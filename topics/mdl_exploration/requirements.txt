@@ -1,0 +1,11 @@
+networkx
+pandas
+matplotlib
+numpy
+tldextract
+sqlparse
+macholib
+pefile
+patsy
+statsmodels
+sklearn
