@@ -33,6 +33,13 @@ cols_to_keep += dataframe.iloc[r].sort_values(ascending=False).head(matches).ind
 python setup.py install
 ```
 
+- 如果是安装完之后修改的，记得要**卸载后重新安装**！！！
+
+```shell
+python -m pip uninstall data_hacking    # 卸载
+python setup.py install #重新安装
+```
+
 - 重启 notebook 的 kernel
 
 ## Changes in Notebook
