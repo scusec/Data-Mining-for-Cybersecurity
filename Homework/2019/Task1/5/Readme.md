@@ -84,7 +84,7 @@ seq2seq模型的基本思想如下：
 -   使用一个循环神经网络读取输入句子，将整个句子的信息压缩到一个固定为度的编码中(**编码器Encoder**)
 -   使用另一个循环神经网络读取编码，将其“解压”为目标语言的一个句子(**解码器Decoder**)
 #### 框架图
-![图片alt](https://pic1.zhimg.com/80/v2-057f266dbfa98cd795b20f722661a78c_hd.jpg ''图片title'')
+![图片alt](https://github.com/scusec/Data-Mining-for-Cybersecurity/blob/master/Homework/2019/Task1/5/img/2.jpg)
 #### Decoder
 Decoder: 根据$x$的中间语义表示$c$ 和已经生成的$y_1,y_2,...,y_(i-1)$来生成$i$时刻的$y_i, y_i=g(c,y_1,y_2,...,y_(i-1))$。Decoder部分的结构和一般的语言模型基本一样：输入单词的词向量，输出为softmax层产生的单词概率，损失函数为log perplexity
 #### Encoder
@@ -142,7 +142,7 @@ Encoder:对输入序列$x$进行编码，通过非线形变换转化为中间语
                     
 ### Process
 在模型训练的时候会生成日志文件，启动tensorboard，PROJECTOR栏将展示投影后的数据的动态图，如下图
-        ![图片alt]()             
+        ![图片alt](https://github.com/scusec/Data-Mining-for-Cybersecurity/blob/master/Homework/2019/Task1/5/img/1.png)             
                        
 ## Improvement
 ### From the perspective of accuracy
