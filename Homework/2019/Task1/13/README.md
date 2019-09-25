@@ -17,13 +17,13 @@
 # 项目优势
 **解决梯度消失问题**
   -神经网络在循环训练的过程中，早期的数据会被更新的并不重要的输入与信息完全淹没，此故障成为梯度消失问题。本项目使用不同类型的循环网络层：长短期记忆层，即LSTM。
-   ###**LSTM原理**
+**LSTM原理**
 
   在LSTM中，代替计算当前存储器时每次都使用相同方式的输入（xt)，神经网络可以通过“输入门”(it)决定当前值对储存器的影响程度，并做出一个决定；通过被命名为“忘记门”(ft)的遗忘的存储器(ct)做出另外一个决定，根据储存器将哪些部分通过“输出门”(ot)发送到下一个时间步长(ht)做第三个决定。
 
 
 
-![avatar](1.png)
+![avatar](https://github.com/scusec/Data-Mining-for-Cybersecurity/edit/master/Homework/2019/Task1/13/1.png)
 
 
 
@@ -37,7 +37,7 @@
 
 一个dropout 层有一个称为p的超参数，它仅仅是每个单元被保存在神经网络模型中进行迭代训练的概率。被保存的单位将其输出提供给下一层，而不被保存的单位则没有提供任何东西。下面是一个例子，展示了一个没有dropout的完全连接的神经网络和一个在迭代训练过程中dropout的完全连接的神经网络之间的区别:
 
-![avatar](2.png)
+![avatar](https://github.com/scusec/Data-Mining-for-Cybersecurity/edit/master/Homework/2019/Task1/13/2.png)
 
 
 
