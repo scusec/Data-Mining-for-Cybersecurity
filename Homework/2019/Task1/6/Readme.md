@@ -34,7 +34,7 @@
 
 - 这是该模块模型结构：
 
-![](C:\Users\lenovo1\Desktop\1.png)
+![](https://github.com/scusec/Data-Mining-for-Cybersecurity/blob/master/Homework/2019/Task1/6/image/1.png)
 
 ##### 3.开始数据的预处理：将Leipzig Chinese Corpus的中文、拼音的数据集进行处理
 
@@ -42,7 +42,7 @@
 
 最后将处理后的数据存入data\zh.tsv中，数据的格式：
 
-![](C:\Users\lenovo1\Desktop\2.png)
+![](https://github.com/scusec/Data-Mining-for-Cybersecurity/blob/master/Homework/2019/Task1/6/image/2.png)
 
 ```python
 with codecs.open("data/zh.tsv", 'w', 'utf-8') as fout:
