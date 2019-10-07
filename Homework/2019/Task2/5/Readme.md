@@ -1,3 +1,4 @@
+
 # 恶意URL识别
 ## 意义
 恶意链接常常出现在钓鱼网站等恶意工具中，检测恶意链接有助于我们及时发现一些攻击并及时制止。
@@ -31,6 +32,8 @@
 ## 算法选取
 本次实验在对集中算法进行选择之后发现`决策树`和`随机森林`的效果比较好，精确度均在89%，召回率可达90%
 同时我们还利用深度学习进行了识别，选取的是双向LSTM，利用keras搭建神经网络,在3轮迭代以后准确率最终可达95.23%，双向LSTM的模型可视化的图如下所示：
+
+![](https://github.com/scusec/Data-Mining-for-Cybersecurity/blob/master/Homework/2019/Task2/5/img/model-blstm.png)
 ## 说明
 训练模型已保存在/model下，测试时输入选择的模型和要测试的url即可，在notebook中调用Judge函数即可判断，`Judge(model_path,test_url)`
 
