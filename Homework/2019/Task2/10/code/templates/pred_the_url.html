@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+<div align="center">
+<h2>User Management</h2>
+
+    <form method="GET">
+
+        <input type="text" name="url" placeholder="url">
+        <br>
+        <input type="submit" value="Submit">
+        <input type="reset" value="reset">
+    </form>
+	{% if features %} {{features}} {% endif %}
+	<br>
+	{% if test_result %} {{test_result}} {% endif %}
+</div>
+
+</body>
+</html>
