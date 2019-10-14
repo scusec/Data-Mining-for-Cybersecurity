@@ -22,7 +22,7 @@ scikit-learn, tensorflow, keras, numpy
 ### 双向 LSTM 网络
 
 使用 keras 构建了如下网络![LSTM网络结构图](img/1.png)
-经过四轮训练，准确率达到了 99.7%
+经过四轮训练，准确率达到了 98.98%，召回率也达到了 98.30%![准确率与召回率](screen/2.png)
 
 ## 模型
 
