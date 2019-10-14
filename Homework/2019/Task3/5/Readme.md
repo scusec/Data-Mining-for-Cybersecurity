@@ -1,7 +1,9 @@
 # XSS检测
 ## 概述
+
 该项目主要是对XSS攻击进行识别预测，我们采用了几种方式，最简单的一种是采用机器学习SVM模型，其模型准确率、召回率、F1-score均可达到98%，其次采用了深度学习的方式，用了双向LSTM进行训练，最后精确度在测试集上可达100%，模型大小仅451kb。
 数据集采用[deep-xss](https://github.com/das-lab/deep-xss)的数据集
+
 ## 文档结构
 
     |-- code
@@ -22,7 +24,7 @@
 
 ![](https://github.com/scusec/Data-Mining-for-Cybersecurity/blob/master/Homework/2019/Task3/5/Screen/svm_score.png)
 
-##双向LSTM
+## 双向LSTM
 模型搭建如下图所示：
 ![](https://github.com/scusec/Data-Mining-for-Cybersecurity/blob/master/Homework/2019/Task3/5/Screen/model-bilstm.png)
 
