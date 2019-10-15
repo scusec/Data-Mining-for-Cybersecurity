@@ -31,7 +31,7 @@
 
 
 ## 数据处理&模型训练
-### 本次项目采用https://github.com/das-lab/deep-xss提供的数据集。在这个数据集中有dmzo_normal.csv和xssed.csv两个文件，分别是正常请求数据集和xss的payload数据集，其中正常数据有31407条，xss数据有33426条。
+### 本次项目采用 https://github.com/das-lab/deep-xss 提供的数据集。在这个数据集中有dmzo_normal.csv和xssed.csv两个文件，分别是正常请求数据集和xss的payload数据集，其中正常数据有31407条，xss数据有33426条。
 ### 我们首先读取两个文件中的数据，并对正常数据标记为1，对xss数据标记为0。之后我们将两个数据集合并成一个完整的data数据集，并对其进行特征工程。
 ### 在本次项目我们主要选取了14个特征，分别是payload长度、以及payload中script字段、java字段、iframe字段、body字段、style字段、marquee字段、<、>、双引号、单引号、%、左括号、右括号的数量。
 ### 由于本项目的数据量不大，特征的数量级也比较小，所以不对数据进行标准化/归一化处理。
