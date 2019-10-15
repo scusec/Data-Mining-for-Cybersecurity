@@ -70,42 +70,42 @@
 - **正例召回率：100%	负例召回率：97%**
 - **正例精确率：97%	负例精：率：100%**
 - **正例 F1值：98%  负例F1值：98%**
-- **具体结果截图[Random_Forest](Screen\RandomForest.png)**
+- **具体结果截图[Random_Forest](https://github.com/scusec/Data-Mining-for-Cybersecurity/tree/master/Homework/2019/Task3/12/Screen/RandomForest.png)**
 
 #### 2.  Bagging
 
 - **正例召回率：100%	负例召回率：97%**
 - **正例精确率：97%	负例精确率：100%**
 - **正例 F1值：98%  负例F1值：98%**
-- **具体结果截图[Bagging](Screen\Bagging.png)**
+- **具体结果截图[Bagging](https://github.com/scusec/Data-Mining-for-Cybersecurity/tree/master/Homework/2019/Task3/12/Screen/Bagging.png)**
 
 #### 3.  Extra_tree
 
 - **正例召回率：100%	负例召回率：97%**
 - **正例精确率：97%	负例精确率：100%**
 - **正例 F1值：98%  负例F1值：98%**
-- **具体结果截图[Extra_tree](Screen\Extra_tree.png)**
+- **具体结果截图[Extra_tree](https://github.com/scusec/Data-Mining-for-Cybersecurity/tree/master/Homework/2019/Task3/12/Screen/Extra_tree.png)**
 
 #### 4.  Adaboost
 
 - **正例召回率：100%	负例召回率：97%**
 - **正例精确率：97%	负例精确率：100%**
 - **正例 F1值：98%  负例F1值：98%**
-- **具体结果截图[Adaboost](Screen\Adaboost.png)**
+- **具体结果截图[Adaboost](https://github.com/scusec/Data-Mining-for-Cybersecurity/tree/master/Homework/2019/Task3/12/Screen/Adaboost.png)**
 
 #### 5.  Gradient_tree_boosting
 
 - **正例召回率：100%	负例召回率：97%**
 - **正例精确率：97%	负例精确率：100%**
 - **正例 F1值：98%  负例F1值：98%**
-- **具体结果截图[Gradient_tree_boosting](Screen\Gradient_tree_boosting.png)**
+- **具体结果截图[Gradient_tree_boosting](https://github.com/scusec/Data-Mining-for-Cybersecurity/tree/master/Homework/2019/Task3/12/Screen/gradient_tree_boosting.png)**
 
 #### 6.  Voting_classifier
 
 - **正例召回率：100%	负例召回率：97%**
 - **正例精确率：97%	负例精确率：100%**
 - **正例 F1值：98%  负例F1值：98%**
-- **具体结果截图[Voting_classifier](Screen\Voting_classifier.png)**
+- **具体结果截图[Voting_classifier](https://github.com/scusec/Data-Mining-for-Cybersecurity/tree/master/Homework/2019/Task3/12/Screen/Voting_classifier.png)**
 
 ### 2.2.3 运行
 
