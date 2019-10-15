@@ -1,14 +1,14 @@
 # Assignment 3: XSS Dection
 
-###使用支持向量机模型进行XSS攻击检测	第2组 
+### 使用支持向量机模型进行XSS攻击检测	第2组 
 
-- ####依赖库：
+- #### 依赖库：
 
   ```python
   pandas, sklearn
   ```
 
-- ####特征选择：
+- #### 特征选择：
   
   1. payload中script的计数
   2. payload中java的计数
@@ -27,10 +27,10 @@
 
   其中dmzo_normal.csv为正常payload样本，xssed.csv为XSS的payload样本，二者均只有payload一列，将数据使用pandas倒入之后进行手动打标签即可；
 
-- ####使用模型
+- #### 使用模型
 
   SVM支持向量机，kernel选用线性核
 
-- ####准确率
+- #### 准确率
 
   98%~99%
