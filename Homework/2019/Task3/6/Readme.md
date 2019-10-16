@@ -43,7 +43,7 @@
 
 - 在Decision tree算法中，accuracy = 0.98, recall = 1.00
 
-  ![决策树](C:\Users\lenovo1\Desktop\Data-Mining-for-Cybersecurity\Task3\6\Screen\决策树.png)
+  ![决策树](https://github.com/scusec/Data-Mining-for-Cybersecurity/blob/master/Homework/2019/Task3/6/Screen/%E5%86%B3%E7%AD%96%E6%A0%91.png)
 
 - 在Random Forest算法中，accuracy = 0.98, recall = 1.00
 
