@@ -47,5 +47,5 @@
 
 - 在Random Forest算法中，accuracy = 0.98, recall = 1.00
 
-  ![随机森林](C:\Users\lenovo1\Desktop\Data-Mining-for-Cybersecurity\Task3\6\Screen\随机森林.png)
+  ![随机森林](https://github.com/scusec/Data-Mining-for-Cybersecurity/blob/master/Homework/2019/Task3/6/Screen/%E9%9A%8F%E6%9C%BA%E6%A3%AE%E6%9E%97.png)
 
