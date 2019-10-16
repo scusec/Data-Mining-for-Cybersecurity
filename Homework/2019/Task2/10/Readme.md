@@ -9,48 +9,64 @@ flask
 
 
 ## 文件结构
-    |-- code
+	|-- code
 		|-- templates
 			|-- pred_the_url.html //html模板文件
-        |--get_features.ipynb 及 get_features.py //从数据集提取特征
-        |--train_DecisionTrees.ipynb //训练特征
-        |--predict_url.ipynb //预测url
-    |-- data
-        |-- data.csv //url数据集
-        |-- features.csv //特征数据集
-        |-- clf.pkl //保存训练好的模型
-    |-- Readme.md
+		|--get_features.ipynb 及 get_features.py //从数据集提取特征
+		|--train_DecisionTrees.ipynb //训练特征
+		|--predict_url.ipynb //预测url
+	|-- data
+		|-- data.csv //url数据集
+		|-- features.csv //特征数据集
+		|-- clf.pkl //保存训练好的模型
+	|-- Readme.md
 	
 
 ## Datasets
 数据集共计14157条数据，
-每条数据包括url、label
+每条数据包括url、label。
+
 对恶意url标记为1，非恶意的url标记为0
 
 ## 特征选择
-no of dots
-presence of hyphen
-len of url
-presence of at
-presence of double slash
-no of subdir
-no of subdomain
-len of domain
-no of queries
-is IP
-presence of Suspicious_TLD
-presence of suspicious domain
+1. 没有 .
+
+2. 有连字符 - 
+
+3. url的长度
+
+4. 存在 at
+
+5. 出现双斜线
+
+6. 没有子目录
+
+7. 没有子域名
+
+8. 域名的长度
+
+9. 没有查询
+
+10. 是IP
+
+11. 存在 Suspicious_TLD
+
+12. 存在可疑域名
+
 
 ## 代码解读
 
 1. get_features.ipynb 及 get_features.py
+
 从数据集中提取特征，写入features.csv
 
 2. train_DecisionTrees.ipynb
+
 采用多种算法训练特征，并将训练效果最好的模型保存到clf.pkl
 训练集与测试集的比例为7:3
 
 3. predict_url.ipynb
+
 编写网页，输入url后返回uri的特征，及URL是否安全
 
 ## 准确率，精确率和召回率
