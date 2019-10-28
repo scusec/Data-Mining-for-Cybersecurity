@@ -120,28 +120,33 @@ python dga_predict.py
 ### 1. 模型训练截图
 
 <div align="center">
-<img src="Screen/train1.png" width="800">
+<img src="Screen/train1.png" width="600">
 </div>
+
 </br>
+
 <div align="center">
-<img src="Screen/train2.png" width="800">
+<img src="Screen/train2.png" width="600">
 </div>
 
 ### 2. 模型评估截图
 
 <div align="center">
-<img src="Screen/result.png" width="800">
+<img src="Screen/result.png" width="600">
 </div>
+
 </br>
 
 ### 3. 数据预测截图
 
 <div align="center">
-<img src="Screen/predict1.png" width="800">
+<img src="Screen/predict1.png" width="600">
 </div>
+
 </br>
+
 <div align="center">
-<img src="Screen/predict2.png" width="800">
+<img src="Screen/predict2.png" width="600">
 </div>
 
 ------
