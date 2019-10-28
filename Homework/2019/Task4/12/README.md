@@ -70,16 +70,16 @@
       │   ├── lstm_train.py           
       │   ├── result_show.py      
       │   └── dga_predict.py                
-      ├── Data                             // 存放原始数据和数据集
+      ├── Data                             // 存放原始数据集和训练数据集
       │   ├── chars.json                               
       │   ├── max.json        
       │   ├── data.csv                 
       │   └── traindata.pkl   
-      ├── Model                            // 存放原始数据和数据集
+      ├── Model                            // 存放训练好的模型和训练结果
       │   ├── model.h5                            
       │   ├── model_weights.h5                     
       │   └── results.pkl                
-      └── Screen                            // 存放训练好的模型文件
+      └── Screen                           // 存放系统框图和运行截图
           ├── flowchart.png                 
           ├── train1.png    
           ├── train2.png
@@ -118,35 +118,32 @@ python dga_predict.py
 ## <span id="env3">四、系统运行截图</span>
 
 ### 1. 模型训练截图
-
+</br>
 <div align="center">
 <img src="Screen/train1.png" width="600">
 </div>
-
 </br>
 
 <div align="center">
 <img src="Screen/train2.png" width="600">
 </div>
-
+</br>
 ### 2. 模型评估截图
-
+</br>
 <div align="center">
 <img src="Screen/result.png" width="600">
 </div>
-
 </br>
-
 ### 3. 数据预测截图
-
+</br>
 <div align="center">
 <img src="Screen/predict1.png" width="600">
 </div>
-
 </br>
 
 <div align="center">
 <img src="Screen/predict2.png" width="600">
 </div>
+</br>
 
 ------
