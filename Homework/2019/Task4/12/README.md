@@ -128,12 +128,14 @@ python dga_predict.py
 <img src="Screen/train2.png" width="600">
 </div>
 </br>
+
 ### 2. 模型评估截图
 </br>
 <div align="center">
 <img src="Screen/result.png" width="600">
 </div>
 </br>
+
 ### 3. 数据预测截图
 </br>
 <div align="center">
