@@ -32,8 +32,8 @@ DGA（域名生成算法）是一种利用随机字符来生成C&C域名，从�
 
 
 
-### 程序框架
-
+### 程序框架图
+![frame](https://github.com/scusec/Data-Mining-for-Cybersecurity/blob/master/Homework/2019/Task4/5/Screen/Frame.png)
 
 
 
@@ -56,13 +56,21 @@ XGBoost，MLP，双向LSTM(由于网络结构和上次的一样，所以不再�
 
 我们采用了以上三种算法进行训练，最终多层感知机和双向LSTM表现出了比较好的结果，其中多层感知机的模型准确率达到94%，如下图所示：
 
+![](https://github.com/scusec/Data-Mining-for-Cybersecurity/blob/master/Homework/2019/Task4/5/Screen/result_MLP.png)
+
 双向LSTM的模型准确率达到95%，如下图所示：
+
+![](https://github.com/scusec/Data-Mining-for-Cybersecurity/blob/master/Homework/2019/Task4/5/Screen/result_BLSTM.png)
+
+
 
 ## How To Run
 
 打开`code`文件夹中的jupyter notebook代码进行运行即可，算法的测试运行test_blstm即可，对于mlp模型的预测，利用joblib加载模型，对文本数据进行2-gram的特征提取然后进行预测即可。
 
 测试样例如下图所示：
+
+![](https://github.com/scusec/Data-Mining-for-Cybersecurity/blob/master/Homework/2019/Task4/5/Screen/test_BLSTM.png)
 
 
 
