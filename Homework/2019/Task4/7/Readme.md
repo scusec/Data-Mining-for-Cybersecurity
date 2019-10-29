@@ -22,7 +22,7 @@
 
 
 ## 实现流程
-![avatar](/Screen/dga.png)
+![avatar](.Screen/dga.png)
 
 
 
