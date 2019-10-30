@@ -26,17 +26,17 @@ DGA是一种生成随机数的算法，通常用来利用随机字符来生成C&
 
 ## 系统实现框图
 
-![系统实现框图](C:\Users\lenovo1\Desktop\Data-Mining-for-Cybersecurity\Task4\6\Screen\系统实现框图.png)
+![系统实现框图](https://github.com/scusec/Data-Mining-for-Cybersecurity/blob/master/Homework/2019/Task4/6/Screen/%E7%B3%BB%E7%BB%9F%E5%AE%9E%E7%8E%B0%E6%A1%86%E5%9B%BE.png)
 
 ## 结果分析
 
 - 使用决策树算法时，准确率：87.6%，召回率：84.8%
 
-  ![决策树](C:\Users\lenovo1\Desktop\Data-Mining-for-Cybersecurity\Task4\6\Screen\决策树.png)
+  ![决策树](https://github.com/scusec/Data-Mining-for-Cybersecurity/blob/master/Homework/2019/Task4/6/Screen/决策树.png)
 
 - 使用随机森林算法时，准确率：88.5%，召回率：87.1%
 
-  ![随机森林](C:\Users\lenovo1\Desktop\Data-Mining-for-Cybersecurity\Task4\6\Screen\随机森林.png)
+  ![随机森林](https://github.com/scusec/Data-Mining-for-Cybersecurity/blob/master/Homework/2019/Task4/6/Screen/随机森林.png)
 
 ## 待改进提高之处
 
