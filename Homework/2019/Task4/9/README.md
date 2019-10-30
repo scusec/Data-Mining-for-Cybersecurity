@@ -55,7 +55,7 @@ good.txt
 
 ## 训练方法
 
-![详见screen目录下的系统框图](\screen\系统框图.png)
+![详见screen目录下的系统框图](https://github.com/scusec/Data-Mining-for-Cybersecurity/blob/master/Homework/2019/Task4/9/screen/%E7%B3%BB%E7%BB%9F%E6%A1%86%E5%9B%BE.png)
 
 
 
