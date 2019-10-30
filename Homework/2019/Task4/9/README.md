@@ -55,7 +55,7 @@ good.txt
 
 ## 训练方法
 
-![](\screen\系统框图.png)
+![详见screen目录下的系统框图](\screen\系统框图.png)
 
 
 
