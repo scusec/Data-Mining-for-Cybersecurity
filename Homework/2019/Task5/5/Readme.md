@@ -1,5 +1,5 @@
 ## 基于深度学习，机器学习与Word2Vec的SQL语句检测
-### **简介：**
+### 简介：
 
 ​	本项目分别采用机器学习以及卷积神经网络算法训练SQL注入检测模型，主要包括文本处理、提取文本向量和训练检测模型三个部分，实验过程中的数据集主要分为三组训练集(用于训练检测模型的数据)、验证集(训练过程中验证模型的准确率)、测试集(测试训练完成后模型的准确率)。
 ​	
@@ -7,8 +7,10 @@
 ​	
 ​	卷积神经网络由三个卷积层、三个池化层组成，最后连接全连接层。在基于深度学习的sql注入检测中，我们找了其他现有的基于CNN的sql注入检测中模型的准确率最终可达99.63%。该模型的网络结构图如下图所示：
 ​	
+    ![](https://github.com/scusec/Data-Mining-for-Cybersecurity/blob/master/Homework/2019/Task5/5/Screen/SQL_CNN.png)
 
-###文件目录
+
+### 文件目录
     |-- code
         |-- CNN //CNN检测sql注入的代码实现   
             |-- cnn.py //模型训练的代码
@@ -61,13 +63,14 @@
 
 - 机器学习
 
-![]()
+![](https://github.com/scusec/Data-Mining-for-Cybersecurity/blob/master/Homework/2019/Task5/5/Screen/Frame_ML.jpg)
 
 - 深度学习
+![](https://github.com/scusec/Data-Mining-for-Cybersecurity/blob/master/Homework/2019/Task5/5/Screen/Freame_CNN.png)
 
 ### 运行
 ####深度学习模型
-运行test_one.py即可进行预测，由于该模型没有进行良好的优化，所以请使用我们在百度网盘链接提供的模型(注意一下路径的更改)
+运行test_one.py即可进行预测，由于该模型没有进行良好的优化，所以模型比较大有84M,由于github单个文件的大小不能超过25M，所以如果要测试请使用我们在百度网盘链接提供的模型(注意一下路径的更改)
 
 如果要自己训练，请使用我们在百度网盘提供的数据集
 
