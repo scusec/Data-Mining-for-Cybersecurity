@@ -26,22 +26,26 @@
 ​	通过多次实验，综合考量各个模型的准确率、召回率等，最终选择了**RandomForest**算法训练出的模型作为最终的预测模型选择；其训练结果如下图所示；
 
 <div align=center><img src=".\image\1.png"></div>
+
 <center> 模型训练结果</center>
 
 ​	各个特征对模型影响的重要性如下图所示：
 
 <div align=center><img src=".\image\5.png"></div>
+
 <center>各特征影响模型比重</center>
 
 ## 测试
 - 正样本测试：输入SQL语句:“ 1 AND 1=1%00 ”，检测结果如下图所示：
 
     ![](.\image\3.png)
+    
     <center>正样本检测结果</center>
 
 - 负样本测试：输入SQL语句:" t%3D1498581264 "，检测结果如下图所示：
 
     ![](.\image\2.png)
+    
     <center>负样本检测结果</center>
 
 ## 运行
