@@ -18,7 +18,7 @@ SQL注入，是发生于SQL注入即是指web应用程序对用户输入数据�
    |-- predict.py
    |-- train_model.py
  |--DataSet
-   |--feature.csv
+   |--normal.csv
    |--sql.csv
  |--Model
    |-- model_0.9884538152610441.pkl
