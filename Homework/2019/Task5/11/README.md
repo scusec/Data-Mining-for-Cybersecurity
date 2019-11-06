@@ -10,13 +10,13 @@ SQL是一个结构化的语言,遵循标准的语法规则,它有一个完整的
 
 下图是SQL语法标记
 
-![sqlphrase](Screen/sqlphrase.png)
+![](https://pic.superbed.cn/item/5dc26b5c8e0e2e3ee92cb0a0.png)
 
 标记序列和标记之间的转换更有意义，所以我们还将通过计算每个SQL语句的ngram来计算序列，这里使用N=3
 
 ## 系统流程图
 
-## ![structure](Screen/structure.png)
+## ![](https://pic.superbed.cn/item/5dc26b6d8e0e2e3ee92cb30a.png)
 
 ## 训练模型
 
@@ -28,7 +28,7 @@ SQL是一个结构化的语言,遵循标准的语法规则,它有一个完整的
 
 召回率：0.995290
 
-## ![accuracy](Screen/accuracy.png)未来改进
+## ![](https://pic.superbed.cn/item/5dc26b818e0e2e3ee92cb52f.png)未来改进
 
 之所以准确率那么高一方面是因为数据集中正常的SQL语句样本过少，数据集不均匀，另一方面是还应考虑一些别的特征，例如信息熵等。
 
