@@ -35,7 +35,7 @@ SQL语句4956条。
 
 ## 实现框图
 
-https://github.com/scusec/Data-Mining-for-Cybersecurity/blob/master/Homework/2019/Task5/10/Screen/Frame.jpg
+![https://github.com/scusec/Data-Mining-for-Cybersecurity/blob/master/Homework/2019/Task5/10/Screen/Frame.jpg]()
 
 
 ## 代码基本流程
