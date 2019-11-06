@@ -62,19 +62,19 @@ SQL语句是对数据库进行操作的一种结构化查询语句，也是网�
 
 - Decison Tree:  准确率：84.8%    召回率：99.5%
 
-![DecesionTree](C:\Users\lenovo1\Desktop\Data-Mining-for-Cybersecurity\Task5\6\Screen\DecesionTree.png)
+![DecesionTree](https://github.com/scusec/Data-Mining-for-Cybersecurity/blob/master/Homework/2019/Task5/6/Screen/DecesionTree.png)
 
 - Logistic：准确率：90.9%   召回率：96.6%
 
-![Logistic](C:\Users\lenovo1\Desktop\Data-Mining-for-Cybersecurity\Task5\6\Screen\Logistic.png)
+![Logistic](https://github.com/scusec/Data-Mining-for-Cybersecurity/blob/master/Homework/2019/Task5/6/Screen/Logistic.png)
 
 - SVM：准确率：89.2%   召回率：97.2%
 
-![SVM](C:\Users\lenovo1\Desktop\Data-Mining-for-Cybersecurity\Task5\6\Screen\SVM.png)
+![SVM](https://github.com/scusec/Data-Mining-for-Cybersecurity/blob/master/Homework/2019/Task5/6/Screen/SVM.png)
 
 - 测试Logistic模型
 
-![testLogistic](C:\Users\lenovo1\Desktop\Data-Mining-for-Cybersecurity\Task5\6\Screen\testLogistic.png)
+![testLogistic](https://github.com/scusec/Data-Mining-for-Cybersecurity/blob/master/Homework/2019/Task5/6/Screen/testLogistic.png)
 
 
 
