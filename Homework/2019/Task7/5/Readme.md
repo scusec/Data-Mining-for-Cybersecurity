@@ -18,7 +18,7 @@ python 3.6.8
 
 ### 特征提取
 
-####词袋 & TF-IDF模型
+#### 词袋 & TF-IDF模型
 
 把一个PHP文件作为一个完整的字符串处理，定义函数load_one_file加载文件到一个字符串比纳凉中返回。并且开源软件的目录结构相对复杂，所以需要递归访问并且指定目录并加载指定文件
 
@@ -57,19 +57,31 @@ t = " ".join(tokens)
 ```
 
 遍历读取指定目录下全部PHP文件，保存其对应的opcode字符串，然后再对opcode字符串进行2-gram处理和tf-idf处理
-### 系统框架图
 
+![](https://github.com/scusec/Data-Mining-for-Cybersecurity/blob/master/Homework/2019/Task7/5/screen/%E6%8F%90%E5%8F%96opcode.png)
+
+### 系统框架图
+![](https://github.com/scusec/Data-Mining-for-Cybersecurity/blob/master/Homework/2019/Task7/5/screen/frame-1.png)
+
+![](https://github.com/scusec/Data-Mining-for-Cybersecurity/blob/master/Homework/2019/Task7/5/screen/frame-2.png)
 ### 模型训练
 
 本次实验选择了XGBoost、RandomForest和SVM进行测试，其中xgboost和随机森林表现出了比较好的效果，其中运行的结果截图如下：
 
 xgboost
 
+![](https://github.com/scusec/Data-Mining-for-Cybersecurity/blob/master/Homework/2019/Task7/5/screen/xgboost.png)
+
 randomforest
+
+![](https://github.com/scusec/Data-Mining-for-Cybersecurity/blob/master/Homework/2019/Task7/5/screen/wordbag&2-gram_rf.png)
 
 mlp
 
+![](https://github.com/scusec/Data-Mining-for-Cybersecurity/blob/master/Homework/2019/Task7/5/screen/mlp.png)
+
 CNN
+![](https://github.com/scusec/Data-Mining-for-Cybersecurity/blob/master/Homework/2019/Task7/5/screen/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202019-11-19%20%E4%B8%8B%E5%8D%888.47.53.png)
 
 ### 结果
 
