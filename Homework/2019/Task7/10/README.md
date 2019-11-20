@@ -1,9 +1,9 @@
 # webshell detection
 - #### webshell:
 
-  - »ùÓÚ»¥ÁªÍøweb³ÌĞòÒÔ¼°web·şÎñÆ÷¶ø´æÔÚµÄÒ»ÖÖºóÃÅĞÎÊ½£¬Ö÷ÒªÍ¨¹ıÍøÒ³½Å±¾³ÌĞòºÍ·şÎñÆ÷ÈİÆ÷ËùÖ§³ÖµÄºó¶Ë³ÌĞò£¬ÔÚweb·şÎñÆ÷¼°ÆäÖĞ¼ä¼şÖĞ½øĞĞÔËĞĞ¡£
+  - åŸºäºäº’è”ç½‘webç¨‹åºä»¥åŠwebæœåŠ¡å™¨è€Œå­˜åœ¨çš„ä¸€ç§åé—¨å½¢å¼ï¼Œä¸»è¦é€šè¿‡ç½‘é¡µè„šæœ¬ç¨‹åºå’ŒæœåŠ¡å™¨å®¹å™¨æ‰€æ”¯æŒçš„åç«¯ç¨‹åºï¼Œåœ¨webæœåŠ¡å™¨åŠå…¶ä¸­é—´ä»¶ä¸­è¿›è¡Œè¿è¡Œã€‚
 
-- #### ÊµÑé»·¾³
+- #### å®éªŒç¯å¢ƒ
 
   - matplotlib
 
@@ -13,37 +13,37 @@
 
     
 
-## Êı¾İ¼¯
-- °×Ñù±¾£¨white_list£©£º¹²¼Æ3586Ìõ
+## æ•°æ®é›†
+- ç™½æ ·æœ¬ï¼ˆwhite_listï¼‰ï¼šå…±è®¡3586æ¡
 
-- ºÚÑù±¾£¨black_list£©£º¹²¼Æ2681Ìõ
+- é»‘æ ·æœ¬ï¼ˆblack_listï¼‰ï¼šå…±è®¡2681æ¡
 
-- ÑµÁ·¼¯´óĞ¡£º5000  ²âÊÔ¼¯´óĞ¡£º1249
+- è®­ç»ƒé›†å¤§å°ï¼š5000  æµ‹è¯•é›†å¤§å°ï¼š1249
 
   
 
-## ÌØÕ÷Ñ¡È¡
-- ÎÄ¼ş´óĞ¡
-- ĞÅÏ¢ìØ
-- ÌØÊâº¯Êı³öÏÖ´ÎÊı
+## ç‰¹å¾é€‰å–
+- æ–‡ä»¶å¤§å°
+- ä¿¡æ¯ç†µ
+- ç‰¹æ®Šå‡½æ•°å‡ºç°æ¬¡æ•°
 
 
 
-## ÊµÑéÁ÷³ÌÍ¼
+## å®éªŒæµç¨‹å›¾
 
-![]( https://github.com/scusec/Data-Mining-for-Cybersecurity/tree/master/Homework/2019/Task7/10/Screen/Frame.png )
-
-
-
-## ÑµÁ·½á¹û
-
-![](https://github.com/scusec/Data-Mining-for-Cybersecurity/tree/master/Homework/2019/Task7/10/Screen/test.png)
+![]( https://github.com/scusec/Data-Mining-for-Cybersecurity/blob/master/Homework/2019/Task7/10/Screen/Frame.png )
 
 
 
+## è®­ç»ƒç»“æœ
 
-## ²Î¿¼Á´½Ó
-»ùÓÚ»úÆ÷Ñ§Ï°µÄwebshell¼ì²â£¨Ò»£© - Öªºõ
+![](https://github.com/scusec/Data-Mining-for-Cybersecurity/blob/master/Homework/2019/Task7/10/Screen/test.png)
+
+
+
+
+## å‚è€ƒé“¾æ¥
+åŸºäºæœºå™¨å­¦ä¹ çš„webshellæ£€æµ‹ï¼ˆä¸€ï¼‰ - çŸ¥ä¹
 https://zhuanlan.zhihu.com/p/58676764
 
 
