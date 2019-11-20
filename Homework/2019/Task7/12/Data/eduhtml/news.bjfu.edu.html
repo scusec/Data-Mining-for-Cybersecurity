@@ -1,0 +1,532 @@
+
+<!DOCTYPE html PUBliC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
+<head>
+	<meta http-equiv="Content-Language" content="zh-cn">
+	<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+
+	<META name="keywords" content="绿色新闻网">
+	<meta name="description" content="绿色新闻网">
+	<title>绿色新闻网</title>
+	<link rel="stylesheet" type="text/css" href="http://news.bjfu.edu.cn/css/css1.css">
+	<script type="text/javascript" src="http://news.bjfu.edu.cn/js_xin/jquery-1.4.2.min.js"></script>
+	<script>
+		$(function() {
+			if (window.PIE) {
+				$('.rounded').each(function() {
+					PIE.attach(this);
+				});
+			}
+		});
+	</script>
+	<script>
+		function mouseOutPic(){
+			if(window.event.toElement.id!="img000") bigPic.style.visibility = "hidden";
+		}
+		function mouseOverPic(imgSrc){
+			var seeBig = document.getElementById("bigPic");
+			var newImg = document.createElement("img");
+			newImg = "<img src=\'" + imgSrc + "\'/>";
+			seeBig.innerHTML = newImg;
+		}
+	</script>
+	<script>
+		function mouseOutPic1(){
+			if(window.event.toElement.id!="img001") bigPic1.style.visibility = "hidden";
+		}
+		function mouseOverPic1(imgSrc1){
+			var seeBig1 = document.getElementById("bigPic1");
+			var newImg1 = document.createElement("img");
+			newImg1 = "<img src=\'" + imgSrc1 + "\'/>";
+			seeBig1.innerHTML = newImg1;
+		}
+	</script>
+</head>
+<body>
+<div class="header">
+	<div style="width: 1100px;height:129px;background:url(http://news.bjfu.edu.cn/new_images/header.jpg);margin:0 auto;border: none ">
+		<div style="width: 885px;height: 82px;padding-left: 10px;padding-top: 25px;float: left">
+			<a href="http://news.bjfu.edu.cn" ><img src="http://news.bjfu.edu.cn/new_images/logo.png" alt="绿色新闻网" width="275" height="82"></a>
+		</div>
+		<div style="width: 94px;height: 46px;float: left;padding-top: 10px;">
+			<img id="img001" src="http://news.bjfu.edu.cn/new_images/weibo.png" onmouseover="mouseOverPic1('http://news.bjfu.edu.cn/new_images/wenboma.png'); bigPic1.style.visibility='visible';bigPic1.style.zIndex=100;bigPic1.style.position='absolute';" onmouseout="mouseOutPic1()">
+			<div id="bigPic1" style="visibility:hidden;">
+			</div>
+		</div>
+		<div style="width: 83px;height: 44px;float: left;padding-top: 10px;">
+			<img id="img000" src="http://news.bjfu.edu.cn/new_images/weixin.png" onmouseover="mouseOverPic('http://news.bjfu.edu.cn/new_images/weixinma.jpg'); bigPic.style.visibility='visible';bigPic.style.zIndex=100;bigPic.style.position='absolute';" onmouseout="mouseOutPic()">
+			<div id="bigPic" style="visibility:hidden;">
+			</div>
+		</div>
+		<div style="width: 112px;height: 35px;float: left;padding-top: 22px;">
+			<a href="mailto:bjfunews@163.com"><img src="http://news.bjfu.edu.cn/new_images/sy_email.png"> </a>
+		</div>
+		<div style="width: 65px;height: 37px;float: left;padding-top: 19px;">
+			<a href="http://cms.bjfu.edu.cn/cms/search/searchResults.jsp?query=%20&siteID=42&submit=1"><img src="http://news.bjfu.edu.cn/new_images/search.png"> </a>
+		</div>
+	</div>
+</div>
+<div class="wrap_box">
+	<div style="width: 100%;height: 44px;background: url(http://news.bjfu.edu.cn/new_images/navbg1.jpg) 0 0 repeat-x;">
+	<div class="nav">
+		<ul>
+			<li><a href="/bljd/">北林焦点</a></li>
+			<li><a href="/lsyw/">绿色要闻</a></li>
+			<li><a href="/ztbd/">专题报道</a></li>
+			<li><a href="/xccc/">宣传橱窗</a></li>
+			<li><a href="/lsxy/">校园动态</a></li>
+			<li><a href="/jxky/">教学科研</a></li>
+			<li><a href="/lswh/">微媒体</a></li>
+			<li><a href="/lscb/">媒体北林</a></li>
+			<li><a href="/djsz/">党建思政</a></li>
+			<li><a href="/xfrw/">绿色人物</a></li>
+			<li><a href="/gdyl/">观点言论</a></li>
+			<li><a href="/lssy/">绿色视野</a></li>
+			<li><a href="/yzph/">一周排行</a></li>
+			<li><a href="http://blb.bjfu.edu.cn/">北林报</a></li>
+			<li><a href="/xyly/">校园掠影</a></li>
+			<li><a href="/spxw/">视频新闻</a></li>
+		</ul>
+	</div>
+	</div>
+	<div class="height10"></div>
+	<div class="wrap">
+		<div class="left_box" style="height: 451px;width: 680px;margin-left: 5px;margin-top: 15px;">
+
+			<div id="play">
+				<ul>
+					<li id="playBg"></li>
+					<li id="playText"></li>
+					<li id="playNum"><a>1</a><a>2</a><a>3</a><a>4</a></li>
+					<li id="playShow" >
+																		<a href="http://news.bjfu.edu.cn/ztbd/xxgclsddsjdjs/index.html" target="_blank"><img src="/images/content/2017/20171027185146297870.jpg" alt="            深入学习贯彻党的十九大精神
+    " style="height:451px;"></a>
+																								<a href="http://news.bjfu.edu.cn/ztbd/xysjd/" target="_blank"><img src="/images/content/2017/20171026091748144589.jpg" alt="            奋力夺取新时代中国特色社会主义伟大胜利
+    " style="height:451px;"></a>
+																								<a href="http://news.bjfu.edu.cn/ztbd/xxhxjs/" target="_blank"><img src="/images/content/2017/20170929193237755499.jpg" alt="            学习贯彻习近平总书记给南开大学新入伍大学生重要回信精神
+    " style="height:451px;"></a>
+																								<a href="http://news.bjfu.edu.cn/lsyw/256094.html" target="_blank"><img src="/images/content/2017/20171017082634268531.jpg" alt="            朱之悌奖励基金正式设立
+    " style="height:451px;"></a>
+												
+					</li>
+				</ul>
+			</div><!-- end play -->
+		</div>
+		<div class="right_box" style="width: 400px;margin-top: 15px;">
+			<h2 class="pubtit_1"><a href="/bljd/" target="_blank"></a></h2>
+						<dl class="r_news_dl1" style="width: 400px;">
+				<dt><h3><a style="color:#000000;" href="http://news.bjfu.edu.cn/ztbd/xysjd/"  class="margin_l" target="_blank">专题：学习党的十九大精神导读</a></h3>
+				<p>中国共产党第十九次全国代表大会于10月18日-24日在京举行。</p>
+				</dt>
+								<dd><img src="/images/content/2017/20171017172854362180.jpg"  width="130" height="91" ></dd>
+													</dl>
+						<dl class="r_news_dl1" style="width: 400px;">
+				<dt><h3><a style="color:#000000;" href="http://news.bjfu.edu.cn/ztbd/xxgclsddsjdjs/index.html"  class="margin_l" target="_blank">专题：学习党的十九大精神进行时</a></h3>
+				<p>校党委要求把学习宣传贯彻党的十九大精神作为当前最主要的任务、最紧迫的理论武装抓紧抓好。</p>
+				</dt>
+								<dd><img src="/images/content/2017/20171018174753797886.jpg"  width="130" height="91" ></dd>
+													</dl>
+						<dl class="r_news_dl1" style="width: 400px;">
+				<dt><h3><a style="color:#000000;" href="http://mp.weixin.qq.com/s/GwvQHxwjEEX7O_i3yWRWTw"  class="margin_l" target="_blank">我校入选世界一流学科建设高校</a></h3>
+				<p>我校入选95所一流学科建设高校名单。风景园林学和林学两个学科入围“双一流”建设学科名单</p>
+				</dt>
+								<dd><img src="/images/content/2017/20170922144342656779.jpg"  width="130" height="91" ></dd>
+													</dl>
+						<dl class="r_news_dl1" style="width: 400px;">
+				<dt><h3><a style="color:#000000;" href="http://news.bjfu.edu.cn/ztbd/dlfjdbl/"  class="margin_l" target="_blank">专题：“砥砺奋进的北林”—贺建校65载华诞  迎党的十九大召开</a></h3>
+				<p>包括党建与人才培养、科学研究、社会服务等方面取得显著成绩和宝贵经验。</p>
+				</dt>
+								<dd><img src="/images/content/2017/20170927080159231467.jpg"  width="130" height="91" ></dd>
+													</dl>
+			
+
+		</div>
+		<div class="line"></div>
+		<div class="height10"></div>
+		<div class="left">
+			<div class="left_box1"  style="height: 310px;margin-bottom: 10px;">
+				<h2 class="left_pubtit">
+					<a style="background: url('http://news.bjfu.edu.cn/new_images/beilinbao.png') no-repeat;margin-left:13px;padding-left: 27px;" href="http://blb.bjfu.edu.cn/" target="_blank">北林报</a>
+				</h2>
+				<div class="leftpic1" style="border:1px solid #00753d;background-color: #f0f6f0;">
+					<div style="width:196px;height:255px; no-repeat;margin:8px auto;">
+
+						<div>
+																					<img src="/images/content/2017/20171017170828262268.png" style="height:248px;width:180px">
+								<a style="float:left;" href="http://blb.bjfu.edu.cn/">&nbsp;&nbsp;&nbsp;&nbsp;第602期&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp</a>
+															<a style="float:left;" href="http://blb.bjfu.edu.cn/oldrelease.php" target="_blank"><<往期报纸 </a>
+													</div>
+
+					</div>
+				</div>
+			</div>
+			<div class="left_box1" style="height: 165px;">
+				<h2 class="left_pubtit"><a style="background: url('http://news.bjfu.edu.cn/new_images/baodao.png') no-repeat;margin-left:9px;padding-left: 23px;" href="/ztbd/" target="_blank">专题报道</a></h2>
+				<ul class="news_ule">
+										<li>
+						<a href="http://news.bjfu.edu.cn/ztbd/xxgclsddsjdjs/index.html" title="学习贯彻落实党的十九大精神" class="margin_l" target="_blank">学习贯彻落实党的十九大精神</a></li>
+										<li>
+						<a href="http://news.bjfu.edu.cn/ztbd/xysjd/" title="喜迎十九大" class="margin_l" target="_blank">喜迎十九大</a></li>
+										<li>
+						<a href="http://news.bjfu.edu.cn/ztbd/dlfjdbl/index.html" title="砥砺奋进的北林" class="margin_l" target="_blank">砥砺奋进的北林</a></li>
+										<li>
+						<a href="http://news.bjfu.edu.cn/ztbd/tlblrjblgs/" title="听老北林人讲北林故事" class="margin_l" target="_blank">听老北林人讲北林故事</a></li>
+										<li>
+						<a href="http://news.bjfu.edu.cn/ztbd/xxhxjs/" title="学习贯彻习总书记给南开大学新入伍大学生回信精神" class="margin_l" target="_blank">学习贯彻习总书记给南开大学新入伍大学生回信精神</a></li>
+					
+				</ul>
+			</div>
+			<div class="left_box1" style="height: 165px;">
+				<h2 class="left_pubtit"><a style="background: url('http://news.bjfu.edu.cn/new_images/renwu.png') no-repeat;margin-left:9px;padding-left: 23px;"href="/xfrw/" target="_blank">绿色人物</a></h2>
+				<ul class="news_ule">
+										<li>
+						<a href="/lsyw/214389.html" title="我校获北京高校辅导员职业能力大赛一等奖" class="margin_l" target="_blank">我校获北京高校辅导员职业能力大赛一等奖</a></li>
+										<li>
+						<a href="https://mp.weixin.qq.com/s?__biz=MzAxOTY5ODA2NA==&mid=402707432&idx=1&sn=383692657a41f9b9cd9d15bd1bcc91ee&scene=1&srcid=0325LuJ5PzbX9yhpnDhhCy31&pass_ticket=BtfQskSj%2FyHyr0Pw7RXG8%2BwFx2JBqilY97XH2hhLye7qwcaO03sS3eQqFhVXSbi4#rd" title="师道 || 王武魁 -- 付真情一片，育桃李满天" class="margin_l" target="_blank">师道 || 王武魁 -- 付真情一片，育桃李满天</a></li>
+										<li>
+						<a href="https://mp.weixin.qq.com/s?__biz=MzAxOTY5ODA2NA==&mid=402387163&idx=1&sn=d755e09fc03735bc68298839977138f7&scene=1&srcid=0325YygHvTkerMDJ3mTf8eBu&pass_ticket=BtfQskSj%2FyHyr0Pw7RXG8%2BwFx2JBqilY97XH2hhLye7qwcaO03sS3eQqFhVXSbi4#rd" title="师道 || 淡极花更艳，浓情为学研" class="margin_l" target="_blank">师道 || 淡极花更艳，浓情为学研</a></li>
+										<li>
+						<a href="/lsyw/197605.html" title="研究生奖学金获得者：硕士生王昱" class="margin_l" target="_blank">研究生奖学金获得者：硕士生王昱</a></li>
+										<li>
+						<a href="/lsyw/196684.html" title="研究生奖学金获得者：博士生陈金辉" class="margin_l" target="_blank">研究生奖学金获得者：博士生陈金辉</a></li>
+									</ul>
+			</div>
+			<div class="left_box1" style="height: 165px;">
+				<h2 class="left_pubtit"><a style="background: url('http://news.bjfu.edu.cn/new_images/guandian.png') no-repeat;margin-left:9px;padding-left: 24px;"href="/gdyl/" target="_blank">观点言论</a></h2>
+				<ul class="news_ule">
+										<li>
+						<a href="/gdyl/244278.html" title="张柏林:开发林业食品大有可为" class="margin_l" target="_blank">张柏林:开发林业食品大有可为</a></li>
+										<li>
+						<a href="/gdyl/242684.html" title="我校全国政协委员尹伟伦：精准提升森林质量" class="margin_l" target="_blank">我校全国政协委员尹伟伦：精准提升森林质量</a></li>
+										<li>
+						<a href="/gdyl/236820.html" title="乌恩：如何让自然的秘密成为游客眼中的美" class="margin_l" target="_blank">乌恩：如何让自然的秘密成为游客眼中的美</a></li>
+										<li>
+						<a href="/gdyl/228842.html" title="坚守时代品质  书写无悔人生" class="margin_l" target="_blank">坚守时代品质  书写无悔人生</a></li>
+										<li>
+						<a href="/gdyl/228843.html" title="不忘初心让立德与立功、立言同行" class="margin_l" target="_blank">不忘初心让立德与立功、立言同行</a></li>
+									</ul>
+			</div>
+			<div class="left_box1"style="height: 380px;">
+				<h2 class="left_pubtit"><a style="background: url('http://news.bjfu.edu.cn/new_images/chuang.png') no-repeat;margin-left:9px;padding-left: 24px;"href="/xccc/" target="_blank">宣传橱窗</a></h2>
+				<div class="leftpic1" style="height: 350px;border: 1px solid #00753d;background-color: #f0f6f0;">
+															<div style="height: 100px; width: 208px;padding-top: 10px;padding-left: 32px;">
+						<a href="/xccc/252905.html" target="_blank">
+							<img  src="/images/content/2017/20170905152418702801.jpg" alt="马克思主义学院特色成绩展示" style="height: 100px; width: 208px;" /></a>
+					</div>
+																				<div style="height: 100px; width: 208px;padding-top: 10px;padding-left: 32px;">
+						<a href="/xccc/252902.html" target="_blank">
+							<img  src="/images/content/2017/20170905152245778108.jpg" alt="林学院特色成绩展示" style="height: 100px; width: 208px;" /></a>
+					</div>
+																				<div style="height: 100px; width: 208px;padding-top: 10px;padding-left: 32px;">
+						<a href="/xccc/252901.html" target="_blank">
+							<img  src="/images/content/2017/20170905152019242623.jpg" alt="水土保持学院特色成绩展示" style="height: 100px; width: 208px;" /></a>
+					</div>
+														</div>
+			</div>
+		</div>
+		<div class="right">
+			<div class="right_box1">
+				<h2 class="right_pubtit" style="background: url('http://news.bjfu.edu.cn/new_images/keyan.png') no-repeat"><a href="/jxky/" target="_blank">&nbsp&nbsp教学科研</a></h2>
+				<ul class="news_ul">
+										<li>
+						<a href="/jxky/257404.html"  class="margin_l" target="_blank">教务处与马克思主义学院研讨十九大精神进课堂、进头脑</a>
+					</li>
+										<li>
+						<a href="/jxky/256907.html"  class="margin_l" target="_blank">4项林业公益性行业科研专项重大项目通过验收</a>
+					</li>
+										<li>
+						<a href="/jxky/257146.html"  class="margin_l" target="_blank">中国科协第324次青年科学家论坛举办</a>
+					</li>
+										<li>
+						<a href="/jxky/257072.html"  class="margin_l" target="_blank">我校学生毕业论文获评全国高校环境类专业本科生优秀毕业论文</a>
+					</li>
+										<li>
+						<a href="/jxky/256887.html"  class="margin_l" target="_blank">教室教学条件改善项目通过专家验收</a>
+					</li>
+										<li>
+						<a href="/jxky/255713.html"  class="margin_l" target="_blank">我校教授获国际组织最佳论文奖 </a>
+					</li>
+										<li>
+						<a href="/jxky/255471.html"  class="margin_l" target="_blank">“油松等速生用材树种高效培育技术研究”项目启动</a>
+					</li>
+										<li>
+						<a href="/jxky/255173.html"  class="margin_l" target="_blank">“西北干旱荒漠区煤炭基地生态安全保障技术”项目启动</a>
+					</li>
+									</ul>
+			</div>
+			<div class="right_box1">
+				<h2 class="right_pubtit" style="background: url('http://news.bjfu.edu.cn/new_images/dangjian.png') no-repeat"><a href="/djsz/" target="_blank">&nbsp&nbsp党建思政</a></h2>
+				<ul class="news_ul">
+										<li>
+						<a href="/djsz/257260.html" title="热议党代会：牢记育人初心，做新时代学生引路人  " class="margin_l" target="_blank">热议党代会：牢记育人初心，做新时代学生引路人  </a></li>
+										<li>
+						<a href="/djsz/256935.html" title="热议党代会：保持战略定力，做到“四个切实”" class="margin_l" target="_blank">热议党代会：保持战略定力，做到“四个切实”</a></li>
+										<li>
+						<a href="/djsz/256913.html" title="热议党代会：新思想、新方略开创中国特色社会主义生态文明新时代" class="margin_l" target="_blank">热议党代会：新思想、新方略开创中国特色社会主义生态文明新时代</a></li>
+										<li>
+						<a href="/djsz/256709.html" title="热议党代会：为实现中国和谐美丽努力奋斗" class="margin_l" target="_blank">热议党代会：为实现中国和谐美丽努力奋斗</a></li>
+										<li>
+						<a href="/djsz/256705.html" title="热议党代会：把精彩论文写在绿水青山之间" class="margin_l" target="_blank">热议党代会：把精彩论文写在绿水青山之间</a></li>
+										<li>
+						<a href="/djsz/256557.html" title="热议党代会：立德树人，做中国特色社会主义理论的传播者" class="margin_l" target="_blank">热议党代会：立德树人，做中国特色社会主义理论的传播者</a></li>
+										<li>
+						<a href="/djsz/256545.html" title="热议党代会：不忘初心牢记使命做一名合格共产党员" class="margin_l" target="_blank">热议党代会：不忘初心牢记使命做一名合格共产党员</a></li>
+										<li>
+						<a href="/djsz/256555.html" title="热议党代会：使命呼唤担当，责任引领未来" class="margin_l" target="_blank">热议党代会：使命呼唤担当，责任引领未来</a></li>
+									</ul>
+			</div>
+			<div class="right_box1">
+				<h2 class="right_pubtit" style="background: url('http://news.bjfu.edu.cn/new_images/meiti.png') no-repeat"><a href="/lscb/" target="_blank">&nbsp&nbsp&nbsp&nbsp媒体北林</a></h2>
+				<ul class="news_ul">
+										<li>
+						<a href="/lscb/256614.html"  title="中国绿色时报:北京林业大学庆祝建校65周年" class="margin_l" target="_blank">中国绿色时报:北京林业大学庆祝建校65周年</a></li>
+										<li>
+						<a href="http://economy.gmw.cn/2017-10/19/content_26546217.htm"  title="光明网：北林师生集中观看十九大开幕会 热议习总书记报告" class="margin_l" target="_blank">光明网：北林师生集中观看十九大开幕会 热议习总书记报告</a></li>
+										<li>
+						<a href="/lscb/256611.html"  title="北京晨报：北林大举行建校65周年庆典 " class="margin_l" target="_blank">北京晨报：北林大举行建校65周年庆典 </a></li>
+										<li>
+						<a href="http://paper.jyb.cn/zgjyb/html/2017-09/15/content_485496.htm?div=-1"  title="中国教育报：微格三步走 磨亮思政课" class="margin_l" target="_blank">中国教育报：微格三步走 磨亮思政课</a></li>
+										<li>
+						<a href="http://www.365yg.com/item/6463339021778027021/"  title="中国教育电视台：北京林业大学开办首届新生训练营" class="margin_l" target="_blank">中国教育电视台：北京林业大学开办首届新生训练营</a></li>
+										<li>
+						<a href="http://bjwb.bjd.com.cn/html/2017-09/06/content_173285.htm"  title="北京晚报：北林大学生让大树成为充电宝" class="margin_l" target="_blank">北京晚报：北林大学生让大树成为充电宝</a></li>
+										<li>
+						<a href="http://bjcb.morningpost.com.cn/html/2017-09/03/content_457342.htm"  title="北京晨报：北京林业大学新生开始报到" class="margin_l" target="_blank">北京晨报：北京林业大学新生开始报到</a></li>
+										<li>
+						<a href="http://share.gmw.cn/kepu/2017-07/19/content_25125463.htm"  title="光明网：北林大绿色长征雪域高原团赴藏开展实践活动" class="margin_l" target="_blank">光明网：北林大绿色长征雪域高原团赴藏开展实践活动</a></li>
+									</ul>
+			</div>
+			<div class="right_box1">
+				<h2 class="right_pubtit"  style="background: url('http://news.bjfu.edu.cn/new_images/lueying.png') no-repeat;border-bottom: 1px solid #00753d;"><a href="/xyly/" target="_blank">&nbsp&nbsp&nbsp&nbsp校园掠影</a></h2>
+				<div class="rightpic1">
+					<div id="play_y">
+						<ul>
+							<li id="playBg_y"></li>
+							<li id="playText_y"></li>
+							<li id="playNum_y"><a>1</a><a>2</a><a>3</a><a>4</a></li>
+							<li id="playShow_y">
+																								<a href="/xyly/248787.html" target="_blank"><img src="/images/content/2017/20170522144716279532.jpg" alt="            鹫峰的春天1
+    "></a>
+																																<a href="/xyly/248788.html" target="_blank"><img src="/images/content/2017/20170522144812525826.jpg" alt="            鹫峰的春天2
+    "></a>
+																																<a href="/xyly/248789.html" target="_blank"><img src="/images/content/2017/20170522144857749004.jpg" alt="            鹫峰的春天3
+    "></a>
+																																<a href="/xyly/248790.html" target="_blank"><img src="/images/content/2017/20170522144939243237.jpg" alt="            鹫峰的春天4
+    "></a>
+																
+
+							</li>
+						</ul>
+					</div><!-- end play -->
+				</div>
+			</div>
+			<div class="right_box1">
+				<h2 class="right_pubtit"  style="background: url('http://news.bjfu.edu.cn/new_images/paihang.png') no-repeat"><a href="/yzph/" target="_blank">&nbsp&nbsp&nbsp&nbsp一周排行</a></h2>
+				<ul class="news_ul">
+
+										<li>
+						<a href="/lsyw/256881.html" title="10名研究生荣获第四届校长奖学金" class="margin_l" target="_blank">10名研究生荣获第四届校长奖学金</a></li>
+										<li>
+						<a href="/lsyw/257313.html" title="聚焦十九大：学校召开会议传达中共教育部党组、北京市精神" class="margin_l" target="_blank">聚焦十九大：学校召开会议传达中共教育部党组、北京市精神</a></li>
+										<li>
+						<a href="/lsyw/256874.html" title="学习十九大回声|沈国舫院士：统筹山水林田湖草系统治理" class="margin_l" target="_blank">学习十九大回声|沈国舫院士：统筹山水林田湖草系统治理</a></li>
+										<li>
+						<a href="/lsyw/257170.html" title="聚焦十九大：北林师生观看十九届中央政治局常委同记者见面直播" class="margin_l" target="_blank">聚焦十九大：北林师生观看十九届中央政治局常委同记者见面直播</a></li>
+										<li>
+						<a href="/lsyw/257298.html" title="冯仲科教授获何梁何利基金科学与技术创新奖" class="margin_l" target="_blank">冯仲科教授获何梁何利基金科学与技术创新奖</a></li>
+										<li>
+						<a href="/lsyw/256905.html" title="生物学院选举产生第三届党委委员" class="margin_l" target="_blank">生物学院选举产生第三届党委委员</a></li>
+										<li>
+						<a href="/lsyw/257043.html" title="学习十九大进行时：人民网发布我校推送的词频分析文章" class="margin_l" target="_blank">学习十九大进行时：人民网发布我校推送的词频分析文章</a></li>
+										<li>
+						<a href="/lsyw/257076.html" title="我校代表团参加第二届中埃农业、兽医与工程国际学术会议" class="margin_l" target="_blank">我校代表团参加第二届中埃农业、兽医与工程国际学术会议</a></li>
+									</ul>
+			</div>
+		</div>
+		<div class="center">
+			<div class="center_box1">
+				<h2 class="center_pubtit"><a href="/lsyw/" target="_blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;绿色要闻</a></h2>
+				<ul class="news_ul">
+										<li>
+						<a href="/lsyw/257411.html"  title="校党委书记王洪元到党委宣传部调研" class="margin_l" target="_blank"><span>2017-10-27</span>校党委书记王洪元到党委宣传部调研</a></li><!--<li class="conmdate" style="width:60px; float:right">2017-10-27</li>-->
+										<li>
+						<a href="/lsyw/257375.html"  title="学校在重阳节前夕为离退休老同志集体祝寿" class="margin_l" target="_blank"><span>2017-10-27</span>学校在重阳节前夕为离退休老同志集体祝寿</a></li><!--<li class="conmdate" style="width:60px; float:right">2017-10-27</li>-->
+										<li>
+						<a href="/lsyw/257394.html"  title="聚焦十九大:党外人士学习十九大精神座谈会召开" class="margin_l" target="_blank"><span>2017-10-27</span>聚焦十九大:党外人士学习十九大精神座谈会召开</a></li><!--<li class="conmdate" style="width:60px; float:right">2017-10-27</li>-->
+										<li>
+						<a href="/lsyw/257313.html"  title="聚焦十九大：学校召开会议传达中共教育部党组、北京市精神" class="margin_l" target="_blank"><span>2017-10-26</span>聚焦十九大：学校召开会议传达中共教育部党组、北京市精神</a></li><!--<li class="conmdate" style="width:60px; float:right">2017-10-26</li>-->
+										<li>
+						<a href="/lsyw/257298.html"  title="冯仲科教授获何梁何利基金科学与技术创新奖" class="margin_l" target="_blank"><span>2017-10-26</span>冯仲科教授获何梁何利基金科学与技术创新奖</a></li><!--<li class="conmdate" style="width:60px; float:right">2017-10-26</li>-->
+										<li>
+						<a href="/lsyw/257206.html"  title="聚焦十九大：学习贯彻落实十九大精神 做好十项工作" class="margin_l" target="_blank"><span>2017-10-26</span>聚焦十九大：学习贯彻落实十九大精神 做好十项工作</a></li><!--<li class="conmdate" style="width:60px; float:right">2017-10-26</li>-->
+										<li>
+						<a href="/lsyw/257257.html"  title="我校与岭南园林股份有限公司签署产学研战略合作协议" class="margin_l" target="_blank"><span>2017-10-26</span>我校与岭南园林股份有限公司签署产学研战略合作协议</a></li><!--<li class="conmdate" style="width:60px; float:right">2017-10-26</li>-->
+										<li>
+						<a href="/lsyw/257170.html"  title="聚焦十九大：北林师生观看十九届中央政治局常委同记者见面直播" class="margin_l" target="_blank"><span>2017-10-25</span>聚焦十九大：北林师生观看十九届中央政治局常委同记者见面直播</a></li><!--<li class="conmdate" style="width:60px; float:right">2017-10-25</li>-->
+									</ul>
+			</div>
+			<div class="center_box1">
+				<h2 class="center_pubtit"><a href="/lsxy/" target="_blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;校园动态</a></h2>
+				<ul class="news_ul">
+										<li>
+						<a href="/lsxy/257393.html"  title="学生安全巡查大队助力平安校园建设" class="margin_l" target="_blank"><span>2017-10-27</span>学生安全巡查大队助力平安校园建设</a></li>
+										<li>
+						<a href="/lsxy/257304.html"  title="学习十九大进行时：我校关工委组织召开党的十九大精神学习座谈会" class="margin_l" target="_blank"><span>2017-10-26</span>学习十九大进行时：我校关工委组织召开党的十九大精神学习座谈会</a></li>
+										<li>
+						<a href="/lsxy/257305.html"  title="林学院多举措关心和帮助新进青年教师成长" class="margin_l" target="_blank"><span>2017-10-26</span>林学院多举措关心和帮助新进青年教师成长</a></li>
+										<li>
+						<a href="/lsxy/257306.html"  title="我校专家导师助力高中发展指导教育" class="margin_l" target="_blank"><span>2017-10-26</span>我校专家导师助力高中发展指导教育</a></li>
+										<li>
+						<a href="/lsxy/257307.html"  title="学习十九大进行时：团员青年朗读十九大报告原文" class="margin_l" target="_blank"><span>2017-10-26</span>学习十九大进行时：团员青年朗读十九大报告原文</a></li>
+										<li>
+						<a href="/lsxy/257210.html"  title="聚焦十九大：北林大师生热议新一届中央领导集体见面会" class="margin_l" target="_blank"><span>2017-10-25</span>聚焦十九大：北林大师生热议新一届中央领导集体见面会</a></li>
+										<li>
+						<a href="/lsxy/257209.html"  title="学习十九大进行时：机关党委第一党支部与园林学院美术旅游办公室党支部联合举办学习交流会" class="margin_l" target="_blank"><span>2017-10-25</span>学习十九大进行时：机关党委第一党支部与园林学院美术旅游办公室党支部联合举办学习交流会</a></li>
+										<li>
+						<a href="/lsxy/257198.html"  title="学习十九大进行时：发展规划处党支部召开党的十九大专题学习会" class="margin_l" target="_blank"><span>2017-10-25</span>学习十九大进行时：发展规划处党支部召开党的十九大专题学习会</a></li>
+									</ul>
+			</div>
+			<div class="center_box1">
+				<h2 class="center_pubtit" style="border-bottom: 1px solid #00753d;"><a href="/spxw/" target="_blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;视频新闻</a></h2>
+				<ul class="news_picul"  style="margin-left: 25px;padding-top:10px;">
+
+										<li><a href="/spxw/256966.html" target="_blank"><img src="/images/content/2017/20171023154636917863.jpg" alt="视频新闻343期：全国政协副主席、致公党主席、科技部部长万钢来校视察" width="116" height="88"></a></li>
+										<li><a href="/spxw/256301.html" target="_blank"><img src="/images/content/2017/20171017173352838482.jpg" alt="视频新闻342期：北京林业大学建校六十五周年纪念大会隆重举行" width="116" height="88"></a></li>
+										<li><a href="/spxw/254049.html" target="_blank"><img src="/images/content/2017/20170915162704696634.jpg" alt="视频新闻341期：我校举行2017级新生开学典礼" width="116" height="88"></a></li>
+										<li><a href="/spxw/254048.html" target="_blank"><img src="/images/content/2017/20170915161958497425.jpg" alt="视频新闻340期：我校领导来到迎新现场看望师生" width="116" height="88"></a></li>
+										<li><a href="/spxw/254047.html" target="_blank"><img src="/images/content/2017/20170915161633123070.jpg" alt="视频新闻339期：我学校召开庆祝教师节座谈会" width="116" height="88"></a></li>
+										<li><a href="http://news.cctv.com/special/gaige/index.shtml" target="_blank"><img src="/images/content/2017/20170903110158876089.jpg" alt="将改革进行到底" width="116" height="88"></a></li>
+					
+				</ul>
+			</div>
+			<div class="center_box1">
+				<h2 class="center_pubtit"><a href="/lswh/" target="_blank">&nbsp;&nbsp;微媒体</a></h2>
+				<ul class="news_ul">
+										<li>
+						<a href="http://mp.weixin.qq.com/s?__biz=MzAxOTY5ODA2NA==&mid=2650414526&idx=1&sn=79f02a8cf0c62af6cba4e738e9d3d525&chksm=83cda541b4ba2c578852599fbe9e3f6f689adf5dba19bbed47ebaaf7a9119c94621dfd6e3ca6&mpshare=1&scene=23&srcid=1027hBK4FZtXiZEmQKravrkB#rd"  title="北林经管:诗酒年华||命若琴弦" class="margin_l" target="_blank">北林经管:诗酒年华||命若琴弦</a></li>
+										<li>
+						<a href="http://mp.weixin.qq.com/s?__biz=MzA4NTQ4MTgwMw==&mid=2651527993&idx=1&sn=08f917988bc4a6e41926319c64292347&chksm=8428fb1db35f720bb0d76084ad2321d473526843505bf94a278471fb688d1442e2d404780594&mpshare=1&scene=23&srcid=1027zQKRhiibC4mHjsVCZjPb#rd"  title="北林研究生:【双选会】关于举办“2018年北京地区毕业研究生专场供需见面、双向选择招聘会”的通知" class="margin_l" target="_blank">北林研究生:【双选会】关于举办“2018年北京地区毕业研究生专场供需见面、双向选择招聘会”的通知</a></li>
+										<li>
+						<a href="http://mp.weixin.qq.com/s?__biz=MjM5OTA1Nzk0OA==&mid=2661134894&idx=1&sn=f65964714942f4c0ccd7c9d9d2c59487&chksm=bda85d5d8adfd44b852c7ed9ca9abce6bfe0e559f5a6d49ac0f46157b07014067e2a720b6d86&mpshare=1&scene=23&srcid=1027p8O0uNj5NQC8gkY0IPk0#rd"  title="林苑资讯捞:外业日记丨你想看的风景都在这里" class="margin_l" target="_blank">林苑资讯捞:外业日记丨你想看的风景都在这里</a></li>
+										<li>
+						<a href="http://mp.weixin.qq.com/s?__biz=MzA3MTA4MTEwNw==&mid=2650715598&idx=1&sn=43a9d198d9fc04960db4ee1022a4462e&chksm=87391832b04e9124aa0bd763d195da024adaf2f6953032ceaa151242b7023d475a356bc9f988&mpshare=1&scene=23&srcid=1027Stp84oO959YF4oL8OMp9#rd"  title="材料人:材料行|斯道拉恩索实践日志" class="margin_l" target="_blank">材料人:材料行|斯道拉恩索实践日志</a></li>
+										<li>
+						<a href="http://mp.weixin.qq.com/s?__biz=MjM5NjgyNDcwNA==&mid=2651318637&idx=1&sn=77286425be17f8886620935864963353&chksm=bd101a828a6793947db71749e768bbd767ec0ab047e7eead260540d129fd75077efe315f1d4b&mpshare=1&scene=23&srcid=1027jjTIJQDKurID8Vjt8hVS#rd"  title="北林计协:网络部培训又来了！" class="margin_l" target="_blank">北林计协:网络部培训又来了！</a></li>
+										<li>
+						<a href="http://mp.weixin.qq.com/s?__biz=MjM5MjIyODgwMQ==&mid=2813822413&idx=1&sn=8e3195136bd0efc4798e65aa3162a044&chksm=84ea5163b39dd875d3aa7213fadc83a2a6b1748f4c6ebbbd29ecf644e92e3848b98e1d2f795c&mpshare=1&scene=23&srcid=1027gG7B9FRgaaxDe7fUfreQ#rd"  title="北林青协:【志愿招募】A4210共享单车管理招募志愿者啦！" class="margin_l" target="_blank">北林青协:【志愿招募】A4210共享单车管理招募志愿者啦！</a></li>
+										<li>
+						<a href="http://mp.weixin.qq.com/s?__biz=MzA3OTY5MjkzOA==&mid=2650589366&idx=1&sn=e5c86763a02447c0b27b7eaa1b2388c7&chksm=87a7fd53b0d07445a11d2810c3a509b47df06247c85f1712f72212c584d4c9c824a05ecf9289&mpshare=1&scene=23&srcid=10277lhnKyw1W9IiUxAjdlVl#rd"  title="北林保护区资讯:学院动态|学院与岭南园林股份有限公司签署产学研战略合作协议" class="margin_l" target="_blank">北林保护区资讯:学院动态|学院与岭南园林股份有限公司签署产学研战略合作协议</a></li>
+										<li>
+						<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDUwMTkyNA==&mid=2654778527&idx=1&sn=f9fc1b240f1be7f046a71db1a6841e8e&chksm=842e2054b359a942455ff5031bec631c3b56d98042b52922d3965febc5f0416cf9d2bdd0ffbc&mpshare=1&scene=23&srcid=1027E9BDWbGbtIXhwWZ9eD1s#rd"  title="艺资讯:【藝·展览】艺设环境设计系艺术实践课程汇报展" class="margin_l" target="_blank">艺资讯:【藝·展览】艺设环境设计系艺术实践课程汇报展</a></li>
+									</ul>
+			</div>
+			<div class="center_box1">
+				<h2 class="center_pubtit"><a href="/lssy/" target="_blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;绿色视野</a></h2>
+				<ul class="news_ul">
+										<li>
+						<a href="http://www.forestry.gov.cn/main/72/content-1040122.html"  title="吉林长白山林区金秋林海五彩山林" class="margin_l" target="_blank">吉林长白山林区金秋林海五彩山林</a></li>
+										<li>
+						<a href="http://www.forestry.gov.cn/main/72/content-1040104.html"  title="生态青海：40万人向荒山进军" class="margin_l" target="_blank">生态青海：40万人向荒山进军</a></li>
+										<li>
+						<a href="http://www.forestry.gov.cn/main/72/content-1040107.html"  title="新疆兵团人27年植树数万棵 为中蒙边境线披“绿衣”" class="margin_l" target="_blank">新疆兵团人27年植树数万棵 为中蒙边境线披“绿衣”</a></li>
+										<li>
+						<a href="http://www.forestry.gov.cn/main/72/content-1040100.html"  title="海南省出台《海南省编制自然资源资产负债表试编实施方案》" class="margin_l" target="_blank">海南省出台《海南省编制自然资源资产负债表试编实施方案》</a></li>
+										<li>
+						<a href="http://www.forestry.gov.cn/main/72/content-1040102.html"  title="四川省林业产业化重点龙头企业达238家" class="margin_l" target="_blank">四川省林业产业化重点龙头企业达238家</a></li>
+										<li>
+						<a href="http://www.forestry.gov.cn/main/72/content-1040095.html"  title="浙江省两个林业政府网站栏目获全国政府网站精品栏目奖" class="margin_l" target="_blank">浙江省两个林业政府网站栏目获全国政府网站精品栏目奖</a></li>
+										<li>
+						<a href="http://www.forestry.gov.cn/main/72/content-1040098.html"  title="广西林业绿色发展建设生态文明侧记·发展模式篇" class="margin_l" target="_blank">广西林业绿色发展建设生态文明侧记·发展模式篇</a></li>
+										<li>
+						<a href="http://www.forestry.gov.cn/main/72/content-1040193.html"  title="《关于促进中国林业云发展的指导意见》正式发布" class="margin_l" target="_blank">《关于促进中国林业云发展的指导意见》正式发布</a></li>
+									</ul>
+			</div>
+		</div>
+	</div>
+	<div class="height20"></div>
+</div>
+<div style="background-color: #003a1d;">
+<div class="footer" style="padding-top: 20px;"><a href="/gywm/">关于我们</a>    |    <a href="?">新闻投稿</a>    |    <a href="http://cms.bjfu.edu.cn/cms/index.jsp">管理员登陆</a></div>
+<div class="copyright" style="height: 50px;">
+	<p style="padding-top: 0px;">Copyright &copy; 2005- 2013 北京林业大学新闻办公室 地址：北京市海淀区清华东路35号 邮政编码:100083</p>
+</div>
+</div>
+
+<script type=text/javascript>
+	var t_x = n_x = 0, count_x = $("#playShow_x a").size();
+	var t = n = 0, count = $("#playShow a").size();
+	var t_y = n_y = 0, count_y = $("#playShow_y a").size();
+	$(function(){
+
+		$("#playShow a:not(:first-child)").hide();
+		$("#playText").html($("#playShow a:first-child").find("img").attr('alt'));
+		$("#playNum a:first").css({"background":"#333333",'color':'#ffffff'});
+		$("#playText").click(function(){window.open($("#playShow a:first-child").attr('href'), "_self")});
+		$("#playNum a").click(function() {
+			var i = $(this).text() - 1;
+			n = i;
+			if (i >= count) return;
+			$("#playText").html($("#playShow a").eq(i).find("img").attr('alt'));
+			$("#playText").unbind().click(function(){window.open($("#playShow a").eq(i).attr('href'), "_self")})
+			$("#playShow a").filter(":visible").hide().parent().children().eq(i).fadeIn(1200);
+			$(this).css({"background":"#cccccc",'color':'#ffffff'}).siblings().css({"background":"#666666",'color':'#333333'});
+		});
+		t = setInterval("showAuto()", 5000);
+		$("#play").hover(function(){clearInterval(t)}, function(){t = setInterval("showAuto()", 5000);});
+
+		$("#playShow_x a:not(:first-child)").hide();
+		$("#playText_x").html($("#playShow_x a:first-child").find("img").attr('alt'));
+		$("#playNum_x a:first").css({"background":"#cccccc",'color':'#ffffff'});
+		$("#playText_x").click(function(){window.open($("#playShow_x a:first-child").attr('href'), "_self")});
+		$("#playNum_x a").click(function() {
+			var i_x = $(this).text() - 1;
+			n_x = i_x;
+			if (i_x >= count_x) return;
+			$("#playText_x").html($("#playShow_x a").eq(i_x).find("img").attr('alt'));
+			$("#playText_x").unbind().click(function(){window.open($("#playShow_x a").eq(i_x).attr('href'), "_self")})
+			$("#playShow_x a").filter(":visible").hide().parent().children().eq(i_x).fadeIn(1200);
+			$(this).css({"background":"#cccccc",'color':'#ffffff'}).siblings().css({"background":"#666666",'color':'#333333'});
+		});
+		t_x = setInterval("showAuto_x()", 5000);
+		$("#play_x").hover(function(){clearInterval(t_x)}, function(){t_x = setInterval("showAuto_x()", 5000);});
+
+		$("#playShow_y a:not(:first-child)").hide();
+		$("#playText_y").html($("#playShow_y a:first-child").find("img").attr('alt'));
+		$("#playNum_y a:first").css({"background":"#cccccc",'color':'#ffffff'});
+		$("#playText_y").click(function(){window.open($("#playShow_y a:first-child").attr('href'), "_self")});
+		$("#playNum_y a").click(function() {
+			var i_x = $(this).text() - 1;
+			n_x = i_x;
+			if (i_x >= count_y) return;
+			$("#playText_y").html($("#playShow_y a").eq(i_x).find("img").attr('alt'));
+			$("#playText_y").unbind().click(function(){window.open($("#playShow_y a").eq(i_x).attr('href'), "_self")})
+			$("#playShow_y a").filter(":visible").hide().parent().children().eq(i_x).fadeIn(1200);
+			$(this).css({"background":"#cccccc",'color':'#ffffff'}).siblings().css({"background":"#666666",'color':'#333333'});
+		});
+		t_y = setInterval("showAuto_y()", 5000);
+		$("#play_y").hover(function(){clearInterval(t_y)}, function(){t_y = setInterval("showAuto_y()", 5000);});
+	})
+
+	function showAuto_x()
+	{
+		n_x = n_x >= (count_x - 1) ? 0 : ++n_x;
+		$("#playNum_x a").eq(n_x).trigger('click');
+	}
+
+	function showAuto()
+	{
+		n = n >= (count - 1) ? 0 : ++n;
+		$("#playNum a").eq(n).trigger('click');
+	}
+	function showAuto_y()
+	{
+		n_y = n_y >= (count_y - 1) ? 0 : ++n_y;
+		$("#playNum_y a").eq(n_y).trigger('click');
+	}
+</script>
+
+
+
+</body>
+</html> 
+</body></html>

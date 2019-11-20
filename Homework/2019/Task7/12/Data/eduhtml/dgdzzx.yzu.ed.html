@@ -1,0 +1,681 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><title>
+	
+        扬州大学电工电子教学实验中心
+    
+</title><link href="style/index_css.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" language="javascript" src="scripts/MSClass.js"></script>
+    <script type="text/javascript">
+        //初始化
+        var def = "0";
+        function mover(object) {
+            var ss = document.getElementById("focus" + object);
+            if (ss != null) {
+                ss.style.display = "block";
+            }
+            cancelpic(object);
+        }
+
+        function cancelpic(object) {
+            for (var i = 0; i < 8; i++) {
+                if (i != object) {
+                    var ss = document.getElementById("focus" + i);
+                    if (ss != null) {
+                        ss.style.display = "none";
+                    }
+                } else {
+                    var dd = document.getElementById("focus" + i);
+                    if (dd != null) {
+                        dd.style.display = "block";
+                    }
+                }
+            }
+        }
+        function YanZheng() {
+            var Title = document.getElementById("txt_Name");
+            var NewsMessage = document.getElementById("txt_PassWord");
+            if (trim(Title.value) == "") {
+                alert("用户名不能为空");
+                return false;
+            }
+            if (trim(NewsMessage.value) == "") {
+                alert("密码不能为空");
+                return false;
+            }
+        }
+        function cleartxt() {
+            document.getElementById("txt_Name").value = "";
+            document.getElementById("txt_PassWord").value = "";
+        }
+        function OnChang() {
+            var LinkUrl = document.getElementById("ddl_xn");
+            var Url = LinkUrl.options[LinkUrl.selectedIndex].value;
+
+            if (Url != "") {
+                top.open("Http://" + Url);
+            }
+        }
+        function OnChang1() {
+            var LinkUrl = document.getElementById("ddl_xw");
+            var Url = LinkUrl.options[LinkUrl.selectedIndex].value;
+
+            if (Url != "") {
+                top.open("Http://" + Url);
+            }
+        }
+    </script>
+</head>
+<body>
+    <form name="form1" method="post" action="index.aspx" id="form1">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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MzUvbmV3cy5odG1sJyB0YXJnZXQ9Il9ibGFuayIgdGl0bGU9J+WbvueJh+WNgeWFrSc+PGltZyBzcmM9Imh0dHA6Ly9kZ2R6engueXp1LmVkdS5jbi9OZXdzSW1hZ2VzLzUyMzA1Ny5KUEciIGNsYXNzPSJpbWciLz48L2E+ZAICD2QWAmYPFQGmATxhIGhyZWY9J2h0dHA6Ly9kZ2R6engueXp1LmVkdS5jbi8zMC8xNi8zNS9uZXdzLmh0bWwnIHRhcmdldD0iX2JsYW5rIiB0aXRsZT0n5Zu+54mH5Y2B5LqUJz48aW1nIHNyYz0iaHR0cDovL2RnZHp6eC55enUuZWR1LmNuL05ld3NJbWFnZXMvNTkyNzQ3LmpwZyIgY2xhc3M9ImltZyIvPjwvYT5kAgMPZBYCZg8VAaYBPGEgaHJlZj0naHR0cDovL2RnZHp6eC55enUuZWR1LmNuLzI5LzE2LzM1L25ld3MuaHRtbCcgdGFyZ2V0PSJfYmxhbmsiIHRpdGxlPSflm77niYfljYHlm5snPjxpbWcgc3JjPSJodHRwOi8vZGdkenp4Lnl6dS5lZHUuY24vTmV3c0ltYWdlcy80ODQ2MzYuanBnIiBjbGFzcz0iaW1nIi8+PC9hPmQCBA9kFgJmDxUBpgE8YSBocmVmPSdodHRwOi8vZGdkenp4Lnl6dS5lZHUuY24vMjgvMTYvMzUvbmV3cy5odG1sJyB0YXJnZXQ9Il9ibGFuayIgdGl0bGU9J+WbvueJh+WNgeS4iSc+PGltZyBzcmM9Imh0dHA6Ly9kZ2R6engueXp1LmVkdS5jbi9OZXdzSW1hZ2VzLzM3NTU4OS5qcGciIGNsYXNzPSJpbWciLz48L2E+ZAIFD2QWAmYPFQGmATxhIGhyZWY9J2h0dHA6Ly9kZ2R6engueXp1LmVkdS5jbi8yNy8xNi8zNS9uZXdzLmh0bWwnIHRhcmdldD0iX2JsYW5rIiB0aXRsZT0n5Zu+54mH5Y2B5LqMJz48aW1nIHNyYz0iaHR0cDovL2RnZHp6eC55enUuZWR1LmNuL05ld3NJbWFnZXMvMzU1Njk0LmpwZyIgY2xhc3M9ImltZyIvPjwvYT5kAgYPZBYCZg8VAaYBPGEgaHJlZj0naHR0cDovL2RnZHp6eC55enUuZWR1LmNuLzI2LzE2LzM1L25ld3MuaHRtbCcgdGFyZ2V0PSJfYmxhbmsiIHRpdGxlPSflm77niYfljYHkuIAnPjxpbWcgc3JjPSJodHRwOi8vZGdkenp4Lnl6dS5lZHUuY24vTmV3c0ltYWdlcy80MzY4ODkuanBnIiBjbGFzcz0iaW1nIi8+PC9hPmQCBw9kFgJmDxUBowE8YSBocmVmPSdodHRwOi8vZGdkenp4Lnl6dS5lZHUuY24vMjUvMTYvMzUvbmV3cy5odG1sJyB0YXJnZXQ9Il9ibGFuayIgdGl0bGU9J+WbvueJh+WNgSc+PGltZyBzcmM9Imh0dHA6Ly9kZ2R6engueXp1LmVkdS5jbi9OZXdzSW1hZ2VzLzIyNjY4MS5qcGciIGNsYXNzPSJpbWciLz48L2E+ZAIID2QWAmYPFQGjATxhIGhyZWY9J2h0dHA6Ly9kZ2R6engueXp1LmVkdS5jbi8yNC8xNi8zNS9uZXdzLmh0bWwnIHRhcmdldD0iX2JsYW5rIiB0aXRsZT0n5Zu+54mH5LmdJz48aW1nIHNyYz0iaHR0cDovL2RnZHp6eC55enUuZWR1LmNuL05ld3NJbWFnZXMvNTY2MTQ3LmpwZyIgY2xhc3M9ImltZyIvPjwvYT5kAgkPZBYCZg8VAaMBPGEgaHJlZj0naHR0cDovL2RnZHp6eC55enUuZWR1LmNuLzIzLzE2LzM1L25ld3MuaHRtbCcgdGFyZ2V0PSJfYmxhbmsiIHRpdGxlPSflm77niYflhasnPjxpbWcgc3JjPSJodHRwOi8vZGdkenp4Lnl6dS5lZHUuY24vTmV3c0ltYWdlcy83OTE2MjkuanBnIiBjbGFzcz0iaW1nIi8+PC9hPmQCCg9kFgJmDxUBowE8YSBocmVmPSdodHRwOi8vZGdkenp4Lnl6dS5lZHUuY24vMjIvMTYvMzUvbmV3cy5odG1sJyB0YXJnZXQ9Il9ibGFuayIgdGl0bGU9J+WbvueJh+S4gyc+PGltZyBzcmM9Imh0dHA6Ly9kZ2R6engueXp1LmVkdS5jbi9OZXdzSW1hZ2VzLzUzNTMyMy5qcGciIGNsYXNzPSJpbWciLz48L2E+ZAILD2QWAmYPFQGjATxhIGhyZWY9J2h0dHA6Ly9kZ2R6engueXp1LmVkdS5jbi8xMi8xNi8zNS9uZXdzLmh0bWwnIHRhcmdldD0iX2JsYW5rIiB0aXRsZT0n5Zu+54mH5YWtJz48aW1nIHNyYz0iaHR0cDovL2RnZHp6eC55enUuZWR1LmNuL05ld3NJbWFnZXMvODM3NDY1LmpwZyIgY2xhc3M9ImltZyIvPjwvYT5kAgwPZBYCZg8VAaMBPGEgaHJlZj0naHR0cDovL2RnZHp6eC55enUuZWR1LmNuLzExLzE2LzM1L25ld3MuaHRtbCcgdGFyZ2V0PSJfYmxhbmsiIHRpdGxlPSflm77niYfkupQnPjxpbWcgc3JjPSJodHRwOi8vZGdkenp4Lnl6dS5lZHUuY24vTmV3c0ltYWdlcy81Njg0MDYuanBnIiBjbGFzcz0iaW1nIi8+PC9hPmQCDQ9kFgJmDxUBowE8YSBocmVmPSdodHRwOi8vZGdkenp4Lnl6dS5lZHUuY24vMTAvMTYvMzUvbmV3cy5odG1sJyB0YXJnZXQ9Il9ibGFuayIgdGl0bGU9J+WbvueJh+Wbmyc+PGltZyBzcmM9Imh0dHA6Ly9kZ2R6engueXp1LmVkdS5jbi9OZXdzSW1hZ2VzLzU1MjQ5MC5qcGciIGNsYXNzPSJpbWciLz48L2E+ZAIOD2QWAmYPFQGiATxhIGhyZWY9J2h0dHA6Ly9kZ2R6engueXp1LmVkdS5jbi85LzE2LzM1L25ld3MuaHRtbCcgdGFyZ2V0PSJfYmxhbmsiIHRpdGxlPSflm77niYfkuIknPjxpbWcgc3JjPSJodHRwOi8vZGdkenp4Lnl6dS5lZHUuY24vTmV3c0ltYWdlcy8xNTQ4NzAuanBnIiBjbGFzcz0iaW1nIi8+PC9hPmQCDw9kFgJmDxUBogE8YSBocmVmPSdodHRwOi8vZGdkenp4Lnl6dS5lZHUuY24vOC8xNi8zNS9uZXdzLmh0bWwnIHRhcmdldD0iX2JsYW5rIiB0aXRsZT0n5Zu+54mH5LqMJz48aW1nIHNyYz0iaHR0cDovL2RnZHp6eC55enUuZWR1LmNuL05ld3NJbWFnZXMvOTgxMTgwLmpwZyIgY2xhc3M9ImltZyIvPjwvYT5kAhAPZBYCZg8VAaIBPGEgaHJlZj0naHR0cDovL2RnZHp6eC55enUuZWR1LmNuLzcvMTYvMzUvbmV3cy5odG1sJyB0YXJnZXQ9Il9ibGFuayIgdGl0bGU9J+WbvueJh+S4gCc+PGltZyBzcmM9Imh0dHA6Ly9kZ2R6engueXp1LmVkdS5jbi9OZXdzSW1hZ2VzLzcyODg1My5qcGciIGNsYXNzPSJpbWciLz48L2E+ZBgBBR5fX0NvbnRyb2xzUmVxdWlyZVBvc3RCYWNrS2V5X18WAgULTG9naW5CdXR0b24FDEltYWdlQnV0dG9uMdAXku5E/p99km/xTYsDoaipYJqO" />
+
+<script type="text/javascript">
+        function hidead()
+        { document.getElementById("pf").style.display = "none"; }
+    </script>
+    <div id="pf" style="position: absolute; z-index: 50; width: 228px;
+        height: 140px;">
+        <div id="Div1" style="width: 228px; height: 140px;">
+            <a href="http://dgdzzx.yzu.edu.cn/92/list.html" target="_blank">
+                <img src="Images/PF_new.jpg" style="width: 228px; height: 140px;" alt="" />
+            </a>
+        </div>
+        <div onclick="hidead();" style="font-size: 9pt; cursor: hand; z-index: 50;
+            text-align: right;">
+            <img src="Images/pc_close.gif" /></div>
+    </div>
+    <script type="text/javascript">
+        var x = 50, y = 60
+        var xin = true, yin = true
+        var step = 1
+        var delay = 1
+        var obj = document.getElementById("pf")
+        function floatAD() {
+            var L = T = 0
+            var R = document.body.clientWidth - obj.offsetWidth
+            var B = document.body.clientHeight - obj.offsetHeight
+            obj.style.left = x + document.body.scrollLeft
+            obj.style.top = y + document.body.scrollTop
+            x = x + step * (xin ? 1 : -1)
+            if (x < L) { xin = true; x = L }
+            if (x > R) { xin = false; x = R }
+            y = y + step * (yin ? 1 : -1)
+            if (y < T) { yin = true; y = T }
+            if (y > B) { yin = false; y = B }
+        }
+        var itl = setInterval("floatAD()", delay)
+        obj.onmouseover = function () { clearInterval(itl) }
+        obj.onmouseout = function () { itl = setInterval("floatAD()", delay) }
+    </script>
+    <div class="container">
+        <div class="M00">
+            <img src="images/Banner.jpg" /></div>
+        <div class="Menu1">
+            <ul>
+                <li id="m0" onmouseover="mover(0)"><a href="http://dgdzzx.yzu.edu.cn/index.html">首 页</a></li>
+                <li id="m1" onmouseover="mover(1)" onmouseout="cancelpic(0)"><a href="http://dgdzzx.yzu.edu.cn/1/list.html">
+                    中心概况</a></li>
+                <li id="m2" onmouseover="mover(2)" onmouseout="cancelpic(0)"><a href="http://dgdzzx.yzu.edu.cn/2/list.html">
+                    实验教学</a></li>
+                <li id="m3" onmouseover="mover(3)" onmouseout="cancelpic(0)"><a href="http://dgdzzx.yzu.edu.cn/3/list.html">
+                    教学资源</a></li>
+                <li id="m4" onmouseover="mover(4)" onmouseout="cancelpic(0)"><a href="http://dgdzzx.yzu.edu.cn/4/list.html">
+                    条件保障</a></li>
+                <li id="m5" onmouseover="mover(5)" onmouseout="cancelpic(0)"><a href="http://dgdzzx.yzu.edu.cn/5/list.html">
+                    资源共享</a></li>
+                <li id="m6" onmouseover="mover(6)" onmouseout="cancelpic(0)"><a href="http://dgdzzx.yzu.edu.cn/6/list.html">
+                    创新园地</a></li>
+                <li id="m7" onmouseover="mover(7)" onmouseout="cancelpic(0)"><a href="http://dgdzzx.yzu.edu.cn/7/list.html">
+                    申报材料</a></li>
+            </ul>
+        </div>
+        <div class="Menu2 P_T zL">
+            <div id="focus0" onmouseover="mover(0)">
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td>
+                            欢迎访问扬州大学电工电子教学实验中心网站&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;今天是:2017年10月28日 星期六
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div id="focus1" class="Menu2 zW" onmouseover="mover(1)" onmouseout="cancelpic(0)">
+                <div class='Menu2_L FL M_T'><a href='http://dgdzzx.yzu.edu.cn/1/17/list.html' target='_self'>中心概况</a></div><div class='Menu2_L FL M_T'><a href='http://dgdzzx.yzu.edu.cn/1/40/list.html' target='_self'>中心规划</a></div><div class='Menu2_L FL M_T'><a href='http://dgdzzx.yzu.edu.cn/1/41/list.html' target='_self'>机构设置</a></div><div class='Menu2_L FL M_T'><a href='http://dgdzzx.yzu.edu.cn/1/42/list.html' target='_self'>中心领导</a></div><div class='Menu2_L FL M_T'><a href='http://dgdzzx.yzu.edu.cn/1/55/list.html' target='_self'>师资队伍</a></div><div class='Menu2_L FL M_T'><a href='http://dgdzzx.yzu.edu.cn/1/44/list.html' target='_self'>高性能计算中心</a></div><div class='Menu2_L FL M_T'><a href='http://dgdzzx.yzu.edu.cn/1/45/list.html' target='_self'>实验分室</a></div>
+            </div>
+            <div id="focus2" class="Menu2 zW" onmouseover="mover(2)" onmouseout="cancelpic(0)" style="display: none; padding-left: 120px;">
+                <div class='Menu2_L FL M_T'><a href='http://dgdzzx.yzu.edu.cn/2/18/list.html' target='_self'>教学计划</a></div><div class='Menu2_L FL M_T'><a href='http://dgdzzx.yzu.edu.cn/2/56/list.html' target='_self'>实验大纲</a></div><div class='Menu2_L FL M_T'><a href='http://dgdzzx.yzu.edu.cn/2/57/list.html' target='_self'>实验环节</a></div><div class='Menu2_L FL M_T'><a href='http://dgdzzx.yzu.edu.cn/2/73/list.html' target='_self'>课程介绍</a></div>
+            </div>
+            <div id="focus3" class="Menu2 zW" onmouseover="mover(3)" onmouseout="cancelpic(0)" style="display: none; padding-left: 180px;">
+                <div class='Menu2_L FL M_T'><a href='http://dgdzzx.yzu.edu.cn/3/19/list.html' target='_self'>元器件展示</a></div><div class='Menu2_L FL M_T'><a href='http://dgdzzx.yzu.edu.cn/3/58/list.html' target='_self'>仪器设备展示</a></div><div class='Menu2_L FL M_T'><a href='http://dgdzzx.yzu.edu.cn/3/59/list.html' target='_self'>教学录像</a></div><div class='Menu2_L FL M_T'><a href='http://dgdzzx.yzu.edu.cn/3/60/list.html' target='_self'>教学课件</a></div><div class='Menu2_L FL M_T'><a href='http://dgdzzx.yzu.edu.cn/3/61/list.html' target='_self'>电子书</a></div><div class='Menu2_L FL M_T'><a href='http://dgdzzx.yzu.edu.cn/92/list.html' target='_blank'>虚拟仿真教学项目</a></div>
+            </div>
+            <div id="focus4" class="Menu2 zW" onmouseover="mover(4)" onmouseout="cancelpic(0)" style="display: none; padding-left: 280px;">
+                <div class='Menu2_L FL M_T'><a href='http://dgdzzx.yzu.edu.cn/4/20/list.html' target='_self'>管理体系</a></div><div class='Menu2_L FL M_T'><a href='http://dgdzzx.yzu.edu.cn/4/46/list.html' target='_self'>教学平台</a></div><div class='Menu2_L FL M_T'><a href='http://dgdzzx.yzu.edu.cn/4/47/list.html' target='_self'>基础条件</a></div><div class='Menu2_L FL M_T'><a href='http://dgdzzx.yzu.edu.cn/4/53/list.html' target='_self'>课程、实验项目</a></div><div class='Menu2_L FL M_T'><a href='http://dgdzzx.yzu.edu.cn/4/68/list.html' target='_self'>设备、软件清单</a></div>
+            </div>
+            <div id="focus5" class="Menu2 zW" onmouseover="mover(5)" onmouseout="cancelpic(0)" style="display: none; padding-left: 550px;">
+                <div class='Menu2_L FL M_T'><a href='http://dgdzzx.yzu.edu.cn/5/21/list.html' target='_self'>共享介绍</a></div><div class='Menu2_L FL M_T'><a href='http://dgdzzx.yzu.edu.cn/5/66/list.html' target='_self'>资源下载</a></div>
+            </div>
+            <div id="focus6" class="Menu2 zW" onmouseover="mover(6)" onmouseout="cancelpic(0)" style="display: none; padding-left: 500px;">
+                <div class='Menu2_L FL M_T'><a href='http://dgdzzx.yzu.edu.cn/6/22/list.html' target='_self'>园地新闻</a></div><div class='Menu2_L FL M_T'><a href='http://dgdzzx.yzu.edu.cn/6/62/list.html' target='_self'>学生作品</a></div><div class='Menu2_L FL M_T'><a href='http://dgdzzx.yzu.edu.cn/6/63/list.html' target='_self'>学生风采</a></div><div class='Menu2_L FL M_T'><a href='http://dgdzzx.yzu.edu.cn/6/64/list.html' target='_self'>创新文章</a></div><div class='Menu2_L FL M_T'><a href='http://dgdzzx.yzu.edu.cn/6/65/list.html' target='_self'>学生创新项目管理</a></div><div class='Menu2_L FL M_T'><a href='http://dgdzzx.yzu.edu.cn/6/102/list.html' target='_self'>园地公告</a></div>
+            </div>
+            <div id="focus7" class="Menu2 zW" onmouseover="mover(7)" onmouseout="cancelpic(0)" style="display: none; padding-left: 820px;">
+                <div class='Menu2_L FL M_T'><a href='http://dgdzzx.yzu.edu.cn/7/23/list.html' target='_self'>申报书</a></div><div class='Menu2_L FL M_T'><a href='http://dgdzzx.yzu.edu.cn/7/67/list.html' target='_self'>中心视频</a></div>
+            </div>
+        </div>
+        <div class="Main M_T">
+            <div class="M00">
+                <div class="L FL">
+                <div class="M00">
+                        <a href="http://dgdzzx.yzu.edu.cn/jxxm.html">
+                            <img src="images/L_new.jpg" width="174" height="81" /></a></div>
+                    <div class="divline">
+                    </div>
+                    <div class="L_00">
+                        <div class="M00">
+                            <img src="images/Login_1.jpg" /></div>
+                        <table id="tb_NO" width="136" border="0" cellspacing="0" cellpadding="0" align="center">
+	<tr>
+		<td colspan="2" height="10">
+                                </td>
+	</tr>
+	<tr>
+		<td width="50" align="right">
+                                    用户名：
+                                </td>
+		<td>
+                                    
+                                    <input name="txt_Name" type="text" id="txt_Name" style="width: 85px;" />
+                                </td>
+	</tr>
+	<tr>
+		<td colspan="2" height="10">
+                                </td>
+	</tr>
+	<tr>
+		<td width="50" align="right">
+                                    密&nbsp;&nbsp;码：
+                                </td>
+		<td>
+                                    
+                                    <input name="txt_PassWord" type="password" id="txt_PassWord" style="width: 85px;" />
+                                </td>
+	</tr>
+	<tr>
+		<td colspan="2" height="10">
+                                </td>
+	</tr>
+	<tr>
+		<td colspan="2">
+                                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                        <tr>
+                                            <td width="73">
+                                                
+                                                <input type="image" name="LoginButton" id="LoginButton" src="images/Login_4.gif" onclick="return YanZheng();" border="0" />
+                                            </td>
+                                            <td align="right">
+                                                
+                                                <input type="image" name="ImageButton1" id="ImageButton1" src="images/Login_5.gif" onclick="return cleartxt();" border="0" />
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+	</tr>
+	<tr>
+		<td colspan="2" height="10">
+                                </td>
+	</tr>
+</table>
+
+                        
+                        <div class="M00">
+                            <img src="images/Login_3.gif" /></div>
+                    </div>
+                    <div class="divline">
+                    </div>
+                    <div class="L_01">
+                        <a href="http://dgdzzx.yzu.edu.cn/2/73/list.html">
+                            <img src="images/L_bt1.gif" /></a></div>
+                    <div class="divline">
+                    </div>
+                    <div class="L_02">
+                                <div class="M00" style="height:10px;">
+                                    <img src="images/JX_1.gif" width="174" height="10" />
+                                </div>
+                                <div class="M00" style="height:168px; background:url(images/KC_bg.gif);">
+                                    
+                                            <div class="L_nr">
+                                                &middot;<a href='http://dgdzzx.yzu.edu.cn/92/73/2/news.html' target="_blank" title='计算机科学与技术专业部（系）'>计算机科学与技术专业部...</a>
+                                            </div>
+                                        
+                                            <div class="L_nr">
+                                                &middot;<a href='http://dgdzzx.yzu.edu.cn/91/73/2/news.html' target="_blank" title='电子与通信工程专业部（系）'>电子与通信工程专业部（...</a>
+                                            </div>
+                                        
+                                            <div class="L_nr">
+                                                &middot;<a href='http://dgdzzx.yzu.edu.cn/90/73/2/news.html' target="_blank" title='电工电子教学实验中心'>电工电子教学实验中心</a>
+                                            </div>
+                                        
+                                            <div class="L_nr">
+                                                &middot;<a href='http://dgdzzx.yzu.edu.cn/89/73/2/news.html' target="_blank" title='软件工程专业部（系）'>软件工程专业部（系）</a>
+                                            </div>
+                                        
+                                            <div class="L_nr">
+                                                &middot;<a href='http://dgdzzx.yzu.edu.cn/87/73/2/news.html' target="_blank" title='自动化专业部（系）'>自动化专业部（系）</a>
+                                            </div>
+                                        
+                                            <div class="L_nr">
+                                                &middot;<a href='http://dgdzzx.yzu.edu.cn/86/73/2/news.html' target="_blank" title='信息管理与信息系统专业部（系）'>信息管理与信息系统专业...</a>
+                                            </div>
+                                        
+                                            <div class="L_nr">
+                                                &middot;<a href='http://dgdzzx.yzu.edu.cn/85/73/2/news.html' target="_blank" title='计算机公共课教学部（计算机中心）'>计算机公共课教学部（计...</a>
+                                            </div>
+                                        
+                                </div>
+                                <div class="M00" style="height:23px;">
+                                    <img src="images/JX_2.gif" width="174" height="23" />
+                                </div>
+                    </div>
+                    <div class="divline">
+                    </div>
+                    <div class="L_01">
+                        <img src="images/L_bt2.gif" /></div>
+                    <div class="divline">
+                    </div>
+                    <div class="L_02">
+                        <div class="M00">
+                            <img src="images/L_bg1.gif" /></div>
+                        <div class="L_03">
+                            <div class="M00">
+                                
+                                <select name="ddl_xn" id="ddl_xn" onchange="OnChang()">
+	<option selected="selected" value="">===校内链接===</option>
+	<option value="www.yzu.edu.cn">扬州大学</option>
+	<option value="xxgcxy.yzu.edu.cn">信息工程学院</option>
+	<option value="mail.yzu.edu.cn">扬大邮箱</option>
+	<option value="10.184.5.10">考勤管理系统</option>
+
+</select>
+                            </div>
+                            
+                        </div>
+                        <div class="M00">
+                            <img src="images/L_bg3.gif" /></div>
+                    </div>
+                </div>
+                <div class="R FL M_E_z">
+                    <div class="R">
+                        <div class="divline">
+                        </div>
+                        <div class="R_00 FL">
+                            <div class="R_02">
+                                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                    <tr>
+                                        <td width="18">
+                                            <img src="images/R_icon.gif" width="18" height="20" />
+                                        </td>
+                                        <td>
+                                            <img src="images/R_BT1.gif" width="82" height="20" />
+                                        </td>
+                                        <td align="right">
+                                            <a href="http://dgdzzx.yzu.edu.cn/1/list.html">
+                                                <img src="images/more1.gif" /></a>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="divline">
+                            </div>
+                            <div class="R_03 M_T">
+                                
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;扬州大学电工电子教学实验中心成立于2005年，中心依托信息工程学院，实行校、院两级管理，主要承担全校电气信息类专业的实践教学任务，为学校16个专业服务，是学校重点建设的电气信息类学科重要的教学科研基地。经过几年的建设，2009年通过江苏省基础实验室示范中心验收，2010年底，在学校发展工科战略指导下，在校区功能调整决策下，从江阳路北校区搬迁到扬子津西校区。将原来分散的实验室集中到一起，现在的实验中心分三层，一层主要是基础实验室如数电、模电、电路实验室，实习室，以及自动化专业实验室如PLC、电力电子、过程控制、检测技术等实验室、自动控制原理实验室；二层主要是软件类实验室如软件技术实验室、信息系统与信息管理实验室、多媒体技术实验室、EDA实验室、网络技术实验室，NIIT实验室、微机原理实验室、组成原理实验室、单片机原理实验室、微波技术实验室等；三层主要是通信电子线路实验室、电子测量实验室、电...
+                                <span class="text_yel"><a href="http://dgdzzx.yzu.edu.cn/1/list.html">
+                                    <span id="lblckqw">[查看全文]</span></a></span>
+                                
+                            </div>
+                        </div>
+                        <div class="R_00 FL M_T_z">
+                            <div class="R_02">
+                                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                    <tr>
+                                        <td width="18">
+                                            <img src="images/R_icon.gif" width="18" height="20" />
+                                        </td>
+                                        <td>
+                                            <img src="images/R_BT5.gif" width="82" height="20" />
+                                        </td>
+                                        
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="divline">
+                            </div>
+                            <div class="R_03 M_T">
+                                
+                                
+                                <script type='text/javascript'>
+                                var focus_width=350;var focus_height=260;var text_height=20;var swf_height = focus_height+text_height;var pics = '';var links = '';var texts = '';
+                                function ati(url, img, title){
+                                    if(pics != ''){
+                                        pics = '|' + pics;
+                                        links = '|' +links;
+                                        texts = '|' + texts;
+                                    }
+                                    pics = escape(img) + pics;
+                                    links = escape(url) + links;
+                                    texts = title + texts;
+                                }
+                                ati('ShowNews.aspx?N_Type=%u0033%u0039&N_Id=%u0032%u0030%u0037', 'NewsImages/363817.JPG', '焦新安校长莅临中心指导工作');ati('ShowNews.aspx?N_Type=%u0033%u0039&N_Id=%u0032%u0030', 'NewsImages/683555.jpg', '图片四');ati('ShowNews.aspx?N_Type=%u0033%u0039&N_Id=%u0031%u0039', 'NewsImages/339991.jpg', '图片三');ati('ShowNews.aspx?N_Type=%u0033%u0039&N_Id=%u0031%u0038', 'NewsImages/303484.jpg', '图片二');ati('ShowNews.aspx?N_Type=%u0033%u0039&N_Id=%u0031%u0037', 'NewsImages/712660.jpg', '图片一');
+                               document.write('<embed src="Images/Slideviewer1.swf" wmode="opaque" FlashVars="pics='+pics+'&texts='+texts+'&links='+links+'&borderwidth='+focus_width+'&borderheight='+focus_height+'&textheight='+text_height+'" menu="false" bgcolor="#ffffff" quality="high" width="'+ focus_width +'" height="'+ swf_height +'" allowScriptAccess="sameDomain" type="application/x-shockwave-flash"/>');
+                                </script>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="divline">
+                    </div>
+                    <div class="R">
+                        <div class="R_01 FL">
+                            <a href="http://dgdzzx.yzu.edu.cn/sy" target="_blank" title="实验教学智能管理系统">
+                                <img src="images/R_T1.jpg" width="180" height="65" /></a></div>
+                        <div class="R_01 FL M_T_z">
+                            <a href="http://dgdzzx.yzu.edu.cn/8/list.html" title="实验预习自测">
+                                <img src="images/R_T2.jpg" width="180" height="65" /></a></div>
+                        <div class="R_01 FL M_T_z">
+                            <a href="http://dgdzzx.yzu.edu.cn/WD.html" title="交流互动">
+                                <img src="images/R_T3.jpg" width="180" height="65" /></a></div>
+                        <div class="R_01 FL M_T_z">
+                            <a href="http://dgdzzx.yzu.edu.cn/sy/index2.aspx" target="_blank" title="开放预约">
+                                <img src="images/R_T4.jpg" width="180" height="65" /></a></div>
+                    </div>
+                    <div class="divline">
+                    </div>
+                    <div class="R">
+                        <div class="R_00 FL">
+                            <div class="R_04">
+                                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                    <tr>
+                                        <td width="96">
+                                            <img src="images/R_BT3.gif" width="96" height="27" />
+                                        </td>
+                                        <td align="right">
+                                            <a href="http://dgdzzx.yzu.edu.cn/34/list.html">
+                                                <img src="images/more2.gif" /></a>
+                                        </td>
+                                        <td width="10">
+                                            <img src="images/R_bg3.gif" />
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="R_05">
+                                
+                                        <div class="R_nr">
+                                            <div class="R_nrz FL">
+                                                <a href='http://dgdzzx.yzu.edu.cn/248/34/34/news.html' target="_blank" title='关于第十三届“博创杯”全国大学生嵌入式设计大赛报名的通知'>关于第十三届“博创杯”全国大学生嵌入...</a>
+                                            </div>
+                                            <div class="R_nry FL">
+                                                [2016-11-18]</div>
+                                        </div>
+                                    
+                                        <div class="R_nr">
+                                            <div class="R_nrz FL">
+                                                <a href='http://dgdzzx.yzu.edu.cn/247/34/34/news.html' target="_blank" title='关于实验室及设备管理登记的通知'>关于实验室及设备管理登记的通知</a>
+                                            </div>
+                                            <div class="R_nry FL">
+                                                [2016-11-15]</div>
+                                        </div>
+                                    
+                                        <div class="R_nr">
+                                            <div class="R_nrz FL">
+                                                <a href='http://dgdzzx.yzu.edu.cn/231/34/34/news.html' target="_blank" title='关于实验室检查的通知'>关于实验室检查的通知</a>
+                                            </div>
+                                            <div class="R_nry FL">
+                                                [2016-03-21]</div>
+                                        </div>
+                                    
+                                        <div class="R_nr">
+                                            <div class="R_nrz FL">
+                                                <a href='http://dgdzzx.yzu.edu.cn/230/34/34/news.html' target="_blank" title='扬州大学本科教学审核评估有关事宜'>扬州大学本科教学审核评估有关事宜</a>
+                                            </div>
+                                            <div class="R_nry FL">
+                                                [2016-03-18]</div>
+                                        </div>
+                                    
+                                        <div class="R_nr">
+                                            <div class="R_nrz FL">
+                                                <a href='http://dgdzzx.yzu.edu.cn/222/34/34/news.html' target="_blank" title='2016年寒假前实验室管理工作检查'>2016年寒假前实验室管理工作检查</a>
+                                            </div>
+                                            <div class="R_nry FL">
+                                                [2016-01-12]</div>
+                                        </div>
+                                    
+                                        <div class="R_nr">
+                                            <div class="R_nrz FL">
+                                                <a href='http://dgdzzx.yzu.edu.cn/221/34/34/news.html' target="_blank" title='实验室安全及日本九州工业大学师生来中心交流的通知'>实验室安全及日本九州工业大学师生来中...</a>
+                                            </div>
+                                            <div class="R_nry FL">
+                                                [2016-01-04]</div>
+                                        </div>
+                                    
+                            </div>
+                        </div>
+                        <div class="R_00 FL M_T_z">
+                            <div class="R_04">
+                                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                    <tr>
+                                        <td width="96">
+                                            <img src="images/R_BT4.gif" width="96" height="27" />
+                                        </td>
+                                        <td align="right">
+                                            <a href="http://dgdzzx.yzu.edu.cn/35/list.html">
+                                                <img src="images/more2.gif" /></a>
+                                        </td>
+                                        <td width="10">
+                                            <img src="images/R_bg3.gif" />
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="R_05">
+                                
+                                        <div class="R_nr">
+                                            <div class="R_nrz FL">
+                                                <a href='http://dgdzzx.yzu.edu.cn/254/35/35/news.html' target="_blank" title='中心《农业物联网虚拟仿真实验教学虚拟实验》获省教育厅立项公示'>中心《农业物联网虚拟仿真实验教学虚拟...</a>
+                                            </div>
+                                            <div class="R_nry FL">
+                                                [2017-01-30]</div>
+                                        </div>
+                                    
+                                        <div class="R_nr">
+                                            <div class="R_nrz FL">
+                                                <a href='http://dgdzzx.yzu.edu.cn/252/35/35/news.html' target="_blank" title='美国澳大利亚荷兰等国家的中学生来中心访问'>美国澳大利亚荷兰等国家的中学生来中心...</a>
+                                            </div>
+                                            <div class="R_nry FL">
+                                                [2017-01-13]</div>
+                                        </div>
+                                    
+                                        <div class="R_nr">
+                                            <div class="R_nrz FL">
+                                                <a href='http://dgdzzx.yzu.edu.cn/249/35/35/news.html' target="_blank" title='科技信息文化节中心举行智能车设计竞赛'>科技信息文化节中心举行智能车设计竞赛</a>
+                                            </div>
+                                            <div class="R_nry FL">
+                                                [2016-11-18]</div>
+                                        </div>
+                                    
+                                        <div class="R_nr">
+                                            <div class="R_nrz FL">
+                                                <a href='http://dgdzzx.yzu.edu.cn/232/35/35/news.html' target="_blank" title='第七届“蓝桥杯”全国软件和信息技术专业人才大赛扬州赛区比赛在中心举行'>第七届“蓝桥杯”全国软件和信息技术专...</a>
+                                            </div>
+                                            <div class="R_nry FL">
+                                                [2016-03-21]</div>
+                                        </div>
+                                    
+                                        <div class="R_nr">
+                                            <div class="R_nrz FL">
+                                                <a href='http://dgdzzx.yzu.edu.cn/233/35/35/news.html' target="_blank" title='2016届毕业生人才精准对接专场校园招聘会在中心举行'>2016届毕业生人才精准对接专场校园招聘...</a>
+                                            </div>
+                                            <div class="R_nry FL">
+                                                [2016-03-21]</div>
+                                        </div>
+                                    
+                                        <div class="R_nr">
+                                            <div class="R_nrz FL">
+                                                <a href='http://dgdzzx.yzu.edu.cn/212/35/35/news.html' target="_blank" title='德国福特旺根应用科学大学副校长Ulrich Mescheder一行参观中心'>德国福特旺根应用科学大学副校长Ulrich M...</a>
+                                            </div>
+                                            <div class="R_nry FL">
+                                                [2014-11-10]</div>
+                                        </div>
+                                    
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="divline">
+            </div>
+            <div class="Tp_00">
+                <div class="M00 FL">
+                    <img src="images/TP_L.gif" /></div>
+                <div class="Tp_01 FL" id="MarqueeDiv">
+                    <table style="width: 950px; display: inline; border-collapse: collapse" border="0"
+                        cellspacing="0" cellpadding="0" align="center">
+                        <tbody>
+                            <tr>
+                                
+                                        <td align="middle">
+                                            <div class="Tp_02 FL">
+                                                <a href='http://dgdzzx.yzu.edu.cn/213/16/35/news.html' target="_blank" title='2014信息科技文化节之智能车竞赛在中心举行'><img src="http://dgdzzx.yzu.edu.cn/NewsImages/780920.JPG" class="img"/></a>
+                                            </div>
+                                        </td>
+                                    
+                                        <td align="middle">
+                                            <div class="Tp_02 FL">
+                                                <a href='http://dgdzzx.yzu.edu.cn/208/16/35/news.html' target="_blank" title='图片十六'><img src="http://dgdzzx.yzu.edu.cn/NewsImages/523057.JPG" class="img"/></a>
+                                            </div>
+                                        </td>
+                                    
+                                        <td align="middle">
+                                            <div class="Tp_02 FL">
+                                                <a href='http://dgdzzx.yzu.edu.cn/30/16/35/news.html' target="_blank" title='图片十五'><img src="http://dgdzzx.yzu.edu.cn/NewsImages/592747.jpg" class="img"/></a>
+                                            </div>
+                                        </td>
+                                    
+                                        <td align="middle">
+                                            <div class="Tp_02 FL">
+                                                <a href='http://dgdzzx.yzu.edu.cn/29/16/35/news.html' target="_blank" title='图片十四'><img src="http://dgdzzx.yzu.edu.cn/NewsImages/484636.jpg" class="img"/></a>
+                                            </div>
+                                        </td>
+                                    
+                                        <td align="middle">
+                                            <div class="Tp_02 FL">
+                                                <a href='http://dgdzzx.yzu.edu.cn/28/16/35/news.html' target="_blank" title='图片十三'><img src="http://dgdzzx.yzu.edu.cn/NewsImages/375589.jpg" class="img"/></a>
+                                            </div>
+                                        </td>
+                                    
+                                        <td align="middle">
+                                            <div class="Tp_02 FL">
+                                                <a href='http://dgdzzx.yzu.edu.cn/27/16/35/news.html' target="_blank" title='图片十二'><img src="http://dgdzzx.yzu.edu.cn/NewsImages/355694.jpg" class="img"/></a>
+                                            </div>
+                                        </td>
+                                    
+                                        <td align="middle">
+                                            <div class="Tp_02 FL">
+                                                <a href='http://dgdzzx.yzu.edu.cn/26/16/35/news.html' target="_blank" title='图片十一'><img src="http://dgdzzx.yzu.edu.cn/NewsImages/436889.jpg" class="img"/></a>
+                                            </div>
+                                        </td>
+                                    
+                                        <td align="middle">
+                                            <div class="Tp_02 FL">
+                                                <a href='http://dgdzzx.yzu.edu.cn/25/16/35/news.html' target="_blank" title='图片十'><img src="http://dgdzzx.yzu.edu.cn/NewsImages/226681.jpg" class="img"/></a>
+                                            </div>
+                                        </td>
+                                    
+                                        <td align="middle">
+                                            <div class="Tp_02 FL">
+                                                <a href='http://dgdzzx.yzu.edu.cn/24/16/35/news.html' target="_blank" title='图片九'><img src="http://dgdzzx.yzu.edu.cn/NewsImages/566147.jpg" class="img"/></a>
+                                            </div>
+                                        </td>
+                                    
+                                        <td align="middle">
+                                            <div class="Tp_02 FL">
+                                                <a href='http://dgdzzx.yzu.edu.cn/23/16/35/news.html' target="_blank" title='图片八'><img src="http://dgdzzx.yzu.edu.cn/NewsImages/791629.jpg" class="img"/></a>
+                                            </div>
+                                        </td>
+                                    
+                                        <td align="middle">
+                                            <div class="Tp_02 FL">
+                                                <a href='http://dgdzzx.yzu.edu.cn/22/16/35/news.html' target="_blank" title='图片七'><img src="http://dgdzzx.yzu.edu.cn/NewsImages/535323.jpg" class="img"/></a>
+                                            </div>
+                                        </td>
+                                    
+                                        <td align="middle">
+                                            <div class="Tp_02 FL">
+                                                <a href='http://dgdzzx.yzu.edu.cn/12/16/35/news.html' target="_blank" title='图片六'><img src="http://dgdzzx.yzu.edu.cn/NewsImages/837465.jpg" class="img"/></a>
+                                            </div>
+                                        </td>
+                                    
+                                        <td align="middle">
+                                            <div class="Tp_02 FL">
+                                                <a href='http://dgdzzx.yzu.edu.cn/11/16/35/news.html' target="_blank" title='图片五'><img src="http://dgdzzx.yzu.edu.cn/NewsImages/568406.jpg" class="img"/></a>
+                                            </div>
+                                        </td>
+                                    
+                                        <td align="middle">
+                                            <div class="Tp_02 FL">
+                                                <a href='http://dgdzzx.yzu.edu.cn/10/16/35/news.html' target="_blank" title='图片四'><img src="http://dgdzzx.yzu.edu.cn/NewsImages/552490.jpg" class="img"/></a>
+                                            </div>
+                                        </td>
+                                    
+                                        <td align="middle">
+                                            <div class="Tp_02 FL">
+                                                <a href='http://dgdzzx.yzu.edu.cn/9/16/35/news.html' target="_blank" title='图片三'><img src="http://dgdzzx.yzu.edu.cn/NewsImages/154870.jpg" class="img"/></a>
+                                            </div>
+                                        </td>
+                                    
+                                        <td align="middle">
+                                            <div class="Tp_02 FL">
+                                                <a href='http://dgdzzx.yzu.edu.cn/8/16/35/news.html' target="_blank" title='图片二'><img src="http://dgdzzx.yzu.edu.cn/NewsImages/981180.jpg" class="img"/></a>
+                                            </div>
+                                        </td>
+                                    
+                                        <td align="middle">
+                                            <div class="Tp_02 FL">
+                                                <a href='http://dgdzzx.yzu.edu.cn/7/16/35/news.html' target="_blank" title='图片一'><img src="http://dgdzzx.yzu.edu.cn/NewsImages/728853.jpg" class="img"/></a>
+                                            </div>
+                                        </td>
+                                    
+                            </tr>
+                        </tbody>
+                    </table>
+                    <script type="text/javascript">
+                        var MarqueeDiv1Control = new Marquee({
+                            MSClassID: "MarqueeDiv",
+                            Direction: 2,
+                            Timer: 2,
+                            Step: 1,
+                            Width: 970,
+                            Height: 152,
+                            AutoStart: 1
+                        })
+                    </script>
+                </div>
+                <div class="M00 FL">
+                    <img src="images/TP_R.gif" /></div>
+            </div>
+        </div>
+        <div class="divline">
+        </div>
+        <div class="Bottomline">
+        </div>
+        <div class="Bottom zW">
+            版权所有：扬州大学电工电子教学实验中心
+            &nbsp;&nbsp;&nbsp;&nbsp;技术支持：<a href="http://www.changedu.com" target="_blank">南京先极科技有限公司</a><br />
+            地 址：江苏扬州市华扬西路196号&nbsp;&nbsp;&nbsp;&nbsp;电 话：0514-87977363&nbsp;&nbsp;&nbsp;&nbsp;邮 箱：dgdzzx@yzu.edu.cn&nbsp;&nbsp;&nbsp;&nbsp;邮 编：225127
+        </div>
+    </div>
+    
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWCgKLq8DADwK7zqrYDQLy9cL8AgL+jNCfDwLSwpnTCAL4wMWHCAKQ7MTdCAKet72CBwK7zdzgDwLttve/DuGhvw0g1MMsBah2Ly4KV1yuyVdt" /></form>
+</body>
+</html>

@@ -1,0 +1,488 @@
+
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>首页 - 西南政法大学教务处</title>
+    <link href="css/global.css" rel="stylesheet">
+    <link href="css/home.css" rel="stylesheet">
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/datetime.js"></script>
+</head>
+<body>
+    <div class="wrapper">
+        
+
+        <div class="header-wrapper">
+            <div class="logo"></div>
+            <div class="date_top">2017-2018学年第一学期</div>
+            <div class="search">
+                <form name="searchForm" method="post" action="/cms/search/searchResults.jsp" target="_blank">
+                    <input name="siteID" size="4" value="179" type="hidden">
+                    <input type="submit" class="btn" value="搜索" />
+                    <input type="text" name="query" class="key" value="" placeholder="站内搜索" />
+                </form>
+            </div>
+            <div class="nav">
+                <ul>
+                    <li class="date"></li>
+                    <li class="normal"><a href=index.htm>首 页</a></li>
+                                                            <li class="line"></li>
+                    <li class="normal">
+                                                <a href=bmgk/cld/index.htm>部门概况</a>
+                                                <div class="nav-menu">
+                            <ul>
+                                                                <li><a href="bmgk/cld/index.htm">处领导</a></li>
+                                                                <li><a href="bmgk/zhglk1/index.htm">综合管理科</a></li>
+                                                                <li><a href="bmgk/jxyjk1/index.htm">教学研究科</a></li>
+                                                                <li><a href="bmgk/jwk/index.htm">教务科</a></li>
+                                                                <li><a href="bmgk/kwxjk1/index.htm">考务学籍科</a></li>
+                                                                <li><a href="bmgk/sjjxk/index.htm">实践教学科</a></li>
+                                                                <li><a href="bmgk/zljkk/index.htm">教学质量监控科</a></li>
+                                                            </ul>
+                        </div>
+                    </li>
+                                                                                <li class="line"></li>
+                    <li class="normal">
+                                                <a href=jw_nav1/nav1_notice/index.htm>教务管理</a>
+                                                <div class="nav-menu">
+                            <ul>
+                                                                <li><a href="jw_nav1/nav1_notice/index.htm">通知公告</a></li>
+                                                                <li><a href="jw_nav1/nav1_zx/index.htm">专项工作</a></li>
+                                                            </ul>
+                        </div>
+                    </li>
+                                                                                <li class="line"></li>
+                    <li class="normal">
+                                                <a href=jw_nav2/nav2_notice/index.htm>考务管理</a>
+                                                <div class="nav-menu">
+                            <ul>
+                                                                <li><a href="jw_nav2/nav2_notice/index.htm">通知公告</a></li>
+                                                                <li><a href="jw_nav2/nav2_zhx/index.htm">专项工作</a></li>
+                                                            </ul>
+                        </div>
+                    </li>
+                                                                                <li class="line"></li>
+                    <li class="normal">
+                                                <a href=jw_nav3/nav3_notice/index.htm>学籍管理</a>
+                                                <div class="nav-menu">
+                            <ul>
+                                                                <li><a href="jw_nav3/nav3_notice/index.htm">通知公告</a></li>
+                                                                <li><a href="jw_nav3/nav3_zhx/index.htm">专项工作</a></li>
+                                                            </ul>
+                        </div>
+                    </li>
+                                                                                <li class="line"></li>
+                    <li class="normal">
+                                                <a href=jw_nav4/nav4_notice/index.htm>实践教学</a>
+                                                <div class="nav-menu">
+                            <ul>
+                                                                <li><a href="jw_nav4/nav4_notice/index.htm">通知公告</a></li>
+                                                                <li><a href="jw_nav4/nav4_zhx/index.htm">专项工作</a></li>
+                                                                <li><a href="jw_nav4/nav4_gg/index.htm">实践教学改革</a></li>
+                                                                <li><a href="jw_nav4/nav4_cxcy/index.htm">创新创业项目</a></li>
+                                                                <li><a href="jw_nav4/jxdt/index.htm">教学动态</a></li>
+                                                            </ul>
+                        </div>
+                    </li>
+                                                                                <li class="line"></li>
+                    <li class="normal">
+                                                <a href=jw_nav5/nav5_notice/index.htm>质量监控</a>
+                                                <div class="nav-menu">
+                            <ul>
+                                                                <li><a href="jw_nav5/nav5_notice/index.htm">通知公告</a></li>
+                                                                <li><a href="jw_nav5/nav5_zhx/index.htm">专项工作</a></li>
+                                                            </ul>
+                        </div>
+                    </li>
+                                                                                <li class="line"></li>
+                    <li class="normal">
+                                                <a href=jw_nav6/nav6_notice/index.htm>教学研究</a>
+                                                <div class="nav-menu">
+                            <ul>
+                                                                <li><a href="jw_nav6/nav6_notice/index.htm">通知公告</a></li>
+                                                                <li><a href="jw_nav6/nav6_zhx/index.htm">专项工作</a></li>
+                                                                <li><a href="jw_nav6/kcjs/index.htm">课程介绍</a></li>
+                                                                <li><a href="jw_nav6/zyflrcpy/index.htm">人才培养</a></li>
+                                                                <li><a href="jw_nav6/jykt/index.htm">教研课题</a></li>
+                                                                <li><a href="jw_nav6/yjdt/index.htm">业界动态</a></li>
+                                                                <li><a href="jw_nav6/tszs/index.htm">他山之石</a></li>
+                                                            </ul>
+                        </div>
+                    </li>
+                                                                                <li class="line"></li>
+                    <li class="normal">
+                                                <a href=jw_nav7/nav7_notice/index.htm>辅修专区</a>
+                                                <div class="nav-menu">
+                            <ul>
+                                                                <li><a href="jw_nav7/nav7_notice/index.htm">通知公告</a></li>
+                                                                <li><a href="jw_nav7/nav7_zhx/index.htm">专项工作</a></li>
+                                                                <li><a href="jw_nav7/nav7_fxglzd/index.htm">辅修管理制度</a></li>
+                                                                <li><a href="jw_nav7/nav7_jxjh/index.htm">教学计划</a></li>
+                                                                <li><a href="jw_nav7/nav7_zykb/index.htm">专业课表</a></li>
+                                                                <li><a href="jw_nav7/nav7_fxks/index.htm">辅修考试</a></li>
+                                                            </ul>
+                        </div>
+                    </li>
+                                                                                                                                                                                                                                                                </ul>
+            </div>
+        </div>        <div class="content-wrapper clearfix">
+            <div class="toppanel clearfix">
+                <div class="toppanel-left">
+                    <dl>
+                        <dt>常用系统和链接</dt>
+                        <dd class="start">
+                            <a href=http://202.202.83.64 target="_blank">教务管理系统</a>
+                        </dd>
+                        <dd>
+                            <a href=http://cc.swupl.edu.cn target="_blank">课程中心</a>
+                        </dd>
+                        <dd>
+                            <a href=http://cet.etest.net.cn/  target="_blank">四六级考试报名</a>
+                        </dd>
+                        <dd>
+                            <a href=http://www.chsi.com.cn/cet/ target="_blank">四六级考试成绩查询</a>
+                        </dd>
+                        <dd>
+                            <a href=jw_nav6/zyflrcpy/index.htm target="_blank">卓越法律人才培养</a>
+                        </dd>
+                        <dd>
+                            <a href=jw_nav4/nav4_cxcy/index.htm target="_blank">创新创业项目</a>
+                        </dd>
+                        <dd>
+                            <a href=bkjxpg/index.htm target="_blank">本科教学评估</a>
+                        </dd>
+                        <dd>
+                            <a href=http://jxpt.swupl.edu.cn/jpk/ target="_blank">精品课程</a>
+                        </dd>
+                        <dd class="end">
+                            <a href=xzxl/index.htm>校历和教学作息时间</a>
+                        </dd>
+                    </dl>
+                </div>
+                <div class="toppanel-right">
+                    <div class="headerobj">
+                        <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="874" height="242">
+                            <param name="movie" value="images/index_dh.swf?v=20170406">
+                            <param name="quality" value="high">
+                            <param name="wmode" value="transparent">
+                            <embed src="images/index_dh.swf?v=20170406" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="874" height="242">
+                        </object>
+                    </div>
+                    <div class="quick">
+                        <ul>
+                            <li>
+                                <a href=tzgg/index.htm >
+                                    <img src="images/01.jpg" />
+                                    <p>通知公告</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href=xwdt/index.htm >
+                                    <img src="images/02.jpg" />
+                                    <p>新闻动态</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href=gzzd/sjzcflfg/index.htm >
+                                    <img src="images/03.jpg" />
+                                    <p>管理制度</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href=bszn/jsbszn/index.htm >
+                                    <img src="images/04.jpg" />
+                                    <p>办事指南</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href=zlxz/jsxzzq/index.htm>
+                                    <img src="images/05.jpg" />
+                                    <p>常用表格</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href=cjzx/index.htm>
+                                    <img src="images/06.jpg" />
+                                    <p>常见咨询</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href=http://zs.swupl.edu.cn target="_blank">
+                                    <img src="images/07.png" />
+                                    <p>本科招生</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="mainpanel clearfix">
+                <div class="topnews clearfix">
+                    <div class="topnews-slide">
+                        <div class="hd">
+                            <ul>
+                                                                <li class=""></li>
+                                                                <li class=""></li>
+                                                                <li class=""></li>
+                                                            </ul>
+                        </div>
+                        <div class="bd">
+                            <ul>
+                                                                <li>
+                                    <div class="bg"></div>
+                                    <a href="http://jwc.swupl.edu.cn/xwdt/229965.htm" target="_blank">
+                                        <img src="images/content/2017-09/20170920093002238395.jpg" alt="市教委专家组来校考察新设专业开办条件">
+                                        <p class="text-elli">市教委专家组来校考察新设专业开办条件</p>
+                                    </a>
+                                </li>
+                                                                <li>
+                                    <div class="bg"></div>
+                                    <a href="http://jwc.swupl.edu.cn/xwdt/229963.htm" target="_blank">
+                                        <img src="images/content/2017-09/20170920092917414279.jpg" alt="我校召开数据填报动员会暨质量报告编制工作协调会">
+                                        <p class="text-elli">我校召开数据填报动员会暨质量报告编制工作协调会</p>
+                                    </a>
+                                </li>
+                                                                <li>
+                                    <div class="bg"></div>
+                                    <a href="http://jwc.swupl.edu.cn/xwdt/228445.htm" target="_blank">
+                                        <img src="images/content/2017-09/20170906160243736081.jpg" alt="教务处召开本学期第一次全处大会">
+                                        <p class="text-elli">教务处召开本学期第一次全处大会</p>
+                                    </a>
+                                </li>
+                                                            </ul>
+                        </div>
+                    </div>
+                    <div class="topnews-list">
+                        <div class="hd">
+                            <h3>新闻动态</h3>
+                            <a href=xwdt/index.htm class="more">更多</a>
+                            <i class="line"></i>
+                        </div>
+                        <div class="bd">
+                            <ul class="ul-news">
+                                                                <li>
+                                    <a href="xwdt/230766.htm" title="本学期第二次教务工作会召开" class="title" target="_blank">本学期第二次教务工作会召开</a>
+                                    <span class="date">2017-09-30</span>
+                                                                        </li>
+                                                                <li>
+                                    <a href="xwdt/230261.htm" title="双创促升级  壮大新动能——我校2017年双创活动周圆满落幕" class="title" target="_blank">双创促升级  壮大新动能——我校2017年双创活动周圆满落幕</a>
+                                    <span class="date">2017-09-23</span>
+                                                                        </li>
+                                                                <li>
+                                    <a href="xwdt/229965.htm" title="市教委专家组来校考察新设专业开办条件" class="title" target="_blank">市教委专家组来校考察新设专业开办条件</a>
+                                    <span class="date">2017-09-20</span>
+                                                                        </li>
+                                                                <li>
+                                    <a href="xwdt/229963.htm" title="我校召开数据填报动员会暨质量报告编制工作协调会" class="title" target="_blank">我校召开数据填报动员会暨质量报告编制工作协调会</a>
+                                    <span class="date">2017-09-20</span>
+                                                                        </li>
+                                                                <li>
+                                    <a href="xwdt/228445.htm" title="教务处召开本学期第一次全处大会" class="title" target="_blank">教务处召开本学期第一次全处大会</a>
+                                    <span class="date">2017-09-06</span>
+                                                                        </li>
+                                                                <li>
+                                    <a href="xwdt/228236.htm" title="新学年开学准备会暨第一次教务工作会召开" class="title" target="_blank">新学年开学准备会暨第一次教务工作会召开</a>
+                                    <span class="date">2017-09-04</span>
+                                                                        </li>
+                                                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="row clearfix">
+                    <div class="row-left">
+                        <div class="hd bg1">
+                            <h3>通知公告</h3>
+                            <a href=tzgg/index.htm class="more">更多</a>
+                        </div>
+                        <div class="bd">
+                            <ul class="ul-news">
+                                                                <li>
+                                    <a href="tzgg/231749.htm" title="关于召开2017-2018学年第一学期第三次教务工作会的通知" class="title" target="_blank">关于召开2017-2018学年第一学期第三次教务工作会的通知</a>
+                                    <span class="date">2017-10-27</span>
+                                                   <i class="new"></i>
+                                    </li>
+                                                                <li>
+                                    <a href="tzgg/231453.htm" title="关于暂停教务系统外网访问的通知" class="title" target="_blank">关于暂停教务系统外网访问的通知</a>
+                                    <span class="date">2017-10-17</span>
+                                                                        </li>
+                                                                <li>
+                                    <a href="tzgg/231423.htm" title="关于吕亮同志因公临时出国（境）信息的公示" class="title" target="_blank">关于吕亮同志因公临时出国（境）信息的公示</a>
+                                    <span class="date">2017-10-16</span>
+                                                                        </li>
+                                                                <li>
+                                    <a href="tzgg/231332.htm" title="关于转发《中国高等教育学会关于开展高校双创教育实践研究专项课题申报工作的通知》的通知" class="title" target="_blank">关于转发《中国高等教育学会关于开展高校双创教育实践研究专项课题申报工作的通知》的通知</a>
+                                    <span class="date">2017-10-13</span>
+                                                                        </li>
+                                                                <li>
+                                    <a href="tzgg/231174.htm" title="关于10月14日上午部分辅修考试地点调整的通知" class="title" target="_blank">关于10月14日上午部分辅修考试地点调整的通知</a>
+                                    <span class="date">2017-10-11</span>
+                                                                        </li>
+                                                            </ul>
+                        </div>
+                    </div>
+                    <div class="row-right">
+                        <div class="hd bg4">
+                            <h3>教学动态</h3>
+                            <a href=jw_nav4/jxdt/index.htm class="more">更多</a>
+                        </div>
+                        <div class="bd">
+                            <ul class="ul-news">
+                                                                <li>
+                                    <a href="http://cis.swupl.edu.cn/xwzx/xyyw/229685.htm" title="我院举行中国刑事警察学院交换生交流座谈会" class="title" target="_blank">我院举行中国刑事警察学院交换生交流座谈会</a>
+                                    <span class="date">2017-10-14</span>
+                                                                        </li>
+                                                                <li>
+                                    <a href="http://cis.swupl.edu.cn/tzgg/228473.htm" title="刑侦学院易旻、杨进友、喻彦林三人赴加拿大参加第21届国际法庭科学大会的情况汇报" class="title" target="_blank">刑侦学院易旻、杨进友、喻彦林三人赴加拿大参加第21届国际法庭科学大会的情况汇报</a>
+                                    <span class="date">2017-09-15</span>
+                                                                        </li>
+                                                                <li>
+                                    <a href="http://cis.swupl.edu.cn/bkjy/xsfc/228385.htm" title="优秀毕业生—马跃忠：平凡的生活中流淌着细碎的不平凡" class="title" target="_blank">优秀毕业生—马跃忠：平凡的生活中流淌着细碎的不平凡</a>
+                                    <span class="date">2017-09-06</span>
+                                                                        </li>
+                                                                <li>
+                                    <a href="http://alc.swupl.edu.cn/xwgg/xyxw/224885.htm" title="应用法学院本科2015级召开实习动员大会" class="title" target="_blank">应用法学院本科2015级召开实习动员大会</a>
+                                    <span class="date">2017-06-26</span>
+                                                                        </li>
+                                                                <li>
+                                    <a href="http://soil.swupl.edu.cn/xyxw/224759.htm" title="我校在江西新增三所优秀生源基地" class="title" target="_blank">我校在江西新增三所优秀生源基地</a>
+                                    <span class="date">2017-06-19</span>
+                                                                        </li>
+                                                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="row clearfix">
+                    <div class="row-left">
+                        <div class="hd bg3">
+                            <h3>他山之石</h3>
+                            <a href=jw_nav6/tszs/index.htm class="more">更多</a>
+                        </div>
+                        <div class="bd">
+                            <ul class="ul-news">
+                                                                <li>
+                                    <a href="http://www.jyb.cn/zgjyb/201710/t20171009_790564.html" title="清华大学：打造电子化图书馆" class="title" target="_blank">清华大学：打造电子化图书馆</a>
+                                    <span class="date">2017-10-14</span>
+                                                                        </li>
+                                                                <li>
+                                    <a href="http://www.jyb.cn/zgjyb/201709/t20170911_764248.html" title="一门成功通识课能帮学生“蜕层皮”" class="title" target="_blank">一门成功通识课能帮学生“蜕层皮”</a>
+                                    <span class="date">2017-09-15</span>
+                                                                        </li>
+                                                                <li>
+                                    <a href="http://www.jyb.cn/zgjyb/201709/t20170904_758378.html" title="把握思想政治理论课的针对性" class="title" target="_blank">把握思想政治理论课的针对性</a>
+                                    <span class="date">2017-09-06</span>
+                                                                        </li>
+                                                                <li>
+                                    <a href="http://www.jyb.cn/zcg/xwy/wzxw/201706/t20170620_675529.html" title="燕京理工学院举办2017校园开放日" class="title" target="_blank">燕京理工学院举办2017校园开放日</a>
+                                    <span class="date">2017-06-26</span>
+                                                                        </li>
+                                                                <li>
+                                    <a href="http://www.jyb.cn/zgjyb/201706/t20170612_663755.html" title="理顺高校创新创业教育改革的三个关系" class="title" target="_blank">理顺高校创新创业教育改革的三个关系</a>
+                                    <span class="date">2017-06-19</span>
+                                                                        </li>
+                                                            </ul>
+                        </div>
+                    </div>
+                    <div class="row-right">
+                        <div class="hd bg2">
+                            <h3>业界动态</h3>
+                            <a href=jw_nav6/yjdt/index.htm class="more">更多</a>
+                        </div>
+                        <div class="bd">
+                            <ul class="ul-news">
+                                                                <li>
+                                    <a href="http://www.jyb.cn/zcg/xwy/wzxw/201710/t20171010_792088.html" title="2018研考网报正式开始 这些事情考研君们要知道" class="title" target="_blank">2018研考网报正式开始 这些事情考研君们要知道</a>
+                                    <span class="date">2017-10-14</span>
+                                                                        </li>
+                                                                <li>
+                                    <a href="http://www.jyb.cn/zgjyb/201709/t20170914_768144.html" title="高校综合改革应该注意些什么" class="title" target="_blank">高校综合改革应该注意些什么</a>
+                                    <span class="date">2017-09-15</span>
+                                                                        </li>
+                                                                <li>
+                                    <a href="http://www.jyb.cn/zcg/xwy/wzxw/201708/t20170825_749066.html" title="中国文化认同下的社会主义核心价值观教育" class="title" target="_blank">中国文化认同下的社会主义核心价值观教育</a>
+                                    <span class="date">2017-09-06</span>
+                                                                        </li>
+                                                                <li>
+                                    <a href="http://www.jyb.cn/zcg/xwy/wzxw/201706/t20170623_679946.html" title="北京高校师资队伍建设情况" class="title" target="_blank">北京高校师资队伍建设情况</a>
+                                    <span class="date">2017-06-26</span>
+                                                                        </li>
+                                                                <li>
+                                    <a href="http://www.sohu.com/a/148721265_190880?loc=1&focus_pic=0" title="中国这12所大学上榜世界百强大学！" class="title" target="_blank">中国这12所大学上榜世界百强大学！</a>
+                                    <span class="date">2017-06-15</span>
+                                                                        </li>
+                                                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+<div class="footer-wrapper">
+    <div class="shadow">
+        <div class="link-page">
+            <div class="popup lt">
+                <a href="javascript:;">校内链接</a>
+                <div class="all_link" style="left: -1px;">
+                    <ul>
+                                                <li><a href="http://www.swupl.edu.cn/" target="_blank" title="西南政法大学">西南政法大学</a></li>
+                                                <li><a href="http://ccls.swupl.edu.cn/" target="_blank" title="民商法学院">民商法学院</a></li>
+                                                <li><a href="http://sel.swupl.edu.cn/" target="_blank" title="经济法学院">经济法学院</a></li>
+                                                <li><a href="http://fxy.swupl.edu.cn/" target="_blank" title="法学院">法学院</a></li>
+                                                <li><a href="http://als.swupl.edu.cn/" target="_blank" title="行政法学院">行政法学院</a></li>
+                                                <li><a href="http://soil.swupl.edu.cn/" target="_blank" title="国际法学院">国际法学院</a></li>
+                                                <li><a href="http://cis.swupl.edu.cn/" target="_blank" title="刑事侦查学院">刑事侦查学院</a></li>
+                                                <li><a href="http://ms.swupl.edu.cn/" target="_blank" title="管理学院">管理学院</a></li>
+                                                <li><a href="http://es.swupl.edu.cn/" target="_blank" title="经济学院">经济学院</a></li>
+                                                <li><a href="http://sfl.swupl.edu.cn/" target="_blank" title="外语学院">外语学院</a></li>
+                                                <li><a href="http://sgjc.swupl.edu.cn/" target="_blank" title="新闻传播学院">新闻传播学院</a></li>
+                                                <li><a href="http://appa.swupl.edu.cn/" target="_blank" title="政治与公共管理学院">政治与公共管理学院</a></li>
+                                                <li><a href="http://xzmy.swupl.edu.cn/" target="_blank" title="马克思主义学院">马克思主义学院</a></li>
+                                                <li><a href="http://alc.swupl.edu.cn/" target="_blank" title="应用法学院(中国仲裁学院)">应用法学院(中国仲裁学院)</a></li>
+                                                <li><a href="http://stept.swupl.edu.cn/" target="_blank" title="体育部">体育部</a></li>
+                                                <li><a href="http://lib.swupl.edu.cn/" target="_blank" title="西南政法大学图书馆">西南政法大学图书馆</a></li>
+                                            </ul>
+                </div>
+            </div>
+            <div class="popup">
+                <a href="javascript:;">校外链接</a>
+                <div class="all_link" style="left: -1px; width: 629px;">
+                    <ul>
+                                                <li><a href="http://web.cupl.edu.cn/jwc/" target="_blank" title="中国政法大学教务处">中国政法大学教务处</a></li>
+                                                <li><a href="http://www.jwc.ecupl.edu.cn/" target="_blank" title="华东政法大学教务处">华东政法大学教务处</a></li>
+                                                <li><a href="http://jwc.zuel.edu.cn/" target="_blank" title="中南财经政法大学教务部">中南财经政法大学教务部</a></li>
+                                                <li><a href="http://jwc.nwupl.edu.cn/" target="_blank" title="西北政法大学教务处">西北政法大学教务处</a></li>
+                                                <li><a href="http://dean.pku.edu.cn/pkudean/index.html" target="_blank" title="北京大学教务部">北京大学教务部</a></li>
+                                                <li><a href="http://www.tsinghua.edu.cn/publish/jwc/615/index.html" target="_blank" title="清华大学教务处">清华大学教务处</a></li>
+                                                <li><a href="http://jiaowu.ruc.edu.cn/" target="_blank" title="中国人民大学教务处">中国人民大学教务处</a></li>
+                                                <li><a href="http://jwc.jlu.edu.cn/" target="_blank" title="吉林大学教务处">吉林大学教务处</a></li>
+                                                <li><a href="http://www.csc.edu.cn/" target="_blank" title="国家留学网">国家留学网</a></li>
+                                                <li><a href="http://www.chsi.com.cn/" target="_blank" title="中国高等教育学生信息网">中国高等教育学生信息网</a></li>
+                                            </ul>
+                </div>
+            </div>
+            <div class="popup rt">
+                <a href="javascript:;">教育资源</a>
+                <div class="all_link" style="width: 629px; right:-1px;">
+                    <ul>
+                                                <li><a href="http://www.moe.gov.cn/" target="_blank" title="中华人民共和国教育部">中华人民共和国教育部</a></li>
+                                                <li><a href="http://www.cqjw.gov.cn/" target="_blank" title="重庆市教育委员会公众信息网">重庆市教育委员会公众信息网</a></li>
+                                                <li><a href="http://www.jingpinke.com/" target="_blank" title="国家精品课程资源网">国家精品课程资源网</a></li>
+                                                <li><a href="http://www.icourses.cn/home/" target="_blank" title="爱课网">爱课网</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <p>西南政法大学版权所有 ©2017年 渝ICP备05001036号-1</p>
+    <p>渝北校区：重庆市渝北区宝圣大道301号&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;沙坪坝校区：重庆市沙坪坝区壮志路2号</p>
+</div>    </div>
+    <script src="js/jquery.SuperSlide.2.1.1.js"></script>
+    <script>
+        $(function () {
+            $(".topnews-slide").slide({ mainCell: ".bd ul", autoPlay: true, trigger: "click", delayTime: 800, interTime: 3500 });
+        })
+    </script>
+</body>
+</html>
+</body></html>

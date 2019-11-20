@@ -1,0 +1,220 @@
+<html>
+ <head> 
+ <!-- Basic Page Needs
+ ================================================== --> 
+ <meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+ <title>邮箱 - 中国人民大学</title> 
+ <meta http-equiv="X-UA-Compatible" content="IE=edge" /> 
+ <meta name="description" content="" /> 
+ <meta name="author" content="" /> 
+ <!-- Mobile Specific Metas
+ ================================================== --> 
+ <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" /> 
+ <!-- CSS
+ ================================================== --> 
+ <link rel="stylesheet" href="http://mimg.qiye.163.com/xm/qiye/login/ruc/stylesheets/base.css" /> 
+ <link rel="stylesheet" href="http://mimg.qiye.163.com/xm/qiye/login/ruc/stylesheets/skeleton.css" /> 
+ <link rel="stylesheet" href="http://mimg.qiye.163.com/xm/qiye/login/ruc/stylesheets/layout.css" /> 
+ <link rel="stylesheet" type="text/css" href="http://mimg.qiye.163.com/xm/qiye/login/ruc/css.css" /> 
+ <!--[if lt IE 9]>
+		<script src="js/html5shiv.js"></script>
+	<![endif]--> 
+ <!-- Favicons
+	================================================== --> 
+ <link rel="shortcut icon" href="http://mimg.qiye.163.com/xm/qiye/login/ruc/favicon.ico" /> 
+ <link rel="apple-touch-icon" href="http://mimg.qiye.163.com/xm/qiye/login/ruc/icon/apple-touch-icon.png" /> 
+ <link rel="apple-touch-icon" sizes="72x72" href="http://mimg.qiye.163.com/xm/qiye/login/ruc/icon/apple-touch-icon-72x72.png" /> 
+ <link rel="apple-touch-icon" sizes="114x114" href="http://mimg.qiye.163.com/xm/qiye/login/ruc/icon/apple-touch-icon-114x114.png" /> 
+ <style type="text/css">
+.popup-pop {
+ -webkit-animation: popup 3s linear infinite;
+ -o-animation: popup 7s linear infinite;
+ -moz-animation: popup 7s linear infinite;
+}
+</style> 
+ <script language="javascript"> 
+function register(){
+	window.location.href = "http://mailapply.ruc.edu.cn";
+}
+ function userCheck(){ 
+ var form = document.login_form; 
+ var username = form.account_name.value; 
+ var pwd = form.password.value; 
+ if(username == ''){ 
+ alert("请输入用户名"); 
+ return false; 
+ } 
+ else if(pwd == ''){ 
+ alert("请输入邮箱密码"); 
+ return false; 
+ } 
+ return true; 
+ } 
+</script>
+ </head> 
+ <body id="login"> 
+ <div class="wrapper"> 
+ <div class="top mobile-hidden"> 
+ <div class="container"> 
+ <div class="sixteen columns"> 
+ <div class="three columns alpha"> 
+ <a href="#" class="three columns align-center-s alpha"><img src="http://mimg.qiye.163.com/xm/qiye/login/ruc/imgs/vruc-logo@2x.png" alt="RUC" class="scale-with-grid logo" /></a> 
+ </div> 
+ <div class="five columns align-right mobile-hidden omega"> 
+ <div class="three columns alpha freshman gray mobile-hidden">
+ 新生或者新教职工？
+ </div> 
+ <div class="two columns omega">
+ <button class="btn two columns alpha" onclick="register();">注册</button>
+ </div> 
+ </div> 
+ </div> 
+ </div> 
+ </div> 
+ <div class="middle"> 
+ <div class="container"> 
+ <div class="eleven columns mobile-hidden leftbanner"> 
+ <div class="leftbanner3"> 
+ <div class="slogon"> 
+ <span class="main-slogon">Mail</span> 
+ <span class="sub-slogon">Put Your Idea In It</span> 
+ </div> 
+ </div> 
+ <div class="gear-5 popup-pop"></div> 
+ </div> 
+ <div class="five columns"> 
+ <div class="box-border box-gray five columns alpha tiup-icon radius-l"> 
+ <div class="formbox center"> 
+ <h5 class="bord row"><img src="http://mimg.qiye.163.com/xm/qiye/login/ruc/imgs/card.png" />登录邮箱</h5> 
+ <form id="login_form" name="login_form" method="post" onsubmit="return userCheck()" action="https://entryhz.qiye.163.com/domain/domainEntLogin" class="row-nomargin"> 
+ <input name="domain" value="ruc.edu.cn" type="hidden" /> 
+ <div class="inputbox row"> 
+ <div class="row"> 
+ <input class="username" id="username" name="account_name" maxlength="30" placeholder="邮箱/学工号" tabindex="1" style="padding-right:70px;" type="text" />
+ <span class="mailhelper" style="position: relative; float: right; margin-top: -31px; margin-right: 5px; z-index: 999999;">@ruc.edu.cn</span> 
+ <input class="password" id="password" name="password" maxlength="30" placeholder="密码" tabindex="2" type="password" /> 
+ </div> 
+ </div> 
+ <div class="row"> 
+ <button type="submit" class="btn login-btn" id="login-btn" tabindex="3">登录</button> 
+ </div> 
+ <div class="row-nomargin"> 
+ <input name="secure" value="1" checked="" type="checkbox" /> SSL安全登录 
+ <input name="all_secure" value="1" type="checkbox" /> 全程SSL 
+ <a id="resetPwd" class="outlink-icon helplink">忘记密码?</a> 
+ </div> 
+ </form> 
+ <script type="text/javascript" src="//mail.qiye.163.com/js/loginjs.jsp"></script> 
+ </div> 
+ </div> 
+ </div> 
+ </div> 
+ <div class="container desc mobile-hidden"> 
+ <div class="four columns alpha"> 
+ <h3>邮箱</h3> 
+ <p>人大用户的专属特权及身份象征</p> 
+ <a href="#">关于V-RUC </a> 
+ <a target="_blank" href="http://mimg.qiye.163.com/p/vip/ruc/help20150928/index_zh_CN.html"> 帮助中心 </a> 
+ <a id="resetPwd2">忘记密码</a> 
+ </div> 
+ <div class="four columns"> 
+ <div class="lefticon">
+ <img src="http://mimg.qiye.163.com/xm/qiye/login/ruc/imgs/link.png" />
+ </div> 
+ <div class="itemdesc"> 
+ <h5>和微人大结合使用</h5> 
+ <p>可以和微人大账户进行绑定，直接在微人大收邮件。使用邮箱还能找回微人大密码。</p> 
+ </div> 
+ </div> 
+ <div class="four columns"> 
+ <div class="lefticon">
+ <img src="http://mimg.qiye.163.com/xm/qiye/login/ruc/imgs/save.png" />
+ </div> 
+ <div class="itemdesc"> 
+ <h5>容量无上限</h5> 
+ <p>当邮箱用量达到现有容量80%时，会自动扩容。学生毕业后可以终生使用人大邮箱。</p> 
+ </div> 
+ </div> 
+ <div class="four columns omega"> 
+ <div class="lefticon">
+ <img src="http://mimg.qiye.163.com/xm/qiye/login/ruc/imgs/phone.png" />
+ </div> 
+ <div class="itemdesc"> 
+ <h5>支持移动终端</h5> 
+ <p>在手机或者平板电脑上会自动切换成更适合阅读的模式。</p> 
+ </div> 
+ </div> 
+ </div> 
+ </div> 
+ </div> 
+ <div class="bottom"> 
+ <div class="container"> 
+ <div class="sixteen columns footer"> 
+ <ul class="footerlist"> 
+ <li><span class="c2 block">&copy; <i class="year">2016</i> RUC</span></li> 
+ <li class="mobile-hidden"><a href="#" class="black">办公</a></li> 
+ <li class="mobile-hidden"><a href="#" class="black">教学</a></li> 
+ <li class="mobile-hidden"><a href="#" class="black">科研</a></li> 
+ <li class="mobile-hidden"><a href="#" class="black">生活</a></li> 
+ <li><a href="#" class="black">隐私政策</a></li> 
+ <li><a href="#" class="black">使用条款</a></li> 
+ <img src="http://mimg.qiye.163.com/xm/qiye/login/ruc/imgs/ruc.png" style="float: right; margin-left: 10px;" /> 
+ <div class="mobile-hidden"> 
+ <select name="language three columns"> <option value="chn">中文（简体）</option> <option value="chn_tw">中文（繁体）</option> <option value="eng">English</option> </select> 
+ </div> 
+ </ul> 
+ </div> 
+ </div> 
+ </div> 
+ <script src="http://mimg.qiye.163.com/xm/qiye/login/ruc/js/jquery.min.js"></script> 
+ <script type="text/javascript">
+	(function () {
+		var resetUrl = 'https://hostname/mailapp/qiyeurs/?from=fromUrl#/resetPwd';
+		var currentHostName = 'mailhz.qiye.163.com';
+		$('#resetPwd').click(function () {
+			location.href = resetUrl.replace('hostname', currentHostName).replace('fromUrl', encodeURIComponent(location.href));
+		});
+		$('#resetPwd2').click(function () {
+			location.href = resetUrl.replace('hostname', currentHostName).replace('fromUrl', encodeURIComponent(location.href));
+		});
+	})();
+ </script> 
+ <script>
+	$('#login_form').on('keydown', 'input', function (event) {
+	 if (event.which == 13) {
+	 event.preventDefault();
+	 var $this = $(event.target);
+	 var index = parseFloat($this.attr('tabindex'));
+ $('[tabindex="' + (index + 1).toString() + '"]').focus();
+	 if(index + 1 == 3){
+		$('[tabindex="' + (index + 1).toString() + '"]').click();
+	 }
+	 }
+	})
+ </script> 
+ <script> 
+	new function($) {
+	 $.fn.setCursorPosition = function(pos) {
+	 if ($(this).get(0).setSelectionRange) {
+	 $(this).get(0).setSelectionRange(pos, pos);
+	 } else if ($(this).get(0).createTextRange) {
+	 var range = $(this).get(0).createTextRange();
+	 range.collapse(true);
+	 range.moveEnd('character', pos);
+	 range.moveStart('character', pos);
+	 range.select();
+	 }
+	 }
+	}(jQuery);
+	var param = (window.location.search); 
+	if(param.length > 3){
+		$('#errormsg').html(decodeURI(param.substring(5, param.length))).show();
+	}
+ </script>
+ <script>
+ var today = new Date();var year = today.getFullYear();$('.year').html(year);
+ </script>
+ <!-- End Document
+================================================== --> 
+ </body>
+</html>

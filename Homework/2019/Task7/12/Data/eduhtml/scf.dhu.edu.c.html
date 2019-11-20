@@ -1,0 +1,286 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9">
+<title>上海国际时尚创意学院</title>
+	<!-- CSS -->
+
+<link type="text/css" href="/_css/_system/system.css" rel="stylesheet"/>
+
+<script language="javascript" src="/_js/jquery.min.js"></script>
+<script language="javascript" src="/_js/jquery.sudy.wp.visitcount.js"></script>
+<link href="/_upload/tpl/06/d8/1752/template1752/style.css" rel="stylesheet" type="text/css" />
+
+	<!-- /CSS -->
+<script src="http://code.jquery.com/jquery-latest.js">
+</script>
+<script src="/_upload/tpl/06/d8/1752/template1752/js/freewall.js">
+</script>
+<script src="/_upload/tpl/06/d8/1752/template1752/js/html5.js">
+</script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js">
+</script>
+<script src="/_upload/tpl/06/d8/1752/template1752/js/common.js">
+</script>
+
+	<!--[if lt IE 9]>    <script src="/_upload/tpl/06/d8/1752/template1752/js/html5.js">IE7_PNG_SUFFIX=".png";</script>
+<![endif]-->
+<script type="text/javascript">
+	    $(function () {
+	        $("#accordion").accordion({
+	            collapsible: false,
+	            activate: function (event, ui) {
+	                var n = $("#accordion .ui-accordion-header-active").attr("lt");
+	                $(".slideshow .photo").fadeOut(1000);
+	                $("#photo" + n).fadeIn(1000);
+	            }
+
+	        });
+	        var wall = new freewall('#container');
+
+	        wall.reset({
+	            selector: '.card',
+	            animate: true,
+	            delay: 50,
+	            gutterX: 23,
+	            gutterY: 16,
+	            cellW: 222,
+	            cellH: 220,
+	            onResize: function () {
+	                wall.fitWidth();
+	            }
+	        });
+	        //wall.fitZone();
+	        wall.fitWidth(944);
+	        wall.refresh();
+
+	        $(".slideshow").mouseenter(function () {
+	            window.clearInterval(s);
+	        });
+	        $(".slideshow").mouseleave(function () {
+	            s = window.setInterval(chooselist, 4000);
+	        });
+	    });
+	    var s = setInterval(chooselist, 4000);
+	    function chooselist() {
+	        var n = $("#accordion .ui-accordion-header-active").attr("lt");
+	        n++;
+	        if (n > 5) {
+	            n = 1;
+	        }
+	        $("#accordion dt[lt='" + n + "']").click();
+	    }</script>
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<body>
+
+<script>gethead();</script>
+<div id="headstr"></div>
+<div class="containerwraper">
+    <div class="container">
+        <div class="slideshow">
+            <div class="mainmenu" id="accordion">
+                <div class="dt" lt="1">
+                    <strong>&lt;</strong>学院概况
+                </div>
+                <div class="dd tile">
+                    <p>
+                        <a href="http://webplus.dhu.edu.cn/_s226/11968/list.psp">学院简介</a>
+                    </p>
+                    <p>
+                        <a href="http://webplus.dhu.edu.cn/_s226/xyjg/list.psp">学院机构</a>
+                    </p>
+                    <p>
+                        <a href="http://webplus.dhu.edu.cn/_s226/hzyx/list.psp">合作院校</a>
+                    </p>
+                </div>
+                <div class="dt" lt="2">
+                    <strong>&lt;</strong>专业设置
+                </div>
+                <div class="dd">
+                    <p>
+                        <a href="http://webplus.dhu.edu.cn/_s226/fzcysj/list.psp">服装创意设计</a>
+                    </p>
+                    <p>
+                        <a href="http://webplus.dhu.edu.cn/_s226/sssnsj/list.psp">时尚室内设计</a>
+                    </p>
+                </div>
+                <div class="dt" lt="3">
+                    <strong>&lt;</strong>师资团队
+                </div>
+                <div class="dd tile">
+                    <p>
+                        <a href="http://webplus.dhu.edu.cn/_s226/dhsz/list.psp">东华师资</a>
+                    </p>
+                    <p>
+                        <a href="http://webplus.dhu.edu.cn/_s226/fxxz/list.psp">飞行学者</a>
+                    </p>
+                    <p>
+                        <a href="http://webplus.dhu.edu.cn/_s226/jzjs/list.psp">兼职教授</a>
+                    </p><!--<p><a href="http://webplus.dhu.edu.cn/_s226/jzjs/list.psp">行政团队</a></p>-->
+                </div>
+                <div class="dt" lt="4">
+                    <strong>&lt;</strong>招生信息
+                </div>
+                <div class="dd">
+                    <p>
+                        <a href="http://webplus.dhu.edu.cn/_s226/dhdx2017nyslzybkzsjz/list.psp">东华大学上海国际时尚创意学院2017年招生简章</a>
+                    </p>
+                </div>
+                <div class="dt" lt="4">
+                    <strong>&lt;</strong>在线课程
+                </div>
+                <div class="dd">
+                    <p>
+                        <a href="http://webplus.dhu.edu.cn/_s226/fscl/list.psp">服饰材料</a>
+                    </p>
+                </div>
+                <div class="dt" lt="5">
+                    <strong>&lt;</strong>校园生活
+                </div>
+                <div class="dd">
+                    <p>
+                        <a href="http://webplus.dhu.edu.cn/_s226/dhdxxy/list.psp">东华大学校园</a>
+                    </p>
+                    <p>
+                        <a href="http://webplus.dhu.edu.cn/_s226/adbdxxy/list.psp">爱丁堡大学校园</a>
+                    </p>
+                </div>
+            </div>
+            <div class="photo" id="photo1">
+                <img width="944" height="269" src="/_upload/tpl/06/d8/1752/template1752/image/6361499431407621258954015.jpg"/>
+            </div>
+            <div class="photo" id="photo2" style="display: none;">
+                <img width="944" height="269" src="/_upload/tpl/06/d8/1752/template1752/image/6361499449289932667294554.jpg"/>
+            </div>
+            <div class="photo" id="photo3" style="display: none;">
+                <img width="944" height="269" src="/_upload/tpl/06/d8/1752/template1752/image/6361499465228480654764408.jpg"/>
+            </div>
+            <div class="photo" id="photo4" style="display: none;">
+                <img width="944" height="269" src="/_upload/tpl/06/d8/1752/template1752/image/6354863385508631951839734.jpg"/>
+            </div>
+            <div class="photo" id="photo5" style="display: none;">
+                <img width="944" height="269" src="/_upload/tpl/06/d8/1752/template1752/image/6354863386749302922908453.jpg"/>
+            </div>
+        </div>
+        <div class="indexcardwraper">
+            <div class="indexcard" id="container">
+                <div class="card square_l bgc_purple">
+                    <div class="indexnews">
+                        <div class="photo">
+                            <p style="text-align: center;">
+                                <a href="http://webplus.dhu.edu.cn/_s226/12400/list.psp" target="_self"><img width="461" height="298" title="Untitled-1.jpg" style="width: 461px; height: 298px; color: rgb(56, 56, 56); text-indent: 28px; font-size: 14px; white-space: normal;" alt="Untitled-1.jpg" src="/_upload/tpl/06/d8/1752/template1752/image/6363227779601585753768177.jpg"/></a>
+                            </p>
+                        </div>
+                        <div class="word">
+                            <div class="wordin">
+                                <h1 style="line-height: normal; margin-bottom: 5px;">
+                                    <span style="font-size: 20px;"></span>中芬机遇挑战100<span style="font-size: 20px;"></span>
+                                </h1>
+                                <p style="line-height: normal; padding-bottom: 10px; font-family: 'Helvetica Neue', Helvetica, 'Hiragino Sans GB', 'Microsoft YaHei', Arial, sans-serif; font-size: 24px; font-weight: 400; margin-bottom: 5px; border-bottom-color: rgb(231, 231, 235); border-bottom-width: 1px; border-bottom-style: solid; white-space: normal;">
+                                    <span style="font-size: 18px;"></span>
+                                </p>
+                                <h1 style="color: rgb(255, 255, 255); line-height: normal; letter-spacing: 2px; font-size: 26px; font-weight: normal; margin-bottom: 6px; white-space: normal;" dir="ltr">
+                                    <span style="font-size: 16px;">可持续时尚工作营系列活动圆满结束</span><span style="font-size: 16px;"></span>
+                                </h1>
+                                <p>
+                                    <br/>
+                                </p>
+                            </div>
+                        </div>
+                    </div><a class="icon_more" href="javascript:void(0)"></a>&nbsp; &nbsp; &nbsp; &nbsp;
+                </div>
+                <div class="card square_s">
+                    <a href="http://webplus.dhu.edu.cn/_s226/dhdx2017nyslzybkzsjz/list.psp" target="_self"></a><a href="http://webplus.dhu.edu.cn/_s226/dhdx2017nyslzybkzsjz/list.psp" target="_self"><img title="招生简章.jpg" alt="招生简章.jpg" src="/_upload/tpl/06/d8/1752/template1752/image/6361955706999837802625526.jpg"/></a><a style="display: inline !important;" href="http://webplus.dhu.edu.cn/_s226/dhdx2017nyslzybkzsjz/list.psp" target="_self">&nbsp;<img width="222" height="222" title="index_admisselect.jpg" style="width: 222px; height: 222px;" alt="index_admisselect.jpg" src="/_upload/tpl/06/d8/1752/template1752/image/6354967864746008183168029.jpg" border="0"/></a>
+                </div>
+                <div class="card square_s">
+                    <a href="http://scf.dhu.edu.cn/ueditor/net/upload/file/20170323/6362587391723975239162079.pdf" target="_blank"></a><a href="http://webplus.dhu.edu.cn/_s226/12412/list.psp" target="_blank"><img width="220" height="221" title="6.jpg" style="width: 220px; height: 221px;" alt="6.jpg" src="/_upload/tpl/06/d8/1752/template1752/image/6361680858511909813898979.jpg"/></a>
+                </div>
+                <div class="card rectangle">
+                    <a title="SCF学院2016级新生开学典礼" href="http://scf.dhu.edu.cn/news/news.html?id=74" target="_self"></a><a title="SCF学院2016级新生开学典礼" href="http://webplus.dhu.edu.cn/_s226/12401/list.psp" target="_self"><img width="460" height="221" title="5.11 工作营海报-01 copy.jpg" style="width: 460px; height: 221px;" alt="5.11 工作营海报-01 copy.jpg" src="/_upload/tpl/06/d8/1752/template1752/image/6363000317097626665682847.jpg"/></a><a class="btmtip def bgc_hgray btmtiphover">&nbsp; 中芬机遇挑战100系列活动预告</a>SCF学院2016级新生开学典礼 &nbsp; &nbsp; &nbsp; &nbsp;
+                </div>
+                <div class="card square_s">
+                    <a href="http://webplus.dhu.edu.cn/_s226/hzyx/list.psp" target="_self"><img width="222" height="222" title="2.jpg" alt="2.jpg" src="/_upload/tpl/06/d8/1752/template1752/image/6361496940220525716174737.jpg"/></a><a class="btmtip def bgc_hgray btmtiphover">&nbsp; 合作院校</a> &nbsp; &nbsp; &nbsp; &nbsp;
+                </div>
+                <div class="card square_s">
+                    <a href="http://webplus.dhu.edu.cn/_s226/fzcysj/list.psp" target="_self"><img width="222" height="222" title="1.jpg" alt="1.jpg" src="/_upload/tpl/06/d8/1752/template1752/image/6361496867716278369633901.jpg"/></a><a class="btmtip def bgc_hgray btmtiphover">&nbsp; 服装创意设计专业</a> &nbsp; &nbsp; &nbsp; &nbsp;
+                </div>
+                <div class="card square_s">
+                    <a href="http://webplus.dhu.edu.cn/_s226/sssnsj/list.psp" target="_self"><img width="222" height="222" title="4.jpg" alt="4.jpg" src="/_upload/tpl/06/d8/1752/template1752/image/6361497019518584996936614.jpg"/></a><a class="btmtip def bgc_hgray btmtiphover">&nbsp; 时尚室内设计专业</a> &nbsp; &nbsp; &nbsp; &nbsp;
+                </div>
+                <div class="card square_s bgc_purple">
+                    <div class="indexothers">
+                        <div class="word">
+                            <div class="wordin">
+                                <h1 class="mrg_t7">
+                                    课程特色
+                                </h1>
+                                <p class="mrg_t7 leht_18" style="display: none;">
+                                    强强联合的学科背景<br/>优质高端的国际化师资<br/>本土与国际交融的创新理念<br/>理论与实践并重的培养特色<br/>项目实战制的教学模式<br/>工作室制的教学环境<br/>自我服务,自我管理的学生培养模式
+                                </p>
+                                <p class="mrg_t19">
+                                    国际化师资队伍<br/>项目化教学模式<br/>工作室教学环境<br/>学生之自我管理
+                                </p>
+                            </div>
+                        </div>
+                    </div><a class="icon_more" href="http://webplus.dhu.edu.cn/_s226/fzcysjkcts/list.psp"></a>
+                </div>
+                <div class="card square_s">
+                    <a href="http://webplus.dhu.edu.cn/_s226/11972/list.psp" target="_self"><img width="222" height="222" title="3.jpg" alt="3.jpg" src="/_upload/tpl/06/d8/1752/template1752/image/6361496953360428798998177.jpg"/></a><a class="btmtip def bgc_hgray btmtiphover">&nbsp; 校园生活</a>
+                </div>
+                <div class="card square_s">
+                    <a href="http://webplus.dhu.edu.cn/_s226/dhsz/list.psp" target="_self"><img width="222" height="222" title="5.jpg" alt="5.jpg" src="/_upload/tpl/06/d8/1752/template1752/image/6361497048774876373678203.jpg"/></a><a class="btmtip def bgc_hgray btmtiphover">&nbsp; 师资团队</a>
+                </div>
+                <div class="card rectangle bgc_dgray">
+                    <div class="indexfoot">
+                        <div class="indexfootin">
+                            <div class="left">
+                                <img width="172" height="172" title="上海国际时尚创意学院微信二维码修改.jpg" alt="上海国际时尚创意学院微信二维码修改.jpg" src="/_upload/tpl/06/d8/1752/template1752/image/6355639947973109451368468.jpg"/>
+                            </div>
+                            <div class="right">
+                                <p>
+                                    <a href="http://www.dhu.edu.cn/" target="_blank"><img width="189" height="41" title="logo_dh.jpg" alt="logo_dh.jpg" src="/_upload/tpl/06/d8/1752/template1752/image/6354715489537123815292695.jpg"/></a>
+                                </p>
+                                <p class="mrg_t10">
+                                    <img width="227" height="17" title="logo_scf.jpg" alt="logo_scf.jpg" src="/_upload/tpl/06/d8/1752/template1752/image/6354715491468934301693531.jpg"/>
+                                </p>
+                                <p class="mrg_t10 ft_sz_8">
+                                    Copyright 2001-2014 Donghua University. All rights reserved.
+                                </p>
+                                <p class="ft_sz_11">
+                                    地址:上海市延安西路1882号东华大学 200051<br/><a href="mailto:scf@dhu.edu.cn">scf@dhu.edu.cn</a>
+                                </p>
+                                <p class="mrg_t10 ft_sz_11">
+                                    <img width="19" height="15" title="2Dbarcodes_s.jpg" alt="2Dbarcodes_s.jpg" src="/_upload/tpl/06/d8/1752/template1752/image/dh/6354939947308857827684814.jpg"/>&nbsp;SCF官方微信二维码
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>
+ <image src="/_visitcount?siteId=226&type=1&columnId=11420" style="display:none" width="0" height="0"></image>

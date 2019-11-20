@@ -1,0 +1,627 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+    <meta name="author" content="洪皓" />
+    <title>科技处</title>
+    <link href="images/Style.css" type="text/css" rel="stylesheet" />
+	<script src="js/jquery-1.8.3.js" type="text/javascript"></script>
+	<script src="js/func_con.js" type="text/javascript"></script>
+	<script type="text/javascript">
+        <!--
+        var timeout = 500;
+        var closetimer= 0;
+        var ddmenuitem = 0;
+        // open hidden layer
+        function mopen(id)
+        {	
+	        // cancel close timer
+	        mcancelclosetime();
+
+	        // close old layer
+	        if(ddmenuitem) ddmenuitem.style.visibility = 'hidden';
+
+	        // get new layer and show it
+	        ddmenuitem = document.getElementById(id);
+	        ddmenuitem.style.visibility = 'visible';
+
+        }
+        // close showed layer
+        function mclose()
+        {
+	        if(ddmenuitem) ddmenuitem.style.visibility = 'hidden';
+        }
+
+        // go close timer
+        function mclosetime()
+        {
+	        closetimer = window.setTimeout(mclose, timeout);
+        }
+
+        // cancel close timer
+        function mcancelclosetime()
+        {
+	        if(closetimer)
+	        {
+		        window.clearTimeout(closetimer);
+		        closetimer = null;
+	        }
+        }
+
+        // close layer when click-out
+        document.onclick = mclose; 
+        // -->
+    </script>
+
+
+</head>
+<body>
+	<div id="i_top">
+		<div id="i_top_con">
+			<div id="i_top_l">
+				<img src="images/logo.jpg" alt=""/>				
+			</div>
+			<div id="i_top_r">
+				<div id="i_top_r1">
+				</div>
+				<div id="i_top_r2">
+					<form action="http://cms.bjfu.edu.cn/cms/search/searchResults.jsp?siteID=222" method="post">
+						<span><input class="form_input" onfocus="this.value=''" value="Search" name="query" /></span>						
+						<span>
+							<input class="form_submit" name="imgbtn" type="image" src="images/search_button.jpg" width="25" height="25" />
+						</span>
+					</form>
+				</div>
+				<div id="i_top_r3">/
+				</div>
+				<div id="i_top_r4">
+					<a href="http://vpn.bjfu.edu.cn/" target="_blank">VPN</a>
+				</div>
+				<div id="i_top_r3">/
+				</div>
+				<div id="i_top_r5">
+					<img src="images/weixin.png" width='70' height="70" alt=""/>
+				</div>
+				<div id="i_top_r6">微信号
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="i_back">
+		<div id="i_nav">
+			
+<ul>
+				<li><a href="/" onmouseover="mopen('m1')" onmouseout="mclosetime()">首&nbsp;页</a>
+					<div id="m1" onmouseover="mcancelclosetime()" onmouseout="mclosetime()" style="display:none;">
+		            </div>
+				</li>
+				<li><a href="/bszn/" onmouseover="mopen('m2')" onmouseout="mclosetime()">办事指南</a>
+					<div id="m2" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+					
+					<a href="/bszn/ywlc/">业务流程</a>
+		            <a href="/bszn/cyxz/">常用下载</a>
+					<a href="/bszn/gzzn/215509.htm">工作职能</a>
+		            <a href="/bszn/ryfg/223616.htm">人员分工</a>
+		            </div>
+				</li>
+				<li><a href="/kjcg/" onmouseover="mopen('m3')" onmouseout="mclosetime()">科技成果</a>
+					<div id="m3" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+		            <a href="/kjcg/kjjl/">科技奖励</a>
+		            <a href="/kjcg/sjtj/">数据统计</a>
+					<a href="/kjcg/cgdt/">成果动态</a>
+		            <a href="/kjcg/cgzs/">成果展示</a>
+					<a href="/kjcg/yyytg/">应用与推广</a>
+		            </div>
+				</li>
+				<li><a href="/jdpt/" onmouseover="mopen('m7')" onmouseout="mclosetime()">基地平台</a>
+					<div id="m7" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+					<a href="/jdpt/jdjs/">基地介绍</a>
+		            <a href="/jdpt/jdxw/">基地新闻</a>
+					<a href="/jdpt/xmcg/">成果应用</a>
+		            <a href="/jdpt/glzd/">管理制度</a>
+		            </div>
+				</li>
+				<li><a href="/xsdd/" onmouseover="mopen('m4')" onmouseout="mclosetime()">学术道德</a>
+					<div id="m4" onmouseover="mcancelclosetime()" onmouseout="mclosetime()" style="display:none;">
+		            </div>
+				</li>
+				<li><a href="/zczd/" onmouseover="mopen('m5')" onmouseout="mclosetime()">政策制度</a>
+					<div id="m5" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+		            <a href="/zczd/kjbxg/">科技部相关</a>
+		            <a href="/zczd/jybxg/">教育部相关</a>
+					<a href="/zczd/gjzrkxw/">自然科学基金</a>
+					<a href="/zczd/gjlyj/">国家林业局</a>
+					<a href="/zczd/bjsxg/">北京市相关</a>
+		            <a href="/zczd/hxkt/">横向课题</a>
+					<a href="/zczd/xxxg/">学校相关</a>
+					<a href="/zczd/qt/">其他</a>
+		            </div>
+				</li>
+				<li><a href="/kjdt/" onmouseover="mopen('m6')" onmouseout="mclosetime()">科技动态</a>
+					<div id="m6" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+		            <a href="/kjdt/kjkx/">科技快讯</a>
+		            <a href="/kjdt/kyxm/">科研项目</a>
+		            </div>
+				</li>
+				
+				<li><a href="http://202.204.112.29/business/login.jsp" target="_blank" onmouseover="mopen('m8')" onmouseout="mclosetime()">科研系统</a>
+					<div id="m8" onmouseover="mcancelclosetime()" onmouseout="mclosetime()" style="display:none;">
+		            </div>
+				</li>
+			</ul>		</div>
+		<div id="i_cont">
+			<div id="i_cont_con2">
+				<div id="banner">	
+					<div id="banner_left"></div>
+					<div id="banner_right"></div>
+					<div id="banner_bg"></div>
+					<div id="banner_info"></div>
+					<ul style="display:none;">
+						<li class="on"></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+					</ul>
+					<div id="banner_list">
+						<!--<a href="images/p1.jpg" target="_blank"><img src="images/p1.jpg" title="keleyi.com" alt="柯乐义 1" /></a>
+						<a href="images/p2.jpg" target="_blank"><img src="images/p2.jpg" title="keleyi.com" alt="柯乐义 2" /></a>
+						<a href="images/p3.jpg" target="_blank"><img src="images/p3.jpg" title="keleyi.com" alt="柯乐义 3" /></a>
+						<a href="images/p4.jpg" target="_blank"><img src="images/p4.jpg" title="keleyi.com" alt="柯乐义 4" /></a>
+						<a href="images/p2.jpg" target="_blank"><img src="images/p2.jpg" title="keleyi.com" alt="柯乐义 2" /></a>-->
+																					<a href="/tpxw/242383.htm" target="_blank"><img src="/images/content/2017/20170309182238358201.jpg" title="" alt="            学校召开科研经费监管领导小组工作会议 
+    " /></a>
+																												<a href="/tpxw/242159.htm" target="_blank"><img src="/images/content/2017/20170307222621308617.jpg" title="" alt="            学校2016年教育部科学研究优秀成果奖数量创历史新... 
+    " /></a>
+																												<a href="/tpxw/238936.htm" target="_blank"><img src="/images/content/2017/20170114162601571160.jpg" title="" alt="            2017年社科类基金项目申报培训会举办 
+    " /></a>
+																												<a href="/tpxw/238935.htm" target="_blank"><img src="/images/content/2017/20170114162720083230.png" title="" alt="            学校举办2017年国家自然科学基金申报辅导动员会 
+    " /></a>
+																												<a href="/tpxw/238772.htm" target="_blank"><img src="/images/content/2017/20170112094431082754.jpg" title="" alt="            我校2017年科技工作会召开 
+    " /></a>
+																		</div>
+				</div>
+			</div>
+			<div id="i_cont_con3">
+				<div id="i_cont_con3_t">
+					<div id="i_cont_con3_tl">通知通告</div>
+					<div id="i_cont_con3_tr"><a href="/tztg/" target="_blank">MORE>></a></div>
+				</div>
+				<div id="i_cont_con3_b">
+					<ul>
+												<li>
+							<div class="cont_title"><a href="/tztg/257381.htm" target="_blank">            【报奖】申报第十届中华环境奖的通知 
+    </a></div>
+							<div class="cont_date">2017-10-27</div>
+						</li>
+												<li>
+							<div class="cont_title"><a href="/tztg/257374.htm" target="_blank">            征集直属高校“十四五”国家重大科技基础设施项目建议的通知 
+    </a></div>
+							<div class="cont_date">2017-10-27</div>
+						</li>
+												<li>
+							<div class="cont_title"><a href="/tztg/257051.htm" target="_blank">            关于申报2018年度高等学校学科创新引智计划（111计划）及... 
+    </a></div>
+							<div class="cont_date">2017-10-24</div>
+						</li>
+												<li>
+							<div class="cont_title"><a href="/tztg/256951.htm" target="_blank">            【师生服务】关于统一管理专利电子申请CPC客户端的通知 
+    </a></div>
+							<div class="cont_date">2017-10-23</div>
+						</li>
+												<li>
+							<div class="cont_title"><a href="/tztg/255174.htm" target="_blank">            【入账】2017年度新立项国家自然科学基金项目到款通知 
+    </a></div>
+							<div class="cont_date">2017-09-28</div>
+						</li>
+												<li>
+							<div class="cont_title"><a href="/tztg/254666.htm" target="_blank">            参加第二十四届中国杨凌农业高新科技成果博览会 
+    </a></div>
+							<div class="cont_date">2017-09-22</div>
+						</li>
+												<li>
+							<div class="cont_title"><a href="/tztg/254333.htm" target="_blank">            【报奖】第十四届林业青年科技奖评选 
+    </a></div>
+							<div class="cont_date">2017-09-19</div>
+						</li>
+											</ul>
+				</div>
+			</div>
+		</div>
+		<div id="i_conm">
+			<div id="i_conm_l">
+				<div id="i_conm_l_t">
+					<div id="i_conm_l_tl">信息公开</div>
+					<div id="i_conm_l_tr"><a href="/gsgg/" target="_blank">MORE>></a></div>
+				</div>
+				<div id="i_conm_l_b">
+					<div class="conml_add"></div>
+					<ul>
+												<li><div class="conml_title"><a href="/gsgg/256892.htm" target="_blank">            关于开展2017年度中央高校业务... 
+    </a></div></li>
+												<li><div class="conml_title"><a href="/gsgg/256241.htm" target="_blank">            关于中央高校基本科研业务费项目经... 
+    </a></div></li>
+												<li><div class="conml_title"><a href="/gsgg/252641.htm" target="_blank">            北京林业大学中央高校基本业务费项... 
+    </a></div></li>
+												<li><div class="conml_title"><a href="/gsgg/251707.htm" target="_blank">            关于填报2017年度国家社科基金... 
+    </a></div></li>
+												<li><div class="conml_title"><a href="/gsgg/248805.htm" target="_blank">            【立项】关于组织开展2017年度... 
+    </a></div></li>
+											</ul>
+				</div>
+			</div>
+			<div id="i_conm_r">
+				<div id="i_conm_r_t">
+					<div id="i_conm_r_tl">科技成果</div>
+					<div id="i_conm_r_tr"><a href="/kjcg/" target="_blank">MORE>></a></div>
+				</div>
+				<div id="i_conm_r_b">
+					<div id="conmr_tab">
+						<ul class="conmr_tab_menu">
+							<li class="conmr_selected">成果动态</li>
+							<li>成果展示</li>
+							<li>应用与推广</li>
+						</ul>
+						<div class="conmr_tab_box">
+							<div id="conmr_tab_box_1">
+								<div id="conmr_tab_box_1_add"></div>
+								<div id="conmr_tab_box_1_con">
+									<ul>
+																				<li>
+											<div class="conmr_tab_box_1_title"><a href="/kjcg/cgdt/251205.htm" target="_blank">            2017年度我校累计发表SCI、EI收录论文情况（更新至2017.10.23... 
+    </a></div>
+											<div class="conmr_tab_box_1_time">2017-10-23</div>
+										</li>
+																				<li>
+											<div class="conmr_tab_box_1_title"><a href="/kjcg/cgdt/247534.htm" target="_blank">            2017年度我校新增EI收录论文情况（2017.10.17-2017.10.... 
+    </a></div>
+											<div class="conmr_tab_box_1_time">2017-10-23</div>
+										</li>
+																				<li>
+											<div class="conmr_tab_box_1_title"><a href="/kjcg/cgdt/218972.htm" target="_blank">            2017年度我校新增SCI收录论文情况（2017.10.17-2017.10... 
+    </a></div>
+											<div class="conmr_tab_box_1_time">2017-10-23</div>
+										</li>
+																				<li>
+											<div class="conmr_tab_box_1_title"><a href="/kjcg/cgdt/242946.htm" target="_blank">            2016年度我校累计发表SCI、EI收录论文情况（更新至2017.4.24) 
+    </a></div>
+											<div class="conmr_tab_box_1_time">2017-05-05</div>
+										</li>
+																			</ul>
+								</div>
+								<!--<div id="conmr_tab_box_1_more">
+									<a href="" target="_blank">MORE</a>
+								</div>-->
+							</div>
+							<div id="conmr_tab_box_2" class="conmr_hide">
+								<div id="conmr_tab_box_2_add"></div>
+								<div id="conmr_tab_box_2_con">
+									<ul>
+																				<li>
+											<div class="conmr_tab_box_1_title"><a href="/kjcg/cgzs/217002.htm" target="_blank">            一种立木防虫环剥装置 
+    </a></div>
+											<div class="conmr_tab_box_1_time">2016-04-21</div>
+										</li>
+																				<li>
+											<div class="conmr_tab_box_1_title"><a href="/kjcg/cgzs/216999.htm" target="_blank">            沙地扦插造林打孔装置 
+    </a></div>
+											<div class="conmr_tab_box_1_time">2016-04-21</div>
+										</li>
+																				<li>
+											<div class="conmr_tab_box_1_title"><a href="/kjcg/cgzs/217000.htm" target="_blank">            权衡多重生态系统服务、保护与发展的决策支持系统 
+    </a></div>
+											<div class="conmr_tab_box_1_time">2016-04-21</div>
+										</li>
+																				<li>
+											<div class="conmr_tab_box_1_title"><a href="/kjcg/cgzs/217001.htm" target="_blank">            林业产品的碳足迹评估及系统优化关键技术引进 
+    </a></div>
+											<div class="conmr_tab_box_1_time">2016-04-21</div>
+										</li>
+																			</ul>
+								</div>
+								<!--<div id="conmr_tab_box_2_more">
+									<a href="" target="_blank">MORE</a>
+								</div>-->
+							</div>
+							<div id="conmr_tab_box_3" class="conmr_hide">
+								<div id="conmr_tab_box_3_add"></div>
+								<div id="conmr_tab_box_3_con">
+									<ul>
+																				<li>
+											<div class="conmr_tab_box_1_title"><a href="/kjcg/yyytg/229177.htm" target="_blank">            关于准备“高校科技成果项目推介对接会”参会项目材料的通知 
+    </a></div>
+											<div class="conmr_tab_box_1_time">2016-09-29</div>
+										</li>
+																				<li>
+											<div class="conmr_tab_box_1_title"><a href="/kjcg/yyytg/229035.htm" target="_blank">            转-2016年山东聊城技术需求 
+    </a></div>
+											<div class="conmr_tab_box_1_time">2016-09-28</div>
+										</li>
+																				<li>
+											<div class="conmr_tab_box_1_title"><a href="/kjcg/yyytg/229033.htm" target="_blank">            新泰市技术需求（2016） 
+    </a></div>
+											<div class="conmr_tab_box_1_time">2016-09-28</div>
+										</li>
+																				<li>
+											<div class="conmr_tab_box_1_title"><a href="/kjcg/yyytg/215777.htm" target="_blank">            转发2014年云南省企业技术需求信息 
+    </a></div>
+											<div class="conmr_tab_box_1_time">2016-04-18</div>
+										</li>
+																			</ul>
+								</div>
+								<!--<div id="conmr_tab_box_3_more">
+									<a href="" target="_blank">MORE</a>
+								</div>-->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="i_conb">
+			<div id="i_conb_l">
+				<div id="i_conb_l_t">
+					<div id="i_conb_l_tl">办事指南</div>
+					<div id="i_conb_l_tr"><a href="/bszn/" target="_blank">MORE>></a></div>
+				</div>
+				<div id="i_conb_l_b">
+					<div id="conbl_tab">
+						<ul class="conbl_tab_menu">
+							<li class="conbl_selected">业务流程</li>
+							<li>常用下载</li>
+						</ul>
+						<div class="conbl_tab_box">
+							<div id="conbl_tab_box_1">
+								<div id="conbl_tab_box_1_add"></div>
+								<div id="conbl_tab_box_1_con">
+									<ul>
+																				<li><div class="conbl_tab_box_1_title"><a href="/bszn/ywlc/232847.htm" target="_blank">            科研经费入账办理流程 
+    </a></div></li>
+																				<li><div class="conbl_tab_box_1_title"><a href="/bszn/ywlc/218992.htm" target="_blank">            技术合同专用章用印流程 
+    </a></div></li>
+																				<li><div class="conbl_tab_box_1_title"><a href="/bszn/ywlc/218991.htm" target="_blank">            学校公章、校长签名章用印流程 
+    </a></div></li>
+																				<li><div class="conbl_tab_box_1_title"><a href="/bszn/ywlc/218990.htm" target="_blank">            科技处人员分工(含工位图） 
+    </a></div></li>
+																			</ul>
+								</div>
+								<!--<div id="conbl_tab_box_1_more">
+									<a href="/bszn/ywlc/" target="_blank">MORE</a>
+								</div>-->
+							</div>
+							<div id="conbl_tab_box_2" class="conbl_hide">
+								<div id="conbl_tab_box_2_add"></div>
+								<div id="conbl_tab_box_2_con">
+									<ul>
+																				<li><div class="conbl_tab_box_1_title"><a href="/bszn/cyxz/234673.htm" target="_blank">            技术合同章、科技处（人文社科处）... 
+    </a></div></li>
+																				<li><div class="conbl_tab_box_1_title"><a href="/bszn/cyxz/218999.htm" target="_blank">            科研合作或业务外协单位有关事项说... 
+    </a></div></li>
+																				<li><div class="conbl_tab_box_1_title"><a href="/bszn/cyxz/218998.htm" target="_blank">            北京林业大学用印批办单 
+    </a></div></li>
+																				<li><div class="conbl_tab_box_1_title"><a href="/bszn/cyxz/218996.htm" target="_blank">            科技合作与技术服务承诺书 
+    </a></div></li>
+																				<li><div class="conbl_tab_box_1_title"><a href="/bszn/cyxz/218995.htm" target="_blank">            横向合同模板 
+    </a></div></li>
+																				<li><div class="conbl_tab_box_1_title"><a href="/bszn/cyxz/218994.htm" target="_blank">            北京林业大学科研助理工资领款单 
+    </a></div></li>
+																				<li><div class="conbl_tab_box_1_title"><a href="/bszn/cyxz/218993.htm" target="_blank">            对外科技交流涉密人员登记表 
+    </a></div></li>
+																			</ul>
+								</div>
+								<!--<div id="conbl_tab_box_2_more">
+									<a href="/bszn/cyxz/" target="_blank">MORE</a>
+								</div>-->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="i_conb_m">
+				<div id="i_conb_m_t">
+					<div id="i_conb_m_tl">政策制度</div>
+					<div id="i_conb_m_tr"><a href="/zczd/" target="_blank">MORE>></a></div>
+				</div>
+				<div id="i_conb_m_b">
+					<div id="conbm_tab">
+						<ul class="conbm_tab_menu">
+							<li class="conbm_selected">国家相关</li>
+							<li>科技部相关</li>
+							<li>教育部相关</li>
+						</ul>
+						<div class="conbm_tab_box">
+							<div id="conbm_tab_box_1">
+								<div id="conbm_tab_box_1_add"></div>
+								<div id="conbm_tab_box_1_con">
+									<ul>
+																				<li><div class="conbm_tab_box_1_title"><a href="http://www.most.gov.cn/mostinfo/xinxifenlei/fgzc/gfxwj/gfxwj2017/201703/t20170302_131601.htm" target="_blank">            《国家重点研发计划资金管理办法》解读 
+    </a></div></li>
+																				<li><div class="conbm_tab_box_1_title"><a href="http://www.most.gov.cn/mostinfo/xinxifenlei/fgzc/gfxwj/gfxwj2017/201703/t20170302_131603.htm" target="_blank">            财科教[2016]113号-国家重点研发... 
+    </a></div></li>
+																				<li><div class="conbm_tab_box_1_title"><a href="/zczd/gjxg/229872.htm" target="_blank">            国家社会科学基金项目资金管理办法 
+    </a></div></li>
+																				<li><div class="conbm_tab_box_1_title"><a href="/zczd/gjxg/226367.htm" target="_blank">            《关于进一步完善中央财政科研项目资金管理... 
+    </a></div></li>
+																				<li><div class="conbm_tab_box_1_title"><a href="/zczd/gjxg/226337.htm" target="_blank">            中共中央办公厅 国务院办公厅印发《关于进... 
+    </a></div></li>
+																				<li><div class="conbm_tab_box_1_title"><a href="/zczd/gjxg/219027.htm" target="_blank">            关于中央财政科技计划管理改革过渡期资金管... 
+    </a></div></li>
+																				<li><div class="conbm_tab_box_1_title"><a href="/zczd/gjxg/219026.htm" target="_blank">            国务院印发关于深化中央财政科技计划（专项... 
+    </a></div></li>
+																			</ul>
+								</div>
+								<!--<div id="conbm_tab_box_1_more">
+									<a href="/zczd/gjxg/" target="_blank">MORE</a>
+								</div>-->
+							</div>
+							<div id="conbm_tab_box_2" class="conbm_hide">
+								<div id="conbm_tab_box_2_add"></div>
+								<div id="conbm_tab_box_2_con">
+									<ul>
+																				<li><div class="conbm_tab_box_1_title"><a href="http://www.most.gov.cn/mostinfo/xinxifenlei/fgzc/gfxwj/gfxwj2017/201703/t20170302_131603.htm" target="_blank">            财科教[2016]113号-国家重点研发... 
+    </a></div></li>
+																				<li><div class="conbm_tab_box_1_title"><a href="/zczd/kjbxg/219299.htm" target="_blank">            财库[2015]245号-财政部科技部关... 
+    </a></div></li>
+																				<li><div class="conbm_tab_box_1_title"><a href="/zczd/kjbxg/219298.htm" target="_blank">            国科发资〔2015〕423号-科技部 财... 
+    </a></div></li>
+																			</ul>
+								</div>
+								<!--<div id="conbm_tab_box_2_more">
+									<a href="/zczd/kjbxg/" target="_blank">MORE</a>
+								</div>-->
+							</div>
+							<div id="conbm_tab_box_3" class="conbm_hide">
+								<div id="conbm_tab_box_3_add"></div>
+								<div id="conbm_tab_box_3_con">
+									<ul>
+																				<li><div class="conbm_tab_box_1_title"><a href="/zczd/jybxg/219311.htm" target="_blank">            财教〔 2008 〕233号-财政部 教... 
+    </a></div></li>
+																				<li><div class="conbm_tab_box_1_title"><a href="/zczd/jybxg/219305.htm" target="_blank">            中央高校基本科研业务费专项资金管理暂行办... 
+    </a></div></li>
+																				<li><div class="conbm_tab_box_1_title"><a href="/zczd/jybxg/219002.htm" target="_blank">            教监〔2012〕6号- 教育部关于进一步... 
+    </a></div></li>
+																				<li><div class="conbm_tab_box_1_title"><a href="/zczd/jybxg/219001.htm" target="_blank">            教技〔2012〕14号-教育部关于进一步... 
+    </a></div></li>
+																				<li><div class="conbm_tab_box_1_title"><a href="/zczd/jybxg/219000.htm" target="_blank">            教财〔2012〕7号-教育部 财政部关于... 
+    </a></div></li>
+																			</ul>
+								</div>
+								<!--<div id="conbm_tab_box_3_more">
+									<a href="/zczd/jybxg/" target="_blank">MORE</a>
+								</div>-->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="i_conb_r">
+				<div id="i_conb_r_t">
+					<div id="i_conb_r_tl">科技动态</div>
+					<div id="i_conb_r_tr"><a href="/kjdt/" target="_blank">MORE>></a></div>
+				</div>
+				<div id="i_conb_r_b">
+					<div id="conbr_tab">
+						<ul class="conbr_tab_menu">
+							<li class="conbr_selected">科技快讯</li>
+							<li>科研项目</li>
+						</ul>
+						<div class="conbr_tab_box">
+							<div id="conbr_tab_box_1">
+								<div id="conbr_tab_box_1_add"></div>
+								<div id="conbr_tab_box_1_con">
+									<ul>
+																				<li><div class="conbr_tab_box_1_title"><a href="/kjdt/kjkx/242160.htm" target="_blank">            学校2016年教育部科学研究优秀成果奖数... 
+    </a></div></li>
+																				<li><div class="conbr_tab_box_1_title"><a href="/kjdt/kjkx/238774.htm" target="_blank">            2016年学校新获国家科技进步奖和技术发... 
+    </a></div></li>
+																				<li><div class="conbr_tab_box_1_title"><a href="/kjdt/kjkx/233811.htm" target="_blank">            【校内】学校启动第二轮聘期科研工作量统计... 
+    </a></div></li>
+																				<li><div class="conbr_tab_box_1_title"><a href="/kjdt/kjkx/218960.htm" target="_blank">            【校内】教育部科技司有关负责人来校调研 
+    </a></div></li>
+																				<li><div class="conbr_tab_box_1_title"><a href="/kjdt/kjkx/218959.htm" target="_blank">            【校内】科技部中国农村技术开发中心主任来... 
+    </a></div></li>
+																				<li><div class="conbr_tab_box_1_title"><a href="/kjdt/kjkx/218958.htm" target="_blank">            【校内】4教师获全国优秀科技工作者和中国... 
+    </a></div></li>
+																				<li><div class="conbr_tab_box_1_title"><a href="/kjdt/kjkx/218957.htm" target="_blank">            【校内】学校邀专家讲解梁希科学技术奖申报... 
+    </a></div></li>
+																			</ul>
+								</div>
+								<!--<div id="conbr_tab_box_1_more">
+									<a href="/kjdt/kjkx/" target="_blank">MORE</a>
+								</div>-->
+							</div>
+							<div id="conbr_tab_box_2" class="conbr_hide">
+								<div id="conbr_tab_box_2_add"></div>
+								<div id="conbr_tab_box_2_con">
+									<ul>
+																			</ul>
+								</div>
+								<!--<div id="conbr_tab_box_2_more">
+									<a href="/kjdt/kyxm/" target="_blank">MORE</a>
+								</div>-->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="i_link">
+			<div id="i_link_l">
+				<div id="i_link_l_t">
+					<div id="i_link_lt">校内链接</div>
+				</div>
+				<div id="i_link_l_b">
+					<div class="link_div">
+						<div class="link_item"><a href="http://www.bjfu.edu.cn/" target="_blank">学校主页</a></div>
+						<div class="link_item"><a href="http://dzb.bjfu.edu.cn/" target="_blank">党政办公室</a></div>
+						<div class="link_item"><a href="http://jcc.bjfu.edu.cn/" target="_blank">计划财务处</a></div>
+						<div class="link_item"><a href="http://graduate.bjfu.edu.cn/" target="_blank">研究生院</a></div>
+						
+						<div class="link_item"><a href="http://sjc.bjfu.edu.cn/" target="_blank">审计处</a></div>
+						<div class="link_item"><a href="http://rsc.bjfu.edu.cn/" target="_blank">人事处</a></div>
+					</div>
+					<div class="link_div">							
+						<div class="link_item"><a href="http://sbc.bjfu.edu.cn/" target="_blank">实设处</a></div>
+						<div class="link_item"><a href="http://vpn.bjfu.edu.cn/" target="_blank">VPN入口</a></div>
+						
+						<div class="link_item"><a href="http://jwc.bjfu.edu.cn/UploadFiles/xiaoli.mht" target="_blank">北林校历</a></div>
+						<div class="link_item"><a href="http://journal.bjfu.edu.cn/" target="_blank">期刊编辑部</a></div>
+						<div class="link_item"><a href="http://222.31.185.50/cx5/" target="_blank">个人财务系统</a></div>
+						<div class="link_item"><a href="http://i.bjfu.edu.cn/" target="_blank">数字校园平台</a></div>
+					</div>
+					<div class="link_div">
+						
+						<div class="link_item"><a href="http://www.cnki.net/" target="_blank">中国知网（CNKI）</a></div>
+						<div class="link_item"><a href="http://202.204.121.39:8088/default.aspx" target="_blank">万方数据</a></div>
+						<div class="link_item"><a href="http://apps.webofknowledge.com/UA_GeneralSearch_input.do?product=UA&search_mode=GeneralSearch&SID=P2wSSLT9dV2i6jz1oAF&preferencesSaved=" target="_blank">SCI</a></div>
+						<div class="link_item"><a href="https://www.engineeringvillage.com/search/quick.url" target="_blank">EI</a></div>
+						<div class="link_item"><a href="http://onlinelibrary.wiley.com/" target="_blank">Wiley</a></div>
+						<div class="link_item"><a href="http://vpn.bjfu.edu.cn/" target="_blank">Springer</a></div>
+					</div>
+				</div>
+			</div>
+			<div id="i_link_r">
+				<div id="i_link_r_t">
+					<div id="i_link_rt">校外链接</div>
+				</div>
+				<div id="i_link_r_b">
+					<div class="link_div">
+						<div class="link_item"><a href="http://www.most.gov.cn/" target="_blank">科学技术部</a></div>
+						<div class="link_item"><a href="http://www.moe.edu.cn/" target="_blank">教育部</a></div>
+						<div class="link_item"><a href="http://www.moa.gov.cn/" target="_blank">农业部</a></div>
+						<div class="link_item"><a href="http://www.forestry.gov.cn/" target="_blank">国家林业局</a></div>
+						<div class="link_item"><a href="http://www.nsfc.gov.cn/" target="_blank">国家自然科学基金委员会</a></div>
+						<div class="link_item"><a href="http://lykj.forestry.gov.cn/" target="_blank">中国林业科技网</a></div>
+						
+					</div>
+					<div class="link_div">
+						<div class="link_item"><a href="http://www.sdpc.gov.cn/" target="_blank">国家发展和改革委员会</a></div>
+						<div class="link_item"><a href="http://www.sipo.gov.cn/" target="_blank">国家知识产权局</a></div>
+						<div class="link_item"><a href="http://www.nosta.gov.cn/web/index.aspx" target="_blank">国家科技奖励工作办公室</a></div>
+						<div class="link_item"><a href="http://www.cutech.edu.cn/cn/index.htm" target="_blank">教育部科技发展中心</a></div>
+						<div class="link_item"><a href="http://www.paper.edu.cn/" target="_blank">中国科技论文在线</a></div>
+						<div class="link_item"><a href="http://www.bjedu.gov.cn/" target="_blank">北京市教育委员会</a></div>
+					</div>
+					<div class="link_div">
+						<div class="link_item"><a href="http://www.bjkw.gov.cn/n8785584/index.html" target="_blank">北京市科学技术委员会</a></div>
+						<div class="link_item"><a href="http://www.bjpc.gov.cn/" target="_blank">北京市发展和改革委员会</a></div>
+						<div class="link_item"><a href="http://www.bjipo.gov.cn/" target="_blank">北京市知识产权局</a></div>
+						<div class="link_item"><a href="http://www.bjyl.gov.cn/" target="_blank">北京市园林绿化局</a></div>
+						<div class="link_item"><a href="http://www.istic.ac.cn/" target="_blank">中国科技信息研究所</a></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="i_foot1">
+			<div id="i_foot1_l">北京林业大学 科技处</div>
+			<div id="i_foot1_r">电话（传真）：010-62337983 地址：北京市海淀区清华东路35号 邮编：100083 Email：kjc@bjfu.edu.cn</div>
+		</div>
+		<div id="i_foot2">
+			版权所有 北京林业大学科技处 COPYRIGHT &copy 2016 ALL RIGHTS RESERVED
+		</div>
+	</div>
+</body>
+</html>
+</body></html>

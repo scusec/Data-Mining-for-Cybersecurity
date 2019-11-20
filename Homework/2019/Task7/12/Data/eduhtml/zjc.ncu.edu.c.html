@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<!--[if lte IE 7 ]><html class="no-js ie lte7 lte8 lte9 "><![endif]-->
+<!--[if IE 8 ]><html class="no-js ie ie8 lte8 lte9 "><![endif]-->
+<!--[if IE 9 ]><html class="no-js ie ie9 lte9 "><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--><html class="no-js"><!--<![endif]-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>欢迎访问南昌大学招生与就业工作处</title>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta name="renderer" content="webkit" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<link rel="alternate icon" type="image/png" href="/template/ZSXXW/images/ncu.png" />
+<link rel="apple-touch-icon-precomposed" href="/template/ZSXXW/images/ncu.png" />
+<meta name="apple-mobile-web-app-title" content="南昌大学招生与就业工作处" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<link rel="stylesheet" href="/template/ZSXXW/assets/css/amazeui.min.css" />
+<link rel="stylesheet" href="/template/ZSXXW/assets/css/amaze.min.css" />
+<link rel="stylesheet" href="/template/ZSXXW/assets/css/default.css" />
+<!--[if (gte IE 9)|!(IE)]><!-->
+<script src="/template/ZSXXW/assets/js/jquery.min.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
+<script src="/template/ZSXXW/assets/js/polyfill/rem.min.js"></script>
+<script src="/template/ZSXXW/assets/js/polyfill/respond.min.js"></script>
+<script src="/template/ZSXXW/assets/js/amazeui.legacy.js"></script>
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<script src="/template/ZSXXW/assets/js/amazeui.min.js"></script>
+<!--<![endif]-->
+    <!--[if lte IE 9 ]><div class="am-alert am-alert-danger ie-warning" data-am-alert>
+  <button type="button" class="am-close">&times;</button>
+  <div class="am-container">
+    南昌大学招生与就业工作处提醒：本网站采用HTML5 + WebKit ，建议使用Chrome,Safri浏览器，<a
+    href="http://browsehappy.com/" target="_blank">速速升级吧</a>！</div></div><![endif]-->
+<script>
+    if(!+[1,]){
+        if(window.location.href.indexOf("php") == "-1"){
+            var url = 'indexie.html';
+            if(window.location.href.indexOf(".html") != "-1"){
+                url=window.location.href.replace(".html","ie.html");
+            }
+            location.href = url;
+        }
+    }
+
+    /*$(function(){
+        var href='';
+        $.ajax({
+            url: "requires.php?c=article&a=type&json=1",
+            type: 'GET',
+            dataType: 'JSON',
+            timeout: 5000,
+            error: function(jqXHRObject, textStatus, errorThrown) {
+                if(jqXHRObject.status==200) {
+                    html_li_func(jqXHRObject.responseText);
+                } else {
+                    //alert('Error loading data!');
+                }
+            },
+            success: function(msg) {
+                html_li_func(msg);
+            }
+        });
+    });*/
+
+    $(function(){
+        var href='';
+        $.ajax({
+            url: "/zs/data.txt",
+            type: 'GET',
+            dataType: 'text',
+            timeout: 5000,
+            error: function(jqXHRObject, textStatus, errorThrown) {
+                if(jqXHRObject.status==200) {
+                    html_li_func(jqXHRObject.responseText);
+                } else {
+                    //alert('Error loading data!');
+                }
+            },
+            success: function(msg) {
+                html_li_func(msg);
+            }
+        });
+    });
+    function html_li_func(msg) {
+        $("#news-list").empty();
+
+        $.each(eval(msg), function(i, item) {
+            if(i<3) {
+                href='/zs/';
+            } else {
+                href='/jy/';
+            }
+            $('<li class="am-g am-list-item-dated"><a href="'+href+'" target="_blank" class="am-list-item-hd "> '+ item.title + '</a><span class="am-list-date">'+ item.addtime + '</span></li>').appendTo($("#news-list"));
+        });
+    }
+</script>
+</head>
+<body class="body_bg">
+    <div class="shadow_bg"></div>
+    <header id="amz-header">
+        <div class="amz-container am-cf">
+            <h1><a href="/"><img src="/template/ZSXXW/images/index/logoss.png"> </a></h1>
+            <button class="am-btn am-show-sm-only" data-am-collapse="{target: '.amz-header-nav'}"><span class="am-sr-only">导航切换</span> <span class="am-icon-bars"></span></button>
+            <nav>
+                <ul class="amz-header-nav am-collapse">
+              <!--  <li><a href="/">首 页</a></li>
+                <li><a href="">机构设置</a></li>
+                <li><a href="">办事指南</a></li>
+                <li><a href="">规章制度</a></li>
+                <li><a href="">常用下载</a></li>-->
+                <li><a href="http://www.ncu.edu.cn">学校主页</a></li>
+            </ul></nav>
+        </div>
+    </header>
+    <div class="am-g am-g-fixed defined-main">
+        <div class="defined-margin-10">
+            <div data-am-widget="list_news" class="am-list-news am-list-news-default am-u-lg-6 am-u-md-12 am-u-sm-12">
+                <!--列表标题-->
+                <div class="am-list-news-hd am-cf">
+                    <span class="defined-span"><i class="am-icon-newspaper-o am-icon-sm"></i></span>
+                    <h2>工作动态</h2>
+                    <span class="am-list-news-more am-fr"></span>
+                </div>
+                <div class="am-list-news-bd">
+                    <ul class="am-list" id="news-list">
+                             </ul>
+                </div>
+            </div>
+        </div>
+        <div class="am-fr am-u-lg-5 am-u-md-12 am-u-sm-12">
+            <div class="zs_div am-u-sm-12">
+                <a href="/zs/" target="_blank">
+                <span  class="am-icon-newspaper-o am-icon-md am-u-sm-4"></span>
+                <h2 class="am-u-md-6 am-u-sm-8">招生信息网</h2>
+                <p class="am-u-md-6 am-u-sm-8">考生及家长入口</p>
+                </a>
+            </div>
+            <div class="zs_div jy_div am-u-sm-12">
+                <a href="/jy/" target="_blank">
+                <span  class="am-icon-graduation-cap am-icon-md"></span>
+                <h2 class="am-u-md-6 am-u-sm-8">就业信息网</h2>
+                <p class="am-u-md-6 am-u-sm-8">在校生、毕业生、用人单位入口</p>
+                </a>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="amz-container am-cf">
+            <p>© 2015 南昌大学招生与就业工作处、毕业生就业指导服务中心 <a target="_blank" href="http://222.204.3.123:8081">旧版网站</a> </p>
+            <p>地址：江西省南昌市红谷滩新区学府大道999号 学工楼407    邮编：330031</p>
+
+        </div>
+    </footer>
+</body>
+</html>

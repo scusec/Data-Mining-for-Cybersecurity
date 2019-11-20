@@ -1,0 +1,442 @@
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN">
+<title>全国高校本科教学工作评估管理信息系统</title>
+	<script type="text/javascript" src="/dwr/engine.js"></script>
+	<script type="text/javascript" src="/dwr/util.js"></script>
+	<script type="text/javascript" src="/fj/pguser/js/jquery.js"></script>
+	<script type="text/javascript" src="/fj/js/jquery.corner.js"></script>
+	<link href="/fj/css/style.css" rel="stylesheet" type="text/css" />
+	<link href="/fj/css/login.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript" src="/fj/pguser/bt/jquery.hoverIntent.minified.js"></script>
+	<script type="text/javascript" src="/fj/pguser/bt/jquery.bgiframe.min.js"></script>
+	<script type="text/javascript" src="/fj/pguser/bt/excanvas.js"></script>
+	<script type="text/javascript" src="/fj/pguser/bt/jquery.bt.js"></script>
+	<script type="text/javascript" src="/fj/pguser/bt/jquery.easing.1.3.js"></script>
+	<script type="text/javascript" src="/fj/js/des.js"></script>
+	<script type="text/javascript" src="/fj/js/md5.js"></script>
+	<script type="text/javascript" src="/fj/js/utils.js"></script>
+	<script type="text/javascript" src="/fj/js/validate.js"></script>
+	<script type="text/javascript" src="/dwr/interface/privDwr.js"></script>
+<script language="javascript"> 
+<!-- 
+if (top.location != self.location) { 
+	top.location=self.location; 
+} 
+//-->
+</script> 				
+ <SCRIPT LANGUAGE="JavaScript"> 
+<!--
+var senstive = "false";
+$(function(){		
+	$('#sbTip1').bt({
+		cssClass: 'tipcss', positions:'right'
+	});			
+	$('#sbTip2').bt({
+		cssClass: 'tipcss', positions:'right'	
+	});			
+	$('#sbTip3').bt({
+		cssClass: 'tipcss', positions:'right'	
+	});
+	
+
+	$('#loginp').corner();
+	$('#loginq').corner();
+	$('#loginz').corner();
+	//$('#header2').corner("top");
+	
+	
+});
+
+	function closewin(i){
+		document.getElementById(i).style.display="none";
+	}
+	function openwin(i){
+		document.getElementById("loginq").style.display="none";
+		document.getElementById("loginp").style.display="none";
+		document.getElementById("loginz").style.display="none";
+		document.getElementById("login" + i).style.display="block";
+		changeCode(i);
+	}	
+
+	
+	function changeP(p,i) {
+		var p1,p2,p3;
+		var jsbh, div, f;
+		p0 = document.getElementById(p+'0');
+		p1 = document.getElementById(p+'1');
+		p2 = document.getElementById(p+'2');
+		p3 = document.getElementById(p+'3');
+		div = document.getElementById(p+'JS');
+		f = document.forms[p + 'LoginForm'];
+		if (p0) p0.className = '';
+		p1.className = '';
+		p2.className = '';
+		p3.className = '';
+		
+		if (i == '0') {
+			p0.className='cur';
+			div.style.display = "block";
+			jsbh = new Array();
+			jsbh[0] = {text:"评估中心领导",value:"_00"};
+			jsbh[1] = {text:"院校教学评估处",value:"_01"};
+			jsbh[2] = {text:"项目管理员",value:"_02"};
+			fg.util.removeAllOptions(f.JSBH);
+			fg.util.addOptions(f.JSBH, jsbh, "value", "text");
+		}
+		
+		if (i == '1') {
+			p1.className='cur';
+			div.style.display = "block";
+			jsbh = new Array();
+			if(p == 'p') {
+				jsbh[0] = {text:"评估中心领导",value:"00"};
+				jsbh[1] = {text:"院校教学评估处",value:"01"};
+				jsbh[2] = {text:"项目管理员",value:"02"};
+			} else {
+				jsbh[0] = {text:"教育主管部门", value:"00"};
+				jsbh[1] = {text:"评估组织单位", value:"01"};
+				jsbh[2] = {text:"项目管理员"  , value:"02"};
+			}
+			fg.util.removeAllOptions(f.JSBH);
+			fg.util.addOptions(f.JSBH, jsbh, "value", "text");
+		}
+		if (i == '2') {
+			p2.className='cur';
+			div.style.display = "block";
+			jsbh = new Array();
+			jsbh[0] = {text:"专家组组长",value:"03"};
+			jsbh[1] = {text:"专家",value:"05"};
+			jsbh[2] = {text:"秘书",value:"04"};
+			fg.util.removeAllOptions(f.JSBH);
+			fg.util.addOptions(f.JSBH, jsbh, "value", "text");			
+		}
+		if (i == '3') {
+			p3.className='cur';
+			div.style.display = "none";
+			jsbh = new Array();
+			jsbh[0] = {text:"被评高校",value:"06"};
+			fg.util.removeAllOptions(f.JSBH);
+			fg.util.addOptions(f.JSBH, jsbh, "value", "text");			
+		}
+	}
+	function checkLogin(p) {
+		var f = document.forms[p + 'LoginForm'];
+		var data = fg.util.getValues(f);
+		var account    = f.YHZH.value;//data["YHZH"];
+		var passwd     = f.YHMM.value;//data["YHMM"];
+		var verifyCode = f.YZM.value;//data["YZM"];	
+		var JSBH       = f.JSBH.options[f.JSBH.selectedIndex].value;
+		if (!Validator.validate(f, 2)) {	
+			return false;
+		}
+		var pmd5       = hex_md5(passwd);
+		verifyCode = make_8str(verifyCode);
+		if (senstive == "false") {
+			verifyCode = verifyCode.toUpperCase();
+		}
+		DES.init(verifyCode, pmd5);
+   		var dp = DES.Encrypt();  
+		_openLoad(p, '正在验证....');
+		if (p == 'q' || p == 'admin') {
+			privDwr.checkUserLogin(account, dp, JSBH, function(result) {
+				f.YHMM.value='';
+				f.YZM.value='';
+				/**
+				 * 清除js中所有变量的值
+				 */
+				pmd5 = verifyCode = dp = passwd = '';
+				if (result == '') { //登录成功
+					tipLoad(p, '登录成功,正在加载数据....');
+					if (JSBH.charAt(0) == '_') {
+						JSBH = JSBH.substring(1);
+					}
+					location.href = "/fj/" + JSBH + "/index.jsp";
+				} else {
+					if (result == '07') {
+						tipLoad(p, '登录成功,正在加载数据....');
+						location.href = "/fj/" + result + "/index.jsp";
+					} else {
+						winMsg("1", "提示信息:\n" + result);
+						changeCode(p);
+						_closeLoad(p);
+					}
+				}
+			});
+		} else if (p == 'p') {
+			privDwr.checkUserLogin_hg(account, dp, JSBH, function(result) {
+				f.YHMM.value='';
+				f.YZM.value='';
+				/**
+				 * 清除js中所有变量的值
+				 */
+				pmd5 = verifyCode = dp = passwd = '';
+				if (result == '') { //登录成功
+					tipLoad(p, '登录成功,正在加载数据....');
+					if (p == 'p') { 
+						location.href = "/" + JSBH + "/evBody.jsp";		
+					}
+				} else {
+					winMsg("1", "提示信息:\n" + result);
+					changeCode(p);
+					_closeLoad(p);
+				}
+			});	
+		}	
+   		return false;	
+	}		
+
+	function changeCode(t) {
+		document.getElementById('iframeVcode' + t).src = "/SecurityCode.do?temp=" + (new Date().getTime().toString(36));
+	}
+	
+	function tipLoad(p, msg) {
+		$("#loading" + p ).html("<font color='red'>" + msg + "</font>");
+		$("#loading" + p ).show();
+	}
+	function _openLoad(p, msg) {
+		$("#loading" + p ).html("<img src='/fj/images/loading.gif' />" + msg);
+		$("#loading" + p ).show();
+	}
+	function _closeLoad(p) {
+		$("#loading" + p ).hide();
+	}	
+	
+//-->
+</SCRIPT>
+
+</head>
+<body style="padding-top:60px;overflow-y:hidden;">
+<div align="center">
+<table width="588" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr>
+    <td colspan="3"><img src="/fj/images/index_03.jpg" width="588" height="145" /></td>
+  </tr>
+  <tr>
+    <td rowspan="3"><img src="/fj/images/index_05.jpg" width="184" height="148" /></td>
+    <td><a id="sbTip2"  title='审核评估请进入' href="javascript:openwin('q');"><img src="/fj/images/index_06.jpg" width="219" height="56" /></a></td>
+    <td rowspan="3"><img src="/fj/images/index_07.jpg" width="185" height="148" /></td>
+  </tr>
+  <tr>
+    <td><img src="/fj/images/index_08.jpg" width="219" height="37" /></td>
+  </tr>
+  <tr>
+    <td><a id="sbTip3"  title='合格评估请进入' href="javascript:openwin('p');"><img src="/fj/images/index_09.jpg" width="219" height="55" /></a></td>
+  </tr>
+  <tr>
+    <td colspan="3" class="zjcss" height="83"  valign="bottom" style="padding-left:185px">
+    	<a id="sbTip1" title='普通高等学校本科教学评估专家推荐请进入' href="/pguser/securityLogin.jsp"> 【评估专家管理系统】</a>
+    	<a id="sbTip1" title='系统管理员入口' href="javascript:openwin('admin');"> 【系统管理员入口】</a>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="3" valign="middle"><div align="center" class="STYLE1">@版权所有：未经允许不得复制或镜像 教育部高等教育教学评估中心<br />
+      邮编：100081  E-mail:pgzx@moe.edu.cn<br />
+     北京市海淀区魏公村路2号，教育部高等教育教学评估中心</div>
+
+<DIV style="Z-INDEX: 200; MARGIN-TOP:-350px; WIDTH: 390px; MARGIN-LEFT: -295px; display:none;" class="ui-window " id="loginq">
+	<DIV class="ui-window-header" id="headerq">
+		<A class="ui-window-close" href="javascript:closewin('loginq');">×</A>
+		<div style="font-size:13px;text-align:left;color:#FFFFFF"><strong>审核评估 - 登录</strong>
+			<span id="loadingq" style="display: none"></span>
+		</div>
+	</DIV>
+	<DIV class=ui-window-body style="height:240px">
+		<FORM name="qLoginForm" id="qLoginForm" method="post" class="ui-window-login" onsubmit="return checkLogin('q')">
+			<DIV class="tab-t0 mb20">
+				<A id="q0" class='cur' href="javascript:changeP('q',0)"><I></I>评估中心</A>
+				<A id="q1" href="javascript:changeP('q',1)"><I></I>省级评估组织</A>
+				<A id="q2" class='' href="javascript:changeP('q',2)"><I></I>评估专家</A>
+				<A id="q3" class='' href="javascript:changeP('q',3)"><I></I>被评高校</A>
+			</DIV>
+				<DIV class="control-group clearfix" style="display:block" id="qJS">
+					<LABEL class=control-label for=inputWarning>类&nbsp;&nbsp;&nbsp;&nbsp;型：</LABEL>
+					<DIV class="controls ui-form-item;">
+						<select name="JSBH" id="JSBH" style="font-size:14px;">
+							<option value="_00" >评估中心领导</option>
+							<option value="_01" >评估中心院校处</option>
+							<option value="_02" >项目管理员</option>
+						</select> 
+					</DIV>
+				</DIV>
+				<DIV class="control-group clearfix">
+					<LABEL class=control-label for=inputWarning>帐&nbsp;&nbsp;&nbsp;&nbsp;号：</LABEL>
+					<DIV class="controls ui-form-item">
+						<INPUT type=text name="YHZH" ID="YHZH" size="20" maxlenth="32" value="" dataType="Require" msg="请您输入帐号">
+					</DIV>
+				</DIV>
+				<DIV class="control-group clearfix">
+					<LABEL class=control-label for=inputWarning>密&nbsp;&nbsp;&nbsp;&nbsp;码：</LABEL>
+					<DIV class="controls ui-form-item">
+						<INPUT type=password name="YHMM" id="YHMM" size="20" maxlength="32" value="" dataType="Require" msg="请您输入密码">
+					</DIV>
+				</DIV>
+				<DIV class="control-group clearfix">
+					<LABEL class=control-label for=inputWarning>验证码：</LABEL>
+					<DIV class="controls ui-form-item">
+						<INPUT style="width:80px" type=text name="YZM" id="YZM" maxlength="6"  dataType="Require" msg="请您输入验证码" value="">
+					</DIV>
+					<P class="yzm clearfix" id="verifyCode">
+						<IMG align="middle" border="0" id="iframeVcodeq" class="yzmimg ml5" src="/SecurityCode.do?op=noChange"/>
+						<SPAN class=gray6><A class=refimg href="javascript:void(0);" onclick="changeCode('q')">换一张</A></SPAN>
+					</P>
+				</DIV>
+				<P class="sub-btn mt20">
+					<BUTTON class="butn butn-orange" type='submit'><I></I>登录</BUTTON>
+					&nbsp;&nbsp;
+					<BUTTON class="butn butn-orange"><I></I>重置</BUTTON>
+				</P>
+		</FORM>
+	</DIV>
+</DIV>
+    
+<DIV style="Z-INDEX: 200; MARGIN-TOP:-350px; WIDTH: 390px; MARGIN-LEFT: -295px; display:none;" class="ui-window " id="loginadmin">
+	<DIV class="ui-window-header" id="headerq">
+		<A class="ui-window-close" href="javascript:closewin('loginadmin');">×</A>
+		<div style="font-size:13px;text-align:left;color:#FFFFFF"><strong>系统管理员 - 登录</strong>
+			<span id="loadingadmin" style="display: none"></span>
+		</div>
+	</DIV>
+	<DIV class=ui-window-body style="height:200px">
+		<FORM name="adminLoginForm" id="adminLoginForm" method="post" class="ui-window-login" onsubmit="return checkLogin('admin')">
+				<select name="JSBH" id="JSBH" style="font-size:14px;display: none;">
+					<option value="07" >系统管理员</option>
+				</select> 
+				<DIV class="control-group clearfix">
+					<LABEL class=control-label for=inputWarning>帐&nbsp;&nbsp;&nbsp;&nbsp;号：</LABEL>
+					<DIV class="controls ui-form-item">
+						<INPUT type=text name="YHZH" ID="YHZH" size="20" maxlenth="32" value="" dataType="Require" msg="请您输入帐号">
+					</DIV>
+				</DIV>
+				<DIV class="control-group clearfix">
+					<LABEL class=control-label for=inputWarning>密&nbsp;&nbsp;&nbsp;&nbsp;码：</LABEL>
+					<DIV class="controls ui-form-item">
+						<INPUT type=password name="YHMM" id="YHMM" size="20" maxlength="32" value="" dataType="Require" msg="请您输入密码">
+					</DIV>
+				</DIV>
+				<DIV class="control-group clearfix">
+					<LABEL class=control-label for=inputWarning>验证码：</LABEL>
+					<DIV class="controls ui-form-item">
+						<INPUT style="width:80px" type=text name="YZM" id="YZM" maxlength="6"  dataType="Require" msg="请您输入验证码" value="">
+					</DIV>
+					<P class="yzm clearfix" id="verifyCode">
+						<IMG align="middle" border="0" id="iframeVcodeadmin" class="yzmimg ml5" src="/SecurityCode.do?op=noChange"/>
+						<SPAN class=gray6><A class=refimg href="javascript:void(0);" onclick="changeCode('admin')">换一张</A></SPAN>
+					</P>
+				</DIV>
+				<P class="sub-btn mt20">
+					<BUTTON class="butn butn-orange" type='submit'><I></I>登录</BUTTON>
+					&nbsp;&nbsp;
+					<BUTTON class="butn butn-orange"><I></I>重置</BUTTON>
+				</P>
+		</FORM>
+	</DIV>
+</DIV>
+    
+<DIV style="Z-INDEX: 200; MARGIN-TOP:-350px; WIDTH: 340px; MARGIN-LEFT: -295px; display:none;" class="ui-window " id="loginp">
+	<DIV class="ui-window-header">
+		<A class="ui-window-close" href="javascript:closewin('loginp');">×</A>
+		<div style="font-size:13px;text-align:left;color:#FFFFFF"><strong>合格评估 - 登录</strong>
+			<span id="loadingp" style="display: none"></span>
+		</div>		
+	</DIV>
+	<DIV class=ui-window-body style="height:240px">
+		<FORM name="pLoginForm" id="pLoginForm" method="post" class=ui-window-login onsubmit="return checkLogin('p')">
+			<input type="hidden" name="loginType" id="loginType" value="1"/>
+			<DIV class="tab-t mb20">
+				<A id="p1" class='cur' href="javascript:changeP('p',1)"><I></I>评估中心</A>
+				<A id="p2" class='' href="javascript:changeP('p',2)"><I></I>评估专家</A>
+				<A id="p3" class='' href="javascript:changeP('p',3)"><I></I>被评高校</A>
+			</DIV>
+
+			<DIV class="control-group clearfix" style="display:block" id="pJS">
+				<LABEL class=control-label for=inputWarning>类&nbsp;&nbsp;&nbsp;&nbsp;型：</LABEL>
+				<DIV class="controls ui-form-item">
+					<select name="JSBH" id="JSBH" style="font-size:14px;">
+							<option value="00" >评估中心领导</option>
+							<option value="01" >评估中心院校处</option>
+							<option value="02" >项目管理员</option>
+					</select> 
+				</DIV>
+			</DIV>
+			<DIV class="control-group clearfix">
+				<LABEL class=control-label for=inputWarning>帐&nbsp;&nbsp;&nbsp;&nbsp;号：</LABEL>
+				<DIV class="controls ui-form-item">
+					<INPUT type=text name="YHZH" ID="YHZH" size="20" maxlenth="32" value="" dataType="Require" msg="请您输入帐号">
+				</DIV>
+			</DIV>
+			<DIV class="control-group clearfix">
+				<LABEL class=control-label for=inputWarning>密&nbsp;&nbsp;&nbsp;&nbsp;码：</LABEL>
+				<DIV class="controls ui-form-item">
+					<INPUT type=password name="YHMM" id="YHMM" size="20" maxlength="32" value="" dataType="Require" msg="请您输入密码">
+				</DIV>
+			</DIV>
+			<DIV class="control-group clearfix">
+				<LABEL class=control-label for=inputWarning>验证码：</LABEL>
+				<DIV class="controls ui-form-item">
+					<INPUT style="width:80px" type=text name="YZM" id="YZM" maxlength="6"  dataType="Require" msg="请您输入验证码" value="">
+				</DIV>
+				<P class="yzm clearfix">
+						<IMG align="middle" border="0" id="iframeVcodep" class="yzmimg ml5" src="/SecurityCode.do?op=noChange"/>
+						<SPAN class=gray6><A class=refimg href="javascript:void(0);" onclick="changeCode('p')">换一张</A></SPAN>
+				</P>
+			</DIV>
+			<P class="sub-btn mt20">
+				<BUTTON class="butn butn-orange" type='submit'><I></I>登录</BUTTON>
+				&nbsp;&nbsp;
+				<BUTTON class="butn butn-orange"><I></I>重置</BUTTON>
+			</P>
+		</FORM>
+	</DIV>
+</DIV>
+
+
+<DIV style="Z-INDEX: 200; MARGIN-TOP:-350px; WIDTH: 330px; MARGIN-LEFT: -295px; display:none;" class="ui-window " id="loginz">
+	<DIV class="ui-window-header">
+		<A class="ui-window-close" href="javascript:closewin('loginz');">×</A>
+		<div style="font-size:13px;text-align:left;color:#FFFFFF"><strong>评估专家推荐 - 登录</strong></div>
+	</DIV>
+	<DIV class=ui-window-body style="height:240px">
+		<FORM name="zLoginForm" id="zLoginForm" class=ui-window-login>
+				<DIV class="control-group clearfix">
+					<LABEL class=control-label for=inputWarning>帐&nbsp;&nbsp;&nbsp;&nbsp;号：</LABEL>
+					<DIV class="controls ui-form-item">
+						<INPUT type=text name=username>
+					</DIV>
+				</DIV>
+				<DIV class="control-group clearfix">
+					<LABEL class=control-label for=inputWarning>密&nbsp;&nbsp;&nbsp;&nbsp;码：</LABEL>
+					<DIV class="controls ui-form-item">
+						<INPUT type=password name=password >
+					</DIV>
+				</DIV>
+				<DIV class="control-group clearfix">
+					<LABEL class=control-label for=inputWarning>验证码：</LABEL>
+					<DIV class="controls ui-form-item">
+						<INPUT style="WIDTH: 80px" type=text name=catcha >
+					</DIV>
+					<P class="yzm clearfix">
+						<IMG align="middle" border="0" id="iframeVcodez" class="yzmimg ml5" src="/SecurityCode.do?op=noChange"/>
+						<SPAN class=gray6><A class=refimg href="javascript:void(0);" onclick="changeCode('z')">换一张</A></SPAN>
+					</P>
+				</DIV>
+				<P class="sub-btn mt20">
+					<BUTTON class="butn butn-orange" onclick="location.href='index.html'" type='button' type='button'><I></I>登录</BUTTON>
+					&nbsp;&nbsp;
+					<BUTTON class="butn butn-orange"><I></I>重置</BUTTON>
+				</P>
+				<h4 class="other-tit"><a href="#">系统登录指南</a> &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp; <a href="#">增加专家表单样式</a></h4>
+		</FORM>
+	</DIV>
+</DIV>
+</td>
+  </tr>
+</table>
+</div>
+</body>
+</html>
+

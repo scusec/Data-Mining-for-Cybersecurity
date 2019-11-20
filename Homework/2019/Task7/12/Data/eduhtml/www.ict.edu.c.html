@@ -1,0 +1,114 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>中国教育信息化网_国内权威教育信息化成果展示、学术交流的重要载体和平台！</title>
+<meta name="keywords" content="中国教育信息化网,教育信息化成果展示,中国教育信息化杂志社,教育信息化网,教育信息化杂志社,教育,信息化,翻转课堂,电子学籍,mooc,国际信息化教育,信息化培训,教育部,国际教育,三通两平台,教育网刊,信息化工作要点,教育信息化专题">
+<meta name="description" content="中国教育信息化网（www.ict.edu.cn）是由中华人民共和国教育部主管，教育部教育管理信息中心主办的教育信息化资讯类综合门户网站，是教育信息化成果展示、学术交流的重要载体和平台。">
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<link rel="stylesheet" href="/css/style.css" media="all" type="text/css">
+<script type="text/javascript" language="javascript" src="/js/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	var theDaysBox  = $("#numdays");
+	var theHoursBox = $("#numhours");
+	var theMinsBox  = $("#nummins");
+	var theSecsBox  = $("#numsecs");
+	
+	var refreshId = setInterval(function() {
+	  var currentSeconds = theSecsBox.text();
+	  var currentMins    = theMinsBox.text();
+	  var currentHours   = theHoursBox.text();
+	  var currentDays    = theDaysBox.text();
+	  
+	  if(currentSeconds == 0 && currentMins == 0 && currentHours == 0 && currentDays == 0) {
+	  	// if everything rusn out our timer is done!!
+	  	// do some exciting code in here when your countdown timer finishes
+	  	
+	  } else if(currentSeconds == 0 && currentMins == 0 && currentHours == 0) {
+	  	// if the seconds and minutes and hours run out we subtract 1 day
+	  	theDaysBox.html(currentDays-1);
+	  	theHoursBox.html("23");
+	  	theMinsBox.html("59");
+	  	theSecsBox.html("59");
+	  } else if(currentSeconds == 0 && currentMins == 0) {
+	  	// if the seconds and minutes run out we need to subtract 1 hour
+	  	theHoursBox.html(currentHours-1);
+	  	theMinsBox.html("59");
+	  	theSecsBox.html("59");
+	  } else if(currentSeconds == 0) {
+	  	// if the seconds run out we need to subtract 1 minute
+	  	theMinsBox.html(currentMins-1);
+	  	theSecsBox.html("59");
+	  } else {
+      	theSecsBox.html(currentSeconds-1);
+      }
+   }, 1000);
+});
+</script>
+</head>
+<body>
+<div class="wrap">
+	<h1>中国教育信息化网</h1>
+<div class="main">
+	<h2>网站紧张升级维护中......</h2>
+	<div class="banner">
+		<img src="/images/banner.png" alt="" />
+	</div>
+	<div class="text">
+		<h3>中国教育信息化网编辑部为给您带来不便表示歉意,&nbsp;<span>敬请期待新版上线...!</span></h3>
+		<div class	="clock-ticker" class="clearfix">
+			<div class="block">
+				<span class="flip-top" id="numdays">30</span>
+				<span class="flip-btm"></span>
+				<footer class="label">Days</footer>
+			</div>
+			<div class="block">
+				<span class="flip-top" id="numhours">12</span>
+				<span class="flip-btm"></span>
+				<footer class="label">Hours</footer>
+			</div>
+			<div class="block">
+				<span class="flip-top" id="nummins">34</span>
+				<span class="flip-btm"></span>
+				<footer class="label">Mins</footer>
+			</div>
+			<div class="block">
+				<span class="flip-top" id="numsecs">9</span>
+				<span class="flip-btm"></span>
+				<footer class="label">Secs</footer>
+			</div>
+		</div>
+			<form class="searchbox">
+	    <input class="search" type="text" placeholder="">
+	    <input class="submit" type="submit" value="Notify" >
+	</form>
+	</div>
+	<div class="clear"></div>
+	<div class="content">
+	<div class="icons">
+		<p class="left">follow us:</p>
+	<ul class="left">
+		<li><a href="#"><img src="/images/rss.png" alt="" /></a></li>
+		<li><a href="#"><img src="/images/twt.png" alt="" /></a></li>
+		<li><a href="#"><img src="/images/plus.png" alt="" /></a></li>
+		<li><a href="#"><img src="/images/in.png" alt="" /></a></li>
+		<li><a href="#"><img src="/images/fb.png" alt="" /></a></li>
+	</ul>
+		<div class="clear"></div>
+	</div>
+	<div class="clear"></div>
+	</div>
+</div>
+<div class="footer">
+<p>中华人民共和国教育部主管 教育部网络安全和信息化领导小组办公室指导 教育部教育管理信息中心主办 <br>
+
+</p>
+	<p>Copyright © www.ict.edu.cn All rights reserved 2017.&nbsp;&nbsp;京ICP备15029559号
+</p>
+</div>
+</div>
+
+</body>
+</html>

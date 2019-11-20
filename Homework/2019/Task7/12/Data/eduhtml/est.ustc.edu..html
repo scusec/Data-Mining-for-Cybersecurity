@@ -1,0 +1,329 @@
+<!--main.htm--><!doctype html>
+<html lang="zh-CN">
+	<head>
+		<meta charset='utf-8'>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+<link type="text/css" href="/_css/_system/system.css" rel="stylesheet"/>
+<link type="text/css" href="/_upload/site/1/style/1/1.css" rel="stylesheet"/>
+<link type="text/css" href="/_upload/site/00/50/80/style/77/77.css" rel="stylesheet"/>
+<link type="text/css" href="/_js/_portletPlugs/simpleNews/css/simplenews.css" rel="stylesheet" />
+
+<script language="javascript" src="/_js/jquery.min.js" sudy-wp-context="" sudy-wp-siteId="80"></script>
+<script language="javascript" src="/_js/jquery.sudy.wp.visitcount.js"></script>
+<link rel="stylesheet" href="/_upload/tpl/00/52/82/template82/res/fiendtrap2.css" OLDSRC="/_upload/tpl/00/52/82/template82/res/fiendtrap2.css" OLDID="26388" RELATED="1">
+		<link rel="stylesheet" href="/_upload/tpl/00/52/82/template82/res/barousel.css" OLDSRC="/_upload/tpl/00/52/82/template82/res/barousel.css" OLDID="26389" RELATED="1">
+		<link rel="stylesheet" href="/_upload/tpl/00/52/82/template82/res/bootstrap.min.css" OLDSRC="/_upload/tpl/00/52/82/template82/res/bootstrap.min.css" OLDID="26240" RELATED="1">
+		
+		
+		<script src="/_upload/tpl/00/52/82/template82/res/bootstrap.min.js" OLDSRC="/_upload/tpl/00/52/82/template82/res/bootstrap.min.js" OLDID="26244" RELATED="1"></script>
+		<script src="/_upload/tpl/00/52/82/template82/res/jquery.easing-1.3.js" OLDSRC="/_upload/tpl/00/52/82/template82/res/jquery.easing-1.3.js" OLDID="26245" RELATED="1"></script>
+		<script src="/_upload/tpl/00/52/82/template82/res/fiendtrap2.js" OLDSRC="/_upload/tpl/00/52/82/template82/res/fiendtrap2.js" OLDID="26390" RELATED="1"></script>
+		<script src="/_upload/tpl/00/52/82/template82/res/jquery.barousel.min.js" OLDSRC="/_upload/tpl/00/52/82/template82/res/jquery.barousel.min.js" OLDID="26391" RELATED="1"></script>
+		
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+			<script src="/_upload/tpl/00/52/82/template82/res/html5shiv.min.js" OLDSRC="/_upload/tpl/00/52/82/template82/res/html5shiv.min.js" OLDID="26247" RELATED="1"></script>
+			<script src="/_upload/tpl/00/52/82/template82/res/respond.min.js" OLDSRC="/_upload/tpl/00/52/82/template82/res/respond.min.js" OLDID="26248" RELATED="1"></script>
+		<![endif]-->
+		<title>中国科学技术大学电子科学与技术系</title>
+	</head>
+	<body>
+		
+		
+		<div class="hust">
+			<div class="hust-carousel">
+				<article>
+					<img src="/_upload/tpl/00/52/82/template82/res/westcamp.jpg" alt="slide 1" width="980" height="350" OLDSRC="/_upload/tpl/00/52/82/template82/res/westcamp.jpg" OLDID="26378" RELATED="1">
+					<div class="contents">
+						<h1>欢迎来到中国科大电子科学与技术系</h1>
+					</div>
+				</article>
+				<article>
+					<img src="/_upload/tpl/00/52/82/template82/res/westlake.jpg" alt="slide 2" width="980" height="350" OLDSRC="/_upload/tpl/00/52/82/template82/res/westlake.jpg" OLDID="26379" RELATED="1">
+					<div class="contents">
+						<h1>美丽西区</h1>
+					</div>
+				</article>
+				<article>
+					<img src="/_upload/tpl/00/52/82/template82/res/guomr.jpg" alt="slide 3" width="980" height="350" OLDSRC="/_upload/tpl/00/52/82/template82/res/guomr.jpg" OLDID="26380" RELATED="1">
+					<div class="contents">
+						<h1>郭沫若广场</h1>
+					</div>
+				</article>
+				<article>
+					<img src="/_upload/tpl/00/52/82/template82/res/ppcow.jpg" alt="slide 3" width="980" height="350" OLDSRC="/_upload/tpl/00/52/82/template82/res/ppcow.jpg" OLDID="26381" RELATED="1">
+					<div class="contents">
+						<h1>孺子牛</h1>
+					</div>
+				</article>
+			</div>
+		</div>
+		
+		<script>
+			$(document).ready(function () {
+				$('#barousel_itemnav').barousel({
+					manualCarousel: 0,
+					contentResize: 1
+				});
+				
+				
+				var currentpath = location.pathname;
+				var isNews = currentpath.search("/xwdt/");
+				var isIntr = currentpath.search("/xkjj/");
+				var isGrp = currentpath.search("/szdw");
+				var isEdc = currentpath.search("/jypy/");
+				var isJob = currentpath.search("/zsjy/");
+				if(isNews!="-1"){
+					$('#News').addClass('active');
+					} else if(isIntr!="-1"){
+					$('#Intr').addClass('active');
+					} else if(isGrp!="-1"){
+					$('#Grp').addClass('active');
+					} else if(isEdc!="-1"){
+					$('#Edc').addClass('active');
+					} else if(isJob!="-1"){
+					$('#Job').addClass('active');
+					} else{
+					$('#Ind').addClass('active');
+				}
+			});
+			$(document).ready(function(){
+				$('.hust-carousel').hustCarousel({
+					easing: 'easeOutExpo',
+					css3pieFix: true
+				});
+			});
+			$(document).ready(function () {
+				var menu = $('#cssmenu');
+				var origOffsetY = menu.offset().top;
+				function scroll() {
+					if ($(window).scrollTop() >= origOffsetY) {
+						$('#cssmenu').addClass('cssmenufixed');
+						$('#cssmenu').removeClass('cssmenufloat');
+						} else {
+						$('#cssmenu').removeClass('cssmenufixed');
+						$('#cssmenu').addClass('cssmenufloat');
+					}
+				}
+				document.onscroll = scroll;
+			});
+			$(document).ready(function() {
+				var bodyHeight = $("body").height();
+				var vwptHeight = $(window).height();
+				if (vwptHeight > bodyHeight) {
+					$("#footer").css("position","absolute").css("bottom",0);
+				}
+			});
+		</script>
+		
+		
+		<div id='cssmenu' class="cssmenufloat">
+			<ul><img align=center class=" hidden-sm hidden-xs" src="/_upload/tpl/00/52/82/template82/res/23Logo4.png" height="42" OLDSRC="/_upload/tpl/00/52/82/template82/res/23Logo4.png" OLDID="27883" RELATED="1">
+				<li id='Ind' class='has-sub'><a href='/main.htm'><span>首页</span></a>
+					<ul>
+						<li class='visible-xs'><a href="http://est.ustc.edu.cn/4722/list.htm"><span>新闻动态</span></a></li>
+						<li class='visible-xs'><a href="/4728/list.htm"><span>系况综述</span></a></li>
+						<li class='visible-xs visible-sm'><a href="http://est.ustc.edu.cn/4638/list.htm"><span>师资队伍</span></a></li>
+						<li class='visible-xs visible-sm'><a href="http://est.ustc.edu.cn/4716/list.htm"><span>教育培养</span></a></li>
+						<li class='last visible-xs visible-sm'><a href="http://est.ustc.edu.cn/4682/list.htm"><span>招生就业</span></a></li>
+					</ul>
+				</li>
+				<li id='News' class='hidden-xs'><a href="http://est.ustc.edu.cn/4722/list.htm"><span>新闻动态</span></a></li>
+				<li id='Intr' class='has-sub hidden-xs'><a href="http://est.ustc.edu.cn/4728/list.htm"><span>系况简介</span></a>
+					<ul>
+						<li><a href="/4728/list.htm"><span>系况综述</span></a></li>
+						<li class='last'><a href="/4727/list.htm"><span>机构设置</span></a></li>
+					</ul>
+				</li>
+				<li id='Grp' class='hidden-sm hidden-xs'><a href="http://est.ustc.edu.cn/4638/list.htm"><span>师资队伍</span></a></li>
+				<li id='Edc' class='hidden-sm hidden-xs hidden-mmm'><a href="http://est.ustc.edu.cn/4716/list.htm"><span>教育培养</span></a></li>
+				<li id='Job' class='last hidden-sm hidden-xs hidden-mm'><a href="http://est.ustc.edu.cn/4682/list.htm"><span>招生就业</span></a></li>
+			</ul>
+		</div>
+		
+		
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-6 col-md-4">
+					<div class="thumbnail">
+						<img src="/_upload/tpl/00/52/82/template82/res/W020150531543585521438.png" alt="第一届“电子杯”羽毛球赛" OLDSRC="/_upload/tpl/00/52/82/template82/res/W020150531543585521438.png" OLDID="26382" RELATED="1">
+						<div class="caption">
+							<h3>我系2015年第一届“电子杯”羽毛球赛成功举办</h3>
+							<p>5月24日上午9点，23系第一届“电子杯”羽毛球赛冠亚季军争夺战于东区羽毛球馆顺利举办。本次“电子杯”羽毛球赛由电子科学与技术系党总支、电子科学与技术系团总支主办，电子科学技术系研究生会承办。</p>
+							<p><a href="/2015/0531/c4722a43626/page.htm" class="btn btn-primary" role="button">查看详情</a></p>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-6 col-md-4">
+					<div class="thumbnail">
+						<img src="/_upload/tpl/00/52/82/template82/res/W020150410475013142635.png" alt="台湾群联电子董事长潘健成" OLDSRC="/_upload/tpl/00/52/82/template82/res/W020150410475013142635.png" OLDID="26383" RELATED="1">
+						<div class="caption">
+							<h3>台湾群联电子董事长潘健成参观我校信息学院暨创业经验分享演讲会</h3>
+							<p>2015年4月9日，应我校信息学院院长、IEEE Fellow吴枫教授，电子科学与技术...</p>
+							<p><a href="/2015/0410/c4722a43606/page.htm" class="btn btn-primary" role="button">查看详情</a></p>
+						</div>
+					</div>
+				</div>
+				
+				<div class="col-sm-6 col-md-4 hidden-sm hidden-xs">
+					<div class="thumbnail">
+						<div id="barousel_itemnav" class="barousel">
+							<div class="barousel_image">
+								<img src="/_upload/tpl/00/52/82/template82/res/W020150803702495703129.jpg" alt="" class="default" OLDSRC="/_upload/tpl/00/52/82/template82/res/W020150803702495703129.jpg" OLDID="26384" RELATED="1">
+								<img src="/_upload/tpl/00/52/82/template82/res/W020150727384423533252.jpg" alt="" OLDSRC="/_upload/tpl/00/52/82/template82/res/W020150727384423533252.jpg" OLDID="26385" RELATED="1">
+								<img src="/_upload/tpl/00/52/82/template82/res/W020150715624587989183.jpg" alt="" OLDSRC="/_upload/tpl/00/52/82/template82/res/W020150715624587989183.jpg" OLDID="26386" RELATED="1">
+								<img src="/_upload/tpl/00/52/82/template82/res/W020150410475013124848.png" alt="" OLDSRC="/_upload/tpl/00/52/82/template82/res/W020150410475013124848.png" OLDID="26387" RELATED="1">
+							</div>
+							<div class="barousel_content">
+								<div class="default">
+									<!-- <p class="header">Horses 1</p> -->
+									<p><a href="/2015/0803/c4722a43235/page.htm">硅谷资深工程师关智源老师暑期课程：MiniCPU设计与验证</a></br></p>
+								</div>
+								<div>
+									<p><a href="/2015/0727/c4722a43634/page.htm">美国俄亥俄州立大学教授何晓明博士</a></p>
+								</div>
+								<div>
+									<p><a href="/2015/0715/c4722a43632/page.htm">美国IEEE Life Fellow黄正民教授学术报告</a></p>
+								</div>
+								<div>
+									<a href="/2015/0410/c4722a43606/page.htm"><p>台湾群联电子董事长潘健成参观我校信息学院暨创业经验分享演讲会</p></a>
+								</div>
+							</div>
+							<div class="barousel_nav">
+							</div>
+							</br>
+						</div>
+					</div>
+					
+					<div class="thumbnail">
+						<!-- <div id="weather"  style="max-height: 270px;overflow:auto"></div> -->
+						<a href="/4683/list.htm" class="btn btn-primary  btn-block" >学生天地</a>
+						<a href="/4658/list.htm" class="btn btn-success  btn-block">科研机构</a>
+						<a href="/4652/list.htm" class="btn btn-info  btn-block">专题</a>
+						<a href="/4610/list.htm" class="btn btn-warning  btn-block">资源下载</a>
+						<a href="/4602/list.htm" class="btn btn-danger  btn-block">特别关注</a>
+					</div>
+				</div>
+			</div>
+			
+			
+			<div class="row">
+				<div class="col-sm-12 col-md-8">
+					<div class="panel panel-primary">
+						<div class="panel-heading">
+							<h3 class="panel-title"><span class="glyphicon glyphicon-book" aria-hidden="true"></span>  最近新闻<span><a class="timeright whitefont" href="/4722/list.htm">更多</a></span></h3>
+						</div>
+						<div class="panel-body" frag="窗口1" portletmode="simpleNews" contents="{c1:'新闻', c2:'0'}" columnMode="1" configs="{ c3:'7', c21:'0',c6:'30'}">
+							<p><a href='/2017/1025/c4722a206038/page.htm' target='_blank' title='我校学生荣获第七届全国大学生集成电路设计·应用创新大赛一等奖'>我校学生荣获第七届全国大学生集成电路设计·应用创新大赛一等奖</a><span class="timeright">2017-10-24</span></p><p><a href='/2017/1020/c4722a196166/page.htm' target='_blank' title='我系2017年“电子信息杯”羽毛球赛成功举办'>我系2017年“电子信息杯”羽毛球赛成功举办</a><span class="timeright">2017-09-26</span></p><p><a href='/2017/1020/c4722a196164/page.htm' target='_blank' title='射频芯片专家林福江：我愿做个伯乐 寻找中国微电子千里马'>射频芯片专家林福江：我愿做个伯乐 寻找中国微电子千里马</a><span class="timeright">2017-09-22</span></p><p><a href='/2017/1020/c4722a196162/page.htm' target='_blank' title='我校学生荣获第七届全国大学生集成电路设计•应用创新大赛二等奖'>我校学生荣获第七届全国大学生集成电路设计•应用创新大赛二等奖</a><span class="timeright">2017-09-07</span></p><p><a href='/2017/1020/c4722a196161/page.htm' target='_blank' title='信息学院研究生高水平学术讲座 – 余昕教授学术报告'>信息学院研究生高水平学术讲座 – 余昕教授学术报告</a><span class="timeright">2017-06-29</span></p><p><a href='/2017/1020/c4722a196160/page.htm' target='_blank' title='IC设计前沿系列讲座之校友陈高鹏0123和左成杰0023学术报告'>IC设计前沿系列讲座之校友陈高鹏0123和左成杰0023学术报告</a><span class="timeright">2017-06-05</span></p><p><a href='/2017/0223/c4722a172016/page.htm' target='_blank' title='美国纪念斯隆凯特林癌症中心李光博士访问中国科大医学影像中心和医学物理中心'>美国纪念斯隆凯特林癌症中心李光博士访问中国科大医学影像中心和...</a><span class="timeright">2017-02-23</span></p>
+							
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 hidden-sm hidden-xs">
+					<div class="panel panel-danger">
+						<div class="panel-heading">
+							<h3 class="panel-title"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>  特别关注</h3>
+						</div>
+						<div class="panel-body">
+							<ul frag="窗口2" portletmode="simpleNews" contents="{c1:'特别关注', c2:'0'}" columnMode="1" configs="{ c21:'0'}"><p><a href='/2010/0922/c4602a43170/page.htm' target='_blank' title='中科院微电子研究所所长叶甜春受聘为我系系主任'>中科院微电子研究所所长叶甜春受...</a></p><p><a href='/2010/0715/c4602a42958/page.htm' target='_blank' title='我系学生机器人活动开展情况'>我系学生机器人活动开展情况</a></p><p><a href='/2010/0715/c4602a43165/page.htm' target='_blank' title='我系研发成功国内首款低功耗脉冲超宽带(UWB)芯片'>我系研发成功国内首款低功耗脉冲...</a></p></ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="col-sm-4 col-md-4">
+					<div class="panel panel-success">
+						<div class="panel-heading">
+							<h3 class="panel-title"><span class="glyphicon glyphicon-pushpin" aria-hidden="true"></span>  通知公告<span class="timeright"><a href="/4718/list.htm">更多</a></span></h3>
+						</div>
+						<div class="panel-body" frag="窗口3" portletmode="simpleNews" contents="{c1:'通知公告', c2:'0'}" columnMode="1" configs="{ c3:'4', c21:'0',c6:'30'}">
+							<p><a href='/2017/0306/c4718a172017/page.htm' target='_blank' title='电子科学与技术系2017年招收硕士研究生复试办法'>电子科学与技术系2017年招收硕士研究生复试办法</a></p><p><a href='http://sist.ustc.edu.cn/zsjy/sszs/201503/t20150317_212584.html' target='_blank' title='信息学院2015年硕士研究生招生复试名单公告'>信息学院2015年硕士研究生招生复试名单公告</a></p><p><a href='/2013/0514/c4718a43143/page.htm' target='_blank' title='IC设计前沿讲座2013年第六期'>IC设计前沿讲座2013年第六期</a></p><p><a href='/2013/0511/c4718a43142/page.htm' target='_blank' title='ISSCC 60周年活动的通知'>ISSCC 60周年活动的通知</a></p>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-4 col-md-4">
+					<div class="panel panel-info">
+						<div class="panel-heading">
+							<h3 class="panel-title"><span class="glyphicon glyphicon-education" aria-hidden="true"></span>  科研信息<span class="timeright whitefont"><a href="/4720/list.htm">更多</a></span></h3>
+						</div>
+						<div class="panel-body" frag="窗口4" portletmode="simpleNews" contents="{c1:'科研信息', c2:'0'}" columnMode="1" configs="{ c3:'4', c21:'0',c6:'30'}">
+							<p><a href='/_s51/2015/0126/c2706a20791/page.htm' target='_blank' title='中科院无线光电通信重点实验室召开第一届学术委员会第一次会议'>中科院无线光电通信重点实验室召开第一届学术委员会第一次会议</a></p><p><a href='http://sist.ustc.edu.cn/xwxx/xw/201410/t20141020_203553.html' target='_blank' title='2014中国云计算大数据安全大会在中国科大召开'>2014中国云计算大数据安全大会在中国科大召开</a></p><p><a href='http://www.ustc.edu.cn/ggtz/201009/t20100909_46856.html' target='_blank' title='(转)关于组织申报2010年度中国科学院研究生科技创新与社会实践资助专项的通知'>(转)关于组织申报2010年度中国科学院研究生科技创新与社会实践资...</a></p><p><a href='/2010/0804/c4720a43061/page.htm' target='_blank' title='(转)关于申报中科院推荐2011年度国家科技奖的通知'>(转)关于申报中科院推荐2011年度国家科技奖的通知</a></p>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-4 col-md-4">
+					<div class="panel panel-warning">
+						<div class="panel-heading">
+							<h3 class="panel-title"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span>  教学信息<span class="timeright"><a href="/4721/list.htm">更多</a></span></h3>
+						</div>
+						<div class="panel-body" frag="窗口5" portletmode="simpleNews" contents="{c1:'教学信息', c2:'0'}" columnMode="1" configs="{ c3:'4', c21:'0',c6:'35'}">
+							<p><a href='/2016/1221/c4721a172018/page.htm' target='_blank' title='生物医学工程专业（0831学术）研究生培养方案'>生物医学工程专业（0831学术）研究生培养方案</a></p><p><a href='/2015/0313/c4721a43712/page.htm' target='_blank' title='2015年研究生复试安排'>2015年研究生复试安排</a></p><p><a href='/2014/0827/c4721a43698/page.htm' target='_blank' title='2015接收推免生面试流程'>2015接收推免生面试流程</a></p><p><a href='/2014/0310/c4721a43711/page.htm' target='_blank' title='2014年电子科学技术系硕士研究生复试办法'>2014年电子科学技术系硕士研究生复试办法</a></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>	
+		
+		
+		<div id="footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-8 col-sm-12 col-xs-12">
+						<h3 class="whitefont"><span class="glyphicon glyphicon-link" aria-hidden="true"></span>  友情链接</h3>
+						<ul class="list-unstyled footline">
+							<li class="col-sm-4 col-xs-6">
+								<a href="http://biomems.ustc.edu.cn/">生物微机电系统实验室</a>
+							</li>
+							<li class="col-sm-4 col-xs-6">
+								<a href="http://bme-nmc.ustc.edu.cn/">神经肌肉控制实验室</a>
+							</li>
+							<li class="col-sm-4 col-xs-6">
+								<a href="http://bmec.ustc.edu.cn/">生物医学影像中心</a>
+							</li>
+							<li class="col-sm-4 col-xs-6">
+								<a href="/_s183/main.htm">微纳电子系统集成研究中心</a>
+							</li>
+							<li class="col-sm-4 col-xs-6">
+								<a href="/_s93/main.htm">中国科学技术大学信息学院</a>
+							</li>
+							<li class="col-sm-4 col-xs-6">
+								<a href="/_s51/main.htm">电子工程与信息科学系</a>
+							</li>
+							<li class="col-sm-4 col-xs-6">
+								<a href="http://auto.ustc.edu.cn/index.php">自动化系</a>
+							</li>
+							<li class="col-sm-4 col-xs-6">
+								<a href="http://www.teach.ustc.edu.cn/">中国科学技术大学教务处</a>
+							</li>
+							<li class="col-sm-4 col-xs-6">
+								<small class="timeright"><a href="/4656/list.htm">更多</a></small>
+							</li>
+						</ul>
+					</div>
+					
+					
+					<div class="col-md-4 col-sm-12 col-xs-12">
+						<h3 class="whitefont"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>  联系方式</h3>
+						<ul class="list-unstyled footline">
+							<li>
+								<span class="whitefont">地址：科大西区电四楼</br>中国安徽省合肥市黄山路</br>Email 地址：bqiu@ustc.edu.cn</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="row ">
+					<div class="col-md-12">
+						</br></br>
+						<p class="footline whitefont text-center">©2015，中国科学技术大学信息科学技术学院电子科学与技术系，版权所有。</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	
+</html>
+ <image src="/_visitcount?siteId=80&type=1&columnId=4598" style="display:none" width="0" height="0"></image>

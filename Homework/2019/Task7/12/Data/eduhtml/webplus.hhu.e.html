@@ -1,0 +1,90 @@
+
+
+
+
+
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>欢迎使用Webplus 2008——高校网站群管理平台！</title>
+        <style type="text/css">
+            <!--
+            .toolsInput{
+                width:110;
+            }
+            body {
+                    margin-left: 0px;
+                    margin-top: 0px;
+                    margin-right: 0px;
+                    margin-bottom: 0px;
+            }
+            .login_txt
+            {
+                    font-size: 9pt; 
+                    line-height: 16pt;
+                    color: #3F3F3F;
+            }
+            .copyright
+            {
+                    font-size: 9pt; 
+                    color: #B2B2B2;
+            }
+            -->
+        </style>
+    </head>    
+    <body onload="javascript:if(document.all['aaa']){document.all['aaa'].focus();}">
+        
+        <table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+ <td height="16" bgcolor="#000000" class="copyright"><div align="right"><!--CopyRight &copy; SudyTech Corp.All Right Reserved.--></div></td>
+</tr>
+<tr>
+<td><table cellspacing="0" cellpadding="0" width="100%" border="0">
+<tr>
+<td background="/images/index/bananer_bg.jpg"><div align="center"><img src="/images/index/bananer.jpg"></div></td>
+</tr>
+</table>
+
+        <table width="100%" height="100%"  border="0" cellpadding="0" cellspacing="0">
+            <tr>
+                <td align="center" valign="top" background="/images/index/main_bot_bg.gif">
+                    <!--<table width="426" border="0" cellspacing="0" cellpadding="0">
+                            <tr>
+                              <td height="60" class="login_txt"><div align="center">
+                                <p align="left">　　欢迎使用WebPlus 2008——高校网站群管理平台！<br>
+                                      在通过身份认证后、点击&quot;工具箱&quot;按钮，您便可以开始管理您的网站。 </p>
+                              </div></td>
+                            </tr>
+                          </table>-->
+                    <table width="426" height="133" border="0" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td width="6" height="6"></td>
+                            <td height="6" background="/images/index/login_top_bg.gif"></td>
+                        </tr>
+                        <tr>
+                            <td width="6"></td>
+                            <td>
+                                <table width="96%"  border="0" align="center" cellpadding="0" cellspacing="0" class="login_txt">
+                                    <tr>
+                                        <td width="116"><div align="center"><img src="/images/index/icon_lock.gif"></div></td>
+                                        <td width="30"></td>
+                                        <td><table height=1 cellpadding=0 cellspacing=0 border=0 style='font-size:9pt;line-height:21px'><form id=loginform name=loginform method=post><tr><td><b>欢迎进入[系统]网站！</b></td></tr><tr><td>用户名：<input type=hidden name='isSubmitted' value='1'><input id='aaa' name='userName' class='toolsInput' onkeydown="if(event.keyCode=='13'){if(this.value==''){alert('请输入用户名！');}else{document.getElementsByName('password')[0].focus();}}"></td></tr><tr><td>密　码：<input type='password' name='password' class='toolsInput' onkeydown="if(event.keyCode=='13'){if(document.getElementsByName('Identi1').length != 0){document.getElementsByName('Identi1')[0].focus();}else{userLogin();}}"></td></tr><tr><td><table cellpadding=0 cellspacing=0 border=0  style='font-size:9pt'><tr><td width='1%' nowrap>验证码：<input name='validateimage' class='toolsInput' size='10' onkeydown="if(event.keyCode=='13'){userLogin();}"></td><td width='1'></td><td align='right'><img src="/control/validateimage"></td></tr></table></td></tr><tr><td align=right><img src='/images/button/login.gif' onclick="userLogin()" border=0 style='cursor:hand' alt='登　录'></td></tr></form></table><script language='javascript'>    function userLogin(){        if(document.getElementsByName('userName')[0].value==''||document.getElementsByName('password')[0].value==''){            alert('请输入用户名和密码！');        }else{            if(document.getElementsByName('validateimage').length != 0){                if(document.getElementsByName('validateimage')[0].value==''){                    alert('请输入验证码！');                    return;                }             }            document.getElementById('loginform').action = '/webplus/login?returnUrl=%2Findex.jsp%3FsiteId%3D0%26pageId%3D0';            document.getElementById('loginform').submit();        }    }</script></td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="6" height="6">&nbsp;</td>
+                            <td height="6"></td>
+                        </tr>
+                    </table>      
+                    <p style="
+    color: #F00;
+    font-weight: bold;
+">请注意：暑假期间（7月10-8月31日），网站群平台进行升级。在此期间，建议各站点只可进行正常新闻发布，不进行站点改版、栏目调整、权限设置等操作。带来不便，请您理解。为了顺利完成升级实施工作，谢谢您的配合。</p>
+                    <p>&nbsp;</p>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

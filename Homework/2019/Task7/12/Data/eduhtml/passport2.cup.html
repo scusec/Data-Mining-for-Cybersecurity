@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>找回密码</title>
+<link href="/css/pwd/basic.css" rel="stylesheet" type="text/css" />
+<link href="/css/pwd/index.css" rel="stylesheet" type="text/css" />
+
+<script src="/js/jquery-1.9.0.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="/js/v5/jquery.cookie.js"></script> 
+<script type="text/javascript">
+	if($.cookie("browserLocale") == "en_US"){
+ 		$.getScript("/js/common/global_en.js"); 
+ 	}else{
+ 		$.getScript("/js/common/global_zh.js"); 
+ 	}
+</script>
+<script src="/js/pwd/pwd_new1.js" type="text/javascript"></script>
+</head>
+
+<body>
+
+<div class="zcenter" align="center">
+	<h2 class="zc_h2">找回密码</h2>
+    <form id="form" name="form" action="/pwd/chkinfo" method="post">
+	<input type="hidden" name="refer" value="http://3rdsemester.cupl.edu.cn"/>
+	<input type="hidden" name="fid" value="16619"/>	
+	<table class="zc_table" width="400" border="1">
+      <div style="margin-top:50px;margin-bottom:100px;" class="progress_bar" id="progress_bar">
+		<img src="/images/pwd/bar1.png"/>
+	  </div>
+      <div style="margin-top:50px;margin-left:-338px;font-size: 14px">
+		请输入账号所绑定的邮箱/手机:
+	  </div>
+	  <tr>
+        <td class="zc_name"></td>
+        <td colspan="2" class="error_td zc_warning_2" id="error_td"></td>
+      </tr>
+      <tr style="padding-top:10px">
+        <td class="zc_name">邮箱/手机：</td>
+        <td><input class="zc_input330" name="emailorphone" type="text" id="emailorphone" value="" onfocus="hiddenError('error_td')"/></td>
+		<td  >
+			<span class="zc_btn" >
+			<a href="javascript:void(0);" onclick="getEmailOrPhoneCode();" id="btnEmailOrPhoneCode" class="fl" style="margin-top: -17px; width: 111px; margin-left: 13px;">发送验证码</a>
+            </span>
+	    </td>
+      </tr>
+	  <tr class="tooltip zl_tr_td_hide">
+        <td class="zc_name"></td>
+        <td colspan="2" class="tooltip_td" id="tooltip_td"></td>
+      </tr>
+      <tr>
+        <td class="zc_name">验证码：</td>
+        <td>
+		<input class="zc_input330" name="vercode" id="vercode" type="text" onkeydown="keydownSubmit(event)" onfocus="hiddenError('error')"/></td>
+        </td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td colspan="3" align="center">
+			<span class="zc_btn"><a style="margin-left: -35px; width: 333px; margin-top: 21px;" href="javascript:void(0);" onclick="pwdSubmit()">下一步</a></span>
+      </tr>
+	  
+	  <div class="Aleabg" style="display:none"></div>
+      <div class="POP-yzm" style="display:none"> 
+          <p class="Tit"><a href="#"><img src="/images/alert/close.png" onclick="hideCode();"/></a></p>
+          <span class="Sp-p1">请输入随机验证码</span>
+          <div class="Inpmain">
+           	<input type="text" name="numcode" id="numcode"  placeholder="请输入右边的四位数字" /><span>
+				<img src="" width="100" height="40" id="numVerCode" style="border:solid 1px #CCC;border-radius:4px;"/>
+			</span><a href="javascript:void(0);" onclick="getNumCode();" >看不清</a>
+          </div>
+          <p class="Btn-p"><a href="javascript:void(0);" class="Sure" onclick="doGetPhoneCode()">Ok</a><a href="javascript:void(0);" onclick="hideCode();">Cancel</a></p>
+      </div>
+    </table>
+	</form>
+</div>
+</body>
+</html>

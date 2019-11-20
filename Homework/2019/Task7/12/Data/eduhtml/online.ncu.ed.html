@@ -1,0 +1,467 @@
+
+
+
+
+
+
+
+
+      
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=gbk" />
+    <title>欢迎进入网络教学综合平台</title>
+    <link href="../styles/common/css/reset.css" rel="stylesheet" type="text/css">
+    <link href="../styles/style_2_03/css/layout.css" rel="stylesheet" type="text/css">
+    
+    <link href="../styles/style_2_03/css/content.css" rel="stylesheet" type="text/css">
+    
+    <script language="javascript" src="../styles/common/js/jquery-1.4.4.min.js" type="text/javascript"></script>
+    <script language="javascript" src="../styles/common/js/general.js" type="text/javascript"></script>
+    <script language="javascript" src="../styles/style_2_03/js/init.js" type="text/javascript"></script>
+    <script type="text/javascript" >
+        function onHelp()
+        {
+            var url=UrlEncode(location.href);
+            window.open("../common/help/help.jsp?qstr="+url,"在线帮助","toolbar=yes,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes");
+        }
+    </script>
+</head>
+<body class="index">
+<div class="wrapper">
+    <div class="wrap">
+        <div class="header">
+            <div class="head">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="logo"></div>
+<div class="nav">
+    <ul>
+        <li><a href="/eol/homepage/common/index.jsp"  class="cur"><span>首页</span></a></li>
+        <li><a href="/eol/homepage/common/index_lesson_rank.jsp"  class=""><span>推荐课程</span></a></li>
+        <li><a href="/eol/homepage/common/index_teacher.jsp" class=""><span>任课教师</span></a></li>
+        <li><a href="/eol/homepage/common/index_teacher_rank.jsp"  class=""><span>教学名师</span></a></li>
+        
+        <li><a href="/eol/homepage/common/info_index.jsp?folderId=121918792"><span>教学博客</span></a></li>
+        
+        <li><a href="/eol/homepage/common/info_index.jsp?folderId=121901893"><span>教学资源库</span></a></li>
+        
+        <li><a href="/eol/homepage/common/info_index.jsp?folderId=121902101"><span>国家精品课程资源网</span></a></li>
+        
+        <li><a href="/eol/homepage/common/info_index.jsp?folderId=121987869"><span>资源下载</span></a></li>
+        
+        
+        
+        
+        
+    </ul>
+</div>
+
+
+</div>
+        </div>
+        <div class="bodyer">
+            <div class="bodys clearfix">
+                <div class="sidebar">
+                    <div class="login">
+
+
+
+
+
+
+<script language="JavaScript" type="text/JavaScript">
+    function checkLogin(){
+        var name=document.getElementById("userName");
+        var pass=document.getElementById("passWord");
+        var formobj=document.getElementById("form1");
+        if(name.value == ""){
+            name.focus();
+            alert("用户名不能为空！");
+            return false;
+        }else if(pass.value == ""){
+            pass.focus();
+            alert("密码不能为空！");
+            return false;
+        }else{
+            return true;
+        }
+
+    }
+
+</script>
+<div class="loginwrap">
+    <div class="login-title">
+        <h4>用户登录</h4>
+    </div>
+    
+    <form action="/eol/homepage/common/login.jsp" method="post" name="login" id="login" onSubmit="return checkLogin();">
+        <div class="login-content">
+            <div><label >用户名</label><input type="text" name="IPT_LOGINUSERNAME" id="userName" tabindex="1" /></div>
+            <div><label>密&nbsp;&nbsp;&nbsp;&nbsp;码</label><input type="password" name="IPT_LOGINPASSWORD" id="passWord" tabindex="2" ></div>
+        </div>
+        <div class="login-button">
+            <input type="submit" class="submit" value="登 录"/>
+            
+        </div>
+    </form>
+    
+</div>
+</div>
+                    <div class="shortcutmenu">
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="shortcutwrap">
+    <div class="shortcut-ul">
+        <ul>
+            
+            
+            <li><a href="/eol/homepage/common/index_jpk.jsp" class="s2"><span>精品课程</span></a>
+            </li>
+            
+	<li><a href="http://online.ncu.edu.cn/eol/homepage/common/apply_view.jsp?open=0&status=&newsId=22&sessionId=267" class="s11"><span>精品资源共享课</span></a></li>
+            
+            <li><a href="/eol/homepage/common/index_issue.jsp" class="s3"><span>
+        
+            研究型教学
+        
+        </span></a></li>
+            
+            
+            
+
+            
+            
+            <li><a href="/eol/homepage/common/index_vblog.jsp" class="s10"><span>教学播客</span></a>
+            </li>
+            
+            
+            <li><a href="http://courseunion.theti.org/courseunion/" class="s7" target="_blank"><span>课程共享联盟</span></a>
+            </li>
+            
+            
+            <li><a href="../../../resource/index.jsp" class="s8" target="_blank"><span>教学资源中心</span></a>
+            </li>
+            
+            
+        </ul>
+    </div>
+</div>
+
+
+</div>
+                    <div class="deplist">
+
+
+
+
+
+
+
+
+
+<div class="depwrap">
+    <div class="dep-title">
+        <h4>开课院系</h4>
+    </div>
+    <div class="dep-ul" id="deplist">
+       <ul><li><a href='index_dept.jsp?deptId=2190' title='人文学院'>人文学院</a></li><li><a href='index_dept.jsp?deptId=2185' title='外国语学院'>外国语学院</a></li><li><a href='index_dept.jsp?deptId=2300' title='艺术与设计学院'>艺术与设计学院</a></li><li><a href='index_dept.jsp?deptId=2198' title='法学院'>法学院</a></li><li><a href='index_dept.jsp?deptId=2194' title='经济与管理学院'>经济与管理学院</a></li><li><a href='index_dept.jsp?deptId=10140' title='管理学院'>管理学院</a></li><li><a href='index_dept.jsp?deptId=2290' title='理学院'>理学院</a></li><li><a href='index_dept.jsp?deptId=2210' title='化学学院'>化学学院</a></li><li><a href='index_dept.jsp?deptId=2206' title='生命科学学院'>生命科学学院</a></li><li><a href='index_dept.jsp?deptId=2203' title='食品学院'>食品学院</a></li><li><a href='index_dept.jsp?deptId=2287' title='材料科学与工程学院'>材料科学与工程学院</a></li><li><a href='index_dept.jsp?deptId=2281' title='机电工程学院'>机电工程学院</a></li><li><a href='index_dept.jsp?deptId=2277' title='建筑工程学院'>建筑工程学院</a></li><li><a href='index_dept.jsp?deptId=2272' title='信息工程学院'>信息工程学院</a></li><li><a href='index_dept.jsp?deptId=2264' title='教育学院'>教育学院</a></li><li><a href='index_dept.jsp?deptId=10081' title='医学院'>医学院</a></li><li><a href='index_dept.jsp?deptId=2252' title='公共管理学院'>公共管理学院</a></li><li><a href='index_dept.jsp?deptId=2247' title='马克思主义学院'>马克思主义学院</a></li><li><a href='index_dept.jsp?deptId=10120' title='新闻与传播学院'>新闻与传播学院</a></li><li><a href='index_dept.jsp?deptId=2245' title='软件学院'>软件学院</a></li><li><a href='index_dept.jsp?deptId=10080' title='抚州医学院'>抚州医学院</a></li></ul>
+    </div>
+</div></div>
+                </div>
+                <div class="main clearfix">
+                    <div class="block-l">
+                        <div class="showpic">
+
+
+
+
+
+
+
+
+<link rel="stylesheet" type="text/css" href="../styles/common/plugins/sliderImg/slider.css" />
+<script type="text/javascript" src="../styles/common/plugins/sliderImg/sliderfader.js"></script>
+<div class="showpicwrap clearfix">
+    <!--Slider 开始-->
+<div id="slideshow">
+<div id="slider">
+<!--轮询图片-->
+<a id="slides" href="#">
+<img src="../styles/style_2_03/image/showpic_1.jpg" alt="" />
+<img src="../styles/style_2_03/image/showpic_2.jpg" alt="" />
+<img src="../styles/style_2_03/image/showpic_3.jpg" alt="" />
+</a><!--轮询图片-->
+<ul id="slidepagination"></ul>
+</div>
+<SCRIPT type="text/javascript">
+   var Slider=new SLIDER.fader.fade('Slider',{
+       id:'slides',
+       auto:4, //时间，秒
+       resume:true,
+       navid:'slidepagination',
+       activeclass:'current',
+       visible:true,
+       position:0
+   });
+  </SCRIPT>
+<!--Slider 结束-->
+</div>
+</div></div>
+                        <div class="notify">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="notifywrap">
+    <div class="notify-title">
+        <h4>通知公告</h4>
+    </div>
+    <div class="notify-ul">
+        <ul>
+            
+            <li><span class="time">2017-06-30</span><a href="../../common/inform/message_content.jsp?nid=4890455" title="关于网络教学平台暂停使用的通知" target="_blank">关于网络教学平台暂停使用的通知</a></li>
+			  
+            <li><span class="time">2013-11-01</span><a href="../../common/inform/message_content.jsp?nid=1165206" title="<b>我校两门国家级精品资源共享课上线啦</b>" target="_blank"><b>我校两门国家级精品资源共享课上线啦</b></a></li>
+			  
+            <li><span class="time">2013-11-01</span><a href="../../common/inform/message_content.jsp?nid=1165013" title="<b>我校两门国家级视频公开课上线啦</b>" target="_blank"><b>我校两门国家级视频公开课上线啦</b></a></li>
+			  
+            <li><span class="time">2013-06-08</span><a href="../../common/inform/message_content.jsp?nid=918125" title="<b>关于近日网络教学综合平台断网情况的说明</b>" target="_blank"><b>关于近日网络教学综合平台断网情况的说明</b></a></li>
+			  
+            <li><span class="time">2012-12-05</span><a href="../../common/inform/message_content.jsp?nid=543841" title="发布《南昌大学网络课程授课情况问卷调查》模板的通知" target="_blank">发布《南昌大学网络课程授课情况问卷调查》模板的通知</a></li>
+			  
+            <li><span class="time">2012-05-14</span><a href="../../common/inform/message_content.jsp?nid=299382" title="相关软件下载" target="_blank">相关软件下载</a></li>
+			  
+               </ul>
+    </div>
+    <div class="notify-more">
+      <a href="./inform_all.jsp" target="_blank">&gt;&gt;更多</a>
+    </div>
+    
+</div></div>
+                        <div class="schoolinfo">
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="schoolinfowrap">
+    <div class="schoolinfo-title">
+        <h4>平台简介</h4>
+    </div>
+    <div class="schoolinfo-content">
+        <input type='hidden' name='709_content' id='709_content' value='&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; 维护管理单位：现代教育技术中心&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; 服务电话：0791-83969298（抚州医学院的师生请拨0794-8251690）&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; 服务电邮：&lt;a href=&quot;mailto:ndmetc@ncu.edu.cn&quot;&gt;ndmetc@ncu.edu.cn&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; 办公地址：前湖校区教学主楼5楼&lt;/strong&gt;&lt;/p&gt;'><iframe id='_rtf_content709' allowTransparency='true' name='_rtf_content709' src='/eol/common/ckeditor/content.html?name=709' width='98%' height='100%' frameborder='0' scrolling='no' marginheight='0'></iframe>
+    </div>
+    <div class="schoolinfo-img"></div>
+</div>
+
+
+
+
+</div>
+                    </div>
+                    <div class="block-r">
+                        <div class="lessonhot">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="dayhot">
+    <div class="dayhot-title"><h4>课程日访问排行</h4></div>
+     <div class="dayhot-ul">
+        <ul>
+            
+            <li><span class="lesname"><a href="../course/course_index.jsp?courseId=10517" target="_blank" title="医学细胞生物学">医学细胞生物学</a></span>
+                <span class="lescount">访问次数：<em>156</em></span>
+                <span class="lestea">主讲教师：<em>李翔,</em></span>
+            </li>
+            
+            <li><span class="lesname"><a href="../course/course_index.jsp?courseId=63853" target="_blank" title="17年下 通用外语类">17年下 通用外......</a></span>
+                <span class="lescount">访问次数：<em>144</em></span>
+                <span class="lestea">主讲教师：<em>付悠悠</em></span>
+            </li>
+            
+            <li><span class="lesname"><a href="../course/course_index.jsp?courseId=50063" target="_blank" title="17年下 社会科学统计软件（SPSS）">17年下 社会科......</a></span>
+                <span class="lescount">访问次数：<em>91</em></span>
+                <span class="lestea">主讲教师：<em>齐小兵</em></span>
+            </li>
+            
+            <li><span class="lesname"><a href="../course/course_index.jsp?courseId=22878" target="_blank" title="17年下 毛泽东思想和中国特色社会主义理论体系概论">17年下 毛泽东......</a></span>
+                <span class="lescount">访问次数：<em>56</em></span>
+                <span class="lestea">主讲教师：<em>易文彬</em></span>
+            </li>
+            
+	    </ul>
+    </div>
+    <div class="dayhot-more">
+      <a href="today_lesson_top_list.jsp" target="_blank">&gt;&gt;更多</a>
+    </div>
+</div>
+<div class="spacer"></div>
+
+
+<div class="totalhot">
+    <div class="totalhot-title"><h4>课程总访问排行</h4></div>
+    <div class="totalhot-ul">
+        <ul>
+            
+            <li><span class="lesname"><a href="../course/course_index.jsp?courseId=44467" target="_blank" title="大学英语资源">大学英语资源</a></span>
+                <span class="lescount">访问次数：<em>923310</em></span>
+                <span class="lestea">主讲教师：<em>大外部</em></span>
+            </li>
+            
+            <li><span class="lesname"><a href="../course/course_index.jsp?courseId=5220" target="_blank" title="医学生物化学">医学生物化学</a></span>
+                <span class="lescount">访问次数：<em>242673</em></span>
+                <span class="lestea">主讲教师：<em>揭克敏</em></span>
+            </li>
+            
+            <li><span class="lesname"><a href="../course/course_index.jsp?courseId=5223" target="_blank" title="生理学I">生理学I</a></span>
+                <span class="lescount">访问次数：<em>208705</em></span>
+                <span class="lestea">主讲教师：<em>杨蓓,</em></span>
+            </li>
+            
+            <li><span class="lesname"><a href="../course/course_index.jsp?courseId=5219" target="_blank" title="医学分子生物学">医学分子生物学</a></span>
+                <span class="lescount">访问次数：<em>168940</em></span>
+                <span class="lestea">主讲教师：<em>黄春洪</em></span>
+            </li>
+            
+	    </ul>
+    </div>
+    <div class="totalhot-more">
+      <a href="total_lesson_top_list.jsp" target="_blank">&gt;&gt;更多</a>
+    </div>
+</div>
+<div class="spacer"></div>
+
+
+</div>
+                        <div class="counter">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="totalcount">
+    <div class="totalcount-title">
+        <h4>总访问量</h4>
+    </div>
+    <div class="totalcount-num">
+        <span class="explain">282591239</span>
+    </div>
+</div>
+<div class="spacer"></div>
+<div class="lesscount">
+    <div class="lesscount-title">
+        <h4>总课程数</h4>
+    </div>
+    <div class="lesscount-num">
+        <span class="explain">15236</span>
+    </div>
+</div>
+<div class="spacer"></div>
+<div class="olcount">
+    <div class="olcount-title">
+        <h4>在线人数</h4>
+    </div>
+    <div class="olcount-num">
+        <span class="explain">278</span>
+    </div>
+</div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="foot">
+
+
+
+
+
+
+<div class="copyright">
+		<p><a href=http://www.ncu.edu.cn/ target=_blank> 南昌大学 </a> 版权所有 2011 <a href=http://www.theti.org target=_blank> 清华大学教育技术研究所</a> 技术支持（请使用1024x768分辨率，IE8或更高版本浏览器访问本系统）</p>
+</div></div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+
+
+
+
+
+

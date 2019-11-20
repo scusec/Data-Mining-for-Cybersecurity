@@ -1,0 +1,805 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" >
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="author" content="" />
+    <meta name="keywords" content="阳光网,南京师范大学党委宣传部,南京师范大学网络宣传中心" />
+    <meta name="description" content="阳光网 | 南京师范大学党委宣传部 | 南京师范大学网络宣传中心" />
+    <meta name="robots" content="all" />
+    <title>阳光网 - 南京师范大学</title>
+    <script src="js/jquery.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="styles/960.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="styles/text.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="styles/main.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="styles/home.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="styles/css3.css" type="text/css" media="all" />
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="rss.xml" />
+    <script type="text/javascript">
+	    $(document).ready(function() {
+			var currentIndex = 0;
+			var DEMO; //函数对象
+			var currentID = 0; //取得鼠标下方的对象ID
+			var pictureID = 0; //索引ID
+			$("#ifocus_piclist li").eq(0).show(); //默认
+			autoScroll();
+			$("#ifocus_btn li").hover(function() {
+				StopScrolll();
+				$("#ifocus_btn li").removeClass("current")//所有的li去掉当前的样式加上正常的样式
+				$(this).addClass("current"); //而本身则加上当前的样式去掉正常的样式
+				currentID = $(this).attr("id"); //取当前元素的ID
+				pictureID = currentID.substring(currentID.length - 1) - 1; //取最后一个字符
+				$("#ifocus_piclist li").eq(pictureID).fadeIn("slow"); //本身显示
+				$("#ifocus_piclist li").not($("#ifocus_piclist li")[pictureID]).hide(); //除了自身别的全部隐藏
+				$("#ifocus_tx li").hide();
+				$("#ifocus_tx li").eq(pictureID).show();
+
+			}, function() {
+				//当鼠标离开对象的时候获得当前的对象的ID以便能在启动自动时与其同步
+				currentID = $(this).attr("id"); //取当前元素的ID
+				pictureID = currentID.substring(currentID.length - 1) - 1; //取最后一个字符
+				currentIndex = pictureID;
+				autoScroll();
+			});
+			//自动滚动
+			function autoScroll() {
+				$("#ifocus_btn li:last").removeClass("current");
+				$("#ifocus_tx li:last").hide();
+				$("#ifocus_btn li").eq(currentIndex).addClass("current");
+				$("#ifocus_btn li").eq(currentIndex - 1).removeClass("current");
+				$("#ifocus_tx li").eq(currentIndex).show();
+				$("#ifocus_tx li").eq(currentIndex - 1).hide();
+				$("#ifocus_piclist li").eq(currentIndex).fadeIn("slow");
+				$("#ifocus_piclist li").eq(currentIndex - 1).hide();
+				currentIndex++; currentIndex = currentIndex >= 5 ? 0 : currentIndex;
+				DEMO = setTimeout(autoScroll, 5000);
+			}
+			function StopScrolll()//当鼠标移动到对象上面的时候停止自动滚动
+			{
+				clearTimeout(DEMO);
+			}
+		});
+	</script>
+</head>
+<body>
+<!-- top start -->	
+<div class="top">
+	<div class="container_16">
+	<div class="login grid_7">
+  <script src="http://sun.njnu.edu.cn/manage/userinfo2.aspx"></script>
+	</div>
+	    <div class="grid_9">
+	      <ul>
+            <li><a id="sethome" href="javascript:SetHome();">设为首页</a></li>
+	    <li><a href="javascript:AddFavorite();">加入收藏</a></li>
+	    <li><a href="/map.html" title="网站地图" target="_blank">网站地图</a></li>
+	    <li class="rss"><a href="http://sun.njnu.edu.cn/rss.xml" title="RSS" target="_blank"><img 
+
+src="styles/img/btn_rss.png" alt="" /></a></li>
+	      </ul>
+	    </div>
+	</div>
+</div>
+<!-- top end -->
+<!-- header start -->
+<div class="container_16">
+	<div id="header">
+	    <div id="logo" class="grid_6">
+	        <h1><span><a href="" title="">阳光网</a></span></h1>
+        </div>
+        <div  id="logoline" class="grid_10 omega">
+        <div class="flash">
+        <div id="flashContent">
+        <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="580" height="104" id="suntop" align="middle">
+        	<param name="movie" value="http://sun.njnu.edu.cn/styles/img/suntop.swf" />
+        	<param name="quality" value="high" />
+        	<param name="bgcolor" value="#006699" />
+        	<param name="play" value="true" />
+        	<param name="loop" value="true" />
+        	<param name="wmode" value="transparent" />
+        	<param name="scale" value="showall" />
+        	<param name="menu" value="false" />
+        	<param name="devicefont" value="false" />
+        	<param name="salign" value="" />
+        	<param name="allowScriptAccess" value="sameDomain" />
+<!--[if !IE]>-->
+        <object type="application/x-shockwave-flash" data="http://sun.njnu.edu.cn/styles/img/suntop.swf" width="580" 
+
+height="104">
+        	<param name="movie" value="http://sun.njnu.edu.cn/styles/img/suntop.swf" />
+        	<param name="quality" value="high" />
+        	<param name="bgcolor" value="#006699" />
+        	<param name="play" value="true" />
+        	<param name="loop" value="true" />
+        	<param name="wmode" value="transparent" />
+        	<param name="scale" value="showall" />
+        	<param name="menu" value="false" />
+        	<param name="devicefont" value="false" />
+        	<param name="salign" value="" />
+        	<param name="allowScriptAccess" value="sameDomain" />
+<!--<![endif]-->
+        	<a href="http://www.adobe.com/go/getflash">
+        	<img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash player" 
+
+/>
+        	</a>
+<!--[if !IE]>-->
+        </object>
+<!--<![endif]-->
+        </object>
+        </div>
+        </div>
+	<div class="grid_6 prefix_4 omega alpha">
+	<div id="search">
+	        <script type="text/javascript"> 
+			function gosearch () {
+			var wq=document.getElementById("searchbox").value;
+			var rd=GetRadioValue("radio");
+			var link="http://sun.njnu.edu.cn/search.html?key="+escape(wq)+"&keyinfo="+escape(rd);
+			window.open(link); }
+			function GetRadioValue(RadioName){
+				var obj;    
+				obj=document.getElementsByName(RadioName);
+				if(obj!=null){
+					var i;
+					for(i=0;i<obj.length;i++){
+						if(obj[i].checked){
+							return obj[i].value;            
+						}
+					}
+				}
+				return null;
+			}
+		</script>
+	          <input type="text" value="请输入关键词" name="search" id="searchbox" onfocus="if (this.value == '请输入关键
+
+词') {this.value = '';}" onblur="if (this.value == '') {this.value = '请输入关键词';}" />
+	          <select id="searchselect" name="" onChange="MM_jumpMenu('parent',this,1)"><option value="#" selected>站内搜索
+
+</option><option value="">站外搜索</option></select>
+	          <input type="submit" id="searchsubmit" value="" onclick="javascript:gosearch()" / >
+	          <div class="clear"></div>
+             </div>
+        </div>
+      </div>
+    </div>
+</div>
+<!-- header end -->
+<div class="mainbg">
+	<!-- wrap start 9 -->
+	<div class="container_16">
+<!-- navi start -->
+		<div id="nav">
+		<div id="navi1" class="grid_16">
+		<ul>
+        	<li class="home"><a href="/" title="阳光首页" class="active">阳光首页</a></li>
+		<li class="line"></li>
+		<li><a href="/news" title="阳光新闻">阳光新闻</a></li>
+		<li class="line"></li>
+		<li><a href="/red" title="阳光地带">阳光地带</a></li>
+		<li class="line"></li>
+		<li><a href="/space" title="媒体南师">媒体南师</a></li>
+		<li class="line"></li>
+		<li><a href="/np" title="南师校报">南师校报</a></li>
+		<li class="line"></li>
+		<li><a href="/bc" title="南师广电">南师广电</a></li>
+		<li class="line"></li>
+		<li><a href="/video" title="阳光视频">阳光视频</a></li>
+		<li class="line"></li>
+		<li><a href="/photos" title="阳光图片">阳光图片</a></li>
+		<li class="line"></li>
+		<li><a href="/club" title="阳光社区">阳光社区</a></li>
+		</ul>
+	</div>
+	<div id="navi2" class="grid_16">
+	<div id="dateweather" class="grid_6 alpha">
+	<div id="divweather"></div>
+	</div>
+	<div id="rank" class="grid_10 omega">
+	<div id="write_online"><a href="post.html" title="在线投稿" target="_blank">在线投稿</a></div>
+	<div id="year_rank"><a href="/news/xwph.html" title="年度新闻排行榜" target="_blank">年度新闻排行榜</a></div>
+	<div id="author_rank"><a href="/news/lgph.html" title="投稿排行榜" target="_blank">投稿排行榜</a></div>
+	<div id="old_version"><a href="http://210.29.142.188/" title="旧版入口" target="_blank">旧版入口</a></div>
+	<div id="phone"><a href="/red/bmgk.html" title="部门概况" target="_blank">部门概况</a></div>
+	</div>
+	</div>
+	<div class="clear"></div>
+		</div>
+<!-- navi end -->
+		<div class="shadow grid_16">	
+		<div id="ifocus" class="grid_10 alpha">
+		<div id="ifocus_pic">
+		<div id="ifocus_piclist" style="left: 0pt; top: 0pt;">
+<ul>
+
+<li style="display: list-item;"><a href="http://sun.njnu.edu.cn/news/2017-10/105841_508553.html" target="_blank"><img src="http://sun.njnu.edu.cn/wzattach/122829_131152.jpg" alt="我校举行学习传达党的十九大精神报告会"></a></li>
+
+<li style="display: none;"><a href="http://sun.njnu.edu.cn/news/2017-10/155515_331291.html" target="_blank"><img src="http://sun.njnu.edu.cn/wzattach/154553_183256.jpg" alt="我校师生集中收看十九大开幕会 师生反响热烈畅谈体会"></a></li>
+
+<li style="display: none;"><a href="http://sun.njnu.edu.cn/news/2017-9/112959_118112.html" target="_blank"><img src="http://sun.njnu.edu.cn/wzattach/164524_581145.jpg" alt="我校举行国家烈士纪念日纪念活动"></a></li>
+
+<li style="display: none;"><a href="http://sun.njnu.edu.cn/news/2017-9/095631_124819.html" target="_blank"><img src="http://sun.njnu.edu.cn/wzattach/103730_374448.jpg" alt="中国共产党南京师范大学第十六次代表大会胜利闭幕"></a></li>
+
+<li style="display: none;"><a href="http://sun.njnu.edu.cn/news/2017-9/145306_428057.html" target="_blank"><img src="http://sun.njnu.edu.cn/wzattach/145206_745199.jpg" alt="中国共产党南京师范大学第十六次代表大会开幕"></a></li>
+
+</ul>
+		</div>
+		<div id="ifocus_opdiv"></div>
+		<div id="ifocus_tx">
+<ul>
+
+<li style="display: list-item;" class="current">我校举行学习传达党的十九大精神报告会</li>
+
+<li style="display: none;" class="normal">我校师生集中收看十九大开幕会 师生反响热烈畅谈体会</li>
+
+<li style="display: none;" class="normal">我校举行国家烈士纪念日纪念活动</li>
+
+<li style="display: none;" class="normal">中国共产党南京师范大学第十六次代表大会胜利闭幕</li>
+
+<li style="display: none;" class="normal">中国共产党南京师范大学第十六次代表大会开幕</li>
+
+</ul>
+		</div>
+		</div>
+		<div id="ifocus_btn">
+<ul>
+ 
+<li class="current" id="p1"><a href="http://sun.njnu.edu.cn/news/2017-10/105841_508553.html" target="_blank"><img src="http://sun.njnu.edu.cn/wzattach/122829_131152.jpg" alt="我校举行学习传达党的十九大精神报告会"></a></li>
+ 
+<li class="" id="p2"><a href="http://sun.njnu.edu.cn/news/2017-10/155515_331291.html" target="_blank"><img src="http://sun.njnu.edu.cn/wzattach/154553_183256.jpg" alt="我校师生集中收看十九大开幕会 师生反响热烈畅谈体会"></a></li>
+ 
+<li class="" id="p3"><a href="http://sun.njnu.edu.cn/news/2017-9/112959_118112.html" target="_blank"><img src="http://sun.njnu.edu.cn/wzattach/164524_581145.jpg" alt="我校举行国家烈士纪念日纪念活动"></a></li>
+ 
+<li class="" id="p4"><a href="http://sun.njnu.edu.cn/news/2017-9/095631_124819.html" target="_blank"><img src="http://sun.njnu.edu.cn/wzattach/103730_374448.jpg" alt="中国共产党南京师范大学第十六次代表大会胜利闭幕"></a></li>
+ 
+<li class="" id="p5"><a href="http://sun.njnu.edu.cn/news/2017-9/145306_428057.html" target="_blank"><img src="http://sun.njnu.edu.cn/wzattach/145206_745199.jpg" alt="中国共产党南京师范大学第十六次代表大会开幕"></a></li>
+
+</ul>
+		</div>
+		</div>
+<!-- ifocus end -->
+		<div id="news" class="grid_6 omega">
+		<div id="headline">
+
+<h6><a href="http://sun.njnu.edu.cn/news/2017-10/105841_508553.html" title="我校举行学习传达党的十九大精神报告会" target="_blank">我校举行学习传达党的十九大精神报告会</a></h6>
+<span><a href="http://sun.njnu.edu.cn/news/2017-10/105841_508553.html" title="我校举行学习传达党的十九大精神报告会" target="_blank">10月26日，我校学习传达党的十九大精神报告会在仙林校区举行。全体校领导、党委委员、纪委委员、全体中层干部、民主党派负责人、教代会执委、离退休同志代表..</a></span><br /><span id="detail"><a href="http://sun.njnu.edu.cn/news/2017-10/105841_508553.html" title="我校举行学习传达党的十九大精神报告会" target="_blank">详细信息 >></a></span>
+
+		</div>
+		<div class="listnews">
+<ul>
+
+<li><span class="time">[10.27]</span><a href="http://sun.njnu.edu.cn/news/2017-10/103222_696539.html" title="教育部博士研究生招生计划管理模式改革专家咨询会在我校召开" target="_blank">教育部博士研究生招生计划管理模式改革专家..</a></li>
+
+<li><span class="time">[10.27]</span><a href="http://sun.njnu.edu.cn/news/2017-10/110120_278836.html" title="校党委中心组专题学习研讨党的十九大报告精神" target="_blank">校党委中心组专题学习研讨党的十九大报告精..</a></li>
+
+<li><span class="time">[10.26]</span><a href="http://sun.njnu.edu.cn/news/2017-10/113409_295023.html" title="学校召开本科生座谈会" target="_blank">学校召开本科生座谈会</a></li>
+
+<li><span class="time">[10.26]</span><a href="http://sun.njnu.edu.cn/news/2017-10/105309_658248.html" title="【我与十九大】王永贵：深入学习领会新时代新思想，书写哲学社会科学发展新篇章" target="_blank">【我与十九大】王永贵：深入学习领会新时代..</a></li>
+
+<li><span class="time">[10.26]</span><a href="http://sun.njnu.edu.cn/news/2017-10/104724_628449.html" title="我校各级人大代表、政协委员、无党派代表人士畅谈十九大精神学习体会" target="_blank">我校各级人大代表、政协委员、无党派代表人..</a></li>
+
+<li><span class="time">[10.26]</span><a href="http://sun.njnu.edu.cn/news/2017-10/092440_920712.html" title="【我与十九大】赵生群：增强文化自信　建设文化强国" target="_blank">【我与十九大】赵生群：增强文化自信　建设..</a></li>
+
+<li class="more"><a href="/news/nsyw.html" title="更多要闻" target="_blank">更多要闻 >></a></li> 
+</ul>
+		</div>
+		</div>
+		<div class="clear"></div>
+<!-- 头条新闻 end -->
+		</div>
+		<!-- 大图新闻和头条新闻 end -->
+		<div class="grid_12 content1">
+		<div class="shadow2">
+		<div class="content1_head">
+			<span class="more"><a href="/news/zhbd.html" target="_blank">更多>></a></span>
+			<span class="title">综合报道</span>
+		</div>			
+		<div class="picnews left">
+		<ul>
+<ul>
+
+<li class="boxshadow"><a href="http://sun.njnu.edu.cn/news/2016-11/111858_166913.html" title="大型原创史诗话剧《雨花台》巡演走进我校" target="_blank"><img src="http://sun.njnu.edu.cn/wzattach/t_112616_743453.jpg" /><span>大型原创史诗话剧《雨花台》巡演走进我校</span></a></li>
+
+<li class="boxshadow"><a href="http://sun.njnu.edu.cn/news/2016-10/175624_157848.html" title="我校举行纪念红军长征胜利80周年活动" target="_blank"><img src="http://sun.njnu.edu.cn/wzattach/t_175554_181397.jpg" /><span>我校举行纪念红军长征胜利80周年活动</span></a></li>
+
+<li class="boxshadow"><a href="http://sun.njnu.edu.cn/news/2016-10/111643_622748.html" title="南师大2016年区人大代表换届选举工作动员大会举行" target="_blank"><img src="http://sun.njnu.edu.cn/wzattach/t_111547_236360.jpg" /><span>南师大2016年区人大代表换届选举工作动员大..</span></a></li>
+
+</ul>
+		</ul>
+		</div>
+<ul class="listnews">
+
+<li><span class="time">[10.27]</span><span class="ly">〖<a href="news/ly.html?wzlyid=28" target="_blank">研究生院</a>〗</span> <a href="http://sun.njnu.edu.cn/news/2017-10/103222_696539.html" title="教育部博士研究生招生计划管理模式改革专家咨询会在我校召开" target="_blank">教育部博士研究生招生计划管理模式改革专家咨询会在..</a>
+</li>
+
+<li><span class="time">[10.27]</span><span class="ly">〖<a href="news/ly.html?wzlyid=38" target="_blank">组织部</a>〗</span> <a href="http://sun.njnu.edu.cn/news/2017-10/113503_246126.html" title="我校举办“十九大报告”专题学习培训会" target="_blank">我校举办“十九大报告”专题学习培训会</a>
+</li>
+
+<li><span class="time">[10.27]</span><span class="ly">〖<a href="news/ly.html?wzlyid=48" target="_blank">宣传部</a>〗</span> <a href="http://sun.njnu.edu.cn/news/2017-10/110120_278836.html" title="校党委中心组专题学习研讨党的十九大报告精神" target="_blank">校党委中心组专题学习研讨党的十九大报告精神</a>
+</li>
+
+<li><span class="time">[10.27]</span><span class="ly">〖<a href="news/ly.html?wzlyid=48" target="_blank">宣传部</a>〗</span> <a href="http://sun.njnu.edu.cn/news/2017-10/105841_508553.html" title="我校举行学习传达党的十九大精神报告会" target="_blank">我校举行学习传达党的十九大精神报告会</a>
+</li>
+
+<li><span class="time">[10.26]</span><span class="ly">〖<a href="news/ly.html?wzlyid=65" target="_blank">学工处</a>〗</span> <a href="http://sun.njnu.edu.cn/news/2017-10/113409_295023.html" title="学校召开本科生座谈会" target="_blank">学校召开本科生座谈会</a>
+</li>
+
+<li><span class="time">[10.26]</span><span class="ly">〖<a href="news/ly.html?wzlyid=57" target="_blank">统战部</a>〗</span> <a href="http://sun.njnu.edu.cn/news/2017-10/104724_628449.html" title="我校各级人大代表、政协委员、无党派代表人士畅谈十九大精神学习体会" target="_blank">我校各级人大代表、政协委员、无党派代表人士畅谈十..</a>
+</li>
+
+<li><span class="time">[10.26]</span><span class="ly">〖<a href="news/ly.html?wzlyid=10" target="_blank">发展委员会</a>〗</span> <a href="http://sun.njnu.edu.cn/news/2017-10/102107_332239.html" title="上海晓信科技创始人卜江做客校友讲坛" target="_blank">上海晓信科技创始人卜江做客校友讲坛</a>
+</li>
+
+<li><span class="time">[10.25]</span><span class="ly">〖<a href="news/ly.html?wzlyid=49" target="_blank">保卫处</a>〗</span> <a href="http://sun.njnu.edu.cn/news/2017-10/165651_908647.html" title="省高校保卫学会宁二片会2017年工作会议在我校召开" target="_blank">省高校保卫学会宁二片会2017年工作会议在我校召..</a>
+</li>
+
+<li><span class="time">[10.25]</span><span class="ly">〖<a href="news/ly.html?wzlyid=59" target="_blank">财务处</a>〗</span> <a href="http://sun.njnu.edu.cn/news/2017-10/152808_291212.html" title="我校荣获中国教育会计学会高师研究分会多项荣誉" target="_blank">我校荣获中国教育会计学会高师研究分会多项荣誉</a>
+</li>
+
+<li><span class="time">[10.25]</span><span class="ly">〖<a href="news/ly.html?wzlyid=57" target="_blank">统战部</a>〗</span> <a href="http://sun.njnu.edu.cn/news/2017-10/142636_309861.html" title="民革南师总支部7名党员入选民革省第十一届委员会专门委员会" target="_blank">民革南师总支部7名党员入选民革省第十一届委员会专..</a>
+</li>
+
+</ul>
+		<div class="clear"></div>
+		</div>
+		</div>
+		<div id="zhuanti" class="grid_4 omega">
+<div class="zt"><a href="http://wmdw.jswmw.com/home/?lid=3989" title="文明校园　你我共建" target="_blank"><img src="http://sun.njnu.edu.cn//ggattach/150603_703787.jpg"/ width="200" height="41" ></a></div><div class="zt"><a href="http://sun.njnu.edu.cn/ddh/" title="中国共产党南京师范大学第十六次代表大会专题网站" target="_blank"><img src="http://sun.njnu.edu.cn//ggattach/150421_136081.jpg"/ width="200" height="41" ></a></div><div class="zt"><a href="http://sun.njnu.edu.cn/xq110/welcome.html" title="南京师范大学110周年校庆网站" target="_blank"><img src="http://sun.njnu.edu.cn//ggattach/130425_204473.png"/ width="200" height="41" ></a></div><div class="zt"><a href="http://210.29.142.188/cxzy/" title="南师大“创先争优”专题网站" target="_blank"><img src="http://sun.njnu.edu.cn//ggattach/164956_639038.png"/ width="200" height="41" ></a></div><div class="zt"><a href="http://210.29.142.188/project/" title="“十二五”规划编制专题" target="_blank"><img src="http://sun.njnu.edu.cn//ggattach/144904_814238.png"/ width="200" height="41" ></a></div>
+		</div>
+		<div class="grid_12 content1">
+		<div class="shadow2">
+		<div class="content1_head">
+			<span class="title">媒体南师</span>
+			<span class="more"><a href="/space/mtns.html" target="_blank">更多>></a></span>
+		</div>			
+		<div class="picnews right">
+<ul>
+
+<li class="boxshadow"><a href="http://sun.njnu.edu.cn/space/2016-11/131055_182062.html" title="〖新华报业视觉江苏〗没有文字却被评为“中国最美的书”" target="_blank"><img src="http://sun.njnu.edu.cn/wzattach/t_125938_161233.jpg" /><span>〖新华报业视觉江苏〗没有文字却被评为“中国最..</span></a></li>
+
+<li class="boxshadow"><a href="http://sun.njnu.edu.cn/space/2016-11/200635_587087.html" title="〖搜狐网〗原创┃新丝绸之路上的艺术之行" target="_blank"><img src="http://sun.njnu.edu.cn/wzattach/t_200126_153545.jpg" /><span>〖搜狐网〗原创┃新丝绸之路上的艺术之行</span></a></li>
+
+<li class="boxshadow"><a href="http://sun.njnu.edu.cn/space/2016-10/112618_134405.html" title="〖宜兴日报〗南京师范大学古典文献学系主任赵生群：磨剑八年 修订《史记》" target="_blank"><img src="http://sun.njnu.edu.cn/wzattach/t_111201_687509.jpg" /><span>〖宜兴日报〗南京师范大学古典文献学系主任赵生..</span></a></li>
+
+</ul>
+		<div class="clear"></div>
+		</div>
+<ul class="listnews">
+
+<li><span class="time">[10.25]</span><a href="http://sun.njnu.edu.cn/space/2017-10/092438_503551.html" title="〖江苏卫视新时空〗新时代新征程：江苏社会各界高度评价大会" target="_blank">〖江苏卫视新时空〗新时代新征程：江苏社会各界高度评价大会</a> </li>
+
+<li><span class="time">[10.24]</span><a href="http://sun.njnu.edu.cn/space/2017-10/110436_817456.html" title="〖中国江苏网〗 听马院院长说学习体会谈贯彻举措" target="_blank">〖中国江苏网〗 听马院院长说学习体会谈贯彻举措</a> </li>
+
+<li><span class="time">[10.24]</span><a href="http://sun.njnu.edu.cn/space/2017-10/093608_422993.html" title="〖江苏卫视新时空〗新时代新征程：江苏各界热议总书记报告" target="_blank">〖江苏卫视新时空〗新时代新征程：江苏各界热议总书记报告</a> </li>
+
+<li><span class="time">[10.23]</span><a href="http://sun.njnu.edu.cn/space/2017-10/214500_203777.html" title="〖新华日报〗进了大学门，先学“管自己”" target="_blank">〖新华日报〗进了大学门，先学“管自己”</a> </li>
+
+<li><span class="time">[10.23]</span><a href="http://sun.njnu.edu.cn/space/2017-10/213735_992722.html" title="〖光明日报〗“一带一路”建设中复合型外语人才的重要性" target="_blank">〖光明日报〗“一带一路”建设中复合型外语人才的重要性</a> </li>
+
+<li><span class="time">[10.23]</span><a href="http://sun.njnu.edu.cn/space/2017-10/213534_980476.html" title="〖交汇点〗与党代表一起来点赞 | 李强书记吴政隆省长为十九大、为辉煌中国点赞！" target="_blank">〖交汇点〗与党代表一起来点赞 | 李强书记吴政隆省长为十九大..</a> </li>
+
+<li><span class="time">[10.23]</span><a href="http://sun.njnu.edu.cn/space/2017-10/145555_812695.html" title="〖光明日报〗侯晶晶代表：让美德的种子根植于青少年心间" target="_blank">〖光明日报〗侯晶晶代表：让美德的种子根植于青少年心间</a> </li>
+
+<li><span class="time">[10.23]</span><a href="http://sun.njnu.edu.cn/space/2017-10/142415_776204.html" title="〖江苏电视台教育频道〗学习十九大报告　拥抱新时代" target="_blank">〖江苏电视台教育频道〗学习十九大报告　拥抱新时代</a> </li>
+
+<li><span class="time">[10.23]</span><a href="http://sun.njnu.edu.cn/space/2017-10/140548_289272.html" title="〖新华日报〗南京师范大学教授侯晶晶：轮椅上书写人生华章" target="_blank">〖新华日报〗南京师范大学教授侯晶晶：轮椅上书写人生华章</a> </li>
+
+<li><span class="time">[10.21]</span><a href="http://sun.njnu.edu.cn/space/2017-10/230559_431555.html" title="〖凤凰网〗中国宝华山知名节庆峰会举行 业界专家把脉宝华山节庆发展" target="_blank">〖凤凰网〗中国宝华山知名节庆峰会举行 业界专家把脉宝华山节庆..</a> </li>
+
+</ul>
+		</div>
+		</div>
+		<div class="sliderbox1 grid_4 omega">
+		<div class="sliderbox1_head">
+			<span class="title"><a href="/bc" target="_blank">南师电视</a></span>
+		</div>
+		<div class="picnews1">
+<ul>
+
+<li><a href="http://sun.njnu.edu.cn/bc/2012-11/205755_673638.html" title="〖南师视线〗郦波--洒脱的行为艺术家" target="_blank"><img src="http://sun.njnu.edu.cn/wzattach/w_205752_386857.jpg" class="boxshadow" /><span>〖南师视线〗郦波--洒脱..</span></a></li>
+
+<li><a href="http://sun.njnu.edu.cn/bc/2012-11/181628_976589.html" title="〖新闻大搜索〗[2012.11.10]" target="_blank"><img src="http://sun.njnu.edu.cn/wzattach/w_181625_764835.jpg" class="boxshadow" /><span>〖新闻大搜索〗[2012..</span></a></li>
+
+</ul>
+		</div>
+<ul class="listnews  video">
+<li><a href="http://sun.njnu.edu.cn/bc/2015-6/152425_899907.html" title="《看南师-南山茶屋》">《看南师-南山茶屋》</a></li><li><a href="http://sun.njnu.edu.cn/bc/2015-6/151657_798266.html" title="南师学子用软黏土捏了个“大白”，有没有萌萌哒`">南师学子用软黏土捏了个“大..</a></li><li><a href="http://sun.njnu.edu.cn/bc/2015-6/150910_429420.html" title="师大春景，你赶上了吗？">师大春景，你赶上了吗？</a></li><li><a href="http://sun.njnu.edu.cn/bc/2015-4/161347_806299.html" title="体坛纵横 2015第一期">体坛纵横 2015第一期</a></li><li><a href="http://sun.njnu.edu.cn/bc/2015-4/161140_939663.html" title="我校文学院郭秦——13年18万稿费全成爱心捐款">我校文学院郭秦——13年1..</a></li>
+</ul>
+		</div>
+			<script type="text/javascript" src="http://sun.njnu.edu.cn/manage/get_info.aspx?
+
+file=MB162417_969491"></script>
+<script type="text/javascript" src="http://sun.njnu.edu.cn/manage/get_info.aspx?file=MB162501_804925"></script>
+		<div class="grid_12 content1">
+		<div class="shadow2">
+		<div class="content1_head">
+			<span class="title">学院风采</span>
+			<span class="more"><a href="/news/xyfc.html" target="_blank">更多>></a></span>
+		</div>			
+		<div class="picnews left">
+<ul>
+
+<li class="boxshadow"><a href="http://sun.njnu.edu.cn/news/2017-6/215503_929288.html" title="南师大福华奖学金签约暨颁奖仪式隆重举行" target="_blank"><img src="http://sun.njnu.edu.cn/wzattach/t_215133_976870.jpg" /><span>南师大福华奖学金签约暨颁奖仪式隆重举行</span></a></li>
+
+<li class="boxshadow"><a href="http://sun.njnu.edu.cn/news/2017-3/170618_483455.html" title="南师大“树人工作室”成立并开办“树人讲堂”" target="_blank"><img src="http://sun.njnu.edu.cn/wzattach/t_170510_756359.jpg" /><span>南师大“树人工作室”成立并开办“树人讲堂”</span></a></li>
+
+<li class="boxshadow"><a href="http://sun.njnu.edu.cn/news/2016-11/154733_117686.html" title="美国奥本大学设计学院访问我校洽谈合作建立研究生工作站" target="_blank"><img src="http://sun.njnu.edu.cn/wzattach/t_154706_856817.jpg" /><span>美国奥本大学设计学院访问我校洽谈合作建立研究..</span></a></li>
+
+</ul>
+		<div class="clear"></div>
+		</div>
+<ul class="listnews">
+
+<li><span class="time">[10.27]</span><span class="ly">〖<a href="news/ly.html?wzlyid=15" target="_blank">文学院</a>〗</span><a href="http://sun.njnu.edu.cn/news/2017-10/164339_529338.html" title="文学院组织师生观看中共十九大开幕会" target="_blank">文学院组织师生观看中共十九大开幕会</a>
+</li>
+
+<li><span class="time">[10.26]</span><span class="ly">〖<a href="news/ly.html?wzlyid=66" target="_blank">公管院</a>〗</span><a href="http://sun.njnu.edu.cn/news/2017-10/234511_841740.html" title="公管院举办优秀学子宣讲活动" target="_blank">公管院举办优秀学子宣讲活动</a>
+</li>
+
+<li><span class="time">[10.26]</span><span class="ly">〖<a href="news/ly.html?wzlyid=9" target="_blank">生科院</a>〗</span><a href="http://sun.njnu.edu.cn/news/2017-10/110746_337437.html" title="2017保护长江生态守望濒危江豚公益活动开幕" target="_blank">2017保护长江生态守望濒危江豚公益活动开幕</a>
+</li>
+
+<li><span class="time">[10.26]</span><span class="ly">〖<a href="news/ly.html?wzlyid=97" target="_blank">马克思主义学院</a>〗</span><a href="http://sun.njnu.edu.cn/news/2017-10/105309_658248.html" title="【我与十九大】王永贵：深入学习领会新时代新思想，书写哲学社会科学发展新篇章" target="_blank">【我与十九大】王永贵：深入学习领会新时代新思..</a>
+</li>
+
+<li><span class="time">[10.26]</span><span class="ly">〖<a href="news/ly.html?wzlyid=55" target="_blank">商学院</a>〗</span><a href="http://sun.njnu.edu.cn/news/2017-10/101802_472038.html" title="省价格系统干部轮训班开班典礼在我校举行" target="_blank">省价格系统干部轮训班开班典礼在我校举行</a>
+</li>
+
+<li><span class="time">[10.26]</span><span class="ly">〖<a href="news/ly.html?wzlyid=15" target="_blank">文学院</a>〗</span><a href="http://sun.njnu.edu.cn/news/2017-10/092440_920712.html" title="【我与十九大】赵生群：增强文化自信　建设文化强国" target="_blank">【我与十九大】赵生群：增强文化自信　建设文化..</a>
+</li>
+
+<li><span class="time">[10.26]</span><span class="ly">〖<a href="news/ly.html?wzlyid=101" target="_blank">心理学院</a>〗</span><a href="http://sun.njnu.edu.cn/news/2017-10/091923_556313.html" title="南师大第三场辅导员心理工作坊顺利开展" target="_blank">南师大第三场辅导员心理工作坊顺利开展</a>
+</li>
+
+<li><span class="time">[10.26]</span><span class="ly">〖<a href="news/ly.html?wzlyid=101" target="_blank">心理学院</a>〗</span><a href="http://sun.njnu.edu.cn/news/2017-10/090551_298366.html" title="国培计划(2017)·新疆乡村教师访名校南师大心理健康教育骨干教师培训班开班" target="_blank">国培计划(2017)·新疆乡村教师访名校南师..</a>
+</li>
+
+<li><span class="time">[10.25]</span><span class="ly">〖<a href="news/ly.html?wzlyid=17" target="_blank">中北学院</a>〗</span><a href="http://sun.njnu.edu.cn/news/2017-10/210408_441837.html" title="中北学院国旗班交接仪式举行" target="_blank">中北学院国旗班交接仪式举行</a>
+</li>
+
+<li><span class="time">[10.25]</span><span class="ly">〖<a href="news/ly.html?wzlyid=17" target="_blank">中北学院</a>〗</span><a href="http://sun.njnu.edu.cn/news/2017-10/203923_978282.html" title="中北学院经管系举办江苏新华发行集团电子商务中心宣讲会" target="_blank">中北学院经管系举办江苏新华发行集团电子商务中..</a>
+</li>
+
+</ul>
+		<div class="clear"></div>
+		</div>
+		</div>
+		<div class="sliderbox2 grid_4 omega">
+		<div class="sliderbox2_head">
+			<span class="title"><a href="/video" target="_blank">阳光视频</a></span>
+		</div>
+		<div class="picnews1">
+<ul>
+
+<li><a href="http://sun.njnu.edu.cn/video/2012-9/161557_628203.html" title="南师大建校110周年文艺晚会" target="_blank"><img src="http://sun.njnu.edu.cn/wzattach/w_161453_345120.jpg" class="boxshadow" /><span>南师大建校110周年文艺..</span></a></li>
+
+<li><a href="http://sun.njnu.edu.cn/video/2012-9/161318_194767.html" title="南师大建校110周年庆祝大会" target="_blank"><img src="http://sun.njnu.edu.cn/wzattach/w_161233_137590.jpg" class="boxshadow" /><span>南师大建校110周年庆祝..</span></a></li>
+
+</ul>
+			</div>
+<ul class="listnews video">
+
+<li><a href="http://sun.njnu.edu.cn/video/2016-4/083322_327334.html" title="人物聚焦第四十三期：程诚：做一颗发光的恒星" target="_blank">人物聚焦第四十三期：程诚：..</a></li>
+
+<li><a href="http://sun.njnu.edu.cn/video/2014-6/143318_720518.html" title="追逐阳光的领跑者——江苏省优秀共产党员标兵杨光同志先进事迹介绍" target="_blank">追逐阳光的领跑者——江苏省..</a></li>
+
+<li><a href="http://sun.njnu.edu.cn/video/2014-5/100005_808732.html" title="车辆火灾预防及应急处置方法" target="_blank">车辆火灾预防及应急处置方法</a></li>
+
+<li><a href="http://sun.njnu.edu.cn/video/2013-2/115942_962521.html" title="《先秦诸子精华》第八讲" target="_blank">《先秦诸子精华》第八讲</a></li>
+
+<li><a href="http://sun.njnu.edu.cn/video/2013-2/115842_202157.html" title="《先秦诸子精华》第七讲" target="_blank">《先秦诸子精华》第七讲</a></li>
+
+</ul>
+		</div>
+		<div class="grid_12 content1">
+		<div class="shadow2">
+		<div class="content1_head">
+			<span class="title">南师讲坛</span>
+			<span class="more"><a href="/news/nsjt.html" target="_blank">更多>></a></span>
+		</div>			
+		<div class="picnews right">
+<ul>
+
+<li class="<boxshadow>"><a href="http://sun.njnu.edu.cn/news/2017-3/195342_286374.html" title="随园传媒讲坛：赵心树教授解读大数据里的选择螺旋" target="_blank"><img src="http://sun.njnu.edu.cn/wzattach/195125_239713.jpg" /><span>随园传媒讲坛：赵心树教授解读大数据里的选择螺..</span></a></li>
+
+<li class="<boxshadow>"><a href="http://sun.njnu.edu.cn/news/2017-2/202311_175559.html" title="陈清河教授做客随园传媒讲坛 畅谈多网融合下的全媒体产业竞合" target="_blank"><img src="http://sun.njnu.edu.cn/wzattach/t_164219_750050.jpg" /><span>陈清河教授做客随园传媒讲坛 畅谈多网融合下的..</span></a></li>
+
+<li class="<boxshadow>"><a href="http://sun.njnu.edu.cn/news/2016-11/114052_697877.html" title="Guy Armstrong、Richard Pierce做客敬文讲坛" target="_blank"><img src="http://sun.njnu.edu.cn/wzattach/w_113951_839837.jpg" /><span>Guy Armstrong、Richard ..</span></a></li>
+
+</ul>
+<div class="clear"></div>
+		</div>
+<ul class="listnews">
+
+<li><span class="time">[10.26]</span><span class="ly">〖<a href="news/ly.html?wzlyid=109" target="_blank">环境学院</a>〗</span><a href="http://sun.njnu.edu.cn/news/2017-10/200903_694019.html" title="环境学院环境论坛第四次学术报告举行" target="_blank">环境学院环境论坛第四次学术报告举行</a>
+</li>
+
+<li><span class="time">[10.23]</span><span class="ly">〖<a href="news/ly.html?wzlyid=55" target="_blank">商学院</a>〗</span><a href="http://sun.njnu.edu.cn/news/2017-10/212341_639805.html" title="大连理工大学王淑娟教授作“案例开发技巧及工作经验介绍”专题讲座" target="_blank">大连理工大学王淑娟教授作“案例开发技巧及工作..</a>
+</li>
+
+<li><span class="time">[10.22]</span><span class="ly">〖<a href="news/ly.html?wzlyid=55" target="_blank">商学院</a>〗</span><a href="http://sun.njnu.edu.cn/news/2017-10/214013_948039.html" title="商学院绿色低碳发展行为学术报告会举行" target="_blank">商学院绿色低碳发展行为学术报告会举行</a>
+</li>
+
+<li><span class="time">[10.19]</span><span class="ly">〖<a href="news/ly.html?wzlyid=22" target="_blank">美术学院</a>〗</span><a href="http://sun.njnu.edu.cn/news/2017-10/133738_691497.html" title="美院举办十味•艺术人文讲座之高士奇的鉴藏生涯" target="_blank">美院举办十味•艺术人文讲座之高士奇的鉴藏生涯</a>
+</li>
+
+<li><span class="time">[10.18]</span><span class="ly">〖<a href="news/ly.html?wzlyid=37" target="_blank">新传院</a>〗</span><a href="http://sun.njnu.edu.cn/news/2017-10/211217_257588.html" title="“我们的电影创作”主创团队文化沙龙举行" target="_blank">“我们的电影创作”主创团队文化沙龙举行</a>
+</li>
+
+<li><span class="time">[10.18]</span><span class="ly">〖<a href="news/ly.html?wzlyid=55" target="_blank">商学院</a>〗</span><a href="http://sun.njnu.edu.cn/news/2017-10/192155_282006.html" title="黄慧教授做客教师发展中心论坛解读暧昧和风险的选择" target="_blank">黄慧教授做客教师发展中心论坛解读暧昧和风险的..</a>
+</li>
+
+<li><span class="time">[10.13]</span><span class="ly">〖<a href="news/ly.html?wzlyid=39" target="_blank">教科院</a>〗</span><a href="http://sun.njnu.edu.cn/news/2017-10/193416_330229.html" title="南京大学博士生导师桑新民教授应邀来教科院讲学" target="_blank">南京大学博士生导师桑新民教授应邀来教科院讲学</a>
+</li>
+
+<li><span class="time">[10.13]</span><span class="ly">〖<a href="news/ly.html?wzlyid=55" target="_blank">商学院</a>〗</span><a href="http://sun.njnu.edu.cn/news/2017-10/131216_449072.html" title="陈齐美教授解读商业研究的误区与真相" target="_blank">陈齐美教授解读商业研究的误区与真相</a>
+</li>
+
+<li><span class="time">[10.13]</span><span class="ly">〖<a href="news/ly.html?wzlyid=26" target="_blank">金女院</a>〗</span><a href="http://sun.njnu.edu.cn/news/2017-10/094316_248784.html" title="金女院MPAcc中心“行业导师面对面大讲堂”第二期——基于儒家文化的公司治理：反思与重构" target="_blank">金女院MPAcc中心“行业导师面对面大讲堂”..</a>
+</li>
+
+<li><span class="time">[10.12]</span><span class="ly">〖<a href="news/ly.html?wzlyid=55" target="_blank">商学院</a>〗</span><a href="http://sun.njnu.edu.cn/news/2017-10/172531_408604.html" title="黄慧教授做客教师发展中心论坛解读暧昧和风险的选择" target="_blank">黄慧教授做客教师发展中心论坛解读暧昧和风险的..</a>
+</li>
+
+</ul>
+		</div>
+		</div>
+		<div class="sliderbox3 grid_4 omega">
+		<div class="sliderbox3_head ">
+			<span class="title"><a href="/photos" target="_blank">阳光图片</a></span>
+		</div>
+<div class="picshow boxshadow">
+				<a href="http://sun.njnu.edu.cn/photos/2012-9/162503_596444.html" target="_blank"><img src="http://sun.njnu.edu.cn/tpattach/t_162405_862258.jpg" alt="南师大董事会第十二次全体会议〖三〗"></a>
+				<div class="picshow_opdiv"></div>
+				<div class="picshow_tx">南师大董事会..</div>
+			</div><div class="picshow boxshadow">
+				<a href="http://sun.njnu.edu.cn/photos/2012-9/162317_681525.html" target="_blank"><img src="http://sun.njnu.edu.cn/tpattach/t_162129_385650.jpg" alt="南师大董事会第十二次全体会议〖二〗"></a>
+				<div class="picshow_opdiv"></div>
+				<div class="picshow_tx">南师大董事会..</div>
+			</div><div class="picshow boxshadow">
+				<a href="http://sun.njnu.edu.cn/photos/2012-9/161828_323431.html" target="_blank"><img src="http://sun.njnu.edu.cn/tpattach/t_161623_300384.jpg" alt="南师大董事会第十二次全体会议〖一〗"></a>
+				<div class="picshow_opdiv"></div>
+				<div class="picshow_tx">南师大董事会..</div>
+			</div><div class="picshow boxshadow">
+				<a href="http://sun.njnu.edu.cn/photos/2012-9/110223_821527.html" target="_blank"><img src="http://sun.njnu.edu.cn/tpattach/t_105832_597887.jpg" alt="南师大迎来2012级新同学〖二〗"></a>
+				<div class="picshow_opdiv"></div>
+				<div class="picshow_tx">南师大迎来2..</div>
+			</div><div class="picshow boxshadow">
+				<a href="http://sun.njnu.edu.cn/photos/2012-9/105043_381674.html" target="_blank"><img src="http://sun.njnu.edu.cn/tpattach/t_104628_791144.jpg" alt="南师大迎来2012级新同学〖一〗"></a>
+				<div class="picshow_opdiv"></div>
+				<div class="picshow_tx">南师大迎来2..</div>
+			</div><div class="picshow boxshadow">
+				<a href="http://sun.njnu.edu.cn/photos/2011-6/162134_215048.html" target="_blank"><img src="http://sun.njnu.edu.cn/tpattach/t_162130_198404.jpg" alt="南师大“党在我心中”合唱比赛〖五〗"></a>
+				<div class="picshow_opdiv"></div>
+				<div class="picshow_tx">南师大“党在..</div>
+			</div>
+		</div>
+			<script type="text/javascript" src="/manage/get_info.aspx?file=MB164941_869934"></script>
+			<script type="text/javascript" src="/manage/get_info.aspx?file=MB165343_178197"></script>
+		<div class="content2 grid_6">
+		<div class="content2_head">
+			<span class="more"><a href="/news/xybd.html" target="_blank">更多>></a></span>
+			<span class="title">校园标点</span>
+		</div>		
+		<div class="picnews">
+<ul>
+
+<li class="left  boxshadow"><a href="http://sun.njnu.edu.cn/news/2013-9/141434_886343.html" title="校研究生会招新工作顺利进行" target="_blank"><img src="http://sun.njnu.edu.cn/wzattach/t_141201_224287.jpg" /><span>校研究生会招新工作顺利进行</span></a></li>
+
+<li class="right  boxshadow"><a href="http://sun.njnu.edu.cn/news/2013-9/100723_486049.html" title="中北学院2013级普通类新生展军训风采" target="_blank"><img src="http://sun.njnu.edu.cn/wzattach/w_100450_597525.jpg" /><span>中北学院2013级普通类新生展军训风采</span></a></li>
+
+</ul>
+		</div>
+<ul class="listnews w317">
+
+<li><span class="time">[10.26]</span><a href="http://sun.njnu.edu.cn/news/2017-10/200344_393247.html" title="外院学生党总支本科生党员工作部召开党员大会" target="_blank">外院学生党总支本科生党员工作部召开党员大..</a>
+</li>
+
+<li><span class="time">[10.25]</span><a href="http://sun.njnu.edu.cn/news/2017-10/235723_843319.html" title="生科院本科生党支部开展“勤习十九大、励行中国梦”活动" target="_blank">生科院本科生党支部开展“勤习十九大、励行..</a>
+</li>
+
+<li><span class="time">[10.25]</span><a href="http://sun.njnu.edu.cn/news/2017-10/200417_313455.html" title="社发院学习贯彻党的十九大精神座谈会本科生专场举行" target="_blank">社发院学习贯彻党的十九大精神座谈会本科生..</a>
+</li>
+
+<li><span class="time">[10.25]</span><a href="http://sun.njnu.edu.cn/news/2017-10/085758_708200.html" title="文学院第39期中级党校开班仪式举行" target="_blank">文学院第39期中级党校开班仪式举行</a>
+</li>
+
+<li><span class="time">[10.24]</span><a href="http://sun.njnu.edu.cn/news/2017-10/192358_683689.html" title="教师教育学院举办常州市田家炳高级中学招聘会" target="_blank">教师教育学院举办常州市田家炳高级中学招聘..</a>
+</li>
+
+<li><span class="time">[10.24]</span><a href="http://sun.njnu.edu.cn/news/2017-10/165430_396962.html" title="常州市奔牛中学在教师教育学院举办招聘会" target="_blank">常州市奔牛中学在教师教育学院举办招聘会</a>
+</li>
+
+<li><span class="time">[10.23]</span><a href="http://sun.njnu.edu.cn/news/2017-10/175613_599708.html" title="金陵女子学院举行优秀学子宣讲会" target="_blank">金陵女子学院举行优秀学子宣讲会</a>
+</li>
+
+</ul>
+		</div>
+		<div class="content2 grid_6">
+		<div class="content2_head">
+			<span class="more"><a href="/news/jjxy.html"  target="_blank">更多>></a></span>
+			<span class="title">菁菁校园</span>
+		</div>
+		<div class="picnews">
+<ul>
+
+<li class="left  boxshadow"><a href="http://sun.njnu.edu.cn/news/2017-4/220557_710497.html" title="生科院研会举办“以旧换新、变废为宝”活动" target="_blank"><img src="http://sun.njnu.edu.cn/wzattach/w_220527_383984.jpg" /><span>生科院研会举办“以旧换新、变废为宝”..</span></a></li>
+
+<li class="right  boxshadow"><a href="http://sun.njnu.edu.cn/news/2015-5/191304_758290.html" title="心理学院研究生会赴青岛路社区举办欢庆母亲节主题活动" target="_blank"><img src="http://sun.njnu.edu.cn/wzattach/t_190910_109144.jpg" /><span>心理学院研究生会赴青岛路社区举办欢庆..</span></a></li>
+
+</ul>
+		</div>
+<ul class="listnews w317">
+
+<li><span class="time">[10.26]</span><a href="http://sun.njnu.edu.cn/news/2017-10/232815_128175.html" title="教师教育学院15级英语师范班开展优秀学生评选" target="_blank">教师教育学院15级英语师范班开展优秀学生..</a>
+</li>
+
+<li><span class="time">[10.26]</span><a href="http://sun.njnu.edu.cn/news/2017-10/232031_597348.html" title="教师教育学院“红烛”青协开展西岗老年大学计算机班志愿活动" target="_blank">教师教育学院“红烛”青协开展西岗老年大学..</a>
+</li>
+
+<li><span class="time">[10.26]</span><a href="http://sun.njnu.edu.cn/news/2017-10/231051_915792.html" title="教师教育学院开展“红烛”青协中国支教2.0活动" target="_blank">教师教育学院开展“红烛”青协中国支教2...</a>
+</li>
+
+<li><span class="time">[10.26]</span><a href="http://sun.njnu.edu.cn/news/2017-10/230826_742825.html" title="教师教育学院“红烛”青协开展六合龙袍新桥小学支教志愿者活动" target="_blank">教师教育学院“红烛”青协开展六合龙袍新桥..</a>
+</li>
+
+<li><span class="time">[10.26]</span><a href="http://sun.njnu.edu.cn/news/2017-10/230021_945046.html" title="教师教育学院17级计算机科学与技术师范班积极参与院运会" target="_blank">教师教育学院17级计算机科学与技术师范班..</a>
+</li>
+
+<li><span class="time">[10.26]</span><a href="http://sun.njnu.edu.cn/news/2017-10/155930_345334.html" title="美院举办十味•艺术人文讲座之“催眠的艺术”" target="_blank">美院举办十味•艺术人文讲座之“催眠的艺术..</a>
+</li>
+
+<li><span class="time">[10.26]</span><a href="http://sun.njnu.edu.cn/news/2017-10/125303_671674.html" title="公管院举办新生心理健康教育讲座" target="_blank">公管院举办新生心理健康教育讲座</a>
+</li>
+
+</ul>
+		</div>
+		<div class="sliderbox4 grid_4 omega" >
+		<div class="borderline">
+		<div class="sliderbox4_head ">
+			<span class="title"><a href="/video/bnsd.html" target="_blank">百年师大</a></span>
+		</div>
+<div class="picshow2 boxshadow">
+				<a href="http://sun.njnu.edu.cn/video/2012-9/161557_628203.html" target="_blank"><img src="http://sun.njnu.edu.cn/wzattach/w_161453_345120.jpg" alt="南师大建校110周年文艺晚会"></a>
+				<div class="picshow2_opdiv"></div>
+				<div class="picshow2_tx">南师大建校110周年文艺晚会</div>
+			</div><div class="picshow2 boxshadow">
+				<a href="http://sun.njnu.edu.cn/video/2012-9/161318_194767.html" target="_blank"><img src="http://sun.njnu.edu.cn/wzattach/w_161233_137590.jpg" alt="南师大建校110周年庆祝大会"></a>
+				<div class="picshow2_opdiv"></div>
+				<div class="picshow2_tx">南师大建校110周年庆祝大会</div>
+			</div><div class="picshow2 boxshadow">
+				<a href="http://sun.njnu.edu.cn/video/2012-8/113914_208417.html" target="_blank"><img src="http://sun.njnu.edu.cn/wzattach/w_114951_875620.png" alt="我与南京有个约会〖微电影〗"></a>
+				<div class="picshow2_opdiv"></div>
+				<div class="picshow2_tx">我与南京有个约会〖微电影〗</div>
+			</div>
+		</div>
+	</div>
+	<div class="grid_6 content2">
+		<div class="content2_head">
+			<span class="more"><a href="/red/xxck.html" target="_blank">更多>></a></span>
+			<span class="title">学习参考</span>
+		</div>
+<ul class="listnews">
+
+<li><a href="http://sun.njnu.edu.cn/red/2017-10/125404_596769.html" title="《学习党的十九大精神》专题一：学习中国共产党第十九次全国代表大会报告" target="_blank">《学习党的十九大精神》专题一：学习中国共产党第..</a></li>
+
+<li><a href="http://sun.njnu.edu.cn/red/2017-10/103243_122452.html" title="学习中国共产党南京师范大学第十六次代表大会党委工作报告、纪委工作报告" target="_blank">学习中国共产党南京师范大学第十六次代表大会党委..</a></li>
+
+<li><a href="http://sun.njnu.edu.cn/red/2017-9/091047_662242.html" title="学习贯彻习近平总书记关于青年学生成长成才重要思想" target="_blank">学习贯彻习近平总书记关于青年学生成长成才重要思..</a></li>
+
+<li><a href="http://sun.njnu.edu.cn/red/2017-9/120140_190871.html" title="学习习近平总书记7.26重要讲话精神" target="_blank">学习习近平总书记7.26重要讲话精神</a></li>
+
+<li><a href="http://sun.njnu.edu.cn/red/2017-5/102258_478723.html" title="学习《中华人民共和国网络安全法》" target="_blank">学习《中华人民共和国网络安全法》</a></li>
+
+<li><a href="http://sun.njnu.edu.cn/red/2017-5/150742_234680.html" title="学习习近平总书记在中国政法大学考察时重要讲话精神" target="_blank">学习习近平总书记在中国政法大学考察时重要讲话精..</a></li>
+
+<li><a href="http://sun.njnu.edu.cn/red/2017-4/120635_203066.html" title="学习《中华人民共和国民法总则》" target="_blank">学习《中华人民共和国民法总则》</a></li>
+
+<li><a href="http://sun.njnu.edu.cn/red/2017-4/142310_596664.html" title="学习习近平总书记关于知识分子重要讲话精神" target="_blank">学习习近平总书记关于知识分子重要讲话精神</a></li>
+
+<li><a href="http://sun.njnu.edu.cn/red/2017-3/161935_933094.html" title="学习全国“两会”精神" target="_blank">学习全国“两会”精神</a></li>
+
+<li><a href="http://sun.njnu.edu.cn/red/2017-3/094005_993437.html" title="学习中共中央、国务院《关于加强和改进新形势下高校思想政治工作的意见》精神" target="_blank">学习中共中央、国务院《关于加强和改进新形势下高..</a></li>
+
+</ul>
+	</div>
+	<div  class="grid_6 content2">
+		<div class="content2_head">
+			<span class="more"><a href="/np/wqxb.html" target="_blank">更多>></a></span>
+			<span class="title">南师校报</span>
+		</div>
+<ul class="pic_content_3">
+
+<li><a title="2017年第十期" href="/np/?id=122422" target="_blank"><img src="http://sun.njnu.edu.cn/wzattach/210913_999959.jpg" alt="2017年第十期" height="220"></a></li>
+
+</ul>
+<ul class="listnews">
+
+<li><a href="/np/?id=122422" title="2017年第十期" target="_blank">2017年第十期</a></li>
+
+<li><a href="/np/?id=122406" title="2017年第九期" target="_blank">2017年第九期</a></li>
+
+<li><a href="/np/?id=120767" title="2017年第八期" target="_blank">2017年第八期</a></li>
+
+<li><a href="/np/?id=120322" title="2017年第七期" target="_blank">2017年第七期</a></li>
+
+<li><a href="/np/?id=119501" title="2017年第六期" target="_blank">2017年第六期</a></li>
+
+<li><a href="/np/?id=119123" title="2017年第五期" target="_blank">2017年第五期</a></li>
+
+<li><a href="/np/?id=118640" title="2017年第四期" target="_blank">2017年第四期</a></li>
+
+<li><a href="/np/?id=118110" title="2017年第三期" target="_blank">2017年第三期</a></li>
+
+<li><a href="/np/?id=117353" title="2017年第二期" target="_blank">2017年第二期</a></li>
+
+<li><a href="/np/?id=116624" title="2017年第一期" target="_blank">2017年第一期</a></li>
+
+</ul>
+	</div>
+	<div class="sliderbox4 grid_4 omega" >
+		 <div class="borderline">
+		 <div class="sliderbox4_head ">
+		 	<span class="title"><a href="/space/sdjs.html" title="" target="_blank">师大精神</a></span>
+		 </div>
+		 <div id="js">
+		 <div id="xx" class="sd"><a href="/space/2010-9/173809_365422.html" target="_blank">校训</a></div>
+		 <div id="xg" class="sd"><a href="/space/2010-9/173716_355017.html" target="_blank">校歌</a></div>
+		 <div id="xh" class="sd"><a href="/space/2010-9/174057_476583.html" target="_blank">校徽</a></div>
+		 <div id="xf" class="sd"><a href="/space/2010-9/174013_642214.html" target="_blank">校风</a></div>
+		 <div id="xs" class="sd"><a href="/space/2010-9/174326_355628.html" target="_blank">校史</a></div>
+		 <div id="xp" class="sd"><a href="/space/2010-9/174214_189863.html" target="_blank">校牌</a></div>
+		 </div>
+		 </div>	
+	</div>
+<!-- 右側欄 end -->
+	<div class="grid_16">
+	<div class="line16"></div>
+		<ul class="links">
+		<li class="first">友情链接</li>
+
+<li><a href="http://www.njnu.edu.cn" title="南京师范大学" target="_blank"><img src="http://sun.njnu.edu.cn//ggattach/162058_860873.gif" weight="88" height="31" /></a></li>
+
+<li><a href="http://www.xl7788.com" title="仙林资讯站" target="_blank"><img src="http://sun.njnu.edu.cn//ggattach/191112_278131.gif" weight="88" height="31" /></a></li>
+
+<li><a href="http://nnusa.cn/" title="南京师大留学服务中心" target="_blank"><img src="http://sun.njnu.edu.cn//ggattach/162234_480414.jpg" weight="88" height="31" /></a></li>
+
+<li><a href="http://3434.njnu.edu.cn/" title="德风园" target="_blank"><img src="http://sun.njnu.edu.cn//ggattach/165615_153349.gif" weight="88" height="31" /></a></li>
+
+<li><a href="http://morning.njnu.edu.cn/" title="清晨网" target="_blank"><img src="http://sun.njnu.edu.cn//ggattach/151747_433339.jpg" weight="88" height="31" /></a></li>
+
+<li><a href="http://www.ec.js.edu.cn/" title="江苏教育" target="_blank"><img src="http://sun.njnu.edu.cn//ggattach/153421_316034.jpg" weight="88" height="31" /></a></li>
+
+<li><a href="http://www.eshufa.com/" title="中国书法家园" target="_blank"><img src="http://sun.njnu.edu.cn//ggattach/120421_374372.png" weight="88" height="31" /></a></li>
+
+<li><a href="http://weibo.com/njnusun" title="南京师范大学官方微博" target="_blank"><img src="http://sun.njnu.edu.cn//ggattach/160047_812792.jpg" weight="88" height="31" /></a></li>
+
+		</ul>
+	</div>
+	</div>
+<!-- wrap end -->
+	</div>
+<!-- mainbg end -->
+	<div class="mainbgshadow"></div>
+	<div class="clear"></div>
+<!-- footer start -->
+	<div class="footer">
+	<div class="container_16">
+	<div id="copyright" class="grid_16">
+	<p><span>版权：南京师范大学网络宣传中心&nbsp;&nbsp;&nbsp;邮箱：sun@njnu.edu.cn&nbsp;&nbsp;&nbsp;电话：025-85898060&nbsp;&nbsp;&nbsp;设计：<a 
+
+href="http://net.njnu.edu.cn" title="南京师范大学信息网络中心" target="_blank">南京师范大学信息化建设管理处
+
+</a>&nbsp;&nbsp;&nbsp;制作：<a href="http://www.xl7788.com" target="_blank">仙林7788</a></span></p>
+	<p><span>Copyright © NANJING NORMAL UNIVERSITY. All rights reserved.</span></p>
+	<img src="styles/img/home_footer_logo.png"/ >
+	</div>
+	<div id="count" class="grid_16" style="text-align:center; color:#ffffff;"><span>访问统计</span><span 
+
+id="tj"></span></div>
+	</div>
+	</div>
+<!-- footer end -->
+</body>
+<script type="text/javascript" src="/weather/Show_Sun.aspx"></script>
+<script src='http://sun.njnu.edu.cn/manage//tj_1.aspx?mc=全站统计&style=tj&show=1&wz=0'></script>
+</html>

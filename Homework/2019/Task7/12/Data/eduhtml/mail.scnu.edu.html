@@ -1,0 +1,338 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb18030" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<title> 华南师范大学邮箱服务 </title>
+<meta name="keywords" content="华师邮箱|华师M邮箱|华南师范大学邮箱|华南师范大学|SCNUMAIL" />
+<meta name="description" content="华南师范大学多功能、大容量邮箱，是学校为广大师生提供的新邮箱服务" />
+<link rel="stylesheet" type="text/css" href="/customer/css/common.css" />
+<link rel="stylesheet" type="text/css" href="/customer/css/index.css" />
+<link rel="stylesheet" type="text/css" href="/customer/css/colorbox.css" />
+<script src="/customer/js/flogon.js" type="text/javascript"></script>
+<script type="text/javascript">
+
+/*
+var targetProtocol = "https:";
+if (window.location.protocol != targetProtocol)
+   window.location.href = targetProtocol +window.location.href.substring(window.location.protocol.length);
+*/
+var a_fRC = 1;
+var g_fFcs = 1;
+var a_fLOff = 0;
+var a_fCAC = 1
+/// <summary>
+/// Is Mime Control installed?
+/// </summary>
+function IsMimeCtlInst(progid) {
+	var oMimeVer = null;
+	try {
+		oMimeVer = new ActiveXObject(progid);
+	}
+	catch (e) {
+	}
+	if (oMimeVer != null)
+		return true;
+	else
+		return false;
+}
+/// <summary>
+/// Render out the S-MIME control if it is installed.
+/// </summary>
+function RndMimeCtl() {
+	if (IsMimeCtlInst("MimeBhvr.MimeCtlVer"))
+		RndMimeCtlHlpr("MimeNSe2k3", "D801B381-B81D-47a7-8EC4-EFC111666AC0", "MIMEe2k3", "mimeLogoffE2k3");
+	if (IsMimeCtlInst("OwaSMime.MimeCtlVer"))
+		RndMimeCtlHlpr("MimeNSe2k7sp1", "833aa5fb-7aca-4708-9d7b-c982bf57469a", "MIMEe2k7sp1", "mimeLogoffE2k7sp1");
+}
+/// <summary>
+/// Helper function to factor out the rendering of the S/MIME control.
+/// </summary>
+function RndMimeCtlHlpr(objid, classid, ns, id) {
+	document.write("<OBJECT id='" + objid + "' classid='CLSID:" + classid + "'></OBJECT>");
+	document.write("<?IMPORT namespace='" + ns + "' implementation=#" + objid + ">");
+	document.write("<" + ns + ":Logoff id='" + id + "' style='display:none'/>");
+}
+function exit() {
+	window.close();
+}
+// 申报系统的几个链接
+var baseUrl = 'http://oa.scnu.edu.cn/AccountDeclare/'; 
+var emailDeclareUrl = baseUrl + 'FrmDeclare.aspx'; // 邮箱申请
+var editInfoUrl =  baseUrl + 'EditLogin.aspx'; // 信息编辑
+var modifyPasswordUrl =  baseUrl + 'ModifyPassword.aspx'; // 更改密码
+function notice() {
+	alert("请选择需要登录的邮箱");
+}
+</script>
+</head>
+
+<body>
+<div class="mininav">
+	<div class="wp">
+		<div class="funcset">
+			<a href="http://www.scnu.edu.cn" target="_blank">华南师范大学首页</a><span class="pipe">|</span>
+			<a href="http://nc.scnu.edu.cn" target="_blank">网络中心</a>
+		</div>
+	</div>
+</div>
+
+<div class="wp">
+	<div id="hd" class="cl">
+		<div class="logo cl">
+			<h1><a href="https://mail.scnu.edu.cn" title="华南师范大学邮箱服务">华南师范大学邮箱服务</a></h1>
+		</div>
+	</div>
+	<div id="wp" class="mailwp">
+		<div class="mailbg"></div>
+		<div class="mail_text" style="display:none">
+			<div class="mail_text_bg"></div>
+			<div class="mail_text_c">
+				<div id="mailscnu">
+					<p>电子邮箱系统还可以通过设置内部门户系统中的&ldquo;单点登录配置&rdquo;，在内部门户或个人门户中直接使用，详细方法请参见单点登录使用指南。</p>
+					<p>电子邮箱系统的密码修改功能调整到进入后系统修改，请登录后点击页面右上方的&ldquo;选项&rdquo;，然后从左边的菜单条中选择&ldquo;更改密码&rdquo;，进行密码修改。</p>
+				</div>
+				<div id="mscnu" style="display:none">
+					<p>M邮箱采用了&ldquo;充分利用社会资源促进高校信息化&rdquo;的建设模式，它是与腾讯企业邮箱合作建立的拥有华师自主域名与自主管理能力的邮箱系统。商用级别的专业化服务，让华师在校师生、校友体验稳定、清洁、可靠的邮件服务。</p>
+				</div>
+			</div>
+		</div>
+		<div class="mail_login">
+			<div class="mail_login_bg"></div>
+			<div class="mail_login_c">
+				<p>请使用邮箱帐号登录</p>
+				<form id="mailform" name="logonForm" action="index.jsp" method="post" onSubmit="notice();return false">
+					<div id="formvalue">
+						<div class="valuearea">
+							<input type="hidden" name="firstlogin" value="false" />
+							<input type="hidden" name="errtemplate" value="dm_loginpage" />
+							<input type="hidden" name="aliastype" value="other" />
+							<input type="hidden" name="dmtype" value="bizmail" />
+							<input type="hidden" name="p" value="" />
+							<input type="hidden" name="destination" value="/owa/">
+							<input type="hidden" name="flags" value="0">
+							<input type="hidden" name="forcedownlevel" value="0">
+						</div>
+					</div>
+					<div class="userArea userselect">
+						<div class="username">
+							<input title="请选择邮箱帐号" type="text" id="username" name="username" value="" placeholder="请选择邮箱帐号" />
+							<span id="choosename" class="choosename schoolname">请选择登录邮箱</span>
+							<div id="selectname" class="choosename" style="display:none">
+								<input type="hidden" id="mymail" value="" />
+								<p>请选择登录邮箱</p>
+								<p class="m1 mailscnu">@scnu.edu.cn</p>
+								<p class="m2 mscnu">@m.scnu.edu.cn</p>
+							</div>
+							<span id="exchange" class="schoolname" style="display:none">@scnu.edu.cn</span>
+							<input type="hidden" id="domain" name="domain" value="m.scnu.edu.cn" />
+						</div>
+						<div class="password">
+							<input title="请输入密码" id="password" type="password" name="password" value="" placeholder="请输入密码" />
+						</div>
+						<div class="btn">
+							<input type="submit" name="" class="mailbtn" value="登录" />
+							<input name="isUtf8" type="hidden" value="1" />
+							<!--a id="ssolink" href="http://222.200.128.7/scnu/serviceGuide/campusTourGuides12.jsp" target="_blank" class="forgetpw">单点登录使用指南</a-->
+							 
+						</div>
+						<div class="adminlogin">
+							
+							<a class="adminloginlink"   href="http://app.scnu.edu.cn/exmail/view/password.html" target="_blank">忘记密码</a>
+							
+							<a class="faq" href="javascript:void(0)" target="_blank">邮箱登录说明</a>
+							<a style="margin-left: 10px;" href="http://nc.scnu.edu.cn/a/20151111/227.html" target="_blank">邮箱使用手册</a>
+							
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div style="display:none">
+	<div id="faq" style="padding: 10px; background: #FFF; line-height: 2em; font-size: 14px">
+		<p>华南师范大学电子邮件系统（@scnu.edu.cn）始建于2007年，目前已有4000多用户，主要向校内教职工开放服务。该系统于2016年升级更新，采用国内专业邮件系统Coremail XT 5.0平台实现，该系统具有高效、稳定、安全及易于扩展等特点，Webmail界面应用简约大方，并提供多项人性化的智能操作。</p>
+		<p>华南师范大学M邮箱系统（@m.scnu.edu.cn）始建于2013年，初始建立用户账号50000个。Ｍ邮箱给每位在校教职工、学生及部分离退休教工、校友提供免费邮箱服务，实现每个华师人拥有华师邮箱的愿望。该邮箱与腾讯企业邮箱合作建立，拥有华师自主域名与自主管理能力，具有不限容量、超大附件、并可与手机、QQ、微信绑定等特点。</p>
+		<p>用户登录邮箱，首先在右边邮箱选择框点击选择自己要登录的邮箱（@scnu.edu.cn或@m.scnu.edu.cn），然后再输入邮箱账号和密码，最后点击登录即可（未激活M邮箱的用户需先登录学校统一身份认证平台（https://sso.scnu.edu.cn）,在“校园应用”模块中的“M邮箱助手”激活自己的邮箱账号）</p>
+	</div>
+</div>
+
+<div id="ft">
+	<div class="wp">
+		<div class="f_category mb10 cl">
+			<p class="ftnav"><strong>校园网服务</strong></p>
+			<p><a href="http://nc.scnu.edu.cn" target="_blank">网络中心</a><span class="pipe">|</span><a href="http://app.scnu.edu.cn" target="_blank">移动平台</a><span class="pipe">|</span><a href="https://sso.scnu.edu.cn" target="_blank">综合服务平台</a><span class="pipe">|</span><a href="http://s.scnu.edu.cn/selfservice" target="_blank">校园网自助服务系统</a><span class="pipe">|</span><a href="http://202.116.32.227/cactifree" target="_blank">网络流量实时查询</a></p>
+		</div>
+		<p>Copyright &copy; 2017 South China Normal University. All Rights Reserved</p>
+		<p>华南师范大学 版权所有</p>
+	</div>
+</div>
+
+<script src="/customer/js/jquery-1.7.1.min.js" type="text/javascript"></script>
+<script src="/customer/js/base.js" type="text/javascript"></script>
+<script src="/customer/js/jquery.colorbox-min.js" type="text/javascript"></script>
+<script src="/customer/js/jquery.cookie.js" type="text/javascript"></script>
+<!--[if lte IE 9]><script src="js/ieonly.js" type="text/javascript"></script><![endif]-->
+<script type="text/javascript">
+$(function () {
+	if($.cookie("scnumail")) {
+		$("#username").val($.cookie("scnumail"));
+	}
+	if($.cookie("mymail")) {
+		$("#mymail").val($.cookie("mymail"));
+	}
+	// 保存30天.若不加expires这个属性,那么浏览器关闭后该cookie就会被清除
+	$('.mailbtn').click(function () {
+		var username = $("#username").val();
+		var mymail = $("#mymail").val();
+		$.cookie("scnumail", username, {expires:30});
+		$.cookie("mymail", mymail, {expires:30});
+	});
+	$(".faq").colorbox({width:"50%", opacity:0.45, inline:true, href:"#faq"});
+});
+</script>
+<script type="text/javascript">
+//判断是否手机
+function IsPC() {
+    var userAgentInfo = navigator.userAgent;
+    var Agents = ["Android", "iPhone",
+                "SymbianOS", "Windows Phone",
+                "iPad", "iPod"];
+    var flag = true;
+    for (var v = 0; v < Agents.length; v++) {
+        if (userAgentInfo.indexOf(Agents[v]) > 0) {
+            flag = false;
+            break;
+        }
+    }
+    return flag;
+}
+ 
+ 
+$(document).ready(function() {
+	$(".choosename").click(function() {
+		$("#selectname").toggle();
+	});
+
+	$(".mailscnu").click(function() {
+		mailscnu();
+	});
+	$(".mscnu").click(function() {
+		mscnu();
+	});
+
+	function mailscnu() {
+		urlhost=window.location.host;
+		urlprotocol=window.location.protocol;
+		url=urlprotocol+"//"+urlhost+"/coremail/index.jsp";          //组合出 destination，这是必须的
+		phoneurl=urlprotocol+"//"+urlhost+"/coremail/xphone/index.jsp"; 
+		//$("input[name='slclogin'][value='mail1']").attr("checked", true);
+		
+		str='<div class="valuearea">'+
+//'<form id="formSCNU" name="formSCNU" action="'+url+'">'  +
+ '  <input type="hidden" name="action:login" value="" />'+
+ '  <input type="hidden" name="face" value="XT5" />'+
+ '  <input type="hidden" name="faceName" value="XT5.0风格" />'+
+ '  <input type="hidden" name="hiddenUseSSL" value="true" />'+
+ '  <input type="hidden" name="locale" value="zh_CN" />'+
+ '  <input type="hidden" name="nodetect" value="false" />'+
+ '  <input type="hidden" name="nonce" value="" />'+
+ '  <input type="hidden" name="supportDynamicPwd" value="true" />'+
+ '  <input type="hidden" name="supportLoginDevice" value="true" /> '+  
+ '  <input type="hidden" name="useSSL" value="true" /> '+   
+
+ '  <input type="hidden" name="accessToken" value="" /> '+   
+  
+// '  <input type="hidden" name="uid" value="'+$("#username").val()+'" />'+
+ '  <input type="hidden" name="pwd" value="'+$("#password").val()+'" />'+
+// '  <input type="hidden" name="domain" value="scnu.edu.cn" />'+
+ //'</form>  '+
+ '</div>  ';
+		 var ispc=IsPC();
+		 if(ispc){
+			  str=str+'<input type="hidden" name="service" id="service" value="">';
+			 $("#mailform").attr("action", url);
+
+		 }
+		 else{
+             str=str+'<input type="hidden" name="service" id="service" value="phone">';
+			 str=str+'<input type="hidden" name="destURL" value="/coremail/xphone/main.jsp" /> '
+			 $("#mailform").attr("action", phoneurl);	 
+		 }
+ 
+		$("#mymail").attr("value","1");
+		$("#domain").attr("value","scnu.edu.cn");		
+		$(".userArea").removeClass("userselect");
+		$(".schoolname").html("@scnu.edu.cn");
+		$(".adminloginlink").hide();
+		$("#mailform").attr("action", url);
+		$("#mailform").attr("onsubmit","");
+		$("#formvalue .valuearea").remove();
+		$("#formvalue").append(str);
+		$("#username").attr("name", "uid");
+		$("#username").attr("title", "邮箱帐号");
+		$("#username").attr("placeholder", "邮箱帐号");
+		$("#password").attr("name", "password");
+		$("#findpw").hide();
+	}
+	function mscnu() {
+		//$("input[name='slclogin'][value='mail2']").attr("checked", true);
+		$("#mymail").attr("value","2");
+		$("#domain").val("m.scnu.edu.cn");
+		$(".userArea").removeClass("userselect");
+		$(".schoolname").html("@m.scnu.edu.cn");
+		$(".adminloginlink").show();
+		$("#mailform").attr("action", "https://exmail.qq.com/cgi-bin/login");
+		$("#mailform").attr("onsubmit","");
+		$("#formvalue .valuearea").remove();
+		$("#formvalue").append("<div class=\"valuearea\"><input type=\"hidden\" name=\"firstlogin\" value=\"false\" /><input type=\"hidden\" name=\"errtemplate\" value=\"dm_loginpage\" /><input type=\"hidden\" name=\"aliastype\" value=\"other\" /><input type=\"hidden\" name=\dmtype\" value=\"bizmail\" /><input type=\"hidden\" name=\"p\" value=\"\" /></div>");
+		$("#username").attr("name", "uin");
+		$("#username").attr("title", "学号/一卡通帐号");
+		$("#username").attr("placeholder", "学号/一卡通帐号");
+		$("#password").attr("name", "pwd");
+		$("#findpw").show();
+	}
+
+	if($("#mymail").val() == 1) {
+		mailscnu();
+	} else if($("#mymail").val() == 2) {
+		mscnu();
+	}
+	/*
+	$("input[name='slclogin']").click(function() {
+		if(this.value == "mail1") {
+
+		} else if(this.value == "mail2") {
+
+		}
+	});
+	*/
+})
+</script>
+<script type="text/javascript">
+function SetHome(obj,vrl) {
+	try {
+		obj.style.behavior='url(#default#homepage)';
+		obj.setHomePage(vrl);
+	} catch(e) {
+		if(window.netscape) {
+			try {
+				netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
+			} catch (e) {
+				alert("抱歉！您的浏览器不支持直接设为首页。请在浏览器地址栏输入“about:config”并回车然后将[signed.applets.codebase_principal_support]设置为“true”，点击“加入收藏”后忽略安全提示，即可设置成功。");
+			}
+			var prefs = Components.classes['@mozilla.org/preferences-service;1'].getService(Components.interfaces.nsIPrefBranch);
+			prefs.setCharPref('browser.startup.homepage',vrl);
+		} else {
+			alert('抱歉，您的浏览器不支持自动设置首页，请使用浏览器菜单手动设置！');
+		}
+	}
+}
+</script>
+</body>
+</html>

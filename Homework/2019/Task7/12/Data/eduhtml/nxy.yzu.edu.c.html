@@ -1,0 +1,702 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="/script/page.css" type=text/css rel=stylesheet>
+<script language="javascript" src="/module/jslib/jquery/jquery.js"></script>
+
+<meta http-equiv="x-ua-compatible" content="ie=7" />
+<link href="/images/451/css.css" rel="stylesheet" type="text/css" />
+<script src="/images/451/dropdowntabs.js" type="text/javascript"></script>
+<script type="text/javascript" src="/images/451/Tfunction.js"></script>
+<script type="text/javascript">
+function showLocale(objD)
+{
+	var str,colorhead,colorfoot;
+	var yy = objD.getYear();
+	if(yy<1900) yy = yy+1900;
+	var MM = objD.getMonth()+1;
+	if(MM<10) MM = '0' + MM;
+	var dd = objD.getDate();
+	if(dd<10) dd = '0' + dd;
+	var hh = objD.getHours();
+	if(hh<10) hh = '0' + hh;
+	var mm = objD.getMinutes();
+	if(mm<10) mm = '0' + mm;
+	var ss = objD.getSeconds();
+	if(ss<10) ss = '0' + ss;
+	var ww = objD.getDay();
+	if  ( ww==0 )  colorhead="<font color=\"#000\">";
+	if  ( ww > 0 && ww < 6 )  colorhead="<font color=\"#000\">";
+	if  ( ww==6 )  colorhead="<font color=\"#000\">";
+	if  (ww==0)  ww="星期日";
+	if  (ww==1)  ww="星期一";
+	if  (ww==2)  ww="星期二";
+	if  (ww==3)  ww="星期三";
+	if  (ww==4)  ww="星期四";
+	if  (ww==5)  ww="星期五";
+	if  (ww==6)  ww="星期六";
+	colorfoot="</font>"
+	str = colorhead + yy + "-" + MM + "-" + dd + " " + hh + ":" + mm + ":" + ss + "  " + ww + colorfoot;
+	return(str);
+}
+function tick()
+{
+	var today;
+	today = new Date();
+	document.getElementById("localtime").innerHTML = showLocale(today);
+	window.setTimeout("tick()", 1000);
+}
+window.onload=function(){tick();}
+</script>
+<title>农学院</title>
+<meta name="Keywords" content="内容管理、内容管理发布（CMS）系统、信息发布、新闻采编发系统、知识管理、知识门户、政府门户、教育门户、企业门户、竞争情报系统、抓取系统、信息采集、信息雷达系统、电子政务、电子政务解决方案、办公系统、OA、网站办公系统"><meta name='Generator' content='大汉版通'><meta name='Author' content='大汉网络'>
+<meta name='Maketime' content='2017-10-25 11:05:38'>
+<meta name="sitename" content="农学院">
+<meta name="siteurl"  content="http://nxy.yzu.edu.cn/index.html">
+<meta name="guild"    content="">
+<meta name="district"    content="">
+<meta name="sitecatalog"    content="">
+
+</head>
+<body>
+<div id="ad" style="position:absolute; left:0; top:0;z-index:99"> 
+
+
+  <DIV>
+<!--我院张洪程教授当选中国工程院院士-->  <A  target=_blank href="http://nxy.yzu.edu.cn/art/2015/12/7/art_6064_496743.html" title="热烈祝贺我院张洪程教授当选中国工程院院士"><IMG src="/images/451/yuanshi.jpg" alt="热烈祝贺我院张洪程教授当选中国工程院院士" style="border:1px solid #CCC;"></A>
+</DIV>
+  <DIV>
+<!--扬州大学农学院宣传片-->  <A  target=_blank href="http://nxy.yzu.edu.cn/art/2016/6/23/art_6031_528504.html" title="农学院宣传片"><IMG src="/images/451/xcp.jpg" alt="农学院宣传片" style="border:1px solid #CCC;"></A>
+</DIV>
+
+<script type="text/javascript"> 
+//切换图层显示
+(function(){
+	var i = 0;
+	var items = $("#floatDiv a");
+	var showimg = function(){
+		items.hide();
+		items.eq(i).show();
+		i=++i%2;
+		setTimeout(showimg , 3000);
+	};
+	setTimeout(showimg , 100);
+})();
+</script>
+<div align="right" style="text-align:right; padding-top:5px;"><a href="#" onclick='closes()'>关闭</a></div>
+
+<script>
+//滚动代码
+var x = 50,y = 60
+var xin = true, yin = true
+var step = 1
+var delay = 30
+var obj=document.getElementById("ad")
+function floatAD() {
+var L=T=0
+var R= document.body.clientWidth-obj.offsetWidth
+var B = document.body.clientHeight-obj.offsetHeight
+obj.style.left = x + document.body.scrollLeft
+obj.style.top = y + document.body.scrollTop
+x = x + step*(xin?1:-1)
+if (x < L) { xin = true; x = L}
+if (x > R){ xin = false; x = R}
+y = y + step*(yin?1:-1)
+if (y < T) { yin = true; y = T }
+if (y > B) { yin = false; y = B }
+}
+var itl= setInterval("floatAD()", delay)
+obj.onmouseover=function(){clearInterval(itl)}
+obj.onmouseout=function(){itl=setInterval("floatAD()", delay)}
+ 
+ function closes(){
+	 document.getElementById("ad").style.display="none";
+	 }
+</script>
+</div>
+
+<script language="javascript" type="text/javascript">
+var xPos = 20; 
+var yPos = document.body.clientHeight;
+var step = 0.5; 
+var delay = 10; 
+var height = 0; 
+var Hoffset = 0; 
+var Woffset = 0; 
+var yon = 0; 
+var xon=0; 
+var pause = true; 
+var interval; 
+img.style.top = yPos; 
+function changePos() { 
+width = document.body.clientWidth; 
+height = document.body.clientHeight; 
+Hoffset = img.offsetHeight; 
+Woffset = img.offsetWidth; 
+img.style.left = xPos + document.body.scrollLeft; 
+img.style.top = yPos + document.body.scrollTop; 
+if (yon) { 
+yPos = yPos + step; 
+} 
+else { 
+yPos = yPos - step; 
+} 
+if (yPos < 0) { 
+yon = 1; 
+yPos = 0; 
+} 
+if (yPos >= (height - Hoffset)) { 
+yon = 0; 
+yPos = (height - Hoffset); 
+} 
+if (xon) { 
+xPos = xPos + step; 
+} 
+else { 
+xPos = xPos - step; 
+} 
+if (xPos < 0) { 
+xon = 1; 
+xPos = 0; 
+} 
+if (xPos >= (width - Woffset)) { 
+xon = 0; 
+xPos = (width - Woffset); 
+} 
+} 
+//function www_helpor_net() { 
+img.visibility = "visible"; 
+interval = setInterval('changePos()', delay); 
+//} 
+//www_helpor_net(); 
+img.onmouseover=function(){clearInterval(interval)}
+img.onmouseout=function(){interval = setInterval('changePos()', delay); }
+
+</script>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0" background="/images/451/bg.jpg" style="background-repeat:repeat-x; background-position:top;">
+ <tr>
+    <td>
+   <table width="1000" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF">
+  <tr>
+    <td><img src="/images/451/banner.jpg" width="1000" height="146" /></td>
+  </tr>
+  <tr>
+    <td><table width="100%"  border="0" cellspacing="0" cellpadding="0" background="/images/451/menuBg.jpg" style="background-repeat:repeat-x">
+      <tr  id="colortab">
+        <td align="center" valign="middle" background="/images/451/menuSperator.jpg" id="menuTd"><a href="/">首 页</a></td>
+        <td align="center" valign="middle" background="/images/451/menuSperator.jpg" id="menuTd"><a href="#" rel="dropmenu1_a">学院概况</a></td>
+        <td align="center" valign="middle" background="/images/451/menuSperator.jpg" id="menuTd"><a href="#" rel="dropmenu2_a">师资队伍</a></td>
+        <td align="center" valign="middle" background="/images/451/menuSperator.jpg" id="menuTd"><a href="#" rel="dropmenu3_a">学科建设</a></td>
+        <td align="center" valign="middle" background="/images/451/menuSperator.jpg" id="menuTd"><a href="#" rel="dropmenu4_a">科学研究</a></td>
+        <td align="center" valign="middle" background="/images/451/menuSperator.jpg" id="menuTd"><a href="#" rel="dropmenu5_a">人才培养</a></td>
+        <td align="center" valign="middle" background="/images/451/menuSperator.jpg" id="menuTd"><a href="#" rel="dropmenu6_a">招生信息</a></td>
+        <td align="center" valign="middle" background="/images/451/menuSperator.jpg" id="menuTd"><a href="#">就业创业</a></td>
+        <td align="center" valign="middle" background="/images/451/menuSperator.jpg" id="menuTd"><a href="/col/col6055/index.html" rel="dropmenu7_a">学生工作</a></td>
+        <td align="center" valign="middle" background="/images/451/menuSperator.jpg" id="menuTd"><a href="#" rel="dropmenu8_a">党群工作</a></td>
+        <td align="center" valign="middle" id="menuTd"><a href="/col/col5891/index.html">校友天地</a></td>
+      </tr>
+    </table>
+     <!--下拉菜单代码开始-->
+      
+         <div id="dropmenu1_a" class="dropmenudiv_a">  
+            <A href="/col/col5885/index.html">学院简介</A>
+            <A href="/col/col5886/index.html">现任领导</A>
+            <A href="/col/col5887/index.html">领导致辞</A>
+            <A href="/col/col5888/index.html">历史沿革</A>
+            <A href="/col/col5889/index.html">机构设置</A>
+            <A href="/col/col5890/index.html">学院荣誉</A>
+            <A href="/col/col5891/index.html">校友天地</A>
+          </div>
+        <div id="dropmenu2_a" class="dropmenudiv_a" style="width:200px;">
+              <A href="/col/col5924/index.html">师资概况</A>
+               <A href="/col/col37541/index.html">院士风采</A>
+              <A href="/col/col5925/index.html">农学系</A>
+              <A href="/col/col5926/index.html">作物遗传育种与应用生物技术系</A>
+              <A href="/col/col5928/index.html">农业发展与信息技术系</A>
+              <A href="/col/col5930/index.html">兼职与客座教授</A>
+              <A href="/col/col5931/index.html">人才招聘</A>
+          </div>
+        <div id="dropmenu3_a" class="dropmenudiv_a">
+              <A href="/col/col5904/index.html">学科概况</A>
+              <A href="/col/col5905/index.html">重点学科</A>
+              <A href="/col/col5906/index.html">博士点</A>
+              <A href="/col/col5907/index.html">硕士点</A>
+        </div>
+       <div id="dropmenu4_a" class="dropmenudiv_a" style="width:135px;">
+              <A href="/col/col5933/index.html">科研概况</A>
+              <A href="/col/col5934/index.html">科研项目</A>
+              <A href="/col/col5935/index.html">科研成果</A>
+              <A href="/col/col5936/index.html">平台建设</A>
+              <A href="/col/col5941/index.html">研究室所</A>
+              <A href="/col/col5944/index.html">学术交流</A>
+              <A href="/col/col5945/index.html">科技开发与社会服务</A>
+        </div>
+       <div id="dropmenu5_a" class="dropmenudiv_a">
+            <A href="/col/col7561/index.html">本科教育</A> 
+            <A href="/col/col7624/index.html">硕士生培养</A>
+            <A href="/col/col7621/index.html">博士生培养</A>
+            <A href="/col/col5991/index.html">专业学位</A>
+            <A href="/col/col7627/index.html">成人教育</A>
+        </div>
+       <div id="dropmenu6_a" class="dropmenudiv_a" style="width:120px;">
+            <A href="/col/col6031/index.html">本科生招生信息</A>
+            <A href="/col/col6032/index.html">硕士生招生信息</A>
+            <A href="/col/col6033/index.html">博士生招生信息</A>
+            <A href="/col/col6034/index.html">专业硕士招生信息</A>
+            <A href="/col/col6035/index.html">成教招生信息</A>
+        </div>
+       <div id="dropmenu7_a" class="dropmenudiv_a">
+            <a href="http://nxy.yzu.edu.cn/col/col24781/index.html" target="_blank">新闻动态</a>
+            <a href="http://nxy.yzu.edu.cn/col/col24782/index.html" target="_blank">通知公告</a>
+            <a href="http://nxy.yzu.edu.cn/col/col7664/index.html" target="_blank">规章制度</a>
+            <a href="http://nxy.yzu.edu.cn/col/col7666/index.html" target="_blank">就业创业</a>
+            <a href="http://nxy.yzu.edu.cn/col/col24783/index.html" target="_blank">学风建设</a>
+            <a href="http://nxy.yzu.edu.cn/col/col24821/index.html" target="_blank">学生活动</a>
+            <a href="http://nxy.yzu.edu.cn/col/col7669/index.html" target="_blank">社会实践</a>
+            <a href="http://nxy.yzu.edu.cn/col/col37981/index.html" target="_blank">社会奖助学金</a>
+        </div>
+      <div id="dropmenu8_a" class="dropmenudiv_a">
+              <A href="/col/col5893/index.html">机构设置</A>
+              <A href="/col/col5894/index.html">规章制度</A>
+              <A href="/col/col5895/index.html">上级文件</A>
+              <A href="/col/col5896/index.html">党内统计</A>
+              <A href="/col/col5897/index.html">理论武装</A>
+              <A href="/col/col5898/index.html">党校工作</A>
+              <A href="/col/col5899/index.html">统战工作</A>
+              <A href="/col/col24361/index.html">反腐倡廉</A>
+              <A href="/col/col5901/index.html">工会工作</A>
+        </div>           
+	<script type="text/javascript">
+    //SYNTAX: tabdropdown.init("menu_id", [integer OR "auto"])
+    tabdropdown.init("colortab", 0)
+    </script>
+ <!--下拉菜单代码结束--> 
+    </td>
+  </tr>
+  <tr>
+    <td><table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#d4e5db">
+      <tr>
+        <td width="16" height="30" align="right" valign="middle" style="color:#060; font-size:14px; font-weight:bold;"> </td>
+        <td width="644" valign="middle" id="localtime"> </td>
+        <td width="80" align="right" valign="middle" style="color:#060; font-size:14px; font-weight:bold;">信息搜索：</td>
+        <td width="260" valign="middle"><form style="width:40px" name="sitesearch" action="/module/sitesearch/index.jsp?columnid=0&webid=64&modalunitid=46182" method="POST"><table><tr><td><input type="text" name="keyvalue" style="width:120px; height:18px; border:1px solid #829bb9;"></td><td><select name="keyword"><option value="vc_title" >标题</option><option value="vc_keyword" >关键字</option><option value="vc_abs">摘要</option></select></td><td><input type="image" src="/picture/0/1404011438335065682.jpg" /></td></tr></table></form></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td align="left" valign="top" style="padding:5px 8px 10px;"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td align="left" valign="top" style="width:760px;"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td align="left" valign="top" style="width:760px;"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td style="width:287px;"><table width="100%" border="0" cellspacing="0" cellpadding="0" class="grayBorder">
+                  <tr>
+                    <td><img src="/images/451/tpxw.jpg" width="285" height="27" border="0" usemap="#Map" /></td>
+                  </tr>
+                  <tr>
+                    <td height="228" align="center" valign="middle"><script type="text/javascript">var _width = 280; var _height = 205;var text_height = 22;var flash_height = _height + text_height;var pic_arr = new Array();var link_arr = new Array();var text_arr = new Array();var i = 0;for(var kk=0;kk<pic_arr.length;kk++){
+ if(pic_arr[kk]==""){
+ pic_arr.splice(kk,1);
+ link_arr.splice(kk,1);
+ text_arr.splice(kk,1);
+ kk--;
+ }
+}
+
+pic_arr[i] = "/picture/0/1708160953022147445.jpg";link_arr[i] = "/art/2017/8/16/art_7501_565753.html";text_arr[i] = "江苏省教育厅厅长葛道凯来我院考察";i++;for(var kk=0;kk<pic_arr.length;kk++){
+ if(pic_arr[kk]==""){
+ pic_arr.splice(kk,1);
+ link_arr.splice(kk,1);
+ text_arr.splice(kk,1);
+ kk--;
+ }
+}
+
+pic_arr[i] = "/picture/0/1703271429529066049.jpg";link_arr[i] = "/art/2017/3/27/art_7501_547767.html";text_arr[i] = "省委书记李强来我院视察";i++;for(var kk=0;kk<pic_arr.length;kk++){
+ if(pic_arr[kk]==""){
+ pic_arr.splice(kk,1);
+ link_arr.splice(kk,1);
+ text_arr.splice(kk,1);
+ kk--;
+ }
+}
+
+pic_arr[i] = "/picture/0/1603231311204248184.jpg";link_arr[i] = "/art/2016/3/22/art_7501_518694.html";text_arr[i] = "郭文善教授在泰州基地向中共中央政治局委员...";i++;for(var kk=0;kk<pic_arr.length;kk++){
+ if(pic_arr[kk]==""){
+ pic_arr.splice(kk,1);
+ link_arr.splice(kk,1);
+ text_arr.splice(kk,1);
+ kk--;
+ }
+}
+
+pic_arr[i] = "/picture/0/1601220931408109197.jpg";link_arr[i] = "/art/2016/1/22/art_7501_514310.html";text_arr[i] = "曹卫星副省长亲切看望我院张洪程院士";i++;for(var kk=0;kk<pic_arr.length;kk++){
+ if(pic_arr[kk]==""){
+ pic_arr.splice(kk,1);
+ link_arr.splice(kk,1);
+ text_arr.splice(kk,1);
+ kk--;
+ }
+}
+
+pic_arr[i] = "/picture/0/1512091530331116315.jpg";link_arr[i] = "/art/2015/12/9/art_7501_497019.html";text_arr[i] = "我院张洪程教授当选中国工程院院士";i++;for(var kk=0;kk<pic_arr.length;kk++){
+ if(pic_arr[kk]==""){
+ pic_arr.splice(kk,1);
+ link_arr.splice(kk,1);
+ text_arr.splice(kk,1);
+ kk--;
+ }
+}
+
+pic_arr[i] = "/picture/0/1510221105352352309.jpg";link_arr[i] = "/art/2015/11/10/art_7501_494471.html";text_arr[i] = "姚冠新书记看望我院张洪程教授";i++;var p = pic_arr.join("|");var l = link_arr.join("|");var t = text_arr.join("|");var f = "/flash/0/slideshow.swf";document.write('<object ID="focus_flash" classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0" width="'+ _width +'" height="'+ flash_height +'">');document.write('<param name="allowScriptAccess" value="sameDomain"><param name="movie" value="'+f+'"><param name="quality" value="high"><param name="bgcolor">');document.write('<param name="menu" value="false"><param name=wmode value="transparent">');document.write('<param name="FlashVars" value="pics='+p+'&links='+l+'&texts='+t+'&borderwidth='+_width+'&borderheight='+_height+'&textheight='+text_height+'">');document.write('<embed ID="focus_flash" src="'+f+'" wmode="opaque" FlashVars="pics='+p+'&links='+l+'&texts='+t+'&borderwidth='+_width+'&borderheight='+_height+'&textheight='+text_height+'" menu="false" quality="high" width="'+ _width +'" height="'+ flash_height +'" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />');document.write('</object>');</script></td>
+                  </tr>
+                </table></td>
+                <td> </td>
+                <td align="left" valign="top" style="width:462px;"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td><img src="/images/451/xyxw.jpg" width="462" height="28" border="0" usemap="#Map2" /></td>
+                  </tr>
+                  <tr>
+                    <td height="228" align="left" valign="top" ><table width='100%' cellspacing='0' cellpadding='0' border='0'>
+<tr>
+<td style='background-color:null'><table cellpadding='0' cellspacing='0' border='0' width='100%' style='border-bottom:1px dashed #CCC;'><tr><td style='height:26px;'>&nbsp;<img src='/picture/0/120412113147083.jpg' align='absmiddle' border='0'> <a href='/art/2017/10/25/art_6064_571836.html' title='我院举行文汇路校区离退休总支一支部与农学1702班共建启动仪式' target=_blank>我院举行文汇路校区离退休总支一支部与农学1702班共建启...</a></td><td width='60' align='left' style='color:#999999'>17-10-25</td></tr></table></td></tr>
+<tr>
+<td style='background-color:null'><table cellpadding='0' cellspacing='0' border='0' width='100%' style='border-bottom:1px dashed #CCC;'><tr><td style='height:26px;'>&nbsp;<img src='/picture/0/120412113147083.jpg' align='absmiddle' border='0'> <a href='/art/2017/10/25/art_6064_571833.html' title='我院召开关工委工作会议' target=_blank>我院召开关工委工作会议</a></td><td width='60' align='left' style='color:#999999'>17-10-25</td></tr></table></td></tr>
+<tr>
+<td style='background-color:null'><table cellpadding='0' cellspacing='0' border='0' width='100%' style='border-bottom:1px dashed #CCC;'><tr><td style='height:26px;'>&nbsp;<img src='/picture/0/120412113147083.jpg' align='absmiddle' border='0'> <a href='/art/2017/10/25/art_6064_571811.html' title='江苏省遗传学会2017年学术研讨会在扬州成功举办' target=_blank>江苏省遗传学会2017年学术研讨会在扬州成功举办</a></td><td width='60' align='left' style='color:#999999'>17-10-25</td></tr></table></td></tr>
+<tr>
+<td style='background-color:null'><table cellpadding='0' cellspacing='0' border='0' width='100%' style='border-bottom:1px dashed #CCC;'><tr><td style='height:26px;'>&nbsp;<img src='/picture/0/120412113147083.jpg' align='absmiddle' border='0'> <a href='/art/2017/10/23/art_6064_571339.html' title='我院师生在第22届校田径运动会中取得优异成绩' target=_blank>我院师生在第22届校田径运动会中取得优异成绩</a></td><td width='60' align='left' style='color:#999999'>17-10-23</td></tr></table></td></tr>
+<tr>
+<td style='background-color:null'><table cellpadding='0' cellspacing='0' border='0' width='100%' style='border-bottom:1px dashed #CCC;'><tr><td style='height:26px;'>&nbsp;<img src='/picture/0/120412113147083.jpg' align='absmiddle' border='0'> <a href='/art/2017/10/22/art_6064_571232.html' title='我院组团出席2017年中国作物学会学术年会' target=_blank>我院组团出席2017年中国作物学会学术年会</a></td><td width='60' align='left' style='color:#999999'>17-10-22</td></tr></table></td></tr>
+<tr>
+<td style='background-color:null'><table cellpadding='0' cellspacing='0' border='0' width='100%' style='border-bottom:1px dashed #CCC;'><tr><td style='height:26px;'>&nbsp;<img src='/picture/0/120412113147083.jpg' align='absmiddle' border='0'> <a href='/art/2017/10/14/art_6064_570229.html' title='我院召开2017年研究生全体大会' target=_blank>我院召开2017年研究生全体大会</a></td><td width='60' align='left' style='color:#999999'>17-10-14</td></tr></table></td></tr>
+<tr>
+<td style='background-color:null'><table cellpadding='0' cellspacing='0' border='0' width='100%' style='border-bottom:1px dashed #CCC;'><tr><td style='height:26px;'>&nbsp;<img src='/picture/0/120412113147083.jpg' align='absmiddle' border='0'> <a href='/art/2017/9/30/art_6064_569167.html' title='我院1项教学成果荣获2017年江苏省教学成果二等奖' target=_blank>我院1项教学成果荣获2017年江苏省教学成果二等奖</a></td><td width='60' align='left' style='color:#999999'>17-09-30</td></tr></table></td></tr>
+<tr>
+<td style='background-color:null'><table cellpadding='0' cellspacing='0' border='0' width='100%' style='border-bottom:1px dashed #CCC;'><tr><td style='height:26px;'>&nbsp;<img src='/picture/0/120412113147083.jpg' align='absmiddle' border='0'> <a href='/art/2017/9/29/art_6064_569084.html' title='中国扬州大学-泰国农业大学农业科学（作物科学）研讨会在我院举行' target=_blank>中国扬州大学-泰国农业大学农业科学（作物科学）研讨会在我...</a></td><td width='60' align='left' style='color:#999999'>17-09-29</td></tr></table></td>
+</tr></table><tr><td></td></tr></td>
+                  </tr>
+                </table></td>
+              </tr>
+              <tr>
+                <td colspan="3" height="8px;"></td>
+              </tr>
+              <tr>
+                <td><a href="http://www.yzcom.com/nxpp/" target="_blank"><img src="/images/451/2014xsfc.jpg"  style="border:1px solid #CCC;padding:1px;"/></a></td>
+                <td> </td>
+                <td><a href="javascript:void(0)"><img src="/images/451/xqbanner2.jpg"  style="border:1px solid #CCC;padding:1px;"/></a></td>
+              </tr>
+              <tr>
+                <td colspan="3" height="8px;"></td>
+              </tr>
+              <tr>
+                <td><table width="100%" border="0" cellspacing="0" cellpadding="0" class="grayBorder">
+                  <tr>
+                    <td><img src="/images/451/mzap.jpg" width="285" height="28" border="0" usemap="#Map3" /></td>
+                  </tr>
+                  <tr>
+                    <td align="left" valign="top" style="height:175px;"><table width='100%' cellspacing='0' cellpadding='0' border='0'>
+<tr>
+<td style='background-color:null'><table cellpadding='0' cellspacing='0' border='0' width='100%' style='border-bottom:1px dashed #CCC;'><tr><td style='height:26px;'>·<a href='/art/2017/10/23/art_6063_571282.html' title='农学院第8周会议活动安排（10月23日-10月29日）' target=_blank>农学院第8周会议活动安排（10月23日-10月2...</a></td></table></td></tr>
+<tr>
+<td style='background-color:null'><table cellpadding='0' cellspacing='0' border='0' width='100%' style='border-bottom:1px dashed #CCC;'><tr><td style='height:26px;'>·<a href='/art/2017/10/16/art_6063_570291.html' title='农学院第7周会议活动安排（10月16日-10月22日）' target=_blank>农学院第7周会议活动安排（10月16日-10月2...</a></td></table></td></tr>
+<tr>
+<td style='background-color:null'><table cellpadding='0' cellspacing='0' border='0' width='100%' style='border-bottom:1px dashed #CCC;'><tr><td style='height:26px;'>·<a href='/art/2017/10/9/art_6063_569469.html' title='农学院第6周会议活动安排（10月9日-10月15日）' target=_blank>农学院第6周会议活动安排（10月9日-10月15...</a></td></table></td></tr>
+<tr>
+<td style='background-color:null'><table cellpadding='0' cellspacing='0' border='0' width='100%' style='border-bottom:1px dashed #CCC;'><tr><td style='height:26px;'>·<a href='/art/2017/9/25/art_6063_568689.html' title='农学院第4周会议活动安排（9月25日-9月30日）' target=_blank>农学院第4周会议活动安排（9月25日-9月30日...</a></td></table></td></tr>
+<tr>
+<td style='background-color:null'><table cellpadding='0' cellspacing='0' border='0' width='100%' style='border-bottom:1px dashed #CCC;'><tr><td style='height:26px;'>·<a href='/art/2017/9/18/art_6063_568109.html' title='农学院第3周会议活动安排（9月18日-9月24日）' target=_blank>农学院第3周会议活动安排（9月18日-9月24日...</a></td></table></td></tr>
+<tr>
+<td style='background-color:null'><table cellpadding='0' cellspacing='0' border='0' width='100%' style='border-bottom:1px dashed #CCC;'><tr><td style='height:26px;'>·<a href='/art/2017/9/11/art_6063_567518.html' title='农学院第2周会议活动安排（9月11日-9月17日）' target=_blank>农学院第2周会议活动安排（9月11日-9月17日...</a></td></table></td>
+</tr></table><tr><td></td></tr></td>
+                  </tr>
+                </table></td>
+                <td> </td>
+                <td align="left" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td><img src="/images/451/xsbg.jpg" width="462" height="28" border="0" usemap="#Map4" /></td>
+                  </tr>
+                  <tr>
+                    <td align="left" valign="top" style="height:175px;"><table width='100%' cellspacing='0' cellpadding='0' border='0'>
+<tr>
+<td style='background-color:null'><table cellpadding='0' cellspacing='0' border='0' width='100%' style='border-bottom:1px dashed #CCC;'><tr><td style='height:26px;'>·<a href='/art/2017/10/10/art_7141_569716.html' title='学术报告：Molecular Breeding at IRRI' target=_blank>学术报告：Molecular Breeding at I...</a></td><td width='60' align='left' style='color:#999999'>17-10-10</td></tr></table></td></tr>
+<tr>
+<td style='background-color:null'><table cellpadding='0' cellspacing='0' border='0' width='100%' style='border-bottom:1px dashed #CCC;'><tr><td style='height:26px;'>·<a href='/art/2017/9/22/art_7141_568622.html' title='2017 中-泰农业交流会 (农学院）' target=_blank>2017 中-泰农业交流会 (农学院）</a></td><td width='60' align='left' style='color:#999999'>17-09-22</td></tr></table></td></tr>
+<tr>
+<td style='background-color:null'><table cellpadding='0' cellspacing='0' border='0' width='100%' style='border-bottom:1px dashed #CCC;'><tr><td style='height:26px;'>·<a href='/art/2017/9/7/art_7141_567239.html' title='2017年农业与农产品安全国际学术会议作物科学领域分场学术报告' target=_blank>2017年农业与农产品安全国际学术会议作物科学领域分场学...</a></td><td width='60' align='left' style='color:#999999'>17-09-07</td></tr></table></td></tr>
+<tr>
+<td style='background-color:null'><table cellpadding='0' cellspacing='0' border='0' width='100%' style='border-bottom:1px dashed #CCC;'><tr><td style='height:26px;'>·<a href='/art/2017/8/25/art_7141_566281.html' title='2017年江苏省现代农业与作物科技研究生暑期学校学术交流' target=_blank>2017年江苏省现代农业与作物科技研究生暑期学校学术交流</a></td><td width='60' align='left' style='color:#999999'>17-08-25</td></tr></table></td></tr>
+<tr>
+<td style='background-color:null'><table cellpadding='0' cellspacing='0' border='0' width='100%' style='border-bottom:1px dashed #CCC;'><tr><td style='height:26px;'>·<a href='/art/2017/8/24/art_7141_566211.html' title='学术报告' target=_blank>学术报告</a></td><td width='60' align='left' style='color:#999999'>17-08-24</td></tr></table></td></tr>
+<tr>
+<td style='background-color:null'><table cellpadding='0' cellspacing='0' border='0' width='100%' style='border-bottom:1px dashed #CCC;'><tr><td style='height:26px;'>·<a href='/art/2017/8/19/art_7141_565892.html' title='2017年江苏省现代农业与作物科技研究生暑期学校学术报告' target=_blank>2017年江苏省现代农业与作物科技研究生暑期学校学术报告</a></td><td width='60' align='left' style='color:#999999'>17-08-19</td></tr></table></td>
+</tr></table><tr><td></td></tr></td>
+                  </tr>
+                </table></td>
+              </tr>
+               <tr>
+                <td colspan="3" height="8px;"></td>
+              </tr>
+              <tr>
+                <td><table width="100%" border="0" cellspacing="0" cellpadding="0" class="grayBorder">
+                   <tr>
+                     <td><img src="/images/451/kypt.jpg" width="285" height="28" border="0" usemap="#Map3Map" /></td>
+                   </tr>
+                   <tr>
+                    <td align="left" valign="top" style="height:180px;"><table width='100%' cellspacing='0' cellpadding='0' border='0'>
+<tr>
+<td style='background-color:null'><table cellpadding='0' cellspacing='0' border='0' width='100%' style='border-bottom:1px dashed #CCC;'><tr><td style='height:26px;'>·<a href='/art/2015/11/28/art_5936_496074.html' title='植物功能基因组学教育部重点实验室' target=_blank>植物功能基因组学教育部重点实验室</a></td></table></td></tr>
+<tr>
+<td style='background-color:null'><table cellpadding='0' cellspacing='0' border='0' width='100%' style='border-bottom:1px dashed #CCC;'><tr><td style='height:26px;'>·<a href='/art/2015/9/1/art_5936_488669.html' title='扬州大学农业科技发展研究院' target=_blank>扬州大学农业科技发展研究院</a></td></table></td></tr>
+<tr>
+<td style='background-color:null'><table cellpadding='0' cellspacing='0' border='0' width='100%' style='border-bottom:1px dashed #CCC;'><tr><td style='height:26px;'>·<a href='/art/2015/3/16/art_5936_476516.html' title='江苏省粮食作物现代产业技术协同创新中心（培育）' target=_blank>江苏省粮食作物现代产业技术协同创新中心（...</a></td></table></td></tr>
+<tr>
+<td style='background-color:null'><table cellpadding='0' cellspacing='0' border='0' width='100%' style='border-bottom:1px dashed #CCC;'><tr><td style='height:26px;'>·<a href='/art/2013/11/27/art_5936_413819.html' title='作物栽培学与耕作学国家重点学科' target=_blank>作物栽培学与耕作学国家重点学科</a></td></table></td></tr>
+<tr>
+<td style='background-color:null'><table cellpadding='0' cellspacing='0' border='0' width='100%' style='border-bottom:1px dashed #CCC;'><tr><td style='height:26px;'>·<a href='/art/2013/11/27/art_5936_413801.html' title='扬州大学农学院稻麦研究室' target=_blank>扬州大学农学院稻麦研究室</a></td></table></td></tr>
+<tr>
+<td style='background-color:null'><table cellpadding='0' cellspacing='0' border='0' width='100%' style='border-bottom:1px dashed #CCC;'><tr><td style='height:26px;'>·<a href='/art/2013/11/27/art_5936_413799.html' title='扬州大学作物栽培工程技术中心' target=_blank>扬州大学作物栽培工程技术中心</a></td></table></td>
+</tr></table><tr><td></td></tr></td>
+                  </tr>
+                </table>
+                  <map name="Map3Map" id="Map3Map">
+                    <area shape="rect" coords="242,5,283,21" href="/col/col5936/index.html" target="_blank" />
+                  </map></td>
+                <td> </td>
+                <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td><img src="/images/451/dzzy.jpg" width="462" height="28" border="0" usemap="#Map4Map" /></td>
+                  </tr>
+                  <tr>
+                    <td align="left" valign="top" style="height:180px;"><table width='100%' cellspacing='0' cellpadding='0' border='0'>
+<tr>
+<td style=''><table width='100%'  border='0' cellspacing='0' cellpadding='0' style="border-bottom:1px dashed #CCC;"><tr><td width='6' height='27'></td><td align='left'> ·<a href='/col/col6047/index.html' class='bt_link'>[中文电子资源]</a><a href='/art/2016/9/14/art_6047_40014.html'  title='扬州大学学报全文数据库' target='_blank' class='bt_link'>扬州大学学报全文数据库</a></td></tr></table></td></tr>
+<tr>
+<td style=''><table width='100%'  border='0' cellspacing='0' cellpadding='0' style="border-bottom:1px dashed #CCC;"><tr><td width='6' height='27'></td><td align='left'> ·<a href='/col/col6048/index.html' class='bt_link'>[外文电子资源]</a><a href='/art/2009/5/8/art_6048_40020.html'  title='Springer-Verlag' target='_blank' class='bt_link'>Springer-Verlag</a></td></tr></table></td></tr>
+<tr>
+<td style=''><table width='100%'  border='0' cellspacing='0' cellpadding='0' style="border-bottom:1px dashed #CCC;"><tr><td width='6' height='27'></td><td align='left'> ·<a href='/col/col6048/index.html' class='bt_link'>[外文电子资源]</a><a href='/art/2009/5/8/art_6048_40017.html'  title='American Society of Agricultural and Biological Engineers' target='_blank' class='bt_link'>American Society of Agricultur...</a></td></tr></table></td></tr>
+<tr>
+<td style=''><table width='100%'  border='0' cellspacing='0' cellpadding='0' style="border-bottom:1px dashed #CCC;"><tr><td width='6' height='27'></td><td align='left'> ·<a href='/col/col6048/index.html' class='bt_link'>[外文电子资源]</a><a href='/art/2009/5/8/art_6048_40015.html'  title='CELL PRESS' target='_blank' class='bt_link'>CELL PRESS</a></td></tr></table></td></tr>
+<tr>
+<td style=''><table width='100%'  border='0' cellspacing='0' cellpadding='0' style="border-bottom:1px dashed #CCC;"><tr><td width='6' height='27'></td><td align='left'> ·<a href='/col/col6047/index.html' class='bt_link'>[中文电子资源]</a><a href='/art/2009/5/8/art_6047_40013.html'  title='中国生物学文献数据(CBA)' target='_blank' class='bt_link'>中国生物学文献数据(CBA)</a></td></tr></table></td></tr>
+<tr>
+<td style=''><table width='100%'  border='0' cellspacing='0' cellpadding='0' style="border-bottom:1px dashed #CCC;"><tr><td width='6' height='27'></td><td align='left'> ·<a href='/col/col6047/index.html' class='bt_link'>[中文电子资源]</a><a href='/art/2009/5/8/art_6047_40009.html'  title='中国生物医学文献数据库' target='_blank' class='bt_link'>中国生物医学文献数据库</a></td></tr></table></td>
+</tr></table></td>
+                  </tr>
+                </table>
+                  <map name="Map4Map" id="Map4Map">
+                    <area shape="rect" coords="417,6,459,22" href="/col/col6047/index.html" target="_blank" />
+                  </map></td>
+              </tr>
+            </table></td>
+            <td> </td>
+            <td align="left" valign="top" style="width:215px;"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td><img src="/images/451/notice.jpg" width="214" height="29" border="0" usemap="#Map5" /></td>
+                  </tr>
+                  <tr>
+                    <td height="198" align="left" valign="top"  class="fradBgTd"><table width='100%' cellspacing='0' cellpadding='0' border='0'>
+<tr>
+<td style='background-color:null'><table cellpadding='0' cellspacing='0' border='0' width='100%'><tr><td style='height:26px;'>·<a href='/art/2017/9/30/art_6062_569148.html' title='关于“2017年中国作物科技奖”评审结果的公示' target=_blank>关于“2017年中国作物...</a></td><td width='32' align='left' style='color:#999999'>09-30</td></tr></table></td></tr>
+<tr>
+<td style='background-color:null'><table cellpadding='0' cellspacing='0' border='0' width='100%'><tr><td style='height:26px;'>·<a href='/art/2017/9/19/art_6062_568267.html' title='关于推荐周一凡等同学为2018年免试硕士研究生人选的公示' target=_blank>关于推荐周一凡等同学为2...</a></td><td width='32' align='left' style='color:#999999'>09-19</td></tr></table></td></tr>
+<tr>
+<td style='background-color:null'><table cellpadding='0' cellspacing='0' border='0' width='100%'><tr><td style='height:26px;'>·<a href='/art/2017/8/11/art_6062_565549.html' title='江苏省现代农业与作物科技暑期学校学员录取名单（校外）' target=_blank>江苏省现代农业与作物科技...</a></td><td width='32' align='left' style='color:#999999'>08-11</td></tr></table></td></tr>
+<tr>
+<td style='background-color:null'><table cellpadding='0' cellspacing='0' border='0' width='100%'><tr><td style='height:26px;'>·<a href='/art/2017/7/8/art_6062_563577.html' title='关于举办江苏省现代农业与作物科技研究生暑期学校的通知' target=_blank>关于举办江苏省现代农业与...</a></td><td width='32' align='left' style='color:#999999'>07-08</td></tr></table></td></tr>
+<tr>
+<td style='background-color:null'><table cellpadding='0' cellspacing='0' border='0' width='100%'><tr><td style='height:26px;'>·<a href='/art/2017/5/11/art_6062_555069.html' title='关于举办扬州大学农学院2017年大学生暑期学术夏令营的通知' target=_blank>关于举办扬州大学农学院2...</a></td><td width='32' align='left' style='color:#999999'>05-11</td></tr></table></td></tr>
+<tr>
+<td style='background-color:null'><table cellpadding='0' cellspacing='0' border='0' width='100%'><tr><td style='height:26px;'>·<a href='/art/2017/4/1/art_6062_551463.html' title='农学院2017年硕士生复试成绩公示' target=_blank>农学院2017年硕士生复...</a></td><td width='32' align='left' style='color:#999999'>04-01</td></tr></table></td></tr>
+<tr>
+<td style='background-color:null'><table cellpadding='0' cellspacing='0' border='0' width='100%'><tr><td style='height:26px;'>·<a href='/art/2017/3/26/art_6062_547635.html' title='2017年农学院硕士复试名单' target=_blank>2017年农学院硕士复试...</a></td><td width='32' align='left' style='color:#999999'>03-26</td></tr></table></td></tr>
+<tr>
+<td style='background-color:null'><table cellpadding='0' cellspacing='0' border='0' width='100%'><tr><td style='height:26px;'>·<a href='/art/2017/3/22/art_6062_547231.html' title='农学院2017年全日制硕士研究生复试报到注意事项' target=_blank>农学院2017年全日制硕...</a></td><td width='32' align='left' style='color:#999999'>03-22</td></tr></table></td>
+</tr></table><tr><td></td></tr></td>
+                  </tr>
+                </table></td>
+              </tr>
+              <tr>
+                <td height="8"></td>
+              </tr>
+              <tr>
+                <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td><img src="/images/451/zsxx.jpg" width="214" height="29" border="0" /></td>
+                  </tr>
+                  <tr>
+                    <td height="135" align="left" valign="top" class="fradBgTd" style="padding:6px;">
+<table width="100%"  height="100%" border="0" cellspacing="0" cellpadding="0">            
+  <tr>
+    <td width="15%" align="right" valign="middle"><img src="/images/451/dot02.jpg" width="7" height="7" /></td>
+     <td width="6" align="left" valign="middle"></td>
+    <td align="left" valign="middle"><A href="/col/col6031/index.html">本科生招生信息</A></td>
+    </tr>
+  <tr>
+    <td align="right" valign="middle"><img src="/images/451/dot02.jpg" width="7" height="7" /></td>
+     <td align="left" valign="middle"></td>
+    <td align="left" valign="middle"><A href="/col/col6032/index.html">硕士生招生信息</A></td>
+  </tr>
+  <tr>
+    <td align="right" valign="middle"><img src="/images/451/dot02.jpg" width="7" height="7" /></td>
+     <td align="left" valign="middle"></td>
+    <td align="left" valign="middle"><A href="/col/col6033/index.html">博士生招生信息</A></td>
+  </tr>
+  <tr>
+    <td align="right" valign="middle"><img src="/images/451/dot02.jpg" width="7" height="7" /></td>
+     <td  align="left" valign="middle"></td>
+    <td align="left" valign="middle"> <A href="/col/col6034/index.html">专业硕士招生信息</A></td>
+  </tr>
+  <tr>
+    <td align="right" valign="middle"><img src="/images/451/dot02.jpg" width="7" height="7" /></td>
+     <td align="left" valign="middle"></td>
+    <td align="left" valign="middle"><A href="/col/col6035/index.html">成教招生信息</A></td>
+  </tr>
+</table>
+
+</td>
+                  </tr>
+                </table></td>
+              </tr>
+              <tr>
+                <td height="8"></td>
+              </tr>
+              <tr>
+                <td><a href="mailto:nongxy@yzu.edu.cn"><img src="/images/451/quickLink01.jpg" width="214" height="39" /></a></td>
+              </tr>
+              <tr>
+                <td height="8"></td>
+              </tr>
+              <tr>
+                <td><a href="/col/col6045/index.html" target="_blank"><img src="/images/451/quickLink02.jpg" width="214" height="39" /></a></td>
+              </tr>
+              <tr>
+                <td height="8"></td>
+              </tr>
+              <tr>
+                <td><a href="/col/col6050/index.html" target="_blank"><img src="/images/451/quickLink03.jpg" width="214" height="39" /></a></td>
+              </tr>
+              <tr>
+                <td height="8"></td>
+              </tr>
+              <tr>
+                <td><a href="/col/col5891/index.html" target="_blank"><img src="/images/451/quickLink04.jpg" width="214" height="39" /></a></td>
+              </tr>
+              <tr>
+                <td height="8"></td>
+              </tr>
+              <tr>
+                <td><a href="/col/col39841/index.html" target="_blank"><img src="/images/451/quickLink05.jpg" width="214" height="39" /></a></td>
+              </tr>
+              <tr>
+                <td height="8"></td>
+              </tr>
+              <tr>
+                <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td><img src="/images/451/quicklink.jpg" width="214" height="29" /></td>
+                  </tr>
+                  <tr>
+                    <td height="88" align="center" valign="middle" class="fradBgTd">
+                    <select style="FONT-SIZE: 9pt; WIDTH: 150px; margin-bottom:8px; BACKGROUND-COLOR: #ffffff" onChange="javascript:if (this.selectedIndex==0) return false;window.open(this.options[this.selectedIndex].value)" size=1 name=select>
+                                  <option selected>-----校内网站链接-----</option>
+                                  <option value="http://www.yzu.edu.cn">扬州大学</option>
+                                  <option value="http://bgxt.yzu.edu.cn">办公系统</option>
+                                  <option value="http://lib.yzu.edu.cn">图书馆</option>
+                                  <option value="http://ic.yzu.edu.cn">信息网络平台</option>
+                                  <option value="http://www.zgzzsl.com/index.php?s=/index/view/id/3043html">扬州大学学报</option>
+                                  <option value="http://mail.yzu.edu.cn/">扬州大学电子邮局</option>
+                                  <option value="http://webwork.yzu.edu.cn/jcms/">JCMS系统</option>
+                     </select>
+                    <br />
+                    <select style="FONT-SIZE: 9pt; WIDTH: 150px; margin-bottom:8px; BACKGROUND-COLOR: #ffffff" onChange="javascript:if (this.selectedIndex==0) return false;window.open(this.options[this.selectedIndex].value)" size=1 name=select3>
+                      <option selected>-----相关网站链接-----</option>
+                      <option value="http://www.moa.gov.cn/">国家农业部</option>
+                      <option value="http://www.moe.edu.cn">国家教育部</option>
+                      <option value="http://www.most.gov.cn">国家科技部</option>
+                      <option value="http://www.nsfc.gov.cn/">国家自然科学基金委员会</option>
+                      <option value="http://www.jse.gov.cn/col/col1366/">江苏省教育厅</option>
+                      <option value="http://www.jstd.gov.cn">江苏省科技厅</option>
+                      <option value="http://www.jsagri.gov.cn">江苏省农业网</option>
+                      <option value="http://www.jaas.ac.cn">江苏省农科院</option>
+                      <option value="http://www.csc.edu.cn/">国家留学基金委员会</option>
+                      <option value="http://www.jsrice.net/">江苏水稻丰产工程科技网</option>
+                    </select><br />
+                                  <select style="FONT-SIZE: 9pt; WIDTH: 150px; BACKGROUND-COLOR: #ffffff" onChange="javascript:if (this.selectedIndex==0) return false;window.open(this.options[this.selectedIndex].value)" size=1 name=select2>
+                                    <option selected>-----其它院校链接-----</option>
+                                    <option value="http://www.cau.edu.cn/">中国农业大</option>
+                                    <option value="http://www.hebau.edu.cn/">河北农业大</option>
+                                    <option value="http://www.neau.edu.cn/">东北农业大学</option>
+                                    <option value="http://www.zju.edu.cn/"> 浙江农业大学(浙江大学)</option>
+                                    <option value="http://www.sdau.edu.cn/">山东农业大学</option>
+                                    <option value="http://www.scau.edu.cn/">华南农业大学</option>
+                                    <option value="http://www.hzau.edu.cn/">华中农业大学</option>
+                                    <option value="http://www.swu.edu.cn/">西南农业大学(西南大学)</option>
+                                    <option value="http://www.ahau.edu.cn/">安徽农业大学</option>
+                                    <option value="http://www.cau.edu.cn/">北京农业大学</option>
+                                    <option value="http://www.jlau.edu.cn/index_2013.asp">吉林农业大学</option>
+                                    <option value="http://www.njau.edu.cn/">南京农业大学</option>
+                                    <option value="http://www.fjau.edu.cn/">福建农业大学</option>
+                                    <option value="http://www.hunau.net/">湖南农业大学</option>
+                                    <option value="http://www.ynau.edu.cn/">云南农业大学</option>
+                                    <option value="http://www.nwsuaf.edu.cn/">西北农林科技大学</option>
+                                    <option value="http://www.gsau.edu.cn/">甘肃农业大学</option>
+                                    <option value="http://www.henau.edu.cn/">河南农业大学</option>
+                                    <option value="http://www.jxau.edu.cn/">江西农业大学</option>
+                                    <option value="http://www.qau.edu.cn/">青岛农业大学</option>
+                                    <option value="http://www.tjac.edu.cn/">天津农学院</option>
+                                    <option value="http://www.agri.sjtu.edu.cn/">上海交大农业与生物学院</option>
+                                  </select>
+                    </td>
+                  </tr>
+                </table></td>
+              </tr>
+            </table></td>
+          </tr>
+        </table></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td align="center" valign="middle" background="/images/451/bottombg.jpg" style="height:106px; background-repeat:repeat-x; color:#333"><p>版权所有：扬州大学农学院 地址:扬州市文汇东路12号 邮编:225009   <a href="#">网站地图</a><br />
+      <br />
+     电话：0514-87979226 87979212 87979351 传真：0514-87996817 Email：<a href="mailto:nxy@yzu.edu.cn">nxy@yzu.edu.cn</a></p></td>
+  </tr>
+</table>
+ 
+    </td>
+  </tr>
+</table>
+
+
+<map name="Map" id="Map">
+  <area shape="rect" coords="243,4,282,22" href="/col/col7501/index.html" target="_blank" />
+</map>
+
+<map name="Map2" id="Map2">
+  <area shape="rect" coords="416,6,455,23" href="/col/col6064/index.html" target="_blank" />
+</map>
+
+<map name="Map3" id="Map3">
+  <area shape="rect" coords="242,5,283,21" href="/col/col6063/index.html" target="_blank" />
+</map>
+
+<map name="Map4" id="Map4">
+  <area shape="rect" coords="417,6,459,22" href="/col/col7141/index.html" target="_blank" />
+</map>
+
+<map name="Map5" id="Map5">
+  <area shape="rect" coords="173,6,209,22" href="/col/col6062/index.html" target="_blank" />
+</map>
+
+
+<!-- visitcount Begin --><iframe src='./module/visitcount/visit.jsp?type=1&i_webid=64&i_columnid=500' name="vishidden" id="vishidden" frameborder="0" style="width:0; height:0; display:none"></iframe><!-- visitcount End -->
+</body>
+</html>
+ <a href='http://www.hanweb.com' style='display:none'>Produced By 大汉网络 大汉版通发布系统</a><script language="javascript" src='/script/pagecontrol.js'></script>

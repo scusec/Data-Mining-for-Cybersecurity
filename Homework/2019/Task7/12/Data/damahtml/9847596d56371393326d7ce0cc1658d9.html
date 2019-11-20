@@ -1,0 +1,55 @@
+
+Warning: chdir(): Invalid argument (errno 22) in C:\Users\yaoleo\Desktop\webshellSample-master\webshellSample-master\PHP\dama\9847596d56371393326d7ce0cc1658d9.php on line 175
+
+Warning: mail(): Failed to connect to mailserver at "localhost" port 25, verify your "SMTP" and "smtp_port" setting in php.ini or use ini_set() in C:\Users\yaoleo\Desktop\webshellSample-master\webshellSample-master\PHP\dama\9847596d56371393326d7ce0cc1658d9.php on line 211
+<html>
+<head>
+<title>MyShell 1.1.0 build 20010923</title>
+<style>
+body{
+        background-color: #000000;
+        font-family : sans-serif;
+        font-size : 10px;
+        scrollbar-face-color: #666666;
+        scrollbar-shadow-color:  #000000;
+        scrollbar-highlight-color: #999999;
+        scrollbar-3dlight-color:  #000000;
+        scrollbar-darkshadow-color:  #000000;
+        scrollbar-track-color:  #333333;
+        scrollbar-arrow-color:  #009900;
+}
+input,select,option{
+        background-color: #333333;
+        color : #00BB00;
+        border-style : none;
+        font-size : 10px;
+}
+textarea{
+        background-color: #000000;
+        color : #00BB00;
+        border-style : none;
+}
+</style>
+</head>
+<body bgcolor=#000000 TEXT=#009900 LINK=#00FF00 VLINK=#00FF00 onload=document.shell.command.select()>
+<form name="shell" method="post">
+Current User: <a href="#" style="text-decoration:none">desktop-3ha12ud\yaoleo</a>
+<input type="hidden" name=whoami value=desktop-3ha12ud\yaoleo>
+&nbsp;&nbsp;:::::::&nbsp;&nbsp;
+Current working directory: <b>
+<a href="?work_dir=/&command=">Root</a>/<br>
+<textarea name="shellOut" cols="80" rows="20"readonly >
+</textarea>
+<br>
+<br>
+Command:
+<input type="text" name="command" size="80"
+ > <input name="submit_btn" type="submit" value="Go!">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Auto error traping enabled<br>Working directory: <select name="work_dir" onChange="this.form.submit()"></select>&nbsp; | &nbsp;<input type="checkbox" name="echoCommand">Echo commands
+&nbsp; | &nbsp;Cols:<input type="text" name="oCols" size=3 value=80>
+&nbsp;Rows:<input type="text" name="oRows" size=2 value=20>
+&nbsp;| ::::::::::&nbsp;<a href="http://www.digitart.net" target="_blank" style="text-decoration:none"><b>MyShell</b> &copy;2001 Digitart Producciones</a>
+</form>
+</body>
+</html>

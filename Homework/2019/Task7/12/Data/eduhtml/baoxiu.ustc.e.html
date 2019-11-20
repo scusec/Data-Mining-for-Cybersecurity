@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-cn" ng-app="repairsonline.index">
+<head>
+    <meta charset="utf-8">
+    <title>在线报修系统|中国科大</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <link href="/common/styles/bootstrap.min.css?ver=20150611" rel="stylesheet">
+    <link href="/common/styles/main.css?ver=20150611" rel="stylesheet">
+    
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<script>
+	    function detectUA() {
+        var u = navigator.userAgent;
+        return {
+            weixin: u.match(/MicroMessenger/i) || window.WeixinJSBridge != undefined,
+            ios : !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端
+            android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1 ,
+            mobile: !!u.match(/AppleWebKit.*Mobile.*/), //是否为移动终端
+            iPhone: u.indexOf('iPhone') > -1  //是否为iPhone或者QQHD浏览器
+        }
+		
+        }
+
+        window.ua = detectUA();
+                
+	    if(ua.weixin)
+	    {
+	    	if (window.stop) 
+				window.stop(); 
+			else 
+				document.execCommand("Stop");
+			
+			window.location.href="/login/mlogin";
+	    }
+		
+	</script>
+</head>
+<body>
+    <!--导航栏-->
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand" title="中国科大网络信息中心报修系统">
+                <img src="/common/images/logo.png">
+            </a>
+            <a class="navbar-brand">中国科大网络信息中心报修系统</a>
+        </div>
+        <div class="navbar" id="navbar">
+                        <ul class="nav navbar-nav navbar-right">
+                                    <li><a href="/login">登录</a></li>
+                            </ul>
+        </div>
+    </div>
+</nav>    <!--正文-->
+    <div class="container">
+        <div class="jumbotron">
+            <div class="container">
+                <h2>报修动态</h2>
+                <p>今日新增报修0项</p>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <table class="table table-bordered table-hover">
+                    <caption class="orange"><h2>今日新增报修</h2></caption>
+                    <thead>
+                    <tr>
+                        <th>标题</th>
+                        <th>故障类型</th>
+                        <th>当前状态</th>
+                        <th>报修时间</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                                        </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <!--页脚-->
+    <footer class="footer">
+    <div class="container">
+        <p class="text-muted">Copyright &copy 2014 - 2015, 中国科学技术大学网络信息中心</p>
+    </div>
+</footer></body>
+</html>

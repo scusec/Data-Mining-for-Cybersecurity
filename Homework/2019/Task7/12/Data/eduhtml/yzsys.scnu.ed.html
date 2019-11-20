@@ -1,0 +1,138 @@
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+<title>考生平台</title>
+
+<link href="css/pingtai.css" rel="stylesheet" type="text/css"></link>
+
+<script type="text/javascript" src="/jquery-easyui-1.4.5/jquery.min.js"></script>
+<script type="text/javascript" src="/jquery-easyui-1.4.5/jquery.easyui.min.js"></script>
+<script type="text/javascript" src="/jquery-easyui-1.4.5/locale/easyui-lang-zh_CN.js"></script>
+<script type="text/javascript" src="/js/utils.js"></script>
+
+<link rel="stylesheet" href="/jquery-easyui-1.4.5/themes/default/easyui.css" type="text/css"></link>
+<link rel="stylesheet" href="/jquery-easyui-1.4.5/themes/icon.css" type="text/css"></link>
+<link rel="stylesheet" href="/jquery-easyui-1.4.5/themes/color.css" type="text/css"></link>
+
+</head>
+<body style="overflow-x:hidden;overflow-y:hidden" onselect="return false">
+	<div id="touming" draggable="false"></div>
+	<div class="all">
+		<div id="login_dialog"></div>
+		<div class="pt">
+			<div class="pt_title">华南师范大学研究生招生管理平台</div>
+		</div>
+		<div class="pt_blue">
+			<div class="pt_bluevon">
+				<a href="javascript:loginDialog('login_tmbm.jsp');"><img src="images/but_1.gif" width="162" height="166" title="硕士推免报名系统"></img></a>
+				<a href="javascript:loginDialog('login_xscx.jsp');"><img src="images/but_2.gif" width="162" height="166" title="硕士考生查询系统"></img></a>
+				
+				
+				<a href="javascript:loginDialog('login_bsbm.jsp');"><img src="images/but_3.gif" width="162" height="166" title="博士报名查询系统"></img></a>
+				
+			</div>
+		</div>
+		<div class="pt_gg">
+			<div class="pt_ggcon">
+				<div class="pt_ggcon_top">
+					<div class="pt_ggcon_top_left">公告</div>
+					<div class="pt_ggcon_top_right">
+						<a href="moreNotice.jsp" target="_blank">更多&gt;&gt;</a>
+					</div>
+				</div>
+				<div class="pt_ggcon_bottom">
+					<ul>
+					
+						<li>
+							<a href="showDetial.jsp?noticeId=7427bfc1-05b5-4455-910b-8baa409e706b" target="_blank">
+								
+									
+									关于2017年博士招生考试准考证下载的通知
+								
+								(2017-04-10)
+							</a>
+						</li>
+					
+						<li>
+							<a href="showDetial.jsp?noticeId=29e397c7-f392-4738-8a77-b364199a6902" target="_blank">
+								
+									
+									关于2017部分博士招生考试科目可使用计算器的通知
+								
+								(2017-04-10)
+							</a>
+						</li>
+					
+						<li>
+							<a href="showDetial.jsp?noticeId=e954c9f9-7b56-4374-aac4-4bf122c6a97e" target="_blank">
+								
+									
+									2017年博士生招生考试小语种题型
+								
+								(2017-04-10)
+							</a>
+						</li>
+					
+						<li>
+							<a href="showDetial.jsp?noticeId=c9cb0f0f-0b47-4940-81e7-f4b8d2959bbf" target="_blank">
+								
+									
+									2017年博士生招生考试统考英语题型
+								
+								(2017-04-10)
+							</a>
+						</li>
+					
+						<li>
+							<a href="showDetial.jsp?noticeId=5f811ed5-69a7-4335-935a-b89a183b74d3" target="_blank">
+								
+									
+									《学历学籍电子注册备案表》和《纸质版学历认证报告》申请途径
+								
+								(2016-12-06)
+							</a>
+						</li>
+					
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
+
+<script type="text/javascript">
+$(document).ready(function() {
+	if(''!=''){
+		var url = location.href;
+		if(url.indexOf("sstmbm.do")>0){
+			loginDialog('login_tmbm.jsp');
+		}else if(url.indexOf("bsbm.do")>0){
+			loginDialog('login_bsbm.jsp');
+		}else if(url.indexOf("ssxscx.do")>0){
+			loginDialog('login_xscx.jsp');
+		}else if(url.indexOf("sstjbm.do")>0){
+			loginDialog('login_sstjbm.jsp');
+		}else if(url.indexOf("xlybm.do")>0){
+			loginDialog('login_xlybm.jsp');
+		}
+	}
+});
+
+function loginDialog(page) {
+	$('#login_dialog').dialog({
+		title:' ',
+		top : 100,
+		width : 400,
+		height : 250,
+		modal:true,
+		href : page,
+		onLoad:function(){
+			$("#errorMsg").append('<font color="red"><b></b></font>');
+		}
+	});
+}
+</script>

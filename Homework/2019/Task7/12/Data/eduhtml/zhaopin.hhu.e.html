@@ -1,0 +1,362 @@
+
+
+<script language="javascript" src="Comm/Job_All.js"></script>
+<script language="javascript" src="Comm/Job_Function.js"></script>
+<script language="javascript" src="Comm/Area_All.js"></script>
+<script language="javascript" src="Comm/Area_Function.js"></script>
+
+
+<script language="javascript" src="Comm/Job_Function.js"></script>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>河海人事招聘网</title>
+ <meta name="keywords" content="河海人事招聘">
+ <meta name="description" content="河海人事招聘">
+<link rel="SHORTCUT ICON" href="favicon.ico">
+<link href="css/blue.css" rel="stylesheet" type="text/css">
+<link href="css/css.css" rel="stylesheet" type="text/css">
+<script language="JavaScript" type="text/JavaScript" src="/showtip.js"></script>
+<script>
+		function checkform(){
+		  if(form1.username.value==""){
+		    alert("请填写用户名");
+			return false;
+		  }
+		  if(form1.password.value==""){
+		    alert("请填写密码");
+			return false;
+		  }  
+		  if(form1.code.value==""){
+		    alert("请输入验证码");
+			return false;
+		  }
+		  if(!form1.type[0].checked&&!form1.type[1].checked){
+		    alert("请选择会员类型");
+			return false;
+		  }
+		}
+</script>
+</head>
+
+<div align="center">    <table width="966" border="0" align="center" cellpadding="0" cellspacing="0">
+      <tr>
+        <td height="5"></td>
+      </tr>
+    </table>
+	<table border="0" cellpadding="0" style="border-collapse: collapse" width="966" id="table1" height="96">
+	<tr>
+		<td width="964">
+		<img border="0" src="Images/about_30.jpg" width="966" height="144"></td>
+	</tr>
+</table>
+    <table width="966" border="0" align="center" cellpadding="0" cellspacing="0">
+      <tr>
+        <td height="5"></td>
+      </tr>
+    </table>
+</div>
+
+
+
+<script language="javascript">
+	function selAll()
+	{
+		var selobj = document.getElementsByName("ComId");
+		for(var i = 0; i < selobj.length; i++)
+		{
+			selobj[i].checked = true;
+		}
+	}
+	
+	function removeAll()
+	{
+		var selobj = document.getElementsByName("ComId");
+		for(var i = 0; i < selobj.length; i++)
+		{
+			selobj[i].checked = false;
+		}
+	}
+	
+	function onclicksel()
+	{
+		var chkobj = document.all("SelAllComId");
+		if(chkobj.checked == true)
+		{
+			selAll();
+		}
+		else
+		{
+			removeAll();
+		}
+	}
+	
+	function GotoPage()
+	{
+		var Fn = ListForm.FileName.value;
+		var Cp = ListForm.CurPage.value;
+		location.href = Fn + "&page=" + Cp;
+	}
+</script>
+<div align="center">
+  <table border="0" cellpadding="0" style="border-collapse: collapse" width="966" id="table1">
+    <tr>
+      <td width="5" background=""></td>
+      <td width="638" height="27" bgcolor="#F9F9F9"><form id="SearchForm" name="SearchForm" method="post" action="Company_Index.asp" style="margin:0">
+        <table width="966" height="32" border="0" align="center" cellpadding="0" cellspacing="0" id="__01">
+          <tr>
+            <td><img src="images/nav_01.jpg" width="184" height="32" alt=""></td>
+            <td width="772" height="32" background="images/nav_02.jpg"><table width="146%" border="0" cellspacing="0" cellpadding="0" id="table2">
+                <tr>
+                  <td height="30" valign="middle">&nbsp;
+                      <select size="1" name="yuanxi" id="yuanxi">
+                        
+                        <option value="" selected>---选择院系单位---</option>
+                        <OPTION value='3824' >水文水资源学院</option><OPTION value='3825' >水利水电学院</option><OPTION value='3826' >港口海岸与近海工程学院</option><OPTION value='3827' >土木与交通学院</option><OPTION value='3828' >环境学院</option><OPTION value='3829' >能源与电气学院</option><OPTION value='3830' >计算机与信息学院</option><OPTION value='3831' >力学与材料学院</option><OPTION value='3832' >地球科学与工程学院</option><OPTION value='3833' >理学院</option><OPTION value='3834' >商学院</option><OPTION value='3835' >公共管理学院</option><OPTION value='3836' >法学院</option><OPTION value='3837' >外国语学院</option><OPTION value='3838' >体育系</option><OPTION value='3839' >马克思主义学院</option>
+                      </select>
+                      <select name="ValidityDate" id="ValidityDate" style="width:131;height:21" size="1">
+                        <option value="" selected> ——选择发布时间——</option>
+                        <option value="1" > 一天内</option>
+                        <option value="2" > 两天内</option>
+                        <option value="3" > 三天内</option>
+                        <option value="7" > 一周内</option>
+                        <option value="14" > 两周内</option>
+                        <option value="30" > 一月内</option>
+                        <option value="60" > 两月内</option>
+                        <option value="90" > 三月内</option>
+                      </select>
+                    &nbsp;
+                    <select size="1" name="gangwei">
+                      <option value="" selected>——岗位类型——</option>
+                      <option value="教师岗" >教师岗</option>
+                      <option value="管理岗">管理岗</option>
+                      <option value="辅导员岗">辅导员岗</option>
+                      <option value="其它专业技术岗">其它专业技术岗 </option>
+                    </select>
+                    <input name="keyword" type="text" class="input_bk_D2D2D2" id="keyword" value="请输入要查询的关键字" size="21" onFocus="javascript:if(this.value=='请输入要查询的关键字')this.value='';" onBlur="javascript:if(this.value=='')this.value='请输入要查询的关键字';" />
+                    &nbsp;
+                    <input type="submit" value="搜 索" name="B1">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
+                </tr>
+            </table></td>
+            <td><img src="images/nav_03.jpg" width="10" height="32" alt=""></td>
+          </tr>
+          <tr>
+            <td height="5"></td>
+          </tr>
+        </table>
+      </form></td>
+      <td width="5" background=""></td>
+    </tr>
+    <tr>
+      <td>　</td>
+    </tr>
+  </table>
+</div>
+<table width="966" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF">
+	<tr>
+		<td width="195" align="center" valign="top"><style type="text/css">
+<!--
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+-->
+</style>
+<table id="__01" width="206" height="161" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td colspan="2"><img src="images/left1_01.jpg" width="206" height="37" alt="" /></td>
+  </tr>
+  <tr>
+    <td width="191" height="116" valign="top" style="border-left:1px #E8E8E8 solid;"><script language="javascript">
+function CheckLogin(){
+if(LoginForm.UserName.value == ""){
+alert("请输入用户名");
+LoginForm.UserName.focus();
+return false;
+}
+if(LoginForm.PassWord.value == ""){
+alert("请输入登录密码");
+LoginForm.PassWord.focus();
+return false;
+}
+if(LoginForm.UserType[0].checked == false && LoginForm.UserType[1].checked == false){
+alert("请选择用户类型");
+return false;
+}
+return true;
+}
+</script>
+<form id="LoginForm" name="LoginForm" method="post" action="Login_Check.asp" style="margin:0" onsubmit="return CheckLogin();">
+<table width="95%" height="125" border="0" align="center" cellpadding="0" cellspacing="0" class="fontblack"><tr>
+<td><table width="98%" border="0" cellpadding="0" cellspacing="3" class="fontblack"><tr>
+<td width="32%" align="right" class="fontblack">会员名：</td>
+<td colspan="2"><input name="UserName" type="text" class="ipt"  id="UserName" size="21" style="width:120px;" maxlength="20" /></td>
+</tr>
+<tr>
+<td align="right" class="fontblack">密&nbsp; 码：</td>
+<td colspan="2"><input name="PassWord" type="password" class="ipt" id="PassWord" size="21" style="width:120px;" maxlength="20" /></td>
+</tr>
+<tr>
+<td align="right" valign="middle" class="fontblack">验证码：</td>
+<td width="68%"><table width="100%" border="0" cellpadding="0" cellspacing="0" class="fontblack"><tr>
+<td width="43%"><input name="code" type="text" id="code" class="ipt" size="10" maxlength="4"></td>
+<td width="57%" align="center"><img src="Code/code.asp" align="absmiddle" /></td>
+</tr>
+ </table></td>
+</tr>
+</table></td>
+</tr>
+<tr>
+<td align="center"><input type="radio" checked name="UserType" value="Person" id="t1" />
+<label for="t1">个人会员</label>
+<input type="radio" name="UserType" value="Company" id="t2" />
+<label for="t2">院系用户</label></td>
+</tr>
+<tr>
+ <td><table width="100%" border="0" cellpadding="0" cellspacing="0" class="fontblack">
+<tr>
+<td colspan="2"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td height="26" colspan="3" align="right"><table width="100%" border="0" cellpadding="0" cellspacing="0" class="fontblack">
+<tr>
+<td width="100%" style="padding-top: 10px" align=center><input name="image" type="image" src="images/bn006.gif" border="0" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Person_Reg.asp" target=_blank><img src="Images/bn005.gif" border="0"></a></td>
+</tr>
+</table></td>
+</tr>
+</table></td>
+</tr>
+</table></td>
+</tr>
+</table>
+</form>
+</td>
+    <td width="15" height="116" background="images/left1_03.jpg">&nbsp;</td>
+  </tr>
+  <tr>
+    <td colspan="2"><img src="images/left1_04.jpg" width="206" height="8" alt="" /></td>
+  </tr>
+</table>
+<table id="__01" width="206" height="272" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td colspan="3"><img src="images/left2_01.jpg" width="206" height="37" alt="" /></td>
+  </tr>
+  <tr>
+    <td width="7" background="images/max5.jpg">&nbsp;</td>
+    <td width="186" height="226" valign="top"><table width="100%" border="0" align="center" cellpadding="0" cellspacing="2">
+      
+      
+      <tr>
+        <td width="186" height="30" background="Images/max1.jpg"><strong class="dwfont14B">求职必读</strong></td>
+      </tr>
+      
+      <tr>
+        <td height="25"><table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+          
+          <tr>
+            <td width="186" height="39" background="Images/max2.jpg" style="padding-left:38px; padding-top:2px; font-size:14px;"><a href="News_More.asp?NewsTypeId=8" >简历规范</a></td>
+          </tr>
+          <tr>
+            <td height="5"></td>
+          </tr>
+          
+          <tr>
+            <td width="186" height="39" background="Images/max2.jpg" style="padding-left:38px; padding-top:2px; font-size:14px;"><a href="News_More.asp?NewsTypeId=9" >求职面试</a></td>
+          </tr>
+          <tr>
+            <td height="5"></td>
+          </tr>
+          
+        </table></td>
+      </tr>
+      
+      <tr>
+        <td width="186" height="30" background="Images/max1.jpg"><strong class="dwfont14B">网站公告栏</strong></td>
+      </tr>
+      
+      <tr>
+        <td height="25"><table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+          
+          <tr>
+            <td width="186" height="39" background="Images/max2.jpg" style="padding-left:38px; padding-top:2px; font-size:14px;"><a href="News_More.asp?NewsTypeId=5" >站点公告</a></td>
+          </tr>
+          <tr>
+            <td height="5"></td>
+          </tr>
+          
+        </table></td>
+      </tr>
+      
+      <tr>
+        <td>　</td>
+      </tr>
+    </table></td>
+    <td width="13" background="images/left2_04.jpg">&nbsp;</td>
+  </tr>
+  <tr>
+    <td colspan="3"><img src="images/left2_05.jpg" width="206" height="9" alt="" /></td>
+  </tr>
+</table>
+</td>
+		<td align="right" valign="top">
+          
+<!--<table width="95%" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td height="5"></td>
+  </tr>
+</table>-->
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="760" height="40" background="Images/max3.jpg">&nbsp;</td>
+  </tr>
+</table>
+<form id="ListForm" name="ListForm" method="post" action="" style="margin:0">
+      <table width="98%" border="0" cellpadding="5" cellspacing="0">
+			<tr>
+				<td width="139" height="25" align="center" background="images/top_4.gif" class="font12b_black">
+				<p align="center">院系名称</td>
+				<td align="center" background="images/top_4.gif" class="font12b_black">
+				<p align="center">岗位类别</td>
+				<td align="center" background="images/top_4.gif" class="font12b_black">
+				<p align="center">招聘职位</td>
+				<td align="center" background="images/top_4.gif" class="font12b_black">
+				<p align="center">学历要求</td>
+				<td align="center" background="images/top_4.gif" class="font12b_black">
+				<p align="center"><span style="font-family: 宋体">截至</span>时间</td>
+			</tr>
+
+			<tr>
+				<td height="30" colspan="5" align="center" class="td_line_col_FFFFFF">没有找到您想要查询的职位！</td>
+			</tr>
+
+		</table>
+	  </form>		</td>
+
+	</tr>
+</table>
+<table width="966" border="0" align="center" cellspacing="0" cellpadding="0">
+<tr>
+<td height="15"></td>
+</tr>
+<tr>
+<td background="images/bottom.jpg"><img src="images/bottom.jpg" align="absmiddle" /></td>
+</tr>
+<tr>
+<td height="25" bgcolor="#FFFFFF"><table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+<tr>
+<td height="25" align="center"><br>版权所有  河海大学人事处  地址：江苏·南京西康路1号  邮编：210098 <br><br>电话：025-83786559 传真：025-83786767 邮箱：rsc@hhu.edu.cn </td>
+</tr>
+</table></td>
+</tr>
+<tr>
+<td align="center" style="padding-top:10px; line-height:25px;"></td>
+</tr>
+<tr>
+<td align="center" style="line-height:25px;"></td>
+</tr>
+</table>
+</body>
+</html>

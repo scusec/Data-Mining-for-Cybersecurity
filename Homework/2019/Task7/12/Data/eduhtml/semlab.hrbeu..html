@@ -1,0 +1,409 @@
+<html>
+<head>
+<title>哈尔滨工程大学经济管理学院实验教学示范中心 >> 首页</title>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+
+
+
+
+
+<script src="/JS/prototype.js"></script>
+<script src="/JS/scriptaculous.js"></script>
+<script src="/JS/checklogin.js"></script>
+<link href='/Skin/DefaultSkin.css' rel='stylesheet' type='text/css'> <script language='JavaScript' type='text/JavaScript' src='/js/menu.js'></script>
+<script type='text/javascript' language='JavaScript1.2' src='/js/stm31.js'></script>
+
+
+<!--此处幻灯JS开始-->
+<script src="unslider/jquery-1.11.1.min.js"></script>
+<script src="unslider/unslider.min.js"></script>
+<script>
+$(document).ready(function(e) {
+    var unslider04 = $('#b04').unslider({
+		dots: true
+	}),
+	data04 = unslider04.data('unslider');
+	$('.unslider-arrow04').click(function() {
+        var fn = this.className.split(' ')[1];
+        data04[fn]();
+    });
+});
+
+</script>
+
+<!--speed图片切换的速度，数字，单位为毫秒
+delay图片停留的时间，数字，单位为毫秒
+complete每次图片切换完后的回调函数，function() {}
+keys是否支持键盘控制，取值true / false
+dots是否显示指示器，取值true / false
+fluid是否支持响应式布局，取值true / false-->
+<!--此处幻灯JS结束-->
+
+<!--此处视频JS和CSS开始-->
+  <!-- Chang URLs to wherever Video.js files will be hosted -->
+  <link href="video-js/video-js.css" rel="stylesheet" type="text/css">
+  <!-- video.js must be in the <head> for older IEs to work. -->
+  <script src="video-js/video.js"></script>
+  <!-- Unless using the CDN hosted version, update the URL to the Flash SWF -->
+  <script>
+    videojs.options.flash.swf = "video-js.swf";
+  </script>
+<!--此处视频JS和CSS结束-->
+
+<style type="text/css">
+/* 此处幻灯样式开始*/
+ul, ol { padding: 0; margin:0;}
+.banner { position: relative; overflow: auto; text-align: center;}
+.banner li { list-style: none; }
+.banner ul li { float: left; }
+#b04 { width: 1920px;
+    z-index:0;
+	position: absolute;
+	margin-top: 0 auto;
+	left: 50%;
+	top: 42px;
+	margin-left: -960px;}
+#b04 .dots { position: absolute; left: 0; right: 0; bottom: 24px;}
+#b04 .dots li 
+{ 
+	display: inline-block; 
+	width: 10px; 
+	height: 10px; 
+	margin: 0 6px; 
+	text-indent: -999em; 
+	border: 2px solid #fff; 
+	border-radius: 10px; 
+	cursor: pointer; 
+	opacity: .4; 
+	-webkit-transition: background .5s, opacity .5s; 
+	-moz-transition: background .5s, opacity .5s; 
+	transition: background .5s, opacity .5s;
+}
+#b04 .dots li.active 
+{
+	background: #fff;
+	opacity: 1;
+}
+#b04 .arrow { position: absolute; top: 378px;}
+#b04 #al { left: 250px;}
+#b04 #ar { right: 250px;}
+/* 此处幻灯样式结束*/
+
+/* 此处主体样式开始*/
+body {
+	background-color: #FFF;
+	margin: 0;
+	text-align: center;
+	font-family: "微软雅黑", "宋体";
+	color: #363636;	
+}
+.bannerback {
+	background-repeat: no-repeat;
+	background-position: center top;
+	text-align: center;
+	margin: 0 auto;
+}
+.diaphaneity {
+filter:alpha(opacity=50);       /* IE */
+-moz-opacity:0.5;              /* Moz + FF */
+opacity: 0.5;                   /* ??CSS3????(FF 1.5???)*/
+}
+#logoback {
+	height: 160px;
+	width: 1200px;
+	z-index: 2;
+	position: relative;
+	margin: 0 auto;
+	text-align:center;
+	background-color: #000; 
+}
+#logo {
+	background-image: url(images/index-_04.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	height: 160px;
+	width: 1200px;
+	z-index: 3;
+	position: absolute;
+	margin-top: 0 auto;
+	left: 50%;
+	top: 0px;
+	margin-left: -600px;
+}
+#naviback01 {
+background-image:url(images/index_05.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-color: #303a45;
+	height: 42px;
+	width: 1920px;
+	z-index: 1;
+	position: absolute;
+	margin-top: 0 auto;
+	left: 50%;
+	top: 202px;
+	margin-left: -960px;
+}
+
+.text01 {
+	color: #000;
+	font-family: "微软雅黑";
+	font-size: 14px;
+}
+.text01 a:link {
+	text-decoration:none;
+	color: #000;
+	font-family: "微软雅黑";
+	font-size: 14px;
+}
+.text01 a:hover {
+	text-decoration:none;
+	color: #000;
+	font-family: "微软雅黑";
+	font-size: 14px;
+}
+
+.title02 {
+	font-size: 18px;
+	line-height: 42px;
+	padding-top: 3px;
+}
+.title01 {
+	font-size: 14px;
+	padding-top: 4px;
+	line-height:32px;
+	text-decoration:none;
+	color: #363636;
+}
+.title01 a:link {
+	font-size: 14px;
+	padding-top: 4px;
+	line-height:32px;
+	text-decoration:none;
+	color: #363636;
+}
+.title01 a:hover {
+	font-size: 14px;
+	padding-top: 4px;
+	line-height:32px;
+	text-decoration:none;
+	color: #c81219;
+}
+#video_cover {
+	width: 109;
+	height: 47;
+	position: absolute;
+	z-index: 1;
+	background-image: url(images/TIP.png);
+	margin-left: 20px;
+	top: 903px;
+}
+.footertext {
+	color: #FFFFFF;
+	line-height: 32px;
+	font-size: 14px;
+}
+.input1 {
+	background-color: #DDDFE0;
+	padding: 0px;
+	vertical-align: middle;
+	opacity: 1.0;
+	filter: alpha(opacity=100);
+	font-family: "微软雅黑";
+	font-size: 12px;
+	line-height: 12px;
+	padding-top: 4px;
+	border-top-width: 0px;
+	border-right-width: 0px;
+	border-bottom-width: 1px;
+	border-left-width: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: solid;
+	border-left-style: none;
+	border-bottom-color: #111314;
+}
+.text02 {
+	color: #000;
+	font-family: "微软雅黑";
+	font-size: 14px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+	background-color: #dddfe0;
+}
+/* 此处主体样式结束*/
+</style>
+
+</head>
+<body>
+<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td align="center" valign="middle" bgcolor="#DDDFE0"><table border="0" align="center" cellpadding="0" cellspacing="0">
+      <tr>
+        <td width="600" height="42" align="left" valign="middle" background="images/index_02.png" class="text01" >　　0451-82519104&nbsp;&nbsp;|&nbsp;&nbsp;通讯详录&nbsp;&nbsp;|&nbsp;&nbsp;<a href="http://www.hrbeu.edu.cn" target="_blank">校首页</a></td>
+        <td width="600" align="right" valign="middle" class="text01" ><table  border="0" cellpadding="0" cellspacing="0">
+                   <tr>
+				   <form name="search" action="search.asp" method="post">
+                     <td height="24" align="center" valign="middle">
+					 
+					 <input name="Keyword" class="input1" id="Keyword" size="30" maxlength="30">&nbsp;<input name="Submit" type="submit" class="text02" id="Submit" value="搜索">
+                     <input id="Field" type="hidden" value="Title" name="Field">                     </td>
+					 </form>
+                   </tr>
+                 </table></td>
+      </tr>
+    </table></td>
+  </tr>
+</table>
+
+<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td height="603" align="center" valign="top" class="bannerback">
+    <!--此处幻灯代码开始-->
+        <div class="banner" id="b04">
+    <ul>
+        <li><img src="unslider/1.jpg" alt="" width="1920" height="603" /></li>
+        <li><img src="unslider/2.jpg" alt="" width="1920" height="603" /></li>
+        <li><img src="unslider/3.jpg" alt="" width="1920" height="603" /></li>
+        <li><img src="unslider/4.jpg" alt="" width="1920" height="603" /></li>
+    </ul>
+    <a href="javascript:void(0);" class="unslider-arrow04 prev"><img class="arrow" id="al" src="unslider/arrowl.png" alt="prev" width="20" height="35" /></a>
+    <a href="javascript:void(0);" class="unslider-arrow04 next"><img class="arrow" id="ar" src="unslider/arrowr.png" alt="next" width="20" height="37" /></a>
+</div>
+    <!--此处幻灯代码结束-->
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="banner">
+
+      <tr>
+        <td height="160" align="center" valign="middle" bgcolor="#000000" class="diaphaneity"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td align="center" valign="middle"><div id="logoback"></div>
+<div id="logo"></div></td>
+          </tr>
+        </table></td>
+      </tr>
+    </table>
+	<div id="naviback01"><table align="center">
+	  <tr><td width="1200" height="42" align="left" valign="middle" style=" padding-bottom:5px;"><script language='JavaScript1.2' src='/Article/JS/ShowClass_Menu.js' type='text/javascript' ></script></td></tr></table></div>	
+      <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tr>
+          <td width="1200" height="401" align="left" valign="middle"></td>
+        </tr>
+    </table></td>
+  </tr>
+</table>
+  <table width="1200" border="0" align="center" cellpadding="0" cellspacing="0"><tr><td height="51" align="center" valign="middle" background="images/index_07.png" style="padding-top: 3px;"><table border="0" align="right" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="86" height="51" align="right" valign="middle" class="title02">通知公告</td>
+    <td width="485" align="right" valign="middle" class="title01" ><a href="ShowClass.asp?ClassID=7">更多</a></td>
+    <td width="142" align="right" valign="middle" class="title02">实验课表</td>
+    <td width="487" align="right" valign="middle" class="title01"><a href="ShowClass.asp?ClassID=8">更多</a></td>
+  </tr>
+</table></td></tr></table>
+  <table width="1200" border="0" align="center" cellpadding="0" cellspacing="0">
+    <tr>
+      <td width="30" align="center" valign="top" ><table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td height="9"></td>
+        </tr>
+        <tr>
+          <td height="196" background="images/index+_08.png"></td>
+        </tr>
+      </table></td>
+      <td width="1170" align="center" valign="middle"><table width="1170" border="0" align="right" cellpadding="0" cellspacing="0">
+        <tr>
+          <td width="541" height="190" align="left" valign="top" class="title01">&nbsp;<a class="title01" href="/Article/ShowArticle.asp?ArticleID=46" title="实验报告评阅要求" target="_blank">实验报告评阅要求</a>&nbsp;(<font color="red">10-27</font>)<br />&nbsp;<a class="title01" href="/Article/ShowArticle.asp?ArticleID=42" title="实验报告封皮" target="_blank">实验报告封皮</a>&nbsp;(<font color="red">10-27</font>)<br /></td>
+          <td width="54" align="left" valign="top"></td>
+          <td width="575" align="left" valign="top"><span class="title01">
+            &nbsp;<a class="title01" href="/Article/ShowArticle.asp?ArticleID=34" title="2017-2018年第一学期实验课表" target="_blank">2017-2018年第一学期实验课表</a>&nbsp;(<font color="red">10-27</font>)<br />&nbsp;<a class="title01" href="/Article/ShowArticle.asp?ArticleID=33" title="2016-2017年第二学期实验课课表" target="_blank">2016-2017年第二学期实验课课表</a>&nbsp;(06-06)<br />
+          </span></td>
+        </tr>
+      </table></td>
+    </tr>
+  </table>
+<table width="1200" border="0" align="center" cellpadding="0" cellspacing="0">
+    <tr>
+      <td height="265" align="center" valign="top" background="images/index-_10.png" ><table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td width="571" height="265" valign="top" background="images/index-_10.png"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <td height="20"></td>
+            </tr>
+          </table>
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td height="47" valign="bottom"><table border="0" align="right" cellpadding="0" cellspacing="0">
+                  <tr>
+                    <td width="86" height="42" align="right" valign="middle" class="title02">教学资源</td>
+                    <td width="485" align="right" valign="middle" class="title01" ><a href="ShowClass.asp?ClassID=3">更多</a></td>
+                  </tr>
+                </table></td>
+              </tr>
+            </table>
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td height="20" align="left" valign="top" class="title01">&nbsp;<a class="title01" href="/Article/ShowArticle.asp?ArticleID=47" title="实验中心开设课程一览表" target="_blank">实验中心开设课程一览表</a>&nbsp;(<font color="red">10-27</font>)<br />&nbsp;<a class="title01" href="/Article/ShowArticle.asp?ArticleID=39" title="实验软件" target="_blank">实验软件</a>&nbsp;(<font color="red">10-27</font>)<br />&nbsp;<a class="title01" href="/Article/ShowArticle.asp?ArticleID=2" title="企业经营管理" target="_blank">企业经营管理</a>&nbsp;(12-18)<br /></td>
+              </tr>
+          </table></td>
+          <td width="54"></td>
+          <td width="575" valign="bottom">
+         <div id="video_cover"><a href="ShowClass.asp?ClassID=9" style="display:block; width:109px;height:47px;"></a></div>
+			<script language='javascript' src='/AD/201505/1.js'></script>
+  
+          
+          </td>
+        </tr>
+      </table></td>
+  </tr>
+  </table>
+<table width="1200" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td height="20"></td>
+  </tr>
+</table>
+
+<!--图片滚动代码开始--> 
+<div id=demo style="overflow:hidden; width:1200; height:140; margin:0 auto;" align=center>
+	<table border=0 align=center cellpadding=1 cellspacing=1 cellspace=0 >
+		<tr><td valign=middle bgcolor=ffffff id=marquePic1>
+	<table width='100%' cellpadding='0' cellspacing='5' border='0' align='center'><tr valign='top'><td align='center'><a class="" href="/Article/ShowArticle.asp?ArticleID=40" title="特色实验室" target="_blank"><img class='pic1' src='/Article/UploadFiles/201710/2017102715465744.jpg'  width='285' height='120' border='0'></a></td><td align='center'><a class="" href="/Article/ShowArticle.asp?ArticleID=26" title="创新体系" target="_blank"><img class='pic1' src='/Article/UploadFiles/201710/2017102715462039.jpg'  width='285' height='120' border='0'></a></td><td align='center'><a class="" href="/Article/ShowArticle.asp?ArticleID=25" title="教学理念" target="_blank"><img class='pic1' src='/Article/UploadFiles/201710/2017102715404333.jpg'  width='285' height='120' border='0'></a></td><td align='center'><a class="" href="/Article/ShowArticle.asp?ArticleID=24" title="教学体系" target="_blank"><img class='pic1' src='/Article/UploadFiles/201710/2017102715411324.jpg'  width='285' height='120' border='0'></a></td><td align='center'><a class="" href="/Article/ShowArticle.asp?ArticleID=23" title="教学目标" target="_blank"><img class='pic1' src='/Article/UploadFiles/201710/2017102715445710.jpg'  width='285' height='120' border='0'></a></td><td align='center'><a class="" href="/Article/ShowArticle.asp?ArticleID=22" title="中心特色" target="_blank"><img class='pic1' src='/Article/UploadFiles/201706/2017060615461816.png'  width='285' height='120' border='0'></a></td><td align='center'><a class="" href="/Article/ShowArticle.asp?ArticleID=21" title="实验教学队伍" target="_blank"><img class='pic1' src='/Article/UploadFiles/201710/2017102715453870.jpg'  width='285' height='120' border='0'></a></td><td align='center'><a class="" href="/Article/ShowArticle.asp?ArticleID=20" title="组织结构" target="_blank"><img class='pic1' src='/Article/UploadFiles/201710/2017102715052311.jpg'  width='285' height='120' border='0'></a></td><td align='center'><a class="" href="/Article/ShowArticle.asp?ArticleID=19" title="历史发展" target="_blank"><img class='pic1' src='/Article/UploadFiles/201710/2017102711152474.jpg'  width='285' height='120' border='0'></a></td><td align='center'><a class="" href="/Article/ShowArticle.asp?ArticleID=17" title="15" target="_blank"><img class='pic1' src='/Article/UploadFiles/201612/2016121822454353.jpg'  width='285' height='120' border='0'></a></td><td align='center'><a class="" href="/Article/ShowArticle.asp?ArticleID=16" title="14" target="_blank"><img class='pic1' src='/Article/UploadFiles/201612/2016121822452759.jpg'  width='285' height='120' border='0'></a></td><td align='center'><a class="" href="/Article/ShowArticle.asp?ArticleID=15" title="13" target="_blank"><img class='pic1' src='/Article/UploadFiles/201612/2016121822451551.jpg'  width='285' height='120' border='0'></a></td><td align='center'><a class="" href="/Article/ShowArticle.asp?ArticleID=14" title="12" target="_blank"><img class='pic1' src='/Article/UploadFiles/201612/2016121822450025.jpg'  width='285' height='120' border='0'></a></td><td align='center'><a class="" href="/Article/ShowArticle.asp?ArticleID=13" title="11" target="_blank"><img class='pic1' src='/Article/UploadFiles/201612/2016121822444594.jpg'  width='285' height='120' border='0'></a></td><td align='center'><a class="" href="/Article/ShowArticle.asp?ArticleID=12" title="10" target="_blank"><img class='pic1' src='/Article/UploadFiles/201612/2016121822442633.jpg'  width='285' height='120' border='0'></a></td></tr></table>
+	  </td><td id=marquePic2 valign=top></td></tr>
+</table></div>
+<script type="text/javascript">
+var speed=50 
+marquePic2.innerHTML=marquePic1.innerHTML 
+function Marquee(){ 
+if(demo.scrollLeft>=marquePic1.scrollWidth){ 
+demo.scrollLeft=0 
+}else{ 
+demo.scrollLeft++ 
+} 
+} 
+var MyMar=setInterval(Marquee,speed) 
+demo.onmouseover=function() {clearInterval(MyMar)} 
+demo.onmouseout=function() {MyMar=setInterval(Marquee,speed)} 
+</script>
+<!--图片滚动代码结束-->
+<table width="1200" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td height="20"></td>
+  </tr>
+</table>
+<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td height="181" bgcolor="#252F3B"><table width="1200" border="0" align="center" cellpadding="0" cellspacing="0">
+      <tr>
+        <td height="181" background="images/index_12.png"><table width="700" border="0" align="right" cellpadding="0" cellspacing="0" style="margin-bottom:10px;" >
+          <tr>
+              <td align="right" class="footertext" >copyright &copy; 2016 哈尔滨工程大学经济管理学院. All rights reserved.
+<br />地址：哈尔滨市南岗区南通大街145号哈尔滨工程大学31号楼　邮编：150001</td>
+              
+          </tr>
+        </table></td>
+      </tr>
+    </table></td>
+  </tr>
+</table>
+</body>
+</html>

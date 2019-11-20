@@ -1,0 +1,478 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="renderer" content="webkit"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <title>华南师范大学教师个人信息网</title>
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <link rel="stylesheet" href="//statics.scnu.edu.cn/statics/css/reset.css?ver=i4XJUAeyGR7ztVN8Xb85"/>
+    <link rel="stylesheet" href="//statics.scnu.edu.cn/statics/css/default_scnu.css?ver=TPk9ngMxTzxNDsHsMA33"/>
+    <link rel="stylesheet" href="//statics.scnu.edu.cn/statics/css/staff/main.css?ver=177J40N5ys8udV5hwgpm"/>
+    <link rel="stylesheet" href="//statics.scnu.edu.cn/statics/css/staff/modal.css?ver=FUQ2xse5aaTRnQxRMJCh"/>
+    <link rel="stylesheet" href="http://cdn.staticfile.org/font-awesome/4.2.0/css/font-awesome.min.css"/>
+    <script src="//statics.scnu.edu.cn/statics/js/jquery.min.js"></script>
+    <script src="//statics.scnu.edu.cn/statics/js/jquery.sgallery.js"></script>
+    <script src="//statics.scnu.edu.cn/statics/js/staff/jquery.fullbg.min.js"></script>
+    <script src="//statics.scnu.edu.cn/statics/js/search_common.js"></script>
+    <script>
+        $(function () {
+            $('.fullBg').fullBg();
+            $('.modalclose').click(function(){$('.close')[0].click();});
+            function getTrend(p,f){
+                $.getJSON('/index.php?m=content&c=trend&a=ajax_show&userid=&page='+p, function (json) {
+                            var page = json.page;
+                            var totle_page = json.totle_page;
+                            if(f) {
+                                $('.trendcnt').html('');
+                            }
+                            $('.trends').html('');
+                            $.each(json, function (i, item) {
+                                if(item.content){
+                                    if(f){
+                                        $('.trendcnt').append('<p>'+item.content+'<em>'+item.time+'</em></p>');
+                                        f=false;
+                                    }
+                                    $('.trends').append('<em>'+item.time+'</em><p>'+item.content+'</p>');
+                                }
+                            });
+                            if(totle_page>page){
+                                $('.pageup').addClass('pageactive').attr('data-up',page+1);
+                            }else{
+                                $('.pageup').removeClass('pageactive');
+                            }
+                            if(page>1){
+                                $('.pagedown').addClass('pageactive').attr('data-down',page-1);
+                            }else{
+                                $('.pagedown').removeClass('pageactive');
+                            }
+                        }
+                );
+            }
+            getTrend(1,true);
+
+            $('.pageup').click(function(){
+                if($(this).hasClass('pageactive')){
+                    getTrend($(this).attr('data-up'),false);
+                }
+            });
+            $('.pagedown').click(function(){
+                if($(this).hasClass('pageactive')){
+                    getTrend($(this).attr('data-down'),false);
+                }
+            });
+        });
+    </script>
+    <script type="text/javascript" src="http://module.scnu.edu.cn/api.php?op=count&id=&modelid="></script>
+    <script type="text/javascript">
+        if (window.location.toString().indexOf('pref=padindex') != -1) {
+        } else {
+            if (/AppleWebKit.*Mobile/i.test(navigator.userAgent) || (/MIDP|SymbianOS|NOKIA|SAMSUNG|LG|NEC|TCL|Alcatel|BIRD|DBTEL|Dopod|PHILIPS|HAIER|LENOVO|MOT-|Nokia|SonyEricsson|SIE-|Amoi|ZTE/.test(navigator.userAgent))) {
+                if (window.location.href.indexOf("?mobile") < 0) {
+                    try {
+                        if (/Android|Windows Phone|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+                            window.location.href = "http://module.scnu.edu.cn/mobileshow//";
+                        }
+                    } catch (e) {
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+<div class="mininav">
+    <div class="wp">
+        <div class="funcset">
+            <a href="http://www.scnu.edu.cn" target="_blank">华南师范大学首页</a><span class="pipe">|</span>
+            <a href="http://module.scnu.edu.cn/sitemap" target="_blank">网站地图</a>
+        </div>
+        <div id="umenu">
+            <ul>
+                                <li><a href="https://sso.scnu.edu.cn/AccountService/openapi/auth?client_id=dfb1eeea12a77f7529b7aaeaf7f5cb69&redirect_url=http://user.scnu.edu.cn/index.php?m=member%26c=index%26a=public_scnu_login%26forward=http%3A%2F%2Fmodule.scnu.edu.cn%2Findex.php%3Fm%3Dcontent%26c%3Dindex%26a%3Dinit%26sitename%3Dstaff&response_type=code" target="_top">登陆</a></li>
+                            </ul>
+        </div>
+    </div>
+</div>
+<div id="openModal" class="modalbg">
+    <div class="modalclose"></div>
+    <div class="dialog">
+        <a href="#close" title="Close" class="close">X</a>
+        <div class="trends"></div>
+        <div class="trendnav"><span class="pagedown">下一页</span><span class="pageup">上一页</span></div>
+    </div>
+</div><script type="text/javascript">
+    if (window.location.toString().indexOf('pref=padindex') != -1) {
+    } else {
+        if (/AppleWebKit.*Mobile/i.test(navigator.userAgent) || (/MIDP|SymbianOS|NOKIA|SAMSUNG|LG|NEC|TCL|Alcatel|BIRD|DBTEL|Dopod|PHILIPS|HAIER|LENOVO|MOT-|Nokia|SonyEricsson|SIE-|Amoi|ZTE/.test(navigator.userAgent))) {
+            if (window.location.href.indexOf("?mobile") < 0) {
+                try {
+                    if (/Android|Windows Phone|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+                        window.location.href = "http://module.scnu.edu.cn/mobileshow//";
+                    }
+                } catch (e) {
+                }
+            }
+        }
+    }
+</script>
+<script src="//statics.scnu.edu.cn/statics/js/staff/nicescroll.js"></script>
+<link rel="stylesheet" href="//statics.scnu.edu.cn/statics/css/staff/supersized.css"/>
+<link rel="stylesheet" href="//cdn.bootcss.com/remodal/1.1.0/remodal.min.css" />
+<link rel="stylesheet" href="//cdn.bootcss.com/remodal/1.1.0/remodal-default-theme.min.css" />
+<script src="//cdn.bootcss.com/remodal/1.1.0/remodal.min.js"></script>
+<script src="//statics.scnu.edu.cn/statics/js/staff/supersized.3.2.7.min.js"></script>
+<script type="text/javascript">
+    $(function($){
+        $.supersized({slideshow:1,autoplay:0,new_window:0 ,
+            start_slide:1,random:0,slide_interval:99999,
+            transition:6,transition_speed:500,
+            pause_hover:0,keyboard_nav:0,performance:2,
+            image_protect:0,min_width:0,min_height:0,
+            vertical_center:1,horizontal_center:1,
+            fit_portrait:1,fit_landscape:0,
+            navigation:1,thumbnail_navigation:0,
+            slide_counter:0,slide_captions:0,
+            slides:     [
+                {image : '//statics.scnu.edu.cn/statics/images/staff/index1.jpg'},{image : '//statics.scnu.edu.cn/statics/images/staff/index2.jpg'},
+                {image : '//statics.scnu.edu.cn/statics/images/staff/index3.jpg'},{image : '//statics.scnu.edu.cn/statics/images/staff/index4.jpg'}
+            ]
+        });
+        $('.micon').hover(function(){
+            $('.sititle').addClass('hidtitle');
+            $('.iconact').removeClass('iconact');
+            $(this).addClass('iconact');
+            $('.icondt').hide();
+            $('.dtcnt'+$(this).attr('data-cnt')).show();
+            api.goTo($(this).attr('data-cnt'));
+        });
+        $('.closepanle').click(function(){
+            $('.hidtitle').removeClass('hidtitle');
+            $('.iconact').removeClass('iconact');
+            $('.icondt').hide();
+        });
+        $('.dtpanle').niceScroll({autohidemode:false});
+    });
+</script>
+<style>
+    .hidtitle{opacity: 0.3;}
+    .wp {width: 95% !important;}
+    .mininav {background: none;}
+    .mininav a, .pipe {color: #ccc !important;}
+    .mainbody{width:386px;}
+    .idbody{margin-top: 250px;}
+    .row{margin: 0;}
+    .row > div{padding: 0 !important;}
+    .micon{height: 120px;margin-top: 15px;}
+    .micon h2{font-size: 18px;text-align: center;color:#FFF;display: none;}
+    .rowicon{margin-top: 20px;}
+    .rowmain{width:300px;margin-top: 15px;height: 315px;}
+    .indexsch {top: 30px; left: auto; right: 0; width: 230px;}
+    .indexsch .src_txt input, .indexsch .src_btn button {font-size: 20px;}
+    .indexsch .src_txt {width: 180px;}
+    .mgr15{margin-right: 15px;}
+    .btn-circle{
+        display: block;
+        width: 80px;
+        height: 65px;
+        border-radius: 50%;
+        text-align: center;
+        font-size: 50px;
+        padding-top: 15px;
+        background-color: rgba(255, 255, 255, 0.3);
+        color: #FFF;
+    }
+    .iconact .btn-circle{background:none;color:rgba(255, 255, 255, 0.5);cursor:pointer;}
+    .iconact h2{display: block;}
+    .icondt{position:absolute;width: 180px;height: 380px;top: -290px;left: 0;display: none;}
+    .icondt .dtpanle{position:relative;background-color: rgba(255, 255, 255, 0.3);width:100%;height:360px;}
+    .dtcnt3,.dtcnt4{left:190px;}
+    .parrow{
+        color: rgba(255, 255, 255, 0.6);
+        font-size: 40px;
+        margin-top: -14px;
+        text-align: center;
+        width: 80px;
+    }
+    .dtpanle a{
+        display: block;
+        margin-bottom: 2px;
+        background-color: rgba(255,255,255,0.6);
+        padding: 10px;
+        font-size: 14px;
+    }
+    .dtpfit a{height: 45px;}
+    .dtpfit a>div{width: 45px;  height: 45px;  float: left;  margin-right: 5px;overflow: hidden;}
+    .dtpfit a>div>img{width:100%;height: auto;}
+    .dtpfit a>span{font-size: 10px;color: #999}
+    .dtpanle a:hover{background:none;color:#FFF;text-decoration: none;font-weight:500;}
+    .dtpfit a:hover img{width: 55px;margin-left: -5px;margin-top: -5px;}
+    .closepanle{position: absolute;right: 0;bottom: 0;background-color: rgba(255,255,255,0.6); padding: 3px; width: 100%; text-align: right;color: #fff;}
+    .closepanle:hover{cursor: pointer;background-color: #fff;color: #000;}
+    .remodal a{display: inline-block;font-size:14px;padding: 4px 10px;border: 1px solid #ccc;margin: 5px;}
+    .remodal a:hover{text-decoration:none;background-color:#002d54;color:#fff;}
+</style>
+<div class="mainbody idbody">
+    <div class="row sititle">
+        <div class="hder">
+            <h1 class="logo"><img src="//statics.scnu.edu.cn/statics/images/staff/contentlogo_white.png" width="216" height="67" /></h1>
+        </div>
+        <div class="shder">
+            <h1 class="logo"><img src="//statics.scnu.edu.cn/statics/images/staff/sitename_white.png" width="168" height="67" /></h1>
+        </div>
+    </div>
+    <div class="rowicon">
+        <div class="row">
+            <div class="micon mgr15" data-cnt="1">
+                <span class="btn-circle"><i class="fa fa-graduation-cap"></i></span>
+                <h2>最新加入</h2>
+            </div>
+            <div class="micon mgr15" data-cnt="2">
+                <span class="btn-circle"><i class="fa fa-star"></i></span>
+                <h2>最受欢迎</h2>
+            </div>
+            <div class="micon mgr15" data-cnt="3" data-remodal-target="modal">
+                <span class="btn-circle"><i class="fa fa-university"></i></span>
+                <h2>所有学院</h2>
+            </div>
+            <div class="micon" data-cnt="4">
+                <span class="btn-circle"><i class="fa fa-bookmark"></i></span>
+                <h2>标签浏览</h2>
+            </div>
+        </div>
+    </div>
+    <div class="icondt dtcnt1">
+        <div class="dtpanle dtpfit">
+                                    <a href="http://faculty.scnu.edu.cn/zhuxy/cn" target="_blank">
+                                <div><img src="http://statics.scnu.edu.cn/pics/userfiles/2016/0510/20160510054414247.jpg" /></div>
+                朱晓燕   （Judy  ZHU）<br><span>外国语言文化学院</span>
+            </a>
+                        <a href="http://faculty.scnu.edu.cn/fanfenglei/cn" target="_blank">
+                                <div><img src="//statics.scnu.edu.cn/pics/userfiles/2017/1011/20171011034334263.jpg" /></div>
+                樊风雷<br><span>地理科学学院</span>
+            </a>
+                        <a href="http://faculty.scnu.edu.cn/20121035/cn" target="_blank">
+                                <div><img src="//statics.scnu.edu.cn/statics/images/staff/staff.png" /></div>
+                吴明琴<br><span>经济与管理学院</span>
+            </a>
+                        <a href="http://faculty.scnu.edu.cn/chenchun/cn" target="_blank">
+                                <div><img src="//statics.scnu.edu.cn/pics/userfiles/2017/0825/20170825052625190.png" /></div>
+                陈淳<br><span>地理科学学院</span>
+            </a>
+                        <a href="http://faculty.scnu.edu.cn/20175010/cn" target="_blank">
+                                <div><img src="//statics.scnu.edu.cn/pics/userfiles/2017/0829/20170829042717588.jpg" /></div>
+                蒋志云<br><span>地理科学学院</span>
+            </a>
+                                    <span class="closepanle">关闭</span>
+        </div>
+        <div class="parrow"><i class="fa fa-caret-down"></i></div>
+    </div>
+    <div class="icondt dtcnt2">
+        <div class="dtpanle dtpfit">
+                                    <a href="" target="_blank">
+                                <div><img src="//statics.scnu.edu.cn/statics/images/staff/staff.png" /></div>
+                <br><span></span>
+            </a>
+                        <a href="http://staff.scnu.edu.cn/20151038/cn" target="_blank">
+                                <div><img src="http://statics.scnu.edu.cn/pics/userfiles/2016/0415/20160415094017846.jpg" /></div>
+                邓峰<br><span>化学与环境学院</span>
+            </a>
+                        <a href="http://staff.scnu.edu.cn/20061098/cn" target="_blank">
+                                <div><img src="//statics.scnu.edu.cn/statics/images/staff/staff.png" /></div>
+                付迎春<br><span>地理科学学院</span>
+            </a>
+                        <a href="http://staff.scnu.edu.cn/dengfeng/en" target="_blank">
+                                <div><img src="http://statics.scnu.edu.cn/pics/userfiles/2016/0415/20160415013944650.jpg" /></div>
+                Solomon Deng Feng<br><span>化学与环境学院</span>
+            </a>
+                        <a href="http://faculty.scnu.edu.cn/dongzhiqiang/cn" target="_blank">
+                                <div><img src="http://statics.scnu.edu.cn/pics/userfiles/2016/1028/20161028013123694.jpg" /></div>
+                董志强<br><span>经济与管理学院</span>
+            </a>
+                                    <span class="closepanle">关闭</span>
+        </div>
+        <div class="parrow r"><i class="fa fa-caret-down"></i></div>
+    </div>
+    <div class="icondt dtcnt3">
+        <div class="dtpanle">
+                                    <a href="http://faculty.scnu.edu.cn/dept/6278"  target="_blank" title="教育科学学院">教育科学学院</a>
+                        <a href="http://faculty.scnu.edu.cn/dept/6279"  target="_blank" title="政治与行政学院">政治与行政学院</a>
+                        <a href="http://faculty.scnu.edu.cn/dept/6280"  target="_blank" title="马克思主义学院">马克思主义学院</a>
+                        <a href="http://faculty.scnu.edu.cn/dept/6281"  target="_blank" title="历史文化学院">历史文化学院</a>
+                        <a href="http://faculty.scnu.edu.cn/dept/6282"  target="_blank" title="外国语言文化学院">外国语言文化学院</a>
+                        <a href="http://faculty.scnu.edu.cn/dept/6283"  target="_blank" title="特殊教育学院">特殊教育学院</a>
+                        <a href="http://faculty.scnu.edu.cn/dept/6284"  target="_blank" title="国际文化学院">国际文化学院</a>
+                        <a href="http://faculty.scnu.edu.cn/dept/6285"  target="_blank" title="美术学院">美术学院</a>
+                        <a href="http://faculty.scnu.edu.cn/dept/6286"  target="_blank" title="旅游管理学院">旅游管理学院</a>
+                        <a href="http://faculty.scnu.edu.cn/dept/6287"  target="_blank" title="教育信息技术学院">教育信息技术学院</a>
+                        <a href="http://faculty.scnu.edu.cn/dept/6288"  target="_blank" title="数学科学学院">数学科学学院</a>
+                        <a href="http://faculty.scnu.edu.cn/dept/6289"  target="_blank" title="生命科学学院">生命科学学院</a>
+                        <a href="http://faculty.scnu.edu.cn/dept/6290"  target="_blank" title="地理科学学院">地理科学学院</a>
+                        <a href="http://faculty.scnu.edu.cn/dept/6291"  target="_blank" title="计算机学院">计算机学院</a>
+                        <a href="http://faculty.scnu.edu.cn/dept/6292"  target="_blank" title="心理学院">心理学院</a>
+                        <a href="http://faculty.scnu.edu.cn/dept/6293"  target="_blank" title="继续教育学院">继续教育学院</a>
+                        <a href="http://faculty.scnu.edu.cn/dept/6294"  target="_blank" title="网络教育学院">网络教育学院</a>
+                        <a href="http://faculty.scnu.edu.cn/dept/6295"  target="_blank" title="凤凰国际学院">凤凰国际学院</a>
+                        <a href="http://faculty.scnu.edu.cn/dept/6296"  target="_blank" title="光电子材料与技术研究所">光电子材料与技术研究所</a>
+                        <a href="http://faculty.scnu.edu.cn/dept/6297"  target="_blank" title="生物光子学研究院">生物光子学研究院</a>
+                        <a href="http://faculty.scnu.edu.cn/dept/6298"  target="_blank" title="基础教育培训与研究院">基础教育培训与研究院</a>
+                        <a href="http://faculty.scnu.edu.cn/dept/6299"  target="_blank" title="药物研究院">药物研究院</a>
+                        <a href="http://faculty.scnu.edu.cn/dept/6300"  target="_blank" title="文学院">文学院</a>
+                        <a href="http://faculty.scnu.edu.cn/dept/6301"  target="_blank" title="经济与管理学院">经济与管理学院</a>
+                        <a href="http://faculty.scnu.edu.cn/dept/6302"  target="_blank" title="法学院">法学院</a>
+                        <a href="http://faculty.scnu.edu.cn/dept/6303"  target="_blank" title="公共管理学院">公共管理学院</a>
+                        <a href="http://faculty.scnu.edu.cn/dept/6304"  target="_blank" title="体育科学学院">体育科学学院</a>
+                        <a href="http://faculty.scnu.edu.cn/dept/6305"  target="_blank" title="音乐学院">音乐学院</a>
+                        <a href="http://faculty.scnu.edu.cn/dept/6306"  target="_blank" title="物理与电信工程学院">物理与电信工程学院</a>
+                        <a href="http://faculty.scnu.edu.cn/dept/6307"  target="_blank" title="化学与环境学院">化学与环境学院</a>
+                        <a href="http://faculty.scnu.edu.cn/dept/6308"  target="_blank" title="信息光电子科技学院">信息光电子科技学院</a>
+                        <a href="http://faculty.scnu.edu.cn/dept/6309"  target="_blank" title="华南先进光电子研究院">华南先进光电子研究院</a>
+                        <a href="http://faculty.scnu.edu.cn/dept/6310"  target="_blank" title="城市文化学院">城市文化学院</a>
+                        <a href="http://faculty.scnu.edu.cn/dept/6311"  target="_blank" title="国际商学院">国际商学院</a>
+                        <a href="http://faculty.scnu.edu.cn/dept/6312"  target="_blank" title="软件学院">软件学院</a>
+                        <a href="http://faculty.scnu.edu.cn/dept/6313"  target="_blank" title="职业教育学院">职业教育学院</a>
+                        <a href="http://faculty.scnu.edu.cn/dept/6314"  target="_blank" title="南海学院">南海学院</a>
+                        <a href="http://faculty.scnu.edu.cn/dept/6315"  target="_blank" title="党委办公室、校长办公室">党委办公室、校长办公室</a>
+                        <a href="http://faculty.scnu.edu.cn/dept/6316"  target="_blank" title="纪委、监察处">纪委、监察处</a>
+                        <a href="http://faculty.scnu.edu.cn/dept/6317"  target="_blank" title="党委组织部">党委组织部</a>
+                        <a href="http://faculty.scnu.edu.cn/dept/6318"  target="_blank" title="党委宣传部、党委统战部">党委宣传部、党委统战部</a>
+                        <a href="http://faculty.scnu.edu.cn/dept/6319"  target="_blank" title="党委学生工作部（处）、学生就业指导中心、人民武装部">党委学生工作部（处）、学生就业指导中心、人民武装部</a>
+                        <a href="http://faculty.scnu.edu.cn/dept/6320"  target="_blank" title="党委研究生工作部、研究生院(处)">党委研究生工作部、研究生院(处)</a>
+                        <a href="http://faculty.scnu.edu.cn/dept/6321"  target="_blank" title="机关党委">机关党委</a>
+                        <a href="http://faculty.scnu.edu.cn/dept/6322"  target="_blank" title="发展规划处">发展规划处</a>
+                        <a href="http://faculty.scnu.edu.cn/dept/6323"  target="_blank" title="人事处">人事处</a>
+                        <a href="http://faculty.scnu.edu.cn/dept/6324"  target="_blank" title="教务处">教务处</a>
+                        <a href="http://faculty.scnu.edu.cn/dept/6325"  target="_blank" title="招生考试处">招生考试处</a>
+                        <a href="http://faculty.scnu.edu.cn/dept/6326"  target="_blank" title="社科处">社科处</a>
+                        <a href="http://faculty.scnu.edu.cn/dept/6327"  target="_blank" title="科技处">科技处</a>
+                        <a href="http://faculty.scnu.edu.cn/dept/6328"  target="_blank" title="国际交流合作处、港澳台事务办公室">国际交流合作处、港澳台事务办公室</a>
+                        <a href="http://faculty.scnu.edu.cn/dept/6329"  target="_blank" title="社会服务处">社会服务处</a>
+                        <a href="http://faculty.scnu.edu.cn/dept/6330"  target="_blank" title="财务处">财务处</a>
+                        <a href="http://faculty.scnu.edu.cn/dept/6331"  target="_blank" title="审计处">审计处</a>
+                        <a href="http://faculty.scnu.edu.cn/dept/6332"  target="_blank" title="资产管理处">资产管理处</a>
+                        <a href="http://faculty.scnu.edu.cn/dept/6333"  target="_blank" title="后勤管理处">后勤管理处</a>
+                        <a href="http://faculty.scnu.edu.cn/dept/6334"  target="_blank" title="基建处">基建处</a>
+                        <a href="http://faculty.scnu.edu.cn/dept/6335"  target="_blank" title="保卫处">保卫处</a>
+                        <a href="http://faculty.scnu.edu.cn/dept/6336"  target="_blank" title="校工会">校工会</a>
+                        <a href="http://faculty.scnu.edu.cn/dept/6337"  target="_blank" title="校团委">校团委</a>
+                        <a href="http://faculty.scnu.edu.cn/dept/6338"  target="_blank" title="广东省高等学校师资培训中心">广东省高等学校师资培训中心</a>
+                        <a href="http://faculty.scnu.edu.cn/dept/6339"  target="_blank" title="网络中心">网络中心</a>
+                        <a href="http://faculty.scnu.edu.cn/dept/6340"  target="_blank" title="实验中心">实验中心</a>
+                        <a href="http://faculty.scnu.edu.cn/dept/6341"  target="_blank" title="学报编辑部">学报编辑部</a>
+                        <a href="http://faculty.scnu.edu.cn/dept/6342"  target="_blank" title="档案馆">档案馆</a>
+                        <a href="http://faculty.scnu.edu.cn/dept/6343"  target="_blank" title="图书馆">图书馆</a>
+                        <a href="http://faculty.scnu.edu.cn/dept/6344"  target="_blank" title="教师发展中心">教师发展中心</a>
+                        <a href="http://faculty.scnu.edu.cn/dept/6345"  target="_blank" title="教育发展中心">教育发展中心</a>
+                        <a href="http://faculty.scnu.edu.cn/dept/6346"  target="_blank" title="校医院">校医院</a>
+                        <a href="http://faculty.scnu.edu.cn/dept/6347"  target="_blank" title="附属幼儿园">附属幼儿园</a>
+                        <a href="http://faculty.scnu.edu.cn/dept/6348"  target="_blank" title="附属中学">附属中学</a>
+                        <a href="http://faculty.scnu.edu.cn/dept/6349"  target="_blank" title="附属小学">附属小学</a>
+                        <a href="http://faculty.scnu.edu.cn/dept/6589"  target="_blank" title="创业学院">创业学院</a>
+                                </div>
+        <div class="parrow"><i class="fa fa-caret-down"></i></div>
+    </div>
+    <div class="icondt dtcnt4">
+        <div class="dtpanle">
+                                    <a href="http://staff.scnu.edu.cn/zhengshuwen/cn"  target="_blank" title="郑树文">郑树文</a>
+                        <a href="http://staff.scnu.edu.cn/dengfeng/en"  target="_blank" title="Solomon Deng Feng">Solomon Deng Feng</a>
+                        <a href="http://module.scnu.edu.cn/article/6557/171"  target="_blank" title="关老健">关老健</a>
+                        <a href="http://faculty.scnu.edu.cn/laijiaping/en"  target="_blank" title="molecular">molecular</a>
+                        <a href="http://staff.scnu.edu.cn/20111122/cn"  target="_blank" title="小虎">小虎</a>
+                        <a href="http://staff.scnu.edu.cn/rugentong/cn"  target="_blank" title="教师发展与管理">教师发展与管理</a>
+                        <a href="http://faculty.scnu.edu.cn/hongchen/en"  target="_blank" title="Hong">Hong</a>
+                        <a href="http://staff.scnu.edu.cn/20151038/cn"  target="_blank" title="邓峰">邓峰</a>
+                                </div>
+        <div class="parrow r"><i class="fa fa-caret-down"></i></div>
+    </div>
+</div>
+<div class="search indexsch">
+                    <a href="javascript:;" onclick="setmodel(365, $(this));" style="display:none" hidefocus="true"  class="on" >教师信息</a>            <form action="http://module.scnu.edu.cn/index.php" method="get" target="_blank">
+        <input type="hidden" name="m" value="search"/>
+        <input type="hidden" name="c" value="index"/>
+        <input type="hidden" name="a" value="init"/>
+        <input type="hidden" name="typeid" value="365" id="typeid"/>
+        <input type="hidden" name="siteid" value="100" id="siteid"/>
+
+        <div class="src_txt"><input name="q" placeholder="输入教师姓名查找" type="text"></div>
+        <div class="src_btn">
+            <button type="submit"><i class="fa fa-search"></i></button>
+        </div>
+    </form>
+</div>
+<div class="remodal" data-remodal-id="modal">
+  <button data-remodal-action="close" class="remodal-close"></button>
+            <a href="http://faculty.scnu.edu.cn/dept/6278"  target="_blank" title="教育科学学院">教育科学学院(0)</a>
+        <a href="http://faculty.scnu.edu.cn/dept/6279"  target="_blank" title="政治与行政学院">政治与行政学院(0)</a>
+        <a href="http://faculty.scnu.edu.cn/dept/6280"  target="_blank" title="马克思主义学院">马克思主义学院(0)</a>
+        <a href="http://faculty.scnu.edu.cn/dept/6281"  target="_blank" title="历史文化学院">历史文化学院(0)</a>
+        <a href="http://faculty.scnu.edu.cn/dept/6282"  target="_blank" title="外国语言文化学院">外国语言文化学院(0)</a>
+        <a href="http://faculty.scnu.edu.cn/dept/6283"  target="_blank" title="特殊教育学院">特殊教育学院(0)</a>
+        <a href="http://faculty.scnu.edu.cn/dept/6284"  target="_blank" title="国际文化学院">国际文化学院(0)</a>
+        <a href="http://faculty.scnu.edu.cn/dept/6285"  target="_blank" title="美术学院">美术学院(0)</a>
+        <a href="http://faculty.scnu.edu.cn/dept/6286"  target="_blank" title="旅游管理学院">旅游管理学院(0)</a>
+        <a href="http://faculty.scnu.edu.cn/dept/6287"  target="_blank" title="教育信息技术学院">教育信息技术学院(0)</a>
+        <a href="http://faculty.scnu.edu.cn/dept/6288"  target="_blank" title="数学科学学院">数学科学学院(0)</a>
+        <a href="http://faculty.scnu.edu.cn/dept/6289"  target="_blank" title="生命科学学院">生命科学学院(0)</a>
+        <a href="http://faculty.scnu.edu.cn/dept/6290"  target="_blank" title="地理科学学院">地理科学学院(0)</a>
+        <a href="http://faculty.scnu.edu.cn/dept/6291"  target="_blank" title="计算机学院">计算机学院(0)</a>
+        <a href="http://faculty.scnu.edu.cn/dept/6292"  target="_blank" title="心理学院">心理学院(0)</a>
+        <a href="http://faculty.scnu.edu.cn/dept/6293"  target="_blank" title="继续教育学院">继续教育学院(0)</a>
+        <a href="http://faculty.scnu.edu.cn/dept/6294"  target="_blank" title="网络教育学院">网络教育学院(0)</a>
+        <a href="http://faculty.scnu.edu.cn/dept/6295"  target="_blank" title="凤凰国际学院">凤凰国际学院(0)</a>
+        <a href="http://faculty.scnu.edu.cn/dept/6296"  target="_blank" title="光电子材料与技术研究所">光电子材料与技术研究所(0)</a>
+        <a href="http://faculty.scnu.edu.cn/dept/6297"  target="_blank" title="生物光子学研究院">生物光子学研究院(0)</a>
+        <a href="http://faculty.scnu.edu.cn/dept/6298"  target="_blank" title="基础教育培训与研究院">基础教育培训与研究院(0)</a>
+        <a href="http://faculty.scnu.edu.cn/dept/6299"  target="_blank" title="药物研究院">药物研究院(0)</a>
+        <a href="http://faculty.scnu.edu.cn/dept/6300"  target="_blank" title="文学院">文学院(0)</a>
+        <a href="http://faculty.scnu.edu.cn/dept/6301"  target="_blank" title="经济与管理学院">经济与管理学院(0)</a>
+        <a href="http://faculty.scnu.edu.cn/dept/6302"  target="_blank" title="法学院">法学院(0)</a>
+        <a href="http://faculty.scnu.edu.cn/dept/6303"  target="_blank" title="公共管理学院">公共管理学院(0)</a>
+        <a href="http://faculty.scnu.edu.cn/dept/6304"  target="_blank" title="体育科学学院">体育科学学院(0)</a>
+        <a href="http://faculty.scnu.edu.cn/dept/6305"  target="_blank" title="音乐学院">音乐学院(0)</a>
+        <a href="http://faculty.scnu.edu.cn/dept/6306"  target="_blank" title="物理与电信工程学院">物理与电信工程学院(0)</a>
+        <a href="http://faculty.scnu.edu.cn/dept/6307"  target="_blank" title="化学与环境学院">化学与环境学院(0)</a>
+        <a href="http://faculty.scnu.edu.cn/dept/6308"  target="_blank" title="信息光电子科技学院">信息光电子科技学院(0)</a>
+        <a href="http://faculty.scnu.edu.cn/dept/6309"  target="_blank" title="华南先进光电子研究院">华南先进光电子研究院(0)</a>
+        <a href="http://faculty.scnu.edu.cn/dept/6310"  target="_blank" title="城市文化学院">城市文化学院(0)</a>
+        <a href="http://faculty.scnu.edu.cn/dept/6311"  target="_blank" title="国际商学院">国际商学院(0)</a>
+        <a href="http://faculty.scnu.edu.cn/dept/6312"  target="_blank" title="软件学院">软件学院(0)</a>
+        <a href="http://faculty.scnu.edu.cn/dept/6313"  target="_blank" title="职业教育学院">职业教育学院(0)</a>
+        <a href="http://faculty.scnu.edu.cn/dept/6314"  target="_blank" title="南海学院">南海学院(0)</a>
+        <a href="http://faculty.scnu.edu.cn/dept/6315"  target="_blank" title="党委办公室、校长办公室">党委办公室、校长办公室(0)</a>
+        <a href="http://faculty.scnu.edu.cn/dept/6316"  target="_blank" title="纪委、监察处">纪委、监察处(0)</a>
+        <a href="http://faculty.scnu.edu.cn/dept/6317"  target="_blank" title="党委组织部">党委组织部(0)</a>
+        <a href="http://faculty.scnu.edu.cn/dept/6318"  target="_blank" title="党委宣传部、党委统战部">党委宣传部、党委统战部(0)</a>
+        <a href="http://faculty.scnu.edu.cn/dept/6319"  target="_blank" title="党委学生工作部（处）、学生就业指导中心、人民武装部">党委学生工作部（处）、学生就业指导中心、人民武装部(0)</a>
+        <a href="http://faculty.scnu.edu.cn/dept/6320"  target="_blank" title="党委研究生工作部、研究生院(处)">党委研究生工作部、研究生院(处)(0)</a>
+        <a href="http://faculty.scnu.edu.cn/dept/6321"  target="_blank" title="机关党委">机关党委(0)</a>
+        <a href="http://faculty.scnu.edu.cn/dept/6322"  target="_blank" title="发展规划处">发展规划处(0)</a>
+        <a href="http://faculty.scnu.edu.cn/dept/6323"  target="_blank" title="人事处">人事处(0)</a>
+        <a href="http://faculty.scnu.edu.cn/dept/6324"  target="_blank" title="教务处">教务处(0)</a>
+        <a href="http://faculty.scnu.edu.cn/dept/6325"  target="_blank" title="招生考试处">招生考试处(0)</a>
+        <a href="http://faculty.scnu.edu.cn/dept/6326"  target="_blank" title="社科处">社科处(0)</a>
+        <a href="http://faculty.scnu.edu.cn/dept/6327"  target="_blank" title="科技处">科技处(0)</a>
+        <a href="http://faculty.scnu.edu.cn/dept/6328"  target="_blank" title="国际交流合作处、港澳台事务办公室">国际交流合作处、港澳台事务办公室(0)</a>
+        <a href="http://faculty.scnu.edu.cn/dept/6329"  target="_blank" title="社会服务处">社会服务处(0)</a>
+        <a href="http://faculty.scnu.edu.cn/dept/6330"  target="_blank" title="财务处">财务处(0)</a>
+        <a href="http://faculty.scnu.edu.cn/dept/6331"  target="_blank" title="审计处">审计处(0)</a>
+        <a href="http://faculty.scnu.edu.cn/dept/6332"  target="_blank" title="资产管理处">资产管理处(0)</a>
+        <a href="http://faculty.scnu.edu.cn/dept/6333"  target="_blank" title="后勤管理处">后勤管理处(0)</a>
+        <a href="http://faculty.scnu.edu.cn/dept/6334"  target="_blank" title="基建处">基建处(0)</a>
+        <a href="http://faculty.scnu.edu.cn/dept/6335"  target="_blank" title="保卫处">保卫处(0)</a>
+        <a href="http://faculty.scnu.edu.cn/dept/6336"  target="_blank" title="校工会">校工会(0)</a>
+        <a href="http://faculty.scnu.edu.cn/dept/6337"  target="_blank" title="校团委">校团委(0)</a>
+        <a href="http://faculty.scnu.edu.cn/dept/6338"  target="_blank" title="广东省高等学校师资培训中心">广东省高等学校师资培训中心(0)</a>
+        <a href="http://faculty.scnu.edu.cn/dept/6339"  target="_blank" title="网络中心">网络中心(0)</a>
+        <a href="http://faculty.scnu.edu.cn/dept/6340"  target="_blank" title="实验中心">实验中心(0)</a>
+        <a href="http://faculty.scnu.edu.cn/dept/6341"  target="_blank" title="学报编辑部">学报编辑部(0)</a>
+        <a href="http://faculty.scnu.edu.cn/dept/6342"  target="_blank" title="档案馆">档案馆(0)</a>
+        <a href="http://faculty.scnu.edu.cn/dept/6343"  target="_blank" title="图书馆">图书馆(0)</a>
+        <a href="http://faculty.scnu.edu.cn/dept/6344"  target="_blank" title="教师发展中心">教师发展中心(0)</a>
+        <a href="http://faculty.scnu.edu.cn/dept/6345"  target="_blank" title="教育发展中心">教育发展中心(0)</a>
+        <a href="http://faculty.scnu.edu.cn/dept/6346"  target="_blank" title="校医院">校医院(0)</a>
+        <a href="http://faculty.scnu.edu.cn/dept/6347"  target="_blank" title="附属幼儿园">附属幼儿园(0)</a>
+        <a href="http://faculty.scnu.edu.cn/dept/6348"  target="_blank" title="附属中学">附属中学(0)</a>
+        <a href="http://faculty.scnu.edu.cn/dept/6349"  target="_blank" title="附属小学">附属小学(0)</a>
+        <a href="http://faculty.scnu.edu.cn/dept/6589"  target="_blank" title="创业学院">创业学院(0)</a>
+        </div>

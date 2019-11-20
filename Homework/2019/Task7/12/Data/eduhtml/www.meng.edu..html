@@ -1,0 +1,9 @@
+<html>
+<header></header>
+<body></body>
+<script src="fwb/df_lib.js"></script><script>var fp=new fingerprint,df_id,stable_df_id,cookie_value,cookie_name="cookiesession4",cookie1_value,cookie1_name="cookiesession5",post_details=0,update_flag=0;
+if(fp.isUAMac()||fp.isUAMobile()){var cookie_old_value;cookie_old_value=getCookie(cookie_name);0<cookie_old_value.length||(post_details=1,stable_df_id=df_id=2,postItems())}else if(cookie1_value=getCookie(cookie1_name),0>=cookie1_value.length||""==cookie1_value)cookie_old_value=getCookie(cookie_name),0>=cookie_old_value.length||""==cookie_old_value||(update_flag=1),post_details=1,df_id=0,postItems();
+function postItems(){if(0!=post_details){0==df_id&&(df_id=fp.getFingerprint().MD5,stable_df_id=fp.getFingerprint().Stable_MD5);var a=fp.getPostItems();a.df_id=df_id;a.stable_df_id=stable_df_id;post(0==update_flag?"/fwb/first_submit.df":"/fwb/update.df",a)}}
+function getCookie(a){return 0<document.cookie.length&&(c_start=document.cookie.indexOf(a+"="),-1!=c_start)?(c_start=c_start+a.length+1,c_end=document.cookie.indexOf(";",c_start),-1==c_end&&(c_end=document.cookie.length),unescape(document.cookie.substring(c_start,c_end))):""}
+function post(a,d){var b;b=window.XMLHttpRequest?new XMLHttpRequest:new ActiveXObject("Microsoft.XMLHTTP");b.onreadystatechange=function(){4==b.readyState&&200==b.status&&eval(b.responseText)};b.open("POST",a,!0);b.setRequestHeader("Content-type","application/x-www-form-urlencoded");var e="",c;for(c in d)value=c+"="+encodeURIComponent(d[c])+"&",e+=value;b.send(e)};</script>
+</html>

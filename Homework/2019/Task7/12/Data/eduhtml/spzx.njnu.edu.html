@@ -1,0 +1,1146 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<title>½­ËÕÊ¡¸ßÐ£Ê¦×ÊÅàÑµÖÐÐÄ</title>
+
+
+    <script language="JavaScript" src="./js/public.js?i=201601" type="text/JavaScript"></script> 
+    <script language="javascript" type="text/javascript">
+    
+function openNews(id,pid)
+{
+    window.open("news.html?id=" + id + "&pid=" + pid);
+}
+
+
+//ÑÐ¾¿ÎÄÏ×
+ function fillYJWX_old()
+    {
+    
+    
+    var parentid="6336";
+        var s="";       
+        var sURL_zt = "./XmlService/search.aspx?gntype=89&parvalue=" + parentid + "&pagesize=5&page=1";        
+       
+        var oResult = optObj(sURL_zt);
+          
+        var sResult = GetNodeText(oResult, "errcode");
+        
+        if (sResult != "") {
+            window.alert(sResult);
+            return;
+        } 
+
+        //var xpath = "//root/rows" ;
+        //var dimlists = oResult.selectNodes(xpath) ;
+         
+        var dimlists = oResult.getElementsByTagName("rows");
+         
+         
+         
+            
+           var s = "";
+        if(dimlists.length>0)
+        {
+            var id = "";
+            try {
+                id = lttrim(dimlists[0].childNodes[0].childNodes[0].nodeValue)
+            }
+            catch (e) {
+            }
+
+            var sVal1 = "";
+            try {
+                sVal1 = lttrim(dimlists[0].childNodes[1].childNodes[0].nodeValue)
+            }
+            catch (e) {
+            }
+
+
+            var sVal2 = "";
+            try {
+                sVal2 = lttrim(dimlists[0].childNodes[2].childNodes[0].nodeValue)
+            }
+            catch (e) {
+                      }
+                      
+                      
+            if (sVal1.length > 18) {
+                sVal1 = sVal1.substring(0, 18) + "¡­";
+            }
+         
+                      
+            var sVal5 = "";
+            try {
+                sVal5 = lttrim(dimlists[0].childNodes[5].childNodes[0].nodeValue)
+            }
+            catch (e) {
+            }
+             
+        	sVal5 = replaceCharacters(sVal5,"brbr","");	
+			sVal5=FormatStringToRight(sVal5,false) ;
+					
+            document.all("spanTmp").innerHTML = sVal5;
+            sVal5 = document.all("spanTmp").innerText;
+            
+            
+            if (sVal5.length > 200) {
+                sVal5 = sVal5.substring(0, 200) + "¡­";
+            }
+
+          // sVal5="2016Äê1ÔÂ7-8ÈÕ£¬È«Ê¡±¾¿ÆÔºÐ£Ê¦×Ê¹ÜÀíÕßÅàÑµ°àôßÈ«Ê¡Ê¦×Ê¹¤×÷Äê¶È»áÒéÔÚÑïÖÝÕÙ¿ª£¬±¾´ÎÅàÑµ°à¸ù¾ÝÊ¡½ÌÓýÌü±¾¿ÆÔºÐ£½ÌÊ¦ÅàÑµ¹¤×÷°²ÅÅ£¬½»Á÷ÑÐÌÖ¸÷Ð£½ÌÊ¦¶ÓÎé½¨Éè¡°Ê®ÈýÎå¡±¹æ»®£¬ÑÐ¾¿²¿Êð2016ÄêÈ«Ê¡¸ßÐ£Ê¦×Ê¶ÓÎé½¨Éè¹¤×÷¡£ÅàÑµ°àÓÉÊ¡½ÌÓýÌüÊ¦×Ê´¦´Þ´ºÏ¼´¦³¤Ö÷³Ö£¬ÑïÖÝ´óÑ§Ð£³¤½¹ÐÂ°²³öÏ¯¿ªÄ»Ê½²¢ÖÂ»¶Ó­´Ç¡£Ê¡½ÌÓýÌüÊ¦×Ê´¦¡¢Ê¡¸ßÐ£Ê¦×ÊÅàÑµÖÐÐÄ¡¢È«Ê¡76Ëù±¾¿ÆÔºÐ££¨¶ÀÁ¢Ñ§Ôº£©ÈËÊÂ´¦µÄ¸ºÔðÍ¬Ö¾²Î¼ÓÁËÅàÑµÑÐÌÖ¡£"
+           
+            
+//    s=s + "<div class=\"hot-text-tit\">" + sVal1 + "</div>";
+//    s=s + "<div class=\"hot-text-text\">" + sVal5 + "</div>";
+//    s=s + "<div class=\"hot-more blue\"><a href=\"#\">>Read more</a></div>";
+//    
+//             
+//                         
+//           document.all("divYJWXTop").innerHTML=s;
+//           document.all("divYJWXTopImg").innerHTML="<img height='220' width='318' src=\"images_news/" + id + ".jpg\" />";  
+           
+           
+    s=s + "<div class=\"yj-pic\" id=\"divYJWXTopImg\"><img height='240' onmouseover=\"this.style.cursor='hand'\" onclick=\"javascript:openNews(" + id + "," + parentid + ")\" width='268' src=\"images_news/" + id + ".jpg\" /></div>";
+    s=s + " <div class=\"yj-text\">";
+ 
+    
+   
+    s=s + "<div class=\"hot-text-tit\">" + sVal1 + "</div>";
+    s=s + "<div class=\"hot-text-text height90\">" + sVal5 + "</div>";
+    s=s + "<div class=\"hot-more blue\"><a href=\"javascript:openNews(" + id + "," + parentid + ")\">>Read more</a></div>";
+   
+    
+               
+        }
+        
+        
+        
+          
+         
+            s=s + "<div class=\"blank8\"></div>";
+            s=s + "<div class=\"yj-list\" id=\"divYJWX\">";
+            s=s + "<ul>";
+         
+        
+        
+        for (var i = 1; i < dimlists.length; i++) {
+
+            var id = "";
+            try {
+                id = lttrim(dimlists[i].childNodes[0].childNodes[0].nodeValue)
+            }
+            catch (e) {
+            }
+
+            var sVal1 = "";
+            try {
+                sVal1 = lttrim(dimlists[i].childNodes[1].childNodes[0].nodeValue)
+            }
+            catch (e) {
+            }
+
+
+            var sVal2 = "";
+            try {
+                sVal2 = lttrim(dimlists[i].childNodes[2].childNodes[0].nodeValue)
+            }
+            catch (e) {
+            }
+
+
+ 
+
+            if (sVal1.length > 18) {
+                sVal1 = sVal1.substring(0, 18) + "¡­";
+            }
+
+ 
+     
+    
+//	s = s + "<li><a href=\"#\">" + sVal1 + "</a></li>";
+
+
+        s=s + "<li align='left'><a href=\"javascript:openNews(" + id + "," + parentid + ")\">" + sVal1 + "</a></li>";
+      
+       
+  
+  
+            
+        }
+
+     s=s + "</ul>";
+     s=s + "</div> ";
+    
+      s=s + "</div>";
+      document.write(s);
+      
+  
+  
+//   s = s + "</ul>"
+
+         
+        //document.write(s);
+      //  document.all("divYJWX").innerHTML=s;
+    }
+  
+//Õþ²ßÎÄ¼þ
+function fillZCWJ()
+    {
+        var parentid="6335";
+        var sURL_zt = "./XmlService/search.aspx?gntype=89&parvalue=" + parentid + "&pagesize=8&page=1";        
+       
+        var oResult = optObj(sURL_zt);
+          
+        var sResult = GetNodeText(oResult, "errcode");
+        
+        if (sResult != "") {
+            window.alert(sResult);
+            return;
+        } 
+
+        //var xpath = "//root/rows" ;
+        //var dimlists = oResult.selectNodes(xpath) ;
+         
+        var dimlists = oResult.getElementsByTagName("rows");
+         
+        var s = "";
+        
+        for (var i = 0; i < dimlists.length; i++) {
+
+            var id = "";
+            try {
+                id = lttrim(dimlists[i].childNodes[0].childNodes[0].nodeValue)
+            }
+            catch (e) {
+            }
+
+            var sVal1 = "";
+            try {
+                sVal1 = lttrim(dimlists[i].childNodes[1].childNodes[0].nodeValue)
+            }
+            catch (e) {
+            }
+
+
+            var sVal2 = "";
+            try {
+                sVal2 = lttrim(dimlists[i].childNodes[2].childNodes[0].nodeValue)
+            }
+            catch (e) {
+            }
+
+
+ 
+
+            if (sVal1.length > 18) {
+                sVal1 = sVal1.substring(0, 18) + "¡­";
+            }
+
+ 
+     
+    
+	s = s + "<li><a href=\"javascript:openNews(" + id + "," + parentid + ")\">" + sVal1 + "</a></li>";
+
+
+            
+        }
+
+   
+
+         
+        //document.write(s);
+        document.all("divZCWJ").innerHTML=s;
+    }
+
+
+function fillPXXM()
+    {
+        var parentid="6334"
+        var sURL_zt = "./XmlService/search.aspx?gntype=89&parvalue=" + parentid + "&pagesize=8&page=1";        
+       
+        var oResult = optObj(sURL_zt);
+          
+        var sResult = GetNodeText(oResult, "errcode");
+        
+        if (sResult != "") {
+            window.alert(sResult);
+            return;
+        } 
+
+        //var xpath = "//root/rows" ;
+        //var dimlists = oResult.selectNodes(xpath) ;
+         
+        var dimlists = oResult.getElementsByTagName("rows");
+         
+        var s = "";
+        
+        for (var i = 0; i < dimlists.length; i++) {
+
+            var id = "";
+            try {
+                id = lttrim(dimlists[i].childNodes[0].childNodes[0].nodeValue)
+            }
+            catch (e) {
+            }
+
+            var sVal1 = "";
+            try {
+                sVal1 = lttrim(dimlists[i].childNodes[1].childNodes[0].nodeValue)
+            }
+            catch (e) {
+            }
+
+
+            var sVal2 = "";
+            try {
+                sVal2 = lttrim(dimlists[i].childNodes[2].childNodes[0].nodeValue)
+            }
+            catch (e) {
+            }
+
+
+ 
+
+            if (sVal1.length > 18) {
+                sVal1 = sVal1.substring(0, 18) + "¡­";
+            }
+
+ 
+     
+    
+	s = s + "<li><a href=\"javascript:openNews(" + id + "," + parentid + ")\">" + sVal1 + "</a></li>";
+
+
+            
+        }
+
+   
+
+         
+        //document.write(s);
+        document.all("divPXXM").innerHTML=s;
+    }
+
+
+   function fillHotNews()
+    {
+        var parentid="6331";
+        var sURL_zt = "./XmlService/search.aspx?gntype=89&parvalue=" + parentid + "&pagesize=9&page=1";        
+       
+        var oResult = optObj(sURL_zt);
+          
+        var sResult = GetNodeText(oResult, "errcode");
+        
+        if (sResult != "") {
+            window.alert(sResult);
+            return;
+        } 
+
+        //var xpath = "//root/rows" ;
+        //var dimlists = oResult.selectNodes(xpath) ;
+         
+        var dimlists = oResult.getElementsByTagName("rows");
+         
+        var s = "";
+        if(dimlists.length>0)
+        {
+            var id = "";
+            try {
+                id = lttrim(dimlists[0].childNodes[0].childNodes[0].nodeValue)
+            }
+            catch (e) {
+            }
+
+            var sVal1 = "";
+            try {
+                sVal1 = lttrim(dimlists[0].childNodes[1].childNodes[0].nodeValue)
+            }
+            catch (e) {
+            }
+
+
+            var sVal2 = "";
+            try {
+                sVal2 = lttrim(dimlists[0].childNodes[2].childNodes[0].nodeValue)
+            }
+            catch (e) {
+                      }
+                      
+                      
+            if (sVal1.length > 27) {
+                sVal1 = sVal1.substring(0, 25) + "¡­";
+            }
+         
+                      
+            var sVal5 = "";
+            try {
+                sVal5 = lttrim(dimlists[0].childNodes[5].childNodes[0].nodeValue)
+            }
+            catch (e) {
+            }
+             
+        	sVal5 = replaceCharacters(sVal5,"brbr","");	
+			sVal5=FormatStringToRight(sVal5,false) ;
+					
+            document.all("spanTmp").innerHTML = sVal5;
+            sVal5 = document.all("spanTmp").innerText;
+            
+            
+            if (sVal5.length > 200) {
+                sVal5 = sVal5.substring(0, 200) + "¡­";
+            }
+
+           //sVal5="2016Äê1ÔÂ7-8ÈÕ£¬È«Ê¡±¾¿ÆÔºÐ£Ê¦×Ê¹ÜÀíÕßÅàÑµ°àôßÈ«Ê¡Ê¦×Ê¹¤×÷Äê¶È»áÒéÔÚÑïÖÝÕÙ¿ª£¬±¾´ÎÅàÑµ°à¸ù¾ÝÊ¡½ÌÓýÌü±¾¿ÆÔºÐ£½ÌÊ¦ÅàÑµ¹¤×÷°²ÅÅ£¬½»Á÷ÑÐÌÖ¸÷Ð£½ÌÊ¦¶ÓÎé½¨Éè¡°Ê®ÈýÎå¡±¹æ»®£¬ÑÐ¾¿²¿Êð2016ÄêÈ«Ê¡¸ßÐ£Ê¦×Ê¶ÓÎé½¨Éè¹¤×÷¡£ÅàÑµ°àÓÉÊ¡½ÌÓýÌüÊ¦×Ê´¦´Þ´ºÏ¼´¦³¤Ö÷³Ö£¬ÑïÖÝ´óÑ§Ð£³¤½¹ÐÂ°²³öÏ¯¿ªÄ»Ê½²¢ÖÂ»¶Ó­´Ç¡£Ê¡½ÌÓýÌüÊ¦×Ê´¦¡¢Ê¡¸ßÐ£Ê¦×ÊÅàÑµÖÐÐÄ¡¢È«Ê¡76Ëù±¾¿ÆÔºÐ££¨¶ÀÁ¢Ñ§Ôº£©ÈËÊÂ´¦µÄ¸ºÔðÍ¬Ö¾²Î¼ÓÁËÅàÑµÑÐÌÖ¡£"
+            s=s + "<div class=\"hot-pic\"><img style='border:1px solid #000' onclick=\"javascript:openNews(" + id + "," + parentid + ")\" onmouseover=\"this.style.cursor='hand'\" height='222' width='318' src=\"images_news/" + id + ".jpg\" /></div>";
+            s=s + "<div class=\"hot-text\">";
+            s=s + "<div class=\"hot-text-tit\"><a href=\"javascript:openNews(" + id + "," + parentid + ")\">" + sVal1 + "</a></div>";
+            s=s + "<div class=\"hot-text-text2\"><a href=\"javascript:openNews(" + id + "," + parentid + ")\">" + sVal5 + "</a></div>";
+            s=s + "<div class=\"but01\"><a href='newslist.html?pid=6331' target='_self'><img src=\"images/b1.jpg\" /></a></div> ";
+            s=s + "</div>";
+               
+                         
+           document.all("divHotNews").innerHTML=s;  
+           
+           
+       
+           
+
+           
+        }
+        
+        
+        
+        
+        s="<ul>";
+        for (var i = 1; i < dimlists.length; i++) {
+
+            var id = "";
+            try {
+                id = lttrim(dimlists[i].childNodes[0].childNodes[0].nodeValue)
+            }
+            catch (e) {
+            }
+
+            var sVal1 = "";
+            try {
+                sVal1 = lttrim(dimlists[i].childNodes[1].childNodes[0].nodeValue)
+            }
+            catch (e) {
+            }
+
+
+            var sVal2 = "";
+            try {
+                sVal2 = lttrim(dimlists[i].childNodes[2].childNodes[0].nodeValue)
+            }
+            catch (e) {
+                      }
+
+            if (sVal1.length > 18) {
+                sVal1 = sVal1.substring(0, 18) + "¡­";
+            }
+  
+           //sVal1="¹ØÓÚ¿ªÕ¹¸ßÖ°¸ß×¨¡°Ë«Ê¦¡±ËØÖÊÅàÑµµÄÍ¨Öª";
+           
+           if(i%2==1)
+                s = s + "<li class=\"blue-n xt03\"><a href=\"javascript:openNews(" + id + "," + parentid + ")\">" + sVal1 + "</a>";
+           else
+                 s = s + "<li class=\"blue-n\"><a href=\"javascript:openNews(" + id + "," + parentid + ")\">" + sVal1 + "</a>";
+                 
+           s = s + "<span  class=\"wdhui\">" + sVal2 + "</span></li>";
+  
+ 
+
+            
+        }
+         
+    s = s + "</ul>";
+    s = s + "  <div class=\"clear\"></div>";
+    s = s + "<div class=\"xt02\"></div>";
+   
+        //document.write(s);
+        document.all("divHotNewsOther").innerHTML=s;
+        
+        
+        
+      /*  
+           <ul>
+   <li class="blue-n xt03"><a href="#">¹ØÓÚ¿ªÕ¹¸ßÖ°¸ß×¨¡°Ë«Ê¦¡±ËØÖÊÅàÑµµÄÍ¨Öª</a>
+   <span  class="wdhui">2016-2-26</span></li>
+   <li class="blue-n"><a href="#">¹ØÓÚ¿ªÕ¹¸ßÖ°¸ß×¨¡°Ë«Ê¦¡±ËØÖÊÅàÑµµÄÍ¨Öª</a>
+   <span class="wdhui">2016-2-26</span></li>
+   <div class="clear"></div>
+   <div class="xt02"></div>
+   <li class="blue-n xt03"><a href="#">¹ØÓÚ¿ªÕ¹¸ßÖ°¸ß×¨¡°Ë«Ê¦¡±ËØÖÊÅàÑµµÄÍ¨Öª</a>
+   <span class="wdhui">2016-2-26</span></li>
+   <li class="blue-n"><a href="#">¹ØÓÚ¿ªÕ¹¸ßÖ°¸ß×¨¡°Ë«Ê¦¡±ËØÖÊÅàÑµµÄÍ¨Öª</a>
+   <span class="wdhui">2016-2-26</span></li>
+   </ul>
+     <div class="clear"></div>
+   <div class="xt02"></div>
+   */
+        
+        
+     
+     
+    }
+    
+    
+    
+    
+    function fillYJWX()
+    {
+       // var parentid="6331";
+       // var sURL_zt = "./XmlService/search.aspx?gntype=89&parvalue=" + parentid + "&pagesize=9&page=1";        
+       var parentid="6336";
+        var s="";       
+        var sURL_zt = "./XmlService/search.aspx?gntype=89&parvalue=" + parentid + "&pagesize=5&page=1";  
+        
+        var oResult = optObj(sURL_zt);
+          
+        var sResult = GetNodeText(oResult, "errcode");
+        
+        if (sResult != "") {
+            window.alert(sResult);
+            return;
+        } 
+
+        //var xpath = "//root/rows" ;
+        //var dimlists = oResult.selectNodes(xpath) ;
+         
+        var dimlists = oResult.getElementsByTagName("rows");
+         
+        var s = "";
+        if(dimlists.length>0)
+        {
+            var id = "";
+            try {
+                id = lttrim(dimlists[0].childNodes[0].childNodes[0].nodeValue)
+            }
+            catch (e) {
+            }
+
+            var sVal1 = "";
+            try {
+                sVal1 = lttrim(dimlists[0].childNodes[1].childNodes[0].nodeValue)
+            }
+            catch (e) {
+            }
+
+
+            var sVal2 = "";
+            try {
+                sVal2 = lttrim(dimlists[0].childNodes[2].childNodes[0].nodeValue)
+            }
+            catch (e) {
+                      }
+                      
+                      
+            if (sVal1.length > 27) {
+                sVal1 = sVal1.substring(0, 25) + "¡­";
+            }
+         
+                      
+            var sVal5 = "";
+            try {
+                sVal5 = lttrim(dimlists[0].childNodes[5].childNodes[0].nodeValue)
+            }
+            catch (e) {
+            }
+             
+        	sVal5 = replaceCharacters(sVal5,"brbr","");	
+			sVal5=FormatStringToRight(sVal5,false) ;
+					
+            document.all("spanTmp").innerHTML = sVal5;
+            sVal5 = document.all("spanTmp").innerText;
+            
+            
+            if (sVal5.length > 200) {
+                sVal5 = sVal5.substring(0, 200) + "¡­";
+            }
+
+           //sVal5="2016Äê1ÔÂ7-8ÈÕ£¬È«Ê¡±¾¿ÆÔºÐ£Ê¦×Ê¹ÜÀíÕßÅàÑµ°àôßÈ«Ê¡Ê¦×Ê¹¤×÷Äê¶È»áÒéÔÚÑïÖÝÕÙ¿ª£¬±¾´ÎÅàÑµ°à¸ù¾ÝÊ¡½ÌÓýÌü±¾¿ÆÔºÐ£½ÌÊ¦ÅàÑµ¹¤×÷°²ÅÅ£¬½»Á÷ÑÐÌÖ¸÷Ð£½ÌÊ¦¶ÓÎé½¨Éè¡°Ê®ÈýÎå¡±¹æ»®£¬ÑÐ¾¿²¿Êð2016ÄêÈ«Ê¡¸ßÐ£Ê¦×Ê¶ÓÎé½¨Éè¹¤×÷¡£ÅàÑµ°àÓÉÊ¡½ÌÓýÌüÊ¦×Ê´¦´Þ´ºÏ¼´¦³¤Ö÷³Ö£¬ÑïÖÝ´óÑ§Ð£³¤½¹ÐÂ°²³öÏ¯¿ªÄ»Ê½²¢ÖÂ»¶Ó­´Ç¡£Ê¡½ÌÓýÌüÊ¦×Ê´¦¡¢Ê¡¸ßÐ£Ê¦×ÊÅàÑµÖÐÐÄ¡¢È«Ê¡76Ëù±¾¿ÆÔºÐ££¨¶ÀÁ¢Ñ§Ôº£©ÈËÊÂ´¦µÄ¸ºÔðÍ¬Ö¾²Î¼ÓÁËÅàÑµÑÐÌÖ¡£"
+            s=s + "<div class=\"hot-pic\"><img style='border:1px solid #000' onclick=\"javascript:openNews(" + id + "," + parentid + ")\" onmouseover=\"this.style.cursor='hand'\" height='222' width='318' src=\"images_news/" + id + ".jpg\" /></div>";
+            s=s + "<div class=\"hot-text\">";
+            s=s + "<div class=\"hot-text-tit\"><a href=\"javascript:openNews(" + id + "," + parentid + ")\">" + sVal1 + "</a></div>";
+            s=s + "<div class=\"hot-text-text2\"><a href=\"javascript:openNews(" + id + "," + parentid + ")\">" + sVal5 + "</a></div>";
+            s=s + "<div class=\"but01\"><a href='newslist.html?pid=6336' target='_self'><img src=\"images/b1.jpg\" /></a></div> ";
+            s=s + "</div>";
+               
+                         
+           document.all("divYJWX").innerHTML=s;  
+           
+           
+       
+           
+
+           
+        }
+        
+        
+        
+        
+        s="<ul>";
+        for (var i = 1; i < dimlists.length; i++) {
+
+            var id = "";
+            try {
+                id = lttrim(dimlists[i].childNodes[0].childNodes[0].nodeValue)
+            }
+            catch (e) {
+            }
+
+            var sVal1 = "";
+            try {
+                sVal1 = lttrim(dimlists[i].childNodes[1].childNodes[0].nodeValue)
+            }
+            catch (e) {
+            }
+
+
+            var sVal2 = "";
+            try {
+                sVal2 = lttrim(dimlists[i].childNodes[2].childNodes[0].nodeValue)
+            }
+            catch (e) {
+                      }
+
+            if (sVal1.length > 18) {
+                sVal1 = sVal1.substring(0, 18) + "¡­";
+            }
+  
+           //sVal1="¹ØÓÚ¿ªÕ¹¸ßÖ°¸ß×¨¡°Ë«Ê¦¡±ËØÖÊÅàÑµµÄÍ¨Öª";
+           
+           if(i%2==1)
+                s = s + "<li class=\"blue-n xt03\"><a href=\"javascript:openNews(" + id + "," + parentid + ")\">" + sVal1 + "</a>";
+           else
+                 s = s + "<li class=\"blue-n\"><a href=\"javascript:openNews(" + id + "," + parentid + ")\">" + sVal1 + "</a>";
+                 
+           s = s + "<span  class=\"wdhui\">" + sVal2 + "</span></li>";
+  
+ 
+
+            
+        }
+         
+    s = s + "</ul>";
+    s = s + "  <div class=\"clear\"></div>";
+    s = s + "<div class=\"xt02\"></div>";
+   
+        //document.write(s);
+        document.all("divYJWXMore").innerHTML=s;
+        
+        
+        
+    
+        
+        
+     
+     
+    }
+     
+    function fillGZTZ()
+    {
+        var parentid="6332";
+        var sURL_zt = "./XmlService/search.aspx?gntype=89&parvalue=" + parentid+ "&pagesize=5&page=1";        
+       
+        var oResult = optObj(sURL_zt);
+          
+        var sResult = GetNodeText(oResult, "errcode");
+        
+        if (sResult != "") {
+            window.alert(sResult);
+            return;
+        } 
+
+        //var xpath = "//root/rows" ;
+        //var dimlists = oResult.selectNodes(xpath) ;
+         
+        var dimlists = oResult.getElementsByTagName("rows");
+         
+        var s = "";
+        
+        for (var i = 0; i < dimlists.length; i++) {
+
+            var id = "";
+            try {
+                id = lttrim(dimlists[i].childNodes[0].childNodes[0].nodeValue)
+            }
+            catch (e) {
+            }
+
+            var sVal1 = "";
+            try {
+                sVal1 = lttrim(dimlists[i].childNodes[1].childNodes[0].nodeValue)
+            }
+            catch (e) {
+            }
+
+
+            var sVal2 = "";
+            try {
+                sVal2 = lttrim(dimlists[i].childNodes[2].childNodes[0].nodeValue)
+            }
+            catch (e) {
+            }
+
+
+//            var sVal5 = "";
+//            try {
+//                sVal5 = lttrim(dimlists[i].childNodes[5].childNodes[0].nodeValue)
+//            }
+//            catch (e) {
+//            }
+ 
+
+            if (sVal1.length > 18) {
+                sVal1 = sVal1.substring(0, 18) + "¡­";
+            }
+
+//        	sVal5 = replaceCharacters(sVal5,"brbr","");	
+//			sVal5=FormatStringToRight(sVal5,false) ;
+//					
+//            document.all("spanTmp").innerHTML = sVal5;
+//            sVal5 = document.all("spanTmp").innerText;
+//            if (sVal5.length > 12) {
+//                sVal5 = sVal5.substring(0, 12) + "¡­";
+//            }
+            
+//            s = s + "<div class=\"zt-box\">";
+//            s = s + " <div class=\"zt-pic\"><img height='80' width='120' src=\"./images_news/" + id + ".jpg\" /></div>";
+//            s = s + " <div class=\"zt-text\"> <div class=\"zt-bt\">" + sVal1 + "</div>";
+//            s = s + "<div class=\"zt-nr\">" + sVal5 + "</div><br />";
+//            s = s + "<div class=\"zt-link blue\"><a href=\"#\">Read more</a></div></div>";
+//            s = s + " </div>";
+// 
+//            if (i > 0 && i % 2 == 0 && i != dimlists.length) {
+//                s = s + "<div class=\"blank8\"></div>";
+//                s = s + "<div class=\"xt2\"></div>";
+//               
+//            }
+
+    s = s + "<dl>";    
+    s = s + "<dd><a href=\"javascript:openNews(" + id + "," + parentid + ")\">" + sVal1 + "</a></dd>";
+    s = s + "<dt>" + sVal2 + "</dt>";
+    s = s + "<div class=\"xt2\"></div>";
+    
+
+            
+        }
+         
+        //document.write(s);
+        document.all("divGZTZ").innerHTML=s;
+    }
+    
+    function fillzt() {
+        
+        var parentid="6333";
+        var sURL_zt = "./XmlService/search.aspx?gntype=89&parvalue=" + parentid + "&pagesize=8&page=1";        
+       
+        var oResult = optObj(sURL_zt);
+          
+        var sResult = GetNodeText(oResult, "errcode");
+        
+        if (sResult != "") {
+            window.alert(sResult);
+            return;
+        } 
+
+        //var xpath = "//root/rows" ;
+        //var dimlists = oResult.selectNodes(xpath) ;
+         
+        var dimlists = oResult.getElementsByTagName("rows");
+         
+        var s = "";
+         
+        for (var i = 0; i < dimlists.length; i++) {
+
+            var id = "";
+            try {
+                id = lttrim(dimlists[i].childNodes[0].childNodes[0].nodeValue)
+            }
+            catch (e) {
+            }
+
+            var sVal1 = "";
+            try {
+                sVal1 = lttrim(dimlists[i].childNodes[1].childNodes[0].nodeValue)
+            }
+            catch (e) {
+            }
+
+
+            var sVal2 = "";
+            try {
+                sVal2 = lttrim(dimlists[i].childNodes[2].childNodes[0].nodeValue)
+            }
+            catch (e) {
+            }
+
+
+            var sVal5 = "";
+            try {
+                sVal5 = lttrim(dimlists[i].childNodes[5].childNodes[0].nodeValue)
+            }
+            catch (e) {
+            }
+ 
+
+            if (sVal1.length > 10) {
+                sVal1 = sVal1.substring(0, 10) + "¡­";
+            }
+
+        	sVal5 = replaceCharacters(sVal5,"brbr","");	
+			sVal5=FormatStringToRight(sVal5,false) ;
+					
+            document.all("spanTmp").innerHTML = sVal5;
+            sVal5 = document.all("spanTmp").innerText;
+            if (sVal5.length > 12) {
+                sVal5 = sVal5.substring(0, 12) + "¡­";
+            }
+            
+            s = s + "<div class=\"zt-box\">";
+            s = s + " <div class=\"zt-pic\"><img height='80' width='120' onclick=\"javascript:openNews(" + id + "," + parentid + ")\" onmouseover=\"this.style.cursor='hand'\" src=\"./images_news/" + id + ".jpg\" /></div>";
+            s = s + " <div class=\"zt-text\"> <div class=\"zt-bt\">" + sVal1 + "</div>";
+            s = s + "<div class=\"zt-nr\">" + sVal5 + "</div><br />";
+            s = s + "<div class=\"zt-link blue\"><a href=\"javascript:openNews(" + id + "," + parentid + ")\">Read more</a></div></div>";
+            s = s + " </div>";
+ 
+            if ( (i +1)% 2 == 0 && i != dimlists.length) {
+                s = s + "<div class=\"blank8\"></div>";
+                s = s + "<div class=\"xt2\"></div>";
+               
+            }
+
+            
+        }
+         
+        //document.write(s);
+        document.all("divZT").innerHTML=s;
+    }
+
+
+    function initpage()
+    {        
+        fillzt();
+        fillGZTZ();
+        fillHotNews();
+	    fillPXXM();
+        fillZCWJ();
+        fillYJWX();
+    }
+    
+    function searchnews() 
+    {
+        var val=document.all("txtSearch").value;
+        if(val.length<1)
+            {                
+                alert("ÇëÊäÈë²éÑ¯¹Ø¼ü×Ö!")
+                return;
+            }
+        val=escape(val)    
+        window.open("newslist.html?pid=0&key=" + val,"_self");
+    }
+	</script>	
+	
+	
+	<link href="css/style.css" rel="stylesheet" type="text/css" />
+	<style type="text/css"> 
+	   
+	    .inputin_two3 {
+	        border-top: none;
+	        border-right: none;
+	        border-bottom: none;
+	        border-left: none;
+	        FONT-SIZE: 20px;
+	        align:left;
+	        text-align: left;
+	        COLOR: #333333; 
+	        WIDTH: 100%;  font-family:ËÎÌå;COLOR: rgb(0,0,0); 
+        }
+        
+        .hot-text-text2{ margin:20px; text-align:left; line-height:26px; display:block; height:130px;font-size:16px;}
+        
+    </style>
+</head>
+
+
+<body onload="initpage()">
+ <div class="logo-box">
+  <div class="logo">½­ËÕÊ¡¸ßÐ£Ê¦×ÊÅàÑµÖÐÐÄ</div>
+  <div class="t-right">
+  <div class="search"><table border=0 cellpadding=0 cellspacing=0><tr style="background-image:url(images/s1.jpg)"><td style="background-image:url(images/s1.jpg)"> &nbsp;<input class="inputin_two3" type="text" style="width:140px;height:25px" name="txtSearch" /> </td><td><img src="images/s2.jpg" onmouseover="this.style.cursor='hand'" onclick="searchnews()" /></td></tr></table> <!--<img src="images/s1.jpg" /> --></div>
+  <div class="login"><!--<img src="images/search.jpg" />--></div>
+  <div class="clear"></div>
+  </div>
+ </div><!--logo-box-->
+ <div class="blank3"></div>
+ <div class="nav">
+ <ul>
+ 
+ <li><a href="index.html" target="_self">Ê×Ò³</a></li>
+ <li class="xt"><a href="newslist.html?pid=6331" target="_self">ÐÂÎÅÖÐÐÄ</a></li>
+ <li class="xt"><a href="newslist.html?pid=6338" target="_self">ÖÐÐÄ½éÉÜ</a></li>
+ <li class="xt"><a href="newslist.html?pid=6332" target="_self">¹¤×÷Í¨Öª</a></li>
+ <li class="xt"><a href="newslist.html?pid=6334" target="_self">ÅàÑµÏîÄ¿</a></li>
+ <li class="xt"><a href="newslist.html?pid=6335" target="_self">Õþ²ßÎÄ¼þ</a></li>
+ <li class="xt"><a href="newslist.html?pid=6336" target="_self">ÑÐ¾¿ÎÄÏ×</a></li>
+ <li class="xt"><a href="newslist.html?pid=6337" target="_self">ÏÂÔØ×¨Çø</a></li>
+ 
+ <!--
+ <li class="xt"><a href="#">¿Î±í²éÑ¯</a></li>
+ <li class="xt"><a href="#">ËæÒâÌí¼Ó</a></li>
+ -->
+ 
+ 
+ </ul>
+ </div><!--nav--> <span id="spanTmp" style="display:none"></span>
+ <div class="banner-pic"></div>
+ 
+  
+  
+  
+  
+  
+  
+ <div class="news-box">
+  <div class="box1k">
+    <div class="blank8"></div>
+   <div class="zt-title">ÈÈµãÐÂÎÅ</div>
+     <div class="blank8"></div>
+     
+   <div id="divHotNews">  
+          
+   </div>
+   
+   <div class="xt02"></div>
+   
+    
+   <div class="hot-list" id="divHotNewsOther">  
+   
+   
+   </div>
+    
+   
+  </div><!--box1k-->
+ </div><!--news-box-->
+ 
+ 
+ 
+ <div class="special-box">
+   <div class="box1k">
+  <div class="sp-left">
+<div class="zt-title">×îÐÂ×¨ÌâÐÅÏ¢</div>
+
+ 
+<div id="divZT"></div>
+		    
+				    
+ <!-- 
+ <div class="zt-box">
+ <div class="zt-pic"><img src="images/t-pic01.jpg" /></div>
+ <div class="zt-text"> <div class="zt-bt">¸ßÐ£½ÌÊ¦¸ÚÇ°ÅàÑµ×¨Ìâ</div>
+<div class="zt-nr">¹ØÓÚÅàÑµ¹ÜÀíÏµÍ³ÖØÐÂ¿ª·ÅµÄÍ¨Öª</div><br />
+<div class="zt-link blue"><a href="#">Read more</a></div></div>
+ </div>
+  <div class="zt-box">
+ <div class="zt-pic"><img src="images/t-pic02.jpg" /></div>
+ <div class="zt-text"> <div class="zt-bt">¸ßÐ£½ÌÊ¦¼ÆËã»úÓ¦ÓÃÄÜÁ¦×¨Ìâ</div>
+<div class="zt-nr">¹ØÓÚÅàÑµ¹ÜÀíÏµÍ³ÖØÐÂ¿ª·ÅµÄÍ¨Öª</div><br />
+<div class="zt-link blue"><a href="#">Read more</a></div></div>
+ </div>
+ 
+   
+  <div class="blank8"></div>
+  <div class="xt2"></div>
+   <div class="zt-box">
+ <div class="zt-pic"><img src="images/t-pic03.jpg" /></div>
+ <div class="zt-text"> <div class="zt-bt">ÇàÄê¹Ç¸É½ÌÊ¦ÑÐÐÞ°à×¨Ìâ</div>
+<div class="zt-nr">¹ØÓÚÅàÑµ¹ÜÀíÏµÍ³ÖØÐÂ¿ª·ÅµÄÍ¨Öª</div><br />
+<div class="zt-link blue"><a href="#">Read more</a></div></div>
+ </div>
+    <div class="zt-box">
+ <div class="zt-pic"><img src="images/t-pic04.jpg" /></div>
+ <div class="zt-text"> <div class="zt-bt">·ÃÎÊÑ§Õß¼°·ÃÎÊ¹¤³ÌÊ¦×¨Ìâ</div>
+<div class="zt-nr">¹ØÓÚÅàÑµ¹ÜÀíÏµÍ³ÖØÐÂ¿ª·ÅµÄÍ¨Öª</div><br />
+<div class="zt-link blue"><a href="#">Read more</a></div></div>
+ </div>
+ 
+
+  
+    <div class="blank8"></div>
+    <div class="xt2"></div>
+  <div class="zt-box">
+ <div class="zt-pic"><img src="images/t-pic05.jpg" /></div>
+ <div class="zt-text"> <div class="zt-bt">Ê¦µÂ½ÌÓý×¨Ìâ</div>
+<div class="zt-nr">¹ØÓÚÅàÑµ¹ÜÀíÏµÍ³ÖØÐÂ¿ª·ÅµÄÍ¨Öª</div><br />
+<div class="zt-link blue"><a href="#">Read more</a></div></div>
+ </div>
+      <div class="zt-box">
+ <div class="zt-pic"><img src="images/t-pic06.jpg" /></div>
+ <div class="zt-text"> <div class="zt-bt">½ÌÊ¦¿ÆÑÐÄÜÁ¦ÅàÑµ×¨Ìâ</div>
+<div class="zt-nr">¹ØÓÚÅàÑµ¹ÜÀíÏµÍ³ÖØÐÂ¿ª·ÅµÄÍ¨Öª</div><br />
+<div class="zt-link blue"><a href="#">Read more</a></div></div>
+ </div>
+     
+  
+      <div class="blank8"></div>
+      <div class="xt2"></div>
+       <div class="zt-box">
+ <div class="zt-pic"><img src="images/t-pic07.jpg" /></div>
+ <div class="zt-text"> <div class="zt-bt">½ÌÊ¦³ö¹úÓ¢ÓïÅàÑµ×¨Ìâ</div>
+<div class="zt-nr">¹ØÓÚÅàÑµ¹ÜÀíÏµÍ³ÖØÐÂ¿ª·ÅµÄÍ¨Öª</div><br />
+<div class="zt-link blue"><a href="#">Read more</a></div></div>
+ </div>
+        <div class="zt-box">
+ <div class="zt-pic"><img src="images/t-pic08.jpg" /></div>
+ <div class="zt-text"> <div class="zt-bt">Ê¦×Ê¹ÜÀí¶ÓÎéÅàÑµ×¨Ìâ</div>
+<div class="zt-nr">¹ØÓÚÅàÑµ¹ÜÀíÏµÍ³ÖØÐÂ¿ª·ÅµÄÍ¨Öª</div><br />
+<div class="zt-link blue"><a href="#">Read more</a></div></div>
+ </div>
+  -->
+  
+  </div>  
+  <!--sp-left-->
+  <div class="sp-right">
+   <div class="gztz">
+   <div class="gztz-tiltle">¹¤×÷Í¨Öª</div>
+    <div class="gz-text" id="divGZTZ">
+    
+    <!--<dl>    
+    <dd><a href="#">¹ØÓÚ×éÖ¯±¨Ãû2011ÄêÉÏ°ëÄê½ÌÊ¦ÍøÂçÅàÑµµÄÍ¨Öª</a></dd>
+    <dt>2016-2-26</dt>
+    <div class="xt2"></div>
+    <dd><a href="#">¹ØÓÚ¾Ù°ìÂí¿ËË¼Ö÷ÒåÖØµã½Ì²Ä¹Ç¸É½ÌÊ¦ÅàÑµ°àµÄÍ¨Öª</a></dd>
+    <dt>2016-2-26</dt>
+    <div class="xt2"></div>
+    <dd><a href="#">¹ØÓÚ×éÖ¯±¨Ãû2011ÄêÉÏ°ëÄê½ÌÊ¦ÍøÂçÅàÑµµÄÍ¨Öª</a></dd>
+    <dt>2016-2-26</dt>
+     <div class="xt2"></div>
+    <dd><a href="#">¹ØÓÚ¾Ù°ìÂí¿ËË¼Ö÷ÒåÖØµã½Ì²Ä¹Ç¸É½ÌÊ¦ÅàÑµ°àµÄÍ¨Öª</a></dd>
+    <dt>2016-2-26</dt>
+    </dl>
+    -->
+    
+    </div>
+   </div>
+   <div class="blank8"></div>
+   <div><a href="http://spzxys.njhosting.cn/login/login.html" target="_blank"><img src="images/info-link.jpg"  /></a></div>
+    <div class="blank8"></div>
+   <div><a href="mailto:njcc@njnu.edu.cn"><img src="images/mail-link.jpg" /></a></div>
+    <div class="blank8"></div>
+   <div><a href="http://spzx.njnu.edu.cn/cj.asp?Action=Searc" target="_blank"><img src="images/sec-link.jpg" /></a></div>
+  </div><!--sp-right-->
+  </div><!--box1k-->
+  <div class="clear"></div>
+  <div class="blank8"></div>
+ </div><!--special-->
+
+ 
+ 
+ <div class="blank8"></div>
+ <div class="blank8"></div>
+ <div class="boxhui">
+ <div class="box1k">
+ <div class="px-left">
+ <div>
+  <div class="px-left-tit">ÅàÑµÏîÄ¿</div>
+  <div class="px-more blue-n"><a href="newslist.html?pid=6334" target="_self">>Read more</a></div>
+  <div class="clear"></div>
+  <div class="px-list-box">
+  <div class="blank5"></div>
+  
+  <ul>
+   <div class="blank5"></div>
+	<div id="divPXXM"></div>  
+<!--
+  <li><a href="#">¹ØÓÚ¿ªÕ¹¸ßÖ°¸ß×¨¡°Ë«Ê¦¡±ËØÖÊÅàÑµµÄÍ¨Öª</a></li>
+  <li><a href="#">¹ØÓÚ¿ªÕ¹¸ßÖ°¸ß×¨¡°Ë«Ê¦¡±ËØÖÊÅàÑµµÄÍ¨Öª</a></li>
+  <li><a href="#">¹ØÓÚ¿ªÕ¹¸ßÖ°¸ß×¨¡°Ë«Ê¦¡±ËØÖÊÅàÑµµÄÍ¨Öª</a></li>
+  <li><a href="#">¹ØÓÚ¿ªÕ¹¸ßÖ°¸ß×¨¡°Ë«Ê¦¡±ËØÖÊÅàÑµµÄÍ¨Öª</a></li>
+  <li><a href="#">¹ØÓÚ¿ªÕ¹¸ßÖ°¸ß×¨¡°Ë«Ê¦¡±ËØÖÊÅàÑµµÄÍ¨Öª</a></li>
+  <li><a href="#">¹ØÓÚ¿ªÕ¹¸ßÖ°¸ß×¨¡°Ë«Ê¦¡±ËØÖÊÅàÑµµÄÍ¨Öª</a></li>
+  <li><a href="#">¹ØÓÚ¿ªÕ¹¸ßÖ°¸ß×¨¡°Ë«Ê¦¡±ËØÖÊÅàÑµµÄÍ¨Öª</a></li>
+  <li><a href="#">¹ØÓÚ¿ªÕ¹¸ßÖ°¸ß×¨¡°Ë«Ê¦¡±ËØÖÊÅàÑµµÄÍ¨Öª</a></li>
+-->
+
+  </ul>
+  <div class="blank5"></div>
+  </div>
+  </div>
+ </div>
+ 
+ 
+ 
+ <div class="zc-right"> <div>
+  <div class="px-left-tit">Õþ²ßÎÄ¼þ</div>
+  <div class="px-more blue-n"><a href="newslist.html?pid=6335" target="_self">>Read more</a></div>
+  <div class="clear"></div>
+  <div class="px-list-box">
+  <div class="blank5"></div>
+  <ul>
+   <div class="blank5"></div>
+
+<!--
+  <li><a href="#">¹ØÓÚ¿ªÕ¹¸ßÖ°¸ß×¨¡°Ë«Ê¦¡±ËØÖÊÅàÑµµÄÍ¨Öª</a></li>
+  <li><a href="#">¹ØÓÚ¿ªÕ¹¸ßÖ°¸ß×¨¡°Ë«Ê¦¡±ËØÖÊÅàÑµµÄÍ¨Öª</a></li>
+  <li><a href="#">¹ØÓÚ¿ªÕ¹¸ßÖ°¸ß×¨¡°Ë«Ê¦¡±ËØÖÊÅàÑµµÄÍ¨Öª</a></li>
+  <li><a href="#">¹ØÓÚ¿ªÕ¹¸ßÖ°¸ß×¨¡°Ë«Ê¦¡±ËØÖÊÅàÑµµÄÍ¨Öª</a></li>
+  <li><a href="#">¹ØÓÚ¿ªÕ¹¸ßÖ°¸ß×¨¡°Ë«Ê¦¡±ËØÖÊÅàÑµµÄÍ¨Öª</a></li>
+  <li><a href="#">¹ØÓÚ¿ªÕ¹¸ßÖ°¸ß×¨¡°Ë«Ê¦¡±ËØÖÊÅàÑµµÄÍ¨Öª</a></li>
+  <li><a href="#">¹ØÓÚ¿ªÕ¹¸ßÖ°¸ß×¨¡°Ë«Ê¦¡±ËØÖÊÅàÑµµÄÍ¨Öª</a></li>
+  <li><a href="#">¹ØÓÚ¿ªÕ¹¸ßÖ°¸ß×¨¡°Ë«Ê¦¡±ËØÖÊÅàÑµµÄÍ¨Öª</a></li>
+-->
+   <div id="divZCWJ"></div>
+
+  </ul>
+  <div class="blank5"></div>
+  </div>
+  </div>
+ </div>
+ <div class="blank8"></div>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ <div class="news-box">
+  <div class="box1k">
+    <div class="blank8"></div>
+   <div class="zt-title">ÑÐ¾¿ÎÄÏ×</div>
+     <div class="blank8"></div>
+     
+   <div id="divYJWX">  
+          
+   </div>
+   
+   <div class="xt02"></div>
+   
+    
+   <div class="hot-list" id="divYJWXMore">  
+   
+   
+   </div>
+    
+   
+  </div><!--box1k-->
+ </div><!--news-box-->
+ 
+ 
+ 
+ <div class="floor">
+  <div class="box1k">
+ <div class="fl-pic"></div>
+ 
+  <div class="fl-text">Copyright  2014 ÄÏ¾©Ê¦·¶´óÑ§. All rights reserved.<br />
+ËÕICP±¸05007121ºÅ</div>
+ </div>
+ <div class="clear"></div>
+ </div>
+ 
+ </body>
+</html>

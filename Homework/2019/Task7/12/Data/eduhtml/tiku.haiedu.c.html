@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>海教课堂-微信登录</title>
+    <meta name="keywords" content="海教课堂网页版-微信登录" >
+    <meta name="description" content="海教课堂网页版-微信登录">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="/Public/source/css/weixin.css" rel="stylesheet"/>
+
+</head>
+<body>
+ <div class="login ng-scope" ng-controller="loginController" ng-if="true">
+
+        <!--BEGIN logo-->
+        <div class="logo">
+            <i class="web_wechat_login_logo"></i>
+        </div>
+        <!--END logo-->
+        <!--BEGIN login_box-->
+        <div class="login_box">
+            <div class="qrcode"  >
+               <div id="qcode" style="margin-top: 20px;"></div>
+              
+            </div>
+            <div style="margin-left: 110px;margin-top: 30px;">
+     		<a href="/Exam/Auth/qq.html" target="_blank">
+     			<img src="/Public/source/images/qq_login.png"/>
+     		</a>
+     		</div>
+        </div>
+        <!--END login_box-->
+        <!--BEGIN lang-->
+        <div class="lang" style="display: none">
+            <!-- ngIf: isMacOS -->
+            <!-- ngIf: isMacOS -->
+            <!-- ngIf: isIPad -->
+            <!-- ngIf: isIPad -->
+            <!-- ngIf: isWindows --><a class="ng-scope" ng-if="isWindows" href="javascript:;">题库介绍</a><!-- end ngIf: isWindows -->
+            <!-- ngIf: isWindows --><span ng-if="isWindows" class="sep ng-scope"></span><!-- end ngIf: isWindows -->
+            <a class="lang-item" href="javascript:;">中文</a>
+            <span class="sep"></span>
+            <a class="lang-item" href="javascript:;">繁体</a>
+            <span class="sep"></span>
+            <a class="lang-item" href="javascript:;">English</a>
+        </div>
+
+        <!--END lang-->
+        <!--BEGIN copyright-->
+        <div class="copyright">
+            <p class="desc">© 2016 海教网  All Rights Reserved  闽ICP备15003626-2号</p>
+        </div>
+        <!--END copyright-->
+    </div>
+	<script src="http://res.wx.qq.com/connect/zh_CN/htmledition/js/wxLogin.js"></script>
+	<script>
+
+
+	  var obj = new WxLogin({
+		id:"qcode", 
+		appid: "wx0d35201528f8895c", 
+		scope: "snsapi_login", 
+		redirect_uri: encodeURIComponent("http://" + window.location.host + "/Exam/Auth/weixin"),
+		state: Math.ceil(Math.random()*1000),
+		style: "black",
+		href: ""
+
+     });
+</script>
+</body>
+</html>

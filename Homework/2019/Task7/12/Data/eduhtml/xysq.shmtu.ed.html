@@ -1,0 +1,128 @@
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+  <head>
+	
+
+<title>上海海事大学校友社区</title>
+<script src="http://xysq.shmtu.edu.cn:80/UI/jquery/jquery-1.8.3.min.js" type="text/javascript"></script>
+<link href="http://xysq.shmtu.edu.cn:80/UI/css/login.css" rel="stylesheet" type="text/css" />
+<script src="http://xysq.shmtu.edu.cn:80/UI/js/login.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		var interval=0;
+		$(document).ready(function(){
+			setTimeout(function(){
+				interval=setInterval("loginByQr()",1000);
+			},200);
+			$("#typeImg").toggle(function(){
+				$("#typeImg").addClass("qrcode");
+				$("#pcpanel").show();
+				$("#wxpanel").hide();
+			},function(){
+				$("#typeImg").removeClass("qrcode");
+				$("#pcpanel").hide();
+				$("#wxpanel").show();
+			});
+		});
+		function loginByQr(){
+			$.ajax({
+				type:'post',
+				url:'http://xysq.shmtu.edu.cn:80/intervalLogin',
+				data:'rd=166612495',
+				dataType:'json',
+				success:function(data){
+					if(data.result!="error"){
+						window.clearInterval(interval);
+						if(data.result=="log"){
+							$("div.loginNotice").html(data.msg);
+							return false;
+						}
+						if(data.result=="success"){
+							$("div.loginNotice").html("扫码成功，正在登录...");
+							//跳转
+							top.location="http://xysq.shmtu.edu.cn:80/alumniHome";
+						}
+					}
+				}
+			});
+		}
+	</script>
+  </head>
+  <body>
+	<div class="alumniLogin">
+  		<div class="header">
+  			<div class="left">
+  				<img src="http://xysq.shmtu.edu.cn:80/UI/images/loginBanner.jpg"/>
+  			</div>
+  			<div class="right">
+  				<a href="../login/help.jsp" target="_blank">帮助</a>
+  			</div>
+        </div>
+        <div class="mainBg">
+	  		<div class="mainCnt" style="position: relative;">
+	  			<div id="typeImg" class="type"></div>
+		  		<form id="loginForm" action="http://xysq.shmtu.edu.cn:80/alumniCheck" method="post">
+				<div class="loginForm">
+					<div id="pcpanel" style="display:none;">
+						<div class="loginLine" style="padding-top:46px;">
+							<div class="loginTxt">
+								<input type="text" name="username" class="loginInput" value="" autocomplete="off"/>
+							</div>
+						</div>
+						<div class="loginLine">
+							<div class="loginPwd">
+								<input type="password" name="password" class="loginInput loginPwd" value=""/>
+							</div>
+						</div>
+						<div class="loginOpt">
+							<div class="loginOptLeft">
+								<input type="checkbox" id="autoLogin" name="autoLogin" class="loginOptCheckbox" value="1"/><label for="autoLogin" class="loginOptCheckbox">下次自动登录</label>
+							</div>
+							<div class="loginOptRight">
+								<a href="http://xysq.shmtu.edu.cn:80/alumniPwd" class="loginOptLink">忘记密码?</a>
+							</div>
+						</div>
+						<div class="loginOpt">
+							<input type="submit" class="loginIn" value=""/>
+						</div>
+						<div class="loginLine">
+							<input type="button" class="loginReg" value=""/>
+						</div>
+					</div>
+					
+					<div id="wxpanel">
+						<p class="w_title">扫码登录</p>
+						<div>
+							<img src="http://xysq.shmtu.edu.cn:80/qrPic?rd=166612495" width="150" height="150" />
+						</div>
+						<p class="w_tip">如您已连接微站</p>
+						<p class="w_tip">可微信<font color="#f64c01">扫一扫</font>登录</p>
+					</div>
+					
+					<div class="loginNotice"></div>
+				</div>
+				</form>
+	        </div>
+        </div>
+        <iframe name='loginCheck' id="loginCheck" style='display:none'></iframe>
+        <div class="footer">
+        	<div class="left">
+  				<a href="javascript:;">关于我们</a>
+  			</div>
+  			<div class="right">
+  				上海海事大学校友总会 © 2017
+  			</div>
+        </div>
+    </div>
+  </body>
+</html>

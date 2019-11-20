@@ -1,0 +1,398 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head> 
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+  <title>中西医结合学院</title> 
+  <link rel="stylesheet" type="text/css" href="/r/cms/zxyjhxy/dj/css/dj/main.css" /> 
+  <script type="text/javascript" src="/r/cms/zxyjhxy/dj/js/jquery.min.js"></script> 
+  <!--图片切换效果--> 
+  <script type="text/javascript">
+$(function() {
+	var sWidth = $("#focus").width(); //获取焦点图的宽度（显示面积）
+	var len = $("#focus ul li").length; //获取焦点图个数
+	var index = 0;
+	var picTimer;
+	
+	//以下代码添加数字按钮和按钮后的半透明条，还有上一页、下一页两个按钮
+	var btn = "<div class='btnBg'></div><div class='btn'>";
+	for(var i=0; i < len; i++) {
+		btn += "<span></span>";
+	}
+	btn += "</div><div class='preNext pre'></div><div class='preNext next'></div>";
+	$("#focus").append(btn);
+	$("#focus .btnBg").css("opacity",0.5);
+
+	//为小按钮添加鼠标滑入事件，以显示相应的内容
+	$("#focus .btn span").css("opacity",0.4).mouseenter(function() {
+		index = $("#focus .btn span").index(this);
+		showPics(index);
+	}).eq(0).trigger("mouseenter");
+	//本例为左右滚动，即所有li元素都是在同一排向左浮动，所以这里需要计算出外围ul元素的宽度
+	$("#focus ul").css("width",sWidth * (len));
+	
+	//鼠标滑上焦点图时停止自动播放，滑出时开始自动播放
+	$("#focus").hover(function() {
+		clearInterval(picTimer);
+	},function() {
+		picTimer = setInterval(function() {
+			showPics(index);
+			index++;
+			if(index == len) {index = 0;}
+		},4000); //此4000代表自动播放的间隔，单位：毫秒
+	}).trigger("mouseleave");
+	
+	//显示图片函数，根据接收的index值显示相应的内容
+	function showPics(index) { //普通切换
+		var nowLeft = -index*sWidth; //根据index值计算ul元素的left值
+		$("#focus ul").stop(true,false).animate({"left":nowLeft},300); //通过animate()调整ul元素滚动到计算出的position
+		//$("#focus .btn span").removeClass("on").eq(index).addClass("on"); //为当前的按钮切换到选中的效果
+		$("#focus .btn span").stop(true,false).animate({"opacity":"0.4"},300).eq(index).stop(true,false).animate({"opacity":"1"},300); //为当前的按钮切换到选中的效果
+	}
+});
+
+</script> 
+  <style type="text/css">
+img{ border:none;}
+#focus {width:340px; height:283px; overflow:hidden; position:relative;}
+#focus ul {height:283px; position:absolute;}
+#focus ul li {float:left; width:340px; height:283px; overflow:hidden; position:relative;}
+#focus ul li div {position:absolute; overflow:hidden;}
+#focus .btnBg {position:absolute; width:340px; height:28px; left:0; bottom:0; background:#666666;Filter:alpha(opacity=50); /* ie有效 */
+-moz-opacity:0.5; /*firefox有效*/
+Opacity:0.5; /*通用，其他浏览器 有效*/
+}
+#focus .btn {position:absolute; width:330px; height:13px; padding-top:10px; padding-bottom:5px;padding-right:10px; right:0; bottom:0; text-align:right;}
+#focus .btn span {display:inline-block; _display:inline; _zoom:1; width:25px; height:10px; _font-size:0; margin-left:5px; cursor:pointer; background:#fff;}
+#focus .btn span.on {background:#fff;}
+
+</style> 
+ </head> 
+ <body> 
+  <div class="wrap">
+<script language="JavaScript">
+function correctPNG() // correctly handle PNG transparency in Win IE 5.5 & 6.
+{
+var arVersion = navigator.appVersion.split("MSIE")
+var version = parseFloat(arVersion[1])
+if ((version >= 5.5) && (document.body.filters)){
+for(var j=0; j<document.images.length; j++){
+var images = document.images[j]
+var imagesName = images.src.toUpperCase()
+if (imagesName.substring(imagesName.length-3, imagesName.length) == "PNG"){
+var imagesID = (images.id) ? "id='" + images.id + "' " : ""
+var imagesClass = (images.className) ? "class='" + images.className + "' " : ""
+var imagesTitle = (images.title) ? "title='" + images.title + "' " : "title='" + images.alt + "' "
+var imagesStyle = "display:inline-block;" + images.style.cssText
+var strNewHTML = "<span " + imagesID + imagesClass + imagesTitle+ " style=\"" + "width:" + images.width + "px; height:" + images.height + "px;" + imagesStyle + ";"
++ "filter:progid:DXImageTransform.Microsoft.AlphaImageLoader"+ "(src=\'" + images.src + "\', sizingMethod='scale');\"></span>"
+images.outerHTML = strNewHTML
+j = j-1
+}
+}
+}
+}
+window.attachEvent("onload", correctPNG);
+</script>	
+
+
+<script src="/r/cms/front.js" type="text/javascript"></script>
+<script src="/r/cms/jquery.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(function() {
+  Cms.siteFlow("",location.href, document.referrer);
+});
+</script>
+
+<div class="whole_bg">
+<div class="top_bg"><img src="/r/cms/zxyjhxy/dj/img/images/bg_gai.jpg" border="0"  width='1147' height='160' /></div>
+
+<!-- header start -->
+	<div class="header"> 
+ <img src=/u/cms/zxyjhxy/201405/29011533iflv.jpg border="0"  height="88"/>
+ </div>
+</div>
+<!-- header end -->
+<!--  nav start  -->
+	<div class="nav">
+<table width="1147" height="15" border="0" cellpadding="0" cellspacing="0" style="margin:0 auto;">
+<tr>                                                                                                   
+<td align="center"><img src="/r/cms/zxyjhxy/dj/img/images/n_bottom.gif" width="1147"  ></td>			
+</tr>
+</table>
+	  <table width="1147" height="39" border="0" cellpadding="0" cellspacing="0">
+		<tr>                                                                                                   
+<td align="center" nowrap="nowrap"><a href="/">首页</a></td>
+
+     <td align="center" nowrap="nowrap" ><a href="http://zxyjhxy.fjtcm.edu.cn:80/1389108484577/index.jhtml" >学院概况</a></td>
+
+
+     <td align="center" nowrap="nowrap" ><a href="http://zxyjhxy.fjtcm.edu.cn:80/1389198201202/index.jhtml" >党团工作</a></td>
+
+
+     <td align="center" nowrap="nowrap" ><a href="http://zxyjhxy.fjtcm.edu.cn:80/1389258621259/index.jhtml" >学科动态 </a></td>
+
+
+     <td align="center" nowrap="nowrap" ><a href="http://zxyjhxy.fjtcm.edu.cn:80/1389258826203/index.jhtml" >学生活动</a></td>
+
+
+     <td align="center" nowrap="nowrap" ><a href="http://zxyjhxy.fjtcm.edu.cn:80/ddqzlxzt20140528165934/index.jhtml" >两学一做</a></td>
+
+
+     <td align="center" nowrap="nowrap" ><a href="http://zxyjhxy.fjtcm.edu.cn:80/zsjy20140528182813/index.jhtml" >招生就业</a></td>
+
+
+     <td align="center" nowrap="nowrap" ><a href="http://zxyjhxy.fjtcm.edu.cn:80/1389257714682/index.jhtml" >教学管理</a></td>
+
+
+     <td align="center" nowrap="nowrap" ><a href="http://zxyjhxy.fjtcm.edu.cn:80/szdw20140606112500/index.jhtml" >师资队伍</a></td>
+
+
+     <td align="center" nowrap="nowrap" ><a href="http://zxyjhxy.fjtcm.edu.cn:80/1389258510276/index.jhtml" >学生工作</a></td>
+
+
+     <td align="center" nowrap="nowrap" ><a href="http://zxyjhxy.fjtcm.edu.cn:80/1389258606768/index.jhtml" >质量工程</a></td>
+
+
+     <td align="center" nowrap="nowrap" ><a href="http://zxyjhxy.fjtcm.edu.cn:80/gggs20140219175151/index.jhtml" >公告</a></td>
+
+
+     <td align="center" nowrap="nowrap" ><a href="http://zxyjhxy.fjtcm.edu.cn:80/syzx20160913113256/index.jhtml" >实验中心</a></td>
+
+		</tr>
+	  </table>
+	</div>
+<!-- nav end -->   <!-- main start --> 
+   <div class="main"> 
+    <div class="center"> 
+     <table> 
+      <tbody> 
+       <tr> 
+        <td nowrap=""> 
+         <div id="container" style="border:1px solid #e0e0e0;"> 
+          <div id="focus"> 
+           <ul>
+               
+            <li><a href="http://zxyjhxy.fjtcm.edu.cn:80/ynxw20140219173536/113028.jhtml"><img src="/u/cms/zxyjhxy/201710/18084016pyc2.jpg" width="340" height="255" /></a></li>  
+            <li><a href="http://zxyjhxy.fjtcm.edu.cn:80/ynxw20140219173536/109672.jhtml"><img src="/u/cms/zxyjhxy/201705/171311209951.jpg" width="340" height="255" /></a></li>  
+            <li><a href="http://zxyjhxy.fjtcm.edu.cn:80/ynxw20140219173536/107909.jhtml"><img src="/u/cms/zxyjhxy/201703/060951325ilf.jpg" width="340" height="255" /></a></li>  
+            <li><a href="http://zxyjhxy.fjtcm.edu.cn:80/ynxw20140219173536/107539.jhtml"><img src="/u/cms/zxyjhxy/201703/06095814v7iz.jpg" width="340" height="255" /></a></li>   
+           </ul> 
+          </div> 
+         </div></td> 
+        <td nowrap="" colspan="2"> 
+         <!-- 学院新闻栏目显示start  --> 
+         <div class="news"> 
+          <h4 class="title"><span><a href="/ynxw20140219173536.jhtml">more</a></span>院内新闻</h4> 
+          <ul class="list_new">
+              
+           <li><span>[2017-10-27]</span><a href="http://zxyjhxy.fjtcm.edu.cn:80/ynxw20140219173536/113291.jhtml" title="我院召开重阳节退休教师座谈会">我院召开重阳节退休教师座谈会</a></li>  
+           <li><span>[2017-10-25]</span><a href="http://zxyjhxy.fjtcm.edu.cn:80/ynxw20140219173536/113250.jhtml" title="我院举行第六期“青马班”开班仪式">我院举行第六期“青马班”开班仪式</a></li>  
+           <li><span>[2017-10-25]</span><a href="http://zxyjhxy.fjtcm.edu.cn:80/ynxw20140219173536/113202.jhtml" title="【福州晚报】石志方：向上向善好青年">【福州晚报】石志方：向上向善好青年</a></li>  
+           <li><span>[2017-10-24]</span><a href="http://zxyjhxy.fjtcm.edu.cn:80/ynxw20140219173536/113145.jhtml" title="李灿东校长莅临我院调研">李灿东校长莅临我院调研</a></li>  
+           <li><span>[2017-10-21]</span><a href="http://zxyjhxy.fjtcm.edu.cn:80/ynxw20140219173536/113131.jhtml" title="我院赴福鼎开展教学巡视工作">我院赴福鼎开展教学巡视工作</a></li>  
+           <li><span>[2017-10-19]</span><a href="http://zxyjhxy.fjtcm.edu.cn:80/ynxw20140219173536/113099.jhtml" title="我院开展“树清廉家风，创最美家庭”承诺签名活动">我院开展“树清廉家风，创最美家庭”承诺签名活动</a></li>  
+           <li><span>[2017-10-18]</span><a href="http://zxyjhxy.fjtcm.edu.cn:80/ynxw20140219173536/113028.jhtml" title="我院组织全体师生认真收看党的十九大开幕盛况">我院组织全体师生认真收看党的十九大开幕盛况</a></li>   
+          </ul> 
+         </div> 
+         <!-- 学院新闻栏目显示end --> </td> 
+       </tr> 
+       <tr> 
+        <td nowrap=""> 
+         <!-- 晚间新闻栏目start --> 
+         <div class="notice"> 
+          <h4 class="c_h4"><span><a href="/jy20140606115333.jhtml">more</a></span>就业服务</h4> 
+          <ul class="list">
+              
+           <li><span>[2017-06-12]</span><a href="http://zxyjhxy.fjtcm.edu.cn:80/jy20140606115333/111099.jhtml" title="福建省莆田市湄洲岛管委会下属事业单位2017年6月招聘5名研究生的公告">福建省莆田市湄洲岛管委会下属事业单位20...</a></li>  
+           <li><span>[2017-06-12]</span><a href="http://zxyjhxy.fjtcm.edu.cn:80/jy20140606115333/111098.jhtml" title="福建蜂疗医院招聘信息">福建蜂疗医院招聘信息</a></li>  
+           <li><span>[2017-06-12]</span><a href="http://zxyjhxy.fjtcm.edu.cn:80/jy20140606115333/111097.jhtml" title="福建省南平市人民医院招聘信息">福建省南平市人民医院招聘信息</a></li>  
+           <li><span>[2017-06-12]</span><a href="http://zxyjhxy.fjtcm.edu.cn:80/jy20140606115333/111096.jhtml" title="厦门市第五医院2017年6月补充编内工作人员考试简章（2017年5月）">厦门市第五医院2017年6月补充编内工作人...</a></li>  
+           <li><span>[2017-06-12]</span><a href="http://zxyjhxy.fjtcm.edu.cn:80/jy20140606115333/111095.jhtml" title="福州市第六医院2017年6月招聘6名合同制工作人员">福州市第六医院2017年6月招聘6名合同制工...</a></li>  
+           <li><span>[2017-06-12]</span><a href="http://zxyjhxy.fjtcm.edu.cn:80/jy20140606115333/111090.jhtml" title="福建漳州市福康医院2017年公开招聘精神科医生方案">福建漳州市福康医院2017年公开招聘精神科...</a></li>   
+          </ul> 
+         </div> 
+         <!-- 晚间新闻栏目end --> </td> 
+        <td nowrap="" width="458"> 
+         <!-- 信息科学系新闻start --> 
+         <div class="notice" style="width:458px;"> 
+          <h4 class="title_1_gai"><span style="float:right;"><a href="/1389258826203.jhtml">more</a></span>学生活动</h4> 
+          <ul class="list">
+              
+           <li><span>[2017-10-27]</span><a href="http://zxyjhxy.fjtcm.edu.cn:80/1389258826203/113303.jhtml" title="我院举办“青年喜迎十九大，不忘初心跟党走”主题演讲比赛">我院举办“青年喜迎十九大，不忘初心跟党走”主题演...</a></li>  
+           <li><span>[2017-05-27]</span><a href="http://zxyjhxy.fjtcm.edu.cn:80/1389258826203/110820.jhtml" title="我院举办“我们的节日——端午传统文化节”活动">我院举办“我们的节日——端午传统文化节”活动</a></li>  
+           <li><span>[2017-05-15]</span><a href="http://zxyjhxy.fjtcm.edu.cn:80/1389258826203/110433.jhtml" title="我院在“杏林杯”篮球赛上蝉联冠军">我院在“杏林杯”篮球赛上蝉联冠军</a></li>  
+           <li><span>[2017-04-24]</span><a href="http://zxyjhxy.fjtcm.edu.cn:80/1389258826203/109919.jhtml" title="我学院举办“解脏腑肌理，剖医者仁心”解剖知识竞赛">我学院举办“解脏腑肌理，剖医者仁心”解剖知识竞赛</a></li>  
+           <li><span>[2017-04-24]</span><a href="http://zxyjhxy.fjtcm.edu.cn:80/1389258826203/109918.jhtml" title="我院开展“一学一做”·在路上医疗卫生服务活动">我院开展“一学一做”·在路上医疗卫生服务活动</a></li>  
+           <li><span>[2017-04-24]</span><a href="http://zxyjhxy.fjtcm.edu.cn:80/1389258826203/110440.jhtml" title="我院举办第七届太极拳比赛">我院举办第七届太极拳比赛</a></li>   
+          </ul> 
+         </div> 
+         <!-- 信息科学系新闻end --> </td> 
+        <td nowrap="" align="top"> 
+         <!-- 晚间新闻栏目显示start --> 
+         <div class="Guidelines" style="width:338px;"> 
+          <h4 class="title2"><span><a href="/ddqzlxzt20140528165934.jhtml">more</a></span>两学一做</h4> 
+          <div class="Guidelist" style="height:195px;"> 
+           <ul class="list">
+               
+            <li><span>[2017-05-27]</span><a href="http://zxyjhxy.fjtcm.edu.cn:80/ddqzlxzt20140528165934/110751.jhtml" title="我院党委学习《关于推进“两学一做”学习教育常态化制度化的意见》精神">我院党委学习《关于推进“两学一做”...</a></li>  
+            <li><span>[2017-04-07]</span><a href="http://zxyjhxy.fjtcm.edu.cn:80/ddqzlxzt20140528165934/109498.jhtml" title="我院开展纪检工作专题教育">我院开展纪检工作专题教育</a></li>  
+            <li><span>[2017-02-23]</span><a href="http://zxyjhxy.fjtcm.edu.cn:80/ddqzlxzt20140528165934/108297.jhtml" title="我院党委召开党委扩大会议">我院党委召开党委扩大会议</a></li>  
+            <li><span>[2017-02-23]</span><a href="http://zxyjhxy.fjtcm.edu.cn:80/ddqzlxzt20140528165934/108296.jhtml" title="我院召开2017年纪委第一次（扩大）会议">我院召开2017年纪委第一次（扩大）会议</a></li>  
+            <li><span>[2016-12-23]</span><a href="http://zxyjhxy.fjtcm.edu.cn:80/ddqzlxzt20140528165934/108295.jhtml" title="我院党委传达学习全国高校思想政治工作会议精神">我院党委传达学习全国高校思想政治工...</a></li>  
+            <li><span>[2016-12-16]</span><a href="http://zxyjhxy.fjtcm.edu.cn:80/ddqzlxzt20140528165934/108294.jhtml" title="我院举办“悠悠爱国情·党团在我心”活动">我院举办“悠悠爱国情·党团在我心”活动</a></li>   
+           </ul> 
+          </div> 
+         </div> 
+         <!-- 晚间新闻栏目显示end --> </td> 
+       </tr> 
+       <tr> 
+        <td nowrap=""> 
+         <!-- 新闻图片start --> 
+         <div class="noticecopy"> 
+          <h4 class="c_h4"><span></span>新闻图片</h4> 
+          <table width="96%" border="0" cellpadding="0" cellspacing="0" style="margin:0 auto;"> 
+           <tbody> 
+            <tr>
+                
+             <td align="center"> 
+              <div class="pic"> 
+               <a href="http://zxyjhxy.fjtcm.edu.cn:80/ynxw20140219173536/113028.jhtml"> <img src="/u/cms/zxyjhxy/201710/18084016pyc2.jpg" width="142" height="106" /> </a> 
+              </div><p> <a href="http://zxyjhxy.fjtcm.edu.cn:80/ynxw20140219173536/113028.jhtml" title="我院组织全体师生认真收看党的十九大开幕盛况"> 我院组织全体师生...</a></p></td>  
+             <td align="center"> 
+              <div class="pic"> 
+               <a href="http://zxyjhxy.fjtcm.edu.cn:80/ynxw20140219173536/109672.jhtml"> <img src="/u/cms/zxyjhxy/201705/171311209951.jpg" width="142" height="106" /> </a> 
+              </div><p> <a href="http://zxyjhxy.fjtcm.edu.cn:80/ynxw20140219173536/109672.jhtml" title="喜报：我院狄英杰在全国高校辅导员职业能力大赛第四赛区获一等奖"> 喜报：我院狄英杰...</a></p></td>   
+            </tr> 
+           </tbody> 
+          </table> 
+         </div> 
+         <!-- 新闻图片end --> </td> 
+        <td nowrap="" width="458"> 
+         <!--早间新闻栏目显示start --> 
+         <div class="noticecopy" style="width:458px;"> 
+          <h4 class="title_1_gai"><span style="float:right;"><a href="/gs20140904155902.jhtml">more</a></span>公示</h4> 
+          <ul class="list">
+              
+           <li><span>[2017-10-09]</span><a href="http://zxyjhxy.fjtcm.edu.cn:80/gs20140904155902/113098.jhtml" title="中西医结合学院关于2016-2017学年学生综合考评结果的公示">中西医结合学院关于2016-2017学年学生综合考评结果...</a></li>  
+           <li><span>[2017-10-09]</span><a href="http://zxyjhxy.fjtcm.edu.cn:80/gs20140904155902/113016.jhtml" title="中西医结合学院关于校级先进班集体、三好生、优秀学生干部推荐结果的公示">中西医结合学院关于校级先进班集体、三好生、优秀学...</a></li>  
+           <li><span>[2017-10-09]</span><a href="http://zxyjhxy.fjtcm.edu.cn:80/gs20140904155902/113006.jhtml" title="中西医结合学院关于2016-2017学年奖学金评选结果的公示">中西医结合学院关于2016-2017学年奖学金评选结果的公示</a></li>  
+           <li><span>[2017-09-18]</span><a href="http://zxyjhxy.fjtcm.edu.cn:80/gs20140904155902/112433.jhtml" title="关于中西医结合学院2018年推免研究生的公示">关于中西医结合学院2018年推免研究生的公示</a></li>  
+           <li><span>[2017-06-19]</span><a href="http://zxyjhxy.fjtcm.edu.cn:80/gs20140904155902/111318.jhtml" title="关于推荐2017届中西医结合学院优秀毕业生的公示">关于推荐2017届中西医结合学院优秀毕业生的公示</a></li>  
+           <li><span>[2017-06-19]</span><a href="http://zxyjhxy.fjtcm.edu.cn:80/gs20140904155902/111317.jhtml" title="关于推荐2016-2017年中西医结合学院三好学生、优秀学生干部的公示">关于推荐2016-2017年中西医结合学院三好学生、优秀...</a></li>   
+          </ul> 
+         </div> 
+         <!-- 早间新闻栏目显示end --> </td> 
+        <td nowrap="" width="242"> 
+         <!-- 友情链接start --> 			<div class="Guidelines">
+				<h4 class="title2" style="width:338px;">
+友情链接
+</h4>
+				<div class="links" style="width:336px;">
+					<table width="100%" border="0" cellspacing="0" cellpadding="0" class="news_links">
+<tr>
+<td><a href="http://210.34.66.109/" target='_blank' title="福建中医药大学图书馆"> 福建中医药大学图书馆</a></td>
+
+<td><a href="http://yjsbnew.fjtcm.edu.cn/" target='_blank' title="福建中医药大学研究生院"> 福建中医药大学研究...</a></td>
+</tr>
+<td><a href="http://rscnew.fjtcm.edu.cn/" target='_blank' title="福建中医药大学人事处"> 福建中医药大学人事处</a></td>
+
+<td><a href="http://kycnew.fjtcm.edu.cn/" target='_blank' title="福建中医药大学科研处"> 福建中医药大学科研处</a></td>
+</tr>
+<td><a href="http://jwc.fjtcm.edu.cn/" target='_blank' title="福建中医药大学教务处"> 福建中医药大学教务处</a></td>
+
+</tr>
+
+
+</table>				</div>
+			</div> 
+         <!-- 友情链接end --> </td> 
+       </tr> 
+      </tbody> 
+     </table> 
+    </div> 
+    <!-- 新闻图片end --> 
+   </div> 
+   <!-- 左边end  --> 
+   <!--  底部 start--> 
+   <div class="footer1">
+       
+    <p><span class="paddingright">地址：福建省福州市闽侯上街邱阳路1号</span>邮政编码：350122</p> 
+    <p><span class="paddingright">版权所有(C)福建中医药大学</span>闽ICP备05005462</p>   
+   </div> 
+   <!--  底部 end--> 
+  </div> 
+  <!-- main end --> 
+  <!--飘窗开始--> 
+  <script language="javascript">
+(function($){
+	$.fn.adFloat=function(options){
+		return new AdFloat(this,options);
+	}
+	var AdFloat=function(element,options){
+		this.element=$(element);
+		this.options=$.extend({
+			width:139,		//默认的广告的宽
+			height:139,		//默认的广告的高
+			top:0,			//默认的广告的Y坐标
+			left:0,			//默认的广告的X坐标
+			delay:30,		//延迟
+			step:1			//默认的广告每次移动的距离(像素)
+		},options);
+		this.interval=null;
+		this.xPos=this.options.left;
+		this.yPos=this.options.top;
+		this.yon=0;
+		this.xon=0;
+		this.isPause=false;
+		this.init();
+	};
+	AdFloat.prototype={
+		init:function(){
+			var me=this;
+			me.element.css("display","block");
+			me.element.css({position:"absolute",left:me.options.left,top:me.options.top,width:me.options.width,height:me.options.height,overflow:"hidden"})	
+			me.element.hover(function(){clearInterval(me.interval)},function(){me.interval=setInterval(function(){me.changePos();},me.options.delay);});
+			$(document).ready(function(){me.start();});
+		},
+		changePos:function(){
+			var me=this;
+			var clientWidth=$(window).width();
+			var clientHeight=$(window).height();
+			var Hoffset=me.options.height;
+			var Woffset=me.options.width;	
+			me.element.css({left:me.xPos+$(document).scrollLeft(),top:me.yPos+$(document).scrollTop()});
+			if(me.yon){
+				me.yPos=me.yPos+me.options.step;	
+			}else{
+				me.yPos=me.yPos-me.options.step;	
+			}
+			if(me.yPos<0){me.yon=1;me.yPos=0;}
+			if(me.yPos>=(clientHeight-Hoffset)){me.yon=0;me.yPos=(clientHeight-Hoffset);}
+			if(me.xon){
+				me.xPos=me.xPos+me.options.step;	
+			}else{
+				me.xPos=me.xPos-me.options.step;	
+			}
+			if(me.xPos<0){me.xon=1;me.xPos=0;}
+			if(me.xPos>=(clientWidth-Woffset)){me.xon=0;me.xPos=(clientWidth-Woffset);}
+		},
+		start:function(){
+			var me=this;
+			me.element.css("top",me.yPos);
+			me.interval=setInterval(function(){me.changePos();},me.options.delay);	
+		}	
+	}	
+})(jQuery);
+</script>    
+  <script language="javascript">
+$(function(){
+	$("#GuangGao").adFloat({width:139,height:139,top:0,left:0})	
+});
+function closewindow(){
+ var name=document.getElementById("GuangGao");
+  name.style.display='none';
+}
+</script> 
+  <!--飘窗结束-->   
+ </body>
+</html>

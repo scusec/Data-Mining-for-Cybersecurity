@@ -1,0 +1,402 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head> 
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+  <title>学生工作处</title> 
+  <link rel="stylesheet" type="text/css" href="/r/cms/xsc/djdz/css/dj/main.css" /> 
+  <script type="text/javascript" src="/r/cms/xsc/djdz/js/jquery.min.js"></script> 
+ 
+  <script type="text/javascript" src="/r/cms/xsc/djdz/js/jquery.KinSlideshow-1.1.js"></script> 
+  <script type="text/javascript" src="/r/cms/xsc/djdz/js/jquery-1.4a2.min.js"></script> 
+
+
+  <script type="text/javascript" src="http://www.itxueyuan.org/uploads/javascript/jquery.js"></script> 
+<script type="text/javascript">
+$(document).ready(function() {
+	$(".imageRotation").each(function(){
+		// 获取有关参数
+		var imageRotation = this,  // 取得 图片轮换容器
+			imageBox = $(imageRotation).children(".imageBox")[0],  // 取得 图片容器
+			icoBox = $(imageRotation).children(".icoBox")[0],  // 取得 图标容器
+			icoArr = $(icoBox).children(),  // 取得所有图标，并保存为数组
+			imageWidth = $(imageRotation).width(),  // 图片宽度
+			imageNum = $(imageBox).children().size(),  // 图片数量
+			imageReelWidth = imageWidth*imageNum,  // 图片容器宽度
+			activeID = parseInt($($(icoBox).children(".active")[0]).attr("rel")),  // 当前图片ID
+			nextID = 0,  // 下张图片ID
+			setIntervalID,  // setInterval() 函数ID
+			intervalTime = 4000,  // 间隔时间
+			speed =500;  // 执行速度
+		
+		// 设置 图片容器 的宽度
+		$(imageBox).css({'width' : imageReelWidth + "px"});
+		
+		// 图片轮换函数
+		var rotate=function(clickID){
+			if(clickID){ nextID = clickID; }
+			else{ nextID=activeID<=3 ? activeID+1 : 1; }
+			
+			$(icoArr[activeID-1]).removeClass("active");
+			$(icoArr[nextID-1]).addClass("active");
+			$(imageBox).animate({left:"-"+(nextID-1)*imageWidth+"px"} , speed);
+			
+			activeID = nextID;
+		}
+		setIntervalID=setInterval(rotate,intervalTime);
+		
+		$(imageBox).hover(
+			function(){ clearInterval(setIntervalID); },
+			function(){ setIntervalID=setInterval(rotate,intervalTime); }
+		);	
+		
+		$(icoArr).click(function(){
+			clearInterval(setIntervalID);
+			var clickID = parseInt($(this).attr("rel"));
+			rotate(clickID);
+			setIntervalID=setInterval(rotate,intervalTime);
+		});
+	});
+});
+</script> 
+  <style type="text/css">
+  ul {
+    list-style-image:url(list-style.gif);
+  }
+  pre {
+    font-family: "Lucida Console", "Courier New", Verdana;
+    border: 1px solid #CCC;
+    background: #f2f2f2;
+    padding: 10px;
+  }
+  code {
+    font-family: "Lucida Console", "Courier New", Verdana;
+    margin: 0;
+    padding: 0;
+  }
+
+  #gallery {
+    padding: 4px;
+	border:1px solid #cccccc;
+  }
+ 
+
+.imageRotation{
+	height:283px;
+	width:340px;
+	overflow:hidden;  /*--超出容器的所有元素都不可见--*/
+	position:relative;  /*--相对定位--*/
+	border:1px solid #eee;
+	background-color:#eee;
+	bodrer-radius:5px;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	}
+
+.imageBox{
+	position:absolute;  /*--固定定位--*/
+	height:255px;
+	top:0px;
+	left:0px;
+	overflow:hidden;
+	}
+.imageBox img {
+	display:block;
+	float:left;
+	border:none;
+        width:340px;
+        heigth:255px;
+	}
+
+.icoBox{
+	position:absolute;  /*--固定定位--*/
+	bottom:4px;
+	left:247px;
+	width:76px;
+	height:12px;
+	text-align:center;
+	line-height:40px;
+	}
+.icoBox span{
+	display:block;
+	float:left;
+	height:12px;
+	width:12px;
+	margin-left:3px;
+	overflow:hidden;
+	background:url("/r/cms/xsc/djdz/img/images/ico.png") 0px 0px no-repeat;
+	cursor:pointer;
+	}
+.icoBox span.active {
+	background-position:0px -12px;
+	cursor:default;
+	}
+  </style> </head> 
+ <body> 
+  <div class="wrap">
+<script language="JavaScript">
+function correctPNG() // correctly handle PNG transparency in Win IE 5.5 & 6.
+{
+var arVersion = navigator.appVersion.split("MSIE")
+var version = parseFloat(arVersion[1])
+if ((version >= 5.5) && (document.body.filters)){
+for(var j=0; j<document.images.length; j++){
+var images = document.images[j]
+var imagesName = images.src.toUpperCase()
+if (imagesName.substring(imagesName.length-3, imagesName.length) == "PNG"){
+var imagesID = (images.id) ? "id='" + images.id + "' " : ""
+var imagesClass = (images.className) ? "class='" + images.className + "' " : ""
+var imagesTitle = (images.title) ? "title='" + images.title + "' " : "title='" + images.alt + "' "
+var imagesStyle = "display:inline-block;" + images.style.cssText
+var strNewHTML = "<span " + imagesID + imagesClass + imagesTitle+ " style=\"" + "width:" + images.width + "px; height:" + images.height + "px;" + imagesStyle + ";"
++ "filter:progid:DXImageTransform.Microsoft.AlphaImageLoader"+ "(src=\'" + images.src + "\', sizingMethod='scale');\"></span>"
+images.outerHTML = strNewHTML
+j = j-1
+}
+}
+}
+}
+window.attachEvent("onload", correctPNG);
+</script>
+<script src="/r/cms/jquery.js" type="text/javascript"></script>
+<script src="/r/cms/front.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(function() {
+  Cms.siteFlow("",location.href, document.referrer);
+});
+</script>	
+<div class="whole_bg">
+<div class="top_bg"><img src="/dbfile.svl?n=/u/cms/xsc/201402/24172955rfxa.jpg" width='1147' height='195' border="0"/></div>
+
+<!-- header start -->
+<div class="header"> 
+<img src="/dbfile.svl?n=/u/cms/xsc/201403/11232045mp7z.png" border="0" height="88"/>
+ </div>
+</div>
+<!-- header end -->
+<!--  nav start  -->
+<div class="nav">
+<table width="1147" height="15" border="0" cellpadding="0" cellspacing="0" style="margin:0 auto;">
+<tr>                                                                                                   
+<td align="center"><img src="/r/cms/xsc/djdz/img/images/n_bottom.gif" width="1147"  ></td>			
+</tr>
+</table>
+	  <table width="1147" height="39" border="0" cellpadding="0" cellspacing="0">
+		<tr>                                                                                                   
+<td align="center" nowrap="nowrap"><a href="/">首页</a></td>
+
+     <td align="center" nowrap="nowrap" ><a href="http://xscnew.fjtcm.edu.cn:80/bmjj20140220234421.jhtml" >部门简介</a></td>
+
+
+     <td align="center" nowrap="nowrap" ><a href="http://www.fjtcm.edu.cn" >学校主页</a></td>
+
+
+     <td align="center" nowrap="nowrap" ><a href="http://xscnew.fjtcm.edu.cn:80/sxjy20140217171427/index.jhtml" >思政教育</a></td>
+
+
+     <td align="center" nowrap="nowrap" ><a href="http://zsb.fjtcm.edu.cn/" >招生在线</a></td>
+
+
+     <td align="center" nowrap="nowrap" ><a href="http://xscnew.fjtcm.edu.cn:80/xsgl20140217191524/index.jhtml" >学生管理</a></td>
+
+
+     <td align="center" nowrap="nowrap" ><a href="http://xscnew.fjtcm.edu.cn:80/zzzx20140217171554/index.jhtml" >资助管理</a></td>
+
+
+     <td align="center" nowrap="nowrap" ><a href="http://210.34.64.59/" >心理健康</a></td>
+
+
+     <td align="center" nowrap="nowrap" ><a href="http://jyzd.fjtcm.edu.cn/" >就业创业</a></td>
+
+
+     <td align="center" nowrap="nowrap" ><a href="http://xscnew.fjtcm.edu.cn:80/jkjy20151112145223/index.jhtml" >健康教育</a></td>
+
+
+     <td align="center" nowrap="nowrap" ><a href="http://xscnew.fjtcm.edu.cn:80/wjhb20140217171717/index.jhtml" >文件汇编</a></td>
+
+
+     <td align="center" nowrap="nowrap" ><a href="http://xscnew.fjtcm.edu.cn:80/xzzq20140217173157/index.jhtml" >下载专区</a></td>
+
+
+     <td align="center" nowrap="nowrap" ><a href="http://dacx.fjtcm.edu.cn/" >档案查询</a></td>
+
+		</tr>
+	  </table>
+	</div>
+<!-- nav end -->   <!-- main start --> 
+   <div class="main"> 
+    <div class="center"> 
+     <table> 
+      <tbody> 
+       <tr> 
+        <td nowrap=""> 
+         <div id="container"> 
+          <div class="imageRotation"> 
+           <div class="imageBox">
+               
+            <a href="http://xscnew.fjtcm.edu.cn:80/gzdt20140217171236/113295.jhtml"><img src="/u/cms/xsc/201710/27082454ftzo.jpg" class="image0" width="340" height="255" /></a>  
+            <a href="http://xscnew.fjtcm.edu.cn:80/gzdt20140217171236/113050.jhtml"><img src="/u/cms/xsc/201710/190356008xwo.jpg" class="image0" width="340" height="255" /></a>  
+            <a href="http://xscnew.fjtcm.edu.cn:80/gzdt20140217171236/111863.jhtml"><img src="/u/cms/xsc/201707/24084220xa2d.jpg" class="image0" width="340" height="255" /></a>  
+            <a href="http://xscnew.fjtcm.edu.cn:80/gzdt20140217171236/111760.jhtml"><img src="/u/cms/xsc/201707/07070218r3fr.png" class="image0" width="340" height="255" /></a>   
+           </div> 
+           <div class="icoBox"> 
+            <span class="active" rel="1">1</span> 
+            <span rel="2">2</span> 
+            <span rel="3">3</span> 
+            <span rel="4">4</span> 
+           </div> 
+         </div> 
+         </div></td> 
+        <td nowrap="" colspan="2" width="800" valign="top"> 
+         <!-- 工作动态start  --> 
+         <div class="news"> 
+          <h4 class="title"><span style="display:block;padding-bottom:3px;"><a href="/gzdt20140217171236.jhtml">更多&gt;&gt;</a></span>工作动态</h4> 
+          <div class="news"> 
+           <ul class="list">
+               
+            <li><span>[2017-10-27]</span><a href="http://xscnew.fjtcm.edu.cn:80/gzdt20140217171236/113295.jhtml"  title="喜迎十九大，弘扬延安精神，践行育人为本----我校举行辅导员职业能力系列赛开赛仪式暨主题演讲比赛" > 喜迎十九大，弘扬延安精神，践行育人为本----我校举行辅导员职业能力系列赛开赛仪式暨主题演讲比赛</a></li>  
+            <li><span>[2017-10-27]</span><a href="http://xscnew.fjtcm.edu.cn:80/gzdt20140217171236/113283.jhtml"  title="校党委陈立典书记主持召开辅导员座谈会" > 校党委陈立典书记主持召开辅导员座谈会</a></li>  
+            <li><span>[2017-10-20]</span><a href="http://www.fjtcm.edu.cn/html/SCHOOLNEWS/20171020/3000059.html"  title="李灿东校长到学生工作部（处）调研" > 李灿东校长到学生工作部（处）调研</a></li>  
+            <li><span>[2017-10-19]</span><a href="http://xscnew.fjtcm.edu.cn:80/gzdt20140217171236/113050.jhtml"  title="福建中医药大学组织在校学生观看党的十九大开幕会直播" > 福建中医药大学组织在校学生观看党的十九大开幕会直播</a></li>  
+            <li><span>[2017-09-23]</span><a href="http://xscnew.fjtcm.edu.cn:80/gzdt20140217171236/112611.jhtml"  title="学校为全体新生开设艾滋病防控专题健康教育讲座" > 学校为全体新生开设艾滋病防控专题健康教育讲座</a></li>  
+            <li><span>[2017-09-21]</span><a href="http://xscnew.fjtcm.edu.cn:80/gzdt20140217171236/112534.jhtml"  title="教育厅第一巡查组到我校开展学生资助工作巡查" > 教育厅第一巡查组到我校开展学生资助工作巡查</a></li>  
+            <li><span>[2017-09-14]</span><a href="http://xscnew.fjtcm.edu.cn:80/gzdt20140217171236/112306.jhtml"  title="林羽副书记看望绿色通道入学新生" > 林羽副书记看望绿色通道入学新生</a></li>   
+           </ul> 
+          </div> 
+         </div> 
+         <!-- 工作动态end --> </td> 
+       </tr> 
+       <tr> 
+        <td nowrap=""> 
+         <!-- 资助管理start --> 
+         <div class="notice"> 
+          <h4 class="c_h4"></h4> 
+          <ul>
+           <table border="0" width="100%" style="padding-top:2px;">
+            <tr height="63">
+            <td align="center"><a href="http://zsb.fjtcm.edu.cn"  target="_blank" ><img src="r/cms/xsc/djdz/img/images/1.png"/></a></td>
+            </tr>
+        <tr height="60">
+            <td align="center"><a href="http://jyzd.fjtcm.edu.cn/"  target="_blank"><img src="r/cms/xsc/djdz/img/images/2.png"/></a> </td>
+
+        </tr>
+<tr height="60">
+            <td align="center"><a href="http://210.34.64.59"  target="_blank"><img src="r/cms/xsc/djdz/img/images/3.png"/></a></td>
+
+        </tr>
+
+           </table>
+</ul>
+  
+         </div> 
+         <!-- 资助管理end --> </td> 
+        <td nowrap="" width="458"> 
+         <!-- 思政教育start --> 
+         <div class="notice" style="width:458px;"> 
+          <h4 class="title_1_gai"><span style="float:right;"><a href="/sxjy20140217171427.jhtml">更多&gt;&gt;</a></span>思政教育</h4> 
+          <ul class="list">
+              
+           <li><span>[2017-10-23]</span><a href="http://xscnew.fjtcm.edu.cn:80/sxjy20140217171427/113134.jhtml"  title="福建中医药大学师生急救知识培训方案" >福建中医药大学师生急救知识培训方案</a></li>  
+           <li><span>[2017-10-18]</span><a href="http://xscnew.fjtcm.edu.cn:80/sxjy20140217171427/113027.jhtml"  title="关于2017-2018学年校学生服务中心学生服务团队名单的公示" >关于2017-2018学年校学生服务中心学生服务团队名单...</a></li>  
+           <li><span>[2017-09-27]</span><a href="http://xscnew.fjtcm.edu.cn:80/sxjy20140217171427/112612.jhtml"  title="关于组织开展2017年防范邪教宣传月活动的通知" >关于组织开展2017年防范邪教宣传月活动的通知</a></li>  
+           <li><span>[2017-09-25]</span><a href="http://xscnew.fjtcm.edu.cn:80/sxjy20140217171427/112588.jhtml"  title="关于做好2016-2017学年度本科生校先进班集体、三好学生和优秀学生干部评选工作的通知" >关于做好2016-2017学年度本科生校先进班集体、三好...</a></li>  
+           <li><span>[2017-09-11]</span><a href="http://xscnew.fjtcm.edu.cn:80/sxjy20140217171427/112197.jhtml"  title="关于做好2017-2018学年第一学期大学生思想政治主题教育活动的通知" >关于做好2017-2018学年第一学期大学生思想政治主题...</a></li>  
+           <li><span>[2017-09-11]</span><a href="http://xscnew.fjtcm.edu.cn:80/sxjy20140217171427/112165.jhtml"  title="关于推荐2016--2017年度全国高等中医药院校优秀辅导员、优秀学生工作者候选人的公示" >关于推荐2016--2017年度全国高等中医药院校优秀辅导...</a></li>   
+          </ul> 
+         </div> 
+         <!-- 思政教育end --> </td> 
+        <td nowrap="" align="top"> 
+         <!-- 学生管理start --> 
+         <div class="Guidelines" style="width:338px;"> 
+          <h4 class="title2"><span><a href="/xsgl20140217191524.jhtml">更多&gt;&gt;</a></span>学生管理</h4> 
+          <div class="Guidelist" style="height:195px;"> 
+           <ul class="list">
+               
+            <li><span>[2017-04-27]</span><a href="http://xscnew.fjtcm.edu.cn:80/xsgl20140217191524/110022.jhtml"  title="福建中医药大学2017年4月学生证挂失声明" >福建中医药大学2017年4月学生证挂失声明</a></li>  
+            <li><span>[2017-04-05]</span><a href="http://xscnew.fjtcm.edu.cn:80/xsgl20140217191524/109353.jhtml"  title="福建中医药大学2017年3月学生证挂失声明" >福建中医药大学2017年3月学生证挂失声明</a></li>  
+            <li><span>[2016-12-28]</span><a href="http://xscnew.fjtcm.edu.cn:80/xsgl20140217191524/107369.jhtml"  title="福建中医药大学12月学生证挂失声明" >福建中医药大学12月学生证挂失声明</a></li>  
+            <li><span>[2016-12-28]</span><a href="http://xscnew.fjtcm.edu.cn:80/xsgl20140217191524/107368.jhtml"  title="福建中医药大学11月学生证挂失声明" >福建中医药大学11月学生证挂失声明</a></li>  
+            <li><span>[2016-10-25]</span><a href="http://xscnew.fjtcm.edu.cn:80/xsgl20140217191524/105075.jhtml"  title="福建中医药大学2016年10月学生证挂失声明" >福建中医药大学2016年10月学生证挂失...</a></li>  
+            <li><span>[2016-09-28]</span><a href="http://xscnew.fjtcm.edu.cn:80/xsgl20140217191524/104397.jhtml"  title="福建中医药大学9月学生证挂失声明" >福建中医药大学9月学生证挂失声明</a></li>   
+           </ul> 
+          </div> 
+         </div> 
+         <!-- 学生管理end --> </td> 
+       </tr> 
+       <tr> 
+        <td nowrap=""> 
+         <!-- 资助管理start --> 
+         <div class="noticecopy"> 
+          <h4 class="c_h4"><span><a href="/zzzx20140217171554.jhtml">更多&gt;&gt;</a></span>资助管理</h4> 
+
+          <ul class="list">
+              
+           <li><span>[2017-09-23]</span><a href="http://xscnew.fjtcm.edu.cn:80/zzzx20140217171554/112610.jhtml"  title="我校开展“金融知识校园行”活动" >我校开展“金融知识校园行”活动</a></li>  
+           <li><span>[2017-09-20]</span><a href="http://xscnew.fjtcm.edu.cn:80/zzzx20140217171554/112531.jhtml"  title="教育厅第一巡查组到我校开展学生资助工作巡查" >教育厅第一巡查组到我校开展学生资助工作...</a></li>  
+           <li><span>[2017-09-11]</span><a href="http://xscnew.fjtcm.edu.cn:80/zzzx20140217171554/112296.jhtml"  title="林羽副书记看望绿色通道入学新生" >林羽副书记看望绿色通道入学新生</a></li>  
+           <li><span>[2017-06-21]</span><a href="http://xscnew.fjtcm.edu.cn:80/zzzx20140217171554/111352.jhtml"  title="学校举行2017年年群豪奖学金颁奖仪式" >学校举行2017年年群豪奖学金颁奖仪式</a></li>  
+           <li><span>[2017-05-21]</span><a href="http://xscnew.fjtcm.edu.cn:80/zzzx20140217171554/110579.jhtml"  title="省政协副主席薛卫民为我校学生资助管理中心授牌" >省政协副主席薛卫民为我校学生资助管理中...</a></li>  
+           <li><span>[2017-04-10]</span><a href="http://xscnew.fjtcm.edu.cn:80/zzzx20140217171554/109549.jhtml"  title="我校接受福建省学生资助管理中心标准化建设评估验收" >我校接受福建省学生资助管理中心标准化建...</a></li>   
+          </ul> 
+
+         </div> 
+         <!-- 资助管理end --> </td> 
+        <td nowrap="" width="458"> 
+         <!--文件汇编start --> 
+         <div class="noticecopy" style="width:458px;"> 
+          <h4 class="title_1_gai"><span style="float:right;"><a href="/wjhb20140217171717.jhtml">更多&gt;&gt;</a></span>文件汇编</h4> 
+          <ul class="list">
+              
+           <li><span>[2017-09-27]</span><a href="http://xscnew.fjtcm.edu.cn:80/wjhb20140217171717/112614.jhtml"  title="福建中医药大学学生违纪处分管理规定（修订稿）" >福建中医药大学学生违纪处分管理规定（修订稿）</a></li>  
+           <li><span>[2017-09-27]</span><a href="http://xscnew.fjtcm.edu.cn:80/wjhb20140217171717/112613.jhtml"  title="福建中医药大学本科生学年综合考评办法" >福建中医药大学本科生学年综合考评办法</a></li>  
+           <li><span>[2017-09-01]</span><a href="http://xscnew.fjtcm.edu.cn:80/wjhb20140217171717/112304.jhtml"  title="福建中医药大学学生参加竞赛及科技创新活动奖励办法（试行）" >福建中医药大学学生参加竞赛及科技创新活动奖励办法...</a></li>  
+           <li><span>[2017-05-15]</span><a href="http://xscnew.fjtcm.edu.cn:80/wjhb20140217171717/112307.jhtml"  title="福建中医药大学学生海外学习交流经费资助管理办法（试行）" >福建中医药大学学生海外学习交流经费资助管理办法（...</a></li>  
+           <li><span>[2016-11-30]</span><a href="http://xscnew.fjtcm.edu.cn:80/wjhb20140217171717/106210.jhtml"  title="大学生住院医疗费用补助审批表(3000元以下）" >大学生住院医疗费用补助审批表(3000元以下）</a></li>  
+           <li><span>[2016-11-30]</span><a href="http://xscnew.fjtcm.edu.cn:80/wjhb20140217171717/106212.jhtml"  title="大学生住院医疗费用补助审批表(3000元以上）" >大学生住院医疗费用补助审批表(3000元以上）</a></li>   
+          </ul> 
+         </div> 
+         <!-- 文件汇编end --> </td> 
+        <td nowrap="" width="242"> 
+         <!-- 下载中心start --> 
+           <div class="noticecopy" style="width:337px;"> 
+          <h4 class="title2"><span style="float:right;"><a href="/xzzq20140217173157.jhtml">更多&gt;&gt;</a></span>下载专区</h4> 
+          <ul class="list">
+              <li><span>[2017-10-07]</span><a href="http://xscnew.fjtcm.edu.cn:80/xzzq20140217173157/112760.jhtml" title="福建中医药大学学生服务中心学生服务团队竞聘报名表" >福建中医药大学学生服务中心学生服务...</a></li>
+              <li><span>[2017-06-14]</span><a href="http://xscnew.fjtcm.edu.cn:80/xzzq20140217173157/111153.jhtml" title="福建中医药大学学生暑假勤工助学申请表（2017年-学生填报）" >福建中医药大学学生暑假勤工助学申请...</a></li>
+              <li><span>[2017-06-14]</span><a href="http://xscnew.fjtcm.edu.cn:80/xzzq20140217173157/111152.jhtml" title="福建中医药大学2017年暑假勤工助学聘任情况汇总表(2017年-用人单位填报)" >福建中医药大学2017年暑假勤工助学聘...</a></li>
+              <li><span>[2016-06-20]</span><a href="http://xscnew.fjtcm.edu.cn:80/xzzq20140217173157/102604.jhtml" title="福建中医药大学学生暑假勤工助学申请表（2016年-学生填报）" >福建中医药大学学生暑假勤工助学申请...</a></li>
+              <li><span>[2016-06-20]</span><a href="http://xscnew.fjtcm.edu.cn:80/xzzq20140217173157/102603.jhtml" title="福建中医药大学2016年暑假勤工助学岗位聘任情况汇总表(用人单位报)" >福建中医药大学2016年暑假勤工助学岗...</a></li>
+              <li><span>[2016-06-07]</span><a href="http://xscnew.fjtcm.edu.cn:80/xzzq20140217173157/102274.jhtml" title="学生办理因私出入境材料流程图及表格" >学生办理因私出入境材料流程图及表格</a></li>
+          </ul> 
+         </div> 
+
+         <!-- 下载中心end --> </td> 
+       </tr> 
+      </tbody> 
+     </table> 
+     <!-- 左边start --> 
+     <div class="left"> 
+     </div> 
+    </div> 
+    <!-- 新闻图片end --> 
+   </div> 
+   <!-- 左边end  --> 
+   <!-- 中间start --> 
+   <div class="middle"> 
+   </div> 
+   <!-- 中间end  --> 
+   <!--  右边start --> 
+   <div class="right"> 
+   </div> 
+   <!-- 右边end --> 
+   <!--  底部 start--> 
+		<div class="footer1" style="text-align:center;margin-top:20px; font-size:12px; line-height:18px; clear:both;">
+     <p style="text-align: center;">地址：福建省福州市闽侯上街邱阳路1号 邮政编码：350122</p>
+<p style="text-align: center;">版权所有(C) 福建中医药大学 闽ICP备05005462</p>
+			
+		
+		</div>
+   <!--  底部 end--> 
+  </div> 
+  <!-- main end -->   
+ </body>
+</html>

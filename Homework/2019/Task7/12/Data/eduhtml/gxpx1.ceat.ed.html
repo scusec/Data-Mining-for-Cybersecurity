@@ -1,0 +1,820 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>高等教育管理干部培训平台</title>
+<link href="http://gxpx1.ceat.edu.cn/public/theme/styles/style.css" rel="stylesheet" type="text/css" />
+<script src="http://gxpx1.ceat.edu.cn/public/common/scripts/Validator/jquery_last.js" type="text/javascript"></script>
+<script type="text/javascript" src="http://gxpx1.ceat.edu.cn/public/theme/scripts/common.js"></script>
+<script src="http://gxpx1.ceat.edu.cn/public/theme/scripts/msgstyle.js" type="text/javascript"></script>
+<script src="http://gxpx1.ceat.edu.cn/public/theme/scripts/msg.js" type="text/javascript"></script>
+<style type="text/css">
+a.lv14:link {
+	font-size: 14px;
+	color: #92171A;
+	text-decoration: none;
+}
+a.lv14:visited {
+	font-size: 14px;
+	color: #92171A;
+	text-decoration: none;
+}
+a.lv14:hover {
+	font-size: 14px;
+	color: #92171A;
+	text-decoration: underline;
+	cursor: pointer
+}
+.div_21{
+	height:20px;
+	padding-left:18px;
+	text-align:left;
+	font-size:12px;
+}
+#pxzt_r p{
+	padding:0px;
+	margin:0px;
+	line-height:16px;
+	text-indent:0px;
+}
+#rbbox{position:absolute;right:0;bottom:0;width:320px;height:0px;overflow:hidden} 
+.buttontz{display:inline;float:right;font-size:12px;cursor:pointer}
+</style>
+<script type="text/javascript">
+function display(obj){
+	var sp1=obj.parentNode.getElementsByTagName("span")[0];
+	if(sp1.style.display=="" || sp1.style.display=="none" )
+		 sp1.style.display = "block";
+	else
+		 sp1.style.display = "none";
+}
+function mm_login(){
+	var username=document.getElementById("username");
+	var password=document.getElementById("password");
+	if(username.value=="" || username.value.length<5 || password.value=="" || password.value.length<5){
+		alert("帐号和密码不能为空并不能小于5位字符！");
+		return false;
+	}
+	return true;
+}
+function displaymav(mavid){
+	var sp1=document.getElementById(mavid);
+	if(sp1.style.display=="" || sp1.style.display=="none" )
+		 sp1.style.display = "block";
+	else
+		 sp1.style.display = "none";
+}
+function v(){
+	if ($("#username").val()=="用户编号/手机号"){
+		$("#username").val('');
+	}
+}
+function g(){
+	if ($("#username").val()==""){
+		$("#username").val('用户编号/手机号');
+	}
+}
+</script>
+</head>
+<body>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<div class="box_center">
+<div class="box_center1"><img src="http://gxpx1.ceat.edu.cn/public/theme/images/banner2.jpg" width="916" height="95" /></div>
+</div>
+
+<div class="box_center">
+<div class="box_center1" id="dh_gx">
+  <div style="float: left; margin-left:20px;"><a href="/index.php/" class="bai14">平台首页</a>　|　<a href="/index.php//news/list/tid/3" class="bai14">平台公告</a>　|　<a href="/index.php//news/list/tid/2" class="bai14">培训动态</a>　|　<a href="/index.php//feature/index" class="bai14">培训专题</a>　|　<a href="/index.php//kczy/kczymore" class="bai14">课程资源</a>　|　<a href="/index.php//news/paper/" class="bai14">论文集萃</a>　|　 <a href="http://bbs.enaea.edu.cn/" class="bai14" target="_blank">论　坛</a></div><div style="float: right; margin-right:20px;"><a href="http://www.ceat.edu.cn" class="bai14" style="color:#F6FF01" target="_blank">∷网站首页∷</a>
+  
+</div>
+</div>
+<form name="frmsearch" action="/index.php//search/list" method="get" style="margin:0px;padding:0px;">
+<div class="box_center">
+  <div class="box_center1" style="background-color:#ECECEC;text-align:left;padding-top:4px;height:32px;">
+  <a href="/index.php//nav/index" class="hui14" target="_blank"><div class="menu_pxjs">平台介绍</div></a>
+  <a href="/index.php//nav/operate" class="hui14" target="_blank"><div class="menu_pxjs">操作指南</div></a>
+  <a href="/index.php//nav/forward" class="hui14"><div class="menu_pxjs">在线学习</div></a>
+  <div style="width:200px;float:left;color: #B71D25;font-size: 14px;font-weight: bold;line-height: 26px;text-align:left;padding-left:20px;"> 学员服务：400-811-9908</div>
+  <!--<a href="#html" class="hui14"><div class="menu_pxjs">在线调查</div></a>-->
+ <!-- <a href="http://www.xiaozhangshuwu.com/" class="hui14" target="_blank"><div class="menu_pxjs">培训用书</div></a>-->
+ <!--<a href="#" class="hui14"><div class="menu_pxjs">管理入口</div></a>--></div>
+</div>
+<div class="box_center" style="padding-top: 0px;">
+  <div class="box_center1" style="background-color:#ECECEC;padding-bottom:4px;">
+  <div id="pxjs_gx">
+
+<!--<div style="float:left"> 培训用书：010-69228543</div>-->
+<div style="float:center;color:#FF5400">站内搜索
+  <select name="sel_1" class="sousuo"  style="width:120px;">
+     <option value="0">请选择条件</option>
+	  		<option value="1">标题</option>
+	  		<option value="2">关键字</option>
+	  		<option value="3">主讲人</option>
+			<option value="3">作者</option>
+	  		<option value="4">内容</option>
+    </select>
+	<select name="sel_2" class="sousuo" style="width:240px;">
+      <option value="0">请选择 类别</option>
+	  <script type="text/javascript" src="http://gxpx1.ceat.edu.cn/public/theme/scripts/programclass.js"  style="width:230px;"></script>
+    </select>
+	<input name="txt_1" class="sousuo" onfocus="this.select()" onBlur="if (value ==''){value='请输入关键字！'}" onclick="if(this.value=='请输入关键字！')this.value=''"
+      onmouseover="this.focus()" value="请输入关键字！" size="18" maxLength="16"  style="width:370px;">
+	  <input type="submit" id="save" style="background-image:url(http://gxpx1.ceat.edu.cn/public/theme/images/pxjs_4.gif);border:0px;width:63px;height:20px;cursor:hand" value=" "/>
+	 </div>
+  </div>
+</div>
+</div></form>
+<script language="JavaScript">
+// function closefloaters(id)
+// {
+// var id=id;
+// id.style.visibility='hidden';}
+    // var delta=0.5
+    // var collection;
+    // function floaters() {
+        // this.items    = [];
+        // this.addItem    = function(id,x,y,content)
+                  // {
+                    // document.write('<DIV id='+id+' style="Z-INDEX: 10; POSITION: absolute;   left:'+(typeof(x)=='string'?eval(x):x)+';top:'+(typeof(y)=='string'?eval(y):y)+'"><a href="http://www.baidu.com" target="_blank">'+content+'</a><br><table><tr><TD style="CURSOR: hand" onclick="closefloaters('+id+')" width=50 align="center"><font color=#000000>关闭</TD></TR></TABLE></DIV>');
+
+                    // var newItem                = {};
+                    // newItem.object            = document.getElementById(id);
+                    // newItem.x                = x;
+                    // newItem.y                = y;
+                    // this.items[this.items.length]        = newItem;
+                  // }
+        // this.play    = function()
+                  // {
+                    // collection                = this.items
+                    // setInterval('play()',10);
+                  // }
+        // }
+        // function play()
+        // {
+
+            // for(var i=0;i<collection.length;i++)
+            // {
+                // var followObj        = collection[i].object;
+                // var followObj_x        = (typeof(collection[i].x)=='string'?eval(collection[i].x):collection[i].x);
+                // var followObj_y        = (typeof(collection[i].y)=='string'?eval(collection[i].y):collection[i].y);
+                // if(followObj.offsetLeft!=(document.body.scrollLeft+followObj_x)) {
+                    // var dx=(document.body.scrollLeft+followObj_x-followObj.offsetLeft)*delta;
+                    // dx=(dx>0?1:-1)*Math.ceil(Math.abs(dx));
+                    // followObj.style.left=followObj.offsetLeft+dx;
+                    // }
+                // if(followObj.offsetTop!=(document.body.scrollTop+followObj_y)) {
+                    // var dy=(document.body.scrollTop+followObj_y-followObj.offsetTop)*delta;
+                    // dy=(dy>0?1:-1)*Math.ceil(Math.abs(dy));
+                    // followObj.style.top=followObj.offsetTop+dy;
+                    // }
+                // followObj.style.display    = '';
+            // }
+        // }
+
+    // var theFloaters        = new floaters();
+    // theFloaters.addItem('followDiv1','document.body.clientWidth-120',80,'<br><img src="public/portal/images/wlxytz.jpg" border="0"  width="100" height="121"/>');
+    // theFloaters.addItem('followDiv2',0,80,'<br><object classid="clsid:D27CDB6E-AE6D-11CF-96B8-444553540000" id="obj1" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0" border="0"  width="120"><param name="movie" value="img/110.swf"><param name="quality" value="High"> <embed src="img/110.swf" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" name="obj1"  width="120"></object>');
+    // theFloaters.play();
+  // </script>
+<div class="box_center">
+<div class="box_center1" style="height:178px;">
+<form action="/index.php//login/index" method="post" name="login">
+<div id="dl"><div><img src="http://gxpx1.ceat.edu.cn/public/theme/images/dl_1_gx.jpg" width="226" height="48" /></div>
+<div style="background-image:url(http://gxpx1.ceat.edu.cn/public/theme/images/dl_3.gif)">
+<div style="height:28px;padding-top:4px;">账　号：
+  <input name="username" id="username" type="text"class="dlk" maxlength="16" value="用户编号/手机号" onclick="v()"  onblur="g()"/></div>
+<div style="height:28px;">密　码：
+  <input name="password" id="password" type="password" class="dlk" maxlength="16" /></div>
+<div style="height:34px;color:#FD3A00"><a href="/index.php//nav/operate" style="color:#FD3A00" target="_blank">帮助</a> | <a href="/index.php//selfhelp/findpassword" style="color:#FD3A00">忘记密码</a>
+	<input type="image" src="http://gxpx1.ceat.edu.cn/public/theme/images/dl_4.gif"  align="absmiddle" onclick="return mm_login();" />
+</div>
+</div>
+<div><img src="http://gxpx1.ceat.edu.cn/public/theme/images/dl_2.gif" /></div></div>
+	</form>
+<div id="gzdt"><div style="width:238px;float:left;padding:4px;">
+<!--焦点图开始-->
+<script type="text/javascript">
+<!--
+var interval_time=3 //图片停顿时间，单位为秒，为0则停止自动切换
+var focus_width=238 //宽度
+var focus_height=150 //高度
+var text_height=18 //标题高度
+var text_align= 'center' //标题文字对齐方式(left、center、right)
+var swf_height = focus_height+text_height //相加之和最好是偶数,否则数字会出现模糊失真的问题
+var pics= 'http://gxpx1.ceat.edu.cn/public//upload/NewsImages/thum/1492493424940.jpg|http://gxpx1.ceat.edu.cn/public//upload/NewsImages/thum/1492480988739.jpg|http://gxpx1.ceat.edu.cn/public//upload/NewsImages/thum/1461568471909.jpg|http://gxpx1.ceat.edu.cn/public//upload/NewsImages/thum/1395715606724.jpg'//图片地址
+var links='http://gxpx1.ceat.edu.cn/public/html/news/201704/data_6064.html|http://gxpx1.ceat.edu.cn/public/html/news/201704/data_6063.html|http://gxpx1.ceat.edu.cn/public/html/news/201704/data_5964.html|http://gxpx1.ceat.edu.cn/public/html/news/201403/data_4640.html'//相对于图片的链接地址
+var texts='李克强：深化教育改革激发更大活力 ...|习近平对推进“两学一做”学习教育常...|全国大学生党员“两学一做”专题网络...|宁波大红鹰学院辅导员专题网络培训班...'//标题文字
+document.write('<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0" width="'+ focus_width +'" height="'+ swf_height +'">');
+document.write('<param name="movie" value="http://gxpx1.ceat.edu.cn/public/portal/flash/hot_new.swf"><param name="quality" value="high"><param name="bgcolor" value="#EEEEEE">');
+document.write('<param name="menu" value="false"><param name=wmode value="opaque">');
+document.write('<param name="FlashVars" value="pics='+pics+'&links='+links+'&texts='+texts+'&borderwidth='+focus_width+'&borderheight='+focus_height+'&textheight='+text_height+'&text_align='+text_align+'&interval_time='+interval_time+'">');
+document.write('<embed src="http://gxpx1.ceat.edu.cn/public/portal/flash/hot_new.swf" wmode="opaque" FlashVars="pics='+pics+'&links='+links+'&texts='+texts+'&borderwidth='+focus_width+'&borderheight='+focus_height+'&textheight='+text_height+'&text_align='+text_align+'&interval_time='+interval_time+'" menu="false" bgcolor="#ffffff" quality="high" width="'+ focus_width +'" height="'+ swf_height +'" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />');
+document.write('</object>');
+//-->
+</script>
+<!--焦点图结束--></div>
+<div style="float:left;margin-left:4px;width:252px;"><div class="bk_bg_gx" style="width:252px;">
+  <div style="float:left"><img src="http://gxpx1.ceat.edu.cn/public/theme/images/bk_1_gx.gif" align="top"> <a href="/index.php//news/list/tid/2" class="hong14" target="_blank"><strong>培训动态</strong></a></div>
+  <div style="float:right"><a href="/index.php//news/list/tid/2" class="hong12" target="_blank">更多&gt;&gt;</a></div>
+</div>
+<div id="gzdt1"><ul>
+  <li><div style="position:absolute;break-all;overflow:hidden;text-overflow:ellipsis; white-space:nowrap; word-break:break-all; width:255px;"><a href="http://gxpx1.ceat.edu.cn/public/html/news/201710/data_6205.html" class="hui12" target="_blank" title="西南医科大学学生政工干部培训班顺利开班">西南医科大学学生政工干部培训班顺利开班</a></div></li>
+  <li><div style="position:absolute;break-all;overflow:hidden;text-overflow:ellipsis; white-space:nowrap; word-break:break-all; width:255px;"><a href="http://gxpx1.ceat.edu.cn/public/html/news/201710/data_6204.html" class="hui12" target="_blank" title="乐山师范学院“弘扬长征精神、坚定理想信念”培训班学员赴长征干部学院培训学习记">乐山师范学院“弘扬长征精神、坚定理想信念”培训班学员赴长征干部学院培训学习记</a></div></li>
+  <li><div style="position:absolute;break-all;overflow:hidden;text-overflow:ellipsis; white-space:nowrap; word-break:break-all; width:255px;"><a href="http://gxpx1.ceat.edu.cn/public/html/news/201710/data_6203.html" class="hui12" target="_blank" title="陕西省组织部门新入部年轻干部示范培训班在西安石油大学培训中心举办">陕西省组织部门新入部年轻干部示范培训班在西安石油大学培训中心举办</a></div></li>
+  <li><div style="position:absolute;break-all;overflow:hidden;text-overflow:ellipsis; white-space:nowrap; word-break:break-all; width:255px;"><a href="http://gxpx1.ceat.edu.cn/public/html/news/201710/data_6201.html" class="hui12" target="_blank" title="第十二期甘肃积石山县党政干部培训班在华侨大学开班">第十二期甘肃积石山县党政干部培训班在华侨大学开班</a></div></li>
+  <li><div style="position:absolute;break-all;overflow:hidden;text-overflow:ellipsis; white-space:nowrap; word-break:break-all; width:255px;"><a href="http://gxpx1.ceat.edu.cn/public/html/news/201710/data_6202.html" class="hui12" target="_blank" title="湖北生态工程职业技术学院举办第二次党务干部培训会">湖北生态工程职业技术学院举办第二次党务干部培训会</a></div></li>
+</ul></div>
+</div></div>
+<div style="width:174px;background:#F1F1F1;float:left;height:178px;">
+<div style="padding:8px;width:160px;"><div style="float:left"><a href="/index.php//news/list/tid/3" class="hong14"  target="_blank"><strong>平台公告</strong></a></div>
+<div style="float:right"><a href="/index.php//news/list/tid/3" class="hong12" target="_blank">更多>></a></div>
+<div style="width:160px;float:left;text-align: left;border-top: 1px solid #B0B0B0;padding-top:4px;margin-top:6px;line-height:18px;"><a href="http://www.enaea.edu.cn/news/bulletin1/2017/31142.html" class="hong12" title="关于组织开展第二期高等学校党风廉政建设专题网络培训的通知"  target="_blank"><font color="red">[新]</font>关于组织开展第二期高等学校党风廉政建设专题网络培训的通知</a>[04-13]</div>
+<div style="width:160px;float:left;text-align: left;padding-top:4px;">
+<marquee onmouseover=this.stop() style="width: 100%; height: 80px;line-height: 18px;" onmouseout=this.start() scrollAmount=1 direction=up>
+<a href="http://gxpx1.ceat.edu.cn/public/html/news/201704/data_6056.html" class="lv12" title="关于组织开展“高校教师党支部书记党务能力提升”专题网络培训的通知" target="_blank">关于组织开展“高校教师党支部书记党务能力提升”专题网络培训的通知[04-10]</a><br>
+<a href="http://gxpx1.ceat.edu.cn/public/html/news/201703/data_6028.html" class="lv12" title="《2017年高等教育网络培训服务计划》印发 " target="_blank">《2017年高等教育网络培训服务计划》印发 [03-02]</a><br>
+<a href="http://gxpx1.ceat.edu.cn/public/html/news/201703/data_6038.html" class="lv12" title="关于组织开展“学习贯彻十八届六中全会精神、深入推进全面从严治党”专题网络培训的通知" target="_blank">关于组织开展“学习贯彻十八届六中全会精神、深入推进全面从严治党”专题网络培训的通知[02-07]</a><br>
+<a href="http://gxpx1.ceat.edu.cn/public/html/news/201611/data_6023.html" class="lv12" title="关于开展2015-2016年度高等教育干部网络培训 “优秀组织单位”和“优秀管理者”评选工作的通知" target="_blank">关于开展2015-2016年度高等教育干部网络培训 “优秀组织单位”和“优秀管理者”评选工作的通知[11-15]</a><br>
+<a href="http://gxpx1.ceat.edu.cn/public/html/news/201611/data_6022.html" class="lv12" title="关于举办2016年高校干部培训管理者培训班的通知" target="_blank">关于举办2016年高校干部培训管理者培训班的通知[11-15]</a><br>
+<a href="http://gxpx1.ceat.edu.cn/public/html/news/201610/data_6019.html" class="lv12" title="关于组织开展“凝心聚力 巩固发展最广泛的爱国统一战线” 专题网络培训的通知" target="_blank">关于组织开展“凝心聚力 巩固发展最广泛的爱国统一战线” 专题网络培训的通知[10-24]</a><br>
+</marquee></div>
+</div></div>
+</div>
+</div>
+<div class="box_center">
+
+
+<div class="box_center">
+	<div class="box_center1" style="width:906px;height:236px;border: 1px solid #C4C4C4;padding:4px;">
+		<div style="overflow: hidden;">
+		    <div class="bk_bg_gx" style="float:none;">
+		      	<div style="float:left"><img src="http://gxpx1.ceat.edu.cn/public/theme/images/bk_1_gx.gif" align="top">&nbsp;<a href="http://gxpx1.ceat.edu.cn/index.php/feature/" class="hong14" target="_blank"><strong>培训专题</strong></a></div>
+		    </div>
+			
+			
+			<div style="overflow:hidden;">
+				<div style="float:left; width:443px; overflow:hidden;">
+                                       <div style="overflow:hidden; padding: 4px 0;">
+						<div style="font-size: 13px; color: #5C5C5C; float:left; font-weight:bold;">干部</div>
+						<div style="float:right"><a href="http://gxpx1.ceat.edu.cn/index.php/feature?type=1" class="hong12" target="_blank">更多&gt;&gt;</a></div>
+					</div>
+					<div class="pxzt1_more" style="width:auto; float:none; height:165px;">
+                                                                 <div style="overflow:hidden;text-overflow:ellipsis; white-space:nowrap;  width:415px;">&nbsp;&nbsp;<a class="hui14" href="/index.php//feature/info?id=278" class="hong14_1" title="“深入学习习总书记讲话精神 全面提升高校干部能力素质”专题网络培训" target="_blank">“深入学习习总书记讲话精神 全面提升高校干部能力素质”专题网络培训</a></div>
+                                                                <div style="overflow:hidden;text-overflow:ellipsis; white-space:nowrap;  width:415px;">&nbsp;&nbsp;<a class="hui14" href="/index.php//feature/info?id=275" class="hong14_1" title="“高校党务干部能力提升”专题网络培训" target="_blank">“高校党务干部能力提升”专题网络培训</a></div>
+                                                                <div style="overflow:hidden;text-overflow:ellipsis; white-space:nowrap;  width:415px;">&nbsp;&nbsp;<a class="hui14" href="/index.php//feature/info?id=267" class="hong14_1" title="第二期高等学校党风廉政建设专题网络培训" target="_blank">第二期高等学校党风廉政建设专题网络培训</a></div>
+                                                                <div style="overflow:hidden;text-overflow:ellipsis; white-space:nowrap;  width:415px;">&nbsp;&nbsp;<a class="hui14" href="/index.php//feature/info?id=261" class="hong14_1" title="“学习贯彻十八届六中全会精神、深入推进全面从严治党”专题网络培训" target="_blank">“学习贯彻十八届六中全会精神、深入推进全面从严治党”专题网络培训</a></div>
+                                                                <div style="overflow:hidden;text-overflow:ellipsis; white-space:nowrap;  width:415px;">&nbsp;&nbsp;<a class="hui14" href="/index.php//feature/info?id=249" class="hong14_1" title="高等学校“两学一做”专题网络培训" target="_blank">高等学校“两学一做”专题网络培训</a></div>
+                                                                <div style="overflow:hidden;text-overflow:ellipsis; white-space:nowrap;  width:415px;">&nbsp;&nbsp;<a class="hui14" href="/index.php//feature/info?id=258" class="hong14_1" title="“凝心聚力 巩固发展最广泛的爱国统一战线”专题" target="_blank">“凝心聚力 巩固发展最广泛的爱国统一战线”专题</a></div>
+                                       					</div>
+				</div>	
+				<div style="float:left; width:443px; overflow:hidden; margin-left:20px;">
+                                         <div style="overflow:hidden; padding: 4px 0;">
+                                                <div style="font-size: 13px; color: #5C5C5C; float:left; font-weight:bold;">教师</div>
+                                                <div style="float:right"><a href="http://gxpx1.ceat.edu.cn/index.php/feature?type=3" class="hong12" target="_blank">更多&gt;&gt;</a></div>
+                                        </div>
+					<div class="pxzt1_more" style="width:auto; float:none; height:165px;">
+                                                      <div style="overflow:hidden;text-overflow:ellipsis; white-space:nowrap;  width:415px;">&nbsp;&nbsp;<a class="hui14" href="/index.php//feature/info?id=272" class="hong14_1" title="“高校骨干教师专业发展与综合素质提升”专题网络培训" target="_blank">“高校骨干教师专业发展与综合素质提升”专题网络培训</a></div>
+                                                    <div style="overflow:hidden;text-overflow:ellipsis; white-space:nowrap;  width:415px;">&nbsp;&nbsp;<a class="hui14" href="/index.php//feature/info?id=264" class="hong14_1" title="“高校教师党支部书记党务能力提升”专题网络培训" target="_blank">“高校教师党支部书记党务能力提升”专题网络培训</a></div>
+                                                    <div style="overflow:hidden;text-overflow:ellipsis; white-space:nowrap;  width:415px;">&nbsp;&nbsp;<a class="hui14" href="/index.php//feature/info?id=255" class="hong14_1" title="“高校教师专业发展与教育教学能力提升”专题网络培训" target="_blank">“高校教师专业发展与教育教学能力提升”专题网络培训</a></div>
+                                                    <div style="overflow:hidden;text-overflow:ellipsis; white-space:nowrap;  width:415px;">&nbsp;&nbsp;<a class="hui14" href="/index.php//feature/info?id=246" class="hong14_1" title="全国高校青年教师党员专题" target="_blank">全国高校青年教师党员专题</a></div>
+                                                    <div style="overflow:hidden;text-overflow:ellipsis; white-space:nowrap;  width:415px;">&nbsp;&nbsp;<a class="hui14" href="/index.php//feature/info?id=233" class="hong14_1" title="“提高高职院校教师教育教学能力 促进人才培养质量提升”专题" target="_blank">“提高高职院校教师教育教学能力 促进人才培养质量提升”专题</a></div>
+                                                    <div style="overflow:hidden;text-overflow:ellipsis; white-space:nowrap;  width:415px;">&nbsp;&nbsp;<a class="hui14" href="/index.php//feature/info?id=224" class="hong14_1" title="“落实习总书记重要讲话精神 做新时期的‘四有’好老师”专题" target="_blank">“落实习总书记重要讲话精神 做新时期的‘四有’好老师”专题</a></div>
+                                        					</div>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+</div>
+
+<div class="box_center">
+<div class="box_center1" style="text-align:left">
+<div style="float:left;">
+<div class="bb_gx" style="margin-left:3px;width:220px;background:#BEBEBE"></div>
+<div class="bb_gx" style="margin-left:2px;width:222px;"></div>
+<div class="bb_gx" style="margin-left:1px;width:224px"></div>
+<div class="aa_gx1">
+<a href="/index.php//kczy/kczymore" target="_blank" title="课程资源" onfocus="this.blur()"><img src="http://gxpx1.ceat.edu.cn/public/theme/images/kczy_gx.gif" border="0" /></a>
+<ul>
+<script type="text/javascript" src="http://gxpx1.ceat.edu.cn/public/theme/scripts/leftprogramclass.js"></script>
+</ul>
+</div>
+<div class="bb_gx" style="margin-left:1px;width:224px"></div>
+<div class="bb_gx" style="margin-left:2px;width:222px;"></div>
+<div class="bb_gx" style="margin-left:3px;width:220px;background:#BEBEBE"></div>
+</div>
+<div class="right_1"><div class="right_2_gx">
+      <div style="float:left;margin-left:4px;"><img src="http://gxpx1.ceat.edu.cn/public/theme/images/bk_1_gx.gif" align="top" />&nbsp;<a href="#html" class="hong14"><strong>最新课程</strong></a></div>
+      <div style="float:right"><!--<a href="#" class="hong12">更多&gt;&gt;</a>--></div>
+	  </div>
+	  <div id="ab"><ul>
+	  <li><span style="position:absolute;break-all;overflow:hidden;text-overflow:ellipsis; white-space:nowrap; word-break:break-all; width:320px;"><a href="/index.php//program/view/pid/3246" class="hong14_1" target="_blank">[符雷]</a><a href="/index.php//program/view/pid/3246" class="hui14" target="_blank" title="重大事件网上舆论引导">重大事件网上舆论引导</a>10-27</span></li>
+	  <li class="a1"><span style="position:absolute;break-all;overflow:hidden;text-overflow:ellipsis; white-space:nowrap; word-break:break-all; width:320px;"><a href="/index.php//program/view/pid/3245" class="hong14_1" target="_blank">[赵俊杰]</a><a href="/index.php//program/view/pid/3245" class="hui14" target="_blank" title="发扬工匠精神 助力“中国制造2025”">发扬工匠精神 助力“中国制造2025”</a>10-27</span></li>
+	  <li><span style="position:absolute;break-all;overflow:hidden;text-overflow:ellipsis; white-space:nowrap; word-break:break-all; width:320px;"><a href="/index.php//program/view/pid/3244" class="hong14_1" target="_blank">[纪录片]</a><a href="/index.php//program/view/pid/3244" class="hui14" target="_blank" title="思想力，行动力——西安交通大学党委工作纪实">思想力，行动力——西安交通大学党委工作纪实</a>10-27</span></li>
+	  <li class="a1"><span style="position:absolute;break-all;overflow:hidden;text-overflow:ellipsis; white-space:nowrap; word-break:break-all; width:320px;"><a href="/index.php//program/view/pid/3243" class="hong14_1" target="_blank">[专题研讨]</a><a href="/index.php//program/view/pid/3243" class="hui14" target="_blank" title="盲评式党课专题——师生中的“三观”问题">盲评式党课专题——师生中的“三观”问题</a>10-27</span></li>
+	  <li><span style="position:absolute;break-all;overflow:hidden;text-overflow:ellipsis; white-space:nowrap; word-break:break-all; width:320px;"><a href="/index.php//program/view/pid/3242" class="hong14_1" target="_blank">[廖志丹]</a><a href="/index.php//program/view/pid/3242" class="hui14" target="_blank" title="《普通高等学校学生党建工作标准》解读">《普通高等学校学生党建工作标准》解读</a>10-25</span></li>
+	  <li class="a1"><span style="position:absolute;break-all;overflow:hidden;text-overflow:ellipsis; white-space:nowrap; word-break:break-all; width:320px;"><a href="/index.php//program/view/pid/3241" class="hong14_1" target="_blank">[胡鸿杰]</a><a href="/index.php//program/view/pid/3241" class="hui14" target="_blank" title="办公室如何有效地上传下达">办公室如何有效地上传下达</a>10-25</span></li>
+	  <li><span style="position:absolute;break-all;overflow:hidden;text-overflow:ellipsis; white-space:nowrap; word-break:break-all; width:320px;"><a href="/index.php//program/view/pid/3240" class="hong14_1" target="_blank">[廖志丹]</a><a href="/index.php//program/view/pid/3240" class="hui14" target="_blank" title="高校学生党支部的角色定位和工作艺术">高校学生党支部的角色定位和工作艺术</a>10-25</span></li>
+	  <li class="a1"><span style="position:absolute;break-all;overflow:hidden;text-overflow:ellipsis; white-space:nowrap; word-break:break-all; width:320px;"><a href="/index.php//program/view/pid/3239" class="hong14_1" target="_blank">[微课]</a><a href="/index.php//program/view/pid/3239" class="hui14" target="_blank" title="如梦初醒">如梦初醒</a>10-25</span></li>
+	  </ul></div>
+	  	  <div class="right_2_gx">
+      <div style="float:left;margin-left:4px;"><img src="http://gxpx1.ceat.edu.cn/public/theme/images/bk_1_gx.gif" align="top" />&nbsp;<a href="/index.php//course/recommend" class="hong14" target="_blank"><strong>推荐课程</strong></a></div>
+      <div style="float:right"><a href="/index.php//course/recommend" class="hong12" target="_blank">更多&gt;&gt;</a></div>
+	  </div>
+<div id="colee_left" style="overflow:hidden;width:660px;margin:0 0 8px 10px;">
+<table cellpadding="0" cellspacing="0" border="0">
+<tr><td id="colee_left1" valign="top" align="center">
+<table cellpadding="1" cellspacing="0" border="0">
+<tr align="center">
+<td><div class="pc_b"><img src="http://gxpx1.ceat.edu.cn/public//upload/video/1332917931772.jpg" width="79" height="73"></div></td>
+<td><div class="pc_b"><img src="http://gxpx1.ceat.edu.cn/public//upload/video/1332394085839.jpg" width="79" height="73"></div></td>
+<td><div class="pc_b"><img src="http://gxpx1.ceat.edu.cn/public//upload/video/133239401629.jpg" width="79" height="73"></div></td>
+<td><div class="pc_b"><img src="http://gxpx1.ceat.edu.cn/public//upload/video/1332918383395.jpg" width="79" height="73"></div></td>
+<td><div class="pc_b"><img src="http://gxpx1.ceat.edu.cn/public//upload/video/130467369798.jpg" width="79" height="73"></div></td>
+<td><div class="pc_b"><img src="http://gxpx1.ceat.edu.cn/public//upload/video/1304673407273.jpg" width="79" height="73"></div></td>
+<td><div class="pc_b"><img src="http://gxpx1.ceat.edu.cn/public//upload/video/1304672996613.jpg" width="79" height="73"></div></td>
+<td><div class="pc_b"><img src="http://gxpx1.ceat.edu.cn/public//upload/video/1304673585395.jpg" width="79" height="73"></div></td>
+</tr>
+<tr align="center">
+  <td><div style="padding-top:6px;break-all;overflow:hidden;text-overflow:ellipsis; white-space:nowrap; word-break:break-all; width:100px;"><a href="/index.php//program/view/pid/1092" class="hui12" target="_blank">高校学生干部团队建设</a></div>
+    <a href="/index.php//program/view/pid/1092" target="_blank" class="hui12">主讲：&nbsp;&nbsp;孙慧环</a></td>
+  <td><div style="padding-top:6px;break-all;overflow:hidden;text-overflow:ellipsis; white-space:nowrap; word-break:break-all; width:100px;"><a href="/index.php//program/view/pid/1058" class="hui12" target="_blank">领导干部的言语表达能力</a></div>
+    <a href="/index.php//program/view/pid/1058" target="_blank" class="hui12">主讲：&nbsp;&nbsp;闻　闸</a></td>
+  <td><div style="padding-top:6px;break-all;overflow:hidden;text-overflow:ellipsis; white-space:nowrap; word-break:break-all; width:100px;"><a href="/index.php//program/view/pid/1025" class="hui12" target="_blank">高职专业建设中的工业文化对接</a></div>
+    <a href="/index.php//program/view/pid/1025" target="_blank" class="hui12">主讲：&nbsp;&nbsp;余祖光</a></td>
+  <td><div style="padding-top:6px;break-all;overflow:hidden;text-overflow:ellipsis; white-space:nowrap; word-break:break-all; width:100px;"><a href="/index.php//program/view/pid/1006" class="hui12" target="_blank">全面加强质量建设，促进高等教育科学发展</a></div>
+    <a href="/index.php//program/view/pid/1006" target="_blank" class="hui12">主讲：&nbsp;&nbsp;杜玉波</a></td>
+  <td><div style="padding-top:6px;break-all;overflow:hidden;text-overflow:ellipsis; white-space:nowrap; word-break:break-all; width:100px;"><a href="/index.php//program/view/pid/811" class="hui12" target="_blank">加强高校党建工作的理论思考与实践总结</a></div>
+    <a href="/index.php//program/view/pid/811" target="_blank" class="hui12">主讲：&nbsp;&nbsp;顾海良</a></td>
+  <td><div style="padding-top:6px;break-all;overflow:hidden;text-overflow:ellipsis; white-space:nowrap; word-break:break-all; width:100px;"><a href="/index.php//program/view/pid/810" class="hui12" target="_blank">现代大学理念与大学内涵发展</a></div>
+    <a href="/index.php//program/view/pid/810" target="_blank" class="hui12">主讲：&nbsp;&nbsp;田建国</a></td>
+  <td><div style="padding-top:6px;break-all;overflow:hidden;text-overflow:ellipsis; white-space:nowrap; word-break:break-all; width:100px;"><a href="/index.php//program/view/pid/802" class="hui12" target="_blank">教育公平与科学发展</a></div>
+    <a href="/index.php//program/view/pid/802" target="_blank" class="hui12">主讲：&nbsp;&nbsp;袁振国</a></td>
+  <td><div style="padding-top:6px;break-all;overflow:hidden;text-overflow:ellipsis; white-space:nowrap; word-break:break-all; width:100px;"><a href="/index.php//program/view/pid/801" class="hui12" target="_blank">高等教育准入性公平</a></div>
+    <a href="/index.php//program/view/pid/801" target="_blank" class="hui12">主讲：&nbsp;&nbsp;王伯庆</a></td>
+</tr>
+</table>
+</td>
+<td id="colee_left2"></td>
+</tr>
+</table>
+</div>
+<script>
+//使用div时，请保证colee_left2与colee_left1是在同一行上.
+var speed=30//速度数值越大速度越慢
+var colee_left2=document.getElementById("colee_left2");
+var colee_left1=document.getElementById("colee_left1");
+var colee_left=document.getElementById("colee_left");
+colee_left2.innerHTML=colee_left1.innerHTML
+function Marquee3(){
+if(colee_left2.offsetWidth-colee_left.scrollLeft<=0)//offsetWidth 是对象的可见宽度
+colee_left.scrollLeft-=colee_left1.offsetWidth//scrollWidth 是对象的实际内容的宽，不包边线宽度
+else{
+colee_left.scrollLeft++
+}
+}
+var MyMar3=setInterval(Marquee3,speed)
+colee_left.onmouseover=function() {clearInterval(MyMar3)}
+colee_left.onmouseout=function() {MyMar3=setInterval(Marquee3,speed)}
+</script>
+	  <div class="right_2_gx">
+      <div style="float:left;margin-left:4px;"><img src="http://gxpx1.ceat.edu.cn/public/theme/images/bk_1_gx.gif" align="top" />&nbsp;<a href="/index.php//feature?type=2" class="hong14" target="_blank"><strong>课程模块</strong></a></div>
+      <div style="float:right"><a href="/index.php//feature?type=2" class="hong12">更多&gt;&gt;</a></div>
+	  </div>
+	  <div id="ab" style="color:#BE595D;font-size:14px;"><ul>
+	  <li><div style="padding-top:6px;break-all;overflow:hidden;text-overflow:ellipsis; white-space:nowrap; word-break:break-all; width:320px;"><img src="http://gxpx1.ceat.edu.cn/public/portal/images/jt.gif"><a href="/index.php//feature/info?id=7" class="hui14" title="地方高校的教育规划与品牌建设" target="_blank">地方高校的教育规划与品牌建设</a></div></li>
+	  <li class="a1"><div style="padding-top:6px;break-all;overflow:hidden;text-overflow:ellipsis; white-space:nowrap; word-break:break-all; width:320px;"><img src="http://gxpx1.ceat.edu.cn/public/portal/images/jt.gif"><a href="/index.php//feature/info?id=6" class="hui14" title="人才培养模式改革与创新型人才培养" target="_blank">人才培养模式改革与创新型人才培养</a></div></li>
+	  <li><div style="padding-top:6px;break-all;overflow:hidden;text-overflow:ellipsis; white-space:nowrap; word-break:break-all; width:320px;"><img src="http://gxpx1.ceat.edu.cn/public/portal/images/jt.gif"><a href="/index.php//feature/info?id=5" class="hui14" title="现代大学理念与制度创新" target="_blank">现代大学理念与制度创新</a></div></li>
+	  <li class="a1"><div style="padding-top:6px;break-all;overflow:hidden;text-overflow:ellipsis; white-space:nowrap; word-break:break-all; width:320px;"><img src="http://gxpx1.ceat.edu.cn/public/portal/images/jt.gif"><a href="/index.php//feature/info?id=3" class="hui14" title="高校的社会服务和特色发展" target="_blank">高校的社会服务和特色发展</a></div></li>
+	  <li><div style="padding-top:6px;break-all;overflow:hidden;text-overflow:ellipsis; white-space:nowrap; word-break:break-all; width:320px;"><img src="http://gxpx1.ceat.edu.cn/public/portal/images/jt.gif"><a href="/index.php//feature/info?id=2" class="hui14" title="管理创新与领导力建设" target="_blank">管理创新与领导力建设</a></div></li>
+	  <li class="a1"><div style="padding-top:6px;break-all;overflow:hidden;text-overflow:ellipsis; white-space:nowrap; word-break:break-all; width:320px;"><img src="http://gxpx1.ceat.edu.cn/public/portal/images/jt.gif"><a href="/index.php//feature/info?id=8" class="hui14" title="校园安全与应急管理能力的提升" target="_blank">校园安全与应急管理能力的提升</a></div></li>
+	  </ul></div>
+	  <div class="right_2_gx">
+      <div style="float:left;margin-left:4px;"><img src="http://gxpx1.ceat.edu.cn/public/theme/images/bk_1_gx.gif" align="top" />&nbsp;<a href="/index.php//expert/index" class="hong14" target="_blank"><strong>专家方阵</strong></a></div>
+      <div style="float:right"><a href="/index.php//expert/index" class="hong12" target="_blank">更多&gt;&gt;</a></div>
+	  </div>
+	  <div style="padding-bottom:4px;border-bottom:1px #ECECEC solid;overflow: hidden;height:134px;">
+	  <div class="pc_b" style="width:116px;"><img id="mimg" src="http://gxpx1.ceat.edu.cn/public//upload/NewsImages/thum/1310975177245.jpg" width="116px" height="112px" border="0" /></div>
+	  <div id="zjfz_wz"> 　　<span id="mavspan">胡冶岩，领导力专家，现任国家行政学院公共管理教研部副主任，享受国务院特殊津贴的专家，中国领导科学研究会常务理事。出版和发表多部研究成果和数十篇论著。多次承担中央组织部的“全国领导干部公开选拔考试题库”项目，并担任“面试题”专家组组长；</span><a id="mavhref" href="/index.php//expert/info?id=927" target="_blank" class="jh12">[详细]</a></div>
+	  <div class="shuxian" style="margin:10px 10px 0 8px;height:120px;"></div>
+	  <div id="zjfz_wz1" style="width:250px;">
+	   <a href="/index.php//expert/info?id=926" class="hui12" title="韩庆祥" target="_blank">韩庆祥</a>
+	   <a href="/index.php//expert/info?id=924" class="hui12" title="刘宝存" target="_blank">刘宝存</a>
+	   <a href="/index.php//expert/info?id=923" class="hui12" title="贾凤姿" target="_blank">贾凤姿</a>
+	   <a href="/index.php//expert/info?id=919" class="hui12" title="郝  平" target="_blank">郝  平</a>
+	   <a href="/index.php//expert/info?id=918" class="hui12" title="黄达人" target="_blank">黄达人</a>
+	   <a href="/index.php//expert/info?id=916" class="hui12" title="顾秉林" target="_blank">顾秉林</a>
+	   <a href="/index.php//expert/info?id=913" class="hui12" title="顾明远" target="_blank">顾明远</a>
+	   <a href="/index.php//expert/info?id=910" class="hui12" title="顾海良" target="_blank">顾海良</a>
+	   <a href="/index.php//expert/info?id=905" class="hui12" title="桂昭明" target="_blank">桂昭明</a>
+	   <a href="/index.php//expert/info?id=904" class="hui12" title="高文兵" target="_blank">高文兵</a>
+	   <a href="/index.php//expert/info?id=901" class="hui12" title="范文曜" target="_blank">范文曜</a>
+	   <a href="/index.php//expert/info?id=900" class="hui12" title="曹鹏飞" target="_blank">曹鹏飞</a>
+	   <a href="/index.php//expert/info?id=899" class="hui12" title="程介明" target="_blank">程介明</a>
+	   <a href="/index.php//expert/info?id=898" class="hui12" title="陈  希" target="_blank">陈  希</a>
+	   <a href="/index.php//expert/info?id=897" class="hui12" title="陈  骏" target="_blank">陈  骏</a>
+	   <a href="/index.php//expert/info?id=896" class="hui12" title="曹勇安" target="_blank">曹勇安</a>
+	   <a href="/index.php//expert/info?id=888" class="hui12" title="蔡     霞" target="_blank">蔡     霞</a>
+	   <a href="/index.php//expert/info?id=849" class="hui12" title="谈松华" target="_blank">谈松华</a>
+	   <a href="/index.php//expert/info?id=846" class="hui12" title="邬大光" target="_blank">邬大光</a>
+	   <a href="/index.php//expert/info?id=845" class="hui12" title="沈  炯" target="_blank">沈  炯</a>
+	   <a href="/index.php//expert/info?id=843" class="hui12" title="王伟廉" target="_blank">王伟廉</a>
+	   <a href="/index.php//expert/info?id=842" class="hui12" title="魏  新" target="_blank">魏  新</a>
+	   <a href="/index.php//expert/info?id=840" class="hui12" title="王伯庆" target="_blank">王伯庆</a>
+	   <a href="/index.php//expert/info?id=836" class="hui12" title="石中英" target="_blank">石中英</a>
+	   <a href="/index.php//expert/info?id=834" class="hui12" title="闪淳昌" target="_blank">闪淳昌</a>
+	   <a href="/index.php//expert/info?id=831" class="hui12" title="潘懋元" target="_blank">潘懋元</a>
+	   <a href="/index.php//expert/info?id=827" class="hui12" title="闵维方" target="_blank">闵维方</a>
+	   <a href="/index.php//expert/info?id=825" class="hui12" title="马陆亭" target="_blank">马陆亭</a>
+	   <a href="/index.php//expert/info?id=822" class="hui12" title="马怀德" target="_blank">马怀德</a>
+	   <a href="/index.php//expert/info?id=820" class="hui12" title="马喜亭" target="_blank">马喜亭</a>
+	  </div>
+	  </div>
+	  </div>
+</div>
+</div>
+
+<div class="box_center">
+<div class="box_center1"><div class="bian_h"><a href="/index.php//news/view/nid/127" target="_blank" border="0"><img src="http://gxpx1.ceat.edu.cn/public/theme/images/pc_1.gif" border="0"></a></div>
+<div class="bian_h" style="margin-left:8px;"><a href="http://forum.naea.edu.cn/chinese/index.asp" target="_blank" border="0"><img src="http://gxpx1.ceat.edu.cn/public/theme/images/pc_5.gif" border="0"></a></div>
+<div class="bian_h" style="margin-left:6px;"><a href="/index.php//news/view/nid/111" target="_blank" border="0"><img src="http://gxpx1.ceat.edu.cn/public/theme/images/pc_6.gif" border="0"></a></div></div>
+</div>
+
+<div class="box_center">
+<div class="box_center1">
+<div style="float:left;">
+<div class="bb_gx" style="margin-left:3px;width:222px;background:#BEBEBE"></div>
+<div class="bb_gx" style="margin-left:2px;width:224px;"></div>
+<div class="bb_gx" style="margin-left:1px;width:226px"></div>
+<div class="aa1_gx">
+<img src="http://gxpx1.ceat.edu.cn/public/theme/images/gdzd_gx.gif" />
+<ul>
+<script type="text/javascript" src="http://gxpx1.ceat.edu.cn/public/theme/scripts/grouplist.js"></script>
+</ul>
+</div>
+<div class="bb_gx" style="margin-left:1px;width:226px"></div>
+<div class="bb_gx" style="margin-left:2px;width:224px;"></div>
+<div class="bb_gx" style="margin-left:3px;width:222px;background:#BEBEBE"></div>
+</div>
+<div class="right_1"><div class="right_3">
+  <div style="padding:0 0 0 8px;">
+<div class="xytd_218_gx"><div class="xytd_1_gx"><div style="float:left"><a href="/index.php//news/paper/" class="hong14" target="_blank"><strong>论文集萃</strong></a></div>
+<div style="float:right"><a href="/index.php//news/paper/" target="_blank" class="hong12">浏览更多</a></div>
+</div>
+<div class="xydt_2"><ul>
+<li><span style="position:absolute;break-all;overflow:hidden;text-overflow:ellipsis; white-space:nowrap; word-break:break-all; width:310px;"><img src="http://gxpx1.ceat.edu.cn/public/portal/images/jt.gif" width="8" height="10" />[李秀秀]<a href="/index.php//news/pview/pid/2/id/A4D5C4A6-F24A-102D-BB6D-00215EDB4E60" class="hui14" title="真相大白 " target="_blank">真相大白 </a></span>
+<li><span style="position:absolute;break-all;overflow:hidden;text-overflow:ellipsis; white-space:nowrap; word-break:break-all; width:310px;"><img src="http://gxpx1.ceat.edu.cn/public/portal/images/jt.gif" width="8" height="10" />[牛人]<a href="/index.php//news/pview/pid/2/id/A4BC6A6A-F24A-102D-BB6D-00215EDB4E60" class="hui14" title="提高大学生创新能力的途径" target="_blank">提高大学生创新能力的途径</a></span>
+<li><span style="position:absolute;break-all;overflow:hidden;text-overflow:ellipsis; white-space:nowrap; word-break:break-all; width:310px;"><img src="http://gxpx1.ceat.edu.cn/public/portal/images/jt.gif" width="8" height="10" />[储祖旺]<a href="/index.php//news/pview/pid/1/id/A4C46490-F24A-102D-BB6D-00215EDB4E60" class="hui14" title="市场化过程中的高校筹资机制" target="_blank">市场化过程中的高校筹资机制</a></span>
+<li><span style="position:absolute;break-all;overflow:hidden;text-overflow:ellipsis; white-space:nowrap; word-break:break-all; width:310px;"><img src="http://gxpx1.ceat.edu.cn/public/portal/images/jt.gif" width="8" height="10" />[莫忧]<a href="/index.php//news/pview/pid/28/id/1571D32C-D0B1-102E-B2AC-E41F13672748" class="hui14" title="成都理工大学重温党史" target="_blank">成都理工大学重温党史</a></span>
+<li><span style="position:absolute;break-all;overflow:hidden;text-overflow:ellipsis; white-space:nowrap; word-break:break-all; width:310px;"><img src="http://gxpx1.ceat.edu.cn/public/portal/images/jt.gif" width="8" height="10" />[蔡潇]<a href="/index.php//news/pview/pid/864/id/24D28A94-2D49-1032-807D-E41F13672748" class="hui14" title="学习心得体会" target="_blank">学习心得体会</a></span>
+</ul>
+</div></div>
+<div class="shuxian" style="margin:3px;height:235px;"></div>
+<div class="xytd_218_gx"><div class="xytd_1_gx"><div style="float:left"><a href="/index.php//news/list/tid/15" class="hong14" target="_blank"><strong>论坛精华</strong></a></div>
+<div style="float:right"><a href="/index.php//news/list/tid/15" class="hong12" target="_blank">浏览更多</a></div>
+</div>
+<div class="xydt_2"><ul>
+<li><span style="position:absolute;break-all;overflow:hidden;text-overflow:ellipsis; white-space:nowrap; word-break:break-all; width:310px;"><img src="http://gxpx1.ceat.edu.cn/public/portal/images/jt.gif" width="8" height="10" />[邢婷]<a href="http://gxpx1.ceat.edu.cn/public/html/news/201710/data_6196.html" class="hui14" title="书记校长为学生上新学期第一堂思政课" target="_blank">书记校长为学生上新学期第一堂思政课</a></span>
+<li><span style="position:absolute;break-all;overflow:hidden;text-overflow:ellipsis; white-space:nowrap; word-break:break-all; width:310px;"><img src="http://gxpx1.ceat.edu.cn/public/portal/images/jt.gif" width="8" height="10" />[孙宏志 许颖]<a href="http://gxpx1.ceat.edu.cn/public/html/news/201710/data_6197.html" class="hui14" title="画定那根实验室安全红线" target="_blank">画定那根实验室安全红线</a></span>
+<li><span style="position:absolute;break-all;overflow:hidden;text-overflow:ellipsis; white-space:nowrap; word-break:break-all; width:310px;"><img src="http://gxpx1.ceat.edu.cn/public/portal/images/jt.gif" width="8" height="10" />[陈洪尧]<a href="http://gxpx1.ceat.edu.cn/public/html/news/201710/data_6198.html" class="hui14" title="“工匠精神”，职业教育的灵魂" target="_blank">“工匠精神”，职业教育的灵魂</a></span>
+<li><span style="position:absolute;break-all;overflow:hidden;text-overflow:ellipsis; white-space:nowrap; word-break:break-all; width:310px;"><img src="http://gxpx1.ceat.edu.cn/public/portal/images/jt.gif" width="8" height="10" />[王松柏  ]<a href="http://gxpx1.ceat.edu.cn/public/html/news/201708/data_6174.html" class="hui14" title="深化产教融合 培养区域急需人才" target="_blank">深化产教融合 培养区域急需人才</a></span>
+<li><span style="position:absolute;break-all;overflow:hidden;text-overflow:ellipsis; white-space:nowrap; word-break:break-all; width:310px;"><img src="http://gxpx1.ceat.edu.cn/public/portal/images/jt.gif" width="8" height="10" />[李超 丁玥 张燏]<a href="http://gxpx1.ceat.edu.cn/public/html/news/201708/data_6173.html" class="hui14" title="余美芳：像蒲公英一样播撒“爱心种子”" target="_blank">余美芳：像蒲公英一样播撒“爱心种子”</a></span>
+<li><span style="position:absolute;break-all;overflow:hidden;text-overflow:ellipsis; white-space:nowrap; word-break:break-all; width:310px;"><img src="http://gxpx1.ceat.edu.cn/public/portal/images/jt.gif" width="8" height="10" />[沈杰群]<a href="http://gxpx1.ceat.edu.cn/public/html/news/201708/data_6172.html" class="hui14" title="民间“野生建筑”，清华博士生徐腾正在暗中观察" target="_blank">民间“野生建筑”，清华博士生徐腾正在暗中观察</a></span>
+<li><span style="position:absolute;break-all;overflow:hidden;text-overflow:ellipsis; white-space:nowrap; word-break:break-all; width:310px;"><img src="http://gxpx1.ceat.edu.cn/public/portal/images/jt.gif" width="8" height="10" />[靳慧霞 刘婕]<a href="http://gxpx1.ceat.edu.cn/public/html/news/201708/data_6168.html" class="hui14" title="匠心育人 知行合一——晋中职业技术学院创新发展之路" target="_blank">匠心育人 知行合一——晋中职业技术学院创新发展之路</a></span>
+<li><span style="position:absolute;break-all;overflow:hidden;text-overflow:ellipsis; white-space:nowrap; word-break:break-all; width:310px;"><img src="http://gxpx1.ceat.edu.cn/public/portal/images/jt.gif" width="8" height="10" />[雷宇 唐婉婷 ]<a href="http://gxpx1.ceat.edu.cn/public/html/news/201708/data_6167.html" class="hui14" title="桑吉措：了解不同的生活方式才能更好地认知这个世界" target="_blank">桑吉措：了解不同的生活方式才能更好地认知这个世界</a></span>
+</ul>
+</div></div>
+</div>
+</div>
+<div><div class="right_3" style="margin-top:6px;width:480px;float:left;padding:0 6px 6px 8px;	background-image: url(http://gxpx1.ceat.edu.cn/public/theme/images/yxbl_bg.jpg);background-repeat: repeat-x;">
+  <div class="xytd_218_gx" style="width:480px;">
+    <div class="xytd_1_gx" style="width:470px;border-bottom:1px solid #BABABA;">
+      <div style="float:left"><a href="/index.php//school/list/" class="hong14" target="_blank"><strong>院校博览</strong></a></div>
+      <div style="float:right"><a href="/index.php//school/list/" class="hong12" target="_blank">更多>></a></div>
+    </div>
+	<div id="yxbl">
+      <ul>
+        <li>[陕西]<a href="http://www.snnu.edu.cn/" class="hui12" target="_blank">陕西师范大学</a> </li>
+        <li>[北京]<a href="http://www.tsinghua.edu.cn/qhdwzy/index.jsp" class="hui12" target="_blank">清华大学</a> </li>
+        <li>[上海]<a href="http://www.ecnu.edu.cn/" class="hui12" target="_blank">华东师范大学</a> </li>
+        <li>[湖北]<a href="http://www.ccnu.edu.cn/" class="hui12" target="_blank">华中师范大学</a> </li>
+        <li>[湖北]<a href="http://www.hust.edu.cn/index.html" class="hui12" target="_blank">华中科技大学</a> </li>
+        <li>[浙江]<a href="http://www.zju.edu.cn/" class="hui12" target="_blank">浙江大学</a> </li>
+        <li>[江苏]<a href="http://www.seu.edu.cn/" class="hui12" target="_blank">东南大学</a> </li>
+        <li>[上海]<a href="http://www.fudan.edu.cn/" class="hui12" target="_blank">复旦大学</a> </li>
+        <li>[上海]<a href="http://www.sjtu.edu.cn/" class="hui12" target="_blank">上海交通大学</a> </li>
+        <li>[北京]<a href="http://www.bnu.edu.cn/" class="hui12" target="_blank">北京师范大学 </a> </li>
+        <li>[北京]<a href="http://www.cnu.edu.cn/" class="hui12" target="_blank">首都师范大学</a> </li>
+        <li>[天津]<a href="http://www.nankai.edu.cn/index.php" class="hui12" target="_blank">南开大学</a> </li>
+        <li>[江苏]<a href="http://www.njnu.edu.cn/" class="hui12" target="_blank">南京师范大学</a> </li>
+        <li>[广东]<a href="http://www.scnu.edu.cn/scnu/" class="hui12" target="_blank">华南师范大学</a> </li>
+        <li>[北京]<a href="http://www.pku.edu.cn/" class="hui12" target="_blank">北京大学</a> </li>
+        <li>[江苏]<a href="http://www.nju.edu.cn/cps/site/newweb/foreground/" class="hui12" target="_blank">南京大学</a> </li>
+        <li>[湖北]<a href="http://www.whu.edu.cn/index.html" class="hui12" target="_blank">武汉大学</a> </li>
+        <li>[吉林]<a href="http://www.nenu.edu.cn/" class="hui12" target="_blank">东北师范大学</a> </li>
+      </ul>
+    </div>  </div>
+</div>
+<div class="right_3" style="margin:6px 0 0 6px;width:176px;float:left;">
+<div><img src="http://gxpx1.ceat.edu.cn/public/theme/images/yxbl_bg1.jpg" width="177" height="54" /></div>
+<div id="sssj">访问数量：<span class="hong14_f">9629309</span><br />
+课件数量：<span class="hong14_f">2832</span><br />
+参考资料：<span class="hong14_f">4598</span><br />
+培训中心：<span class="hong14_f">531</span><br />
+注册人数：<span class="hong14_f">92078</span></div>
+</div>
+</div></div>
+<div class="box_center">
+<div class="box_center1" style="float:left">
+<div style="height:24px;line-height:24px;text-align:left;"><span style="color:#FD3A00;font-size:13px;"><strong>友情链接：</strong></span>
+	<a href="http://www.moe.gov.cn/" class="hui12" target="_blank">中华人民共和国教育部</a>
+	<a href="http://www.naea.edu.cn/" class="hui12" target="_blank">国家教育行政学院</a>
+	<a href="http://www.ccps.gov.cn/" class="hui12" target="_blank">中共中央党校</a>
+	<a href="http://www.nsa.gov.cn" class="hui12" target="_blank">国家行政学院</a>
+	<a href="http://www.edu-hb.com/" class="hui12" target="_blank">中国招生考试教育网</a>
+	<a href="http://www.jyb.com.cn/" class="hui12" target="_blank">中国教育报</a>
+　<a href="/index.php//school/links" class="hui12" target="_blank">更多>></a></div>
+</div>
+</div>
+<div class="box_center">
+<div class="box_center1" style="float:left">
+<div class="bottom1_gx"><a href="/index.php//news/view/nid/93" class="bai12">网站介绍</a> | <a href="#html" class="bai12">合作伙伴</a> | <a href="/index.php//news/view/nid/95" class="bai12">联系我们</a> | <a href="/index.php//news/view/nid/97" class="bai12">客户服务</a></div>
+<div class="bottom2">国家教育行政学院主办 中国教育干部培训网版权所有 未经允许不得转载<br />
+  地址：国家教育行政学院办公楼601 办学合作电话：010-69248888-3629 <br />
+  网络经营许可证编号：京ICP证050120号  京ICP备09040110号 <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11011502002627" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><img src="http://goschool.org.cn/static/index/images/icp-logo.png" style="float:left;"/>京公网安备 11011502002627号</a>
+  网络视听许可证：0110419<br />  技术支持：北京国人通教育科技有限公司<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1000465525'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/z_stat.php%3Fid%3D1000465525%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script></div>
+</div>
+</div>
+
+
+<!-- 弹框开始 -->
+<style type="text/css">
+#loft_win {border:#0066FF 0px solid;}
+#loft_win_min {border:#0066FF 0px solid;}
+.loft_win_head {color: #FFFFFF; font-size:13px; background-color:#8F181A; height:25px; padding:0,5,0,5;}
+#contentDiv {background-color:#FFFFFF; border:#8F181A 0px solid; border-left-style:none; border-right-style:none;}
+
+　　</style>
+<script type="text/javascript">
+<!--右下脚弹出窗口开始-->
+	window.onresize = resizeDiv;
+	window.onerror = function(){}
+	var divTop,divLeft,divWidth,divHeight,docHeight,docWidth,objTimer,i = 0;
+
+	function getMsg()
+	{
+		try
+		{
+			divTop = parseInt(document.getElementById("loft_win").style.top,10);
+			divLeft = parseInt(document.getElementById("loft_win").style.left,10);
+			divHeight = parseInt(document.getElementById("loft_win").offsetHeight,10);
+			divWidth = parseInt(document.getElementById("loft_win").offsetWidth,10);
+			docWidth = document.body.clientWidth;
+			docHeight = document.body.clientHeight;
+			document.getElementById("loft_win").style.top = -200;//parseInt(document.body.scrollTop,10) + docHeight + 10;// divHeight
+			document.getElementById("loft_win").style.left = 0;//parseInt(document.body.scrollLeft,10) + docWidth - divWidth;
+			document.getElementById("loft_win").style.visibility="visible";
+			objTimer = window.setInterval("moveDiv()",10);
+		}
+		catch(e){}
+	}
+
+	//初始化位置
+	function resizeDiv()
+	{
+		i+=1;
+		//if(i>600) closeDiv() //想不用自动消失由用户来自己关闭所以屏蔽这句
+		try
+		{
+			divHeight = parseInt(document.getElementById("loft_win").offsetHeight,10);
+			divWidth = parseInt(document.getElementById("loft_win").offsetWidth,10);
+			docWidth = document.body.clientWidth;
+			docHeight = document.body.clientHeight;
+			document.getElementById("loft_win").style.top = 0;//docHeight - divHeight+ parseInt(document.body.scrollTop,10);
+			document.getElementById("loft_win").style.left = 0;//docWidth - divWidth + parseInt(document.body.scrollLeft,10);
+		}
+		catch(e){}
+	}
+
+	//最小化
+	function minsizeDiv()
+	{
+		i+=1
+		//if(i>300) closeDiv() //想不用自动消失由用户来自己关闭所以屏蔽这句
+		try
+		{
+			divHeight = parseInt(document.getElementById("loft_win_min").offsetHeight,10);
+			divWidth = parseInt(document.getElementById("loft_win_min").offsetWidth,10);
+			docWidth = document.body.clientWidth;
+			docHeight = document.body.clientHeight;
+			document.getElementById("loft_win_min").style.top = 0;//docHeight - divHeight + parseInt(document.body.scrollTop,10);
+			document.getElementById("loft_win_min").style.left = 0;//docWidth - divWidth + parseInt(document.body.scrollLeft,10);
+		}
+		catch(e){}
+	}
+
+	//移动
+	function moveDiv()
+	{
+		try
+		{
+			if(parseInt(document.getElementById("loft_win").style.top)>0)
+			{
+				window.clearInterval(objTimer);
+				objTimer = window.setInterval("resizeDiv()",1);
+			}
+			else
+			{
+				divTop = parseInt(document.getElementById("loft_win").style.top,10);
+				document.getElementById("loft_win").style.top = divTop +1;
+			}
+		}
+			catch(e){}
+	}
+
+	function minDiv()
+	{
+		closeDiv();
+		document.getElementById('loft_win_min').style.visibility='visible';
+		objTimer = window.setInterval("minsizeDiv()",1);
+	}
+
+	function maxDiv()
+	{
+		document.getElementById('loft_win_min').style.visibility='hidden';
+		document.getElementById('loft_win').style.visibility='visible';
+		//objTimer = window.setInterval("resizeDiv()",1);
+		resizeDiv()
+		//getMsg();
+	}
+
+	function closeDiv()
+	{
+		document.getElementById('loft_win').style.visibility='hidden';
+		document.getElementById('loft_win_min').style.visibility='hidden';
+		//document.getElementById('loft_win').style.display="none";
+		if(objTimer) window.clearInterval(objTimer);
+	}
+	<!--右下脚弹出窗口结束-->
+</script>
+
+<!--提示窗口代码开始-->
+	<!--初状态-->
+	
+	<DIV id="loft_win" style="Z-INDEX:99999; LEFT: 0px; VISIBILITY: hidden;WIDTH: 310px; POSITION: absolute; TOP: 0px; HEIGHT: 170px;">
+		<TABLE cellSpacing="0" cellPadding="0" width="100%" bgcolor="#FFFFFF" border="0">
+			<TR>
+				<td width="100%" valign="top" align="center">
+					<table width="100%" height="100%" border="0" cellspacing="0" cellpadding="0">
+						<tr  bgcolor="#f2b644">
+							<td width="90%" class="loft_win_head"  style="background:#4800ff">通知</td>
+							<td width="26" class="loft_win_head"  style="background:#4800ff"> </td>
+							<td align="right" class="loft_win_head"  style="background:#4800ff">
+								<span style="CURSOR: hand;font-size:12px;font-weight:bold;margin-right:4px;" title="最小化" onclick="minDiv()" >- </span><span style="CURSOR: hand;font-size:12px;font-weight:bold;margin-right:4px;" title="关闭" onclick="closeDiv() ">×</span>
+							</td>
+						</tr>
+					</table>
+				</td>
+			</TR>
+			<TR>
+				<TD height="150" align="center" valign="top" colSpan="3">
+					<div id="contentDiv" style="overflow-y:auto;">
+						<table width="100%" height="100%" cellpadding="5" cellspacing="0">
+							<tr>
+								<td align="left" valign="top">
+
+									<p style="font-size:12px;">
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;各位学员：
+									</p>
+
+									<p style="line-height:13pt">
+									   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;中国教育干部网络学院定于2015年8月31日22:00至2015年9月4日8:00对平台进行维护，在此期间所有平台将无法访问，给您带来不便，敬请谅解。
+如有疑问，请拨打服务热线：400-811-9908
+									</p>
+									<p style="text-align: right">
+									  中国教育干部网络学院
+									</p>
+									<p style="text-align: right">
+									  2015年8月31日
+									</p>
+								</td>
+							</tr>
+						</table>
+					</div>
+				</TD>
+			</TR>			
+		</TABLE>
+	</DIV>
+	<!--提示窗口代码结束-->
+	<!-- 弹框结束 -->
+<div id="rbbox"><a class="buttontz" onclick="closeBox()" ><font style="color:black;">关闭</font></a><img src="http://www.enaea.edu.cn/images/tongzhi1.png"  height="220" width="328"></div> 
+</body>
+<script>
+function CookieEnable()
+{
+	var result=false;
+	if(navigator.cookiesEnabled)
+	  return true;
+	document.cookie = "testcookie=yes;";
+	var cookieSet = document.cookie;
+	if (cookieSet.indexOf("testcookie=yes") > -1)
+	  result=true;
+	document.cookie = "";
+	return result;
+}
+var result=CookieEnable();
+if(!result)
+{
+	alert("您现在的系统无法记录cookie，请您设置IE启用cookie选项，否则无法正常登录！");
+}
+var pnum=1;
+function changepic(){
+	var piccount=31;var pic1="http://gxpx1.ceat.edu.cn/public//upload/NewsImages/thum/1310975177245.jpg";var txt1="胡冶岩，领导力专家，现任国家行政学院公共管理教研部副主任，享受国务院特殊津贴的专家，中国领导科学研究会常务理事。出版和发表多部研究成果和数十篇论著。多次承担中央组织部的“全国领导干部公开选拔考试题库”...";var mavid1="927";var pic2="http://gxpx1.ceat.edu.cn/public//upload/NewsImages/thum/131097474464.jpg";var txt2="韩庆祥，中央党校马克思主义理论教研部副主任、教授、博士生导师、学术委员会主任。兼任北京大学、复旦大学、北京师范大学、吉林大学、中国社会科学院有关学术机构教授。中组部联系的高级专家。中央党校省部级班主讲...";var mavid2="926";var pic3="http://gxpx1.ceat.edu.cn/public//upload/NewsImages/thum/1310973695677.jpg";var txt3="刘宝存，北京师范大学教育学院国际与比较教育研究院院长、教授。主要研究领域为比较教育、高等教育、教育管理、美国教育。开设的主要课程为《比较教育学》、《比较高等教育》、《比较教育管理》、《高等教育学》、《...";var mavid3="924";var pic4="http://gxpx1.ceat.edu.cn/public//upload/NewsImages/thum/1310973522992.jpg";var txt4="贾凤姿，女，大连海事大学马克思主义学院教授。28年工作在思政课教学第一线，长期从事哲学与社会发展问题研究，出版学术专著5部，在《求是》杂志、《光明日报》、《人民日报》等国家重要刊物及报刊，公开发表学术论文...";var mavid4="923";var pic5="http://gxpx1.ceat.edu.cn/public//upload/NewsImages/thum/1310971974889.jpg";var txt5="郝平，教育部副部长、党组成员，国家语言文字工作委员会主任，中国联合国教科文组织全国委员会主任，原北京外国语大学校长（至2010年3月），第十一届全国政协委员。";var mavid5="919";var pic6="http://gxpx1.ceat.edu.cn/public//upload/NewsImages/thum/1310971824825.jpg";var txt6="黄达人，原中山大学校长，1962年至1968年就读于浙江大学数学系。1978年至1981年在浙江大学数学系读研究生，毕业后留校任教。1985年至1986年作为访问学者在美国南卡罗来纳大学数学系进修访问一年。1988年任浙江大学数学系教授...";var mavid6="918";var pic7="http://gxpx1.ceat.edu.cn/public//upload/NewsImages/thum/1310971557973.jpg";var txt7="顾秉林，清华大学校长、中国科学院院士、教授，物理学家和材料科学家。1982年在丹麦Aarhus大学获得博士学位，回国后继续在清华任教，先后担任物理系教授，系主任，清华大学研究生院院长。2003年起任清华大学校长。";var mavid7="916";var pic8="http://gxpx1.ceat.edu.cn/public//upload/NewsImages/thum/1310971077892.jpg";var txt8="顾明远，男，1929年10月生，江苏江阴人。现任中国教育学会会长，北京师范大学资深教授、北京师范大学国际与比较教育研究院博士生导师；教育部社会科学委员会副主任、教育部教师教育专家委员会主任、教育部教育发展研究...";var mavid8="913";var pic9="http://gxpx1.ceat.edu.cn/public//upload/NewsImages/thum/1310970193460.jpg";var txt9="顾海良，男，汉族，1951年1月生，上海人，1984年3月入党，1969年1月参加工作，中国社会科学院研究生院经济思想史专业毕业，研究生学历，硕士学位，教授。现任教育部党组成员、国家教育行政学院院长。";var mavid9="910";var pic10="http://gxpx1.ceat.edu.cn/public//upload/NewsImages/thum/1310969162264.jpg";var txt10="桂昭明，中央人才工作协调小组特聘专家，中国人才研究会常务理事、学术委员会委员，中国劳动学会理事、学术委员会委员，武汉工程大学管理学院教授、武汉工程大学人才资源开发研究所所长、经济管理学院教授、博士研究...";var mavid10="905";var pic11="http://gxpx1.ceat.edu.cn/public//upload/NewsImages/thum/1310968984898.jpg";var txt11="高文兵，男，1955年10月出生，汉族，山东蓬莱人，现任中南大学党委书记。1985年1月至1995年2月，教育部科技司主任科员、工程师、副处长、处长、办公室主任、司长助理；1995年2月至1999年8月，教育部直属机关党委副书记兼纪委...";var mavid11="904";var pic12="http://gxpx1.ceat.edu.cn/public//upload/NewsImages/thum/1310968298200.jpg";var txt12="范文曜，国家教育发展研究中心副主任。";var mavid12="901";var pic13="http://gxpx1.ceat.edu.cn/public//upload/NewsImages/thum/1310967993475.jpg";var txt13="曹鹏飞，中央党校党建部教授、博士。";var mavid13="900";var pic14="http://gxpx1.ceat.edu.cn/public//upload/NewsImages/thum/1310967801483.jpg";var txt14="程介明，原香港大学副校长，现香港大学校长资深顾问、教育学院首席教授、哈佛大学讲座教授、香港师训会主席。香港教育改革的推动者，被香港报章誉为“香港教改灵魂人物、超越教育界的香港文化名流”。";var mavid14="899";var pic15="http://gxpx1.ceat.edu.cn/public//upload/NewsImages/thum/1310967555726.jpg";var txt15="陈希，男，汉族，1953年9月生，福建莆田人，1970年12月参加工作，1978年11月加入中国共产党，清华大学化学工程系物化专业毕业，研究生学历，理学硕士，研究员，化工专家。现任中国科协党组书记、副主席（主持常务工作）、...";var mavid15="898";var pic16="http://gxpx1.ceat.edu.cn/public//upload/NewsImages/thum/1310967345990.jpg";var txt16="陈骏，南京大学校长。1979年毕业于南京大学地质系地球化学专业，1985年获矿床学博士学位并留校任教，1988年赴英国伦敦大学帝国理工学院地质系从事博士后研究，1992年受聘为南京大学地球科学系教授，先后担任地球科学系系...";var mavid16="897";var pic17="http://gxpx1.ceat.edu.cn/public//upload/NewsImages/thum/1310967098103.jpg";var txt17="曹勇安教授是黑龙江东亚学团、齐齐哈尔职业学院的创办人，现任黑龙江东亚学团董事长、齐齐哈尔职业学院党委书记、院长。经过十七年的探索，曹勇安率领下的黑龙江东亚学团和齐齐哈尔职业学院茁壮成长，其教育改革实践...";var mavid17="896";var pic18="http://gxpx1.ceat.edu.cn/public//upload/NewsImages/thum/1310548074577.jpg";var txt18="蔡霞，中央党校党建教研部教授。长期从事党建研究与教学工作。主要研究方向：政党意识形态、执政党建设。主持一项国家级科研基金项目“转型时期执政党对社会意识形态的引导”，参与国家级重点科研基金项目“执政党的...";var mavid18="888";var pic19="http://gxpx1.ceat.edu.cn/public//upload/NewsImages/thum/1308906125126.jpg";var txt19="谈松华，国家教育咨询委员会委员，中国教育学会常务副会长，学术委员会主任，国家教育发展研究中心研究员，博士生导师，北京大学、北京师范大学、华东师范大学等高校兼职教授。曾任中共上海市委研究室处长、副研究员...";var mavid19="849";var pic20="http://gxpx1.ceat.edu.cn/public//upload/NewsImages/thum/1308905744801.jpg";var txt20="邬大光，男，1957年生，辽宁人。厦门大学高等教育发展研究中心副主任、教授、博士生导师，厦门大学副校长。1982年毕业于沈阳师范学院外语系英语专业，1988年毕业于沈阳师范学院教育科学研究所，获教育学硕士学位。1990年...";var mavid20="846";var pic21="http://gxpx1.ceat.edu.cn/public//upload/NewsImages/thum/130890559769.jpg";var txt21="沈炯，博士，男，汉族，中共党员，东南大学党委常委、副校长，能源与环境学院教授、博士生导师。1957年6月生于江苏省无锡市。1979年进入南京工学院（现东南大学）动力工程系电厂热能动力专业本科阶段学习，分别于1983年...";var mavid21="845";var pic22="http://gxpx1.ceat.edu.cn/public//upload/NewsImages/thum/1308905366233.jpg";var txt22="王伟廉，男，1952年3月出生于湖南长沙市，籍贯湖北武汉市，中共党员。博士，高等教育学教授，博士生导师。曾在国家重点学科、教育部文科基地厦门大学高等教育科学研究所任副所长、教授、博士生导师。1982年2月毕业于东...";var mavid22="843";var pic23="http://gxpx1.ceat.edu.cn/public//upload/NewsImages/thum/1308905257817.jpg";var txt23="魏新，北京大学教授，现任方正集团董事长，方正科技集团董事长兼总裁，北大方正投资有限公司董事长，北京方正产业控股有限公司董事长，方正控股有限公司执行董事，北京大学教授。曾在美国夏威夷大学、弗吉尼亚理工学...";var mavid23="842";var pic24="http://gxpx1.ceat.edu.cn/public//upload/NewsImages/thum/1308905101536.jpg";var txt24="王伯庆，四川成都人。在中国获材料工程学士和工业经济管理文科硕士、在美国获统计学理科硕士和经济学博士。麦可思公司创始人、总裁，中国高等教育供需跟踪评估系统（CHEFS）创始人，麦可思《中国大学生就业报告》（就...";var mavid24="840";var pic25="http://gxpx1.ceat.edu.cn/public//upload/NewsImages/thum/1308904581165.jpg";var txt25="石中英，男，1967年生，安徽寿县人，中共党员，北京师范大学研究生院副院长，《中国教师》杂志社社长，中国教育学会中青年教育理论工作者分会理事长，博士，教授，博士生导师。主要从事教育基本理论与教育哲学的教学...";var mavid25="836";var pic26="http://gxpx1.ceat.edu.cn/public//upload/NewsImages/thum/130890407256.jpg";var txt26="闪淳昌，1965年曾在云南省地矿局区调队、物探大队任工程师、教育科长、副队长；1983年至1984年任云南省地质矿产局副局长；1984年任云南省科委副主任兼云南省科技干部管理局党组书记、局长；1987年任云南省劳动人事厅副厅长...";var mavid26="834";var pic27="http://gxpx1.ceat.edu.cn/public//upload/NewsImages/thum/130890347216.jpg";var txt27="潘懋元，广东揭阳人，1920年出生，教授。曾任厦门大学副校长、顾问、海外教育学院院长、国务院学位委员会教育学科评审组召集人。现任厦门大学高等教育科学研究所名誉所长、中国高等教育学会副会长、全国高等教育学研...";var mavid27="831";var pic28="http://gxpx1.ceat.edu.cn/public//upload/NewsImages/thum/130890252816.jpg";var txt28="闵维方，男，汉族，1950年10月出生，黑龙江齐齐哈尔人，中共党员，1968年8月参加工作，1987年6月美国斯坦福大学教育学院毕业，研究生学历，教授，博士生导师。现任北京大学党委书记、校务委员会主任，兼任教育学院院长、...";var mavid28="827";var pic29="http://gxpx1.ceat.edu.cn/public//upload/NewsImages/thum/1308902229446.jpg";var txt29="马陆亭，1963年8月生，教育部教育发展研究中心高教室主任，管理科学与工程专业博士，国际教育与比较专业博士后。主持和参加过多项国家课题及教育部政策调研任务，作为教育部编制组成员参加了《全国教育事业“十五”计...";var mavid29="825";var pic30="http://gxpx1.ceat.edu.cn/public//upload/NewsImages/thum/1308901752792.gif";var txt30="1965年10月生于青海西宁。现任中国政法大学副校长、教授、博士生导师，校学术委员会委员，副主席。1984年毕业于北京大学法律系，同年考入中国政法大学，1991年获得行政法硕士学位，1993年获得博士学位，系我国首位行政诉讼...";var mavid30="822";var pic31="http://gxpx1.ceat.edu.cn/public//upload/NewsImages/thum/1308901460696.jpg";var txt31="北京航空航天大学大学生心理咨询与发展辅导研究中心主任，硕士生导师，副教授。中国心理卫生协会大学生心理咨询专业委员会常务委员兼秘书长，北京高教学会心理咨询研究会副秘书长。";var mavid31="820";	if (pnum<=piccount){
+		document.getElementById("mimg").src=eval("pic"+pnum);
+		document.getElementById("mavspan").innerHTML=eval("txt"+pnum);
+		document.getElementById("mavhref").href="/index.php/"+"/expert/info?id="+eval("mavid"+pnum);
+		pnum++;
+	}else{
+		pnum=1;
+	}
+	setTimeout("changepic()",3000);
+}
+window.onload=function(){
+	mm_ipflux('/index.php/');
+	changepic();
+}
+</script>
+<SCRIPT language=JavaScript>
+function closeDiv2(){
+followDiv1.style.display="none";
+clearTimeout(myTime);
+}
+    var delta=0.5
+    var collection;
+	var myTime;
+	
+    function floaters() {
+        this.items    = [];
+        this.addItem    = function(id,x,y,content)
+                  {
+                    document.write('<DIV id='+id+' style="Z-INDEX: 100; POSITION: absolute;  width:105px; height:105px;left:'+(typeof(x)=='string'?eval(x):x)+';top:'+(typeof(y)=='string'?eval(y):y)+'"><a href=#><font  color="#FFFFFF" onclick=closeDiv2() style=cursor: hand;>关闭</font></a>'+content+'</DIV>');
+ 
+                    var newItem                = {};
+                    newItem.object            = document.getElementById(id);
+                    newItem.x                = x;
+                    newItem.y                = y;
+                    this.items[this.items.length]        = newItem;
+                  }
+        this.play    = function()
+                  {
+                    collection                = this.items
+                    myTime=setInterval('play()',10);
+                  }
+        }
+        function play()
+        {
+            if(screen.width<=800)
+            {
+                for(var i=0;i<collection.length;i++)
+                {
+                    collection[i].object.style.display    = 'none';
+                }
+                return;
+            }			
+            for(var i=0;i<collection.length;i++)
+            {
+                var followObj        = collection[i].object;
+                var followObj_x        = (typeof(collection[i].x)=='string'?eval(collection[i].x):collection[i].x);
+                var followObj_y        = (typeof(collection[i].y)=='string'?eval(collection[i].y):collection[i].y);
+                if(followObj.offsetLeft!=(document.body.scrollLeft+followObj_x)) {
+                    var dx=(document.body.scrollLeft+followObj_x-followObj.offsetLeft)*delta;
+                    dx=(dx>0?1:-1)*Math.ceil(Math.abs(dx));
+                    followObj.style.left=followObj.offsetLeft+dx;
+                    }
+                if(followObj.offsetTop!=(document.documentElement.scrollTop+followObj_y)) {
+                    var dy=(document.documentElement.scrollTop+followObj_y-followObj.offsetTop)*delta;
+                    dy=(dy>0?1:-1)*Math.ceil(Math.abs(dy));
+                    followObj.style.top=followObj.offsetTop+dy;
+                    }
+                followObj.style.display    = '';
+            }
+        }
+ /*
+    var theFloaters        = new floaters();
+    theFloaters.addItem('followDiv1','document.body.clientWidth-168',80,'<br><table width="158px" height="105px" align="left" background="http://gxpx1.ceat.edu.cn/public/portal/images/gyztpxgx.gif"><tr><td>&nbsp;</td></tr><tr><td align="left">&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://221.174.21.232/gypx/index.php/list/catch?id=Njgx" target="_blank"><font color="#FFFFFF">—>学员学习流程</font></a><br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://221.174.21.232/gypx/index.php/list/catch?id=Njgw" target="_blank"><font color="#FFFFFF">—>管理操作流程</font></a></td></tr></table>');
+    theFloaters.play();
+*/
+//window.onload=function(){getMsg();}
+</script>
+<!-- 通知结束 -->
+<script language="javascript" type="text/javascript"> 
+window.onload=function(){//showBox();} 
+function showBox(o){ 
+if (o==undefined) o=document.getElementById("rbbox"); 
+o.style.height=o.clientHeight+2+"px"; 
+if (o.clientHeight<220) setTimeout(function(){showBox(o)},5); 
+} 
+function closeBox(){document.getElementById("rbbox").style.display="none";} 
+</script>
+</html>

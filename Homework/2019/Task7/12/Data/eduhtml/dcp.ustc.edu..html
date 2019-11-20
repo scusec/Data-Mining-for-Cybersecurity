@@ -1,0 +1,665 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>中国科学技术大学-化学物理系</title>
+<link href="./images/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<style type="text/css">
+ table{margin:auto;}
+</style>
+<table width="1000" border="0" align="center" cellpadding="0" cellspacing="0" background="./images/top.png">
+<tr>
+<td width="419" height="106" align="center" valign="middle">&nbsp;</td>
+<td width="189">&nbsp;</td>
+<td width="392"><table width="70%" height="106" border="0" align="right" cellpadding="0" cellspacing="0">
+  <tr>
+    <td colspan="3" align="right" valign="top"><div id="head"><img src="./images/index_08.gif" class="img">英文版&nbsp;&nbsp;<img src="./images/index_08.gif" class="img"><a href="http://www.ustc.edu.cn">校首页</a>&nbsp;&nbsp;&nbsp;&nbsp;</div></td>
+ </tr> 
+  <tr>
+    <td width="18%" height="25" align="right" valign="middle"><img src="./images/index_07.gif" width="20" height="22"></td>
+    <td width="57%" align="right" valign="middle"><form id="form1" name="form1" method="post" action="">
+<label>
+<input name="textfield" type="text" size="20" style="border:1px solid #C4CACF;height:21px;">
+</label>
+    </form></td>
+    <td width="25%" align="left" valign="middle"><img src="./images/index.jpg" width="54" height="23"></td>
+  </tr>
+</table></td>
+</tr>
+</table>
+
+<table width="1000" border="0" align="center" cellpadding="0" cellspacing="0">
+<tr>
+<td width="20"><img src="./images/index_03.gif" width="20" height="36"></td>
+<td width="959" background="./images/index_05.gif" id="menu">
+<a href=""><font face="微软雅黑">首 页</font></a><a href="./xkjj/bxjj/"><font face="微软雅黑">系况简介</font></a><a href="./xwdt/xshd/"><font face="微软雅黑">新闻动态</font></a><a href="./szdw/xszb/"><font face="微软雅黑">师资队伍</font></a><a href="./xsgz/yjcy/"><font face="微软雅黑">研究方向</font></a><a href="./jypy/bksjy/"><font face="微软雅黑">教育培养</font></a><a href="./zsjy/bks/"><font face="微软雅黑">招生就业</font></a><a href="./dtxs/xdzz/"><font face="微软雅黑">党团学生</font></a><a href="./rczp/"><font face="微软雅黑">人才招聘</font></a><a href="./xsqk/"><font face="微软雅黑">系属期刊</font></a></td>
+<td width="21" align="right"><img src="./images/index_04.gif" width="21" height="36"></td>
+</tr>
+<!--
+<tr>
+<td colspan="3"><img src="./images/index_02.png" width="1000" height="23"></td>
+</tr>
+-->
+</table>
+
+<table width="1000" border="0" align="center" cellpadding="0" cellspacing="0">
+<!--
+<tr>
+<td colspan="4"><img src="./images/index_09.gif" width="1000" height="8"></td>
+</tr>
+-->
+
+<SCRIPT language=JavaScript>var brOK=false;
+var mie=false;
+var aver=parseInt(navigator.appVersion.substring(0,1));
+var aname=navigator.appName;
+function checkbrOK()
+{if(aname.indexOf("Internet Explorer")!=-1)
+   {if(aver>=4) brOK=navigator.javaEnabled();
+    mie=true;
+   }
+ if(aname.indexOf("Netscape")!=-1)  
+   {if(aver>=4) brOK=navigator.javaEnabled();}
+}
+var vmin=2;
+var vmax=5;
+var vr=2;
+var timer1;
+function Chip(chipname,width,height)
+{this.named=chipname;
+ this.vx=vmin+vmax*Math.random();
+ this.vy=vmin+vmax*Math.random();
+ this.w=width;
+ this.h=height;
+ this.xx=0;
+ this.yy=0;
+ this.timer1=null;
+}
+function movechip(chipname)
+{
+ if(brOK)
+  {eval("chip="+chipname);
+   if(!mie)
+    {pageX=window.pageXOffset;
+     pageW=window.innerWidth;
+     pageY=window.pageYOffset;
+     pageH=window.innerHeight;
+    }
+   else
+    {pageX=window.document.body.scrollLeft;
+     pageW=window.document.body.offsetWidth-8;
+     pageY=window.document.body.scrollTop;
+     pageH=window.document.body.offsetHeight;
+    } 
+chip.xx=chip.xx+chip.vx;
+chip.yy=chip.yy+chip.vy;
+   chip.vx+=vr*(Math.random()-0.5);
+   chip.vy+=vr*(Math.random()-0.5);
+   if(chip.vx>(vmax+vmin))  chip.vx=(vmax+vmin)*2-chip.vx;
+   if(chip.vx<(-vmax-vmin)) chip.vx=(-vmax-vmin)*2-chip.vx;
+   if(chip.vy>(vmax+vmin))  chip.vy=(vmax+vmin)*2-chip.vy;
+   if(chip.vy<(-vmax-vmin)) chip.vy=(-vmax-vmin)*2-chip.vy;
+if(chip.xx<=pageX)
+     {chip.xx=pageX;
+      chip.vx=vmin+vmax*Math.random();
+     }
+   if(chip.xx>=pageX+pageW-chip.w)
+     {chip.xx=pageX+pageW-chip.w;
+      chip.vx=-vmin-vmax*Math.random();
+     }
+   if(chip.yy<=pageY)
+     {chip.yy=pageY;
+      chip.vy=vmin+vmax*Math.random();
+     }
+   if(chip.yy>=pageY+pageH-chip.h)
+     {chip.yy=pageY+pageH-chip.h;
+      chip.vy=-vmin-vmax*Math.random();
+     }
+if(!mie)
+      {eval('document.'+chip.named+'.top ='+chip.yy);
+       eval('document.'+chip.named+'.left='+chip.xx);
+      } 
+   else
+      {eval('document.all.'+chip.named+'.style.pixelLeft='+chip.xx);
+       eval('document.all.'+chip.named+'.style.pixelTop ='+chip.yy); 
+      }
+   chip.timer1=setTimeout("movechip('"+chip.named+"')",100);
+  }
+}
+function stopme(chipname)
+{if(brOK)
+  {//alert(chipname)
+   eval("chip="+chipname);
+   if(chip.timer1!=null)
+    {clearTimeout(chip.timer1)}
+  }
+} </SCRIPT>
+
+<SCRIPT>
+var mm;
+function mm()
+{checkbrOK(); 
+mm=new Chip("mm",60,80);
+if(brOK) 
+{ movechip("mm");
+}
+}
+</SCRIPT>
+
+
+
+<body onload=mm()>
+
+<p> <DIV id=mm style="POSITION: fixed">
+       	<a href="./zsjy/yjs/"><img border="0" src="./images/yjs.jpg" width="120" height="120"></a></p>
+
+
+
+
+
+
+
+
+
+
+<tr>
+<td width="6" bgcolor="#FFFFFF" class="leftbg"></td>
+<td width="265" valign="top" bgcolor="#FFFFFF">
+
+<!--
+<table width="251" border="0" align="center" cellpadding="0" cellspacing="0" style=" margin-top:20px;">
+
+<table width="251" border="0" align="center" cellpadding="0" cellspacing="0">
+<tr>
+<td width="18" align="left" valign="middle"><img src="./images/index_18.gif" width="18"></td>
+<td align="left" valign="top" background="./images/index_20.gif">
+<table width="100%" border="0" cellspacing="0" cellpadding="0" style="margin-top:10px;">
+<tr>
+<td width="13%" height="30" align="center"><img src="./images/index_16.gif" width="9" height="9"></td>
+<td width="65%" align="left" class="tztg">公告栏</td>
+
+<td width="22%" align="left" class="more"><a href="./xwdt/tzgg/">更多</a></td>
+</tr>
+
+<tr>
+<td colspan="3" class="leftcontent">
+
+
+<marquee id="scrollArea" height="150" width="150" loop="-1" scrollamount="1" 
+scrolldelay="50" direction="up" onMouseOver=scrollArea.stop() 
+onMouseOut=scrollArea.start()>
+<ul>
+<li><span class="time">2013-11-05</span><a href="./xwdt/tzgg/201311/t20131105_177705.html">化学物理系网站测试通知</a></li>
+
+
+<li><span class="time">2013-11-05</span><a href="./xwdt/tzgg/201311/t20131105_177704.html">化学物理系网站更新通知</a></li>
+
+</ul>
+</marquee> 
+
+
+</td>
+</tr>
+
+
+</table>
+
+
+</td>
+
+
+
+<td width="19" align="right" valign="middle"><img src="./images/index_19.gif" width="19"></td>
+
+</tr>
+</table>
+
+
+
+</td>
+<td width="725" align="right" valign="top" bgcolor="#FFFFFF">
+<table width="714" border="0" cellspacing="0" cellpadding="0" style="margin-top:20px;">
+  <tr>
+    <td width="260"><table width="250" border="0" cellspacing="0" cellpadding="0" align="left">
+      <tr>
+        <td align="center" height="170">
+
+<div style="display:none">
+				
+					<img src="./xwdt/kyxx/201311/W020131104336228193117_1024_629.jpg" alt="我系校友崔景荣发明设计抗癌新药，荣获2011美国发明家大奖">
+				
+					<img src="./xwdt/xw/201012/W020101210352797846494_554_415.jpg" alt="化学物理系同学向郭永怀先生献花">
+				
+					<img src="./xwdt/xshd/201012/W020101210354372692318_400_267.jpg" alt="辛厚文教授作《科大的创新精神》报告">
+				
+</div>
+
+
+<span id="focusViewer"></span>
+              <script type="text/javascript" src="./images/sinaflash.js"></script>
+              <script type="text/javascript" language="JavaScript">
+
+
+				var focus_width = 250;
+				var focus_height = 171;
+				var text_height = 30;
+				var swf_height = focus_height + text_height;
+				var curhref = document.location.href;
+
+				var pic = new Array();
+				var linka = new Array();
+				var text = new Array();
+				
+					pic.push('./xwdt/kyxx/201311/W020131104336228193117_1024_629.jpg');
+					linka.push('./xwdt/kyxx/201311/t20131104_177636.html');
+					text.push('我系校友崔景荣发明设计抗癌新药，荣获2...');
+				
+					pic.push('./xwdt/xw/201012/W020101210352797846494_554_415.jpg');
+					linka.push('./xwdt/xw/201012/t20101203_83128.html');
+					text.push('化学物理系同学向郭永怀先生献花');
+				
+					pic.push('./xwdt/xshd/201012/W020101210354372692318_400_267.jpg');
+					linka.push('./xwdt/xshd/201012/t20101203_83106.html');
+					text.push('辛厚文教授作《科大的创新精神》报告');
+				
+
+				var pics = pic.join('|');
+				var links = linka.join('|');	
+				var texts = text.join('|');		
+
+				var FocusFlash = new sinaFlash("./images/pixviewer.swf", "focusflash", focus_width, swf_height, "7", "#FFFFFF", false, "High");
+				FocusFlash.addParam("allowScriptAccess", "sameDomain");
+				FocusFlash.addParam("menu", "false");
+				FocusFlash.addParam("wmode", "opaque");
+
+				
+				FocusFlash.addVariable("pics", pics);
+				FocusFlash.addVariable("links", links);
+				FocusFlash.addVariable("texts", texts);
+				FocusFlash.addVariable("borderwidth", focus_width);
+				FocusFlash.addVariable("borderheight", focus_height);
+				FocusFlash.addVariable("textheight", text_height);
+				FocusFlash.addVariable("curhref", curhref);
+				FocusFlash.write("focusViewer");
+			</script>
+        </td>
+      </tr>
+    </table></td>
+    <td width="454" valign="top">
+	<table width="454" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td height="5" align="center"><img src="./images/index_20.gif" width="450" height="4"></td>
+      </tr>
+      <tr>
+        <td height="5" align="center"></td>
+      </tr>
+      <tr>
+        <td align="center"><table width="444" border="0" cellspacing="0" cellpadding="0" class="news">
+<tr>
+<td align="right" valign="top" class="more"><a href="./xwdt/xw/">更多新闻内容</a></td>
+</tr>
+
+<tr>
+<td align="left">
+<ul>
+  <li>
+  <a href="./xwdt/xw/201603/t20160321_238892.html"><font color="#ff0000">“化学物理仪器”专业方向课题开放选择</font></a>
+  </li>
+  <li>
+  <a href="./xwdt/xw/201511/t20151120_230844.html">适应科大新节奏，创造大学优生活</a>
+  </li>
+  <li>
+  <a href="./xwdt/xw/201511/t20151120_230850.html">生日，生命，生活----记2015级3系生日班会</a>
+  </li>
+  <li>
+  <a href="./xwdt/xw/201511/t20151120_230853.html">走进实验室，接触科研大师——参观物化实验室，走进化学物理系</a>
+  </li>
+  <li>
+  <a href="./xwdt/xw/201509/t20150908_226948.html">单原子Pd催化剂可实现高选择性加氢</a>
+  </li>
+</ul>
+</td>
+</tr>
+</table></td>
+      </tr>
+      
+    </table></td>
+  </tr>
+</table>
+-->
+
+
+<table width="1000" border="0" align="center" cellpadding="0" cellspacing="0" style=" margin-top:8px;">
+
+<DIV align=center id="scrollobj" style="white-space:nowrap;overflow:hidden;width:980px;margin-left:10px"><span>
+<a href="./xsgz/dfz/" ><img src="./images/zhuanye1.jpg" border="0" style="margin-right:10px"></a>
+<a href="./xsgz/jtdfz/"><img src="./images/zhuanye2.jpg" border="0" style="margin-right:10px"></a>
+<a href="./xsgz/bmwlhx/"><img src="./images/zhuanye3.jpg" border="0" style="margin-right:10px"></a>
+<a href="./xsgz/yzfz/"> <img src="./images/zhuanye4.jpg" border="0" style="margin-right:10px"></a>
+<img src="./images/zhuanye5.jpg" border="0" style="margin-right:10px">
+<a href="http://dcp.ustc.edu.cn/xwdt/kyxx/201311/t20131104_177636.html"><img src="./images/fanli1.jpg" border="0" style="margin-right:10px"></a>
+<a href="http://dcp.ustc.edu.cn/xwdt/xw/201012/t20101203_83128.html"><img src="./images/fanli4.jpg" border="0" style="margin-right:10px"></a>
+
+</span></DIV>
+<script language="javascript" type="text/javascript">
+
+	function scroll(obj) {
+		var tmp = (obj.scrollLeft)++;
+		//当滚动条到达右边顶端时
+		if (obj.scrollLeft==tmp) obj.innerHTML += obj.innerHTML;
+		//当滚动条滚动了初始内容的宽度时滚动条回到最左端
+		if (obj.scrollLeft>=obj1.firstChild.offsetWidth) obj.scrollLeft=0;
+	}
+	setInterval("scroll(document.getElementById('scrollobj'))",30);
+
+</script>
+
+
+
+
+
+
+
+
+</td>
+</tr>
+</table>
+
+
+
+</td>
+
+<td width="7" align="right" bgcolor="#FFFFFF" class="rightbg"></td>
+
+
+
+</tr>
+</table>
+
+
+
+
+
+
+
+
+
+
+<table width="1000" border="0" align="center" cellpadding="0" cellspacing="0">
+<tr>
+
+<td width="432" align="left" valign="top">
+
+
+
+<table width="472" align="left" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td height="40" align="left" valign="middle" background="./images/index_27.gif" class="fnxw"><span class="more"><a href="./xwdt/xw/">more</a></span><font face="微软雅黑">
+系闻公告</font></td>
+</tr>
+<tr>
+<td align="left" class="fnxwcontent">
+
+<ul>
+<font face="微软雅黑">
+<li><span class="time">2016-03-21</span>・<a href="./xwdt/xw/201603/t20160321_238892.html"><font color="#ff0000">“化学物理仪器”专业方向课题开放选择</font></a></li>
+</font>
+
+<font face="微软雅黑">
+<li><span class="time">2015-11-20</span>・<a href="./xwdt/xw/201511/t20151120_230844.html">适应科大新节奏，创造大学优生活</a></li>
+</font>
+
+<font face="微软雅黑">
+<li><span class="time">2015-11-20</span>・<a href="./xwdt/xw/201511/t20151120_230850.html">生日，生命，生活----记2015级3系生日班会</a></li>
+</font>
+
+<font face="微软雅黑">
+<li><span class="time">2015-11-20</span>・<a href="./xwdt/xw/201511/t20151120_230853.html">走进实验室，接触科研大师——参观物化实验室，走进化学物理系</a></li>
+</font>
+
+<font face="微软雅黑">
+<li><span class="time">2015-09-08</span>・<a href="./xwdt/xw/201509/t20150908_226948.html">单原子Pd催化剂可实现高选择性加氢</a></li>
+</font>
+
+<font face="微软雅黑">
+<li><span class="time">2014-06-22</span>・<a href="./xwdt/xw/201406/t20140622_197768.html">我系吴奇教授和李连伟博士获第八届冯新德高分子奖</a></li>
+</font>
+
+<font face="微软雅黑">
+<li><span class="time">2014-06-12</span>・<a href="./xwdt/xw/201406/t20140612_197336.html">我系校友吴屹影博士发明新型电池</a></li>
+</font>
+
+<font face="微软雅黑">
+<li><span class="time">2014-05-26</span>・<a href="./xwdt/xw/201405/t20140526_196635.html">我系李连伟博士学术论文入选Springer Theses丛书</a></li>
+</font>
+</ul>
+</td>
+</tr>
+</table>
+</td>
+
+<td width="432" align="right" valign="top">
+
+<table width="472" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td height="40" align="left" valign="middle" background="./images/index_27.gif" class="fnxw"><span class="more"><a href="./xwdt/xshd/">more</a></span><font face="微软雅黑">
+学术报告</font></td>
+</tr>
+<tr>
+<td align="left" class="fnxwcontent">
+<ul>
+<font face="微软雅黑">
+<li><span class="time">2014-03-23</span>・<a href="./xwdt/xshd/201403/t20140323_191442.html">3月24日—Prof. Andreas Otto教授报告</a></li>
+</font>
+
+<font face="微软雅黑">
+<li><span class="time">2017-09-21</span>・<a href="./xwdt/xshd/201709/t20170921_287425.html">化学物理系博士支部“铭记历史 缅怀先烈”主题党日活动</a></li>
+</font>
+
+<font face="微软雅黑">
+<li><span class="time">2013-12-24</span>・<a href="./xwdt/xshd/201312/t20131224_188949.html">12月15日学术报告---表面科学与催化系列讲座</a></li>
+</font>
+
+<font face="微软雅黑">
+<li><span class="time">2013-12-21</span>・<a href="./xwdt/xshd/201312/t20131221_187496.html">12月10日诺贝尔化学奖解读报告—罗毅教授</a></li>
+</font>
+
+<font face="微软雅黑">
+<li><span class="time">2013-12-24</span>・<a href="./xwdt/xshd/201312/t20131224_188950.html">10月29日学术报告---李灿院士</a></li>
+</font>
+
+<font face="微软雅黑">
+<li><span class="time">2013-12-24</span>・<a href="./xwdt/xshd/201312/t20131224_188951.html">6月27日学术报告—夏幼南教授</a></li>
+</font>
+
+<font face="微软雅黑">
+<li><span class="time">2013-12-24</span>・<a href="./xwdt/xshd/201312/t20131224_188952.html">6月21日表面科学与催化系列讲座</a></li>
+</font>
+
+<font face="微软雅黑">
+<li><span class="time">2013-12-24</span>・<a href="./xwdt/xshd/201312/t20131224_188953.html">3月3日学术报告---吴奇 院士</a></li>
+</font>
+</ul>
+</td>
+
+
+
+</table>
+</td>
+
+
+
+
+<table width="1000" border="0" align="center" cellpadding="0" cellspacing="0">
+<tr>
+
+<td width="432" align="left" valign="top">
+
+
+
+<table width="472" align="left" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td height="40" align="left" valign="middle" background="./images/index_27.gif" class="fnxw"><span class="more"><a href="./xwdt/kyxx/">more</a></span><font face="微软雅黑">
+科研动态</font></td>
+</tr>
+<tr>
+<td align="left" class="fnxwcontent">
+
+<ul>
+<font face="微软雅黑">
+<li><span class="time">2014-07-13</span>・<a href="./xwdt/kyxx/201407/t20140713_198696.html">曾杰教授课题组发明新型多功能材料“纳米之星”</a></li>
+</font>
+
+<font face="微软雅黑">
+<li><span class="time">2014-05-16</span>・<a href="./xwdt/kyxx/201405/t20140516_196182.html">拓扑绝缘体结构设计与生长机理研究取得重要进展</a></li>
+</font>
+
+<font face="微软雅黑">
+<li><span class="time">2014-04-14</span>・<a href="./xwdt/kyxx/201404/t20140414_193011.html">今年古根海姆奖 (Guggenheim Fellowship)的获奖名单</a></li>
+</font>
+
+<font face="微软雅黑">
+<li><span class="time">2014-04-09</span>・<a href="./xwdt/kyxx/201404/t20140409_192589.html">负载型双金属催化剂在原子层面上的精细可控合成取得重要进展</a></li>
+</font>
+
+<font face="微软雅黑">
+<li><span class="time">2014-04-09</span>・<a href="./xwdt/kyxx/201404/t20140409_192587.html">复合结构催化剂设计取得重要进展</a></li>
+</font>
+
+<font face="微软雅黑">
+<li><span class="time">2014-04-09</span>・<a href="./xwdt/kyxx/201404/t20140409_192585.html">光解水制氢的复合催化剂设计取得重要进展</a></li>
+</font>
+
+<font face="微软雅黑">
+<li><span class="time">2014-04-09</span>・<a href="./xwdt/kyxx/201404/t20140409_192583.html">半金属磁性材料的理论设计取得新进展</a></li>
+</font>
+
+<font face="微软雅黑">
+<li><span class="time">2013-11-04</span>・<a href="./xwdt/kyxx/201311/t20131104_177639.html">校友张桥博士获IUPAC青年化学家奖</a></li>
+</font>
+</ul>
+</td>
+</tr>
+</table>
+</td>
+
+<td width="432" align="right" valign="top">
+
+<table width="472" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td height="40" align="left" valign="middle" background="./images/index_27.gif" class="fnxw"><span class="more"><a href="./dtxs/xsfc/">more</a></span><font face="微软雅黑">
+学生风采</font></td>
+</tr>
+<tr>
+<td align="left" class="fnxwcontent">
+
+<ul>
+<font face="微软雅黑">
+<li><span class="time">
+2013-12-17</span>・<a href="./dtxs/xsfc/201312/t20131217_179613.html">“向母校致敬——升旗进支部”主题团日活动</a></li>
+</font>
+
+<font face="微软雅黑">
+<li><span class="time">
+2013-12-17</span>・<a href="./dtxs/xsfc/201312/t20131217_179610.html">“学习十八大，在党的指引下健康成长”主题团日活动</a></li>
+</font>
+
+<font face="微软雅黑">
+<li><span class="time">
+2013-12-17</span>・<a href="./dtxs/xsfc/201312/t20131217_179609.html">合肥野生动物园之行</a></li>
+</font>
+
+<font face="微软雅黑">
+<li><span class="time">
+2013-12-17</span>・<a href="./dtxs/xsfc/201312/t20131217_179608.html">10级化学物理系成功举办学习经验交流会</a></li>
+</font>
+
+<font face="微软雅黑">
+<li><span class="time">
+2013-12-17</span>・<a href="./dtxs/xsfc/201312/t20131217_179607.html">“书香传递”主题团日活动</a></li>
+</font>
+
+<font face="微软雅黑">
+<li><span class="time">
+2013-12-11</span>・<a href="./dtxs/xsfc/201312/t20131211_179337.html">绿色环保，大圩摘葡萄之旅</a></li>
+</font>
+</ul>
+</td>
+
+
+
+</table>
+</td>
+
+<!--
+<table width="1000" border="0" align="center" cellpadding="0" cellspacing="0" style=" margin-top:8px;">
+
+<td width="232" align="left" valign="top"> 
+  <table width="232" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td height="31" class="zt" BACKGROUND=./images/index_23.gif><span class="more"><a href=""></a></span>友情链接</td>
+</tr>
+</td>
+<tr>
+<td><img src="./images/index_26.gif" width="232" height="7"></td>
+</tr>
+</table>
+-->
+
+<table width="1000" border="0" align="center" cellpadding="0" cellspacing="0" style="margin-top:8px;">
+<hr width=990 style="border:1px dashed #000;height:1px;margin-top:5px">
+<DIV align=center id="scroll2" style="white-space:nowrap;overflow:hidden;width:960px;margin-left:20px"><span>
+   <img src="./images/index_16.gif"><font color=back style="margin-right:30px"><a href="http://www.ustc.edu.cn/">中国科学技术大学</a></font>
+   <img src="./images/index_16.gif"><font color=back style="margin-right:30px"><a href="http://cjcp.ustc.edu.cn/">化学物理学报</a></font>
+   <img src="./images/index_16.gif"><font color=back style="margin-right:30px"><a href="http://scms.ustc.edu.cn/">化学材料学院</a></font>
+   <img src="./images/index_16.gif"><font color=back style="margin-right:30px"><a href="http://www.hfnl.edu.cn/">微尺度实验中心</a></font>
+    <img src="./images/index_16.gif"><font color=back style="margin-right:30px"><a href="http://gradschool.ustc.edu.cn/">研究生招生在线</a></font>
+    <img src="./images/index_16.gif"><font color=back style="margin-right:30px"><a href="http://www.cas.ac.cn/">中国科学院</a></font>
+     <img src="./images/index_16.gif"><font color=back style="margin-right:30px"><a href="http://af.ustc.edu/">校友基金会</a></font>
+
+     <img src="./images/index_16.gif"><font color=back style="margin-right:30px"><a href="http://bbs.ustc.edu.cn/index.html">瀚海星云</a></font>
+</span></DIV>
+<script language="javascript" type="text/javascript">
+
+	function scroll(obj) {
+		var tmp = (obj.scrollLeft)++;
+		//当滚动条到达右边顶端时
+		if (obj.scrollLeft==tmp) obj.innerHTML += obj.innerHTML;
+		//当滚动条滚动了初始内容的宽度时滚动条回到最左端
+		if (obj.scrollLeft>=obj.firstChild.offsetWidth) obj.scrollLeft=0;
+	}
+	setInterval("scroll(document.getElementById('scroll2'))",50);
+//
+</script>
+
+
+</table>
+
+
+
+<table width="1000" border="0" align="center" cellpadding="0" cellspacing="0" style=" margin-top:5px;">
+<tr>
+<td><img src="./images/index_08.jpg"></td>
+</tr>
+
+
+
+<tr>
+<td height="50">
+<table width="1000" border="0" cellpadding="0" cellspacing="0">
+<tr align="center">
+<td>CopyRight 2010 中国科学技术大学化学物理系 All Rights Reserved<br />
+通信地址：安徽省合肥市金寨路96号化学物理系 邮编：230026 </td>
+</tr>
+</table>
+
+</td>
+</tr>
+</table>
+
+
+</body>
+</html>

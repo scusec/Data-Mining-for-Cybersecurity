@@ -1,0 +1,397 @@
+<!DOCTYPE html><html><head><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="save" content="history" /><link rel="shortcut icon" href="/favicon.ico"/><title>中国石油大学（华东）</title><meta http-equiv="Content-Type" content="text/html; charset=gb2312" /><link rel="stylesheet" type="text/css" href="http://rescdn.qqmail.com/bizmail/zh_CN/htmledition/style/login_setting376101.css" /><style type="text/css">a{ color:#34599e;}.self_preview_04 a{ color:#C0D2F4;}.self_preview_01{ color:#798699;}.self_preview_02{ color:#a0a0a0;}.self_preview_03{ color:#798699;}.self_preview_04{ color:#C0D2F4;}#preview_box{ color:#798598;}#preview_box a{ color:#34599d;}.bg_color{ background:#eaf3ff;}.border_color{ border:1px solid #acc3e4;}.company_link{color:#34599d; }</style><script src="http://rescdn.qqmail.com/bizmail/zh_CN/htmledition/js_biz/3rd/bj-report-tryjs.min362537.js"></script><script src="http://rescdn.qqmail.com/bizmail/zh_CN/htmledition/js_biz/all3955ca.js" type="text/javascript"></script><script>
+var JsChecker =
+{
+isreload:false,
+check:function(_asFile)
+{
+return typeof window[(/[0-9a-fA-F]{6}$/.test(_asFile) ? _asFile.substr(0,_asFile.length - 6) : _asFile) + "_js"] == "function";
+},
+load:function(_aoFiles, _abIsReload)
+{
+for (var i = 0, _nLen = _aoFiles.length; i < _nLen; i++)
+{
+var _sFile = _aoFiles[i];
+if (_sFile && (!_abIsReload || !JsChecker.check(_sFile)))
+{
+document.write("<script", " language='javascript' src='http://rescdn.qqmail.com/bizmail/zh_CN/htmledition/js_biz/", _sFile, ".js",
+_abIsReload ? "?" + Math.random() : "", "'></", "script>");
+_abIsReload && (JsChecker.isreload = true);
+}
+}
+}
+};
+</script><script>JsChecker.load(["safeauth19d947"]);</script><script>JsChecker.load(["safeauth19d947"], true);</script><script>
+BJ_REPORT.init({
+  id: 1230
+});
+BJ_REPORT.tryJs().spyAll();
+</script><script>
+(function()
+{
+if (!JsChecker.check("safeauth19d947"))
+{
+var _sHref = location.href;
+location.replace(_sHref + (_sHref.indexOf("?") == -1 ? "?" : "&") + "res=local");
+}
+}
+)();
+(function()
+{
+if (JsChecker.isreload)
+{
+window.netTrans = new Image();
+window.netTrans.src = ["/cgi-bin/getinvestigate?flowid=&stat=jsdownloadfail&res=&jsfailtime=", 
+JsChecker.check("safeauth19d947") ? 1 : 2, "&r=", Math.random()].join("");
+}
+}
+)();
+
+function setCookieAlias(_asValue, _asDomain)
+{
+var _oDate = new Date( new Date().valueOf() + 7 * 24 * 3600 * 1000 );
+var _sCookie = "qqmail_alias=" + escape(_asValue) + "; expires=" + _oDate.toGMTString() + "; path=/; domain=" + _asDomain;
+document.cookie = _sCookie;
+}
+
+function checkInput()
+{
+window.org_pass=S("pp").value;
+if (!window.RSAKey)
+{
+document.getElementById("downError").style.display = "block";
+document.getElementById("returnMsg").style.display = "none";
+return false;
+}
+if( !checkCookie() )
+{
+return false;
+}
+
+
+
+var inputUin = document.form1.qquin.value.toLowerCase();
+if( inputUin == "" )
+{
+showMsg("emptyUserName");
+document.form1.qquin.focus();
+return false;
+}
+
+
+var re = /^\d+$/;
+
+if( inputUin.indexOf( "@qq.com" ) > 0 || inputUin.indexOf( "@vip.qq.com" ) > 0 || inputUin.indexOf( "@foxmail.com" ) > 0 )
+{
+showMsg( "errorLoginWithQQAccount" );
+return false;
+}
+
+else if( inputUin.indexOf( "@" ) > -1  )
+{
+showMsg( "errorUserName" );
+return false;
+}
+
+else
+{
+document.form1.uin.value = document.form1.qquin.value + "@upc.edu.cn";
+}
+if( document.form1.pp.value == "" )
+{
+showMsg("emptyPassword");
+document.form1.pp.focus();
+return false;
+}
+
+if( document.form1.pp.value.length >= 100 )
+{
+showMsg("errorPassowrdTooLong");
+document.form1.pp.focus();
+return false;
+}
+
+if( S("VerifyArea").style.display != "none" )
+{
+if (document.form1.verifycode.value == "验证码")
+{
+document.form1.verifycode.value = "";
+}
+if (document.form1.verifycode.value == "")
+{
+showMsg("emptyVerifyCode");
+document.form1.verifycode.focus();
+return false;
+}
+}
+else
+{
+document.form1.verifycode.value = "";
+}
+
+
+var PublicKey = "CF87D7B4C864F4842F1D337491A48FFF54B73A17300E8E42FA365420393AC0346AE55D8AFAD975DFA175FAF0106CBA81AF1DDE4ACEC284DAC6ED9A0D8FEB1CC070733C58213EFFED46529C54CEA06D774E3CC7E073346AEBD6C66FC973F299EB74738E400B22B1E7CDC54E71AED059D228DFEB5B29C530FF341502AE56DDCFE9";
+var RSA = new RSAKey();
+RSA.setPublic(PublicKey, "10001");
+var PublicTs="1509202296";
+
+var Res = RSA.encrypt(document.form1.pp.value + '\n' + document.form1.ts.value + '\n');
+if (Res )
+{
+if (document.form1.chg.value == 1)
+{
+document.form1.p.value = hex2b64(Res);
+}
+else
+{
+if (document.form1.ppp.value != "")
+{
+document.form1.p.value = document.form1.ppp.value;
+}
+else
+{
+document.form1.p.value = hex2b64(Res);
+}
+}
+}
+var MaskValue = "";
+for (var Loop = 0; Loop < document.form1.pp.value.length; Loop++, MaskValue += "0");
+document.form1.pp.value = MaskValue;
+
+setCookieAlias(document.form1.uin.value, document.form1.domain.value);
+
+return true;
+}
+
+function CheckName()
+{
+var _account = document.form1.qquin.value.toLowerCase();
+
+if( _account.indexOf( "@qq.com" ) > 0 || _account.indexOf( "@vip.qq.com" ) > 0 || _account.indexOf( "@foxmail.com" ) > 0 )
+{
+showMsg( "errorLoginWithQQAccount" );
+return false;
+}
+else if( S("errorLoginWithQQAccount" ) != null )
+{
+S( "msgContainer" ).innerHTML = "";
+S( "msgContainer" ).style.display = "none";
+return true;
+}
+}
+
+function checkCookie() {
+
+var agt,cookieEnabled,isSafari, number;
+
+agt             = navigator.userAgent.toLowerCase();
+cookieEnabled   = navigator.cookieEnabled;
+isSafari        = ( agt.indexOf("safari") != -1 );
+number= Math.random();
+document.cookie = number;
+
+if( ((document.cookie.indexOf(number) == -1 || !cookieEnabled) && !isSafari) || (!cookieEnabled && isSafari) ) {
+S("infobarNoCookie").style.display = "block";
+return false;
+}
+else {
+return true;
+}
+}
+
+function changeimg()
+{
+S('vfcode').src = '/cgi-bin/getverifyimage?aid=23000101&' + Math.random();
+}
+
+function showMsg(msgId)
+{
+
+var msg, msgTemplate, txt;
+
+msg = {
+errorUserName       : "你输入的邮箱帐号不正确，请重新输入",
+emptyUserName       : "请填写你的邮箱帐号",
+emptyPassword       : "请填写邮箱密码",
+emptyVerifyCode     : "请填写验证码",
+errorPassowrdTooLong: "邮箱密码不能超过100个字符",
+
+errorNamePassowrd   : "你填写的帐号或密码不正确，请再次尝试",
+errorVerifyCode     : "你填写的验证码不正确",
+frequent            : "为了保障邮箱安全，请输入验证码",
+errorBlockIPErr: "你的IP已被暂时屏蔽，不能登录，请迟一些时候再尝试",
+errorDistinctValid: "为了你邮箱帐号的安全，请再次输入验证码登录",
+errorPermissionDenied:"你没有权限登录",
+errorLoginWithQQAccount: "请使用企业邮箱帐号登录",
+errorBizmailMX: "登录失败。你域名的MX记录未通过验证，请联系管理员",
+errorBindNullUin: "帐号为空，请重输",
+errorBindErr: "帐号绑定关系错误，请联系管理员",
+errorBindFail: "帐号绑定关系查询出错，请稍后再试",
+errorLogout: "你已成功退出邮箱",
+errorTimeout: "你的邮箱被退出",
+errorInactive: "你的帐号被禁用，请联系你的管理员",
+errorBizmailLoginLimit : "管理员限制该IP登录企业邮箱"
+};
+
+msgTemplate = '<div class="error" id="%_id_%">%_msg_%</div>';
+txt = msg[ msgId ];
+
+if (msgId != undefined && msgId != "" && txt != undefined)
+{
+S( "msgContainer" ).innerHTML = msgTemplate.replace( /%_msg_%/ig , txt ).replace( /%_id_%/ig , msgId );
+S( "msgContainer" ).style.display = "";
+return true;
+}
+}
+
+function addClass(_aoDom, _asClass)
+{
+var _sClassName = " " + _aoDom.className + " ";
+if (_sClassName.indexOf(" " + _asClass + " ") < 0)
+{
+    _aoDom.className += _aoDom.className ? " " + _asClass : _asClass;
+}
+}
+function rmClass(_aoDom, _asClass)
+{
+var _sClassName = " " + _aoDom.className + " ";
+_sClassName = _sClassName.replace(" " + _asClass + " ", " ");
+_aoDom.className = _sClassName;
+}
+
+function focusUin()
+{
+var _oUin = document.getElementById("qquin");
+_oUin.style.color = "#4d4d4c";
+_oUin.value = ("帐号" == _oUin.value) ? "" : _oUin.value;
+var _oSpan = document.getElementById("qquin").parentNode;
+addClass(_oSpan, "input_active");
+}
+function blurUin()
+{
+CheckName();
+var _oUin = document.getElementById("qquin");
+_oUin.style.color = ("" == _oUin.value) ? "#a0a0a0" : "#4d4d4c";
+_oUin.value = ("" == _oUin.value) ? "" : _oUin.value;
+var _oSpan = document.getElementById("qquin").parentNode;
+rmClass(_oSpan, "input_active");
+}
+
+function focusPT()
+{
+CheckName();
+var _oPP = document.getElementById("pp"),
+_oPT = document.getElementById("pptext");
+
+ _oPP.className = "self_input input_active";
+ _oPT.style.display = "none";
+ _oPP.style.display = "";
+ _oPP.focus();
+ }
+function keyupPP(event)
+{
+var gsAgent = navigator.userAgent.toLowerCase(),
+gbIsOpera = gsAgent.indexOf("opera") > -1,
+gbIsIE = (gsAgent.indexOf("compatible") > -1 && !gbIsOpera)|| gsAgent.indexOf("msie") > -1,
+gnIEVer = /MSIE (\d+.\d+);/i.test(gsAgent) && parseFloat(RegExp["$1"]);
+
+if(!gbIsIE || (gbIsIE && gnIEVer <= 9)){
+var caps_lock_tips = document.getElementById("caps_lock_tips");
+
+var dom = document.getElementById("pp");
+var code = event.keyCode || event.which;
+isShift = (event.shiftKey || 16 == code || false);
+if(!dom.value)
+{
+caps_lock_tips.style.display = "none";
+return false;
+}
+
+var newKey = event.key;
+if(/^[A-Z]+$/.test(newKey) && caps_lock_tips.style.display != "block" && !isShift)
+{
+caps_lock_tips.style.display = "block";
+}
+else if(!/^[A-Z]+$/.test(newKey) && caps_lock_tips.style.display != "none")
+{
+caps_lock_tips.style.display = "none";
+}
+}
+
+}
+function focusPP()
+{
+CheckName();
+var _oPP = document.getElementById("pp");
+addClass(_oPP,"input_active");
+}
+function blurPP2()
+{
+var _oPP = document.getElementById("pp");
+rmClass(_oPP,"input_active");
+
+var caps_lock_tips = document.getElementById("caps_lock_tips");
+caps_lock_tips.style.display = "none";
+}
+function blurPP()
+{
+
+var _oPP = document.getElementById("pp"),
+_oPT = document.getElementById("pptext");
+
+_oPP.className = "self_input";
+
+if ("" == _oPP.value)
+{
+_oPP.style.display = "none";
+_oPT.style.display = "";
+}
+var caps_lock_tips = document.getElementById("caps_lock_tips");
+caps_lock_tips.style.display = "none";
+}
+
+function focusVC()
+{
+var _oVC = document.getElementById("vc");
+_oVC.style.color = "#4d4d4c";
+_oVC.value = ("验证码" == _oVC.value) ? "" : _oVC.value;
+addClass(document.getElementById("vc"),"input_active");
+}
+function blurVC()
+{
+var _oVC = document.getElementById("vc");
+_oVC.style.color = ("" == _oVC.value) ? "#a0a0a0" : "#4d4d4c";
+_oVC.value = ("" == _oVC.value) ? "验证码" : _oVC.value;
+rmClass(document.getElementById("vc"),"input_active");
+}
+function init()
+{
+var o =S('qquin');
+try{
+if( o.value=='')
+{
+o.focus();
+}
+else
+{
+S('pp').focus();
+}
+}catch(ex){}
+
+var bAlwaysShowVerifyCode = (false == true);
+S("VerifyArea").style.display = ( bAlwaysShowVerifyCode  ? "block" : "none" );
+checkCookie();
+CheckName();
+}
+</script></head><body class="self_dm_login layout_wrap_01"><form name="form1" method="post" action="/cgi-bin/login" onSubmit="return checkInput();" ><input type="hidden" name="sid" value=""/><input type="hidden" name="uin" value=""/><input type="hidden" name="domain" value="upc.edu.cn" /><input type="hidden" name="aliastype" value="other"/><input type="hidden" name="errtemplate" value="logindomain"/><input type="hidden" name="firstlogin" value="false"/><input type="hidden" name="f" value="html"/><input type="hidden" name="p"/><input type="hidden" name="delegate_url" value="" /><input type="hidden" name="ppp" value="" /><input type="hidden" name="ts" value="1509202296" /><input type="hidden" name="chg" value="0" /><div class="self_preview_01" id="preview_box"><div id="preview_mask" style=""></div><div class="self_preview_wrap"><div class="preview_head"><div class="company_logo edit_issue"><img style="margin-top:0px;margin-left:0px;" class="logo_img" src="/cgi-bin/viewfile?type=skin&domain=&f=14217A43806E5DECF61141504D8CA982B117DA517075327262F7F323BDFC4020&skin_modtime=1491523818" alt=""/></div><p class="bg_color edit_issue">新用户初始密码为Upc+证件号后六位，证件号中的字母大写</p></div><div class="company_main"><div class="company_main_wrap"><div class="company_pic edit_issue"><img src="/cgi-bin/viewfile?type=skin&domain=&f=14217A43806E5DECF61141504D8CA982B117DA51707532723191E1119499949D&skin_modtime=1491523818" style="margin-top:0px;margin-left:0px;" /></div><div class="company_loginbox bg_color border_color edit_issue"><div id="js_input_area"><h3>登录邮箱</h3><div id="msgContainer" class="login_box_msg" style="display:none;">提示区域</div><div class="company_input_wrap " style="display: inline-block; vertical-align: middle;"><span class="input_with_domain" style="position: relative; "><input type="text" id="qquin" name="qquin" value="" tabindex="1" class="self_input   " onfocus="focusUin()" onblur="blurUin()" /><span class="domain_play" title="@upc.edu.cn">@upc.edu.cn</span></span></div><div class="company_input_wrap"><input type="password" id="pp" name="pp" style="display:none;" tabindex="2" class="self_input input_active" onkeyup="keyupPP(event)" onblur="blurPP()" /><input type="text" id="pptext" value="密码" tabindex="2" class="self_input gray"  onkeyup="keyupPP(event)" onfocus="focusPT()" onblur="onblurPT()" /><div class="lock_tips lock_tips_PT01" id="caps_lock_tips" style="display: none;"><span class="lock_tips_row"></span><span>大写锁定已打开</span></div></div><div id="VerifyArea" class="company_input_wrap verifor4" style=""><input type="text" id="vc" name="verifycode" tabindex="3" autocomplete="off" class="self_input gray" value="验证码" onfocus="focusVC()" onblur="blurVC()" /><div class="self_tips"><div class="self_veri_img"><script type="text/javascript">
+document.write("<img id='vfcode' src='/cgi-bin/getverifyimage?aid=23000101&",Math.random(),"' style='cursor:pointer;border:1px solid #e4eef9' onclick='changeimg()'>");
+</script></div><div><a href="javascript:changeimg()">看不清楚？&nbsp;换一个</a></div></div></div><div style="height:25px;padding-top:8px;*padding-top:0; padding-left:2px; position: relative;  "><input type="checkbox" id="ss" name="ss" value="1" tabindex="7" class="checkBox"  style="vertical-align: middle;"/><label for="ss" style="line-height:15px;" class="checkBoxLabel">5天内自动登录</label><a class="self_forg right" href="/cgi-bin/readtemplate?check=false&t=biz_rf_portal#recovery">忘记密码？</a><div id="auto_login_tips" style="display:none; visibility:hidden; position: absolute; width: 190px; background: #aaa; left: 0px; top: 25px;  background:#fdfde4;color:#d88708; padding: 5px 0 7px 5px;z-index:10;"><div>为了你的帐号安全，请勿在网吧或公用电脑上使用此功能！</div></div></div><script type="text/javascript">
+document.getElementById("ss").onmouseover = function(){
+document.getElementById("auto_login_tips").style.display = "block";
+document.getElementById("auto_login_tips").style.visibility = "visible";
+};
+
+document.getElementById("ss").onmouseout = function(){
+document.getElementById("auto_login_tips").style.display = "none";
+document.getElementById("auto_login_tips").style.visibility = "hidden";
+};
+</script><div class="login_submit" style="display: inline-block;vertical-align: middle; position: relative; top:-2px"><a class="login_btn_wrapper" href="javascript:;"><input class="login_btn" type="submit" value="登录" /></a></div><div class="admin_login_link_wrap"><a class="admin_login_link" href="http://exmail.qq.com/login">管理员登录</a></div></div></div></div></div><div class="company_bottom"><div class="company_link bg_color edit_issue"><a href="http://mailbm.upc.edu.cn/slave_zgsd" target="_blank">设置别名</a> | <a href="http://service.exmail.qq.com/cgi-bin/help" target="_blank">帮助中心</a></div><div class="company_copyright edit_issue">&copy;&nbsp;<span>1998&nbsp;-&nbsp;2016&nbsp;Tencent&nbsp;Inc.&nbsp;All&nbsp;Rights&nbsp;Reserved</span></div></div><div id="EditWrap"></div><div id="EditWrap2"></div></div></div></body><script>init();</script></html>

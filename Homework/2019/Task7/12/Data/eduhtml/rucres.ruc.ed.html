@@ -1,0 +1,432 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="author" content="微普科技 http://www.wiipu.com" />
+		<title>中国人民大学研究性教学课程网</title>
+		<link rel="shortcut icon" href="http://rucres.ruc.edu.cn/favicon.ico" type="image/x-icon">
+		<link rel="stylesheet" href="css/style.css" type="text/css" />
+ 	    <link rel="stylesheet" href="css/index.css" type="text/css" />
+    	<link rel="stylesheet" href="css/nivo-slider.css" type="text/css" media="screen" />
+		<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+        <script type="text/javascript" src="js/common.js"></script>
+		<script type="text/javascript" src="js/layer/layer.js"></script>
+	</head>
+    <body>
+        <div>
+            <div class="bbody">
+                <div class="top rucres_index">
+                    <!--头部-->
+                    <div><script>
+	$(function(){
+    	$('#login').click(function(){//登录
+    		layer.open({
+    			type       : 2,
+                title      : '',
+                closeBtn   : 1,
+                shadeClose : true,
+                shade      : 0.3,
+                area       : ['720px', '530px'],
+                content    : ['teacher_login.html','no']
+            });
+    	});
+		//修改密码
+		$("#newpass").click(function(){
+        	layer.open({
+            	type: 2,
+            	title: '修改密码',
+            	shadeClose: true,
+            	shade: 0.3,
+           		area: ['500px', '300px'],
+            	content: 'teacher_resetpass.php'
+     		});
+  		});
+        //查询
+        $('#submit').click(function(){
+			
+			var keywords = $('#titleinput').val();
+			location.href='search_courselist.php?keywords='+keywords;
+		});
+		$("#search").click(function(){//全局搜索按钮弹出
+			document.getElementById("searchdiv").style.display="none";
+			document.getElementById("searchinfo").style.display="inline";
+		})
+	});
+</script>
+<div class="head">
+    <div class="top">
+        <div class="logo"><a href="index.php"><img src="images/notice_03.png"/></a></div>
+        <div class="head_right">
+        	<p class="search" id="searchinfo" style="display:none;">
+        		<input class="searchinput" name="title" id="titleinput" placeholder="请输入关键字" type="text">
+        		<button type="submit" class="btn-search" id="submit">搜索</button>
+        	</p>
+        	<p class="login"><a  href="javascript:void(0)" id="login">登录</a></p>
+        	<p class="img_btn"><a href="javascript:void(0)"  id="searchdiv"><img id="search" src="images/notice_01.png" width=26 height=26/></a></p>
+	        
+	        
+	    </div>
+        <div class="clear"></div>
+    </div>
+    <div class="navigation">
+        <div class="hbgo">
+        </div>
+        <ul class="nav">
+            <li   class="active" ><a href="index.php">首页</a></li>
+            <li   ><a href="aboutus.php">关于我们</a></li>
+            <li   ><a href="notice.php">通知公告</a></li>
+            <li   ><a href="activity_message.php">活动简讯</a></li>
+            <li   ><a href="course_resource.php">课程资源</a></li>
+            <li   ><a href="policy.php">政策文件</a></li>
+            <li   ><a href="research_reference.php">研究参考</a></li>
+            <li   ><a href="achivement_exhibition.php">成果展示</a></li>
+            <div class="clear"></div>
+        </ul>
+    </div>
+</div>
+</div>
+                </div>
+					<script type="text/javascript" src="js/jquery-1.4.3.min.js"></script>
+<script type="text/javascript" src="js/jquery.nivo.slider.js"></script>
+<script type="text/javascript">
+	var jQuery_1_4_3 = $.noConflict(true);
+        jQuery_1_4_3(function($){
+             $(window).load(function() {
+                $('#slider').nivoSlider();
+            })
+        });
+</script>
+	<div id="wrapper">
+		<div id="slider-wrapper">
+        
+			<div id="slider" class="nivoSlider">
+			<img src="userfiles/upload/album/201611141326535722.jpg" alt="" title="" /><img src="userfiles/upload/album/201611141324198757.jpg" alt="" title="" /><img src="userfiles/upload/album/201611141326437668.jpg" alt="" title="" />			</div>
+		</div>
+	</div>                <div class="letterimage" style="background-image: url(images/index5.jpg);"></div>
+            </div>
+            <div class="indexcontentup">
+                <div class="indextop w1200">
+                    <div class="topleft">
+                        <div class="notice">
+                            <div class="file"><a href="notice.php">通知公告</a></div>
+                            <div class="more"><a href="notice.php">更多&gt;&gt;</a></div>
+                        </div>
+                        <div class="indexintro">
+                                                        <div class="images"><a href="notice.php?id=49"><img src="userfiles/upload/notice/201611172152238149.jpg"/></a></div>
+                            <div class="wordintro">
+                                <div class="title"><a class="" href="notice.php?id=49">关于召开“中国人民大学2015－2016学年秋季学期本科研究性教学课程立项项目教师座谈会”的通知</a></div>
+                                <div class="words"><a class="" href="notice.php?id=49">各相关立项项目负责人：
+
+为进一步了解本科研究性教学课程立项项目进展情况，给相关开课教师提供一个充分交流的平台，教务处作......</a></div>
+								<div class="date"><a class="" href="notice.php?id=49">2016-11-21</a>
+                                </div>
+                                                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        
+                    </div>
+                    <div class="topright">
+                            <div class="moremessage">
+                                <a  class="activity" href="activity_message.php?">活动简讯</a>
+                                <a class="more" href="activity_message.php">更多&gt;&gt;</a>
+                            </div>
+                        <div class="indexcontent">
+                            <ul>
+                                     
+                                     <li>•&nbsp;<a href="activity_detail.php?id=58">
+                                         中国人民大学召开本科研究性教学课程立项项目教师座谈......<span>2016-11-22</span></a>
+                                    </li>
+                                    
+                                     
+                                     <li>•&nbsp;<a href="activity_detail.php?id=52">
+                                         龙永红处长深入课堂了解本科研究性教学建设课程情况......<span>2016-11-21</span></a>
+                                    </li>
+                                    
+                                     
+                                     <li>•&nbsp;<a href="activity_detail.php?id=50">
+                                         中国人民大学召开2015－2016学年秋季学期本科......<span>2016-11-21</span></a>
+                                    </li>
+                                    
+                                     
+                                     <li>•&nbsp;<a href="activity_detail.php?id=48">
+                                         人民大学召开第一批（2015）本科研究性教学课程立......<span>2016-11-21</span></a>
+                                    </li>
+                                    
+                                                                 <div class="clear"></div>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="backimage" style="background-image: url(images/index6.jpg); height: auto;">
+                    <div class="indexcourse w1200">
+                        <div class="indexmore">
+                            <ul>
+                                <li><a class="" href="course_resource.php?subjectid=0"><span style="padding-bottom: 5px;">更多&gt;&gt;</span>课程资源</a></li>
+                                <div class="clear"></div>
+                            </ul>
+                        </div>
+                        <div class="resourceleft">
+                            <div class="bookimage" style="background-image: url(images/index7.jpg);">
+                                <ul>
+                                                                        <li><a href="course_resource.php?subjectid=1">经济学</a></li>
+                                                                        <li><a href="course_resource.php?subjectid=2">法学</a></li>
+                                                                        <li><a href="course_resource.php?subjectid=3">管理学</a></li>
+                                                                        <li><a href="course_resource.php?subjectid=4">历史学</a></li>
+                                                                        <li><a href="course_resource.php?subjectid=5">理学</a></li>
+                                                                        <li><a href="course_resource.php?subjectid=6">哲学</a></li>
+                                                                        <li><a href="course_resource.php?subjectid=7">工学</a></li>
+                                                                        <li><a href="course_resource.php?subjectid=8">文学</a></li>
+                                                                         <div class="clear"></div>
+                                </ul>
+                            </div>
+                            <div class="indexleftimages">
+                                <ul>
+                                                                        <li>
+                                        <div class="wholeimage">
+                                            <div class="images"><a href="course_courseinfo.php?courseid=71"><img src="userfiles/upload/course/img/201704210903461348.jpg"/></a></div>
+                                            <div class="shadow"></div>
+                                            <div class="letters"><a href="course_courseinfo.php?courseid=71">广告创意与表现</a></div>
+                                        </div>
+                                        <div class="indexteacher">
+                                            <div>主讲教师：王树良</div>
+                                            <div class="college">学院名称：新闻学院</div>
+                                        </div>
+                                    </li>
+                                   
+                                                                        <li>
+                                        <div class="wholeimage">
+                                            <div class="images"><a href="course_courseinfo.php?courseid=35"><img src="userfiles/upload/course/img/201611101342249622.jpg"/></a></div>
+                                            <div class="shadow"></div>
+                                            <div class="letters"><a href="course_courseinfo.php?courseid=35">实验经济学</a></div>
+                                        </div>
+                                        <div class="indexteacher">
+                                            <div>主讲教师：王湘红</div>
+                                            <div class="college">学院名称：经济学院</div>
+                                        </div>
+                                    </li>
+                                   
+                                                                        <li>
+                                        <div class="wholeimage">
+                                            <div class="images"><a href="course_courseinfo.php?courseid=43"><img src="userfiles/upload/course/img/201611101503589006.jpg"/></a></div>
+                                            <div class="shadow"></div>
+                                            <div class="letters"><a href="course_courseinfo.php?courseid=43">保险法</a></div>
+                                        </div>
+                                        <div class="indexteacher">
+                                            <div>主讲教师：张俊岩</div>
+                                            <div class="college">学院名称：财政金融学院</div>
+                                        </div>
+                                    </li>
+                                   
+                                                                        <li>
+                                        <div class="wholeimage">
+                                            <div class="images"><a href="course_courseinfo.php?courseid=65"><img src="userfiles/upload/course/img/201611101300106775.jpg"/></a></div>
+                                            <div class="shadow"></div>
+                                            <div class="letters"><a href="course_courseinfo.php?courseid=65">人生哲学</a></div>
+                                        </div>
+                                        <div class="indexteacher">
+                                            <div>主讲教师：张霄</div>
+                                            <div class="college">学院名称：哲学院</div>
+                                        </div>
+                                    </li>
+                                   
+                                                                        <li>
+                                        <div class="wholeimage">
+                                            <div class="images"><a href="course_courseinfo.php?courseid=10"><img src="userfiles/upload/course/img/201612231626313827.jpg"/></a></div>
+                                            <div class="shadow"></div>
+                                            <div class="letters"><a href="course_courseinfo.php?courseid=10">食品安全与质量管理</a></div>
+                                        </div>
+                                        <div class="indexteacher">
+                                            <div>主讲教师：李佳洁</div>
+                                            <div class="college">学院名称：农业与农村发展学院</div>
+                                        </div>
+                                    </li>
+                                   
+                                                                        <li>
+                                        <div class="wholeimage">
+                                            <div class="images"><a href="course_courseinfo.php?courseid=60"><img src="userfiles/upload/course/img/201611101414042127.jpg"/></a></div>
+                                            <div class="shadow"></div>
+                                            <div class="letters"><a href="course_courseinfo.php?courseid=60">心理学研究方法</a></div>
+                                        </div>
+                                        <div class="indexteacher">
+                                            <div>主讲教师：胡平</div>
+                                            <div class="college">学院名称：理学院心理学系</div>
+                                        </div>
+                                    </li>
+                                   
+                                                                        <li>
+                                        <div class="wholeimage">
+                                            <div class="images"><a href="course_courseinfo.php?courseid=62"><img src="userfiles/upload/course/img/201611101357042127.jpg"/></a></div>
+                                            <div class="shadow"></div>
+                                            <div class="letters"><a href="course_courseinfo.php?courseid=62">社会心理学</a></div>
+                                        </div>
+                                        <div class="indexteacher">
+                                            <div>主讲教师：刑采</div>
+                                            <div class="college">学院名称：理学院心理学系</div>
+                                        </div>
+                                    </li>
+                                   
+                                                                        <li>
+                                        <div class="wholeimage">
+                                            <div class="images"><a href="course_courseinfo.php?courseid=58"><img src="userfiles/upload/course/img/201612231054162606.jpg"/></a></div>
+                                            <div class="shadow"></div>
+                                            <div class="letters"><a href="course_courseinfo.php?courseid=58">世界现代史</a></div>
+                                        </div>
+                                        <div class="indexteacher">
+                                            <div>主讲教师：王皖强</div>
+                                            <div class="college">学院名称：历史学院</div>
+                                        </div>
+                                    </li>
+                                   
+                                                                        <div class="clear"></div>
+                                </ul>
+                            </div>
+                            <div class="clear"></div>
+                            <div class="content rucresindex">
+                                <div class="position">
+                                    <p class="p1"><a class="" href="hotcourse_list.php">关注排行</a></p>
+                	            	<p class="p2"><a class="" href="hotcourse_list.php">更多&gt;&gt;</a></p>
+                                    <div class="clear"></div>
+                                </div>
+                                <div class="contentfocus rucresindex">
+                                    <ul style="margin-left: -10px;">
+                                                                                <li>
+                                            <div class="liimg"><a href="course_courseinfo.php?courseid=71"><img src="userfiles/upload/course/img/201704210903461348.jpg"/></a></div>
+                                            <div class="top">
+                                                <span class="one"><a href="course_courseinfo.php?courseid=71">广告创意与表现</a></span>
+                                                <span class="two">王树良</span>
+                                            </div>
+                                            <div class="clear"></div> 
+                                            <div class="bottom">
+                                                <div class="economic">新闻学院</div>
+                                                <div class="number">
+                                                    <div class="bigpic"><img src="images/Image4.png"/></div>
+                                                    <span>976</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                                                                <li>
+                                            <div class="liimg"><a href="course_courseinfo.php?courseid=35"><img src="userfiles/upload/course/img/201611101342249622.jpg"/></a></div>
+                                            <div class="top">
+                                                <span class="one"><a href="course_courseinfo.php?courseid=35">实验经济学</a></span>
+                                                <span class="two">王湘红</span>
+                                            </div>
+                                            <div class="clear"></div> 
+                                            <div class="bottom">
+                                                <div class="economic">经济学院</div>
+                                                <div class="number">
+                                                    <div class="bigpic"><img src="images/Image4.png"/></div>
+                                                    <span>661</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                                                                <li>
+                                            <div class="liimg"><a href="course_courseinfo.php?courseid=43"><img src="userfiles/upload/course/img/201611101503589006.jpg"/></a></div>
+                                            <div class="top">
+                                                <span class="one"><a href="course_courseinfo.php?courseid=43">保险法</a></span>
+                                                <span class="two">张俊岩</span>
+                                            </div>
+                                            <div class="clear"></div> 
+                                            <div class="bottom">
+                                                <div class="economic">财政金融学院</div>
+                                                <div class="number">
+                                                    <div class="bigpic"><img src="images/Image4.png"/></div>
+                                                    <span>640</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                                                                <li>
+                                            <div class="liimg"><a href="course_courseinfo.php?courseid=65"><img src="userfiles/upload/course/img/201611101300106775.jpg"/></a></div>
+                                            <div class="top">
+                                                <span class="one"><a href="course_courseinfo.php?courseid=65">人生哲学</a></span>
+                                                <span class="two">张霄</span>
+                                            </div>
+                                            <div class="clear"></div> 
+                                            <div class="bottom">
+                                                <div class="economic">哲学院</div>
+                                                <div class="number">
+                                                    <div class="bigpic"><img src="images/Image4.png"/></div>
+                                                    <span>596</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                                                                <li>
+                                            <div class="liimg"><a href="course_courseinfo.php?courseid=10"><img src="userfiles/upload/course/img/201612231626313827.jpg"/></a></div>
+                                            <div class="top">
+                                                <span class="one"><a href="course_courseinfo.php?courseid=10">食品安全与质量管理</a></span>
+                                                <span class="two">李佳洁</span>
+                                            </div>
+                                            <div class="clear"></div> 
+                                            <div class="bottom">
+                                                <div class="economic">农业与农村发展学院</div>
+                                                <div class="number">
+                                                    <div class="bigpic"><img src="images/Image4.png"/></div>
+                                                    <span>588</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                             
+                                       <div class="clear"></div>
+                                    </ul>
+                                </div>
+                                <div class="clear"></div>
+                                <div class="indexbottom">
+                                    <div class="friendlyconnect">
+                                        <div class="connect">友情链接</div>
+                                        <div class="items">
+                                                                                    <a target="_blank" href="http://jiaowu.ruc.edu.cn/">中国人民大学教务处 </a>
+                                        
+                                                                                    <a target="_blank" href="http://www.tsinghua.edu.cn/publish/jwc/615/index.html">清华大学教务处 </a>
+                                        
+                                                                                    <a target="_blank" href="http://dean.pku.edu.cn/pkudean/index.html">北京大学教务处 </a>
+                                        
+                                                                                    <a target="_blank" href="http://xxgk.fudan.edu.cn/_s81/main.psp">复旦大学教务处 </a>
+                                        
+                                                                                    <a target="_blank" href="http://jwc.sjtu.edu.cn/web/sjtu/198001.htm">上海交通大学教务处 </a>
+                                        
+                                                                                    <a target="_blank" href="http://jwbinfosys.zju.edu.cn/default2.aspx">浙江大学现代教务管理系统 </a>
+                                        
+                                                                                </div>
+                                    </div>
+                                   <div class="materialdown"><a href="download.php" style="float:right;"><img src="images/index19.jpg"/></a></div>
+                                   <div class="clear"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        
+<div class="clear"></div>
+<div class="foot">
+		
+    <div class="bottom">
+        <div class="foot_nav">
+        	<ul class="foot_nav_ul">
+        		<a href="index.php"><li class="foot_nav_li">首页</li></a><li class="foot_nav_lim">|</li>
+        		<a href="aboutus.php"><li class="foot_nav_li">关于我们</li></a><li class="foot_nav_lim">|</li>
+        		<a href="course_resource.php"><li class="foot_nav_li">课程资源</li></a><li class="foot_nav_lim">|</li>
+        		<a href="achivement_exhibition.php"><li class="foot_nav_li">成果展示</li></a>
+        	</ul>
+        </div>
+   		<div class="web">
+            <p class="p1">©</p> 
+            <p class="p2">&nbsp;中国人民大学研究性教学课程建设网 版权所有 2016&nbsp;&nbsp;<a href="http://www.wiipu.com/" target="_blank" style="color: white;">技术支持：微普科技</a></p>
+            <div class="order">&nbsp;&nbsp;您是第
+	        <span>9</span>
+	        <span>9</span>
+	        <span>9</span>
+	        <span>9</span>
+	        <span>9</span>
+	        位访客</div>
+            <div class="clear"></div>
+        </div>
+        <div style="float:right;width:135px; position: absolute;right: 10%;text-align: center;">
+			<img src="images/we_chat.jpg" style="width:80px;margin-bottom: 5px;"/>
+			<p style="font-size:12px; color: white;">RUC研究性教学课程建设</p>
+		</div>
+    </div>
+    <div class="clear"></div>
+</div>
+    </body>
+</html>

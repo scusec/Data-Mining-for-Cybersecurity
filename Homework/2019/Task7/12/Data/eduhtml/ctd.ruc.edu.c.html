@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="author" content="微普科技 -- http://www.wiipu.com" />
+	<title>中国人民大学教师教学发展中心</title>
+	<link href="css/style.css" rel="stylesheet">
+	<script src="js/jquery.1.9.1.min.js"></script>
+	<script src="js/jquery.event.drag-1.5.min.js"></script>
+	<script src="js/jquery.touchSlider.js"></script>
+	<script src="js/jquery.index.sildsr.js"></script>
+	<script src="js/main.jquery.js"></script>
+	<script>
+		$(function(){
+			//内容部分左侧选项卡 end
+			$(".sc-newcnt .lefttab > span").click(function(){
+				if(!$(this).hasClass("on")){
+					$(this).addClass("on").siblings("span").removeClass("on");
+					$(this).siblings("a").css("display","none");
+					$(this).siblings("a").eq($(this).index()).css("display","block");
+					$(this).parent(".lefttab").siblings(".lftabint").find("ul").css("display","none");
+					$(this).parent(".lefttab").siblings(".lftabint").find("ul").eq($(this).index()).fadeIn(600);
+				}
+				if($(this).index()==1){
+					$(this).parent(".lefttab").addClass("bgchange");
+				}else{$(this).parent(".lefttab").removeClass("bgchange");}
+			});//
+			//点击滚动到底部
+			$(".cntsc-wrap").click(function(){
+				var heightTop = $(document).scrollTop();
+				if(heightTop < 80){
+					$(document).scrollTop(1080);
+				}
+			});  
+		});
+	</script>
+</head>
+<body>
+	<div class="wrap">
+	   	<div class="header">
+	    		<script type="text/javascript" src="js/layer/layer.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			//搜索
+			$("#cer_search").click(function(){
+				var keywords   	= $('input[name=keywords]').val();
+				if(keywords==''){
+                    layer.msg('请填写查询关键字');
+					return false;
+                }
+				location.href="search_list.php?keywords="+keywords;
+			});
+		});	
+	</script>
+<div class="topsearch floatr">
+    <div class="w1200">
+    	    		<a href="login.php">登陆</a><a>丨</a>
+    		<a href="register.php">注册</a>
+    	    	<a class="searcht" id="cer_search">搜索</a>
+    	<input type="text" name="keywords" placeholder="关键字" value="" />
+    </div>
+</div>	     	<div class="clear"></div>
+            <div class="w1200">
+    <div class="nav">
+    	<ul>
+    		<li class="indexabs  on"><a href="index.php">首页</a></li>
+    		<li ><a href="centerintro.php">了解中心</a></li>
+    		<li ><a href="teachertraining.php?type=1">教学发展</a></li>
+    		<li class="navmidli "><a href="news_list.php?code=5">教改研究</a></li>
+    		<li ><a href="informationteach_list.php?type=1">信息化教学</a></li>
+    		<li ><a href="download_list.php">教学社区</a></li>
+    		<li ><a href="academic.php">示范建设</a></li>
+    		<div class="clear"></div>
+    	</ul>
+    </div>
+    <div class="head_logo">
+    	<a href="http://www.ruc.edu.cn/" target="_blank"><img src="images/base/header_logo_sxy.png" alt="中国人民大学" /></a>
+    	<a href="http://ctd.ruc.edu.cn/"><img src="images/base/header_logo.png" alt="教师教学发展中心" /></a>
+    </div>
+</div>		</div>
+		<div class="clear"></div>
+		<!--头部结束-->
+		<div class="imain">
+			<div class="main_visual">
+				<div class="flicking_con"></div>
+				<div class="main_image">
+					<ul>
+						
+    									<li><a style="background-size:cover;background-image:url(http://ctd.ruc.edu.cn/userfiles/pic/201709221547181462.png)" href="#"></a></li>
+    							    
+    									<li><a style="background-size:cover;background-image:url(http://ctd.ruc.edu.cn/userfiles/pic/201704011618214584.png)" href="http://ctd.ruc.edu.cn/web/detailnews.php?id=397&code=10"></a></li>
+    							    
+    									<li><a style="background-size:cover;background-image:url(http://ctd.ruc.edu.cn/userfiles/pic/201703291623236735.png)" href="#"></a></li>
+    							    
+    									<li><a style="background-size:cover;background-image:url(http://ctd.ruc.edu.cn/userfiles/pic/201704011620455981.png)" href="http://ctd.ruc.edu.cn/web/detailnews.php?id=389&code=3"></a></li>
+    							    
+    									<li><a style="background-size:cover;background-image:url(http://ctd.ruc.edu.cn/userfiles/pic/201703171656486079.png)" href="#"></a></li>
+    							    
+    									<li><a style="background-size:cover;background-image:url(http://ctd.ruc.edu.cn/userfiles/pic/201703221516072650.png)" href="#"></a></li>
+    							    
+    									<li><a style="background-size:cover;background-image:url(http://ctd.ruc.edu.cn/userfiles/pic/201702231052055467.png)" href="#"></a></li>
+    							    
+    									<li><a style="background-size:cover;background-image:url(http://ctd.ruc.edu.cn/userfiles/pic/201703171400557574.png)" href="#"></a></li>
+    							    
+    									<li><a style="background-size:cover;background-image:url(http://ctd.ruc.edu.cn/userfiles/pic/201702221015229415.png)" href="http://rucctd.wiiyun.com/web/index.php"></a></li>
+    							    					</ul>
+					<a href="javascript:;" id="btn_prev"></a>
+					<a href="javascript:;" id="btn_next"></a>
+				</div>
+			</div>
+			<!--首页轮播 end-->
+			<div class="cntsc-wrap">
+				<div class="sc-newcnt w1200">
+					<div class="floatl">
+						<div class="lefttab">
+							
+							<span class="on" style="margin-left:30px;vertical-align:middle;display:inline-block;background:url(images/indexnew/notice.png) no-repeat left center;padding-left:36px;">通知公告</span>
+							
+							<span style="margin-left:;vertical-align:middle;display:inline-block;background:url(images/indexnew/news.png) no-repeat 100px 10px;padding-left:138px;">新闻动态</span>
+							
+							<a href="notice.php" target="_blank" title="通知公告">MORE+</a>
+							<a href="news.php" target="_blank" title="新闻动态" style="display:none">MORE+</a>
+						</div>
+						<div class="lftabint">
+							 								<ul>
+																			<li>
+											<a href="detailnotice.php?id=521&code=11" target="_blank" target="_blank">教师教学发展中心研究生助管招聘启事</a>
+											<span>2017-09-30</span>
+										</li>
+									
+																			<li>
+											<a href="detailnotice.php?id=520&code=6" target="_blank" target="_blank">关于2017-2018学年秋季学期“名师沙龙”选学申报的通知</a>
+											<span>2017-09-11</span>
+										</li>
+									
+																			<li>
+											<a href="detailnotice.php?id=519&code=11" target="_blank" target="_blank">关于开展2016年度中国人民大学“新生研讨课优秀主讲教师”评选工作的通知</a>
+											<span>2017-07-25</span>
+										</li>
+									
+																			<li>
+											<a href="detailnotice.php?id=517&code=11" target="_blank" target="_blank">关于2017年度教师教学发展项目评审结果的公示</a>
+											<span>2017-06-29</span>
+										</li>
+									
+																			<li>
+											<a href="detailnotice.php?id=514&code=11" target="_blank" target="_blank">关于对2016教师教学发展改革项目进行中期检查的通知</a>
+											<span>2017-06-22</span>
+										</li>
+									
+																			<li>
+											<a href="detailnotice.php?id=513&code=11" target="_blank" target="_blank">关于2017年中国人民大学教师教学发展项目申报的通知</a>
+											<span>2017-04-26</span>
+										</li>
+									
+																			<li>
+											<a href="detailnotice.php?id=501&code=11" target="_blank" target="_blank">中国人民大学教师教学发展中心招聘启事</a>
+											<span>2017-03-29</span>
+										</li>
+									
+																	</ul>
+							
+							<!---通知公告 end-->
+							 							<ul style="display:none;">
+																<li>
+									<a href="detailnews.php?id=401&code=11" target="_blank">2016-2017春季学期 “微格教学”考核圆满落幕</a>
+									<span>2017-06-09</span>
+								</li>
+																<li>
+									<a href="detailnews.php?id=400&code=11" target="_blank">2017年春季学期3门“名师沙龙”课程顺利开设</a>
+									<span>2017-04-19</span>
+								</li>
+																<li>
+									<a href="detailnews.php?id=399&code=11" target="_blank">2017年春季学期中心建设14门双选认证数字化课程</a>
+									<span>2017-04-19</span>
+								</li>
+																<li>
+									<a href="detailnews.php?id=397&code=10" target="_blank">中心举办第21期教师教学发展沙龙 探讨电影在国际关系教学中的应用</a>
+									<span>2017-04-01</span>
+								</li>
+																<li>
+									<a href="detailnews.php?id=389&code=3" target="_blank">教师教学发展中心举办案例教学研习营 共商国际反腐的学科建设与人才培养</a>
+									<span>2017-03-14</span>
+								</li>
+																<li>
+									<a href="detailnews.php?id=396&code=7" target="_blank">论谈 | 刘伟：凸显人文特色 建设成绩突出世界一流大学</a>
+									<span>2016-12-20</span>
+								</li>
+																<li>
+									<a href="detailnews.php?id=385&code=10" target="_blank">教师教学发展沙龙之“经典交响曲赏析”系列活动圆满落幕</a>
+									<span>2016-12-02</span>
+								</li>
+															</ul>
+							<!--新闻动态-->
+						</div>
+					</div>
+					<!--左侧内容部分 end-->
+					<div class="floatr">
+						<div class="til">
+							<span>活动预告</span>
+							<a href="activity.php" target="_blank">MORE+</a>
+						</div>
+																			<div class="info">
+								<div class="relative">
+								
+									<img src="http://ctd.ruc.edu.cn/userfiles/pic/201703301042066174.png" alt="活动图片" />
+									<span>
+										<strong>18</strong>
+										2017-05									</span>
+								</div>
+								<a href="activity_detail.php?id=38" target="_blank">2016-2017春季学期“微格教学”考核</a>
+							</div>
+											</div>
+					<!--右侧侧内容部分 end-->
+					<div class="clear"></div>
+				</div>
+			</div>
+			<!--首页修部分end-->
+		</div>
+		<!--首页内容部分 end-->
+		<div class="footer">
+	<div class="w1200">
+		<div class="floatl">
+			<p class="footer_logo">
+				<a href="index.php"><img src="images/base/footer_logo.png"  alt="logo" /></a>
+				<a href="contactus.php" target="_blank">联系我们</a>
+				<a>丨</a>
+				<a href="http://ctd.ruc.edu.cn/" target="_blank">旧版地址</a>
+			</p>
+			<p>
+				©2012年中国人民大学教师教学发展中心 &nbsp; 版权所有 &nbsp; 京ICP备10052035号       
+				<span>京公海网安备1101080015号</span>
+			</p>
+			<p>
+				技术支持：<a href="http://www.wiipu.com/" target="_blank">微普科技</a>
+			</p>
+		</div>
+		<div class="flinks">
+			<p>友情链接</p>
+			<span>
+				<a href="http://www.moe.edu.cn" target="_blank">教育部</a>
+				<a href="http://www.ruc.edu.cn" target="_blank">中国人民大学</a>
+				<a href="http://jiaowu.ruc.edu.cn" target="_blank">中国人民大学教务处</a>
+				<a href="http://mooc.crup.com.cn" target="_blank">芸窗慕课</a>
+				<a href="http://www.livedu.com.cn" target="_blank">北京高校优质课程资源共享联盟</a>
+			</span>
+		</div>
+		<div class="floatr">
+			<img src="images/base/footer_wxerweima.png" alt="微信公众号" />
+			<span>微信公众号</span>
+		</div>
+		<div class="clear"></div>
+	</div>
+</div>	</div>
+</body>
+</html>

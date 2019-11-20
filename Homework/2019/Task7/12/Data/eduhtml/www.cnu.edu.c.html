@@ -1,0 +1,679 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=1440" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<LINK rel="shortcut icon" type=images/bitbug.icon href="images/bitbug.ico">
+<title>首都师范大学 Capital Normal University</title>
+<link href="css/style20160601.css" rel="stylesheet" type="text/css" />
+<!-----------下拉菜单 效果-------->
+<script type="text/javascript" src="js/jquery-1.7.2.js"></script>
+<script type="text/javascript" src="js/js1.js"></script>
+<!--链接切换-->
+<script type="text/javascript" src="js/show.js"></script>
+
+<script>
+window.onload = function ()
+{
+	show ();
+};
+</script>
+<style>@media screen max-width(1025px){
+	.top { max-width:990px; }
+	}</style>
+</head>
+
+<body>
+
+<script src="js/uaredirect.js" type="text/javascript"></script>
+<script type="text/javascript">
+		String.prototype.endWith=function(s){
+		  if(s==null||s==""||this.length==0||s.length>this.length)
+			 return false;
+		  if(this.substring(this.length-s.length)==s)
+			 return true;
+		  else
+			 return false;
+		  return true;
+		 }
+ 
+		var a=window.location.href;
+		var r = window.location.search;
+		if(!r.endWith("frm")){
+			//不以frm结尾时候做跳转
+			uaredirect("http://wap.cnu.edu.cn");	
+		}else{
+			//以frm结尾时候，做浏览器识别跳转
+			
+		}
+	</script>
+
+<script type="text/javascript" src="js/jquery-1.9.0.min.js"></script>
+<script>
+		function checkXnwk(url, xwssyh) {
+		var url1 = window.location + "";
+		url1 = url1.substring(0, url1.lastIndexOf('/')) + "/" + url;
+		if (xwssyh != '' && xwssyh == 'xn') {
+			var flag = checkSession();
+			if (flag == "true") {
+				window.open(url);
+			} else if (flag == "false") {
+                                url1 = url1.split("").reverse().join("") ;
+			        url1 = encodeURIComponent(url1) ;
+				window.open('/cms/web/checkXnwk.jsp?url=' + url1,'_blank');
+			} else {
+				window.open(url);
+			}
+		} else {
+			window.open(url);
+		}
+	}
+	function checkSession() {
+		var flag = "";
+		jQuery.ajax({
+			type : "POST",
+			url : '/cms/web/getXnwkSession.jsp',
+			async : false,
+			success : function(data) { 
+				var newData = data.replace(/(^\s*)|(\s*$)/g, "");
+				flag = newData;
+			}
+		});
+		return flag;
+	}
+</script>
+
+<!--头部开始-->
+<div class="header_bg">
+ 
+
+<div class="header">
+    <div class="top">
+      <div class="logo"></div>
+      <div class="top_rt">
+        <div class="top_link">
+          <div class="top_nav">
+            <div class="top_nav02" id="top_nav02">
+              <ul>
+                <li><a href="http://mail.cnu.edu.cn/" target="_blank">电子邮件</a></li>
+                <li><a href="http://oa.cnu.edu.cn/" target="_blank" title="仅限校内访问">办公系统</a></li>
+                <li><a href="http://portal.cnu.edu.cn" target="_blank" title="仅限校内访问">服务门户</a></li>
+              <!--  <li class="top_nav_li"><a href="#">网上应用</a>
+                  <dl  style="z-index:99999;">
+                    <dd><a href="http://uid.cnu.edu.cn/" target="_blank" title="仅限校内访问">书记信息</a></dd>
+                    <dd><a href="http://uid.cnu.edu.cn/" target="_blank" title="仅限校内访问">校长信息</a></dd>
+                    <dd><a href="http://dc.cnu.edu.cn/jwcxkw/" target="_blank">网上选课</a></dd>
+                    <dd><a href="http://elearning.cnu.edu.cn/" target="_blank">网上教学</a></dd>
+                  </dl>
+                </li>-->
+                <li><a href="http://eng.cnu.edu.cn/" target="_blank">English</a></li>
+              </ul>
+            </div>
+			 <div class="top_nav03">
+           <a href="http://portal.cnu.edu.cn/" target="_blank" title="仅限校内访问">书记信箱</a>
+                   <a href="http://portal.cnu.edu.cn/" target="_blank" title="仅限校内访问">校长信箱</a>
+                    <a href="http://dc.cnu.edu.cn/jwcxkw/" target="_blank">网上选课</a>
+                    <a href="http://elearning.cnu.edu.cn/" target="_blank">网上教学</a>
+            </div>
+          </div>
+        </div>
+        <div class="sea_box">
+          <form name="dataForm" class="search" action="/cms/search/searchResults.jsp" target="_blank" method="post" accept-charset="utf-8" onsubmit="document.charset='utf-8';">
+            <input name="siteID" value="59" type ="hidden" />
+            <input class="notxt" value="站内搜索" name="query" type="text" id="keywords" onFocus="if(value==defaultValue){value='';}" onBlur="if(!value){value=defaultValue;}"
+                                 onclick="if(this.value==''){this.value='';this.form.keywords.style.color='#323232'}" />
+            <input class="notxt1" name="Submit" type="submit" value="" />
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="nav">
+      <div class="nav02" id="nav02">
+        <ul>
+          <li><a href="index.htm">首页</a></li>
+          <li><a href="xxgk/index.htm">学校概况</a>
+            <dl style="z-index:99999;">
+              <div class="dl_bg">
+			                  <dd><a href="xxgk/xxjj/index.htm" title="学校简介">学校简介</a></dd>
+			                <dd><a href="xxgk/lsyg/index.htm" title="历史沿革">历史沿革</a></dd>
+			                <dd><a href="xxgk/xrld/index.htm" title="现任领导">现任领导</a></dd>
+			                <dd><a href="xxgk/ljld/index.htm" title="历届领导">历届领导</a></dd>
+			                <dd><a href="xxgk/jgsz/index.htm" title="机构设置">机构设置</a></dd>
+						 <dd><a href="xxgk/sjsd/jbqk/index.htm" title="$channel.title">数据师大</a></dd>
+			                <dd><a href="xxgk/xxbs/index.htm" title="学校标识">学校标识</a></dd>
+			                <div class="clear"></div>
+              </div>
+            </dl>
+          </li>
+		   <li><a href="xxgk1/index.htm" >信息公开</a></li>
+          <li><a href="jyjx/index.htm" >教育教学</a>
+		  <dl style="z-index:99999;">
+              <div class="dl_bg">
+                <dd><a href="jyjx/bksjy/zysz/index.htm" title="$channel.title">本科生教育</a></dd>
+				<dd><a href="jyjx/yjsjy/bsxwsqd/index.htm" title="$channel.title">研究生教育</a></dd>
+				<dd><a href="jyjx/jxjy/jxjyjj/index.htm" title="$channel.title">继&nbsp;续&nbsp;教&nbsp;育</a></dd>
+				<dd><a href="jyjx/lxsjy/index.htm" title="$channel.title">留学生教育</a></dd>
+                <div class="clear"></div>
+              </div>
+            </dl>
+		  </li>
+          <li><a href="jsjy/index.htm">教师教育</a>
+		  <dl style="z-index:99999;">
+              <div class="dl_bg">
+			                  <dd><a href="jsjy/zxdt/index.htm" title="最新动态">最新动态</a></dd>
+			                <dd><a href="jsjy/ktyj/index.htm" title="课题研究">课题研究</a></dd>
+			                <dd><a href="jsjy/zysz2/index.htm" title="专业设置">专业设置</a></dd>
+						  <dd><a href="jsjy/xmhz/qyhz/index.htm" title="$channel.title">项目合作</a></dd>
+			    <dd><a href="jsjy/zysj/jysx/index.htm" title="$channel.title">专业实践</a></dd>
+                <div class="clear"></div>
+              </div>
+            </dl>
+		  </li>
+          <li><a href="kxyj/index.htm" >科学研究</a>
+		  <dl style="z-index:99999;">
+              <div class="dl_bg">
+			                  <dd><a href="kxyj/kydt/index.htm" title="科研动态">科研动态</a></dd>
+			                <dd><a href="kxyj/kyzc/index.htm" title="科研政策">科研政策</a></dd>
+						<dd><a href="kxyj/kyxm/index.htm" title="$channel.title">科研项目</a></dd>
+			<dd><a href="kxyj/kycg/hjqk/index.htm" title="$channel.title">科研成果</a></dd>
+			                 <dd><a href="kxyj/zdxk/index.htm" title="重点学科">重点学科</a></dd>
+			                <dd><a href="kxyj/yjjd/index.htm" title="研究基地">研究基地</a></dd>
+			                <dd><a href="kxyj/jybcxtd/index.htm" title="创新团队">创新团队</a></dd>
+			                <div class="clear"></div>
+              </div>
+            </dl>
+		  </li>
+         <li><a href="szdw/ys/index.htm" >师资队伍</a>
+		  <dl style="z-index:99999;">
+              <div class="dl_bg">
+			                  <dd><a href="szdw/ys/index.htm" title="院&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;士">院&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;士</a></dd>
+			                <dd><a href="szdw/qrjh/index.htm" title="千人计划">千人计划</a></dd>
+			                <dd><a href="szdw/zjxz/index.htm" title="长江学者">长江学者</a></dd>
+			                <dd><a href="szdw/bjxz/index.htm" title="北京学者">北京学者</a></dd>
+			                <dd><a href="szdw/jcrc/index.htm" title="杰出人才">杰出人才</a></dd>
+			                <dd><a href="szdw/gjjqhdz/index.htm" title="国家杰青">国家杰青</a></dd>
+			                <dd><a href="szdw/wjjs/index.htm" title="外籍教师">外籍教师</a></dd>
+			                <div class="clear"></div>
+              </div>
+            </dl>
+		  </li>
+          <li><a href="zsjy2/index.htm" >招生就业</a>
+		  <dl style="z-index:99999;">
+              <div class="dl_bg">
+			                  <dd><a href="zsjy2/zsgz/index.htm" title="招生工作">招生工作</a></dd>
+			                <dd><a href="http://jy.cnu.edu.cn" title="就业工作">就业工作</a></dd>
+			                <div class="clear"></div>
+              </div>
+            </dl></li>
+         <li><a href="hzjl/index.htm" >合作交流</a>
+		  <dl style="z-index:99999;">
+              <div class="dl_bg">
+			                  <dd><a href="hzjl/gjky/index.htm" title="国际会议">国际会议</a></dd>
+						<dd><a href="hzjl/lhbx/bxxm/index.htm" title="$channel.title">联合办学</a></dd>
+			<dd><a href="hzjl/jhpy/jhxm/index.htm" title="$channel.title">交换培养</a></dd>
+			                <dd><a href="hzjl/wgzj/index.htm" title="外国专家">外国专家</a></dd>
+			                <dd><a href="hzjl/gjjldx/index.htm" title="国际交流大学">国际交流大学</a></dd>
+			                <div class="clear"></div>
+              </div>
+            </dl>
+		  </li>
+          <li><a href="rczp/index.htm" >人才招聘</a>
+		  <dl style="z-index:99999;">
+              <div class="dl_bg">
+			                  <dd><a href="rczp/2015ncpyxrc/index.htm" title="诚聘优秀人才">诚聘优秀人才</a></dd>
+			                <dd><a href="rczp/bsh/index.htm" title="博士后">博士后</a></dd>
+			                <dd><a href="rczp/mxskgkzp/index.htm" title="面向社会公开招聘">面向社会公开招聘</a></dd>
+			                <dd><a href="rczp/mxxnzp/index.htm" title="面向校内招聘">面向校内招聘</a></dd>
+			                <dd><a href="rczp/gccrczp/index.htm" title="高层次人才招聘">高层次人才招聘</a></dd>
+			                <div class="clear"></div>
+              </div>
+            </dl>
+		  </li>
+         <li><a href="xywh/index.htm" >校园文化</a>
+		  <dl style="z-index:99999;">
+              <div class="dl_bg">
+			                  <dd><a href="http://202.204.208.147/ssd3d.html" title="3D&nbsp;校园">3D&nbsp;校园</a></dd>
+			                <dd><a href="http://old.cnu.edu.cn/pages2/3dmap/_flash/flash.html" title="校园全景">校园全景</a></dd>
+						<dd><a href="xywh/xfjs/wxzl/index.htm" title="$channel.title">学风建设</a></dd>
+			                  <dd><a href="http://old.cnu.edu.cn:8086/" title="博观网站">博观网站</a></dd>
+			                <dd><a href="xywh/xssl/index.htm" title="学生社联">学生社联</a></dd>
+			                <dd><a href="xywh/tqpp/index.htm" title="团旗飘飘">团旗飘飘</a></dd>
+			                <dd><a href="xywh/xxsk/index.htm" title="校学生会">校学生会</a></dd>
+			                <dd><a href="xywh/yjsk/index.htm" title="研究生会">研究生会</a></dd>
+			                <dd><a href="xywh/xlzx/index.htm" title="心理咨询">心理咨询</a></dd>
+			                <dd><a href="xywh/glgd/index.htm" title="管理规定">管理规定</a></dd>
+			                <div class="clear"></div>
+              </div>
+            </dl>
+		  </li>
+         <li><a href="http://www.lib.cnu.edu.cn/" target="_blank">图书资料</a>
+		<!-- <dl class="dl_bg" style="z-index:99999;">
+              <div class="dl_bg">
+                <dd><a href="#">学校简介</a></dd>
+                <dd><a href="#">历史沿革</a></dd>
+                <dd><a href="#">现任领导</a></dd>
+                <dd><a href="#">历届领导</a></dd>
+                <div class="clear"></div>
+              </div>
+            </dl>--></li>
+          <li><a href="fwzn/index.htm" >服务指南</a>
+            <dl class="nav02_dl2" style="z-index:99999;">
+              <div class="dl_bg">
+                                  <dd><a href="fwzn/shfw/index.htm" title="生活服务">生活服务</a></dd>
+			                <dd><a href="http://dc.cnu.edu.cn/news/xyfg/index.htm" title="校园风光">校园风光</a></dd>
+			                <dd><a href="fwzn/xydy/index.htm" title="校园导游">校园导游</a></dd>
+			                <dd><a href="fwzn/xl/index.htm" title="校&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;历">校&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;历</a></dd>
+						<dd><a href="fwzn/bgdh/jgsw/index.htm" title="$channel.title">办公电话</a></dd>
+			<dd><a href="fwzn/wlfw/index.htm" title="$channel.title">网络服务</a></dd>
+			<dd><a href="fwzn/sjdx/zgdx/index.htm" title="$channel.title">世界大学</a></dd>
+			                <dd><a href="fwzn/cyxx/index.htm" title="常用信息">常用信息</a></dd>
+			                <dd><a href="fwzn/cywz/index.htm" title="常用网址">常用网址</a></dd>
+			                <div class="clear"></div>
+              </div>
+            </dl>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div></div>
+<!--头部结束--> 
+<!--头部图片切换开始-->
+<div class="banner" id="banner">
+  <div class="banner_show" id="banner_show">
+
+
+   <a href="http://www.cnu.edu.cn/jdxw/jdxw/124046.htm" class="bannger_inbox" ><img src="images/content/2017-10/20171027173157792650.jpg" width="1440" height="515" /><div class="baCon"><span class="banContent">学校党委举办学习党的十九大精神辅导报告会</span></div></a>
+   <a href="http://www.cnu.edu.cn/jdxw/jdxw/123551.htm" class="bannger_inbox" ><img src="images/content/2017-10/20171024174211753257.jpg" width="1440" height="515" /><div class="baCon"><span class="banContent">我校女子篮球队勇夺2017CUBA中国大学生篮球联赛北京赛区冠军</span></div></a>
+   <a href="http://www.cnu.edu.cn/jdxw/jdxw/123296.htm" class="bannger_inbox" ><img src="images/content/2017-10/20171019104242695272.jpg" width="1440" height="515" /><div class="baCon"><span class="banContent">我校师生积极收看党的十九大开幕会盛况</span></div></a>
+   <a href="http://www.cnu.edu.cn/jdxw/jdxw/123151.htm" class="bannger_inbox" ><img src="images/content/2017-10/20171017104320192538.jpg" width="1440" height="515" /><div class="baCon"><span class="banContent">学校本科教学工作审核评估专家见面会顺利召开</span></div></a>
+   <a href="http://www.cnu.edu.cn/jdxw/jdxw/120551.htm" class="bannger_inbox" ><img src="images/content/2017-09/20170921164856567260.jpg" width="1440" height="515" /><div class="baCon"><span class="banContent">热烈祝贺！我校入选一流学科建设高校</span></div></a>
+   <a href="http://www.cnu.edu.cn/jdxw/jdxw/120163.htm" class="bannger_inbox" ><img src="images/content/2017-09/20170917004633590738.jpg" width="1440" height="515" /><div class="baCon"><span class="banContent">数学科学学院方复全教授的科研成果在国际顶尖数学杂志《Acta Mathematica》在线发表</span></div></a>
+   <a href="http://www.cnu.edu.cn/jdxw/jdxw/119668.htm" class="bannger_inbox" ><img src="images/content/2017-09/20170908202905425306.jpg" width="1440" height="515" /><div class="baCon"><span class="banContent">中共中央政治局委员、国务院副总理刘延东来我校考察指导工作</span></div></a>
+    
+ 
+
+
+ 
+    <div class="banner_pre_next"> <a href="javascript:;" class="banner_btn_left">上一个</a> <a href="javascript:;" class="banner_btn_right">下一个</a> </div>
+  </div>
+</div>
+</div>
+<script type="text/javascript" src="js/jquery.caroufredsel-6.0.4-packed.js" ></script> 
+<script type="text/javascript" src="js/focus.js" ></script> 
+<script>
+bannerNew();
+window.onresize = function ()
+{
+	bannerNew();
+};
+
+function bannerNew()
+{
+	var oShowNew = document.getElementById('banner_show');
+	var oBannerNew = document.getElementById('banner');
+	var aImgNew = oShowNew.getElementsByTagName('img');
+	var iW = document.documentElement.clientWidth;
+	
+	if(iW<1440)
+	{
+		oBannerNew.style.width = oShowNew.style.width = iW + 'px';
+		oBannerNew.style.height = oShowNew.style.height = iW * (515/1440) + 'px';
+		
+		for(var i=0;i<aImgNew.length;i++)
+		{
+			aImgNew[i].style.width = iW + 'px';
+			aImgNew[i].style.height = iW * (515/1440) + 'px';
+		};
+	};
+	
+	if(iW>=1440)
+	{
+		oBannerNew.style.width = oShowNew.style.width = 1440 + 'px';
+		oBannerNew.style.height = oShowNew.style.height = 515 + 'px';
+		
+		for(var i=0;i<aImgNew.length;i++)
+		{
+			aImgNew[i].style.width = 1440 + 'px';
+			aImgNew[i].style.height = 515 + 'px';
+		};
+	};
+};
+</script>
+<!--头部图片切换结束--> 
+
+<!--conten开始-->
+<div class="content">
+  <div class="cont_lf">
+    <div class="cont_lf_list1">
+      <div class="con_list_title">
+        <h2>焦点新闻</h2>
+        <a href="jdxw/index.htm" target="_blank">更多</a> </div>
+      <div class="con_list_con">
+        <ul>
+		    <li><span>10-27</span><a href="jdxw/jdxw/124046.htm" title="学校党委举办学习党的十九大精神辅导报告会" target="_blank">            学校党委举办学习党的十九大精神辅导报告会 
+    </a></li>
+		     <li><span>10-27</span><a href="jdxw/jdxw/124020.htm" title="校工会召开新入职（校）教职工慰问暨座谈会" target="_blank">            校工会召开新入职（校）教职工慰问暨座谈会 
+    </a></li>
+		     <li><span>10-26</span><a href="jdxw/jdxw/123835.htm" title="学校召开三十年教（工）龄教职工表彰暨座谈会" target="_blank">            学校召开三十年教（工）龄教职工表彰暨座谈会 
+    </a></li>
+		     <li><span>10-26</span><a href="jdxw/jdxw/123817.htm" title="郑萼书记与学校民进会员集体学习十九大报告" target="_blank">            郑萼书记与学校民进会员集体学习十九大报告 
+    </a></li>
+		     <li><span>10-26</span><a href="jdxw/jdxw/123820.htm" title="北京市属高校学位与研究生教育工作研讨会在我校召开" target="_blank">            北京市属高校学位与研究生教育工作研讨会在我校召开 
+    </a></li>
+		         </ul>
+      </div>
+    </div>
+    <div class="cont_lf_list2">
+      <div class="con_list_title con_list_title2">
+        <h2>学术活动</h2>
+         <a href="xzhd/index.htm" target="_blank">更多</a> </div>
+      <div class="con_list_con con_list_con2">
+        <ul>
+		          <li>
+            <div class="list_time"><b>2017</b>
+              <p>10-26</p>
+            </div>
+            <a href="xzhd/123718.htm" title="信息工程学院学术讲座：For an interdisciplinary path: multiscale modeling and numerical" target="_blank">            信息工程学院学术讲座：For an interdisciplinary p... 
+    </a></li>
+		          <li>
+            <div class="list_time"><b>2017</b>
+              <p>11-01</p>
+            </div>
+            <a href="xzhd/123731.htm" title="文学院学术讲座：移动的艺术边界" target="_blank">            文学院学术讲座：移动的艺术边界 
+    </a></li>
+		          <li>
+            <div class="list_time"><b>2017</b>
+              <p>10-31</p>
+            </div>
+            <a href="xzhd/123451.htm" title="基础学部“通识大讲堂”：话说三千年的北京城" target="_blank">            基础学部“通识大讲堂”：话说三千年的北京城 
+    </a></li>
+		          <li>
+            <div class="list_time"><b>2017</b>
+              <p>10-30</p>
+            </div>
+            <a href="xzhd/123776.htm" title="博观讲堂：从中国软实力的世界排名看"一带一路"倡议的战略意义" target="_blank">            博观讲堂：从中国软实力的世界排名看"一带一路"倡议的战略意义 
+    </a></li>
+		          <li>
+            <div class="list_time"><b>2017</b>
+              <p>10-29</p>
+            </div>
+            <a href="xzhd/123801.htm" title="历史学院学术讲座：世界史博导论坛——明清时期东亚封贡体系的关系实态" target="_blank">            历史学院学术讲座：世界史博导论坛——明清时期东亚封贡体系的关系实态 
+    </a></li>
+		        </ul>
+      </div>
+    </div>
+    <div class="clear"></div>
+    <div class="link"> 
+      <!--链接-->
+      <div class="bm_con">
+          <div class="til_bm">
+            <ul id="btil">
+              <li><a href="#" class="a01">教学单位</a></li>
+              <li><a href="#" class="a02">机关部处</a></li>
+              <li><a href="#" class="a03">其他单位</a></li>
+              <li style="margin-right:0;"><a href="#" class="a04">友情链接</a></li>
+            </ul>
+          </div>
+          <div class="box_bm" id="box">
+            <dl>
+			              <dd> <a href="http://chinese.cnu.edu.cn/" title="文学院 " target="_blank">            文学院  
+    </a></dd>
+			               <dd> <a href="http://history.cnu.edu.cn/" title="历史学院 " target="_blank">            历史学院  
+    </a></dd>
+			               <dd> <a href="http://zf.cnu.edu.cn/" title="政法学院 " target="_blank">            政法学院  
+    </a></dd>
+			               <dd> <a href="http://jyxy.cnu.edu.cn/" title="教育学院 " target="_blank">            教育学院  
+    </a></dd>
+			               <dd> <a href="http://waiyuan.cnu.edu.cn/" title="外国语学院 " target="_blank">            外国语学院  
+    </a></dd>
+			               <dd> <a href="http://mjy.cnu.edu.cn/" title="马克思主义学院 " target="_blank">            马克思主义学院  
+    </a></dd>
+			               <dd> <a href="http://dc.cnu.edu.cn/glxy/" title="管理学院 " target="_blank">            管理学院  
+    </a></dd>
+			               <dd> <a href="http://yyxy.cnu.edu.cn/" title="音乐学院" target="_blank">            音乐学院 
+    </a></dd>
+			               <dd> <a href="http://art.cnu.edu.cn/" title="美术学院 " target="_blank">            美术学院  
+    </a></dd>
+			               <dd> <a href="http://math.cnu.edu.cn/" title="数学科学学院 " target="_blank">            数学科学学院  
+    </a></dd>
+			               <dd> <a href="http://physics.cnu.edu.cn" title="物理系 " target="_blank">            物理系  
+    </a></dd>
+			               <dd> <a href="http://hxx.cnu.edu.cn" title="化学系 " target="_blank">            化学系  
+    </a></dd>
+			               <dd> <a href="http://smkxxy.cnu.edu.cn/" title="生命科学学院 " target="_blank">            生命科学学院  
+    </a></dd>
+			               <dd> <a href="http://cret.cnu.edu.cn/" title="资源环境与旅游学院 " target="_blank">            资源环境与旅游学院  
+    </a></dd>
+			               <dd> <a href="http://www.ie.cnu.edu.cn/" title="信息工程学院 " target="_blank">            信息工程学院  
+    </a></dd>
+			               <dd> <a href="http://cmet.cnu.edu.cn/" title="教育技术系 " target="_blank">            教育技术系  
+    </a></dd>
+			               <dd> <a href="http://cjy.cnu.edu.cn/" title="初等教育学院 " target="_blank">            初等教育学院  
+    </a></dd>
+			               <dd> <a href="http://xqjyxy.cnu.edu.cn/" title="学前教育学院 " target="_blank">            学前教育学院  
+    </a></dd>
+			               <dd> <a href="http://ydxy.cnu.edu.cn/" title="燕都学院 " target="_blank">            燕都学院  
+    </a></dd>
+			               <dd> <a href="http://gist.cnu.edu.cn/" title="地信国际学院" target="_blank">            地信国际学院 
+    </a></dd>
+			               <dd> <a href="http://xlxy.cnu.edu.cn" title="心理学院" target="_blank">            心理学院 
+    </a></dd>
+			               <dd> <a href="http://lxxqjcxb.cnu.edu.cn" title="良乡校区基础学部 " target="_blank">            良乡校区基础学部  
+    </a></dd>
+			               <dd> <a href="http://jxjyxy.cnu.edu.cn/" title="继续教育学院 " target="_blank">            继续教育学院  
+    </a></dd>
+			               <dd> <a href="http://www.ciecnu.cn/" title="国际文化学院 " target="_blank">            国际文化学院  
+    </a></dd>
+			               <dd> <a href="http://jjxy.cnu.edu.cn/" title="京疆学院 " target="_blank">            京疆学院  
+    </a></dd>
+			               <dd> <a href="http://www.cnusf.com/" title="中国书法文化研究院" target="_blank">            中国书法文化研究院 
+    </a></dd>
+			               <dd> <a href="http://www.bjcs.edu.cn/" title="文化研究院 " target="_blank">            文化研究院  
+    </a></dd>
+			               <dd> <a href="http://rcae.cnu.edu.cn" title="美育研究中心" target="_blank">            美育研究中心 
+    </a></dd>
+			               <dd> <a href="http://jjy.cnu.edu.cn/" title="首都基础教育发展研究院" target="_blank">            首都基础教育发展研究院 
+    </a></dd>
+			               <dd> <a href="http://dc.cnu.edu.cn/dyb/" title="大学英语教研部 " target="_blank">            大学英语教研部  
+    </a></dd>
+			               <dd> <a href="http://tyjxyjb.cnu.edu.cn" title="体育教学研究部" target="_blank">            体育教学研究部 
+    </a></dd>
+			               <dd> <a href="http://www.lib.cnu.edu.cn/" title="图书馆 " target="_blank">            图书馆  
+    </a></dd>
+			               <dd> <a href="http://usco.cnu.edu.cn/" title="上海合作组织大学" target="_blank">            上海合作组织大学 
+    </a></dd>
+			             </dl>
+            <dl>
+                           <dd> <a href="http://info.cnu.edu.cn/" title="学校办公室" target="_blank">            学校办公室 
+    </a></dd>
+			               <dd> <a href="http://zzb.cnu.edu.cn" title="组织部 " target="_blank">            组织部  
+    </a></dd>
+			               <dd> <a href="http://dc.cnu.edu.cn/news/" title="宣传部 " target="_blank">            宣传部  
+    </a></dd>
+			               <dd> <a href="http://tzb.cnu.edu.cn" title="统战部 " target="_blank">            统战部  
+    </a></dd>
+			               <dd> <a href=" http://jw.cnu.edu.cn" title="纪委、监察室 " target="_blank">            纪委、监察室  
+    </a></dd>
+			               <dd> <a href="http://sjc.cnu.edu.cn/" title="审计处 " target="_blank">            审计处  
+    </a></dd>
+			               <dd> <a href="http://dc.cnu.edu.cn/ltxgbc/" title="离退休干部处 " target="_blank">            离退休干部处  
+    </a></dd>
+			               <dd> <a href="http://jwc.cnu.edu.cn/" title="教务处 " target="_blank">            教务处  
+    </a></dd>
+			               <dd> <a href="http://zjc.cnu.edu.cn/" title="招生就业处 " target="_blank">            招生就业处  
+    </a></dd>
+			               <dd> <a href=" http://gzc.cnu.edu.cn" title="国有资产管理处" target="_blank">            国有资产管理处 
+    </a></dd>
+			               <dd> <a href="http://std.cnu.edu.cn/" title="科技处 " target="_blank">            科技处  
+    </a></dd>
+			               <dd> <a href="http://skc.cnu.edu.cn/" title="社科处 " target="_blank">            社科处  
+    </a></dd>
+			               <dd> <a href="http://fzghbgs.cnu.edu.cn" title="发展规划办公室 " target="_blank">            发展规划办公室  
+    </a></dd>
+			               <dd> <a href="http://grad.cnu.edu.cn/" title="研究生院" target="_blank">            研究生院 
+    </a></dd>
+			               <dd> <a href="http://ygb.cnu.edu.cn" title="研究生工作部" target="_blank">            研究生工作部 
+    </a></dd>
+			               <dd> <a href="http://cnursc.cnu.edu.cn/" title="人事处 " target="_blank">            人事处  
+    </a></dd>
+			               <dd> <a href="http://202.204.209.123:800/cwcmh/index.asp" title="财务处 " target="_blank">            财务处  
+    </a></dd>
+			               <dd> <a href="http://bwc.cnu.edu.cn/" title="保卫处 " target="_blank">            保卫处  
+    </a></dd>
+			               <dd> <a href="http://dc.cnu.edu.cn/jjc/" title="基建处 " target="_blank">            基建处  
+    </a></dd>
+			               <dd> <a href="http://hqglc.cnu.edu.cn" title="后勤管理处 " target="_blank">            后勤管理处  
+    </a></dd>
+			               <dd> <a href="http://202.204.208.109/xcbbgs/index.htm" title="校办产业管理办公室 " target="_blank">            校办产业管理办公室  
+    </a></dd>
+			               <dd> <a href="http://student.cnu.edu.cn/" title="学生处 " target="_blank">            学生处  
+    </a></dd>
+			               <dd> <a href="http://wzgl.cnu.edu.cn:8080/pub/xtw/index.htm" title="团委" target="_blank">            团委 
+    </a></dd>
+			               <dd> <a href="http://www.cnu.edu.cn/gh/" title="工会 " target="_blank">            工会  
+    </a></dd>
+			               <dd> <a href="http://202.204.208.109/lx/lx-new-campus/xxqjs.htm" title="良乡校区办公室" target="_blank">            良乡校区办公室 
+    </a></dd>
+			               <dd> <a href="http://rkjsb.cnu.edu.cn" title="人口与计划生育办公室" target="_blank">            人口与计划生育办公室 
+    </a></dd>
+			               <dd> <a href="http://dc.cnu.edu.cn/jgdw/" title="机关党委" target="_blank">            机关党委 
+    </a></dd>
+			             </dl>
+            <dl>
+                            <dd> <a href="http://202.204.208.109/gjs/index.htm" title="高等教育研究所" target="_blank">            高等教育研究所 
+    </a></dd>
+			               <dd> <a href="http://www.cnu.edu.cn/xbbjb" title=" 学报编辑部 " target="_blank">             学报编辑部  
+    </a></dd>
+			               <dd> <a href="http://qys.cnu.edu.cn/" title="青年教育艺术研究所 " target="_blank">            青年教育艺术研究所  
+    </a></dd>
+			               <dd> <a href="http://dc.cnu.edu.cn/dc/" title="数字校园建设中心" target="_blank">            数字校园建设中心 
+    </a></dd>
+			               <dd> <a href="http://gaoshi.cnu.edu.cn/" title="北京市高师培训中心 " target="_blank">            北京市高师培训中心  
+    </a></dd>
+			               <dd> <a href="http://hqjt.cnu.edu.cn/" title="后勤集团" target="_blank">            后勤集团 
+    </a></dd>
+			               <dd> <a href="http://202.204.208.109/kjfwzx/index.html" title="科教服务中心" target="_blank">            科教服务中心 
+    </a></dd>
+			               <dd> <a href="http://xyy.cnu.edu.cn/" title="校医院" target="_blank">            校医院 
+    </a></dd>
+			               <dd> <a href="http://www.cnuschool.org/xxjj/index.htm" title="首都师大附中" target="_blank">            首都师大附中 
+    </a></dd>
+			               <dd> <a href="http://www.yuxinschool.com.cn/" title="附属育新学校" target="_blank">            附属育新学校 
+    </a></dd>
+			               <dd> <a href="http://www.kdcnu.com/" title="科德学院" target="_blank">            科德学院 
+    </a></dd>
+			               <dd> <a href="http://kjy.cnu.edu.cn/" title="首都师范大学科技园" target="_blank">            首都师范大学科技园 
+    </a></dd>
+			               <dd> <a href="http://yuce.cnu.edu.cn/" title="语言文字测试中心" target="_blank">            语言文字测试中心 
+    </a></dd>
+			               <dd> <a href="http://youshi.cnu.edu.cn" title="北京市幼教师资培训中心" target="_blank">            北京市幼教师资培训中心 
+    </a></dd>
+			               <dd> <a href="http://www.sascc-cnu.org/" title="出国留学咨询服务中心" target="_blank">            出国留学咨询服务中心 
+    </a></dd>
+			               <dd> <a href="http://www.ssdfx.net/portal.php" title="首都师范大学附属小学" target="_blank">            首都师范大学附属小学 
+    </a></dd>
+			               <dd> <a href="http://bjme.cnu.edu.cn" title="北京数学教育研究中心" target="_blank">            北京数学教育研究中心 
+    </a></dd>
+			               <dd> <a href="http://cit.cnu.edu.cn." title="成像技术高精尖创新中心" target="_blank">            成像技术高精尖创新中心 
+    </a></dd>
+			               <dd> <a href="http://bjyswri.cnu.edu.cn" title="北京青少年社会工作研究院" target="_blank">            北京青少年社会工作研究院 
+    </a></dd>
+			               <dd> <a href="http://www.cnu.edu.cn/sqjwh" title="社区居委会" target="_blank">            社区居委会 
+    </a></dd>
+			               <dd> <a href="http://cnupn.cnu.edu.cn" title="首都师范大学出版社" target="_blank">            首都师范大学出版社 
+    </a></dd>
+			             </dl>
+            <dl>
+                           <dd> <a href="http://www.hie.edu.cn/" title="高教改革与发展网" target="_blank">            高教改革与发展网 
+    </a></dd>
+			               <dd> <a href="http://www.moe.edu.cn/" title=" 教育部 " target="_blank">             教育部  
+    </a></dd>
+			               <dd> <a href="http://ziyuan.eol.cn/college.php" title="中国高校" target="_blank">            中国高校 
+    </a></dd>
+			               <dd> <a href="http://www.edu.cn/" title="中国教育计算机网" target="_blank">            中国教育计算机网 
+    </a></dd>
+			               <dd> <a href="http://www.bjedu.gov.cn/publish/portal27/" title="北京教育委员会" target="_blank">            北京教育委员会 
+    </a></dd>
+			               <dd> <a href="http://www.xinhuanet.com/" title="新华网" target="_blank">            新华网 
+    </a></dd>
+			               <dd> <a href="http://www.caigou.com.cn/" title="教育装备采购网" target="_blank">            教育装备采购网 
+    </a></dd>
+			             </dl>
+          </div>
+      </div>
+      
+      <!--链接--> 
+    </div>
+  </div>
+  <div class="cont_rt">
+    <div class="con_list2 con_list3">
+      <div class="con_list_title con_list_title3">
+        <h2>校园信息</h2>
+
+        <a href="xyxx/xygg/index.htm" target="_blank">更多</a> </div>
+      <div class="cont_rt_con_list2_con">
+        <ul>
+		     <li><span>10-11 </span> <a href="javascript:void(0);" title="关于参加首都师范大学2018届毕业生校园大型双选会的通知" onClick="checkXnwk('xyxx/xygg/122392.htm','xw');"  >            关于参加首都师范大学2018届毕业生校园... 
+    </a></li>
+		     <li><span>10-27 </span> <a href="javascript:void(0);" title="2017-2018学年第一学期第9周会议日程安排表" onClick="checkXnwk('xyxx/xygg/124047.htm','xw');"  >            2017-2018学年第一学期第9周会议... 
+    </a></li>
+		     <li><span>10-26 </span> <a href="javascript:void(0);" title="关于彻底清理挂账的通知" onClick="checkXnwk('xyxx/xygg/123826.htm','xn');"  >            关于彻底清理挂账的通知 
+    </a></li>
+		     <li><span>10-25 </span> <a href="javascript:void(0);" title="关于北京高校卓越青年科学家项目申报工作的通知" onClick="checkXnwk('xyxx/xygg/123774.htm','xw');"  >            关于北京高校卓越青年科学家项目申报工作的... 
+    </a></li>
+		     <li><span>10-24 </span> <a href="javascript:void(0);" title="关于2017年度“叶圣陶奖学金”学校推荐名单的公示" onClick="checkXnwk('xyxx/xygg/123692.htm','xw');"  >            关于2017年度“叶圣陶奖学金”学校推荐... 
+    </a></li>
+		     <li><span>10-23 </span> <a href="javascript:void(0);" title="首都师范大学美育研究中心2018年度美育研究课题立项公示" onClick="checkXnwk('xyxx/xygg/123561.htm','xw');"  >            首都师范大学美育研究中心2018年度美育... 
+    </a></li>
+		          </ul>
+      </div>
+    </div>
+    <div class="cont_rt_link"> 
+	<a href="http://dc.cnu.edu.cn/lxyzzt/" target="_blank"><img src="images/cont_rt_link_3_03.jpg"></a> 
+	<a href="http://xyh.cnu.edu.cn/" target="_blank"><img src="images/cont_rt_link_1.jpg" /></a> 
+	<a href="http://jjh.cnu.edu.cn/" target="_blank"><img src="images/cont_rt_link_2.jpg" /></a>
+	
+	 </div>
+  </div>
+</div>
+<!--conten开始-->
+
+<div class="footer_bg">
+      
+
+<div class="footer" style="position:relative;"
+>
+    	<div class="footer_img">
+        	<img src="images/footer_bg.jpg" />
+
+        </div>
+
+    	<div class="address">
+        	Copyright &copy; 首都师范大学版权所有&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;地址：北京市西三环北路105号 100048<br />     E-mail: info@cnu.edu.cn&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;             <a href="#">网站地图</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;           京公网安备:110402430068号 
+
+        </div>
+        <div class="counter">
+        	访问量统计: <script src="http://202.204.221.10:8080/gplog/log/channelVisitLog.jsp?parentID=3544"></script>次
+
+  </div>
+<div class="tu" style="position:absolute; width:75px; height:80px; right:0px; top:0px;">
+<script type="text/javascript">document.write(unescape("%3Cspan id='_ideConac' %3E%3C/span%3E%3Cscript src='http://dcs.conac.cn/js/01/000/0000/60438161/CA010000000604381610001.js' type='text/javascript'%3E%3C/script%3E"));</script>
+
+</div>
+
+      
+        </div>
+
+<script src="http://202.204.221.10:8080/gplog/log/writeLog.jsp?siteID=59&channelID=3544"></script>    </div>
+</div>
+<!--<script>
+$('#banner_show').hover(function(){
+	$('.banner_mag').stop(true,false).animate({bottom:0},400);
+},function(){
+	$('.banner_mag').stop(true,false).animate({bottom:-48},400);
+});
+show ();
+</script>-->
+
+</body></html>

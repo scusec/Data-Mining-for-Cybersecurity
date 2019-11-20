@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html>
+<head id="dHead">
+    <title></title> <!-- 通过定制功能填充值 -->
+    <base href="http://mail.swupl.edu.cn/coremail/common/index_cmxt50.jsp" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    
+    <meta name="renderer" content="webkit|ie-stand">
+    <link id="favor" rel="shortcut icon"/>
+    <link rel="stylesheet" href="index_cmxt50/css/normalize.css" />
+    <link rel="stylesheet" href="index_cmxt50/css/iconfont/iconfont.css" />
+    <link rel="stylesheet" href="index_cmxt50/css/custom.css" />
+    <link rel="stylesheet" href="index_cmxt50/css/custom.cdn.css" />
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="index_cmxt50/css/IE7-hack.css" />
+    <![endif]-->
+</head>
+<body>
+<div class="main-bottom"></div>
+<div class="main-middle"></div>
+<div class="main">
+    <div class="content"></div>
+    <div class="aside-blur"></div>
+    <div class="aside-blur2 transparent"></div>
+    <div class="aside"></div>
+    
+    <div class="seo-link">
+        <a href="http://www.coremail.cn/" target="_blank">邮件系统</a>
+        <a href="http://www.coremail.cn/" target="_blank">邮件服务器</a>
+        <a href="http://www.corpease.net/" target="_blank">企业邮箱</a>
+        <a href="http://www.icoremail.cn/" target="_blank">企业邮箱</a>
+    </div>
+</div>
+</body>
+
+<script type="text/x-handlebar-template" id="contentTpl">
+    <div>
+        
+        <a href="{{#if facade_custom.logo_link}}{{facade_custom.logo_link}}{{^}}http://www.coremail.cn{{/if}}" target="_blank" class="logo">
+            <img src="{{#isArrayNotNull facade_custom.logo}}{{getFirstElement facade_custom.logo orgId}}{{^}}index_cmxt50/img/logo.gif{{/isArrayNotNull}}" alt="Coremail 电子邮件系统">
+        </a>
+    </div>
+    {{#if facade_custom.slogan_text}}
+    <div>
+        <label class="slogan">{{facade_custom.slogan_text}}</label>
+    </div>
+    {{/if}}
+    {{#unless facade_custom.background}}
+    <div class="version">
+        <i class="iconfont iconlogonew"></i>
+    </div>
+    {{/unless}}
+    {{#isArrayNotNull detail_custom.telephone}}
+    <div class="hotline">
+        {{#each detail_custom.telephone}}
+        <span>{{telephone_content}} : {{telephone_num}}</span>
+        {{/each}}
+    </div>
+    {{/isArrayNotNull}}
+    <div class="copyright">
+        {{#if facade_custom.copyright_link}}
+        <a href="{{facade_custom.copyright_link}}" target="_blank">
+            {{#if facade_custom.copyright_text}}
+            {{{facade_custom.copyright_text}}}
+            {{^}}
+            Coremail. &copy; Copyright 2000 - 2016 Mailtech.
+            {{/if}}
+        </a>
+        {{^}}
+        <label>
+            {{#if facade_custom.copyright_text}}
+            {{facade_custom.copyright_text}}
+            {{^}}
+            Coremail. &copy; Copyright 2000 - 2016 Mailtech.
+            {{/if}}
+        </label>
+        {{/if}}
+    </div>
+</script>
+
+<script type="text/x-handlebar-template" id="asideTpl">
+    
+    <div class="viceLogo">
+        <a href="http://www.coremail.cn" target="_blank">
+            <img src="index_cmxt50/img/viceLogo.gif"/>
+        </a>
+    </div>
+
+    <div class="weather">
+        {{#isArrayNotNull detail_custom.top_link}}
+        <div class="f-fr">
+            {{#each detail_custom.top_link}}
+            <a href="{{top_link_href}}" target="_blank">{{top_link_content}}</a>
+            {{/each}}
+        </div>
+        {{^}}
+        <div class="f-fl">
+            <i class="iconfont" id="weatherPic"></i>
+            <label class="temperture" id="weatherInfo"></label>
+        </div>
+        <div class="f-fr">
+            
+            
+            
+            <i class="iconfont iconheart favourite" data-operation="addFavourite" title="收藏本页" data-msg="请按 Ctrl+D 收藏本页"></i>
+            <a href="/coremail/help/index_zh_CN.jsp" target="_blank" title="帮助"><i class="iconfont iconhelp question"></i></a>
+        </div>
+        {{/isArrayNotNull}}
+    </div>
+    <div class="loginArea normalForm" curtype="normalForm">
+        <div class="loginType">
+            <div class="f-fl">
+                <a href="javascript:void(0)" logintype="normalForm">用户登录</a>
+                
+            </div>
+            <div class="f-fr">
+                    <span class="locale">Language:</span>
+                    <span id="localeMenu" role="dropdown" class="locale">
+                        <ul class="u-menu u-menu-hidden">
+                            
+                                
+                                
+                                <li data-locale="zh_CN"><a href="javascript:void(0)">简体中文</a></li>
+                                
+                                    
+                                
+                            
+                                
+                                
+                                <li data-locale="zh_TW"><a href="javascript:void(0)">繁體中文</a></li>
+                                
+                            
+                                
+                                
+                                <li data-locale="en_US"><a href="javascript:void(0)">English</a></li>
+                                
+                            
+                        </ul>
+                        <span>简体中文</span>
+                        <i class="iconfont icondown"></i>
+                    </span>
+            </div>
+        </div>
+        <div class="content-wrapper">
+            <span class="arrow"></span>
+            
+            
+            <div class="formLogin">
+                
+                
+                
+
+                <div class="second-auth-wrap j-second-auth-wrap f-dn">
+                    <div class="auth-body j-auth-body"></div>
+                    
+                    <div class="auth-footer j-auth-footer">
+                        <div class="u-dialog-btns">
+                            <button class="u-btn u-btn-default j-back">
+                                返回
+                            </button>
+                            <button class="u-btn u-btn-primary j-confirm">
+                                确定
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <form action="/coremail/index.jsp?cus=1" method="post" class="j-login-form u-form">
+                    <input type="hidden" name="locale" id="locale" value="zh_CN"/> 
+                    <input type="hidden" name="nodetect" value="false"/>
+                    <input type="hidden" name="destURL" value=""/> <!-- 通过参数请求参数，支持登陆成功后跳转到指定页面 -->
+                    <input type="hidden" name="accessToken" class="j-access-token" value="" />
+                    <input type="hidden" name="timestamp" class="j-timestamp" value="" />
+                    <input type="hidden" name="signature" class="j-signature" value="" />
+                    <input type="hidden" name="nonce" class="j-nonce" value="" />
+                    <input type="hidden" name="device" class="j-device" value="" />
+                    
+                    <input type="hidden" name="supportDynamicPwd" value="true" />
+                    <div class="inputArea">
+                        
+                        <div class="u-form-item u-form-item-1 forUid">
+                            <div class="wrapper">
+                                <label class="label"><i class="iconfont iconhead"></i></label>
+                                <div class="input-wrapper">
+                                    <div class="sub-input-wrapper">
+                                        
+                                        <input class="u-input" type="text" name="uid" autocomplete="off" id="uid" tabindex="1" placeholder="用户名" value=""/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        
+                        
+
+                        
+                        <div class="u-form-item u-form-item-1 forPassword">
+                            <div class="wrapper">
+                                <label class="label"><i class="iconfont iconlock"></i></label>
+                                <div class="input-wrapper">
+                                    <div class="sub-input-wrapper">
+                                        
+                                        
+                                            
+                                            
+                                                <input class="u-input" type="password" name="password" id="password" placeholder="密　码" tabindex="2"
+                                                       value=""/>
+                                            
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        
+                        
+
+                        
+                        
+
+                        
+                        
+                        
+                        
+                            
+                            <div class="u-form-item u-form-item-1 faceMenu" id="faceMenu" role="dropdown">
+                                <div class="wrapper">
+                                    <label class="label"><i class="iconfont icontie"></i></label>
+                                    <label class="faceTxt">自动选择</label>
+                                    <label class="label dropdown"><i class="iconfont icondown"></i></label>
+                                </div>
+                                <ul class="u-menu u-menu-hidden">
+                                    
+                                        <li data-face="auto" data-facetxt="自动选择">
+                                            <a href="javascript:void(0)">自动选择</a>
+                                        </li>
+                                    
+                                        <li data-face="XT5" data-facetxt="XT5.0风格">
+                                            <a href="javascript:void(0)">XT5.0风格</a>
+                                        </li>
+                                    
+                                        <li data-face="XT3" data-facetxt="XT3.0风格">
+                                            <a href="javascript:void(0)">XT3.0风格</a>
+                                        </li>
+                                    
+                                </ul>
+                                <input type="hidden" name="face" id="face"
+                                       value="auto"/> 
+                                <input type="hidden" name="faceName" id="faceName"
+                                       value="自动选择"/> 
+                            </div>
+                        
+                        
+                        
+
+                        
+                        <div class="u-form-item u-form-item-1 viceLocaleMenu locale" id="viceLocaleMenu" role="dropdown">
+                            <ul class="u-menu u-menu-hidden">
+                                
+                                    
+                                    
+                                    <li data-locale="zh_CN"><a href="javascript:void(0)">简体中文</a></li>
+                                    
+                                        
+                                    
+                                
+                                    
+                                    
+                                    <li data-locale="zh_TW"><a href="javascript:void(0)">繁體中文</a></li>
+                                    
+                                
+                                    
+                                    
+                                    <li data-locale="en_US"><a href="javascript:void(0)">English</a></li>
+                                    
+                                
+                            </ul>
+                            <div class="wrapper">
+                                <label class="label"><i class="iconfont iconlanguage"></i></label>
+                                <label class="viceLocaleTxt">简体中文</label>
+                                <label class="label dropdown"><i class="iconfont icondown"></i></label>
+                            </div>
+                        </div>
+                        
+                    </div>
+
+                    <div class="u-form-item u-form-item-2">
+                        
+                            <div class="cbWrapper f-fl j-saveUsername">
+                                <input type="checkbox" id="saveUsername" class="checkboxfix" />
+                                <label for="saveUsername">记住用户名</label>
+                            </div>
+                        
+                        
+                    </div>
+                    <div class="u-form-item u-form-item-2">
+                        <input type="hidden" name="action:login" />
+                        <button class="u-btn u-btn-primary submit j-submit" type="button">
+                            登录
+                        </button>
+                    </div>
+                    <div class="u-form-item u-form-item-2" style="margin-top: 8px">
+                        <input class="u-btn u-btn-default submit" type="button" onclick="window.location.href='http://idc.swupl.edu.cn/portal_main/toPortalPage?appid=98f7c19d95124104bd0e674cfdf96f4b'" value="统一身份认证登录">
+                    </div>
+                    
+                    
+                        
+                        
+                        
+                            
+                        
+                    
+                    <div class="u-form-item u-form-item-2 f-dn" id="warnOrErrDiv">
+                        <label></label>
+                    </div>
+                    
+                    <div class="u-form-item u-form-item-2">
+                        
+                        
+                            
+                            
+                            
+                            
+                        
+
+                        
+                        
+                        
+                    </div>
+                    {{#if detail_custom.iac_enable}}
+                    <div class="u-form-item u-form-item-3">
+                        {{#isArrayNotNull detail_custom.iac}}
+                        <div class="QRCode">
+                            <img src="{{getFirstElement detail_custom.iac orgId}}"/>
+                        </div>
+                        {{/isArrayNotNull}}
+                        {{#or detail_custom.iac_link detail_custom.iac_text}}
+                        <div class="CSLink">
+                            {{#if detail_custom.iac_link}}
+                            <a href="{{detail_custom.iac_link}}" target="_blank">
+                                {{detail_custom.iac_text}}
+                            </a>
+                            {{^}}
+                            <label>
+                                {{detail_custom.iac_text}}
+                            </label>
+                            {{/if}}
+                        </div>
+                        {{/or}}
+                    </div>
+                    {{/if}}
+                </form>
+            </div>
+
+            
+
+            <div class="ssl-login">
+                <div class="login-container">
+                    <p class="login-desc">您正在使用证书登录, 请确保电脑已安装了证书或正在使用UKEY</p>
+                    <button class="u-btn u-btn-primary login-button j-ssl-login-button">CA证书登录</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="viceCopyright">
+        <label>
+            Coremail. &copy; Copyright 2000 - 2016 Mailtech.
+        </label>
+    </div>
+    
+
+</script>
+
+<script type="text/x-handlebar-template" id="smsVerifyTpl">
+    <div class="sms-verify-wrap">
+        
+            
+                <p class="desc-title">请输入手机动态密码</p>
+            
+            
+        
+        <div class="mg-top-l">
+            <input type="text" maxlength="4" class="u-input j-code" />
+            <button class="u-btn u-btn-default j-send" style="vertical-align: baseline;">重新发送</button>
+        </div>
+        
+            
+                <p class="error j-error mg-top-s"></p>
+            
+        
+    </div>
+</script>
+
+<script type="text/x-handlebar-template" id="dynamic1VerifyTpl">
+    <div class="dynamic1-verify-wrap">
+        
+            
+                <p class="desc-title">请输入动态口令</p>
+            
+            
+        
+        <p class="desc-sub">密保遗失无法验证，请联系管理员</p>
+        <div class="mg-top-l">
+            <input type="text" maxlength="6" class="u-input j-code" />
+        </div>
+        
+            
+                <p class="error j-error mg-top-s"></p>
+            
+        
+    </div>
+</script>
+
+<script type="text/x-handlebar-template" id="dynamic2VerifyWrapTpl">
+    <div class="dynamic2-verify-wrap j-dynamic2-verify"></div>
+</script>
+
+<script type="text/x-handlebar-template" id="dynamic2PushVerifyTpl">
+    <p class="desc-title">授权信息已发至验证App，请查看确定！</p>
+    <p class="desc-sub">未收到推送信息，可能是网络延迟，请检查手机网络环境，或者选择验证码授权，如果验证失败，请联系管理员。</p>
+    <p class="mg-top-s">
+        <a class="verify-toggle j-toggle" href="javascript:void(0)">验证码授权</a>
+    </p>
+    
+        
+            <p class="error j-error mg-top-s">授权信息确认失败 </p>
+        
+    
+</script>
+
+<script type="text/x-handlebar-template" id="dynamic2CodeVerifyTpl">
+    <p class="desc-title">请输入从验证App 获取的6位数验证码：</p>
+    <div class="mg-top-l">
+        <input type="text" maxlength="6" class="u-input j-code" />
+    </div>
+    <p class="mg-top-s">
+        <a class="verify-toggle j-toggle" href="javascript:void(0)">授权信息推送</a>
+    </p>
+    
+        
+            <p class="error j-error mg-top-s"></p>
+        
+    
+</script>
+
+
+
+
+
+
+<script type="text/javascript">
+    var CUSTOME_DATA = {"ts":1482461440000,"indexPageData2": {
+"temp_resource":{
+"facade_custom":{
+"logo":["logo_000"],
+"logo_link":"http://www.swupl.edu.cn",
+"background":["background_000"],
+"favor":["favor_000"],
+"favor_title":"西南政法大学",
+"default_lang":"zh_CN",
+"background_color":"rgb(53, 152, 219)",
+"submit_button_color":"#3598db",
+"submit_button_font_color":"#ffffff",
+"copyright_link":"http://www.swupl.edu.cn",
+"copyright_text":"西南政法大学. &copy; Copyright 2016",
+"slogan_color":"#000000",
+"slogan_text":"",
+"slogan_fontsize":"14"},
+"detail_custom":{
+"iac_enable":false,
+"iac":[],
+"iac_text":"微信客服",
+"iac_link":"http://coremail.cn",
+"top_link":[{
+"top_link_href":"http://www.swupl.edu.cn",
+"top_link_content":"西南政法大学"}],
+"telephone":[],
+"business_info":[{
+"info_href":"",
+"info_content":""}]}},
+"real_resource":{
+"facade_custom":{
+"logo":["logo_001"],
+"logo_link":"http://www.swupl.edu.cn",
+"background":["background_001"],
+"favor":["favor_001"],
+"favor_title":"西南政法大学",
+"default_lang":"zh_CN",
+"background_color":"rgb(53, 152, 219)",
+"submit_button_color":"#3598db",
+"submit_button_font_color":"#ffffff",
+"copyright_link":"http://www.swupl.edu.cn",
+"copyright_text":"西南政法大学. &copy; Copyright 2016",
+"slogan_color":"#000000",
+"slogan_text":"",
+"slogan_fontsize":"14"},
+"detail_custom":{
+"iac_enable":false,
+"iac":[],
+"iac_text":"微信客服",
+"iac_link":"http://coremail.cn",
+"top_link":[{
+"top_link_href":"http://www.swupl.edu.cn",
+"top_link_content":"西南政法大学"}],
+"telephone":[],
+"business_info":[{
+"info_href":"",
+"info_content":""}]}},
+"style_used":"0"}}
+
+
+
+
+
+
+    
+    
+        
+        
+    
+
+
+
+;
+    var I18N_CONST = {
+        lbl_confirm: "确定",
+        lbl_cancel: "取消",
+        msg_empty_verifyCode: "请输入验证码",
+        msg_empty_uid: "用户名未输入",
+        msg_empty_pwd: "密码未输入",
+        msg_unknown_email: "邮件帐号不存在",
+        msg_incomplete_email: "请输入完整的邮箱地址",
+        msg_filed_load_lookup: "域名信息加载失败"
+    };
+    var SYS_CONST = {
+        primaryDomain: "swupl.edu.cn",
+        wsConfig: {
+            enable: true,
+            host: "http://mail.swupl.edu.cn"
+        },
+        focusEleName: "uid",
+        empty_error: null,
+        error_other: null,
+        secondAuthMeta: {
+            config: "custom",
+            needVerifyCode: false,
+            emptyVerifyCodeMsg: "请输入验证码",
+            
+            sms: false,
+            dynamic1: false,
+            dynamic2: false
+        },
+        confirmText: "确定",
+        cancelText: "取消",
+        imgCDN: false,
+        favorTitle: "西南政法大学电子邮件系统",
+        enablePasswordKey: false,
+        publicKey_e: "",
+        publicKey_n: "",
+        
+        appScanLogin: {
+            
+            enable: false
+        },
+        encryptHash: null,
+        enableSpeedTest: false
+    }
+</script>
+<script src="../framework/87850/components/requirejs/require.js" data-main="assets/login/js/main"></script>
+</html>

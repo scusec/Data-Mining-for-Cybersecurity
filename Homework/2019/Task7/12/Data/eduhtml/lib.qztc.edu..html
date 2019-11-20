@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<!--[if lte IE 7]> <div style=' text-align:center; clear: both; padding:0 0 0 15px; position: relative;'> <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">你正在使用 Internet Explorer 的过期版本。 包括 Windows.com 在内的许多网站不再支持 Internet Explorer 6 和 Internet Explorer 7。 请更新浏览器，否则你无法正常查看本站！</a></div> <![endif]-->
+<!--[if lt IE 7]> <html class="ie6 ie" lang="zh-hans" dir="ltr"> <![endif]-->
+<!--[if IE 7]>    <html class="ie7 ie" lang="zh-hans" dir="ltr"> <![endif]-->
+<!--[if IE 8]>    <html class="ie8 ie" lang="zh-hans" dir="ltr"> <![endif]-->
+<!--[if gt IE 8]> <!--> <html class="
+not-ie" lang="zh-hans" dir="ltr"> <!--<![endif]-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type='text/css'>body {background-color: # !important; background-image: none !important;}</style> 
+      <script type='text/javascript'>
+      var objBlackAndWhite  = {
+				hoverEffect: false, // default true
+				// set the path to BnWWorker.js for a superfast implementation
+				webworkerPath: '',
+				// for the images with a fluid width and height 
+				responsive: true,
+				invertHoverEffect: true,
+				speed: {//this property could also be just speed: value for both fadeIn and fadeOut
+					fadeIn: 400, // 400ms for fadeIn animations
+					fadeOut: 800 // 800ms for fadeOut animations
+				}
+	    };
+	  </script>  
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<link rel="shortcut icon" href="http://lib.qztc.edu.cn/misc/favicon.ico" type="image/vnd.microsoft.icon" />
+<title>首页 | 泉州师范学院图书馆</title>
+<style type="text/css" media="all">
+@import url("http://lib.qztc.edu.cn/modules/system/system.base.css?oxw8lt");
+@import url("http://lib.qztc.edu.cn/modules/system/system.menus.css?oxw8lt");
+@import url("http://lib.qztc.edu.cn/modules/system/system.messages.css?oxw8lt");
+@import url("http://lib.qztc.edu.cn/modules/system/system.theme.css?oxw8lt");
+</style>
+<style type="text/css" media="all">
+@import url("http://lib.qztc.edu.cn/sites/all/modules/jquery_update/replace/ui/themes/base/minified/jquery.ui.core.min.css?oxw8lt");
+@import url("http://lib.qztc.edu.cn/sites/all/modules/jquery_update/replace/ui/themes/base/minified/jquery.ui.theme.min.css?oxw8lt");
+@import url("http://lib.qztc.edu.cn/sites/all/modules/jquery_update/replace/ui/themes/base/minified/jquery.ui.tabs.min.css?oxw8lt");
+</style>
+<style type="text/css" media="all">
+@import url("http://lib.qztc.edu.cn/modules/comment/comment.css?oxw8lt");
+@import url("http://lib.qztc.edu.cn/sites/all/modules/date/date_api/date.css?oxw8lt");
+@import url("http://lib.qztc.edu.cn/modules/field/theme/field.css?oxw8lt");
+@import url("http://lib.qztc.edu.cn/modules/node/node.css?oxw8lt");
+@import url("http://lib.qztc.edu.cn/modules/poll/poll.css?oxw8lt");
+@import url("http://lib.qztc.edu.cn/modules/search/search.css?oxw8lt");
+@import url("http://lib.qztc.edu.cn/modules/user/user.css?oxw8lt");
+@import url("http://lib.qztc.edu.cn/sites/all/modules/extlink/extlink.css?oxw8lt");
+@import url("http://lib.qztc.edu.cn/sites/all/modules/nodeorder/css/nodeorder.css?oxw8lt");
+@import url("http://lib.qztc.edu.cn/sites/all/modules/views/css/views.css?oxw8lt");
+@import url("http://lib.qztc.edu.cn/sites/all/modules/media/modules/media_wysiwyg/css/media_wysiwyg.base.css?oxw8lt");
+</style>
+<style type="text/css" media="all">
+@import url("http://lib.qztc.edu.cn/sites/all/modules/ctools/css/ctools.css?oxw8lt");
+</style>
+<style type="text/css" media="all">
+@import url("http://lib.qztc.edu.cn/sites/all/themes/goodnex/css/mycss.css?oxw8lt");
+@import url("http://lib.qztc.edu.cn/sites/all/themes/goodnex/css/style.css?oxw8lt");
+@import url("http://lib.qztc.edu.cn/sites/all/themes/goodnex/css/drupal.css?oxw8lt");
+@import url("http://lib.qztc.edu.cn/sites/all/themes/goodnex/css/skeleton.css?oxw8lt");
+@import url("http://lib.qztc.edu.cn/sites/all/themes/goodnex/css/layout.css?oxw8lt");
+@import url("http://lib.qztc.edu.cn/sites/all/themes/goodnex/js/fancybox/jquery.fancybox-1.3.4.css?oxw8lt");
+@import url("http://lib.qztc.edu.cn/sites/all/themes/goodnex/js/flexslider/css/flexslider.css?oxw8lt");
+@import url("http://lib.qztc.edu.cn/sites/all/themes/goodnex/js/mediaelement/jquery.mediaelementplayer.css?oxw8lt");
+@import url("http://lib.qztc.edu.cn/sites/all/themes/goodnex/js/jquery.tooltip/jquery.tooltip.css?oxw8lt");
+@import url("http://lib.qztc.edu.cn/sites/all/themes/goodnex/css/font-awesome.css?oxw8lt");
+@import url("http://lib.qztc.edu.cn/sites/all/themes/goodnex/css/goodnex.css?oxw8lt");
+</style>
+<script type="text/javascript" src="http://lib.qztc.edu.cn/sites/all/modules/jquery_update/replace/jquery/1.7/jquery.min.js?v=1.7.1"></script>
+<script type="text/javascript" src="http://lib.qztc.edu.cn/misc/jquery.once.js?v=1.2"></script>
+<script type="text/javascript" src="http://lib.qztc.edu.cn/misc/drupal.js?oxw8lt"></script>
+<script type="text/javascript" src="http://lib.qztc.edu.cn/sites/all/modules/jquery_update/replace/ui/ui/minified/jquery.ui.core.min.js?v=1.8.11"></script>
+<script type="text/javascript" src="http://lib.qztc.edu.cn/sites/all/modules/jquery_update/replace/ui/ui/minified/jquery.ui.widget.min.js?v=1.8.11"></script>
+<script type="text/javascript" src="http://lib.qztc.edu.cn/sites/all/modules/jquery_update/replace/ui/external/jquery.cookie.js?v=67fb34f6a866c40d0570"></script>
+<script type="text/javascript" src="http://lib.qztc.edu.cn/sites/all/modules/jquery_update/replace/misc/jquery.form.min.js?v=2.69"></script>
+<script type="text/javascript" src="http://lib.qztc.edu.cn/sites/all/modules/jquery_update/replace/ui/ui/minified/jquery.ui.tabs.min.js?v=1.8.11"></script>
+<script type="text/javascript" src="http://lib.qztc.edu.cn/misc/jquery.ba-bbq.js?v=1.2.1"></script>
+<script type="text/javascript" src="http://lib.qztc.edu.cn/misc/ajax.js?v=7.54"></script>
+<script type="text/javascript" src="http://lib.qztc.edu.cn/sites/all/modules/extlink/extlink.js?oxw8lt"></script>
+<script type="text/javascript" src="http://lib.qztc.edu.cn/sites/default/files/languages/zh-hans_yx-Exw3O47uxJvbYe-Dl28xsK4GFvmm9dSFS5zaa7nA.js?oxw8lt"></script>
+<script type="text/javascript" src="http://lib.qztc.edu.cn/sites/all/modules/views/js/base.js?oxw8lt"></script>
+<script type="text/javascript" src="http://lib.qztc.edu.cn/misc/progress.js?v=7.54"></script>
+<script type="text/javascript" src="http://lib.qztc.edu.cn/sites/all/modules/views/js/ajax_view.js?oxw8lt"></script>
+<script type="text/javascript" src="http://lib.qztc.edu.cn/sites/all/modules/quicktabs/js/qt_ui_tabs.js?oxw8lt"></script>
+<script type="text/javascript" src="http://lib.qztc.edu.cn/sites/all/themes/goodnex/js/jquery.modernizr.js?oxw8lt"></script>
+<script type="text/javascript" src="http://lib.qztc.edu.cn/sites/all/themes/goodnex/js/jquery.easing.1.3.min.js?oxw8lt"></script>
+<script type="text/javascript" src="http://lib.qztc.edu.cn/sites/all/themes/goodnex/js/jquery.cycle.all.min.js?oxw8lt"></script>
+<script type="text/javascript" src="http://lib.qztc.edu.cn/sites/all/themes/goodnex/js/jquery.blackandwhite.min.js?oxw8lt"></script>
+<script type="text/javascript" src="http://lib.qztc.edu.cn/sites/all/themes/goodnex/js/mediaelement/mediaelement-and-player.min.js?oxw8lt"></script>
+<script type="text/javascript" src="http://lib.qztc.edu.cn/sites/all/themes/goodnex/js/jquery.jcarousel.min.js?oxw8lt"></script>
+<script type="text/javascript" src="http://lib.qztc.edu.cn/sites/all/themes/goodnex/js/jquery.jflickrfeed.min.js?oxw8lt"></script>
+<script type="text/javascript" src="http://lib.qztc.edu.cn/sites/all/themes/goodnex/js/jquery.touchswipe.min.js?oxw8lt"></script>
+<script type="text/javascript" src="http://lib.qztc.edu.cn/sites/all/themes/goodnex/js/jquery.isotope.min.js?oxw8lt"></script>
+<script type="text/javascript" src="http://lib.qztc.edu.cn/sites/all/themes/goodnex/js/mobile-map.js?oxw8lt"></script>
+<script type="text/javascript" src="http://lib.qztc.edu.cn/sites/all/themes/goodnex/js/fancybox/jquery.fancybox-1.3.4.pack.js?oxw8lt"></script>
+<script type="text/javascript" src="http://lib.qztc.edu.cn/sites/all/themes/goodnex/js/flexslider/js/jquery.flexslider-min.js?oxw8lt"></script>
+<script type="text/javascript" src="http://lib.qztc.edu.cn/sites/all/themes/goodnex/js/config.js?oxw8lt"></script>
+<script type="text/javascript" src="http://lib.qztc.edu.cn/sites/all/themes/goodnex/js/custom.js?oxw8lt"></script>
+<script type="text/javascript" src="http://lib.qztc.edu.cn/sites/all/themes/goodnex/js/goodnex.js?oxw8lt"></script>
+<script type="text/javascript" src="http://lib.qztc.edu.cn/sites/all/themes/goodnex/js/jquery.tooltip.js?oxw8lt"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":{"theme":"goodnex","theme_token":"KueH_znxBzum9CbWytQ4526IBIzk_Tf6ckvarGBriQc","js":{"sites\/all\/modules\/jquery_update\/replace\/jquery\/1.7\/jquery.min.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"sites\/all\/modules\/jquery_update\/replace\/ui\/ui\/minified\/jquery.ui.core.min.js":1,"sites\/all\/modules\/jquery_update\/replace\/ui\/ui\/minified\/jquery.ui.widget.min.js":1,"sites\/all\/modules\/jquery_update\/replace\/ui\/external\/jquery.cookie.js":1,"sites\/all\/modules\/jquery_update\/replace\/misc\/jquery.form.min.js":1,"sites\/all\/modules\/jquery_update\/replace\/ui\/ui\/minified\/jquery.ui.tabs.min.js":1,"misc\/jquery.ba-bbq.js":1,"misc\/ajax.js":1,"sites\/all\/modules\/extlink\/extlink.js":1,"public:\/\/languages\/zh-hans_yx-Exw3O47uxJvbYe-Dl28xsK4GFvmm9dSFS5zaa7nA.js":1,"sites\/all\/modules\/views\/js\/base.js":1,"misc\/progress.js":1,"sites\/all\/modules\/views\/js\/ajax_view.js":1,"sites\/all\/modules\/quicktabs\/js\/qt_ui_tabs.js":1,"sites\/all\/themes\/goodnex\/js\/jquery.modernizr.js":1,"sites\/all\/themes\/goodnex\/js\/jquery.easing.1.3.min.js":1,"sites\/all\/themes\/goodnex\/js\/jquery.cycle.all.min.js":1,"sites\/all\/themes\/goodnex\/js\/jquery.blackandwhite.min.js":1,"sites\/all\/themes\/goodnex\/js\/mediaelement\/mediaelement-and-player.min.js":1,"sites\/all\/themes\/goodnex\/js\/jquery.jcarousel.min.js":1,"sites\/all\/themes\/goodnex\/js\/jquery.jflickrfeed.min.js":1,"sites\/all\/themes\/goodnex\/js\/jquery.touchswipe.min.js":1,"sites\/all\/themes\/goodnex\/js\/jquery.isotope.min.js":1,"sites\/all\/themes\/goodnex\/js\/mobile-map.js":1,"sites\/all\/themes\/goodnex\/js\/fancybox\/jquery.fancybox-1.3.4.pack.js":1,"sites\/all\/themes\/goodnex\/js\/flexslider\/js\/jquery.flexslider-min.js":1,"sites\/all\/themes\/goodnex\/js\/config.js":1,"sites\/all\/themes\/goodnex\/js\/custom.js":1,"sites\/all\/themes\/goodnex\/js\/goodnex.js":1,"sites\/all\/themes\/goodnex\/js\/jquery.tooltip.js":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"misc\/ui\/jquery.ui.core.css":1,"misc\/ui\/jquery.ui.theme.css":1,"misc\/ui\/jquery.ui.tabs.css":1,"modules\/comment\/comment.css":1,"sites\/all\/modules\/date\/date_api\/date.css":1,"modules\/field\/theme\/field.css":1,"modules\/node\/node.css":1,"modules\/poll\/poll.css":1,"modules\/search\/search.css":1,"modules\/user\/user.css":1,"sites\/all\/modules\/extlink\/extlink.css":1,"sites\/all\/modules\/nodeorder\/css\/nodeorder.css":1,"sites\/all\/modules\/views\/css\/views.css":1,"sites\/all\/modules\/media\/modules\/media_wysiwyg\/css\/media_wysiwyg.base.css":1,"sites\/all\/modules\/ctools\/css\/ctools.css":1,"sites\/all\/themes\/goodnex\/css\/mycss.css":1,"sites\/all\/themes\/goodnex\/css\/style.css":1,"sites\/all\/themes\/goodnex\/css\/drupal.css":1,"sites\/all\/themes\/goodnex\/css\/skeleton.css":1,"sites\/all\/themes\/goodnex\/css\/layout.css":1,"sites\/all\/themes\/goodnex\/js\/fancybox\/jquery.fancybox-1.3.4.css":1,"sites\/all\/themes\/goodnex\/js\/flexslider\/css\/flexslider.css":1,"sites\/all\/themes\/goodnex\/js\/mediaelement\/jquery.mediaelementplayer.css":1,"sites\/all\/themes\/goodnex\/js\/jquery.tooltip\/jquery.tooltip.css":1,"sites\/all\/themes\/goodnex\/css\/font-awesome.css":1,"sites\/all\/themes\/goodnex\/css\/goodnex.css":1}},"jcarousel":{"ajaxPath":"\/jcarousel\/ajax\/views"},"quicktabs":{"qt_fronttab":{"name":"fronttab","active_tab":"1","history":0},"qt_quicktab0":{"name":"quicktab0","active_tab":"1","history":0}},"extlink":{"extTarget":"_blank","extClass":0,"extLabel":"(link is external)","extImgClass":0,"extSubdomains":1,"extExclude":"","extInclude":"","extCssExclude":"","extCssExplicit":"","extAlert":0,"extAlertText":"This link will take you to an external web site.","mailtoClass":"mailto","mailtoLabel":"(link sends e-mail)"},"urlIsAjaxTrusted":{"\/":true}});
+//--><!]]>
+</script>
+  
+  <!-- IE Fix for HTML5 Tags -->
+  <!--[if lt IE 9]>
+    <script src="http://210.34.124.1/html5.js"></script>
+  <![endif]-->
+  
+	<!-- Web Fonts  -->
+
+<!-- User defined CSS --><style type='text/css'></style><!-- End user defined CSS -->  
+
+	<script type='text/javascript' src='/sites/all/themes/goodnex/js/sticky.js'></script>
+    <script type="text/javascript">
+      $j = jQuery.noConflict();
+      $j(document).ready(function(){
+        $j("div.itemwx,div.itemcx").tooltip();
+      });
+    </script>
+</head>
+
+<body class="html front not-logged-in no-sidebars page-node page-node- page-node-872 node-type-page wide normal pattern-6 color-1 " >
+
+<div id="wrapper">
+  <header id="header">
+    <div class="container">
+    
+      <div class="eight columns">
+
+	      		      		    	    
+	      	        <h1 class="logo">
+			      <a href="/" title="首页" rel="home" id="logo">
+			        <img src="http://lib.qztc.edu.cn/sites/default/files/12xin_.png" alt="首页" />
+			      </a>
+	        </h1>
+		    		    
+		    		      <div id="name-and-slogan" class="hidden">
+		
+		        		          <h1 id="site-name" class="hidden">
+		            <a href="/" title="首页" rel="home"><span>泉州师范学院图书馆</span></a>
+		          </h1>
+		        		
+		        		
+		      </div> <!-- /#name-and-slogan -->
+		    		    
+      </div>
+      
+      <div class="eight columns">
+          <div class="region region-header-right">
+    <div id="block-block-16" class="block block-block">
+
+    
+  <div class="content">
+     <div class="widget widget_contacts"><br><br><a  href="#"><div class="itemwx">
+<div class="tooltip_description" style="display:none" title="图书馆微信号"><img src="/sites/all/themes/goodnex/images/icons/wx.png" width="100" height="100"></div>
+</div></a>
+ <a href="#"><div class="itemcx">
+<div class="tooltip_description" style="display:none" title="超星移动图书馆"><img src="/sites/all/themes/goodnex/images/icons/cx.jpg" width="100" height="100"></div>
+</div></div></a>  </div>
+</div>
+  </div>
+     </div>  
+     
+     <div class="clear"></div>
+     
+     <div class="sixteen columns">
+				<div class="menu-container clearfix">
+					<nav id="navigation" class="navigation">
+					  <div class="menu">
+					      
+<ul><li><a href="/bggk/4">概况</a><ul><li><a href="/bggk/4" title="">图书馆简介</a></li>
+<li><a href="/dzfw/531" title="">开放时间</a></li>
+<li><a href="/dzfw/542">空间与设施</a></li>
+<li><a href="/552">组织机构</a></li>
+<li><a href="/cywd/gzzd" title="">规章制度</a></li>
+<li><a href="/gallery" title="">馆舍风貌</a></li>
+<li><a href="/guan-kan-guan-xun">馆刊馆讯</a><ul><li><a href="/db" title="">图书馆导报</a></li>
+<li><a href="/gxqb" title="">高校竞争情报</a></li>
+<li><a href="/jjqb" title="">经济竞争情报</a></li>
+</ul></li>
+</ul></li>
+<li><a href="/dzfw/531" title="了解图书馆的开放时间">服务</a><ul><li><a href="/dzfw/tsjy" title="">借阅服务</a></li>
+<li><a href="/dzfw/wxcd" title="">文献传递</a></li>
+<li><a href="/dzfw/933">查新服务</a></li>
+<li><a href="/dzfw/932">查收查引</a></li>
+<li><a href="/cywd/922">咨询服务</a></li>
+<li><a href="/dzfw/538">学科服务</a></li>
+<li><a href="/pxjz" title="">讲座培训</a></li>
+<li><a href="/dzfw/929" title="">图书荐购</a></li>
+<li><a href="/dzfw/546">图书捐赠</a></li>
+</ul></li>
+<li><a href="/eresources" title="">资源</a></li>
+<li><a href="/cywd/589">帮助</a><ul><li><a href="/fwlc" title="">服务流程</a></li>
+<li><a href="/cywd/xszl">新生专栏</a></li>
+<li><a href="/cywd/2747" title="">无线上网</a></li>
+<li><a href="/cywd/589" title="">常用软件</a></li>
+<li><a href="/cywd/918">常用文档</a></li>
+<li><a href="/faq">常见问题</a></li>
+</ul></li>
+<li><a href="http://210.34.124.28:8080/" title="图书馆馆藏图书检索系统，请在IE下浏览使用。">我的图书馆</a></li>
+<li><a href="http://www.qztc.edu.cn/" title="">学校主页</a></li>
+</ul>					  </div>  
+					</nav>
+					
+					<div class="search-wrapper">
+					  <form onsubmit="if(this.search_block_form.value==&#039;Search&#039;){ alert(&#039;Please enter a search&#039;); return false; }" action="/" method="post" id="search-block-form--2" accept-charset="UTF-8"><div><div class="container-inline">
+      <h2 class="element-invisible">搜索表单</h2>
+    <div class="form-item form-type-textfield form-item-search-block-form">
+  <label class="element-invisible" for="edit-search-block-form--4">搜索 </label>
+ <input title="请输入您想搜索的关键词。" onblur="if (this.value == &#039;&#039;) {this.value = &#039;Search&#039;;}" onfocus="if (this.value == &#039;Search&#039;) {this.value = &#039;&#039;;}" placeholder="搜索" type="text" id="edit-search-block-form--4" name="search_block_form" value="搜索" size="40" maxlength="128" class="form-text" />
+</div>
+<div class="form-actions form-wrapper" id="edit-actions--2"><button type="submit" class="submit-search"><input type="submit" id="edit-submit--2" name="op" value="" class="button default form-submit" /></button></div><input type="hidden" name="form_build_id" value="form-2rc9a3bTWpEgu3vL-cMOLZD3HnpdHQufZwnuyW7C6WU" />
+<input type="hidden" name="form_id" value="search_block_form" />
+</div>
+</div></form>					</div><!--/ .search-wrapper--> 
+					
+				</div>
+     </div>
+     
+    </div>  				
+	</header>
+	  <div class="region region-before-content-no-wrap">
+    <div id="block-views-ajax-content-block" class="block block-views">
+
+    
+  <div class="content">
+    <div style="background:url(/chaoxing/grey.png) repeat;margin-top: 20px;" style="min-width:960px">
+<div class ="container" style="height:162px;">
+<aside id="sidebar" class="four columns">
+			
+<ul class="ajax-nav">
+
+          
+  
+  
+     
+    <li><a href="#">FULink发现</a></li><li><a href="#">读秀学术搜索</a></li><li><a href="#">FULink随书光盘</a></li>
+  
+  
+  
+  
+  
+  	
+</ul><!--/ .ajax-nav-->
+
+</aside><!--/ #sidebar-->     
+<section id="main" class="twelve columns" style="width: 680px;">
+  <div class="ajax-content">
+    <ul>
+		  		  		  		  		
+		  		
+		  		
+		  		      <li class="ajax-navigation-item">
+ </br>  <div style="margin:0px auto; text-align:center;"><a href="http://www.fulink.edu.cn/" target="_blank">
+<img src="/fulink/logo.gif" alt="" width="300" style="padding-right:70px;"/></a>
+    <iframe name="fulink" id="fulink" src="/nfulink/fulink.html" style="width: 580px; height: 90px;" frameborder="0"></iframe></div></li><li class="ajax-navigation-item">
+ </br>  <div style="margin:0px auto; text-align:center;"><a href="http://www.duxiu.com" target="_blank">
+<img src="/duxiu/duxiu.png" alt="" width="120" style="padding-right:100px;"/></a>
+    <iframe name="duxiu" id="duxiu" src="/duxiu/duxiu.html" style="width: 580px; height: 90px;" frameborder="0"></iframe></div>
+</li><li class="ajax-navigation-item">
+</br><div style="margin:0px auto; text-align:center;"><a href="http://59.77.229.126/media/515/1" target="_blank">
+<img src="/ndisk/fglogo.png" alt="" width="300" style="padding-right:70px;"/></a>
+    <iframe name="discover" id="discover" src="/ndisk/fdisk.html" style="width: 580px; height: 90px;" frameborder="0"></iframe></div></li>		  		
+		  		
+		  		
+		  
+		  		  
+		  
+    </ul>
+  </div>    
+</section>
+</div></div>
+  </div>
+</div>
+<div id="block-views-recent-works-block" class="block block-views">
+
+    
+  <div class="content">
+    <div class="container">
+<div><br></div>
+<div class="eight columns row">
+<div class="jcarousel-container">
+  <ul data-scroll-count="1" data-auto="7" class="projects-carousel clearfix">
+        
+  
+  
+  
+        <li class="eight columns">
+	<div class="preloader">
+		<a href="http://210.34.124.1/goethe" class="bwWrapper single-image plus-icon" rel="jcarousel"> 
+			<img src="http://lib.qztc.edu.cn/sites/default/files/images/twzl/shijiuda.jpg" alt="" />
+		</a>				
+	</div><!--/ .preloader-->
+	<a href="http://210.34.124.1/goethe" class="project-meta">
+		<h5 class="title">好书推荐||喜迎十九大专题数字图书</h6>
+		<span class="categories"></span>	
+	</a>
+</li>  <li class="eight columns">
+	<div class="preloader">
+		<a href="http://210.34.124.1/xxgg/2758" class="bwWrapper single-image plus-icon" rel="jcarousel"> 
+			<img src="http://lib.qztc.edu.cn/sites/default/files/images/twzl/wu_biao_ti__0.jpg" alt="" />
+		</a>				
+	</div><!--/ .preloader-->
+	<a href="http://210.34.124.1/xxgg/2758" class="project-meta">
+		<h5 class="title">超星期刊开通试用通知</h6>
+		<span class="categories"></span>	
+	</a>
+</li>  <li class="eight columns">
+	<div class="preloader">
+		<a href="/xxgg/949" class="bwWrapper single-image plus-icon" rel="jcarousel"> 
+			<img src="http://lib.qztc.edu.cn/sites/default/files/images/twzl/1_0.jpg" alt="" />
+		</a>				
+	</div><!--/ .preloader-->
+	<a href="/xxgg/949" class="project-meta">
+		<h5 class="title">福建省高校数字图书馆（FULINK）</h6>
+		<span class="categories"></span>	
+	</a>
+</li>  <li class="eight columns">
+	<div class="preloader">
+		<a href="/xxgg/741" class="bwWrapper single-image plus-icon" rel="jcarousel"> 
+			<img src="http://lib.qztc.edu.cn/sites/default/files/images/twzl/1_2.jpg" alt="" />
+		</a>				
+	</div><!--/ .preloader-->
+	<a href="/xxgg/741" class="project-meta">
+		<h5 class="title">维普论文检测系统免费试用服务</h6>
+		<span class="categories"></span>	
+	</a>
+</li>
+  
+  
+  
+  
+  
+  
+  </ul>
+</div>
+</div>
+<div class="eight columns row">	
+
+			  <div  id="quicktabs-fronttab" class="quicktabs-ui-wrapper"><ul><li><a href="#qt-fronttab-ui-tabs1">图书馆公告</a></li><li><a href="#qt-fronttab-ui-tabs2"> 新闻资讯</a></li></ul><div  id="qt-fronttab-ui-tabs1"><div class="view view-fnews view-id-fnews view-display-id-page view-dom-id-b5ac4d21b7e267899efd49ed30cd7b15">
+        
+  
+  
+      <div class="view-content">
+      <div class="widget widget_categories">    <ul>          <li class="">  
+          <a href="/xxgg/2875">2017年泉州师院全民阅读月暨闽南文化进校园系列活动开幕</a>  </li>
+          <li class="">  
+          <a href="/xxgg/2873">个人研究室申请结果公告</a>  </li>
+          <li class="">  
+          <a href="/xxgg/2775"> 2017年图书馆新生入馆培训考试获奖名单公布啦！</a>  </li>
+          <li class="">  
+          <a href="/xxgg/2770">关于iReader服务暂停的通知</a>  </li>
+          <li class="">  
+          <a href="/xxgg/2768">【转】我校举办马克思主义理论学习会暨“鸟巢图书馆”红色阅...</a>  </li>
+          <li class="">  
+          <a href="/xxgg/2767">图书馆2017级新生入馆培训圆满完成</a>  </li>
+          <li class="">  
+          <a href="/xxgg/2766">关于图书馆部分网络服务暂停的通知</a>  </li>
+      </ul></div>    </div>
+  
+  
+  
+  
+      <div class="view-footer">
+      <a href="/xxgg" style="float:right">More &gt;&gt;</a>    </div>
+  
+  
+</div></div><div  id="qt-fronttab-ui-tabs2"><div class="view view-fnews view-id-fnews view-display-id-page_1 view-dom-id-7101dfe65a83fb8cfed3a16b43920373">
+        
+  
+  
+      <div class="view-content">
+      <div class="widget widget_categories">    <ul>          <li class="">  
+          <a href="/xxgg/2563">图书馆举办两岸关系数据库使用专场讲座</a>  </li>
+          <li class="">  
+          <a href="/xxgg/2559">听南音聊方言 寻忆千年泉州 ——“泉州第一炮”陈日升莅临...</a>  </li>
+          <li class="">  
+          <a href="/xxgg/2554">图书馆举办“龙源云借阅”专题讲座</a>  </li>
+          <li class="">  
+          <a href="/xxgg/2553">图书馆举办善用工具完成合格的毕业论文专场讲座</a>  </li>
+          <li class="">  
+          <a href="/xxgg/2552">教师发展中心成功举办FULink平台专题讲座</a>  </li>
+          <li class="">  
+          <a href="/xxgg/2545">泉州师范学院2017年“世界读书日”系列活动正式开幕</a>  </li>
+          <li class="">  
+          <a href="/xxgg/2488">刺桐会闽南文化进校园活动在我校举办</a>  </li>
+      </ul></div>    </div>
+  
+  
+  
+  
+      <div class="view-footer">
+      <a href="/xxgg" style="float:right">More &gt;&gt;</a>    </div>
+  
+  
+</div></div></div>             
+</div>
+</div>  </div>
+</div>
+  </div>
+  <section id="content">
+	  <div class="container">
+	     
+	    	    
+	    	    
+	    		  
+		  	   
+	    		  
+			  			  
+	     		      	      	
+			    <div class="region region-content">
+    <div id="block-views-recent-posts-block" class="block block-views">
+
+    
+  <div class="content">
+    ﻿<div class="eight columns row">	
+
+			  <div  id="quicktabs-quicktab0" class="quicktabs-ui-wrapper"><ul><li><a href="#qt-quicktab0-ui-tabs1">培训与活动</a></li><li><a href="#qt-quicktab0-ui-tabs2">资源动态</a></li></ul><div  id="qt-quicktab0-ui-tabs1"><div class="view view-fnews view-id-fnews view-display-id-page_3 view-dom-id-be69f04e4d5ff4fd92f77e005e5f9a6e">
+        
+  
+  
+      <div class="view-content">
+      <div class="widget widget_categories">    <ul>          <li class="">  
+          <a href="/xxgg/2776">图书馆为军转干部举办专场培训</a>  </li>
+          <li class="">  
+          <a href="/xxgg/2769">【转】詹仁锋研究馆员来校作专题讲座</a>  </li>
+          <li class="">  
+          <a href="/xxgg/2565">图书馆举办CNKI数据库专场培训</a>  </li>
+          <li class="">  
+          <a href="/xxgg/2550">图书馆举办信息检索大赛、读书笔记大赛培训会</a>  </li>
+          <li class="">  
+          <a href="/xxgg/2549">图书馆举办“闽南文化特色解读”讲座</a>  </li>
+          <li class="">  
+          <a href="/xxgg/2547">图书馆举办“软件通——带着PS去旅行”讲座</a>  </li>
+          <li class="">  
+          <a href="/xxgg/2529">图书馆举办善用工具完成合格的毕业论文专场讲座</a>  </li>
+      </ul></div>    </div>
+  
+  
+  
+  
+      <div class="view-footer">
+      <a href="/xxgg" style="float:right">More &gt;&gt;</a>    </div>
+  
+  
+</div></div><div  id="qt-quicktab0-ui-tabs2"><div class="view view-fnews view-id-fnews view-display-id-page_2 view-dom-id-534b07fdee99cbd240264a42d9d2744f">
+        
+  
+  
+      <div class="view-content">
+      <div class="widget widget_categories">    <ul>          <li class="">  
+          <a href="/xxgg/2758">超星期刊开通试用通知</a>  </li>
+          <li class="">  
+          <a href="/xxgg/2690">关于笔杆开通试用的通知</a>  </li>
+          <li class="">  
+          <a href="/xxgg/2551">关于开通“中国知网（CNKI）知识资源总库”远程服务的通...</a>  </li>
+          <li class="">  
+          <a href="/xxgg/2501">关于开通RESSET金融研究数据库试用通知</a>  </li>
+          <li class="">  
+          <a href="/xxgg/1388">关于起点考研网试用通知</a>  </li>
+          <li class="">  
+          <a href="/xxgg/794">关于全球大学生创新创业教学与研究视频数据库试用通知</a>  </li>
+          <li class="">  
+          <a href="/xxgg/779">关于免费使用CALIS和CASHL文献传递服务的通知</a>  </li>
+      </ul></div>    </div>
+  
+  
+  
+  
+      <div class="view-footer">
+      <a href="/xxgg" style="float:right">More &gt;&gt;</a>    </div>
+  
+  
+</div></div></div>             
+</div>
+<div class="eight columns row" style="padding-left:20px"><h4 class="title-service">
+		<i class="icons-link"></i>
+		<a href="#">便捷通道</a>
+	</h4>
+
+	<a class="button small turquoise" href="/dzfw/531">开馆时间</a>
+	<a class="button small blue" href="/cywd/xszl">新生专栏</a>
+	<a class="button small violet" href="/cywd/922">总咨询台</a>
+	<a class="button small lime" href="/faq">常见问题</a>
+	<a class="button small green" href="/cywd/589">常用软件</a>
+    <a class="button small light-gray" href="/cywd/2747">无线上网</a>
+	<a class="button small biscuit" href="/dzfw/546">图书捐赠</a>
+	<a class="button small virid" href="/dzfw/wxcd">文献传递</a>
+	<a class="button small yellow" href="/dzfw/932">查收查引</a>
+	<a class="button small orange" href="/dzfw/933">委托查新</a>
+    <a class="button small brown" href="/xxgg/1010">龙源云借阅</a>
+    <a class="button small vinous" href="/xxgg/447">歌德电子书</a>
+    <a class="button small red" href="/chaoxing/chaoxingindex.html" target="_blank">移动图书馆</a>
+	<a class="button small pink" title="" href="/xxgg/780">图书馆微信号</a>
+    <h4 class="title-service">
+		<i class="icons-book"></i>
+		<a href="#">数字资源</a>
+	</h4>
+    <a class="button small turquoise" href="/guan-cang-zi-yuan-chong-lei/dian-zi-qi-kan">电子期刊</a>
+	<a class="button small blue" href="/guan-cang-zi-yuan-chong-lei/dian-zi-bao-zhi">电子报纸</a>
+	<a class="button small violet" href="/guan-cang-zi-yuan-chong-lei/dian-zi-tu-shu">电子图书</a>
+	<a class="button small lime" href="/guan-cang-zi-yuan-chong-lei/xue-wei-lun-wen">学位论文</a>
+	<a class="button small green" href="/guan-cang-zi-yuan-chong-lei/duo-mei-ti">多媒体资源</a>
+	<a class="button small virid" href="/guan-cang-zi-yuan-chong-lei/min-tai-wen-hua-te-cang">闽台文化特藏</a>
+	<a class="button small yellow" href="/guan-cang-zi-yuan-chong-lei/wang-shang-gong-kai-ke">网上公开课</a>
+    </div>
+
+  </div>
+</div>
+<div id="node-872" class="node node-page clearfix" about="/front" typeof="foaf:Document">
+
+  
+      <span property="dc:title" content="首页" class="rdf-meta element-hidden"></span><span property="sioc:num_replies" content="0" datatype="xsd:integer" class="rdf-meta element-hidden"></span>
+  
+  <div class="content">
+      </div>
+
+  
+  
+</div>
+  </div>
+              
+					  
+		  		  
+		  		    
+    </div>
+  </section> 
+ 
+    <div class="region region-after-content-no-wrap">
+    <div id="block-views-rrecent-works-block" class="block block-views">
+
+    
+  <div class="content">
+    <div class="container">
+<div class="divider-solid"></div>
+<div class="jcarousel-container">
+  <ul data-scroll-count="1" data-auto="7" class="projects-carousel clearfix">
+        
+  
+  
+  
+        <li class="three columns">
+	<div class="preloader">
+		<a href="http://www.cnki.net/" class="bwWrapper single-image plus-icon" rel="jcarousel">  
+			<img src="http://lib.qztc.edu.cn/sites/default/files/images/recommend%20/cnki_0.png"  alt="" />
+		</a>				
+	</div><!--/ .preloader-->
+<!--/	<a href="http://www.cnki.net/" class="project-meta">
+		<h6 class="title">
+		<span class="categories"></span></h6>	
+	</a>-->
+</li>  <li class="three columns">
+	<div class="preloader">
+		<a href="http://210.34.127.204" class="bwWrapper single-image plus-icon" rel="jcarousel">  
+			<img src="http://lib.qztc.edu.cn/sites/default/files/images/recommend%20/mo_fang_.png"  alt="" />
+		</a>				
+	</div><!--/ .preloader-->
+<!--/	<a href="http://210.34.127.204" class="project-meta">
+		<h6 class="title">
+		<span class="categories"></span></h6>	
+	</a>-->
+</li>  <li class="three columns">
+	<div class="preloader">
+		<a href="http://210.34.124.1/686" class="bwWrapper single-image plus-icon" rel="jcarousel">  
+			<img src="http://lib.qztc.edu.cn/sites/default/files/images/recommend%20/chao_xing_.png"  alt="" />
+		</a>				
+	</div><!--/ .preloader-->
+<!--/	<a href="http://210.34.124.1/686" class="project-meta">
+		<h6 class="title">
+		<span class="categories"></span></h6>	
+	</a>-->
+</li>  <li class="three columns">
+	<div class="preloader">
+		<a href="http://www.nstl.gov.cn/NSTL/nstl/facade/exweb/electroicResource.jsp?i=1 " class="bwWrapper single-image plus-icon" rel="jcarousel">  
+			<img src="http://lib.qztc.edu.cn/sites/default/files/images/recommend%20/ntsl_0.png"  alt="" />
+		</a>				
+	</div><!--/ .preloader-->
+<!--/	<a href="http://www.nstl.gov.cn/NSTL/nstl/facade/exweb/electroicResource.jsp?i=1 " class="project-meta">
+		<h6 class="title">
+		<span class="categories"></span></h6>	
+	</a>-->
+</li>  <li class="three columns">
+	<div class="preloader">
+		<a href="http://www.nlc.cn/" class="bwWrapper single-image plus-icon" rel="jcarousel">  
+			<img src="http://lib.qztc.edu.cn/sites/default/files/images/recommend%20/12345.jpg"  alt="" />
+		</a>				
+	</div><!--/ .preloader-->
+<!--/	<a href="http://www.nlc.cn/" class="project-meta">
+		<h6 class="title">
+		<span class="categories"></span></h6>	
+	</a>-->
+</li>  <li class="three columns">
+	<div class="preloader">
+		<a href="http://mnwh.qztc.edu.cn/" class="bwWrapper single-image plus-icon" rel="jcarousel">  
+			<img src="http://lib.qztc.edu.cn/sites/default/files/images/recommend%20/min_nan_wen_hua_ji_di__0.png"  alt="" />
+		</a>				
+	</div><!--/ .preloader-->
+<!--/	<a href="http://mnwh.qztc.edu.cn/" class="project-meta">
+		<h6 class="title">
+		<span class="categories"></span></h6>	
+	</a>-->
+</li>  <li class="three columns">
+	<div class="preloader">
+		<a href="http://210.34.124.28:8080/" class="bwWrapper single-image plus-icon" rel="jcarousel">  
+			<img src="http://lib.qztc.edu.cn/sites/default/files/images/recommend%20/guan_cang_cha_guo_.png"  alt="" />
+		</a>				
+	</div><!--/ .preloader-->
+<!--/	<a href="http://210.34.124.28:8080/" class="project-meta">
+		<h6 class="title">
+		<span class="categories"></span></h6>	
+	</a>-->
+</li>  <li class="three columns">
+	<div class="preloader">
+		<a href="http://210.34.124.1/xxgg/402" class="bwWrapper single-image plus-icon" rel="jcarousel">  
+			<img src="http://lib.qztc.edu.cn/sites/default/files/images/recommend%20/xiao_wai_ru_kou_1_0.png"  alt="" />
+		</a>				
+	</div><!--/ .preloader-->
+<!--/	<a href="http://210.34.124.1/xxgg/402" class="project-meta">
+		<h6 class="title">
+		<span class="categories"></span></h6>	
+	</a>-->
+</li>  <li class="three columns">
+	<div class="preloader">
+		<a href="http://210.34.124.1/chaoxing/chaoxingindex.html" class="bwWrapper single-image plus-icon" rel="jcarousel">  
+			<img src="http://lib.qztc.edu.cn/sites/default/files/images/recommend%20/yi_dong_tu_shu_guan_1.png"  alt="" />
+		</a>				
+	</div><!--/ .preloader-->
+<!--/	<a href="http://210.34.124.1/chaoxing/chaoxingindex.html" class="project-meta">
+		<h6 class="title">
+		<span class="categories"></span></h6>	
+	</a>-->
+</li>  <li class="three columns">
+	<div class="preloader">
+		<a href="http://210.34.124.1/777" class="bwWrapper single-image plus-icon" rel="jcarousel">  
+			<img src="http://lib.qztc.edu.cn/sites/default/files/images/recommend%20/333.jpg"  alt="" />
+		</a>				
+	</div><!--/ .preloader-->
+<!--/	<a href="http://210.34.124.1/777" class="project-meta">
+		<h6 class="title">
+		<span class="categories"></span></h6>	
+	</a>-->
+</li>
+  
+  
+  
+  
+  
+  
+  </ul>
+</div><br></div>  </div>
+</div>
+  </div>
+
+  <footer id="footer" style="min-width:960px">
+    <div class="container">
+		  
+	    <div class="four columns">
+	      			      <div class="region region-footer-1">
+    <div id="block-block-2" class="block block-block">
+
+    <h2>快速通道</h2>
+  
+  <div class="content">
+    <ul class="b-list just-links m-dark list-paddingleft-2"><li>
+<p>            <a title="校园信息门户" href="http://i.qzu.cn/" target="_blank">校园信息门户</a></p>
+</li>
+<li>
+<p>            <a title="内容管理系统" href="http://cms.qzu.cn" target="_blank">内容管理系统</a></p>
+</li>
+<li>
+<p>            <a title="电子邮件系统" href="http://mail.qztc.edu.cn" target="_blank">电子邮件系统</a></p>
+</li>
+<li>
+<p>            <a title="校园网络导航" href="http://www.qztc.edu.cn/wldh.html" target="_blank">校园网络导航</a></p>
+</li>
+</ul>  </div>
+</div>
+  </div>
+			  	    </div>
+	    
+	    <div class="four columns">
+	      			      <div class="region region-footer-2">
+    <div id="block-block-10" class="block block-block">
+
+    <h2>常用链接</h2>
+  
+  <div class="content">
+    <ul class="b-list just-links m-dark list-paddingleft-2"><li>
+<p>            <a title="“两学一做”专题教育网站" href="http://www.qztc.edu.cn/xcb/liangxueyizuo/" target="_blank">“两学一做”专题教育网站</a></p>
+</li>
+<li>
+<p>            <a title="网络教学综合平台" href="http://eol.qztc.edu.cn" target="_blank">网络教学综合平台</a></p>
+</li>
+<li>
+<p>            <a title="本科生招生" href="http://www.qztc.edu.cn/zsxx/zhaosheng/index.html" target="_blank">本科生招生</a></p>
+</li>
+<li>
+<p>            <a title="南音研究中心" href="http://www.qztc.edu.cn/nanyin/" target="_blank">南音研究中心</a></p>
+</li>
+</ul>  </div>
+</div>
+  </div>
+			  	    </div>
+	    
+	    <div class="four columns">
+	      			      <div class="region region-footer-3">
+    <div id="block-block-11" class="block block-block">
+
+    <h2>友情链接</h2>
+  
+  <div class="content">
+    <ul class="b-list just-links m-dark list-paddingleft-2"><li>
+<p>            <a title="福州大学图书馆" href="http://www.lib.fzu.edu.cn/" target="_blank">福州大学图书馆</a></p>
+</li>
+<li>
+<p>            <a title="厦门大学图书馆" href="http://library.xmu.edu.cn/portal/" target="_blank">厦门大学图书馆</a></p>
+</li>
+<li>
+<p>            <a title="华侨大学图书馆" href="http://lib.hqu.edu.cn/" target="_blank">华侨大学图书馆</a></p>
+</li>
+<li>
+<p>            <a title="福建师范大学图书馆" href="http://library.fjnu.edu.cn/" target="_blank">福建师范大学图书馆</a></p>
+</li>
+</ul>  </div>
+</div>
+  </div>
+			  	    </div>
+	    
+	    <div class="four columns">
+	      			      <div class="region region-footer-4">
+    <div id="block-block-5" class="block block-block">
+
+    <h2>联系我们</h2>
+  
+  <div class="content">
+    <h2>泉州师范学院图书馆</h2><p>福建省泉州市丰泽区<br />东海街道东海大街<br />电话：0595-22919859<br />传真：0595-22919859<br />邮箱：<a href="mailto:libbgs@qztc.edu.cn">libbgs@qztc.edu.cn</a></p>  </div>
+</div>
+  </div>
+			  	    </div>
+
+      <div class="clear"></div>
+      
+      <div class="sixteen columns">
+        <div class="adjective clearfix">
+		   		    
+				  				      <div class="region region-footer-bottom">
+    <div id="block-block-1" class="block block-block">
+
+    
+  <div class="content">
+    <p>   Copyright © 2014.　<a href="http://lib.qztc.edu.cn" target="_blank">泉州师范学院图书馆</a>　版权所有　泉师备案号：QZU2016026　  请使用IE8.0以上浏览器浏览本站！</p>  </div>
+</div>
+  </div>
+				  		  
+		    </div>
+      </div>
+	  </div>  
+	</footer>
+	
+</div> 
+</body>
+</html>

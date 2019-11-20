@@ -1,0 +1,1182 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><meta charset="utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge" /><meta name="viewport" content="width=device-width, initial-scale=1" /><title>
+	中国政法大学研究生院
+</title><link href="site/css/bootstrap.min.css" rel="stylesheet" /><link href="site/css/fullcalendar.css" rel="stylesheet" /><link href="site/css/owl.carousel.css" rel="stylesheet" /><link href="site/css/prettyPhoto.css" rel="stylesheet" /><link href="site/css/jquery.bxslider.css" rel="stylesheet" /><link href="site/css/font-awesome.min.css" rel="stylesheet" /><link href="site/svg/style.css" rel="stylesheet" /><link href="site/css/mystyle_1.css" rel="stylesheet" /><link href="site/css/add.css" rel="stylesheet" /><link href="site/css/widget.css" rel="stylesheet" /><link href="site/css/typography.css" rel="stylesheet" /><link href="site/css/shortcodes.css" rel="stylesheet" /><link href="site/css/style_1.css" rel="stylesheet" /><link href="site/css/color.css" rel="stylesheet" /><link href="site/css/responsive.css" rel="stylesheet" /><link href="site/css/selectric.css" rel="stylesheet" /><link href="site/css/jquery.sidr.dark.css" rel="stylesheet" /><link href="site/css/change.css" type="text/css" rel="stylesheet" /></head>
+<body>
+    
+<div class="kode_wrapper">
+    <!-- register Modal -->
+    <div class="modal fade" id="reg-box" tabindex="-1" role="dialog">
+        <div class="modal-dialog">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <div class="modal-content">
+                <!--SIGNIN AS USER START-->
+                <div class="user-box">
+                    <h2>Sign up as a User</h2>
+                    <!--FORM FIELD START-->
+                    <div class="form">
+                        <div class="input-container">
+                            <input type="text" placeholder="Name">
+                            <i class="fa fa-user"></i>
+                        </div>
+                        <div class="input-container">
+                            <input type="text" placeholder="E-mail">
+                            <i class="fa fa-envelope-o"></i>
+                        </div>
+                        <div class="input-container">
+                            <input type="password" placeholder="Password">
+                            <i class="fa fa-unlock"></i>
+                        </div>
+                        <div class="input-container">
+                            <label>
+                                <span class="radio">
+                                    <input type="checkbox" name="foo" value="1" checked>
+                                    <span class="radio-value" aria-hidden="true"></span>
+                                </span>
+                                <span>Remember me</span>
+                            </label>
+                        </div>
+                        <div class="input-container">
+                            <button class="btn-style">Sign Up</button>
+                        </div>
+                    </div>
+                    <!--FORM FIELD END-->
+                    <!--OPTION START-->
+                    <div class="option">
+                        <h5>Or Using</h5>
+                    </div>
+                    <!--OPTION END-->
+                    <!--OPTION START-->
+                    <div class="social-login">
+                        <a href="#" class="google"><i class="fa fa-google-plus"></i>Google Account</a>
+                        <a href="#" class="facebook"><i class="fa fa-facebook"></i>Facebook Account</a>
+                    </div>
+                    <!--OPTION END-->
+                </div>
+                <!--SIGNIN AS USER END-->
+                <div class="user-box-footer">
+                    Already have an account? <a href="#">Sign In</a>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <!-- register Modal end-->
+
+    <!-- SIGNIN MODEL START -->
+    <div class="modal fade" id="signin-box" tabindex="-1" role="dialog">
+        <div class="modal-dialog">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <div class="modal-content">
+                <div class="user-box">
+                    <h2>Sign In</h2>
+                    <!--FORM FIELD START-->
+                    <div class="form">
+                        <div class="input-container">
+                            <input type="text" placeholder="E-mail">
+                            <i class="fa fa-envelope-o"></i>
+                        </div>
+                        <div class="input-container">
+                            <input type="password" placeholder="Password">
+                            <i class="fa fa-unlock"></i>
+                        </div>
+                        <div class="input-container">
+                            <label>
+                                <span class="radio">
+                                    <input type="checkbox" name="foo" value="1" checked>
+                                    <span class="radio-value" aria-hidden="true"></span>
+                                </span>
+                                <span>Remember me</span>
+                            </label>
+                        </div>
+                        <div class="input-container">
+                            <button class="btn-style">Sign In</button>
+                        </div>
+                    </div>
+                    <!--FORM FIELD END-->
+                    <!--OPTION START-->
+                    <div class="option">
+                        <h5>Or Using</h5>
+                    </div>
+                    <!--OPTION END-->
+                    <!--OPTION START-->
+                    <div class="social-login">
+                        <a href="#" class="google"><i class="fa fa-google-plus"></i>Google Account</a>
+                        <a href="#" class="facebook"><i class="fa fa-facebook"></i>Facebook Account</a>
+                    </div>
+                    <!--OPTION END-->
+
+                </div>
+                <div class="user-box-footer">
+                    <p>
+                        Don't have an account?<br>
+                        <a href="#">Sign up as a User</a>
+                    </p>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <!-- SIGNIN MODEL END -->
+    <form method="post" id="searchform">
+        <div id="sidr">
+            <div class="logo_wrap">
+                <a href="index.aspx">   
+                    <img src="../site/extra-images/logo.png" /></a>
+            </div>
+            <div class="clearfix clear"></div>
+            <!-- Your content -->
+            <div class="kf-sidebar">
+                <!--KF_SIDEBAR_SEARCH_WRAP START-->
+                <div class="widget widget-search">
+                    <h2>搜索</h2>
+                    <input type="search" placeholder="关键字..." name="keyword" onkeypress="return enterSearch(event)">
+                </div>
+                <!--KF_SIDEBAR_SEARCH_WRAP END-->
+
+                <!--KF_SIDEBAR_ARCHIVE_WRAP START-->
+                <div class="widget widget-archive ">
+                    <h2>导航</h2>
+                    <ul class="sidebar_archive_des">
+                        <li>
+                            
+                            <a href="../site/yanyuandongtai.aspx"><i class="fa fa-angle-right"></i>研院动态</a>
+                                                        
+                        </li>
+                        <li>
+                            
+                            <a href="../site/index_1.aspx?id=CF1A50066E6DCFD7"><i class="fa fa-angle-right"></i>通知公告</a>
+                             
+                        </li>
+                        <li>
+                            <a href="##"><i class="fa fa-angle-right"></i>专题</a>
+                        </li>
+                        <li>
+                            
+                            <a href="../site/index_1.aspx?id=B5B4C87A468EA58F"><i class="fa fa-angle-right"></i>链接</a>
+                             
+                        </li>
+
+                    </ul>
+                </div>
+                <!--KF_SIDEBAR_ARCHIVE_WRAP END-->
+
+                <p class="copy-right-sidr">中国政法大学研究生院</p>
+            </div>
+        </div>
+
+    </form>
+    <!--HEADER START-->
+    <header id="header_2">
+        <div class="kode_navigation my_kode_navigation">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="logo_wrap">
+                            <a href="#">
+                                <img src="../site/extra-images/logo_xiaohui.png" class="logo_1" onclick="location.href='http://www.cupl.edu.cn'" alt="" />
+                                <img src="../site/extra-images/logo_wenzi.png" class="logo_2" onclick="location.href='index.aspx'" alt="" />
+                                
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-3 my_sousuo">
+<a href="http://yjsyold.cupl.edu.cn/">旧网站入口</a>
+                        <a onclick="AddFavorite('中国政法大学研究生院',location.href)" style="cursor: pointer">收藏本站</a>
+                        <a href="http://www.cupl.edu.cn">法大首页</a>
+                        <a href="##" class="weixin">
+                            <img src="../site/extra-images/weixin.png" alt="" />
+                            官方微信
+    							<i class="fa fa-caret-down"></i>
+                            <img src="../site/extra-images/erweima_2.jpg" alt="" class="erweima_2" />
+                        </a>
+                        <div class="sousuo clearfix">
+                            <input type="search" name="" id="keyword" value="" placeholder="请输入搜索内容" />
+                            <a class="btn btn-default" onclick="searchTxt()"><i class="fa fa-search"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!--kode navigation end-->
+        <!--kode navigation start-->
+        <div class="kode_navigation mykode">
+            <div id="mobile-header">
+                <a id="responsive-menu-button" href="#sidr-main"><i class="fa fa-bars"></i></a>
+            </div>
+            <p id="mynav">导航</p>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-14">
+                        <!--kode nav_2 start-->
+                        <div class="nav_2" id="navigation">
+                            <ul>
+                                
+                                <li>
+                                    <a href="../site/yanyuanjianjie.aspx" class="nav_2_title">研院概况</a>
+                                    
+                                    <ul>
+                                        
+                                        <li><a href="../site/yanyuandongtai.aspx">研院动态</a></li>
+                                        
+                                        <li><a href="../site/yanyuanjianjie.aspx">研院简介</a></li>
+                                        
+                                        <li><a href="../site/xianrenlingdao.aspx">现任领导</a></li>
+                                        
+                                        <li><a href="../site/jigoushezhi.aspx">机构设置</a></li>
+                                        
+                                        <li><a href="../site/ContactUs.aspx">联系我们</a></li>
+                                        
+                                        <li><a href="../site/schoolviews.aspx">研院美景</a></li>
+                                        
+                                    </ul>
+                                    
+                                </li>
+                                
+                                <li>
+                                    <a href="../site/index_1.aspx?id=563516FC35EA4FFE" class="nav_2_title">研究生招生</a>
+                                    
+                                    <ul>
+                                        
+                                        <li><a href="../site/index_1.aspx?id=4BE8BCF7EC281A97">内地硕士招生</a></li>
+                                        
+                                        <li><a href="../site/index_1.aspx?id=F5884D391D3700FD">内地博士招生</a></li>
+                                        
+                                        <li><a href="../site/index_1.aspx?id=7F927A87677C30F5">港澳台研究生</a></li>
+                                        
+                                        <li><a href="../site/index_1.aspx?id=D83E4E1309CA40C7">外国来华留学研究生</a></li>
+                                        
+                                          <li><a href="../site/index_2.aspx?id=CFF3BFBB7A477E89">规章制度</a></li>
+                                          
+                                          <li><a href="../site/index_2.aspx?id=6FF9716FAAA7599D">相关链接</a></li>
+                                          
+                                          <li><a href="../site/index_2.aspx?id=F761C65DF98914F6">联系我们</a></li>
+                                          
+                                    </ul>
+                                    
+                                </li>
+                                
+                                <li>
+                                    <a href="../site/index_1.aspx?id=985969A28EDBC0AF" class="nav_2_title">研究生培养</a>
+                                    
+                                    <ul>
+                                        
+                                        <li><a href="../site/index_1.aspx?id=31E6929799EC8EE5">教务管理</a></li>
+                                        
+                                        <li><a href="../site/index_1.aspx?id=A68CE80B29F053FB">培养方案</a></li>
+                                        
+                                        <li><a href="../site/index_1.aspx?id=230A9194680BACE8">出国留学与交流</a></li>
+                                        
+                                        <li><a href="../site/index_1.aspx?id=3B227DB633033FD6">创学基金与奖学金</a></li>
+                                        
+                                          <li><a href="../site/index_2.aspx?id=E6F5858DF4D2B69A">产学研联合培养</a></li>
+                                          
+                                          <li><a href="../site/index_2.aspx?id=FA611F5CDEBDF89D">研究生国情教育</a></li>
+                                          
+                                        <li><a href="../site/index_1.aspx?id=B7874141DA3B604C">访问学者与同步进修</a></li>
+                                        
+                                    </ul>
+                                    
+                                </li>
+                                
+                                <li>
+                                    <a href="../site/index_1.aspx?id=AB7F00E442DDA3E8" class="nav_2_title">学籍管理</a>
+                                    
+                                    <ul>
+                                        
+                                          <li><a href="../site/index_2.aspx?id=118382780BAF98C7">日常管理</a></li>
+                                          
+                                          <li><a href="../site/index_2.aspx?id=296D877E0CD9F3BF">规章制度</a></li>
+                                          
+                                          <li><a href="../site/index_2.aspx?id=0033F39D37BF8DDA">常用下载</a></li>
+                                          
+                                          <li><a href="../site/index_2.aspx?id=AF58FB0FEF8AA79C">办事指南</a></li>
+                                          
+                                    </ul>
+                                    
+                                </li>
+                                
+                                <li>
+                                    <a href="../site/index_1.aspx?id=343F1EE80015BA82" class="nav_2_title">学位管理</a>
+                                    
+                                    <ul>
+                                        
+                                          <li><a href="../site/index_2.aspx?id=D8FD172AE74C8260">学位申请与授予</a></li>
+                                          
+                                          <li><a href="../site/index_2.aspx?id=908ACB6209711A38">同等学力人员申硕</a></li>
+                                          
+                                          <li><a href="../site/index_2.aspx?id=2EEE54B31A899358">优秀学位论文</a></li>
+                                          
+                                          <li><a href="../site/index_2.aspx?id=4B7FAB353CAC9427">导师工作</a></li>
+                                          
+                                          <li><a href="../site/index_2.aspx?id=96B744A585E90CF0">规章制度</a></li>
+                                          
+                                          <li><a href="../site/index_2.aspx?id=F57FA2F1DF856EC3">常用下载</a></li>
+                                          
+                                          <li><a href="../site/index_2.aspx?id=E57BD2DE679761F7">其他</a></li>
+                                          
+                                    </ul>
+                                    
+                                </li>
+                                
+                                <li>
+                                    <a href="../site/index_1.aspx?id=BA76F0C2442A865A" class="nav_2_title">专业学位</a>
+                                    
+                                    <ul>
+                                        
+                                          <li><a href="../site/index_2.aspx?id=479954BD8C9EAABE">招生信息</a></li>
+                                          
+                                          <li><a href="../site/index_2.aspx?id=BC501259897A8AA5">教学培养</a></li>
+                                          
+                                          <li><a href="../site/index_2.aspx?id=810D67A36EDA4598">学位管理</a></li>
+                                          
+                                          <li><a href="../site/index_2.aspx?id=4FDA6B29CA8DFE8D">规章制度</a></li>
+                                          
+                                          <li><a href="../site/index_2.aspx?id=D2884FE17B76040D">常用下载</a></li>
+                                          
+                                    </ul>
+                                    
+                                </li>
+                                
+                                <li>
+                                    <a href="../site/index_1.aspx?id=353727ED376D5B1B" class="nav_2_title">质量监督</a>
+                                    
+                                    <ul>
+                                        
+                                          <li><a href="../site/index_2.aspx?id=1B4C3C6CD742096E">学位论文学术规范审查</a></li>
+                                          
+                                          <li><a href="../site/index_2.aspx?id=2824C2C182C8D316">硕士博士学位论文抽检</a></li>
+                                          
+                                          <li><a href="../site/index_2.aspx?id=C083DD5DBBC0BB6D">学位点评估</a></li>
+                                          
+                                          <li><a href="../site/index_2.aspx?id=BC04869D779D052E">在校生调查及毕业生质量追踪调查</a></li>
+                                          
+                                          <li><a href="../site/index_2.aspx?id=38B9EFB67B4FF98B">研究生学风建设</a></li>
+                                          
+                                    </ul>
+                                    
+                                </li>
+                                
+                                <li>
+                                    <a href="../site/index_1.aspx?id=D33FA077F7729529" class="nav_2_title">博士后</a>
+                                    
+                                    <ul>
+                                        
+                                          <li><a href="../site/index_2.aspx?id=150704DAA3012D31">招生简章</a></li>
+                                          
+                                          <li><a href="../site/index_2.aspx?id=59758AD0D8BDE433">基金申请</a></li>
+                                          
+                                          <li><a href="../site/index_2.aspx?id=8EB4DDD39D3408C3">年度考核</a></li>
+                                          
+                                          <li><a href="../site/index_2.aspx?id=D76A64FB91D1DC35">学术活动</a></li>
+                                          
+                                          <li><a href="../site/index_2.aspx?id=B0DA8F4F1DE0BF7D">其他</a></li>
+                                          
+                                    </ul>
+                                    
+                                </li>
+                                
+                                <li>
+                                    <a href="../site/index_1.aspx?id=B5B4C87A468EA58F" class="nav_2_title">常用平台链接</a>
+                                    
+                                    <ul>
+                                        
+                                          <li><a href="../site/index_2.aspx?id=30A1D23063C3A206">奖助学金工作</a></li>
+                                          
+                                          <li><a href="../site/index_2.aspx?id=3625D545D59DCD39">学术刊物</a></li>
+                                          
+                                          <li><a href="../site/index_2.aspx?id=9A5CABB05EE35456">常用表格下载</a></li>
+                                          
+                                        <li><a href="../site/changyongpingtai.aspx">常用平台</a></li>
+                                        
+                                          <li><a href="../site/index_2.aspx?id=D0500DCBC2789E07">服务指南</a></li>
+                                          
+                                    </ul>
+                                    
+                                </li>
+                                
+                                <li><a id="simple-menu" href="#sidr" class="nav_2_title"><i class="fa fa-bars"></i></a></li>
+                            </ul>
+                        </div>
+                        <!--kode nav_2 end-->
+                    </div>
+                    <!--<div class="col-md-1 kong">
+    					</div>-->
+                </div>
+            </div>
+        </div>
+        <!--kode navigation end-->
+    </header>
+    <!--HEADER END-->
+
+    <div class="my_lunbo">
+        <p></p>
+        <ul class="my_lunbo_tu">
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+
+    <div class="kf_content_wrap my_kf_content_wrap">
+        <div class="dongtai">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="kf_edu2_heading1">
+                            <h3>研院动态</h3>
+                            <p class="clearfix"></p>
+                            <span>
+                                <img src="../site/extra-images/more.png" /></span>
+                            
+                            <a href="../site/yanyuandongtai.aspx">更多</a>
+                            
+                        </div>
+                        <div class="col-sm-5">
+                            <div class="box">
+                                <ul class="tu">
+                                    
+                                    <li>
+                                        <a href="../site/index_3.aspx?id=BA4DE852E39C1905">
+                                            <img src="http://gms.cupl.edu.cn/Uploadfiles/Images/14885181331994518020171024152325.jpg" width="290" alt="" /></a>
+                                        <p>我校研究生招生工作研讨会及安全...</p>
+                                    </li>
+                                    
+                                    <li>
+                                        <a href="../site/index_3.aspx?id=3C38F5F7EDC6AFD0">
+                                            <img src="http://gms.cupl.edu.cn/Uploadfiles/Images/研究生院举办“法学大数据分析在法学研究中的实证分析运用”讲座120171023114558.png" width="290" alt="" /></a>
+                                        <p>研究生院举办“法学大数据分析在...</p>
+                                    </li>
+                                    
+                                    <li>
+                                        <a href="../site/index_3.aspx?id=24D80A0021B6E3D4">
+                                            <img src="http://gms.cupl.edu.cn/Uploadfiles/Images/QQ图片2017102012312920171020142630.jpg" width="290" alt="" /></a>
+                                        <p>我校召开研究生思想政治理论课课...</p>
+                                    </li>
+                                    
+                                    <li>
+                                        <a href="../site/index_3.aspx?id=9737DCF0095EF8E4">
+                                            <img src="http://gms.cupl.edu.cn/Uploadfiles/Images/我校召开研究生教育教学工作会暨校研究生教学指导委员会20171012174710.jpg" width="290" alt="" /></a>
+                                        <p>我校召开研究生教育教学工作会暨...</p>
+                                    </li>
+                                    
+                                    <li>
+                                        <a href="../site/index_3.aspx?id=7A596F785B9C3393">
+                                            <img src="http://gms.cupl.edu.cn/Uploadfiles/Images/微信图片_2017092708251420170927082650.jpg" width="290" alt="" /></a>
+                                        <p>我校召开2017级研究生新生座...</p>
+                                    </li>
+                                    
+                                </ul>
+                                <ul class="dian">
+                                    
+                                    <li class="current">1</li>
+                                    
+                                    <li>2</li>
+                                    
+                                    <li>3</li>
+                                    
+                                    <li>4</li>
+                                    
+                                    <li>5</li>
+                                    
+                                </ul>
+
+                                <!--<a href="##" class="leftBtn"></a>
+        						<a href="##" class="rightBtn"></a>-->
+                            </div>
+                        </div>
+                        <div class="col-sm-7">
+                            <ul class="yanyuan">
+                                
+                                <li>
+                                    <s>
+                                        <img src="../site/extra-images/jiantou.png" alt="" /></s>
+                                    <a href="../site/index_3.aspx?id=E9BFBA862C554830">不忘初心 牢记使命——研究生院党支部...</a>
+                                    <span>2017-10-27</span>
+                                </li>
+                                
+                                <li>
+                                    <s>
+                                        <img src="../site/extra-images/jiantou.png" alt="" /></s>
+                                    <a href="../site/index_3.aspx?id=02E5E8B525CF649E">“汇聚法学智慧  引领法治新声中国政...</a>
+                                    <span>2017-10-26</span>
+                                </li>
+                                
+                                <li>
+                                    <s>
+                                        <img src="../site/extra-images/jiantou.png" alt="" /></s>
+                                    <a href="../site/index_3.aspx?id=28F14A406F2950DB">研究生院教职工党员参观 “砥砺奋进的...</a>
+                                    <span>2017-10-25</span>
+                                </li>
+                                
+                                <li>
+                                    <s>
+                                        <img src="../site/extra-images/jiantou.png" alt="" /></s>
+                                    <a href="../site/index_3.aspx?id=BA4DE852E39C1905">我校研究生招生工作研讨会及安全保密培...</a>
+                                    <span>2017-10-24</span>
+                                </li>
+                                
+                                <li>
+                                    <s>
+                                        <img src="../site/extra-images/jiantou.png" alt="" /></s>
+                                    <a href="../site/index_3.aspx?id=3C38F5F7EDC6AFD0">研究生院举办“法学大数据分析在法学研...</a>
+                                    <span>2017-10-23</span>
+                                </li>
+                                
+                                <li>
+                                    <s>
+                                        <img src="../site/extra-images/jiantou.png" alt="" /></s>
+                                    <a href="../site/index_3.aspx?id=24D80A0021B6E3D4">我校召开研究生思想政治理论课课程建设...</a>
+                                    <span>2017-10-20</span>
+                                </li>
+                                
+                                <li>
+                                    <s>
+                                        <img src="../site/extra-images/jiantou.png" alt="" /></s>
+                                    <a href="../site/index_3.aspx?id=58DD83E97DF0D9DA">研究生院成功推进研究生跨学科课程建设...</a>
+                                    <span>2017-10-13</span>
+                                </li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-4 zhaosheng">
+                        <div class="kf_edu2_heading1">
+                            <h3>招生信息</h3>
+                            <span>
+                                <img src="../site/extra-images/more.png" /></span>
+                            <p class="clearfix"></p>
+                            
+                            <a href="../site/index_1.aspx?id=563516FC35EA4FFE">更多</a>
+                            
+                        </div>
+                        <ul class="mylist">
+                            
+                            <li class="clearfix">
+                                <div class="col-xs-2 mylist_left">
+                                    <span>26</span>
+                                    <span>10月</span>
+                                </div>
+                                <div class="col-xs-12 col-sm-10 mylist_right">
+                                    <h6><a href="../site/index_3.aspx?id=1C255185C1FDFD9C">关于报考我校2018年硕士考生核对学...</a></h6>
+                                    <p>
+                                        &nbsp;&nbsp;各位考生：2018年硕士研究生网上报名于2017...
+                                        
+                                    </p>
+                                </div>
+                            </li>
+                            
+                            <li class="clearfix">
+                                <div class="col-xs-2 mylist_left">
+                                    <span>26</span>
+                                    <span>10月</span>
+                                </div>
+                                <div class="col-xs-12 col-sm-10 mylist_right">
+                                    <h6><a href="../site/index_3.aspx?id=83C2D07E9C0AEC09">关于报考我校2018年硕士考生核对网...</a></h6>
+                                    <p>
+                                        &nbsp;各位考生：2018年硕士研究生网上报名于2017年10月10...
+                                        
+                                    </p>
+                                </div>
+                            </li>
+                            
+                            <li class="clearfix">
+                                <div class="col-xs-2 mylist_left">
+                                    <span>18</span>
+                                    <span>10月</span>
+                                </div>
+                                <div class="col-xs-12 col-sm-10 mylist_right">
+                                    <h6><a href="../site/index_3.aspx?id=EE2AE946BAA32586">2018年拟录取推免生注意事项</a></h6>
+                                    <p>
+                                        各位拟录取推免生：我校2018年接收推免生拟录取名单在我校研究生院网站及...
+                                        
+                                    </p>
+                                </div>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--公告栏开始-->
+        <div class="gonggao">
+            <div class="container">
+                <div class="row">
+
+                    <!-- /.col-lg-6 -->
+                    <div class="col-md-8">
+                        <div>
+                            <!--<div class="panel-heading">
+                            <h4>公告栏</h4>
+                        </div>-->
+                            <!-- /.panel-heading -->
+                            <div>
+                                <!-- Nav tabs -->
+                                
+                                <ul class="nav nav-pills">
+
+                                    <li class="active">
+                                        
+                                        <a href="#home-pills" data-toggle="tab" id="CF1A50066E6DCFD7" class="tb_odd">通知通告</a>
+                                        
+                                    </li>
+                                    <li>
+                                        
+                                        <a href="#profile-pills" data-toggle="tab" id="31E6929799EC8EE5" class="tb_even">教务管理</a>
+                                        
+                                    </li>
+                                    <li>
+                                        
+                                        <a href="#messages-pills" data-toggle="tab" id="1D4C4130279E2DB9" class="tb_odd">讲座信息</a>
+                                        
+                                    </li>
+                                    <li>
+                                        
+                                        <a href="#settings-pills" data-toggle="tab" id="230A9194680BACE8" class="tb_even">出国留学</a>
+                                        
+                                    </li>
+                                    <li class="last">
+                                        <a style="cursor: pointer">更多</a>
+                                        <img src="../site/extra-images/more.png" />
+                                    </li>
+                                </ul>
+
+                                <!-- Tab panes -->
+                                <div class="tab-content">
+                                    <div class="tab-pane fade in active" id="home-pills">
+                                        <!--<h4>Home Tab</h4>-->
+                                        <ul class="mylist">
+                                            
+                                            <li class="clearfix">
+                                                <div class="col-xs-2 mylist_left col-tz-1">
+                                                    <span>27</span>
+                                                    <span>2017.
+                                                        10</span>
+                                                </div>
+                                                <div class="col-xs-12 col-sm-10 mylist_right">
+                                                    <h6><a href="../site/index_3.aspx?id=CC9832B44E8613BE">关于进行2018届毕业研究生学历、学位证书相片电子图像采集工...</a></h6>
+                                                    <p>
+                                                        &nbsp;各有关学院：根据教育部及北京市教委对高校毕业研究生学历、学位证书相片电子图像采集工作的有关要求，结合我校具体情况，现将2018届毕业研究生电子图像采集工作通知如下：一、2018届毕业研究生包括：（一）2015级研究生、学制两年的...
+                                                        
+                                                    </p>
+                                                </div>
+                                            </li>
+                                            
+                                            <li class="clearfix">
+                                                <div class="col-xs-2 mylist_left col-tz-1">
+                                                    <span>26</span>
+                                                    <span>2017.
+                                                        10</span>
+                                                </div>
+                                                <div class="col-xs-12 col-sm-10 mylist_right">
+                                                    <h6><a href="../site/index_3.aspx?id=4BBF162147D4DCD4">关于学习习近平总书记视察法大重要讲话精神心得体会获奖名单的公...</a></h6>
+                                                    <p>
+                                                        研究生工作办公室于2017年9月在研究生中开展了学习习近平总书记5月3日视察法大重要讲话精神征文活动，经学习心得征集、专家评审等环节，现将评审结果公示
+                                                        
+                                                    </p>
+                                                </div>
+                                            </li>
+                                            
+                                            <li class="clearfix">
+                                                <div class="col-xs-2 mylist_left col-tz-1">
+                                                    <span>26</span>
+                                                    <span>2017.
+                                                        10</span>
+                                                </div>
+                                                <div class="col-xs-12 col-sm-10 mylist_right">
+                                                    <h6><a href="../site/index_3.aspx?id=DCFFDB44C16780E0">关于开展2018年硕士学位论文资助项目工作的通知</a></h6>
+                                                    <p>
+                                                        &nbsp;各二级培养单位：依据《中国政法大学研究生创新基金管理办法》相关规定，现将我校2018年硕士学位论文资助项目相关工作通知如下：一、参加对象和名额分配硕士学位论文资助项目的资助对象，为中国政法大学正式注册在校的全日制应届（2018....
+                                                        
+                                                    </p>
+                                                </div>
+                                            </li>
+                                            
+                                            <li class="clearfix">
+                                                <div class="col-xs-2 mylist_left col-tz-1">
+                                                    <span>26</span>
+                                                    <span>2017.
+                                                        10</span>
+                                                </div>
+                                                <div class="col-xs-12 col-sm-10 mylist_right">
+                                                    <h6><a href="../site/index_3.aspx?id=63ED130C8447D20F">2016年硕士研究生创新实践项目结项通知</a></h6>
+                                                    <p>
+                                                        各二级培养单位：根据《中国政法大学研究生创新基金资助项目管理办法》第五章第三十六条、第四十条及相关规定，现将2016年硕士研究生创新实践活动资助项目结项相关事项通知如下。一、硕士研究生创新实践活动资助项目立项负责人应提交如下书面材料：1.《...
+                                                        
+                                                    </p>
+                                                </div>
+                                            </li>
+                                            
+                                        </ul>
+                                    </div>
+                                    <div class="tab-pane fade" id="profile-pills">
+                                        <!--<h4>Profile Tab</h4>-->
+                                        <ul class="mylist">
+                                            
+                                            <li class="clearfix">
+                                                <div class="col-xs-2 mylist_left col-tz-1">
+                                                    <span>26</span>
+                                                    <span>2017.
+                                                        10
+                                                    </span>
+                                                </div>
+                                                <div class="col-xs-10 mylist_right">
+                                                    <h6>
+                                                        
+                                                        <span>[教务信息]</span>
+                                                        
+                                                        <a href="../site/index_3.aspx?id=B725A5F882F4B123">关于对2016年博士研究生创新实践活动资助项目结项的通知</a>
+                                                    </h6>
+                                                    <p>
+                                                        &nbsp;各二级培养单位：根据《中国政法大学研究生创新基金资助项目管理办法》第五章第三十六条、第四十条及相关规定，现将2016年博士研究生创新实践活动资助项目结项相关事项通知如下。一、博士研究生创新实践活动资助项目立项负责人应提交如下书面...
+                                                        
+                                                    </p>
+                                                </div>
+                                            </li>
+                                            
+                                            <li class="clearfix">
+                                                <div class="col-xs-2 mylist_left col-tz-1">
+                                                    <span>26</span>
+                                                    <span>2017.
+                                                        10
+                                                    </span>
+                                                </div>
+                                                <div class="col-xs-10 mylist_right">
+                                                    <h6>
+                                                        
+                                                        <span>[教务信息]</span>
+                                                        
+                                                        <a href="../site/index_3.aspx?id=B4CB8C9BE593BA35">关于批准2017年研究生跨学科课程建设项目的通知</a>
+                                                    </h6>
+                                                    <p>
+                                                        &nbsp;各二级培养单位：&nbsp; 根据《关于申报2017年研究生跨学科课程的通知》（法大研字[2017]42号）的相关规定，经任课教师申报、所在二级培养单位推荐、专家评审、拟开课程公示等程序，按照择优开课的原则，共评选出7门课程为我...
+                                                        
+                                                    </p>
+                                                </div>
+                                            </li>
+                                            
+                                            <li class="clearfix">
+                                                <div class="col-xs-2 mylist_left col-tz-1">
+                                                    <span>25</span>
+                                                    <span>2017.
+                                                        10
+                                                    </span>
+                                                </div>
+                                                <div class="col-xs-10 mylist_right">
+                                                    <h6>
+                                                        
+                                                        <span>[教务信息]</span>
+                                                        
+                                                        <a href="../site/index_3.aspx?id=D9E6125F3A5AD96F">关于2017—2018学年第二学期研究生教学工作安排的通知</a>
+                                                    </h6>
+                                                    <p>
+                                                        &nbsp;各二级培养单位： 根据研究生培养方案和教学进度的安排，2017-2018学年第一学期研究生教学工作进展过半，2017-2018学年第二学期研究生教学准备工作即将开始，现将2017-2018学年第二学期研究生教学安排等有关事项通知...
+                                                        
+                                                    </p>
+                                                </div>
+                                            </li>
+                                            
+                                            <li class="clearfix">
+                                                <div class="col-xs-2 mylist_left col-tz-1">
+                                                    <span>23</span>
+                                                    <span>2017.
+                                                        10
+                                                    </span>
+                                                </div>
+                                                <div class="col-xs-10 mylist_right">
+                                                    <h6>
+                                                        
+                                                        <span>[选课信息]</span>
+                                                        
+                                                        <a href="../site/index_3.aspx?id=3F0C5B94C9171932">关于开启跨学科课程选课通知</a>
+                                                    </h6>
+                                                    <p>
+                                                        &nbsp;各位同学：为贯彻落实习近平总书记5月3日视察我校重要讲话精神，深化我校研究生教育教学改革，加强研究生课程建设，提高研究生课程的教学水平和教学质量。研究生院现开设跨学科课程7门，不区分法学非法学（课程具体信息详见附件）。2017级...
+                                                        
+                                                    </p>
+                                                </div>
+                                            </li>
+                                            
+                                        </ul>
+                                    </div>
+                                    <div class="tab-pane fade" id="messages-pills">
+                                        <!--<h4>Messages Tab</h4>-->
+                                        <ul class="mylist">
+                                            
+                                            <li class="clearfix">
+                                                <div class="col-xs-2 mylist_left col-tz-1">
+                                                    <span>04</span>
+                                                    <span>2017.
+                                                        05
+                                                    </span>
+                                                </div>
+                                                <div class="col-xs-10 mylist_right">
+                                                    <h6><a href="../site/index_3.aspx?id=B1882C5E69E199E1">“检学论法”系列活动——认罪认罚从宽制度研究论坛</a></h6>
+                                                    <p>
+                                                        主办：北京市人民检察院第二分院公诉部、中国政法大学刑事司法学院
+时间：5月4日（周四）下午2:00        地点：科研楼B211
+                                                        
+                                                    </p>
+                                                </div>
+                                            </li>
+                                            
+                                            <li class="clearfix">
+                                                <div class="col-xs-2 mylist_left col-tz-1">
+                                                    <span>21</span>
+                                                    <span>2017.
+                                                        03
+                                                    </span>
+                                                </div>
+                                                <div class="col-xs-10 mylist_right">
+                                                    <h6><a href="../site/index_3.aspx?id=9D43F47276D445BD">3月23日讲座：《法庭讼辩技巧》</a></h6>
+                                                    <p>
+                                                        全体师生：香港资深大律师许伟强将来校举办讲座，具体如下：一、讲座题目：法庭讼辩技巧二、主讲人：许伟强 香港资深大律师三、时间：2017年3月23日 星期四16:00-17:30四、地点：学院路校区科研楼B211会议室五、语言：中文欢迎全校师...
+                                                        
+                                                    </p>
+                                                </div>
+                                            </li>
+                                            
+                                            <li class="clearfix">
+                                                <div class="col-xs-2 mylist_left col-tz-1">
+                                                    <span>17</span>
+                                                    <span>2017.
+                                                        03
+                                                    </span>
+                                                </div>
+                                                <div class="col-xs-10 mylist_right">
+                                                    <h6><a href="../site/index_3.aspx?id=4807D05AE9514621">讲座：“一带一路”与企业国际化风险管理</a></h6>
+                                                    <p>
+                                                        &nbsp;
+                                                        
+                                                    </p>
+                                                </div>
+                                            </li>
+                                            
+                                            <li class="clearfix">
+                                                <div class="col-xs-2 mylist_left col-tz-1">
+                                                    <span>20</span>
+                                                    <span>2017.
+                                                        03
+                                                    </span>
+                                                </div>
+                                                <div class="col-xs-10 mylist_right">
+                                                    <h6><a href="../site/index_3.aspx?id=7947B9A073FC4EEC">2016年《高级法官、检察官司法前沿讲堂》第五讲</a></h6>
+                                                    <p>
+                                                        讲座时间：2016年12月20日18:30讲座地点：学院路校区教学楼207教室讲座主题：《关于检察制度的若干问题》主 讲 人 ：最高人民检察院检察委员会委员、法律政策研究室主任、全国检察业务专家、一级高级检察官万春
+                                                        
+                                                    </p>
+                                                </div>
+                                            </li>
+                                            
+                                        </ul>
+                                    </div>
+                                    <div class="tab-pane fade" id="settings-pills">
+                                        <!--<h4>Settings Tab</h4>-->
+                                        <ul class="mylist">
+                                            
+                                            <li class="clearfix">
+                                                <div class="col-xs-2 mylist_left col-tz-1">
+                                                    <span>19</span>
+                                                    <span>2017.
+                                                        10
+                                                    </span>
+                                                </div>
+                                                <div class="col-xs-10 mylist_right">
+                                                    <h6>
+                                                        
+                                                        <span>[交换留学]</span>
+                                                        
+                                                        <a href="../site/index_3.aspx?id=4A3946A93510A8AD">关于申请2018/19学年海外硕士奖学金项目的通知</a></h6>
+                                                    <p>
+                                                        各位同学：根据我校与国外36所大学签署的51个硕士奖学金项目协议，2018/19学年外方将通过提供全额奖学金或10-70%学费减免的方式，资助一批法大优秀本科应届毕业生和在读硕士研究生赴海外攻读法学、政治学、社会学、管理学、国际关系、传媒等...
+                                                        
+                                                    </p>
+                                                </div>
+                                            </li>
+                                            
+                                            <li class="clearfix">
+                                                <div class="col-xs-2 mylist_left col-tz-1">
+                                                    <span>16</span>
+                                                    <span>2017.
+                                                        10
+                                                    </span>
+                                                </div>
+                                                <div class="col-xs-10 mylist_right">
+                                                    <h6>
+                                                        
+                                                        <span>[交换留学]</span>
+                                                        
+                                                        <a href="../site/index_3.aspx?id=E1C05C5AC47C2162">关于博士研究生申请意大利博洛尼亚大学2017/2018伊拉斯...</a></h6>
+                                                    <p>
+                                                        各位同学:根据我校与意大利博洛尼亚大学（University of Bologna）签署的伊拉斯谟+（Erasmus Plus Programme）交流项目协议，将选拔2名优秀博士研究生赴博洛尼亚大学进行短期交换学习，相关报名事宜通知如下:...
+                                                        
+                                                    </p>
+                                                </div>
+                                            </li>
+                                            
+                                            <li class="clearfix">
+                                                <div class="col-xs-2 mylist_left col-tz-1">
+                                                    <span>16</span>
+                                                    <span>2017.
+                                                        10
+                                                    </span>
+                                                </div>
+                                                <div class="col-xs-10 mylist_right">
+                                                    <h6>
+                                                        
+                                                        <span>[国家公派]</span>
+                                                        
+                                                        <a href="../site/index_3.aspx?id=1F940C6AF9CFFE85">关于邀请参加2017博士生国际招生面试交流会的通知</a></h6>
+                                                    <p>
+                                                        各位同学：由中国教育国际交流协会主办的第九届2017博士生国际招生面试交流会/PhD Workshop China 2017将分别于2017年11月18日-19日在北京港澳中心瑞士酒店和11月21日在上海花园饭店举办。预计今年的参会单位将吸...
+                                                        
+                                                    </p>
+                                                </div>
+                                            </li>
+                                            
+                                            <li class="clearfix">
+                                                <div class="col-xs-2 mylist_left col-tz-1">
+                                                    <span>13</span>
+                                                    <span>2017.
+                                                        10
+                                                    </span>
+                                                </div>
+                                                <div class="col-xs-10 mylist_right">
+                                                    <h6>
+                                                        
+                                                        <span>[国家公派]</span>
+                                                        
+                                                        <a href="../site/index_3.aspx?id=CF6993E8B2A0F400">关于选拔研究生2018年赴荷兰鹿特丹伊拉斯姆斯大学攻读博士学...</a></h6>
+                                                    <p>
+                                                        &nbsp; &nbsp; 根据我校与荷兰鹿特丹伊拉斯姆斯大学签订的校际交流协议，我校2018年可向该校推荐攻读博士学位学生赴国外学习，并于2018年3月向国家留学基金管理委员会推荐申请奖学金资助。&nbsp;&nbsp;&nbsp; 现将...
+                                                        
+                                                    </p>
+                                                </div>
+                                            </li>
+                                            
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /.panel-body -->
+                        </div>
+                        <!-- /.panel -->
+                    </div>
+                    <div class="col-md-4 zhuanti ">
+                        <div class="kf_cur_catg_wrap">
+                            <div class="kf_edu2_heading1">
+                                <h3>专题</h3>
+                                <p class="clearfix"></p>
+                                <span>
+                                    <img src="../site/extra-images/more.png" /></span>
+                                 
+                                  <a href="##">更多</a>
+                                
+                            </div>
+                        </div>
+                        <ul class="ul_right">
+                            
+                            <li>
+                                <img src="../site/extra-images/news1.png" />
+                               
+                                <a href="../site/subjectIndex.aspx?subId=1B66C0BD3880FDE3">中华法学硕博英才奖</a>
+                            </li>
+                            
+                            <li>
+                                <img src="../site/extra-images/news2.png" />
+                               
+                                <a href="../site/subjectIndex.aspx?subId=F477F5BE465CF6C4">研究生院30周年</a>
+                            </li>
+                            
+                            <li>
+                                <img src="../site/extra-images/news3.png" />
+                               
+                                <a href="../site/subjectIndex.aspx?subId=0AD10F464E0FE2F1">企业法务征文奖</a>
+                            </li>
+                            
+                            <li>
+                                <img src="../site/extra-images/news4.png" />
+                               
+                                <a href="../site/subjectIndex.aspx?subId=33774AFCAD6084D7">研究生国情教育</a>
+                            </li>
+                                                        
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="xiaoyue">
+            <div class="container">
+                <div class="row">
+                    <div class="container">
+                        <div class="kf_edu2_heading1">
+                            <h3>晓月徜徉</h3>
+                            <p class="clearfix"></p>
+                            <span>
+                                <img src="../site/extra-images/more.png" /></span>
+                            
+                            <a href="../site/schoolviews.aspx">更多</a>
+                            
+                        </div>
+                    </div>
+                    <ul class="xiaoyue_tupian clearfix">
+                        
+                        <li class="col-sm-3 col-xs-6">
+                            <img src="http://gms.cupl.edu.cn/Uploadfiles/Images/6362727449657313313246801.jpg" alt="" />
+                            <p>中国政法大学研究生院</p>
+                        </li>
+                        
+                        <li class="col-sm-3 col-xs-6">
+                            <img src="http://gms.cupl.edu.cn/Uploadfiles/Images/6362727438717014098475139.jpg" alt="" />
+                            <p>中国政法大学研究生院</p>
+                        </li>
+                        
+                        <li class="col-sm-3 col-xs-6">
+                            <img src="http://gms.cupl.edu.cn/Uploadfiles/Images/6362727402492190473344554.jpg" alt="" />
+                            <p>中国政法大学研究生院</p>
+                        </li>
+                        
+                        <li class="col-sm-3 col-xs-6">
+                            <img src="http://gms.cupl.edu.cn/Uploadfiles/Images/6362727428951396944074969.jpg" alt="" />
+                            <p>中国政法大学研究生院</p>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+
+            
+<!--COUNTER SECTION START-->
+<section class="edu2_counter_wrap my_edu2_counter_wrap">
+    <div class="container">
+
+        <!--EDU2 COUNTER DES START-->
+        <div class="edu2_counter_des">
+           
+              <span style="cursor: pointer" onclick="window.open('http://61.50.139.39/')"></span>
+            <h3>
+               
+                <a href="http://61.50.139.39/" target="_blank">研究生综合管理系统</a>
+            </h3>
+        </div>
+        <!--EDU2 COUNTER DES END-->
+        <!--EDU2 COUNTER DES START-->
+        <div class="edu2_counter_des">
+            
+            <span style="cursor: pointer" onclick="window.open('http://yjsyx.cupl.edu.cn/')"></span>
+            
+            <h3>
+                
+                <a href="http://yjsyx.cupl.edu.cn/"  target="_blank">研究生迎新</a>
+                
+            </h3>
+        </div>
+        <!--EDU2 COUNTER DES END-->
+        <!--EDU2 COUNTER DES START-->
+        <div class="edu2_counter_des">
+            
+            <span style="cursor: pointer" onclick="window.open('../site/index_2.aspx?id=3625D545D59DCD39')"></span>
+            
+            <h3>
+                
+                <a href="../site/index_2.aspx?id=3625D545D59DCD39" target="_blank">学术刊物</a>
+                
+            </h3>
+        </div>
+        <!--EDU2 COUNTER DES END-->
+        <!--EDU2 COUNTER DES START-->
+        <div class="edu2_counter_des">
+            <span style="cursor: pointer" onclick="window.open('../site/ServiceCenter.aspx')"></span>
+            <h3>
+                <a href="../site/ServiceCenter.aspx" target="_blank">研究生教学服务中心</a>
+            </h3>
+        </div>
+        <!--EDU2 COUNTER DES END-->
+        <!--EDU2 COUNTER DES START-->
+        <div class="edu2_counter_des">
+          
+             <span style="cursor: pointer" onclick="window.open('http://jwc.cupl.edu.cn/info/1154/2776.htm')"></span>
+            <h3>
+               
+                 <a href="http://jwc.cupl.edu.cn/info/1154/2776.htm" target="_blank">法大校历</a>
+            </h3>
+        </div>
+        <!--EDU2 COUNTER DES END-->
+    </div>
+</section>
+<!--COUNTER SECTION END-->
+
+            <input name="hidIsPC" type="hidden" id="hidIsPC" />
+        </div>
+        </div>
+        
+<footer class="my_footer">
+	<!--EDU2 FOOTER CONTANT WRAP START-->
+	<div class="container">
+		<div class="row">
+			<!--EDU2 FOOTER CONTANT DES START-->
+			<!--<div class="col-md-3">
+					<div class="widget widget-links">
+						<h5>研究生院</h5>
+						<ul>
+							<li>Graduate school</li>
+							<!--<li><a href="#">Our Stories</a></li>
+							<li><a href="#">My Account</a></li>
+							<li><a href="#">Our History</a></li>
+							<li><a href="#">Sprcialist Info</a></li>-->
+			
+			<div class="container">
+				<ul>
+					<li class="col-sm-3">
+						<p>研究生院</p>
+						<p>Graduate School</p>
+					</li>
+					<li class="col-sm-6">
+						<ul class="my_footer_content">
+							<li>地址：北京市海淀区西土城路25号中国政法大学研究生院</li>
+							<li>邮编：100088</li>
+						</ul>
+						<ul class="my_footer_content">
+							<li>传真：010-58908060</li>
+							<li>Email：yyzhk@cupl.edu.cn</li>
+						</ul>
+					</li>
+					<li class="col-sm-3">
+						<p>Copyright:中国政法大学研究生院</p>
+						<p>百度统计</p>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!--EDU2 FOOTER CONTANT DES END-->
+</footer>
+
+</body>
+</html>
+<script src="site/js/jquery.js"></script>
+<script src="site/js/bootstrap.min.js"></script>
+<script src="site/js/jquery.bxslider.min.js"></script>
+<script src="site/js/owl.carousel.min.js"></script>
+<script src="site/js/jquery.prettyPhoto.js"></script>
+<script src="site/js/moment.min.js"></script>
+<script src="site/js/fullcalendar.min.js"></script>
+<script src="site/js/jquery.downCount.js"></script>
+<script src="site/js/jquery-filterable.js"></script>
+<script src="site/js/jquery.accordion.js"></script>
+<script src="site/js/waypoints-min.js"></script>
+<script src="site/js/jquery.vticker.min.js"></script>
+<script src="site/js/jquery.selectric.min.js"></script>
+<script src="site/js/jquery.sidr.min.js"></script>
+<script src="site/js/custom.js"></script>
+<script src="site/js/myjq_1.js"></script>
+<script src="site/layer/layer.js"></script>
+<script src="site/js/content_js/content_indexLayer.js"></script>
+<script src="site/js/search1.js"></script>

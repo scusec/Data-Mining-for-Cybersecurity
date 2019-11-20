@@ -1,0 +1,451 @@
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="initial-scale=1.0,user-scalable=0"/>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+<title>统一身份认证平台</title>
+<script type="text/javascript" src="/sso/login/js/jquery.js"></script>
+<script type="text/javascript" src="/sso/login/js/velocity.min.js"></script>
+<script type="text/javascript" src="/sso/login/js/velocity.ui.js"></script>
+<script type="text/javascript" src="/sso/login/js/global.js"></script>
+<script type="text/javascript" src="/sso/login/js/StackBlur.js"></script>
+<script src="/sso/login/js/placeholder.js"></script>
+<script src="/sso/login/js/jbase64.js"></script>
+<script src="js/jquery.cookie.js"></script>
+<!--<script src="http://res.wx.qq.com/connect/zh_CN/htmledition/js/wxLogin.js"></script>-->
+<link href="/sso/login/iconfont/iconfont.css" rel="stylesheet" type="text/css" />
+<link href="/sso/login/icon/iconfont.css" rel="stylesheet" type="text/css" />
+<link href="/sso/login/css/login.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript">
+var words = new Array("帮助别人减轻三分烦恼，自己就会享受七分快乐。",
+"每个人都有潜在的能量，只是很容易被习惯所掩盖，被时间所迷离，被惰性所消磨。",
+"有理想在的地方，地狱就是天堂。有希望在的地方，痛苦也成欢乐。",
+"不要对挫折叹气，姑且把这一切看成是在你成大事之前，必须经受的准备工作。",
+"河流之所以能够到达目的地，是因为它懂得怎样避开障碍。",
+"一个成功的竞争者应该经得起风雨，应该具有抗挫折的能力。",
+"不要让对失败的恐惧，绊住你尝试新事物的脚步。",
+"学会理解，因为只有理解别人，才会被别人理解。",
+"学会忘记，因为只有忘记已经失去的才能立足当前，展望未来。",
+"学会快乐，因为只有开心度过每一天，活得才精彩。",
+"心宽阔了，才能明白没有一个人是孤岛，才能欣赏到对岸的风景，才能懂得如何接纳他人。",
+"当困难来临时，用微笑去面对，用智慧去解决。",
+"没有人富有的可以不用别人的帮助，也没有人穷的不能在某方面给他人帮助。",
+"规划的根本目的是为了更快、更有效地达成目标。",
+"不要惧怕学习，知识是没有重量的，你永远可以轻易的带着它与你同行。",
+"在你有一肚子火要发之前，先给自己10分钟沉思一会儿。",
+"收敛自己的脾气，偶尔要刻意沉默，因为冲动会做下让自己无法挽回的事情。",
+"多抱怨一天，就少幸福一天，多回头看一天，就少前进一天。",
+"人生就像一张有去无回的单程车票，没有彩排，每一场都是现场直播。",
+"高傲自大只能让你止步不前，但是正直和谦虚可以引领你走向成功。",
+"要么你去驾驭生命，要么是生命驾驭你。",
+"成大事者能把困境变为成功的有力跳板。",
+"如果你想要更上一层楼，就为别人提供超出预期更多更好的服务。",
+"没有问题就是最大的问题。没有问题的安逸如同没有引爆的地雷一样危险。",
+"失败能打垮人的头脑，胜利也能冲昏人的头脑。",
+"天时不如地利，地利不如人和。",
+"目标从梦想开始，幸福从心态把握，成功则在行动中实现。");
+	var i=null;
+
+	var in_pass=false;
+	
+	//是否IE8\9
+	var IEor = navigator.userAgent.indexOf("MSIE 9") >= 0|| navigator.userAgent.indexOf("MSIE 8") >=0
+	
+	//是否小于等于IE8
+	var belowIE8 = navigator.userAgent.indexOf("MSIE 8") >= 0|| navigator.userAgent.indexOf("MSIE 7") >=0
+	
+	var userBgImage="/sso/login/images/b"+Math.round(Math.random()*9)+".jpg";
+	//用户自定义的颜色
+	var userColor="0,187,238"
+	var lts="e2s1";
+	
+	function login(){
+	if(!hasText($(".un_input input").val())){
+		$(".un_input").velocity("stop",true);
+		$(".un_input").velocity("callout.shake", { duration:400});
+		return;
+	}
+	if(!hasText($(".passwd input").val())){
+		$(".passwd").velocity("stop",true);
+		$(".passwd").velocity("callout.shake", {  duration:400});
+		return;
+	}
+			
+		
+	$(".passwd input,.un_input input").attr("readonly","readonly");
+
+	
+	$.post("/sso/ssoLogin",{"username":$(".un_input input").val(),"password":$(".passwd input").val()},function(data){
+		
+			if(data.state){
+							$(".blurbg").children().not(".welcome_word,#bgimg,#bgsvg").velocity("fadeOut",300);
+								$(".welcome_word").velocity("fadeIn",{duration:400,complete:function(){
+									$(".welcome_word").velocity("fadeOut",{duration:400,delay:1000,complete:function(){
+											$("#fm1").submit();
+									}});
+								}});
+						
+			}else{
+				if(data.state==true){
+							$(".passwd").velocity("callout.shake", { duration:400});
+							$(".passwd input").val("");
+							$(".passwd input,.un_input input").removeAttr("readonly");
+				}else{
+							$(".passwd,.un_input").velocity("callout.shake", { duration:400});
+							$(".passwd input,.un_input input").val("").removeAttr("readonly");
+                            $(".err"). html(data.messageinfo);
+				}
+			}
+				
+				
+	},"json");
+	
+	
+	
+		/**	$.ajax({
+				url:window.location.url,
+				data:{"username":$(".un_input input").val(),"password":$(".passwd input").val(),"lt":lts,"_eventId":"submit"},
+				complete:function(resp,status){
+						var data = resp.responseText;
+							if(data.indexOf("/sso")>=0){
+							$(".passwd").velocity("callout.shake", { duration:400});
+							$(".passwd input").val("");
+							$(".passwd input,.un_input input").removeAttr("disabled");
+							
+						}else{
+						
+								$(".blurbg").children().not(".welcome_word,#bgimg,#bgsvg").velocity("fadeOut",300);
+								$(".welcome_word").velocity("fadeIn",{duration:400,complete:function(){
+								$(".welcome_word").velocity("fadeOut",{duration:400,delay:1000,complete:function(){
+									window.location.reload();
+								}});
+							}});
+						}
+			
+					}
+			})**/
+}
+
+function isPC()  
+{  
+           var userAgentInfo = navigator.userAgent;  
+           var Agents = new Array("Android", "iPhone", "SymbianOS", "Windows Phone", "iPad", "iPod");  
+           var flag = true;  
+           for (var v = 0; v < Agents.length; v++) {  
+               if (userAgentInfo.indexOf(Agents[v]) > 0) { flag = false; break; }  
+           }  
+           return flag;  
+}       
+
+$(function(){
+
+/** var obj = new WxLogin({
+		        id:"login_container",//div的id
+		        appid: "wx3557bc9a2b251a52",
+		        scope: "snsapi_login",//写死
+		        redirect_uri:encodeURI("你的处理扫码事件的方法") ,
+		        state: "",
+		        style: "black",//二维码黑白风格        
+		        href: "https://某个域名下的css文件"
+		    });**/
+
+	//$(".click_icon .p1").css("background-color","rgb("+userColor+")");
+			//获取cookie保存的用户名和密码
+			var username = $.cookie('SSOcookUser');
+			var password = $.cookie('SSOcookPass');
+			var remember = $.cookie('SSOremember');
+			if(remember == 1){
+				$("input[name='username']").val(username);
+				$("input[name='password']").val(password);
+				$("#remember").attr("checked","checked");
+			}
+			
+			
+	//对密码进行Base64加密
+   $(document).on("submit","#fm1",
+			function() {
+				var username =$("input[name='username']").val();
+				var password =$("input[name='password']").val();
+				if($("#remember").is(':checked')){
+					$.cookie('SSOcookUser',username,{expires:7});
+					$.cookie('SSOcookPass',password,{expires:7});
+					$.cookie('SSOremember',1,{expires:7});
+				}else{
+					$.cookie('SSOcookUser',null);
+					$.cookie('SSOcookPass',null);
+					$.cookie('SSOremember',null);
+				} 
+				$("input[name='password']").val(
+						//window.btoa($("input[name='password']").val()));
+					BASE64.encoder($("input[name='password']").val())
+				)
+		});
+	
+	$(".welcome_word").html(words[parseInt(Math.random()*(words.length-1))]);
+	$(document).keydown(function(e){
+		if(in_pass&&e.which==13){
+			login();
+	}
+	});
+	$(".icon-right").click(function(){
+		login();
+	});
+	$("#bg").attr("src",userBgImage);
+	$("#bluri").attr("src",userBgImage.replace("/b","/sb"));
+	var mm=$("#bluri");
+	
+	if (!IEor) {
+		$("#bgimg").remove();
+		if(mm[0].complete){
+			stackBlurImageObj( mm[0], "bgsvg", 10, false );
+			adjust();
+		}else{
+			mm[0].onload = function(){
+				stackBlurImageObj( mm[0], "bgsvg", 10, false );
+				adjust();
+			};
+		}
+	} else {
+	
+		$("#bgsvg").remove();
+		$("#bgimg").attr("src",userBgImage);
+	}
+
+
+	$(".icon-cancel").click(function(){
+			in_pass=false;
+			var sq=[
+					{e:$(this).parent().parent(),p:"transition.slideDownBigOut",o:{duration:400,easing:"easeOutCirc"}},
+					{e:$(".welcome_content .title2"),p:{top:"35%","height":"100px","margin-left":"-250px","width":"500px"},o:{duration:400,sequenceQueue:false,easing:"easeInOutExpo"}},
+					{e:$(".click_icon .p1,.welcome_content .logo,.welcome_content .title1"),p:"fadeIn",o:{delay:200,duration:200,sequenceQueue:false}}
+			]
+			$(".welcome_bg").velocity("fadeOut",300);
+			$.Velocity.RunSequence(sq);
+			$("#bg").velocity("fadeIn",300);
+
+	});
+
+	$(".click_icon").children().click(function(){
+		var item = $(".panel_password");
+		in_pass=true;
+		if($(this).hasClass("q")){
+			//alert("建设中，敬请期待");
+			//return false;
+			item = $(".panel_qrcode");
+		}
+		
+
+			var sq=[
+					{e:$(".click_icon .p1,.welcome_content .logo,.welcome_content .title1"),p:"transition.fadeOut",o:{duration:10}},
+					{e:item,p:"transition.slideUpBigIn",o:{duration:600,easing:"easeInOutExpo",display:"block"}},
+					{e:$(".welcome_content .title2"),p:{top:"15%","height":"50px","width":"250px","margin-left":"-125px"},o:{duration:600,sequenceQueue:false,easing:"easeOutCirc"}}
+			]
+			$(".welcome_bg").velocity({opacity:0.2},{display:"block"},300);
+			$("#bg").velocity("fadeOut",300);
+			$.Velocity.RunSequence(sq);
+			
+		
+	})
+	
+	$("#forget").click(function(){
+		//$(".forget").velocity("transition.flipXIn",300); 
+		//$(".panel_password").hide();
+		window.open("/findPassword/index.action");
+	});
+	
+	$("#help").click(function(){
+		//$(".forget").velocity("transition.flipXIn",300); 
+		//$(".panel_password").hide();
+		//window.html("http://10.1.0.212:8071/help.html);
+		//window.location.href="http://id.ouc.edu.cn:8071/help.html)";
+
+	});
+
+	$(".forget_p .lend .btn").click(function(){
+	{
+		$(".forget").velocity("transition.flipXOut",300,function(){
+		}); 
+		$(".panel_password").velocity("fadeIn",{delay:100,duration:300});
+	}
+	});
+	
+	
+		
+	if(!isPC()){
+		$(".logo").css({width:84,height:84,left:"50%","margin-left":"-42px"});
+		$(".title2").css({width:240,height:48,left:"50%","margin-left":"-120px"});
+		$(".click_icon .p").click();
+		$(".head").hide();
+		$(".panel_password").css("top","-150px");
+		$(".icons").hide();
+		$(".icons3").hide();
+		$(".icons2").hide();
+		$(".icons1").css({"margin-left":"-35px"});
+	}
+	
+	
+	$(window).resize(function(){
+		clearTimeout(i);
+		i = setTimeout(function(){adjust();},50);
+	});
+	adjust();
+	$("#bg").load(function(){
+		$(".blurbg").velocity("fadeIn",300,function(){
+			$(".welcome_content").velocity("transition.slideUpBigIn");
+		})
+		setTimeout(function(){
+			
+			if(!in_pass){
+				$(".click_icon .p").click();
+			}
+		},2000);
+	})
+});
+function adjust(){
+		var w = $(window).width();
+		var h = $(window).height();
+		if(w/16*9>h){
+			h=parseInt(w/16*9)*1.05;
+			w=w*1.05;
+		}else{
+			w=parseInt(h/9*16)*1.05;
+			h=h*1.05;
+		}
+			$("#bgsvg,#bg,#bgimg,#bgsvg image").width(w).height(h);
+			$("#bgimg,#bg,#bgsvg").css({"left":"50%","top":"50%","margin-left":"-"+((parseInt(w/2))+"px"),"margin-top":("-"+(parseInt(h/2))+"px")});
+			if(navigator.userAgent.indexOf("MSIE 9")>0||navigator.userAgent.indexOf("MSIE 8")>0){
+				$("#bgimg").css("margin-left","-"+(parseInt(w/2)+10)+"px").css("margin-top","-"+(parseInt(h/2)+10)+"px");
+			}
+}
+
+function hasText(a) {
+	if (typeof (a) == "undefined") {
+		return false;
+	}
+	if (a == null) {
+		return false;
+	}
+	if (a == "null") {
+		return false;
+	}
+	if (typeof (a) == "string") {
+		a = a.replace(/(^\s*)|(\s*$)/g, "");
+	}
+	if (a === "") {
+		return false;
+	}
+	return true;
+}
+
+</script>
+<style type="text/css">
+.welcome_word{
+	width:100%;
+	height:30px;
+	line-height:30px;
+	text-align:center;
+	font-size:16px;
+	text-shadow:0px 0px 3px #333;
+	display:none;
+	position:absolute;
+	top:50%;
+	margin-top:-15px;
+	left:0;
+}
+.click_icon .p:hover{
+	box-shadow:0px 0px 20px rgb(0,187,238);
+}
+.click_icon .q{
+	background-color:rgb(80,80,80);
+	background-color:rgba(80,80,80,0.5);
+	color:#999;
+	cursor:help;
+}
+</style>
+</head>
+<body>
+<div class="blurbg">
+<img id="bluri" src=""/>
+<img id="bgimg" src=""/>
+<canvas id="bgsvg"></canvas>
+<img id="bg" src=""/>
+<div class="welcome">
+<div class="welcome_bg"></div>
+<div class="welcome_content">
+	<img class="logo" src="/sso/login/images/jjdx.png"/>
+	<div class="title1">欢迎使用中国海洋大学统一身份认证平台</div>
+	<img class="title2" src="/sso/login/images/title.png"/>
+	<div class="click_icon">
+		<div class="p1 q" title="即将登场，敬请期待"><div class="iconfont icon-qrcode"></div><div class="its">扫码登录</div></div>
+		<div class="p1 p"><div class="iconfont icon-input"></div><div class="its">密码登录</div></div>
+	</div>
+</div>
+</div>
+<div class="panel_password">
+<div class="head" style="color:white;background-color:white;overflow:visible">
+<img src="/sso/login/images/head.png" style="width:102px;height:102px;position:absolute;top:-1px;left:-1px;"/>
+</div>
+<form id="fm1" name="fm1" action="/sso/login?service=http%3A%2F%2Fmy.ouc.edu.cn%2Fuser%2FsimpleSSOLogin" method="post">
+<div class="un_input">
+<input type="text" name="username" placeholder="工号/学号"/>
+</div>
+<div class="passwd">
+<input type="password" name="password" placeholder="请输入密码" />
+<div class="iconfont icon-right"></div>
+</div>
+<div class="remember" style="left:50%;margin-left:-90px;width:180px;position:absolute;font-size:14px;top:50%;margin-top:90px;color:#fff;text-align:center;">
+	<label style="float:left;opacity:0.5;"><input type="checkbox" id="remember" />记住我的选择</label>
+</div>
+<div class ="err" style="color:red; bottom:29%;left:37%;width:350px;position:absolute;">
+</div>
+<input type="hidden" name="lt" value="e2s1" />
+<input type="hidden" name="_eventId" value="submit" />	
+</form>
+<div id="appimg" style="display:none; position:absolute; left:46%;margin-top:32%; "><img src="/sso/login/images/get_matrix_img.png"></img></div>
+<!--<a target="_Blank"
+href="http://urp.ouc.edu.cn"class="icons3" style="margin-left:-190px;display:block;text-decoration:none;color:#fff;"><div id="portal"class="iconfont icon-portal login-portal-icon"></div><div style="font-size:14px;">旧版门户</div></a>-->
+<div class="icons"><div class="iconfont icon-cancel"></div><div style="font-size:14px;">登录方式</div></div>
+<div class="icons1"><div class="iconfont icon-cancel icon-lock-fill-copy"id="forget"></div><div style="font-size:14px;">忘记密码</div></div>
+<a target="_Blank"
+href="http://id.ouc.edu.cn:8071/sso/html.jsp"class="icons1 icons1-help" style="margin-left:40px;display:block;text-decoration:none;color:#fff;"><div id="help"class="iconfont icon-help login-help-icon"></div><div style="font-size:14px;">帮助说明</div></a>
+<a target="_Blank"
+href="http://app.ouc.edu.cn/getApps"class="icons2" style="margin-left:110px;display:block;text-decoration:none;color:#fff;"><div id="icon-phoneapp"class="iconfont icon-phoneapp login-portal-icon"></div><div style="font-size:14px;">移动校园</div></a>
+
+<div class="prompt" style="font-size:14px;color:#fff;left:0;margin-left:0;padding:0 20px;text-align:center;width:100%;opacity:0.5;">建议用户使用谷歌、火狐、IE9及以上浏览器，360浏览器请使用极速模式访问</div>
+</div>
+<div class="panel_qrcode">
+<div class="qrcode" id="login_container">
+	<!--<img src="/sso/login/images/get_matrix_img.png"/>-->
+	<span>使用微信扫一扫登录</span>
+</div>
+<div class="icons"><div class="iconfont icon-cancel"></div><div style="font-size:14px;">登录方式</div></div>
+</div>
+<div class="forget">
+<div class="forget_p">
+<div class="title">找回我的密码</div>
+<div class="line">在下方输入您的邮箱地址：</div>
+<div class="line">
+<div class="un_input">
+<input type="text"  placeholder="@bucea.edu.cn"/>
+</div>
+<div class="send">发送</div>
+<div style="clear: both"></div>
+</div>
+<div class="line">我们已经向您的邮箱发送了一封密码找回的邮件，请注意查收</div>
+<div class="line lend">
+<div class="btn">关闭</div>
+</div>
+</div>
+</div>
+</div>
+<div class="welcome_word"></div>
+</body>
+</html>
+
+

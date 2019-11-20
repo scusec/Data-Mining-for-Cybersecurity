@@ -1,0 +1,441 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<link type="text/css" href="/_css/_system/system.css" rel="stylesheet"/>
+<link type="text/css" href="/_upload/site/1/style/1/1.css" rel="stylesheet"/>
+<link type="text/css" href="/_upload/site/00/4f/79/style/50/50.css" rel="stylesheet"/>
+       <LINK href="/_css/tpl2/system.css" type="text/css" rel="stylesheet"> 
+       <LINK href="/_css/tpl2/default/default.css" type="text/css" rel="stylesheet"> 
+<link type="text/css" href="/_js/_portletPlugs/simpleNews/css/simplenews.css" rel="stylesheet" />
+       <LINK href="/_css/tpl2/default/portlet/dtjt/8/dtjt8.css" type="text/css" rel="stylesheet">
+<link type="text/css" href="/_js/_portletPlugs/sudyNavi/css/sudyNav.css" rel="stylesheet" />
+
+<script language="javascript" src="/_js/jquery.min.js" sudy-wp-context="" sudy-wp-siteId="79"></script>
+<script language="javascript" src="/_js/jquery.sudy.wp.visitcount.js"></script>
+<script type="text/javascript" src="/_js/_portletPlugs/sudyNavi/jquery.sudyNav.js"></script>
+<link rel="stylesheet" href="/_upload/tpl/00/8b/139/template139/style.css" type="text/css"/>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>国际教育学院英文网</title>
+</head>
+
+<body>
+<div class="white_bg">
+  <div class="head">
+    <div class="headimg"><a href="/main.htm"><img src="/_upload/tpl/00/8b/139/template139/images/logo.jpg"></a></div>
+    <div class="english">
+      <p><a style="color:white;" href="http://ies.zuel.edu.cn/main.htm">中文</a></p>
+    </div>
+  </div>
+  <div class="banner" frag="面板88">
+    <div frag="窗口88">
+                      <!-- 多图交替8 图片 切换 -->
+<div class="dtjt8_div_img" style="width:1181px;height:452px;">
+    <img id="w88imgShow" name="w88imgShow" onclick="w88openWindow();" style="FILTER: revealTrans(duration=2,transition=20); border: 0; cursor: pointer;" src="/..//_css/tpl/default/images/loading.gif" width="1181px" height="452px" vspace="0">
+    <div id='w88imgNumber' class="number"></div>
+</div>
+<script language="JavaScript" class="" >
+    var w88imgJsons = [
+    
+        
+            {
+            "src" : "/_upload/article/images/a0/a8/4b9804e2452fb5c6caec8b27c5ba/c41dc9c9-782a-4d29-b88e-ae3ae703e6ac.jpg",
+            "url" : "/2016/0606/c2176a43201/page.htm"
+            },
+        
+    
+        
+            {
+            "src" : "/_upload/article/images/a2/44/60bf73a743e7aa5bb39dd9bef5fa/1ae61e6d-7e1e-4f65-87b1-e6ee7f737211.jpg",
+            "url" : "/2016/0606/c2176a43200/page.htm"
+            },
+        
+    
+        
+            {
+            "src" : "/_upload/article/images/b2/fa/50ca5ce4410c8279c3be92f4204c/5078716c-0b43-40bc-a4ef-f40f9a55fce7.jpg",
+            "url" : "/2016/0606/c2176a43199/page.htm"
+            },
+        
+    
+        
+            {
+            "src" : "/_upload/article/images/55/01/9d084f92434aab21b1dd3191c8ca/3e1f6033-16d1-495b-b131-e968cb5e3bd2.jpg",
+            "url" : "/2016/0606/c2176a43198/page.htm"
+            }];
+        
+       
+</script>
+<script language="JavaScript">
+        var w88imgUrl = new Array();
+        var w88imgLink = new Array();
+
+        var w88count = 0;
+        var w88running = false;
+        var w88index = 0;
+        var w88nextAdTimer;
+        var w88k = 0;
+        function w88nextAd(num) {
+            if (num >= 0 && num <= w88count - 1) {
+                w88index = num;
+                clearTimeout(w88nextAdTimer);
+            } else {
+                num = w88index;
+            }
+            if (w88index > w88count - 1) {
+                w88index = 0;
+            }
+            if (!w88running) {
+                w88running = true;
+
+            } else if (document.all) {
+                w88imgShow.filters.revealTrans.Transition = 50;
+                w88imgShow.filters.revealTrans.apply();
+                w88imgShow.filters.revealTrans.play();
+            }
+            document.getElementById('w88imgShow').src = w88imgUrl[w88index];
+            document.getElementById('w88imgNumber').innerHTML = "";
+            w88k = 0;
+            for (var i = 0; i < w88count; i++) {
+                w88k++;
+                if (i !== w88index) {
+                    document.getElementById('w88imgNumber').innerHTML += '<a href="javascript:w88nextAd(' + i + ')" class="nomal">' + w88k + '</a>';
+                } else {
+                    document.getElementById('w88imgNumber').innerHTML += '<a href="javascript:w88nextAd(' + i + ')" class="current">' + w88k + '</a>';
+                }
+            }
+            w88index++;
+            if (w88count > 1) {
+                w88nextAdTimer = setTimeout("w88nextAd(-1)", 4000);
+            }
+        }
+
+        function w88openWindow() {
+            var jumpUrl = w88imgLink[w88index - 1];
+            if (jumpUrl && jumpUrl != '') {
+                window.open(jumpUrl);
+            }
+        }
+
+        $().ready(function() {
+            try {
+                var objs = w88imgJsons;
+                w88count = objs.length;
+                if (w88count == 0) {
+                    document.getElementById('w88imgShow').style.display = "none";
+                    document.getElementById('w88imgNumber').style.display = "none";
+                    return;
+                }
+                for (var i = 0; i < objs.length; i++) {
+                    w88imgUrl[i] = objs[i].src;
+                    w88imgLink[i] = objs[i].url;
+                }
+                w88nextAd(-1);
+            } catch (e) {
+            }
+        });
+</script>
+            
+    </div>
+  </div>
+  <div class="picbox">
+    <div class="box1" frag="面板1">
+      <div class="box1_pic" frag="窗口1">
+        <div id="wp_news_w1"> 
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="wp_article_list_table"> 
+<tr> 
+<td> 
+ 
+          <!--InfoCycleBegin-->
+          <div class="dongtu"><a href='http://ies-en.zuel.edu.cn/2158/list.htm' target='_self' title='1'><image src='/_upload/article/images/f7/7c/45e06bef4df59a9a424a6b849558/d19c8eb5-4fc4-4beb-aaee-2f40d6ba0ff1_s.jpg' width='176'></a></div>
+          <!--InfoCycleEnd--> 
+        </td> 
+</tr> 
+</table></div> 
+
+      </div>
+      <div class="sekuai1" frag="面板2">
+        <div frag="窗口2">
+          <div id="wp_nav_w2"> 
+
+ 
+<ul class="wp_nav" data-nav-config="{drop_v: 'down', drop_w: 'right', dir: 'y', opacity_main: '-1', opacity_sub: '-1', dWidth: '0'}">
+      
+     <li class="nav-item i1 "> 
+         <a href="/2158/list.htm" title="Why ZUEL" target="_self"><span class="item-name">Why ZUEL</span></a><i class="mark"></i> 
+          
+     </li> 
+      
+</ul> 
+ 
+ 
+ </div>
+        </div>
+      </div>
+    </div>
+    <div class="box2">
+      <div class="box2_a">
+        <div class="box2_a_1" frag="面板3">
+          <div frag="窗口3">
+            <div id="wp_news_w3"> 
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="wp_article_list_table"> 
+<tr> 
+<td> 
+ 
+              <!--InfoCycleBegin-->
+              <div class="dongtu2"><a href='http://ies-en.zuel.edu.cn/2159/list.htm' target='_self' title='1'><image src='/_upload/article/images/69/82/d7ee6de5451ca4fa9191de252a94/9cef621d-c8f3-4c2b-a28b-00fceb3d036c_s.jpg' height='142'></a></div>
+              <!--InfoCycleEnd--> 
+            </td> 
+</tr> 
+</table></div> 
+
+          </div>
+        </div>
+        <div class="box2_a_2" frag="面板4">
+          <div frag="窗口4">
+            <div id="wp_nav_w4"> 
+
+ 
+<ul class="wp_nav" data-nav-config="{drop_v: 'down', drop_w: 'right', dir: 'y', opacity_main: '-1', opacity_sub: '-1', dWidth: '0'}">
+      
+     <li class="nav-item i1 "> 
+         <a href="/2159/list.htm" title="Academics" target="_self"><span class="item-name">Academics</span></a><i class="mark"></i> 
+          
+     </li> 
+      
+</ul> 
+ 
+ 
+ </div>
+          </div>
+        </div>
+      </div>
+      <div class="box2_b">
+        <div class="box2_b_1" frag="面板5">
+          <div frag="窗口5">
+            <div id="wp_news_w5"> 
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="wp_article_list_table"> 
+<tr> 
+<td> 
+ 
+              <!--InfoCycleBegin-->
+              <div class="dongtu3"><a href='http://ies-en.zuel.edu.cn/wcholarships/list.htm' target='_self' title='1'><image src='/_upload/article/images/e0/95/9f1f0c124a4caccbd27e3df1bd11/fba93c8d-5025-4c75-805b-6a7b75b407e2_s.jpg' width='163'></a></div>
+              <!--InfoCycleEnd--> 
+            </td> 
+</tr> 
+</table></div> 
+
+          </div>
+        </div>
+        <div class="box2_b_2" frag="面板6">
+          <div frag="窗口6">
+            <div id="wp_nav_w6"> 
+
+ 
+<ul class="wp_nav" data-nav-config="{drop_v: 'down', drop_w: 'right', dir: 'y', opacity_main: '-1', opacity_sub: '-1', dWidth: '0'}">
+      
+     <li class="nav-item i1 "> 
+         <a href="/wcholarships/list.htm" title="Scholarships" target="_self"><span class="item-name">Scholarships</span></a><i class="mark"></i> 
+          
+     </li> 
+      
+</ul> 
+ 
+ 
+ </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="box3">
+      <div class="box3_a">
+        <div class="box3_a_1" frag="面板7">
+          <div frag="窗口7">
+            <div id="wp_news_w7"> 
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="wp_article_list_table"> 
+<tr> 
+<td> 
+ 
+              <!--InfoCycleBegin-->
+              <div class="dongtu4"><a href='http://ies-en.zuel.edu.cn/2161/list.htm' target='_self' title='1'><image src='/_upload/article/images/58/18/a7c33a79466b8b6aae234fc1c906/66550286-7b2f-4fbe-a0d9-a7345974500b_s.jpg' width='215'></a></div>
+              <!--InfoCycleEnd--> 
+            </td> 
+</tr> 
+</table></div> 
+
+          </div>
+        </div>
+        <div class="box3_a_2" frag="面板8">
+          <div frag="窗口8">
+            <div id="wp_nav_w8"> 
+
+ 
+<ul class="wp_nav" data-nav-config="{drop_v: 'down', drop_w: 'right', dir: 'y', opacity_main: '-1', opacity_sub: '-1', dWidth: '0'}">
+      
+     <li class="nav-item i1 "> 
+         <a href="/2161/list.htm" title="Campus Life" target="_self"><span class="item-name">Campus Life</span></a><i class="mark"></i> 
+          
+     </li> 
+      
+</ul> 
+ 
+ 
+ </div>
+          </div>
+        </div>
+      </div>
+      <div class="box3_b">
+        <div class="box3_b_1" frag="面板9">
+          <div frag="窗口9">
+            <div id="wp_news_w9"> 
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="wp_article_list_table"> 
+<tr> 
+<td> 
+ 
+              <!--InfoCycleBegin-->
+              <div class="dongtu5"><a href='http://ies-en.zuel.edu.cn/2162/list.htm' target='_self' title='1'><image src='/_upload/article/images/49/d9/3353c3a641eda90e2573e620f4a1/da0ab75a-306a-4a1a-8950-671f6a4b7810_s.jpg' width='215'></a></div>
+              <!--InfoCycleEnd--> 
+            </td> 
+</tr> 
+</table></div> 
+
+          </div>
+        </div>
+        <div class="box3_b_2" frag="面板10">
+          <div frag="窗口10">
+            <div id="wp_nav_w10"> 
+
+ 
+<ul class="wp_nav" data-nav-config="{drop_v: 'down', drop_w: 'right', dir: 'y', opacity_main: '-1', opacity_sub: '-1', dWidth: '0'}">
+      
+     <li class="nav-item i1 "> 
+         <a href="/2162/list.htm" title="Alumni" target="_self"><span class="item-name">Alumni</span></a><i class="mark"></i> 
+          
+     </li> 
+      
+</ul> 
+ 
+ 
+ </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="box3">
+      <div class="box3_a">
+        <div class="box3_a_1" frag="面板11">
+          <div frag="窗口11">
+            <div id="wp_news_w11"> 
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="wp_article_list_table"> 
+<tr> 
+<td> 
+ 
+              <!--InfoCycleBegin-->
+              <div class="dongtu6"><a href='http://ies-en.zuel.edu.cn/2163/list.htm' target='_self' title='1'><image src='/_upload/article/images/0c/11/5872ae744f898b523acf7403ad8f/0d7484fc-0fc4-4e19-99ef-ae2e73b16675_s.jpg' width='214'></a></div>
+              <!--InfoCycleEnd--> 
+            </td> 
+</tr> 
+</table></div> 
+
+          </div>
+        </div>
+        <div style="background-color:#ff6500;" class="box3_a_2" frag="面板12">
+          <div frag="窗口12">
+            <div id="wp_nav_w12"> 
+
+ 
+<ul class="wp_nav" data-nav-config="{drop_v: 'down', drop_w: 'right', dir: 'y', opacity_main: '-1', opacity_sub: '-1', dWidth: '0'}">
+      
+     <li class="nav-item i1 "> 
+         <a href="/2163/list.htm" title="Notices & News" target="_self"><span class="item-name">Notices & Ne...</span></a><i class="mark"></i> 
+          
+     </li> 
+      
+</ul> 
+ 
+ 
+ </div>
+          </div>
+        </div>
+      </div>
+      <div class="box3_b">
+        <div class="box3_b_1" frag="面板13">
+          <div frag="窗口13">
+            <div id="wp_news_w13"> 
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="wp_article_list_table"> 
+<tr> 
+<td> 
+ 
+              <!--InfoCycleBegin-->
+              <div class="dongtu7"><a href='http://ies-en.zuel.edu.cn/2164/list.htm' target='_self' title='1'><image src='/_upload/article/images/16/62/59f9470d4225a4bcd2be1b6ab9a4/4c32c21f-e7da-441e-8dd4-7b47bb75d10b_s.jpg' width='214'></a></div>
+              <!--InfoCycleEnd--> 
+            </td> 
+</tr> 
+</table></div> 
+
+          </div>
+        </div>
+        <div style="background-color:#336dff;" class="box3_b_2" frag="面板14">
+          <div frag="窗口14">
+            <div id="wp_nav_w14"> 
+
+ 
+<ul class="wp_nav" data-nav-config="{drop_v: 'down', drop_w: 'right', dir: 'y', opacity_main: '-1', opacity_sub: '-1', dWidth: '0'}">
+      
+     <li class="nav-item i1 "> 
+         <a href="/2164/list.htm" title="Resources" target="_self"><span class="item-name">Resources</span></a><i class="mark"></i> 
+          
+     </li> 
+      
+</ul> 
+ 
+ 
+ </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="box4" frag="面板15">
+      <div class="box4_1" frag="窗口15">
+        <div id="wp_news_w15"> 
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="wp_article_list_table"> 
+<tr> 
+<td> 
+ 
+          <!--InfoCycleBegin-->
+          <div><a href='http://ies-en.zuel.edu.cn/2165/list.htm' target='_self' title='1'><image src='/_upload/article/images/33/52/b929ccc54f72ba9dec0e8f7c25db/4afc3d82-5f77-448b-a208-49af36ea18f5_s.png' width='86'></a></div>
+          <!--InfoCycleEnd--> 
+        </td> 
+</tr> 
+</table></div> 
+
+      </div>
+      <div class="box4_2" frag="面板16">
+        <div class="box4_3" frag="窗口16">
+          <div id="wp_nav_w16"> 
+
+ 
+<ul class="wp_nav" data-nav-config="{drop_v: 'down', drop_w: 'right', dir: 'y', opacity_main: '-1', opacity_sub: '-1', dWidth: '0'}">
+      
+     <li class="nav-item i1 "> 
+         <a href="/2165/list.htm" title="Apply On Line" target="_self"><span class="item-name">Apply On Line</span></a><i class="mark"></i> 
+          
+     </li> 
+      
+</ul> 
+ 
+ 
+ </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footbox">
+    <p>Address: 182# Nanhu Avenue, East Lake High-tech Development Zone, Wuhan</p>
+    <p>Tel:0086-27-88385157 Fax: 0086-27-88386557</p>
+  </div>
+</div>
+</body>
+</html>
+
+ <image src="/_visitcount?siteId=79&type=1&columnId=2157" style="display:none" width="0" height="0"></image>

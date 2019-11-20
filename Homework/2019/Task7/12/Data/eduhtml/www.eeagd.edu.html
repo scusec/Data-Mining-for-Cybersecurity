@@ -1,0 +1,2672 @@
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<meta http-equiv="X-UA-Compatible" content="IE=11">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>   
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" type="text/css" href="/portal/css/web.css">
+	<link rel="stylesheet" type="text/css" href="/portal/css/b.css">
+	<link rel="stylesheet" type="text/css" href="/portal/css/f.css">
+	<script type="text/javascript" src="/portal/js/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="/portal/js/tools.js"></script>
+	<script type="text/javascript" src="/portal/js/b.js"></script>
+	<script type="text/javascript" src="/portal/js/f.js"></script>
+	<script type="text/javascript">
+		var path = '/portal';
+		var basePath ='/portal';
+	</script>
+<link rel="stylesheet" type="text/css" href="/portal/css/index.css">
+<link rel="stylesheet" type="text/css" href="/portal/css/modal.css">
+<link rel="shortcut icon" href="/portal/favicon.ico"/>
+<link rel="bookmark" href="/portal/favicon.ico"/>
+
+<!-- 创建时间: 2017-10-28 23:17:43 -->
+<meta name="keywords" content="广东省教育考试院" />
+<meta name="description" content="广东省教育考试院" />
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="cache-control" content="no-cache">
+<meta http-equiv="expires" content="0">
+<title>广东省教育考试院</title>
+<base href="/portal/">
+<style type="text/css">
+
+</style>
+</head>
+<body>
+	
+
+<style>
+.scy-js-sou {
+    width: 140px;
+    height: 32px;
+    background: url(/portal/img2/index_scy_jyb_sousuo_new_03.png) no-repeat;
+    padding: 0 13px;
+}
+
+.scy-js-sou input {
+    width: 100px;
+    height: 23px;
+    line-height: 23px;
+    background: none;
+    border: none;
+    outline: none;
+    padding-top: 5px;
+    float:left;
+}
+
+.scy-js-sou img {
+	margin-top:5px;
+    right: 10px;
+    bottom: 6px;
+    float:left;
+}
+
+.logindiv{
+   -moz-border-radius: 15px;
+   -webkit-border-radius: 15px;
+   border-radius: 15px;
+   background:#497fd7;
+   width:150px;
+   height:30px;
+   text-align:center;
+   line-height:30px;
+}
+#srchInput_bak{
+	visibility: hidden;
+}
+</style>
+<div class="Header">
+	<div class="top">
+		<div style="width: 1002px; margin: 0px auto;">
+			
+			<div class="logo">
+				<a href="/portal/" title="首页">
+					<img src="/portal/img2/logo_red.png" height="110" border="0" />
+				</a>
+			</div>
+			
+			
+			<div style="float:right;margin-top:10px;background:url('/portal/img2/font20151222v01.wyf.png') no-repeat;width:300px;height:34px;"></div>
+			
+			<div style="float:right;margin-top:20px;width:140px;">
+				
+				<div class="scy-js-sou">
+					<form name="searchform" id="searchform" method="post" action="/portal/search.jsp" >
+						<input name="srchWord" type="text" id="srchInput" onkeypress="if(event.keyCode==13){headSearch(1);}"></input>
+						<input type='hidden' id='hiddenPage' name='page'></input>
+						<input type="hidden" name="rskey" id="rskey"></input>
+						<a href="javascript:headSearch(1)">
+							<img src="/portal/img2/search_sy.png">
+						</a>
+			        </form>
+		        </div>
+			</div>	
+			
+			<!-- 生成静态页面时用到的标签，不要改动，不要改动 copper 20151203 -->
+			
+
+		</div>
+	</div>
+</div>
+<div style="clear:both;"></div>
+<div class="menu1" id="portalMenu" style="position: relative;">
+	<div style="width: 1000px; margin: 0px auto;height:100%;">
+			<div class="dh01" id="menu_1"><img id="menuImg_1" src="/portal/img2/menu1.gif"></div>
+	<div class="dh01" id="menu_2"><img id="menuImg_2" src="/portal/img2/menu2.gif"></div>
+	<div class="dh01" id="menu_3"><img id="menuImg_3" src="/portal/img2/menu3.gif"></div>
+	<div class="dh01" id="menu_4"><img id="menuImg_4" src="/portal/img2/menu4.gif"></div>
+	<div class="dh01" id="menu_5"><img id="menuImg_5" src="/portal/img2/menu5.gif"></div>
+	<div class="dh01" style='margin-right:0px' id="menu_6"><img id="menuImg_6" src="/portal/img2/menu6.gif"></div>
+
+	</div>
+	<span class="notice" style="position: absolute;top: 52px;right: 600px;color: #F00;display: none;">点击进入办事大厅</span>
+</div>
+<script>
+	$(function() {
+	
+		$("div.dh01").hover(function() {
+			//copper 20151125
+			
+			
+			$("div.menuTab").each(function(){
+				$(this).hide();
+			});
+			
+			$("div.dh01 img").each(function(index){
+				$(this).attr("src", "/portal/img2/menu" + (index+1) + ".gif");
+			});
+			var menu = $(this).attr("id");
+			var menuId = menu.substr(5);
+			$("#menuImg_" + menuId).attr("src", "/portal/img2/menu" + menuId + "_on.gif");
+			
+			var nowID = $(this).attr("id");//当前选中tab的ID
+			if(nowID == "menu_4"){//menu_5是办事大厅,不用显示其他内容，还原成刚打开页面的样子，点击跳转即可
+			
+				$("#portlet_0").show();
+				
+			}else{//不是办事大厅就正常显示相关内容
+			
+				$("#portlet_0").hide();
+				$("#portlet_" + menuId).show();
+			}
+		},function(){
+			$("div.menuTab").each(function(){
+				$(this).hide();
+			});
+			
+			$("div.dh01 img").each(function(index){
+				$(this).attr("src", "/portal/img2/menu" + (index+1) + ".gif");
+			})
+			
+			$("#portlet_0").show();
+		});
+		
+		$("div.menuTab").hover(function(){
+
+			var menu = $(this).attr("id");
+			var menuId = menu.substr(8);
+			$("#portlet_0").hide();
+			$("#portlet_" + menuId).show();
+			$("#menuImg_" + menuId).attr("src", "/portal/img2/menu" + menuId + "_on.gif");
+			
+		},function(){
+			$("div.menuTab").each(function(){
+				$(this).hide();
+			});
+			
+			$("div.dh01 img").each(function(index){
+				$(this).attr("src", "/portal/img2/menu" + (index+1) + ".gif");
+			})
+			
+			$("#portlet_0").show();
+		});
+		$("div.dh01").click(function(){
+			var nowID = $(this).attr("id");
+			if(nowID == "menu_4"){
+				window.open("http://wsbs.gdedu.gov.cn/publicfiles//business/htmlfiles/gdsjyt/index.html");
+			}
+			
+		});
+		
+		//办事大厅的提示语操作 	
+		$("#menu_4").mouseover(function(){
+			$(".notice").css({"display":"block"});
+		});
+		$("#menu_4").mouseout(function(){
+			$(".notice").css({"display":"none"});
+		});
+		  
+
+	});
+	
+</script>
+
+<!-- 生成静态页面时用到的标签，不要改动，不要改动 copper 20151203 -->
+
+ 
+<script>
+function headSearch() {
+	var srchWord = $("input#srchInput").val();
+	if(srchWord == null || srchWord == ""){
+		alert("请输入搜索关键字");
+		return;
+	}
+	document.searchform.submit();
+}
+</script>
+ 
+
+
+<!-- 生成静态页面时用到的标签，不要改动，不要改动 copper 20151203 -->
+
+
+	<div style="width: 1000px; margin: 0px auto;">
+		<div style="width: 100%; margin: 0px auto;">
+			<!--  机构简介 -->
+			<div id="portlet_1" class="portlet menuTab" style="display: none">
+			<div class="news">
+				<div class="nr" style="width:45%;float:left;margin-right:5%;margin-left:2%;margin-top: -8px;">
+					<ul class="tab">
+						<li class="current"><a>职能部门简介</a></li>
+						
+					</ul>
+					<div class="content" style="padding: 0px;">
+						<ul style="display: block">
+							<div class="scy_bottom-left-nr1" style="margin-top:0px;">
+							<img src="/portal/img2/jianjie.jpg" style="float: left; margin-right: 10px; margin-bottom: 10px;" />
+							&nbsp;&nbsp;广东省教育考试院为副厅级事业单位，由广东省教育厅管理。广东省招生委员会、广东省自学考试委员会的日常工作由省教育考试院承担。 广东省高等中专学校招生委员会办公室（简称广东省招生办）是广东省招生委员会的执行机构。它负责全省学生进入全国各类大学的报名、考试、录取工作， 此外还负责本省学生报考全国各地的硕士研究生、中专学校等工作。中华人民共和国普通高等学校联合招收华侨、港澳、
+							台湾省学生办公室（简称中国联合招办）附设在广东省招生办内，它主要负责内地高校招收华侨和港澳台地区 ......
+							<a href="/portal/anon/38572" target="_blank">详情>>></a>
+							</div>
+						</ul>
+						<ul>
+							
+						</ul>
+					</div>
+				</div>
+				
+				<!-- 机构 -->
+				<div class="scy-bq-main-xwfb1" style="width: 45%; padding-right: 20px;">
+					<div class="scy-bq-main-xwfb1-list">
+						<h2 style="width: 120px;">
+							<a target="_blank">职能部门简介</a>
+						</h2>
+					</div>
+					<div class="scy_bottom-left-nr1" style="padding: 0px;">
+						<div class="zoomPan" id="zoomPan">
+						    <img src="/portal/img2/zhinengbumeng.png" width="455" />
+						    <div id="zoom" class="sh"><img src="/portal/img2/zhinengbumeng.png"  width="600"/></div>
+						</div>
+					</div>
+				</div>
+				</div>
+			</div>
+
+
+			<!--  公告公示-->
+			<div id="portlet_2" class="portlet menuTab" style="display: none">
+				<div class="news">
+					<!-- 公告 -->
+					<div class="scy-bq-main-xwfb1" style="width: 90%; margin-left: 30px;">
+						<div class="scy-bq-main-xwfb1-list">
+							<h2 style="width: 10%">
+								<a href="/portal/more/37822" target="_blank">招考公示</a>
+							</h2>
+						</div>
+						<div class="scy_bottom-left-nr2">
+							<ul>
+								
+									<li style="width: 100%; padding-left: 10px;"><span>[2017-08-05]
+									</span> <a title="广东省2017年“高校专项计划”及“地方专项计划”招生录取考生名单公示" href="/portal/messages/1501923755934.html" target="_blank">广东省2017年“高校专项计划”及“地方专项计划”招生录取考生名单公示</a></li>
+								
+									<li style="width: 100%; padding-left: 10px;"><span>[2017-07-16]
+									</span> <a title="2017年浙江大学等高校在广东省开展综合评价招生录取模式录取考生名单公示" href="/portal/messages/1500173564273.html" target="_blank">2017年浙江大学等高校在广东省开展综合评价招生录取模式录取考生名单公示</a></li>
+								
+									<li style="width: 100%; padding-left: 10px;"><span>[2017-07-12]
+									</span> <a title="2017年中山大学等高校在广东省开展综合评价招生录取模式入选资格考生名单公示" href="/portal/messages/1499853575363.html" target="_blank">2017年中山大学等高校在广东省开展综合评价招生录取模式入选资格考生名单公示</a></li>
+								
+									<li style="width: 100%; padding-left: 10px;"><span>[2017-06-30]
+									</span> <a title="教育部阳光平台上公示过的广东省2017年特殊类招生资格考生名单" href="/portal/messages/1498789961819.html" target="_blank">教育部阳光平台上公示过的广东省2017年特殊类招生资格考生名单</a></li>
+								
+									<li style="width: 100%; padding-left: 10px;"><span>[2017-06-29]
+									</span> <a title="2017年南方科技大学等高校在广东省开展综合评价招生录取模式入选资格考生名单公示" href="/portal/messages/1498704431649.html" target="_blank">2017年南方科技大学等高校在广东省开展综合评价招生录取模式入选资格考生名单公示</a></li>
+								
+									<li style="width: 100%; padding-left: 10px;"><span>[2017-06-25]
+									</span> <a title=" 关于公示广东省2017年“地方专项计划”资格审核通过考生名单的通知" href="/portal/messages/1498368670264.html" target="_blank"> 关于公示广东省2017年“地方专项计划”资格审核通过考生名单的通知</a></li>
+								
+									<li style="width: 100%; padding-left: 10px;"><span>[2017-04-13]
+									</span> <a title="2017年外国语学校推荐保送生资格名单公示" href="/portal/messages/1492048395462.html" target="_blank">2017年外国语学校推荐保送生资格名单公示</a></li>
+								
+									<li style="width: 100%; padding-left: 10px;"><span>[2016-11-22]
+									</span> <a title="关于公示广东省2016年成人高校招生符合免试入学条件和具备加分资格考生名单的通知" href="/portal/messages/1479796874624.html" target="_blank">关于公示广东省2016年成人高校招生符合免试入学条件和具备加分资格考生名单的通知</a></li>
+								
+								<div style="float: right; margin-right: 20px; margin-top: 20px">
+									<a href="/portal/more/37822" target="_blank">更多...</a>
+								</div>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!--  考试招生-->
+			<div id="portlet_3" class="portlet menuTab" style="display: none">
+				<div class="news">
+					<div class="scy-bq-main-xwfb-3">
+						<div class="scy-bq-main-xwfb1-list" style="white-space: nowrap;">
+							<h2 style="width: 150px;">
+								<a>法律法规政策文件</a>
+							</h2>
+						</div>
+						<!-- start 政策文件  tag-->
+						<div class="scy-bq-main-xwfb2-nr-3">
+							<div class="scy_01-3">
+								<a target="_blank" class="nav_title_small_a_left" href="/portal/more/38552">
+									<img style="width:200px;height:48px;" alt="国家部委文件" src="/portal/img2/JYBicon_01_240-80.png">
+								</a>
+								<a target="_blank" class="nav_title_small_a_left" href="/portal/more/38556">
+									<img style="width:200px;height:48px;" alt="省厅局文件" src="/portal/img2/SWSZHF_02_icon240-80.png">
+								</a>
+								<a target="_blank" class="nav_title_small_a_left" href="/portal/more/38557">
+									<img style="width:200px;height:48px;" alt="省考试院文件" src="/portal/img2/SKSYicon_03_240-80.png">
+								</a>
+							</div>
+						</div>
+						<!-- end 政策文件  tag-->
+						<div class="scy-bq-main-xwfb1-list" style="white-space: nowrap;">
+							<h2 style="width: 100px;">
+								<a>考务指南</a>
+							</h2>
+						</div>
+						<div class="scy_01-3">
+						<a class="nav_title_small_a_left" href="/portal/more/38402" target="_blank">
+							<img src="/portal/img2/120Guide_icon2.png" />
+						</a>
+						</div>
+					</div>
+					<div class="scy-bq-main-xwfb1-3" style="height: 360px; width: 710px;">
+						<div class="scy-bq-main-xwfb1-list">
+							<h2 style="width: 150px;">
+								<a target="_blank">考试招生业务系统</a>
+							</h2>
+						</div>
+						<script type="text/javascript">
+							$(function(){
+								$(".kszsicon").hover(function(){
+									$(this).attr("src",$(this).attr("src").replace("_off.","_on."));
+								},function(){
+									$(this).attr("src",$(this).attr("src").replace("_on.","_off."));
+								});
+							})
+						</script>
+						<div class="scy-bq-main-xwfb1-nr-3">
+							<table style="width: 100%; height: 300px;">
+								
+									
+									<tr style="height: 50%;">
+									
+									
+									
+										<td align="center" valign="middle"><a target="_blank" data-toggle="modal" href="#modal_1">
+											<img class="kszsicon" alt="普通高考" src="/portal/img2/100NCEE_icon_off.png">
+										</a></td>
+									
+									
+																		
+									
+									
+								
+									
+									
+									
+										<td align="center" valign="middle"><a target="_blank" data-toggle="modal" href="#modal_2">
+											<img class="kszsicon" alt="成人高考" src="/portal/img2/100ADULTEXAM_icon_off.png">
+										</a></td>
+									
+									
+																		
+									
+									
+								
+									
+									
+									
+									
+									
+										<td align="center" valign="middle"><a target="_blank" href="http://www.stegd.edu.cn/selfec/">
+											<img class="kszsicon" alt="自学考试" src="/portal/img2/baoming6_on.png">
+										</a></td>
+																		
+									
+									
+								
+									
+									
+									
+										<td align="center" valign="middle"><a target="_blank" data-toggle="modal" href="#modal_4">
+											<img class="kszsicon" alt="高中学考" src="/portal/img2/GZHXK_icon100_off.png">
+										</a></td>
+									
+									
+																		
+									
+									
+								
+									
+									
+									
+									
+									
+										<td align="center" valign="middle"><a target="_blank" href="http://www.ecogd.edu.cn/zkpt">
+											<img class="kszsicon" alt="中招中考" src="/portal/img2/ZZZK_icon100_off.png">
+										</a></td>
+																		
+									
+									
+								
+									
+									
+									
+									
+									
+										<td align="center" valign="middle"><a target="_blank" href="http://www.ecogd.edu.cn/zkpt_gz">
+											<img class="kszsicon" alt="五年一贯制" src="/portal/img2/WNYGZ_icon100_off.png">
+										</a></td>
+																		
+									
+									
+									</tr>
+									
+								
+									
+									<tr style="height: 50%;">
+									
+									
+									
+										<td align="center" valign="middle"><a target="_blank" data-toggle="modal" href="#modal_6">
+											<img class="kszsicon" alt="联合招生" src="/portal/img2/LHZSH_icon100_off.png">
+										</a></td>
+									
+									
+																		
+									
+									
+								
+									
+									
+									
+										<td align="center" valign="middle"><a target="_blank" data-toggle="modal" href="#modal_7">
+											<img class="kszsicon" alt="香港免试生招生" src="/portal/img2/XHMSS_icon100_off.png">
+										</a></td>
+									
+									
+																		
+									
+									
+								
+									
+									
+									
+									
+									
+										<td align="center" valign="middle"><a target="_blank" href="http://www.chsi.com.cn/">
+											<img class="kszsicon" alt="研究生考试" src="/portal/img2/YJSKS_icon100_off.png">
+										</a></td>
+																		
+									
+									
+								
+									
+									
+									
+										<td align="center" valign="middle"><a target="_blank" data-toggle="modal" href="#modal_9">
+											<img class="kszsicon" alt="本科插班生" src="/portal/img2/100TOPUP_icon_off.png">
+										</a></td>
+									
+									
+																		
+									
+									
+								
+									
+									
+									
+										<td align="center" valign="middle"><a target="_blank" data-toggle="modal" href="#modal_10">
+											<img class="kszsicon" alt="社会考试" src="/portal/img2/SHKS_icon100_off.png">
+										</a></td>
+									
+									
+																		
+									
+									
+								
+									
+									
+									
+									
+									
+										<td align="center" valign="middle"><a target="_blank" href="http://www.ecogd.edu.cn/zkpt">
+											<img class="kszsicon" alt="三二分段" src="/portal/img2/SEFD_icon100_off.png">
+										</a></td>
+																		
+									
+									
+									</tr>
+									
+								
+
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--  动态资讯-->
+			<div id="portlet_5" class="portlet menuTab" style="display: none">
+				<div class="news">
+					<div class="scy-bq-main-xwfb" id="one_con2" style="display: block; width: 33%; float: left">
+						<div class="scy-bq-main-xwfb-list">
+							<h2></h2>
+						</div>
+					</div>
+					<!-- 工作动态 -->
+					<div class="scy-bq-main-xwfb1" style="width: 90%; padding-right: 20px; margin-left: 30px;">
+						<div class="scy-bq-main-xwfb1-list">
+							<h2>
+								<a href="/portal/more/39820" target="_blank">招考园地</a>
+							</h2>
+						</div>
+						<div class="scy_bottom-left-nr2">
+							<ul>
+								
+									<li style="width: 100%; padding-left: 10px;"><span>[2017-06-19]
+									</span> <a title="澳门城市大学2017年本科招生资讯" href="/portal/messages/1497864138632.html" target="_blank">澳门城市大学2017年本科招生资讯</a></li>
+								
+									<li style="width: 100%; padding-left: 10px;"><span>[2017-06-16]
+									</span> <a title="浙江大学2017年广东省综合评价录取招生简章" href="/portal/messages/1497607619162.html" target="_blank">浙江大学2017年广东省综合评价录取招生简章</a></li>
+								
+									<li style="width: 100%; padding-left: 10px;"><span>[2017-06-15]
+									</span> <a title="中山大学2017年广东省综合评价录取招生简章" href="/portal/messages/1497511064729.html" target="_blank">中山大学2017年广东省综合评价录取招生简章</a></li>
+								
+									<li style="width: 100%; padding-left: 10px;"><span>[2017-06-15]
+									</span> <a title="华南理工大学2017年广东省综合评价录取招生简章" href="/portal/messages/1497511152956.html" target="_blank">华南理工大学2017年广东省综合评价录取招生简章</a></li>
+								
+									<li style="width: 100%; padding-left: 10px;"><span>[2017-06-09]
+									</span> <a title="南方科技大学2017 年基于高考基础上综合评价招生章程" href="/portal/messages/1496974694273.html" target="_blank">南方科技大学2017 年基于高考基础上综合评价招生章程</a></li>
+								
+									<li style="width: 100%; padding-left: 10px;"><span>[2017-05-19]
+									</span> <a title="深圳北理莫斯科大学2017年广东省高考基础上的综合评价录取本科招生实施方案" href="/portal/messages/1495184829853.html" target="_blank">深圳北理莫斯科大学2017年广东省高考基础上的综合评价录取本科招生实施方案</a></li>
+								
+									<li style="width: 100%; padding-left: 10px;"><span>[2017-05-19]
+									</span> <a title="香港中文大学（深圳）2017年广东省高考基础上的综合评价录取招生章程" href="/portal/messages/1495184520406.html" target="_blank">香港中文大学（深圳）2017年广东省高考基础上的综合评价录取招生章程</a></li>
+								
+									<li style="width: 100%; padding-left: 10px;"><span>[2017-05-19]
+									</span> <a title="北京师范大学-香港浸会大学联合国际学院2017年广东省高考基础上的综合评价录取实施办法" href="/portal/messages/1495184422737.html" target="_blank">北京师范大学-香港浸会大学联合国际学院2017年广东省高考基础上的综合评价录取实施办法</a></li>
+								
+								<div style="float: right; margin-right: 20px; margin-top: 20px">
+									<a href="/portal/more/39820" target="_blank">更多...</a>
+								</div>
+							</ul>
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+
+			<div id="portlet_6" class="portlet menuTab" style="display: none">
+				<div class="news">
+					<div class="scy-bq-main-xwfb1-4" style="margin-left: 25px;">
+						<div class="scy-bq-main-xwfb1-list" style="white-space: nowrap;">
+							<h2 style="width: 88px;">
+								<a href="/portal/more/37825" target="_blank">下载中心</a>
+							</h2>
+						</div>
+						<div class="scy-bq-main-xwfb2-nr-4">
+							
+								<div class="download-4">
+									<div>
+										<a title="军队院校招收普通中学高中毕业生政治考核表" href="/portal/upload/1496997186961.doc" target="_blank">
+											<h3>军队院校招收普通中学高中毕业生政治考核表</h3>
+											<span class="download_p-4"></span>
+										</a>
+									</div>
+								</div>
+							
+								<div class="download-4">
+									<div>
+										<a title="广东省普通高中学业水平考试考务工作手册" href="/portal/upload/1494905040166.docx" target="_blank">
+											<h3>广东省普通高中学业水平考试考务工作手册</h3>
+											<span class="download_p-4"></span>
+										</a>
+									</div>
+								</div>
+							
+								<div class="download-4">
+									<div>
+										<a title="2017年广东省考试招生系统通讯录登记表" href="/portal/upload/1490587969971.doc" target="_blank">
+											<h3>2017年广东省考试招生系统通讯录登记表</h3>
+											<span class="download_p-4"></span>
+										</a>
+									</div>
+								</div>
+							
+								<div class="download-4">
+									<div>
+										<a title="广东省2017年高等职业院校自主招生考生报名表" href="/portal/upload/1487581956224.doc" target="_blank">
+											<h3>广东省2017年高等职业院校自主招生考生报名</h3>
+											<span class="download_p-4"></span>
+										</a>
+									</div>
+								</div>
+							
+						</div>
+						<div style="float: right; margin-top: 10px;">
+							<a href="/portal/more/37825" target="_blank">更多</a>
+						</div>
+					</div>
+					<div class="scy-bq-main-xwfb1-4" style="white-space: nowrap; width: 20%">
+						<div class="scy-bq-main-xwfb1-list">
+							<h2 style="width: 88px;">
+								<a target="_blank">咨询互动</a>
+							</h2>
+						</div>
+						<div class="scy-bq-main-xwfb2-nr-4">
+							<div class="scy-bq-main-xwfb2-title-4">
+								<table width="100%" border="0" align="center" cellpadding="0" cellspacing="10">
+									<tr>
+										<td width="33%" align="center"><a target="_blank" href="http://xf.gdhed.edu.cn/web/index.jsp">
+												<img src="/portal/img2/120Mail_icon.png" />
+											</a></td>
+									</tr>
+									<tr>
+										<td width="34%" align="center"><a target="_blank" href="http://www.5184.com/">
+												<img src="/portal/img2/120info_icon.png" />
+											</a></td>
+									</tr>
+								</table>
+							</div>
+						</div>
+					</div>
+					<div class="scy-bq-main-xwfb1-4" style="white-space: nowrap; width: 37%">
+						<div class="scy-bq-main-xwfb1-list">
+							<h2 style="width: 88px;">
+								<a target="_blank">在线调查</a>
+							</h2>
+						</div>
+						<div class="scy-bq-main-xwfb2-nr-4" id="voteDiv">
+							
+<style type="text/css">
+.scy-bq-main-xwfb2-nr-4 {
+	width: 100%;
+	white-space: normal;
+}
+
+.question-4 {
+	height: 70px;
+	border-bottom: 2px #5B7DA3 solid;
+	padding: 20px 10px 0px 0px;
+	font-size: 14px;
+	color: #4b4b4b;
+}
+</style>
+<div class="scy-bq-main-xwfb2-nr-4">
+	<div id="content"></div>
+	<div style="float: right; margin-top: 10px;">
+		<a href="/portal/question_more.jsp" target="_blank">更多</a>
+	</div>
+</div>
+<script type="text/javascript">
+	$(function() {
+		$.ajax({ url : "question", cache : false, dataType : "json", type : "get", success : function(data) {
+			if (data == null) {
+				return;
+			}
+			var str = "";
+			var i = 0;
+			for (obj in data) {
+				var baseUrl = data[obj].type == 1 ? "question.jsp?id=" + data[obj].id : "vote.jsp?id=" + data[obj].id;
+
+				str += "<div class='question-4'><div style='height:32px;'>";
+				str += "<a target='_blank' href='"+baseUrl+"'>&nbsp;&nbsp;" + data[obj].name.substring(0,40) + "</a>";
+				str += "</div>";
+				str += "<div style='float:right;margin-top:15px'>";
+				str += "<font style='font-size:12px'>调查中</font>";
+				str += "&nbsp;&nbsp;<a style='font-size:12px' target='_Blank' href='"+baseUrl+"'>进入</a>";
+				str += "</div></div>";
+				if (++i > 2) break;
+			}
+
+			$("#content").html(str);
+		} });
+	});
+</script>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+			<div id="portlet_0" class="portlet menuTab">
+				<!-- 图片轮播效果 -->
+				<div class="news">
+
+					<div id="notification_" style="float: left; width: 300px; height: 350px; overflow: hidden; padding-left: 13px;">
+						<div class="scy-bq-main-xwfb1-list">
+							<h2 style="width: 100px;">
+								<a href="/portal/more/37634" target="_blank">图片新闻</a>
+							</h2>
+						</div>
+						<div id="slide_box" style="margin: 10px 10px 10px 0px; width: 300px; height: 300px; overflow: hidden; float: left; background-color: #E8E8E8">
+							<ul class="slide_img" style="padding: 0px; margin: 0px;">
+								
+									<li><a href="/portal/messages/1508756566412.html" target="_blank">
+											<img style="width: 300px; height: 310px; overflow: hidden;" src="/portal/upload/1508725341564.jpg">
+											<font class="desc">黄宁生检查2017年10月自学考试工作</font>
+										</a></li>
+								
+									<li><a href="/portal/messages/1507892088754.html" target="_blank">
+											<img style="width: 300px; height: 310px; overflow: hidden;" src="/portal/upload/1507892150506.jpg">
+											<font class="desc">省招生委员会、省自学考试委员会召开201</font>
+										</a></li>
+								
+									<li><a href="/portal/messages/1506653670071.html" target="_blank">
+											<img style="width: 300px; height: 310px; overflow: hidden;" src="/portal/upload/1506738286661.jpg">
+											<font class="desc">省招生办9月28日召开2017年普通高校</font>
+										</a></li>
+								
+									<li><a href="/portal/messages/1496886042452.html" target="_blank">
+											<img style="width: 300px; height: 310px; overflow: hidden;" src="/portal/upload/1496897300511.jpg">
+											<font class="desc">2017年普通高考今天顺利开考 </font>
+										</a></li>
+								
+									<li><a href="/portal/messages/1495418026999.html" target="_blank">
+											<img style="width: 300px; height: 310px; overflow: hidden;" src="/portal/upload/1495421149895.jpg">
+											<font class="desc">陈云贤赴佛山检查高考准备工作</font>
+										</a></li>
+								
+							</ul>
+							<div id="slide_order"></div>
+						</div>
+					</div>
+					<!-- 通知公告 -->
+
+					<div id="notification_" style="margin-right: 10px; float: left; width: 380px; height: 360px; overflow: hidden; padding-left: 8px;">
+						<div class="scy-bq-main-xwfb1-list">
+							<h2 style="width: 100px;">
+								<a href="/portal/more/37629" target="_blank">通知公告</a>
+							</h2>
+						</div>
+						<ul>
+							
+							
+								
+								<li style="border-bottom: 1px solid #E2E2E2;">
+									
+									
+										<img src="/portal/img2/newicon.png" /> 
+									
+									
+									<a title="2018年全国硕士研究生招生考试诚信教育公告--[2017-10-27]" href="/portal/messages/1509098078995.html" target="_blank">2018年全国硕士研究生招生考试诚信教育公告</a>
+								</li>
+							
+								
+								<li style="border-bottom: 1px solid #E2E2E2;">
+									
+									
+										<img src="/portal/img2/newicon.png" /> 
+									
+									
+									<a title="关于《广东省教育厅、广东省招生委员会关于2018年深入推进普通高等学校考试招生改革的通知》公开征求意见的公告--[2017-10-27]" href="/portal/messages/1509097083984.html" target="_blank">关于《广东省教育厅、广东省招生委员会关于2018</a>
+								</li>
+							
+								
+								<li style="border-bottom: 1px solid #E2E2E2;">
+									
+									
+										<img src="/portal/img2/newicon.png" /> 
+									
+									
+									<a title="致参加2018年全国硕士研究生招生考试考生的一封信--[2017-10-26]" href="/portal/messages/1508984352952.html" target="_blank">致参加2018年全国硕士研究生招生考试考生的一封</a>
+								</li>
+							
+								
+								<li style="border-bottom: 1px solid #E2E2E2;">
+									
+									
+										<img src="/portal/img2/newicon.png" /> 
+									
+									
+									<a title="关于公布《2018年广东省普通高考英语科听说考试考试大纲》的通知--[2017-10-24]" href="/portal/messages/1508837648675.html" target="_blank">关于公布《2018年广东省普通高考英语科听说考试</a>
+								</li>
+							
+								
+								<li style="border-bottom: 1px solid #E2E2E2;">
+									
+									
+										<img src="/portal/img2/newicon.png" /> 
+									
+									
+									<a title="中共广东省纪委驻省教育厅纪检组信访举报途径--[2017-10-24]" href="/portal/messages/1508813900762.html" target="_blank">中共广东省纪委驻省教育厅纪检组信访举报途径</a>
+								</li>
+							
+								
+								<li style="border-bottom: 1px solid #E2E2E2;">
+									
+									
+									
+										<img src="/portal/img2/10list_ico.png" /> 
+									
+									<a title="关于调整华南师范大学硕士研究生报考点接受考生报考范围的通知--[2017-10-20]" href="/portal/messages/1508473008237.html" target="_blank">关于调整华南师范大学硕士研究生报考点接受考生报考</a>
+								</li>
+							
+								
+								<li style="border-bottom: 1px solid #E2E2E2;">
+									
+									
+									
+										<img src="/portal/img2/10list_ico.png" /> 
+									
+									<a title="关于做好2018年上半年广东省中等职业技术教育专业技能课程考试报考工作的通知--[2017-10-19]" href="/portal/messages/1508379341758.html" target="_blank">关于做好2018年上半年广东省中等职业技术教育专</a>
+								</li>
+							
+								
+								<li style="border-bottom: 1px solid #E2E2E2;">
+									
+									
+									
+										<img src="/portal/img2/10list_ico.png" /> 
+									
+									<a title="关于印发《广东省2018年普通高校招生统一考试美术术科考试大纲》的通知--[2017-10-16]" href="/portal/messages/1508148306860.html" target="_blank">关于印发《广东省2018年普通高校招生统一考试美</a>
+								</li>
+							
+							<div style="float: right; margin-right: 20px; margin-top: 10px;">
+								<a href="/portal/more/37629" target="_blank">更多...</a>
+							</div>
+						</ul>
+					</div>
+
+					<div style="width: 27.2%; float: left;">
+						<div class="scy-bq-main-xwfb9" style="width: 100%;">
+							<div class="scy-bq-main-xwfb1-list">
+								<h2 style="width: 90px;">
+									<a href="/portal/more/39638" target="_blank">新闻动态</a>
+								</h2>
+							</div>
+							<div class="scy_bottom-left-nr2" style="margin: 0">
+								<ul>
+									
+										<li style="width: 100%; line-height: 35px;">
+										 <a title="黄宁生检查2017年10月自学考试工作--[2017-10-23]" href="/portal/messages/1508756566412.html" target="_blank">黄宁生检查2017年10月自学考试工</a>
+										</li>
+									
+										<li style="width: 100%; line-height: 35px;">
+										 <a title="省招生委员会、省自学考试委员会召开2017年成人高考和10月份自学考试安全工作视频会议--[2017-10-13]" href="/portal/messages/1507892088754.html" target="_blank">省招生委员会、省自学考试委员会召开2</a>
+										</li>
+									
+										<li style="width: 100%; line-height: 35px;">
+										 <a title="省招生办9月28日召开2017年普通高校考试招生工作总结会--[2017-09-29]" href="/portal/messages/1506653670071.html" target="_blank">省招生办9月28日召开2017年普通</a>
+										</li>
+									
+										<li style="width: 100%; line-height: 35px;">
+										 <a title="广东省2017年成人高考报名9月1日开始--[2017-08-23]" href="/portal/messages/1503484541551.html" target="_blank">广东省2017年成人高考报名9月1日</a>
+										</li>
+									
+								</ul>
+							</div>
+						</div>
+						<!-- 考试日历 -->
+						
+						<div class="scy-bq-main-xwfb1-list">
+							<h2 style="width: 100px;">
+								<a target="_blank">考试月历</a>
+							</h2>
+						</div>
+						<div id="thisMonth"
+							style="cursor: pointer; font-weight: bold; margin-top: 5px; width: 100%; height: 20px; background-color: #497FD7; border: 1px solid #497FD7; color: white; font-size: 14px; line-height: 20px; text-align: center;">本月招考</div>
+						<div id="examination_calendar" style="font-size: 12px; overflow: auto; overflow-x: hidden; width: 100%; height: 93px; border: 1px solid #E2E2E2;">
+							
+							
+								
+							
+								
+							
+								
+							
+								
+							
+								
+							
+								
+							
+								
+							
+								
+							
+								
+							
+								
+							
+								
+							
+								
+							
+								
+							
+								
+							
+								
+							
+								
+							
+								
+							
+								
+							
+								
+							
+								
+							
+								
+							
+								
+							
+								
+							
+								
+							
+								
+							
+								
+							
+								
+							
+								
+							
+								
+							
+								
+							
+								
+							
+								
+							
+								
+							
+								
+							
+								
+							
+								
+							
+								
+							
+								
+							
+								
+							
+								
+							
+								
+							
+								
+							
+								
+							
+								
+							
+								
+							
+								
+							
+								
+							
+								
+							
+								
+							
+								
+							
+								
+							
+								
+							
+								
+							
+								
+							
+								
+							
+								
+							
+								
+							
+								
+							
+								
+							
+								
+							
+								
+									<div style="color:#4b4b4b;float:left;width:96%;padding:5px;line-height:24px; background-color:#F7DBCE">
+										<a style="cursor: pointer;" title="12月考试报名为10月29日前：剑桥通用五级英语证书考试（KET/PET校园版）报名">12月考试报名为10月29日前：剑桥通用五级英语证书考试（KET/PET校园版）报名</a>
+									</div>
+									
+								
+							
+								
+									<div style="color:#4b4b4b;float:left;width:96%;padding:5px;line-height:24px;">
+										<a style="cursor: pointer;" title="12月考试报名为9月-10月上旬：全国大学英语四、六级考试（CET）报名">12月考试报名为9月-10月上旬：全国大学英语四、六级考试（CET）报名</a>
+									</div>
+									
+								
+							
+								
+									<div style="color:#4b4b4b;float:left;width:96%;padding:5px;line-height:24px; background-color:#F7DBCE">
+										<a style="cursor: pointer;" title="：关于做好2018年上半年广东省中等职业技术教育专业技能课程考试报考工作的通知">：关于做好2018年上半年广东省中等职业技术教育专业技能课程考试报考工作的通知</a>
+									</div>
+									
+								
+							
+								
+									<div style="color:#4b4b4b;float:left;width:96%;padding:5px;line-height:24px;">
+										<a style="cursor: pointer;" title="10月21-22日：高等教育自学考试">10月21-22日：高等教育自学考试</a>
+									</div>
+									
+								
+							
+								
+									<div style="color:#4b4b4b;float:left;width:96%;padding:5px;line-height:24px; background-color:#F7DBCE">
+										<a style="cursor: pointer;" title="10月28-29日：成人高校招生全国统一考试">10月28-29日：成人高校招生全国统一考试</a>
+									</div>
+									
+								
+							
+								
+							
+								
+							
+								
+							
+								
+							
+								
+							
+								
+							
+								
+							
+								
+							
+							
+						</div>
+						<div id="nextMonth"
+							style="cursor: pointer; font-weight: bold; margin-top: 1px; width: 100%; height: 20px; background-color: #497FD7; border: 1px solid #497FD7; color: white; font-size: 14px; line-height: 20px; text-align: center;">本年招考</div>
+						<div id="examination_calendar2" style="display: none; font-size: 12px; overflow: auto; overflow-x: hidden; width: 100%; height: 93px; border: 1px solid #E2E2E2;">
+							
+								<div style="color:#4b4b4b;float:left;width:96%;padding:5px;line-height:24px; background-color:#F7DBCE">
+									<a style="cursor: pointer;" title="1月1-15日（冬季项目）：全国普通高校运训、民传专业单招考试报名">1月1-15日（冬季项目）：全国普通高校运训、民传专业单招考试报名</a>
+								</div>
+							
+								<div style="color:#4b4b4b;float:left;width:96%;padding:5px;line-height:24px;">
+									<a style="cursor: pointer;" title="1月2日：全省美术术科统一考试">1月2日：全省美术术科统一考试</a>
+								</div>
+							
+								<div style="color:#4b4b4b;float:left;width:96%;padding:5px;line-height:24px; background-color:#F7DBCE">
+									<a style="cursor: pointer;" title="1月2日：全省音乐术科统一考试（笔试）">1月2日：全省音乐术科统一考试（笔试）</a>
+								</div>
+							
+								<div style="color:#4b4b4b;float:left;width:96%;padding:5px;line-height:24px;">
+									<a style="cursor: pointer;" title="1月7-8日：普通高中学业水平考试">1月7-8日：普通高中学业水平考试</a>
+								</div>
+							
+								<div style="color:#4b4b4b;float:left;width:96%;padding:5px;line-height:24px; background-color:#F7DBCE">
+									<a style="cursor: pointer;" title="1月7-8日：高等教育自学考试">1月7-8日：高等教育自学考试</a>
+								</div>
+							
+								<div style="color:#4b4b4b;float:left;width:96%;padding:5px;line-height:24px;">
+									<a style="cursor: pointer;" title="1月7日：广东省中等职业技术教育专业技能课程考试（理论考试及部分实操考试）">1月7日：广东省中等职业技术教育专业技能课程考试（理论考试及部分实操考试）</a>
+								</div>
+							
+								<div style="color:#4b4b4b;float:left;width:96%;padding:5px;line-height:24px; background-color:#F7DBCE">
+									<a style="cursor: pointer;" title="1月7-13日：普通高校三二分段专升本转段考试报名">1月7-13日：普通高校三二分段专升本转段考试报名</a>
+								</div>
+							
+								<div style="color:#4b4b4b;float:left;width:96%;padding:5px;line-height:24px;">
+									<a style="cursor: pointer;" title="1月7-13日：普通高等学校本科插班生考试报名">1月7-13日：普通高等学校本科插班生考试报名</a>
+								</div>
+							
+								<div style="color:#4b4b4b;float:left;width:96%;padding:5px;line-height:24px; background-color:#F7DBCE">
+									<a style="cursor: pointer;" title="1月9-20日：全省音乐术科统一考试（面试）">1月9-20日：全省音乐术科统一考试（面试）</a>
+								</div>
+							
+								<div style="color:#4b4b4b;float:left;width:96%;padding:5px;line-height:24px;">
+									<a style="cursor: pointer;" title="1月9-20日：全省体育术科统一考试">1月9-20日：全省体育术科统一考试</a>
+								</div>
+							
+								<div style="color:#4b4b4b;float:left;width:96%;padding:5px;line-height:24px; background-color:#F7DBCE">
+									<a style="cursor: pointer;" title="4月考试报名为2017年的1月10-25日：高等教育自学考试报名">4月考试报名为2017年的1月10-25日：高等教育自学考试报名</a>
+								</div>
+							
+								<div style="color:#4b4b4b;float:left;width:96%;padding:5px;line-height:24px;">
+									<a style="cursor: pointer;" title="1月13-20日：中小学教师资格考试（笔试）报名">1月13-20日：中小学教师资格考试（笔试）报名</a>
+								</div>
+							
+								<div style="color:#4b4b4b;float:left;width:96%;padding:5px;line-height:24px; background-color:#F7DBCE">
+									<a style="cursor: pointer;" title="2月中旬：全省高职自主招生统一文化考试报名">2月中旬：全省高职自主招生统一文化考试报名</a>
+								</div>
+							
+								<div style="color:#4b4b4b;float:left;width:96%;padding:5px;line-height:24px;">
+									<a style="cursor: pointer;" title="3月1-15日（其他项目）：全国普通高校运训、民传专业单招考试报名">3月1-15日（其他项目）：全国普通高校运训、民传专业单招考试报名</a>
+								</div>
+							
+								<div style="color:#4b4b4b;float:left;width:96%;padding:5px;line-height:24px; background-color:#F7DBCE">
+									<a style="cursor: pointer;" title="3月上旬-3月底：中国销售管理专业水平证书考试、中英合作商务管理与金融管理专业“基础段”及“管理段”证书课程考试等非学历（行业）证书考试、中国书画等级考试（CCPT）报名">3月上旬-3月底：中国销售管理专业水平证书考试、中英合作商务管理与金融管理专业“基础段”及“管理段”证书课程考试等非学历（行业）证书考试、中国书画等级考试（CCPT）报名</a>
+								</div>
+							
+								<div style="color:#4b4b4b;float:left;width:96%;padding:5px;line-height:24px;">
+									<a style="cursor: pointer;" title="3月1日-31日：内地高校联合招收华侨港澳台学生考试报名">3月1日-31日：内地高校联合招收华侨港澳台学生考试报名</a>
+								</div>
+							
+								<div style="color:#4b4b4b;float:left;width:96%;padding:5px;line-height:24px; background-color:#F7DBCE">
+									<a style="cursor: pointer;" title="3月4日：全省高职自主招生统一文化考试">3月4日：全省高职自主招生统一文化考试</a>
+								</div>
+							
+								<div style="color:#4b4b4b;float:left;width:96%;padding:5px;line-height:24px;">
+									<a style="cursor: pointer;" title="3月11日：中小学教师资格考试（笔试）">3月11日：中小学教师资格考试（笔试）</a>
+								</div>
+							
+								<div style="color:#4b4b4b;float:left;width:96%;padding:5px;line-height:24px; background-color:#F7DBCE">
+									<a style="cursor: pointer;" title="3月11日：普通高校三二分段专升本转段考试">3月11日：普通高校三二分段专升本转段考试</a>
+								</div>
+							
+								<div style="color:#4b4b4b;float:left;width:96%;padding:5px;line-height:24px;">
+									<a style="cursor: pointer;" title="3月11-12日：普通高等学校本科插班生考试">3月11-12日：普通高等学校本科插班生考试</a>
+								</div>
+							
+								<div style="color:#4b4b4b;float:left;width:96%;padding:5px;line-height:24px; background-color:#F7DBCE">
+									<a style="cursor: pointer;" title="3月11-14日：普通高考英语听说考试">3月11-14日：普通高考英语听说考试</a>
+								</div>
+							
+								<div style="color:#4b4b4b;float:left;width:96%;padding:5px;line-height:24px;">
+									<a style="cursor: pointer;" title="3月18-19日：全国英语等级考试（PETS）">3月18-19日：全国英语等级考试（PETS）</a>
+								</div>
+							
+								<div style="color:#4b4b4b;float:left;width:96%;padding:5px;line-height:24px; background-color:#F7DBCE">
+									<a style="cursor: pointer;" title="3月20-29日（初定）：高职院校五年一贯制高职班招生文化课考试报名">3月20-29日（初定）：高职院校五年一贯制高职班招生文化课考试报名</a>
+								</div>
+							
+								<div style="color:#4b4b4b;float:left;width:96%;padding:5px;line-height:24px;">
+									<a style="cursor: pointer;" title="3月25-26日：剑桥少儿英语考试">3月25-26日：剑桥少儿英语考试</a>
+								</div>
+							
+								<div style="color:#4b4b4b;float:left;width:96%;padding:5px;line-height:24px; background-color:#F7DBCE">
+									<a style="cursor: pointer;" title="3月25-28日：全国计算机等级考试（NCRE）">3月25-28日：全国计算机等级考试（NCRE）</a>
+								</div>
+							
+								<div style="color:#4b4b4b;float:left;width:96%;padding:5px;line-height:24px;">
+									<a style="cursor: pointer;" title="5月考试报名为4月17日前：剑桥通用五级英语证书考试（KET/PET校园版）报名">5月考试报名为4月17日前：剑桥通用五级英语证书考试（KET/PET校园版）报名</a>
+								</div>
+							
+								<div style="color:#4b4b4b;float:left;width:96%;padding:5px;line-height:24px; background-color:#F7DBCE">
+									<a style="cursor: pointer;" title="4月8-9日：内地高校招收港澳台研究生考试">4月8-9日：内地高校招收港澳台研究生考试</a>
+								</div>
+							
+								<div style="color:#4b4b4b;float:left;width:96%;padding:5px;line-height:24px;">
+									<a style="cursor: pointer;" title="2017年4月10-19日：普通高中学业水平考试报名">2017年4月10-19日：普通高中学业水平考试报名</a>
+								</div>
+							
+								<div style="color:#4b4b4b;float:left;width:96%;padding:5px;line-height:24px; background-color:#F7DBCE">
+									<a style="cursor: pointer;" title="4月中下旬。：广东省中等职业技术教育专业技能课程考试（理论考试及部分实操考试）报名">4月中下旬。：广东省中等职业技术教育专业技能课程考试（理论考试及部分实操考试）报名</a>
+								</div>
+							
+								<div style="color:#4b4b4b;float:left;width:96%;padding:5px;line-height:24px;">
+									<a style="cursor: pointer;" title="4月15-16日：高等教育自学考试">4月15-16日：高等教育自学考试</a>
+								</div>
+							
+								<div style="color:#4b4b4b;float:left;width:96%;padding:5px;line-height:24px; background-color:#F7DBCE">
+									<a style="cursor: pointer;" title="4月15日：高职院校五年一贯制高职班招生文化课考试">4月15日：高职院校五年一贯制高职班招生文化课考试</a>
+								</div>
+							
+								<div style="color:#4b4b4b;float:left;width:96%;padding:5px;line-height:24px;">
+									<a style="cursor: pointer;" title="4月下旬－5月上旬：全国大学英语四、六级口语考试（CET-SET）报名">4月下旬－5月上旬：全国大学英语四、六级口语考试（CET-SET）报名</a>
+								</div>
+							
+								<div style="color:#4b4b4b;float:left;width:96%;padding:5px;line-height:24px; background-color:#F7DBCE">
+									<a style="cursor: pointer;" title="4月22-23日：全国普通高校运训、民传专业单招考试">4月22-23日：全国普通高校运训、民传专业单招考试</a>
+								</div>
+							
+								<div style="color:#4b4b4b;float:left;width:96%;padding:5px;line-height:24px;">
+									<a style="cursor: pointer;" title="4月下旬－5月上旬：全国大学英语四、六级口语考试（CET-SET）报名">4月下旬－5月上旬：全国大学英语四、六级口语考试（CET-SET）报名</a>
+								</div>
+							
+								<div style="color:#4b4b4b;float:left;width:96%;padding:5px;line-height:24px; background-color:#F7DBCE">
+									<a style="cursor: pointer;" title="7月考试报名为2017年的5月10-20日：高等教育自学考试报名">7月考试报名为2017年的5月10-20日：高等教育自学考试报名</a>
+								</div>
+							
+								<div style="color:#4b4b4b;float:left;width:96%;padding:5px;line-height:24px;">
+									<a style="cursor: pointer;" title="5月20-21日：中国销售管理专业水平证书考试、中英合作商务管理与金融管理专业“基础段”及“管理段”证书课程考试等非学历（行业）证书考试、中国书画等级考试（CCPT）">5月20-21日：中国销售管理专业水平证书考试、中英合作商务管理与金融管理专业“基础段”及“管理段”证书课程考试等非学历（行业）证书考试、中国书画等级考试（CCPT）</a>
+								</div>
+							
+								<div style="color:#4b4b4b;float:left;width:96%;padding:5px;line-height:24px; background-color:#F7DBCE">
+									<a style="cursor: pointer;" title="5月20-21日：全国大学英语四、六级口语考试（CET-SET）">5月20-21日：全国大学英语四、六级口语考试（CET-SET）</a>
+								</div>
+							
+								<div style="color:#4b4b4b;float:left;width:96%;padding:5px;line-height:24px;">
+									<a style="cursor: pointer;" title="5月20-21日：内地高校联合招收华侨港澳台学生考试">5月20-21日：内地高校联合招收华侨港澳台学生考试</a>
+								</div>
+							
+								<div style="color:#4b4b4b;float:left;width:96%;padding:5px;line-height:24px; background-color:#F7DBCE">
+									<a style="cursor: pointer;" title="9月考试报名为2017年5月下旬-7月15日：剑桥少儿英语考试报名">9月考试报名为2017年5月下旬-7月15日：剑桥少儿英语考试报名</a>
+								</div>
+							
+								<div style="color:#4b4b4b;float:left;width:96%;padding:5px;line-height:24px;">
+									<a style="cursor: pointer;" title="5月28日：剑桥通用五级英语证书考试（KET/PET校园版）">5月28日：剑桥通用五级英语证书考试（KET/PET校园版）</a>
+								</div>
+							
+								<div style="color:#4b4b4b;float:left;width:96%;padding:5px;line-height:24px; background-color:#F7DBCE">
+									<a style="cursor: pointer;" title="5-6月：中高职衔接三二分段转段考核（具体由各校安排）">5-6月：中高职衔接三二分段转段考核（具体由各校安排）</a>
+								</div>
+							
+								<div style="color:#4b4b4b;float:left;width:96%;padding:5px;line-height:24px;">
+									<a style="cursor: pointer;" title="5-6月：中高职衔接三二分段转段考核（具体由各校安排）">5-6月：中高职衔接三二分段转段考核（具体由各校安排）</a>
+								</div>
+							
+								<div style="color:#4b4b4b;float:left;width:96%;padding:5px;line-height:24px; background-color:#F7DBCE">
+									<a style="cursor: pointer;" title="9月考试报名为2017年6月：全国英语等级考试（PETS）报名">9月考试报名为2017年6月：全国英语等级考试（PETS）报名</a>
+								</div>
+							
+								<div style="color:#4b4b4b;float:left;width:96%;padding:5px;line-height:24px;">
+									<a style="cursor: pointer;" title="9月考试报名为2017年5月下旬-7月15日：剑桥少儿英语考试报名">9月考试报名为2017年5月下旬-7月15日：剑桥少儿英语考试报名</a>
+								</div>
+							
+								<div style="color:#4b4b4b;float:left;width:96%;padding:5px;line-height:24px; background-color:#F7DBCE">
+									<a style="cursor: pointer;" title="9月考试为2017年6月：全国计算机等级考试（NCRE）报名">9月考试为2017年6月：全国计算机等级考试（NCRE）报名</a>
+								</div>
+							
+								<div style="color:#4b4b4b;float:left;width:96%;padding:5px;line-height:24px;">
+									<a style="cursor: pointer;" title="6月7-8日：普通高校招生全国统一考试">6月7-8日：普通高校招生全国统一考试</a>
+								</div>
+							
+								<div style="color:#4b4b4b;float:left;width:96%;padding:5px;line-height:24px; background-color:#F7DBCE">
+									<a style="cursor: pointer;" title="6月9日：普通高中学业水平考试">6月9日：普通高中学业水平考试</a>
+								</div>
+							
+								<div style="color:#4b4b4b;float:left;width:96%;padding:5px;line-height:24px;">
+									<a style="cursor: pointer;" title="6月17日：全国大学英语四、六级考试（CET）">6月17日：全国大学英语四、六级考试（CET）</a>
+								</div>
+							
+								<div style="color:#4b4b4b;float:left;width:96%;padding:5px;line-height:24px; background-color:#F7DBCE">
+									<a style="cursor: pointer;" title="6月：初中毕业生学业考试（具体由各市安排，其中使用省命题卷的市在20-22日）">6月：初中毕业生学业考试（具体由各市安排，其中使用省命题卷的市在20-22日）</a>
+								</div>
+							
+								<div style="color:#4b4b4b;float:left;width:96%;padding:5px;line-height:24px;">
+									<a style="cursor: pointer;" title="7月1日：广东省中等职业技术教育专业技能课程考试（理论考试及部分实操考试）">7月1日：广东省中等职业技术教育专业技能课程考试（理论考试及部分实操考试）</a>
+								</div>
+							
+								<div style="color:#4b4b4b;float:left;width:96%;padding:5px;line-height:24px; background-color:#F7DBCE">
+									<a style="cursor: pointer;" title="9月考试报名为2017年5月下旬-7月15日：剑桥少儿英语考试报名">9月考试报名为2017年5月下旬-7月15日：剑桥少儿英语考试报名</a>
+								</div>
+							
+								<div style="color:#4b4b4b;float:left;width:96%;padding:5px;line-height:24px;">
+									<a style="cursor: pointer;" title="7月8-9日：高等教育自学考试">7月8-9日：高等教育自学考试</a>
+								</div>
+							
+								<div style="color:#4b4b4b;float:left;width:96%;padding:5px;line-height:24px; background-color:#F7DBCE">
+									<a style="cursor: pointer;" title="10月考试报名为2017年的7月15-25日：高等教育自学考试报名">10月考试报名为2017年的7月15-25日：高等教育自学考试报名</a>
+								</div>
+							
+								<div style="color:#4b4b4b;float:left;width:96%;padding:5px;line-height:24px;">
+									<a style="cursor: pointer;" title="11月考试报名为9月上旬-9月底：中国销售管理专业水平证书考试、中英合作商务管理与金融管理专业“基础段”及“管理段”证书课程考试等非学历（行业）证书考试、中国书画等级考试（CCPT）报名">11月考试报名为9月上旬-9月底：中国销售管理专业水平证书考试、中英合作商务管理与金融管理专业“基础段”及“管理段”证书课程考试等非学历（行业）证书考试、中国书画等级考试（CCPT）报名</a>
+								</div>
+							
+								<div style="color:#4b4b4b;float:left;width:96%;padding:5px;line-height:24px; background-color:#F7DBCE">
+									<a style="cursor: pointer;" title="12月考试报名为9月-10月上旬：全国大学英语四、六级考试（CET）报名">12月考试报名为9月-10月上旬：全国大学英语四、六级考试（CET）报名</a>
+								</div>
+							
+								<div style="color:#4b4b4b;float:left;width:96%;padding:5px;line-height:24px;">
+									<a style="cursor: pointer;" title="9月1-10日：成人高校招生全国统一考试报名">9月1-10日：成人高校招生全国统一考试报名</a>
+								</div>
+							
+								<div style="color:#4b4b4b;float:left;width:96%;padding:5px;line-height:24px; background-color:#F7DBCE">
+									<a style="cursor: pointer;" title="下半年报名为9月中下旬：中小学教师资格考试（笔试）报名">下半年报名为9月中下旬：中小学教师资格考试（笔试）报名</a>
+								</div>
+							
+								<div style="color:#4b4b4b;float:left;width:96%;padding:5px;line-height:24px;">
+									<a style="cursor: pointer;" title="9月16-17日：全国英语等级考试（PETS）">9月16-17日：全国英语等级考试（PETS）</a>
+								</div>
+							
+								<div style="color:#4b4b4b;float:left;width:96%;padding:5px;line-height:24px; background-color:#F7DBCE">
+									<a style="cursor: pointer;" title="9月23日：剑桥少儿英语考试">9月23日：剑桥少儿英语考试</a>
+								</div>
+							
+								<div style="color:#4b4b4b;float:left;width:96%;padding:5px;line-height:24px;">
+									<a style="cursor: pointer;" title="9月23-26日：全国计算机等级考试（NCRE）">9月23-26日：全国计算机等级考试（NCRE）</a>
+								</div>
+							
+								<div style="color:#4b4b4b;float:left;width:96%;padding:5px;line-height:24px; background-color:#F7DBCE">
+									<a style="cursor: pointer;" title="12月考试报名为10月29日前：剑桥通用五级英语证书考试（KET/PET校园版）报名">12月考试报名为10月29日前：剑桥通用五级英语证书考试（KET/PET校园版）报名</a>
+								</div>
+							
+								<div style="color:#4b4b4b;float:left;width:96%;padding:5px;line-height:24px;">
+									<a style="cursor: pointer;" title="12月考试报名为9月-10月上旬：全国大学英语四、六级考试（CET）报名">12月考试报名为9月-10月上旬：全国大学英语四、六级考试（CET）报名</a>
+								</div>
+							
+								<div style="color:#4b4b4b;float:left;width:96%;padding:5px;line-height:24px; background-color:#F7DBCE">
+									<a style="cursor: pointer;" title="：关于做好2018年上半年广东省中等职业技术教育专业技能课程考试报考工作的通知">：关于做好2018年上半年广东省中等职业技术教育专业技能课程考试报考工作的通知</a>
+								</div>
+							
+								<div style="color:#4b4b4b;float:left;width:96%;padding:5px;line-height:24px;">
+									<a style="cursor: pointer;" title="10月21-22日：高等教育自学考试">10月21-22日：高等教育自学考试</a>
+								</div>
+							
+								<div style="color:#4b4b4b;float:left;width:96%;padding:5px;line-height:24px; background-color:#F7DBCE">
+									<a style="cursor: pointer;" title="10月28-29日：成人高校招生全国统一考试">10月28-29日：成人高校招生全国统一考试</a>
+								</div>
+							
+								<div style="color:#4b4b4b;float:left;width:96%;padding:5px;line-height:24px;">
+									<a style="cursor: pointer;" title="10月下旬-11月上旬：全国大学英语四、六级口语考试（CET-SET）报名">10月下旬-11月上旬：全国大学英语四、六级口语考试（CET-SET）报名</a>
+								</div>
+							
+								<div style="color:#4b4b4b;float:left;width:96%;padding:5px;line-height:24px; background-color:#F7DBCE">
+									<a style="cursor: pointer;" title="11月4日：中小学教师资格考试（笔试）">11月4日：中小学教师资格考试（笔试）</a>
+								</div>
+							
+								<div style="color:#4b4b4b;float:left;width:96%;padding:5px;line-height:24px;">
+									<a style="cursor: pointer;" title="11月14-19日：普通高中学业水平考试报名">11月14-19日：普通高中学业水平考试报名</a>
+								</div>
+							
+								<div style="color:#4b4b4b;float:left;width:96%;padding:5px;line-height:24px; background-color:#F7DBCE">
+									<a style="cursor: pointer;" title="11月18-19日：中国销售管理专业水平证书考试、中英合作商务管理与金融管理专业“基础段”及“管理段”证书课程考试等非学历（行业）证书考试、中国书画等级考试（CCPT）">11月18-19日：中国销售管理专业水平证书考试、中英合作商务管理与金融管理专业“基础段”及“管理段”证书课程考试等非学历（行业）证书考试、中国书画等级考试（CCPT）</a>
+								</div>
+							
+								<div style="color:#4b4b4b;float:left;width:96%;padding:5px;line-height:24px;">
+									<a style="cursor: pointer;" title="11月18-19日：全国大学英语四、六级口语考试（CET-SET）">11月18-19日：全国大学英语四、六级口语考试（CET-SET）</a>
+								</div>
+							
+								<div style="color:#4b4b4b;float:left;width:96%;padding:5px;line-height:24px; background-color:#F7DBCE">
+									<a style="cursor: pointer;" title="12月9日：剑桥通用五级英语证书考试（KET/PET校园版）">12月9日：剑桥通用五级英语证书考试（KET/PET校园版）</a>
+								</div>
+							
+								<div style="color:#4b4b4b;float:left;width:96%;padding:5px;line-height:24px;">
+									<a style="cursor: pointer;" title="12月16日：全国大学英语四、六级考试（CET）">12月16日：全国大学英语四、六级考试（CET）</a>
+								</div>
+							
+								<div style="color:#4b4b4b;float:left;width:96%;padding:5px;line-height:24px; background-color:#F7DBCE">
+									<a style="cursor: pointer;" title="12月24-25日：全国硕士学位研究生入学考试">12月24-25日：全国硕士学位研究生入学考试</a>
+								</div>
+													
+						</div>
+						<script type="text/javascript">
+							var showThisMonth = true;
+
+							$("#thisMonth").hover(function() {
+								if (!showThisMonth) {
+									$("#examination_calendar2").hide();
+									$("#examination_calendar").fadeIn();
+									showThisMonth = true;
+								}
+							});
+							$("#nextMonth").hover(function() {
+								if (showThisMonth) {
+									$("#examination_calendar").hide();
+									$("#examination_calendar2").fadeIn();
+									showThisMonth = false;
+								}
+							});
+						</script>
+					</div>
+				</div>
+			</div>
+
+
+			<!-- start left tag -->
+			<div class="portlet" style="width: 100%; height: 300px; margin-right: 2px; margin-top: 10px;">
+				<div class="nr">
+					<ul class="tab">
+						<li class="current"><a target="_blank" href="/portal/more/37631">普通高考</a></li>
+						<li><a target="_blank" href="/portal/more/39062">高中学考</a></li>
+						<li><a target="_blank" href="/portal/more/37633">成人高考</a></li>
+						<li><a target="_blank" href="/portal/more/37632">研究生考试</a></li>
+						<li><a target="_blank" href="/portal/more/38321">自学考试</a></li>
+						<li><a target="_blank" href="/portal/more/38646">中招中考</a></li>
+						<li><a target="_blank" href="/portal/more/38647">联合招生</a></li>
+						<li><a target="_blank" href="/portal/more/38322">社会考试</a></li>
+						<li><a target="_blank" href="/portal/more/38323">其他</a></li>
+					</ul>
+					<div class="content scy_bottom-left-nr1" style="padding: 0px;">
+						<ul style="display: block;">
+							
+								<li><a title="广东省民族宗教委 广东省招生委员会关于做好普通高校招收广东省少数民族聚居区少数民族考生工作的通知" href="/portal/messages/1507608552363.html" target="_blank">广东省民族宗教委 广东省招生委员会关于做好普通高</a> <span>[2017-10-09]
+								</span></li>
+							
+								<li><a title="关于印发《广东省2018年普通高等学校招生全国统一考试体育术科考试大纲》的通知" href="/portal/messages/1503046703908.html" target="_blank">关于印发《广东省2018年普通高等学校招生全国统</a> <span>[2017-08-18]
+								</span></li>
+							
+								<li><a title="关于做好我省报考2018年普通高校入学考试的“三侨生”证明办理工作的通知" href="/portal/messages/1502952547391.html" target="_blank">关于做好我省报考2018年普通高校入学考试的“三</a> <span>[2017-08-17]
+								</span></li>
+							
+								<li><a title="关于做好广东省2017年第三批普通专科院校征集志愿和网上录取工作的通知" href="/portal/messages/1502203941138.html" target="_blank">关于做好广东省2017年第三批普通专科院校征集志</a> <span>[2017-08-08]
+								</span></li>
+							
+								<li><a title="广东省2017年“高校专项计划”及“地方专项计划”招生录取考生名单公示" href="/portal/messages/1501923755934.html" target="_blank">广东省2017年“高校专项计划”及“地方专项计划</a> <span>[2017-08-05]
+								</span></li>
+							
+								<li><a title="广东省2017年第二批本科征集志愿投档情况" href="/portal/messages/1501080212797.html" target="_blank">广东省2017年第二批本科征集志愿投档情况</a> <span>[2017-07-26]
+								</span></li>
+							
+								<li><a title="我省二本普通高校25日开始征集志愿" href="/portal/messages/1500968258154.html" target="_blank">我省二本普通高校25日开始征集志愿</a> <span>[2017-07-25]
+								</span></li>
+							
+								<li><a title="关于做好广东省2017年第二批普通本科院校征集志愿和网上录取工作的通知" href="/portal/messages/1500970823801.html" target="_blank">关于做好广东省2017年第二批普通本科院校征集志</a> <span>[2017-07-25]
+								</span></li>
+							
+								<li><a title="2017年中山大学等高校在广东省开展综合评价招生录取模式入选资格考生名单公示" href="/portal/messages/1499853575363.html" target="_blank">2017年中山大学等高校在广东省开展综合评价招生</a> <span>[2017-07-12]
+								</span></li>
+							
+								<li><a title="广东省2017年提前第一批本科理科第一次投档情况" href="/portal/messages/1499429340477.html" target="_blank">广东省2017年提前第一批本科理科第一次投档情况</a> <span>[2017-07-07]
+								</span></li>
+							
+								<li><a title="广东省2017年提前第一批本科文科第一次投档情况" href="/portal/messages/1499429334626.html" target="_blank">广东省2017年提前第一批本科文科第一次投档情况</a> <span>[2017-07-07]
+								</span></li>
+							
+								<li><a title="关于公布北京航空航天大学 中国民航大学 中国民用航空飞行学院 上海工程技术大学飞行技术专业录取最低控制分数线的通知" href="/portal/messages/1499593748614.html" target="_blank">关于公布北京航空航天大学 中国民航大学 中国民用</a> <span>[2017-07-06]
+								</span></li>
+							
+								<li><a title="公布广东省2017年军队院校招生综合结论合格考生名单" href="/portal/messages/1499257938763.html" target="_blank">公布广东省2017年军队院校招生综合结论合格考生</a> <span>[2017-07-05]
+								</span></li>
+							
+								<li><a title="教育部阳光平台上公示过的广东省2017年特殊类招生资格考生名单" href="/portal/messages/1498789961819.html" target="_blank">教育部阳光平台上公示过的广东省2017年特殊类招</a> <span>[2017-06-30]
+								</span></li>
+							
+							<div style="float: right; margin-right: 40px">
+								<a target="_blank" href="/portal/more/37631">更多...</a>
+							</div>
+						</ul>
+						<ul>
+							
+								<li><a title="关于公布2017年6月普通高中学业水平考试考生成绩复查结果的通知" href="/portal/messages/1500457976197.html" target="_blank">关于公布2017年6月普通高中学业水平考试考生成</a> <span>[2017-07-18]
+								</span></li>
+							
+								<li><a title="关于公布2017年6月普通高中学业水平考试成绩的通知" href="/portal/messages/1499246056147.html" target="_blank">关于公布2017年6月普通高中学业水平考试成绩的</a> <span>[2017-07-05]
+								</span></li>
+							
+								<li><a title="关于公布2017年广东省普通高中学业水平考试考生成绩转入认定结果的通知" href="/portal/messages/1499246551522.html" target="_blank">关于公布2017年广东省普通高中学业水平考试考生</a> <span>[2017-07-05]
+								</span></li>
+							
+								<li><a title="关于做好2017年6月广东省普通高中学业水平考试报名工作的通知" href="/portal/messages/1491970732023.html" target="_blank">关于做好2017年6月广东省普通高中学业水平考试</a> <span>[2017-04-12]
+								</span></li>
+							
+								<li><a title="关于公布2017年1月普通高中学业水平考试成绩的通知" href="/portal/messages/1487302317184.html" target="_blank">关于公布2017年1月普通高中学业水平考试成绩的</a> <span>[2017-02-17]
+								</span></li>
+							
+								<li><a title="关于做好2017年普通高中学业水平考试考生成绩转移审核工作的通知" href="/portal/messages/1480043249302.html" target="_blank">关于做好2017年普通高中学业水平考试考生成绩转</a> <span>[2016-11-25]
+								</span></li>
+							
+								<li><a title="关于2017年1月广东省普通高中学业水平考试报名工作的补充通知" href="/portal/messages/1479369663221.html" target="_blank">关于2017年1月广东省普通高中学业水平考试报名</a> <span>[2016-11-17]
+								</span></li>
+							
+								<li><a title="关于做好2017年1月广东省普通高中学业水平考试报名和考务工作的通知" href="/portal/messages/1476693637657.html" target="_blank">关于做好2017年1月广东省普通高中学业水平考试</a> <span>[2016-10-17]
+								</span></li>
+							
+								<li><a title="关于2017年广东省普通高中学业水平考试工作安排的通知" href="/portal/messages/1473737275264.html" target="_blank">关于2017年广东省普通高中学业水平考试工作安排</a> <span>[2016-09-13]
+								</span></li>
+							
+								<li><a title="广东省教育厅关于印发《2017年广东省普通高中学业水平考试大纲（语文、 数学、英语）》的通知" href="/portal/messages/1473406663674.html" target="_blank">广东省教育厅关于印发《2017年广东省普通高中学</a> <span>[2016-09-09]
+								</span></li>
+							
+								<li><a title="广东省教育厅关于印发普通高中学业水平考试和学生综合素质评价实施办法的通知" href="/portal/messages/1473152100647.html" target="_blank">广东省教育厅关于印发普通高中学业水平考试和学生综</a> <span>[2016-09-06]
+								</span></li>
+							
+								<li><a title="广东省教育厅关于增加普通高中学业水平考试科目推进高职院校分类考试招生的通知" href="/portal/messages/1471915796731.html" target="_blank">广东省教育厅关于增加普通高中学业水平考试科目推进</a> <span>[2016-08-23]
+								</span></li>
+							
+								<li><a title="关于公布2016年6月普通高中学业水平考试成绩的通知" href="/portal/messages/1467685702472.html" target="_blank">关于公布2016年6月普通高中学业水平考试成绩的</a> <span>[2016-07-05]
+								</span></li>
+							
+								<li><a title="2016年6月普通高中学业水平考试顺利结束" href="/portal/messages/1465465857692.html" target="_blank">2016年6月普通高中学业水平考试顺利结束</a> <span>[2016-06-09]
+								</span></li>
+							
+							<div style="float: right; margin-right: 40px">
+								<a target="_blank" href="/portal/more/39062">更多...</a>
+							</div>
+						</ul>
+						<ul>
+							
+								<li><a title="关于公布《广东省2017年成人高等学校招生 专业目录》的公告" href="/portal/messages/1504263825725.html" target="_blank">关于公布《广东省2017年成人高等学校招生 专业</a> <span>[2017-09-01]
+								</span></li>
+							
+								<li><a title="关于做好2017年广东省成人高校考试招生工作的通知" href="/portal/messages/1504258433014.html" target="_blank">关于做好2017年广东省成人高校考试招生工作的通</a> <span>[2017-08-24]
+								</span></li>
+							
+								<li><a title="广东省2016年成人高考高中起点专科脱产院校第一次投档情况" href="/portal/messages/1481284272884.html" target="_blank">广东省2016年成人高考高中起点专科脱产院校第一</a> <span>[2016-12-09]
+								</span></li>
+							
+								<li><a title="广东省2016年成人高考专科起点本科层次院校第一次投档情况" href="/portal/messages/1481284329417.html" target="_blank">广东省2016年成人高考专科起点本科层次院校第一</a> <span>[2016-12-09]
+								</span></li>
+							
+								<li><a title="广东省2016年成人高考高中起点本科层次院校第一次投档情况" href="/portal/messages/1481284134843.html" target="_blank">广东省2016年成人高考高中起点本科层次院校第一</a> <span>[2016-12-09]
+								</span></li>
+							
+								<li><a title="广东省2016年成人高考高中起点专科非脱产院校第一次投档情况" href="/portal/messages/1481284202525.html" target="_blank">广东省2016年成人高考高中起点专科非脱产院校第</a> <span>[2016-12-09]
+								</span></li>
+							
+								<li><a title="关于做好广东省2016年成人高等学校招生征集志愿工作的通知" href="/portal/messages/1481276987515.html" target="_blank">关于做好广东省2016年成人高等学校招生征集志愿</a> <span>[2016-12-09]
+								</span></li>
+							
+								<li><a title="关于下达广东省2016年各类成人高校招生录取最低控制分数线的通知" href="/portal/messages/1480044010360.html" target="_blank">关于下达广东省2016年各类成人高校招生录取最低</a> <span>[2016-11-25]
+								</span></li>
+							
+								<li><a title="广东省2016年成人高等学校招生分专业招生计划" href="/portal/messages/1480045166441.html" target="_blank">广东省2016年成人高等学校招生分专业招生计划</a> <span>[2016-11-25]
+								</span></li>
+							
+								<li><a title="关于公布广东省2016年成人高考考生考试成绩的通知" href="/portal/messages/1479959980461.html" target="_blank">关于公布广东省2016年成人高考考生考试成绩的通</a> <span>[2016-11-24]
+								</span></li>
+							
+								<li><a title="关于《广东省2016年成人高等学校报考须知及招生专业目录》增补的通知" href="/portal/messages/1472826651164.html" target="_blank">关于《广东省2016年成人高等学校报考须知及招生</a> <span>[2016-09-02]
+								</span></li>
+							
+								<li><a title="关于更正部分2016年成人高等学校招生专业的通知" href="/portal/messages/1472826486354.html" target="_blank">关于更正部分2016年成人高等学校招生专业的通知</a> <span>[2016-09-02]
+								</span></li>
+							
+								<li><a title="关于做好2016年广东省成人高校招生工作的通知" href="/portal/messages/1471938449718.html" target="_blank">关于做好2016年广东省成人高校招生工作的通知</a> <span>[2016-08-23]
+								</span></li>
+							
+								<li><a title="我省今年成人高考成绩于11月24日公布 录取工作将于12月1日开始" href="/portal/messages/1457336074145.html" target="_blank">我省今年成人高考成绩于11月24日公布 录取工作</a> <span>[2015-11-23]
+								</span></li>
+							
+							<div style="float: right; margin-right: 40px">
+								<a target="_blank" href="/portal/more/37633">更多...</a>
+							</div>
+						</ul>
+						<ul>
+							
+								<li><a title="2018年全国硕士研究生招生考试诚信教育公告" href="/portal/messages/1509098078995.html" target="_blank">2018年全国硕士研究生招生考试诚信教育公告</a> <span>[2017-10-27]
+								</span></li>
+							
+								<li><a title="致参加2018年全国硕士研究生招生考试考生的一封信" href="/portal/messages/1508984352952.html" target="_blank">致参加2018年全国硕士研究生招生考试考生的一封</a> <span>[2017-10-26]
+								</span></li>
+							
+								<li><a title="关于调整华南师范大学硕士研究生报考点接受考生报考范围的通知" href="/portal/messages/1508473008237.html" target="_blank">关于调整华南师范大学硕士研究生报考点接受考生报考</a> <span>[2017-10-20]
+								</span></li>
+							
+								<li><a title="广东省2018年硕士研究生招生全国统一考试网上报名须知" href="/portal/messages/1506306284550.html" target="_blank">广东省2018年硕士研究生招生全国统一考试网上报</a> <span>[2017-09-25]
+								</span></li>
+							
+								<li><a title="广东省2017年招收博士学位研究生破格录取考生名单公示" href="/portal/messages/1503059545764.html" target="_blank">广东省2017年招收博士学位研究生破格录取考生名</a> <span>[2017-08-18]
+								</span></li>
+							
+								<li><a title="关于调整广东外语外贸大学研究生报考点接受考生报考范围的通知" href="/portal/messages/1477491113578.html" target="_blank">关于调整广东外语外贸大学研究生报考点接受考生报考</a> <span>[2016-10-26]
+								</span></li>
+							
+								<li><a title="关于调整华南师范大学研究生报考点接受考生报考范围的通知" href="/portal/messages/1477058676475.html" target="_blank">关于调整华南师范大学研究生报考点接受考生报考范围</a> <span>[2016-10-21]
+								</span></li>
+							
+								<li><a title="关于做好广东省2017年硕士研究生招生考试工作的通知" href="/portal/messages/1474617509482.html" target="_blank">关于做好广东省2017年硕士研究生招生考试工作的</a> <span>[2016-09-23]
+								</span></li>
+							
+								<li><a title="广东省2017年硕士研究生招生全国统一考试网上报名须知" href="/portal/messages/1474595075620.html" target="_blank">广东省2017年硕士研究生招生全国统一考试网上报</a> <span>[2016-09-23]
+								</span></li>
+							
+								<li><a title="我省2016年硕士研究生招生考试初试成绩公布" href="/portal/messages/1464666650360.html" target="_blank">我省2016年硕士研究生招生考试初试成绩公布</a> <span>[2016-02-15]
+								</span></li>
+							
+								<li><a title="2016年港澳台研究生报名注意事项（广州报考点）" href="/portal/messages/1457336085942.html" target="_blank">2016年港澳台研究生报名注意事项（广州报考点）</a> <span>[2015-11-17]
+								</span></li>
+							
+								<li><a title="我国硕士研究生的4种分类方法" href="/portal/messages/1457335152236.html" target="_blank">我国硕士研究生的4种分类方法</a> <span>[2015-07-31]
+								</span></li>
+							
+								<li><a title="高等教育学历学位常识问答" href="/portal/messages/1457335152185.html" target="_blank">高等教育学历学位常识问答</a> <span>[2015-07-31]
+								</span></li>
+							
+								<li><a title="教育部公布2015年全国硕士研究生招生考试考生进入复试的初试成绩基本要求" href="/portal/messages/1457335584487.html" target="_blank">教育部公布2015年全国硕士研究生招生考试考生进</a> <span>[2015-07-31]
+								</span></li>
+							
+							<div style="float: right; margin-right: 40px">
+								<a target="_blank" href="/portal/more/37632">更多...</a>
+							</div>
+						</ul>
+						<ul>
+							
+								<li><a title="致参加2017年10月自学考试考生的一封信" href="/portal/messages/1508234475031.html" target="_blank">致参加2017年10月自学考试考生的一封信</a> <span>[2017-10-17]
+								</span></li>
+							
+								<li><a title="关于广东省2017年10月高等教育自学考试的提醒" href="/portal/messages/1508234692273.html" target="_blank">关于广东省2017年10月高等教育自学考试的提醒</a> <span>[2017-10-17]
+								</span></li>
+							
+								<li><a title="关于公布2018年广东省自学考试各专业开考课程考试时间安排的通知" href="/portal/messages/1507526919209.html" target="_blank">关于公布2018年广东省自学考试各专业开考课程考</a> <span>[2017-10-09]
+								</span></li>
+							
+								<li><a title="关于港澳台考生参加我省高等教育自学考试有关问题的通知" href="/portal/messages/1502877659116.html" target="_blank">关于港澳台考生参加我省高等教育自学考试有关问题的</a> <span>[2017-08-16]
+								</span></li>
+							
+								<li><a title="我省2017年10月高等教育自学考试报名报考即将开始" href="/portal/messages/1500025479435.html" target="_blank">我省2017年10月高等教育自学考试报名报考即将</a> <span>[2017-07-14]
+								</span></li>
+							
+								<li><a title="广东省2017年7月自学考试顺利结束" href="/portal/messages/1499758386424.html" target="_blank">广东省2017年7月自学考试顺利结束</a> <span>[2017-07-11]
+								</span></li>
+							
+								<li><a title="关于2017年7月高等教育自学考试 使用答题卡作答的通知" href="/portal/messages/1497509207718.html" target="_blank">关于2017年7月高等教育自学考试 使用答题卡作</a> <span>[2017-06-15]
+								</span></li>
+							
+								<li><a title="关于广东省自学考试开通网上办事 服务事项的通知" href="/portal/messages/1497509197562.html" target="_blank">关于广东省自学考试开通网上办事 服务事项的通知</a> <span>[2017-06-15]
+								</span></li>
+							
+								<li><a title="关于《国家教育考试违规处理办法》中 部分自学考试事项贯彻意见的通知" href="/portal/messages/1497256832146.html" target="_blank">关于《国家教育考试违规处理办法》中 部分自学考试</a> <span>[2017-06-12]
+								</span></li>
+							
+								<li><a title="关于调整我省高等教育自学考试 行政管理学（独立本科段）和建筑工程 （独立本科段）两个专业考试计划的通知" href="/portal/messages/1496996451055.html" target="_blank">关于调整我省高等教育自学考试 行政管理学（独立本</a> <span>[2017-06-09]
+								</span></li>
+							
+								<li><a title="关于2014年4月和10月广东省自学考试 《商务管理专业》和《金融管理专业》（本科） 增加部分考试课程的通知" href="/portal/messages/1496995818684.html" target="_blank">关于2014年4月和10月广东省自学考试 《商务</a> <span>[2017-06-09]
+								</span></li>
+							
+								<li><a title="关于公布2015年我省高等教育自学考试 各专业开考课程及电子商务中、高级职业 证书课程考试时间安排的通知" href="/portal/messages/1496996627247.html" target="_blank">关于公布2015年我省高等教育自学考试 各专业开</a> <span>[2017-06-09]
+								</span></li>
+							
+								<li><a title="转发全国考委关于不再指定全国中小学教师 继续教育网负责义务教育专业助学的 组织与管理等工作的通知" href="/portal/messages/1496997042519.html" target="_blank">转发全国考委关于不再指定全国中小学教师 继续教育</a> <span>[2017-06-09]
+								</span></li>
+							
+								<li><a title="关于补登记2017年上半年广东省自学考试毕业申请前置学历信息的公告" href="/portal/messages/1496657076350.html" target="_blank">关于补登记2017年上半年广东省自学考试毕业申请</a> <span>[2017-06-05]
+								</span></li>
+							
+							<div style="float: right; margin-right: 40px">
+								<a target="_blank" href="/portal/more/38321">更多...</a>
+							</div>
+						</ul>
+
+						<ul>
+							
+								<li><a title="关于印发2017年中等职业学校招收初中毕业生生源计划的通知" href="/portal/messages/1497014452195.html" target="_blank">关于印发2017年中等职业学校招收初中毕业生生源</a> <span>[2017-05-31]
+								</span></li>
+							
+								<li><a title="广东省职业院校对口自主招生三二分段试点工作手册（修订版）" href="/portal/messages/1494904057731.html" target="_blank">广东省职业院校对口自主招生三二分段试点工作手册（</a> <span>[2017-05-16]
+								</span></li>
+							
+								<li><a title="广东省教育厅 广东省招生委员会办公室关于开展2017年职业院校中高职衔接三二分段试点工作的通知" href="/portal/messages/1494207688263.html" target="_blank">广东省教育厅 广东省招生委员会办公室关于开展20</a> <span>[2017-05-08]
+								</span></li>
+							
+								<li><a title="关于公布广东省2017年高职院校五年一贯制单独招生考试录取最低控制分数线的通知" href="/portal/messages/1493967583075.html" target="_blank">关于公布广东省2017年高职院校五年一贯制单独招</a> <span>[2017-05-05]
+								</span></li>
+							
+								<li><a title="关于公布广东省2017年高职院校五年一贯制招生考试成绩的通知" href="/portal/messages/1493967364494.html" target="_blank">关于公布广东省2017年高职院校五年一贯制招生考</a> <span>[2017-05-05]
+								</span></li>
+							
+								<li><a title="广东省教育厅  广东省招生委员会办公室关于做好2017年高职院校对口中职学校自主招生三二分段转段考核工作的通知" href="/portal/messages/1493363481530.html" target="_blank">广东省教育厅  广东省招生委员会办公室关于做好2</a> <span>[2017-04-28]
+								</span></li>
+							
+								<li><a title="2017年我省中高职贯通的五年一贯制考试工作顺利进行" href="/portal/messages/1493170961320.html" target="_blank">2017年我省中高职贯通的五年一贯制考试工作顺利</a> <span>[2017-04-26]
+								</span></li>
+							
+								<li><a title="关于印发《广东省2017年高中阶段学校招生录取工作实施办法》的通知" href="/portal/messages/1492055577506.html" target="_blank">关于印发《广东省2017年高中阶段学校招生录取工</a> <span>[2017-04-13]
+								</span></li>
+							
+								<li><a title="关于做好2017年广东省高职院校五年一贯制单独招生考试报名工作的通知" href="/portal/messages/1489722871988.html" target="_blank">关于做好2017年广东省高职院校五年一贯制单独招</a> <span>[2017-03-17]
+								</span></li>
+							
+								<li><a title="关于做好2017年高职院校五年一贯制高职单独招生考试试点工作的通知" href="/portal/messages/1489378386169.html" target="_blank">关于做好2017年高职院校五年一贯制高职单独招生</a> <span>[2017-03-13]
+								</span></li>
+							
+								<li><a title="广东省教育厅关于2017年广东省初中毕业生学业考试时间安排的通知" href="/portal/messages/1487926370321.html" target="_blank">广东省教育厅关于2017年广东省初中毕业生学业考</a> <span>[2017-02-24]
+								</span></li>
+							
+								<li><a title="关于做好2017年职业院校中高职衔接三二分段高考报名录取审核工作的通知" href="/portal/messages/1480391752607.html" target="_blank">关于做好2017年职业院校中高职衔接三二分段高考</a> <span>[2016-11-29]
+								</span></li>
+							
+								<li><a title="关于做好广东省2016年中等职业学校招生录取工作的通知" href="/portal/messages/1467705956874.html" target="_blank">关于做好广东省2016年中等职业学校招生录取工作</a> <span>[2016-07-05]
+								</span></li>
+							
+								<li><a title="广东省教育厅关于做好2016年初中毕业生学业考试考务工作的通知" href="/portal/messages/1464838221836.html" target="_blank">广东省教育厅关于做好2016年初中毕业生学业考试</a> <span>[2016-06-02]
+								</span></li>
+							
+							<div style="float: right; margin-right: 40px">
+								<a target="_blank" href="/portal/more/38646">更多...</a>
+							</div>
+						</ul>
+						<ul>
+							
+								<li><a title="关于2017年香港免试生补录工作的公告" href="/portal/messages/1501063324782.html" target="_blank">关于2017年香港免试生补录工作的公告</a> <span>[2017-07-26]
+								</span></li>
+							
+								<li><a title="关于划定2017年全国联招录取最低控制分数线的通知" href="/portal/messages/1497500612582.html" target="_blank">关于划定2017年全国联招录取最低控制分数线的通</a> <span>[2017-06-15]
+								</span></li>
+							
+								<li><a title="关于2017年全国联招入学考试成绩公布及录取工作安排的公告" href="/portal/messages/1497335714217.html" target="_blank">关于2017年全国联招入学考试成绩公布及录取工作</a> <span>[2017-06-13]
+								</span></li>
+							
+								<li><a title="关于全国联招考试广州考区考试地点的公告" href="/portal/messages/1494920978768.html" target="_blank">关于全国联招考试广州考区考试地点的公告</a> <span>[2017-05-16]
+								</span></li>
+							
+								<li><a title="关于加强全国联招考生学历核查工作的公告" href="/portal/messages/1494222749573.html" target="_blank">关于加强全国联招考生学历核查工作的公告</a> <span>[2017-05-04]
+								</span></li>
+							
+								<li><a title="王斌伟院长巡察2017年内地（大陆）高校招收港澳台研究生入学考试工作" href="/portal/messages/1492394307117.html" target="_blank">王斌伟院长巡察2017年内地（大陆）高校招收港澳</a> <span>[2017-04-11]
+								</span></li>
+							
+								<li><a title="2017年中华人民共和国普通高等学校联合招收华侨、港澳地区及台湾省学生简章" href="/portal/messages/1483087684570.html" target="_blank">2017年中华人民共和国普通高等学校联合招收华侨</a> <span>[2016-12-30]
+								</span></li>
+							
+								<li><a title="联招考试大纲各学科修订内容" href="/portal/messages/1481011318624.html" target="_blank">联招考试大纲各学科修订内容</a> <span>[2016-12-06]
+								</span></li>
+							
+								<li><a title="2017年港澳台研究生报名注意事项（广州报考点）" href="/portal/messages/1479353565518.html" target="_blank">2017年港澳台研究生报名注意事项（广州报考点）</a> <span>[2016-11-17]
+								</span></li>
+							
+								<li><a title="关于全国联招考试华侨考生国外居住时间计算问题的公告" href="/portal/messages/1466061568269.html" target="_blank">关于全国联招考试华侨考生国外居住时间计算问题的公</a> <span>[2016-06-16]
+								</span></li>
+							
+								<li><a title="关于划定2016年全国联招录取最低控制分数线的通知" href="/portal/messages/1465890510151.html" target="_blank">关于划定2016年全国联招录取最低控制分数线的通</a> <span>[2016-06-14]
+								</span></li>
+							
+								<li><a title="关于2016年全国联招入学考试成绩公布及录取工作的公告" href="/portal/messages/1465784632400.html" target="_blank">关于2016年全国联招入学考试成绩公布及录取工作</a> <span>[2016-06-14]
+								</span></li>
+							
+								<li><a title="2016年港澳台研究生报名注意事项" href="/portal/messages/1465786674799.html" target="_blank">2016年港澳台研究生报名注意事项</a> <span>[2015-11-02]
+								</span></li>
+							
+								<li><a title="2016年联合招生简章" href="/portal/messages/1465786144775.html" target="_blank">2016年联合招生简章</a> <span>[2015-11-01]
+								</span></li>
+							
+							<div style="float: right; margin-right: 40px">
+								<a target="_blank" href="/portal/more/38647">更多...</a>
+							</div>
+						</ul>
+						<ul>
+							
+								<li><a title="关于做好我省2017年下半年中国书画等级考试报考工作的通知" href="/portal/messages/1504161830367.html" target="_blank">关于做好我省2017年下半年中国书画等级考试报考</a> <span>[2017-08-31]
+								</span></li>
+							
+								<li><a title="关于做好我省2017年下半年非学历（行业）证书考试报考工作的通知" href="/portal/messages/1504162998600.html" target="_blank">关于做好我省2017年下半年非学历（行业）证书考</a> <span>[2017-08-31]
+								</span></li>
+							
+								<li><a title="广东省2017年下半年中小学教师资格考试笔试公告" href="/portal/messages/1503650296631.html" target="_blank">广东省2017年下半年中小学教师资格考试笔试公告</a> <span>[2017-08-25]
+								</span></li>
+							
+								<li><a title="关于公布我省2017年上半年非学历证书考试考生成绩的通知" href="/portal/messages/1500954175164.html" target="_blank">关于公布我省2017年上半年非学历证书考试考生成</a> <span>[2017-07-25]
+								</span></li>
+							
+								<li><a title="2017年9月（第49次）全国计算机等级考试（NCRE） 广东考区报考简章" href="/portal/messages/1499416796432.html" target="_blank">2017年9月（第49次）全国计算机等级考试（N</a> <span>[2017-06-15]
+								</span></li>
+							
+								<li><a title="2017年9月剑桥少儿英语考试有关安排" href="/portal/messages/1499416684922.html" target="_blank">2017年9月剑桥少儿英语考试有关安排</a> <span>[2017-06-02]
+								</span></li>
+							
+								<li><a title="关于做好我省2017年上半年非学历（行业） 证书考试报考工作的通知" href="/portal/messages/1488955971646.html" target="_blank">关于做好我省2017年上半年非学历（行业） 证书</a> <span>[2017-03-08]
+								</span></li>
+							
+								<li><a title="转发教育部考试中心关于停考中英合作商务管理与金融管理（基础段）、（管理段）证书考试的通知" href="/portal/messages/1487922381723.html" target="_blank">转发教育部考试中心关于停考中英合作商务管理与金融</a> <span>[2017-02-24]
+								</span></li>
+							
+								<li><a title="广东省2017年上半年中小学教师资格考试笔试公告" href="/portal/messages/1483945989679.html" target="_blank">广东省2017年上半年中小学教师资格考试笔试公告</a> <span>[2017-01-09]
+								</span></li>
+							
+								<li><a title="关于我省2016年下半年中小学教师资格考试笔试增加两天报名的公告" href="/portal/messages/1473671299899.html" target="_blank">关于我省2016年下半年中小学教师资格考试笔试增</a> <span>[2016-09-12]
+								</span></li>
+							
+								<li><a title="广东省2016年下半年中小学教师资格考试笔试公告" href="/portal/messages/1472539634965.html" target="_blank">广东省2016年下半年中小学教师资格考试笔试公告</a> <span>[2016-08-30]
+								</span></li>
+							
+								<li><a title="关于做好2016年下半年中小学教师资格考试笔试报名工作的通知" href="/portal/messages/1472032668137.html" target="_blank">关于做好2016年下半年中小学教师资格考试笔试报</a> <span>[2016-08-24]
+								</span></li>
+							
+								<li><a title="广东省教育厅关于印发《中小学教师资格考试试点实施办法》和《中小学教师资格定期注册试点实施办法》的通知" href="/portal/messages/1465184496159.html" target="_blank">广东省教育厅关于印发《中小学教师资格考试试点实施</a> <span>[2016-08-22]
+								</span></li>
+							
+								<li><a title="广东省中小学教师资格考试答疑" href="/portal/messages/1466502560121.html" target="_blank">广东省中小学教师资格考试答疑</a> <span>[2016-06-21]
+								</span></li>
+							
+							<div style="float: right; margin-right: 40px">
+								<a target="_blank" href="/portal/more/38322">更多...</a>
+							</div>
+						</ul>
+						<ul>
+							
+								<li><a title="关于做好2018年上半年广东省中等职业技术教育专业技能课程考试报考工作的通知" href="/portal/messages/1508379341758.html" target="_blank">关于做好2018年上半年广东省中等职业技术教育专</a> <span>[2017-10-19]
+								</span></li>
+							
+								<li><a title="关于2017年广东省普通高等学校本科插班生考试和三二分段专升本转段考试考场安排的通知" href="/portal/messages/1486697842028.html" target="_blank">关于2017年广东省普通高等学校本科插班生考试和</a> <span>[2017-02-10]
+								</span></li>
+							
+								<li><a title="广州市招生考试委员会办公室关于公布2015年我市高中阶段学校招生录取最低控制分数线的" href="/portal/messages/1457335152356.html" target="_blank">广州市招生考试委员会办公室关于公布2015年我市</a> <span>[2015-07-31]
+								</span></li>
+							
+								<li><a title="2015年本科插班生招生考试大纲及专业目录" href="/portal/messages/1457335558944.html" target="_blank">2015年本科插班生招生考试大纲及专业目录</a> <span>[2015-07-30]
+								</span></li>
+							
+								<li><a title="《广东省普通高校2007年本科插班生招生考试大纲及专业目录》书讯" href="/portal/messages/1457335943878.html" target="_blank">《广东省普通高校2007年本科插班生招生考试大纲</a> <span>[2006-12-29]
+								</span></li>
+							
+							<div style="float: right; margin-right: 40px">
+								<a target="_blank" href="/portal/more/38323">更多...</a>
+							</div>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- end left tag -->
+
+
+		</div>
+	</div>
+	<div class="portlet" style="width: 100%; height: 20px;"></div>
+
+	
+	<!-- 普通高考 -->
+	<div class="modal" id="modal_1">
+		<a class="close" data-dismiss="modal">关闭</a>
+		<h1>普通高考</h1>
+		<img src="/portal/img2/line.png" width="100%" height="2"/>
+		
+		
+		
+				
+			
+				<div class="optype">学生端入口</div>
+			
+			
+				<div style="width:100%;margin-bottom:20px;">
+			
+		
+				<div style="float:left;width:20%;text-align:center;">
+					
+						<a target="_blank" href="http://www.ecogd.edu.cn/pgks"><img src="/portal/img2/kaoshi.png" width="80"/>
+							普高报名
+						</a>
+					
+										
+				</div>
+
+			
+		
+				
+			
+			
+		
+				<div style="float:left;width:20%;text-align:center;">
+					
+					
+						<a target="_blank" style="cursor:pointer"><img src="/portal/img2/kaoshi.png" width="80" style="opacity:0.3;filter: progid:DXImageTransform.Microsoft.Alpha(opacity=30);"/>
+							普高志愿填报
+						</a>
+										
+				</div>
+
+			
+		
+				
+			
+			
+		
+				<div style="float:left;width:20%;text-align:center;">
+					
+						<a target="_blank" href="http://www.ecogd.edu.cn/kszj"><img src="/portal/img2/kaoshi.png" width="80"/>
+							普高志愿征集
+						</a>
+					
+										
+				</div>
+
+			
+		
+			
+				<div style="clear:both;"></div>
+			</div>
+				
+			
+				<div class="optype">教师端入口</div>
+			
+			
+				<div style="width:100%;margin-bottom:20px;">
+			
+		
+				<div style="float:left;width:20%;text-align:center;">
+					
+					
+						<a target="_blank" style="cursor:pointer"><img src="/portal/img2/luqu.png" width="80" style="opacity:0.3;filter: progid:DXImageTransform.Microsoft.Alpha(opacity=30);"/>
+							普高评卷教师管理系统
+						</a>
+										
+				</div>
+
+			
+		
+		
+		<div style="clear:both;"></div>
+		</div>
+	</div>
+	
+	<!-- 成人高考 -->
+	<div class="modal" id="modal_2">
+		<a class="close" data-dismiss="modal">关闭</a>
+		<h1>成人高考</h1>
+		<img src="/portal/img2/line.png" width="100%" height="2"/>
+		
+		
+		
+				
+			
+				<div class="optype">学生端入口</div>
+			
+			
+				<div style="width:100%;margin-bottom:20px;">
+			
+		
+				<div style="float:left;width:20%;text-align:center;">
+					
+						<a target="_blank" href="http://www.ecogd.edu.cn/cr"><img src="/portal/img2/baoming.png" width="80"/>
+							成人高考网上报名
+						</a>
+					
+										
+				</div>
+
+			
+		
+			
+				<div style="clear:both;"></div>
+			</div>
+				
+			
+				<div class="optype">管理端入口</div>
+			
+			
+				<div style="width:100%;margin-bottom:20px;">
+			
+		
+				<div style="float:left;width:20%;text-align:center;">
+					
+						<a target="_blank" href="http://www.ecogd.edu.cn/crzb"><img src="/portal/img2/luqu.png" width="80"/>
+							成人高考网上录取
+						</a>
+					
+										
+				</div>
+
+			
+		
+		
+		<div style="clear:both;"></div>
+		</div>
+	</div>
+	
+	<!-- 自学考试 -->
+	<div class="modal" id="modal_3">
+		<a class="close" data-dismiss="modal">关闭</a>
+		<h1>自学考试</h1>
+		<img src="/portal/img2/line.png" width="100%" height="2"/>
+		
+		
+		
+		
+		<div style="clear:both;"></div>
+		</div>
+	</div>
+	
+	<!-- 高中学考 -->
+	<div class="modal" id="modal_4">
+		<a class="close" data-dismiss="modal">关闭</a>
+		<h1>高中学考</h1>
+		<img src="/portal/img2/line.png" width="100%" height="2"/>
+		
+		
+		
+				
+			
+				<div class="optype">学生端入口</div>
+			
+			
+				<div style="width:100%;margin-bottom:20px;">
+			
+		
+				<div style="float:left;width:20%;text-align:center;">
+					
+						<a target="_blank" href="http://www.ecogd.edu.cn/xyspbm"><img src="/portal/img2/baoming.png" width="80"/>
+							考生报名
+						</a>
+					
+										
+				</div>
+
+			
+		
+			
+				<div style="clear:both;"></div>
+			</div>
+				
+			
+				<div class="optype">管理端入口</div>
+			
+			
+				<div style="width:100%;margin-bottom:20px;">
+			
+		
+				<div style="float:left;width:20%;text-align:center;">
+					
+						<a target="_blank" href="http://www.ecogd.edu.cn/xyspzr"><img src="/portal/img2/chengji.png" width="80"/>
+							考生成绩转入
+						</a>
+					
+										
+				</div>
+
+			
+		
+				
+			
+			
+		
+				<div style="float:left;width:20%;text-align:center;">
+					
+						<a target="_blank" href="http://www.ecogd.edu.cn/xyspzc"><img src="/portal/img2/chengji.png" width="80"/>
+							考生成绩转出
+						</a>
+					
+										
+				</div>
+
+			
+		
+		
+		<div style="clear:both;"></div>
+		</div>
+	</div>
+	
+	<!-- 中招中考 -->
+	<div class="modal" id="modal_5">
+		<a class="close" data-dismiss="modal">关闭</a>
+		<h1>中招中考</h1>
+		<img src="/portal/img2/line.png" width="100%" height="2"/>
+		
+		
+		
+		
+		<div style="clear:both;"></div>
+		</div>
+	</div>
+	
+	<!-- 五年一贯制 -->
+	<div class="modal" id="modal_11">
+		<a class="close" data-dismiss="modal">关闭</a>
+		<h1>五年一贯制</h1>
+		<img src="/portal/img2/line.png" width="100%" height="2"/>
+		
+		
+		
+		
+		<div style="clear:both;"></div>
+		</div>
+	</div>
+	
+	<!-- 联合招生 -->
+	<div class="modal" id="modal_6">
+		<a class="close" data-dismiss="modal">关闭</a>
+		<h1>联合招生</h1>
+		<img src="/portal/img2/line.png" width="100%" height="2"/>
+		
+		
+		
+				
+			
+				<div class="optype">学生端入口</div>
+			
+			
+				<div style="width:100%;margin-bottom:20px;">
+			
+		
+				<div style="float:left;width:20%;text-align:center;">
+					
+					
+						<a target="_blank" style="cursor:pointer"><img src="/portal/img2/baoming.png" width="80" style="opacity:0.3;filter: progid:DXImageTransform.Microsoft.Alpha(opacity=30);"/>
+							联合招生网上报名
+						</a>
+										
+				</div>
+
+			
+		
+			
+				<div style="clear:both;"></div>
+			</div>
+				
+			
+				<div class="optype">管理端入口</div>
+			
+			
+				<div style="width:100%;margin-bottom:20px;">
+			
+		
+				<div style="float:left;width:20%;text-align:center;">
+					
+					
+						<a target="_blank" style="cursor:pointer"><img src="/portal/img2/jihua.png" width="80" style="opacity:0.3;filter: progid:DXImageTransform.Microsoft.Alpha(opacity=30);"/>
+							联合招生计划
+						</a>
+										
+				</div>
+
+			
+		
+				
+			
+			
+		
+				<div style="float:left;width:20%;text-align:center;">
+					
+						<a target="_blank" href="http://www.ecogd.edu.cn/lzlq"><img src="/portal/img2/luqu.png" width="80"/>
+							联合招生录取
+						</a>
+					
+										
+				</div>
+
+			
+		
+		
+		<div style="clear:both;"></div>
+		</div>
+	</div>
+	
+	<!-- 香港免试生招生 -->
+	<div class="modal" id="modal_7">
+		<a class="close" data-dismiss="modal">关闭</a>
+		<h1>香港免试生招生</h1>
+		<img src="/portal/img2/line.png" width="100%" height="2"/>
+		
+		
+		
+				
+			
+				<div class="optype">学生端入口</div>
+			
+			
+				<div style="width:100%;margin-bottom:20px;">
+			
+		
+				<div style="float:left;width:20%;text-align:center;">
+					
+					
+						<a target="_blank" style="cursor:pointer"><img src="/portal/img2/baoming.png" width="80" style="opacity:0.3;filter: progid:DXImageTransform.Microsoft.Alpha(opacity=30);"/>
+							香港免试生报名
+						</a>
+										
+				</div>
+
+			
+		
+				
+			
+			
+		
+				<div style="float:left;width:20%;text-align:center;">
+					
+						<a target="_blank" href="http://www.ecogd.edu.cn/hkmslq/ks/login.jsp"><img src="/portal/img2/luqu.png" width="80"/>
+							香港免试生录取(学生端)
+						</a>
+					
+										
+				</div>
+
+			
+		
+			
+				<div style="clear:both;"></div>
+			</div>
+				
+			
+				<div class="optype">管理端入口</div>
+			
+			
+				<div style="width:100%;margin-bottom:20px;">
+			
+		
+				<div style="float:left;width:20%;text-align:center;">
+					
+					
+						<a target="_blank" style="cursor:pointer"><img src="/portal/img2/jihua.png" width="80" style="opacity:0.3;filter: progid:DXImageTransform.Microsoft.Alpha(opacity=30);"/>
+							香港免试生计划
+						</a>
+										
+				</div>
+
+			
+		
+				
+			
+			
+		
+				<div style="float:left;width:20%;text-align:center;">
+					
+						<a target="_blank" href="http://www.ecogd.edu.cn/hkmslq/"><img src="/portal/img2/luqu.png" width="80"/>
+							香港免试生录取(管理端)
+						</a>
+					
+										
+				</div>
+
+			
+		
+		
+		<div style="clear:both;"></div>
+		</div>
+	</div>
+	
+	<!-- 研究生考试 -->
+	<div class="modal" id="modal_8">
+		<a class="close" data-dismiss="modal">关闭</a>
+		<h1>研究生考试</h1>
+		<img src="/portal/img2/line.png" width="100%" height="2"/>
+		
+		
+		
+		
+		<div style="clear:both;"></div>
+		</div>
+	</div>
+	
+	<!-- 本科插班生 -->
+	<div class="modal" id="modal_9">
+		<a class="close" data-dismiss="modal">关闭</a>
+		<h1>本科插班生</h1>
+		<img src="/portal/img2/line.png" width="100%" height="2"/>
+		
+		
+		
+				
+			
+				<div class="optype">学生端入口</div>
+			
+			
+				<div style="width:100%;margin-bottom:20px;">
+			
+		
+				<div style="float:left;width:20%;text-align:center;">
+					
+					
+						<a target="_blank" style="cursor:pointer"><img src="/portal/img2/baoming.png" width="80" style="opacity:0.3;filter: progid:DXImageTransform.Microsoft.Alpha(opacity=30);"/>
+							本科插班生网上报名
+						</a>
+										
+				</div>
+
+			
+		
+			
+				<div style="clear:both;"></div>
+			</div>
+				
+			
+				<div class="optype">管理端入口</div>
+			
+			
+				<div style="width:100%;margin-bottom:20px;">
+			
+		
+				<div style="float:left;width:20%;text-align:center;">
+					
+						<a target="_blank" href="http://www.ecogd.edu.cn/bcgl"><img src="/portal/img2/luqu.png" width="80"/>
+							本科插班生管理系统
+						</a>
+					
+										
+				</div>
+
+			
+		
+		
+		<div style="clear:both;"></div>
+		</div>
+	</div>
+	
+	<!-- 社会考试 -->
+	<div class="modal" id="modal_10">
+		<a class="close" data-dismiss="modal">关闭</a>
+		<h1>社会考试</h1>
+		<img src="/portal/img2/line.png" width="100%" height="2"/>
+		
+		
+		
+				
+			
+				<div class="optype">学生端入口</div>
+			
+			
+				<div style="width:100%;margin-bottom:20px;">
+			
+		
+				<div style="float:left;width:20%;text-align:center;">
+					
+						<a target="_blank" href="http://202.116.236.74/NCRE_EMS/StudentLogin.aspx"><img src="/portal/img2/kaoshi.png" width="80"/>
+							计算机等级考试
+						</a>
+					
+										
+				</div>
+
+			
+		
+				
+			
+			
+		
+				<div style="float:left;width:20%;text-align:center;">
+					
+						<a target="_blank" href="http://www.ecogd.edu.cn/cet46"><img src="/portal/img2/kaoshi.png" width="80"/>
+							英语四六级考试
+						</a>
+					
+										
+				</div>
+
+			
+		
+				
+			
+			
+		
+				<div style="float:left;width:20%;text-align:center;">
+					
+						<a target="_blank" href="http://www.ecogd.edu.cn/pets"><img src="/portal/img2/kaoshi.png" width="80"/>
+							英语等级考试
+						</a>
+					
+										
+				</div>
+
+			
+		
+				
+			
+			
+		
+				<div style="float:left;width:20%;text-align:center;">
+					
+						<a target="_blank" href="http://www.eesc.com.cn"><img src="/portal/img2/kaoshi.png" width="80"/>
+							非学历考试
+						</a>
+					
+										
+				</div>
+
+			
+		
+			
+				<div style="clear:both;"></div>
+			</div>
+				
+			
+				<div class="optype">管理端入口</div>
+			
+			
+				<div style="width:100%;margin-bottom:20px;">
+			
+		
+				<div style="float:left;width:20%;text-align:center;">
+					
+						<a target="_blank" href="http://202.116.236.74/NCRE_EMS/OrgLogin.aspx "><img src="/portal/img2/kaoshi.png" width="80"/>
+							计算机等级考试
+						</a>
+					
+										
+				</div>
+
+			
+		
+		
+		<div style="clear:both;"></div>
+		</div>
+	</div>
+	
+	<!-- 三二分段 -->
+	<div class="modal" id="modal_12">
+		<a class="close" data-dismiss="modal">关闭</a>
+		<h1>三二分段</h1>
+		<img src="/portal/img2/line.png" width="100%" height="2"/>
+		
+		
+		
+		
+		<div style="clear:both;"></div>
+		</div>
+	</div>
+	
+
+	
+<div class="Clear"></div>
+<style type="text/css">
+.footer {
+	/* height: 190px; */
+	width: 998px;
+	background-color: #606D92;
+	paddding-bottom: 0;
+	margin: 0px auto;
+	margin-top: 2px;
+}
+
+.aa3 {
+	text-align: center;
+	vertical-align: middle;
+	color: #ffffff;
+	font-size: 13px;
+}
+
+.aa4 {
+	width: 100%;
+	text-align: center;
+	color: #ffffff;
+	valign: middle;
+	border-right: 1px #FFF solid;
+}
+
+.footer div {
+	color: #ffffff;
+}
+
+.footer td {
+	color: #ffffff;
+}
+
+.footer a:link {
+	color: #ffffff;
+	text-decoration: none;
+}
+
+.footer a:visited {
+	text-decoration: none;
+	color: #ffffff;
+}
+
+.footer a:hover {
+	text-decoration: none;
+	color: #06F;
+}
+
+.footer a:active {
+	text-decoration: none;
+	color: #96F;
+}
+#_span_jiucuo{
+    position: relative;
+    top: -14px;
+}
+</style>
+<div style="width: 100%; background-color: #606D92; padding-top: 5px;">
+	<div class="footer">
+		<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+			<tr>
+
+				<td width="20%" align="center"><a href="http://www.moe.edu.cn/" target="_blank">
+						<img src="/portal/img2/footicon02.jpg" width="98%" height="36" />
+					</a></td>
+				<td width="20%" align="center"><a href="http://www.gdedu.gov.cn/" target="_blank">
+						<img src="/portal/img2/footicon05.jpg" width="98%" height="36" />
+					</a></td>					
+				<td width="20%" align="center"><a href="http://www.neea.edu.cn/" target="_blank">
+						<img src="/portal/img2/footicon03.jpg" width="98%" height="36" />
+					</a></td>
+				<td width="20%" align="center"><a href="http://www.eesc.com.cn/" target="_blank">
+						<img src="/portal/img2/footicon04.jpg" width="98%" height="36" />
+					</a></td>
+				<td width="20%" align="center"><a href="http://www.5184.com/" target="_blank">
+						<img src="/portal/img2/footicon01.jpg" width="98%" height="36" />
+					</a></td>
+
+		</table>
+		<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+			<tr>
+				<td width="24%" height="30px"><div class="aa4">相关链接</div></td>
+				<td width="28%" align="center" valign="middle"><div class="aa4" style="border-right: 1px #FFF solid;">
+						<select name="select" onChange="if(this.vaue!='#') window.open(this.value)">
+							<option value="#">--地市考试中心--</option>
+							<option value="http://www.gzzk.com.cn">广州招考网</option>
+							<option value="http://51a.gov.cn/">深圳招考网</option>
+							<option value="http://www.mzjy.net/">梅州市教育局</option>
+							<option value="http://www.zjjy.org/">湛江市教育局</option>
+							<!--<option value="http://www.mmkszx.com/">茂名招考网</option>-->
+							<option value="http://kszx.fsjy.net/">佛山市招考网</option>
+							<option value="http://zqzsb.zqbe.net/">肇庆市招考网</option>
+							<option value="http://www.51a.gov.cn/">深圳市招考网</option>
+							<option value="http://jyj.jiangmen.gov.cn/reception/index.aspx">江门市教育局</option>
+							<option value="http://www.mmjynet.com/">茂名市教育局</option>
+							<option value="http://www.gdczedu.net/">潮州市教育局</option>
+							<option value="http://www.gzedu.gov.cn/">广州市教育局</option>
+							<option value="http://www.zhjy.net/">珠海市教育局</option>
+							<option value="http://www.sgedu.gov.cn/">韶关市教育局</option>
+							<option value="http://www.stedu.net/">汕头市教育信息网</option>
+							<option value="http://www.dgjy.net/">东莞市教育局</option>
+							<option value="http://www.heyuan.net/jiaoyu/main.htm">河源市教育局</option>
+							<option value="http://www.zsedu.net/">中山市教育局</option>
+						</select>
+					</div></td>
+				<td width="28%" align="center" valign="middle">
+					<div class="aa4">
+						<select name="select2" onChange="if(this.vaue!='#') window.open(this.value)">
+							<option value="#">--各省考试机构--</option>
+							<option value="http://www.shmeea.com.cn">上海教育考试院</option>
+							<option value="http://www.lnzsks.com">辽宁招考办</option>
+							<option value="http://zsb.hr.hl.cn">黑龙江招考办</option>
+							<option value="http://www.ahzk.net">安徽省自考办</option>
+							<option value="http://www.jszs.net/">江苏省高校招生办</option>
+							<option value="http://www.zjzk.cn">浙江高等教育自考办</option>
+							<option value="http://www.heao.com.cn">河南教委招生办</option>
+							<option value="http://www.bjeea.edu.cn">北京教育考试院</option>
+							<option value="http://www.zjzs.net">浙江高等院校招生办</option>
+							<option value="http://www.jxzxks.com">江西省自考办公室</option>
+							<option value="http://www.gxeea.edu.cn">广西招生考试院</option>
+							<option value="http://www.qhjyks.com">青海省考试管理中心</option>
+							<option value="http://www.ea.hainan.gov.cn">海南考试局</option>
+							<option value="http://www.zhaokao.net">天津教育招考中心</option>
+							<option value="http://www.fjzk.com.cn">福建省自考办公室</option>
+							<option value="http://www.sdzs.gov.cn">山东省招生信息网</option>
+							<option value="http://www.sdzk.gov.cn">山东省自考办公室</option>
+							<option value="http://www.gzzb.edu.cn">贵州省招生办公室</option>
+							<option value="http://www.sneac.com">陕西招生考试信息网</option>
+							<option value="http://www.hbeeh.edu.cn">湖北省教育考试院</option>
+							<option value="http://www.hneao.edu.cn">湖南省教育考试院</option>
+							<option value="http://www.ea.hainan.gov.cn">海南省考试局</option>
+							<option value="http://www.gszs.edu.cn/">甘肃省招生办公室</option>
+							<option value="http://www.hebeea.edu.cn">河北省教育考试院</option>
+							<option value="http://www.sxkszx.edu.cn">山西招考管理中心</option>
+							<option value="http://www.jlcueo.edu.cn">吉林省招生办公室</option>
+							<option value="http://www.scgzb.edu.cn/">四川省招生办公室</option>
+							<option value="http://www.jlste.com.cn">吉林自学考试办公室</option>
+							<option value="http://www.jszk.net.cn/">江苏高等教育自考办</option>
+							<option value="http://www.cqzkb.edu.cn">重庆招生考试办公室</option>
+							<option value="http://www.jxcrzs.com.cn">江西高等院校招生办</option>
+							<option value="http://www.steogs.edu.cn">甘肃自学考试办公室</option>
+							<option value="http://www.nxks.nx.edu.cn/">宁夏普通高校招生办</option>
+							<option value="http://www.nm.zsks.cn/">内蒙古教育招考中心</option>
+
+						</select>
+					</div>
+				</td>
+				<td width="20%" align="center" valign="middle"><select name="select3" onChange="if(this.vaue!='#') window.open(this.value)">
+						<option value="#">---各高等院校---</option>
+						<option value="http://www.pku.edu.cn">北京大学</option>
+						<option value="http://www.zsu.edu.cn">中山大学</option>
+						<option value="http://www.szu.edu.cn">深圳大学</option>
+						<option value="http://www.zju.edu.cn/">浙江大学</option>
+						<option value="http://www.jnu.edu.cn/">暨南大学</option>
+						<option value="http://www.gzhu.edu.cn">广州大学</option>
+						<option value="http://www.fudan.edu.cn/">复旦大学</option>
+						<option value="http://www.nankai.edu.cn/">南开大学</option>
+						<option value="http://www.tongji.edu.cn/">同济大学</option>
+						<option value="http://www.gdcc.edu.cn/">广东商学院</option>
+						<option value="http://www.ruc.edu.cn/">中国人民大学</option>
+						<option value="http://www.scnu.edu.cn">华南师范大学</option>
+						<option value="http://www.gdut.edu.cn">广东工业大学</option>
+						<option value="http://www.scau.edu.cn">华南农业大学</option>
+						<option value="http://www.tsinghua.edu.cn/">清华大学</option>
+						<option value="http://www.bupt.edu.cn/">北京邮电大学</option>
+						<option value="http://www.ccom.edu.cn/">中央音乐学院</option>
+						<option value="http://www.cupl.edu.cn/">中国政法大学</option>
+						<option value="http://www.sjtu.edu.cn/">上海交通大学</option>
+						<option value="http://www.scut.edu.cn/">华南理工大学</option>
+						<option value="http://www.bfsu.edu.cn/">北京外国语大学</option>
+						<option value="http://www.gdufs.edu.cn">广东外语外贸大学</option>
+
+					</select></td>
+			</tr>
+		</table>
+
+
+		<div class="aa3">
+			<div style="position: absolute;margin-bottom: 10px;border-right:1px solid white">
+				<script id="_jiucuo_" sitecode='4400000081' src='http://pucha.kaipuyun.cn/exposure/jiucuo.js'></script>
+				<a href="http://bszs.conac.cn/sitename?method=show&id=0922834C0DCF1D41E053012819AC4180" target="_blank">
+					<img alt="" src="/portal/img2/blue.png">
+				</a>
+			</div>
+			<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+				<tr height="25px">
+					<td align="center"><div class="aa3">
+							版权所有：广东省教育考试院 | <a style="color: #fff;" href="#" onclick="this.style.behavior='url(#default#homepage)';this.setHomePage('http://202.116.236.99');">设为首页</a> |
+							<a href="/portal/common/map.html" target="_blank">联系我们</a>
+						</div></td>
+				</tr>
+				<tr height="25px">
+					<td><div class="aa3">
+							Copyright &copy; 1998-2015
+							<a href="http://www.ecogd.edu.cn" target="_blank">ecogd</a>
+							、
+							<a href="http://www.eeagd.edu.cn" target="_blank">eeagd</a>
+							、
+							<a href="http://www.stegd.edu.cn" target="_blank">stegd</a>
+							All Rights Reserved <span class="td">粤ICP备05008847号</span>
+						</div></td>
+				</tr>
+				<tr height="25px">
+					<td><div class="aa3">地址：广州市中山大道西69号 邮编：510631 电话：(020)89338633</div></td>
+				</tr>
+				
+				<tr height="15px">
+					<td><!-- <div class="aa3">版权与免责声明 | 有任何问题与建议请联络:WebMaster | <a href="http://www.ganflon.com" target="_blank">技术支持：广东广风隆电子科技有限公司</a></div> --></td>
+					<!-- <td ><div style="display:none" class="aa3">版权与免责声明 | 有任何问题与建议请联络:WebMaster | 您是本站第 <span id="countspan"></span>位访问者</div></td> --> 
+					<!-- dev by copperlau@yeah.net -->
+				</tr>
+				 
+			</table>
+		</div>
+	</div>
+</div>
+
+<script>
+	$(function(){
+		var idParam = msgId ? "id="+msgId : "";
+		$.get("/portal/count?dir=1&admin=portal&"+idParam,function(data){
+			var clickTimesDiv = $("#clickTimes");
+			if(clickTimesDiv.length > 0) clickTimesDiv.html("浏览量："+data);
+		});
+	});
+</script>
+	<script type="text/javascript" src="/portal/js/modal.js"></script>
+
+	<script>
+		var msgId=0;
+		$(function() {
+			 x=new zoomBox('zoomPan','zoom');
+		}); 
+		//<![CDATA[
+		function zoomBox() {this.index.apply(this, arguments);};
+		zoomBox.prototype = {
+		    index: function(win,zoom) {
+		        var win=document.getElementById(win);
+		        var box=document.getElementById(zoom);
+		       	var img=box.getElementsByTagName('IMG')[0];
+		       // var zoom=img.width/win.getElementsByTagName('IMG')[0].width;
+		        
+		        var zoom = 1.5;
+		        var z=Math.round(box.offsetWidth/2);
+		        win.onmousemove=function (e){
+		            e = e || window.event;
+		            var x=e.clientX,y=e.clientY, ori=win.getBoundingClientRect();
+		            if (x>ori.right+20||y>ori.bottom+20||x<ori.left-20||y<ori.top-20){box.style.display='none';}
+		            x-=ori.left;
+		            y-=ori.top;
+		            box.style.left=x-z-100+'px';
+		            box.style.top=y-z-100+'px';
+		            img.style.left=-x*zoom+z+100+'px';
+		            img.style.top=-y*zoom+z+100+'px';
+		        };
+		        win.onmouseover=function (){box.style.display='';};
+		    }
+		};
+ 		//]]>
+	</script>
+	
+	
+
+</body>
+</html>
+

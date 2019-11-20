@@ -1,0 +1,159 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="" />
+    <meta name="decription" content="" />
+    	
+    <title>数字东林</title>
+		<script>
+             var cas_domain="数字东林";
+             var num  = "0";
+             var cover_url_show  = "comm/image/login_container_bg.jpg";
+             function ewmclick(){
+            	 document.getElementById("ymdl").style.display="none";
+            	 document.getElementById("ewmsm").style.display="";
+             }
+             function dlclick(){
+            	 document.getElementById("ymdl").style.display="";
+            	 document.getElementById("ewmsm").style.display="none";
+             }
+		</script>
+	    <script type="text/javascript" src="j/jquery-1.6.1.min.js"></script>	
+		<script type="text/javascript" src="j/login.js"></script>
+		<script type="text/javascript" src="j/md5.js"></script>
+		
+		
+		
+		
+		
+		
+		
+    <link href="comm/css/style.css" media="screen" rel="stylesheet" type="text/css" />
+</head>
+	<body class="login_bg_f">
+		<div id="wrapper" class="login_header">
+			<div class="login_header_center">
+					
+					<img src="comm/image/head_logo.png" class="left"/>
+					
+				<div class="cas_header_help">
+					<div class="help_notice">
+						<div class="help_notice_top"></div>
+						<div class="help_notice_mid">
+							<div class="help_notice_title">
+								<span class="help_notice_title_name">登录提示</span>
+							</div>
+							<ul class="help_notice_list">
+								<li class="help_notice_item">
+									<span class="help_notice_item_l">1.</span>
+									<span class="help_notice_item_r">登录账号为您的教职工号或学号</span>
+								</li>
+								<li class="help_notice_item">
+									<span class="help_notice_item_l">2.</span>
+									<span class="help_notice_item_r">首次登录请修改密码，并妥善保管密码</span>
+								</li>
+								<li class="help_notice_item">
+									<span class="help_notice_item_l">3.</span>
+									<span class="help_notice_item_r">若密码丢失、请点击“密码找回”重置</span>
+								</li>
+									<li class="help_notice_item">
+									<span class="help_notice_item_l">4.</span>
+									<span class="help_notice_item_r">所有账号和密码均区分大小写</span>
+								</li>
+							</ul>
+						</div>
+						<div class="help_notice_bottom"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="login_content">
+			<div class="login_content_center">
+				<div id="ewmsm" class="login_box" style="display:none">
+					<div class="two_dimension_code1" onclick="dlclick();"></div>
+					<div class="login_box_title2 text_align_center">
+						<span class="login_box_title_name2 float_none">数字东林随身带</span>
+					</div>
+					<div class="dimension_code_box">
+                    	<img src="comm/image/two_dimension_code01.png" />
+                    </div>
+				</div>
+				<div id="ymdl" class="login_box">
+					<div class="two_dimension_code" onclick="ewmclick();"></div>
+					<div class="login_box_title">
+						<span class="login_box_title_name">数字东林</span>
+					</div>
+					
+					<form id=login_form name=login_form class="login_form"
+						action="/cas/login" method=post onsubmit="return false;">
+					
+					<input type="hidden" name="encodedService"
+						value="http%3a%2f%2fi.nefu.edu.cn%2fdcp%2fforward.action%3fpath%3d%2fportal%2fportal%26p%3dhome">
+					
+					<input type="hidden" name="service" value="http://i.nefu.edu.cn/dcp/forward.action?path=/portal/portal&p=home">
+					
+					<input type="hidden" name="serviceName" value="null">
+					<input type="hidden" name="loginErrCnt" value="0">
+					
+						<ul class="login_box_list">
+							<li class="login_box_item margin_top_18">
+								<div class="login_input_box">
+									<span class="login_input_icon">
+										<img src="comm/image/login_input_icon_1.png" />
+									</span>
+									<input type="text" class="login_input" value="" 
+									id="username" name=username
+									onkeydown="javascript:clearContent()" tabindex="1"
+									onkeyup="javascript:return enter(event,'username');"
+									onclick="setThis('username')" onchange="setColor()"/>
+								</div>
+							</li>
+							<li class="login_box_item margin_top_18">
+								<div class="login_input_box">
+									<span class="login_input_icon">
+										<img src="comm/image/login_input_icon_2.png" />
+									</span>
+									<input type="password" class="login_input" 
+									id="password" name="password"
+									value="" tabindex="2" type="password"
+									onkeyup="javascript:return enter(event,'password');"/>
+									<input type="hidden" name="lt" value="LT-438352-CYGyTbUExrX7RwmiDgxE" />
+								</div>
+							</li>
+							
+							
+						
+                      		
+							<li class="login_box_item margin_top_8">
+								<input type="checkbox" class="login_box_checkbox"  name="autoLogin" id="autoLogin"/>
+								<span class="login_box_checkbox_label">记住密码</span>
+								<span class="login_box_sepline">|</span>
+								<a href="/cas/pwd/html/pwdForget.jsp" class="forget_password">忘记登录密码？</a>
+							</li>
+							<li class="login_box_item margin_top_14">
+								<input type="button" class="login_btn" value="登&nbsp;录" 
+								 id="login" onclick="javascript:submitInfo();" />
+							</li>
+<!--					
+							<li class="login_box_item margin_top_10">
+								<a href="javascript:;" class="register_id">自助注册</a>
+							</li>
+-->
+						</ul>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="login_footer" id="footer">
+			<div class="login_footer_center" id="footer-content">
+				<span class="login_footer_describe">"数字东林"由 数字化校园建设办公室（网络信息中心）提供技术支持</span>
+				<span class="login_footer_describe left">数字东林 Copyright &copy; 2017</span>
+			</div>
+		</div>
+	</body>
+</html>
+	

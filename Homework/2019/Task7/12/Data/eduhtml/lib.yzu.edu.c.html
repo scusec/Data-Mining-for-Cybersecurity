@@ -1,0 +1,1094 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<!--
+-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="http://lib.yzu.edu.cn/yzuico.png">
+    <title>扬州大学图书馆</title>
+	<link rel="stylesheet" type="text/css" href="http://lib.yzu.edu.cn/images/default/style.css">
+	<link rel="stylesheet" type="text/css" href="http://lib.yzu.edu.cn/images/default/cms.css">
+    <link href="http://lib.yzu.edu.cn/images/default/bootstrap.min.css" rel="stylesheet">
+      <!--[if lte IE 6]>
+  <link rel="stylesheet" type="text/css" href="http://lib.yzu.edu.cn/images/default/bootstrap-ie6.css">
+  <link rel="stylesheet" type="text/css" href="http://lib.yzu.edu.cn/images/default/ie.css">
+  <![endif]-->
+    <link rel="stylesheet" type="text/css" href="http://lib.yzu.edu.cn/images/default/index.css">
+    <link rel="stylesheet" type="text/css" href="http://lib.yzu.edu.cn/images/default/flexslider.css">
+    <script src="http://lib.yzu.edu.cn/images/default/jquery.min.js"></script>
+    <script src="http://lib.yzu.edu.cn/images/default/bootstrap.min.js"></script>
+     <!--[if lte IE 6]>
+  <script type="text/javascript" src="http://lib.yzu.edu.cn/images/default/bootstrap-ie.js"></script>
+  <![endif]-->
+    <!--<script src="http://lib.yzu.edu.cn/images/default/xianshi.js"></script>-->
+    <script src="http://lib.yzu.edu.cn/images/default/js.js"></script>
+    <script src="http://lib.yzu.edu.cn/images/default/common.js"></script>
+	<SCRIPT LANGUAGE="JavaScript" src="http://lib.yzu.edu.cn/images/default/inc.js"></SCRIPT>
+	<SCRIPT LANGUAGE="JavaScript" src="http://lib.yzu.edu.cn/images/default/default.js"></SCRIPT>
+  </head>
+  <SCRIPT LANGUAGE="JavaScript">
+//屏蔽可忽略的js脚本错误
+function killErr(){
+	return true;
+}
+//window.onerror=killErr;
+function get_obj(obj){
+   return document.getElementById(obj);
+}
+function choose_node(node){
+//alert(node);
+	$('#menu_'+node).addClass('xj_active');
+}
+function check_login(){
+	var username=get_obj('login_u').value;
+	var password=get_obj('login_p').value;
+	if(!username){
+		alert("用户名不能为空");
+		get_obj('login_u').focus();
+		return false;
+	}
+}
+
+function pop_login()
+{
+	var h=$(window).height()>$('body').height()?$(window).height():$('body').height();
+	$("#bodyly").fadeIn('slow').css({'width':$(window).width()+"px",'height':h+"px"});
+	$("#SearchDivhire").fadeIn('slow');
+	var url=document.URL;
+	
+	var left=($('body').width()/2-200>0?$(window).width()/2-200:0)+"px";	
+	$("#SearchDivhire").fadeIn('slow').css({'top':'200px','left':left});
+	$("#hiretypes").css({"min-height":"80px","height":"auto"});
+	var tmp_str='<form name="form_login" method="post" action="http://121.42.24.143/njucm/do/login.php" onSubmit="return check_login()"><table cellpadding=1 cellspacing=3 align=center width=99% border=0 class="login_pop2">';
+	tmp_str+='<tr><td class="ltd">用户名：</td><td><input type="text" id="login_u" name="username" value=""></td></tr>';
+	tmp_str+='<tr><td colspan="2" height="12px"></td></tr>';
+	tmp_str+='<tr><td class="ltd">密码：</td><td><input id="login_p" type="password" name="password"></td></tr>';
+	tmp_str+='<tr><td colspan="2" height="12px"></td></tr>';
+	tmp_str+='<tr><td class="ltd">类型：</td><td><input type="radio" name="type" value="1" checked> 一卡通 <input type="radio" name="type" value="0" > 本站</td></tr>';
+	//tmp_str+='<tr><td colspan="2" height="12px"></td></tr>';
+	//tmp_str+='<tr><td class="ltd">记住密码：<input type="checkbox" name="jizhu" value="1"></td></tr>';
+	
+	tmp_str+='<tr><td class="ltd" colspan=2 height="30px" style="color:#aaa">用户名为学号/工号，初始密码为身份证后六位</td></tr>';
+	tmp_str+='<tr><td colspan="2" height="12px"></td></tr>';
+	tmp_str+='<tr><td></td><td style="padding-left:80px"><input type="hidden" name="step" value="2"><input class="radio" type="hidden" name="cookietime" value="86400" ><input type="hidden" name="fromurl" value="'+url+'"><input type="submit" name="Submit" value="提交"></td></tr>';
+	tmp_str+="</table></form>";
+	$("#hiretypes").html(tmp_str);
+}
+</SCRIPT>
+  <body>
+    <!--xj_top-->
+    <div class="xj_top">
+		<img src="http://lib.yzu.edu.cn/images/default/xj_top.png" class="ch_bg" style='height:129px;'/>
+        <div class="container">
+            <div class="xj_top1">
+                <a href="http://lib.yzu.edu.cn"><img src="http://lib.yzu.edu.cn/images/default/xj_logo.png"/></a>
+            </div>
+            <div class="xj_top2">
+                <div class="xj_top3">
+                  
+                        <div class="xj_search">
+                            <input type="text" class="xj_ss" id="top_keywords" style='float:left;color:#B0B0B0;padding-left:5px;'  onclick="if(this.value=='站内检索'){this.value='';this.style.color='#666'}" onblur="if(this.value==''){this.value='站内检索';this.style.color='#B0B0B0'}" value='站内检索' onkeydown="huiche(event,1)" />
+                            <button class="xj_sousuo" onclick="cksearch()"><img src="http://lib.yzu.edu.cn/images/default/xj_search.png" /></button>
+                        </div>
+              
+                    <div class="xj_rukou">
+                        <img src="http://lib.yzu.edu.cn/images/default/xj_rukou.png" />
+                        <span class="xj_in"><a href="http://202.195.60.230/" target="_target">旧版入口</a></span>
+                    </div>
+                    <img src="http://lib.yzu.edu.cn/images/default/xj_1.png" class="xj_ying">
+                    <img src="http://lib.yzu.edu.cn/images/default/xj_2.png" class="xj_zhong">
+                </div>
+                <div class="xj_top4">
+                    <ul>
+                        
+	<!--<div class="cell"  style='display:none'></div>
+	<dl id="menu_6" onmouseover="SubOn(this)" onmouseout="SubOut(this)" class=over>
+        <dt id="dt6"><a href="http://lib.yzu.edu.cn/"  >首页</a></dt>-->
+		<li><img src="http://lib.yzu.edu.cn/images/default/xj_xian.png"/></li>
+		<li><a href="http://lib.yzu.edu.cn/" target="_self" id="menu_1">首页</a></li>
+
+
+   <!-- </dl>-->
+
+	<!--<div class="cell" ></div>
+	<dl id="menu_7" onmouseover="SubOn(this)" onmouseout="SubOut(this)" >
+        <dt id="dt7"><a href="http://lib.yzu.edu.cn/list.php?fid=5"  >资源</a></dt>-->
+		<li><img src="http://lib.yzu.edu.cn/images/default/xj_xian.png"/></li>
+		<li><a href="http://lib.yzu.edu.cn/list.php?fid=5" target="_self" id="menu_2">资源</a></li>
+
+
+   <!-- </dl>-->
+
+	<!--<div class="cell" ></div>
+	<dl id="menu_8" onmouseover="SubOn(this)" onmouseout="SubOut(this)" >
+        <dt id="dt8"><a href="http://lib.yzu.edu.cn/list.php?fid=40"  >服务</a></dt>-->
+		<li><img src="http://lib.yzu.edu.cn/images/default/xj_xian.png"/></li>
+		<li><a href="http://lib.yzu.edu.cn/list.php?fid=40" target="_self" id="menu_3">服务</a></li>
+
+
+   <!-- </dl>-->
+
+	<!--<div class="cell" ></div>
+	<dl id="menu_9" onmouseover="SubOn(this)" onmouseout="SubOut(this)" >
+        <dt id="dt9"><a href="http://lib.yzu.edu.cn/list.php?fid=44"  >概况</a></dt>-->
+		<li><img src="http://lib.yzu.edu.cn/images/default/xj_xian.png"/></li>
+		<li><a href="http://lib.yzu.edu.cn/list.php?fid=44" target="_self" id="menu_4">概况</a></li>
+
+
+   <!-- </dl>-->
+
+	<!--<div class="cell" ></div>
+	<dl id="menu_10" onmouseover="SubOn(this)" onmouseout="SubOut(this)" >
+        <dt id="dt10"><a href="http://lib.yzu.edu.cn/list.php?fid=4"  >互动</a></dt>-->
+		<li><img src="http://lib.yzu.edu.cn/images/default/xj_xian.png"/></li>
+		<li><a href="http://lib.yzu.edu.cn/list.php?fid=4" target="_self" id="menu_5">互动</a></li>
+
+
+   <!-- </dl>-->
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+		<script>
+			function huiche(events,type)  //处理回车事件 
+			{ 
+				var eventSource;
+				var currentKey = events.charCode||events.keyCode;
+				if(document.all){eventSource =window.event.srcElement; }
+				else{eventSource = events.target;}
+				if(currentKey==13){ 
+					switch(type)
+					{
+						case 1: cksearch();break;
+						//case 2: search_all();break;
+						case 3:search_gc();break;
+						case 4:search_ed();break;
+						case 5:search_db();break;
+						case 6:db("all");break;
+						case 15:search_findplus();break;
+						case 13:search_xs();break;
+						case 155:search_Edu();break;
+						case 113:searchBook();break
+						//case 5: search_book();break;
+						//case 6: search_hy();break;
+						//case 7: search_lw();break;
+					}
+				} 
+			} 
+		</script>
+
+<SCRIPT LANGUAGE="JavaScript">
+
+choose_node("1");
+</SCRIPT>
+
+
+    </div>
+	
+<!--
+-->
+
+<div class="xj_main">
+        <!--xj_zhuanqu-->
+		
+        <div class="xj_zhuanqu" >
+            <ul>
+                <li><a href="http://lib.yzu.edu.cn/list.php?fid=25" target="_self">> 学生专区</a></li>
+<li><a href="http://lib.yzu.edu.cn/list.php?fid=26" target="_self">> 教师专区</a></li>
+<li><a href="http://lib.yzu.edu.cn/list.php?fid=27" target="_self">> 访客专区</a></li>
+<li class="xj_bgy"><a href="http://lib.yzu.edu.cn/list.php?fid=28" target="_self">> 办公园地</a></li>
+            </ul>
+        </div>
+		
+        <!--xj_zhuanqu-->
+		<div id='ffff2'>
+        <div class="container1" id="yzu_cntw" >
+		<div class="dserdr"></div>
+            <!--xj_content-->
+            <div class="xj_content xj_cc">
+				<img src="http://lib.yzu.edu.cn/images/default/xj_66.png" class="ch_bg2" />
+				<div style='position:relative;' id='maxscreen'>
+                <div class="container" >
+				
+                    <!--xj_underground-->
+                    <div class="xj_underground">                 
+                            <div class="xj_shouye1">
+								<ul class="nav nav-tabs tab_btn xj_pp" role="tablist">
+                                   <li role="presentation" class="active"><a href="#qi1" aria-controls="qi1" role="tab" data-toggle="tab">馆藏目录</a></li>
+                                   <li role="presentation"><a href="#qi2" aria-controls="qi2" role="tab" data-toggle="tab">电子资源</a></li>
+                                   <li role="presentation"><a href="#qi3" aria-controls="qi3" role="tab" data-toggle="tab">学术搜索</a></li>
+                                   <li role="presentation"><a href="#qi4" aria-controls="qi4" role="tab" data-toggle="tab">知识发现</a></li>
+								   <li role="presentation"><a href="#qi5" aria-controls="qi5" role="tab" data-toggle="tab">开元E读</a></li>
+                                </ul>
+                                <div class="tab-content">
+                                   <div role="tabpanel" class="tab-pane active" id="qi1">
+                                       <div class="xj_timing">
+                                            <div class="xj_ti">
+                                                <div id="dropdown1" class="xj_timing1">
+                                                  <div class="btn-group">
+                                                    <a  type="button" id="dropdownMenu" data-toggle="dropdown" class="lian">
+                                                      <span class="placeholder ziti">题名</span>
+                                                      <span class="caret jiantou"></span>
+                                                    </a>
+                                                    <ul class="dropdown-menu width2" role="menu" aria-labelledby="dropdownMenu">                                
+														<li role="presentation" value="1" onclick="getvalue1('title')"><a role="menuitem" tabindex="1" href="#1">题名</a></li>
+														<li role="presentation" value="2" onclick="getvalue1('author')"><a role="menuitem" tabindex="2" href="#2">责任者</a></li>
+														<li role="presentation" value="3" onclick="getvalue1('keyword')"><a role="menuitem" tabindex="3" href="#3">主题词</a></li>
+														<li role="presentation" value="3" onclick="getvalue1('isbn')"><a role="menuitem" tabindex="3" href="#3">ISBN/ISSN</a></li>
+														<li role="presentation" value="3" onclick="getvalue1('asordno')"><a role="menuitem" tabindex="3" href="#3">订购号</a></li>
+														<li role="presentation" value="3" onclick="getvalue1('coden')"><a role="menuitem" tabindex="3" href="#3">分类号</a></li>
+														<li role="presentation" value="3" onclick="getvalue1('callno')"><a role="menuitem" tabindex="3" href="#3">索书号</a></li>
+														<li role="presentation" value="3" onclick="getvalue1('publisher')"><a role="menuitem" tabindex="3" href="#3">出版社</a></li>
+														<li role="presentation" value="3" onclick="getvalue1('series')"><a role="menuitem" tabindex="3" href="#3">丛书名</a></li>
+														<li role="presentation" value="3" onclick="getvalue1('tpinyin')"><a role="menuitem" tabindex="3" href="#3">题名拼音</a></li>
+														<li role="presentation" value="3" onclick="getvalue1('apinyin')"><a role="menuitem" tabindex="3" href="#3">责任者拼音</a></li>
+                                                    </ul>
+                                                    <script>
+                                                        var searchtype = "title";
+                                                        function getvalue1(obj)
+                                                        {
+                                                            searchtype=obj;
+                                                        }
+                                                    </script>
+                                                  </div>
+                                                </div>
+                                                <div id="dropdown5" class="xj_timing1">
+                                                    <div class="btn-group">
+                                                        <a  type="button" id="dropdownMenu" data-toggle="dropdown" class="lian">
+                                                            <span class="placeholder ziti" onclick="getvalue2('forward')">前方一致</span>
+                                                            <span class="caret jiantou"></span>
+                                                        </a>
+                                                        <ul class="dropdown-menu width2" role="menu" aria-labelledby="dropdownMenu_1">
+                                                            <li role="presentation" value="1" onclick="getvalue2('forward')"><a role="menuitem" tabindex="1" href="#1">前方一致</a></li>
+                                                            <li role="presentation" value="2" onclick="getvalue2('full')"><a role="menuitem" tabindex="2" href="#2">完全匹配</a></li>
+                                                            <li role="presentation" value="3" onclick="getvalue2('any')"><a role="menuitem" tabindex="3" href="#3">任意匹配</a></li>
+                                                        </ul>
+                                                        <script>
+                                                            var searchtype2 = "forward";
+                                                            function getvalue2(obj)
+                                                            {
+																//alert(searchtype2)
+                                                                searchtype2=obj;
+                                                            }
+                                                        </script>
+                                                    </div>
+                                                </div>
+                                                <div class="xj_timing2 width553">
+                                                    <input type="text" class="xj_timing3" style='float:left;color:#B0B0B0;width:354px;'  onclick="if(this.value=='请输入检索词'){this.value='';this.style.color='#666'}" onblur="if(this.value==''){this.value='请输入检索词';this.style.color='#B0B0B0'}" onkeydown="huiche(event,3)" id="keywords3" value="请输入检索词"/>
+                                                    <button class="xj_ss" onclick='search_gc()'><img src="http://lib.yzu.edu.cn/images/default/xj_fang2.png" /></button>
+                                                </div>
+                                            </div>
+                                        </div>									 
+								
+                                <span class="xj_shuoming" style='margin-top:0;'><strong>说明</strong>:查找馆藏纸本图书和期刊资源.</span>
+								<div class="yzu_links">
+									<a href='http://fszl.yzu.edu.cn:8989/poweb/' target='_blank'>随书光盘</a>
+<a href='#' class='yzu_fgx'>|</a>
+
+<a href='http://opac.yzu.edu.cn:8080/newbook/newbook_cls_browse.php' target='_blank'>新书通报</a>
+<a href='#' class='yzu_fgx'>|</a>
+
+<a href='http://zjzy.yzu.edu.cn/guji/guji.php'target='_blank'>古籍特藏书目</a>
+<a href='#' class='yzu_fgx'>|</a>
+
+<a href='http://opac.calis.edu.cn/opac/simpleSearch.do' target='_blank'>CALIS联合目录</a>
+
+									<div style='clear:both;'></div>
+								</div>
+                                   </div>
+                                   <div role="tabpanel" class="tab-pane" id="qi2">
+                                       <div class="xj_timing">
+                                            <div class="xj_ti">
+                                                <div id="dropdown2" class="xj_timing1" style='display:none;'>
+                                                  <div class="btn-group">
+                                                    <a  type="button" id="dropdownMenu" data-toggle="dropdown" class="lian">
+                                                      <span class="placeholder ziti">题名</span>
+                                                      <span class="caret jiantou"></span>
+                                                    </a>
+                                                    <ul class="dropdown-menu width2" role="menu" aria-labelledby="dropdownMenu">
+                                                      <li role="presentation" value="1"><a role="menuitem" tabindex="1" href="#1">提名1</a></li>
+                                                      <li role="presentation" value="2"><a role="menuitem" tabindex="2" href="#2">提名2</a></li>
+                                                      <li role="presentation" value="3"><a role="menuitem" tabindex="3" href="#3">提名3</a></li>
+                                                    </ul>
+                                                  </div>
+                                                </div>
+                                                <div class="xj_timing2 width683" >
+                                                    <input type="text" class="xj_timing3" style="padding-left:10px;color:#B0B0B0;width:594px;"  onclick="if(this.value=='请输入数据库名称'){this.value='';this.style.color='#666'}" onblur="if(this.value==''){this.value='请输入数据库名称';this.style.color='#B0B0B0'}" onkeydown="huiche(event,5)" id="skey2"  value="请输入数据库名称" />
+                                                    <button class="xj_ss" onclick='search_db()'><img src="http://lib.yzu.edu.cn/images/default/xj_fang2.png" /></button>
+                                                </div>
+                                            </div>
+                                        </div>
+										
+                                <span class="xj_shuoming"><strong>说明</strong>:查找本馆中外文电子资源.</span>
+								<div class="yzu_links">
+									<a href='http://lib.yzu.edu.cn/do/list.php?fid=6'target='_blank'>数据库导航</a>
+<a href='#' class='yzu_fgx'>|</a>
+								
+<a href='http://lib.yzu.edu.cn/list.php?fid=5' target='_blank'>版权公告</a>
+<a href='#' class='yzu_fgx'>|</a>
+
+<a href='http://lib.yzu.edu.cn/list.php?fid=69' target='_blank'>核心期刊</a>
+									<div style='clear:both;'></div>
+								</div>
+
+                                   </div>
+                                   <div role="tabpanel" class="tab-pane" id="qi3">
+                                       <div class="xj_timing">
+                                            <div class="xj_ti">
+                                                <div id="dropdown3" class="xj_timing1">
+                                                  <div class="btn-group">
+                                                    <a  type="button" id="dropdownMenu" data-toggle="dropdown" class="lian">
+                                                      <span class="placeholder ziti">读秀</span>
+                                                      <span class="caret jiantou"></span>
+                                                    </a>
+                                                    <ul class="dropdown-menu width2" role="menu" aria-labelledby="dropdownMenu">
+                                                      <li role="presentation" value="1" onclick="getvalue3(1)"><a role="menuitem" tabindex="1" href="#1">读秀</a></li>
+                                                      <li role="presentation" value="2" onclick="getvalue3(2)"><a role="menuitem" tabindex="2" href="#2">百链</a></li>
+                                                      
+                                                    </ul>
+                                                  </div>
+                                                </div>
+                                                <div class="xj_timing2 width5531" >
+                                                    <input type="text" class="xj_timing3" style='float:left;color:#B0B0B0; width:474px;' class='pt_search_text' onclick="if(this.value=='请输入检索词'){this.value='';this.style.color='#666'}" onblur="if(this.value==''){this.value='请输入检索词';this.style.color='#B0B0B0'}" onkeydown="huiche(event,13)" id="keywords13" value="请输入检索词"/>
+                                                    <button class="xj_ss" onclick="search_xs()"><img src="http://lib.yzu.edu.cn/images/default/xj_fang2.png" /></button>
+                                                </div>
+                                            </div>
+											<script>
+												var searchtype3 = 1;
+												function getvalue3(obj)
+												{
+													searchtype3=obj;
+												}	
+											</script>
+                                        </div>
+										 
+                                <span class="xj_shuoming"><strong>说明</strong>:  面向学术资源具有强大的搜索功能.中文学术搜索请选择"读秀";外文学术搜索请选择"百链".</span>
+                                   </div>
+                                   <div role="tabpanel" class="tab-pane" id="qi4">
+                                       <div class="xj_timing">
+                                            <div class="xj_ti">
+                                                <div id="dropdown4" class="xj_timing1">
+                                                  <div class="btn-group">
+                                                    <a  type="button" id="dropdownMenu" data-toggle="dropdown" class="lian">
+                                                      <span class="placeholder ziti">FIND+</span>
+                                                      <span class="caret jiantou"></span>
+                                                    </a>
+                                                    <ul class="dropdown-menu width2" role="menu" aria-labelledby="dropdownMenu">
+                                                      <li role="presentation" value="1" onclick="getvalue4(1)"><a role="menuitem" tabindex="1" href="#1">FIND+</a></li>
+                                                      <li role="presentation" value="2" onclick="getvalue4(2)"><a role="menuitem" tabindex="2" href="#2">超星</a></li>                                                    
+                                                    </ul>
+                                                  </div>
+                                                </div>
+                                                <div class="xj_timing2 width5531" >
+                                                    <input type="text" class="xj_timing3" style='float:left;color:#B0B0B0;' class='pt_search_text' onclick="if(this.value=='请输入检索词'){this.value='';this.style.color='#666'}" onblur="if(this.value==''){this.value='请输入检索词';this.style.color='#B0B0B0'}" onkeydown="huiche(event,15)" id="keywords15" value="请输入检索词"/>
+                                                    <button class="xj_ss" onclick="search_findplus()"><img src="http://lib.yzu.edu.cn/images/default/xj_fang2.png"/></button>
+                                                </div>
+                                            </div>
+											<script>
+												var searchtype4 = 1;
+												function getvalue4(obj)
+												{
+													searchtype4=obj;
+												}	
+											</script>
+                                        </div>
+									
+                                <span class="xj_shuoming"><strong>说明</strong>:使用Find+、超星发现系统查找中外文资料.</span>
+                                   </div>
+
+
+								   <div role="tabpanel" class="tab-pane" id="qi5">
+                                       <div class="xj_timing">
+                                            <div class="xj_ti">
+                                                <div id="dropdown4" class="xj_timing1" style='display:none;'>
+                                                  <div class="btn-group">
+                                                    <a  type="button" id="dropdownMenu" data-toggle="dropdown" class="lian">
+                                                      <span class="placeholder ziti">FIND+ssss</span>
+                                                      <span class="caret jiantou"></span>
+                                                    </a>
+                                                    <ul class="dropdown-menu width2" role="menu" aria-labelledby="dropdownMenu">
+                                                      <li role="presentation" value="1" onclick="getvalue4(1)"><a role="menuitem" tabindex="1" href="#1">FIND+ssssssss</a></li>
+                                                      <li role="presentation" value="2" onclick="getvalue4(2)"><a role="menuitem" tabindex="2" href="#2">超星ssss</a></li>                                                    
+                                                    </ul>
+                                                  </div>
+                                                </div>
+                                                <div class="xj_timing2 width683">
+                                                    <input type="text" class="xj_timing3" style='float:left;color:#B0B0B0;' class='pt_search_text' onclick="if(this.value=='请输入检索词'){this.value='';this.style.color='#666'}" onblur="if(this.value==''){this.value='请输入检索词';this.style.color='#B0B0B0'}" onkeydown="huiche(event,155)" id="keywords155" value="请输入检索词"/>
+                                                    <button class="xj_ss" onclick="search_Edu()"><img src="http://lib.yzu.edu.cn/images/default/xj_fang2.png"/></button>
+                                                </div>
+                                            </div>
+											
+                                        </div>
+									
+                                <span class="xj_shuoming"><strong>说明</strong>:查找全国高校图书馆资料。通过馆际互借、文献传递的形式获取外馆文献。</span>
+                                   </div>
+                                </div>                            
+                            </div>                     
+                    </div>
+                    <!--xj_underground end-->
+                    <!--xj_wo-->
+                    <div class="xj_wo">
+                        <!--xj_own-->               
+						<div class="xj_own">
+							<div class="xj_own1">
+	<div class="xj_first xj_second">
+        <div class="xj_first1"  id="xj_b6">
+            <a href='http://202.195.60.230/ywbd/ywbd/ywzxt.asp' target="_self" id="xj_a6">
+                <span class="xj_de">有问必答</span>
+            </a>
+        </div>
+    </div>
+    <div class="xj_first ">
+        <div class="xj_first1"  id="xj_b5">
+            <a href='http://kjcx.yzu.edu.cn/' target="_self" id="xj_a5">
+                <span class="xj_de">科技查新</span>
+            </a>
+        </div>
+    </div>
+    
+</div>
+<div class="xj_own1">
+    <div class="xj_first xj_second">
+        <div class="xj_first1" id="xj_b3">
+            <a href='http://lib.yzu.edu.cn/list.php?fid=11' target="_self" id="xj_a3">
+                <span class="xj_de">古籍特藏</span>
+            </a>
+        </div>
+    </div>
+    <div class="xj_first">
+        <div class="xj_first1" id="xj_b2">
+            <a href='http://lib.yzu.edu.cn/list.php?fid=94' target="_self" id="xj_a2">
+                <span class="xj_de">查收查引</span>
+            </a>
+        </div>
+    </div>
+    
+</div>
+<div class="xj_own1"> 
+    <div class="xj_first xj_second">
+        <div class="xj_first1" id="xj_b4">
+            <a href="http://lib.yzu.edu.cn/bencandy.php?fid=167&aid=516" target="_self" id="xj_a4">
+                <span class="xj_de">教材征订</span>
+            </a>
+        </div>
+    </div>
+    <div class="xj_first ">
+        <div class="xj_first1" id="xj_b1">
+            <a href='http://book.yzu.edu.cn/'target="_self" id="xj_a1">
+                <span class="xj_de">我的图书馆</span>
+            </a>
+        </div>
+    </div>
+    
+</div>   
+                        </div>
+                        <!--xj_own end-->
+                        <!--xj_dongdong-->
+                        <div class="xj_dongdong">
+                            <div class="xj_dongdong1">
+                                <ul>
+                                  <li><a href="javascript:void(0);" class="xj_hover" onMouseOver="setTab('shf_nav',1,3);showmore(1);" id="shf_nav1">资源动态</a></li>
+                                  <li>|</li>
+                                  <li><a href="javascript:void(0);" onMouseOver="setTab('shf_nav',2,3);showmore(2);" id="shf_nav2">服务动态</a></li>
+                                  <li>|</li>
+                                  <li><a href="javascript:void(0);" onMouseOver="setTab('shf_nav',3,3);showmore(3);" id="shf_nav3">图书馆动态</a></li>
+                                </ul>
+                                <span class="xj_more" id='zyinfo1'><a href="http://lib.yzu.edu.cn/do/list.php?fid=21" target="_self">MORE<img src="http://lib.yzu.edu.cn/images/default/xj_0.png"></a></span>
+                								<span class="xj_more" style='display:none;' id='zyinfo2'><a href="http://lib.yzu.edu.cn/do/list.php?fid=22" target="_self">MORE<img src="http://lib.yzu.edu.cn/images/default/xj_0.png"></a></span>
+                								<span class="xj_more" style='display:none;' id='zyinfo3'><a href="http://lib.yzu.edu.cn/do/list.php?fid=23" target="_self">MORE<img src="http://lib.yzu.edu.cn/images/default/xj_0.png"></a></span>
+
+								<script>
+									function showmore(num)
+									{
+										$(".xj_more").hide();
+										$("#zyinfo"+num).show();
+									}
+								</script>
+                            </div>
+                            <div class="xj_dongdong2"  id="con_shf_nav_1"  style="display:block; ">
+                                <table>                                    
+                                   <tr>
+                                        <td class="xj_style1"><a href="http://lib.yzu.edu.cn/bencandy.php?fid=21&id=1143" target="_self">SIAM全文电子期刊现刊  开通试用..</a></td>
+                                        <td class="xj_style2">2017-10-19</td>
+                                    </tr><tr>
+                                        <td class="xj_style1"><a href="http://lib.yzu.edu.cn/bencandy.php?fid=21&id=1139" target="_self">大公报 开通试用</a></td>
+                                        <td class="xj_style2">2017-10-19</td>
+                                    </tr><tr>
+                                        <td class="xj_style1"><a href="http://lib.yzu.edu.cn/bencandy.php?fid=21&id=1140" target="_self">中国近代报刊数据库 开通试用</a></td>
+                                        <td class="xj_style2">2017-10-19</td>
+                                    </tr><tr>
+                                        <td class="xj_style1"><a href="http://lib.yzu.edu.cn/bencandy.php?fid=21&id=1141" target="_self">雕龙数据库 开通试用</a></td>
+                                        <td class="xj_style2">2017-10-19</td>
+                                    </tr><tr>
+                                        <td class="xj_style1"><a href="http://lib.yzu.edu.cn/bencandy.php?fid=21&id=1113" target="_self">学知课堂  正式上线！</a></td>
+                                        <td class="xj_style2">2017-09-29</td>
+                                    </tr><tr>
+                                        <td class="xj_style1"><a href="http://lib.yzu.edu.cn/bencandy.php?fid=21&id=1100" target="_self">超星期刊  开通试用！</a></td>
+                                        <td class="xj_style2">2017-09-21</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="xj_dongdong2"  id="con_shf_nav_2" style="display:none; ">
+                                <table>
+                                   <tr>
+                                        <td class="xj_style1"><a href="http://lib.yzu.edu.cn/bencandy.php?fid=22&id=1155" target="_self">图书馆为化学化工学院师生举办SciFinder数据..</a></td>
+                                        <td class="xj_style2">2017-10-27</td>
+                                    </tr><tr>
+                                        <td class="xj_style1"><a href="http://lib.yzu.edu.cn/bencandy.php?fid=22&id=1151" target="_self">关于办理2017年度第二期全省高校通用借书证..</a></td>
+                                        <td class="xj_style2">2017-10-25</td>
+                                    </tr><tr>
+                                        <td class="xj_style1"><a href="http://lib.yzu.edu.cn/bencandy.php?fid=22&id=1132" target="_self">讲座：SciFinder在化学学科中的应用..</a></td>
+                                        <td class="xj_style2">2017-10-16</td>
+                                    </tr><tr>
+                                        <td class="xj_style1"><a href="http://lib.yzu.edu.cn/bencandy.php?fid=22&id=1131" target="_self">通知：关于开展图书馆走近新生现场体验活动..</a></td>
+                                        <td class="xj_style2">2017-10-16</td>
+                                    </tr><tr>
+                                        <td class="xj_style1"><a href="http://lib.yzu.edu.cn/bencandy.php?fid=22&id=1115" target="_self">报道：图书馆开启新生入馆教育新模式..</a></td>
+                                        <td class="xj_style2">2017-09-30</td>
+                                    </tr><tr>
+                                        <td class="xj_style1"><a href="http://lib.yzu.edu.cn/bencandy.php?fid=22&id=1106" target="_self">通知：扬州市图书馆学会2017年学术研讨会征..</a></td>
+                                        <td class="xj_style2">2017-09-22</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="xj_dongdong2"  id="con_shf_nav_3" style="display:none; ">
+                                <table>
+                                    <tr>
+                                        <td class="xj_style1"><a href="http://lib.yzu.edu.cn/bencandy.php?fid=23&id=1156" target="_self">简讯：校党委组织部高静老师应邀为我馆支委..</a></td>
+                                        <td class="xj_style2">2017-10-27</td>
+                                    </tr><tr>
+                                        <td class="xj_style1"><a href="http://lib.yzu.edu.cn/bencandy.php?fid=23&id=1154" target="_self">学术报告：图书馆建设漫谈</a></td>
+                                        <td class="xj_style2">2017-10-26</td>
+                                    </tr><tr>
+                                        <td class="xj_style1"><a href="http://lib.yzu.edu.cn/bencandy.php?fid=23&id=1153" target="_self">简讯：科技查新站黄继东主任为我校参赛学生..</a></td>
+                                        <td class="xj_style2">2017-10-26</td>
+                                    </tr><tr>
+                                        <td class="xj_style1"><a href="http://lib.yzu.edu.cn/bencandy.php?fid=23&id=1152" target="_self">报道：我馆组织理论中心组专题学习，要求采..</a></td>
+                                        <td class="xj_style2">2017-10-25</td>
+                                    </tr><tr>
+                                        <td class="xj_style1"><a href="http://lib.yzu.edu.cn/bencandy.php?fid=23&id=1150" target="_self">简讯：我馆三位同志被评为2015-2017年度“江..</a></td>
+                                        <td class="xj_style2">2017-10-24</td>
+                                    </tr><tr>
+                                        <td class="xj_style1"><a href="http://lib.yzu.edu.cn/bencandy.php?fid=23&id=1148" target="_self">简讯：我馆代表队在第十七届教职工趣味运动..</a></td>
+                                        <td class="xj_style2">2017-10-23</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <!--xj_dongdong end-->
+                        <!--xj_lunbo1-->
+                        <div class="xj_lunbo1">
+                            <div class="flexslider">
+                              <ul id="slides" class="slides">
+                                  <!-- <li><a href="http://lib.yzu.edu.cn/bencandy.php?fid=23&id=770"><img src="http://lib.yzu.edu.cn/upload_files/article/22/7_20161215161736.jpg"  width=330 height=262/></a></li><li><a href="http://lib.yzu.edu.cn/bencandy.php?fid=23&id=753"><img src="http://lib.yzu.edu.cn/upload_files/article/23/37_20161205144032.jpg"  width=330 height=262/></a></li><li><a href="http://lib.yzu.edu.cn/bencandy.php?fid=23&id=741"><img src="http://lib.yzu.edu.cn/upload_files/article/23/37_20161128110345.png"  width=330 height=262/></a></li>
+                                  <li>
+<a href="http://lib.yzu.edu.cn/bencandy.php?fid=167&aid=639" target="_blank"><img src="http://lib.yzu.edu.cn/upload_files/other/1_20160928085759_new201602.jpg"  width=330 height=262/></a>
+</li>
+
+<li>
+<a href="http://lib.yzu.edu.cn/bencandy.php?fid=22&id=722" target="_blank"><img src="http://lib.yzu.edu.cn/upload_files/other/1_20161121112617_20161121001.jpg"  width=330 height=262/></a>
+</li>
+
+
+<li>
+<a href="http://lib.yzu.edu.cn/bencandy.php?fid=22&id=724" target="_blank"><img src="http://lib.yzu.edu.cn/upload_files/other/1_20161121112654_20161121002.jpg"  width=330 height=262/></a>
+</li>
+
+<li>
+<a href="http://lib.yzu.edu.cn/list.php?fid=169" target="_blank"><img src="http://lib.yzu.edu.cn/upload_files/other/1_20160531023247_image001.jpg"  width=330 height=262/></a>
+ </li>
+                                  <li>
+<a href="http://lib.yzu.edu.cn/bencandy.php?fid=167&aid=639" target="_blank"><img src="http://lib.yzu.edu.cn/upload_files/other/1_20160928085759_new201602.jpg"  width=330 height=262/></a>
+</li>
+
+<li>
+<a href="http://lib.yzu.edu.cn/bencandy.php?fid=22&id=722" target="_blank"><img src="http://lib.yzu.edu.cn/upload_files/other/1_20161121112617_20161121001.jpg"  width=330 height=262/></a>
+</li>
+
+
+<li>
+<a href="http://lib.yzu.edu.cn/bencandy.php?fid=22&id=724" target="_blank"><img src="http://lib.yzu.edu.cn/upload_files/other/1_20161121112654_20161121002.jpg"  width=330 height=262/></a>
+</li>
+
+<li>
+<a href="http://lib.yzu.edu.cn/list.php?fid=169" target="_blank"><img src="http://lib.yzu.edu.cn/upload_files/other/1_20160531023247_image001.jpg"  width=330 height=262/></a>
+ </li>
+-->
+								  
+
+<li>
+<a href="http://lib.yzu.edu.cn/bencandy.php?fid=167&aid=1096"><img src="http://lib.yzu.edu.cn/upload_files/other/1_20170920061231_2017走近新生003.jpg"  width=330 height=262/></a>
+</li>
+
+<li>
+<a href="http://lib.yzu.edu.cn/list.php?fid=213"><img src="http://lib.yzu.edu.cn/upload_files/other/1_20170913110018_888.jpg"  width=330 height=262/></a>
+</li>
+
+
+                              </ul>
+                            </div>
+                        </div>
+                        <!--xj_lunbo1 end-->
+                    </div>
+                    <!--xj_wo end-->
+                    <!--xj_zhongcheng-->
+                    <div class="xj_zhongcheng row">
+                        <div class="xj_zhongcheng1">
+                                <ul>
+                                  <li><a href="javascript:void(0);" class="xj_kk" onMouseOver="setTabb('shh_nav',1,2)" id="shh_nav1">资源</a></li>
+                                  <li>|</li>
+                                  <li><a href="javascript:void(0);" onMouseOver="setTabb('shh_nav',2,2)" id="shh_nav2">服务</a></li>
+                                </ul>
+                         
+
+							<ul id="con_shh_nav_1" class='ul_service' style='display:block;background:none;'>
+						
+								 
+						
+								 <li class='ul_service_li'><a href="http://lib.yzu.edu.cn/do/list.php?fid=5">版权公告</a></li><li class='ul_service_li'><a href="http://lib.yzu.edu.cn/do/list.php?fid=6">数据库导航</a></li><li class='ul_service_li'><a href="http://lib.yzu.edu.cn/do/list.php?fid=8">图书</a></li><li class='ul_service_li'><a href="http://lib.yzu.edu.cn/do/list.php?fid=7">馆藏目录</a></li><li class='ul_service_li'><a href="http://lib.yzu.edu.cn/do/list.php?fid=10">学位论文</a></li><li class='ul_service_li'><a href="http://lib.yzu.edu.cn/do/list.php?fid=9">期刊</a></li><li class='ul_service_li'><a href="http://lib.yzu.edu.cn/do/list.php?fid=12">随书光盘</a></li><li class='ul_service_li'><a href="http://lib.yzu.edu.cn/do/list.php?fid=11">古籍特藏</a></li>
+							
+							</ul>
+							
+							<ul id="con_shh_nav_2" class='ul_service' style='background:none;display:none;'>
+								
+								 
+								 <li class='ul_service_li'><a href="http://lib.yzu.edu.cn/do/list.php?fid=41">文献借阅</a></li><li class='ul_service_li'><a href="http://lib.yzu.edu.cn/do/list.php?fid=13">文献传递</a></li><li class='ul_service_li'><a href="http://lib.yzu.edu.cn/do/list.php?fid=14">馆际互借</a></li><li class='ul_service_li'><a href="http://lib.yzu.edu.cn/do/list.php?fid=15">科技查新</a></li><li class='ul_service_li'><a href="http://lib.yzu.edu.cn/do/list.php?fid=16">信息咨询</a></li><li class='ul_service_li'><a href="http://lib.yzu.edu.cn/do/list.php?fid=17">学科服务</a></li><li class='ul_service_li'><a href="http://lib.yzu.edu.cn/do/list.php?fid=24">读者培训</a></li><li class='ul_service_li'><a href="http://lib.yzu.edu.cn/do/list.php?fid=18">出版资讯与荐购</a></li>
+								
+							</ul>
+                        </div>
+						
+                        <div class="xj_zhongcheng2">
+							<span class="xj_xinshu" style='float:left;width:18px;color:#603c30;font-size:15px;position:relative;left:35px;top:10px;'>︻<br/><a href='http://lib.yzu.edu.cn/list.php?fid=114&showTag=1'>好书推介</a><br/>︼</span>
+                            <div id="myCarousel" class="carousel xj_lunbo2 slide" data-ride="carousel">
+                               <!-- 轮播（Carousel）项目 -->
+                               <div class="carousel-inner">
+									
+                                  <div class="item active xj_dongxi">                                 
+									<div style='float:left;'>
+										 <table width='100%' border='0' cellspacing='0' cellpadding='0'><tr><td width=25%><a href="http://lib.yzu.edu.cn/bencandy.php?fid=220&id=1127" class='bookgds'><img src="http://lib.yzu.edu.cn/upload_files/article/220/14_20171016101613_congqianman.jpg" class="xj_shu1" width="75" height="99" ></a></td><td width=25%><a href="http://lib.yzu.edu.cn/bencandy.php?fid=220&id=1126" class='bookgds'><img src="http://lib.yzu.edu.cn/upload_files/article/220/14_20171016091759_xijizuojia.jpg" class="xj_shu1" width="75" height="99" ></a></td><td width=25%><a href="http://lib.yzu.edu.cn/bencandy.php?fid=220&id=1124" class='bookgds'><img src="http://lib.yzu.edu.cn/upload_files/article/220/14_20171011094106_zhongsheng.jpg" class="xj_shu1" width="75" height="99" ></a></td><td width=25%><a href="http://lib.yzu.edu.cn/bencandy.php?fid=220&id=1123" class='bookgds'><img src="http://lib.yzu.edu.cn/upload_files/article/220/14_20171011093802_huijiadelu.png" class="xj_shu1" width="75" height="99" ></a></td></tr></table>
+									</div>                                        
+                                  </div>
+                                  <div class="item xj_dongxi">                                  
+									 <div style='float:left;'>
+											<table width='100%' border='0' cellspacing='0' cellpadding='0'><tr><td width=25%><a href="http://lib.yzu.edu.cn/bencandy.php?fid=220&id=1122" class='bookgds'><img src="http://lib.yzu.edu.cn/upload_files/article/220/14_20171011093450_shouwangzhixin.jpg" class="xj_shu1" width="75" height="99" ></a></td><td width=25%><a href="http://lib.yzu.edu.cn/bencandy.php?fid=220&id=1121" class='bookgds'><img src="http://lib.yzu.edu.cn/upload_files/article/191/14_20171011092113_weilaijianshi.jpg" class="xj_shu1" width="75" height="99" ></a></td><td width=25%><a href="http://lib.yzu.edu.cn/bencandy.php?fid=219&id=1087" class='bookgds'><img src="http://lib.yzu.edu.cn/upload_files/article/219/14_20170915101955_yibainianpiaobo.jpg" class="xj_shu1" width="75" height="99" ></a></td><td width=25%><a href="http://lib.yzu.edu.cn/bencandy.php?fid=219&id=1086" class='bookgds'><img src="http://lib.yzu.edu.cn/upload_files/article/219/14_20170915101431_mianbaonanhai.jpg" class="xj_shu1" width="75" height="99" ></a></td></tr></table>
+									</div>									
+                                  </div>
+                                  <div class="item xj_dongxi">                                    
+									<div>
+										<table width='100%' border='0' cellspacing='0' cellpadding='0'><tr><td width=25%><a href="http://lib.yzu.edu.cn/bencandy.php?fid=219&id=1086" class='bookgds'><img src="http://lib.yzu.edu.cn/upload_files/article/219/14_20170915101431_mianbaonanhai.jpg" class="xj_shu1" width="75" height="99" ></a></td><td width=25%><a href="http://lib.yzu.edu.cn/bencandy.php?fid=219&id=1085" class='bookgds'><img src="http://lib.yzu.edu.cn/upload_files/article/219/14_20170915101121_tongmou.jpg" class="xj_shu1" width="75" height="99" ></a></td><td width=25%><a href="http://lib.yzu.edu.cn/bencandy.php?fid=219&id=1084" class='bookgds'><img src="http://lib.yzu.edu.cn/upload_files/article/219/14_20170915100609_buluozhendeyoudiyuan.jpg" class="xj_shu1" width="75" height="99" ></a></td><td width=25%><a href="http://lib.yzu.edu.cn/bencandy.php?fid=219&id=1081" class='bookgds'><img src="http://lib.yzu.edu.cn/upload_files/article/219/14_20170908091556_weirenyeyaoyourendong.jpg" class="xj_shu1" width="75" height="99" ></a></td></tr></table>
+									</div>									                                  				
+                                  </div>
+								  
+                                </div>								
+                                <a class="xj_zuobian" href="#myCarousel" 
+                                  data-slide="prev"><img src="http://lib.yzu.edu.cn/images/default/xj_le.png"/></a>
+                                <a class="xj_youbian" href="#myCarousel" 
+                                  data-slide="next"><img src="http://lib.yzu.edu.cn/images/default/xj_ri.png"/></a>
+                            </div> 
+							<span class="xj_xinshu" style='float:left;position:relative;top:10px;margin-left:10px;'>
+										<ul class="book_gdarea">
+											<!--热门借阅-->
+											<li>
+												<a href="http://lib.yzu.edu.cn/bookplus_yzu/hotbook_list.php"  target='_blank'>热门借阅</a>
+											</li>
+											<li>
+												<a href="http://lib.yzu.edu.cn/bookplus_yzu/newbook_list.php" target='_blank'>新书推荐</a>
+											</li>
+											<li>
+												<a href="http://lib.yzu.edu.cn/list.php?fid=218"  target='_blank'>读书节</a>
+											</li>
+										</ul>
+									</span>
+                        </div>
+                    </div>
+                    <!--xj_zhongcheng end-->
+                </div>
+				
+            </div>
+            <!--xj_content end-->
+        </div>
+
+<script>
+		function search_gc()
+		{
+			var tmp_keywords	='';
+			tmp_keywords	=	document.getElementById('keywords3').value;
+			tmp_keywords=$.trim(tmp_keywords);
+			if(tmp_keywords.length==0 || tmp_keywords=='请输入检索词'){alert('检索词不能为空');}
+			else
+			{
+				tmp_keywords = encodeURI(tmp_keywords);
+				var url	="http://opac.yzu.edu.cn:8080/opac/openlink.php?strSearchType="+searchtype+"&match_flag="+searchtype2+"&historyCount=1&strText="+tmp_keywords+"&doctype=ALL&with_ebook=on&displaypg=20&showmode=list&sort=CATA_DATE&orderby=desc&dept=ALL";
+				window.open(url);
+			}
+		}
+
+		function search_findplus()
+		{
+
+			
+			var tmp_keywords	='';
+			tmp_keywords	=	document.getElementById('keywords15').value;
+			tmp_keywords=$.trim(tmp_keywords);
+			if(tmp_keywords.length==0 || tmp_keywords=='请输入检索词'){alert('检索词不能为空');}
+			else
+			{
+				tmp_keywords = encodeURI(tmp_keywords);	
+				if(searchtype4==1)
+				{
+					url	= "http://en.yzu.findplus.cn/searchapi.html?query="+tmp_keywords;
+				}
+				else
+				{
+					url	= "http://ss.zhizhen.com/s?sw="+tmp_keywords+"&size=15&isort=0&x=0_275";
+				}			
+				window.open(url);
+			}
+		}
+
+		function search_Edu()
+		{
+			var tmp_keywords	='';
+			tmp_keywords	=	document.getElementById('keywords155').value;
+			tmp_keywords=$.trim(tmp_keywords);
+			if(tmp_keywords.length==0 || tmp_keywords=='请输入检索词'){alert('检索词不能为空');}
+			else
+			{
+				tmp_keywords = encodeURI(tmp_keywords);	
+				url	= "http://www.yidu.edu.cn/100000/search.html?q="+tmp_keywords;		
+				window.open(url);
+			}
+		}
+
+		function search_xs()
+		{
+			var tmp_keywords	='';
+			tmp_keywords	=	document.getElementById('keywords13').value;
+			tmp_keywords=$.trim(tmp_keywords);
+			if(tmp_keywords.length==0 || tmp_keywords=='请输入检索词'){alert('检索词不能为空');}
+			else
+			{
+				tmp_keywords = encodeURI(tmp_keywords);	
+				if(searchtype3==1)
+				{
+					url	= "http://qw.duxiu.com/getPage?sw="+tmp_keywords+"&ecode=utf-8";
+
+				}
+				else
+				{
+					url	= "http://jour.blyun.com/searchJour?Field=all&channel=searchJour&sw="+tmp_keywords+"&ecode=utf-8&edtype=&searchtype=&view=0";
+
+					
+				}			
+				window.open(url);
+			}
+		}
+function cksearch(){
+
+	var inputString=document.getElementById("top_keywords").value;
+	inputString=$.trim(inputString);
+	if (inputString=='' || inputString=='站内检索')
+	{
+		alert('关键字不能为空!');
+		return false;
+	}else{
+		//add_k(inputString);
+		var url='http://lib.yzu.edu.cn/do/search.php?type=all&index=1&keyword='+encodeURI(inputString);
+		//alert(url);
+		window.open(url,'_self');
+	}
+}
+
+/***********************************数据库***********************************/ 
+function search_db()
+{
+
+	
+	var skey2=$("#skey2").val();
+
+	if(skey2=='请输入数据库名称')
+	{
+		skey2='';
+	}
+	url="http://lib.yzu.edu.cn/do/list.php?fid=6&skey2="+skey2;
+	window.open(url);
+} 
+
+var throttleV2 = function(fn, delay, mustRunDelay){     
+	var timer = null;     
+	var t_start;     
+	return function(){
+		var context = this, args = arguments, t_curr = +new Date();         
+		clearTimeout(timer);         
+		if(!t_start){             
+			t_start = t_curr;         
+		}         
+		if(t_curr - t_start >= mustRunDelay){             
+			fn.apply(context, args);             
+			t_start = t_curr;         
+		} else {             
+			timer = setTimeout(function(){                 
+				fn.apply(context, args);             
+			}, delay);         
+		}     
+	};  
+};
+</script>
+    </div>
+	</div>
+	<script>
+					
+					
+/*
+
+					function myfuntwo()
+					{
+						$("#zhuanqu").height($("#ffff2").height());
+						$("#yzu_cntw").width("90%");
+						var sethight	= $("#yzu_cntw").width();
+						$("#maxscreen").wdith(sethight);
+						var kd	= $(window).width()
+						var kd1	= $("#maxscreen").width();
+						var kd2	= parseInt((kd-kd1)/2);
+						$("#maxscreen").css("left",kd2);
+					}
+
+
+
+					$(function($) {
+						myfuntwo();
+					});
+
+
+
+					window.onresize = throttleV2(myfuntwo, 50, 100);
+*/					//	var kd	= $(window).width();
+						//var kd1	= $("#maxscreen").width();
+						//var kd2	= parseInt((kd-kd1)/2);
+						//$("#yzu_cntw").css("left",100px);
+						$("#zhuanqu").height($("#ffff2").height());
+						//$("#yzu_cntw").width("85%");
+						
+					
+					
+				</script>
+<!--
+-->
+
+ <div class="footer" style='position:relative;'>
+ <img src="http://lib.yzu.edu.cn/images/default/xj_di.png" class="ch_bg1"/>
+		<div class='yzu_footinfos' id='yzu_footinfos'>
+			
+			
+	
+	<a href="http://www.yzu.edu.cn/" target="_blank" title="扬州大学">扬州大学</a>
+
+	
+	<a href="http://oa.yzu.edu.cn/" target="_blank" title="行政办公系统">行政办公系统</a>
+
+	
+	<a href="http://www.calis.edu.cn/calisnew/" target="_blank" title="CALIS">CALIS</a>
+
+	
+	<a href="http://www.jalis.org.cn/" target="_blank" title="JALIS">JALIS</a>
+
+	 <!--<a href="" target="_blank" title="">Array[name1]</a>-->
+	 <!--<select style='border:none' class='selector' onChange="if(this.options[this.selectedIndex].value != ''){window.open(this.options[this.selectedIndex].value,'_blank');}">
+				
+					<option class='selectorfirst' value='' style='border:none;'>--校内站点--</div>-->
+
+					<div id="dropdown11" class="dropup" style='width:100x;float:right;'>
+                                                  <div class="btn-group">
+                                                    <a  type="button" id="dropdownMenu" data-toggle="dropdown" class="lian">
+                                                      <span class="placeholder ziti">校内站点</span>
+                                                      <span class="caret jiantou"></span>
+                                                    </a>
+                                                    <ul class="dropdown-menu width2" role="menu" aria-labelledby="dropdownMenu">  
+
+					
+<!--<option value="" style='border:none;'>校内站点</option>-->
+<li role="presentation" value="1" onclick="getvalue1('title')"><a role="menuitem" tabindex="1" href="">校内站点</a></li>
+
+<!--<option value="http://xxzx.yzu.edu.cn/" style='border:none;'>信息中心</option>-->
+<li role="presentation" value="1" onclick="getvalue1('title')"><a role="menuitem" tabindex="1" href="http://xxzx.yzu.edu.cn/">信息中心</a></li>
+
+<!--<option value="http://dangan.yzu.edu.cn/" style='border:none;'>档案馆</option>-->
+<li role="presentation" value="1" onclick="getvalue1('title')"><a role="menuitem" tabindex="1" href="http://dangan.yzu.edu.cn/">档案馆</a></li>
+
+<!--<option value="http://hqglc.yzu.edu.cn/" style='border:none;'>后勤保障处</option>-->
+<li role="presentation" value="1" onclick="getvalue1('title')"><a role="menuitem" tabindex="1" href="http://hqglc.yzu.edu.cn/">后勤保障处</a></li>
+
+<!--<option value="http://cwc.yzu.edu.cn/" style='border:none;'>财务处</option>-->
+<li role="presentation" value="1" onclick="getvalue1('title')"><a role="menuitem" tabindex="1" href="http://cwc.yzu.edu.cn/">财务处</a></li>
+
+<!--<option value="http://rsc.yzu.edu.cn/" style='border:none;'>人事处</option>-->
+<li role="presentation" value="1" onclick="getvalue1('title')"><a role="menuitem" tabindex="1" href="http://rsc.yzu.edu.cn/">人事处</a></li>
+
+<!--<option value="http://rwskc.yzu.edu.cn/" style='border:none;'>人文社科处</option>-->
+<li role="presentation" value="1" onclick="getvalue1('title')"><a role="menuitem" tabindex="1" href="http://rwskc.yzu.edu.cn/">人文社科处</a></li>
+
+<!--<option value="http://zrkxc.yzu.edu.cn/" style='border:none;'>科学技术处</option>-->
+<li role="presentation" value="1" onclick="getvalue1('title')"><a role="menuitem" tabindex="1" href="http://zrkxc.yzu.edu.cn/">科学技术处</a></li>
+
+<!--<option value="http://yjsc.yzu.edu.cn/" style='border:none;'>研究生院</option>-->
+<li role="presentation" value="1" onclick="getvalue1('title')"><a role="menuitem" tabindex="1" href="http://yjsc.yzu.edu.cn/">研究生院</a></li>
+
+<!--<option value="http://jwc.yzu.edu.cn/" style='border:none;'>教务处</option>-->
+<li role="presentation" value="1" onclick="getvalue1('title')"><a role="menuitem" tabindex="1" href="http://jwc.yzu.edu.cn/">教务处</a></li>
+
+<!--<option value="http://gonghui.yzu.edu.cn/" style='border:none;'>工会</option>-->
+<li role="presentation" value="1" onclick="getvalue1('title')"><a role="menuitem" tabindex="1" href="http://gonghui.yzu.edu.cn/">工会</a></li>
+
+
+													</ul>
+								
+											  </div>
+											</div>
+				
+	
+	<a href="http://lib.yzu.edu.cn/list.php?fid=116" target="_blank" title="网站地图">网站地图</a>
+
+			 <div class="xj_banqian">版权所有:扬州大学图书馆 联系信箱:tushu@yzu.edu.cn 联系电话:0514-87973418</div>
+		</div>
+    </div>
+    <!--footer end-->
+    <!--side-->
+    <div class="xj_side xj_side3">
+        <ul>
+			<div style='position:relative;right:100px;'>
+				<div id='nbuewm2' style='display:none;width:100px;position:absolute;'>
+					<img src="http://lib.yzu.edu.cn/images/default/ewmcode.png" width="100px" height="100px">
+				</div>
+			</div>
+			<li onmouseover="showewm2();" onmouseout="hideewm2()"><a href="http://lib.yzu.edu.cn/list.php?fid=144" target="_self"><img src="http://lib.yzu.edu.cn/images/default/xj_shouji.png" /></a></li>
+			
+			<div style='position:relative;right:100px;top:8px;'>
+				<div id='nbuewm3' style='display:none;width:100px;position:absolute;'>
+					<img src="http://lib.yzu.edu.cn/images/default/wbcode.png" width="100px" height="100px">
+				</div>
+			</div>
+            <li onmouseover="showewm3();" onmouseout="hideewm3()"><a href="http://weibo.com/3938492549/profile?topnav=1&wvr=5&user=1" target="_self"><img src="http://lib.yzu.edu.cn/images/default/xj_weibo.png" /></a></li>
+
+			<div style='position:relative;right:100px;'>
+				<div id='nbuewm4' style='display:none;width:100px;position:absolute;'>
+					<img src="http://lib.yzu.edu.cn/images/default/weixin.jpg" width="100px" height="100px">
+				</div>
+			</div>
+			<li onmouseover="showewm4();" onmouseout="hideewm4()"><a href="http://lib.yzu.edu.cn/list.php?fid=174" target="_self"><img src="http://lib.yzu.edu.cn/images/default/xj_d.png" /></a></li>
+
+        </ul>
+    </div>
+    <!--side end-->
+    <script src="http://lib.yzu.edu.cn/images/default/flexslider.js"></script>
+    <script src="http://lib.yzu.edu.cn/images/default/common.js"></script>
+	<script>
+		function show_db(div,id,type,page,rows)
+		{
+			if(get_obj("skey") && $("#skey").val()){
+				AJAX.get(div,"http://lib.yzu.edu.cn/do/get_db.php?skey="+encodeURIComponent($("#skey").val())+"&nid=&page="+page+"&type="+type+"&id_sort="+id+"&rows=&div="+div);
+			}
+			else
+			{
+				AJAX.get(div,"http://lib.yzu.edu.cn/do/get_db.php?nid=&page="+page+"&type="+type+"&id_sort="+id+"&rows=&div="+div);
+			}
+		}
+	</script>
+
+	<script>
+
+		function cksearch()
+		{
+
+			var inputString=document.getElementById("top_keywords").value;
+			inputString=$.trim(inputString);
+			if (inputString=='' || inputString=='站内检索')
+			{
+				alert('关键字不能为空!');
+				return false;
+			}else{
+				//add_k(inputString);
+				var url='http://lib.yzu.edu.cn/do/search.php?type=all&index=1&keyword='+encodeURI(inputString);
+				//alert(url);
+				window.open(url,'_self');
+			}
+		}
+
+		function changeTcolor(obj)
+		{
+			$(obj).children().addClass("xj_active");
+		}
+
+		function myfunthree()
+		{
+		
+			var kd	= $(window).width()
+			var kd1	= $("#yzu_footinfos").width();
+			var kd2	= parseInt((kd-kd1)/2);
+			$("#yzu_footinfos").css("left",kd2);
+		}
+
+		$(function($) {
+			myfunthree();
+		});
+		window.onresize = throttleV2(myfunthree, 50, 100);
+
+
+		
+
+	</script>
+	<script>
+			//二级页面左右对齐
+
+			window.onload = function() {
+			
+			var lefttree	= '';
+			var cntright	= '';
+			lefttree	= $("#treeleft").height();
+			cntright	= $("#contentright").height();
+
+			var setheight	= Math.max(lefttree,cntright);
+
+			//alert(setheight);
+			$("#treeleft").height(setheight+20);
+			$("#contentright").height(setheight+20);
+			
+			
+		}; 
+	 function showewm2()
+	 {
+		$("#nbuewm2").show();
+	 }
+
+	 function hideewm2()
+	 {
+		$("#nbuewm2").hide();
+	 }
+
+	 function showewm3()
+	 {
+		$("#nbuewm3").show();
+	 }
+
+	 function hideewm3()
+	 {
+		$("#nbuewm3").hide();
+	 }
+	 function showewm4()
+	 {
+		$("#nbuewm4").show();
+	 }
+
+	 function hideewm4()
+	 {
+		$("#nbuewm4").hide();
+	 }
+
+	
+		</script>
+  </body>
+</html>

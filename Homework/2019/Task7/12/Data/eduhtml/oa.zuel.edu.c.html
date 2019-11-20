@@ -1,0 +1,134 @@
+
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=700 ,user-scalable=yes">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>中南财经政法大学办公自动化系统</title>
+    <link href="../../css/common.css" rel="stylesheet">
+    <link href="../../css/login.css" rel="stylesheet">
+    <link rel="shortcut icon" href="../../favicon.ico" />
+
+
+</head>
+<body onload='pageLoad();'>
+
+<form action="/" method="post">
+
+<div class="login-t-r">
+    
+    
+</div>
+
+<div class="login">
+
+
+<div class="login-qr-bg" style="height:200px;">
+</div>
+<div class="login-qr row" style="display:block;">
+    <div class="login-qr-l">
+        <div class="mg-r-20 w100">
+        <img src="../../images/qr.png" style="width:100px; height:100px;" />
+        </div>
+        <div class="fs-12 w100 text-center">
+        <span style="color:#fff;" >中南大OA（请勿使用微信扫码）</span>
+        </div>
+        
+    </div>
+    <div class="login-qr-r">
+    <div class="pd-l-30 fs-12">
+        <a href="../../Files/DownLoad/NtkoControlBrowserSetup.msi" target="_blank" class="png32 login-icon mg-r-15">Office控件</a>
+        <a href="../../Files/DownLoad/AdobeFlash_Firefox_Opera_Safari.exe" target="_blank" class="png32 login-icon">火狐Flash</a>
+        <a href="../../Files/DownLoad/PDFCreator.exe" target="_blank" class="png32 login-icon mg-r-15">PDFCreator</a>
+        
+        
+        <a href="../../Files/DownLoad/FileFormatConverters.exe" target="_blank" class="png32 login-icon">Office2007兼容补丁</a>
+        <a href="../../Files/DownLoad/AdbeRdr.exe" target="_blank" class="png32 login-icon mg-r-15">PDF阅读器</a>
+    </div>
+    </div>
+</div>
+
+
+<div class="png32 login-bg">
+    <div class="login-ipt-pos">
+        <input type="text" id="userName" name="userName" value="" placeholder="请输入用户名" class="login-ipt1">
+        <input type="password" id="passWord" name="passWord" class="login-ipt2">
+    </div>
+    <input type="submit" id="button" value="登录" class="login-submit" />
+    <a href="javascript:viod(0);" id="log" target="_blank" class="png32" style="font:normal 14pt 'Microsoft YaHei'; color:red; position:absolute; right:-50px; top:50%; margin-top:35px;"><b>统一身份认证<br />登录入口</b></a>
+    
+    <div class="login-btn4 login-btn4-fcs">
+        <span>App与备用软件</span>
+        <div style="position:absolute; top:-14px; left:70px;"><img src="../../images/new.gif" /></div>    
+    </div>
+</div>
+
+<div class="ft text-center fs-12 dhide">
+     
+</div>
+
+</div>
+
+
+</form>
+
+</body>
+<script type="text/javascript" src="../../Scripts/jquery-1.11.2.min.js"></script>
+<script type="text/javascript" src="../../Scripts/jquery.placeholder.min.js"></script>
+<script type="text/javascript" src="../../Scripts/login.js" charset='gb2312' ></script>
+
+<link rel="stylesheet" href="../../Content/tipswindown.css" type="text/css" media="all" />
+<script src="../../Scripts/tipswindown.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+        function pageLoad() {
+            var user = '';
+            var isPass = ''
+            $("#userName").val(user);
+            $("#userName").select();
+            if (isPass != "") {
+                if (isPass != "false") {
+                    if (isPass == "OAValPwd") {
+                        //OA弱密码
+                        alert("您的密码设置过于简单，请修改一个高强度、不易猜测的密码（8-16位字母数字组合），方可正常登录进入系统。");
+                        tipsWindown("系统认证用户密码修改", 'url:get?../../Home/LoginPwd', 390, 180, "true", "", "true", "leotheme");
+                        return false;
+                    } else {
+                        alert(isPass);
+                    }
+                }
+                else {
+                    alert("对不起，您的用户名或密码有误！");
+                }
+            }
+
+            $.post("/Home/ValIP", function (data) {
+                if (data.toLowerCase() == "false") {
+                    alert("基于安全考虑，校外用户规定用统一身份认证登录！");
+                    window.location.href = 'http://ids.znufe.edu.cn/authserver/login?service=http://oa.zuel.edu.cn/';
+                }
+            });
+
+        }
+        $(function () {
+            $("#log").click(function () {
+                window.location.href = 'http://ids.znufe.edu.cn/authserver/login?service=http://oa.zuel.edu.cn/';
+                return false;
+            });
+            $("#ip").click(function () {
+                $.post("/Home/ValIP", function (data) {
+                    alert(data);
+                });
+            });
+        });
+//        //回车默认搜索
+//        $(document).keydown(function () {
+//            if (event.keyCode == 13) {
+//                $("#log").click();
+//                event.keyCode = 0;
+//                event.returnValue = false;
+//            }
+//        });
+    </script>
+</html>

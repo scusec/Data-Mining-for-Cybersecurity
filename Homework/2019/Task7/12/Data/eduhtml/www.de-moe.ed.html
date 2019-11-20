@@ -1,0 +1,1085 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!-- 2017-03-01 15:30:27 -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>驻德使馆教育处</title>
+<link href="./css/zdbsc.css" rel="stylesheet" type="text/css" />
+</head>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>驻德使馆教育处</title>
+<link href="./css/zdbsc.css" rel="stylesheet" type="text/css" />
+<script src="./js/jquery/jquery.js" type="text/javascript"></script>
+</head>
+
+<body style="font-size:12px;">
+<table width="950" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td ><img src="images/top.jpg" width="950" height="155" border="0" usemap="#Map1" />    </td>
+  </tr>
+</table>
+
+<table width="950" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td height="33" background="images/navbg.jpg"><table width="950" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="680" height="32" valign="bottom" class="font14w"><table width="100%" border="0" cellspacing="0" cellpadding="2">
+          <tr>
+            <!-- <td width="13%" align="center"><a href="./" class="font14w">首页</a> </td>
+            <td width="17%" align="center"><a href="./article_list_read_one.php?id=435" class="font14w">关于我们</a> </td>
+            <td width="15%" align="center"><a href="./article_list.php?sortid=3" class="font14w">办事指南</a></td>
+            <td width="18%" align="center"><a href="./article_list.php?sortid=4" class="font14w">合作交流</a></td>
+            <td width="16%" align="center"><a href="./article_list.php?sortid=5" class="font14w">留学服务</a> </td>
+            <td width="21%" align="center"><a href="./article_list.php?sortid=6" class="font14w">学人之家</a></td> -->
+            	<td  align="center">&nbsp;&nbsp;&nbsp;&nbsp;<a href="./" class="font14w">首页</a> </td>
+            <td align="center">&nbsp;&nbsp;&nbsp;&nbsp;<a href="./article_list_read_one.php?id=1957" class="font14w">教育交流</a> </td>
+            <td align="center">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="./article_list_read_one.php?id=2031" class="font14w">留学服务</a> </td>
+            <td align="center">&nbsp;&nbsp;&nbsp;&nbsp;<a href="./article_list_read_one.php?id=2032" class="font14w">人才工作</a></td>
+            <td align="center">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="./article_list_read_one.php?id=336" class="font14w">汉语推广</a></td>
+            <td align="center"><a href="./article_list_read_one.php?id=1823" class="font14w">Study in China</a></td>
+            <td align="center"><a href="./article_list_read_one.php?id=435" class="font14w">联系我们</a> </td>
+	</tr>
+        </table></td>
+        <td width="270"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td height="30" align="middle" valign="bottom"><div id="sitetime"></td>
+          </tr>
+        </table></td>
+      </tr>
+    </table></td>
+  </tr>
+</table>
+<table width="950" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td height="5"></td>
+  </tr>
+</table>
+
+<SCRIPT language="javascript" type="text/javascript" >
+function formatdate(id){
+	d=new Date();
+	localTime = d.getTime();
+	localOffset=d.getTimezoneOffset()*60000;
+	utc = localTime + localOffset;
+	var myDate = new Date();     //取得(创建)当前时间      
+	month = myDate.getMonth()+1;      //获取当前月份(0-11,0代表1月)  
+	
+	if(month>10 || month<4){
+		offset =1;
+	}else{
+		offset =2;		
+	}
+	  
+	
+	hawaii = utc + (3600000*offset);
+
+	D= new Date(hawaii);
+	//D= new Date();
+	m=new Date();
+
+	var dateStr = D.getFullYear() + "年";
+    if((D.getMonth() + 1) < 10){
+        dateStr = dateStr + '0' + (D.getMonth() + 1) + "月";
+    }else{
+        dateStr = dateStr + (D.getMonth() + 1) + "月";
+    }
+    if(D.getDate() < 10){
+        dateStr = dateStr + '0' + D.getDate() + "日 ";
+    }else{
+        dateStr = dateStr + D.getDate() + "日 ";
+    }
+
+	dateStr = dateStr + " 德国时间 ";
+    if(D.getHours() < 10){
+        dateStr = dateStr + '0' + D.getHours() + ":";
+    }else{
+        dateStr = dateStr + D.getHours() + ":";
+    }
+    if(D.getMinutes() < 10){
+        dateStr = dateStr + '0' + D.getMinutes() + ":";
+    }else{
+        dateStr = dateStr + D.getMinutes() + ":";
+    }
+	if(D.getSeconds() < 10){
+        dateStr = dateStr + '0' + D.getSeconds();
+    }else{
+        dateStr = dateStr + D.getSeconds();
+    }
+
+	document.getElementById(id).innerHTML = "<font color='red'>"+dateStr+"</font>";
+
+	}
+	setInterval("formatdate('sitetime');",1000);
+</SCRIPT>
+
+
+<map name="Map1" id="Map1"><area shape="rect" coords="866,107,935,132" href="./article_list.php?sortid=12030" /></map>
+<table width="950" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="188" valign="top" background="images/leftbg.jpg"><table width="100%" height="5" border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <td></td>
+      </tr>
+    </table>
+      <table width="176" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tr>
+          <td><img src="images/bddj.gif" width="177" height="82" border="0" usemap="#MapMap" />
+            <map name="MapMap" id="MapMap">
+              <area shape="rect" coords="113,56,173,76" target="_blank" href="./reg" />
+            </map>
+          </td>
+        </tr>
+      </table>
+      <table width="100%" height="5" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td></td>
+        </tr>
+      </table>
+      <!-- <table width="176" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tr>
+          <td height="107" background="images/ssbg.gif"><table width="176" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <td width="135" height="50">&nbsp;</td>
+              <td width="41">&nbsp;</td>
+            </tr>
+            <tr>
+              <td align="center"><input name="textfield22" type="text" size="13" /></td>
+              <td><img src="images/go.gif" width="34" height="34" /></td>
+            </tr>
+          </table></td>
+        </tr>
+      </table> -->
+      <!-- <table width="100%" height="5" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td></td>
+        </tr>
+      </table> -->
+      
+      <!-- 2014-07-25 wangzhao add start -->
+      <table width="176"  height="170" border="0"  align="center" cellpadding="0" cellspacing="0" style=" background-color:#f9fddf; font-family:'宋体'; font-size:12px; color:#b02403; line-height:20px;">
+    
+    <tr><td valign="top">
+    <table>
+             <tr><td width="22"  height="20" align="center"><img src="./images/arrow201.gif" width="5" height="5" /></td>
+          <td style=" width:154px;  text-align:left;padding-right:15px; overflow: hidden;">
+        <a href="article_list.php?sortid=12032" target="_blank" title="相关政策">
+        <span>相关政策</span></a>
+        </td>
+        </tr>
+               <tr><td width="22"  height="20" align="center"><img src="./images/arrow201.gif" width="5" height="5" /></td>
+          <td style=" width:154px;  text-align:left;padding-right:15px; overflow: hidden;">
+        <a href="article_list.php?sortid=12033" target="_blank" title="国家公派留学人员事务">
+        <span>国家公派留学人员事务</span></a>
+        </td>
+        </tr>
+               <tr><td width="22"  height="20" align="center"><img src="./images/arrow201.gif" width="5" height="5" /></td>
+          <td style=" width:154px;  text-align:left;padding-right:15px; overflow: hidden;">
+        <a href="article_list.php?sortid=12034" target="_blank" title="高水平项目海外选拔">
+        <span>高水平项目海外选拔</span></a>
+        </td>
+        </tr>
+               <tr><td width="22"  height="20" align="center"><img src="./images/arrow201.gif" width="5" height="5" /></td>
+          <td style=" width:154px;  text-align:left;padding-right:15px; overflow: hidden;">
+        <a href="article_list.php?sortid=12144" target="_blank" title="艺术类项目海外选拔">
+        <span>艺术类项目海外选拔</span></a>
+        </td>
+        </tr>
+               <tr><td width="22"  height="20" align="center"><img src="./images/arrow201.gif" width="5" height="5" /></td>
+          <td style=" width:154px;  text-align:left;padding-right:15px; overflow: hidden;">
+        <a href="article_list.php?sortid=12037" target="_blank" title="留学回国人员证明">
+        <span>留学回国人员证明</span></a>
+        </td>
+        </tr>
+               <tr><td width="22"  height="20" align="center"><img src="./images/arrow201.gif" width="5" height="5" /></td>
+          <td style=" width:154px;  text-align:left;padding-right:15px; overflow: hidden;">
+        <a href="article_list.php?sortid=12038" target="_blank" title="国家优秀自费生奖学金">
+        <span>国家优秀自费生奖学金</span></a>
+        </td>
+        </tr>
+               <tr><td width="22"  height="20" align="center"><img src="./images/arrow201.gif" width="5" height="5" /></td>
+          <td style=" width:154px;  text-align:left;padding-right:15px; overflow: hidden;">
+        <a href="article_list.php?sortid=12145" target="_blank" title="领事保护与服务">
+        <span>领事保护与服务</span></a>
+        </td>
+        </tr>
+          <tr>
+              <td height="10" align="center">&nbsp;</td>
+              <td align="right"><a href="./article_list.php?sortid=5" class="red">更多&gt;&gt;</a>&nbsp;&nbsp;</td>
+            </tr>
+    </table>
+    </td></tr>
+      </table>
+      <table width="176" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tr>
+          <td><img src="images/bottom.gif" width="176" height="5" /></td>
+        </tr>
+      </table>
+      <table width="100%" height="5" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td></td>
+        </tr>
+      </table>
+      <table width="176"  height="170" border="0"  align="center" cellpadding="0" cellspacing="0" style=" background-color:#f9fddf; font-family:'宋体'; font-size:12px; color:#b02403; line-height:20px;">
+    
+    <tr><td valign="top">
+    <table>
+             <tr><td width="22"  height="20" align="center"><img src="./images/arrow201.gif" width="5" height="5" /></td>
+          <td style=" width:154px;  text-align:left;padding-right:15px; overflow: hidden;">
+        <a href="article_list.php?sortid=12068" target="_blank" title="国家人才政策">
+        <span>国家人才政策</span></a>
+        </td>
+        </tr>
+               <tr><td width="22"  height="20" align="center"><img src="./images/arrow201.gif" width="5" height="5" /></td>
+          <td style=" width:154px;  text-align:left;padding-right:15px; overflow: hidden;">
+        <a href="article_list.php?sortid=12071" target="_blank" title="千人计划">
+        <span>千人计划</span></a>
+        </td>
+        </tr>
+               <tr><td width="22"  height="20" align="center"><img src="./images/arrow201.gif" width="5" height="5" /></td>
+          <td style=" width:154px;  text-align:left;padding-right:15px; overflow: hidden;">
+        <a href="article_list.php?sortid=12143" target="_blank" title="国家杰出青年基金">
+        <span>国家杰出青年基金</span></a>
+        </td>
+        </tr>
+               <tr><td width="22"  height="20" align="center"><img src="./images/arrow201.gif" width="5" height="5" /></td>
+          <td style=" width:154px;  text-align:left;padding-right:15px; overflow: hidden;">
+        <a href="article_list.php?sortid=12072" target="_blank" title="中科院百人计划">
+        <span>中科院百人计划</span></a>
+        </td>
+        </tr>
+               <tr><td width="22"  height="20" align="center"><img src="./images/arrow201.gif" width="5" height="5" /></td>
+          <td style=" width:154px;  text-align:left;padding-right:15px; overflow: hidden;">
+        <a href="article_list.php?sortid=12073" target="_blank" title="长江学者计划">
+        <span>长江学者计划</span></a>
+        </td>
+        </tr>
+               <tr><td width="22"  height="20" align="center"><img src="./images/arrow201.gif" width="5" height="5" /></td>
+          <td style=" width:154px;  text-align:left;padding-right:15px; overflow: hidden;">
+        <a href="article_list.php?sortid=12074" target="_blank" title="春晖计划">
+        <span>春晖计划</span></a>
+        </td>
+        </tr>
+               <tr><td width="22"  height="20" align="center"><img src="./images/arrow201.gif" width="5" height="5" /></td>
+          <td style=" width:154px;  text-align:left;padding-right:15px; overflow: hidden;">
+        <a href="article_list.php?sortid=12075" target="_blank" title="青年千人计划">
+        <span>青年千人计划</span></a>
+        </td>
+        </tr>
+          <tr>
+              <td height="10" align="center">&nbsp;</td>
+              <td align="right"><a href="./article_list.php?sortid=12066" class="red">更多&gt;&gt;</a>&nbsp;&nbsp;</td>
+            </tr>
+    </table>
+    </td></tr>
+      </table>
+      <table width="176" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tr>
+          <td><img src="images/bottom.gif" width="176" height="5" /></td>
+        </tr>
+      </table>
+      <table width="100%" height="5" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td></td>
+        </tr>
+      </table>
+      <!-- 2014-07-25 wangzhao add end -->
+        <!--平安留学-->
+        <table width="176" border="0" align="center" cellpadding="0" cellspacing="0">
+            <tr>
+                <td height="35" valign="bottom" background="images/wsdc01.gif">
+                    <table width="100%" height="30" border="0" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td height="0" align="center" class="font14b"><a href="./article_list.php?sortid=12169">&nbsp;&nbsp;&nbsp;&nbsp;<strong>平安留学</strong></a></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+
+        <table width="176"  height="130" border="0"  align="center" cellpadding="0" cellspacing="0" style=" background-color:#f9fddf; font-family:'宋体'; font-size:12px; color:#b02403; line-height:20px;">
+            <tr>
+                <td valign="top">
+                    <table>
+                                                                                    <tr>
+                                    <td width="22"  height="20" align="center">
+                                        <img src="./images/arrow201.gif" width="5" height="5" />
+                                    </td>
+                                    <td style=" width:154px;  text-align:left;padding-right:15px; overflow: hidden;">
+                                        <a href="article_read.php?id=12169-20160503-3308" target="_blank" title="柏林和勃兰登堡州学生会一览"><span>柏林和勃兰登堡州学...</span></a>
+                                    </td>
+                                </tr>
+                                                                                                                <tr>
+                                    <td width="22"  height="20" align="center">
+                                        <img src="./images/arrow201.gif" width="5" height="5" />
+                                    </td>
+                                    <td style=" width:154px;  text-align:left;padding-right:15px; overflow: hidden;">
+                                        <a href="article_read.php?id=12169-20160406-3227" target="_blank" title="北德四州（不莱梅、萨克森、萨-安、图林根）学生会一览"><span>北德四州（不莱梅、...</span></a>
+                                    </td>
+                                </tr>
+                                                                                                                <tr>
+                                    <td width="22"  height="20" align="center">
+                                        <img src="./images/arrow201.gif" width="5" height="5" />
+                                    </td>
+                                    <td style=" width:154px;  text-align:left;padding-right:15px; overflow: hidden;">
+                                        <a href="article_read.php?id=12169-20160406-3221" target="_blank" title="北威州学生会一览"><span>北威州学生会一览</span></a>
+                                    </td>
+                                </tr>
+                                                                                                                <tr>
+                                    <td width="22"  height="20" align="center">
+                                        <img src="./images/arrow201.gif" width="5" height="5" />
+                                    </td>
+                                    <td style=" width:154px;  text-align:left;padding-right:15px; overflow: hidden;">
+                                        <a href="article_read.php?id=12169-20160406-3219" target="_blank" title="巴伐利亚州学生会一览"><span>巴伐利亚州学生会一览</span></a>
+                                    </td>
+                                </tr>
+                                                                            <tr>
+                            <td height="10" align="center">&nbsp;</td>
+                            <td align="right"><a href="./article_list.php?sortid=12169" class="red">更多&gt;&gt;</a>&nbsp;&nbsp;</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <!--end-->
+
+      <table width="176" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tr>
+          <td height="35" valign="bottom" background="images/wsdc01.gif"><table width="100%" height="30" border="0" cellpadding="0" cellspacing="0">
+            <tr>
+              <td height="0" align="center" class="font14b"><a href="./article_list.php?sortid=12055">&nbsp;&nbsp;&nbsp;&nbsp;<strong>社团信息</strong></a></td>
+            </tr>
+          </table></td>
+        </tr>
+      </table>
+		
+      <table width="176"  height="170" border="0"  align="center" cellpadding="0" cellspacing="0" style=" background-color:#f9fddf; font-family:'宋体'; font-size:12px; color:#b02403; line-height:20px;">
+		
+		<tr><td valign="top">
+		<table>
+									 <tr><td width="22"  height="20" align="center"><img src="./images/arrow201.gif" width="5" height="5" /></td>
+          <td style=" width:154px;  text-align:left;padding-right:15px; overflow: hidden;">
+				<a href="article_read.php?id=12055-20161118-4063
+				" target="_blank" title="2016海德堡新生欢迎会圆满结束">
+				<span>2016海德堡新生欢迎...</span></a>
+				</td>
+        </tr>
+														 <tr><td width="22"  height="20" align="center"><img src="./images/arrow201.gif" width="5" height="5" /></td>
+          <td style=" width:154px;  text-align:left;padding-right:15px; overflow: hidden;">
+				<a href="http://www.de-moe.edu.cn/article_read.php?id=12014-20161109-4024" target="_blank" title=" 德国同济校友会2016年年会暨二十周年庆典纪实">
+				<span> 德国同济校友会2016...</span></a>
+				</td>
+        </tr>
+														 <tr><td width="22"  height="20" align="center"><img src="./images/arrow201.gif" width="5" height="5" /></td>
+          <td style=" width:154px;  text-align:left;padding-right:15px; overflow: hidden;">
+				<a href="http://www.de-moe.edu.cn/article_read.php?id=12014-20161030-3979" target="_blank" title=" 2016全德中国学生会暨校友会年会在柏林召开">
+				<span> 2016全德中国学生会...</span></a>
+				</td>
+        </tr>
+														 <tr><td width="22"  height="20" align="center"><img src="./images/arrow201.gif" width="5" height="5" /></td>
+          <td style=" width:154px;  text-align:left;padding-right:15px; overflow: hidden;">
+				<a href="article_read.php?id=12055-20161110-4032
+				" target="_blank" title="著名书法家周斌教授为留德学人讲书法">
+				<span>著名书法家周斌教授...</span></a>
+				</td>
+        </tr>
+							
+		<tr>
+              <td height="10" align="center">&nbsp;</td>
+              <td align="right"><a href="./article_list.php?sortid=12055" class="red">更多&gt;&gt;</a>&nbsp;&nbsp;</td>
+            </tr>
+		</table>
+		
+		</td></tr>
+      </table>
+	 
+      <table width="176" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tr>
+          <td><img src="images/bottom.gif" width="176" height="5" /></td>
+        </tr>
+      </table>
+      <table width="100%" height="5" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td></td>
+        </tr>
+      </table>
+      <!-- <table width="176" border="0" align="center" cellpadding="0" cellspacing="0" style="background-color:#f9fddf;" color:#b02403; line-height:20px;>
+        <tr>
+          <td height="33" align="center" class="font14red" background="images/wsdc01.gif" ><a href="./article_list.php?sortid=12063">&nbsp;&nbsp;&nbsp;&nbsp;<strong>人文经典选读</strong></a>
+        </tr>
+      </table>
+      <table width="176"  height="170" border="0"  align="center" cellpadding="0" cellspacing="0" style=" background-color:#f9fddf; font-family:'宋体'; font-size:12px; color:#b02403; line-height:20px;">
+		
+		<tr><td valign="top">
+		<table>
+		
+		<tr>
+              <td height="10" align="center">&nbsp;</td>
+              <td align="right"><a href="./article_list.php?sortid=12063" class="red">更多&gt;&gt;</a>&nbsp;&nbsp;</td>
+            </tr>
+		</table>
+		
+		</td></tr>
+      </table>
+      
+      <table width="100%" height="5" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td></td>
+        </tr>
+      </table>-->
+         <table width="176" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tr>
+          <td height="35" valign="bottom" background="images/wsdc01.gif"><table width="100%" height="30" border="0" cellpadding="0" cellspacing="0">
+            <tr>
+              <td height="0" align="center" class="font14b"><a href="./article_list.php?sortid=12055">&nbsp;&nbsp;&nbsp;&nbsp;<strong>友情链接</strong></a></td>
+            </tr>
+          </table></td>
+        </tr>
+      </table>
+	  <table width="176"  border="0"  align="center" cellpadding="0" cellspacing="0" style=" background-color:#f9fddf; font-family:'宋体'; font-size:12px; color:#b02403; line-height:20px;">
+		
+		<tr><td valign="top">
+		  <script type="text/JavaScript">
+<!--
+function MM_jumpMenu(targ,selObj,restore){ //v3.0
+window.open(selObj.options [selObj.selectedIndex].value,'_blank');
+}
+
+
+//-->
+</script>
+		  <form name="form1" id="form1">
+		  <label>
+            <select name="select" style=" width:165px; border:1px solid #ccc; "onchange="MM_jumpMenu('parent',this,1)">
+              <option>----中国驻外机构----</option>
+			  			  <option value="http://www.china-botschaft.de/chn/">中国驻德国大使馆</option>
+			  			  <option value="http://www.sino-education.org/">驻美国使馆教育处</option>
+			  			  <option value="http://www.edu-chineseembassy-uk.org/">驻英国使馆教育处</option>
+			  			  <option value="http://www.eduru.org/">驻俄罗斯使馆教育处</option>
+			  			  <option value="http://www.education-ambchine.org/">驻法国使馆教育处</option>
+			  			  <option value="http://www.eduembca.org/">驻加拿大使馆教育处</option>
+			  			  <option value="http://www.edu-australia.org/">驻澳大利亚使馆教育处</option>
+			               
+            </select>
+          </label></form></td>
+        </tr>
+        <tr>
+          <td height="28" align="center" valign="bottom" bgcolor="#F9F9F9"> 
+		  <form name="form2" id="form2">
+		  <select name="select2" style=" width:165px; border:1px solid #ccc; "onchange="MM_jumpMenu('parent',this,1)">
+              <option>----德国相关部门----</option>
+              			  <option value="http://www.bmbf.de">德国联邦教育与科研部</option>
+			  			  <option value="http://www.auswaertiges-amt.de/diplo/de/Startseite.html">德国联邦外交部</option>
+			  			  <option value="http://www.daad.de">德意志学术交流中心DAAD</option>
+			  			  <option value="http://www.hrk.de/de/home/home.php">德国大学校长联席会议HRK</option>
+			  			  <option value="http://www.kmk.org/">德国各州文教部长联席会议KMK</option>
+			  			  <option value="http://www.dfg.de">德国科学基金会DFG</option>
+			  			  <option value="http://www.bibb.de/">德国联邦职教所BIBB</option>
+			              </select></form></td>
+        </tr>
+
+        <tr>
+          <td height="28" align="center" valign="bottom" bgcolor="#F9F9F9">
+		  <form name="form3" id="form3">
+		  <select name="select3" style=" width:165px; border:1px solid #ccc; "onchange="MM_jumpMenu('parent',this,1)">
+              <option>----国内相关部门----</option>
+             			  <option value="http://www.moe.edu.cn">中国教育部</option>
+			  			  <option value="http://www.csc.edu.cn">国家留学基金委</option>
+			  			  <option value="http://www.hanban.edu.cn"">国家汉办</option>
+			  			  <option value="http://www.chisa.edu.cn/">神州学人</option>
+			  			  <option value="http://www.fmprc.gov.cn/chn/">中国外交部</option>
+			  			  <option value="http://www.jsj.edu.cn/index.php/default/index">教育涉外信息监管网</option>
+			  			  <option value="http://www.cscse.edu.cn/">中国留学网</option>
+			              </select>
+			</form></td>
+        </tr>		
+		
+          <!-- <td height="28" align="center" valign="bottom" bgcolor="#F9F9F9">
+		  
+		  <form name="form3" id="form3">
+		  <select name="menu1" style=" width:165px; border:1px solid #ccc; "  onchange="MM_jumpMenu('parent',this,1)">
+            <option>----德国孔子学院----</option>
+						  <option value="http://www.kongzi.de/">Nürnberg-Erlangen</option>
+			  			  <option value="http://www.konfuziusinstitut-leipzig.de/">Leipzig</option>
+			  			  <option value="http://www.konfuzius-duesseldorf.de/">Düsseldorf</option>
+			  			  <option value="http://www.konfuziusinstitut-hannover.de/">Hannover</option>
+			  			  <option value="http://www.konfuziusinstitut-berlin.de/">Berlin</option>
+			  			  <option value="http://www.konfuzius-institut-hamburg.de/">Hamburg</option>
+			  			  <option value="http://www.konfuziusinstitut-trier.de/">Trier</option>
+			  			  <option value="http://www.konfuzius-institut-frankfurt.de/">Frankfurt</option>
+			  			  <option value="http://www.konfuzius-institute.de/">KI Deutschland</option>
+			  			  <option value="http://www.konfuzius-institut-bremen.de/">Bremen</option>
+			  			  <option value="http://www.ki-erfurt.de/">Erfurt</option>
+			  			  <option value="http://www.ki-freiburg.de/index.php/zh/">Freiburg</option>
+			  			  <option value="http://www.konfuzius-institut-heidelberg.de/de/">Heidelberg</option>
+			  			  <option value="http://www.konfuzius-muenchen.de/">München</option>
+			  			  <option value="http://www.salzmannschule.de/start/index2.htm">Schnepfenthal (孔子课堂）</option>
+			  			  <option value="https://www.uni-due.de/konfuzius-institut/">Metropoloe Ruhr</option>
+			            </select>
+		  </form></td>
+        </tr> -->
+          
+  </table>
+      <table width="176" border="0" align="center" cellpadding="0" cellspacing="0" background="images/fwl.gif">
+        <tr>
+          <td height="33" align="center" class="font14red">访问量： 3367432</td>
+        </tr>
+      </table>
+      <table width="100%" height="5" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td></td>
+        </tr>
+      </table>
+      <!--
+	  <table width="176" border="0" align="center" cellpadding="0" cellspacing="0" style="background-color:#f9fddf;  font-family:'宋体'; font-size:12px; color:#b02403; line-height:20px;" >
+        <tr>
+          
+          <td height="33" align="center" class="font14red" background="images/wsdc01.gif" ><a href="./article_list.php?sortid=12058">&nbsp;&nbsp;&nbsp;&nbsp;<strong>留德作品</strong></a>
+          </td>
+          </tr>
+          <tr>
+           <td>
+          <div style="padding-bottom:10px;">
+		  <div style="text-align:center;padding-top:8px;color:#000; padding-left:1px;"><a href="./article_read.php?id="></a></div>
+		  
+
+<div id="demo" style="OVERFLOW: hidden;margin-left:5px;display:block; WIDTH: 165px; COLOR: #000;" align="center">  
+                              <table cellspacing="0" cellpadding="0" align="center" border="0">
+                                <tbody>
+                                  <tr>
+                                    <td  align="left" id="demo1">
+									<table border="0" cellspacing="0" cellpadding="0" style="padding-left:1px;" align="center" bgcolor="#FFFFFF">
+                                        <tr>
+		  				                        
+                                    </table></td>
+                                    <td width="1" id="demo2" ></td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                              
+							  <script language="JavaScript" type="text/javascript">
+var speed=20;
+demo2.innerHTML=demo1.innerHTML;	
+
+function Marquee(){
+	if(demo2.offsetWidth  <= demo.scrollLeft){	
+		demo.scrollLeft = demo.scrollLeft - demo1.offsetWidth;		
+	}
+	else{
+		demo.scrollLeft++;
+	}
+}
+
+var MyMar=setInterval(Marquee,speed);	
+
+demo.onmouseover=function() {clearInterval(MyMar);}
+demo.onmouseout=function() {MyMar=setInterval(Marquee,speed);}
+						          </script>
+		  
+
+
+		  </div></td>
+        </tr>
+      </table>
+      <table width="100%" height="5" border="0" cellpadding="0" cellspacing="0">
+       
+                                <tr>
+                                   <td align="right"><a href="./article_list.php?sortid=12058" class="red">更多&gt;&gt;</a>&nbsp;&nbsp;</td>
+                                </tr>
+                              
+      </table> --></td>    <td width="6"></td>
+    <td width="556" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="3%"><img src="images/arrow1.gif" width="7" height="17" /></td>
+        <td width="97%" height="30" class="font14b" align="center">
+		
+		<marquee  border="0" align="middle" scrollamount="2"  scrolldelay="30" width="100%" height="20" style="color: #ff0000;font-size:12px;font-weight:normal" onMouseOver="this.stop();" onMouseOut="this.start();"> 
+														•	<a href="http://www.de-moe.edu.cn/article_read.php?id=12015-20160728-3641" target="_blank" class="style3">
+				<span class="style3"> 与你有关！留德人员手续办理简化通知(2016-07-29)</span></a>
+														•	<a href="http://www.de-moe.edu.cn/article_read.php?id=12015-20160720-3611" target="_blank" class="style3">
+				<span class="style3">中国驻德使馆提醒我公民加强安全防范，注意旅行安全(2016-07-29)</span></a>
+													 </marquee>
+		
+		</td>
+      </tr>
+    </table>
+      <!--table width="556" border="0" align="center" cellpadding="5" cellspacing="0">
+        <tr>试用版
+          <td width="561" align="center" valign="bottom" bgcolor="#CFCFCF"><table width="542" border="0" align="center" cellpadding="1" cellspacing="0" bgcolor="#FFFFFF">
+            <tr>
+              <td><img src="./userfiles/image/heying.jpg" width="542" height="208" /></td>
+            </tr>
+          </table>          
+            <table width="100%" height="3" border="0" cellpadding="0" cellspacing="0">
+              <tr>
+                <td></td>
+              </tr>
+            </table>
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td align="center"><a href="#">德国专业协会联合会议代表合影</a></td>
+              </tr>
+            </table>            </td>
+        </tr>
+      </table-->
+      <table width="556" border="0" cellspacing="0" cellpadding="2">
+        <tr>
+          <td width="495" height="25" valign="bottom"><img src="images/arrow.gif" width="15" height="15" hspace="10" align="absmiddle" /><span class="font14b"><strong>最新动态</strong></span></td>
+          <td width="53" valign="bottom"><a href="article_list.php?sortid=12014" class="red">更多>></a></td>
+        </tr>
+        <tr>
+          <td height="2" colspan="2" background="images/line.gif"></td>
+        </tr>
+      </table>
+      <table width="540" border="0" align="center" cellpadding="3" cellspacing="0">
+
+        <tr>
+          <td>
+		  <ul>
+							<li>
+				<a href="article_read.php?id=12014-20170627-4526
+				" target="_blank" class="style3">
+				<span class="style3">第十届“汉语桥”世界中学生中文比赛德国区决赛在哥廷根成功落下帷幕(2017-06-27)</span></a>
+				</li>
+							<li>
+				<a href="article_read.php?id=12014-20170522-4444
+				" target="_blank" class="style3">
+				<span class="style3">第16届“汉语桥”世界大学生中文比赛德国区选拔赛成功落幕(2017-05-22)</span></a>
+				</li>
+							<li>
+				<a href="http://www.de-moe.edu.cn/article_read.php?id=12038-20170515-4425" target="_blank" class="style3">
+				<span class="style3">史明德大使为2016年度国家优秀自费留学生颁奖(2017-05-15)</span></a>
+				</li>
+							<li>
+				<a href="article_read.php?id=12014-20170515-4424
+				" target="_blank" class="style3">
+				<span class="style3">2017年度全德华人专业学会年会在柏林举行(2017-05-15)</span></a>
+				</li>
+							<li>
+				<a href="article_read.php?id=12014-20170412-4355
+				" target="_blank" class="style3">
+				<span class="style3"><font color=red>“五一”将至，中国驻德使馆提醒您注意安全 </font>(2017-04-12)</span></a>
+				</li>
+							<li>
+				<a href="article_read.php?id=12014-20170310-4318
+				" target="_blank" class="style3">
+				<span class="style3"><font color=red>中国驻德国使馆发言人就德国某网站出售辱华Ｔ恤发表声明 </font>(2017-03-10)</span></a>
+				</li>
+						</ul>
+		  
+			
+			</td>
+        </tr>
+      </table>
+	  
+      <table width="556" border="0" cellspacing="0" cellpadding="2">
+        <tr>
+          <td width="495" height="25" valign="bottom"><img src="images/arrow.gif" width="15" height="15" hspace="10" align="absmiddle" /><span class="font14b"><strong>通知公告</strong></span></td>
+          <td width="53" valign="bottom"><a href="article_list.php?sortid=12015" class="red">更多&gt;&gt;</a></td>
+        </tr>
+        <tr>
+          <td height="2" colspan="2" background="images/line.gif"></td>
+        </tr>
+      </table>
+      <table width="540" border="0" align="center" cellpadding="3" cellspacing="0">
+        <tr>
+          <td>
+		    <ul>
+							<li>
+				<a href="article_read.php?id=12015-20170928-4774
+				" target="_blank" class="style3">
+				<span class="style3">辽宁科技学院2017教师招聘启事(2017-09-28)</span></a>
+				</li>
+							<li>
+				<a href="article_read.php?id=12015-20170928-4773
+				" target="_blank" class="style3">
+				<span class="style3">陕西师范大学第二届“曲江学者论坛”暨陕西省“丝绸之路青年学者论坛”分论坛公告(2017-09-28)</span></a>
+				</li>
+							<li>
+				<a href="article_read.php?id=12015-20170928-4772
+				" target="_blank" class="style3">
+				<span class="style3">中科院上海微系统所2017-2018年度海内外高层次人才招聘(2017-09-28)</span></a>
+				</li>
+							<li>
+				<a href="article_read.php?id=12015-20170921-4764
+				" target="_blank" class="style3">
+				<span class="style3">西安电子科技大学第二届“华山青年学者国际论坛”(2017-09-21)</span></a>
+				</li>
+							<li>
+				<a href="article_read.php?id=12015-20170919-4752
+				" target="_blank" class="style3">
+				<span class="style3"><font color=red>2017年度国家优秀自费留学生奖学金德国地区拟推荐名单公示 </font>(2017-09-19)</span></a>
+				</li>
+							<li>
+				<a href="article_read.php?id=12015-20170904-4713
+				" target="_blank" class="style3">
+				<span class="style3">全球能源互联网发展合作组织招聘公告(2017-09-04)</span></a>
+				</li>
+						</ul>
+
+		</td>
+        </tr>
+      </table>
+	  <table width="556" border="0" cellspacing="0" cellpadding="2">
+        <tr>
+          <td width="495" height="25" valign="bottom"><img src="images/arrow.gif" width="15" height="15" hspace="10" align="absmiddle" /><span class="font14b"><strong>政策信息</strong></span></td>
+          <td width="53" valign="bottom"><a href="article_list.php?sortid=12054" class="red">更多>></a></td>
+        </tr>
+        <tr>
+          <td height="2" colspan="2" background="images/line.gif"></td>
+        </tr>
+      </table>
+      <table width="540" border="0" align="center" cellpadding="3" cellspacing="0">
+        <tr>
+          <td>
+		  <ul>
+										<li>
+				<a href="http://www.moe.gov.cn/srcsite/A10/s7151/201709/t20170912_314245.html" target="_blank" class="style3">
+				<span class="style3" title="教育部办公厅关于公布高校教师考核评价改革示范校的通知">教育部办公厅关于公布高校教师考核评价改革示范校的通知(2017-09-14)</span></a>
+				</li>
+														<li>
+				<a href="http://www.moe.gov.cn/srcsite/A10/s7030/201709/t20170911_314181.html" target="_blank" class="style3">
+				<span class="style3" title="教育部办公厅关于关爱教师典型经验做法的通报">教育部办公厅关于关爱教师典型经验做法的通报(2017-09-14)</span></a>
+				</li>
+														<li>
+				<a href="http://www.moe.gov.cn/srcsite/A03/s3014/201709/t20170904_313118.html" target="_blank" class="style3">
+				<span class="style3" title="教育部等十四部门关于印发《中央有关部门贯彻实施〈国务院关于鼓励社会力量兴办教育促进民办教育健康发展的若干意见〉任务分工方案》的通知">教育部等十四部门关于印发《中央有关部门贯彻实施〈国务院关于...(2017-09-06)</span></a>
+				</li>
+														<li>
+				<a href="http://www.moe.gov.cn/srcsite/A04/s8132/201708/t20170821_311528.html" target="_blank" class="style3">
+				<span class="style3" title="中共教育部党组关于加快直属高校高层次人才发展的指导意见">中共教育部党组关于加快直属高校高层次人才发展的指导意见(2017-08-23)</span></a>
+				</li>
+														<li>
+				<a href="http://www.moe.gov.cn/srcsite/A05/s7501/201708/t20170816_311219.html" target="_blank" class="style3">
+				<span class="style3" title="教育部关于印发《教育部经济责任审计整改工作办法》的通知">教育部关于印发《教育部经济责任审计整改工作办法》的通知(2017-08-18)</span></a>
+				</li>
+														<li>
+				<a href="http://www.moe.gov.cn/srcsite/A10/s7034/201707/t20170731_310426.html" target="_blank" class="style3">
+				<span class="style3" title="教育部办公厅关于印发《乡村校园长“三段式”培训指南》等四个文件的通知">教育部办公厅关于印发《乡村校园长“三段式”培训指南》等四个文...(2017-08-03)</span></a>
+				</li>
+										</ul>			
+			&nbsp;</td>
+        </tr>
+      </table>
+      <table width="556" border="0" cellspacing="0" cellpadding="2">
+        <tr>
+          <td width="495" height="25" valign="bottom"><img src="images/arrow.gif" width="15" height="15" hspace="10" align="absmiddle" /><span class="font14b"><strong>德国教育动态</strong></span></td>
+          <td width="53" valign="bottom"><a href="article_list.php?sortid=12016" class="red">更多&gt;&gt;</a></td>
+        </tr>
+        <tr>
+          <td height="2" colspan="2" background="images/line.gif"></td>
+        </tr>
+      </table>
+      <table width="540" border="0" align="center" cellpadding="3" cellspacing="0">
+        <tr>
+          <td>
+		    <ul>
+							<li>
+				<a href="article_read.php?id=12016-20171023-4791
+				" target="_blank" class="style3">
+				<span class="style3">柏林和慕尼黑两地大学在国际上最受欢迎 <font color=red>new</font> (2017-10-23)</span></a>
+				</li>
+							<li>
+				<a href="article_read.php?id=12016-20171023-4790
+				" target="_blank" class="style3">
+				<span class="style3">汇聚卓越力量 — 首批马克斯•普朗克学院启动 <font color=red>new</font> (2017-10-23)</span></a>
+				</li>
+							<li>
+				<a href="article_read.php?id=12016-20171023-4789
+				" target="_blank" class="style3">
+				<span class="style3">亥姆霍兹联合会资助16个青年科学家小组 <font color=red>new</font> (2017-10-23)</span></a>
+				</li>
+							<li>
+				<a href="article_read.php?id=12016-20171009-4779
+				" target="_blank" class="style3">
+				<span class="style3">经合组织积极评价德国教育(2017-10-09)</span></a>
+				</li>
+							<li>
+				<a href="article_read.php?id=12016-20171009-4778
+				" target="_blank" class="style3">
+				<span class="style3">本届德国联邦政府教育改革重要举措回顾(2017-10-09)</span></a>
+				</li>
+							<li>
+				<a href="article_read.php?id=12016-20171009-4777
+				" target="_blank" class="style3">
+				<span class="style3">德国人文和社科类专项资助成果显现(2017-10-09)</span></a>
+				</li>
+						</ul>
+		   </tr>
+      </table>
+	  <!-- <table width="556" border="0" cellspacing="0" cellpadding="2">
+        <tr>
+          <td width="495" height="25" valign="bottom"><img src="images/arrow.gif" width="15" height="15" hspace="10" align="absmiddle" /><span class="font14b"><strong>学人论坛</strong></span></td>
+          <td width="53" valign="bottom"><a href="article_list.php?sortid=12051" class="red">更多&gt;&gt;</a></td>
+        </tr>
+        <tr>
+          <td height="2" colspan="2" background="images/line.gif"></td>
+        </tr>
+      </table>
+	   <table width="540" border="0" align="center" cellpadding="3" cellspacing="0">
+        <tr>
+          <td>
+		    <ul>
+						</ul>
+		   </tr>
+      </table> -->
+	  <table width="556" border="0" cellspacing="0" cellpadding="2">
+        <tr>
+          <td width="495" height="25" valign="bottom"><img src="images/arrow.gif" width="15" height="15" hspace="10" align="absmiddle" /><span class="font14b"><strong>时事阅读</strong></span></td>
+          <td width="53" valign="bottom"><a href="article_list.php?sortid=12052" class="red">更多&gt;&gt;</a></td>
+        </tr>
+        <tr>
+          <td height="2" colspan="2" background="images/line.gif"></td>
+        </tr>
+      </table>
+	   <table width="540" border="0" align="center" cellpadding="3" cellspacing="0">
+        <tr>
+          <td>
+		    <ul>
+							<li>
+				<a href="article_read.php?id=12052-20171026-4798
+				" target="_blank" class="style3">
+				<span class="style3">全国首家“习近平新时代中国特色社会主义思想研究中心”在人大成立 <font color=red>new</font> (2017-10-26)</span></a>
+				</li>
+							<li>
+				<a href="article_read.php?id=12052-20171026-4797
+				" target="_blank" class="style3">
+				<span class="style3">比技术更重要的，是教育理念 <font color=red>new</font> (2017-10-26)</span></a>
+				</li>
+							<li>
+				<a href="article_read.php?id=12052-20171025-4796
+				" target="_blank" class="style3">
+				<span class="style3">“一带一路”教育项目设奖学金 <font color=red>new</font> (2017-10-25)</span></a>
+				</li>
+							<li>
+				<a href="article_read.php?id=12052-20171025-4795
+				" target="_blank" class="style3">
+				<span class="style3">国家财政性教育经费首超3万亿 连续5年GDP占比超4% <font color=red>new</font> (2017-10-25)</span></a>
+				</li>
+							<li>
+				<a href="article_read.php?id=12052-20171024-4794
+				" target="_blank" class="style3">
+				<span class="style3">陈宝生就“教育民生”答记者问 <font color=red>new</font> (2017-10-24)</span></a>
+				</li>
+							<li>
+				<a href="article_read.php?id=12052-20171024-4793
+				" target="_blank" class="style3">
+				<span class="style3">党的十九大报告在全国高校青年师生中引起强烈反响  <font color=red>new</font> (2017-10-24)</span></a>
+				</li>
+						</ul>
+		   </tr>
+      </table>
+	</td>
+    <td width="6"></td>
+    <td width="194" valign="top" class="border"><table width="100%" height="5" border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <td></td>
+      </tr>
+    </table>
+    <!-- sousu sta add-->
+    <form name="form1" action="/search.php" method="post">
+    <table width="176" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tr>
+          <td height="107" background="images/ssbg.gif"><table width="176" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <td width="135" height="50">&nbsp;</td>
+              <td width="41">&nbsp;</td>
+            </tr>
+            <tr>
+              <td align="center"><input name="sTopic" type="text" size="13" /></td>
+              <td><input type="image" src="images/go.gif" width="34" height="34" /></td>
+            </tr>
+          </table></td>
+        </tr>
+      </table>
+      </form>
+    <!-- sousu end -->
+    <!-- <table width="192" height="207" border="0" align="center" cellpadding="0" cellspacing="0" background="images/r_tbg.gif">
+        <tr>
+          <td width="47">&nbsp;</td>
+          <td width="145" class="font14b"><a href="http://www.de-moe.edu.cn/article_read.php?id=12037-20130621-1470"><strong>留学回国人员证明</strong></a></td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+          <td class="font14b"><a href="http://www.de-moe.edu.cn/article_read.php?id=12015-20090114-411"><strong>报刊订阅</strong></a></td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+          <td class="font14b"><a href="#"><strong>网上申请</strong></a></td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+          <td class="font14b"><a href="./article_list.php?sortid=12039"><strong>回国服务</strong></a></td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+          <td class="font14b"><a href="./article_list.php?sortid=12030"><strong>Study in China</strong></a></td>
+        </tr>
+  </table> -->
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+              <td align="center"><a href="/article_list.php?sortid=12149" target="_blank"><img src="images/logo.jpg" width="172" height="73" vspace="6"  border="0"/></a></td>
+          </tr>
+          <tr>
+              <td align="center"><a href="http://www.konfuzius-institute.de/" target="_blank"><img src="images/kz.gif" width="172" height="73" vspace="6"  border="0"/></a></td>
+          </tr>
+      </table>
+      <table width="192" border="0" cellspacing="0" cellpadding="0" background="images/r_tbg2.gif">
+        <tr>
+          <td width="8%" height="30" >&nbsp;</td>
+          <td width="69%" ><a href="./article_list.php?sortid=12057"><strong>德国教育</strong></a></td>
+          <td width="23%" align="left"  ><a href="./article_list.php?sortid=12057">更多&gt;&gt;</a></td>
+        </tr>
+      </table>
+      <table width="96%" border="0" align="center" cellpadding="5" cellspacing="0">
+        <tr>
+          <td height="100" valign="top">
+		  		  							<img src="images/arrow2.gif" width="7" height="7" hspace="5" vspace="8" align="absmiddle" />	
+							<a href="article_read.php?id=12057-20170110-4204
+				" title="2017年德国高校名录" target="_blank" class="style3">2017年德国高校名录
+				</a><br />
+		 		  		  							<img src="images/arrow2.gif" width="7" height="7" hspace="5" vspace="8" align="absmiddle" />	
+							<a href="http://www.de-moe.edu.cn/article_read.php?id=12052-20141011-2018" title="中德合作行动纲要" target="_blank" class="style3">中德合作行动纲要
+				</a><br />
+		 		  		  							<img src="images/arrow2.gif" width="7" height="7" hspace="5" vspace="8" align="absmiddle" />	
+							<a href="article_read.php?id=12057-20160111-2896
+				" title="德国联邦教研部《中国战略》选编" target="_blank" class="style3">德国联邦教研部《中国战...
+				</a><br />
+		 		  		  							<img src="images/arrow2.gif" width="7" height="7" hspace="5" vspace="8" align="absmiddle" />	
+							<a href="article_read.php?id=12057-20151006-2727
+				" title="2015年度德国高校名录" target="_blank" class="style3">2015年度德国高校名录
+				</a><br />
+		 		  		  							<img src="images/arrow2.gif" width="7" height="7" hspace="5" vspace="8" align="absmiddle" />	
+							<a href="article_read.php?id=12057-20140213-528
+				" title="德国精英大学" target="_blank" class="style3">德国精英大学
+				</a><br />
+		 		  		  
+		 </td>
+        </tr>
+      </table>
+       <table width="192" border="0" cellspacing="0" cellpadding="0" background="images/r_tbg2.gif">
+        <tr>
+          <td width="8%" height="30" >&nbsp;</td>
+          <td width="69%" ><a href="./article_list.php?sortid=12130"><strong>中国教育</strong></a></td>
+          <td width="23%" align="left"  ><a href="./article_list.php?sortid=12130">更多&gt;&gt;</a></td>
+        </tr>
+      </table>
+      <table width="96%" border="0" align="center" cellpadding="5" cellspacing="0">
+        <tr>
+          <td height="100" valign="top">
+		  		  							<img src="images/arrow2.gif" width="7" height="7" hspace="5" vspace="8" align="absmiddle" />	
+							<a href="article_read.php?id=12130-20140902-1970
+				" title="中国教育发展概况" target="_blank" class="style3">中国教育发展概况
+				</a><br />
+		 		  		  							<img src="images/arrow2.gif" width="7" height="7" hspace="5" vspace="8" align="absmiddle" />	
+							<a href="article_read.php?id=12130-20141121-2100
+				" title="高校国际合作联合实验室介绍" target="_blank" class="style3">高校国际合作联合实验室...
+				</a><br />
+		 		  		  							<img src="images/arrow2.gif" width="7" height="7" hspace="5" vspace="8" align="absmiddle" />	
+							<a href="article_read.php?id=12130-20141121-2099
+				" title="高等学校创新能力提升计划（简称2011计划）介绍" target="_blank" class="style3">高等学校创新能力提升计...
+				</a><br />
+		 		  		  							<img src="images/arrow2.gif" width="7" height="7" hspace="5" vspace="8" align="absmiddle" />	
+							<a href="article_read.php?id=12130-20141027-2053
+				" title="211工程高校名单" target="_blank" class="style3">211工程高校名单
+				</a><br />
+		 		  		  							<img src="images/arrow2.gif" width="7" height="7" hspace="5" vspace="8" align="absmiddle" />	
+							<a href="article_read.php?id=12130-20141027-2054
+				" title="985工程高校名单" target="_blank" class="style3">985工程高校名单
+				</a><br />
+		 		  		  							<img src="images/arrow2.gif" width="7" height="7" hspace="5" vspace="8" align="absmiddle" />	
+							<a href="article_read.php?id=12130-20160726-3634
+				" title="Chinas Bildungswesen in Zahlen 2015" target="_blank" class="style3">Chinas Bildungswesen i...
+				</a><br />
+		 		  		  							<img src="images/arrow2.gif" width="7" height="7" hspace="5" vspace="8" align="absmiddle" />	
+							<a href="http://www.de-moe.edu.cn/article_read.php?id=12054-20160623-3531" title="2016全国高等学校名单" target="_blank" class="style3">2016全国高等学校名单
+				</a><br />
+		 		  		  
+		 </td>
+        </tr>
+      </table>
+
+      <!--德国教育年报-->
+      <table width="192" border="0" cellspacing="0" cellpadding="0" background="images/r_tbg2.gif">
+        <tr>
+          <td width="8%" height="30" >&nbsp;</td>
+          <td width="69%" ><a href="./article_list.php?sortid=12146&form=years&list=ul"><strong>德国教育简讯汇编</strong></a></td>
+          <td width="23%" align="left"  ><a href="./article_list.php?sortid=12146&form=years&list=ul">更多&gt;&gt;</a></td>
+        </tr>
+      </table>
+      <table width="96%" border="0" align="center" cellpadding="5" cellspacing="0">
+        <tr>
+          <td height="100" valign="top">
+                          <img src="images/arrow2.gif" width="7" height="7" hspace="5" vspace="8" align="absmiddle" />  
+              <a href="article_read.php?id=12146-20170101-4783&form=years
+        " title="德国教育简讯2017第9期" target="_blank" class="style3">德国教育简讯2017第9期
+        </a><br />
+                               <img src="images/arrow2.gif" width="7" height="7" hspace="5" vspace="8" align="absmiddle" />  
+              <a href="article_read.php?id=12146-20170101-4729&form=years
+        " title="德国教育简讯2017第8期" target="_blank" class="style3">德国教育简讯2017第8期
+        </a><br />
+                               <img src="images/arrow2.gif" width="7" height="7" hspace="5" vspace="8" align="absmiddle" />  
+              <a href="article_read.php?id=12146-20170101-4607&form=years
+        " title="德国教育简讯2017第6/7期" target="_blank" class="style3">德国教育简讯2017第6/7期
+        </a><br />
+                               <img src="images/arrow2.gif" width="7" height="7" hspace="5" vspace="8" align="absmiddle" />  
+              <a href="article_read.php?id=12146-20170101-4478&form=years
+        " title="德国教育简讯2017第5期" target="_blank" class="style3">德国教育简讯2017第5期
+        </a><br />
+                 
+     </td>
+        </tr>
+      </table>
+
+
+      <table width="192" border="0" cellspacing="0" cellpadding="0" background="images/r_tbg2.gif">
+        <tr>
+          <td width="8%" height="30" >&nbsp;</td>
+          <td width="69%" ><strong>二维码</strong> </td>
+          <td width="23%" align="center" valign="bottom" ></td>
+        </tr>
+      </table>
+      <table width="194" border="0" align="center" cellpadding="5" cellspacing="0">
+        <tr>         
+     	<td>驻德国使馆教育处官方微信公众平台上线了！用手机扫描以下二维码，或搜索昵称“中德教育”、名称“CN_DE_BIDUNG”关注我们吧！</td>
+        </tr>
+        <tr>
+        	<td align="center"><img src="/images/erweima.png" width=160></td>
+        </tr>        
+  </table></td>  </tr>
+</table>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>驻德使馆教育处</title>
+<link href="./css/zdbsc.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript">
+
+ var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32403901-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</head><table width="950" border="0" align="center" cellpadding="3" cellspacing="0">
+  <tr>
+    <td height="10"></td>
+  </tr>
+  <tr>
+    <td height="5" bgcolor="#C3C2C1"></td>
+  </tr>
+   <tr>
+    <td align="center" valign="middle"><p align="center">中国驻联邦德国使馆教育处<br />
+      Abteilung für Bildungswesen der Botschaft der Volksrepublik China in der Bundesrepublik Deutschland<a href="http://www.megapelis.com"></a></p></td>
+  </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,225 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=GBK" />
+<title>九思协同办公系统</title>
+<style type="text/css">
+body,div,table{font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#000000;}
+body{ background:#E8EFF5;}
+a:link,a:visited,a:hover,a:active{color:#c4d1e4; text-decoration:none;}
+#top_logo{padding-top:40px; text-align:left; height:170px;}
+.but_z{width:178px; height:20px; border:1px solid #a7d0fe;}
+</style>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+    
+    var screenwidth;//分辨率宽度
+    var screenheight;//分辨率高度
+    screenwidth = screen.width;
+    screenheight = screen.height;
+//-->
+
+</SCRIPT>
+<SCRIPT LANGUAGE="JavaScript" src="js/cookie.js"></SCRIPT>
+<script LANGUAGE="JavaScript" src="js/log.js"></script>
+<script LANGUAGE="JavaScript" src="js/des.js"></script>
+<script src="/jsoa/webmail/ajax_util.js"></script>
+
+</head>
+   
+	 <script type="text/javascript">
+	    if(navigator.userAgent.match(/Android/i) || (navigator.userAgent.indexOf('iPhone') != -1) || (navigator.userAgent.indexOf('iPad') != -1)){
+	        location.href="/jsoa/wap.jsp";
+	    }
+	 </script>
+
+<body onUnload="javascript:unLoad();" onLoad="javascript:load();checkIE11();initHeight();jumpErr();msg();">
+<form name="CheckUserForm" method="post" action="/jsoa/CheckUser.do">
+<input type="hidden" name="checkBrow" id="checkBrow" value=""/>
+<input type="hidden" name="pwdError" value="$3$$60$"/>
+<table width="100%" height="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="center" valign="middle">
+    
+	<div style="background-image:url(/jsoa/upload/2014/logo/2014_1407862313948353475.jpg); width:812px; height:480px;">
+<div id="top_logo">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#" class="ab" onClick="setHomePage();">设为首页</a>&nbsp;&nbsp;&nbsp;<a href="#" class="ab" onClick="addFavorite();">加入收藏</a></div>
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" style="padding-right:290px;">      
+      
+      <tr>
+        <td id="tdHeight" style="height:60" align="right" valign="bottom"><font color="#4b74ac">用户名&nbsp;<b>:</b></font>&nbsp;
+            <input name="userName" type="text" class="but_z"></td>
+      </tr>
+      <tr>
+        <td height="45" align="right" valign="middle"><font color="#4b74ac">密&nbsp;&nbsp;&nbsp;&nbsp;码&nbsp;<b>:</b></font>&nbsp;
+            <input name="userPassword" type="password" class="but_z"></td>
+      </tr>      
+      
+      
+      <tr>
+        <td height="30" align="right" valign="middle"><div style="width:225px; text-align:left"><font color="#4b74ac" style="line-height:25px;">验证码&nbsp;<b>:</b></font>&nbsp;
+        <input style="margin-bottom:4px; height:20px;" id="ImageCode" name="ImageCode" type="text"  size="4">&nbsp;&nbsp;<img id="pwdImage" src="CreateImage" alt="换一张" style="cursor: hand;" onClick="this.src='CreateImage?'+Math.random();"/></div></td>
+      </tr>
+      
+      <tr>
+        <td align="right" height="30" valign="middle"><table width="180" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+            
+              <td><input type="checkbox" name="checkbox" id="checkbox"/></td>
+              <td valign="bottom"><label for="checkbox">记住密码</label></td>
+              
+              <td align="right" valign="middle"><a href="javascript:submitForm();"><img src="images/an_niu.gif" border="0"></a></td>
+            </tr>
+            <tr>
+            <td colspan="3" align="right" height="20" valign="bottom"><!-- <a href="#" onclick="javascript:forgetPwd();">忘记密码了？</a> --></td>
+            </tr>
+        </table></td>
+      </tr>
+    </table>
+	<div style="padding-top:93px; text-align:right">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+	<table width="96%" border="0" cellspacing="0" cellpadding="0">
+		<tr height="30" valign="bottom">
+		 <td class="ab" style="color:#c4d1e4;">技术支持：<a title="OA,OA系统,OA办公系统" href="http://www.jiusi.net" target="_blank">九思软件</a></td>
+		 <td align="right" class="ab" style="color:#c4d1e4;"><a title="OA,OA系统,OA办公系统" href="http://www.jiusi.net" target="_blank">www.jiusi.net</a>&nbsp;</td>
+		</tr>
+	</table>
+	</div></td>
+  </tr>
+</table>
+</form>
+</body>
+</html>
+
+<SCRIPT LANGUAGE="JavaScript">
+function initHeight(){
+	 if(navigator.userAgent.indexOf("MSIE")!=-1) {
+     	if(navigator.userAgent.indexOf("MSIE 10.0")==-1){
+     		document.getElementById("tdHeight").style.height="80";
+     	}else{
+     		document.getElementById("tdHeight").style.height="40";
+     	}
+     }else if(navigator.userAgent.indexOf("Trident/7.0")!=-1){//ie 11
+		 document.getElementById("tdHeight").style.height="40";
+	 }
+	 if(navigator.userAgent.indexOf("Firefox")!=-1){//火狐
+		 document.getElementById("tdHeight").style.height="40";
+	 }
+	 if(navigator.userAgent.indexOf("Safari")!=-1){//苹果
+		 document.getElementById("tdHeight").style.height="40";
+	 }	
+	 
+}
+var error=document.CheckUserForm.pwdError.value;
+<!--
+
+function msg(){
+
+}
+
+function submit(){
+	/*if(navigator.userAgent.indexOf("iPad")>0){
+	 unLoad();
+	}*/
+	
+	
+    document.CheckUserForm.submit();
+}
+
+function checkForm(){
+     if(document.CheckUserForm.userName.value==""){
+        alert("请输入正确的用户帐号！");
+        document.CheckUserForm.userName.focus();
+        return false;
+    }else if( document.CheckUserForm.userPassword.value==""){
+        alert("请输入正确的密码！");
+        document.CheckUserForm.userPassword.focus();
+        return false;
+    }
+   //增加dec加密
+   if(document.CheckUserForm.userPassword.value.length<36){
+	   document.CheckUserForm.userPassword.value = strEnc(document.CheckUserForm.userPassword.value,"jiusi","jiusi.net","www.jiusi.net");
+   }
+    return true;
+}
+function load(){
+	//判断是否在框架内或子页面打开了登陆页
+	/*if(opener){
+		opener.location.href="/jsoa/login.jsp";
+		window.close();
+	}*/
+	if(self.frameElement && self.frameElement.tagName=="IFRAME"){
+		window.parent.location.href="/jsoa/login.jsp";
+	}
+    
+    //deleteCookie("jsoaUSERNAME");
+    if(Cookie("jsoaUserName") != null || Cookie("jsoaDomainAccount") != null){		
+        if(Cookie("jsoaUserName") != null){
+            document.CheckUserForm.userName.value = Cookie("jsoaUserName");
+        }
+                
+    }
+    if(document.getElementById('checkbox')){
+      if(Cookie("MarkPwd") != null || Cookie("jsoaDomainAccount") != null){		
+        if(Cookie("MarkPwd") != null){
+            if(Cookie("MarkPwd")=='1'){
+                document.CheckUserForm.checkbox.checked=true;
+                  if(Cookie("jsoaUserPwd") != null || Cookie("jsoaDomainAccount") != null){
+				        if(Cookie("jsoaUserPwd") != null){
+				            document.CheckUserForm.userPassword.value = Cookie("jsoaUserPwd");
+				        }        
+				    }
+            }else{
+               document.CheckUserForm.checkbox.checked=false;
+            }
+        }        
+      }
+    }
+	
+		if(document.CheckUserForm.userName.value==""){
+			document.CheckUserForm.userName.focus();
+		}else{
+			document.CheckUserForm.userPassword.focus();
+		}
+	
+}
+
+function addFavorite(){
+  window.external.addFavorite(window.location.href, document.title);
+  return false;
+}
+function setHomePage(){
+  document.body.style.behavior='url(#default#homepage)';
+  document.body.setHomePage('http://oa.lzu.edu.cn/jsoa/login.jsp');
+  return false;
+}
+function jumpSite(){
+  location.href="http://www.jiusi.net";
+}
+function jumpErr(){
+	
+}
+
+function checkIE11(){
+   if(navigator.userAgent.indexOf("Trident/7.0")>=0 && navigator.userAgent.indexOf("MSIE")>=0){
+       document.getElementById("checkBrow").value="IE11And360";
+   }else if(navigator.userAgent.indexOf("Trident/7.0")>=0 && navigator.userAgent.indexOf("MSIE")<0){
+       document.getElementById("checkBrow").value="IE11"; 
+   }
+}
+//-->
+function forgetPwd(){
+	window.open("/jsoa/recallPassword.jsp");
+}
+
+</script>

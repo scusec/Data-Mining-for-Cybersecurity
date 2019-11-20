@@ -1,0 +1,364 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="/script/page.css" type=text/css rel=stylesheet>
+<script language="javascript" src="/module/jslib/jquery/jquery.js"></script>
+
+<link rel="stylesheet" type="text/css" href="/images/3521/style.css"/>
+<script type="text/javascript" src="/images/3521/MSClass.js"></script>
+<script type="text/javascript" src="/images/3521/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="/images/3521/multimenu.js"></script>
+<script src="/images/3521/swfobject_modified.js" type="text/javascript"></script>
+<script type="text/javascript">
+ $().ready(function(e) {
+   (function(){
+	 var size = $("#bannerBox img").size();
+	 for(var i=0;i<size;i++){
+		 $("#TabID").append("<li>"+(i+1).toString()+"</li>");
+	 }
+   })();
+	
+   $("#tzgg li label").each(function(index, element) {
+        $(this).html((index+1).toString());
+   });
+	
+	
+   //banner焦点图片
+   var banner=new Marquee(
+	{
+		MSClass: ["banner","bannerBox","TabID"],
+		Direction : 2,
+		Width:1200,
+		Height:386,
+		DelayTime:3000,
+		WaitTime:5000,
+		Step:4,
+		ScrollStep:1,
+		SwitchType:2,
+		AutoStart:1
+	});
+	
+    $(".banner").hover(
+	   function(){		     
+		   $("#toLeft,#toRight").show();
+	   },
+	   function(){
+		   $("#toLeft,#toRight").hide();
+	   }	   
+	 );
+	
+	 $("#toLeft").click(function(e) {
+		   banner.Run(1);
+     });
+	 
+	 $("#toRight").click(function(e) {
+           banner.Run(2);
+     });
+	 
+	 $("#toLeft,#toRight").hover(
+	   function(){		     
+		  $(this).css({"filter":"alpha(opacity=90)","opacity":"0.90"});
+	   },
+	   function(){
+		  $(this).css({"filter":"alpha(opacity=50)","opacity":"0.50"}); 
+	   }	   
+	 );
+	
+ });
+</script>
+<title>农业科技发展研究院</title>
+<meta name="Keywords" content="内容管理、内容管理发布（CMS）系统、信息发布、新闻采编发系统、知识管理、知识门户、政府门户、教育门户、企业门户、竞争情报系统、抓取系统、信息采集、信息雷达系统、电子政务、电子政务解决方案、办公系统、OA、网站办公系统"><meta name='Generator' content='大汉版通'><meta name='Author' content='大汉网络'>
+<meta name='Maketime' content='2017-10-19 10:33:28'>
+<meta name="sitename" content="农业科技发展研究院">
+<meta name="siteurl"  content="http://nky.yzu.edu.cn/index.html">
+<meta name="guild"    content="">
+<meta name="district"    content="">
+<meta name="sitecatalog"    content="">
+
+</head>
+
+<body>
+<div class="container">
+  <div class="top">
+    <a href="#" class="englishLink">English</a>
+    <object id="FlashID" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="1200" height="156">
+    <param name="movie" value="/images/3521/logo.swf" />
+    <param name="quality" value="high" />
+    <param name="wmode" value="opaque" />
+    <param name="swfversion" value="8.0.35.0" />
+    <!-- 此 param 标签提示使用 Flash Player 6.0 r65 和更高版本的用户下载最新版本的 Flash Player。如果您不想让用户看到该提示，请将其删除。 -->
+    <param name="expressinstall" value="/images/3521/expressInstall.swf" />
+    <!-- 下一个对象标签用于非 IE 浏览器。所以使用 IECC 将其从 IE 隐藏。 -->
+    <!--[if !IE]>-->
+    <object type="application/x-shockwave-flash" data="/images/3521/logo.swf" width="1200" height="156">
+      <!--<![endif]-->
+      <param name="quality" value="high" />
+      <param name="wmode" value="opaque" />
+      <param name="swfversion" value="8.0.35.0" />
+      <param name="expressinstall" value="/images/3521/expressInstall.swf" />
+      <!-- 浏览器将以下替代内容显示给使用 Flash Player 6.0 和更低版本的用户。 -->
+      <div>
+        <h4>此页面上的内容需要较新版本的 Adobe Flash Player。</h4>
+        <p><a href="http://www.adobe.com/go/getflashplayer"><img src="http://www.adobe.co/images/3521/shared/download_buttons/get_flash_player.gif" alt="获取 Adobe Flash Player" /></a></p>
+      </div>
+      <!--[if !IE]>-->
+    </object>
+    <!--<![endif]-->
+  </object>
+  </div>
+  <div class="menu" id="trmenu">
+     <ul>
+       <li><a href="/">首&nbsp; 页</a></li>
+       <li><a href="javascript:void(0)" rel="dropMenu01">部门概况</a></li>
+       <li><a href="javascript:void(0)" rel="dropMenu02">组织管理</a></li>
+       <li><a href="javascript:void(0)" rel="dropMenu03">科学研究</a></li>
+       <li><a href="javascript:void(0)" rel="dropMenu04">开放交流</a></li>
+       <li><a href="/col/col39766/index.html">人才培养</a></li>
+       <li style="background:none;"><a href="/col/col39767/index.html">规章制度</a></li>
+     </ul>
+     <!-- 下拉菜单开始 -->
+        <!--下拉一级 样式.dropMenu -->
+        <div id="dropMenu01" class="dropMenu">
+              <a href="/col/col39772/index.html" rel="popMenu01_01">部门简介</a>
+              <a href="/col/col39770/index.html">工作职责</a>
+              <a href="/col/col39771/index.html">人员分工</a>
+        </div>
+        <div id="dropMenu02" class="dropMenu">
+              <a href="/col/col39775/index.html">组织架构</a>
+              <a href="/col/col39776/index.html">委 员 会</a>
+        </div>
+        <div id="dropMenu03" class="dropMenu">
+              <a href="/col/col39778/index.html">研究方向</a>
+              <a href="/col/col39779/index.html">研究队伍</a>
+              <a href="/col/col39780/index.html">科研项目</a>
+              <a href="/col/col39781/index.html">创新成果</a>
+              <a href="/col/col39782/index.html">基金课题</a>
+              <a href="/col/col39783/index.html">科研平台</a>
+        </div>
+        <div id="dropMenu04" class="dropMenu">
+              <a href="/col/col39785/index.html">主办会议</a>
+              <a href="/col/col39786/index.html">学术报告</a>
+        </div>
+        
+        <!--二级弹出-->  
+        <div id="popMenu01_01" class="popMenu">
+              <a href="/col/col39772/index.html">扬州大学农业科技发展研究院</a>
+              <a href="/col/col39773/index.html">教育部农业与农产品安全国际合作联合实验室</a>
+        </div>
+  </div>
+  <div class="banner">
+    <div id="banner" >
+         <div id="bannerBox" class="bannerBox"> 
+         <table width='100%' cellspacing='0' cellpadding='0' border='0'>
+<tr>
+<td style=''><div><a href='/art/2016/12/15/art_39787_540732.html'  target='_blank'><img src='/picture/0/1612151007076094170.jpg' /></a></div>
+</td><td style=''><div><a href='/art/2016/12/15/art_39787_540718.html'  target='_blank'><img src='/picture/0/1612150844147865735.jpg' /></a></div>
+</td><td style=''><div><a href='/art/2016/11/25/art_39787_538901.html'  target='_blank'><img src='/picture/0/1611251631515565676.jpg' /></a></div>
+</td><td style=''><div><a href='/art/2016/11/25/art_39787_538874.html'  target='_blank'><img src='/picture/0/1611251128103728193.jpg' /></a></div>
+</td><td style=''><div><a href='javascript:void(0)'  target='_blank'><img src='/picture/2542/1611221058475283779.jpg' /></a></div>
+</td><td style=''><div><a href='javascript:void(0)'  target='_blank'><img src='/picture/2542/1611221058506375819.jpg' /></a></div>
+</td><td style=''><div><a href='javascript:void(0)'  target='_blank'><img src='/picture/2542/1611221058542101216.png' /></a></div>
+</td>
+</tr></table>
+         </div>
+        
+    </div>    
+    <ul class="TabID" id="TabID">
+    </ul>
+    <img src="/images/3521/toLeft.png" class="toLeft" id="toLeft" />
+    <img src="/images/3521/toRight.png" class="toRight" id="toRight" />    
+  </div>
+  <div class="content">
+   <div class="news">
+     <h3 class="indexTitle"><a href="/col/col39763/index.html" target="_blank">更多&gt;&gt;</a><span>新闻动态</span><i>News</i></h3>
+     <div class="newsCon">
+       <div class="newsTitleList">
+         <table width='100%' cellspacing='0' cellpadding='0' border='0'>
+<tr>
+<td style='background-color:null'><div class="newsFirst"><h4><a href="/art/2017/10/17/art_39763_570579.html" target="_blank" title="我院举办PI聘任仪式(2017-10-17)">我院举办PI聘任仪式</a></h4><span><a href="/art/2017/10/17/art_39763_570579.html" target="_blank">2017年10月15日上午，我院PI聘任仪式在荷花池校区行政楼一楼报告厅举行。校长、农业科技发展研究院（国际联合实验室）院长（主任）焦新安，副校长</a><span></div></td>
+</tr></table>
+         <table width='100%' cellspacing='0' cellpadding='0' border='0'>
+<tr>
+<td style='background-color:null'>
+  <ul><li><span>10.10</span><a href='/art/2017/10/10/art_39763_569713.html' title='中国扬州大学-泰国农业大学农业科学研讨会在我校召开(2017-10-10)' target=_blank>中国扬州大学-泰国农业大学农业科学研讨会...</a></li></ul>
+</td></tr>
+<tr>
+<td style='background-color:null'>
+  <ul><li><span>09.25</span><a href='/art/2017/9/25/art_39763_568718.html' title='德国吉森大学Trinad Chakraborty教授来访(2017-09-25)' target=_blank>德国吉森大学Trinad Chakrab...</a></li></ul>
+</td></tr>
+<tr>
+<td style='background-color:null'>
+  <ul><li><span>09.14</span><a href='/art/2017/9/14/art_39763_567920.html' title='“2017农业与农产品安全国际学术会议（作物科学）”在学校举行(2017-09-14)' target=_blank>“2017农业与农产品安全国际学术会议（...</a></li></ul>
+</td></tr>
+<tr>
+<td style='background-color:null'>
+  <ul><li><span>09.14</span><a href='/art/2017/9/14/art_39763_567915.html' title='“中国-加拿大作物科学国际合作学术交流平台”项目专家论证会在学校召开(2017-09-14)' target=_blank>“中国-加拿大作物科学国际合作学术交流平...</a></li></ul>
+</td></tr>
+<tr>
+<td style='background-color:null'>
+  <ul><li><span>09.08</span><a href='/art/2017/9/8/art_39763_567290.html' title='法国巴斯德研究所高级研究员Richard Lo-Man来访(2017-09-08)' target=_blank>法国巴斯德研究所高级研究员Richard...</a></li></ul>
+</td>
+</tr></table>
+       </div>
+       <div class="newsPicList">
+          <table width='100%' cellspacing='0' cellpadding='0' border='0'>
+<tr>
+<td style=''>
+<ul><li>
+<a href='/art/2017/5/18/art_39762_558229.html' title='辛世文院士受聘“扬州大学教育部农业与农产品安全国际联合实验室”国际咨询委员会委员(2017-05-18)' target='_blank'>          
+                <img src='/picture/0/1705231533043713385.jpg' />
+                <span>辛世文院士受聘“扬州大学教育部农业与农产...</span>
+</a></li></ul>
+</td><td style=''>
+<ul><li>
+<a href='/art/2016/12/15/art_39762_540793.html' title='2016中澳农业与农产品安全国际学术会议在学校召开(2016-12-15)' target='_blank'>          
+                <img src='/picture/0/1612151136145981401.jpg' />
+                <span>2016中澳农业与农产品安全国际学术会议...</span>
+</a></li></ul>
+</td><td style=''>
+<ul><li>
+<a href='/art/2016/12/1/art_39762_539436.html' title='国际合作联合实验室召开2016年国际咨询委员会会议(2016-12-01)' target='_blank'>          
+                <img src='/picture/0/s1612011112377783974.jpg' />
+                <span>国际合作联合实验室召开2016年国际咨询...</span>
+</a></li></ul>
+</td>
+</tr></table>
+       </div>
+     </div>
+   </div><!-- news end-->
+   
+   <div class="innovation">
+      <h3 class="indexTitle"><a href="/col/col39781/index.html" target="_blank">更多&gt;&gt;</a><span>创新成果</span><i>Innovation</i></h3>
+      <div class="innovationCon">
+          <table width='100%' cellspacing='0' cellpadding='0' border='0'>
+<tr>
+<td style=''>
+<ul><li>
+              <a href="/art/2015/9/12/art_39781_538397.html">
+              <img src="/picture/0/s1611251017224487146.jpg" width="252" height="164" />
+              </a>
+              <div class="inC">
+                <h4><a href="/art/2015/9/12/art_39781_538397.html" target="_blank" title="我校获得国家一类新兽药“重组新城疫病毒（A-VII株）灭活疫苗”">我校获得国家一类新兽药“重组新城疫病毒（...</a></h4>
+                <span>2015-09-12</span>
+                <a href="/art/2015/9/12/art_39781_538397.html" class="innovationTitle">
+                   2014年12月18日，由刘秀梵院士及团队联合攻关获得的国家一类新兽药——“重组新城疫病毒（A-VII株）灭活疫苗”成果发布会暨家禽重要疫病防控论坛在</a>
+                <a href="/art/2015/9/12/art_39781_538397.html" class="innovationDetail">&nbsp;</a>
+              </div><!--inC end-->
+</li></ul>
+</td><td style=''>
+<ul><li>
+              <a href="/art/2015/9/12/art_39781_538398.html">
+              <img src="/picture/0/1611291002218457686.jpg" width="252" height="164" />
+              </a>
+              <div class="inC">
+                <h4><a href="/art/2015/9/12/art_39781_538398.html" target="_blank" title="应用毯状苗机械化移栽技术油菜再创高产">应用毯状苗机械化移栽技术油菜再创高产</a></h4>
+                <span>2015-09-12</span>
+                <a href="/art/2015/9/12/art_39781_538398.html" class="innovationTitle">
+                   记者日前从扬州大学农学院获悉：专家组通过现场测量、取样，得出位于扬州市宝应县曹甸镇2.6亩油菜毯状苗机械移栽示范方和江都区小纪镇2.8亩...</a>
+                <a href="/art/2015/9/12/art_39781_538398.html" class="innovationDetail">&nbsp;</a>
+              </div><!--inC end-->
+</li></ul>
+</td></tr>
+<tr>
+<td style=''>
+<ul><li>
+              <a href="/art/2015/12/31/art_39781_538399.html">
+              <img src="/picture/0/1611250957065398577.jpg" width="252" height="164" />
+              </a>
+              <div class="inC">
+                <h4><a href="/art/2015/12/31/art_39781_538399.html" target="_blank" title="2项农业科技成果获2015年度中国商业联合会科学技术一等奖">2项农业科技成果获2015年度中国商业联...</a></h4>
+                <span>2015-12-31</span>
+                <a href="/art/2015/12/31/art_39781_538399.html" class="innovationTitle">
+                   近日，中国商业联合会公布了2015年度中国商业联合会科学技术奖评选结果，我校兽医学院刘宗平教授的《生物抗氧化剂调控奶牛围产期代谢应激关...</a>
+                <a href="/art/2015/12/31/art_39781_538399.html" class="innovationDetail">&nbsp;</a>
+              </div><!--inC end-->
+</li></ul>
+</td><td style=''>
+<ul><li>
+              <a href="/art/2016/3/28/art_39781_538400.html">
+              <img src="/picture/0/1611251006445344533.jpg" width="252" height="164" />
+              </a>
+              <div class="inC">
+                <h4><a href="/art/2016/3/28/art_39781_538400.html" target="_blank" title="我校喜获2项教育部科学研究优秀成果奖">我校喜获2项教育部科学研究优秀成果奖</a></h4>
+                <span>2016-03-28</span>
+                <a href="/art/2016/3/28/art_39781_538400.html" class="innovationTitle">
+                   2016年2月，根据《教育部关于2015年度高等学校科学研究优秀成果奖（科学技术）奖励的决定》文件，我校喜获2项教育部科学研究优秀成果奖。其中...</a>
+                <a href="/art/2016/3/28/art_39781_538400.html" class="innovationDetail">&nbsp;</a>
+              </div><!--inC end-->
+</li></ul>
+</td>
+</tr></table>
+      </div>
+   </div><!-- innovation end-->
+   
+   
+   
+   <div class="indexConBottom">
+      <div class="contactUs">
+         <h3><img src="/images/3521/contactus.png" /></h3>
+         <ul>
+           <li class="contatc01">电话：86-514-87977735</li> 
+           <li class="contatc02">传真：86-514-87977735</li>  
+           <li class="contatc03">Email：gszhou@yzu.edu.cn</li> 
+           <li class="contatc04">地址：江苏省扬州市扬州大学文汇路校区 </li> 
+           <li class="contatc05">邮编：225009</li> 
+         </ul>
+       </div>
+   
+   
+       <div class="tzgg" id="tzgg">
+         <h3><a href="/col/col39764/index.html" target="_blank">更多&gt;&gt;</a><span>通知公告</span></h3>
+         <table width='100%' cellspacing='0' cellpadding='0' border='0'>
+<tr>
+<td style='background-color:null'>
+  <ul><li><span>10-19</span><label>&nbsp;</label><a href='/art/2017/10/19/art_39764_570905.html' title='外国专家学术报告：Commercializing research（商业化科研）(2017-10-19)' target=_blank>外国专家学术报告：Commercializing...</a></li></ul>
+</td></tr>
+<tr>
+<td style='background-color:null'>
+  <ul><li><span>10-19</span><label>&nbsp;</label><a href='/art/2017/10/19/art_39764_570904.html' title='外国专家学术报告：The phytomicrobiome and crop productivity（植物微生物群落与作物生产）(2017-10-19)' target=_blank>外国专家学术报告：The phytomicrob...</a></li></ul>
+</td></tr>
+<tr>
+<td style='background-color:null'>
+  <ul><li><span>10-18</span><label>&nbsp;</label><a href='/art/2017/10/18/art_39764_570727.html' title='外国专家学术报告：Hormones of the Holobiont（共生功能体的激素调节）(2017-10-18)' target=_blank>外国专家学术报告：Hormones of the...</a></li></ul>
+</td></tr>
+<tr>
+<td style='background-color:null'>
+  <ul><li><span>10-17</span><label>&nbsp;</label><a href='/art/2017/10/17/art_39764_570554.html' title='关于聘任第一批PI的通知(2017-10-17)' target=_blank>关于聘任第一批PI的通知</a></li></ul>
+</td></tr>
+<tr>
+<td style='background-color:null'>
+  <ul><li><span>10-12</span><label>&nbsp;</label><a href='/art/2017/10/12/art_39764_569975.html' title='关于举行农业科技发展研究院（国际联合实验室）首批PI聘任仪式的通知(2017-10-12)' target=_blank>关于举行农业科技发展研究院（国际联合实验室）首批...</a></li></ul>
+</td></tr>
+<tr>
+<td style='background-color:null'>
+  <ul><li><span>09-21</span><label>&nbsp;</label><a href='/art/2017/9/21/art_39764_568474.html' title='2017生物医学扬州国际论坛(2017-09-21)' target=_blank>2017生物医学扬州国际论坛</a></li></ul>
+</td>
+</tr></table>
+       </div><!--tzgg end-->
+       <div class="rczp">
+         <h3><a href="/col/col39765/index.html" target="_blank">更多&gt;&gt;</a><span>人才招聘</span></h3>
+         <table width='100%' cellspacing='0' cellpadding='0' border='0'>
+<tr>
+<td style='background-color:null'>
+  <ul><li><span>10-17</span><a href='/art/2017/10/17/art_39765_570557.html' title='扬州大学农业科技发展研究院2018年人才引进计划表(2017-10-17)' target=_blank>扬州大学农业科技发展研究院2018年人才引进计划...</a></li></ul>
+</td></tr>
+<tr>
+<td style='background-color:null'>
+  <ul><li><span>11-24</span><a href='/art/2016/11/24/art_39765_538757.html' title='扬州大学农业科技发展研究院2017年引进人才计划(2016-11-24)' target=_blank>扬州大学农业科技发展研究院2017年引进人才计划</a></li></ul>
+</td>
+</tr></table>
+       </div><!--tzgg end-->       
+   </div>   
+  </div><!-- content end-->
+  <div class="bottom">
+    Copyright 2016  扬州大学农业科技发展研究院 & 教育部农业与农产品安全国际合作联合实验室 版权所有<br/>
+    电话：86-514-87977735  传真：86-514-87977735 &nbsp;&nbsp; Email: gszhou@yzu.edu.cn   
+  </div>
+</div>
+
+
+<!-- visitcount Begin --><iframe src='./module/visitcount/visit.jsp?type=1&i_webid=103&i_columnid=39641' name="vishidden" id="vishidden" frameborder="0" style="width:0; height:0; display:none"></iframe><!-- visitcount End -->
+</body>
+</html>
+ <a href='http://www.hanweb.com' style='display:none'>Produced By 大汉网络 大汉版通发布系统</a><script language="javascript" src='/script/pagecontrol.js'></script>

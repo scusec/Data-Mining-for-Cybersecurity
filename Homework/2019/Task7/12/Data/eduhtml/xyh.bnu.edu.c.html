@@ -1,0 +1,1552 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>
+	北京师范大学校友网
+</title><link rel="shortcut icon" href="Views/Master/favicon.ico" /><link href="Content/css/bootstrap.css" rel="stylesheet" /><link rel="stylesheet" type="text/css" href="Content/css/style.css" />
+    <style>
+        html {
+            min-width: 1120px;
+        }
+
+        .memgb_img {
+            width: 400px;
+            height: 225px;
+            background: url(../../../Content/img/Nt_me.png) no-repeat center;
+            overflow: hidden;
+        }
+
+        .memgb_img-text {
+            width: 255px;
+            height: 125px;
+            margin: 70px auto;
+        }
+
+        .memgb_img-span {
+            font-size: 18px;
+            color: #414040;
+            display: block;
+            height: 85px;
+            text-align: center;
+        }
+
+        .memgb_img-button {
+            width: 105px;
+            height: 35px;
+            font-size: 18px;
+            color: #ffffff;
+            line-height: 35px;
+            text-align: center;
+            border-radius: 35px;
+            background: #318bc8;
+            display: table;
+            margin: 0 auto;
+            border: none;
+            outline: none;
+        }
+
+        .header-top {
+            width: 100%;
+            height: 25px;
+            background: #318bc8;
+        }
+
+        .header-top-in {
+            width: 1200px;
+            height: 25px;
+            margin: 0 auto;
+        }
+
+        .set-index {
+            line-height: 25px;
+            font-size: 12px;
+            color: #ffffff;
+            float: left;
+        }
+
+        .set-index-a {
+            color: #ffffff;
+        }
+
+        .header-margin {
+            margin-left: 25px;
+        }
+
+        .header-r {
+            width: 151px;
+            height: 25px;
+            float: right;
+        }
+
+        .header-login {
+            display: block;
+            line-height: 25px;
+            font-size: 12px;
+            color: #ffffff;
+            float: left;
+        }
+
+        .header-bot {
+            width: 100%;
+            height: 81px;
+            background: url(../../Content/img_Login/header-bg.png);
+            overflow: hidden;
+        }
+
+        .header-bot-in {
+            width: 1200px;
+            height: 81px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .header-img {
+            display: block;
+            width: 300px;
+            height: 54px;
+            margin-top: 13px;
+            float: left;
+        }
+
+        .header-input {
+            width: 180px;
+            height: 18px;
+            border: 0;
+            border-bottom: 1px solid #999999;
+            line-height: 18px;
+            font-size: 12px;
+            color: #666;
+            float: right;
+            background: rgba(255,255,255,0.7);
+            margin-top: 3px;
+            box-sizing: border-box;
+            padding-left: 4px;
+        }
+
+        .header-nones {
+            width: 25px;
+            height: 25px;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+
+        .header-none {
+            display: block;
+            width: 14px;
+            height: 8px;
+            position: absolute;
+            right: 4px;
+            top: 8px;
+            cursor: pointer;
+        }
+
+        .header-no {
+            display: none;
+        }
+
+        .nav-horn {
+            display: block;
+            width: 12px;
+            height: 5px;
+            position: absolute;
+            left: 44px;
+            top: 35px;
+            display: none;
+        }
+
+        .nav-horns {
+            display: block;
+            width: 12px;
+            height: 5px;
+            position: absolute;
+            left: 44px;
+            top: 35px;
+            display: none;
+        }
+
+        .Login-names {
+            min-width: 93px;
+            font-size: 12px;
+            line-height: 40px;
+            float: left;
+            color: #ffffff;
+        }
+
+        .Login-getOut {
+            display: block;
+            font-size: 12px;
+            line-height: 40px;
+            float: left;
+            color: #ffffff;
+            margin-left: 20px;
+            cursor: pointer;
+            background-color: #318bc8;
+        }
+    </style>
+    <script src="../../Content/js/jquery-1.11.3.js"></script>
+    
+    <script src="../../Content/js/jquery.cookie.js"></script>
+    <script type="text/javascript">
+
+    </script>
+    
+    <style>
+        .Contact-us {
+            margin-top: 50px;
+        }
+        .carousel-control.left{
+            background-image:none;
+        }
+        .carousel-control.right{
+            background-image:none;
+        }
+    </style>
+</head>
+<body>
+    <form name="aspnetForm" method="post" action="" id="aspnetForm">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJNDg3Nzk3MTUwD2QWAmYPZBYCAgMPZBYEZg8WAh4LXyFJdGVtQ291bnQCCBYQZg9kFgRmDxUEATEAAS8G6aaW6aG1ZAIDDxYCHwBmZAIBD2QWBGYPFQQBMgAvL0FsdW1uaUFzc29jaWF0aW9uL0Fzc29jaWF0aW9uTGlzdF8yXzBfMTg4Lmh0bWwJ5qCh5Y+L5LyaZAIDDxYCHwACAxYGZg9kFgJmDxUEAzE4OAAvL0FsdW1uaUFzc29jaWF0aW9uL0Fzc29jaWF0aW9uTGlzdF8yXzBfMTg4Lmh0bWwM5oC75Lya5qaC5Ya1ZAIBD2QWAmYPFQQDMTkwAC8vQWx1bW5pQXNzb2NpYXRpb24vQXNzb2NpYXRpb25MaXN0XzJfMV8xOTAuaHRtbAzop4Tnq6DliLbluqZkAgIPZBYCZg8VBAMxOTEALy9BbHVtbmlBc3NvY2lhdGlvbi9Bc3NvY2lhdGlvbkxpc3RfMl8yXzE5MS5odG1sDOWIhuS8mue7hOe7h2QCAg9kFgRmDxUEATgALi9TY2hvb2xTZXJ2ZXJzL0Fzc29jaWF0aW9uTGlzdFR3b184XzBfMjAxLmh0bWwM5pSv5oyB5Lit5b+DZAIDDxYCHwACBBYIZg9kFgJmDxUEAzIwMQAuL1NjaG9vbFNlcnZlcnMvQXNzb2NpYXRpb25MaXN0VHdvXzhfMF8yMDEuaHRtbAzph43lm57mr43moKFkAgEPZBYCZg8VBAMyNjIALi9TY2hvb2xTZXJ2ZXJzL0Fzc29jaWF0aW9uTGlzdFR3b184XzFfMjYyLmh0bWwM57uI6Lqr5a2m5LmgZAICD2QWAmYPFQQDMjYzAC4vU2Nob29sU2VydmVycy9Bc3NvY2lhdGlvbkxpc3RUd29fOF8yXzI2My5odG1sDOS6i+S4mumihuiIqmQCAw9kFgJmDxUEAzYwOQArL0FsdW1uaUFzc29jaWF0aW9uL0Fzc29jaWF0aW9uXzhfM182MDkuaHRtbAzkuJPlsZ7npo/liKlkAgMPZBYEZg8VBAE0ACUvQWx1bW5pQ2VmaXJvL1JvbmdZdUxpc3RfN180XzE5OC5odG1sDOagoeWPi+e+pOiKs2QCAw8WAh8AAgUWCmYPZBYCZg8VBAMxOTcGX2JsYW5rKmh0dHA6Ly93d3cuYm51LmVkdS5jbi94eGdrL2xzbXIvaW5kZXguaHRtbAzljoblj7LlkI3kurpkAgEPZBYCZg8VBAM1ODkAKy9BbHVtbmlBc3NvY2lhdGlvbi9Bc3NvY2lhdGlvbl80XzFfNTg5Lmh0bWwM5Lik6Zmi6Zmi5aOrZAICD2QWAmYPFQQDMTk4ACUvQWx1bW5pQ2VmaXJvL1JvbmdZdUxpc3RfN180XzE5OC5odG1sDOiNo+iqieagoeWPi2QCAw9kFgJmDxUEAzU4OAArL0FsdW1uaUFzc29jaWF0aW9uL0Fzc29jaWF0aW9uXzRfM181ODguaHRtbAznibnnuqfmlZnluIhkAgQPZBYCZg8VBAMxOTkAJi9BbHVtbmlDZWZpcm8vU2Nob29sUmNhbGxfNF80XzE5OS5odG1sDOagoeWPi+mjjumHh2QCBA9kFgRmDxUEAzIyNQAfL0FjdGlvbi9OZXdzTGlzdF8xXzIyNV8yOTMuaHRtbAzmlrDpl7vkuK3lv4NkAgMPFgIfAAIGFgxmD2QWAmYPFQQDMjI2Bl9ibGFuayZodHRwOi8vd3d3LmJudS5lZHUuY24vYnNka3gvaW5kZXguaHRtbAzmr43moKHmlrDpl7tkAgEPZBYCZg8VBAMyOTMAHy9BY3Rpb24vTmV3c0xpc3RfMV8yMjVfMjkzLmh0bWwP5qCh5Y+L5Lya5b+r6K6vZAICD2QWAmYPFQQDMjI3AB8vQWN0aW9uL05ld3NMaXN0XzJfMjI1XzIyNy5odG1sDOeDreeCuea0u+WKqGQCAw9kFgJmDxUEAzIyOAAfL0FjdGlvbi9OZXdzTGlzdF8zXzIyNV8yMjguaHRtbAzliIbkvJrliqjmgIFkAgQPZBYCZg8VBAMyOTQAIC9BY3Rpb24vTmV3c0xpc3RfMTRfMjI1XzI5NC5odG1sDOagoeWPi+i/lOagoWQCBQ9kFgJmDxUEAzI5NQAgL0FjdGlvbi9OZXdzTGlzdF8xNl8yMjVfMjk1Lmh0bWwM6YCa55+l5YWs5ZGKZAIFD2QWBGYPFQQDMjIzABUvSm91cm5hbF8yMjNfMjIzLmh0bWwM5qCh5Y+L5YiK54mpZAIDDxYCHwACAhYEZg9kFgJmDxUEAzIyNAAVL0pvdXJuYWxfMjIzXzIyNC5odG1sDOW4iOWkp+agoeWPi2QCAQ9kFgJmDxUEAzIyOQAYL0NvbnRyaWJ1dGVfMjIzXzIyOS5odG1sDOaIkeimgeaKleeov2QCBg9kFgRmDxUEATkAIS9TY2hvb2xKdWFuL0p1YW5KWlhNXzlfMF8yMDcuaHRtbAzmoKHlj4vmjZDotaBkAgMPFgIfAAIDFgZmD2QWAmYPFQQDMjA3ACEvU2Nob29sSnVhbi9KdWFuSlpYTV85XzBfMjA3Lmh0bWwM5o2Q6LWg5b2i5byPZAIBD2QWAmYPFQQDMjA4ACYvQWx1bW5pQ2VmaXJvL1NjaG9vbFJjYWxsXzlfMV8yMDguaHRtbAzmjZDotaDmlYXkuotkAgIPZBYCZg8VBAMyMDkAIi9TY2hvb2xKdWFuL0RvbmF0ZVRoYW5rXzlfMjA5Lmh0bWwJ6I2j6KqJ5aKZZAIHD2QWBGYPFQQDNjA0ADIvU2Nob29sU2VydmVycy9Bc3NvY2lhdGlvbkxpc3RUaHJlZV82MDRfMF82MDUuaHRtbAjorrDCt+W/hmQCAw8WAh8AAgMWBmYPZBYCZg8VBAM2MDUAMi9TY2hvb2xTZXJ2ZXJzL0Fzc29jaWF0aW9uTGlzdFRocmVlXzYwNF8wXzYwNS5odG1sDOacqOmTjuW5tOWNjmQCAQ9kFgJmDxUEAzYwNgAyL1NjaG9vbFNlcnZlcnMvQXNzb2NpYXRpb25MaXN0VGhyZWVfNjA0XzFfNjA2Lmh0bWwM5ZCM54+t55qE5L2gZAICD2QWAmYPFQQDNjA3AC0vQWx1bW5pQXNzb2NpYXRpb24vQXNzb2NpYXRpb25fNjA0XzJfNjA3Lmh0bWwG5rKZ5ryPZAIBD2QWFAIBDxYCHwACAxYGZg9kFgJmDxUBATFkAgEPZBYCZg8VAQEyZAICD2QWAmYPFQEBM2QCAw8WAh8AAgMWBmYPZBYCZg8VATsvVXBsb2FkLzIwMTcvMDkvMjAvOWI5NzkyMjItZDQyNS00NzU1LWFjY2ItN2QzMjhlOWY1Y2M5LmpwZ2QCAQ9kFgJmDxUBOy9VcGxvYWQvMjAxNy8wOS8yMC84YTZkOTZhMC0yNWUxLTQyNTYtODFmOC01MWJlNTEzOWI5NjEuanBnZAICD2QWAmYPFQE7L1VwbG9hZC8yMDE3LzA5LzIwLzA1NDgxNjE5LTdhZTMtNDA0Yy05MDZhLWU1MDkxNTkyNmMzNC5qcGdkAgUPFgIfAAIH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dHRwOi8vbXAud2VpeGluLnFxLmNvbS9zL29zQWl1NlY1VklaY1FJUE5ianlYUEFkAgEPFQ4JdW5kZWZpbmVkBl9ibGFuazBodHRwOi8vbXAud2VpeGluLnFxLmNvbS9zL29zQWl1NlY1VklaY1FJUE5ianlYUEFD5LqR5Y2X5qCh5Y+L5LyaMjAxN+W5tOS8muaaqOavjeagoTExNeWRqOW5tOWNjuivnuW8guWcsOWQjOW6huWkpy4uLgAKMjAxNy0wOS0xNgRub25lBl9ibGFuazBodHRwOi8vbXAud2VpeGluLnFxLmNvbS9zL29zQWl1NlY1VklaY1FJUE5ianlYUEFD5LqR5Y2X5qCh5Y+L5LyaMjAxN+W5tOS8muaaqOavjeagoTExNeWRqOW5tOWNjuivnuW8guWcsOWQjOW6huWkpy4uLgAKMjAxNy0wOS0xNgZfYmxhbmswaHR0cDovL21wLndlaXhpbi5xcS5jb20vcy9vc0FpdTZWNVZJWmNRSVBOYmp5WFBBZAICDxUBCXVuZGVmaW5lZGQCAg9kFgZmDxUDBG5vbmUGX2JsYW5rMGh0dHA6Ly9tcC53ZWl4aW4ucXEuY29tL3MvWTB4UFFrWDQ2eVlnSlN6eDVqaFNZd2QCAQ8VDgAGX2JsYW5rMGh0dHA6Ly9tcC53ZWl4aW4ucXEuY29tL3MvWTB4UFFrWDQ2eVlnSlN6eDVqaFNZd0rmnKjpk47nvJjCt+WyreWNl+aDheKAlOKAlOWMl+S6rOW4iOiMg+Wkp+WtpjExNeWRqOW5tOagoeW6huWFrOebiuW+rumprC4uLgAKMjAxNy0wOS0xNgVibG9jawZfYmxhbmswaHR0cDovL21wLndlaXhpbi5xcS5jb20vcy9ZMHhQUWtYNDZ5WWdKU3p4NWpoU1l3SuacqOmTjue8mMK35bKt5Y2X5oOF4oCU4oCU5YyX5Lqs5biI6IyD5aSn5a2mMTE15ZGo5bm05qCh5bqG5YWs55uK5b6u6amsLi4uAAoyMDE3LTA5LTE2Bl9ibGFuazBodHRwOi8vbXAud2VpeGluLnFxLmNvbS9zL1kweFBRa1g0NnlZZ0pTeng1amhTWXdkAgIPFQEAZAIDD2QWBmYPFQMEbm9uZQZfYmxhbmvAAWh0dHBzOi8vbXAud2VpeGluLnFxLmNvbS9zP19fYml6PU16QTNNemcyTnpRNE53PT0mbWlkPTI2NTA4OTQ5NDEmaWR4PTEmc249MzZjMTQxYmYyYzk2NmQ0Y2ZiZDg4NWE4NDc0OGZiOWMmY2hrc209ODRmZDViZWRiMzhhZDJmYmU2MDM3NjI0MDk1ZDdiYzA0YmQzOWVmZTRlZTI5ZTVlNzY1M2FiMzZlOWIzZDk5MzM1NjY4ZmY3MzA1NiNyZGQCAQ8VDjYvVXBsb2FkL25ld0ltYWdlL2ltYWdlcy8yMDE3MDUwMy8yMDE3MDUwMzE1NDk1MjM4Ny5qcGcGX2JsYW5rwAFodHRwczovL21wLndlaXhpbi5xcS5jb20vcz9fX2Jpej1NekEzTXpnMk56UTROdz09Jm1pZD0yNjUwODk0OTQxJmlkeD0xJnNuPTM2YzE0MWJmMmM5NjZkNGNmYmQ4ODVhODQ3NDhmYjljJmNoa3NtPTg0ZmQ1YmVkYjM4YWQyZmJlNjAzNzYyNDA5NWQ3YmMwNGJkMzllZmU0ZWUyOWU1ZTc2NTNhYjM2ZTliM2Q5OTMzNTY2OGZmNzMwNTYjcmQn5rKI6Ziz5qCh5Y+L5Lya5Y+s5byA5Lya5ZGY5Luj6KGo5aSn5LyaFiZsdDtwJmd0O29mZiZsdDsvcCZndDsKMjAxNy0wNC0xNQVibG9jawZfYmxhbmvAAWh0dHBzOi8vbXAud2VpeGluLnFxLmNvbS9zP19fYml6PU16QTNNemcyTnpRNE53PT0mbWlkPTI2NTA4OTQ5NDEmaWR4PTEmc249MzZjMTQxYmYyYzk2NmQ0Y2ZiZDg4NWE4NDc0OGZiOWMmY2hrc209ODRmZDViZWRiMzhhZDJmYmU2MDM3NjI0MDk1ZDdiYzA0YmQzOWVmZTRlZTI5ZTVlNzY1M2FiMzZlOWIzZDk5MzM1NjY4ZmY3MzA1NiNyZCfmsojpmLPmoKHlj4vkvJrlj6zlvIDkvJrlkZjku6PooajlpKfkvJoWJmx0O3AmZ3Q7b2ZmJmx0Oy9wJmd0OwoyMDE3LTA0LTE1Bl9ibGFua8ABaHR0cHM6Ly9tcC53ZWl4aW4ucXEuY29tL3M/X19iaXo9TXpBM016ZzJOelE0Tnc9PSZtaWQ9MjY1MDg5NDk0MSZpZHg9MSZzbj0zNmMxNDFiZjJjOTY2ZDRjZmJkODg1YTg0NzQ4ZmI5YyZjaGtzbT04NGZkNWJlZGIzOGFkMmZiZTYwMzc2MjQwOTVkN2JjMDRiZDM5ZWZlNGVlMjllNWU3NjUzYWIzNmU5YjNkOTkzMzU2NjhmZjczMDU2I3JkZAICDxUBNi9VcGxvYWQvbmV3SW1hZ2UvaW1hZ2VzLzIwMTcwNTAzLzIwMTcwNTAzMTU0OTUyMzg3LmpwZ2QCDQ8WAh8AZmQCDw8WAh8AAgYWDGYPZBYEZg8VAgZfYmxhbmswaHR0cDovL21wLndlaXhpbi5xcS5jb20vcy84OFNWblFHWFpMQVZkNWJSUENra21RZAIBDxUFQlVwbG9hZC8yMDE3LzEwLzE4LzM5NWMwYzk0LWYyOTktNDFlNS05OWQ5LWMwODdmZTUxMzkxMV8zODhfMjkwLmpwZy3igJzkurrotbDlpKnmtq/vvIzlv4Pns7vluIjlpKfigJ0gfCDljoblj7IuLi4t4oCc5Lq66LWw5aSp5rav77yM5b+D57O75biI5aSn4oCdIHwg5Y6G5Y+yLi4uAAoyMDE3LTEwLTE3ZAIBD2QWBGYPFQIGX2JsYW5rMWh0dHBzOi8vbXAud2VpeGluLnFxLmNvbS9zLzNocjZqeVJEbFg5VUFCbXd5Y3pRVmdkAgEPFQVCVXBsb2FkLzIwMTcvMTAvMTgvMDYwOGM0NTEtZDVkOC00MzA2LWEwYWEtOTYwN2YyOGYwNDNlXzM4OF8yOTAuanBnJeavjeagoeebuOiBmuivneWutuW4uCAsIOaVmeiCsjE5NjIuLi4l5q+N5qCh55u46IGa6K+d5a625bi4ICwg5pWZ6IKyMTk2Mi4uLgAKMjAxNy0xMC0xN2QCAg9kFgRmDxUCBl9ibGFuazBodHRwOi8vbXAud2VpeGluLnFxLmNvbS9zL2t6NHNWUFBoMVpoV2FqaTZzdkc3WXdkAgEPFQU2L1VwbG9hZC9uZXdJbWFnZS9pbWFnZXMvMjAxNzAzMDYvMjAxNzAzMDYxOTU0MTk4NDYuanBnK+eVheiwiOaIkOWwse+8jOeskeiwiOS6uueUnyB8IOeJqeeQhuezuzUuLi4r55WF6LCI5oiQ5bCx77yM56yR6LCI5Lq655SfIHwg54mp55CG57O7NS4uLj/lkIzlrabogZrkvJrmmK/kuIDlpKfnm5vlrrTvvIzku4DkuYjpg73lj6/ku6Xmjqjovp7llK/ni6zlkIwuLi4KMjAxNi0xMS0xNmQCAw9kFgRmDxUCBl9ibGFuazBodHRwOi8vbXAud2VpeGluLnFxLmNvbS9zL3RwQXZ3QkRGbjU2c09yZEQxcFdvWHdkAgEPFQU2L1VwbG9hZC9uZXdJbWFnZS9pbWFnZXMvMjAxNzAzMDYvMjAxNzAzMDYyMDAyNDA0OTMuanBnG+avleS4muWtoyB8IOaIkeS7rOWNgeW5tOiBmhvmr5XkuJrlraMgfCDmiJHku6zljYHlubTogZo/5pe25YWJ6I2P6IuS77yM55m96am56L+H6ZqZ77yM56uv5Y2I55qE6aqE6Ziz5bim552A5oiR5Lus5Y+ILi4uCjIwMTYtMTAtMjZkAgQPZBYEZg8VAgZfYmxhbmswaHR0cDovL21wLndlaXhpbi5xcS5jb20vcy9QdXhIVllZQV84VkFkVVFWTU1lOVRnZAIBDxUFNi9VcGxvYWQvbmV3SW1hZ2UvaW1hZ2VzLzIwMTcwMzA2LzIwMTcwMzA2MTk1ODQxMjg3LmpwZy3nm7jor4bkuInljYHlubTvvIzpnZLmmKXkuIDovojlrZAgfCDnu4/mtY4uLi4t55u46K+G5LiJ5Y2B5bm077yM6Z2S5pil5LiA6L6I5a2QIHwg57uP5rWOLi4uNTE5ODblubQ55pyI77yM5oiR5Lus5Zyo5biI5aSn6IGa6aaW77yM4oCc57uP5rWO57O7Li4uCjIwMTYtMTAtMjZkAgUPZBYEZg8VAgZfYmxhbmswaHR0cDovL21wLndlaXhpbi5xcS5jb20vcy9lQUpRZFQ3QmE1WThhdTM4aGVfWTd3ZAIBDxUFNi9VcGxvYWQvbmV3SW1hZ2UvaW1hZ2VzLzIwMTcwMzA2LzIwMTcwMzA2MTk1NjIwNTY3LmpwZy3nm7jor4bkuIDnlLLlrZDvvIzogITogIvlho3nm7jogZogfCDlnLDnkIYuLi4t55u46K+G5LiA55Sy5a2Q77yM6ICE6ICL5YaN55u46IGaIHwg5Zyw55CGLi4uP+WPiOaYr+eni+mjjumAgeeIveaXtuiKgu+8jOiZveeEtuayoeaVoumAmuefpeWkluWcsOWQjOWtpu+8jC4uLgoyMDE2LTEwLTI2ZAIRDxYCHwACBBYIZg9kFgJmDxUBNC9VcGxvYWQvQmFubmVyL2ltYWdlcy8yMDE3MDEyMC8yMDE3MDEyMDE4MzIzMzUyMC5wbmdkAgEPZBYCZg8VATQvVXBsb2FkL0Jhbm5lci9pbWFnZXMvMjAxNzAxMjAvMjAxNzAxMjAxODMxMjc3MjMucG5nZAICD2QWAmYPFQE0L1VwbG9hZC9CYW5uZXIvaW1hZ2VzLzIwMTcwMTIwLzIwMTcwMTIwMTgzMDU5OTExLnBuZ2QCAw9kFgJmDxUBNC9VcGxvYWQvQmFubmVyL2ltYWdlcy8yMDE3MDEyMC8yMDE3MDEyMDE4MzAyNDQxMS5wbmdkAhMPFgIfAAIGFgxmD2QWAmYPFQIWaHR0cDovL3d3dy5ibnUuZWR1LmNuLxLljJfkuqzluIjojIPlpKflraZkAgEPZBYCZg8VAhpodHRwOi8vZW5nbGlzaC5ibnUuZWR1LmNuLxlCRUlKSU5HIE5PUk1BTCBVTklWRVJTSVRZZAICD2QWAmYPFQIVaHR0cDovL3d3dy5ibnVlZi5vcmcvD+aVmeiCsuWfuumHkeS8mmQCAw9kFgJmDxUCGmh0dHA6Ly93d3cubGliLmJudS5lZHUuY24vCeWbvuS5pummhmQCBA9kFgJmDxUCGWh0dHA6Ly9kYW5nYW4uYm51LmVkdS5jbi8J5qGj5qGI6aaGZAIFD2QWAmYPFQIXaHR0cDovL3NkeHMuYm51LmVkdS5jbi8J5qCh5Y+y6aaGZGT/1sQRk+bqNfCpV1dLO0z59h2Bp3D1iHJr2/SFq8MREA==" />
+
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAAkU2hm6zKCQ0+WeK/HYvs1DhbMHXbKZhqVFahENkLN2uWIDHjmJt56RkgS32hw/4n+yH5cvkPsVe/KM592Ts907VTwkTh51uq/YZH3FgfBV86+cwOnOL57tL+EBktPVfjyC7Opj3TIjuN3yAf9tRUS4ZJ0Q62Zs0J1158T9rtgCTqfuin8HmyP+I1lNTR2yJ5YhLVMJCyaq4Aif3pJyQ8dPQoqBW7Jg+Ubf/oC0IqAgDg==" />
+        <div class="BodyBox">
+            <!-- 头部 -->
+            <div class="header">
+                <div class="header-top">
+                    <div class="header-top-in">
+                        <div class="set-index">
+                            <p class="set-index-a" onclick="SetHome(this)">设为首页</p>
+                        </div>
+                        <div class="set-index header-margin"><a class="set-index-a" href="javascript:addFav()" rel="sidebar">收藏我们</a></div>
+                        <div class="header-r">
+
+                            
+                            <div class="landr" style="display: none;">
+                                <a class="header-login" href="/PersonalCenter/Login.html">登录</a>
+                                <a class="header-login header-margin" href="/PersonalCenter/Login.html">注册</a>
+                            </div>
+                            
+                            <div class="float_r" style="position: relative;">
+                                <input class="header-input" onkeypress="if(event.keyCode==13) {$('.hp_search_logo').click();return false;}" type="text" placeholder="请输入搜索内容" />
+                                <a class="hp_search_logo s-hp-search-logo" onclick="Search()" href="javascript:void(0)"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="header-bot">
+                    <div class="header-bot-in">
+                        <a href="/">
+                            <img class="header-img" src="../../Content/img/hp_logo.png" /></a>
+
+                    </div>
+                </div>
+            </div>
+            <!-- 导航 -->
+            <div class="hp_nav">
+                <div class="nav_content clear">
+                    <ul class="nav_bar clear">
+                        
+                                <li class="float_l">
+                                    <a onclick="ClickCount(1)" target="" href="/">首页</a>
+                                    <input type="hidden" name="ctl00$Navigation$ctl00$hiddenId" id="ctl00_Navigation_ctl00_hiddenId" value="1" />
+                                    <img class="nav-horn" src="../../Content/img_Login/nav-horn.png" />
+                                    <img class="nav-horns" src="../../Content/img_Login/nav-horns.png" />
+                                    <ul class="nav-ul2" style="display: none;">
+                                        
+                                        
+                                    </ul>
+                                </li>
+                            
+                                <li class="float_l">
+                                    <a onclick="ClickCount(2)" target="" href="/AlumniAssociation/AssociationList_2_0_188.html">校友会</a>
+                                    <input type="hidden" name="ctl00$Navigation$ctl01$hiddenId" id="ctl00_Navigation_ctl01_hiddenId" value="2" />
+                                    <img class="nav-horn" src="../../Content/img_Login/nav-horn.png" />
+                                    <img class="nav-horns" src="../../Content/img_Login/nav-horns.png" />
+                                    <ul class="nav-ul2" style="display: none;">
+                                        
+                                                <li><a onclick="ClickCount(188)" target="" href="/AlumniAssociation/AssociationList_2_0_188.html">总会概况</a></li>
+                                            
+                                                <li><a onclick="ClickCount(190)" target="" href="/AlumniAssociation/AssociationList_2_1_190.html">规章制度</a></li>
+                                            
+                                                <li><a onclick="ClickCount(191)" target="" href="/AlumniAssociation/AssociationList_2_2_191.html">分会组织</a></li>
+                                            
+                                        
+                                    </ul>
+                                </li>
+                            
+                                <li class="float_l">
+                                    <a onclick="ClickCount(8)" target="" href="/SchoolServers/AssociationListTwo_8_0_201.html">支持中心</a>
+                                    <input type="hidden" name="ctl00$Navigation$ctl02$hiddenId" id="ctl00_Navigation_ctl02_hiddenId" value="8" />
+                                    <img class="nav-horn" src="../../Content/img_Login/nav-horn.png" />
+                                    <img class="nav-horns" src="../../Content/img_Login/nav-horns.png" />
+                                    <ul class="nav-ul2" style="display: none;">
+                                        
+                                                <li><a onclick="ClickCount(201)" target="" href="/SchoolServers/AssociationListTwo_8_0_201.html">重回母校</a></li>
+                                            
+                                                <li><a onclick="ClickCount(262)" target="" href="/SchoolServers/AssociationListTwo_8_1_262.html">终身学习</a></li>
+                                            
+                                                <li><a onclick="ClickCount(263)" target="" href="/SchoolServers/AssociationListTwo_8_2_263.html">事业领航</a></li>
+                                            
+                                                <li><a onclick="ClickCount(609)" target="" href="/AlumniAssociation/Association_8_3_609.html">专属福利</a></li>
+                                            
+                                        
+                                    </ul>
+                                </li>
+                            
+                                <li class="float_l">
+                                    <a onclick="ClickCount(4)" target="" href="/AlumniCefiro/RongYuList_7_4_198.html">校友群芳</a>
+                                    <input type="hidden" name="ctl00$Navigation$ctl03$hiddenId" id="ctl00_Navigation_ctl03_hiddenId" value="4" />
+                                    <img class="nav-horn" src="../../Content/img_Login/nav-horn.png" />
+                                    <img class="nav-horns" src="../../Content/img_Login/nav-horns.png" />
+                                    <ul class="nav-ul2" style="display: none;">
+                                        
+                                                <li><a onclick="ClickCount(197)" target="_blank" href="http://www.bnu.edu.cn/xxgk/lsmr/index.html">历史名人</a></li>
+                                            
+                                                <li><a onclick="ClickCount(589)" target="" href="/AlumniAssociation/Association_4_1_589.html">两院院士</a></li>
+                                            
+                                                <li><a onclick="ClickCount(198)" target="" href="/AlumniCefiro/RongYuList_7_4_198.html">荣誉校友</a></li>
+                                            
+                                                <li><a onclick="ClickCount(588)" target="" href="/AlumniAssociation/Association_4_3_588.html">特级教师</a></li>
+                                            
+                                                <li><a onclick="ClickCount(199)" target="" href="/AlumniCefiro/SchoolRcall_4_4_199.html">校友风采</a></li>
+                                            
+                                        
+                                    </ul>
+                                </li>
+                            
+                                <li class="float_l">
+                                    <a onclick="ClickCount(225)" target="" href="/Action/NewsList_1_225_293.html">新闻中心</a>
+                                    <input type="hidden" name="ctl00$Navigation$ctl04$hiddenId" id="ctl00_Navigation_ctl04_hiddenId" value="225" />
+                                    <img class="nav-horn" src="../../Content/img_Login/nav-horn.png" />
+                                    <img class="nav-horns" src="../../Content/img_Login/nav-horns.png" />
+                                    <ul class="nav-ul2" style="display: none;">
+                                        
+                                                <li><a onclick="ClickCount(226)" target="_blank" href="http://www.bnu.edu.cn/bsdkx/index.html">母校新闻</a></li>
+                                            
+                                                <li><a onclick="ClickCount(293)" target="" href="/Action/NewsList_1_225_293.html">校友会快讯</a></li>
+                                            
+                                                <li><a onclick="ClickCount(227)" target="" href="/Action/NewsList_2_225_227.html">热点活动</a></li>
+                                            
+                                                <li><a onclick="ClickCount(228)" target="" href="/Action/NewsList_3_225_228.html">分会动态</a></li>
+                                            
+                                                <li><a onclick="ClickCount(294)" target="" href="/Action/NewsList_14_225_294.html">校友返校</a></li>
+                                            
+                                                <li><a onclick="ClickCount(295)" target="" href="/Action/NewsList_16_225_295.html">通知公告</a></li>
+                                            
+                                        
+                                    </ul>
+                                </li>
+                            
+                                <li class="float_l">
+                                    <a onclick="ClickCount(223)" target="" href="/Journal_223_223.html">校友刊物</a>
+                                    <input type="hidden" name="ctl00$Navigation$ctl05$hiddenId" id="ctl00_Navigation_ctl05_hiddenId" value="223" />
+                                    <img class="nav-horn" src="../../Content/img_Login/nav-horn.png" />
+                                    <img class="nav-horns" src="../../Content/img_Login/nav-horns.png" />
+                                    <ul class="nav-ul2" style="display: none;">
+                                        
+                                                <li><a onclick="ClickCount(224)" target="" href="/Journal_223_224.html">师大校友</a></li>
+                                            
+                                                <li><a onclick="ClickCount(229)" target="" href="/Contribute_223_229.html">我要投稿</a></li>
+                                            
+                                        
+                                    </ul>
+                                </li>
+                            
+                                <li class="float_l">
+                                    <a onclick="ClickCount(9)" target="" href="/SchoolJuan/JuanJZXM_9_0_207.html">校友捐赠</a>
+                                    <input type="hidden" name="ctl00$Navigation$ctl06$hiddenId" id="ctl00_Navigation_ctl06_hiddenId" value="9" />
+                                    <img class="nav-horn" src="../../Content/img_Login/nav-horn.png" />
+                                    <img class="nav-horns" src="../../Content/img_Login/nav-horns.png" />
+                                    <ul class="nav-ul2" style="display: none;">
+                                        
+                                                <li><a onclick="ClickCount(207)" target="" href="/SchoolJuan/JuanJZXM_9_0_207.html">捐赠形式</a></li>
+                                            
+                                                <li><a onclick="ClickCount(208)" target="" href="/AlumniCefiro/SchoolRcall_9_1_208.html">捐赠故事</a></li>
+                                            
+                                                <li><a onclick="ClickCount(209)" target="" href="/SchoolJuan/DonateThank_9_209.html">荣誉墙</a></li>
+                                            
+                                        
+                                    </ul>
+                                </li>
+                            
+                                <li class="float_l">
+                                    <a onclick="ClickCount(604)" target="" href="/SchoolServers/AssociationListThree_604_0_605.html">记·忆</a>
+                                    <input type="hidden" name="ctl00$Navigation$ctl07$hiddenId" id="ctl00_Navigation_ctl07_hiddenId" value="604" />
+                                    <img class="nav-horn" src="../../Content/img_Login/nav-horn.png" />
+                                    <img class="nav-horns" src="../../Content/img_Login/nav-horns.png" />
+                                    <ul class="nav-ul2" style="display: none;">
+                                        
+                                                <li><a onclick="ClickCount(605)" target="" href="/SchoolServers/AssociationListThree_604_0_605.html">木铎年华</a></li>
+                                            
+                                                <li><a onclick="ClickCount(606)" target="" href="/SchoolServers/AssociationListThree_604_1_606.html">同班的你</a></li>
+                                            
+                                                <li><a onclick="ClickCount(607)" target="" href="/AlumniAssociation/Association_604_2_607.html">沙漏</a></li>
+                                            
+                                        
+                                    </ul>
+                                </li>
+                            
+                    </ul>
+                    
+                    <div class="JoinUs">
+                        <a href="/PersonalCenter/Login.html">加入我们</a>
+                    </div>
+                    
+                </div>
+            </div>
+            <!-- 内容 -->
+            
+    <div style="background:#f5f5f5;">
+        <!--轮播图-->
+        <div class="lunb-tu content nm-new-bot-3">
+            <div id="myCarousel" class="carousel slide" style="height:337px;">
+                <!-- 轮播（Carousel）指标 -->
+                <div class="hd">
+                <ul class="carousel-indicators" style="margin-bottom: 10px;">
+                    
+                            <li  data-slide-to="1"></li>
+                        
+                            <li  data-slide-to="2"></li>
+                        
+                            <li  data-slide-to="3"></li>
+                        
+                </ul>
+                    </div>
+                <!-- 轮播（Carousel）项目 -->
+                <div class="bd" style="position: relative; height: 100%;z-index: 0;">
+                <ul class="" id="bdUlImgLength">
+                    
+                            <li class="item">
+                                <a>
+                                    <img style="width: 100%; height: 337px" src="http://xyh.bnu.edu.cn//Upload/2017/09/20/9b979222-d425-4755-accb-7d328e9f5cc9.jpg" alt="">
+                                </a></li>
+                        
+                            <li class="item">
+                                <a>
+                                    <img style="width: 100%; height: 337px" src="http://xyh.bnu.edu.cn//Upload/2017/09/20/8a6d96a0-25e1-4256-81f8-51be5139b961.jpg" alt="">
+                                </a></li>
+                        
+                            <li class="item">
+                                <a>
+                                    <img style="width: 100%; height: 337px" src="http://xyh.bnu.edu.cn//Upload/2017/09/20/05481619-7ae3-404c-906a-e50915926c34.jpg" alt="">
+                                </a></li>
+                        
+                </ul>
+                    </div>
+                <!-- 轮播（Carousel）导航 -->
+                <a class="carousel-control left prev" href="#myCarousel"
+                    data-slide="prev">
+                    <span class="Left-dh" style="color:#318bc8; font-size: 70px; line-height: 337px;">
+                        <img src="../Content/img/Left-dh.png" style="width:20px;height:34px;"/>
+                    </span>
+                </a>
+                <a class="carousel-control right next" href="#myCarousel"
+                    data-slide="next">
+                     <span class="Left-dh Right-dh" style="color: #318bc8; font-size: 70px; line-height: 337px;">
+                         <img src="../Content/img/Right-dh.png" style="width:20px;height:34px;"/></span>
+                </a>
+            </div>
+            
+        </div>
+        
+        
+        <div class="index-log"> 
+            <div class="NewsBackgd">
+                <div class="NewsBack">
+                    <div class="content">
+                        <!--校友会快讯+分会动态-->
+                        <div class="clear">
+                            <div class="News-Hot">
+                                <div class="content_box_title_line nm-new-bot-3 clear">
+                                    <a href="/Action/NewsList_1_225_293.html" class="Clean clear">
+                                        <p class="float_l content_box_title_l">校友会快讯</p>
+                                        <div class="float_r content_box_title_r">
+                                            更多&nbsp&nbsp>>
+                                        </div>
+                                    </a>
+                                </div>
+                                <ul class="nm-News-Hot">
+                                    
+                                    <li>
+                                        <a target="_self" href='/SchoolBranch/NewsXiang_408_1_225.html' class="clear">
+                                            <span class="nm-News-Hot-left"><i></i>我校多名校友当选党的十九大代表</span>
+                                            <span class="nm-News-Hot-right">2017-10-18</span>
+                                        </a>
+                                    </li>
+                                             
+                                    <li>
+                                        <a target="_blank" href='https://mp.weixin.qq.com/s/yrM2VE77Rh7JQBDVZmTdBA' class="clear">
+                                            <span class="nm-News-Hot-left"><i></i>2017年京师校友文化节圆满落幕</span>
+                                            <span class="nm-News-Hot-right">2017-09-16</span>
+                                        </a>
+                                    </li>
+                                             
+                                    <li>
+                                        <a target="_blank" href='http://mp.weixin.qq.com/s/_c6ELek3lrzrMcudOa5T6w' class="clear">
+                                            <span class="nm-News-Hot-left"><i></i>“年华暗换，亿旧日时光”伉俪回母校活动顺利举办</span>
+                                            <span class="nm-News-Hot-right">2017-09-12</span>
+                                        </a>
+                                    </li>
+                                             
+                                    <li>
+                                        <a target="_blank" href='https://mp.weixin.qq.com/s/FXqZqD41IfVj0xVsA-uHhA' class="clear">
+                                            <span class="nm-News-Hot-left"><i></i>情系母校，教育报国 | 学校举办中小学校长校友论坛</span>
+                                            <span class="nm-News-Hot-right">2017-09-10</span>
+                                        </a>
+                                    </li>
+                                             
+                                    <li>
+                                        <a target="_self" href='/SchoolBranch/NewsXiang_375_1_225.html' class="clear">
+                                            <span class="nm-News-Hot-left"><i></i>校友工作办公室开展“校友认家门”系列活动</span>
+                                            <span class="nm-News-Hot-right">2017-07-04</span>
+                                        </a>
+                                    </li>
+                                             
+                                    <li>
+                                        <a target="_self" href='/SchoolBranch/NewsXiang_374_1_225.html' class="clear">
+                                            <span class="nm-News-Hot-left"><i></i>学校正式上线校友实名制虚拟卡</span>
+                                            <span class="nm-News-Hot-right">2017-06-30</span>
+                                        </a>
+                                    </li>
+                                             
+                                    <li>
+                                        <a target="_blank" href='http://mp.weixin.qq.com/s/ou9JFCg4pklhHPW7Tzgzzw' class="clear">
+                                            <span class="nm-News-Hot-left"><i></i>我校举办2017届毕业生校友班级联络员聘任仪式</span>
+                                            <span class="nm-News-Hot-right">2017-06-14</span>
+                                        </a>
+                                    </li>
+                                             
+                                </ul>
+                            </div>
+                            <div class="News-Hot News-Hot-right">
+                                <div class="content_box_title_line nm-new-bot-3 clear">
+                                    <a href="/Action/NewsList_3_225_228.html" class="Clean clear">
+                                        <p class="float_l content_box_title_l">分会动态</p>
+                                        <div class="float_r content_box_title_r">
+                                            更多&nbsp&nbsp>>
+                                        </div>
+                                    </a>
+                                </div>
+                                <ul class="nm-News-Hot">
+                                      
+                                    <li>
+                                        <a target="_blank" href='http://mp.weixin.qq.com/s/Y0xPQkX46yYgJSzx5jhSYw' class="clear">
+                                            <span class="nm-News-Hot-left"><i></i>木铎缘·岭南情——北京师范大学115周年校庆公益微马跑</span>
+                                            <span class="nm-News-Hot-right">2017-09-16</span>
+                                        </a>
+                                    </li>
+                                              
+                                    <li>
+                                        <a target="_blank" href='http://mp.weixin.qq.com/s/osAiu6V5VIZcQIPNbjyXPA' class="clear">
+                                            <span class="nm-News-Hot-left"><i></i>云南校友会2017年会暨母校115周年华诞大会胜利召开</span>
+                                            <span class="nm-News-Hot-right">2017-09-16</span>
+                                        </a>
+                                    </li>
+                                              
+                                    <li>
+                                        <a target="_blank" href='http://mp.weixin.qq.com/s/24djb6fN6OGieWSX4jqOtg' class="clear">
+                                            <span class="nm-News-Hot-left"><i></i>“庆祝北京师范大学115年华诞”福建校友会联谊活动</span>
+                                            <span class="nm-News-Hot-right">2017-09-16</span>
+                                        </a>
+                                    </li>
+                                              
+                                    <li>
+                                        <a target="_blank" href='https://mp.weixin.qq.com/s?__biz=MzA3Mzg2NzQ4Nw==&mid=2650894941&idx=1&sn=36c141bf2c966d4cfbd885a84748fb9c&chksm=84fd5bedb38ad2fbe6037624095d7bc04bd39efe4ee29e5e7653ab36e9b3d99335668ff73056#rd' class="clear">
+                                            <span class="nm-News-Hot-left"><i></i>北京师范大学沈阳校友会召开第七次会员代表大会</span>
+                                            <span class="nm-News-Hot-right">2017-04-15</span>
+                                        </a>
+                                    </li>
+                                              
+                                    <li>
+                                        <a target="_blank" href='http://mp.weixin.qq.com/s/hm3d0_3zTeV5hAJUKt3WqQ' class="clear">
+                                            <span class="nm-News-Hot-left"><i></i>2016年厦门校友会年会暨迎新年聚会顺利召开</span>
+                                            <span class="nm-News-Hot-right">2017-03-02</span>
+                                        </a>
+                                    </li>
+                                              
+                                    <li>
+                                        <a target="_self" href='/SchoolBranch/NewsXiang_291_3_225.html' class="clear">
+                                            <span class="nm-News-Hot-left"><i></i>2017，爱在一起，北师大上海校友会年会顺利举行</span>
+                                            <span class="nm-News-Hot-right">2017-01-20</span>
+                                        </a>
+                                    </li>
+                                              
+                                    <li>
+                                        <a target="_self" href='/SchoolBranch/NewsXiang_292_3_225.html' class="clear">
+                                            <span class="nm-News-Hot-left"><i></i>北京师范大学山西校友会第一届第十次会议顺利举行</span>
+                                            <span class="nm-News-Hot-right">2017-01-10</span>
+                                        </a>
+                                    </li>
+                                              
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--热点活动-->
+                <div class="NoticeIndex1">
+                    <div class="content">
+                        <div class="Notice-Tel">
+                            <div class="content_box_title_line clear">
+                                <a href="/Action/NewsList_2_225_227.html" class="Clean clear">
+                                    <p class="float_l content_box_title_l">热点活动</p>
+                                    <div class="float_r content_box_title_r">
+                                        更多&nbsp&nbsp>>
+                                    </div>
+                                </a>
+                            </div>
+                            <ul class="Notice-Tel-ul clear">
+                                
+                                        <li>
+                                            <a target="_blank" href='http://mp.weixin.qq.com/s/yrM2VE77Rh7JQBDVZmTdBA' class="Notice-Tel-ul-a clear">
+                                                <div class="Time-left">
+                                                    <span class="Notice-t1">16</span>
+                                                    <span class="Notice-t2">九月</span>
+                                                </div>
+                                                <div class="Time-right">
+                                                    <p class="Time-right1">2017年京师校友文化节系列活动顺利举行</p>
+                                                    <p class="Time-right2">为庆祝第33个教师节暨母校建校115周年，进一步团结校友、凝聚校友，搭建校友之间相互联系平台，校友总会组织举办2017年.....</p>
+                                                    <i class="RightTj" style="display:none;"></i>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    
+                                        <li>
+                                            <a target="_blank" href='http://mp.weixin.qq.com/s/Y0xPQkX46yYgJSzx5jhSYw' class="Notice-Tel-ul-a clear">
+                                                <div class="Time-left">
+                                                    <span class="Notice-t1">16</span>
+                                                    <span class="Notice-t2">九月</span>
+                                                </div>
+                                                <div class="Time-right">
+                                                    <p class="Time-right1">木铎缘·岭南情——北京师范大学115周年校庆公益微...</p>
+                                                    <p class="Time-right2">2017年，是北京师范大学115周年华诞。为彰显“学为人师，行为世范”之校训精神，传承“治学修身，兼济天下”的育人理念，.....</p>
+                                                    <i class="RightTj" style="display:none;"></i>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    
+                                        <li>
+                                            <a target="_self" href='/SchoolBranch/NewsXiang_398_2_225.html' class="Notice-Tel-ul-a clear">
+                                                <div class="Time-left">
+                                                    <span class="Notice-t1">16</span>
+                                                    <span class="Notice-t2">九月</span>
+                                                </div>
+                                                <div class="Time-right">
+                                                    <p class="Time-right1">北师人，聚榕城，忆母校，庆华诞</p>
+                                                    <p class="Time-right2">2017年8月19日，吉日。福州景城大酒店，来自八闽大地的北京师范大学校友齐聚一堂，共庆母校115周年华诞，共叙校友情谊.....</p>
+                                                    <i class="RightTj" style="display:none;"></i>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    
+                                        <li>
+                                            <a target="_blank" href='http://mp.weixin.qq.com/s/osAiu6V5VIZcQIPNbjyXPA' class="Notice-Tel-ul-a clear">
+                                                <div class="Time-left">
+                                                    <span class="Notice-t1">16</span>
+                                                    <span class="Notice-t2">九月</span>
+                                                </div>
+                                                <div class="Time-right">
+                                                    <p class="Time-right1">云南校友会2017年暨母校115周年华诞异地同庆大...</p>
+                                                    <p class="Time-right2">北京师范大学云南校友会2017年会暨母校115周年华诞异地同庆大会，于2017年8月19日下午在省政协委员活动中心顺利召.....</p>
+                                                    <i class="RightTj" style="display:none;"></i>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                 <!-- 分会动态 -->
+            <div class="NoticeIndex2">
+                <div class="content" style="display:none;">
+                    <div class="content_box_title_line clear">
+                        <a href="/Action/NewsList_14_225_294.html" class="Clean clear">
+                            <p class="float_l content_box_title_l">分会动态</p>
+                            <div class="float_r content_box_title_r">
+                                更多&nbsp;&nbsp;&gt;&gt;
+                            </div>
+                        </a>
+                    </div>
+                    <div class="content_box clear">
+                        <div class="hp_news_1 clear">
+                          
+                            
+                                    <div class="float_l clear hp_news_bot" style='display:block'>
+                                    <div class="float_l hp_news_pic">
+                                       <a target="_blank" href='http://mp.weixin.qq.com/s/24djb6fN6OGieWSX4jqOtg'> <img src="http://xyh.bnu.edu.cn/Admin/undefined"/></a>
+                                    </div>
+                                    <div class="float_l hp_activity1 position_r" style="position:relative;">
+                                      
+                                        <a target="_blank" href='http://mp.weixin.qq.com/s/24djb6fN6OGieWSX4jqOtg'><p class="IndexActiveP"></p></a>
+                                        <p class="IndexActiveP2"></p>
+                                        <p class="IndexActiveP3">2017-09-16</p>
+                                        <i class="IndexActiveZj"></i>
+                                    </div>
+                                     </div>
+                                    <div class="float_l clear hp_news_bot" style='display:none'>
+                                    
+                                    <div class="float_l hp_activity1 position_r" style="position:relative;">
+                                      
+                                        <a target="_blank" href='http://mp.weixin.qq.com/s/24djb6fN6OGieWSX4jqOtg'><p class="IndexActiveP"></p></a>
+                                        <p class="IndexActiveP2"></p>
+                                        <p class="IndexActiveP3">2017-09-16</p>
+                                        <i class="IndexActiveZj2"></i>
+                                    </div>
+                                <div class="float_l hp_news_pic">
+                                        <a target="_blank" href='http://mp.weixin.qq.com/s/24djb6fN6OGieWSX4jqOtg'><img src="http://xyh.bnu.edu.cn/Admin/undefined"/></a>
+                                    </div>
+                            </div>
+                                
+                                    <div class="float_l clear hp_news_bot" style='display:block'>
+                                    <div class="float_l hp_news_pic">
+                                       <a target="_blank" href='http://mp.weixin.qq.com/s/osAiu6V5VIZcQIPNbjyXPA'> <img src="http://xyh.bnu.edu.cn/Admin/undefined"/></a>
+                                    </div>
+                                    <div class="float_l hp_activity1 position_r" style="position:relative;">
+                                      
+                                        <a target="_blank" href='http://mp.weixin.qq.com/s/osAiu6V5VIZcQIPNbjyXPA'><p class="IndexActiveP">云南校友会2017年会暨母校115周年华诞异地同庆大...</p></a>
+                                        <p class="IndexActiveP2"></p>
+                                        <p class="IndexActiveP3">2017-09-16</p>
+                                        <i class="IndexActiveZj"></i>
+                                    </div>
+                                     </div>
+                                    <div class="float_l clear hp_news_bot" style='display:none'>
+                                    
+                                    <div class="float_l hp_activity1 position_r" style="position:relative;">
+                                      
+                                        <a target="_blank" href='http://mp.weixin.qq.com/s/osAiu6V5VIZcQIPNbjyXPA'><p class="IndexActiveP">云南校友会2017年会暨母校115周年华诞异地同庆大...</p></a>
+                                        <p class="IndexActiveP2"></p>
+                                        <p class="IndexActiveP3">2017-09-16</p>
+                                        <i class="IndexActiveZj2"></i>
+                                    </div>
+                                <div class="float_l hp_news_pic">
+                                        <a target="_blank" href='http://mp.weixin.qq.com/s/osAiu6V5VIZcQIPNbjyXPA'><img src="http://xyh.bnu.edu.cn/Admin/undefined"/></a>
+                                    </div>
+                            </div>
+                                
+                                    <div class="float_l clear hp_news_bot" style='display:none'>
+                                    <div class="float_l hp_news_pic">
+                                       <a target="_blank" href='http://mp.weixin.qq.com/s/Y0xPQkX46yYgJSzx5jhSYw'> <img src="http://xyh.bnu.edu.cn/Admin/"/></a>
+                                    </div>
+                                    <div class="float_l hp_activity1 position_r" style="position:relative;">
+                                      
+                                        <a target="_blank" href='http://mp.weixin.qq.com/s/Y0xPQkX46yYgJSzx5jhSYw'><p class="IndexActiveP">木铎缘·岭南情——北京师范大学115周年校庆公益微马...</p></a>
+                                        <p class="IndexActiveP2"></p>
+                                        <p class="IndexActiveP3">2017-09-16</p>
+                                        <i class="IndexActiveZj"></i>
+                                    </div>
+                                     </div>
+                                    <div class="float_l clear hp_news_bot" style='display:block'>
+                                    
+                                    <div class="float_l hp_activity1 position_r" style="position:relative;">
+                                      
+                                        <a target="_blank" href='http://mp.weixin.qq.com/s/Y0xPQkX46yYgJSzx5jhSYw'><p class="IndexActiveP">木铎缘·岭南情——北京师范大学115周年校庆公益微马...</p></a>
+                                        <p class="IndexActiveP2"></p>
+                                        <p class="IndexActiveP3">2017-09-16</p>
+                                        <i class="IndexActiveZj2"></i>
+                                    </div>
+                                <div class="float_l hp_news_pic">
+                                        <a target="_blank" href='http://mp.weixin.qq.com/s/Y0xPQkX46yYgJSzx5jhSYw'><img src="http://xyh.bnu.edu.cn/Admin/"/></a>
+                                    </div>
+                            </div>
+                                
+                                    <div class="float_l clear hp_news_bot" style='display:none'>
+                                    <div class="float_l hp_news_pic">
+                                       <a target="_blank" href='https://mp.weixin.qq.com/s?__biz=MzA3Mzg2NzQ4Nw==&mid=2650894941&idx=1&sn=36c141bf2c966d4cfbd885a84748fb9c&chksm=84fd5bedb38ad2fbe6037624095d7bc04bd39efe4ee29e5e7653ab36e9b3d99335668ff73056#rd'> <img src="http://xyh.bnu.edu.cn/Admin//Upload/newImage/images/20170503/20170503154952387.jpg"/></a>
+                                    </div>
+                                    <div class="float_l hp_activity1 position_r" style="position:relative;">
+                                      
+                                        <a target="_blank" href='https://mp.weixin.qq.com/s?__biz=MzA3Mzg2NzQ4Nw==&mid=2650894941&idx=1&sn=36c141bf2c966d4cfbd885a84748fb9c&chksm=84fd5bedb38ad2fbe6037624095d7bc04bd39efe4ee29e5e7653ab36e9b3d99335668ff73056#rd'><p class="IndexActiveP">沈阳校友会召开会员代表大会</p></a>
+                                        <p class="IndexActiveP2">&lt;p&gt;off&lt;/p&gt;</p>
+                                        <p class="IndexActiveP3">2017-04-15</p>
+                                        <i class="IndexActiveZj"></i>
+                                    </div>
+                                     </div>
+                                    <div class="float_l clear hp_news_bot" style='display:block'>
+                                    
+                                    <div class="float_l hp_activity1 position_r" style="position:relative;">
+                                      
+                                        <a target="_blank" href='https://mp.weixin.qq.com/s?__biz=MzA3Mzg2NzQ4Nw==&mid=2650894941&idx=1&sn=36c141bf2c966d4cfbd885a84748fb9c&chksm=84fd5bedb38ad2fbe6037624095d7bc04bd39efe4ee29e5e7653ab36e9b3d99335668ff73056#rd'><p class="IndexActiveP">沈阳校友会召开会员代表大会</p></a>
+                                        <p class="IndexActiveP2">&lt;p&gt;off&lt;/p&gt;</p>
+                                        <p class="IndexActiveP3">2017-04-15</p>
+                                        <i class="IndexActiveZj2"></i>
+                                    </div>
+                                <div class="float_l hp_news_pic">
+                                        <a target="_blank" href='https://mp.weixin.qq.com/s?__biz=MzA3Mzg2NzQ4Nw==&mid=2650894941&idx=1&sn=36c141bf2c966d4cfbd885a84748fb9c&chksm=84fd5bedb38ad2fbe6037624095d7bc04bd39efe4ee29e5e7653ab36e9b3d99335668ff73056#rd'><img src="http://xyh.bnu.edu.cn/Admin//Upload/newImage/images/20170503/20170503154952387.jpg"/></a>
+                                    </div>
+                            </div>
+                                
+                            
+                        </div>
+                    </div>
+                </div>
+                <!-- 捐赠动态 -->
+                <div class="content IndexDonaAc">
+                    <div class="content_box clear">
+                        <div class="DonaActice-box DonaActiceBoxRadi">
+                            <div class="content_box_title clear content_box_title_gai">
+                                <a href="/Action/NewsList_14_225_294.html" class="Clean clear">
+                                    <p class="float_l content_box_title_l">校友返校</p>
+                                    <div class="float_r content_box_title_r">更多&nbsp&nbsp>></div>
+                                </a>
+                            </div>
+                            <div class="txtMarquee-top">
+                                <div class="bd">
+                                    
+                                    <ul class="infoList" style="display:none;">
+                                        
+                                    </ul>
+                                    
+                                    <ul class="XiaoYouBack clear">
+                                        
+                                                <li>
+                                            <a target="_blank" href='http://mp.weixin.qq.com/s/88SVnQGXZLAVd5bRPCkkmQ'>
+                                                <div class="XiaoYouBackImg"><img src="http://xyh.bnu.edu.cn/Admin/Upload/2017/10/18/395c0c94-f299-41e5-99d9-c087fe513911_388_290.jpg" alt="“人走天涯，心系师大” | 历史..." /></div>
+                                                <p class="XiaoYouBackh3">“人走天涯，心系师大” | 历史...</p>
+                                                <p class="XiaoYouBackp1"></p>
+                                                <p class="XiaoYouBackp2">2017-10-17</p>
+                                            </a>
+                                            </li>
+                                             
+                                                <li>
+                                            <a target="_blank" href='https://mp.weixin.qq.com/s/3hr6jyRDlX9UABmwyczQVg'>
+                                                <div class="XiaoYouBackImg"><img src="http://xyh.bnu.edu.cn/Admin/Upload/2017/10/18/0608c451-d5d8-4306-a0aa-9607f28f043e_388_290.jpg" alt="母校相聚话家常 , 教育1962..." /></div>
+                                                <p class="XiaoYouBackh3">母校相聚话家常 , 教育1962...</p>
+                                                <p class="XiaoYouBackp1"></p>
+                                                <p class="XiaoYouBackp2">2017-10-17</p>
+                                            </a>
+                                            </li>
+                                             
+                                                <li>
+                                            <a target="_blank" href='http://mp.weixin.qq.com/s/kz4sVPPh1ZhWaji6svG7Yw'>
+                                                <div class="XiaoYouBackImg"><img src="http://xyh.bnu.edu.cn/Admin//Upload/newImage/images/20170306/20170306195419846.jpg" alt="畅谈成就，笑谈人生 | 物理系5..." /></div>
+                                                <p class="XiaoYouBackh3">畅谈成就，笑谈人生 | 物理系5...</p>
+                                                <p class="XiaoYouBackp1">同学聚会是一大盛宴，什么都可以推辞唯独同...</p>
+                                                <p class="XiaoYouBackp2">2016-11-16</p>
+                                            </a>
+                                            </li>
+                                             
+                                                <li>
+                                            <a target="_blank" href='http://mp.weixin.qq.com/s/tpAvwBDFn56sOrdD1pWoXw'>
+                                                <div class="XiaoYouBackImg"><img src="http://xyh.bnu.edu.cn/Admin//Upload/newImage/images/20170306/20170306200240493.jpg" alt="毕业季 | 我们十年聚" /></div>
+                                                <p class="XiaoYouBackh3">毕业季 | 我们十年聚</p>
+                                                <p class="XiaoYouBackp1">时光荏苒，白驹过隙，端午的骄阳带着我们又...</p>
+                                                <p class="XiaoYouBackp2">2016-10-26</p>
+                                            </a>
+                                            </li>
+                                             
+                                                <li>
+                                            <a target="_blank" href='http://mp.weixin.qq.com/s/PuxHVYYA_8VAdUQVMMe9Tg'>
+                                                <div class="XiaoYouBackImg"><img src="http://xyh.bnu.edu.cn/Admin//Upload/newImage/images/20170306/20170306195841287.jpg" alt="相识三十年，青春一辈子 | 经济..." /></div>
+                                                <p class="XiaoYouBackh3">相识三十年，青春一辈子 | 经济...</p>
+                                                <p class="XiaoYouBackp1">1986年9月，我们在师大聚首，“经济系...</p>
+                                                <p class="XiaoYouBackp2">2016-10-26</p>
+                                            </a>
+                                            </li>
+                                             
+                                                <li>
+                                            <a target="_blank" href='http://mp.weixin.qq.com/s/eAJQdT7Ba5Y8au38he_Y7w'>
+                                                <div class="XiaoYouBackImg"><img src="http://xyh.bnu.edu.cn/Admin//Upload/newImage/images/20170306/20170306195620567.jpg" alt="相识一甲子，耄耋再相聚 | 地理..." /></div>
+                                                <p class="XiaoYouBackh3">相识一甲子，耄耋再相聚 | 地理...</p>
+                                                <p class="XiaoYouBackp1">又是秋风送爽时节，虽然没敢通知外地同学，...</p>
+                                                <p class="XiaoYouBackp2">2016-10-26</p>
+                                            </a>
+                                            </li>
+                                             
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="float_r clear donation_state" style="display:none;">
+                          
+                            <div class="IndDonImg">
+                                <a href="SchoolJuan/JuanJZXM.aspx?ParID=9">在线捐赠</a>
+                            </div>
+                            <div class="IndDonErwm">
+                                <a href="#">
+                                    <img src="../Content/img_Login/DonaActiveImg.png" class="DonaActiveImg"/>
+                                    <p class="DonaActiveImgP">扫一扫关注微信公众平台</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--关注联系我们-->
+                <div class="IameChatBox clear" style="display:none;">
+                    <div class="IameChatLeft">
+                        <span class="IameChatLeft1">关注我们</span>
+                        <img src="../Content/img/IameChatLeft2.png" alt="" class="IameChatLeft2"/>
+                        <span class="IameChatLeft3">扫一扫关注微信公众平台</span>
+                    </div>
+                    <div class="IameChatRight">
+                        <span class="IameChatRightspan">联系我们</span>
+                        <ul class="IameChatRightUl">
+                            <li>
+                                <i><img src="../Content/img/IameChatRightUl1.png" /></i>北京师范大学英东楼B-128
+                            </li>
+                            <li>
+                                <i><img src="../Content/img/IameChatRightUl2.png" /></i>bnuxyh@bnu.edu.cn
+                            </li>
+                            <li>
+                                <i><img src="../Content/img/IameChatRightUl3.png" /></i>010-58805471
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="IameChatBox">
+                    <div class="nm-IameChatLeft">
+                        <img src="../Content/img/IameChatLeft2.png"/>
+                        <span style="text-align:center;">微信扫码回家</span>
+                    </div>
+                    <div class="nm-IameChatLeft" style="margin-left:122px;">
+                        <img src="../Content/img/IameChatLeftm.png"/>
+                        <span>“北师大人”App下载</span>
+                    </div>
+                    <div>
+                        <span class="IameChatRightspan"> <i class="nm-line" style="margin-right:9px;"></i>联系我们<i class="nm-line" style="margin-left:9px;"></i>  </span>
+                        <ul class="IameChatRightUl clear">
+                            <li style="margin-right:52px;">
+                                <i><img src="../Content/img/IameChatRightUl1.png" /></i>北京师范大学英东楼B-128
+                            </li>
+                            <li style="margin-right:44px;">
+                                <i><img src="../Content/img/IameChatRightUl2.png" /></i>bnuxyh@bnu.edu.cn
+                            </li>
+                            <li>
+                                <i><img src="../Content/img/IameChatRightUl3.png" /></i>010-58805471
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+                <!-- 校友捐赠实物 -->
+            <div style="width:100%;background:#fff; display:none;">
+                <div class="content">
+                    <div class="content_box clear">
+                        <div class="hp_donation_info clear">
+                            <div class="picScroll-left">
+                                <div class="hd">
+                                    <a class="prev">
+                                        <img src="../Content/img/hp_icon_l.png" alt="" /></a>
+                                    <a class="next">
+                                        <img src="../Content/img/hp_icon_r.png" alt="" /></a>
+                                </div>
+                                <div class="bd">
+                                    <ul class="picList">
+                                        
+                                                <li>
+                                                    <div class="pic">
+                                                        <img src="http://xyh.bnu.edu.cn/Admin//Upload/Banner/images/20170120/20170120183233520.png" />
+                                                    </div>
+                                                </li>
+                                            
+                                                <li>
+                                                    <div class="pic">
+                                                        <img src="http://xyh.bnu.edu.cn/Admin//Upload/Banner/images/20170120/20170120183127723.png" />
+                                                    </div>
+                                                </li>
+                                            
+                                                <li>
+                                                    <div class="pic">
+                                                        <img src="http://xyh.bnu.edu.cn/Admin//Upload/Banner/images/20170120/20170120183059911.png" />
+                                                    </div>
+                                                </li>
+                                            
+                                                <li>
+                                                    <div class="pic">
+                                                        <img src="http://xyh.bnu.edu.cn/Admin//Upload/Banner/images/20170120/20170120183024411.png" />
+                                                    </div>
+                                                </li>
+                                            
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--联系我们-->
+                    <div class="Contact-us clear">
+                        <div class="ContactUsPosit">
+                            
+                            <div class="ContactUsBox">
+                                <div class="ContactUsCont1">北京师范大学英东楼B-128</div>
+                                <div class="ContactUsCont2">bnuxyh@bnu.edu.cn</div>
+                                <div class="ContactUsCont3">010-58805471</div>
+                                <span class="Contact-text">
+                                    <span style="display:block; color: #333; font-size: 18px;">联系我们</span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                 
+            <div class="Friend-link clear">
+                <div style="margin-bottom:30px;">
+                    <img src="../Content/img_Login/FindLink.png" style="width:48px;height:48px;display:block;margin:0 auto 6px;"/>
+                    <p class="Friend-link-p">友情链接</p>
+                </div>
+                <ul class="Friend-link-ul clear">
+                    
+                             <li>
+                        <a target="blank" href="http://www.bnu.edu.cn/">
+                            <span class="Friend-link-span1"></span>
+                            <span>北京师范大学</span>
+                        </a>
+                    </li>
+                        
+                             <li>
+                        <a target="blank" href="http://english.bnu.edu.cn/">
+                            <span class="Friend-link-span1"></span>
+                            <span>BEIJING NORMAL UNIVERSITY</span>
+                        </a>
+                    </li>
+                        
+                             <li>
+                        <a target="blank" href="http://www.bnuef.org/">
+                            <span class="Friend-link-span1"></span>
+                            <span>教育基金会</span>
+                        </a>
+                    </li>
+                        
+                             <li>
+                        <a target="blank" href="http://www.lib.bnu.edu.cn/">
+                            <span class="Friend-link-span1"></span>
+                            <span>图书馆</span>
+                        </a>
+                    </li>
+                        
+                             <li>
+                        <a target="blank" href="http://dangan.bnu.edu.cn/">
+                            <span class="Friend-link-span1"></span>
+                            <span>档案馆</span>
+                        </a>
+                    </li>
+                        
+                             <li>
+                        <a target="blank" href="http://sdxs.bnu.edu.cn/">
+                            <span class="Friend-link-span1"></span>
+                            <span>校史馆</span>
+                        </a>
+                    </li>
+                        
+                   
+                </ul>
+            </div>
+        </div>
+    </div>
+
+            <!-- 底部背景图 -->
+            <div class="null-bfooter"></div>
+            <div class="hp_foot_pic">
+                <div class="hp_web_info">
+
+                    <p>© 版权所有 北京师范大学</p>
+                    <p>电话：010-58805471    传真：010-58805471    电话查号台：010-58806183</p>
+                    <p>您是第 193951 位访问者</p>
+                </div>
+            </div>
+        </div>
+        <div class="mask" style="display: none;">
+            <div class="maskImg">
+                <img src="" alt="Alternate Text" id="maskImgShow" />
+                <img src="../../Content/img/MaskDela.png" class="maskImgDelat" />
+            </div>
+        </div>
+        <!--收藏设为首页-->
+        <div class="mengban" style="display: none; position: fixed; z-index: 9999; width: 100%; height: 100%; background: rgba(178,178,178,0.5); overflow: hidden; left: 0; top: 0;">
+
+            <div style="display: block; margin: 300px auto;" class="memgb_img">
+                <div class="memgb_img-text">
+                    <span class="memgb_img-span">请使用Ctrl+D进行添加</span>
+                    <p onclick="Close()" class="memgb_img-button">确定</p>
+                </div>
+            </div>
+        </div>
+        <div class="mengban2" style="display: none; position: fixed; z-index: 9999; width: 100%; height: 100%; background: rgba(178,178,178,0.5); overflow: hidden; left: 0; top: 0;">
+            <div style="display: block; margin: 300px auto;" class="memgb_img">
+                <div class="memgb_img-text">
+                    <span class="memgb_img-span">您的浏览器不支持一键设为首页<br />
+                        您需要手动设置首页</span>
+                    <p onclick="Close()" class="memgb_img-button">确定</p>
+                </div>
+            </div>
+        </div>
+    </form>
+    <script src="../../Content/js/jquery-1.11.3.js"></script>
+    
+    <script type="text/javascript" src="../../Content/js/jquery.SuperSlide.2.1.1.js"></script>
+    <script src="../../Content/js/bootstrap.js"></script>
+    <script src="../../Content/js/bootstrap.min.js"></script>
+    <script src="../../Content/js/script.js"></script>
+    <script src="../../Content/js/jquery.leoweather.min.js"></script>
+
+    <script>
+        $('#DateTimes').leoweather({ format: '<span id="colock" class=\"ttq\">{年}年{月}月{日}日</span>  <b>{城市}</b>&nbsp;  {夜间气温}℃~{白天气温}℃ &nbsp;  {天气}' });
+    </script>
+
+    <script type="text/javascript">
+        function Close() {
+            $(".mengban").hide();
+            $(".mengban2").hide();
+        }
+        function tuichu() {
+            debugger;
+            $.ajax({
+                async: false,
+                type: "post",
+                url: "/PersonalCenter/Login.html",
+                data: {
+                    actionName: "Out"
+                },
+                success: function (msg) {
+                    debugger;
+                    if (msg) {
+                        if (msg == "1") {
+                            history.go(0);
+                        }
+                    }
+                }
+            });
+        }
+
+        function ClickCount(id) {
+            $.ajax({
+                async: false,
+                type: "post",
+                url: "/Handler/Ajax.ashx",
+                data: {
+                    methodname: "ClickCount",
+                    id: id
+                },
+                success: function (msg) {
+                }
+            });
+        }
+
+        $(function () {
+            //判断浏览器是否支持placeholder属性
+            supportPlaceholder = 'placeholder' in document.createElement('input'),
+                placeholder = function (input) {
+                    var text = input.attr('placeholder'),
+                        defaultValue = input.defaultValue;
+                    if (!defaultValue) {
+                        input.val(text).addClass("phcolor");
+                    }
+                    input.focus(function () {
+                        if (input.val() == text) {
+                            $(this).val("");
+                        }
+                    });
+                    input.blur(function () {
+                        if (input.val() == "") {
+                            $(this).val(text).addClass("phcolor");
+                        }
+                    });
+                    //输入的字符不为灰色
+                    //input.keydown(function () {
+                    //    $(this).removeClass("phcolor");
+                    //});
+                };
+            //当浏览器不支持placeholder属性时，调用placeholder函数
+            if (!supportPlaceholder) {
+                $('input').each(function () {
+                    text = $(this).attr("placeholder");
+                    if ($(this).attr("type") == "text") {
+                        placeholder($(this));
+                    }
+                    if ($(this).attr("type") == "password") {
+                        placeholder($(this));
+                    }
+                });
+            }
+        });
+
+
+        if (navigator.appName == "Microsoft Internet Explorer" && navigator.appVersion.match(/8./i) == "8.") {
+            $(".header-input").val("请输入搜索内容");
+            $(".header-input").css("background", "#ccc");
+        }
+        else if (navigator.appName == "Microsoft Internet Explorer" && navigator.appVersion.match(/9./i) == "9.") {
+            $(".header-input").val("请输入搜索内容");
+            $(".header-input").css("background", "#ccc");
+        }
+        $(".nav_bar>li").hover(function () {
+            $(this).find(".nav-ul2").show().siblings().children(".nav-ul2").hide();
+            $(this).find(".nav-horn").show().parent().siblings().children(".nav-horn").hide();
+        }, function () {
+            $(this).find(".nav-ul2").hide();
+            $(".nav-horn").hide();
+            $(".nav-horns").hide();
+        });
+        $(".nav_bar>li").eq(0).hover(function () {
+            $(".nav-horn").hide();
+        });
+        $(".nav_bar>li>.nav-ul2>li").hover(function () {
+            $(this).addClass("nav-ul2-active").siblings().removeClass("nav-ul2-active");
+            $(this).parent().parent().find(".nav-horns").eq(0).show().parent().siblings().children(".nav-horns").hide();
+        }, function () {
+            $(this).removeClass("nav-ul2-active");
+        });
+        $(".nav_bar li:eq(0)").hover(function () {
+            $(this).find(".nav-ul2").hide();
+        });
+        function EditImg() {
+            var imglist = $("#fellowImg").find("img");
+            $(imglist).each(function () {
+                $(this).click(function () {
+                    $(".mask").css("display", "block")
+                    var maskImg = $(this).attr("src");//图片路径
+                    $(".mask #maskImgShow").attr("src", maskImg);//原图显示
+                    var maskImgWidthyu = $(".mask #maskImgShow").width();
+                    var maskImgHeightyu = $(".mask #maskImgShow").height();//原图的宽高
+                    var ClienWidthOff = document.body.offsetWidth;
+                    var ClienHeightOff = document.body.offsetHeight;//浏览器宽高
+
+                    if (maskImgWidthyu > ClienWidthOff) {
+                        var ClienWidth = (parseInt(ClienWidthOff) - 30) + "px";
+                        $(".mask #maskImgShow").attr("width", ClienWidth);
+                        $(".mask #maskImgShow").attr("height", "auto");
+                        var secHeight = $(".mask #maskImgShow").height();
+                        if (secHeight > ClienHeightOff) {
+                            var ClienHeight = (parseInt(ClienHeightOff) - 30) + "px";
+                            $(".mask #maskImgShow").attr("width", "auto");
+                            $(".mask #maskImgShow").attr("height", ClienHeight);
+                        }
+                    } else {
+                        if (maskImgHeightyu > ClienHeightOff) {
+                            var ClienHeight = (parseInt(ClienHeightOff) - 30) + "px";
+                            $(".mask #maskImgShow").attr("width", "auto");
+                            $(".mask #maskImgShow").attr("height", ClienHeight);
+                            var secWidth = $(".mask #maskImgShow").width();
+                            if (secWidth > ClienWidthOff) {
+                                var ClienWidth = (parseInt(ClienWidthOff) - 30) + "px";
+                                $(".mask #maskImgShow").attr("width", ClienWidth);
+                                $(".mask #maskImgShow").attr("height", "auto");
+                            }
+                        }
+                    }
+
+
+                    var maskImgWdithM = $(".mask #maskImgShow").width();
+                    var maskImgWdithH = $(".mask #maskImgShow").height();
+                    var ClienHeightCha = ClienHeightOff - maskImgWdithH;
+                    $(".maskImg").css("padding-top", ClienHeightCha / 2);
+                    var ClienHeightDeta = (parseInt(ClienHeightCha / 2) - 14) + "px";
+                    var ClienHeightdetaLeft = (parseInt(maskImgWdithM) - 14) + "px";
+
+                    $(".mask .maskImgDelat").css({ "top": ClienHeightDeta, "left": ClienHeightdetaLeft });
+                });
+            })
+            $("#fellowImg").find("a").css("color", "#469cf1");
+        };
+
+
+        window.onload = function () {
+            EditImg();
+            $(".maskImgDelat").click(function () {
+                $(this).parents(".mask").css("display", "none");
+            });
+
+            engine = null;
+            if (window.navigator.appName == "Microsoft Internet Explorer") {
+                if (document.documentMode) {
+                    engine = document.documentMode;
+                } else {
+                    engine = 5;
+                    if (document.compatMode) {
+                        if (document.compatMode == "CSS1Compat")
+                        { engine = 7; }
+                    }
+                }
+                if (engine <= 7) {
+                    alert("您的浏览器版本过低，为了体验更好的效果请升级浏览器或下载最新浏览器使用！");
+                }
+            }
+        }
+        $(function () {
+            var pagepath = location.pathname + location.search;
+            // pagepath = pagepath.toString().substring(pagepath.toString().indexOf("/V"));
+            //分页后产生page 
+            //if (pagepath.indexOf("page") != "-1") {
+            //    pagepath = pagepath.substring(0, pagepath.indexOf("page") - 1);
+            //}
+            function isContains(substr) {
+                ////var ret = substr.trim() == pagepath.trim() ? true : false;
+                //var ret = substr == pagepath ? true : false;
+                //return ret;
+                return pagepath.indexOf(substr) > -1;
+            }
+
+            function isRegExpContains(substr) {
+                // return new RegExp(substr).test(pagepath);
+                return pagepath.indexOf(substr) > -1;
+            }
+
+            //function isContains(substr) {
+            //    return new RegExp(substr).test(pagepath);
+            //}
+            if (isContains('HomePage')) {
+                addActiveToNav('首页');
+            } else if (isContains('LiShiList')) {
+                addActiveToNav('校友会');
+            } else if (isContains('AssociationList_2')) {
+                addActiveToNav('校友会');
+            } else if (isContains('AssociationList_4')) {
+                addActiveToNav('支持中心');
+            } else if (isContains('LocalChapter_2')) {
+                addActiveToNav('校友会');
+            } else if (isContains('Association_2')) {
+                addActiveToNav('校友会');
+            } else if (isContains('GZZD_2')) {
+                addActiveToNav('校友会');
+            } else if (isContains('AssociationListTwo_8')) {
+                addActiveToNav('支持中心');
+            } else if (isContains('Association_8')) {
+                addActiveToNav('支持中心');
+            } else if (isContains('Recruitment_8')) {
+                addActiveToNav('支持中心');
+            } else if (isContains('RecruXiang_8')) {
+                addActiveToNav('支持中心');
+            } else if (isContains('RongYuList_7')) {
+                addActiveToNav('校友群芳');
+            } else if (isContains('RelationMe_2')) {
+                addActiveToNav('校友群芳');
+            } else if (isContains('RelationMe_3')) {
+                addActiveToNav('校友群芳');
+            } else if (isContains('SchoolRcall_4')) {
+                addActiveToNav('校友群芳');
+            } else if (isContains('SchoolRcall_9')) {
+                addActiveToNav('校友捐赠');
+            } else if (isContains('NewsList')) {
+                addActiveToNav('新闻中心');
+            } else if (isContains('Journal')) {
+                addActiveToNav('校友刊物');
+            } else if (isContains('Contribute')) {
+                addActiveToNav('校友刊物');
+            } else if (isContains('JuanJZXM')) {
+                addActiveToNav('校友捐赠');
+            } else if (isContains('JuanJZFS')) {
+                addActiveToNav('校友捐赠');
+            } else if (isContains('DonateThank')) {
+                addActiveToNav('校友捐赠');
+            } else if (isContains('Association_604')) {
+                addActiveToNav('记');
+            } else if (isContains('AssociationListThree_604')) {
+                addActiveToNav('记');
+            }
+        });
+    </script>
+    <script type="text/javascript">
+
+        function addActiveToNav(navText) {
+            $($(".nav_bar li a:contains('" + navText + "')")[0]).addClass("nav_bar_style01");
+        }
+        //加入收藏
+
+        function addFav(sTitle, sURL) {
+            try {
+                var sURL = document.location.href;
+                var sTitle = document.title;
+                window.external.addFavorite(sURL, sTitle);
+            } catch (e) {
+                try {
+                    window.sidebar.addPanel(sTitle, sURL, "");
+                } catch (e) {
+                    //alert("浏览器收藏没有成功，请使用Ctrl+D进行添加!");
+                    $(".mengban").css("display", "block");
+                }
+            }
+        }
+        //设为主页
+        function SetHome(obj) {
+
+            var url = document.location.href;
+            try {
+                obj.style.behavior = 'url(#default#homepage)';
+                obj.setHomePage(url);
+            } catch (e) {
+                if (window.netscape) {
+                    try {
+                        netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
+                    } catch (e) {
+                        //alert("抱歉，此操作被浏览器拒绝！您可手动将【" + url + "】设置为首页\n\n请在浏览器地址栏输入“about:config”\n\n并回车然后将[signed.applets.codebase_principal_support]设置为'true'");
+                        $(".mengban2").css("display", "block");
+                    }
+                } else {
+                    //alert("抱歉，您所使用的浏览器无法完成此操作。\n\n您需要手动将【" + url + "】设置为首页。");
+                    $(".mengban2").css("display", "block");
+
+                }
+            }
+        }
+
+        function Search() {
+            var seaerchText = $(".header-input").val();
+            if (seaerchText == "" || seaerchText == "Searching") {
+                alert("请输入内容");
+                return false;
+            }
+            reg = /^[\u4E00-\u9FA5]{1,10}$/
+            if (!reg.test(seaerchText)) {
+                alert("请输入1-10汉字");
+                return false;
+            }
+            window.location.href = "../Search_" + seaerchText + ".html";
+
+            location.href = '/Action/Seach_' + seaerchText + ".html";
+        }
+    </script>
+
+    
+
+    <script type="text/javascript">
+
+        $(function () {
+            //判断浏览器是否支持placeholder属性
+            supportPlaceholder = 'placeholder' in document.createElement('input'),
+            placeholder = function (input) {
+                var text = input.attr('placeholder'),
+                defaultValue = input.defaultValue;
+                if (!defaultValue) {
+                    input.val(text).addClass("phcolor");
+                }
+                input.focus(function () {
+                    if (input.val() == text) {
+                        $(this).val("");
+                    }
+                });
+                input.blur(function () {
+                    if (input.val() == "") {
+                        $(this).val(text).addClass("phcolor");
+                    }
+                });
+                //输入的字符不为灰色
+                //input.keydown(function () {
+                //    $(this).removeClass("phcolor");
+                //});
+            };
+            //当浏览器不支持placeholder属性时，调用placeholder函数
+            if (!supportPlaceholder) {
+                $('input').each(function () {
+                    text = $(this).attr("placeholder");
+                    if ($(this).attr("type") == "text") {
+                        placeholder($(this));
+                    }
+                    if ($(this).attr("type") == "password") {
+                        placeholder($(this));
+                    }
+                });
+            }
+        });
+
+        $(".XiaoYouBack li:eq(5)").css("margin-right", "0");
+        //热点活动
+        $(".Notice-Tel-ul li:eq(0)").css("margin-top", "20px");
+        $(".Notice-Tel-ul li:eq(1)").css("margin-top", "20px");
+        $(".Notice-Tel-ul li:eq(2)").css("margin-top", "30px");
+        $(".Notice-Tel-ul li:eq(3)").css("margin-top", "30px");
+
+        $(".Time-right").mouseover(function(){
+            $(this).find(".RightTj").show();
+            $(this).addClass("ColorBj");
+        });
+         $(".Time-right").mouseout(function(){
+             $(this).find(".RightTj").hide();
+             $(this).removeClass("ColorBj");
+        });
+        $(".News-hot-ul li:eq(1)").css("background", "#ceeafb");
+        //$(".News-hot-ul li").mouseover(function () {
+        //    $(this).find("img").addClass(".News-hot-ulActive");
+        //});
+        //$(".News-hot-ul li").mouseout(function () {
+        //    $(this).find("img").removeClass(".News-hot-ulActive");
+        //});
+        //分会动态div间距
+            
+        //
+            if (navigator.appName == "Microsoft Internet Explorer" && navigator.appVersion.match(/8./i) == "8.") {
+                $(".picScroll-left .bd ").css("padding", "8px");
+                $(".NoticeIndex2").css("background", "#f9f9f9")
+            }
+            else if (navigator.appName == "Microsoft Internet Explorer" && navigator.appVersion.match(/9./i) == "9.") {
+                $(".NoticeIndex2").css("background", "#f9f9f9");
+            }
+
+
+            //jQuery(".picScroll-left").slide({ titCell: ".hd ul", mainCell: ".bd ul", autoPage: true, effect: "leftLoop", autoPlay: true, vis: 4, trigger: "click" });
+            if ($("#bdUlImgLength li").length > 1) {
+                jQuery("#myCarousel").slide({ mainCell: ".bd ul", effect: "leftLoop", autoPlay: true });
+            } else {
+                $(".hd .carousel-indicators li").css("background","#fff")
+            }
+
+            //$(".carousel-indicators li:eq(0)").addClass("active");
+            //$(".carousel-inner div:eq(0)").addClass("active");
+            //$('#myCarousel').carousel({
+            //    interval: 4000
+            //});
+        $(function () {
+            $(".infoList").innerHTML += $(".infoList").innerHTML;
+            jQuery(".txtMarquee-top").slide({ mainCell: ".bd ul", autoPlay: true, effect: "topMarquee", vis: 7, interTime: 50 });
+            XiaoUrl();
+            FenUrl();
+
+        });
+        //$(".hp_activity1:eq(1)").css("background", "#e44f4f");
+        //$(".hp_activity1:eq(2)").css("background", "#4b89c4");
+        //$(".hp_activity1:eq(3)").css("background", "#ffc446");
+        function XiaoUrl() {
+            var friend = "";
+            $.ajax({
+                async: false,
+                type: "post",
+                url: "../Handler/Ajax.ashx",
+                data: {
+                    methodname: "GetFriendUrl",
+                    Types: "1",
+                },
+                success: function (msg) {
+                    $.each($.parseJSON(msg), function (i, item) {
+                        friend += '<option value="' + item.Address + '">' + item.Conntent + '</option>'
+                    })
+                    $("#xiaoUrl").append(friend);
+                }
+            })
+        }
+        $("#xiaoUrl").change(function () {
+            var url = this.value;
+            window.location.href = url;
+        })
+
+        function FenUrl() {
+            var friend = "";
+            $.ajax({
+                async: false,
+                type: "post",
+                url: "../Handler/Ajax.ashx",
+                data: {
+                    methodname: "GetFriendUrl",
+                    Types: "2",
+                },
+                success: function (msg) {
+                    $.each($.parseJSON(msg), function (i, item) {
+                        friend += '<option value="' + item.Address + '">' + item.Conntent + '</option>'
+                    })
+                    $("#fenUrl").append(friend);
+                }
+            })
+        }
+        $("#fenUrl").change(function () {
+            var url = this.value;
+            window.location.href = url;
+        });
+
+        $(".hp_inlink_option option").mouseover(function () {
+            $(this).css("background", "#559567");
+        });
+    </script>
+
+</body>
+</html>

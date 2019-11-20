@@ -1,0 +1,827 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>中国政法大学图书馆</title>
+<link rel="stylesheet" type="text/css" href="css/index.css" />
+<script type="text/javascript" src="js/jquery1.42.min.js"></script>
+<script type="text/javascript" src="js/jquery.SuperSlide.2.1.1.js"></script>
+<!--Announced by Visual SiteBuilder 9-->
+<link rel="stylesheet" type="text/css" href="_sitegray/_sitegray_d.css" />
+<script language="javascript" src="_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232307e7847545352574b03050003 -->
+<link rel="stylesheet" type="text/css" href="index.vsb.css" />
+<META Name="keywords" Content="中国政法大学图书馆" />
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1001,'/index.jsp',-1,1271769360)</script>
+</head>
+
+<style type="text/css">
+    .sbtn 
+        {
+        line-height : 38px;
+        color: #FFFFFF;
+        height: 38px;
+        width:122px;
+        float: left;
+        background-color: #3581be;
+        font-size: 20px;
+        font-family: "Microsoft Yahei";
+        background-position: -87px 7px;
+        background-image: url(http://xuezhi.apabi.com/Content/images/icons.png);
+        background-repeat: no-repeat;}
+    .sbtn:hover {
+        background-color: #5aa5df;} 
+    .stext
+        {
+        width: 350px;
+        height: 34px;
+        line-height: 38px;
+        padding-left: 6px;
+        font-size: 16px;
+        
+        background: none repeat scroll 0px center rgba(83, 83, 83, 0.1);}
+</style>
+<script type="text/JavaScript">
+     var orgid="211010";
+     var type="99";
+    var baseUrl="http://www.yidu.edu.cn";
+    function setkey(i) {
+        document.forms["eduform"].skey.value = i;
+    }
+
+
+    function setsearchkey(i) {
+
+        var k;
+        switch (i) {
+            case "0":
+
+                k = "<input type=radio name='s' property='s' onclick='setkey(0)' checked='true'/>全部字段&nbsp;&nbsp;&nbsp;<input type=radio name='s' property='s' onclick='setkey(1)'/>书名&nbsp;&nbsp;&nbsp;<input type=radio name='s' property='s' onclick='setkey(2)'/>作者&nbsp;&nbsp;&nbsp;<input type=radio name='s' property='s' onclick='setkey(3)'/>主题&nbsp;&nbsp;&nbsp;<input type=radio name='s' property='s' onclick='setkey(4)'/>ISBN&nbsp;&nbsp;&nbsp;<input type=radio name='s' property='s' onclick='setkey(5)'/>出版者";
+                document.getElementById("isbook").style.visibility = "visible";
+                break;
+            case "1":
+                k = "<input type=radio name='s' property='s' onclick='setkey(0)' checked='true'/>全部字段&nbsp;&nbsp;&nbsp;<input type=radio name='s' property='s' onclick='setkey(1)'/>文章名&nbsp;&nbsp;&nbsp;<input type=radio name='s' property='s' onclick='setkey(2)'/>刊名&nbsp;&nbsp;&nbsp;<input type=radio name='s' property='s' onclick='setkey(3)'/>ISSN&nbsp;&nbsp;&nbsp;<input type=radio name='s' property='s' onclick='setkey(4)'/>作者";
+                document.getElementById("isbook").style.visibility = "hidden";
+                break;
+            case "2":
+
+                k = "<input type=radio name='s' property='s' onclick='setkey(0)' checked='true'/>全部字段&nbsp;&nbsp;&nbsp;<input type=radio name='s' property='s' onclick='setkey(1)'/>刊名&nbsp;&nbsp;&nbsp;<input type=radio name='s' property='s' onclick='setkey(2)'/>ISSN";
+                document.getElementById("isbook").style.visibility = "hidden";
+                break;
+
+            case "3":
+
+                k = "<input type=radio name='s' property='s' onclick='setkey(0)' checked='true'/>全部字段&nbsp;&nbsp;&nbsp;<input type=radio name='s' property='s' onclick='setkey(1)'/>题目&nbsp;&nbsp;&nbsp;<input type=radio name='s' property='s' onclick='setkey(2)'/>作者&nbsp;&nbsp;&nbsp;<input type=radio name='s' property='s' onclick='setkey(3)'/>导师&nbsp;&nbsp;&nbsp;<input type=radio name='s' property='s' onclick='setkey(4)'/>学校&nbsp;&nbsp;&nbsp;<input type=radio name='s' property='s' onclick='setkey(5)'/>学科";
+                document.getElementById("isbook").style.visibility = "hidden";
+                break;
+            case "4":
+
+                k = "<input type=radio name='s' property='s' onclick='setkey(0)' checked='true'/>全部字段&nbsp;&nbsp;&nbsp;<input type=radio name='s' property='s' onclick='setkey(1)'/>书名&nbsp;&nbsp;&nbsp;<input type=radio name='s' property='s' onclick='setkey(2)'/>作者&nbsp;&nbsp;&nbsp;<input type=radio name='s' property='s' onclick='setkey(3)'/>主题&nbsp;&nbsp;&nbsp;<input type=radio name='s' property='s' onclick='setkey(4)'/>ISBN&nbsp;&nbsp;&nbsp;<input type=radio name='s' property='s' onclick='setkey(5)'/>出版者";
+                document.getElementById("isbook").style.visibility = "visible";
+                break;
+
+            case "5":
+
+                k = "<input type=radio name='s' property='s' onclick='setkey(0)' checked='true'/>全部字段&nbsp;&nbsp;&nbsp;<input type=radio name='s' property='s' onclick='setkey(1)'/>刊名&nbsp;&nbsp;&nbsp;<input type=radio name='s' property='s' onclick='setkey(2)'/>ISSN";
+                document.getElementById("isbook").style.visibility = "hidden";
+                break;
+
+            case "99":
+
+                k = "<input type=radio name='s' property='s' onclick='setkey(0)' checked='true'/>全部字段&nbsp;&nbsp;&nbsp;<input type=radio name='s' property='s' onclick='setkey(1)'/>题名&nbsp;&nbsp;&nbsp;<input type=radio name='s' property='s' onclick='setkey(2)'/>作者/出版者&nbsp;&nbsp;&nbsp;<input type=radio name='s' property='s' onclick='setkey(3)'/>主题&nbsp;&nbsp;&nbsp;<input type=radio name='s' property='s' onclick='setkey(4)'/>ISBN/ISSN";
+                document.getElementById("isbook").style.visibility = "hidden";
+                break;
+        }
+        document.getElementById("key").innerHTML = k;
+        document.forms["eduform"].skey.value = "0";
+        document.forms["eduform"].stype.value = i;
+
+    }
+
+    function clearalert() {
+        var s = document.getElementById("svalue").value;
+        if (s == "请输入有意义的检索词" || s == "e读")
+            document.getElementById("svalue").value = "";
+    }
+
+    function search() {
+        init();
+        var s = document.getElementById("svalue").value;
+
+
+        if (s == "" || s == null || s == "请输入有意义的检索词" || s == "e读") {
+
+            document.getElementById("svalue").value = "请输入有意义的检索词";
+            return false;
+        }
+        else {
+            //s = s.replace(reg, "");
+            document.forms["eduform"].submit();
+        }
+    }
+
+    //<!--注释（一）如果申请了e读saas租用版的馆将所有的“caliscode”值修改为该馆数字代码即可，不执行注释（二）。注释开始符<!-- 结束符-->
+    //<!--注释（二）如果没有申请e读saas租用版的馆请将本段代码中所有的http://www.yidu.edu.cn/saas/....地址修改为http://www.yidu.edu.cn/educhina/....并将caliscode参数去掉，不执行注释（一）-->
+
+    function init() {
+        document.forms["eduform"].stype.value=type;
+        var target = getQueryString("target");
+        if (target != null) {
+            setFormAttr("target", target);
+        }
+        var caliscode = getQueryString("orgid");
+        
+        var calisInput = document.getElementById("caliscode");
+        if (caliscode != null) {
+
+            calisInput.setAttribute("value", caliscode);
+        } else if(orgid!=null){
+            calisInput.setAttribute("value", orgid);
+        }
+        else{
+            calisInput.setAttribute("value", "100000");
+        }
+
+        var action = getQueryString("action");
+        var actionUrl = baseUrl+"/xuezhi/educhina.do";
+        if (action == "calis") {
+            actionUrl = "http://www.yidu.edu.cn/saas/educhina.do";
+        }
+        setFormAttr("action", actionUrl);
+    }
+    function setFormAttr(attrName, attrValue) {
+        var s = document.getElementById("indexform");
+        s.setAttribute(attrName, attrValue);
+    }
+    function getQueryString(name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+        var r = window.location.search.substr(1).match(reg);
+        if (r != null) return unescape(r[2]); return null;
+    }
+    //action="http://172.18.89.141/xuezhi/educhina"
+    //http://localhost:8080/xuezhi/educhina
+</script>
+
+<body>
+
+<div class="warp">
+    <div class="nav">
+         <div class="logo"><!--#begineditable name="LOGO" viewid="127606" tagname="LOGO" action="" layout="" contype="" stylesysid="" template="" tplstyle="" clone="" istemp=""-->
+<!-- 网站logo图片地址请在本组件"内容配置-网站logo"处填写 -->
+<a href=""><img src="images/logo.png" /></a><!--#endeditable--></div>
+      <div class="ZNav">
+             <!--#begineditable name="网站导航" viewid="127607" tagname="网站导航" action="" layout="" contype="" stylesysid="" template="" tplstyle="" clone="" istemp=""--><ul>
+    <li><a href="http://202.205.72.204:8080/reader/login.php" target="_blank">我的图书馆</a></li>
+    <li><a href="gzzd.htm" target="_blank">规章制度</a></li>
+    <li><a href="kgsj.htm" target="_blank">开馆时间</a></li>
+    <li><a href="bggk.htm" target="_blank">本馆概况</a></li>
+    <li><a href="index.htm" target="_blank">首页</a></li>
+</ul><!--#endeditable-->
+         </div>
+  </div>
+
+  <div class="Qukleft">
+        <div class="Quktext">
+
+            
+<ul>
+            <!--#begineditable name="交流互动" viewid="127608" tagname="交流互动" action="" layout="" contype="" stylesysid="" template="" tplstyle="" clone="" istemp=""-->    <script language="javascript" src="/system/resource/js/dynclicks.js"></script>    
+      
+               <li><a href="http://wpa.qq.com/msgrd?v=3&uin=3165658381&site=qq&menu=yes" target="_blank"><img src="images/quk001.png" />QQ咨询</a></li>
+               <li><a href="http://202.205.72.204:8080/opac/search.php" target="_blank"><img src="images/quk002.png" />书目查询</a></li>
+       
+
+      
+               <li><a href="http://bbs.cupl.edu.cn/forum.php?mod=forumdisplay&fid=57" target="_blank"><img src="images/quk003.png" />BBS咨询</a></li>
+               <li><a href="https://202.205.72.211/" target="_blank"><img src="images/quk004.png" />远程访问</a></li>
+       
+
+      
+               <li><a href="fw/yjzx.htm" target="_blank"><img src="images/quk005.png" />邮件咨询</a></li>
+               <li><a href="fw/lwtj.htm" target="_blank"><img src="images/quk006.png" />论文提交</a></li>
+       
+
+      
+               <li><a href="info/1033/1587.htm" target="_blank"><img src="images/quk007.png" />电话咨询</a></li>
+               <li><a href="fw/jzxx.htm" target="_blank"><img src="images/quk008.png" />捐赠信息</a></li>
+       
+
+      
+               <li><a href="fw/jzyg.htm" target="_blank"><img src="images/quk009.png" />讲座预告</a></li>
+               <li><a href="http://202.205.72.204:8080/asord/asord_hist.php" target="_blank"><img src="images/quk010.png" />读者荐购</a></li>
+       
+
+      
+               <li><a href="http://202.205.71.3/" target="_blank"><img src="images/quk015.png" />座位预约</a></li>
+               <li><a href="info/1054/1355.htm" target="_blank"><img src="images/quk012.png" />新生教育</a></li>
+       
+
+      
+               <li><a href="fw/cscy.htm" target="_blank"><img src="images/quk013.png" />查收查引</a></li>
+               <li><a href="http://202.205.72.218:8080/LibMemory/jsp/login.jsp" target="_blank"><img src="images/quk011.png" />阅读记忆</a></li>
+       
+<!--#endeditable--></ul>
+         
+      </div>
+      <div class="er">
+          <!--#begineditable name="二维码图片列表" viewid="127609" tagname="二维码图片列表" action="" layout="" contype="" stylesysid="" template="" tplstyle="" clone="" istemp=""-->    <ul>
+            
+                <li><img src="images/wxfw.jpg" width="88" height="88" /><p>微信二维码</p></li>
+                <li><img src="images/ydtsg.jpg" width="88" height="88" /><p>移动图书馆</p></li>
+        
+</ul><!--#endeditable-->
+      </div>
+    </div>
+    
+    <div class="Mainright">
+        <div class="mian">
+            <div class="banner">
+                
+            <!--banner图片切换开始-->     
+           <div class="fullSlide">
+            <!--#begineditable name="图片列表" viewid="127610" tagname="图片列表" action="" layout="" contype="" stylesysid="" template="" tplstyle="" clone="" istemp=""-->    <div class="bd">
+<ul>
+           
+               <li><a href=""><img src="images/banner04.jpg" width="870" height="328" /> </a></li>
+               <li><a href=""><img src="images/banner06.jpg" width="870" height="328" /> </a></li>
+               <li><a href=""><img src="images/banner05.jpg" width="870" height="328" /> </a></li>
+               <li><a href="#"><img src="images/fengyazhi.JPG" width="870" height="328" /> </a></li>
+     
+</ul>
+</div>
+<div class="hd"><ul>
+       
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+     
+</ul>
+</div><!--#endeditable-->
+    </div>
+
+    <script type="text/javascript">
+        jQuery(".fullSlide").slide({ titCell:".hd ul", mainCell:".bd ul", effect:"fold",  autoPlay:true, autoPage:true, trigger:"click" });
+    </script>
+      <!--banner图片切换结束-->    
+                 
+                 
+                 
+            </div>
+            <div class="news-box">
+            
+            <div class="search">
+            <div class="searchbox">
+                    <div class="hd">
+                        <ul>
+                           <a href="#"><li class="on">书目检索</li></a><a href="#"><li>读秀学术</li></a><a href="#"><li>e读</li></a><a href="#">
+                           <!--<li>站内搜索</li>-->
+                           </a>
+                        </ul>
+                    </div>
+                    <div class="bd">
+                       <!--馆藏检索-->
+                       <ul class="i405">
+                      <!--#begineditable name="馆藏检索" viewid="127674" tagname="馆藏检索" action="" layout="" contype="" stylesysid="" template="" tplstyle="" clone="" istemp=""--><script type="text/javascript">
+    function goserch(){
+        var strText = document.getElementById("strTextlabiary").value;
+        var strSearchType = document.getElementsByName("strSearchTypelabiary");
+        var strSearchTypevalue = "title";
+        for(var i=0;i<strSearchType.length;i++){
+ 
+            if(strSearchType[i].checked==true){
+                strSearchTypevalue=strSearchType[i].value;
+            }
+        }
+        window.open("http://202.205.72.204:8080/opac/openlink.php?historyCount=1&strText="+strText+"&strSearchType="+strSearchTypevalue+"&PHPSESSID=ku5141r416or3haptjcq7bafh6&");
+    }
+    
+</script>
+    <table width="400" align="center" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+            <td>
+                <table align="center" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td width="80%" align="left">
+                            <table border="0" cellspacing="0" cellpadding="0">
+                                <tr>
+                                    <td>
+                                        <ul>
+                                            <li><input class="log_txt" type="text" id="strTextlabiary" name="strTextlabiary" onkeydown="if(event.keyCode==13){ goserch()} " /></li>
+                                        </ul>
+
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td width="10%" align="center">
+                            <ul>
+                                <li><input class="log_but" type="button" id="ch_search" value="&nbsp;" onclick="goserch()" /></li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <td>
+                <table width="600" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td align="left" style="color: #ffffff">
+                            <div id="key">
+                                <!--注释（四）不需要的字段可在下面这段<input> 代码前进行注释。注释开始符<!-- 结束符-->
+                                <input type="radio" name="strSearchTypelabiary" value="title" checked="checked" /> 题&nbsp;&nbsp;名 
+                                <input type="radio" name="strSearchTypelabiary" value="author" style=" margin-left:20px" />责任者
+                                 <input type="radio" name="strSearchTypelabiary" value="keyword" style="margin-left:20px" /> 主题词
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+<!--#endeditable-->
+</ul>
+                        
+                        
+                        <!--统一检索-->
+                        <ul class="i405">
+                          <!--#begineditable name="静态自定义DIV组件" viewid="130631" tagname="静态自定义DIV组件" action="" layout="" contype="" stylesysid="" template="" tplstyle="" clone="" istemp=""-->
+<script LANGUAGE="JavaScript">
+    //控制文本框的焦点
+    function textFocus(e,i){    
+        try{
+            if(i == 1 && (e.value == null || e.value == '')){
+                e.value ="输入检索词";
+            }else if(i == 2 && e.value =="输入检索词"){
+                e.value = '';
+            }
+        }catch(err){}
+    }
+</script>
+<script type="text/javascript">
+    function btsubmit2(){
+         document.indexform2.submit();
+    }
+    function getsw(v){
+        if(v===1){
+        document.getElementById("indexform2").action = "http://qw.duxiu.com/getPage?";
+        }else if(v===2){
+        document.getElementById("indexform2").action = "http://book.duxiu.com/search?";
+        }else if(v===3){
+        document.getElementById("indexform2").action = "http://jour.duxiu.com/searchJour?";
+        }
+    }
+
+</script>
+<form id="indexform2" name="indexform2" target="_blank" action="http://qw.duxiu.com/getPage?" method="get">
+	<INPUT id="channel" type="hidden" value="search" name="channel"> <input type="hidden" value="utf-8" name="ecode" />
+	<table width="400" align="center" border="0" cellspacing="0" cellpadding="0">
+		<tr>
+			<td>
+				<table align="center" border="0" cellspacing="0" cellpadding="0">
+					<tr>
+						<td width="80%" align="left">
+							<table border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td>
+										<ul>
+											<li><input class="log_txt" type="text" id="sw" name="sw" onClick="textFocus(this,2)" /></li>
+										</ul>
+									</td>
+								</tr>
+							</table>
+						</td>
+						<td width="10%" align="center">
+							<ul>
+								<li><input class="log_but" type="button" id="ch_search" value="&nbsp;" onclick="btsubmit2()" /></li>
+							</ul>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+	<table>
+		<tr>
+			<td>
+				<table width="600" border="0" cellspacing="0" cellpadding="0">
+					<tr>
+						<td align="left" style="color: #ffffff">
+							<div id="key">
+								<!--注释（四）不需要的字段可在下面这段<input> 代码前进行注释。注释开始符<!-- 结束符-->
+								&nbsp;&nbsp;&nbsp;&nbsp; 
+								<input type="radio" name="strSearchType" id="strSearchType1" checked="checked" onblur="getsw(1)" /> 知&nbsp;&nbsp;识 
+								<input type="radio" name="strSearchType" id="strSearchType2" onblur="getsw(2)" style=" margin-left:15px" />图&nbsp;&nbsp;书 
+								<input type="radio" name="strSearchType" id="strSearchType3" onblur="getsw(3)" style=" margin-left:15px" /> 期&nbsp;&nbsp;刊
+							</div>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+</form><!--#endeditable-->
+                        </ul>
+                        
+                        <!--超星发现-->
+                        <ul class="i405">
+                          <!--#begineditable name="e读接口" viewid="130635" tagname="e读接口" action="" layout="" contype="" stylesysid="" template="" tplstyle="" clone="" istemp=""--><script type="text/javascript">
+    function btsubmit3(){
+        var subbt = document.getElementById("submitbt3");
+        subbt.click();
+    }
+
+</script>
+<form id="indexform" name="eduform" target="_blank" action="http://www.yidu.edu.cn/saas/educhina.do">
+<input type="hidden" name="skey" value="0" />
+<input id="caliscode" type="hidden" name="caliscode" value="111800" />
+<input type="submit" id="submitbt3" name="submitbt3" style="display: none;">
+<table width="400" align="center" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+        <td>
+            <table align="center" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                    <td width="80%" align="left">
+                        <table border="0" cellspacing="0" cellpadding="0">
+                            <tr>
+                                <td>
+                                   
+                                   <ul>
+                                        <li>
+                                        <input class="log_txt" type="text" id="svalue" name="svalue" /> 
+                                        </li>
+                                        </ul>  
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                   <td width="10%" align="center" style="display:none">
+                        <table border="0" cellspacing="0" cellpadding="0">
+                            <tr>
+                                <td>
+                                    <select name="stype">
+                                        <!--注释（三）不需要的类型可在下面这段<option> 代码前进行注释。注释开始符<!-- 结束符-->
+                                        <option selected="selected" value="99">所有类型</option>
+                                        <option value="0">中文图书</option>
+                                        <option value="4">外文图书</option>
+                                        <option value="1">期刊文章</option>
+                                        <option value="5">中文期刊</option>
+                                        <option value="2">外文期刊</option>
+                                        <option value="3">学位论文</option>
+                                    </select>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td width="10%" align="center">
+                        <ul>
+                            <li>
+                            <input class="log_but" type="button" id="ch_search" value="&nbsp;" onclick="btsubmit3()" /> 
+                            </li>
+                        </ul> 
+                  </td>
+                     
+                                    </tr>
+            </table>
+        </td>
+    </tr>
+    <tr style="display:none">
+        <td>
+            <table width="600" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                    <td align="left">
+                        <div id="key">
+                            <!--注释（四）不需要的字段可在下面这段<input> 代码前进行注释。注释开始符<!-- 结束符-->
+                            <input type="radio" name="s" property="s" onclick="setkey(0)" checked="true" />全部字段&nbsp;<input type="radio" name="s" property="s" onclick="setkey(1)" />题名&nbsp;<input type="radio" name="s" property="s" onclick="setkey(2)" />作者/出版者&nbsp;<input type="radio" name="s" property="s" onclick="setkey(3)" />主题&nbsp;<input type="radio" name="s" property="s" onclick="setkey(4)" />ISBN/ISSN</div>
+                    </td>
+                    <td align="left">
+                        <span id="isbook" style="visibility: hidden">
+                            <label>
+                                <input type="checkbox" name="he" value="1" />有电子书</label>
+                            <font color="#000000">&nbsp;&nbsp</font></span>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+</form><!--#endeditable-->
+                        </ul>
+ <ul class="i405">
+                     <!--#begineditable name="全文检索" viewid="139456" tagname="全文检索" action="" layout="" contype="" stylesysid="" template="" tplstyle="" clone="" istemp="true"--><script type="text/javascript">
+    function _nl_ys_check(){
+        
+        var keyword = document.getElementById('showkeycode139456').value;
+        if(keyword==null||keyword==""){
+            alert("请输入你要检索的内容！");
+            return false;
+        }
+        if(window.toFF==1)
+        {
+            document.getElementById("lucenenewssearchkey139456").value = Simplized(keyword );
+        }else
+        {
+            document.getElementById("lucenenewssearchkey139456").value = keyword;            
+        }
+        var  base64 = new Base64();
+        document.getElementById("lucenenewssearchkey139456").value = base64.encode(document.getElementById("lucenenewssearchkey139456").value);
+        new VsbFormFunc().disableAutoEnable(document.getElementById("showkeycode139456"));
+        return true;
+    } 
+</script>
+<form action="ssjg.jsp?wbtreeid=1001" method="post" id="au8a" name="au8a" onsubmit="return _nl_ys_check()" style="display: inline">
+ <input type="hidden" id="lucenenewssearchkey139456" name="lucenenewssearchkey" value=""><input type="hidden" id="_lucenesearchtype139456" name="_lucenesearchtype" value="1"><input type="hidden" id="searchScope139456" name="searchScope" value="0">
+ <li>
+<input name="showkeycode" id="showkeycode139456" class="log_txt" type="text" value="请输入需要搜索的内容..." onfocus="if(this.value=='请输入需要搜索的内容...')this.value=''" onblur="if(this.value=='')this.value='请输入需要搜索的内容...'" />
+ <input type="submit" class="log_but" value="&nbsp;" /></li>
+
+</form>
+
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/formfunc.js"></script>
+<!--#endeditable-->
+</ul>
+                    </div>
+                    
+                  
+                
+                
+                
+              
+                </div>
+                  <script type="text/javascript">jQuery(".searchbox").slide();</script> 
+            </div>
+            <div style="clear:both"></div>
+            
+            <div class="news">
+                <div class="hd">
+                    <ul>
+                       <a href="index/zwsjk.htm"><li class="on">电子资源</li></a><a href="fw/dzfw.htm"><li>读者服务</li></a><a href="fw/tzgg.htm"><li>通知公告</li></a><a href="fw/jxpx.htm"><li>教学培训</li></a>
+                    </ul>
+                </div>
+                <div class="bd">
+                    <!--新闻资讯-->
+                    <ul class="dzzy">
+                       <li>
+                           <div class="zwsjk">
+                               <div class="dzzy_title"><span><a href="index/zwsjk.htm" target="" style=" font-size:12px; color:#C00; float:right">+MORE</a></span> 中文数据库 </div>
+                               <!--#begineditable name="中文数据库" viewid="127611" tagname="中文数据库" action="" layout="" contype="" stylesysid="" template="" tplstyle="" clone="" istemp=""--><ul class="zwsjul">
+   <li><a href="info/1012/1452.htm">万律中国（Westlaw China）数据库</a></li>
+   <li><a href="info/1012/1018.htm">“北大法宝”－司法考试平台</a></li>
+   <li><a href="info/1012/1017.htm">中国知网</a></li>
+   <li><a href="info/1012/1016.htm">中华数字书苑数据库</a></li>
+   <li><a href="info/1012/1015.htm">新东方网络课程多媒体数据库</a></li>
+   <li><a href="info/1012/1014.htm">万方数据库</a></li>
+   <li><a href="info/1012/1013.htm">“北大法宝”－中国法律检索系统</a></li>
+   <li><a href="info/1012/1012.htm">中文社会科学引文索引CSSCI数据库</a></li>
+   <li><a href="info/1012/1011.htm">民国时期期刊全文数据库（1911～1949）</a></li>
+   <li><a href="info/1012/1009.htm">晚清期刊全文数据库</a></li>
+</ul><script>_showDynClickBatch(['dynclicks_u9_1452','dynclicks_u9_1018','dynclicks_u9_1017','dynclicks_u9_1016','dynclicks_u9_1015','dynclicks_u9_1014','dynclicks_u9_1013','dynclicks_u9_1012','dynclicks_u9_1011','dynclicks_u9_1009'],[1452,1018,1017,1016,1015,1014,1013,1012,1011,1009],"wbnews", 1271769360)</script>
+<!--#endeditable-->
+                           </div>
+                        
+                       </li>
+                       
+                       <li>
+                           <div class="zwsjk">
+                               <div class="dzzy_title"><span><a href="index/wwsjk.htm" target="" style=" font-size:12px; color:#C00; float:right">+MORE</a></span> 外文数据库 </div>
+                               <!--#begineditable name="外文数据库" viewid="127612" tagname="外文数据库" action="" layout="" contype="" stylesysid="" template="" tplstyle="" clone="" istemp=""--><ul class="zwsjul">
+   <li><a href="info/1013/1707.htm">部分外文原版纸质期刊的电子版本合集</a></li>
+   <li><a href="info/1013/1695.htm">世界贸易法数据库（World Trade Law Net）</a></li>
+   <li><a href="info/1013/1544.htm">JSTOR电子书</a></li>
+   <li><a href="info/1013/1037.htm">Westlaw Next数据库</a></li>
+   <li><a href="info/1013/1036.htm">Kluwer仲裁数据库</a></li>
+   <li><a href="info/1013/1035.htm">SAGE Journals期刊数据库</a></li>
+   <li><a href="info/1013/1034.htm">《海牙国际法演讲集》网络版</a></li>
+   <li><a href="info/1013/1033.htm">NSTL全国开通电子资源</a></li>
+   <li><a href="info/1013/1032.htm">ProQuest学位论文全文数据库</a></li>
+   <li><a href="info/1013/1031.htm">剑桥期刊回溯库</a></li>
+</ul>
+
+
+
+<script>_showDynClickBatch(['dynclicks_u10_1707','dynclicks_u10_1695','dynclicks_u10_1544','dynclicks_u10_1037','dynclicks_u10_1036','dynclicks_u10_1035','dynclicks_u10_1034','dynclicks_u10_1033','dynclicks_u10_1032','dynclicks_u10_1031'],[1707,1695,1544,1037,1036,1035,1034,1033,1032,1031],"wbnews", 1271769360)</script>
+<!--#endeditable-->
+                           </div>
+                        
+                       </li>
+                       
+                       <li>
+                           <div class="zwsjk">
+                               <div class="dzzy_title"><span><a href="index/gztszy.htm" target="" style=" font-size:12px; color:#C00; float:right">+MORE</a></span> 馆藏特色资源 </div>
+                               <!--#begineditable name="馆藏特色资源" viewid="127613" tagname="馆藏特色资源" action="" layout="" contype="" stylesysid="" template="" tplstyle="" clone="" istemp=""--><ul class="zwsjul">
+  <li><a href="info/1021/1065.htm">中国政法大学政治学参考文献</a></li>
+  <li><a href="info/1021/1064.htm">随书光盘及多媒体点播系统</a></li>
+  <li><a href="info/1021/1063.htm">法学文献题录索引</a></li>
+</ul><script>_showDynClickBatch(['dynclicks_u11_1065','dynclicks_u11_1064','dynclicks_u11_1063'],[1065,1064,1063],"wbnews", 1271769360)</script>
+<!--#endeditable-->
+                           </div>
+                           <div class="clear"></div>
+                           <div class="zwsjk">
+                               <div class="dzzy_title"><span><a href="index/mfsjk.htm" target="" style=" font-size:12px; color:#C00; float:right">+MORE</a></span> 免费数据库 </div>
+                              <!--#begineditable name="免费数据库" viewid="127614" tagname="免费数据库" action="" layout="" contype="" stylesysid="" template="" tplstyle="" clone="" istemp=""--><ul class="zwsjul">
+   <li><a href="info/1022/1955.htm">国家哲学社会科学学术期刊数据库</a></li>
+   <li><a href="info/1022/1842.htm">【OA资源】edx大规模开放课程平台</a></li>
+   <li><a href="info/1022/1813.htm">【OA资源】网络开放课程（OCW）</a></li>
+   <li><a href="info/1022/1812.htm">【OA资源】世界数字图书馆</a></li>
+   <li><a href="info/1022/1782.htm">知产宝数据库</a></li>
+   <li><a href="info/1022/1703.htm">国家哲学社会科学文献中心</a></li>
+</ul><script>_showDynClickBatch(['dynclicks_u12_1955','dynclicks_u12_1842','dynclicks_u12_1813','dynclicks_u12_1812','dynclicks_u12_1782','dynclicks_u12_1703'],[1955,1842,1813,1812,1782,1703],"wbnews", 1271769360)</script>
+<!--#endeditable-->
+                           </div>
+                        
+                       </li>
+                       
+                      
+                    </ul>
+                    
+                     <!--读者服务-->
+                    <ul class="dz_service">
+                       <!--#begineditable name="读者服务" viewid="127616" tagname="读者服务" action="" layout="" contype="" stylesysid="" template="" tplstyle="" clone="" istemp=""-->   <li><a href="info/1033/1587.htm"><img src="/__local/A/1D/31/BA7828053E2D5B21D418F100828_C5D388E7_8EE.png" width="50" height="50" /><p>电话咨询</p></a></li>
+   <li><a href="fw/zzfw.htm"><img src="/__local/2/FF/8B/C983354D71071C12B6477FB101D_2F8BFA58_EB7.png" width="50" height="50" /><p>自助服务</p></a></li>
+   <li><a href="fw/jxpx.htm"><img src="/__local/5/21/D8/1F4979BBD6CD429F93BE069263B_35D38459_CAD.png" width="50" height="50" /><p>用户培训</p></a></li>
+   <li><a href="fw/gkgx.htm"><img src="/__local/0/F3/50/589AACFABE5976660EA0486453D_C88F6E94_FDA.png" width="50" height="50" /><p>馆刊馆讯</p></a></li>
+   <li><a href="http://opac.calis.edu.cn/simpleSearch.do"><img src="/__local/B/D1/68/A328A81727406078398F70CE116_9540C4FC_171B.png" width="50" height="50" /><p>CALIS联合...</p></a></li>
+   <li><a href="info/1033/1167.htm"><img src="/__local/0/5E/DB/4BBD9C8A029783D3675AA6B91CF_91541ACD_14EF.png" width="50" height="50" /><p>微信服务</p></a></li>
+   <li><a href="info/1033/1166.htm"><img src="/__local/F/54/53/E0504D77EFFC97CF9139D9D94E2_A2F03D37_141B.png" width="50" height="50" /><p>远程访问</p></a></li>
+   <li><a href="info/1033/1165.htm"><img src="/__local/8/89/81/C7A24FEE05E82BFBDB913A15F5D_2BCA14DE_1323.png" width="50" height="50" /><p>论文提交</p></a></li>
+   <li><a href="info/1033/1164.htm"><img src="/__local/E/0E/04/026C2930BE21D162AA31DAFC787_9BD8EB3D_1DB4.png" width="50" height="50" /><p>查收查引</p></a></li>
+   <li><a href="info/1033/1163.htm"><img src="/__local/A/0E/7B/B991E6E42CF81B8B09BBD3F1A90_B07C97F4_13FA.png" width="50" height="50" /><p>图书捐赠</p></a></li>
+   <li><a href="info/1045/1225.htm"><img src="/__local/0/60/BC/23984DEEDCA3600F271AC8F2E53_7A7683FF_F74.png" width="50" height="50" /><p>原文传递</p></a></li>
+   <li><a href="info/1033/1160.htm"><img src="/__local/6/61/D8/FB9FDFA23DDAA715E899252CD72_C635328E_1194.png" width="50" height="50" /><p>馆际互借</p></a></li>
+   <li><a href="info/1033/1159.htm"><img src="/__local/3/7D/B8/A56F8D28797EE39C2A58FF495E0_B0DFF8A0_CB5.png" width="50" height="50" /><p>在线咨询</p></a></li>
+<script>_showDynClickBatch(['dynclicks_u13_1587','dynclicks_u13_1339','dynclicks_u13_1338','dynclicks_u13_1337','dynclicks_u13_1299','dynclicks_u13_1167','dynclicks_u13_1166','dynclicks_u13_1165','dynclicks_u13_1164','dynclicks_u13_1163','dynclicks_u13_1836','dynclicks_u13_1160','dynclicks_u13_1159'],[1587,1339,1338,1337,1299,1167,1166,1165,1164,1163,1836,1160,1159],"wbnews", 1271769360)</script>
+<!--#endeditable-->
+                       <span class="more"><a href="fw/dzfw.htm" style=" color:#C00">+MORE</a></span> 
+                    </ul>
+                    
+                     <!--通知公告-->
+<ul class="date_zy">
+                    <!--#begineditable name="通知公告" viewid="127617" tagname="通知公告" action="" layout="" contype="" stylesysid="" template="" tplstyle="" clone="" istemp=""-->   <li><span class="date">2017-10-25</span><span class="font"><a href="info/1031/1995.htm">闭馆通知</a></span></li>
+   <li><span class="date">2017-10-11</span><span class="font"><a href="info/1031/1978.htm">关于违规使用Westlaw Next数据...</a></span></li>
+   <li><span class="date">2017-10-10</span><span class="font"><a href="info/1031/1977.htm">2017年秋季图书馆资源与服务利...</a></span></li>
+   <li><span class="date">2017-09-22</span><span class="font"><a href="info/1031/1964.htm">2017年国庆节、中秋节开馆时间...</a></span></li>
+   <li><span class="date">2017-09-22</span><span class="font"><a href="info/1031/1962.htm">关于2017年ProQuest学位论文挑...</a></span></li>
+   <li><span class="date">2017-09-18</span><span class="font"><a href="info/1031/1942.htm">关于举办2017年秋季外文原版图...</a></span></li>
+   <li><span class="date">2017-09-02</span><span class="font"><a href="info/1031/1882.htm">关于座位管理系统暂停使用的通知</a></span></li>
+   <li><span class="date">2017-07-10</span><span class="font"><a href="info/1031/1862.htm">“我爱写书评”活动获奖名单</a></span></li>
+   <li><span class="date">2017-07-06</span><span class="font"><a href="info/1031/1857.htm">关于2017年暑假期间闭馆的通知</a></span></li>
+   <li><span class="date">2017-06-30</span><span class="font"><a href="info/1031/1854.htm">文渊阁闭馆通知</a></span></li>
+   <li><span class="date">2017-06-30</span><span class="font"><a href="info/1031/1853.htm">图书馆2017年夏季学期工作安排</a></span></li>
+   <li><span class="date">2017-06-08</span><span class="font"><a href="info/1031/1822.htm">关于2017届毕业生“图书馆记忆...</a></span></li>
+   <li><span class="date">2017-05-27</span><span class="font"><a href="info/1031/1801.htm">关于2017年夏季博士、硕士毕业...</a></span></li>
+   <li><span class="date">2017-05-22</span><span class="font"><a href="info/1031/1797.htm">闭馆通知</a></span></li>
+   <li><span class="date">2017-05-22</span><span class="font"><a href="info/1031/1796.htm">2017年端午节放假通知</a></span></li>
+   <li><span class="date">2017-05-22</span><span class="font"><a href="info/1031/1795.htm">关于在学院路校区举办台版图书...</a></span></li>
+   <li><span class="date">2017-05-12</span><span class="font"><a href="info/1031/1785.htm">《文献信息检索与论文写作》开...</a></span></li>
+   <li><span class="date">2017-05-11</span><span class="font"><a href="info/1031/1783.htm">《法律文献信息与研究》2017年...</a></span></li>
+   <li><span class="date">2017-05-05</span><span class="font"><a href="info/1031/1770.htm">2017年春季图书馆资源与服务利...</a></span></li>
+   <li><span class="date">2017-05-02</span><span class="font"><a href="info/1031/1767.htm">2017年SAGE期刊数据库有奖问答...</a></span></li>
+<script>_showDynClickBatch(['dynclicks_u14_1995','dynclicks_u14_1978','dynclicks_u14_1977','dynclicks_u14_1964','dynclicks_u14_1962','dynclicks_u14_1942','dynclicks_u14_1882','dynclicks_u14_1862','dynclicks_u14_1857','dynclicks_u14_1854','dynclicks_u14_1853','dynclicks_u14_1822','dynclicks_u14_1801','dynclicks_u14_1797','dynclicks_u14_1796','dynclicks_u14_1795','dynclicks_u14_1785','dynclicks_u14_1783','dynclicks_u14_1770','dynclicks_u14_1767'],[1995,1978,1977,1964,1962,1942,1882,1862,1857,1854,1853,1822,1801,1797,1796,1795,1785,1783,1770,1767],"wbnews", 1271769360)</script>
+<!--#endeditable-->
+                     <span><a href="fw/tzgg.htm" style=" color:#C00; float:right;">+MORE</a></span> 
+                    </ul>
+                     <!--教学培训-->
+<ul class="date_zy">
+                    <!--#begineditable name="教学培训" viewid="127618" tagname="教学培训" action="" layout="" contype="" stylesysid="" template="" tplstyle="" clone="" istemp=""-->  <li><span class="date">2017-10-09</span><span class="font"><a href="info/1044/1972.htm">2017年秋季图书馆资源与服务利...</a></span></li>
+  <li><span class="date">2017-05-15</span><span class="font"><a href="info/1044/1792.htm">Lexis.com®全球法律信息数据库...</a></span></li>
+  <li><span class="date">2017-05-03</span><span class="font"><a href="info/1044/1768.htm">2017年5月Westlaw Next数据库在...</a></span></li>
+  <li><span class="date">2017-05-02</span><span class="font"><a href="info/1044/1764.htm">2017年春季图书馆资源与服务利...</a></span></li>
+  <li><span class="date">2017-04-06</span><span class="font"><a href="info/1044/1738.htm">2017年春季电子资源培训讲座课...</a></span></li>
+  <li><span class="date">2017-03-30</span><span class="font"><a href="info/1044/1723.htm">2017年春季电子资源培训讲座时...</a></span></li>
+  <li><span class="date">2016-11-04</span><span class="font"><a href="info/1044/1582.htm">2016年秋季资源与服务利用活动...</a></span></li>
+  <li><span class="date">2016-10-14</span><span class="font"><a href="info/1044/1545.htm">2016年秋季数据库宣传月课件</a></span></li>
+  <li><span class="date">2016-10-08</span><span class="font"><a href="info/1044/1510.htm">2016年秋季数据库宣传月即将开...</a></span></li>
+  <li><span class="date">2016-04-06</span><span class="font"><a href="info/1044/1243.htm">2016年春季数据库宣传月课件</a></span></li>
+  <li><span class="date">2016-03-29</span><span class="font"><a href="info/1044/1242.htm">2016年春季数据库宣传月即将开...</a></span></li>
+  <li><span class="date">2015-10-14</span><span class="font"><a href="info/1044/1241.htm">2015年10月Westlaw Next新平台...</a></span></li>
+  <li><span class="date">2015-10-10</span><span class="font"><a href="info/1044/1240.htm">2015年秋季数据库宣传月课件</a></span></li>
+  <li><span class="date">2015-09-08</span><span class="font"><a href="info/1044/1239.htm">EBSCO数据库2015年9月份在线培...</a></span></li>
+  <li><span class="date">2015-06-09</span><span class="font"><a href="info/1044/1238.htm">2015年“万方数据杯”文献检索...</a></span></li>
+  <li><span class="date">2015-05-25</span><span class="font"><a href="info/1044/1237.htm">2015年05月Westlaw Next新平台...</a></span></li>
+  <li><span class="date">2015-04-15</span><span class="font"><a href="info/1044/1236.htm">2015年04月Westlaw大讲堂开课通...</a></span></li>
+  <li><span class="date">2015-04-08</span><span class="font"><a href="info/1044/1235.htm">2015年春季数据库宣传月课件</a></span></li>
+  <li><span class="date">2015-03-31</span><span class="font"><a href="info/1044/1234.htm">2015年春季数据库宣传月即将开...</a></span></li>
+  <li><span class="date">2015-03-18</span><span class="font"><a href="info/1044/1233.htm">2015年EBSCO数据库在线培训课程...</a></span></li>
+<script>_showDynClickBatch(['dynclicks_u15_1972','dynclicks_u15_1792','dynclicks_u15_1768','dynclicks_u15_1764','dynclicks_u15_1738','dynclicks_u15_1723','dynclicks_u15_1582','dynclicks_u15_1545','dynclicks_u15_1510','dynclicks_u15_1243','dynclicks_u15_1242','dynclicks_u15_1241','dynclicks_u15_1240','dynclicks_u15_1239','dynclicks_u15_1238','dynclicks_u15_1237','dynclicks_u15_1236','dynclicks_u15_1235','dynclicks_u15_1234','dynclicks_u15_1233'],[1972,1792,1768,1764,1738,1723,1582,1545,1510,1243,1242,1241,1240,1239,1238,1237,1236,1235,1234,1233],"wbnews", 1271769360)</script>
+<!--#endeditable-->
+<span><a href="fw/jxpx.htm" style=" color:#C00; float:right">+MORE</a></span> 
+                    </ul>
+                     
+              </div>
+            </div>
+            </div>
+            <script type="text/javascript">jQuery(".news").slide();</script> 
+            
+            <div class="books">
+               <!--#begineditable name="红色区域列表" viewid="127619" tagname="红色区域列表" action="" layout="" contype="" stylesysid="" template="" tplstyle="" clone="" istemp=""--><ul>
+   <li><a href="info/1045/1225.htm"><img src="/__local/8/88/0C/A295C7DD5FCDD8A6E8BDCEFFEDF_11CED885_1733.png" /></a><p>原文传递</p></li>
+   <li><a href="info/1033/1160.htm"><img src="/__local/D/09/61/B5D3A13D0061B7FC25337BDBD09_9587B0F3_104F.png" /></a><p>馆际互借</p></li>
+   <li><a href="fw/jypxb.htm"><img src="/__local/8/17/1C/880F327B202B3DF10017986D1B0_E6320B95_19D8.png" /></a><p>借阅排行榜</p></li>
+   <li><a href="info/1045/1222.htm"><img src="/__local/E/FF/E8/53182DA5ED27F782D24BB5A59A1_292E1602_11DC.png" /></a><p>校长推荐书目</p></li>
+   <li><a href="http://202.205.72.204:8080/newbook/newbook_cls_browse.php"><img src="/__local/3/6D/52/BA2A58FAD6F215693E5B6313962_E19450D9_30D2.png" /></a><p>新书通报</p></li>
+</ul><script>_showDynClickBatch(['dynclicks_u16_1225','dynclicks_u16_1224','dynclicks_u16_1223','dynclicks_u16_1222','dynclicks_u16_1710'],[1225,1224,1223,1222,1710],"wbnews", 1271769360)</script>
+<!--#endeditable-->
+              
+
+        
+            </div>
+            <div class="clear"></div>
+            
+            <div class="DB">
+                <div class="resources">
+                     <div class="sy">
+                          <div class="newspics">
+                              <div class="newspic_title"><a href="#"><img src="images/newspic_title.jpg" /></a></div>
+                              <div class="newspic_img">
+                                  <!--#begineditable name="法大文库" viewid="127620" tagname="法大文库" action="" layout="" contype="" stylesysid="" template="" tplstyle="" clone="" istemp=""-->
+ <div class="bd">
+ <ul>
+<li><a href="fdwk/sy.htm"><img src="/__local/B/C3/2A/3594C5C79186734AB8E2991CFF8_B3A6112B_15E83.jpg" /></a></li>
+</ul>
+</div><script>_showDynClickBatch(['dynclicks_u17_1440'],[1440],"wbnews", 1271769360)</script>
+<!--#endeditable-->
+                              </div>
+                              <script type="text/javascript">jQuery(".newspic_img").slide({ mainCell:".bd ul",effect:"fold",autoPlay:true,delayTime:200 });</script> 
+                          </div>
+                          <div class="restext">
+                             <div class="title"><a href="index/sysjk.htm">+MORE</a>试用数据库</div>
+                             <div class="txt">
+                                 <!--#begineditable name="试用数据库" viewid="127621" tagname="试用数据库" action="" layout="" contype="" stylesysid="" template="" tplstyle="" clone="" istemp=""--><ul>
+   <li><a href="info/1014/1540.htm">IG Publishing电子图书法律分库已开通试用</a></li>
+   <li><a href="info/1014/1963.htm">中国共产党思想理论资源数据库已开通试用</a></li>
+   <li><a href="info/1014/1952.htm">爱如生中国基本古籍库已开通试用</a></li>
+   <li><a href="info/1014/1855.htm">超星期刊已开通试用</a></li>
+   <li><a href="info/1014/1844.htm">Worldlib Ebook 外文原版电子图书已开通试用</a></li>
+   <li><a href="info/1014/1843.htm">Worldlib国外文献整合平台已开通试用</a></li>
+   <li><a href="info/1014/1841.htm">起点考研网已开通试用</a></li>
+</ul><script>_showDynClickBatch(['dynclicks_u18_1540','dynclicks_u18_1963','dynclicks_u18_1952','dynclicks_u18_1855','dynclicks_u18_1844','dynclicks_u18_1843','dynclicks_u18_1841'],[1540,1963,1952,1855,1844,1843,1841],"wbnews", 1271769360)</script>
+<!--#endeditable-->
+                             </div>
+                          </div>
+                     </div>
+                     <div class="clear"></div>
+                     <div class="linkss">
+                        <!--#begineditable name="友情链接" viewid="127622" tagname="友情链接" action="" layout="" contype="" stylesysid="" template="" tplstyle="" clone="" istemp=""--><script language="javascript" src="/system/resource/js/openlink.js"></script><UL>
+   <li><a href="lxwm.htm" target="_blank">联系我们</a></li>
+   <li><a href="xglj.htm" target="_blank">相关链接</a></li>
+   <li><a href="http://202.112.118.46/index.html" target="_blank">Balis中心</a></li>
+   <li><a href="http://bbs.cupl.edu.cn/forum.php?mod=forumdisplay&amp;fid=57" target="_blank">留言板</a></li>
+   <li><a href="http://www.cupl.edu.cn/" target="_blank">法大首页</a></li>
+</UL><!--#endeditable-->
+                       <span style="font-size:26px">LINKS</span><span style="font-size:16px; margin-left:5px">友情链接</span>
+                     </div>
+                    <div class="copyright"><img src="images/copy_logo.png" /><p><!--#begineditable name="版权" viewid="127624" tagname="版权" action="" layout="" contype="" stylesysid="" template="" tplstyle="" clone="" istemp=""--><!-- 版权内容请在本组件"内容配置-版权"处填写 -->
+海淀校区：北京市海淀区西土城路25号<br />
+昌平校区：北京市昌平区府学路27号<br />
+版权所有：中国政法大学图书馆<!--#endeditable-->  站长统计-访问量[<!--#begineditable name="文字计数器" viewid="127626" tagname="文字计数器" action="" layout="" contype="" stylesysid="" template="" tplstyle="" clone="" istemp=""--><script language="javascript" src="_dwr/engine.js"></script><script language="javascript" src="_dwr/util.js"></script><script language="javascript" src="_dwr/interface/PageCounterDWR.js"></script><span id="a127626" name="a127626"></span>   
+
+<script>
+function getvisittimea127626()
+{       
+    PageCounterDWR.getVisittime('1271769360','1001','TOTAL_COUNTER','0','2',callbackdataa127626)
+}
+function callbackdataa127626(data)
+{
+    document.getElementById("a127626").innerHTML = data; 
+}
+getvisittimea127626();
+</script><!--#endeditable-->]</p>
+
+</div>
+                     
+                </div>
+                <div class="kslinks">
+                    <!--#begineditable name="右边链接" viewid="127623" tagname="右边链接" action="" layout="" contype="" stylesysid="" template="" tplstyle="" clone="" istemp=""--><UL>
+    <li><a href="ybdh/tsgyd.htm">图书馆园地</a></li>
+    <li><a href="ybdh/txh.htm">图学会</a></li>
+    <li><a href="ybdh/byln.htm">毕业留念</a></li>
+    <li><a href="info/1073/1754.htm">图书馆导航</a></li>
+    <li><a href="ybdh/swzl.htm">失物招领</a></li>
+    <li><a href="ybdh/lglm.htm">立格联盟</a></li>
+</UL><!--#endeditable-->
+                </div>
+            </div>
+        
+      </div>
+    </div>
+
+
+
+   <div class="clear"></div>
+
+
+
+
+</div>
+<div style="display: none"><a href="http://webscan.360.cn/index/checkwebsite/url/library.cupl.edu.cn" name="c22689f6eb6cc51efb8453783ab965a0">360网站安全检测平台</a></div>
+</body>
+</html>

@@ -1,0 +1,488 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+        <meta name="keywords" content="北林后勤,北京林业大学后勤服务总公司,北林后勤服务总公司,,食堂,公寓,幼儿园">
+        <meta name="author" content="信息学院--张明岳 tel:15652509307">
+		<title>北京林业大学后勤服务总公司</title>
+		<link type="text/css" href="http://ldhq.bjfu.edu.cn/css/index.css" rel="stylesheet"/>
+        <link type="text/css" href="http://ldhq.bjfu.edu.cn/css/HeadandFoot.css" rel="stylesheet"/>  
+        <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>      
+		<script type="text/javascript" src="js/jquery.index.js"></script>
+        
+			<!--执行NewsShow的脚本-->
+		<script type="text/javascript">
+            
+			$(window).load(function(){
+                
+				$('#demo1').orbit({
+				'bullets': true,
+				'timer' : true,
+				'animation' : 'fade'
+				});	
+                
+			});
+		</script>
+        <!-- 关于浮动广告的js -->
+            <SCRIPT type=text/javascript> 
+                    function addEvent(obj,evtType,func,cap){ 
+                    cap=cap||false; 
+                    if(obj.addEventListener){ 
+                    obj.addEventListener(evtType,func,cap); 
+                    return true; 
+                    }else if(obj.attachEvent){ 
+                    if(cap){ 
+                    obj.setCapture(); 
+                    return true; 
+                    }else{ 
+                    return obj.attachEvent("on" + evtType,func); 
+                    } 
+                    }else{ 
+                    return false; 
+                    } 
+                    } 
+                    function getPageScroll(){ 
+                    var xScroll,yScroll; 
+                    if (self.pageXOffset) { 
+                    xScroll = self.pageXOffset; 
+                    } else if (document.documentElement && document.documentElement.scrollLeft){ 
+                    xScroll = document.documentElement.scrollLeft; 
+                    } else if (document.body) { 
+                    xScroll = document.body.scrollLeft; 
+                    } 
+                    if (self.pageYOffset) { 
+                    yScroll = self.pageYOffset; 
+                    } else if (document.documentElement && document.documentElement.scrollTop){ 
+                    yScroll = document.documentElement.scrollTop; 
+                    } else if (document.body) { 
+                    yScroll = document.body.scrollTop; 
+                    } 
+                    arrayPageScroll = new Array(xScroll,yScroll); 
+                    return arrayPageScroll; 
+                    } 
+                    function GetPageSize(){ 
+                    var xScroll, yScroll; 
+                    if (window.innerHeight && window.scrollMaxY) { 
+                    xScroll = document.body.scrollWidth; 
+                    yScroll = window.innerHeight + window.scrollMaxY; 
+                    } else if (document.body.scrollHeight > document.body.offsetHeight){ 
+                    xScroll = document.body.scrollWidth; 
+                    yScroll = document.body.scrollHeight; 
+                    } else { 
+                    xScroll = document.body.offsetWidth; 
+                    yScroll = document.body.offsetHeight; 
+                    } 
+                    var windowWidth, windowHeight; 
+                    if (self.innerHeight) { 
+                    windowWidth = self.innerWidth; 
+                    windowHeight = self.innerHeight; 
+                    } else if (document.documentElement && document.documentElement.clientHeight) { 
+                    windowWidth = document.documentElement.clientWidth; 
+                    windowHeight = document.documentElement.clientHeight; 
+                    } else if (document.body) { 
+                    windowWidth = document.body.clientWidth; 
+                    windowHeight = document.body.clientHeight; 
+                    } 
+                    if(yScroll < windowHeight){ 
+                    pageHeight = windowHeight; 
+                    } else { 
+                    pageHeight = yScroll; 
+                    } 
+                    if(xScroll < windowWidth){ 
+                    pageWidth = windowWidth; 
+                    } else { 
+                    pageWidth = xScroll; 
+                    } 
+                    arrayPageSize = new Array(pageWidth,pageHeight,windowWidth,windowHeight) 
+                    return arrayPageSize; 
+                    } 
+
+                    var AdMoveConfig=new Object(); 
+                    AdMoveConfig.IsInitialized=false; 
+                    AdMoveConfig.ScrollX=0; 
+                    AdMoveConfig.ScrollY=0; 
+                    AdMoveConfig.MoveWidth=0; 
+                    AdMoveConfig.MoveHeight=0; 
+                    AdMoveConfig.Resize=function(){ 
+                    var winsize=GetPageSize(); 
+                    AdMoveConfig.MoveWidth=winsize[2]; 
+                    AdMoveConfig.MoveHeight=winsize[3]; 
+                    AdMoveConfig.Scroll(); 
+                    } 
+                    AdMoveConfig.Scroll=function(){ 
+                    var winscroll=getPageScroll(); 
+                    AdMoveConfig.ScrollX=winscroll[0]; 
+                    AdMoveConfig.ScrollY=winscroll[1]; 
+                    } 
+                    addEvent(window,"resize",AdMoveConfig.Resize); 
+                    addEvent(window,"scroll",AdMoveConfig.Scroll); 
+                    function AdMove(id){ 
+                    if(!AdMoveConfig.IsInitialized){ 
+                    AdMoveConfig.Resize(); 
+                    AdMoveConfig.IsInitialized=true; 
+                    } 
+                    var obj=document.getElementById(id); 
+                    obj.style.position="absolute"; 
+                    var W=AdMoveConfig.MoveWidth-obj.offsetWidth; 
+                    var H=AdMoveConfig.MoveHeight-obj.offsetHeight; 
+                    var x = W*Math.random(),y = H*Math.random(); 
+                    var rad=(Math.random()+1)*Math.PI/6; 
+                    var kx=Math.sin(rad),ky=Math.cos(rad); 
+                    var dirx = (Math.random()<0.5?1:-1), diry = (Math.random()<0.5?1:-1); 
+                    var step = 1; 
+                    var interval; 
+                    this.SetLocation=function(vx,vy){x=vx;y=vy;} 
+                    this.SetDirection=function(vx,vy){dirx=vx;diry=vy;} 
+                    obj.CustomMethod=function(){ 
+                    obj.style.left = (x + AdMoveConfig.ScrollX) + "px"; 
+                    obj.style.top = (y + AdMoveConfig.ScrollY) + "px"; 
+                    rad=(Math.random()+1)*Math.PI/6; 
+                    W=AdMoveConfig.MoveWidth-obj.offsetWidth; 
+                    H=AdMoveConfig.MoveHeight-obj.offsetHeight; 
+                    x = x + step*kx*dirx; 
+                    if (x < 0){dirx = 1;x = 0;kx=Math.sin(rad);ky=Math.cos(rad);} 
+                    if (x > W){dirx = -1;x = W;kx=Math.sin(rad);ky=Math.cos(rad);} 
+                    y = y + step*ky*diry; 
+                    if (y < 0){diry = 1;y = 0;kx=Math.sin(rad);ky=Math.cos(rad);} 
+                    if (y > H){diry = -1;y = H;kx=Math.sin(rad);ky=Math.cos(rad);} 
+                    } 
+                    this.Run=function(){ 
+                    var delay = 10; 
+                    interval=setInterval(obj.CustomMethod,delay); 
+                    obj.onmouseover=function(){clearInterval(interval);} 
+                    obj.onmouseout=function(){interval=setInterval(obj.CustomMethod, delay);} 
+                    } 
+                    } 
+            </SCRIPT> 
+	</head>
+	<body>
+        <!-- this is head -->
+        
+		<div class="HeadLogo"> 
+                <!-- 这是第一个版本 -->
+				<!-- <img class="HeadLoge_logo" src="http://ldhq.bjfu.edu.cn/ToolPic/HeadLogo_logo.png"/>
+				<div class="HeadLogo_text">
+					<p><img src="http://ldhq.bjfu.edu.cn/AddPic/HeadLogo_bjfu.png"/></p>
+				</div> -->
+            <div class="headLogo">
+                <img src="http://ldhq.bjfu.edu.cn/ToolPic/tempAddLogo.png"/>
+            </div>
+                <!-- 这是官网等提示,暂时不要了 -->
+<!-- 				<div class="HeadLogo_Topshow"  style="display:none;"><a href="http://www.bjfu.edu.cn">北林官方网站</a> | <a href="javascript:;" onclick="shoucang(document.title,window.location.href)">添加收藏</a></div>
+ -->		</div>
+		<div class="Navi">
+			<div class="Navimain">
+				<ul class="Navimain_ul">
+					<li class="Navimain_Navi">
+						<div onclick="location.href='/'">首页</div>
+					</li>
+					<li class="Navimain_Navi">
+						<div>公司概况</div>
+						<ul>
+							<li onclick="location.href='/hqzgs/zgs_gsjj/159739.htm'">公司简介</li>
+                            <li onclick="location.href='/hqzgs/zgs_gsdt/'">公司动态</li>
+							<li onclick="location.href='/hqzgs/zgs_zzjg/160925.htm'">组织机构</li>
+							<li onclick="location.href='/hqzgs/zgs_dqgz/'">党群工作</li>
+							<li onclick="location.href='/hqzgs/zgs_zcfg/'">政策法规</li>
+							
+							<li onclick="location.href='/hqzgs/zgs_gswh/'">公司文化</li>
+							<li onclick="location.href='/hqzgs/zgs_ryjl/160994.htm'">荣誉奖励</li>
+						</ul>
+					</li>
+					<li class="Navimain_Navi">
+						<div>新闻中心</div>
+						<ul>
+                            <li onclick="location.href='/hqzgs/zgs_gsdt/'">公司动态</li>
+							<li onclick="location.href='/ysfwzx/ysfw_cydt/'">餐饮动态</li>
+							<li onclick="location.href='/hqxsgy/xsgy_gydt/'">公寓动态</li>
+							<li onclick="location.href='/hqyey/yey_ysdt/'">园所动态</li>
+						</ul>
+					</li>
+					<li class="Navimain_Navi">
+						<div>服务大厅</div>
+						<ul>
+							<li onclick="location.href='/ysfwzx/ysfw_zxjj/160544.htm'">饮食服务中心</li>
+							<li onclick="location.href='/hqxsgy/xsgy_zxjj/159561.htm'">学生公寓中心</li>
+							<li onclick="location.href='/hqyey/yey_ysjj/159574.htm'">幼儿园</li>
+						</ul>
+					</li>
+					<li class="Navimain_Navi"  onclick="location.href='/lxwm/161823.htm'">
+						<div>联系我们</div>
+						<ul>
+						</ul>
+					</li>			
+				</ul>
+                <div class="Navimain_div">
+                    <form  class="zmy_search" action="http://cms.bjfu.edu.cn/cms/search/searchResults.jsp?siteID=174" method="post">
+                        <input class="search_text" name="query" placeholder="请输入您要搜索的内容" onfocus="this.value=''" size="30" maxlength="100" />
+                        <input class="search_btn" type="submit" value="搜&nbsp;索" name="Submit" />
+                    </form>
+                </div>
+			</div>
+		</div>
+</body></html>        <!-- this is index -->
+		<div class="Image_show">
+			<div id="demo1" class="featured" style="height:341px; width:1001px; visible:hidden;background:#fff;">
+                                                                <a href="http://ldhq.bjfu.edu.cn/hqzgs/zgs_gsdt/246380.htm"><img src="/images/content/2017/20170424190120211515.jpg" rel="title01" /></a>
+                                                                    <a href="http://ldhq.bjfu.edu.cn/hqzgs/zgs_gsdt/242366.htm"><img src="/images/content/2017/20170309190204435394.jpg" rel="title02" /></a>
+                                                                    <a href="http://ldhq.bjfu.edu.cn/ysfwzx/ysfw_cydt/226760.htm"><img src="/images/content/2016/20160902073808588576.jpg" rel="title03" /></a>
+                                                                                                <a href="http://ldhq.bjfu.edu.cn/hqzgs/zgs_gsdt/176637.htm"><img src="/images/content/2015/20150203155945379520.jpg" rel="title05" /></a>
+                                			</div> 
+                                        <a href="http://ldhq.bjfu.edu.cn/hqzgs/zgs_gsdt/246380.htm"><span class="orbit-caption" id="title01">            后勤服务总公司在学校师生运动会上创造佳绩 
+    </span></a>
+                                            <a href="http://ldhq.bjfu.edu.cn/hqzgs/zgs_gsdt/242366.htm"><span class="orbit-caption" id="title02">            温情三月 美丽绽放  ——后勤服务总公司举办... 
+    </span></a>
+                                            <a href="http://ldhq.bjfu.edu.cn/ysfwzx/ysfw_cydt/226760.htm"><span class="orbit-caption" id="title03">            饮食服务中心举办暑期烹饪技能暨岗前知识培训班 
+    </span></a>
+                                            <a href="/tpxw/181577.htm"><span class="orbit-caption" id="title04">            饮食服务中心参加北京高校第十六届食品原材料联... 
+    </span></a>
+                                            <a href="http://ldhq.bjfu.edu.cn/hqzgs/zgs_gsdt/176637.htm"><span class="orbit-caption" id="title05">            赵相华总经理率北京高校后勤考察团赴浙江大学、... 
+    </span></a>
+                            		</div>
+		<div class="Company_info">
+			<ul class="Company_info-ul">
+				<li onclick="location.href='/hqzgs/zgs_gsjj/159739.htm';"><div class="Company_info-ul_dis"><div class="Company_info-Font">公司简介</div></div></li>
+                <li onclick="location.href='/hqzgs/zgs_gsdt/';"><div class="Company_info-ul_dis"><div class="Company_info-Font">公司动态</div></div></li>
+				<li onclick="location.href='/hqzgs/zgs_zzjg/160925.htm';"><div class="Company_info-ul_dis"><div class="Company_info-Font">组织机构</div></div></li>
+				<li onclick="location.href='/hqzgs/zgs_dqgz/';"><div class="Company_info-ul_dis"><div class="Company_info-Font">党群工作</div></div></li>
+				<li onclick="location.href='/hqzgs/zgs_zcfg/';"><div class="Company_info-ul_dis"><div class="Company_info-Font">政策法规</div></div></li>				
+				<li onclick="location.href='/hqzgs/zgs_gswh/';"><div class="Company_info-ul_dis"><div class="Company_info-Font">公司文化</div></div></li>
+				<li onclick="location.href='/hqzgs/zgs_ryjl/160994.htm';" style="margin-right:0;"><div class="Company_info-ul_dis"><div class="Company_info-Font">荣誉奖励</div></div></li>
+			</ul>
+		</div>
+		<div class="NoticeAndNews">
+			<div class="NoticeLine"></div>
+				<div id="Notice_name"><img src="ToolPic/Notice_ima.png"/></div>
+				<div id="News_name"><img src="ToolPic/News_ima.png"/></div>
+			<div class="NoticeNews_Main">
+				<div class="Notice">
+                                             <h4><A class=txt title=关于公寓值班室提供碎纸服务的通知 href="/hqxsgy/xsgy_tzgg/250592.htm"  target=_blank style="text-decoration:none;color:#dd2d61; font-size:17px;">
+                                关于公寓值班室提供碎纸服... 
+    </A><span>发布时间：2017-06-16</span><img src="ToolPic/Notice_hotloge.png"/></h4>                              
+                        <p style="text-indent: 2em;">
+                             临近毕业，为方便大家安全处置私密信件、文件等物品，学生公寓中心为每栋公寓楼值班室配备了碎纸机，请有需求的同学与本楼管理员或值班员联系。
+                        <a href="/hqxsgy/xsgy_tzgg/250592.htm">[全部]</a>
+                        </p>                    
+                    					<div class="Notice_newstip">下一条：</div>
+                    <div style="float:left">
+                        <ul>
+                                                            <li onclick="location.href='/ysfwzx/ysfw_tzgg/244125.htm';"><a href="#" style="font-size:14px;">            餐卡24小时自助充值 
+    </a><span style="font-size:14px;">2017-06-28</span><img src="ToolPic/Notice_hotloge.png"/></li>
+                                                    </ul>
+                    </div>					
+				</div>
+				<div class="News">
+					<ul>
+                                                     <li onclick="location.href='/hqzgs/zgs_gsdt/252369.htm';">
+                                                                    <img src="ToolPic/News_oldlogo.png" border=0"/>
+                                                             <a href="#" style="font-size:14px;">            后勤服务总公司开展暑期培训 
+    </a><span style="font-size:14px;">2017-08-21</span></li>
+                            <div style="clear:both;"></div>                   
+                                                     <li onclick="location.href='/syxw/247305.htm';">
+                                                                    <img src="ToolPic/News_oldlogo.png" border=0"/>
+                                                             <a href="#" style="font-size:14px;">            后勤服务总公司通过ISO9001国际质量... 
+    </a><span style="font-size:14px;">2017-05-04</span></li>
+                            <div style="clear:both;"></div>                   
+                                                     <li onclick="location.href='/syxw/246380.htm';">
+                                                                    <img src="ToolPic/News_oldlogo.png" border=0"/>
+                                                             <a href="#" style="font-size:14px;">            后勤服务总公司在学校师生运动会上创造佳绩 
+    </a><span style="font-size:14px;">2017-04-24</span></li>
+                            <div style="clear:both;"></div>                   
+                                                     <li onclick="location.href='/syxw/246169.htm';">
+                                                                    <img src="ToolPic/News_oldlogo.png" border=0"/>
+                                                             <a href="#" style="font-size:14px;">            学生公寓中心消防控制系统专项培训纪实 
+    </a><span style="font-size:14px;">2017-04-21</span></li>
+                            <div style="clear:both;"></div>                   
+                                                     <li onclick="location.href='/syxw/242366.htm';">
+                                                                    <img src="ToolPic/News_oldlogo.png" border=0"/>
+                                                             <a href="#" style="font-size:14px;">            温情三月 美丽绽放 
+    </a><span style="font-size:14px;">2017-03-09</span></li>
+                            <div style="clear:both;"></div>                   
+                                                     <li onclick="location.href='http://news.bjfu.edu.cn/lsyw/239955.htm';">
+                                                                    <img src="ToolPic/News_oldlogo.png" border=0"/>
+                                                             <a href="#" style="font-size:14px;">            校领导实地走访学生公寓 
+    </a><span style="font-size:14px;">2017-03-08</span></li>
+                            <div style="clear:both;"></div>                   
+                         					</ul>
+                    <div class="News_more" onclick="location.href='/syxw/';">更多</div>
+				</div>
+			</div>
+			<div class="NoticeLine"></div>
+          
+		</div>       
+		<div class="Main">
+			<div class="First_logo">
+				<img src="ToolPic/DietService.png"/>
+			</div>
+			<div class="DietService">
+				<ul>
+					<li id="DietService_li1">
+						<span class="DietService_Sin">中心简介</span>
+						<div onclick="location.href='/ysfwzx/ysfw_zxjj/160544.htm';" style="background:url(./images/DietService_Pic1.jpg);">
+							<h2>中心简介</h2>
+						</div>
+					</li>
+					<li id="DietService_li2">
+						<span>餐饮动态</span>
+						<div onclick="location.href='/ysfwzx/ysfw_cydt/';" style="background:url(./images/DietService_Pic2.jpg);">
+							<h2>餐饮动态</h2>
+						</div>	
+					</li>
+					<li id="DietService_li3">
+						<span class="DietService_Sin">通知公告</span>
+						<div onclick="location.href='/ysfwzx/ysfw_tzgg/';" style="background:url(./images/DietService_Pic3.jpg);">
+							<h2>通知公告</h2>
+						</div>	
+					</li>
+					<li id="DietService_li4">
+						<span>政策法规</span>
+						<div onclick="location.href='/ysfwzx/ysfw_zcfg/';" style="background:url(./images/DietService_Pic4.jpg);">
+							<h2>政策法规</h2>
+						</div>
+					</li>
+					<li id="DietService_li5">
+						<span class="DietService_Sin">科学管理</span>
+						<div onclick="location.href='/ysfwzx/ysfw_kxgl/';" style="background:url(./images/DietService_Pic5.jpg);">
+							<h2>科学管理</h2>
+						</div>
+					</li>
+					<li id="DietService_li6">
+						<span>行业资讯</span>
+						<div onclick="location.href='/ysfwzx/ysfw_xyzx/';" style="background:url(./images/DietService_Pic6.jpg);">
+							<h2>行业资讯</h2>
+						</div>
+					</li>
+					<li id="DietService_li7">
+						<span class="DietService_Sin">农校对接</span>
+						<div onclick="location.href='/ysfwzx/ysfw_nxdj/';" style="background:url(./images/DietService_Pic7.jpg);">
+							<h2>农校对接</h2>
+						</div>
+					</li>
+					<li id="DietService_li8">
+						<span class="DietService_Sin">民主办伙</span>
+						<div onclick="location.href='/ysfwzx/ysfw_mzbh/';" style="background:url(./images/DietService_Pic9.jpg);">
+							<h2>民主办伙</h2>
+						</div>
+					</li>
+					<li id="DietService_li9">
+						<span>科学饮食</span>
+						<div onclick="location.href='/ysfwzx/ysfw_mdhc/';" style="background:url(./images/DietService_Pic10.jpg);">
+							<h2>科学饮食</h2>
+						</div>
+					</li>
+					<li id="DietService_li10">
+						<span class="DietService_Sin">员工风采</span>
+						<div onclick="location.href='/ysfwzx/ysfw_ygfc/';" style="background:url(./images/DietService_Pic11.jpg);">
+							<h2>员工风采</h2>
+						</div>	
+					</li>
+					<li id="DietService_li11">
+						<span>安全监督</span>
+						<div onclick="location.href='/ysfwzx/ysfw_aqjd/';" style="background:url(./images/DietService_Pic12.jpg);">
+							<h2>安全监督</h2>
+						</div>
+					</li>
+                    <li id="DietService_li12">
+						<span>学子超市</span>
+						<div onclick="location.href='/ysfwzx/ysfw_xzcs/160950.htm';" style="background:url(./images/DietService_Pic8.jpg);">
+							<h2>学子超市</h2>
+						</div>
+					</li>
+				</ul>
+			</div>           
+			<div class="Second_logo">
+				<img src="ToolPic/StudentHouse.png"/>
+			</div>
+			<div class="StudentHouse">
+				<ul class="StudentHouse_ul">
+					<li onclick="location.href='/hqxsgy/xsgy_zxjj/159561.htm';"><img src="ToolPic/StudentHouse1_1.png"/><span>中心简介</span></li>
+					<li onclick="location.href='/hqxsgy/xsgy_gydt/';"><img src="ToolPic/StudentHouse1_2.png"/><span>公寓动态</span></li>
+					<li onclick="location.href='/hqxsgy/xsgy_tzgg/';"><img src="ToolPic/StudentHouse1_3.png"/><span>通知公告</span></li>
+					<li onclick="location.href='/hqxsgy/xsgy_zcfg/';"><img src="ToolPic/StudentHouse1_4.png"/><span>政策法规</span></li>
+					<li onclick="location.href='/hqxsgy/xsgy_aqgl/';"><img src="ToolPic/StudentHouse1_5.png"/><span>安全管理</span></li>
+					<li onclick="location.href='/hqxsgy/xsgy_fwzn/159571.htm';"><img src="ToolPic/StudentHouse1_6.png"/><span>服务指南</span></li>
+					<li onclick="location.href='/hqxsgy/xsgy_fczs/';"><img src="ToolPic/StudentHouse1_7.png"/><span>风采展示</span></li>
+					<li onclick="location.href='/hqxsgy/xsgy_mzgl/';"><img src="ToolPic/StudentHouse1_8.png"/><span>民主管理</span></li>
+				</ul>
+			</div>
+			<div class="Third_logo">
+				<img src="ToolPic/KinderGarten.png"/>
+			</div>
+			<div class="KinderGarten">
+				<ul class="KinderGarten_ul">
+					<li onclick="location.href='/hqyey/yey_ysjj/159574.htm';"><img src="ToolPic/KinderGarten1_1.png"/><span>园所简介</span></li>
+					<li onclick="location.href='/hqyey/yey_ysdt/';"><img src="ToolPic/KinderGarten1_2.png"/><span>园所动态</span></li>
+					<li onclick="location.href='/hqyey/yey_tzgg/';"><img src="ToolPic/KinderGarten1_3.png"/><span>通知公告</span></li>
+					<li onclick="location.href='/hqyey/yey_jyzc/';"><img src="ToolPic/KinderGarten1_4.png"/><span>教育之窗</span></li>
+					<li onclick="location.href='/hqyey/yey_wsbj/';"><img src="ToolPic/KinderGarten1_5.png"/><span>卫生保健</span></li>
+					<li onclick="location.href='/hqyey/yey_jygy/';"><img src="ToolPic/KinderGarten1_6.png"/><span>家园共育</span></li>
+					<li onclick="location.href='/hqyey/yey_ygfc/';"><img src="ToolPic/KinderGarten1_7.png"/><span>员工风采</span></li>
+					<li onclick="location.href='/hqyey/yey_jcsj/';"><img src="ToolPic/KinderGarten1_8.png"/><span>精彩瞬间</span></li>
+				</ul>
+			</div>
+		</div>
+        <div class="Link_line"></div>
+        <script src="http://cms.bjfu.edu.cn/cms/web/writeLog.jsp?channelID=6982"></script>
+		
+        <div class="Link_all">
+			<div class="Link_line"></div>
+			<div class="Link">
+				<div style="margin: auto;width: 900px;text-align: center;">
+                    <div style="float:left;padding:0;">友情链接：</div>
+                    <form action="" method="post" name="form1" style="float:left;margin-left: 20px;">
+                        <select onchange="javascript:window.open(this.options[this.selectedIndex].value)" name="select" style="height: 22px;width: 185px;text-align: center;">
+                            <option selected="" value="">--教育行政主管部门--</option>
+                            <option target="_blank" value="http://www.moe.gov.cn/">教育部</option>
+                            <option target="_blank" value="http://www.bjedu.gov.cn">北京市教委</option>
+                            <option target="_blank" value="http://bjhdjyj.30edu.com/">海淀区教委</option>
+                        </select>
+                    </form>
+                    <form action="" method="post" name="form1" style="float:left;margin-left: 20px;">
+                        <select onchange="javascript:window.open(this.options[this.selectedIndex].value)" name="select" style="height: 22px;width: 185px;text-align: center;">
+                            <option selected="" value="">------行业协会------</option>
+                            <option target="_blank" value="http://www.chinacacm.org/">中国教育后勤协会</option>
+                            <option target="_blank" value="http://www.gxlhcg.com/bpm/new_main.jsp">北京高校联合采购网</option>
+                            <option target="_blank" value="http://www.eduhuoshi.com/">中国学校伙食管理网</option>
+                            <option target="_blank" value="http://www.ccas.com.cn/">中国烹饪协会</option>
+                        </select>
+                    </form>
+                    <form action="" method="post" name="form1" style="float:left;margin-left: 20px;">
+                        <select onchange="javascript:window.open(this.options[this.selectedIndex].value)" name="select" style="height: 22px;width: 185px;text-align: center;">
+                            <option selected="" value="">------兄弟高校------</option>
+                            <option target="_blank" value="http://hq.tsinghua.edu.cn/">清华大学</option>
+                            <option target="_blank" value="http://zwb.pku.edu.cn/">北京大学</option>
+                            <option target="_blank" value="http://hqjt.ruc.edu.cn/">中国人民大学</option>
+                            <option target="_blank" value="http://hq.bnu.edu.cn/">北京师范大学</option>
+                            <option target="_blank" value="http://hq.buaa.edu.cn/index.html">北京航空航天大学</option>
+                            <option target="_blank" value="http://hq.ustb.edu.cn/">北京科技大学</option>
+                            <option target="_blank" value="http://zulg.zju.edu.cn/">浙江大学</option>
+                            <option target="_blank" value="http://hq.sysu.edu.cn/">中山大学</option>
+                        </select>
+                    </form>
+                    <form action="" method="post" name="form1" style="float:left;margin-left: 20px;">
+                        <select onchange="javascript:window.open(this.options[this.selectedIndex].value)" name="select" style="height: 22px;width: 185px;text-align: center;">
+                            <option selected="" value="">----校内相关处室----</option>
+                            <option target="_blank" value="http://xsc.bjfu.edu.cn/">学生处</option>
+                            <option target="_blank" value="http://bwc.bjfu.edu.cn/">保卫处</option>
+                            <option target="_blank" value="http://zwc.bjfu.edu.cn/">总务处</option>
+                            <option target="_blank" value="http://jwc.bjfu.edu.cn/">教务处</option>
+                            <option target="_blank" value="http://dzb.bjfu.edu.cn/">党政办</option>
+                        </select>
+                    </form>
+				</div>
+			</div>
+		</div>
+		<div class="Foot">	
+			<div class="Foot_text">
+			<h5 class="Foot_info"> <span id="showVisitTime" style="color:red;display:none;"></span>
+            Copyright<span style="font-size:20px; vertical-align:middle;">&#169;</span>2000-2014 北京林业大学后勤服务总公司 地址：北京市海淀区清华东路35号 邮政编码：100083 Email：beilinhouqin@126.com 电话：010-62338315<br/> <span style="position:relative;top:3px;">京公网安备110402430001</span><script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1254575625'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1254575625%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script></h5>
+						</div>
+		</div>
+		<div class="Gotop" id="Gotop2"><a href="javascript:;">返回<br/>顶部</a></div>        <!-- 浮动广告 -->
+                
+        
+        <script type="text/javascript" src="http://ldhq.bjfu.edu.cn/js/jquery.HeadandFoot.js"></script>
+	</body>
+</html>
+</body></html>

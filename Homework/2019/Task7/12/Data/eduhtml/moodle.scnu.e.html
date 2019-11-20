@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html  dir="ltr" lang="en" xml:lang="en">
+<head>
+    <title>砺儒云课堂</title>
+    <link rel="shortcut icon" href="http://moodle.scnu.edu.cn/theme/image.php/lambda/theme/1509013818/favicon" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="moodle, 砺儒云课堂" />
+<link rel="stylesheet" type="text/css" href="http://moodle.scnu.edu.cn/theme/yui_combo.php?rollup/3.17.2/yui-moodlesimple-min.css" /><script id="firstthemesheet" type="text/css">/** Required in order to fix style inclusion problems in IE with YUI **/</script><link rel="stylesheet" type="text/css" href="http://moodle.scnu.edu.cn/theme/styles.php/lambda/1509013818/all" />
+<script type="text/javascript">
+//<![CDATA[
+var M = {}; M.yui = {};
+M.pageloadstarttime = new Date();
+M.cfg = {"wwwroot":"http:\/\/moodle.scnu.edu.cn","sesskey":"B3LLv6B4HH","themerev":"1509013818","slasharguments":1,"theme":"lambda","iconsystemmodule":"core\/icon_system_standard","jsrev":"1506747004","admin":"admin","svgicons":true,"usertimezone":"Asia\/Hong_Kong","contextid":4};var yui1ConfigFn = function(me) {if(/-skin|reset|fonts|grids|base/.test(me.name)){me.type='css';me.path=me.path.replace(/\.js/,'.css');me.path=me.path.replace(/\/yui2-skin/,'/assets/skins/sam/yui2-skin')}};
+var yui2ConfigFn = function(me) {var parts=me.name.replace(/^moodle-/,'').split('-'),component=parts.shift(),module=parts[0],min='-min';if(/-(skin|core)$/.test(me.name)){parts.pop();me.type='css';min=''}
+if(module){var filename=parts.join('-');me.path=component+'/'+module+'/'+filename+min+'.'+me.type}else{me.path=component+'/'+component+'.'+me.type}};
+YUI_config = {"debug":false,"base":"http:\/\/moodle.scnu.edu.cn\/lib\/yuilib\/3.17.2\/","comboBase":"http:\/\/moodle.scnu.edu.cn\/theme\/yui_combo.php?","combine":true,"filter":null,"insertBefore":"firstthemesheet","groups":{"yui2":{"base":"http:\/\/moodle.scnu.edu.cn\/lib\/yuilib\/2in3\/2.9.0\/build\/","comboBase":"http:\/\/moodle.scnu.edu.cn\/theme\/yui_combo.php?","combine":true,"ext":false,"root":"2in3\/2.9.0\/build\/","patterns":{"yui2-":{"group":"yui2","configFn":yui1ConfigFn}}},"moodle":{"name":"moodle","base":"http:\/\/moodle.scnu.edu.cn\/theme\/yui_combo.php?m\/1506747004\/","combine":true,"comboBase":"http:\/\/moodle.scnu.edu.cn\/theme\/yui_combo.php?","ext":false,"root":"m\/1506747004\/","patterns":{"moodle-":{"group":"moodle","configFn":yui2ConfigFn}},"filter":null,"modules":{"moodle-core-actionmenu":{"requires":["base","event","node-event-simulate"]},"moodle-core-blocks":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification"]},"moodle-core-checknet":{"requires":["base-base","moodle-core-notification-alert","io-base"]},"moodle-core-chooserdialogue":{"requires":["base","panel","moodle-core-notification"]},"moodle-core-dock":{"requires":["base","node","event-custom","event-mouseenter","event-resize","escape","moodle-core-dock-loader","moodle-core-event"]},"moodle-core-dock-loader":{"requires":["escape"]},"moodle-core-dragdrop":{"requires":["base","node","io","dom","dd","event-key","event-focus","moodle-core-notification"]},"moodle-core-event":{"requires":["event-custom"]},"moodle-core-formchangechecker":{"requires":["base","event-focus","moodle-core-event"]},"moodle-core-handlebars":{"condition":{"trigger":"handlebars","when":"after"}},"moodle-core-languninstallconfirm":{"requires":["base","node","moodle-core-notification-confirm","moodle-core-notification-alert"]},"moodle-core-lockscroll":{"requires":["plugin","base-build"]},"moodle-core-maintenancemodetimer":{"requires":["base","node"]},"moodle-core-notification":{"requires":["moodle-core-notification-dialogue","moodle-core-notification-alert","moodle-core-notification-confirm","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-core-notification-dialogue":{"requires":["base","node","panel","escape","event-key","dd-plugin","moodle-core-widget-focusafterclose","moodle-core-lockscroll"]},"moodle-core-notification-alert":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-confirm":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-exception":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-ajaxexception":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-popuphelp":{"requires":["moodle-core-tooltip"]},"moodle-core-tooltip":{"requires":["base","node","io-base","moodle-core-notification-dialogue","json-parse","widget-position","widget-position-align","event-outside","cache-base"]},"moodle-core_availability-form":{"requires":["base","node","event","event-delegate","panel","moodle-core-notification-dialogue","json"]},"moodle-backup-backupselectall":{"requires":["node","event","node-event-simulate","anim"]},"moodle-backup-confirmcancel":{"requires":["node","node-event-simulate","moodle-core-notification-confirm"]},"moodle-course-categoryexpander":{"requires":["node","event-key"]},"moodle-course-dragdrop":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification","moodle-course-coursebase","moodle-course-util"]},"moodle-course-formatchooser":{"requires":["base","node","node-event-simulate"]},"moodle-course-management":{"requires":["base","node","io-base","moodle-core-notification-exception","json-parse","dd-constrain","dd-proxy","dd-drop","dd-delegate","node-event-delegate"]},"moodle-course-modchooser":{"requires":["moodle-core-chooserdialogue","moodle-course-coursebase"]},"moodle-course-util":{"requires":["node"],"use":["moodle-course-util-base"],"submodules":{"moodle-course-util-base":{},"moodle-course-util-section":{"requires":["node","moodle-course-util-base"]},"moodle-course-util-cm":{"requires":["node","moodle-course-util-base"]}}},"moodle-form-dateselector":{"requires":["base","node","overlay","calendar"]},"moodle-form-passwordunmask":{"requires":[]},"moodle-form-shortforms":{"requires":["node","base","selector-css3","moodle-core-event"]},"moodle-form-showadvanced":{"requires":["node","base","selector-css3"]},"moodle-question-chooser":{"requires":["moodle-core-chooserdialogue"]},"moodle-question-preview":{"requires":["base","dom","event-delegate","event-key","core_question_engine"]},"moodle-question-qbankmanager":{"requires":["node","selector-css3"]},"moodle-question-searchform":{"requires":["base","node"]},"moodle-availability_completion-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_date-form":{"requires":["base","node","event","io","moodle-core_availability-form"]},"moodle-availability_grade-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_group-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_grouping-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_profile-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-qtype_ddimageortext-dd":{"requires":["node","dd","dd-drop","dd-constrain"]},"moodle-qtype_ddimageortext-form":{"requires":["moodle-qtype_ddimageortext-dd","form_filepicker"]},"moodle-qtype_ddmarker-dd":{"requires":["node","event-resize","dd","dd-drop","dd-constrain","graphics"]},"moodle-qtype_ddmarker-form":{"requires":["moodle-qtype_ddmarker-dd","form_filepicker","graphics","escape"]},"moodle-qtype_ddwtos-dd":{"requires":["node","dd","dd-drop","dd-constrain"]},"moodle-mod_assign-history":{"requires":["node","transition"]},"moodle-mod_attendance-groupfilter":{"requires":["base","node"]},"moodle-mod_bigbluebuttonbn-modform":{"requires":["base","node"]},"moodle-mod_forum-subscriptiontoggle":{"requires":["base-base","io-base"]},"moodle-mod_quiz-autosave":{"requires":["base","node","event","event-valuechange","node-event-delegate","io-form"]},"moodle-mod_quiz-dragdrop":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification","moodle-mod_quiz-quizbase","moodle-mod_quiz-util-base","moodle-mod_quiz-util-page","moodle-mod_quiz-util-slot","moodle-course-util"]},"moodle-mod_quiz-modform":{"requires":["base","node","event"]},"moodle-mod_quiz-questionchooser":{"requires":["moodle-core-chooserdialogue","moodle-mod_quiz-util","querystring-parse"]},"moodle-mod_quiz-quizbase":{"requires":["base","node"]},"moodle-mod_quiz-quizquestionbank":{"requires":["base","event","node","io","io-form","yui-later","moodle-question-qbankmanager","moodle-core-notification-dialogue"]},"moodle-mod_quiz-randomquestion":{"requires":["base","event","node","io","moodle-core-notification-dialogue"]},"moodle-mod_quiz-repaginate":{"requires":["base","event","node","io","moodle-core-notification-dialogue"]},"moodle-mod_quiz-toolboxes":{"requires":["base","node","event","event-key","io","moodle-mod_quiz-quizbase","moodle-mod_quiz-util-slot","moodle-core-notification-ajaxexception"]},"moodle-mod_quiz-util":{"requires":["node","moodle-core-actionmenu"],"use":["moodle-mod_quiz-util-base"],"submodules":{"moodle-mod_quiz-util-base":{},"moodle-mod_quiz-util-slot":{"requires":["node","moodle-mod_quiz-util-base"]},"moodle-mod_quiz-util-page":{"requires":["node","moodle-mod_quiz-util-base"]}}},"moodle-mod_tutorialbooking-dragdrop":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop"]},"moodle-message_airnotifier-toolboxes":{"requires":["base","node","io"]},"moodle-filter_glossary-autolinker":{"requires":["base","node","io-base","json-parse","event-delegate","overlay","moodle-core-event","moodle-core-notification-alert","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-filter_mathjaxloader-loader":{"requires":["moodle-core-event"]},"moodle-editor_atto-editor":{"requires":["node","transition","io","overlay","escape","event","event-simulate","event-custom","node-event-html5","node-event-simulate","yui-throttle","moodle-core-notification-dialogue","moodle-core-notification-confirm","moodle-editor_atto-rangy","handlebars","timers","querystring-stringify"]},"moodle-editor_atto-plugin":{"requires":["node","base","escape","event","event-outside","handlebars","event-custom","timers","moodle-editor_atto-menu"]},"moodle-editor_atto-menu":{"requires":["moodle-core-notification-dialogue","node","event","event-custom"]},"moodle-editor_atto-rangy":{"requires":[]},"moodle-format_grid-gridkeys":{"requires":["event-nav-keys"]},"moodle-report_eventlist-eventfilter":{"requires":["base","event","node","node-event-delegate","datatable","autocomplete","autocomplete-filters"]},"moodle-report_loglive-fetchlogs":{"requires":["base","event","node","io","node-event-delegate"]},"moodle-gradereport_grader-gradereporttable":{"requires":["base","node","event","handlebars","overlay","event-hover"]},"moodle-gradereport_history-userselector":{"requires":["escape","event-delegate","event-key","handlebars","io-base","json-parse","moodle-core-notification-dialogue"]},"moodle-tool_capability-search":{"requires":["base","node"]},"moodle-tool_lp-dragdrop-reorder":{"requires":["moodle-core-dragdrop"]},"moodle-tool_monitor-dropdown":{"requires":["base","event","node"]},"moodle-assignfeedback_editpdf-editor":{"requires":["base","event","node","io","graphics","json","event-move","event-resize","transition","querystring-stringify-simple","moodle-core-notification-dialog","moodle-core-notification-alert","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-atto_accessibilitychecker-button":{"requires":["color-base","moodle-editor_atto-plugin"]},"moodle-atto_accessibilityhelper-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_align-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_bold-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_charmap-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_clear-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_collapse-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_emoticon-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_equation-button":{"requires":["moodle-editor_atto-plugin","moodle-core-event","io","event-valuechange","tabview","array-extras"]},"moodle-atto_html-button":{"requires":["moodle-editor_atto-plugin","event-valuechange"]},"moodle-atto_image-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_indent-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_italic-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_link-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_managefiles-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_managefiles-usedfiles":{"requires":["node","escape"]},"moodle-atto_media-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_noautolink-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_orderedlist-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_rtl-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_strike-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_subscript-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_superscript-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_table-button":{"requires":["moodle-editor_atto-plugin","moodle-editor_atto-menu","event","event-valuechange"]},"moodle-atto_title-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_underline-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_undo-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_unorderedlist-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_wordimport-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-tinymce_mathslate-dialogue":{"requires":["escape","moodle-local_mathslate-editor","moodle-tinymce_mathslate-editor"]},"moodle-tinymce_mathslate-editor":{"requires":["dd-drag","dd-proxy","dd-drop","event","tabview","io-base","json","moodle-tinymce_mathslate-textool","moodle-tinymce_mathslate-mathjaxeditor"]},"moodle-tinymce_mathslate-mathjaxeditor":{"requires":["moodle-tinymce_mathslate-snippeteditor","dd-drop"]},"moodle-tinymce_mathslate-snippeteditor":{"requires":["json"]},"moodle-tinymce_mathslate-textool":{"requires":["dd-drag","dd-proxy","dd-drop","event","json"]}}},"gallery":{"name":"gallery","base":"http:\/\/moodle.scnu.edu.cn\/lib\/yuilib\/gallery\/","combine":true,"comboBase":"http:\/\/moodle.scnu.edu.cn\/theme\/yui_combo.php?","ext":false,"root":"gallery\/1506747004\/","patterns":{"gallery-":{"group":"gallery"}}}},"modules":{"core_filepicker":{"name":"core_filepicker","fullpath":"http:\/\/moodle.scnu.edu.cn\/lib\/javascript.php\/1506747004\/repository\/filepicker.js","requires":["base","node","node-event-simulate","json","async-queue","io-base","io-upload-iframe","io-form","yui2-treeview","panel","cookie","datatable","datatable-sort","resize-plugin","dd-plugin","escape","moodle-core_filepicker","moodle-core-notification-dialogue"]},"core_comment":{"name":"core_comment","fullpath":"http:\/\/moodle.scnu.edu.cn\/lib\/javascript.php\/1506747004\/comment\/comment.js","requires":["base","io-base","node","json","yui2-animation","overlay","escape"]},"mathjax":{"name":"mathjax","fullpath":"https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/mathjax\/2.7.1\/MathJax.js?delayStartupUntil=configured"}}};
+M.yui.loader = {modules: {}};
+
+//]]>
+</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <noscript>
+			<link rel="stylesheet" type="text/css" href="http://moodle.scnu.edu.cn/theme/lambda/style/nojs.css" />
+	</noscript>
+    <!-- Google web fonts -->
+    
+    <script type="text/javascript">
+    function isBrowser() {
+    	var bodyfont="Open+Sans";
+    	var bodyweight="400";
+    	var headingfont="Open+Sans";
+    	var headingweight="700";
+    	var font_languages="";
+        var Sys = {};
+        var ua = navigator.userAgent.toLowerCase();
+        var s;
+        (s = ua.match(/msie ([\d.]+)/)) ? Sys.ie = s[1]: 0;
+        if (Sys.ie) {
+            if (Sys.ie == '9.0' || Sys.ie == '10.0' || Sys.ie == '11.0') {
+                document.write('<link href="https://fonts.googleapis.com/css?family='+bodyfont+':'+bodyweight+'|'+headingfont+':'+headingweight+font_languages+'" rel="stylesheet">')
+            }
+        }else{
+            document.write('<link href="https://fonts.googleapis.com/css?family='+bodyfont+':'+bodyweight+'|'+headingfont+':'+headingweight+font_languages+'" rel="stylesheet">')
+        }
+    }
+    isBrowser();
+    </script></head>
+
+<body  id="page-site-index" class="format-site course path-site dir-ltr lang-en yui-skin-sam yui3-skin-sam moodle-scnu-edu-cn pagelayout-frontpage course-1 context-4 notloggedin  sidebar-enabled  has-region-side-pre used-region-side-pre has-region-side-post empty-region-side-post has-region-footer-left used-region-footer-left has-region-footer-middle used-region-footer-middle has-region-footer-right used-region-footer-right has-region-hidden-dock used-region-hidden-dock">
+
+<div class="skiplinks">
+    <a href="#maincontent" class="skip">Skip to main content</a>
+</div><script type="text/javascript" src="http://moodle.scnu.edu.cn/theme/yui_combo.php?rollup/3.17.2/yui-moodlesimple-min.js"></script><script type="text/javascript" src="http://moodle.scnu.edu.cn/theme/jquery.php/core/jquery-3.1.0.min.js"></script>
+<script type="text/javascript" src="http://moodle.scnu.edu.cn/theme/jquery.php/theme_lambda/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="http://moodle.scnu.edu.cn/theme/jquery.php/theme_lambda/camera.js"></script>
+<script type="text/javascript" src="http://moodle.scnu.edu.cn/theme/jquery.php/theme_lambda/jquery.bxslider32.js"></script>
+<script type="text/javascript" src="http://moodle.scnu.edu.cn/theme/jquery.php/theme_lambda/lambda_customjs.js"></script>
+<script type="text/javascript" src="http://moodle.scnu.edu.cn/lib/javascript.php/1506747004/lib/javascript-static.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+document.body.className += ' jsenabled';
+//]]>
+</script>
+
+
+<div id="sidebar" class="">
+	<aside id="block-region-side-pre" class="block-region" data-blockregion="side-pre" data-droptarget="1"><a class="skip skip-block" id="fsb-1" href="#sb-1">Skip Navigation</a><div id="inst4" class="block_navigation  block" role="navigation" data-block="navigation" data-instanceid="4" aria-labelledby="instance-4-header"><div class="header"><div class="title"><div class="block_action"></div><h2 id="instance-4-header">Navigation</h2></div></div><div class="content"><ul class="block_tree list" role="tree" data-ajax-loader="block_navigation/nav_loader"><li class="type_unknown depth_1 contains_branch current_branch" aria-labelledby="label_1_1"><p class="tree_item branch active_tree_node canexpand navigation_node" role="treeitem" aria-expanded="true" aria-owns="random59f49a9cf018a1_group" data-collapsible="false"><a tabindex="-1" id="label_1_1" href="http://moodle.scnu.edu.cn/">Home</a></p><ul id="random59f49a9cf018a1_group" role="group"><li class="type_activity depth_2 item_with_icon" aria-labelledby="label_2_3"><p class="tree_item hasicon" role="treeitem"><a tabindex="-1" id="label_2_3" title="Forum" href="http://moodle.scnu.edu.cn/mod/forum/view.php?id=20"><img class="icon navicon" alt="Forum" title="Forum" src="http://moodle.scnu.edu.cn/theme/image.php/lambda/forum/1509013818/icon" /><span class="item-content-wrap">平台通知</span></a></p></li><li class="type_system depth_2 contains_branch" aria-labelledby="label_2_4"><p class="tree_item branch" role="treeitem" id="expandable_branch_0_courses" aria-expanded="false" data-requires-ajax="true" data-loaded="false" data-node-id="expandable_branch_0_courses" data-node-key="courses" data-node-type="0"><a tabindex="-1" id="label_2_4" href="http://moodle.scnu.edu.cn/course/index.php">Courses</a></p></li></ul></li></ul></div></div><span class="skip-block-to" id="sb-1"></span><a class="skip skip-block" id="fsb-3" href="#sb-3">Skip Calendar</a><div id="inst3" class="block_calendar_month  block" role="complementary" data-block="calendar_month" data-instanceid="3" aria-labelledby="instance-3-header"><div class="header"><div class="title"><div class="block_action"></div><h2 id="instance-3-header">Calendar</h2></div></div><div class="content"><table class="minicalendar calendartable" summary="October 2017 Calendar"><caption><div class="calendar-controls"><a class="arrow_link previous" href="http://moodle.scnu.edu.cn/?time=1504195200" title="Previous month"><span class="arrow ">&#x25C4;</span><span class="accesshide " >&nbsp;<span class="arrow_text">Previous month</span></span></a><span class="hide"> | </span><span class="current"><a title="This month" href="http://moodle.scnu.edu.cn/calendar/view.php?view=month&amp;time=1509202588&amp;course=1">October 2017</a></span><span class="hide"> | </span><a class="arrow_link next" href="http://moodle.scnu.edu.cn/?time=1509465600" title="Next month"><span class="accesshide " ><span class="arrow_text">Next month</span>&nbsp;</span><span class="arrow ">&#x25BA;</span></a><span class="clearer"><!-- --></span>
+</div></caption><tr class="weekdays"><th scope="col"><abbr title="Monday">Mon</abbr></th>
+<th scope="col"><abbr title="Tuesday">Tue</abbr></th>
+<th scope="col"><abbr title="Wednesday">Wed</abbr></th>
+<th scope="col"><abbr title="Thursday">Thu</abbr></th>
+<th scope="col"><abbr title="Friday">Fri</abbr></th>
+<th scope="col"><abbr title="Saturday">Sat</abbr></th>
+<th scope="col"><abbr title="Sunday">Sun</abbr></th>
+</tr><tr><td class="dayblank">&nbsp;</td>
+<td class="dayblank">&nbsp;</td>
+<td class="dayblank">&nbsp;</td>
+<td class="dayblank">&nbsp;</td>
+<td class="dayblank">&nbsp;</td>
+<td class="dayblank">&nbsp;</td>
+<td class="weekend day">1</td></tr><tr><td class="day">2</td><td class="day">3</td><td class="day">4</td><td class="day">5</td><td class="day">6</td><td class="weekend day">7</td><td class="weekend day">8</td></tr><tr><td class="day">9</td><td class="day">10</td><td class="day">11</td><td class="day">12</td><td class="day">13</td><td class="weekend day">14</td><td class="weekend day">15</td></tr><tr><td class="day">16</td><td class="day">17</td><td class="day">18</td><td class="day">19</td><td class="day">20</td><td class="weekend day">21</td><td class="weekend day">22</td></tr><tr><td class="day">23</td><td class="day">24</td><td class="day">25</td><td class="day">26</td><td class="day">27</td><td class="weekend day today eventnone"><span class="accesshide " >Today Saturday, 28 October </span><a id="59f49a9d002cf59f49a9cf018a3" href="#"
+    data-container="body"
+    data-toggle="popover"
+    data-html="true"
+    data-trigger="hover"
+    data-placement="top"
+    data-title="Today Saturday, 28 October"
+    data-content="No events">28</a></td><td class="weekend day">29</td></tr><tr><td class="day">30</td><td class="day">31</td><td class="dayblank">&nbsp;</td><td class="dayblank">&nbsp;</td><td class="dayblank">&nbsp;</td><td class="dayblank">&nbsp;</td><td class="dayblank">&nbsp;</td></tr></table></div></div><span class="skip-block-to" id="sb-3"></span></aside>    <div id="sidebar-btn"><span></span><span></span><span></span></div>
+</div>
+
+<div id="wrapper">
+
+
+    <header id="page-header" class="clearfix">
+       
+    <div class="container-fluid">    
+    <div class="row-fluid">
+    <!-- HEADER: LOGO AREA -->
+        	
+                        	<div class="span6">
+                <div class="logo-header">
+                	<a class="logo" href="http://moodle.scnu.edu.cn" title="Home">
+                    <img src="//moodle.scnu.edu.cn/pluginfile.php/1/theme_lambda/logo/1509013818/%E5%8B%B7%E5%8B%A4%E4%BA%91%E8%AF%BE%E5%A0%82500.png" class="img-responsive" alt="logo" />                    </a>
+                </div>
+                </div>
+                  	
+            
+            <div class="span6 login-header">
+            <div class="profileblock">
+            
+                    
+				<form class="navbar-form pull-right" method="post" action="http://moodle.scnu.edu.cn/login/index.php?authldap_skipntlmsso=1">
+					<div id="block-login">
+					<div id="user"><i class="fa fa-user"></i></div>
+                    <label for="inputName" class="lambda-sr-only">Username</label>
+					<input id="inputName" class="span2" type="text" name="username" placeholder="Username">
+					<div id="pass"><i class="fa fa-key"></i></div>
+                    <label for="inputPassword" class="lambda-sr-only">Password</label>
+                    <input id="inputPassword" class="span2" type="password" name="password" id="password" placeholder="Password">
+					<button type="submit" id="submit"><span class="lambda-sr-only">Log in</span></button>
+					</div>
+        
+        			<div class="forgotpass">
+        									<a target="_self" href="http://moodle.scnu.edu.cn/login/index.php">Moodle Login Page</a>
+            		 
+					</div>
+        
+				</form>
+			 
+	
+	</div>
+    </div>
+            
+    </div>
+    </div>
+               
+</header>
+
+<header role="banner" class="navbar">
+    <nav role="navigation" class="navbar-inner">
+        <div class="container-fluid">
+            <a class="brand" href="http://moodle.scnu.edu.cn">Front page</a>            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </a>
+            <div class="nav-collapse collapse">
+	    	<!-- add wakey -->
+	    	<ul class="nav college"><li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">分类课程<b class="caret"></b></a><ul class="dropdown-menu"><li><a href = http://moodle.scnu.edu.cn/course/index.php?categoryid=38>【001】信息技术技能与工具</a></li><li><a href = http://moodle.scnu.edu.cn/course/index.php?categoryid=2>【101】教育科学学院</a></li><li><a href = http://moodle.scnu.edu.cn/course/index.php?categoryid=3>【102】政治与行政学院</a></li><li><a href = http://moodle.scnu.edu.cn/course/index.php?categoryid=4>【103】历史文化学院</a></li><li><a href = http://moodle.scnu.edu.cn/course/index.php?categoryid=5>【104】外国语言文化学院</a></li><li><a href = http://moodle.scnu.edu.cn/course/index.php?categoryid=6>【107】国际文化学院</a></li><li><a href = http://moodle.scnu.edu.cn/course/index.php?categoryid=7>【108】美术学院</a></li><li><a href = http://moodle.scnu.edu.cn/course/index.php?categoryid=8>【109】旅游管理学院</a></li><li><a href = http://moodle.scnu.edu.cn/course/index.php?categoryid=9>【111】教育信息技术学院</a></li><li><a href = http://moodle.scnu.edu.cn/course/index.php?categoryid=10>【112】数学科学学院</a></li><li><a href = http://moodle.scnu.edu.cn/course/index.php?categoryid=11>【113】生命科学学院</a></li><li><a href = http://moodle.scnu.edu.cn/course/index.php?categoryid=12>【114】地理科学学院</a></li><li><a href = http://moodle.scnu.edu.cn/course/index.php?categoryid=13>【115】计算机学院</a></li><li><a href = http://moodle.scnu.edu.cn/course/index.php?categoryid=14>【116】心理学院 </a></li><li><a href = http://moodle.scnu.edu.cn/course/index.php?categoryid=15>【117】继续教育学院 </a></li><li><a href = http://moodle.scnu.edu.cn/course/index.php?categoryid=16>【118】网络教育学院</a></li><li><a href = http://moodle.scnu.edu.cn/course/index.php?categoryid=50>【119】马克思主义学院</a></li><li><a href = http://moodle.scnu.edu.cn/course/index.php?categoryid=17>【121】光电子材料与技术研究所</a></li><li><a href = http://moodle.scnu.edu.cn/course/index.php?categoryid=18>【122】生物光子学研究院</a></li><li><a href = http://moodle.scnu.edu.cn/course/index.php?categoryid=19>【123】基础教育培训与研究院</a></li><li><a href = http://moodle.scnu.edu.cn/course/index.php?categoryid=20>【124】脑科学与康复医学研究院</a></li><li><a href = http://moodle.scnu.edu.cn/course/index.php?categoryid=21>【130】文学院</a></li><li><a href = http://moodle.scnu.edu.cn/course/index.php?categoryid=22>【131】经济与管理学院</a></li><li><a href = http://moodle.scnu.edu.cn/course/index.php?categoryid=23>【132】法学院</a></li><li><a href = http://moodle.scnu.edu.cn/course/index.php?categoryid=24>【133】公共管理学院</a></li><li><a href = http://moodle.scnu.edu.cn/course/index.php?categoryid=25>【134】体育科学学院</a></li><li><a href = http://moodle.scnu.edu.cn/course/index.php?categoryid=26>【135】音乐学院</a></li><li><a href = http://moodle.scnu.edu.cn/course/index.php?categoryid=27>【136】物理与电信工程学院</a></li><li><a href = http://moodle.scnu.edu.cn/course/index.php?categoryid=28>【137】化学与环境学院</a></li><li><a href = http://moodle.scnu.edu.cn/course/index.php?categoryid=29>【138】信息光电子科技学院</a></li><li><a href = http://moodle.scnu.edu.cn/course/index.php?categoryid=30>【139】华南先进光电子研究院</a></li><li><a href = http://moodle.scnu.edu.cn/course/index.php?categoryid=31>【151】城市文化学院</a></li><li><a href = http://moodle.scnu.edu.cn/course/index.php?categoryid=32>【152】International Business College</a></li><li><a href = http://moodle.scnu.edu.cn/course/index.php?categoryid=33>【153】软件学院</a></li><li><a href = http://moodle.scnu.edu.cn/course/index.php?categoryid=34>【154】职业教育学院</a></li><li><a href = http://moodle.scnu.edu.cn/course/index.php?categoryid=35>【301】网络中心</a></li><li><a href = http://moodle.scnu.edu.cn/course/index.php?categoryid=36>【306】图书馆</a></li><li><a href = http://moodle.scnu.edu.cn/course/index.php?categoryid=51>【307】教师发展中心</a></li><li><a href = http://moodle.scnu.edu.cn/course/index.php?categoryid=42>【991】军事教研室</a></li><li><a href = http://moodle.scnu.edu.cn/course/index.php?categoryid=41>【992】中小学实验课程</a></li><li><a href = http://moodle.scnu.edu.cn/course/index.php?categoryid=40>【993】通识教育</a></li><li><a href = http://moodle.scnu.edu.cn/course/index.php?categoryid=43>【996】示范课程</a></li><li><a href = http://moodle.scnu.edu.cn/course/index.php?categoryid=39>【998】大学生知识普及</a></li><li><a href = http://moodle.scnu.edu.cn/course/index.php?categoryid=1>【999】其他</a></li></ul></li></ul>                <ul class="nav"><li class="dropdown"><a href="#cm_submenu_1" class="dropdown-toggle" data-toggle="dropdown" title="教学工具">教学工具<b class="caret"></b></a><ul class="dropdown-menu"><li><a title="Office 365" href="https://sso.scnu.edu.cn/AccountService/user/office365.html">Office 365</a></li><li><a title="Camtasia Studio" href="https://www.techsmith.com/camtasia.html">Camtasia Studio</a></li><li><a title="教师信息网" href="http://faculty.scnu.edu.cn/">教师信息网</a></li></ul><li><a title="平台操作指南" href="http://moodle.scnu.edu.cn/course/view.php?id=5">平台操作指南</a></li><li><a title="learnTV" href="https://learntv.scnu.edu.cn">learnTV</a></li><li><a title="平台通知" href="http://moodle.scnu.edu.cn/mod/forum/view.php?id=20">平台通知</a></li><li><a title="数据统计系统" href="http://moodle.scnu.edu.cn/login/statistics_login.php">数据统计系统</a></li><li class="dropdown langmenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown" title="Language">English ‎(en)‎<b class="caret"></b></a><ul class="dropdown-menu"><li><a title="English ‎(en)‎" href="http://moodle.scnu.edu.cn/?lang=en">English ‎(en)‎</a></li><li><a title="Français ‎(fr)‎" href="http://moodle.scnu.edu.cn/?lang=fr">Français ‎(fr)‎</a></li><li><a title="简体中文 ‎(zh_cn)‎" href="http://moodle.scnu.edu.cn/?lang=zh_cn">简体中文 ‎(zh_cn)‎</a></li><li><a title="正體中文 ‎(zh_tw)‎" href="http://moodle.scnu.edu.cn/?lang=zh_tw">正體中文 ‎(zh_tw)‎</a></li></ul></ul>                <ul class="nav pull-right">
+                    <li></li>
+                </ul>
+                
+                                
+                <form id="search" action="http://moodle.scnu.edu.cn/course/search.php" >
+                <div class="divider pull-left"></div>
+                	<label for="coursesearchbox" class="lambda-sr-only">Search courses</label>						
+					<input id="coursesearchbox" type="text" onFocus="if(this.value =='Search courses' ) this.value=''" onBlur="if(this.value=='') this.value='Search courses'" value="Search courses" name="search" >
+					<button type="submit"><span class="lambda-sr-only">Submit</span></button>						
+				</form>
+                
+            </div>
+        </div>
+    </nav>
+</header>
+
+<div id="page" class="container-fluid">
+	
+	<div class="camera_wrap camera_emboss " id="camera_wrap" style="margin-bottom:10px;">
+    
+    		<div data-src="//moodle.scnu.edu.cn/pluginfile.php/1/theme_lambda/slide1image/1509013818/banner04.jpg">
+			<div class="camera_caption moveFromRight">
+            	                			</div>
+		</div>
+        
+    		<div data-src="//moodle.scnu.edu.cn/pluginfile.php/1/theme_lambda/slide2image/1509013818/banner03.jpg">
+			<div class="camera_caption moveFromRight">
+            	                			</div>
+		</div>
+        
+    		<div data-src="//moodle.scnu.edu.cn/pluginfile.php/1/theme_lambda/slide3image/1509013818/banner01.jpg">
+			<div class="camera_caption moveFromRight">
+            	                			</div>
+		</div>
+        
+    		<div data-src="//moodle.scnu.edu.cn/pluginfile.php/1/theme_lambda/slide4image/1509013818/banner02.jpg">
+			<div class="camera_caption moveFromRight">
+            	                			</div>
+		</div>
+        
+        				
+	</div>
+    
+        
+	<!-- add wakey include recommended course  -->
+	<div class="fontpage-intro">
+		    <div class="row-fluid frontpage">
+		        <div class="span8">
+		            <h1>欢迎来到</h1>
+		            <h1 class="main-heading">砺儒云课堂 <span style="font-size: xx-large; color: #888888;">Liru Online Courses</span></h1>
+		            <div class="divider line-01"></div>
+		            <h4>有先进教学理论支撑的在线教学平台</h4>
+		            <p class="plus">砺儒云课堂致力于提供教学、学习与教学管理“一站式”服务，提升教师信息化教学能力和学生信息化学习能力，旨在建设成为高水平在线课程学习平台。砺儒云课堂采用国际主流的在线教学学习系统Moodle构建，以超融合基础架构作为技术架构，实现与多种信息化平台对接，实现利用教学大数据对学生进行跟踪反馈，具有功能插件多样、数据跟踪详细、开源式、扩展性能优异、维护简单等优点。</p>
+		        </div>
+		        <div class="span4"><img class="img-responsive" src="/theme/image.php/lambda/theme/1482310031/index/pic" /></div>
+		    </div>
+		    <div class="spotlight spotlight-v1 spotlight-full arrow-top">
+		        <div class="row-fluid">
+		            <div class="span10">
+		                <h5>为了帮助老师快速了解平台功能和使用方法，通过开放式的讨论共同提高对砺儒云课堂的认识和消化，我们在平台上开设了一门开放性的《Moodle，我教、你学》课程，希望老师在平台上从事教与学的过程中体验教学平台对教学活动的助益。</h5>
+		            </div>
+		            <div class="span2" style="margin-top:15px;">
+		                <p style="text-align:right;">
+		                    <a class="btn btn-primary" href="/course/view.php?id=5">进入课程</a>
+		                </p>
+		            </div>
+		        </div>
+		    </div>
+		</div><div id="home-course-list"><h2>Available courses</h2><div class="divider line-01"></div><div class="courses frontpage-course-list-all"><div class="row-fluid"><div class="image-box span3">
+		<a class="course-box" href="http://moodle.scnu.edu.cn/course/view.php?id=1885">
+		<div class="img-inner">
+		<img src="http://moodle.scnu.edu.cn/pluginfile.php/27420/course/overviewfiles/%E6%88%AA%E5%9B%BE.png" class="img-responsive" width="100%" alt="小学教育技术应用方法实验">
+		</div>
+		<div class="image-box-content">
+		<div class="course-detail">
+		<h5>小学教育技术应用方法实验
+		</h5>
+		<div class="course-summery"><p>&nbsp; &nbsp; &nbsp; &nbsp;本课程根据互联网时代小学卓越教师教学专业能力发展的现实诉求，聚焦小学课程与教学的...</div>
+		<div class="course-teacher">教师：睿 尹</div>
+		<div class="course-studentNum clearfix">
+		<span class="pull-left"><i class="fa fa-building"></i>教育科学学院</span>
+		<span class="pull-right"><i class="fa fa-user"></i>66人在学</span>
+		</div>
+		<div class="mask"></div>
+		</div>
+		</div>
+		</a>
+		</div><div class="image-box span3">
+		<a class="course-box" href="http://moodle.scnu.edu.cn/course/view.php?id=1189">
+		<div class="img-inner">
+		<img src="http://moodle.scnu.edu.cn/pluginfile.php/5111/course/overviewfiles/8ad4b31c8701a18b261154439e2f07082938fec0.jpg" class="img-responsive" width="100%" alt="教育传播学">
+		</div>
+		<div class="image-box-content">
+		<div class="course-detail">
+		<h5>教育传播学
+		</h5>
+		<div class="course-summery"><p>     《教育传播学》是教育技术学专业基础理论课程之一。教学、学习的实质就是实现信息的流动。如何将教育信息结构化、符号化，实现教育信...</div>
+		<div class="course-teacher">教师：小勇 胡</div>
+		<div class="course-studentNum clearfix">
+		<span class="pull-left"><i class="fa fa-building"></i>教育信息技术学院</span>
+		<span class="pull-right"><i class="fa fa-user"></i>68人在学</span>
+		</div>
+		<div class="mask"></div>
+		</div>
+		</div>
+		</a>
+		</div><div class="image-box span3">
+		<a class="course-box" href="http://moodle.scnu.edu.cn/course/view.php?id=1536">
+		<div class="img-inner">
+		<img src="http://moodle.scnu.edu.cn/pluginfile.php/21411/course/overviewfiles/QQ%E6%88%AA%E5%9B%BE20170218224635.png" class="img-responsive" width="100%" alt="中学政治教学研究">
+		</div>
+		<div class="image-box-content">
+		<div class="course-detail">
+		<h5>中学政治教学研究
+		</h5>
+		<div class="course-summery"><p>《中学政治教学研究》是体现师范教育特点、培养思想政治教育专业本科生教学理论与实践能力为核心、培育智慧型、反思型、探究型、实践型的专业化...</div>
+		<div class="course-teacher">教师：丽湛 邝</div>
+		<div class="course-studentNum clearfix">
+		<span class="pull-left"><i class="fa fa-building"></i>政治与行政学院</span>
+		<span class="pull-right"><i class="fa fa-user"></i>114人在学</span>
+		</div>
+		<div class="mask"></div>
+		</div>
+		</div>
+		</a>
+		</div><div class="image-box span3">
+		<a class="course-box" href="http://moodle.scnu.edu.cn/course/view.php?id=84">
+		<div class="img-inner">
+		<img src="http://moodle.scnu.edu.cn/pluginfile.php/3984/course/overviewfiles/ExtensiveReading.jpg" class="img-responsive" width="100%" alt="英语泛读.一(2016)">
+		</div>
+		<div class="image-box-content">
+		<div class="course-detail">
+		<h5>英语泛读.一(2016)
+		</h5>
+		<div class="course-summery">暂无简介</div>
+		<div class="course-teacher">教师：常青 叶</div>
+		<div class="course-studentNum clearfix">
+		<span class="pull-left"><i class="fa fa-building"></i>外国语言文化学院 / 英语泛读</span>
+		<span class="pull-right"><i class="fa fa-user"></i>4人在学</span>
+		</div>
+		<div class="mask"></div>
+		</div>
+		</div>
+		</a>
+		</div><div class="clearfix hidexs"></div><div class="image-box span3">
+		<a class="course-box" href="http://moodle.scnu.edu.cn/course/view.php?id=80">
+		<div class="img-inner">
+		<img src="http://moodle.scnu.edu.cn/pluginfile.php/3288/course/overviewfiles/3_.jpg" class="img-responsive" width="100%" alt="英语泛读.三(2016)">
+		</div>
+		<div class="image-box-content">
+		<div class="course-detail">
+		<h5>英语泛读.三(2016)
+		</h5>
+		<div class="course-summery">暂无简介</div>
+		<div class="course-teacher">教师：波 王</div>
+		<div class="course-studentNum clearfix">
+		<span class="pull-left"><i class="fa fa-building"></i>外国语言文化学院 / 英语泛读</span>
+		<span class="pull-right"><i class="fa fa-user"></i>322人在学</span>
+		</div>
+		<div class="mask"></div>
+		</div>
+		</div>
+		</a>
+		</div><div class="image-box span3">
+		<a class="course-box" href="http://moodle.scnu.edu.cn/course/view.php?id=4172">
+		<div class="img-inner">
+		<img src="http://moodle.scnu.edu.cn/pluginfile.php/53269/course/overviewfiles/%E7%89%A9%E7%90%86%E5%8C%96%E5%AD%A61.jpg" class="img-responsive" width="100%" alt="2017物理化学 （环境科学、环境工程）">
+		</div>
+		<div class="image-box-content">
+		<div class="course-detail">
+		<h5>2017物理化学 （环境科学、环境工程）
+		</h5>
+		<div class="course-summery"><p>课程简介：物理化学课程是化学及环境、材料、能源等近化学类专业的一门基础理论课。课程学习的目的是在已学过一些先行课的基础上，运用物理和数...</div>
+		<div class="course-teacher">教师：广平 何、艳辉 孙、蕊 杨</div>
+		<div class="course-studentNum clearfix">
+		<span class="pull-left"><i class="fa fa-building"></i>化学与环境学院 / 物理化学</span>
+		<span class="pull-right"><i class="fa fa-user"></i>116人在学</span>
+		</div>
+		<div class="mask"></div>
+		</div>
+		</div>
+		</a>
+		</div><div class="image-box span3">
+		<a class="course-box" href="http://moodle.scnu.edu.cn/course/view.php?id=1543">
+		<div class="img-inner">
+		<img src="http://moodle.scnu.edu.cn/pluginfile.php/22678/course/overviewfiles/wjhx.png" class="img-responsive" width="100%" alt="无机化学(下)">
+		</div>
+		<div class="image-box-content">
+		<div class="course-detail">
+		<h5>无机化学(下)
+		</h5>
+		<div class="course-summery">暂无简介</div>
+		<div class="course-teacher">教师：霞 万、泳聪 区、辉 张、伟光 章、军 范</div>
+		<div class="course-studentNum clearfix">
+		<span class="pull-left"><i class="fa fa-building"></i>化学与环境学院 / 无机化学</span>
+		<span class="pull-right"><i class="fa fa-user"></i>147人在学</span>
+		</div>
+		<div class="mask"></div>
+		</div>
+		</div>
+		</a>
+		</div><div class="image-box span3">
+		<a class="course-box" href="http://moodle.scnu.edu.cn/course/view.php?id=81">
+		<div class="img-inner">
+		<img src="http://moodle.scnu.edu.cn/pluginfile.php/3405/course/overviewfiles/ET%20IN%20TEFL.jpg" class="img-responsive" width="100%" alt="外语教育技术（2016）">
+		</div>
+		<div class="image-box-content">
+		<div class="course-detail">
+		<h5>外语教育技术（2016）
+		</h5>
+		<div class="course-summery"><p>本课程是英语系英语教育本科专业必修课，主要讲授英语教师的基本技术素养，并结合英语课程标准的目标结构讲授技术在培养英语听说读写等方面的教...</div>
+		<div class="course-teacher">教师：晓斌 刘</div>
+		<div class="course-studentNum clearfix">
+		<span class="pull-left"><i class="fa fa-building"></i>外国语言文化学院</span>
+		<span class="pull-right"><i class="fa fa-user"></i>215人在学</span>
+		</div>
+		<div class="mask"></div>
+		</div>
+		</div>
+		</a>
+		</div><div class="clearfix hidexs"></div></div></div></div><div id="home-course-list"><h2>开放课程</h2><div class="divider line-01"></div><div class="courses frontpage-course-list-all"><div class="row-fluid"><div class="image-box span3">
+		<a class="course-box" href="http://moodle.scnu.edu.cn/course/view.php?id=5">
+		<div class="img-inner">
+		<img src="http://moodle.scnu.edu.cn/pluginfile.php/271/course/overviewfiles/writing-notes-idea-conference-medium.jpg" class="img-responsive" width="100%" alt="Moodle，我教&你学">
+		</div>
+		<div class="image-box-content">
+		<div class="course-detail">
+		<h5>Moodle，我教&你学
+		</h5>
+		<div class="course-summery"><p>为配合我校“互联网＋创新人才培养行动计划”工作的落实，网络中心探索性地建立了Moodle的”砺儒云课堂“在线教学平台”，这一平台已经成...</div>
+		<div class="course-teacher">教师：Nanhui Lin、君仪 徐、辉琼 罗、政松 陈、骏 黄</div>
+		<div class="course-studentNum clearfix">
+		<span class="pull-left"><i class="fa fa-building"></i>信息技术技能与工具</span>
+		<span class="pull-right"><i class="fa fa-user"></i>15人在学</span>
+		</div>
+		<div class="mask"></div>
+		</div>
+		</div>
+		</a>
+		</div><div class="image-box span3">
+		<a class="course-box" href="http://moodle.scnu.edu.cn/course/view.php?id=3643">
+		<div class="img-inner">
+		<img src="http://moodle.scnu.edu.cn/pluginfile.php/49039/course/overviewfiles/Business%20Statistics.jpg" class="img-responsive" width="100%" alt="商务统计学 Business Statistics（课程参考）">
+		</div>
+		<div class="image-box-content">
+		<div class="course-detail">
+		<h5>商务统计学 Business Statistics（课程参考）
+		</h5>
+		<div class="course-summery"><p>This course aims to introduce students to the fundamental statistic...</div>
+		<div class="course-teacher">教师：少明 柴</div>
+		<div class="course-studentNum clearfix">
+		<span class="pull-left"><i class="fa fa-building"></i>示范课程</span>
+		<span class="pull-right"><i class="fa fa-user"></i>3人在学</span>
+		</div>
+		<div class="mask"></div>
+		</div>
+		</div>
+		</a>
+		</div><div class="image-box span3">
+		<a class="course-box" href="http://moodle.scnu.edu.cn/course/view.php?id=4206">
+		<div class="img-inner">
+		<img src="http://moodle.scnu.edu.cn/pluginfile.php/67209/course/overviewfiles/%E9%9B%85%E5%85%B8%E5%AD%A6%E9%99%A2.jpg" class="img-responsive" width="100%" alt="博雅华师">
+		</div>
+		<div class="image-box-content">
+		<div class="course-detail">
+		<h5>博雅华师
+		</h5>
+		<div class="course-summery"><p>华南师范大学通识教育课程期待您的参与！</p></div>
+		<div class="course-teacher">教师：处 教务</div>
+		<div class="course-studentNum clearfix">
+		<span class="pull-left"><i class="fa fa-building"></i>通识教育</span>
+		<span class="pull-right"><i class="fa fa-user"></i>2人在学</span>
+		</div>
+		<div class="mask"></div>
+		</div>
+		</div>
+		</a>
+		</div><div class="image-box span3">
+		<a class="course-box" href="http://moodle.scnu.edu.cn/course/view.php?id=1902">
+		<div class="img-inner">
+		<img src="http://moodle.scnu.edu.cn/pluginfile.php/31097/course/overviewfiles/zxkcyp.png" class="img-responsive" width="100%" alt="在线课程样片">
+		</div>
+		<div class="image-box-content">
+		<div class="course-detail">
+		<h5>在线课程样片
+		</h5>
+		<div class="course-summery"><p>本课程所提供的全部视频皆有高教社音像出版部提供，免费提供给各位师生学习参考</p></div>
+		<div class="course-teacher">教师：南晖 林</div>
+		<div class="course-studentNum clearfix">
+		<span class="pull-left"><i class="fa fa-building"></i>信息技术技能与工具</span>
+		<span class="pull-right"><i class="fa fa-user"></i>51人在学</span>
+		</div>
+		<div class="mask"></div>
+		</div>
+		</div>
+		</a>
+		</div><div class="clearfix hidexs"></div></div></div></div>	<div id ="page-header-nav" class="clearfix"> </div>
+    <div id="page-content" class="row-fluid">
+    	            <div id="region-bs-main-and-pre" class="span9">
+            <div class="row-fluid">
+            	                <section id="region-main" class="span8">
+                                    	<span class="notifications" id="user-notifications"></span>
+<div role="main"><span id="maincontent"></span><div class="box mdl-align"><form id="coursesearch" action="http://moodle.scnu.edu.cn/course/search.php" method="get"><fieldset class="coursesearchbox invisiblefieldset"><label for="shortsearchbox">Search courses: </label><input type="text" id="shortsearchbox" size="12" name="search" value="" /><input type="submit" value="Go" /></fieldset></form></div><br /></div>        		</section>
+        	            </div>
+        	</div>
+        <aside id="block-region-side-post" class="span3 block-region" data-blockregion="side-post" data-droptarget="1"></aside>    </div>
+
+    
+	<a href="#top" class="back-to-top"><i class="fa fa-chevron-circle-up fa-3x"></i><span class="lambda-sr-only">Back</span></a>
+
+</div>
+
+	<footer id="page-footer" class="container-fluid">
+			<div class="row-fluid">
+		<aside id="block-region-footer-left" class="span4 block-region" data-blockregion="footer-left" data-droptarget="1"><a class="skip skip-block" id="fsb-5" href="#sb-5">Skip 平台简介</a><div id="inst12733" class="block_html  block" role="complementary" data-block="html" data-instanceid="12733" aria-labelledby="instance-12733-header"><div class="header"><div class="title"><div class="block_action"></div><h2 id="instance-12733-header">平台简介</h2></div></div><div class="content"><div class="no-overflow"><p style=" margin-bottom:15px;border-bottom: 1px solid #545454;padding-bottom:15px; "><span style="line-height: 1.5;"><img src="http://moodle.scnu.edu.cn/pluginfile.php/23429/block_html/content/lrrkt-r.png" alt="" width="220" height="57" role="presentation" class="img-responsive atto_image_button_text-bottom"></span></p><p></p><p><span style="line-height: 1.5;">砺儒云课堂致力于提供教学、学习与教学管理“一站式”服务，提升教师信息化教学能力和学生信息化学习能力，旨在建设成为高水平在线课程学习平台。砺儒云课堂采用国际主流的在线教学学习系统Moodle构建，以超融合基础架构作为技术架构，实现与多种信息化平台对接，实现利用教学大数据对学生进行跟踪反馈，具有功能插件多样、数据跟踪详细、开源式、扩展性能优异、维护简单等优点。</span></p></div></div></div><span class="skip-block-to" id="sb-5"></span></aside><aside id="block-region-footer-middle" class="span4 block-region" data-blockregion="footer-middle" data-droptarget="1"><a class="skip skip-block" id="fsb-6" href="#sb-6">Skip 砺儒手机端</a><div id="inst12734" class="block_html  block" role="complementary" data-block="html" data-instanceid="12734" aria-labelledby="instance-12734-header"><div class="header"><div class="title"><div class="block_action"></div><h2 id="instance-12734-header">砺儒手机端</h2></div></div><div class="content"><div class="no-overflow"><div class="text-center span6" style="margin-top: 15px;">
+<p><img src="http://moodle.scnu.edu.cn/pluginfile.php/23430/block_html/content/a94ead7.jpg" alt="华南师范大学企业号" width="150" height="150" style="height: 150px;" class="img-responsive atto_image_button_text-bottom"></p>
+<p style="margin-top: 10px; font-size: 14px;">华师企业号-砺儒云课堂</p>
+</div>
+<div class="text-center span6" style="margin-top: 15px;">
+<p><img src="http://moodle.scnu.edu.cn/pluginfile.php/23430/block_html/content/gh_c02f559570f3_258.jpg" alt="砺儒小程序" width="150" height="150" style="height: 150px;" class="img-responsive atto_image_button_text-bottom"></p>
+<p style="margin-top: 10px; font-size: 14px;">砺儒小程序</p>
+</div></div></div></div><span class="skip-block-to" id="sb-6"></span></aside><aside id="block-region-footer-right" class="span4 block-region" data-blockregion="footer-right" data-droptarget="1"><a class="skip skip-block" id="fsb-7" href="#sb-7">Skip 联系我们</a><div id="inst12735" class="block_html  block" role="complementary" data-block="html" data-instanceid="12735" aria-labelledby="instance-12735-header"><div class="header"><div class="title"><div class="block_action"></div><h2 id="instance-12735-header">联系我们</h2></div></div><div class="content"><div class="no-overflow"><p style="margin-bottom:30px;">我们致力推进于学校信息化全方位发展，愿以高度的责任感为学校教职工提供最热情与周到的服务，我们将尽最大努力为老师的教学提供技术支持，欢迎随时联系我们。</p>
+<p><i class="fa fa-map-marker"></i> 地址：<a href="###">广东省广州天河区中山大道西55号</a></p>
+<p><i class="fa fa-phone"></i> 电话：<a href="###">(020) 39317219</a></p>
+<p><i class="fa fa-envelope"></i> 邮箱：<a href="mailto:moodle@scnu.edu.cn">moodle@scnu.edu.cn</a></p></div></div></div><span class="skip-block-to" id="sb-7"></span></aside> 	</div>
+
+	<div class="footerlinks">
+    	<div class="row-fluid">
+    		<p class="helplink"></p>
+    		<div class="footnote"><p>Copyright © 2017 South China Normal University.All Rights Reserved</p></div>		</div>
+        
+            		
+    	        
+   	</div><div class="logininfo">You are not logged in. (<a href="http://moodle.scnu.edu.cn/login/index.php">Log in</a>)</div>	</footer>
+
+    
+<!-- Piwik -->
+<script type="text/javascript">
+  var _paq = _paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//piwik.scnu.edu.cn/";
+    _paq.push(['setTrackerUrl', u+'piwik.php']);
+    _paq.push(['setSiteId', '3']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<!-- End Piwik Code --><script type="text/javascript">
+//<![CDATA[
+var require = {
+    baseUrl : 'http://moodle.scnu.edu.cn/lib/requirejs.php/1506747004/',
+    // We only support AMD modules with an explicit define() statement.
+    enforceDefine: true,
+    skipDataMain: true,
+    waitSeconds : 0,
+
+    paths: {
+        jquery: 'http://moodle.scnu.edu.cn/lib/javascript.php/1506747004/lib/jquery/jquery-3.1.0.min',
+        jqueryui: 'http://moodle.scnu.edu.cn/lib/javascript.php/1506747004/lib/jquery/ui-1.12.1/jquery-ui.min',
+        jqueryprivate: 'http://moodle.scnu.edu.cn/lib/javascript.php/1506747004/lib/requirejs/jquery-private'
+    },
+
+    // Custom jquery config map.
+    map: {
+      // '*' means all modules will get 'jqueryprivate'
+      // for their 'jquery' dependency.
+      '*': { jquery: 'jqueryprivate' },
+
+      // 'jquery-private' wants the real jQuery module
+      // though. If this line was not here, there would
+      // be an unresolvable cyclic dependency.
+      jqueryprivate: { jquery: 'jquery' }
+    }
+};
+
+//]]>
+</script>
+<script type="text/javascript" src="http://moodle.scnu.edu.cn/lib/javascript.php/1506747004/lib/requirejs/require.min.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+require(['core/first'], function() {
+;
+require(["media_videojs/loader"], function(loader) {
+    loader.setUp(function(videojs) {
+        videojs.options.flash.swf = "http://moodle.scnu.edu.cn/media/player/videojs/videojs/video-js.swf";
+videojs.addLanguage("en",{
+ "Play": "Play",
+ "Pause": "Pause",
+ "Current Time": "Current Time",
+ "Duration Time": "Duration Time",
+ "Remaining Time": "Remaining Time",
+ "Stream Type": "Stream Type",
+ "LIVE": "LIVE",
+ "Loaded": "Loaded",
+ "Progress": "Progress",
+ "Fullscreen": "Fullscreen",
+ "Non-Fullscreen": "Non-Fullscreen",
+ "Mute": "Mute",
+ "Unmute": "Unmute",
+ "Playback Rate": "Playback Rate",
+ "Subtitles": "Subtitles",
+ "subtitles off": "subtitles off",
+ "Captions": "Captions",
+ "captions off": "captions off",
+ "Chapters": "Chapters",
+ "Close Modal Dialog": "Close Modal Dialog",
+ "Descriptions": "Descriptions",
+ "descriptions off": "descriptions off",
+ "Audio Track": "Audio Track",
+ "You aborted the media playback": "You aborted the media playback",
+ "A network error caused the media download to fail part-way.": "A network error caused the media download to fail part-way.",
+ "The media could not be loaded, either because the server or network failed or because the format is not supported.": "The media could not be loaded, either because the server or network failed or because the format is not supported.",
+ "The media playback was aborted due to a corruption problem or because the media used features your browser did not support.": "The media playback was aborted due to a corruption problem or because the media used features your browser did not support.",
+ "No compatible source was found for this media.": "No compatible source was found for this media.",
+ "The media is encrypted and we do not have the keys to decrypt it.": "The media is encrypted and we do not have the keys to decrypt it.",
+ "Play Video": "Play Video",
+ "Close": "Close",
+ "Modal Window": "Modal Window",
+ "This is a modal window": "This is a modal window",
+ "This modal can be closed by pressing the Escape key or activating the close button.": "This modal can be closed by pressing the Escape key or activating the close button.",
+ ", opens captions settings dialog": ", opens captions settings dialog",
+ ", opens subtitles settings dialog": ", opens subtitles settings dialog",
+ ", opens descriptions settings dialog": ", opens descriptions settings dialog",
+ ", selected": ", selected"
+});
+
+    });
+});;
+require(["block_navigation/navblock"], function(amd) { amd.init("4"); });;
+require(["block_settings/settingsblock"], function(amd) { amd.init("5", null); });;
+
+require(['jquery'], function($) {
+    require(['theme_bootstrapbase/bootstrap'], function() {
+        $('#59f49a9d002cf59f49a9cf018a3').popover();
+    });
+});
+;
+
+require(['core/yui'], function(Y) {
+    M.util.init_skiplink(Y);
+});
+;
+
+require(['jquery'], function($) {
+    $('#single_select59f49a9cf018a8').change(function() {
+        $('#single_select_f59f49a9cf018a7').submit();
+    });
+});
+;
+require(["core/log"], function(amd) { amd.setConfig({"level":"warn"}); });
+});
+//]]>
+</script>
+<script type="text/javascript" src="http://moodle.scnu.edu.cn/theme/javascript.php/lambda/1509013818/footer"></script>
+<script type="text/javascript">
+//<![CDATA[
+M.str = {"moodle":{"lastmodified":"Last modified","name":"Name","error":"Error","info":"Information","yes":"Yes","no":"No","ok":"OK","viewallcourses":"View all courses","cancel":"Cancel","morehelp":"More help","loadinghelp":"Loading...","confirm":"Confirm","areyousure":"Are you sure?","closebuttontitle":"Close","unknownerror":"Unknown error"},"repository":{"type":"Type","size":"Size","invalidjson":"Invalid JSON string","nofilesattached":"No files attached","filepicker":"File picker","logout":"Logout","nofilesavailable":"No files available","norepositoriesavailable":"Sorry, none of your current repositories can return files in the required format.","fileexistsdialogheader":"File exists","fileexistsdialog_editor":"A file with that name has already been attached to the text you are editing.","fileexistsdialog_filemanager":"A file with that name has already been attached","renameto":"Rename to \"{$a}\"","referencesexist":"There are {$a} alias\/shortcut files that use this file as their source","select":"Select"},"admin":{"confirmdeletecomments":"You are about to delete comments, are you sure?","confirmation":"Confirmation"}};
+//]]>
+</script>
+<script type="text/javascript">
+//<![CDATA[
+(function() {Y.use("moodle-filter_mathjaxloader-loader",function() {M.filter_mathjaxloader.configure({"mathjaxconfig":"\n\nMathJax.Hub.Config({\n    config: [\"Accessible.js\", \"Safe.js\"],\n    errorSettings: { message: [\"!\"] },\n    skipStartupTypeset: true,\n    messageStyle: \"none\"\n});\n","lang":"en"});
+});
+Y.use("moodle-filter_glossary-autolinker",function() {M.filter_glossary.init_filter_autolinking({"courseid":0});
+});
+Y.use("moodle-theme_lambda-sidebar",function() {M.theme_lambda.sidebar.init();
+});
+M.util.help_popups.setup(Y);
+Y.use("moodle-core-popuphelp",function() {M.core.init_popuphelp();
+});
+M.util.init_block_hider(Y, {"id":"inst4","title":"Navigation","preference":"block4hidden","tooltipVisible":"Hide Navigation block","tooltipHidden":"Show Navigation block"});
+M.util.init_block_hider(Y, {"id":"inst3","title":"Calendar","preference":"block3hidden","tooltipVisible":"Hide Calendar block","tooltipHidden":"Show Calendar block"});
+M.util.init_block_hider(Y, {"id":"inst12733","title":"\u5e73\u53f0\u7b80\u4ecb","preference":"block12733hidden","tooltipVisible":"Hide \u5e73\u53f0\u7b80\u4ecb block","tooltipHidden":"Show \u5e73\u53f0\u7b80\u4ecb block"});
+M.util.init_block_hider(Y, {"id":"inst12734","title":"\u783a\u5112\u624b\u673a\u7aef","preference":"block12734hidden","tooltipVisible":"Hide \u783a\u5112\u624b\u673a\u7aef block","tooltipHidden":"Show \u783a\u5112\u624b\u673a\u7aef block"});
+M.util.init_block_hider(Y, {"id":"inst12735","title":"\u8054\u7cfb\u6211\u4eec","preference":"block12735hidden","tooltipVisible":"Hide \u8054\u7cfb\u6211\u4eec block","tooltipHidden":"Show \u8054\u7cfb\u6211\u4eec block"});
+ M.util.js_pending('random59f49a9cf018a12'); Y.on('domready', function() { M.util.js_complete("init");  M.util.js_complete('random59f49a9cf018a12'); });
+})();
+//]]>
+</script>
+
+<!--[if lte IE 9]>
+<script src="http://moodle.scnu.edu.cn/theme/lambda/javascript/ie/iefix.js"></script>
+<![endif]-->
+
+<script>
+	jQuery(function(){
+		jQuery('#camera_wrap').camera({
+			fx: 'random',
+			height: 'auto',
+			loader: 'bar',
+			thumbnails: false,
+			pagination: false,
+			autoAdvance: true,
+			hover: false,
+			navigationHover: true,
+			mobileNavHover: true,
+			opacityOnGrid: false
+		});
+	});
+
+</script>
+
+</body>
+</html>

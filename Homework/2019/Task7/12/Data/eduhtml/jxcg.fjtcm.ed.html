@@ -1,0 +1,152 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>福建中医药大学成果网</title>
+<link rel="stylesheet" type="text/css" href="/r/cms/cgw/cgw/css/jwcone/css.css">
+<script type="text/javascript" src="/r/cms/cgw/cgw/js/jquery.min.js"></script>
+<script type="text/javascript" src="/r/cms/cgw/cgw/js/jquery-1.4a2.min.js"></script>
+<script type="text/javascript" src="/r/cms/cgw/cgw/js/jquery.KinSlideshow-1.1.js"></script>
+<script src="/r/cms/front.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(function() {
+  Cms.siteFlow("",location.href, document.referrer);
+});
+</script>
+<script type="text/javascript">
+$(document).ready(function() {
+	
+$("ul#topnav li").hover(function() { //Hover over event on list item
+	//$(this).css({ 'background' : '#1376c9 url(topnav_active.gif) repeat-x'}); //Add background color + image on hovered list item
+	$(this).find("span").show(); //Show the subnav
+} , function() { //on hover out...
+	$(this).css({ 'background' : 'none'}); //Ditch the background
+	$(this).find("span").hide(); //Hide the subnav
+});
+	
+});
+
+ 
+  $(function(){
+      $("#KinSlideshow").KinSlideshow();
+  })
+
+</script>
+<script language="JavaScript">
+function correctPNG() // correctly handle PNG transparency in Win IE 5.5 & 6.
+{
+var arVersion = navigator.appVersion.split("MSIE")
+var version = parseFloat(arVersion[1])
+if ((version >= 5.5) && (document.body.filters)){
+for(var j=0; j<document.images.length; j++){
+var images = document.images[j]
+var imagesName = images.src.toUpperCase()
+if (imagesName.substring(imagesName.length-3, imagesName.length) == "PNG"){
+var imagesID = (images.id) ? "id='" + images.id + "' " : ""
+var imagesClass = (images.className) ? "class='" + images.className + "' " : ""
+var imagesTitle = (images.title) ? "title='" + images.title + "' " : "title='" + images.alt + "' "
+var imagesStyle = "display:inline-block;" + images.style.cssText
+var strNewHTML = "<span " + imagesID + imagesClass + imagesTitle+ " style=\"" + "width:" + images.width + "px; height:" + images.height + "px;" + imagesStyle + ";"
++ "filter:progid:DXImageTransform.Microsoft.AlphaImageLoader"+ "(src=\'" + images.src + "\', sizingMethod='scale');\"></span>"
+images.outerHTML = strNewHTML
+j = j-1
+}
+}
+}
+}
+window.attachEvent("onload", correctPNG);
+</script>
+
+
+</head>
+<body class="whole">
+<div class="content">
+  <!--头部开始-->
+  <div class="header">
+    <div class="topbg"> <img src="/r/cms/cgw/cgw/img/images/bg.png" width="1001"/></div>
+    <div class="logo"> <img src="/r/cms/cgw/cgw/img/images/logo.png"  border="0" class="logo_img"/></div>
+  </div>
+  <!--头部结束-->
+  <!--导航开始-->
+
+  <div class="menu">
+<table width="1001" height="15" border="0" cellpadding="0" cellspacing="0" style="margin:0 auto;">
+<tr>                                                                                                   
+<th align="center"><img src="/r/cms/cgw/cgw/img/images/n_bottom.gif" width="1001"  ></th>			
+</tr>
+</table>
+  <div class="container">	
+    <ul id="topnav">
+        <li class="topnav_li"><a href="/" class="index">首页</a></li>
+        <li class="topnav_li">
+            <a href="http://jxcg.fjtcm.edu.cn:80/tzgg/index.jhtml" class="index1">通知公告</a>
+        </li>
+        <li class="topnav_li">
+            <a href="http://jxcg.fjtcm.edu.cn/sjtd/index.jhtml" class="index1">成果申报</a>
+        </li>
+        <li class="topnav_li">
+            <a href="http://jxcg.fjtcm.edu.cn/20150428105025/index.jhtml" class="index1">成果展示</a>
+        </li>
+
+    </ul>
+</div>
+  </div>
+  <!--导航结束-->
+ <!--中心开始-->
+ <div class="center">
+ <table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td nowrap="nowrap" valign="top" width="336">
+	 <!--左边开始-->
+	 　　<div class="jxcg_left">
+	       <div class="jxcg_notice"><span class="jxcg_span"><a href="/tzgg/index.jhtml">更多</a></span><font color="#410e0b">*</font>&nbsp;通知公告</div> 
+	  <ul class="jxcg_ul">
+	    <li><a href="http://jxcg.fjtcm.edu.cn:80/tzgg/91292.jhtml" title="福建省教育厅关于公布福建省第七届高等教育教学成果奖项目的通知">福建省教育厅关于公布福建省第...</a></li>
+	    <li><a href="http://jxcg.fjtcm.edu.cn:80/tzgg/24984.jhtml" title="福建省教育厅关于开展第七届高等教育教学成果奖励工作的通知">福建省教育厅关于开展第七届高...</a></li>
+	  </ul>
+	    </div>
+
+   <!--左边结束-->
+	
+	</td>
+	<td nowrap="nowrap" valign="top" width="336">
+	 <!-- 中间开始-->
+  　<div class="jxcg_left">
+	       <div class="jxcg_notice"><span class="jxcg_span"><a href="/sjtd/index.jhtml">更多</a></span><font color="#410e0b">*</font>&nbsp;成果申报</div> 
+	  <ul class="jxcg_ul">
+	    <li><a href="http://jxcg.fjtcm.edu.cn:80/sjtd/index.jhtml" title="申报省级特等奖">申报省级特等奖</a></li>
+	    <li><a href="http://jxcg.fjtcm.edu.cn:80/sjyd/index.jhtml" title="申报省级一等奖">申报省级一等奖</a></li>
+	    <li><a href="http://jxcg.fjtcm.edu.cn:80/sjed/index.jhtml" title="申报省级二等奖">申报省级二等奖</a></li>
+	  </ul>
+	    </div>
+   　<!--中间结束-->
+	
+	</td>
+    <td nowrap="nowrap" valign="top">
+   <!--右边开始-->
+ 　<div class="jxcg_left">
+	       <div class="jxcg_notice"><span class="jxcg_span"><a href="/20150428105025/index.jhtml">更多</a></span><font color="#410e0b">*</font>&nbsp;成果展示</div> 
+	  <ul class="jxcg_ul">
+	    <li><a href="http://jxcg.fjtcm.edu.cn:80/20150428105025/index.jhtml" title="2014年省教学成果特等奖">2014年省教学成果特等奖</a></li>
+	    <li><a href="http://jxcg.fjtcm.edu.cn:80/20150428105113/index.jhtml" title="2014年省教学成果一等奖">2014年省教学成果一等奖</a></li>
+	    <li><a href="http://jxcg.fjtcm.edu.cn:80/20150428105130/index.jhtml" title="2014年省教学成果二等奖">2014年省教学成果二等奖</a></li>
+	  </ul>
+	    </div>
+
+   <!--右边开始--> 
+</td>
+  </tr>
+</table>
+</div>
+ <!--中心结束--> 
+ <div class="spacer"></div>
+  <!--底部开始--> 
+ <div class="footer2">
+     <p>地址:福建省福州市闽侯上街邱阳路1号 邮政编码:350122</p>
+<p>版权所有(C)福建中医药大学闽ICP备05005462</p>
+ </div>
+  <!--底部结束-->  
+   </div>  
+</div>
+</body>
+</html>

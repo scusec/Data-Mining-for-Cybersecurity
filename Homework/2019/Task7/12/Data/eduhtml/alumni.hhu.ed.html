@@ -1,0 +1,139 @@
+
+<html>
+    <head>
+        <title>
+            抱歉！出错了。       
+        </title>
+        <LINK href="/css/css.css" type="text/css" rel="stylesheet">
+    </head>
+    <body  leftMargin="0" topMargin="0" bgColor="#f7f7f7">
+        <TABLE cellSpacing="0" cellPadding="0" width="500" border="0" height="250" align="center" class="ourfont">
+            <TBODY>
+                <tr>
+                    <td height="50"></td>
+                </tr>
+                <TR>            
+                    <TD height="13">
+                        <TABLE id="" cellSpacing="0" cellPadding="0" width="100%" border="0" class="ourfont" height="13" background="/images/error/inside_top_bg1.gif">
+                            <TR>
+                                <TD width="1" height="13" bgcolor="#6b6d6b"><img src="/images/error/blank.gif" width="1" height="1"></TD>
+                                <TD background="/images/error/top.gif"><img src="/images/error/blank.gif" width="1" height="1"></TD>
+                                <TD width="1" bgcolor="#6b6d6b"><img src="/images/error/blank.gif" width="1" height="1"></TD>
+                            </TR>
+                        </TABLE>
+                    </TD>
+                </TR>
+                <TR>
+                    <TD>
+                        <div align="center">
+                            <TABLE id="Table3" cellSpacing="0" cellPadding="0" width="100%" border="0" class="ourfont" height="100%">
+                                <TR>
+                                    <TD background="/images/error/inside_left_bg.gif"></TD>
+                                    <TD>
+                                        <TABLE class="ourfont" id="Table4" height="100%" cellSpacing="0" cellPadding="0" width="100%" border="0">
+                                            <TR>
+                                                <TD height="35" align="center" valign="top" bgColor="#ffffff" class="ourfont1" id="TD1">
+                                                    <TABLE id="Table1" cellSpacing="0" cellPadding="0" width="100%" border="0" class="ourfont" height="100%" align="center" bgColor="#ffffff">
+                                                        <TR>
+                                                            <TD height="30"></TD>
+                                                        </TR>
+                                                        <TR>
+                                                            <TD height="1">
+                                                                <TABLE id="Table2" cellSpacing="0" cellPadding="0" width="100%" border="0">
+                                                                    <TR>
+                                                                        <TD width="20">&nbsp;</TD>
+                                                                        <TD width="1%" valign="top" align="right"><img src="/images/error/error.gif" width="39" height="39"></TD>
+                                                                        <TD>信息：com.mysql.jdbc.CommunicationsException:&nbsp;Communications&nbsp;link&nbsp;failure&nbsp;due&nbsp;to&nbsp;underlying&nbsp;exception:&nbsp;
+
+**&nbsp;BEGIN&nbsp;NESTED&nbsp;EXCEPTION&nbsp;**&nbsp;
+
+java.net.ConnectException
+MESSAGE:&nbsp;Connection&nbsp;refused
+
+STACKTRACE:
+
+java.net.ConnectException:&nbsp;Connection&nbsp;refused
+	at&nbsp;java.net.PlainSocketImpl.socketConnect(Native&nbsp;Method)
+	at&nbsp;java.net.PlainSocketImpl.doConnect(PlainSocketImpl.java:333)
+	at&nbsp;java.net.PlainSocketImpl.connectToAddress(PlainSocketImpl.java:195)
+	at&nbsp;java.net.PlainSocketImpl.connect(PlainSocketImpl.java:182)
+	at&nbsp;java.net.SocksSocketImpl.connect(SocksSocketImpl.java:366)
+	at&nbsp;java.net.Socket.connect(Socket.java:519)
+	at&nbsp;java.net.Socket.connect(Socket.java:469)
+	at&nbsp;java.net.Socket.&lt;init&gt;(Socket.java:366)
+	at&nbsp;java.net.Socket.&lt;init&gt;(Socket.java:208)
+	at&nbsp;com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:173)
+	at&nbsp;com.mysql.jdbc.MysqlIO.&lt;init&gt;(MysqlIO.java:268)
+	at&nbsp;com.mysql.jdbc.Connection.createNewIO(Connection.java:2745)
+	at&nbsp;com.mysql.jdbc.Connection.&lt;init&gt;(Connection.java:1553)
+	at&nbsp;com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:285)
+	at&nbsp;java.sql.DriverManager.getConnection(DriverManager.java:525)
+	at&nbsp;java.sql.DriverManager.getConnection(DriverManager.java:140)
+	at&nbsp;org.logicalcobwebs.proxool.DefaultConnectionBuilder.buildConnection(DefaultConnectionBuilder.java:39)
+	at&nbsp;org.logicalcobwebs.proxool.Prototyper.buildConnection(Prototyper.java:159)
+	at&nbsp;org.logicalcobwebs.proxool.ConnectionPool.getConnection(ConnectionPool.java:217)
+	at&nbsp;org.logicalcobwebs.proxool.ProxoolDriver.connect(ProxoolDriver.java:89)
+	at&nbsp;java.sql.DriverManager.getConnection(DriverManager.java:525)
+	at&nbsp;java.sql.DriverManager.getConnection(DriverManager.java:171)
+	at&nbsp;com.sudytech.data.SudyDBSessionFactory.getDBSession(SudyDBSessionFactory.java:217)
+	at&nbsp;com.sudytech.data.SudyDBSessionFactory.getDBSession(SudyDBSessionFactory.java:163)
+	at&nbsp;com.sudytech.webplus.Site.getSiteIdByDummyName(Site.java:2908)
+	at&nbsp;com.sudytech.webplus.urlrewriter.UrlConverter.isDummyNameForSite(UrlConverter.java:787)
+	at&nbsp;com.sudytech.webplus.urlrewriter.UrlConverter.doCommonUrl(UrlConverter.java:563)
+	at&nbsp;com.sudytech.webplus.urlrewriter.UrlConverter.&lt;init&gt;(UrlConverter.java:56)
+	at&nbsp;com.sudytech.webplus.urlrewriter.HttpModule.doFilter(HttpModule.java:59)
+	at&nbsp;org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at&nbsp;org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at&nbsp;org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:230)
+	at&nbsp;org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:175)
+	at&nbsp;org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:128)
+	at&nbsp;org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:104)
+	at&nbsp;org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at&nbsp;org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:261)
+	at&nbsp;org.apache.jk.server.JkCoyoteHandler.invoke(JkCoyoteHandler.java:190)
+	at&nbsp;org.apache.jk.common.HandlerRequest.invoke(HandlerRequest.java:283)
+	at&nbsp;org.apache.jk.common.ChannelSocket.invoke(ChannelSocket.java:767)
+	at&nbsp;org.apache.jk.common.ChannelSocket.processConnection(ChannelSocket.java:697)
+	at&nbsp;org.apache.jk.common.ChannelSocket$SocketConnection.runIt(ChannelSocket.java:889)
+	at&nbsp;org.apache.tomcat.util.threads.ThreadPool$ControlRunnable.run(ThreadPool.java:686)
+	at&nbsp;java.lang.Thread.run(Thread.java:595)
+
+
+**&nbsp;END&nbsp;NESTED&nbsp;EXCEPTION&nbsp;**
+
+
+
+Last&nbsp;packet&nbsp;sent&nbsp;to&nbsp;the&nbsp;server&nbsp;was&nbsp;1&nbsp;ms&nbsp;ago.</TD>
+                                                                    </TR>
+                                                                    <TR>
+                                                                        <TD HEIGHT="30" COLSPAN="3"></TD>
+                                                                    </TR>
+                                                                    <TR>
+                                                                        <TD ALIGN="center" COLSPAN="3"><a href="http://alumni.hhu.edu.cn/s/0/main.jspy" class="button" title="返回首页">返回首页</a>&nbsp;&nbsp;&nbsp;<a href="http://alumni.hhu.edu.cn/s/0/manage/main.jspy" class="button" title="回管理入口">回管理入口</a>&nbsp;&nbsp;&nbsp;<a href="#" onclick="javascript:window.close();" class="button" title="关闭该页面">关闭该页面</a></TD>
+                                                                    </TR>
+                                                                </TABLE>
+                                                            </TD>
+                                                        </TR>
+                                                    </TABLE>
+                                                </TD>
+                                            </TR>
+                                            <TR>
+                                                <TD id="TD2" vAlign="top" bgColor="#ffffff"></TD>
+                                            </TR>
+                                        </TABLE>
+                                    </TD>
+                                    <TD background="/images/error/inside_right_bg.gif"></TD>
+                                </TR>
+                                <TR>
+                                    <TD width="30" height="1"><font face="宋体"><IMG height="30" src="/images/error/left_arrow.gif" width="30"></font></TD>
+                                    <TD align="center" height="1" background="/images/error/inside_bottom_bg.gif"><font face="宋体">&nbsp;</font></TD>
+                                    <TD width="30" height="1"><font face="宋体"><IMG height="30" src="/images/error/right_arrow.gif" width="30"></font></TD>
+                                </TR>
+                            </TABLE>      
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

@@ -1,0 +1,191 @@
+
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8">
+    <link href="/loginref/thickbox.css" type="text/css" rel="stylesheet">
+    <script src="/scripts/lib/jquery.min.js"></script>
+    <script src="/scripts/lib/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="/scripts/dlib/ajax.js"></script>
+    <script type="text/javascript" src="/scripts/dlib/validate.js"></script>
+    <script language="javascript" src="/loginref/jquery.js"></script>
+    <link href="/loginref/global.css" type="text/css" rel="stylesheet">
+    <link href="/loginref/option.css" type="text/css" rel="stylesheet">
+    <link href="/loginref/list.css" type="text/css" rel="stylesheet">
+    <title>采购评审专家抽取和通知系统</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="cache-control" content="no-cache, must-revalidate">
+    <meta http-equiv="expires" content="0">
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        td {
+            font-family: Tahoma, Geneva, sans-serif;
+        }
+
+        .bgtop {
+            /*background:url(images/login/login_bgtop.png) repeat-x 0 45px;*/
+            background-color: #F6F7FA;
+        }
+
+        .logintop {
+            background: url(/loginref/top_bg.png) repeat-x;
+        }
+
+        .bgbottom {
+            /*background:url(images/login/login_bgbottom.png) repeat-x bottom;*/
+        }
+
+        .boxbg {
+            position: absolute;
+            #position:relative;
+            _position: relative;
+        }
+
+        .bgimg {
+            position: absolute;
+            left: -257px;
+            z-index: 10;
+        }
+
+        .boxleft {
+            margin-right: 40px;
+            position: relative;
+            z-index: 20;
+        }
+
+        .logo {
+            border-right: 1px solid #D7DBE6;
+            padding-right: 10px;
+            white-space: nowrap;
+        }
+
+        .selflogo {
+            padding-left: 10px;
+            white-space: nowrap;
+        }
+
+        .intro {
+            margin: 10px;
+            list-style-type: square;
+            list-style-position: inside;
+            color: #7A7B7B;
+            line-height: 20px;
+            padding: 0;
+        }
+
+        .boxright {
+            margin-left: 40px;
+        }
+
+        .logininp {
+            border: 1px solid #96A1B7;
+            height: 20px;
+        }
+
+        .loginbtn {
+            background: url(/loginref/imgbtn.gif) no-repeat;
+            width: 72px;
+            height: 20px;
+            border: 0;
+            line-height: 20px;
+            color: #3B5165;
+        }
+
+        .copyright {
+            background: url(/loginref/bottom_bg.png) repeat-x;
+            color: #FFF;
+            font-size: 10px;
+        }
+    </style>
+</head>
+<body>
+    <table class="bgtop" border="0" cellpadding="0" cellspacing="0" height="100%" width="100%">
+        <tbody>
+            <tr>
+                <td class="logintop" height="45">&nbsp;</td>
+            </tr>
+            <tr>
+                <td class="bgbottom" align="center">
+                    <table border="0" cellpadding="0" cellspacing="0" width="500">
+                        <tbody>
+                            <tr>
+                                <td align="right" height="367" width="257">
+                                    <table class="boxleft" border="0" cellpadding="0" cellspacing="0">
+                                        <tbody>
+                                            <tr>
+                                                <td class="logo"><img src="/loginref/biglogo.png"></td>
+                                                <td class="selflogo"><img width="191" src="/loginref/selflogo.png"></td>
+                                            </tr>
+                                            <tr>
+                                                <td height="20"></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="2">
+                                                    <ul class="intro">
+                                                        <li>功能完备--强大的评审专家抽取和通知功能</li>
+                                                        <li>专业易用--友好的人机交互带来绝佳的用户体验</li>
+                                                        <li>灵活安全--出色的采购项目管理系统</li>
+                                                        <li>无限扩展--提供坚实的采购基础数据支持</li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                                <td class="boxbg">
+                                    <div class="bgimg"><img src="/loginref/login_boxbg.png"></div>
+                                </td>
+                                <td width="400">
+                                    <form name="loginform" action="./index_jcms.jsp" method="post" style="margin:0;" target="hidframe">
+                                        <input name="TimeMili" value="2014-12-16 15:22:28" type="hidden">
+
+                                        <select name="compid" style="display:none">
+
+                                            <option selected="selected" value="1">扬州大学</option>
+
+                                        </select>
+                                        <table class="boxright" border="0" cellpadding="0" cellspacing="0">
+                                            <tbody>
+                                                <tr>
+                                                    <td height="30">登录名：</td>
+                                                    <td><input id="username" name="username" class="logininp" style="width:150px;" type="text"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td height="30">密&nbsp;&nbsp;&nbsp;码：</td>
+                                                    <td><input id="userpassword" name="userpassword" class="logininp" style="width:150px;" type="password"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td height="30">验证码：</td>
+                                                    <td>
+                                                        <input id="verifycode" name="verifycode" class="logininp" maxlength="4" style="width:86px;" type="text">
+                                                        <img id="codeimage" src="/ValidateAction/1/VerifyCode.aspx" title="如果看不清数字，请点图片刷新验证码" onclick="reloadLogCodeImage();" style="cursor:pointer" align="absbottom" height="20" width="60">
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td height="30">&nbsp;</td>
+                                                    <td>
+                                                        <input value="登 录" class="loginbtn" onclick="validateUser();" type="button">
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </form>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td class="copyright" align="center" height="21">Copyright © 2014-2017 系统设计制作：丁晓超；设计指导：扬州大学采购管理办公室</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

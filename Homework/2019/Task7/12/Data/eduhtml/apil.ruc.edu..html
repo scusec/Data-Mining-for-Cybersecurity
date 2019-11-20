@@ -1,0 +1,362 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>中国人民大学-亚太法学研究院</title>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<link rel="stylesheet" type="text/css" href="css/zzsc.css" />
+<script src="js/jquery-1.4.2.min.js"></script>
+<link rel="stylesheet" type="text/css" href="css/css.css" />
+</head>
+
+<body>
+<style type="text/css">
+<!--
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+.head-zt1 {
+	font-family: "宋体";
+	font-size: 12px;
+	color: #BFD5FF;
+	text-decoration: none;
+}
+.search {
+	font-family: "宋体";
+	font-size: 14px;
+	color: #305397;
+	background-color: #DAE7FF;
+}
+.head-zt2 {
+	font-family: "宋体";
+	font-size: 14px;
+	font-weight: bold;
+	color: #FFFFFF;
+	text-decoration: none;
+}
+.head-zt2:hover {
+	color: #FFFF00;
+	text-decoration: none;
+}
+.text-overflow {
+	display:block;/*内联对象需加*/
+	/*width:96%;*/
+	/*word-break:keep-all;/* 不换行 */
+	/*white-space:nowrap;/* 不换行 */
+	/*overflow:hidden;/* 内容超出宽度时隐藏超出部分的内容 */
+	/*text-overflow:ellipsis;/* 当对象内文本溢出时显示省略标记(...) ；需与overflow:hidden;一起使用。*/
+}
+-->
+</style>
+<script src="/js/js.js"></script>
+<table width="100%" height="140" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td height="2" bgcolor="#002160"></td>
+  </tr>
+  <tr>
+    <td height="43" bgcolor="#002160"><table width="1000" height="34" border="0" align="center" cellpadding="0" cellspacing="0">
+      <tr>
+        <td><table width="380" height="34" border="0" align="right" cellpadding="0" cellspacing="0" bgcolor="#305397">
+          <tr>
+            <td width="130" class="head-zt1"><div align="center"><a href="/" class="head-zt2">中文</a>  | <a href="/eng/" class="head-zt2">ENGLISH</a></div></td>
+            <td width="215"><input name="k" type="text" class="search" id="k" size="28" maxlength="20" /></td>
+            <td width="35"><img style="cursor:pointer" onclick="chk();" src="/images/search.jpg" width="20" height="19" /></td>
+          </tr>
+        </table></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td height="80" bgcolor="#002160"><table width="1000" border="0" align="center" cellpadding="0" cellspacing="0">
+      <tr>
+        <td><a href="/"><img src="/images/pic-1.jpg" width="465" height="76" border="0"/></a></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td height="1" bgcolor="#002160"><div align="center"><img src="/images/pic-2.jpg" width="984" height="1" /></div></td>
+  </tr>
+  <tr>
+    <td height="15" bgcolor="#002160"></td>
+  </tr>
+</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td height="40" bgcolor="#990000"><table width="960" border="0" align="center" cellpadding="0" cellspacing="0">
+      <tr>
+        <td width="112" class="head-zt2"><a href="/" class="head-zt2">首页</a></td>
+        <td width="148" class="head-zt2"><a href="/about-us.asp" class="head-zt2">关于我们</a></td>
+        <td width="148" class="head-zt2"> <a href="/dongtai/" class="head-zt2">学院动态</a></td>
+        <td width="148" class="head-zt2"> <a href="/rencai/" class="head-zt2">人才培养</a></td>
+        <td width="148" class="head-zt2"> <a href="/research/" class="head-zt2">学术科研</a></td>
+        <td width="148" class="head-zt2"> <a href="/zhengce/" class="head-zt2">政策建言</a></td>
+        <td width="148" class="head-zt2"> <a href="/about-hezuo.asp" class="head-zt2">合作机构</a></td>
+        </tr>
+    </table></td>
+  </tr>
+</table>
+
+<table width="1000" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td height="350">
+	<div id="flashBg">
+	<div id="flashLine">
+	<div id="flash">
+	<a href="#" target="_blank" id="flash1" style="display: block; " name="#cccccc"><img src="images/ad/3.jpg" width="1000" height="350"></a>
+	<a href="#" target="_blank" id="flash2" name="#0b0b0b" style="display: none; "><img src="images/ad/001.jpg" width="1000" height="350"></a>
+	<a href="#" target="_blank" id="flash3" name="#0b0b0b" style="display: none; "><img src="images/ad/1.jpg" width="1000" height="350"></a>
+	<a href="#" target="_blank" id="flash4" name="#04304b" style="display: none; "><img src="images/ad/4.jpg" width="1000" height="350"></a>
+
+	  <div class="flash_bar">
+	<div class="dq" id="f1" onclick="changeflash(1)"></div>
+	<div class="no" id="f2" onclick="changeflash(2)"></div>
+	<div class="no" id="f3" onclick="changeflash(3)"></div>
+	<div class="no" id="f4" onclick="changeflash(4)"></div>
+	  </div>
+	</div>
+	</div>
+	</div>
+	<script>
+	var currentindex=1;
+	var length = $(".flash_bar div").length;
+	
+	$("#flashBg").css("background-color",$("#flash1").attr("name"));
+	function changeflash(i) {	
+	currentindex=i;
+	
+	for (j=1;j<=length;j++){
+		if (j==i) 
+		{$("#flash"+j).fadeIn("normal");
+		$("#flash"+j).css("display","block");
+		$("#f"+j).removeClass();
+		$("#f"+j).addClass("dq");
+		$("#flashBg").css("background-color",$("#flash"+j).attr("name"));
+		}
+		else
+		{$("#flash"+j).css("display","none");
+		$("#f"+j).removeClass();
+		$("#f"+j).addClass("no");}
+	}}
+	function startAm(){
+	timerID = setInterval("timer_tick()",3000);
+	}
+	function stopAm(){
+	clearInterval(timerID);
+	}
+	function timer_tick() {
+		currentindex=currentindex>=length?1:currentindex+1;
+		changeflash(currentindex);}
+	$(document).ready(function(){
+	$(".flash_bar div").mouseover(function(){stopAm();}).mouseout(function(){startAm();});
+	startAm();
+	});
+	</script>
+		</td>
+  </tr>
+</table>
+<table width="1000" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td height="10" bgcolor="#FFFFFF"></td>
+  </tr>
+</table>
+<table width="1000" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="270" height="35" valign="bottom" bgcolor="#FFFFFF">&nbsp;<a href="qianyan/" target="_blank"><img src="images/pic-3.jpg" border="0"/></a></td>
+    <td width="15" rowspan="3" bgcolor="#FFFFFF"></td>
+    <td width="430" valign="bottom" bgcolor="#FFFFFF">&nbsp;<a href="dongtai/" target="_blank"><img src="images/pic-4.jpg" width="101" height="24" border="0" /></a></td>
+    <td width="15" rowspan="3" bgcolor="#FFFFFF"></td>
+    <td width="270" valign="bottom" bgcolor="#FFFFFF">&nbsp;<a href="/more/?id=7" target="_blank"><img src="images/pic-5.jpg" width="120" height="23" border="0" /></a></td>
+  </tr>
+  <tr>
+    <td height="2" bgcolor="#990000"></td>
+    <td height="2" bgcolor="#990000"></td>
+    <td height="2" bgcolor="#990000"></td>
+  </tr>
+  <tr>
+    <td height="181" valign="top" bgcolor="F6F3ED">
+	<table width="260" border="0" align="center" cellpadding="0" cellspacing="0">
+	  
+      <tr>
+        <td height="140" valign="bottom"><a href="/news/?362.html" target="_blank" class="a2"><img src="/file/suolv/2016122315564173499.jpg" width="260" height="135" border="0" /></a></td>
+      </tr>
+      <tr>
+        <td height="40"><div align="center" class="a1" style="line-height:22px;"><a href="/news/?362.html" target="_blank" class="a1">【亚太前沿讲座2016-2017学年第五期】</a></div></td>
+      </tr>
+      <!--<tr>
+        <td><a href="/news/?.html" target="_blank" class="a2">　　……【详细】</a></td>
+      </tr>-->
+      
+    </table>
+      <table width="10" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td height="8"></td>
+        </tr>
+      </table>
+      <table width="260" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tr>
+          <td>
+		    <div class="text-overflow" style="width:250px; line-height:24px;">
+			
+			<img src="images/A-lang.jpg" width="3" height="5" /> <a href="/news/?182.html" target="_blank" class="a2">亚太法律前沿系列讲座公告---谈“从银行保险的国际发展趋势探讨监理思维”之研究两岸保险市场发展沿革与展望</a><br />
+			
+			<img src="images/A-lang.jpg" width="3" height="5" /> <a href="/news/?206.html" target="_blank" class="a2">【金融法前沿】白江：“金融抑制、金融法治与经济增长“</a><br />
+			
+			<img src="images/A-lang.jpg" width="3" height="5" /> <a href="/news/?203.html" target="_blank" class="a2">【亚太法律前沿系列讲座】余额宝等“宝宝”问题法律和监管研讨会</a><br />
+			
+			<img src="images/A-lang.jpg" width="3" height="5" /> <a href="/news/?192.html" target="_blank" class="a2">亚太法律前沿第三十一期“公益金融管理与消保措施”</a><br />
+			
+			<img src="images/A-lang.jpg" width="3" height="5" /> <a href="/news/?184.html" target="_blank" class="a2">亚太法律前沿三十期“两岸银行保险讲座“在校举行</a><br />
+			
+			<img src="images/A-lang.jpg" width="3" height="5" /> <a href="/news/?170.html" target="_blank" class="a2">中国人民大学法学院与美国律师协会（ABA）共同举办ABA首届在华大会</a><br />
+			
+			</div>
+		  </td>
+        </tr>
+      </table>
+      <table width="10" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td height="10"></td>
+        </tr>
+      </table></td>
+    <td valign="top" bgcolor="#FFFFFF"><table width="10" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td height="10"></td>
+      </tr>
+    </table>
+	
+      <table width="410" border="0" align="center" cellpadding="0" cellspacing="0">
+      <tr>
+        <td width="150" rowspan="2"><img src="/file/suolv/201792622125773499.jpg" width="150" height="100" /></td>
+        <td width="10" rowspan="2">&nbsp;</td>
+        <td width="250" height="30"><div class="a3">日本一桥大学法学院交流生活动顺利展开</div></td>
+      </tr>
+      <tr>
+        <td>
+		<a href="/news/?368.html" class="a2" target="_blank">【详细】</a>
+		</td>
+      </tr>
+    </table>
+      <table width="10" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td height="10"></td>
+        </tr>
+      </table>
+      <table width="430" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td height="1" bgcolor="#D9D9D9"></td>
+        </tr>
+      </table>
+      <table width="10" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td height="10"></td>
+        </tr>
+      </table>
+      <table width="410" border="0" align="center" cellpadding="0" cellspacing="0">
+      <tr>
+        <td width="150" rowspan="2"><img src="/file/suolv/20176281093173499.jpg" width="150" height="100" /></td>
+        <td width="10" rowspan="2">&nbsp;</td>
+        <td width="250" height="30"><div class="a3">中国人民大学亚太法学研究院情系钦北区贫困学子牵手活动启航</div></td>
+      </tr>
+      <tr>
+        <td>
+		<a href="/news/?367.html" class="a2" target="_blank">【详细】</a>
+		</td>
+      </tr>
+    </table>
+	  
+      <table width="10" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td height="12"></td>
+        </tr>
+      </table>
+      <table width="410" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tr>
+          <td>
+		  <div class="text-overflow" style="line-height:24px;">
+			
+			<img src="images/A-hong.jpg" width="3" height="5" /> <a href="/news/?353.html" target="_blank" class="a2">我院学生赴金杜律师事务所参观学习</a><br />
+			
+			<img src="images/A-hong.jpg" width="3" height="5" /> <a href="/news/?334.html" target="_blank" class="a2">我院学生赴日本驻华大使馆见习交流</a><br />
+			
+			<img src="images/A-hong.jpg" width="3" height="5" /> <a href="/news/?331.html" target="_blank" class="a2">亚太法学研究院“法律&#8226;外语&#8226;生活”学习交流会第一期顺利举行</a><br />
+			
+			<img src="images/A-hong.jpg" width="3" height="5" /> <a href="/news/?328.html" target="_blank" class="a2">亚太法学研究院开展“中日韩电子支付及法律规制学习会”</a><br />
+			
+			<img src="images/A-hong.jpg" width="3" height="5" /> <a href="/news/?327.html" target="_blank" class="a2">我院师生参加“中日韩电子支付与法律规制国际研讨会”</a><br />
+			
+			<img src="images/A-hong.jpg" width="3" height="5" /> <a href="/news/?325.html" target="_blank" class="a2">日本律师协会代表团访问我院进行合作会谈</a><br />
+			
+			<img src="images/A-hong.jpg" width="3" height="5" /> <a href="/news/?324.html" target="_blank" class="a2">亚太法律前沿2015—2016学年第一期“经济新常态下法律人才的发展方向”讲座成功举办</a><br />
+			
+			<img src="images/A-hong.jpg" width="3" height="5" /> <a href="/news/?323.html" target="_blank" class="a2">欧洲及东亚民法典动向——名古屋大学名誉教授加藤雅信访问我院</a><br />
+			
+			</div>
+			</td>
+        </tr>
+      </table>
+      <table width="10" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td height="10"></td>
+        </tr>
+      </table></td>
+    <td valign="top" bgcolor="#EFF3F1"><table width="10" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td height="10"></td>
+      </tr>
+    </table>
+      <table width="260" border="0" align="center" cellpadding="0" cellspacing="0">
+      <tr>
+        <td height="154" valign="top">
+		<div class="text-overflow" style="width:250px; line-height:24px;">
+		
+		<img src="images/A-hong.jpg" width="3" height="5" /> <a href="/news/?365.html" target="_blank" class="a2">【亚太前沿讲座】2016-2017学年第九期</a><br />
+		
+		<img src="images/A-hong.jpg" width="3" height="5" /> <a href="/news/?360.html" target="_blank" class="a2">牛津大学PRICE(普莱斯)传媒法国际模拟法庭亚太分赛区志愿者招募通知【截至10月30日】</a><br />
+		
+		<img src="images/A-hong.jpg" width="3" height="5" /> <a href="/news/?358.html" target="_blank" class="a2">【亚太法律前沿讲座】2016-2017学年第一期公告</a><br />
+		
+		<img src="images/A-hong.jpg" width="3" height="5" /> <a href="/news/?354.html" target="_blank" class="a2">亚太法学院赴东南亚交流学习人员选拔公告</a><br />
+		
+		<img src="images/A-hong.jpg" width="3" height="5" /> <a href="/news/?347.html" target="_blank" class="a2">中国人民大学亚太法学研究院招聘启事[截止4 月 30日]</a><br />
+		
+		<img src="images/A-hong.jpg" width="3" height="5" /> <a href="/news/?346.html" target="_blank" class="a2">【亚太法律前沿讲座】2015-2016学年第六期公告</a><br />
+		
+		<img src="images/A-hong.jpg" width="3" height="5" /> <a href="/news/?343.html" target="_blank" class="a2">【亚太法律前沿讲座】2015-2016学年第五期公告</a><br />
+		
+		<img src="images/A-hong.jpg" width="3" height="5" /> <a href="/news/?183.html" target="_blank" class="a2">【讲座预告】金融法前沿：金融抑制、金融法治与经济增长[白江][11月15日]</a><br />
+		
+		<img src="images/A-hong.jpg" width="3" height="5" /> <a href="/news/?322.html" target="_blank" class="a2">[亚太法律前沿2015—2016学年第一期公告]互联网法务暨经济新常态下法务人才的发展方向</a><br />
+		
+		<img src="images/A-hong.jpg" width="3" height="5" /> <a href="/news/?320.html" target="_blank" class="a2">亚太法学研究院2015级“互联网金融+经济与法律”方向法律硕士录取名单</a><br />
+		
+		<img src="images/A-hong.jpg" width="3" height="5" /> <a href="/news/?317.html" target="_blank" class="a2">[亚太法律前沿2014—2015学年公告]日本的企业破产重整制度的发展和最新立法动向</a><br />
+		
+		</div>
+		</td>
+      </tr>
+    </table>
+      <table width="260" height="95" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tr>
+          <td><div align="center"><a href="/rencai/?id=10" target="_blank"><img src="images/pic-6.jpg" width="75" height="75" border="0" /></a></div></td>
+          <td><div align="center"><a href="/rencai/?id=11" target="_blank"><img src="images/pic-7.jpg" width="76" height="75" border="0" /></a></div></td>
+          <td><div align="right"><img src="images/pic-8.jpg" width="76" height="75" /></div></td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td height="8" bgcolor="#DFDFDF"></td>
+  </tr>
+</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td height="72" bgcolor="#002160"><div align="center" class="a4">版权所有：中国人民大学亚太法学研究院　　邮编：100872　　地址：北京市海淀区中关村大街59号　　电话：010-62513525 </div></td>
+  </tr>
+</table>
+
+</body>
+</html>

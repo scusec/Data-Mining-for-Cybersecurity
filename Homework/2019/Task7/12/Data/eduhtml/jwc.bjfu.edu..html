@@ -1,0 +1,738 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<meta name="keywords" content="北京林业大学教务处,北林教务处,bjfu,教务处" />
+<meta name="author" content="杨大利,15210505872" />
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<script src="js/slide.js" type="text/javascript"></script>
+<title>北京林业大学教务处</title>
+</head>
+<body>
+<div id="bg">
+	<div id="header">
+		<div id="banner">
+			<div id="topright">
+				<div class="trbox"><a href="mailto:yuboss@bjfu.edu.cn"><img alt=处长信箱 src="images/cxinx.gif"></a></div>
+				<div class="trbox"><a href="mailto:luoboss@bjfu.edu.cn"><img alt=校长信箱 src="images/xxinx.gif"></a></div>
+				<div class="trbox"><a href="http://jwc.bjfu.edu.cn/englishweb/" target="_blank" ><img alt=英文版 src="images/c_eng.gif"></a></div>
+			</div>
+		</div>
+		<div id="navbar">
+			<div id="nav">
+				<ul>
+					<li style="background:none"><a href="http://jwc.bjfu.edu.cn">首页</a></li>
+					<li><a href="/jgsz/" target="_blank">机构设置</a></li>
+					<li><a href="/gzzd/" target="_blank">规章制度</a></li>
+					<li><a href="/jxjh/" target="_blank">教学计划</a></li>
+					<li><a href="http://newjwxt.bjfu.edu.cn/" target="_blank">家长督学</a></li>
+					<li><a href="http://202.204.121.134/biyezheng/search.htm" target="_blank" >证书验证</a></li>
+					<li><a href="http://202.204.121.134/jpkc/index.asp" target="_blank">精品课程</a></li>
+					<li><a href="/jxcg/" target="_blank">教学成果</a></li>
+					<li><a href="/xjzc/" target="_blank">学籍注册</a></li>
+					<li><a href="http://202.204.121.134/liuyanban/book.asp" target="_blank" >网上留言</a></li>
+				</ul>
+			</div>
+			<div id="indexsearch">
+				<FORM id="login" method="post" action="http://cms.bjfu.edu.cn/cms/search/searchResults.jsp">
+				<input name="siteID" type="hidden" value=121>
+	  			<input name="query" type="text" class="input" id="username" onfocus="this.style.backgroundColor='#fff';" onblur="this.style.backgroundColor='#f3f3f3';" size="19" />
+       			<INPUT type="image" IMG src="images/button.gif" class="bn_submit" alt ="搜索" NAME="imagesubmit" /> 
+       			</FORM>
+				
+				
+			</div>
+		</div>
+	</div>
+	
+	<!--header结束-->
+	
+	<div id="main_wrapper">
+		<div id="main_left">
+			<div class="leftbox">
+				<div id="rili">
+					<div id="rili_l">
+						<div id="zhouci">
+							<div>
+							
+<SCRIPT Language="JavaScript">
+<!--
+function weekNo() {
+  var totalDays = 0;
+  var totalDays1 = 0;
+  now = new Date();
+  years=now.getYear();
+  nowmonth=now.getMonth()+1;
+  nowdate=now.getDate();
+//以下设置开学日期
+  years1=2017;
+  nowmonth1=9;
+  nowdate1=4;
+//以上设置开学日期
+//以下设置放假日期
+  fangjia=20180122;
+//注意这里与开学日期设置不同,如果放假日期是2013年1月6日,则应设置为20130106,而不是201316
+//以上设置放假日期
+  if (years < 1000)
+  years+=1900
+  var days = new Array(12);	// Array to hold the total days in a month
+  days[0] = 31;
+  days[2] = 31;
+  days[3] = 30;
+  days[4] = 31;
+  days[5] = 30;
+  days[6] = 31;
+  days[7] = 31;
+  days[8] = 30;
+  days[9] = 31;
+  days[10] = 30;
+  days[11] = 31;
+   if (Math.round(now.getYear()/4) == now.getYear()/4) {
+	 days[1] = 29
+  }else{
+	 days[1] = 28
+  }
+if(years1 == years){
+  if (now.getMonth() == 0) {
+	 totalDays = totalDays + now.getDate() + 1;
+  }else{
+	 var curMonth = now.getMonth();
+	 for (var count = 1; count <= curMonth; count++) {
+		 totalDays = totalDays + days[count - 1];
+	 }
+	 totalDays = totalDays + now.getDate() + 1;
+   }
+   if (nowmonth1 == 1) {
+	 totalDays1 = totalDays1 + nowdate1;
+  }else{
+	 for (var count = 1; count <= nowmonth1-1; count++) {
+		 totalDays1 = totalDays1 + days[count - 1];
+	 }
+	 totalDays1 = totalDays1 + nowdate1 + 1;
+   }
+totalDays = totalDays - totalDays1;
+}else{
+	 for (var count = 1; count <= 12; count++) {
+		 totalDays = totalDays + days[count - 1];
+	 }
+   if (nowmonth1 == 1) {
+	 totalDays1 = totalDays1 + nowdate1;
+  }else{
+	 for (var count = 1; count <= nowmonth1-1; count++) {
+		 totalDays1 = totalDays1 + days[count - 1];
+	 }
+	 totalDays1 = totalDays1 + nowdate1 + 0;
+   }
+totalDays = totalDays - totalDays1 + now.getDate();
+}
+   if(totalDays<0){week=0;return week;}
+   if(now.getMonth()+1 < 10)
+  {temp=now.getMonth()+1;
+  nowmonth="0" + temp;
+  }else{nowmonth=now.getMonth()+1;}
+  if(now.getDate() < 10)
+  {nowdate="0" + now.getDate();}
+  else{nowdate=now.getDate();}
+   nowyear = years.toString();
+   nowtime = nowyear + nowmonth + nowdate;
+   if(nowtime >= fangjia){week=0;return week;}
+   var week = parseInt(totalDays/7) + 1;
+   return week;
+}
+document.write(weekNo());
+// -->
+</SCRIPT>							</div>
+						</div>
+					</div>
+
+					<div id="rili_r">
+						<div id="riqi">
+							<div>
+							<SCRIPT Language="JavaScript">
+							<!--
+							function NowDate() {
+							  years=now.getYear();
+							  nowmonth=now.getMonth() + 1;
+							  nowdate=now.getDate();
+							  nowZhou=now.getDay();
+							  if(nowZhou==1){nowZhou='一';}
+							  if(nowZhou==2){nowZhou='二';}
+							  if(nowZhou==3){nowZhou='三';}
+							  if(nowZhou==4){nowZhou='四';}
+							  if(nowZhou==5){nowZhou='五';}
+							  if(nowZhou==6){nowZhou='六';}
+							  if(nowZhou==0){nowZhou='日';}
+							  var datetime=nowmonth+"月"+nowdate+"日,周"+nowZhou;
+							  return datetime;
+							}
+							document.write(NowDate());
+							// -->
+							</SCRIPT>
+							</div>
+						</div>
+                                                                            <div id="tianqi">
+<script type="text/javascript" src="http://ext.weather.com.cn/68968.js"></script>
+<!--<iframe width="100%" allowtransparency="true" scrolling="no" height="20" frameborder="0" vspace="0" hspace="0" marginheight="0" marginwidth="0" src="http://m.weather.com.cn/m/pn6/weather.htm "></iframe>-->
+
+                  						</div>
+					</div>
+				</div>
+				<div class="xtpt"><a href="http://newjwxt.bjfu.edu.cn/" target="_blank"><img alt=教务系统 src="images/jiaowuxt.gif"></a></div>
+				<div class="xtpt"><a href="http://202.204.121.133/eol/homepage/common/" target="_blank" ><img alt=教学平台 src="images/jiaoxuept.gif"></a></div>
+			</div>
+			<div class="leftbox">
+				<div class="left_title"><img alt=信息服务 src="images/xinxifw.gif"></a></div>
+				<div class="cleftbox">
+					<div class="xinxifw">
+						<div class="xinxifw_pic"><img alt=北林校历 src="images/xinxifw1.gif"></div>
+						<div class="xinxifw_wenzi"><a href="http://jwc.bjfu.edu.cn/UploadFiles/xiaoli.mht" target="_blank">北林校历</a></div>
+					</div>
+					<div class="xinxifw">
+						<div class="xinxifw_pic"><img alt=万年日历 src="images/xinxifw2.gif"></div>
+						<div class="xinxifw_wenzi"><a href="http://202.204.121.134/rili.htm" target="_blank">万年日历</a></div>
+					</div>
+					<div class="xinxifw">
+						<div class="xinxifw_pic"><img alt=课表查询 src="images/xinxifw3.gif"></div>
+						<div class="xinxifw_wenzi"><a href="/kbcx/" target="_blank">课表查询</a></div>
+					</div>
+					<div class="xinxifw">
+						<div class="xinxifw_pic"><img alt=科研训练 src="images/xinxifw4.gif"></div>
+						<div class="xinxifw_wenzi"><a href="/kyxl/" target="_blank">实践教学</a></div>
+					</div>
+					<div class="xinxifw">
+						<div class="xinxifw_pic"><img alt=教务邮件 src="images/xinxifw5.gif"></div>
+						<div class="xinxifw_wenzi"><a href="http://jkcjzx.bjfu.edu.cn/" target="_blank">促进中心</a></div>
+					</div>
+					<div class="xinxifw">
+						<div class="xinxifw_pic"><img alt=北林邮件 src="images/xinxifw6.gif"></div>
+						<div class="xinxifw_wenzi"><a href="http://mail.bjfu.edu.cn/" target="_blank">北林邮件</a></div>
+					</div>
+					<div class="xinxifw">
+						<div class="xinxifw_pic"><img alt=常见问题 src="images/xinxifw7.gif"></div>
+						<div class="xinxifw_wenzi"><a href="/cjwt/" target="_blank">常见问题</a></div>
+					</div>
+					<div class="xinxifw">
+						<div class="xinxifw_pic"><img alt=使用帮助 src="images/xinxifw8.gif"></div>
+						<div class="xinxifw_wenzi"><a href="/jsgl/" target="_blank">使用帮助</a></div>
+					</div>
+					<div class="xinxifw">
+						<div class="xinxifw_pic"><img alt=教学参考 src="images/xinxifw9.gif"></div>
+						<div class="xinxifw_wenzi"><a href="/jscx/" target="_blank">教学参考</a></div>
+					</div>
+					<div class="xinxifw">
+						<div class="xinxifw_pic"><img alt=教务动态 src="images/xinxifw10.gif"></div>
+						<div class="xinxifw_wenzi"><a href="/pjzb/" target="_blank">教务动态</a></div>
+					</div>
+				</div>
+			</div>
+			<div class="leftbox">
+				<div class="left_title"><img alt=校内链接 src="images/xiaoneilj.gif"></div>
+				<div class="cleftbox">
+					<div id="xiaoneilj_menu">
+						<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+                          <tr>
+                            <td height="30" align="center" valign="middle">
+                                <form id="form2" name="form2" method="post" action="">
+                                    <select name="select" id="select" onchange=javascript:window.open(this.options[this.selectedIndex].value)>
+                                      <option selected>------院系链接------</option>
+                                      
+                                                                    
+                                      <option value="http://hjxy.bjfu.edu.cn" target=_blank>------环境学院------</option>
+                                      
+                                                                    
+                                      <option value="http://waiyu.bjfu.edu.cn" target=_blank>------外语学院------</option>
+                                      
+                                                                    
+                                      <option value="http://cos.bjfu.edu.cn/" target=_blank>------理学院------</option>
+                                      
+                                                                    
+                                      <option value="http://graduate.bjfu.edu.cn/" target=_blank>---研究生院---</option>
+                                      
+                                                                    
+                                      <option value="http://lxy.bjfu.edu.cn" target=_blank>------林学院------</option>
+                                      
+                                                                    
+                                      <option value="http://clxy.bjfu.edu.cn" target=_blank>------材料学院------</option>
+                                      
+                                                                    
+                                      <option value="http://biology.bjfu.edu.cn" target=_blank>------生物学院------</option>
+                                      
+                                                                    
+                                      <option value="http://yuanlin.bjfu.edu.cn" target=_blank>------园林学院------</option>
+                                      
+                                                                    
+                                      <option value="http://em.bjfu.edu.cn" target=_blank>----经济管理学院----</option>
+                                      
+                                                                    
+                                      <option value="http://renwen.bjfu.edu.cn" target=_blank>------人文学院------</option>
+                                      
+                                                                    
+                                      <option value="http://shby.bjfu.edu.cn" target=_blank>------水保学院------</option>
+                                      
+                                                                    
+                                      <option value="http://it.bjfu.edu.cn/" target=_blank>------信息学院------</option>
+                                      
+                                                                    
+                                      <option value="http://zrbhq.bjfu.edu.cn" target=_blank>-----保护区学院-----</option>
+                                      
+                                                                    
+                                      <option value="http://sports.bjfu.edu.cn" target=_blank>------体育部------</option>
+                                      
+                                                                    
+                                      <option value="http://bjfucj.bjfu.edu.cn" target=_blank>----成教学院----</option>
+                                      
+                                                                    
+                                      <option value="http://gxy.bjfu.edu.cn" target=_blank>------工学院------</option>
+                                      
+                                                                    
+                                      <option value="http://hjxy.bjfu.edu.cn/" target=_blank>------环境学院------</option>
+                                      
+                                                              
+                                    </select>
+                                  </form>
+                              </td>
+                          </tr>
+                          <tr>
+                            <td height="30" align="center" valign="middle">
+                                <form id="form4" name="form4" method="post" action="">
+                                    <label>
+                                    <select name="select3" id="select3" onchange=javascript:window.open(this.options[this.selectedIndex].value)>
+                                      <option selected>------职能处室------</option >
+                                      
+                                                                      
+                                      <option value="http://jkcjzx.bjfu.edu.cn/" target=_blank>--教学促进中心--</option>
+                                      
+                                                                      
+                                      <option value="http://dzb.bjfu.edu.cn" target=_blank>-----校长办公室-----</option>
+                                      
+                                                                      
+                                      <option value="http://zsb.bjfu.edu.cn" target=_blank>-----招生办公室-----</option>
+                                      
+                                                                      
+                                      <option value="http://zwc.bjfu.edu.cn/Index.Asp" target=_blank>--总务产业管理处--</option>
+                                      
+                                                                      
+                                      <option value="http://nic.bjfu.edu.cn" target=_blank>------信息中心------</option>
+                                      
+                                                                      
+                                      <option value="http://xsc.bjfu.edu.cn" target=_blank>------校学生处------</option>
+                                      
+                                                                      
+                                      <option value="http://www.bjfu.edu.cn/aa/dianzixw/index.asp" target=_blank>------北林在线------</option>
+                                      
+                                                                      
+                                      <option value="http://zcc.bjfu.edu.cn:8090/zcc/" target=_blank>-----资产管理处-----</option>
+                                      
+                                                                      
+                                      <option value="http://zzb.bjfu.edu.cn/" target=_blank>-------组织部-------</option>
+                                      
+                                                                      
+                                      <option value="http://xsc.bjfu.edu.cn/" target=_blank>-----学生管理科-----</option>
+                                      
+                                                                      
+                                      <option value="http://jcc.bjfu.edu.cn/" target=_blank>------校财务处------</option>
+                                      
+                                                                      
+                                      <option value="$cms.getUrl($article)" target=_blank>-----体育教学部-----</option>
+                                      
+                                                                      
+                                      <option value="http://rsc.bjfu.edu.cn/renshi/index.html" target=_blank>------校人事处------</option>
+                                      
+                                                                      
+                                      <option value="http://job.bjfu.edu.cn" target=_blank>----就业服务中心----</option>
+                                      
+                                                                      
+                                      <option value="http://www.ccbfu.com" target=_blank>------计算中心------</option>
+                                      
+                                                                  
+                                    </select>
+                                    </label>
+                                  </form>
+                              </td>
+                          </tr>
+                        </table>
+					</div>
+					<div id="xiaoneilj_pic1">
+						<div class="cxiaoneilj_pic"><a href="/lxsybzl/" target="_blank">点击进入</a></div>
+					</div>
+					<div id="xiaoneilj_pic">
+						<div class="cxiaoneilj_pic"><a href="/gxybgs/" target="_blank">点击进入</a></div>
+					</div>
+				</div>
+			</div>
+			<div class="leftbox">
+				<div class="left_title"><img alt=站内统计 src="images/zhanneitj.gif"></div>
+				<div class="cleftbox"  style="margin-top:30px;">
+<div style="float:left"><img title="北林教务处微信公众号" src="images/erweima.png"></div>
+					<div id="czhanneitj" style="float:right">
+						<script src="http://cms.bjfu.edu.cn/cms/web/channelVisitLog.jsp?siteID=44"></script><br />
+						<script src="http://cms.bjfu.edu.cn/cms/web/writeLog.jsp?channelID=44"></script>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="main_right">
+			<div id="news">
+				<div id="news_l">
+				
+					<div id="focusViwer">
+<div id="imgADPlayer"></div> 
+<script> 
+		
+		PImgPlayer.addItem( "<a href=/tpxw/257357.html target=_blank style=color:#FFFFFF;text-decoration:none;>不忘初心 牢记使命</a>", "/tpxw/257357.html", "/images/content/2017/20171027093059157325.jpg"); 		
+
+				
+		PImgPlayer.addItem( "<a href=/tpxw/256635.html target=_blank style=color:#FFFFFF;text-decoration:none;>教务教评党支部召开党的十九大开幕会学习交流专题组织生活</a>", "/tpxw/256635.html", "/images/content/2017/20171019201317725279.jpg"); 		
+
+			
+		PImgPlayer.addItem( "<a href=/tpxw/256213.html target=_blank style=color:#FFFFFF;text-decoration:none;>中国劳动关系学院副校长一行来校交流</a>", "/tpxw/256213.html", "/images/content/2017/20171017103809442413.jpg"); 		
+
+			
+		PImgPlayer.addItem( "<a href=/tpxw/256206.html target=_blank style=color:#FFFFFF;text-decoration:none;>教室教学条件改善项目通过专家验收</a>", "/tpxw/256206.html", "/images/content/2017/20171017103646457324.jpg"); 		
+
+	
+PImgPlayer.init( "imgADPlayer", 325, 188+16 );   
+</script>
+</div>
+				
+                </div>
+				<div id="news_r">
+					<div class="lanmu_title">
+						<div class="lanmu_pic"><img src="images/news_bt.gif" alt="图片新闻"></div>
+						<div class="more"><a href="/tpxw/" target="_blank"><img src="images/more.jpg" alt="查看更多"></a></div>
+					</div>
+					<div class="lanmu_c">
+						<ul class="list_n">
+                        							<li><span class="datetime">2017-10-27</span><a href="/tpxw/257357.html" target="_blank" title="不忘初心 牢记使命">            不忘初心 牢记使命 
+    </a></li>
+                        							<li><span class="datetime">2017-10-27</span><a href="/tpxw/257346.html" target="_blank" title="教务处与马克思主义学院研讨十九大精神进课堂、进头脑">            教务处与马克思主义学院研讨十九大精... 
+    </a></li>
+                        							<li><span class="datetime">2017-10-19</span><a href="/tpxw/256635.html" target="_blank" title="教务教评党支部召开党的十九大开幕会学习交流专题组织生活">            教务教评党支部召开党的十九大开幕会... 
+    </a></li>
+                        							<li><span class="datetime">2017-10-17</span><a href="/tpxw/256213.html" target="_blank" title="中国劳动关系学院副校长一行来校交流">            中国劳动关系学院副校长一行来校交流 
+    </a></li>
+                        							<li><span class="datetime">2017-10-17</span><a href="/tpxw/256206.html" target="_blank" title="教室教学条件改善项目通过专家验收">            教室教学条件改善项目通过专家验收 
+    </a></li>
+                        							<li><span class="datetime">2017-09-28</span><a href="/tpxw/255158.html" target="_blank" title="于斌、尹大伟同志任教务处副处长">            于斌、尹大伟同志任教务处副处长 
+    </a></li>
+                        							<li><span class="datetime">2017-09-28</span><a href="/tpxw/255157.html" target="_blank" title="我校师生在北京市2017年大学生工业设计大赛中荣获佳绩">            我校师生在北京市2017年大学生工... 
+    </a></li>
+                        							<li><span class="datetime">2017-09-13</span><a href="/tpxw/253840.html" target="_blank" title="我校两位教师当选首批全国林业教学名师">            我校两位教师当选首批全国林业教学名... 
+    </a></li>
+                        						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="lanmu">
+				<div class="lanmu_l">
+					<div class="lanmu_title">
+						<div class="lanmu_pic"><img src="images/kuaixun_bt.png" alt="教务快讯"></div>
+						<div class="more"><a href="/jwkx/" target="_blank"><img src="images/more.jpg" alt="查看更多"></a></div>
+					</div>
+					<div class="lanmu_c">
+						<ul class="list">
+                        							<li><span class="datetime">2017-10-11</span><a href="/jwkx/255714.html" target="_blank" title="关于做好2017-2018学年第二学期本科课程教学日历填写工作的通知">            关于做好2017-2018学年第二学... 
+    </a></li>
+													<li><span class="datetime">2017-09-29</span><a href="/jwkx/255279.html" target="_blank" title="教务处2017年国庆节、中秋节值班表">            教务处2017年国庆节、中秋节值班表 
+    </a></li>
+													<li><span class="datetime">2017-09-28</span><a href="/jwkx/255189.html" target="_blank" title="转：关于做好2017年中秋节、国庆节假期期间有关工作的通知">            转：关于做好2017年中秋节、国庆节... 
+    </a></li>
+													<li><span class="datetime">2017-09-21</span><a href="/jwkx/254560.html" target="_blank" title="关于核对2017级新生照片的通知">            关于核对2017级新生照片的通知 
+    </a></li>
+													<li><span class="datetime">2017-09-18</span><a href="/jwkx/254146.html" target="_blank" title="停开课列表（截至9月18日）">            停开课列表（截至9月18日） 
+    </a></li>
+													<li><span class="datetime">2017-09-17</span><a href="/jwkx/254133.html" target="_blank" title="关于查询本学期选课抽签结果的通知">            关于查询本学期选课抽签结果的通知 
+    </a></li>
+												</ul>
+					</div>
+				</div>
+				<div class="lanmu_r">
+					<div class="lanmu_title">
+						<div class="lanmu_pic"><img src="images/dongtai_bt.png" alt="教改动态"></div>
+						<div class="more"><a href="/jgdt/" target="_blank"><img src="images/more.jpg" alt="查看更多"></a></div>
+					</div>
+					<div class="lanmu_c">
+						<ul class="list">
+													<li><span class="datetime">2017-10-25</span><a href="/jgdt/257150.html" target="_blank" title="关于开展2017年度示范性虚拟仿真实验教学项目遴选推荐工作的通知">            关于开展2017年度示范性虚拟仿真实... 
+    </a></li>
+													<li><span class="datetime">2017-10-23</span><a href="/jgdt/257007.html" target="_blank" title="北京林业大学关于征集2017年教育教学研究论文的通知">            北京林业大学关于征集2017年教育教... 
+    </a></li>
+													<li><span class="datetime">2017-10-12</span><a href="/jgdt/255809.html" target="_blank" title="关于申报产学合作协同育人项目的通知">            关于申报产学合作协同育人项目的通知 
+    </a></li>
+													<li><span class="datetime">2017-08-20</span><a href="/jgdt/252329.html" target="_blank" title="关于开展2017年国家精品在线开放课程认定工作的通知">            关于开展2017年国家精品在线开放课... 
+    </a></li>
+													<li><span class="datetime">2017-07-29</span><a href="/jgdt/252168.html" target="_blank" title="关于公布北京林业大学2017年教学成果奖评奖结果的通知">            关于公布北京林业大学2017年教学成... 
+    </a></li>
+													<li><span class="datetime">2017-07-26</span><a href="/jgdt/252540.html" target="_blank" title="关于公布北京林业大学2017年校级大学生科研训练计划项目的通知">            关于公布北京林业大学2017年校级大... 
+    </a></li>
+												</ul>
+					</div>
+				</div>
+			</div>
+			<div class="lanmu">
+				<div class="lanmu_l">
+					<div class="lanmu_title">
+						<div class="lanmu_pic"><img src="images/kaoshi_bt.png" alt="考试信息"></div>
+						<div class="more"><a href="/ksxx/" target="_blank"><img src="images/more.jpg" alt="查看更多"></a></div>
+					</div>
+					<div class="lanmu_c">
+						<ul class="list">
+													<li><span class="datetime">2017-10-19</span><a href="/ksxx/256577.html" target="_blank" title="关于2017年下半年全国大学英语四、六级口语考试报名的通知">            关于2017年下半年全国大学英语四、... 
+    </a></li>
+													<li><span class="datetime">2017-10-18</span><a href="/ksxx/256438.html" target="_blank" title="关于领取2017年6月四六级成绩单的通知">            关于领取2017年6月四六级成绩单的... 
+    </a></li>
+													<li><span class="datetime">2017-09-26</span><a href="/ksxx/254942.html" target="_blank" title="补缓考安排表9.29（劳动法与劳动政策分析、纸的科学）">            补缓考安排表9.29（劳动法与劳动政... 
+    </a></li>
+													<li><span class="datetime">2017-09-21</span><a href="/ksxx/254550.html" target="_blank" title="第七届海峡两岸口译大赛北京林业大学校级选拔赛通知">            第七届海峡两岸口译大赛北京林业大学校... 
+    </a></li>
+													<li><span class="datetime">2017-09-21</span><a href="/ksxx/254549.html" target="_blank" title="2017年“外研社杯”全国英语演讲大赛校级初赛通知">            2017年“外研社杯”全国英语演讲大... 
+    </a></li>
+													<li><span class="datetime">2017-09-12</span><a href="/ksxx/253692.html" target="_blank" title="2017年“外研社杯”Uchallenge全国大学生英语挑战赛校级初赛通知">            2017年“外研社杯”Uchalle... 
+    </a></li>
+												</ul>
+					</div>
+				</div>
+				<div class="lanmu_r">
+					<div class="lanmu_title">
+						<div class="lanmu_pic"><img src="images/tiaoke_bt.png" alt="课程信息"></div>
+						<div class="more"><a href="/tkxx/" target="_blank"><img src="images/more.jpg" alt="查看更多"></a></div>
+					</div>
+					<div class="lanmu_c">
+						<ul class="list">
+													<li><span class="datetime">2017-10-27</span><a href="http://jwc.bjfu.edu.cn/kctz/257371.html" target="_blank" title="关于公选课《陶艺与彩绘制作》的调课通知">            关于公选课《陶艺与彩绘制作》的调课通... 
+    </a></li>
+													<li><span class="datetime">2017-10-16</span><a href="/tkxx/256004.html" target="_blank" title="关于公选课《果品营养保健与品评》的停课通知">            关于公选课《果品营养保健与品评》的停... 
+    </a></li>
+													<li><span class="datetime">2017-10-11</span><a href="/tkxx/255651.html" target="_blank" title="关于公选课《保护生物学B》正常授课的通知">            关于公选课《保护生物学B》正常授课的... 
+    </a></li>
+													<li><span class="datetime">2017-09-28</span><a href="/tkxx/255201.html" target="_blank" title="关于公选课《俄罗斯概况》、《俄罗斯影视欣赏》、《俄语入门》调课的通知">            关于公选课《俄罗斯概况》、《俄罗斯影... 
+    </a></li>
+													<li><span class="datetime">2017-09-26</span><a href="/tkxx/254959.html" target="_blank" title="关于公选课《现代生活实用英语》上课地点更换的通知">            关于公选课《现代生活实用英语》上课地... 
+    </a></li>
+													<li><span class="datetime">2017-09-26</span><a href="/tkxx/254958.html" target="_blank" title="关于公选课《英语话中华》上课地点更换的通知">            关于公选课《英语话中华》上课地点更换... 
+    </a></li>
+												</ul>
+					</div>
+				</div>
+			</div>
+			<div class="lanmu">
+				<div class="lanmu_l">
+					<div class="lanmu_title">
+						<div class="lanmu_pic"><img src="images/fuxiu_bt.png" alt="辅修信息"></div>
+						<div class="more"><a href="/fxxx/" target="_blank"><img src="images/more.jpg" alt="查看更多"></a></div>
+					</div>
+					<div class="lanmu_c">
+						<ul class="list">
+													<li><span class="datetime">2017-09-15</span><a href="/fxxx/254058.html" target="_blank" title="2016级日语辅修分班通知">            2016级日语辅修分班通知 
+    </a></li>
+													<li><span class="datetime">2017-09-12</span><a href="/fxxx/253687.html" target="_blank" title="关于日语辅修专业一年级（17级）开课的通知">            关于日语辅修专业一年级（17级）开课... 
+    </a></li>
+													<li><span class="datetime">2017-09-07</span><a href="/fxxx/253098.html" target="_blank" title="北京林业大学外语学院翻译辅修开课通知">            北京林业大学外语学院翻译辅修开课通知 
+    </a></li>
+													<li><span class="datetime">2017-09-05</span><a href="/fxxx/252849.html" target="_blank" title="关于日语辅修二年级开课及交费通知">            关于日语辅修二年级开课及交费通知 
+    </a></li>
+													<li><span class="datetime">2017-09-05</span><a href="/fxxx/252826.html" target="_blank" title="2017年计算机艺术设计辅修专业招生简章">            2017年计算机艺术设计辅修专业招生... 
+    </a></li>
+													<li><span class="datetime">2017-09-04</span><a href="http://jwc.bjfu.edu.cn/fxxx/245240.html" target="_blank" title="2017级日语辅修专业招生简章">            2017级日语辅修专业招生简章 
+    </a></li>
+												</ul>
+					</div>
+				</div>
+				<div class="lanmu_r">
+					<div class="lanmu_title">
+						<div class="lanmu_pic"><img src="images/xiazai_bt.png" alt="下载专区"></div>
+						<div class="more"><a href="/xzzq/" target="_blank"><img src="images/more.jpg" alt="查看更多"></a></div>
+					</div>
+					<div class="lanmu_c">
+						<ul class="list">
+													<li><span class="datetime">2017-10-25</span><a href="/xzzq/257153.html" target="_blank" title="北京林业大学大学生创新创业训练项目变更申请表">            北京林业大学大学生创新创业训练项目变... 
+    </a></li>
+													<li><span class="datetime">2017-10-10</span><a href="/xzzq/255600.html" target="_blank" title="北京林业大学大学生创新创业训练计划项目经费报账申请表">            北京林业大学大学生创新创业训练计划项... 
+    </a></li>
+													<li><span class="datetime">2017-06-29</span><a href="/xzzq/251380.html" target="_blank" title="北京林业大学本科教学专项经费报账申请表">            北京林业大学本科教学专项经费报账申请... 
+    </a></li>
+													<li><span class="datetime">2017-06-27</span><a href="/xzzq/83622.html" target="_blank" title="办理本科学生中英文成绩单、在读证明、学历学位证明的注意事项(附模板)">            办理本科学生中英文成绩单、在读证明、... 
+    </a></li>
+													<li><span class="datetime">2017-06-21</span><a href="/xzzq/223165.html" target="_blank" title="北京林业大学考试命题表和试卷模板（含论文考试要求）">            北京林业大学考试命题表和试卷模板（含... 
+    </a></li>
+													<li><span class="datetime">2017-06-06</span><a href="/xzzq/249740.html" target="_blank" title="北京林业大学本科毕业论文（设计）答辩申请表">            北京林业大学本科毕业论文（设计）答辩... 
+    </a></li>
+												</ul>
+					</div>
+				</div>
+			</div>
+			<div class="lanmu">
+				<div class="lanmu_l">
+					<div class="lanmu_title">
+						<div class="lanmu_pic"><img src="images/jiaoyuwenyuan_bt.png" alt="教育教学文苑" height="26" width="121"></div>
+						<div class="more"><a href="/jyjxwy/" target="_blank"><img src="images/more.jpg" alt="查看更多"></a></div>
+					</div>
+					<div class="lanmu_c">
+						<ul class="list">
+													<li><span class="datetime">2017-10-26</span><a href="/jyjxwy/257223.html" target="_blank" title="大国兴教 人民为本——写在党的十九大召开之际 ">            大国兴教 人民为本——写在党的十九大... 
+    </a></li>
+													<li><span class="datetime">2017-10-26</span><a href="/jyjxwy/257222.html" target="_blank" title="不会游泳不能毕业？新生们普遍表示“不担心”--清华体育老传统有了新传承">            不会游泳不能毕业？新生们普遍表示“不... 
+    </a></li>
+													<li><span class="datetime">2017-10-26</span><a href="/jyjxwy/257220.html" target="_blank" title="陕西师大：信息技术“点燃”激情飞扬的课堂">            陕西师大：信息技术“点燃”激情飞扬的... 
+    </a></li>
+													<li><span class="datetime">2017-10-12</span><a href="/jyjxwy/255808.html" target="_blank" title="提升科技创新能力 培养德才兼备人才 为全面建成小康社会提供有力支撑">            提升科技创新能力 培养德才兼备人才 ... 
+    </a></li>
+													<li><span class="datetime">2017-10-11</span><a href="/jyjxwy/255722.html" target="_blank" title="中国高等教育规模位居世界第一">            中国高等教育规模位居世界第一 
+    </a></li>
+													<li><span class="datetime">2017-10-09</span><a href="/jyjxwy/255469.html" target="_blank" title="刘延东：在2017年全国教书育人楷模及优秀教师代表座谈会上的讲话">            刘延东：在2017年全国教书育人楷模... 
+    </a></li>
+												</ul>
+					</div>
+				</div>
+				<div class="lanmu_r">
+					<div class="lanmu_title">
+						<div class="lanmu_pic"><img src="images/xueshengchengzhang_bt.png" alt="学生成长成才" height="26" width="121"></div>
+						<div class="more"><a href="/xscccc/" target="_blank"><img src="images/more.jpg" alt="查看更多"></a></div>
+					</div>
+					<div class="lanmu_c">
+						<ul class="list">
+													<li><span class="datetime">2017-10-11</span><a href="/xscccc/255724.html" target="_blank" title="今年107万大学生报名入伍">            今年107万大学生报名入伍 
+    </a></li>
+													<li><span class="datetime">2017-10-11</span><a href="/xscccc/255721.html" target="_blank" title="华中科技大学出台管理新规 本科生学分不够可降读专科">            华中科技大学出台管理新规 本科生学分... 
+    </a></li>
+													<li><span class="datetime">2017-10-10</span><a href="/xscccc/255569.html" target="_blank" title="“第二成绩单”是高校教学创新">            “第二成绩单”是高校教学创新 
+    </a></li>
+													<li><span class="datetime">2017-09-14</span><a href="/xscccc/253968.html" target="_blank" title="“清华队”是如何炼成的？">            “清华队”是如何炼成的？ 
+    </a></li>
+													<li><span class="datetime">2017-09-14</span><a href="/xscccc/253967.html" target="_blank" title="社会常识也是大学生的必修课">            社会常识也是大学生的必修课 
+    </a></li>
+													<li><span class="datetime">2017-09-07</span><a href="/xscccc/253082.html" target="_blank" title="“我是如何成功逆袭的”">            “我是如何成功逆袭的” 
+    </a></li>
+												</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+</div>
+<div id="footer">
+	<div id="kongbai"></div>
+	<div id="lianjie">
+            <li style="margin:0;"><a href="">友情链接：</a></li>                        
+                        <li><a href="http://www.moe.edu.cn/" target="_blank">教育部</a></li>
+                        <li><a href="http://www.bjedu.gov.cn/publish/portal0/default.htm" target="_blank">市教委</a></li>
+                        <li><a href="http://gjgl.naea.edu.cn/" target="_blank">高等教育学会</a></li>
+                        <li><a href="http://www.cet.edu.cn/" target="_blank">英语四六级考试中心</a></li>
+                        <li><a href="http://www.xueyuanlu.cn/" target="_blank">学院路共同体</a></li>
+                        <li><a href="http://www.jingpinke.com/index" target="_blank">国家精品课资源网</a></li>
+                        <li><a href="http://www.icourses.edu.cn/" target="_blank">国家精品视频公开课</a></li>
+                        <li><a href="http://open.163.com/" target="_blank">网易公开课</a></li>
+                        <li><a href="http://www.bjfu.edu.cn/" target="_blank">学校主页</a></li>
+                        <li><a href="http://dc.bjfu.edu.cn/" target="_blank">大创网</a></li>
+            
+	</div>
+	<div id="cfooter">
+		<p>版权所有 &copy; 2004-2012&nbsp;&nbsp;&nbsp; 北京林业大学教务处 &nbsp;&nbsp;&nbsp;E-mail: <a href="mailto:jwc@bjfu.edu.cn">jwc@bjfu.edu.cn</a>&nbsp;</p>
+	</div>
+</div>
+
+<style type="text/css">
+#notice {width:193px; color: #222222; font-size: 14px;}
+#notice #close {text-align:right;padding-right:5px;padding-top:5px; padding-bottom:5px;font-weight:700;cursor: pointer;font-size:16px; color:#023F03;background:#8CBB6B;border:1px #1C6A1E solid;border-bottom:0;}
+#notice #content {background:#F3FDF5;color: #222222; padding-left:6px; padding-right:6px; padding-top:10px; padding-bottom:10px;}
+</style>
+<div id="notice">
+  <div id="close" onclick="document.getElementById('notice').style.display='none'">关闭</div>
+ <div id="content"><STRONG><A href="http://202.204.121.135/jwxt/Index.htm"><FONT size=4>旧教务系统</FONT></A></STRONG> </div>
+   </div>
+<script language="javascript">
+ var Class = {
+   create: function() {
+     return function() {
+       this.initialize.apply(this, arguments);
+     }
+   }
+ }
+ Function.prototype.bind = function() {
+   var __method = this, args = $A(arguments), object = args.shift();
+   return function() {
+     return __method.apply(object, args.concat($A(arguments)));
+   }
+ }
+ var $A = Array.from = function(iterable) {
+   if (!iterable) return [];
+   if (iterable.toArray) {
+     return iterable.toArray();
+   } else {
+     var results = [];
+     for (var i = 0; i < iterable.length; i++)
+       results.push(iterable[i]);
+     return results;
+   }
+ }
+ var Float = Class.create();
+ Float.prototype = {
+  initialize: function(elem, options) {
+   this.toDo = options.toDo || function(){},
+   this.bodyScrollTop = document.documentElement.scrollTop || document.body.scrollTop,
+   this.bodyScrollLeft = document.documentElement.scrollLeft || document.body.scrollLeft,
+   this.element = document.getElementById(elem);
+   this.dely = options.dely || 500;
+   this.top = options.top || 0;
+   this.left = options.left || 0;
+   
+  },
+  start:function(){
+   if(!this.element){
+    ('please set a element first!');
+    return false;
+   }
+   this.element.style.position = 'absolute';
+   this.toDo();
+   setInterval(this.toDo.bind(this),this.dely)
+  }
+ }
+var f = new Float('notice',{dely:100,
+ toDo:function(){
+  var isIE = document.all && window.external;
+  this.bodyScrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+  this.bodyScrollLeft = document.documentElement.scrollLeft || document.body.scrollLeft;
+  if(isIE){
+   this.docWidth = document.documentElement.clientWidth || document.body.clientWidth;
+   this.docHeight = document.documentElement.clientHeight || document.body.clientHeight;
+  }else{
+   this.docWidth = (document.body.clientWidth > document.documentElement.clientWidth)?document.documentElement.clientWidth:document.body.clientWidth;
+   this.docHeight = (document.body.clientHeight > document.documentElement.clientHeight)?document.documentElement.clientHeight:document.body.clientHeight;
+  }
+  this.element.style.top = (this.docHeight - parseInt(this.element.offsetHeight,10)) + parseInt(this.bodyScrollTop, 10)+ 'px';
+  this.element.style.left = (this.docWidth - parseInt(this.element.offsetWidth,10)) + parseInt(this.bodyScrollLeft, 10) + 'px';
+ }
+});
+f.start();
+</script> 
+<!--float start-->
+<div id="ad" style="position: absolute;z-index:999;">
+</DIV>
+<SCRIPT type="text/javascript">
+var x = 50,y = 60
+var xin = true, yin = true
+var step = 1 
+var delay = 20
+var obj=document.getElementById("ad") 
+function floatAD() {
+var L=T=0
+var R= document.body.clientWidth-obj.offsetWidth
+var B = document.body.clientHeight-obj.offsetHeight
+obj.style.left = x + document.body.scrollLeft
+obj.style.top = y + document.body.scrollTop
+x = x + step*(xin?1:-1) 
+if (x < L) { xin = true; x = L} 
+if (x > R){ xin = false; x = R} 
+y = y + step*(yin?1:-1) 
+if (y < T) { yin = true; y = T } 
+if (y > B) { yin = false; y = B } 
+}
+var itl= setInterval("floatAD()", delay) 
+obj.onmouseover=function(){clearInterval(itl)} 
+obj.onmouseout=function(){itl=setInterval("floatAD()", delay)}
+</script>
+<!--float end --></body>
+</html>
+</body></html>

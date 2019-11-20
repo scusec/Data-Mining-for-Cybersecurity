@@ -1,0 +1,705 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head> 
+  <base href="http://www.nun.edu.cn"> 
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+  <title>北方民族大学</title> 
+  <link rel="stylesheet" type="text/css" href="css/style.css"> 
+  <link rel="stylesheet" type="text/css" href="css/index.css"> 
+  <link rel="stylesheet" type="text/css" href="css/style11.css"> 
+  <link rel="stylesheet" type="text/css" href="css/conmmon.css"> 
+  <link rel="stylesheet" type="text/css" href="css/list.css"> 
+  <link rel="stylesheet" type="text/css" href="css/banner.css"> 
+  <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script> 
+  <script type="text/javascript" src="js/jquery_downav.js"></script> 
+  <script type="text/javascript" src="js/jqFocus.js"></script> 
+  <script type="text/javascript">
+//选项卡用js
+function nTabs(thisObj, Num, active, normal) {
+    if (thisObj.className == active) return;
+    var tabObj = thisObj.parentNode.id;
+    var tabList = document.getElementById(tabObj).getElementsByTagName("li");
+    for (i = 0; i < tabList.length; i++) {
+        if (i == Num) {
+            thisObj.className = active;
+            document.getElementById(tabObj + "_Content" + i).style.display = "block";
+
+        } else {
+            tabList[i].className = normal;
+            document.getElementById(tabObj + "_Content" + i).style.display = "none";
+        }
+    }
+    return void(0);
+
+}
+</script> 
+  <script type="text/javascript">
+	$(function(){
+		$("#focuswrap").jqFocus({
+			focusContainer : ".fs",
+			focusUl : ".fs ul",
+			focusUlLi : ".fs ul li",
+			focusSmallBtnBg : ".fs .btnBg",
+			focusActive : "active",
+			preBtn : ".fs .btnPre",
+			nextBtn : ".fs .btnNext"
+		});
+	})
+</script> 
+  <script type="text/javascript" charset="UTF-8">
+var SiteName='北方民族大学首站2017';
+var SiteDomainName='www.nun.edu.cn';
+var SiteContext='nun';
+var searchServer='http://wzzy.nun.edu.cn/SearchServer';
+var CheckLogin='false';
+
+</script> 
+  <link href="http://wzzy.nun.edu.cn/SearchServer/css/floatingAd.css" rel="stylesheet" type="text/css"> 
+  <script language="javascript" type="text/javascript" src="http://wzzy.nun.edu.cn/SearchServer/js/floatingAd.js"></script> 
+  <script>
+$(function(){
+$.floatingAd({
+delay: 60,
+isLinkClosed: false,
+ad:[
+{headFilter: 0.3,'img': '/resource/20171019/20171019100556311.jpg','imgHeight': 60,'imgWidth': 264,'linkUrl': 'http://sjd.nun.edu.cn/','z-index': 100,'title': '十九大','closed-icon': '/static/themes/blue/icons/16x16/close.gif'}
+],
+});
+});
+</script> 
+  <script type="text/javascript" charset="UTF-8" src="http://wzzy.nun.edu.cn/SearchServer/js/TemplateProcess.js"></script> 
+  <script type="text/javascript" charset="UTF-8" src="http://wzzy.nun.edu.cn/SearchServer/js/visit.js"></script> 
+  <script type="text/javascript" charset="UTF-8" src="http://wzzy.nun.edu.cn/SearchServer/js/pagination.js"></script> 
+  <script type="text/javascript" charset="UTF-8" src="http://wzzy.nun.edu.cn/SearchServer/js/listAjax.js"></script> 
+  <script type="text/javascript" charset="UTF-8" src="http://wzzy.nun.edu.cn/SearchServer/js/UrlTool.js"></script> 
+  <script type="text/javascript" charset="UTF-8" src="http://wzzy.nun.edu.cn/SearchServer/js/articlePagination.js"></script> 
+  <script type="text/javascript" charset="UTF-8" src="http://wzzy.nun.edu.cn/SearchServer/js/flexpaper/flexpaper_flash.js"></script> 
+ </head> 
+ <body> 
+  <div class="top"> 
+   <div class="t_cont"> 
+    <!-- <div class="rq" cmsid=18>
+		今天是：
+      <span id=localtime cmsid=19></span>
+	  <span class="txt" cmsid=20>欢迎光临北方民族大学！</span>
+      <script type="text/javascript" cmsid=21>
+function showLocale(objD)
+{
+	var str,colorhead,colorfoot;
+	var yy = objD.getYear();
+	if(yy<1900) yy = yy+1900;
+	var MM = objD.getMonth()+1;
+	if(MM<10) MM = '0' + MM;
+	var dd = objD.getDate();
+	if(dd<10) dd = '0' + dd;
+	var hh = objD.getHours();
+	if(hh<10) hh = '0' + hh;
+	var mm = objD.getMinutes();
+	if(mm<10) mm = '0' + mm;
+	var ss = objD.getSeconds();
+	if(ss<10) ss = '0' + ss;
+	var ww = objD.getDay();
+	if  ( ww==0 )  colorhead="<font color=\"#979797\">";
+	if  ( ww > 0 && ww < 6 )  colorhead="<font color=\"#979797\">";
+	if  ( ww==6 )  colorhead="<font color=\"#979797\">";
+	if  (ww==0)  ww="星期日";
+	if  (ww==1)  ww="星期一";
+	if  (ww==2)  ww="星期二";
+	if  (ww==3)  ww="星期三";
+	if  (ww==4)  ww="星期四";
+	if  (ww==5)  ww="星期五";
+	if  (ww==6)  ww="星期六";
+	colorfoot="</script></font>"
+	str = colorhead + yy + "-" + MM + "-" + dd + " " + hh + ":" + mm + ":" + ss + "  " + ww + colorfoot;
+	return(str);
+}
+function tick()
+{
+	var today;
+	today = new Date();
+	document.getElementById("localtime").innerHTML = showLocale(today);
+	window.setTimeout("tick()", 1000);
+}
+tick();
+</script>
+    </div>--> 
+    <div class="top_nav"> 
+     <ul> 
+      <!-- <li cmsid=24><a href="#" cmsid=25>旧版网页</a></li>--> 
+      <!--<li cmsid=26><span cmsid=27>|</span></li>--> 
+      <li><a href="#">设为首页</a></li> 
+      <li><span>|</span></li> 
+      <li><a href="http://en.nun.edu.cn/">English</a></li> 
+     </ul> 
+    </div> 
+   </div> 
+  </div> 
+  <div class="top_line"></div> 
+  <div class="headerbox"> 
+   <div class="header"> 
+    <div class="logo"> 
+     <img src="images/logo.jpg"> 
+    </div> 
+    <div class="r_cont"> 
+     <!--<ul class="head_list" cmsid=32>
+				<li cmsid=33><a href="#" cmsid=34>考生/学生家长</a></li>
+				<li cmsid=35><a href="#" cmsid=36>校友</a></li>
+				<li cmsid=37><a href="#" cmsid=38>教职工</a></li>
+				<li cmsid=39><a href="#" cmsid=40>学生</a></li>
+			</ul>--> 
+     <div class="clear"></div> 
+     <!-- 搜索 开始 --> 
+     <!--	<div class="searchbox" cmsid=42>
+        		<input name="" type="text" class="searchinput"     cmsid=43 />
+            	<div class="searchbtn" cmsid=44><a href="#" cmsid=45>搜索</a></div>
+        	</div>  --> 
+     <!-- 搜索 开始 --> 
+    </div> 
+   </div> 
+  </div> 
+  <!--导航 开始--> 
+  <div class="menubox"> 
+   <div id="navmenu"> 
+    <ul> 
+     <li class="nav_line"><a href="http://www.nun.edu.cn">网站首页</a></li> 
+     <li><a href="javascript:void(0)">学校概况</a> 
+      <ul> 
+       <li><a href="http://www.nun.edu.cn/3273/65420.html" target="_blank">学校概况</a></li> 
+       <li><a href="http://www.nun.edu.cn/3274.html" target="_blank">现任领导</a></li> 
+       <li><a href="http://www.nun.edu.cn/3275/65421.html" target="_blank">民大章程</a></li> 
+       <li><a href="http://www.nun.edu.cn/3276.html" target="_blank">校园风光</a></li> 
+       <li><a href="http://www.nun.edu.cn/3293.html" target="_blank">学校标识</a></li> 
+       <li><a href="http://www.nun.edu.cn/3294.html" target="_blank">学校校歌</a></li> 
+       <li><a href="http://www.nun.edu.cn/3295.html" target="_blank">学校校训</a></li> 
+      </ul> </li> 
+     <li class="nav_line"><a href="javascript:void(0)">机构设置</a> 
+      <ul> 
+       <li><a href="http://www.nun.edu.cn/3278.html" target="_blank">机关职能部门</a></li> 
+       <li><a href="http://www.nun.edu.cn/3279.html" target="_blank">教学单位</a></li> 
+       <li><a href="http://www.nun.edu.cn/3280.html" target="_blank">科研院所</a></li> 
+       <li><a href="http://www.nun.edu.cn/3282.html" target="_blank">附属单位</a></li> 
+      </ul> </li> 
+     <li class="nav_line"><a href="javascript:void(0)">教育教学</a> 
+      <ul> 
+       <li><a href="http://jwc.nun.edu.cn" target="_blank" title="本科生培养">本科生培养</a></li> 
+       <li><a href="http://yjsc.nun.edu.cn" target="_blank" title="研究生培养">研究生培养</a></li> 
+      </ul> </li> 
+     <li class="nav_line"><a href="http://www.nun.edu.cn/3290.html">队伍建设</a> 
+      <ul> 
+       <li><a href="http://www.nun.edu.cn/3291.html" target="_blank">国家级人才</a></li> 
+       <li><a href="http://www.nun.edu.cn/3292.html" target="_blank">省部级人才</a></li> 
+      </ul> </li> 
+     <li class="nav_line"><a href="javascript:void(0)">科学研究</a> 
+      <ul> 
+       <li><a href="http://bfyyyjs.nun.edu.cn/" target="_blank" title="北方语言研究院">北方语言研究院</a></li> 
+       <li><a href="javascript:void(0)" target="_blank" title="西夏研究所">西夏研究所</a></li> 
+       <li><a href="http://hzyjy.nun.edu.cn/" target="_blank" title="回族学研究院">回族学研究院 </a></li> 
+       <li><a href="javascript:void(0)" target="_blank" title="社会学与民族学研究所">社会学与民族学研究所</a></li> 
+       <li><a href="http://szyjs.nun.edu.cn" target="_blank" title="数值计算与工程应用研究所">数值计算与工程应用研究所</a></li> 
+       <li><a href="javascript:void(0)" target="_blank" title="非物质文化遗产研究所">非物质文化遗产研究所</a></li> 
+      </ul> </li> 
+     <li class="nav_line"><a href="http://gjhzjl.nun.edu.cn/" target="_blank">合作交流</a> 
+      <!--<ul>
+          <li><a href="#">栏目名称</a></li>
+          <li><a href="#">栏目名称</a></li>
+        </ul>--> </li> 
+     <li class="nav_line"><a href="javascript:void(0)">招生就业</a> 
+      <ul> 
+       <li><a href="http://zb.nun.edu.cn" target="_blank" title="招生信息">本预科招生信息</a></li> 
+       <li><a href="http://yjsc.nun.edu.cn" target="_blank" title="招生信息">研究生招生信息</a></li> 
+       <li><a href="http://jyc.nun.edu.cn" target="_blank" title="就业信息">就业信息</a></li> 
+      </ul> </li> 
+     <li><a href="javascript:void(0)">媒体民大</a> 
+      <ul> 
+       <li><a href="http://xww.nun.edu.cn/2063.html" target="_blank">媒体民大</a></li> 
+       <li><a href="script:void(0)" target="_blank">民大校报</a></li> 
+       <li><a href="script:void(0)" target="_blank">民大电台</a></li> 
+       <li><a href="http://www.nun.edu.cn/3288.html" target="_blank">民大微博</a></li> 
+       <li><a href="http://www.nun.edu.cn/3287.html" target="_blank">民大微信</a></li> 
+      </ul> </li> 
+    </ul> 
+   </div> 
+  </div> 
+  <!--导航 结束--> 
+  <!--焦点图开始--> 
+  <div class="banner"> 
+   <div class="flexslider"> 
+    <ul class="slides"> 
+     <li><img src="images/banner_09.jpg"></li> 
+     <li><img src="images/banner_03.jpg"></li> 
+     <li><img src="images/banner_05.jpg"></li> 
+     <li><img src="images/banner_01.jpg"></li> 
+     <li><img src="images/banner_02.jpg"></li> 
+     <li><img src="images/banner_04.jpg"></li> 
+    </ul> 
+   </div> 
+  </div> 
+  <!--焦点图结束--> 
+  <div class="box"> 
+   <div class="content mt25"> 
+    <div class="i_list w500 mr20"> 
+     <div class="tit"> 
+      <ul id="two_tab" class="tit_tab"> 
+       <li class="active" onmousemove="nTabs(this,0,'active','normal')"><a href="http://xww.nun.edu.cn/2061.html" target="_blank" style="color:#222;">民大新闻</a> </li> 
+       <li onmousemove="nTabs(this,1,'active','normal')"><a href="http://xww.nun.edu.cn/2066.html" target="_blank" style="color:#222;">通知公告</a></li> 
+      </ul> 
+      <div class=""> 
+       <a href="http://xww.nun.edu.cn/2061.html" title="更多"></a> 
+      </div> 
+     </div> 
+     <!-- 民大新闻 开始 --> 
+     <div class="list" id="two_tab_Content0"> 
+      <ul> 
+       <li> 
+        <div class="txt w400"> 
+         <a href="http://xww.nun.edu.cn/2061/68560.html" target="_blank"><font color="#FF0000">教育部本科教学工作审核评估专家组向我校反馈审核评估意见</font></a> 
+        </div> 
+        <div class="rq">
+          [10-27] 
+        </div> </li> 
+       <li> 
+        <div class="txt w400"> 
+         <a href="http://xww.nun.edu.cn/2061/68551.html" target="_blank"><font color="#FF0000">我校组织收看国家民委系统学习贯彻党的十九大精神电视电话会...</font></a> 
+        </div> 
+        <div class="rq">
+          [10-26] 
+        </div> </li> 
+       <li> 
+        <div class="txt w400"> 
+         <a href="http://xww.nun.edu.cn/2061/68404.html" target="_blank"><font color="#FF0000">教育部对我校本科教学工作审核评估拉开帷幕</font></a> 
+        </div> 
+        <div class="rq">
+          [10-24] 
+        </div> </li> 
+       <li> 
+        <div class="txt w400"> 
+         <a href="http://xww.nun.edu.cn/2061/68457.html" target="_blank"><font color="#FF0000">《中国民族报》专版对我校人才培养工作进行报道</font></a> 
+        </div> 
+        <div class="rq">
+          [10-24] 
+        </div> </li> 
+       <li> 
+        <div class="txt w400"> 
+         <a href="http://xww.nun.edu.cn/2061/68603.html" target="_blank">校党委中心组召开理论学习会 传达学习党的十九大精神</a> 
+        </div> 
+        <div class="rq">
+          [10-27] 
+        </div> </li> 
+       <li> 
+        <div class="txt w400"> 
+         <a href="http://xww.nun.edu.cn/2061/68555.html" target="_blank">我校举办第三届社团风采展示活动暨学生社团工作表彰晚会</a> 
+        </div> 
+        <div class="rq">
+          [10-27] 
+        </div> </li> 
+       <li> 
+        <div class="txt w400"> 
+         <a href="http://xww.nun.edu.cn/2061/68530.html" target="_blank">2017年全国高雅艺术进校园国家话剧院专场演出在我校举行</a> 
+        </div> 
+        <div class="rq">
+          [10-26] 
+        </div> </li> 
+       <li> 
+        <div class="txt w400"> 
+         <a href="http://xww.nun.edu.cn/2061/68527.html" target="_blank">国家民委教育科技司、自治区教育厅领导来我校调研</a> 
+        </div> 
+        <div class="rq">
+          [10-25] 
+        </div> </li> 
+       <li> 
+        <div class="txt w400"> 
+         <a href="http://xww.nun.edu.cn/2061/68525.html" target="_blank">我校荣获全区学生羽毛球锦标赛团体赛冠军</a> 
+        </div> 
+        <div class="rq">
+          [10-25] 
+        </div> </li> 
+       <li> 
+        <div class="txt w400"> 
+         <a href="http://xww.nun.edu.cn/2061/68532.html" target="_blank">我校学生在全国武术套路冠军赛中摘得男子对练项目金牌</a> 
+        </div> 
+        <div class="rq">
+          [10-25] 
+        </div> </li> 
+       <li> 
+        <div class="txt w400"> 
+         <a href="http://xww.nun.edu.cn/2061/68476.html" target="_blank">国家民委教科司副司长李学锋考察我校新校区建设情况</a> 
+        </div> 
+        <div class="rq">
+          [10-24] 
+        </div> </li> 
+      </ul> 
+     </div> 
+     <!-- 民大新闻 结束 --> 
+     <!-- 通知公告 开始 --> 
+     <div class="list" id="two_tab_Content1" style="display:none;"> 
+      <ul> 
+       <li> 
+        <div class="txt w400"> 
+         <a href="http://xww.nun.edu.cn/2066/68595.html" target="_blank"><font color="#FF0000">宁夏国家安全机关举报须知</font></a> 
+        </div> 
+        <div class="rq">
+          [10-27] 
+        </div> </li> 
+       <li> 
+        <div class="txt w400"> 
+         <a href="http://xww.nun.edu.cn/2066/68513.html" target="_blank"><font color="#FF0000">招聘公示：北方民族大学2017年公开招聘拟聘人员公示（第...</font></a> 
+        </div> 
+        <div class="rq">
+          [10-25] 
+        </div> </li> 
+       <li> 
+        <div class="txt w400"> 
+         <a href="http://xww.nun.edu.cn/2066/68287.html" target="_blank"><font color="#FF0000">北方民族大学章程80问</font></a> 
+        </div> 
+        <div class="rq">
+          [10-21] 
+        </div> </li> 
+       <li> 
+        <div class="txt w400"> 
+         <a href="http://xww.nun.edu.cn/2066/67590.html" target="_blank"><font color="#FF0000">北方民族大学审核评估100问</font></a> 
+        </div> 
+        <div class="rq">
+          [10-14] 
+        </div> </li> 
+       <li> 
+        <div class="txt w400"> 
+         <a href="http://xww.nun.edu.cn/2066/46746.html" target="_blank"><font color="#FF0000">校外用户访问校园网内资源的办法VPN（校外用户必读）</font></a> 
+        </div> 
+        <div class="rq">
+          [12-24] 
+        </div> </li> 
+       <li> 
+        <div class="txt w400"> 
+         <a href="http://xww.nun.edu.cn/2066/68598.html" target="_blank">北方民族大学2017年外文电子资源回溯单一来源采购项目公...</a> 
+        </div> 
+        <div class="rq">
+          [10-27] 
+        </div> </li> 
+       <li> 
+        <div class="txt w400"> 
+         <a href="http://xww.nun.edu.cn/2066/68531.html" target="_blank">北方民族大学材料科学与工程学院等离子放电烧结炉单一来源采...</a> 
+        </div> 
+        <div class="rq">
+          [10-26] 
+        </div> </li> 
+       <li> 
+        <div class="txt w400"> 
+         <a href="http://xww.nun.edu.cn/2066/68523.html" target="_blank">北方民族大学档案整理采购项目中标公告</a> 
+        </div> 
+        <div class="rq">
+          [10-25] 
+        </div> </li> 
+       <li> 
+        <div class="txt w400"> 
+         <a href="http://xww.nun.edu.cn/2066/68423.html" target="_blank">关于催促电气信息工程学院张博琛尽快返校的通知</a> 
+        </div> 
+        <div class="rq">
+          [10-23] 
+        </div> </li> 
+       <li> 
+        <div class="txt w400"> 
+         <a href="http://xww.nun.edu.cn/2066/68306.html" target="_blank">北方民族大学高性能计算及多渠道调研实验室项目中标公告</a> 
+        </div> 
+        <div class="rq">
+          [10-21] 
+        </div> </li> 
+       <li> 
+        <div class="txt w400"> 
+         <a href="http://xww.nun.edu.cn/2066/68305.html" target="_blank">北方民族大学经济管理综合实践教学仿真平台建设项目中标公告</a> 
+        </div> 
+        <div class="rq">
+          [10-21] 
+        </div> </li> 
+      </ul> 
+     </div> 
+     <!-- 通知公告 结束 --> 
+    </div> 
+    <div class="i_list w390"> 
+     <div class="tit"> 
+      <ul id="one_tab" class="tit_tab"> 
+       <li onmousemove="nTabs(this,0,'active','normal')"><a href="http://xww.nun.edu.cn/2864.html" target="_blank" style="color:#222;">学术看板</a></li> 
+       <li class="active" onmousemove="nTabs(this,1,'active','normal')"><a href="http://xww.nun.edu.cn/2062.html" target="_blank" style="color:#222;">部门动态</a></li> 
+      </ul> 
+      <div class=""> 
+       <a href="http://xww.nun.edu.cn/2864.html" title="更多"></a> 
+      </div> 
+     </div> 
+     <!--部门动态 开始 --> 
+     <div class="list" id="one_tab_Content0"> 
+      <ul> 
+       <li> 
+        <div class="txt w280"> 
+         <a href="http://xww.nun.edu.cn/2864/68355.html" target="_blank">社会结构及其演变</a> 
+        </div> 
+        <div class="rq">
+          [10-24] 
+        </div> </li> 
+       <li> 
+        <div class="txt w280"> 
+         <a href="http://xww.nun.edu.cn/2864/67940.html" target="_blank">中国司法改革之路径选择</a> 
+        </div> 
+        <div class="rq">
+          [10-18] 
+        </div> </li> 
+       <li> 
+        <div class="txt w280"> 
+         <a href="http://xww.nun.edu.cn/2864/67937.html" target="_blank">工商民族志及其研究方法</a> 
+        </div> 
+        <div class="rq">
+          [10-18] 
+        </div> </li> 
+       <li> 
+        <div class="txt w280"> 
+         <a href="http://xww.nun.edu.cn/2864/67936.html" target="_blank">比较宗教与哲学社会</a> 
+        </div> 
+        <div class="rq">
+          [10-18] 
+        </div> </li> 
+       <li> 
+        <div class="txt w280"> 
+         <a href="http://xww.nun.edu.cn/2864/67804.html" target="_blank">超混沌复分数阶系统和他们的广义函数投影复...</a> 
+        </div> 
+        <div class="rq">
+          [10-17] 
+        </div> </li> 
+       <li> 
+        <div class="txt w280"> 
+         <a href="http://xww.nun.edu.cn/2864/67464.html" target="_blank">Plant–human interact...</a> 
+        </div> 
+        <div class="rq">
+          [10-11] 
+        </div> </li> 
+       <li> 
+        <div class="txt w280"> 
+         <a href="http://xww.nun.edu.cn/2864/67458.html" target="_blank">汉语北方话的“番式”变读及其注音方法</a> 
+        </div> 
+        <div class="rq">
+          [10-11] 
+        </div> </li> 
+       <li> 
+        <div class="txt w280"> 
+         <a href="http://xww.nun.edu.cn/2864/67378.html" target="_blank">企业管理研究方法前沿</a> 
+        </div> 
+        <div class="rq">
+          [10-10] 
+        </div> </li> 
+       <li> 
+        <div class="txt w280"> 
+         <a href="http://xww.nun.edu.cn/2864/67374.html" target="_blank">企业生产要素配置与协同发展</a> 
+        </div> 
+        <div class="rq">
+          [10-10] 
+        </div> </li> 
+       <li> 
+        <div class="txt w280"> 
+         <a href="http://xww.nun.edu.cn/2864/67373.html" target="_blank">管理创新与企业发展</a> 
+        </div> 
+        <div class="rq">
+          [10-10] 
+        </div> </li> 
+       <li> 
+        <div class="txt w280"> 
+         <a href="http://xww.nun.edu.cn/2864/66750.html" target="_blank">西方弦乐发展的技术及演变</a> 
+        </div> 
+        <div class="rq">
+          [09-30] 
+        </div> </li> 
+      </ul> 
+     </div> 
+     <!-- 部门动态 结束 --> 
+     <!-- 学术看板 开始 --> 
+     <div class="list" id="one_tab_Content1" style="display:none;"> 
+      <ul> 
+       <li> 
+        <div class="txt w280"> 
+         <a href="http://xww.nun.edu.cn/2062/68544.html" target="_blank">音乐舞蹈学院组织全体学生集中学习党的十九...</a> 
+        </div> 
+        <div class="rq">
+          [10-26] 
+        </div> </li> 
+       <li> 
+        <div class="txt w280"> 
+         <a href="http://xww.nun.edu.cn/2062/68557.html" target="_blank">图书馆举办读书分享会暨主题征文比赛颁奖仪...</a> 
+        </div> 
+        <div class="rq">
+          [10-26] 
+        </div> </li> 
+       <li> 
+        <div class="txt w280"> 
+         <a href="http://xww.nun.edu.cn/2062/68519.html" target="_blank">生物科学与工程学院举办第五届标本展</a> 
+        </div> 
+        <div class="rq">
+          [10-25] 
+        </div> </li> 
+       <li> 
+        <div class="txt w280"> 
+         <a href="http://xww.nun.edu.cn/2062/68479.html" target="_blank">数信学院举办首届“模拟面试”展示大赛</a> 
+        </div> 
+        <div class="rq">
+          [10-25] 
+        </div> </li> 
+       <li> 
+        <div class="txt w280"> 
+         <a href="http://xww.nun.edu.cn/2062/68512.html" target="_blank">机电工程学院访学生举办“携手工大 并肩前...</a> 
+        </div> 
+        <div class="rq">
+          [10-25] 
+        </div> </li> 
+       <li> 
+        <div class="txt w280"> 
+         <a href="http://xww.nun.edu.cn/2062/68477.html" target="_blank">管理学院与北京诺格威文化科技有限公司正式...</a> 
+        </div> 
+        <div class="rq">
+          [10-24] 
+        </div> </li> 
+       <li> 
+        <div class="txt w280"> 
+         <a href="http://xww.nun.edu.cn/2062/68451.html" target="_blank">土木工程学院第四届“家乡杯”演讲比赛圆满...</a> 
+        </div> 
+        <div class="rq">
+          [10-24] 
+        </div> </li> 
+       <li> 
+        <div class="txt w280"> 
+         <a href="http://xww.nun.edu.cn/2062/68104.html" target="_blank">外国语学院举办日语口译大赛</a> 
+        </div> 
+        <div class="rq">
+          [10-23] 
+        </div> </li> 
+       <li> 
+        <div class="txt w280"> 
+         <a href="http://xww.nun.edu.cn/2062/68394.html" target="_blank">马克思主义学院开展教学实践活动</a> 
+        </div> 
+        <div class="rq">
+          [10-23] 
+        </div> </li> 
+       <li> 
+        <div class="txt w280"> 
+         <a href="http://xww.nun.edu.cn/2062/68397.html" target="_blank">马克思主义学院召开审核性评估主题学习活动</a> 
+        </div> 
+        <div class="rq">
+          [10-23] 
+        </div> </li> 
+       <li> 
+        <div class="txt w280"> 
+         <a href="http://xww.nun.edu.cn/2062/68101.html" target="_blank">管理学院进一步开展毕业生管理教育工作</a> 
+        </div> 
+        <div class="rq">
+          [10-20] 
+        </div> </li> 
+      </ul> 
+     </div> 
+     <!-- 学术看板 结束 --> 
+    </div> 
+    <div class="list_r"> 
+     <ul class="list_img"> 
+      <li><a href="#" target="_blank"><img src="images/ban_01.jpg" title="校长信箱"></a></li> 
+      <li><a href="http://my.nun.edu.cn/" target="_blank"><img src="images/ban_02.jpg" title="智慧校园"></a></li> 
+      <li><a href="http://www.nun.edu.cn/3273/65422.html" target="_blank"><img src="images/ban_03.jpg" title="校园服务"></a></li> 
+      <li><a href="http://lib.nun.edu.cn/" target="_blank"><img src="images/ban_04.jpg" title="图书馆"></a></li> 
+     </ul> 
+     <div class="jqfocus" id="focuswrap"> 
+      <div class="fs"> 
+       <ul> 
+        <li><a href="http://sjd.nun.edu.cn" target="_blank"><img src="images/ad_01.jpg" title="图片标题"></a></li> 
+        <li><a href="http://lxyz.nun.edu.cn/" target="_blank"><img src="images/ad_02.jpg" title="图片标题"></a></li> 
+        <li><a href="http://xww.nun.edu.cn/2143.html" target="_blank"><img src="images/ad_03.jpg" title="图片标题"></a></li> 
+        <li><a href="http://pjzt.nun.edu.cn/" target="_blank"><img src="images/ad_04.jpg" title="图片标题"></a></li> 
+       </ul> 
+       <div class="btnPre"></div> 
+       <div class="btnNext"></div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="link_box"> 
+    <ul class="link_tab" id="link_tab"> 
+     <li class="active" onclick="nTabs(this,0,'active','normal')">精品导航</li> 
+     <li onclick="nTabs(this,1,'active','normal')">民族院校</li> 
+     <li onclick="nTabs(this,2,'active','normal')">常用系统</li> 
+     <li onclick="nTabs(this,3,'active','normal')">其他链接</li> 
+    </ul> 
+    <!-- 精品导航 开始 --> 
+    <ul class="link_cont" id="link_tab_Content0"> 
+     <li><a href="http://www.seac.gov.cn/" target="_blank">国家民委</a></li> 
+     <li><a href="http://www.moe.gov.cn/" target="_blank">教育部</a></li> 
+     <li><a href="http://www.nxedu.gov.cn/index.html" target="_blank">自治区教育厅</a></li> 
+     <li><a href="http://www.yiban.cn/" target="_blank">易班网</a></li> 
+     <li><a href="http://www.univs.cn/" target="_blank">大学生在线</a></li> 
+    </ul> 
+    <!-- 精品导航 结束 --> 
+    <!-- 名族院校 开始 --> 
+    <ul class="link_cont" id="link_tab_Content1" style="display:none;"> 
+     <li><a href="http://www.muc.edu.cn/" target="_blank">中央民族大学</a></li> 
+     <li><a href="http://www.scuec.edu.cn/" target="_blank">中南民族大学</a></li> 
+     <li><a href="http://www.swun.edu.cn/" target="_blank">西南民族大学</a></li> 
+     <li><a href="http://www.xbmu.edu.cn/" target="_blank">西北民族大学</a></li> 
+     <li><a href="http://www.dlnu.edu.cn/" target="_blank">大连民族大学</a></li> 
+     <li><a href="http://www.gxun.edu.cn/" target="_blank">广西民族大学</a></li> 
+     <li><a href="http://www.ynni.edu.cn/" target="_blank">云南民族大学</a></li> 
+     <li><a href="http://www.gzmu.edu.cn/" target="_blank">贵州民族大学</a></li> 
+     <li><a href="http://www.qhmu.edu.cn/" target="_blank">青海民族大学</a></li> 
+     <li><a href="http://www.imun.edu.cn/" target="_blank">内蒙古民族大学</a></li> 
+     <li><a href="http://www.xzmy.edu.cn/" target="_blank">西藏民族学院</a></li> 
+     <li><a href="http://www.hbmy.edu.cn/" target="_blank">湖北民族学院</a></li> 
+     <li><a href="http://www.imnc.edu.cn/" target="_blank">呼和浩特民族学院</a></li> 
+     <li><a href="http://www.scun.edu.cn/" target="_blank">四川民族学院</a></li> 
+    </ul> 
+    <!-- 名族院校 结束 --> 
+    <!-- 常用系统 开始 --> 
+    <ul class="link_cont" id="link_tab_Content2" style="display:none;"> 
+     <li><a href="http://my.nun.edu.cn" class="linkzca" target="_blank">智慧校园</a></li> 
+     <li><a href="http://202.201.112.11/" class="linkzca" target="_blank">教学资源</a></li> 
+     <li><a href="http://nwsni.fanya.chaoxing.com/portal" class="linkzca" target="_blank">网络教学</a></li> 
+     <li><a href="http://xygzb.nun.edu.cn" class="linkzca" target="_blank">校友总会</a></li> 
+     <li><a href="http://202.201.112.120/jyjjh" class="linkzca" target="_blank">教育基金</a></li> 
+     <li><a href="http://202.201.112.147:8080/login/Login.jsp?logintype=1&amp;languageid=7&amp;message=">OA平台</a></li> 
+     <li><a href="http://202.201.112.11/meol/custom.do?menuId=5" class="linkzca" target="_blank">精品课程</a></li> 
+    </ul> 
+    <!-- 常用系统 结束 --> 
+    <!-- 其它链接 开始 --> 
+    <ul class="link_cont" id="link_tab_Content3" style="display:none;"> 
+     <li><a href="http://www.pku.edu.cn/" target="_blank">北京大学</a></li> 
+     <li><a href="http://www.hfut.edu.cn/ch/" target="_blank">合肥工业大学</a></li> 
+     <li><a href="http://www.snnu.edu.cn/default.php" target="_blank">陕西师范大学</a></li> 
+     <li><a href="http://www.nxu.edu.cn/" target="_blank">宁夏大学</a></li> 
+     <li><a href="http://www.nxmu.edu.cn/" target="_blank">宁夏医科大学</a></li> 
+     <li><a href="http://www.nxtu.cn/" target="_blank">宁夏师范学院</a></li> 
+    </ul> 
+    <!-- 其它链接 结束 --> 
+   </div> 
+   <div class="clear"></div> 
+  </div> 
+  <div class="clear"></div> 
+  <div class="bot_y"></div> 
+  <div class="footer"> 
+   <div class="footer_cont"> 
+    <div class="logo"> 
+     <img src="images/logo_footer.png"> 
+    </div> 
+    <div class="txt"> 
+     <p>版权所有：北方民族大学党委宣传部</p> 
+     <p>@2003-2016 Copyright by HUT and All Rights Reserved 宁ICP备：010150</p> 
+     <p>中国-宁夏回族自治区-银川市-西夏区-文昌北街204号 </p> 
+    </div> 
+    <ul class="list_ewm"> 
+     <li><img src="images/ewm_01.jpg"><p>北方民大微博</p></li> 
+     <li><img src="images/ewm_02.jpg"><p>北方民大微信</p></li> 
+     <li><img src="images/ewm_03.jpg"><p>国家民委微信</p></li> 
+    </ul> 
+   </div> 
+  </div> 
+  <script type="text/javascript" src="js/jquery.flexslider-min.js"></script> 
+  <script type="text/javascript">
+$(document).ready(function(){
+    $('.flexslider').flexslider({
+        directionnav: true,
+        pauseonaction: false,
+        pauseOnHover: true,
+        slideshowSpeed: 5000
+    });
+});
+</script>  
+ </body>
+</html>

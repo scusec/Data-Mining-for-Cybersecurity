@@ -1,0 +1,631 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link type="text/css" media="all" rel="stylesheet" href="/Content/css/front/index.css" />
+    <script src="/Content/js/lib/jquery-1.7.2.min.js"></script>
+    <script src="/Content/js/front/ShowSubMenu.js"></script>
+    <script type='text/javascript' src='/Content/js/front/tabbiaoqian.js'></script>
+    <script src="/Content/js/front/main.js"></script>
+    <title>中国人民大学机构知识库</title>
+    <meta name="robots" content="all" />
+    <meta name="author" content="中国人民大学机构知识库" />
+    <meta name="copyright" content="(c) 版权所有 中国人民大学机构知识库" />
+    <meta name="description" content="机构知识库" />
+    <meta name="keywords" content="机构知识库 成果典藏 学者推荐 文献类型" />
+</head>
+<body>
+    <form action="" name="formTypeSearch" method="post" target="_blank">
+        <input type="hidden" name="hfAdvCon" id="hfAdvCons" />
+    </form>
+    <div id="header">
+        <div class="header_box">
+            <div id="top">
+                <ul style="display: inline">
+    <li><a href="/Account/Login">登录</a></li>
+    <li style="none"><a href="/Account/Register" target="_blank">注册</a></li>
+    <li><a href="http://webrary.ujs.edu.cn/Help/Service-oriented%20institutional%20repository" target="_blank">简明向导</a></li>
+    <li><a href="" target="_blank">NoteFirst 个人科研助理下载</a></li>
+    <div class="clear">
+    </div>
+</ul>
+<ul style="display: none">
+    <li><a href="/Account/Logout">退出</a></li>
+    <li><a href="" target="_blank"></a></li>
+    <li><a href="http://webrary.ujs.edu.cn/Help/Service-oriented%20institutional%20repository" target="_blank">简明向导</a></li>
+    <li><a href="/Admin" title="知识库入口" target="_blank" style="display:; ">馆员入口</a></li>
+    <li><a href="/Profile" title="知识库入口" target="_blank">用户中心</a></li>
+    <div class="clear">
+    </div>
+</ul>
+                </div>
+            <div id="banner">
+                <div id="logo">
+                    <img src="/Content/images/front/index_logo.png" alt="" width="338" height="62" />
+            </div>
+                <div class="search">
+                    <select class="selectTop">
+                        <option value="Title">标题</option>
+                        <option value="Author">作者</option>
+                        <option value="Media">来源</option>
+                        <option value="Keyword">关键词</option>
+                        <option value="Abstract">摘要</option>
+                    </select>
+                    <input id="txtTopKeyword" class="search_text" type="text" placeholder="请输入查询" onkeydown=" return (simSearchClick()); " />
+                    <input id="btnTopSearch" onclick=" ToSimSearch() " class="search_button" type="button" onfocus="this.blur();" />
+                    <div class="clear">
+        </div>
+                    <p class="highsearch">
+                        <a href="/SearchAdv">高级搜索</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+        <div id="navbar">
+        <div class="nav_box">
+            <div class="navmenu">
+                <ul>
+                    <li onmouseover="showSubMenu(this)" onmouseout="hideSubMenu(this)">
+                        <a href="#">关于我们</a>
+                        <ul>
+                            <li><a href="/FiexdContent/ShowContent/6" target="_blank">版权说明</a></li>
+                            <li><a href="/FiexdContent/ShowContent/7" target="_blank">联系我们</a></li>
+                            <li><a href="/FiexdContent/ShowContent/8" target="_blank">友情链接</a></li>
+                        </ul>
+                    </li>
+                    <li onmouseover="showSubMenu(this)" onmouseout="hideSubMenu(this)">
+                        <a href="#">技术支持</a>
+                        <ul>
+                            <a href="/FiexdContent/ShowContent/5" target="_blank">功能简介</a>
+                        </ul>
+                    </li>
+                    <li onmouseover="showSubMenu(this)" onmouseout="hideSubMenu(this)">
+                        <a href="#">用户服务</a>
+                        <ul>
+                                <li><a href="/FiexdContent/ShowContent/2" target="_blank">认领个人成果</a></li>
+                                                            <li><a href="/FiexdContent/ShowContent/3" target="_blank">个人学术名片</a></li>
+                            <li><a href="/FiexdContent/ShowContent/4" target="_blank">论文收录通知</a></li>
+                            <li><a href="http://202.112.118.87:9001/" target="_blank">团队服务</a></li>
+                        </ul>
+                    </li>
+                    <li onmouseover="showSubMenu(this)" onmouseout="hideSubMenu(this)">
+                        <a href="#">收录情况</a>
+                        
+<ul>
+        <li><a href="#" onclick="ToAdvSearch('shoulu', '2', 'SCI(E)')">SCI(E)</a></li>
+        <li><a href="#" onclick="ToAdvSearch('shoulu', '11', 'SSCI')">SSCI</a></li>
+        <li><a href="#" onclick="ToAdvSearch('shoulu', '1', 'A&amp;HCI')">A&amp;HCI</a></li>
+        <li><a href="#" onclick="ToAdvSearch('shoulu', '4', 'CPCI-S')">CPCI-S</a></li>
+        <li><a href="#" onclick="ToAdvSearch('shoulu', '6', 'CPCI-SSH')">CPCI-SSH</a></li>
+        <li><a href="#" onclick="ToAdvSearch('shoulu', '3', 'EI')">EI</a></li>
+        <li><a href="#" onclick="ToAdvSearch('shoulu', '17', 'ESI高被引论文')">ESI高被引论文</a></li>
+        <li><a href="#" onclick="ToAdvSearch('shoulu', '18', 'ESI热点论文')">ESI热点论文</a></li>
+        <li><a href="#" onclick="ToAdvSearch('shoulu', '5', 'PubMed')">PubMed</a></li>
+        <li><a href="#" onclick="ToAdvSearch('shoulu', '9', 'CSCD')">CSCD</a></li>
+        <li><a href="#" onclick="ToAdvSearch('shoulu', '12', 'CSSCI')">CSSCI</a></li>
+        <li><a href="#" onclick="ToAdvSearch('shoulu', '7', '中文核心期刊要目总览')">中文核心期刊要目总览</a></li>
+        <li><a href="#" onclick="ToAdvSearch('shoulu', '8', '中国科技核心期刊')">中国科技核心期刊</a></li>
+        <li><a href="#" onclick="ToAdvSearch('shoulu', '16', '人大复印资料')">人大复印资料</a></li>
+        <li><a href="#" onclick="ToAdvSearch('shoulu', '15', '中国人文社会科学期刊库')">中国人文社会科学期刊库</a></li>
+</ul>
+
+                    </li>
+                    <li><a href="/Scholar">我校学者</a></li>
+                    <li onmouseover="showSubMenu(this)" onmouseout="hideSubMenu(this)">
+                        <a href="#">分类浏览</a>
+                        <ul id="special">
+                            <li>
+    <div class="thirdmenu">
+        按文献种类浏览
+    </div>
+    <div class="fourmenu">
+                <div class="fivemenu">
+                    <a href="#" onclick="ToAdvSearch('bib', '3', '期刊')">期刊</a>
+                </div>
+                <div class="fivemenu">
+                    <a href="#" onclick="ToAdvSearch('bib', '4', '会议')">会议</a>
+                </div>
+                <div class="fivemenu">
+                    <a href="#" onclick="ToAdvSearch('bib', '6', '报纸')">报纸</a>
+                </div>
+                <div class="fivemenu">
+                    <a href="#" onclick="ToAdvSearch('bib', '2', '图书')">图书</a>
+                </div>
+                <div class="fivemenu">
+                    <a href="#" onclick="ToAdvSearch('bib', '9', '专利')">专利</a>
+                </div>
+        <div class="clear">
+        </div>
+    </div>
+</li>
+<li>
+    <div class="fourmenu">
+        <div class="fivemenu">
+            <a href="/SearchHot" target="_blank">最新提交</a>
+        </div>
+        <div class="fivemenu">
+            <a href="/SearchHot/Index/1" target="_blank">热点成果</a>
+        </div>
+        <div class="fivemenu">
+            <a href="/SearchHot/Index/2" target="_blank">下载排行</a>
+        </div>
+        <div class="fivemenu">
+            <a href="#" onclick="ToAdvSearch('important', '', '')">重要成果</a>
+        </div>
+        <div class="fivemenu">
+            <a href="#" onclick="ToAdvSearch('dept', '', '')">院系</a>
+        </div>
+        <div class="fivemenu">
+            <a href="/AuthorResult" target="_blank">作者</a>
+        </div>
+        <div class="fivemenu">
+            <a href="/JournalResult" target="_blank">来源</a>
+        </div>
+        <div class="fivemenu">
+            <a href="/KeywordCluster" target="_blank">关键词</a>
+        </div>
+        <div class="fivemenu">
+            <a href="#" onclick="ToAdvSearch('year','','')">年度</a>
+        </div>
+        <div class="fivemenu">
+            <a href="/HotAnalysis" target="_blank">热点分析</a>
+        </div>
+        <div class="clear">
+        </div>
+    </div>
+</li>
+
+                        </ul>
+                    </li>
+                    <li onmouseover="showSubMenu(this)" onmouseout="hideSubMenu(this)">
+                        <a href="#">成果提交</a>
+                        <ul>
+                            <li><a href="/FiexdContent/ShowContent/1" target="_blank">提交说明</a></li>
+                            <li><a href="/Profile#/Profile/ExportAchievement/FirstItem" target="_blank">单篇提交</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/Home">首页</a></li>
+                </ul>
+                <div class="clear">
+            </div>
+        </div>
+        </div>
+        <div class="clear">
+        </div>
+    </div>
+    <div id="index_banner">
+        <div class="column_box">
+            <div class="column">
+                <div class="index_gain">
+                    <div class="title">
+                        成果典藏
+                    </div>
+                    <div class="list">
+                        典藏人大科研和教学成果，记录和沉淀人大历史，展现人大学者风采，同时作为我校的一个交流窗口。
+                    </div>
+                    <a href="/SearchHot/Index/1" target="_blank">成果浏览</a>
+                </div>
+                <div class="index_assistant">
+                    <div class="title">
+                        个人科研助理
+                    </div>
+                    <div class="list">
+                        为研究生导师、科研团队、项目组提供分享、交流、协作服务，实现团队资源的积累、传承和高效利用，规范团队科研活动。
+                    </div>
+                    <a href="http://202.112.118.87:9007/download/NoteFirst_Full.zip">NoteFirst 下载</a>
+                </div>
+                <div class="index_cooperate">
+                    <div class="title">
+                        团队科研协同
+                    </div>
+                    <div class="list">
+                        为师生提供期刊订阅、文献云服务、个人成果报表、论文收录引用通知、参考文献自动形成等服务。
+                    </div>
+                    <a href="http://202.112.118.87:9007/TeamList.aspx" target="_blank">加入团队</a>
+                </div>
+                <div class="clear">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="con_box">
+        <div id="container">
+                <div id="sidebar">
+                <div id="gain">
+                    <div class="titlebar">
+                        <div class="title">
+                            <a>人大成果</a>
+                            </div>
+                        </div>
+                    <div class="refer">
+                            <ul>
+                            <li>
+                                元数据<br />
+                                <font>182668</font>
+                            </li>
+                            <li>
+                                全文量<br />
+                                <font>73271</font>
+                            </li>
+                            <div class="clear">
+                            </div>
+                            </ul>
+                        <div class="btnsubmit">
+                            <a target="_blank" href="/Profile#/Profile/ExportAchievement/FirstItem">
+                                <img src="/Content/images/front/submit.jpg" alt="" width="113" height="32" />
+                            </a>
+                            </div>
+                        <div class="clear">
+                        </div>
+                    </div>
+                            </div>
+                <div id="newsTwo">
+                    <div class="titlebar">
+                        <div class="title">学科动态</div>
+                        <div class="more" style="display:inline">
+                            <a href="/News" target="_blank"><img width="37" height="11" alt="" src="/Content/images/front/more.jpg" /></a>
+                        </div>
+                        <div class="clear"></div>
+                            </div>
+                    <div class="list">
+                        <ul>
+                                <li><a href="/News/Item/230" target="_blank" title="ESI学科动态--2016年9月（第五期） ">ESI学科动态--2016年9月（第五期） </a>  </li>
+                                <li><a href="/News/Item/229" target="_blank" title="ESI学科动态--2016年7月（第四期） ">ESI学科动态--2016年7月（第四期） </a>  </li>
+                                <li><a href="/News/Item/228" target="_blank" title="ESI学科动态--2016年5月（第三期）">ESI学科动态--2016年5月（第三期）</a>  </li>
+                                <li><a href="/News/Item/1" target="_blank" title="ESI学科动态--2016年3月">ESI学科动态--2016年3月</a>  </li>
+                                <li><a href="/News/Item/223" target="_blank" title="图书馆首届Database页面设计大赛">图书馆首届Database页面设计大赛</a>  </li>
+                        </ul>
+                        </div>
+                            </div>
+                <div id="submit">
+                    <div class="titlebar">
+                        <div class="title">
+                            <a>最新提交</a>
+                        </div>
+                        <div class="more" style="display:inline">
+                            <a href="/SearchHot" target="_blank">
+                                <img src="/Content/images/front/more.jpg" alt="" width="37" height="11" />
+                            </a>
+                    </div>
+                        <div class="clear">
+                            </div>
+                    </div>
+                    <div class="list">
+                        <ul>
+                                <li>
+                                    <div class="title">
+                                        <a href="/AchivementDetails/Index/381127" title="Parenting Behaviors and Weight Status of Junior High School Students in   China" target="_blank">
+                                                Parenting Behaviors and Weight Status of Junior High School Students in   China
+                                            </a>
+                                        </div>
+                                    <div class="author" title="Tian, Zhengqi;Wen, Ming;Wang, Weidong,等">
+                                        Tian, Zhengqi;Wen, Ming;Wang, Weidong,等
+                                    </div>
+                                    <div class="source" title="FASEB JOURNAL.2016,30.">
+                                        FASEB JOURNAL.2016,30.
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="title">
+                                        <a href="/AchivementDetails/Index/381126" title="Estimation and inference of error-prone covariate effect in the presence   of confounding variables" target="_blank">
+                                                Estimation and inference of error-prone covariate effect in the presence   of confounding variables
+                                            </a>
+                                        </div>
+                                    <div class="author" title="Liu, Jianxuan;Ma, Yanyuan;Zhu, Liping,等">
+                                        Liu, Jianxuan;Ma, Yanyuan;Zhu, Liping,等
+                                    </div>
+                                    <div class="source" title="ELECTRONIC JOURNAL OF STATISTICS.2017,11(1),480-501.">
+                                        ELECTRONIC JOURNAL OF STATISTICS.2017,11(1),480-501.
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="title">
+                                        <a href="/AchivementDetails/Index/381125" title="Stochastic completeness for graphs with curvature dimension conditions" target="_blank">
+                                                Stochastic completeness for graphs with curvature dimension conditions
+                                            </a>
+                                        </div>
+                                    <div class="author" title="Hua, Bobo;Lin, Yong">
+                                        Hua, Bobo;Lin, Yong
+                                    </div>
+                                    <div class="source" title="ADVANCES IN MATHEMATICS.2017,306,279-302.">
+                                        ADVANCES IN MATHEMATICS.2017,306,279-302.
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="title">
+                                        <a href="/AchivementDetails/Index/381124" title="Research on the Innovation of Financial Economic Management Mode in   Computer Age" target="_blank">
+                                                Research on the Innovation of Financial Economic Management Mode in   Computer Age
+                                            </a>
+                                        </div>
+                                    <div class="author" title="Ning, Wang;Ming, Jian;Yu, Wang">
+                                        Ning, Wang;Ming, Jian;Yu, Wang
+                                    </div>
+                                    <div class="source" title="AGRO FOOD INDUSTRY HI-TECH.2017,28(3),204-209.">
+                                        AGRO FOOD INDUSTRY HI-TECH.2017,28(3),204-209.
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="title">
+                                        <a href="/AchivementDetails/Index/381123" title="Pair-checkerboard antiferromagnetic order in beta-Fe4Se5 with root 5 x   root 5-ordered Fe vacancies" target="_blank">
+                                                Pair-checkerboard antiferromagnetic order in beta-Fe4Se5 with root 5 x   root 5-ordered Fe vacancies
+                                            </a>
+                                        </div>
+                                    <div class="author" title="Gao, Miao;Kong, Xin;Yan, Xun-Wang,等">
+                                        Gao, Miao;Kong, Xin;Yan, Xun-Wang,等
+                                    </div>
+                                    <div class="source" title="PHYSICAL REVIEW B.2017,95(17).">
+                                        PHYSICAL REVIEW B.2017,95(17).
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="title">
+                                        <a href="/AchivementDetails/Index/381122" title="Bipolar spin blockade, many-body tunneling and long-range resonance in   triple quantum dots" target="_blank">
+                                                Bipolar spin blockade, many-body tunneling and long-range resonance in   triple quantum dots
+                                            </a>
+                                        </div>
+                                    <div class="author" title="Hou, WenJie;Wang, YuanDong;Wei, JianHua">
+                                        Hou, WenJie;Wang, YuanDong;Wei, JianHua
+                                    </div>
+                                    <div class="source" title="EPL.2017,118(6).">
+                                        EPL.2017,118(6).
+                                    </div>
+                                </li>
+                        </ul>
+                            </div>
+                                        </div>
+                                    </div>
+            <div id="main">
+                <div id="scholar">
+                    <div class="titlebar">
+                        <div class="title">
+                            <a>学者推荐</a>
+                            </div>
+                        <div class="more" style="display:none">
+                            <a href="/Scholar/Index/1" target="_blank">
+                                <img src="/Content/images/front/more.jpg" alt="" width="37" height="11" />
+                                            </a>
+                                        </div>
+                        <div class="clear">
+                                    </div>
+                    </div>
+                    <div class="column">
+
+                            <div class="people_one">
+                                <a href="/Scholar/ScholarCard/62362" target="_blank"><img src="/ImageShow?Id=62362&Width=180&&Height=220" alt="" width="190" height="228" /></a>
+                                <div class="scholar_name">
+                                    <a href="/Scholar/ScholarCard/62362" target="_blank">
+                                        <span class="name">孙毅</span>二级教授
+                                    </a>
+                            </div>
+                                <div class="scholar_organ">
+                                    文学院
+                        </div>
+                                <div class="clear">
+                </div>
+            </div>
+                            <div class="people_two">
+                                <a href="/Scholar/ScholarCard/60566" target="_blank"><img src="/ImageShow?Id=60566&Width=180&&Height=220" alt="" width="190" height="228" /></a>
+                                <div class="scholar_name">
+                                    <a href="/Scholar/ScholarCard/60566" target="_blank">
+                                        <span class="name">黄朴民</span>二级教授
+                                    </a>
+                            </div>
+                                <div class="scholar_organ">
+                                    国学院
+                        </div>
+                                    <div class="scholar_field" title="《孙子兵法》研究、中国思想史、中国军事史">
+                                        研究领域：《孙子兵法》研究、中国思想史、中国军事史
+                    </div>
+                                <div class="clear">
+                </div>
+            </div>
+                            <div class="people_three">
+                                <a href="/Scholar/ScholarCard/61311" target="_blank"><img src="/ImageShow?Id=61311&Width=180&&Height=220" alt="" width="190" height="228" /></a>
+                                <div class="scholar_name">
+                                    <a href="/Scholar/ScholarCard/61311" target="_blank">
+                                        <span class="name">包伟民</span>二级教授
+                                    </a>
+                            </div>
+                                <div class="scholar_organ">
+                                    历史学院
+                        </div>
+                                    <div class="scholar_field" title="宋史、中国古代经济史、江南区域史、中古时期基层行政制度、城市史">
+                                        研究领域：宋史、中国古代经济史、江南区域史、中古时期基层行政制度、城市史
+                    </div>
+                                <div class="clear">
+                </div>
+            </div>
+                        <div class="clear">
+                    </div>
+                    </div>
+                    </div>
+                <div class="tab">
+                    <div id="bg" class="xixi1">
+                        <div id="font1" class="tab1" onmouseover="setTab03Syn(1);document.getElementById('bg').className='xixi1'">
+                            <a href="">重要成果</a>
+                    </div>
+                        <div id="font2" class="tab2" onmouseover="setTab03Syn(2);document.getElementById('bg').className='xixi2'">
+                            <a href="">热门浏览</a>
+                </div>
+                        <div class="clear">
+                            </div>
+                        </div>
+                    <div id="TabTab03Con1">
+                        <div id="achieve">
+                            <div class="titlebar">
+                                <div class="more" style="display:inline">
+                                    <a href="" target="">
+                                        <img src="/Content/images/front/more.jpg" alt="" width="37" height="11" />
+                                                    </a>
+                                                </div>
+                                            </div>
+                            <div class="list">
+
+                                    <div class="gain_one">
+                                        <div class="title">
+                                            <a href="/AchivementDetails/Index/308796" target="_blank" title="Evidence for a spinon Fermi surface in a triangular-lattice   quantum-spin-liquid candidate">
+                                                        Evidence for a spinon Fermi surface in a...
+                                                    </a>
+                                                </div>
+                                        <div class="hits">
+                                            3248 阅
+                                                </div>
+                                            </div>
+                                    <div class="gain_two">
+                                        <div class="title">
+                                            <a href="/AchivementDetails/Index/279156" target="_blank" title="Discovery of robust in-plane ferroelectricity in atomic-thick SnTe">
+                                                        Discovery of robust in-plane ferroelectricity in atomic-thick SnTe
+                                                    </a>
+                                                </div>
+                                        <div class="hits">
+                                            3552 阅
+                                                </div>
+                                            </div>
+                                    <div class="gain_three">
+                                        <div class="title">
+                                            <a href="/AchivementDetails/Index/279151" target="_blank" title="Observation of the Efimovian expansion in scale-invariant Fermi gases">
+                                                        Observation of the Efimovian expansion in scale-invariant Fermi gases
+                                                    </a>
+                                                </div>
+                                        <div class="hits">
+                                            3532 阅
+                                                </div>
+                                            </div>
+                                <div class="clear">
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                    <div id="TabTab03Con2" style="display: none">
+                        <div id="hot">
+                            <div class="titlebar">
+                                <div class="more" style="display:inline">
+                                    <img src="/Content/images/front/more.jpg" alt="" width="37" height="11" />
+                        </div>
+                    </div>
+                            <div class="list">
+
+                                    <div class="gain_one">
+                                        <div class="title">
+                                            <a href="/AchivementDetails/Index/318023" target="_blank" title="活体动物双光子激发延时检测荧光成像分析方法及设备">
+                                                活体动物双光子激发延时检测荧光成像分析方法及设备
+                                                                </a>
+                                                            </div>
+                                        <div class="hits">
+                                            3591 阅
+                                        </div>
+                                    </div>
+                                    <div class="gain_two">
+                                        <div class="title">
+                                            <a href="/AchivementDetails/Index/277565" target="_blank" title="学校大辩论——20世纪80年代美国公共教育政策中的意识形态冲突">
+                                                学校大辩论——20世纪80年代美国公共教育政策中的意识形态冲突
+                                                                </a>
+                                                            </div>
+                                        <div class="hits">
+                                            3674 阅
+                                        </div>
+                                    </div>
+                                    <div class="gain_three">
+                                        <div class="title">
+                                            <a href="/AchivementDetails/Index/279156" target="_blank" title="Discovery of robust in-plane ferroelectricity in atomic-thick SnTe">
+                                                Discovery of robust in-plane f...
+                                                                </a>
+                                                            </div>
+                                        <div class="hits">
+                                            3552 阅
+                                        </div>
+                                    </div>
+                                <div class="clear">
+                                </div>
+                            </div>
+                        </div>
+                            </div>
+                        </div>
+                <div id="bottom">
+                    <div id="depart_count">
+                        <div class="titlebar">
+                            <div class="title">
+                                <a href="">成果分类统计</a>
+                    </div>
+                            <div class="more" style="display:none">
+                                <a href="" target="">
+                                    <img src="/Content/images/front/more.jpg" alt="" width="37" height="11" />
+                                </a>
+                </div>
+                            <div class="clear">
+                            </div>
+                        </div>
+                        <div class="list">
+                            <ul>
+                                        <li><span>148302</span><a href="#" title="期刊" onclick="ToAdvSearch('bib', '3', '期刊') ">期刊</a></li>
+                                        <li><span>14351</span><a href="#" title="会议" onclick="ToAdvSearch('bib', '4', '会议') ">会议</a></li>
+                                        <li><span>9978</span><a href="#" title="报纸" onclick="ToAdvSearch('bib', '6', '报纸') ">报纸</a></li>
+                                        <li><span>9873</span><a href="#" title="图书" onclick="ToAdvSearch('bib', '2', '图书') ">图书</a></li>
+                                        <li><span>164</span><a href="#" title="专利" onclick="ToAdvSearch('bib', '9', '专利') ">专利</a></li>
+                            </ul>
+                    </div>
+                        <div class="clear">
+                            </div>
+                        </div>
+                    <div id="liter_type">
+                        <div class="titlebar">
+                            <div class="title">
+                                <a>院系成果统计</a>
+                        </div>
+                            <div class="more" style="display:inline">
+                                <a href="#" onclick="ToAdvSearch('dept', '', '')">
+                                    <img src="/Content/images/front/more.jpg" alt="" width="37" height="11" />
+                                </a>
+                    </div>
+                            <div class="clear">
+                            </div>
+                        </div>
+                        <div class="list">
+                            <ul>
+                                        <li><span class="num_date">16324</span><a href="#" title="法学院" onclick="ToAdvSearch('dept', '525', '法学院')">法学院 </a></li>
+                                        <li><span class="num_date">12174</span><a href="#" title="经济学院" onclick="ToAdvSearch('dept', '547', '经济学院')">经济学院 </a></li>
+                                        <li><span class="num_date">9431</span><a href="#" title="商学院" onclick="ToAdvSearch('dept', '578', '商学院')">商学院 </a></li>
+                                        <li><span class="num_date">9079</span><a href="#" title="哲学院" onclick="ToAdvSearch('dept', '612', '哲学院')">哲学院 </a></li>
+                                        <li><span class="num_date">6904</span><a href="#" title="新闻学院" onclick="ToAdvSearch('dept', '598', '新闻学院')">新闻学院 </a></li>
+                                        <li><span class="num_date">6664</span><a href="#" title="马克思主义学院" onclick="ToAdvSearch('dept', '568', '马克思主义学院')">马克思主义学院 </a></li>
+                                        <li><span class="num_date">5698</span><a href="#" title="财政金融学院" onclick="ToAdvSearch('dept', '520', '财政金融学院')">财政金融学院 </a></li>
+                                        <li><span class="num_date">5426</span><a href="#" title="公共管理学院" onclick="ToAdvSearch('dept', '526', '公共管理学院')">公共管理学院 </a></li>
+                                        <li><span class="num_date">5425</span><a href="#" title="国际关系学院" onclick="ToAdvSearch('dept', '534', '国际关系学院')">国际关系学院 </a></li>
+                                        <li><span class="num_date">4405</span><a href="#" title="农业与农村发展学院" onclick="ToAdvSearch('dept', '572', '农业与农村发展学院')">农业与农村发展学院 </a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="clear">
+                    </div>
+                        </div>
+                    </div>
+            <div class="clear">
+                </div>
+            </div>
+        </div>
+    <div id="footer">
+            
+<div class="con_box">
+    <div class="box">
+        <div class="logo">
+            <img src="/Content/images/front/bottom-logo.jpg" alt="" width="234" height="56" />
+        </div>
+        <div class="copyright">
+            在线人数：199 站点总访问量：1633385<br />
+            Copyright © 中国人民大学图书馆
+        </div>
+        <div class="clear">
+        </div>
+    </div>
+</div>
+        </div>
+    <input id="IsShowImportAchivement" type="hidden" value="inline" />
+    <input id="IsShowHotAchivement" type="hidden" value="inline" />
+    <script src="/Content/js/lib/metisMenu.min.js"></script>
+    <script src="/Content/js/lib/store.min.js"></script>
+    <script src="/Content/js/MvcHelper.js"></script>
+    <script src="/Content/js/site.js"></script>
+</body>
+</html>

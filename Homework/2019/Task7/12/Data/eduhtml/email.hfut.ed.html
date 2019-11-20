@@ -1,0 +1,234 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>合肥工业大学电子邮件系统</title>
+<meta name="description" content="合共大,合共大邮箱,合肥工业大学,合肥工业大学电子邮件系统" />
+<link rel="shortcut icon" href="favicon.ico" />
+<link type="text/css" rel="stylesheet" href="/css/style.css" />
+<script type="text/javascript" src="/common/js/iepng.js"></script>
+<script type="text/javascript">
+   EvPNG.fix('div, ul, img, li, input, span');
+</script>
+<script type="text/javascript">
+<!--
+
+function getCookie(name) {
+var reg = new RegExp("(^| )" + name + "=([^;]*)(;|$)", "gi");
+var tmp = reg.exec(document.cookie);
+return unescape((tmp || [])[2] || "");
+}
+window.onload=function(){
+var cookie=getCookie("uid");
+if(cookie!=null&&cookie!=""){
+document.getElementsByName("password")[0].focus();
+}else{
+document.getElementsByName("uid")[0].focus();
+}
+var domain=getCookie("domain");
+if (domain=="mail.hfut.edu.cn")  
+      document.getElementsByName("domain")[1].checked="checked";
+//假如是firefox则隐藏隐藏设置主页
+if(!document.all) {
+var homepage = document.getElementById("homepage");
+if(homepage){
+homepage.style.display = "none";
+}
+}
+}
+function setCookie(name, value) {
+document.cookie = name + '=' + escape(value)
++ ";expires=" + (new Date(2099, 12, 31)).toGMTString();
+}
+function restoreCookies() {
+document.getElementsByName("uid")[0].value = getCookie("uid");
+}
+function loginSubmit(form, event) {
+if (document.getElementById("saveUsername").checked) {
+	setCookie("uid", document.getElementsByName("uid")[0].value);
+	if (document.getElementsByName("domain")[0].checked)
+	{
+         setCookie("domain", "hfut.edu.cn");
+         if(form.elements["uid"].value.indexOf("@")==-1)
+			form.elements["uid"].value+="@hfut.edu.cn"
+     }
+     else if (document.getElementsByName("domain")[1].checked)
+     {
+         setCookie("domain", "mail.hfut.edu.cn");
+         if(form.elements["uid"].value.indexOf("@")==-1)
+         form.elements["uid"].value+="@mail.hfut.edu.cn"
+     }
+	 else if (document.getElementsByName("domain")[2].checked)
+     {
+         setCookie("domain", "xy.hfut.edu.cn");
+         if(form.elements["uid"].value.indexOf("@")==-1)
+         form.elements["uid"].value+="@xy.hfut.edu.cn"
+     }
+}
+
+if ((document.getElementById("face_classic_cgi") || {}).selected) {
+if (document.all) { // is IE
+event.returnValue = false;
+}
+document.getElementById("classic_cgi_form").elements["user"].value = form.elements["uid"].value;
+document.getElementById("classic_cgi_form").elements["pass"].value = form.elements["password"].value;
+document.getElementById("classic_cgi_form").submit();
+return false;
+}
+return true;
+}
+function bookmarkMe() {
+try {
+window.external.AddFavorite(location.href, document.title);
+} catch(e) {
+alert("请按 Ctrl-D 收藏本页")
+}
+}
+function recoverPwd(anchorElement) {
+anchorElement.href += '?uid='+ document.getElementById("uid").value;
+}
+//-->
+</script>
+</head>
+
+<body>
+<div class="top">
+<div class="top_left">
+<ul>
+<li><a class="HeLink" href="javascript:;" onClick="this.style.behavior='url(#default#homepage)';this.setHomePage(document.location);">设为首页</a>&nbsp;|&nbsp;</li>
+<li><a class="HeLink" href="javascript:bookmarkMe()">收藏本页</a>&nbsp;|&nbsp;</li>
+<li><a target="_self" href="http://www.hfut.edu.cn">学校首页</a>&nbsp;|&nbsp;</li>
+<li><a target="_self" href="http://news.hfut.edu.cn/">工大新闻</a></li>
+</ul>
+<hr />
+</div>
+</div>
+<div class="main">
+<div class="main_left">
+<div class="left_font">
+<div class="poto_float"><img src="/images/logo_2.png" border=0 width="93" height="90"/></div>
+<p style="font-size:30px; color:#99262a;	display:block;margin-left:18%;margin-bottom:35px;">电子邮件系统</p>
+<!--
+<p>SMTP(发信认证)/POP3/IMAP服务器: <span>210.45.240.3</span><br/>
+教育网入口：<a href="http://email.hfut.edu.cn" target="">http://email.hfut.edu.cn</a><br/>
+电信入口：<a href="http://email2.hfut.edu.cn" target="">http://email2.hfut.edu.cn</a><br/>
+<a href="http://mail.hfut.edu.cn" target="">旧邮件系统</a> 可以查看邮件，但请不要发邮件。</p>
+-->
+<p>
+<a href="notice1.html" style="color:Red" target="_blank" >开通工大邮箱账号的说明</a><br/>
+<a href="notice2.html" style="color:Red" target="_blank" >密码强度说明</a><br/>
+<a href="notice3.html" style="color:Red" target="_blank" >问题邮箱账号停用名单</a>
+
+</p>
+<p style="color:#933;line-height:24px;"><span style="color:red">注意：</span>
+<br />
+　　为了您的邮箱安全，请不要使用过于简单的密码。
+<br />
+　　请尽快完善邮件选项中的个人资料信息和密码保护信息，<br />以便于您更好的管理自己的邮箱。
+<br />
+　　建议将邮件选项-> 安全设置中的反病毒功能打开。
+<br />
+　　超过14天的垃圾邮件将被系统自动删除，请用户及时处<br />理垃圾邮件中的有用的邮件，并及时清空回收站
+<br />	
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;连续6个月未登陆的邮箱账号将被视作“可疑账号”暂停<br />使用；之后6个月内，如该账号无人认领，则账号将被系统删<br />除。
+</p>
+<p>　　<b>联系电话：0551-62901178</b></p>
+</div>
+</div>
+<div class="main_middle"><img src="/images/lr.gif" border="0px"/></div>
+<div class="main_right">
+<p style="color:#99262a;display:block;margin-left:5%;margin-bottom:20px;font-size:30px;font-family:'微软雅黑';">登录邮箱<span class="titleNote error"></span></p>
+<br/>
+<form id="loginForm" method="post" action="" onsubmit="return loginSubmit(this, event);">
+<table class="loginTable" cellspacing="10px">
+<tfoot>
+<tr>
+<td></td>
+<td><button class="Button" type="submit" name="action:login"></button></td>
+</tr>
+<tr>
+<td></td>
+<td style="font-size:12px;">
+                <a href="/coremail/forgetpwd.jsp" onclick="recoverPwd(this);">
+                  我忘记登录密码了 &gt;&gt;
+                </a></td>
+</tr></tfoot>
+<tbody><tr>
+<th>用户名:　</th>
+<td style="background-image:url(/images/input_e.gif);background-repeat:no-repeat;"><input type="text" id="uid" name="uid" class="input"
+                       value=""></td>
+            <td class="error"></td>
+</tr>
+<tr>
+<th>密　码:　</th>
+<td style="background-image:url(/images/input_e.gif);background-repeat:no-repeat;"><input type="password" name="password" class="input" autocomplete="off"
+                       value=""></td>
+            <td class="error"></td>
+</tr>
+<tr>
+<td></td>
+<td style="font-size:14px">
+<input type="radio" name="domain" value="hfut.edu.cn" checked />教　师
+<input type="radio" name="domain" value="mail.hfut.edu.cn" />学　生
+<input type="radio" name="domain" value="xy.hfut.edu.cn" />校　友</td>
+</tr>
+
+<tr>
+<th style="font-size:13px">界面风格:　</th>
+<td>
+
+              <select name="face" class="inputWidth">
+                <option value="">自动选择</option>
+                
+                  
+                
+                  
+                    <option value="XJS" selected>
+                      XJS 风格
+                    </option>
+                
+                
+                  
+                
+              </select>
+</td>
+</tr>
+<tr>
+<th>
+<input type="checkbox" checked="" id="saveUsername">
+</th>
+<td>
+<label for="saveUsername" style="color:#333;font-size:13px;">在此电脑上记住用户名
+</label>
+</td>
+</tr>
+</tbody></table>
+</form>
+<div class="main_right_help">
+<ul>
+<li><a href="http://email.hfut.edu.cn:9900/siteadmin/servlet/siteadmin/pub/reg.html">单位邮箱注册</a>　|</li>
+<li>　<a target="_blank" href="/coremail/help/index_zh_CN.jsp">邮件帮助</a>　|</li>
+<li>　<a href="http://user.hfut.edu.cn" target="_blank">网络服务</a>　|</li>
+<li>　<a target="_blank">旧版入口</a></li>
+</ul>
+<br />
+<div style="clear:both"></div>
+<hr />
+</div>
+</div>
+<div style="clear:both"></div>
+</div>
+<div class="foot">Copyright &copy; 2011 合肥工业大学　　地址： 安徽省合肥市屯溪路193号(230009)
+<br/>网络服务信箱:netservice@hfut.edu.cn </div>
+<script type="text/javascript"><!--
+  restoreCookies();
+  //--></script>
+
+
+
+  <form action="/coremail/fcg/login" id="classic_cgi_form" method="post">
+    <input type="hidden" name="user" />
+    <input type="hidden" name="pass" />
+  </form>
+</body>
+</html>

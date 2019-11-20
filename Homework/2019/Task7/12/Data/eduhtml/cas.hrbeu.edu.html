@@ -1,0 +1,190 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+
+
+
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<title>哈尔滨工程大学 统一身份认证</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport"
+	content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+<script type="text/javascript" src="/cas/js/jquery-1.9.1.min.js;jsessionid=79D087D48A76DBEE8C879F0E2820CC37.jvm1"></script>
+<script type="text/javascript" src="/cas/js/jquery.cookie.js;jsessionid=79D087D48A76DBEE8C879F0E2820CC37.jvm1"></script>
+<script>$.cookie.json=true;</script>
+<link rel="icon" href="/cas/themes/hrbeu/favicon.ico;jsessionid=79D087D48A76DBEE8C879F0E2820CC37.jvm1"
+	type="image/x-icon" />
+<link href="/cas/themes/hrbeu/style.css;jsessionid=79D087D48A76DBEE8C879F0E2820CC37.jvm1?201604081" rel="stylesheet"
+	type="text/css" media="screen" />
+</head>
+<body>
+	<div id="banner">
+		<div id="top">
+			<div id="topPic">
+				<img src="images/index_02.gif;jsessionid=79D087D48A76DBEE8C879F0E2820CC37.jvm1">
+			</div>
+		</div>
+	</div>
+
+<div id="main">
+	<div id="mainMiddle">
+		<div id="mainLeft">
+			<img src="images/index_06.jpg">
+		</div>
+		<div id="mainRight">
+			<div id="login">
+				<form id="fm1" class="clearfix" action="/cas/login;jsessionid=79D087D48A76DBEE8C879F0E2820CC37.jvm1?service=http%3A%2F%2Fone.hrbeu.edu.cn%2Finfoplus%2Flogin%3Bjsessionid%3DA3478DAC202C762E0484320BF3FC899C%3FretUrl%3Dhttp%253A%252F%252Fone.hrbeu.edu.cn%252Finfoplus%252Foauth2%252Fauthorize%253Fresponse_type%253Dcode%2526scope%253Dprofile%252Bprofile_edit%252Bapp%252Btask%252Bprocess%252Bsubmit%252Bprocess_edit%252Btriple%2526redirect_uri%253Dhttp%25253A%25252F%25252Fone.hrbeu.edu.cn%25252Ftaskcenter%25252Fwall%25252Fendpoint%25253FretUrl%25253Dhttp%2525253A%2525252F%2525252Fone.hrbeu.edu.cn%2525252Ftaskcenter%2525252Fworkflow%2525252Findex%2526client_id%253D1640e2e4-f213-11e3-815d-fa163e9215bb%2526x_redirected%253Dtrue" method="post">
+					<li><input id="username" name="username" class="input1 required" tabindex="1" placeholder="学号/工号" type="text" value="" autocomplete="false"/></li>
+					<li><input id="password" name="password" class="input2 required" tabindex="2" placeholder="密码" type="password" value="" autocomplete="off"/></li>
+					<li class="captcha-validate" style="display: none;">
+						<div class="row fl-controls-left" style="width: 100%;">
+							
+							<table style="margin: 0px auto;">
+								<tr>
+									<td><input id="captcha" name="captcha" class="input1 required" style="width:140px;background-image: none;" tabindex="2" placeholder="验证码" accesskey="c" type="text" value="" size="10" autocomplete="off"/></td>
+									<td align="left" valign="bottom"
+										style="vertical-align: bottom; height: 42px;"><img
+										align="absmiddle"
+										alt="必须录入验证码。"
+										onclick="this.src='captcha.jpg?'+Math.random()" width="93"
+										height="42" src="captcha.jpg"></td>
+								</tr>
+							</table>
+						</div>
+					</li>
+					<li style="text-align: right;"><input type="hidden" name="lt"
+						value="LT-853474-IogNV7PzbhS4Wp5TYpkevGg9OWOcvL" /> <input type="hidden" name="execution"
+						value="e1s1" /> <input type="hidden"
+						name="_eventId" value="submit" /> <a
+						href="http://cas.hrbeu.edu.cn/profile/user/reset/password">忘记密码？</a>
+						&nbsp;&nbsp;&nbsp; <a
+						href="http://cas.hrbeu.edu.cn/profile/user/modify/password"
+						onclick="alert('请您先登录统一身份认证系统。');">修改密码</a>&nbsp;&nbsp;&nbsp; <input
+						class="loginBtn" name="submit" accesskey="l" value="登 录"
+						tabindex="4" type="submit" /></li>
+
+					<li><a href="themes/hrbeu/funcdesc.jsp"><img
+							src="images/btn12_03.jpg" width="127" height="48" border="0" /></a><a
+						href="themes/hrbeu/accountdesc.jsp"><img
+							src="images/btn12_05.jpg" width="132" height="48" border="0" /></a></li>
+
+					<li></li>
+				</form>
+			</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+	<div class="clear"></div>
+</div>
+<div id="banner1" style="display: none;">
+	<div id="bg">
+		<div id="login1">
+			<form id="fm1" class="clearfix" action="/cas/login;jsessionid=79D087D48A76DBEE8C879F0E2820CC37.jvm1?service=http%3A%2F%2Fone.hrbeu.edu.cn%2Finfoplus%2Flogin%3Bjsessionid%3DA3478DAC202C762E0484320BF3FC899C%3FretUrl%3Dhttp%253A%252F%252Fone.hrbeu.edu.cn%252Finfoplus%252Foauth2%252Fauthorize%253Fresponse_type%253Dcode%2526scope%253Dprofile%252Bprofile_edit%252Bapp%252Btask%252Bprocess%252Bsubmit%252Bprocess_edit%252Btriple%2526redirect_uri%253Dhttp%25253A%25252F%25252Fone.hrbeu.edu.cn%25252Ftaskcenter%25252Fwall%25252Fendpoint%25253FretUrl%25253Dhttp%2525253A%2525252F%2525252Fone.hrbeu.edu.cn%2525252Ftaskcenter%2525252Fworkflow%2525252Findex%2526client_id%253D1640e2e4-f213-11e3-815d-fa163e9215bb%2526x_redirected%253Dtrue" method="post">
+				<li><input id="username" name="username" class="input1 required" tabindex="1" placeholder="学号/工号" type="text" value="" autocomplete="false"/></li>
+				<li><input id="password" name="password" class="input2 required" tabindex="2" placeholder="密码" type="password" value="" autocomplete="off"/></li>
+				<li class="captcha-validate" style="display: none;">
+					<div class="row fl-controls-left" style="width: 100%;">
+						
+						<table style="margin: 0px auto;">
+							<tr>
+								<td><input id="captcha" name="captcha" class="input1 required" style="width:140px;background-image: none;" tabindex="2" placeholder="验证码" accesskey="c" type="text" value="" size="10" autocomplete="off"/></td>
+								<td align="left" valign="bottom"
+									style="vertical-align: bottom; height: 42px;"><img
+									align="absmiddle"
+									alt="必须录入验证码。"
+									onclick="this.src='captcha.jpg?'+Math.random()" width="93"
+									height="42" src="captcha.jpg"></td>
+							</tr>
+						</table>
+					</div>
+				</li>
+				<li><input type="hidden" name="lt" value="LT-853474-IogNV7PzbhS4Wp5TYpkevGg9OWOcvL" /> <input
+					type="hidden" name="execution" value="e1s1" /> <input
+					type="hidden" name="_eventId" value="submit" /> <a
+					href="http://cas.hrbeu.edu.cn/profile/user/reset/password">忘记密码？</a>
+					<a onclick="alert('请您先登录统一身份认证系统。');"
+					href="http://cas.hrbeu.edu.cn/profile/user/modify/password">修改密码</a>
+					<input class="loginBtn" name="submit" accesskey="l" value="登 录"
+					tabindex="4" type="submit" /></li>
+
+				<li><a href="themes/hrbeu/funcdesc.jsp"><img
+						src="images/btn12_03.jpg" width="127" height="48" border="0" /></a><a
+					href="themes/hrbeu/accountdesc.jsp"><img
+						src="images/btn12_05.jpg" width="132" height="48" border="0" /></a></li>
+
+				<li></li>
+			</form>
+		</div>
+	</div>
+</div>
+
+
+
+	<div id="bottom">
+	© 2016 哈尔滨工程大学<br> 
+      信息化处服务电话：0451-82519114 <a style="text-decoration:none;" href="http://fwtg.hrbeu.edu.cn/2017/0119/c2096a106852/page.htm">联系我们</a>
+	</div>
+    </body>
+</html>
+
+
+<script>
+
+var message = $.cookie('MESSAGE_TICKET');
+if(!message){
+	$.cookie('MESSAGE_TICKET', {times: 0} , { expires: 7, path: '/' });
+}else{
+	if(message.times > 2){
+		$('.captcha-validate').show();
+	}
+	var error = $('.errors').text();
+	if(error){
+		message.times = message.times + 1;
+		$.cookie('MESSAGE_TICKET', message , { expires: 7, path: '/' });
+	}
+}
+
+if("" == "true"){
+	$.cookie('MESSAGE_TICKET', {times:0} , { expires: 7, path: '/' });
+	$('.captcha-validate').hide();
+}
+
+	var browser = {
+		versions : function() {
+			var u = navigator.userAgent, app = navigator.appVersion;
+			return { //移动终端浏览器版本信息 
+				trident : u.indexOf('Trident') > -1, //IE内核 
+				presto : u.indexOf('Presto') > -1, //opera内核 
+				webKit : u.indexOf('AppleWebKit') > -1, //苹果、谷歌内核 
+				gecko : u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1, //火狐内核 
+				mobile : !!u.match(/AppleWebKit.*Mobile.*/), //是否为移动终端 
+				ios : !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端 
+				android : u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //android终端或uc浏览器 
+				iPhone : u.indexOf('iPhone') > -1, //是否为iPhone或者QQHD浏览器 
+				iPad : u.indexOf('iPad') > -1, //是否iPad 
+				webApp : u.indexOf('Safari') == -1
+			//是否web应该程序，没有头部与底部 
+			};
+		}(),
+		language : (navigator.browserLanguage || navigator.language)
+				.toLowerCase()
+	};
+
+	// 根据不同的终端，跳转到不同的地址 ; 
+	if (browser.versions.mobile) {
+		document.getElementById("banner").style.display = 'none';
+		//document.getElementById("bottom").style.display = 'none';
+		document.getElementById("main").style.display = 'none';
+
+		document.body.background = '#eefbff url(images/bgline.jpg) repeat-x top';
+		document.getElementById("banner1").style.display = 'block';
+		$('#login1 #username').focus();
+	} else {
+		$('#login #username').focus();
+	}
+</script>

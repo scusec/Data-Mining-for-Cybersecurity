@@ -1,0 +1,579 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="/script/page.css" type=text/css rel=stylesheet>
+<script language="javascript" src="/module/jslib/jquery/jquery.js"></script>
+
+<title>机械工程学院</title>
+<meta name="Keywords" content="内容管理、内容管理发布（CMS）系统、信息发布、新闻采编发系统、知识管理、知识门户、政府门户、教育门户、企业门户、竞争情报系统、抓取系统、信息采集、信息雷达系统、电子政务、电子政务解决方案、办公系统、OA、网站办公系统"><meta name='Generator' content='大汉版通'><meta name='Author' content='大汉网络'>
+<meta name='Maketime' content='2017-10-27 18:02:19'>
+<meta name="sitename" content="机械工程学院">
+<meta name="siteurl"  content="http://jxgcxy.yzu.edu.cn/index.html">
+<meta name="guild"    content="">
+<meta name="district"    content="">
+<meta name="sitecatalog"    content="">
+
+<link href="/images/77/css0.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/images/77/Tfunction.js"></script>
+<script type="text/JavaScript">
+function OpenFriendLink(url){ //v3.0
+  
+  if(url!="") window.open(url) ;
+  
+}
+</script>
+<script language="JavaScript">
+var ctimer;
+
+var lunarInfo=new Array(
+0x04bd8,0x04ae0,0x0a570,0x054d5,0x0d260,0x0d950,0x16554,0x056a0,0x09ad0,0x055d2,
+0x04ae0,0x0a5b6,0x0a4d0,0x0d250,0x1d255,0x0b540,0x0d6a0,0x0ada2,0x095b0,0x14977,
+0x04970,0x0a4b0,0x0b4b5,0x06a50,0x06d40,0x1ab54,0x02b60,0x09570,0x052f2,0x04970,
+0x06566,0x0d4a0,0x0ea50,0x06e95,0x05ad0,0x02b60,0x186e3,0x092e0,0x1c8d7,0x0c950,
+0x0d4a0,0x1d8a6,0x0b550,0x056a0,0x1a5b4,0x025d0,0x092d0,0x0d2b2,0x0a950,0x0b557,
+0x06ca0,0x0b550,0x15355,0x04da0,0x0a5d0,0x14573,0x052d0,0x0a9a8,0x0e950,0x06aa0,
+0x0aea6,0x0ab50,0x04b60,0x0aae4,0x0a570,0x05260,0x0f263,0x0d950,0x05b57,0x056a0,
+0x096d0,0x04dd5,0x04ad0,0x0a4d0,0x0d4d4,0x0d250,0x0d558,0x0b540,0x0b5a0,0x195a6,
+0x095b0,0x049b0,0x0a974,0x0a4b0,0x0b27a,0x06a50,0x06d40,0x0af46,0x0ab60,0x09570,
+0x04af5,0x04970,0x064b0,0x074a3,0x0ea50,0x06b58,0x055c0,0x0ab60,0x096d5,0x092e0,
+0x0c960,0x0d954,0x0d4a0,0x0da50,0x07552,0x056a0,0x0abb7,0x025d0,0x092d0,0x0cab5,
+0x0a950,0x0b4a0,0x0baa4,0x0ad50,0x055d9,0x04ba0,0x0a5b0,0x15176,0x052b0,0x0a930,
+0x07954,0x06aa0,0x0ad50,0x05b52,0x04b60,0x0a6e6,0x0a4e0,0x0d260,0x0ea65,0x0d530,
+0x05aa0,0x076a3,0x096d0,0x04bd7,0x04ad0,0x0a4d0,0x1d0b6,0x0d250,0x0d520,0x0dd45,
+0x0b5a0,0x056d0,0x055b2,0x049b0,0x0a577,0x0a4b0,0x0aa50,0x1b255,0x06d20,0x0ada0)
+
+var nStr1 = new Array('日','一','二','三','四','五','六','七','八','九','十','十一','腊')
+var nStr2 = new Array('初','十','廿','卅','　')
+
+//====================================== 传回农历 y年的总天数
+function lYearDays(y) {
+   var i, sum = 348
+   for(i=0x8000; i>0x8; i>>=1) sum += (lunarInfo[y-1900] & i)? 1: 0
+   return(sum+leapDays(y))
+}
+
+//====================================== 传回农历 y年闰月的天数
+function leapDays(y) {
+   if(leapMonth(y))  return((lunarInfo[y-1900] & 0x10000)? 30: 29)
+   else return(0)
+}
+
+//====================================== 传回农历 y年闰哪个月 1-12 , 没闰传回 0
+function leapMonth(y) {
+   return(lunarInfo[y-1900] & 0xf)
+}
+
+//====================================== 传回农历 y年m月的总天数
+function monthDays(y,m) {
+   return( (lunarInfo[y-1900] & (0x10000>>m))? 30: 29 )
+}
+
+//====================================== 算出农历, 传入日期物件, 传回农历日期物件
+//                                       该物件属性有 .year .month .day .isLeap .yearCyl .dayCyl .monCyl
+function Lunar(objDate) {
+
+   var i, leap=0, temp=0
+   var baseDate = new Date(1900,0,31)
+   var offset   = (objDate - baseDate)/86400000
+
+   this.dayCyl = offset + 40
+   this.monCyl = 14
+
+   for(i=1900; i<2050 && offset>0; i++) {
+      temp = lYearDays(i)
+      offset -= temp
+      this.monCyl += 12
+   }
+
+   if(offset<0) {
+      offset += temp;
+      i--;
+      this.monCyl -= 12
+   }
+
+   this.year = i
+   this.yearCyl = i-1864
+
+   leap = leapMonth(i) //闰哪个月
+   this.isLeap = false
+
+   for(i=1; i<13 && offset>0; i++) {
+      //闰月
+      if(leap>0 && i==(leap+1) && this.isLeap==false)
+         { --i; this.isLeap = true; temp = leapDays(this.year); }
+      else
+         { temp = monthDays(this.year, i); }
+
+      //解除闰月
+      if(this.isLeap==true && i==(leap+1)) this.isLeap = false
+
+      offset -= temp
+      if(this.isLeap == false) this.monCyl ++
+   }
+
+   if(offset==0 && leap>0 && i==leap+1)
+      if(this.isLeap)
+         { this.isLeap = false; }
+      else
+         { this.isLeap = true; --i; --this.monCyl;}
+
+   if(offset<0){ offset += temp; --i; --this.monCyl; }
+
+   this.month = i
+   this.day = offset + 1
+}
+
+//====================== 中文日期
+function cDay(d){
+   var s;
+
+   switch (d) {
+      case 10:
+         s = '初十'; break;
+      case 20:
+         s = '二十'; break;
+         break;
+      case 30:
+         s = '三十'; break;
+         break;
+      default :
+         s = nStr2[Math.floor(d/10)];
+         s += nStr1[d%10];
+   }
+   return(s);
+}
+
+
+function init(){
+
+if (document.all){
+	
+settimes();
+}
+}
+
+function settimes(){
+var time= new Date();
+
+hours= time.getHours();
+mins= time.getMinutes();
+secs= time.getSeconds();
+mons= (time.getMonth()+1);
+years= time.getYear(); 
+days= time.getDate(); 
+var sDObj , lDObj;
+	
+
+sDObj = new Date(years,time.getMonth(),days)    //当月一日日期
+lDObj = new Lunar(sDObj)
+
+week=time.getDay();
+switch (week)
+{
+	case 0: week="星期日"; break;
+	case 1: week="星期一"; break;
+	case 2: week="星期二"; break;
+	case 3: week="星期三"; break;
+	case 4: week="星期四"; break;
+	case 5: week="星期五"; break;
+	case 6: week="星期六"; break;
+}
+
+if (hours<10)
+hours="0"+hours;
+if(mins<10)
+mins="0"+mins;
+if (secs<10)
+secs="0"+secs;
+
+if (nStr1[lDObj.month]=="一") {
+	var nstr = "正月"+cDay(lDObj.day);
+}
+else {
+	var nstr = nStr1[lDObj.month]+"月"+cDay(lDObj.day);
+}
+var ystr = mons+"/"+days;
+var festival = "";
+switch (nstr)
+{
+	case "正月初一": festival="春节";break;
+	case "正月十五": festival="元宵节";break;
+	case "五月初五": festival="端午节";break;
+	case "八月十五": festival="中秋节";break;
+	case "九月初九": festival="重阳节";break;
+	case "腊月初八": festival="腊八节";break;
+}
+switch (ystr)
+{
+	case "1/1": festival+="元旦";break;
+	case "3/8": festival+="妇女节";break;
+	case "5/1": festival+="劳动节";break;
+	case "6/1": festival+="儿童节";break;
+	case "7/1": festival+="党的生日";break;
+	case "8/1": festival+="建军节";break;
+	case "9/10": festival+="教师节";break;
+	case "10/1": festival+="国庆节";break;
+}
+//var tim1=document.getElementById("tim1");
+//alert("<table cellpadding='0' cellspacing='0' border='0'><tr><td align='center'><font color=FFFFFF>"+years+"/"+ystr+" "+week+" "+hours+":"+mins+":"+secs+"<br>"+"农历"+(lDObj.isLeap?"闰":" ")+nstr+"  "+"</font></td></tr></table>");
+
+tim1.innerHTML="您好，欢迎光临扬州大学机械工程学院,http://jxgcxy.yzu.edu.cn。今天是"+years+"年"+ystr+" "+week+" "+hours+":"+mins+":"+secs;
+//tim1.innerHTML=years;
+setTimeout('settimes()',960);
+}
+</script>
+<script src="Scripts/AC_RunActiveContent.js" type="text/javascript"></script>
+</head>
+
+<body style="background-color:#535353">
+<!--<div>
+    <div id="floatAd1" style="position:absolute;z-index:100;"> 
+      <img src="/images/77/flag.jpg" border="0" usemap="#Map"/>
+<map name="Map" id="Map">
+      <area shape="rect" coords="7,7,216,75" href="http://jxgcxy.yzu.edu.cn/col/col29241/index.html" target="_blank" />
+      <area shape="rect" coords="10,86,213,149" href="/art/2016/10/12/art_4737_534054.html" target="_blank" />
+    </map>
+    </div>
+    <div id="floatAd" style="position:absolute;z-index:100;"> 
+      <a href="http://jxgcxy.yzu.edu.cn/art/2017/8/15/art_4761_565713.html" target="_blank"><img src="/images/77/hy.jpg" /></a>
+    </div>
+    <script type="text/javascript"> 
+       divFloat("floatAd");
+	   divFloat("floatAd1",190,220,true); //后面数字表标起点位置(相对左上角),默认值50,60; false表示不显关闭按钮
+    </script> 
+</div> -->
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td background="/images/77/bg.gif" style="background-repeat:repeat-x"><table width="920" border="0" align="center" cellpadding="0" cellspacing="0" style="color:#000; text-decoration:none">
+      <tr>
+        <td width="601" height="31" background="/images/77/topbg.gif" style="padding-left:15px"><div id="tim1" style="color:#fff;"></div>
+          <script>window.onload=function (){init();}</script></td>
+        <td width="319" background="/images/77/topbg.gif" style="padding-right:15px" align="right" class="tfff"><a href="http://jxgcxy.yzu.edu.cn">[返回首页]</a>  <a href="http://www.yzu.edu.cn" target="_blank">[扬大首页]</a>  <a href="http://bgxt.yzu.edu.cn" target="_blank">[办公系统]</a>  <a href="http://mail.yzu.edu.cn" target="_blank">[校内邮箱]</a></td>
+      </tr>
+    </table>
+    <table width="920" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="920"><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="920" height="194">
+            <param name="movie" value="/images/77/top.swf" />
+            <param name="quality" value="high" />
+            <PARAM NAME="WMode" VALUE="Transparent">
+            <embed src="/images/77/top.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="920" height="194"></embed>
+          </object></td>
+  </tr>
+</table>
+<table width="920" border="0" align="center" cellpadding="0" cellspacing="0" style="border:1px solid #0A1F3C; border-left:none; border-right:none; background:no-repeat">
+  <tr>
+    <td width="74" height="35" align="center" background="/images/77/menushoubg.gif" class="menu" onmouseover="this.background='/images/77/menuhovebg.gif'" onmouseout="this.background='/images/77/menushoubg.gif'"><a href="http://jxgcxy.yzu.edu.cn">首页</a></td>
+    <td width="77" align="center" background="/images/77/menubg.gif" class="menu" onmouseover="this.background='/images/77/menuhovebg.gif';sub1.style.display='block'" onmouseout="this.background='/images/77/menubg.gif';sub1.style.display='none'"><a href="/col/col4712/index.html">学院概况</a></td>
+    <td width="77" align="center" background="/images/77/menubg.gif" class="menu" onmouseover="this.background='/images/77/menuhovebg.gif'" onmouseout="this.background='/images/77/menubg.gif'"><a href="/col/col4717/index.html" onmouseover="sub2.style.display='block'" onmouseout="sub2.style.display='none'">队伍建设</a></td>
+    <td width="77" align="center" background="/images/77/menubg.gif" class="menu" onmouseover="this.background='/images/77/menuhovebg.gif'" onmouseout="this.background='/images/77/menubg.gif'"><a href="/col/col4722/index.html" onmouseover="sub3.style.display='block'" onmouseout="sub3.style.display='none'">学科建设</a></td>
+    <td width="77" align="center" background="/images/77/menubg.gif" class="menu" onmouseover="this.background='/images/77/menuhovebg.gif'" onmouseout="this.background='/images/77/menubg.gif'"><a href="/col/col4726/index.html" onmouseover="sub4.style.display='block'" onmouseout="sub4.style.display='none'">科学研究</a></td>
+    <td width="77" align="center" background="/images/77/menubg.gif" class="menu" onmouseover="this.background='/images/77/menuhovebg.gif'" onmouseout="this.background='/images/77/menubg.gif'"><a href="/col/col4731/index.html" onmouseover="sub5.style.display='block'" onmouseout="sub5.style.display='none'">人才培养</a></td>
+    <td width="77" align="center" background="/images/77/menubg.gif" class="menu" onmouseover="this.background='/images/77/menuhovebg.gif'" onmouseout="this.background='/images/77/menubg.gif'"><a href="/col/col4736/index.html" onmouseover="sub6.style.display='block'" onmouseout="sub6.style.display='none'">招生就业</a></td>
+    <td width="77" align="center" background="/images/77/menubg.gif" class="menu" onmouseover="this.background='/images/77/menuhovebg.gif'" onmouseout="this.background='/images/77/menubg.gif'"><a href="/col/col4742/index.html" onmouseover="sub7.style.display='block'" onmouseout="sub7.style.display='none'">合作交流</a></td>
+    <td width="77" align="center" background="/images/77/menubg.gif" class="menu" onmouseover="this.background='/images/77/menuhovebg.gif'" onmouseout="this.background='/images/77/menubg.gif'"><a href="/col/col4745/index.html" onmouseover="sub8.style.display='block'" onmouseout="sub8.style.display='none'">党建工作</a></td>
+    <td width="77" align="center" background="/images/77/menubg.gif" class="menu" onmouseover="this.background='/images/77/menuhovebg.gif'" onmouseout="this.background='/images/77/menubg.gif'"><a href="http://jxgcxy.yzu.edu.cn/col/col13921/index.html" target="_blank">学生工作</a></td>
+	<td width="77" align="center" background="/images/77/menubg.gif" class="menu" onmouseover="this.background='/images/77/menuhovebg.gif'" onmouseout="this.background='/images/77/menubg.gif'"><a href="/col/col4752/index.html" onmouseover="sub9.style.display='block'" onmouseout="sub9.style.display='none'">下载专区</a></td>
+    <td width="76" align="center" background="/images/77/menubg.gif" class="menu" onmouseover="this.background='/images/77/menuhovebg.gif'" onmouseout="this.background='/images/77/menubg.gif'"><a href="/col/col20081/index.html" target="_blank" style="font-family:Arial, Helvetica, sans-serif">English</a></td>
+  </tr>
+</table>
+<table width="920" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#383838">
+  <tr>
+    <td width="1251" height="25" valign="top">
+	
+		<table width="920" cellpadding="0" cellspacing="0" onmouseover="this.style.display='block'" onmouseout="this.style.display='none'" id="sub1">
+			<tr>
+				<td width="80px"></td>
+				<td height="34" valign="middle" class="submenu">
+					<A href="/col/col4712/index.html">学院简介</A>
+					<A href="/col/col4713/index.html">现任领导</A>
+					<A href="/col/col4714/index.html">机构设置</A>
+					<A href="/col/col4715/index.html">办公电话</A>
+					<A href="/col/col4716/index.html">学院荣誉</A>
+				</td>
+			</tr>
+	  </table>
+	  
+	  <table width="920" cellpadding="0" cellspacing="0" onmouseover="this.style.display='block'" onmouseout="this.style.display='none'" id="sub2">
+			<tr>
+				<td width="150px"></td>
+				<td height="34" valign="middle" class="submenu">
+					<A href="/col/col4717/index.html">师资概况</A>
+					<A href="/col/col4718/index.html">师资队伍</A>
+					<A href="/col/col4719/index.html">人才政策</A>
+					<A href="/col/col4720/index.html">招聘信息</A>
+					<A href="/col/col4721/index.html">教师简介</A>
+				</td>
+			</tr>
+	  </table>
+	  
+	  <table width="920" cellpadding="0" cellspacing="0" onmouseover="this.style.display='block'" onmouseout="this.style.display='none'" id="sub3">
+			<tr>
+				<td width="230px"></td>
+				<td height="34" valign="middle" class="submenu">
+					<A href="/col/col4722/index.html">学科概况</A>
+					<A href="/col/col4723/index.html">重点学科</A>
+                    <A href="/col/col25881/index.html">博士学位授权点</A>
+					<A href="/col/col4724/index.html">学术型硕士学位授权点</A>
+					<A href="/col/col4725/index.html">专业学位型硕士学位授权点</A>
+				</td>
+			</tr>
+	  </table>
+	  
+	  <table width="920" cellpadding="0" cellspacing="0" onmouseover="this.style.display='block'" onmouseout="this.style.display='none'" id="sub4">
+			<tr>
+				<td width="305px"></td>
+				<td height="34" valign="middle" class="submenu">
+					<A href="/col/col4726/index.html">科研概况</A>
+					<A href="/col/col4727/index.html">科研机构</A>
+					<A href="/col/col4728/index.html">科研项目</A>
+					<A href="/col/col4729/index.html">科技服务</A>
+					<A href="/col/col4730/index.html">科研成果</A>
+				</td>
+			</tr>
+	  </table>
+	  
+	  <table width="920" cellpadding="0" cellspacing="0" onmouseover="this.style.display='block'" onmouseout="this.style.display='none'" id="sub5">
+			<tr>
+				<td width="260px"></td>
+				<td height="34" valign="middle" class="submenu">
+					<A href="/col/col4732/index.html">研究生教育</A>
+					<A href="/col/col4733/index.html">专业学位教育</A>
+					<A href="/col/col4731/index.html">本科生教育</A>
+					<A href="/col/col4734/index.html">继续教育</A>
+					<A href="/col/col4735/index.html">教研成果</A>
+				</td>
+			</tr>
+	  </table>
+	  
+	  <table width="920" cellpadding="0" cellspacing="0" onmouseover="this.style.display='block'" onmouseout="this.style.display='none'" id="sub6">
+			<tr>
+				<td width="260px"></td>
+				<td height="34" valign="middle" class="submenu">
+					<A href="/col/col4736/index.html">博士研究生招生</A>
+					<A href="/col/col4737/index.html">硕士研究生招生</A>
+					<A href="/col/col4738/index.html">专业学位招生</A>
+					<a href="/col/col6436/index.html">本科教育招生</a>
+					<A href="/col/col4739/index.html">继续教育招生</A>
+					<A href="/col/col4740/index.html">技能培训招生</A>
+					<A href="/col/col4741/index.html">就业指导</A>
+				</td>
+			</tr>
+	  </table>
+	  
+	  <table width="920" cellpadding="0" cellspacing="0" onmouseover="this.style.display='block'" onmouseout="this.style.display='none'" id="sub7">
+			<tr>
+				<td width="460px"></td>
+				<td height="34" valign="middle" class="submenu">
+					<A href="/col/col4742/index.html">国际合作概况</A>
+					<A href="/col/col4743/index.html">IMAEP项目</A>
+					<A href="/col/col4744/index.html">INTAP项目</A>
+				</td>
+			</tr>
+	  </table>
+	  
+	  <table width="920" cellpadding="0" cellspacing="0" onmouseover="this.style.display='block'" onmouseout="this.style.display='none'" id="sub8">
+			<tr>
+				<td width="380px"></td>
+				<td height="34" valign="middle" class="submenu">
+					<A href="/col/col4745/index.html">组织机构</A>
+					<A href="/col/col4746/index.html">理论学习</A>
+					<A href="/col/col4747/index.html">组织工作</A>
+					<A href="/col/col4748/index.html">党校天地</A>
+					<A href="/col/col4749/index.html">廉政建设</A>
+					<A href="/col/col4750/index.html">统战工作</A>
+					<A href="/col/col4751/index.html">工会工作</A>
+				</td>
+			</tr>
+	  </table>
+	  
+	  <table width="920" cellpadding="0" cellspacing="0" onmouseover="this.style.display='block'" onmouseout="this.style.display='none'" id="sub9">
+			<tr>
+				<td width="650px"></td>
+				<td height="34" valign="middle" class="submenu">
+					<A href="/col/col4752/index.html">学院发文</A>
+					<A href="/col/col4753/index.html">规章制度</A>
+					<A href="/col/col4754/index.html">工作计划</A>
+					<A href="/col/col4755/index.html">表格下载</A>
+				</td>
+			</tr>
+	  </table>
+	
+	
+	</td>
+  </tr>
+</table>
+<table width="920" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="920"><img src="/images/77/ttt.gif" width="920" height="11" /></td>
+  </tr>
+</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td style=" background-position:bottom; background-repeat:repeat-x"><table width="920" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#ffffff">
+      <tr>
+        <td width="220" align="right" valign="top" style="padding-bottom:12px;"><table width="207" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <td width="207" height="52" align="left" valign="bottom" background="/images/77/l11.gif"><table width="184" border="0" align="center" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td width="91" height="22" align="left" valign="top"><table width='100%' cellspacing='0' cellpadding='0' border='0'>
+<tr>
+<td style='background-color:null'><div style="color:#fff; margin-top:-4px; padding-top:4px" class="t1"><a style="color:#fff; font-size:14px;font-weight:bold" href='/art/2017/10/23/art_4758_571378.html' title='第八周会议活动安排' target=_blank>·本周安排<span style="display:none">第八周会议活动安排</span></a></div></td>
+</tr></table></td>
+                  <td width="93" align="right" valign="middle"><a href="/col/col4758/index.html" style="color:#fff; text-decoration:none">更多</a></td>
+                </tr>
+              </table></td>
+            </tr>
+            <tr>
+              <td align="left" valign="top" background="/images/77/llbg.gif"><table width="184" border="0" align="center" cellpadding="0" cellspacing="0">
+                  <tr>
+                    <td width="184" height="170" colspan="2" align="left" valign="top"><marquee width="100%" height="160px" direction="up"  scrollamount="1" scrolldelay="1" onmouseover="this.stop()" onmouseout="this.start()"><table width='100%' cellspacing='0' cellpadding='0' border='0'>
+<tr>
+<td style='background-color:null'><div style="border-bottom:1px dotted #fff; line-height:18px;color:#fff;padding-top:4px; padding-bottom:3px" class="t1"><a style="line-height:18px;color:#fff" title='星期一：院党政联席会'>·星期一：院党政联席会</a></div></td></tr>
+<tr>
+<td style='background-color:null'><div style="border-bottom:1px dotted #fff; line-height:18px;color:#fff;padding-top:4px; padding-bottom:3px" class="t1"><a style="line-height:18px;color:#fff" title='星期二：校社会合作与服务工作例会；校奖学金评审会'>·星期二：校社会合作与服务工作例会；校奖学金评审会</a></div></td></tr>
+<tr>
+<td style='background-color:null'><div style="border-bottom:1px dotted #fff; line-height:18px;color:#fff;padding-top:4px; padding-bottom:3px" class="t1"><a style="line-height:18px;color:#fff" title='星期三：院关工委会议；政治学习（学习19大会议精神）、教研活动'>·星期三：院关工委会议；政治学习（学习19大会议精神）、教研活动</a></div></td></tr>
+<tr>
+<td style='background-color:null'><div style="border-bottom:1px dotted #fff; line-height:18px;color:#fff;padding-top:4px; padding-bottom:3px" class="t1"><a style="line-height:18px;color:#fff" title='星期四：校专业认证现场考查工作协调会'>·星期四：校专业认证现场考查工作协调会</a></div></td>
+</tr></table></marquee></td>
+                  </tr>
+                  <tr>
+                     <td height="43" align="left" valign="top"><a href="http://webwork.yzu.edu.cn/jcms"><img src="/images/77/201405051.gif" width="88" height="33" border="0" /></a></td>
+                    <td align="right" valign="top"><a href="http://melab.yzu.edu.cn/zyjs"><img src="/images/77/201405052.gif" width="88" height="33" border="0" /></a></td>
+                  </tr>
+                  <tr>
+                    <td height="43" align="left" valign="top"><a href="http://jwweb.yzu.edu.cn:8082/xsxt/" target="_blank"><img src="/images/77/l3.gif" width="88" height="33" border="0" /></a></td>
+                    <td align="right" valign="top"><a href="/col/col4763/index.html" target="_blank"><img src="/images/77/l4.gif" width="88" height="33" border="0" /></a></td>
+                  </tr>
+                  <tr>
+                    <td height="43" colspan="2" align="left" valign="top"><a href="/col/col15102/index.html" target="_blank"><img src="/images/77/l5.gif" width="184" height="33" border="0" /></a></td>
+                  </tr>
+                  <tr>
+                    <td height="43" colspan="2" align="left" valign="top"><a href="http://58.192.142.141/jxxy/bysj.htm" target="_blank"><img src="/images/77/l6.gif" width="184" height="33" border="0" /></a></td>
+                  </tr>
+                  <tr>
+                    <td height="43" align="left" valign="top"><a href="mailto:zhangjf@yzu.edu.cn"><img src="/images/77/yzxx.jpg" width="88" height="33" /></a></td>
+                    <td height="43" align="right" valign="top"><a href="mailto:qhhuang@yzu.edu.cn"><img src="/images/77/sjxx.jpg" width="88" height="33" /></a></td>
+                  </tr>
+                  <tr>
+                    <td height="30" colspan="2" align="center" valign="top"><SELECT style="FONT-SIZE: 12px; WIDTH: 184px" onchange="javascript:if (this.selectedIndex==0) return false;window.open(this.options[this.selectedIndex].value)" size=1 name=select1> <OPTION selected>--------校内链接---------</OPTION> <OPTION value=http://jwjc.yzu.edu.cn/>纪委（监察处）</OPTION> <OPTION value=http://dwbgs.yzu.edu.cn/>党委办公室</OPTION> <OPTION value=http://dwzzb2.yzu.edu.cn/>组织部</OPTION> <OPTION value=http://dwxcb.yzu.edu.cn/>宣传部</OPTION> <OPTION value=http://dangxiao.yzu.edu.cn/>（党校）</OPTION> <OPTION value=http://dwtzb.yzu.edu.cn/>统战部</OPTION> <OPTION value=http://xgc2.yzu.edu.cn/>学工部</OPTION> <OPTION value=http://bwc.yzu.edu.cn/>保卫部（处）</OPTION> <OPTION value=http://rwb.yzu.edu.cn/>（人武部）</OPTION> <OPTION value=http://gonghui.yzu.edu.cn/>工会</OPTION> <OPTION value=http://tuanwei.yzu.edu.cn/>团委</OPTION> <OPTION value=http://xzbgs.yzu.edu.cn/>校长办公室</OPTION> <OPTION value=http://jwc.yzu.edu.cn/>教务处</OPTION> <OPTION value=http://zhaoban.yzu.edu.cn/>（招办）</OPTION> <OPTION value=http://yjsc.yzu.edu.cn/>研究生处（院）</OPTION> <OPTION value=http://zrkxc.yzu.edu.cn/>自然科学处</OPTION> <OPTION value=http://rwskc.yzu.edu.cn/>人文社科处</OPTION> <OPTION value=http://cjc.yzu.edu.cn/>成教处（院）</OPTION> <OPTION value=http://gjhzjlc.yzu.edu.cn/>国际合作与交流（港澳台办公室）</OPTION> <OPTION value=http://rsc.yzu.edu.cn/>人事处</OPTION> <OPTION value=http://hwjyxy.yzu.edu.cn/>海外教育学院</OPTION> <OPTION value=http://cwc.yzu.edu.cn/>财务处</OPTION> <OPTION value=http://gzc2.yzu.edu.cn/>国有资产管理处</OPTION> <OPTION value=http://sjc.yzu.edu.cn/>审计处</OPTION> <OPTION value=http://hqglc.yzu.edu.cn/>后勤管理处</OPTION> <OPTION value=http://jjc.yzu.edu.cn/>基建处</OPTION> <OPTION value=http://sbc2.yzu.edu.cn/>实验室与设备管理处</OPTION> <OPTION value=http://cszx.yzu.edu.cn/>（测试中心）</OPTION> <OPTION value=http://kjcyc.yzu.edu.cn/>科技产业处</OPTION> <OPTION value=http://fzbgs.yzu.edu.cn/>发展办公室</OPTION> <OPTION value=http://ltxc.yzu.edu.cn/>离退休处</OPTION> <OPTION value=http://hqjt.yzu.edu.cn/>后勤服务集团</OPTION> <OPTION value=http://tsg.yzu.edu.cn/>图书馆</OPTION> <OPTION value=http://pgzx2.yzu.edu.cn/>教育教学评估中心</OPTION> <OPTION value=http://xbbjb.yzu.edu.cn/>学报编辑部</OPTION> <OPTION value=http://dag2.yzu.edu.cn/>档案馆</OPTION> <OPTION value=http://xxzx.yzu.edu.cn/>信息中心</OPTION> <OPTION value=http://synmc.yzu.edu.cn/>实验农牧场</OPTION></SELECT></td>
+                  </tr>
+                  <tr>
+                    <td height="30" colspan="2" align="center" valign="top"><SELECT style="FONT-SIZE: 12px; WIDTH: 184px" onchange="javascript:if (this.selectedIndex==0) return false;window.open(this.options[this.selectedIndex].value)" size=1 name=select1><OPTION selected>--------常用链接---------</OPTION> <OPTION value=http://www.most.gov.cn/>国家科技部</OPTION> <OPTION value=http://www.moe.edu.cn/>国家教育部</OPTION> <OPTION value=http://www.cmes.org/cmes/index.jsp>中国机械工程学会</OPTION> <OPTION value=http://www.nsfc.gov.cn/nsfc2008/index.htm>国家自然科学基金委员会</OPTION> <OPTION value=http://www.ec.js.edu.cn/>江苏省教育厅</OPTION> <OPTION value=http://www.jstd.gov.cn/hotkm/jskj/index.jsp>江苏省科技厅</OPTION> <OPTION value=http://mail.yzu.edu.cn>扬大邮箱</OPTION> <OPTION value=http://bgxt.yzu.edu.cn>扬大办公系统</OPTION> <OPTION value=http://www.baidu.com>百度搜索</OPTION> <OPTION value=http://www.g.cn>google谷歌搜索</OPTION> <OPTION value=http://www.yahoo.com.cn>yahoo雅虎搜索</OPTION> <OPTION value=http://www.sina.com>新浪网</OPTION> <OPTION value=http://www.sohu.com>搜狐网</OPTION> <OPTION value=http://www.da-gang.com>钢丝绳</OPTION> <OPTION value=http://www.qq.com>腾讯网</OPTION> <OPTION value=http://www.hao123.com>好123网址导航</OPTION></SELECT></td>
+                  </tr>
+              </table></td>
+            </tr>
+            <tr>
+              <td align="left" valign="top"><img src="/images/77/l8.gif" width="207" height="8" /></td>
+            </tr>
+        </table></td>
+        <td width="467" valign="top" style="padding-bottom:12px;"><table width="440" border="0" align="center" cellpadding="0" cellspacing="0">
+            <tr>
+              <td width="440" align="left" valign="top"><table width="440" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td height="34" valign="top"><a href="/col/col4759/index.html"><img src="/images/77/c1.gif" width="440" height="26" border="0" /></a></td>
+                  </tr>
+                  <tr>
+                    <td height="150" valign="top"><table width='100%' cellspacing='0' cellpadding='0' border='0'>
+<tr>
+<td style='background-color:null'><div style="border-bottom:1px dotted #99A5B1; height:23px; line-height:23px;color:#000; margin-top:-4px; padding-top:4px" class="t1"><span class="fr" style=" font-size:11px; font-family:Arial, Helvetica, sans-serif; color:#2C4E7C">10-27</span><a style="height:23px; line-height:23px" href='/art/2017/10/27/art_4759_572262.html' title='我院召开2017年下半年关工委工作会议暨新一轮老少共建启动仪式' target=_blank>·我院召开2017年下半年关工委工作会议暨新一轮老少共建启动仪...</a></div></td></tr>
+<tr>
+<td style='background-color:null'><div style="border-bottom:1px dotted #99A5B1; height:23px; line-height:23px;color:#000; margin-top:-4px; padding-top:4px" class="t1"><span class="fr" style=" font-size:11px; font-family:Arial, Helvetica, sans-serif; color:#2C4E7C">10-27</span><a style="height:23px; line-height:23px" href='/art/2017/10/27/art_4759_572238.html' title='我院与常州轻工职业技术学院机械工程系开展学生工作交流' target=_blank>·我院与常州轻工职业技术学院机械工程系开展学生工作交流</a></div></td></tr>
+<tr>
+<td style='background-color:null'><div style="border-bottom:1px dotted #99A5B1; height:23px; line-height:23px;color:#000; margin-top:-4px; padding-top:4px" class="t1"><span class="fr" style=" font-size:11px; font-family:Arial, Helvetica, sans-serif; color:#2C4E7C">10-27</span><a style="height:23px; line-height:23px" href='/art/2017/10/27/art_4759_572197.html' title='我院学子在第三届“协鑫杯”创新创业大赛中再获佳绩' target=_blank>·我院学子在第三届“协鑫杯”创新创业大赛中再获佳绩</a></div></td></tr>
+<tr>
+<td style='background-color:null'><div style="border-bottom:1px dotted #99A5B1; height:23px; line-height:23px;color:#000; margin-top:-4px; padding-top:4px" class="t1"><span class="fr" style=" font-size:11px; font-family:Arial, Helvetica, sans-serif; color:#2C4E7C">10-24</span><a style="height:23px; line-height:23px" href='/art/2017/10/24/art_4759_571717.html' title='焦新安校长来学院调研指导工作' target=_blank>·焦新安校长来学院调研指导工作</a></div></td></tr>
+<tr>
+<td style='background-color:null'><div style="border-bottom:1px dotted #99A5B1; height:23px; line-height:23px;color:#000; margin-top:-4px; padding-top:4px" class="t1"><span class="fr" style=" font-size:11px; font-family:Arial, Helvetica, sans-serif; color:#2C4E7C">10-24</span><a style="height:23px; line-height:23px" href='/art/2017/10/24/art_4759_571679.html' title='我院在第二十二届校运动会上再创历史佳绩' target=_blank>·我院在第二十二届校运动会上再创历史佳绩</a></div></td></tr>
+<tr>
+<td style='background-color:null'><div style="border-bottom:1px dotted #99A5B1; height:23px; line-height:23px;color:#000; margin-top:-4px; padding-top:4px" class="t1"><span class="fr" style=" font-size:11px; font-family:Arial, Helvetica, sans-serif; color:#2C4E7C">10-18</span><a style="height:23px; line-height:23px" href='/art/2017/10/18/art_4759_570787.html' title='我院举办第十三届教职工趣味运动会' target=_blank>·我院举办第十三届教职工趣味运动会</a></div></td>
+</tr></table></td>
+                  </tr>
+              </table></td>
+            </tr>
+            <tr>
+              <td height="34" align="left" valign="bottom"><a href="/col/col4760/index.html"><img src="/images/77/c2.gif" width="440" height="26" border="0" /></a></td>
+            </tr>
+            <tr>
+              <td align="left" valign="top"><script language='javascript' src="/module/jslib/jquery/artdialog/artDialog.min.js"></script><script language='javascript' src="/module/permissionread/permissionunit.jsp?columnid=4760&unitid=36640&permissiontype=1&unitfilepath="></script></td>
+            </tr>
+            <tr>
+              <td height="34" align="left" valign="bottom"><a href="/col/col4761/index.html"><img src="/images/77/c3.gif" width="440" height="26" border="0" /></a></td>
+            </tr>
+            <tr>
+              <td height="128" align="left" valign="top"><table width='100%' cellspacing='0' cellpadding='0' border='0'>
+<tr>
+<td style='background-color:null'><div style="border-bottom:1px dotted #99A5B1; height:23px; line-height:23px;color:#000; margin-top:-4px; padding-top:4px" class="t1"><span class="fr" style=" font-size:11px; font-family:Arial, Helvetica, sans-serif; color:#2C4E7C">09-07</span><a style="height:23px; line-height:23px" href='/art/2017/9/7/art_4761_567250.html' title='学术报告：Modern engine control systems' target=_blank>·学术报告：Modern engine control sys...</a></div></td></tr>
+<tr>
+<td style='background-color:null'><div style="border-bottom:1px dotted #99A5B1; height:23px; line-height:23px;color:#000; margin-top:-4px; padding-top:4px" class="t1"><span class="fr" style=" font-size:11px; font-family:Arial, Helvetica, sans-serif; color:#2C4E7C">08-15</span><a style="height:23px; line-height:23px" href='/art/2017/8/15/art_4761_565713.html' title='第十一届国际摩擦学研讨年会“汽车和发动机工业中摩擦学”研讨会通知' target=_blank>·第十一届国际摩擦学研讨年会“汽车和发动机工业中摩擦学”研讨会...</a></div></td></tr>
+<tr>
+<td style='background-color:null'><div style="border-bottom:1px dotted #99A5B1; height:23px; line-height:23px;color:#000; margin-top:-4px; padding-top:4px" class="t1"><span class="fr" style=" font-size:11px; font-family:Arial, Helvetica, sans-serif; color:#2C4E7C">06-05</span><a style="height:23px; line-height:23px" href='/art/2017/6/5/art_4761_559570.html' title='学术报告：Effect of Al addition on properties and microstructure of refractory high-entrop' target=_blank>·学术报告：Effect of Al addition on ...</a></div></td></tr>
+<tr>
+<td style='background-color:null'><div style="border-bottom:1px dotted #99A5B1; height:23px; line-height:23px;color:#000; margin-top:-4px; padding-top:4px" class="t1"><span class="fr" style=" font-size:11px; font-family:Arial, Helvetica, sans-serif; color:#2C4E7C">06-05</span><a style="height:23px; line-height:23px" href='/art/2017/6/5/art_4761_559568.html' title='学术报告：创新设计与设计竞争力' target=_blank>·学术报告：创新设计与设计竞争力</a></div></td></tr>
+<tr>
+<td style='background-color:null'><div style="border-bottom:1px dotted #99A5B1; height:23px; line-height:23px;color:#000; margin-top:-4px; padding-top:4px" class="t1"><span class="fr" style=" font-size:11px; font-family:Arial, Helvetica, sans-serif; color:#2C4E7C">04-13</span><a style="height:23px; line-height:23px" href='/art/2017/4/13/art_4761_552280.html' title='研究生全英文课程:Intelligent Manufacturing（智能制造工业）' target=_blank>·研究生全英文课程:Intelligent Manufactu...</a></div></td>
+</tr></table></td>
+            </tr>
+        </table></td>
+        <td width="233" valign="top" background="/images/77/tttbg.gif" style="padding-bottom:12px;"><table width="210" border="0" align="center" cellpadding="0" cellspacing="0">
+            <tr>
+              <td height="150" align="left" valign="top"><script type="text/javascript">var _width = 210; var _height = 155;var text_height = 30;var flash_height = _height + text_height;var pic_arr = new Array();var link_arr = new Array();var text_arr = new Array();var i = 0;pic_arr[i] = "/picture/0/s1710241520223763506.jpg";link_arr[i] = "/art/2017/10/24/art_7841_571722.html";text_arr[i] = "焦新安校长来学院调研指导工作";i++;pic_arr[i] = "/picture/0/s1710120910149148823.jpg";link_arr[i] = "/art/2017/10/12/art_7841_569991.html";text_arr[i] = "俞洪亮副校长来我院调研指导工作";i++;pic_arr[i] = "/picture/0/1709071710517859582.jpg";link_arr[i] = "/art/2017/9/7/art_7841_567265.html";text_arr[i] = "姚冠新书记亲切看望我院刘澄教授";i++;pic_arr[i] = "/picture/0/1709071709081166747.jpg";link_arr[i] = "/art/2017/9/7/art_7841_567264.html";text_arr[i] = "费坚副校长来学院调研指导工作";i++;pic_arr[i] = "/picture/0/1610180852571697435.jpg";link_arr[i] = "/art/2016/10/18/art_7841_534512.html";text_arr[i] = "焦新安校长来学院调研指导工作";i++;var p = pic_arr.join("|");var l = link_arr.join("|");var t = text_arr.join("|");var f = "/flash/0/slideshow.swf";document.write('<object ID="focus_flash" classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0" width="'+ _width +'" height="'+ flash_height +'">');document.write('<param name="allowScriptAccess" value="sameDomain"><param name="movie" value="'+f+'"><param name="quality" value="high"><param name="bgcolor">');document.write('<param name="menu" value="false"><param name=wmode value="transparent">');document.write('<param name="FlashVars" value="pics='+p+'&links='+l+'&texts='+t+'&borderwidth='+_width+'&borderheight='+_height+'&textheight='+text_height+'">');document.write('<embed ID="focus_flash" src="'+f+'" wmode="opaque" FlashVars="pics='+p+'&links='+l+'&texts='+t+'&borderwidth='+_width+'&borderheight='+_height+'&textheight='+text_height+'" menu="false" quality="high" width="'+ _width +'" height="'+ flash_height +'" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />');document.write('</object>');</script></td>
+            </tr>
+            <tr>
+              <td height="34" align="left" valign="bottom"><a href="/col/col17521/index.html"><img src="/images/77/r1.gif" width="210" height="26" /></a></td>
+            </tr>
+            <tr>
+              <td height="118" align="left" valign="top" style="padding-top:2px"><div style="margin-top:-3px"><table width='100%' cellspacing='0' cellpadding='0' border='0'>
+<tr>
+<td style='background-color:null'><div style="border-bottom:1px dotted #99A5B1; height:23px; line-height:23px;color:#000; margin-top:-4px; padding-top:4px" class="t1"><a style="height:23px; line-height:23px" href='/art/2017/10/26/art_17521_571990.html' title='我院成功举办新生乒乓球比赛' target=_blank>·我院成功举办新生乒乓球比赛</a></div></td></tr>
+<tr>
+<td style='background-color:null'><div style="border-bottom:1px dotted #99A5B1; height:23px; line-height:23px;color:#000; margin-top:-4px; padding-top:4px" class="t1"><a style="height:23px; line-height:23px" href='/art/2017/10/26/art_17521_571989.html' title='我院学干培训班系列观摩活动圆满结束' target=_blank>·我院学干培训班系列观摩活动圆满...</a></div></td></tr>
+<tr>
+<td style='background-color:null'><div style="border-bottom:1px dotted #99A5B1; height:23px; line-height:23px;color:#000; margin-top:-4px; padding-top:4px" class="t1"><a style="height:23px; line-height:23px" href='/art/2017/10/26/art_17521_571975.html' title='求是、求实、求新、求精——我院学生干部培训班第一讲' target=_blank>·求是、求实、求新、求精——我院...</a></div></td></tr>
+<tr>
+<td style='background-color:null'><div style="border-bottom:1px dotted #99A5B1; height:23px; line-height:23px;color:#000; margin-top:-4px; padding-top:4px" class="t1"><a style="height:23px; line-height:23px" href='/art/2017/10/19/art_17521_570914.html' title='我院举办2017年学生干部培训班开班仪式' target=_blank>·我院举办2017年学生干部培训...</a></div></td></tr>
+<tr>
+<td style='background-color:null'><div style="border-bottom:1px dotted #99A5B1; height:23px; line-height:23px;color:#000; margin-top:-4px; padding-top:4px" class="t1"><a style="height:23px; line-height:23px" href='/art/2017/10/19/art_17521_570900.html' title='2017级新生入学教育（六）——青年大学生为什么要加入中国共产党' target=_blank>·2017级新生入学教育（六）—...</a></div></td>
+</tr></table></div></td>
+            </tr>
+            <tr>
+              <td height="34" align="left" valign="bottom"><a href="/col/col4741/index.html"><img src="/images/77/r2.gif" width="210" height="26" border="0" /></a></td>
+            </tr>
+            <tr>
+              <td align="left" valign="top" style="padding-top:2px"><div style="margin-top:-3px"><table width='100%' cellspacing='0' cellpadding='0' border='0'>
+<tr>
+<td style='background-color:null'><div style="border-bottom:1px dotted #99A5B1; height:23px; line-height:23px;color:#000; margin-top:-4px; padding-top:4px" class="t1"><a style="height:23px; line-height:23px" href='/art/2017/10/25/art_4741_571864.html' title='2017.10.13 牧羊集团丰尚 2018届招聘会' target=_blank>·2017.10.13 牧羊集团...</a></div></td></tr>
+<tr>
+<td style='background-color:null'><div style="border-bottom:1px dotted #99A5B1; height:23px; line-height:23px;color:#000; margin-top:-4px; padding-top:4px" class="t1"><a style="height:23px; line-height:23px" href='/art/2017/10/25/art_4741_571863.html' title='2017.10.13 富士康 2018校园（菁干班）招聘会' target=_blank>·2017.10.13 富士康 ...</a></div></td></tr>
+<tr>
+<td style='background-color:null'><div style="border-bottom:1px dotted #99A5B1; height:23px; line-height:23px;color:#000; margin-top:-4px; padding-top:4px" class="t1"><a style="height:23px; line-height:23px" href='/art/2017/10/25/art_4741_571862.html' title='2017.10.13  双环传动机械股份有限公司  2018校园招聘会' target=_blank>·2017.10.13  双环传...</a></div></td></tr>
+<tr>
+<td style='background-color:null'><div style="border-bottom:1px dotted #99A5B1; height:23px; line-height:23px;color:#000; margin-top:-4px; padding-top:4px" class="t1"><a style="height:23px; line-height:23px" href='/art/2017/10/25/art_4741_571860.html' title='2017.10.12  柯尼卡美能达公系统研发（无锡）有限公司   校园招聘会' target=_blank>·2017.10.12  柯尼卡...</a></div></td></tr>
+<tr>
+<td style='background-color:null'><div style="border-bottom:1px dotted #99A5B1; height:23px; line-height:23px;color:#000; margin-top:-4px; padding-top:4px" class="t1"><a style="height:23px; line-height:23px" href='/art/2017/10/25/art_4741_571859.html' title='2017.10.12   精进电动科技股份有限公司  2018招聘会' target=_blank>·2017.10.12   精进...</a></div></td>
+</tr></table></div></td>
+            </tr>
+            
+        </table></td>
+      </tr>
+    </table>
+      <table width="920" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tr>
+          <td style="font-size:12px; color:#fff; font-family:Arial, Helvetica, sans-serif; padding:15px 0" width="920" align="center">© 2009 扬州大学机械工程学院 版权所有    <a href="/col/col7801/index.html" target="_blank" style="color:#fff">网站地图</a><br />
+            地址：江苏省扬州市邗江区华扬西路196号（225127）　电话：0514-87978347 <br />
+          传真：0514-87859737　 Email:jxxy@yzu.edu.cn</td>
+        </tr>
+      </table></td>
+  </tr>
+</table></td>
+  </tr>
+</table>
+
+
+<!-- visitcount Begin --><iframe src='./module/visitcount/visit.jsp?type=1&i_webid=9&i_columnid=229' name="vishidden" id="vishidden" frameborder="0" style="width:0; height:0; display:none"></iframe><!-- visitcount End -->
+</body>
+</html>
+ <a href='http://www.hanweb.com' style='display:none'>Produced By 大汉网络 大汉版通发布系统</a><script language="javascript" src='/script/pagecontrol.js'></script>

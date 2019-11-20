@@ -1,0 +1,182 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>北京高校文献资源统一检索系统平台</title>
+	<link type="text/css" rel="stylesheet" href="/areas/bjgx/css/style.css" />
+	<script language=javascript src="/javascript/area/inc.js"></script>
+	<script language="javascript" src="/javascript/common.js"></script>
+	<script language="javascript" src="/js/writecookie.action"></script>
+	<script language="javascript" src="/areas/bjgx/js/showIndexNews.js"></script>
+	<script type="text/javascript">
+		var remark="";
+		var _bookDomain='book.balis.edu.cn';
+		var _jourDomain='jour.balis.edu.cn';
+		var _npdomain='newspaper.balis.edu.cn/';
+		var _userip="221.224.213.42";
+		var ck=new Cookie(); 
+	</script>
+	<script type="text/javascript" src="/areas/bjgx/js/idxarea.js"></script>
+	<link href="/style/area/idxarea.css" type=text/css rel=stylesheet/>
+	<style type="text/css">
+	.top {
+	    color: #FFFFFF;
+	    height: 28px;
+	    line-height: 28px;
+	}
+	.top .top_right {
+	    float: right;
+	}
+	
+	.top .top_left {
+	    float: left;
+	}
+	</style>
+</head>
+
+<body onLoad="changeTag('me_2','searchJour','searchJour');document.f2.sw.focus();">
+<div class="wrap">
+	
+   <div class="banner" style="width: 1000px;height:215px;background: url(/areas/bjgx/images/banner.jpg)">
+   <div class="top">
+    	<div class="top_left"><a href="/">首页</a>|<a target="_blank" href="http://book.balis.edu.cn/ebook.do?go=guideindex">图书导航</a>
+    	|<a target="_blank" href="http://eng.balis.edu.cn/magguide">期刊导航 </a>
+    	|<a target="_blank" href="http://eng.balis.edu.cn/dbguide">数据库导航</a></div>
+    </div>
+   </div>
+   <div class="content clearfix">
+      <div class="search fl">
+		<ul class="clearfix">
+            <script language="javascript" src="/areas/bjgx/js/alltopmenu.js"></script>
+			<script>new _topmenu({items:["quanbu","book","qikan","baozhi","xuewei","huiyi","nstl"]}).output()</script>
+        </ul>
+        
+			
+		
+		
+				
+		<form name="f2" id="f2" onSubmit="return isSearch(this);" action="http://book.balis.edu.cn/jsarea.jsp" method="get" >
+			<input name="code" value="utf-8" type="hidden" />
+			
+			<input name="channel" id="channel" type="hidden" value="goqw.jsp"/>
+         <div class="quick clearfix">
+             <div class="txt fl"><b class="icons"></b><input class="txt" type="text" id=sw maxLength=128 name="sw"/></div>
+             <select id="wenxianleixing" style="width:100px;height:33px;border:1px solid #ccc;float:left;margin-left: 5px;display:none;" name="type">
+		            <option value="1">西文期刊</option>
+		            <option value="2">中文期刊</option>
+		            <option value="3">俄文期刊</option>
+		            <option value="4">日文期刊</option>
+		            <option value="5">计量检定规程</option>
+		            <option value="6">中文专利</option>
+		            <option value="7">外文专利</option>
+		            <option value="8">外文科技丛书</option>
+		            <option value="9">外文文集汇编</option>
+		            <option value="10">中文会议论文</option>
+		            <option value="11">外文会议论文</option>
+		            <option value="12">中文学位论文</option>
+		            <option value="13">外文学位论文</option>
+		            <option value="14">国外科技报告</option>
+		</select>
+             <input type="submit" value=中文搜索 name="Submit" class="btn" id="jiansuo1"/>
+             <input id="fsearch" onclick="findexsearch();" value="外文搜索" type="button" class="btn"/>
+         </div>
+         <div id="book_right2" style="display: none;"></div>
+         <div class="choice" id="book" ></div>
+         </form>
+      </div> 
+      <div class="catalogue fr">
+          <div class="tit">联合目录</div>
+          <ul>
+          	 <li><b class="icons"></b> <a href="http://opac.calis.edu.cn/opac/simpleSearch.do" target="_blank">CALIS高校书刊联合目录</a></li>
+             <li><b class="icons"></b> <a href="http://ccc.calis.edu.cn/index.php?artifact=null" target="_blank">CALIS外文期刊网</a></li>
+             <li><b class="icons"></b> <a href="http://www.cashl.edu.cn/portal/search.html?res=article" target="_blank">高校人文社科外文期刊目次数据库 </a></li>
+             <li><b class="icons"></b> <a href="http://union.csdl.ac.cn/" target="_blank">全国期刊联合目录</a></li>
+          </ul>
+      </div>
+   </div>
+   <div class="listBox clearfix">
+      <div class="service fl">
+          <div class="tit"><span>服务 <em>/ SERVICE</em></span></div>
+          <div class="box fl serBox">
+             <h2>常用服务</h2>
+             <ul class="clearfix">
+                <li><b class="icons"></b> <a href="http://202.112.118.46/ywcdwz/index.html" target="_blank">原文传递</a></li>
+                <li><b class="icons"></b> <a href="http://202.112.118.41/" target="_blank">馆际互借</a></li>
+                <li><b class="icons"></b> <a href="http://balis5.ustb.edu.cn/request/kjcx_front" target="_blank">科技查新</a></li>
+                <li><b class="icons"></b> <a href="http://balis5.ustb.edu.cn/request/wxzt_front" target="_blank">专题服务</a></li>
+                <li><b class="icons"></b> <a href="http://balis5.ustb.edu.cn/html/guide" target="_blank">投稿指南</a></li>
+                <li><b class="icons"></b> <a href="http://balis5.ustb.edu.cn/request/slyy_front" target="_blank">收录引用</a></li>
+                <li><b class="icons"></b> <a href="http://eng.balis.edu.cn/magguide" target="_blank">期刊导航</a></li>
+                <li><b class="icons"></b> <a href="http://eng.balis.edu.cn/dbguide" target="_blank">数据库导航</a></li>
+             </ul>
+          </div>
+          <div class="box fl">
+             <h2>特色资源</h2>
+             <ul>
+                <li><b class="icons"></b> <a href="http://202.112.118.52:8777/zwx/" target="_blank">学科主文献</a></li>
+                <li><b class="icons"></b> <a href="http://balis.caigou.com.cn/Zixun.asp" target="_blank">非书资料</a></li>
+                <li><b class="icons"></b> <a href="http://www.gscass.cn/zt/zt01/tsg.aspx?subject=4" target="_blank">中国社会科学院研究生院图书馆 </a></li>
+             </ul>
+          </div>
+          <div class="box fl">
+             <h2>分中心</h2>
+             <ul>
+             <li><b class="icons"></b><a href="http://202.112.118.46/ywcdwz/index.html" target="_blank">原文传递中心</a></li>
+             <li><b class="icons"></b><a href="http://202.112.118.41/" target="_blank">馆际互借中心</a></li>
+             <li><b class="icons"></b><a href="http://balis5.ustb.edu.cn/" target="_blank">联合咨询中心</a></li>
+             <li><b class="icons"></b><a href="http://balis.caigou.com.cn/" target="_blank">资源协调中心</a></li>
+             <li><b class="icons"></b><a href="http://www.lib.bnu.edu.cn/balis/index.htm" target="_blank">培训中心</a></li>
+             </ul>
+          </div>
+          <div class="clear"></div>
+      </div>
+      <div class="newsList fr">
+         <div class="tit"><a href="/news/newsList.action?areaid=430&flag=newslist&cataid=18486&pageSize=80" target="_blank" class="fr">更多</a><span>动态新闻 <em>/ NEWS</em></span></div>
+         <ul id="dongtainews">
+         <script>
+         getIndexNews1("/news/getIndexNews.action?cataids=18486&subsize=6");</script>
+         
+            <!--<li><em>03-07</em><b class="icons"></b><a href="">2013年度BALIS原文传递总结大...</a></li>  -->
+         </ul>
+      </div>
+   </div>
+   
+
+<div class="footer" align="center">
+      <div class="link"><a href="http://www.balis.edu.cn/news/showNews.action?flag=content&id=21575" target="_blank">BALIS简介</a>  |  
+      <a href="http://bjgxtgw.ruc.edu.cn/" target="_blank">北京高校图工委</a>  |  
+      <a href="http://bjtyh.ruc.edu.cn/" target="_blank">北京图研会</a>|  
+      <a href="http://www.calis.edu.cn/" target="_blank">CALIS</a>  |  
+      <a href=" http://www.cashl.edu.cn/portal/index.jsp" target="_blank">CASHL</a>  |  
+      <a href="http://www.bj.calis.edu.cn:8090/" target="_blank">CALIS北京中心</a>  |  
+      <a href="http://www.cadal.net/" target="_blank">CADAL</a>| 
+      <a href="http://www.nstl.gov.cn/" target="_blank">NSTL</a>|  
+      <a href="http://www.nlc.gov.cn/" target="_blank">国家图书馆 </a>|  
+      <a href="http://ipac.library.sh.cn/ipac20/ipac.jsp?profile=#focus" target="_blank">上海图书馆 </a>|  
+      <a href="http://www.clcn.net.cn/" target="_blank">首都图书馆 </a>
+      </div>
+      <div class="foot">
+ 		北京高校文献资源统一检索系统平台 &copy; <script>document.write(new Date().getFullYear());</script>
+      </div>
+   </div>
+
+</div>
+
+<div id="img10" style="width: 258px;position: absolute; left: 100px; top: 43px; visibility :visible; z-index: 100000;" onMouseOver="clearInterval(interval10)" onMouseOut="interval10 = setInterval('changePos10()', delay10)" align="right">
+<a href="http://202.112.118.41/xuanchuanyue2017/xuanchuanyue.htm" target="_blank">
+	<img src="/areas/bjgx/images/82611.png" border="0"/>
+</a>
+    <br/>
+    <span style="cursor:hand;color:red;font-weight:bold" onClick="img10.style.visibility = 'hidden'"><img src="/areas/jxelib/images/fclose.gif" width="80" height="14" align="right"/></span>
+</div>
+
+<script type="text/javascript" src="/areas/bjgx/js/floatnew-t.js"></script>
+
+
+<script language="javascript" src="/javascript/area/visitcount.js"></script>
+<script type="text/javascript">new visitcount();</script>
+</body>
+</html>

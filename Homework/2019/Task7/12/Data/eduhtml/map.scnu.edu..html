@@ -1,0 +1,98 @@
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+<meta name="viewport"
+	content="width=device-width,minimum-scale=1.0,maximum-scale=1.0" />
+<title>华南师范大学校园地图服务系统</title>
+<script src="/modify/js/jquery-1.11.3.min.js"></script>
+<script src="/school/js/coordtransform.js"></script>
+<script src="/mobile/js/icssp_mobile.cookie.js"></script>
+<script type="text/javascript">
+
+/**
+ * (移动端)首页程序入口
+ */
+$(function(){
+	if(isMobile()){
+		//手机定位
+		//location_html();
+		window.location.href="/mobile/index.html";
+	}else{
+		window.location.href="/modify/index.html";
+	}
+});
+
+/* 定位功能 */
+function location_html(){
+	if (navigator.geolocation) {
+		navigator.geolocation.getCurrentPosition(function(poi) {
+			var lon = poi.coords.longitude;
+			var lat = poi.coords.latitude;
+			var t = new Transformation(45, 45, 49);
+			var p = t.WGS842IMAP(lon, lat);
+			//p.x, p.y 
+			if(p.x > 220589){							//石牌桥
+				setCookie("schoolArea","spq");
+			}else if(p.x < 214625){						//大学城
+				setCookie("schoolArea","nh");
+			}else{										//海南
+				setCookie("schoolArea","dxc");
+			}
+			setCookie("centerX",p.x);
+			setCookie("centerY",p.y);
+			window.location.href="/mobile/index.html";
+		}, function(error) {
+			 switch(error.code)  //错误码   
+	            {  
+	            case error.PERMISSION_DENIED:  			//用户拒绝  
+				  alert("访问失败，请允许访问地理定位");	              
+	              break;  
+	            case error.POSITION_UNAVAILABLE:  		//无法提供定位服务  
+	              alert("无法提供定位服务，请检查手机是否开启GPS或手机没有分配该权限");
+	              break;  
+	            case error.TIMEOUT:  					//连接超时  
+	              alert("连接超时，请检查网络");
+	              break;  
+	            case error.UNKNOWN_ERROR:  				//未知错误  
+	              alert("请稍后重试");
+	              break;  
+	         }
+		},{
+      	    // 指示浏览器获取高精度的位置，默认为false
+            enableHighAccuracy: true,
+            // 指定获取地理位置的超时时间，默认不限时，单位为毫秒
+            timeout: 30000,
+            // 最长有效期，在重复获取地理位置时，此参数指定多久再次获取位置。
+            maximumAge: 10000
+        });
+	}else{
+		alert("当前手机不支持定位，请重新访问！");
+	}
+}
+	
+
+function isMobile(){
+	var flag = false;
+	var u = navigator.userAgent;
+	var ios = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), // ios终端
+	android = u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, // android终端或者uc浏览器
+	iPhone = u.indexOf('iPhone') > -1 || u.indexOf('Mac') > -1, // 是否为iPhone或者QQHD浏览器
+	iPad = u.indexOf('iPad') > -1; // 是否iPad
+	if (ios || android || iPhone || iPad) {
+		flag = true;
+	}
+	return flag;
+}
+</script>
+</head>
+<body>
+	
+</body>
+</html>

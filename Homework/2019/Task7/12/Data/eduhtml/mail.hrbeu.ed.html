@@ -1,0 +1,335 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>哈尔滨工程大学电子邮件系统</title>
+    <base href="http://mail.hrbeu.edu.cn/coremail/common/index_cmxt30.jsp" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link href="index_cmxt30/login.css" rel="stylesheet" type="text/css" charset="iso-8859-1" />
+    <link href="../common/assets/75997/jquery-ui/themes/base/jquery.ui.tabs.css" rel="stylesheet"
+          type="text/css" charset="iso-8859-1">
+    
+    <script type="text/javascript"><!--
+        var markme_msg = "请按 Ctrl-D 收藏本页";
+        var login_page_custom = {};
+        login_page_custom.locale = "zh_CN";
+    -->
+    </script>
+
+    
+    
+
+
+
+
+    
+    
+        <script type="text/javascript" src="/coremail/common/assets/75997/jquery/jquery-1.8.2.min.js" charset="iso-8859-1"></script>
+    
+
+
+
+    <script type="text/javascript" src="../common/assets/login/login.js" charset="iso-8859-1"></script>
+    <script type="text/javascript" src="../common/assets/75997/js/blur.js" charset="iso-8859-1"></script>
+
+    
+    
+    
+</head>
+
+<body>
+<div class="Head">
+    <div class="logo">
+        <a href="http://mail.hrbeu.edu.cn" target="_blank">
+            <img style="border:0 none;" src="
+
+/coremail/s?func=getLoginLogoData"
+                 alt="Coremail 电子邮件系统">
+        </a>
+    </div>
+    <div class="Links" id="links">
+        
+        
+        
+        
+        
+
+	
+        <span><a target="_blank" href="http://fwtg.hrbeu.edu.cn/mail/main.htm">服务指南</a> | </span>
+	
+	
+        <span id="localeSwitch"><a href="javascript:setCookie('locale','en_US'); window.location = location;">English</a> |&nbsp;</span>
+        
+        <span id="helpIndex"><a target="_blank" href="/coremail/help/index_zh_CN.jsp">帮助</a> | </span>
+    </div>
+</div>
+
+<div class="Main" id="Main">
+<div class="MainBg" id="MainBg">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+        
+        
+            
+        
+    
+
+
+
+    
+    
+
+
+
+
+<form id="loginForm" method="post" action="/coremail/index.jsp?cus=1" onSubmit="return loginSubmit(this, event);">
+    <input type=hidden name="destURL" value="/coremail/setUcardid.jsp" />
+<div class="MainL">
+</div>
+
+    
+    
+        <div id="mainRCommon">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+    </head>
+    <body>
+        <div class="MainR" style="width: 335px;">
+        <div class="Header">
+            
+            <div class="title"><img src="index_cmxt30/images/indexHreuDot01.gif" style="vertical-align:middle;" width="33" height="31" />用户登录</div>
+            
+            <div class="select_options localePanel">
+            <ul>
+                
+                    
+                    
+                        
+                    
+                    <a href="javascript:void(0);" onclick="changeLocale('zh_CN', '简体中文'); return false;">
+                        <li>
+                            <span>简体中文</span>
+                        </li>
+                    </a>
+                
+                    
+                    
+                    <a href="javascript:void(0);" onclick="changeLocale('zh_TW', '繁體中文'); return false;">
+                        <li>
+                            <span>繁體中文</span>
+                        </li>
+                    </a>
+                
+                    
+                    
+                    <a href="javascript:void(0);" onclick="changeLocale('en_US', 'English'); return false;">
+                        <li>
+                            <span>English</span>
+                        </li>
+                    </a>
+                
+            </ul>
+        </div>
+        </div>
+        
+        <div id="logArea" class="tab-content">
+            <div class="inptr">
+                <input type="text" id="uid" name="uid" class="inpUser" with="50" value="">
+<!-- <div style="float:right;font-size:16px!important; position:relative; left:0px; top:-29px; z-index:100;">@hrbeu.edu.cn</div> -->
+                <input type="hidden" name="nodetect" size="10" value="false" /> 
+            </div>
+<!-- <div style="visibility:hidden; height:0px;"> -->
+            
+                
+                
+                <div class="smallInptr"
+                     id="inpDomain" >
+                    <div class="inpDomain">
+                        <span style="float:left" id="domainVal">hrbeu.edu.cn</span>
+                    </div>
+<!-- </div> -->
+                </div>
+                <input type="hidden" name="domain" id="domain" value="hrbeu.edu.cn" ignoreIDV="true"
+                       dvalue="">
+                
+            
+            <div class="inptr">
+                <input type="password" id="password" name="password" class="inpPW" autocomplete="off"
+                       value="">
+            </div>
+            
+            
+
+            
+                
+                
+            
+            
+            
+            <div class="inpB">
+                <div>
+                    <button name="action:login" type="submit" class="Button" id="login_button">
+                        登录
+                    </button>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    
+                    
+                    <a href="http://mail.hrbeu.edu.cn/register/register.jsp"  class="Button" style="padding: 10px 30px; color: #545454; boder:solid 1px ; border-color:rgb(209,209,209); background-color: rgb(243,243,243);">
+                        注册
+                    </a>
+                    
+                    
+
+                    
+                    
+                </div>
+            </div>
+			
+            <div class="inplist">
+                <label for="saveUsername" id="saveUsernameLabel">
+                    <input type="checkbox" id="saveUsername" class="checkboxfix" />
+                    记住用户名
+                </label>
+                <div style=" float:right;">
+                
+                </div>
+                <br>
+                
+            </div>
+            <!--<div class="inplist">-->
+                
+                <!--
+                
+                    <label class="for">
+                        <a href="http://mail.hrbeu.edu.cn/register/register.jsp">注册</a>
+                    </label>
+                
+            </div>-->
+            
+        </div>
+
+        <div class="Bottom">
+            <div>
+                <div class="TLine"></div>
+                
+                <label id="faceSelectOption">
+                    <a href="javascript:void(0);" onclick="displayFacePanel(this)">
+                        
+
+
+
+
+
+
+
+
+
+
+
+
+                    </a>
+                </label>
+
+                
+                
+            </div>
+        </div>
+
+        
+        
+    </div>
+    </body>
+</html>
+</div>
+    
+
+
+</form>
+</div>
+
+
+
+
+</div>
+
+<div class="MainM" id="newFeatures">
+    <div style="width:1060px; margin:0px auto;">
+    <a href="http://fwtg.hrbeu.edu.cn/02/dd/c206a733/page.htm" target="_blank"><img src="index_cmxt30/images/emaiBtn_01.png" width="113" height="55" border="0" /></a> 
+    <a href="http://fwtg.hrbeu.edu.cn/02/dc/c206a732/page.htm" target="_blank"><img src="index_cmxt30/images/emaiBtn_02.png" width="124" height="55" border="0" /></a> 
+    <a href="http://fwtg.hrbeu.edu.cn/02/db/c206a731/page.htm" target="_blank"><img src="index_cmxt30/images/emaiBtn_03.png" width="120" height="55" border="0" /></a> 
+    <a href="http://fwtg.hrbeu.edu.cn/02/da/c206a730/page.htm" target="_blank"><img src="index_cmxt30/images/emaiBtn_04.png" width="128" height="55" border="0" /></a> 
+    <a href="http://fwtg.hrbeu.edu.cn/02/d9/c206a729/page.htm" target="_blank"><img src="index_cmxt30/images/emaiBtn_05.png" width="123" height="55" border="0" /></a> 
+    <a href="http://fwtg.hrbeu.edu.cn/02/d8/c206a728/page.htm" target="_blank"><img src="index_cmxt30/images/emaiBtn_06.png" width="131" height="55" border="0" /></a> 
+    <a href="http://fwtg.hrbeu.edu.cn/02/d7/c206a727/page.htm" target="_blank"><img src="index_cmxt30/images/emaiBtn_07.png" width="120" height="55" border="0" /></a> 
+    <a href="http://fwtg.hrbeu.edu.cn/02/d6/c206a726/page.htm" target="_blank"><img src="index_cmxt30/images/emaiBtn_08.png" width="138" height="55" border="0" /></a>
+        <!--
+            
+            
+            <dl>
+                <a href="/coremail/help/mobile_zh_CN.jsp">
+                    <b class="bico icoPhone"></b>
+                    <span class="dd">移动办公</span>
+                </a>
+            </dl>
+            
+            <dl>
+                <a href="/coremail/help/coremail_zh_CN.jsp">
+                    <b class="bico icoTemplate"></b>
+                    <span class="dd">全新风格</span>
+                </a>
+            </dl>
+            
+            <dl>
+                <a href="/coremail/help/multiSecurity_zh_CN.jsp">
+                    <b class="bico icoMultiSecurity"></b>
+                    <span class="dd">多重密保</span>
+                </a>
+            </dl>
+            
+            <dl>
+                <a href="/coremail/help/calendar_zh_CN.jsp">
+                    <b class="bico icoCalendar"></b>
+                    <span class="dd">会议与日程</span>
+                </a>
+            </dl>
+        -->
+    </div>
+</div>
+
+<div class="footer">
+    <div class="link">
+            <a href="http://www.coremail.cn/" target="_blank">邮件系统</a>
+            <a href="http://www.coremail.cn/" target="_blank">邮件服务器</a>
+            <a href="http://www.corpease.net/" target="_blank">企业邮箱</a>
+            <a href="http://www.icoremail.cn/" target="_blank">企业邮箱</a>
+        </div>
+    <div class="copyright" id="copyright">
+        &copy; 2015 哈尔滨工程大学<br>信息化处服务电话：0451-82519114 服务邮箱：nic@hrbeu.edu.cn
+    </div>
+</div>
+
+<script type="text/javascript"><!--
+    
+    initXT3("uid");
+-->
+</script>
+
+
+</body>
+</html>

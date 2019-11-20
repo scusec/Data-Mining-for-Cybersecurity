@@ -1,0 +1,689 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head xmlns="">
+    <title>基层水利队伍培训工程</title>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <link rel="stylesheet" type="text/css" href="http://slpx.hhu.edu.cn/cms/res_base/com_whatycms_hhdxpx/default/article/css/css.css" />
+    <link rel="stylesheet" type="text/css" href="http://slpx.hhu.edu.cn/cms/res_base/com_whatycms_hhdxpx/default/article/css/reset.css" /><script src="http://slpx.hhu.edu.cn/cms/res_base/com_whatycms_hhdxpx/default/article/js/jquery-1.6.1.min.js" type="text/javascript"></script><script src="http://slpx.hhu.edu.cn/cms/res_base/com_whatycms_hhdxpx/default/article/js/picmove.js" type="text/javascript"></script><script type="text/javascript">
+    $(function() {
+        $("#nav ul li").click(function () {
+            $("#nav ul li").removeClass("first");
+        });
+    });
+
+$(function(){
+	var tabTitle = ".tab3 dl dt a";
+	var tabContent = ".tab3 dl ul";
+	$(tabTitle + ":first").addClass("on");
+	//$(tabContent).not(":first").hide();
+        $(tabContent).eq(0).siblings(tabContent).hide().end().show();
+	$(tabTitle).unbind("click").bind("click", function(){
+		$(this).siblings("a").removeClass("on").end().addClass("on");
+		var index = $(tabTitle).index( $(this) );
+		$(tabContent).eq(index).siblings(tabContent).hide().end().show();
+   });
+});
+function MM_jumpMenu(targ,selObj,restore){ //v3.0
+  eval(targ+".location='"+selObj.options[selObj.selectedIndex].value+"'");
+  if (restore) selObj.selectedIndex=0;
+}
+
+ </script>
+ <!--
+ <div id="img" style="position:absolute;z-index=99;">
+    <a href="/"><img src="/pxbm.jpg" alt=""  border="0" usemap="#Map"/>
+    <map name="Map">
+      <area shape="rect" coords="1,1,187,101" onclick="postName()"/>
+    </map>
+    </a>
+  </div>
+
+	<SCRIPT LANGUAGE="JavaScript">
+	function postName(){
+		window.open("/sso/login_homePage.action");	
+	}
+    var xPos = document.body.clientWidth-20;
+    var yPos = document.body.clientHeight/2;
+    var step = 1;
+    var delay = 10;
+    var height = 0;
+    var Hoffset = 0;
+    var Woffset = 0;
+    var yon = 0;
+    var xon = 0;
+    var pause = true;
+    var interval;
+    img.style.top = yPos;
+    function changePos() {
+        width = document.body.clientWidth;
+        height = document.body.clientHeight;
+        Hoffset = img.offsetHeight;
+        Woffset = img.offsetWidth;
+        img.style.left = xPos + document.body.scrollLeft;
+        img.style.top = yPos + document.body.scrollTop;
+        if (yon) {
+            yPos = yPos + step;
+        }else {
+            yPos = yPos - step;
+        }
+        if (yPos < 0) {
+            yon = 1;
+            yPos = 0;
+        }
+        if (yPos >= (height - Hoffset)) {
+            yon = 0;
+            yPos = (height - Hoffset);
+        }
+        if (xon) {
+            xPos = xPos + step;
+        }else {
+            xPos = xPos - step;
+        }
+        if (xPos < 0) {
+            xon = 1;
+            xPos = 0;
+        }
+        if (xPos >= (width - Woffset)) {
+            xon = 0;
+            xPos = (width - Woffset);
+        }
+    }
+    function start() {
+        img.visibility = "visible";
+        interval = setInterval('changePos()', delay);
+    }
+    start();
+    img.onmouseover = function() {
+        clearInterval(interval);
+        interval = null;
+    }
+    img.onmouseout = function() {
+        interval = setInterval('changePos()', delay);
+    }
+    </SCRIPT>
+      -->
+      <script type="text/javascript">
+         function c(i){
+            var btn = document.getElementById("btn");
+            i--;
+            if(i==0){
+              btn.href="javascript:checkLogin();";
+            }
+            else{
+              setTimeout("c("+i+")",1000);
+           }
+	 }
+	
+          function checkLogin(){
+		btn.removeAttribute("href");
+                c(4);
+                var loginIdDom = document.getElementById("loginId");
+		var pwdDom = document.getElementById("pwd");
+		var authCode = document.getElementById("authCode");
+		if(loginIdDom.value==''){
+			alert("请输入您的用户名！");
+			loginIdDom.focus();
+			return ;
+		}
+		if(pwdDom.value==''){
+			alert('请输入您的密码！');
+			pwdDom.focus();
+			return ;
+		}
+			if(authCode.value==''){
+			alert('请输入验证码！');
+			authCode.focus();
+			return ;
+		}
+				
+		if(loginIdDom.value.substr(0,2)=='px'){
+			document.login.action="/sso/login_login.action";
+			document.login.submit();
+		}else if(loginIdDom.value.substr(0,2)=='pb'){
+			document.login.action="/sso/login_login.action";
+			document.login.submit();
+
+		}else if(loginIdDom.value.substr(0,2)=='pf'){
+			document.login.action="/sso/login_login.action";
+			document.login.submit();
+
+		}else if(loginIdDom.value.substr(0,2)=='pz'){
+			document.login.action="/sso/login_login.action";
+			document.login.submit();
+
+		}else if(loginIdDom.value.substr(0,2)=='ps') {
+			document.login.action="/sso/login_login.action";
+			document.login.submit();
+		}else if(loginIdDom.value.charAt(0)=='x'){
+			document.login.action="<%=dndx_dxjx %>/sso/login_login.action";
+			document.login.submit();
+			
+		}else{
+			//window.open ('show.html','top','height=100,width=400,top=0,left=0,toolbar=no,menubar=no,scrollbars=no, resizable=no,location=no, status=no');
+			alert("用户名错误！\n培训平台学生用户名需以px开头\n培训平台班主任用户名需以pb开头\n培训平台辅导教师用户名需以pf开头\n培训平台管理员用户名需以pz开头\n站点管理员用户名需以ps开头");		}
+		
+		
+	}
+	window.document.onkeypress=function(){
+		if(event.keyCode==13)
+			checkLogin();
+	}
+	function init(){
+	    //setNull();
+	    $.post("/sso/login_getHomePlan.action", {cache: new Date().getTime() },
+				function(data){
+					if(data!='###') {
+						//$("planTable").html(data);
+						document.getElementById('planTable').innerHTML = data;
+					}				
+				});
+	}
+        
+        	
+
+	function setNull(){
+	document.getElementById("loginId").value='';
+	document.getElementById("pwd").value='';
+	}
+
+        function reloadcode(){
+		var verify=document.getElementById('img_data');
+		verify.setAttribute('src','/sso/authimg?'+Math.random());
+	}
+</script>
+  </head>
+  <body xmlns="" onload="init()">
+    <!--top start-->
+<div id="top">
+<div id="time" class="time"><script>
+setInterval("document.getElementById('time').innerHTML='今天是' + new Date().toLocaleString();",1000);
+</script></div>
+<div class="top_nav"><span class="homepage"><a onclick="this.style.behavior='url(#default#homepage)';this.setHomePage(document.location.href)" href="#">设为首页</a></span>| <span class="favorites"><a onClick="window.external.AddFavorite(document.location.href,'基层水利培训工程')" href="#">加入收藏</a></span></div>
+</div>
+<!--top end--><!--adv start-->
+<div id="adv"><img alt="" width="1002" height="118" src="http://slpx.hhu.edu.cn/cms/res_base/com_whatycms_hhdxpx/default/article/images/top1.jpg" usemap="#Map"/>
+  <map name="Map" id="Map">
+    <area shape="rect" coords="11,7,102,103" href="http://www.cahee.org.cn" target="_blank" alt="中国水利教育协会"/>
+    <area shape="rect" coords="102,7,192,104" href="http://jjy.hhu.edu.cn" target="_blank" alt="河海大学远程与继续教育学院"/>
+  </map>
+</div>
+<!--adv end--><!--nav start-->
+<div id="nav">
+<ul>
+  <li><a href="/cms">首页</a></li>
+  <li><img alt="" width="2" height="36" src="http://slpx.hhu.edu.cn/cms/res_base/com_whatycms_hhdxpx/default/article/images/line.jpg" /></li>
+  <li><a target="_blank" href="/cms/sljg/index.htm">水利机构</a></li>
+  <li><img alt="" width="2" height="36" src="http://slpx.hhu.edu.cn/cms/res_base/com_whatycms_hhdxpx/default/article/images/line.jpg" /></li>
+  <li><a href="/cms/pxxm/index.htm">培训项目</a></li>
+  <li><img alt="" width="2" height="36" src="http://slpx.hhu.edu.cn/cms/res_base/com_whatycms_hhdxpx/default/article/images/line.jpg" /></li>
+  <li><a href="/cms/tjkc/index.htm">数字资源</a></li>
+  <li><img alt="" width="2" height="36" src="http://slpx.hhu.edu.cn/cms/res_base/com_whatycms_hhdxpx/default/article/images/line.jpg" /></li>
+  <li><a target="_blank" href="http://www.hhup.com">数字出版</a></li>
+  <li><img alt="" width="2" height="36" src="http://slpx.hhu.edu.cn/cms/res_base/com_whatycms_hhdxpx/default/article/images/line.jpg" /></li>
+  <li><a href="/cms/msfc/index.htm">名师风采</a></li>
+  <li><img alt="" width="2" height="36" src="http://slpx.hhu.edu.cn/cms/res_base/com_whatycms_hhdxpx/default/article/images/line.jpg" /></li>
+  <li><a href="/cms/xyfw/index.htm">学员服务</a></li>
+  <li><img alt="" width="2" height="36" src="http://slpx.hhu.edu.cn/cms/res_base/com_whatycms_hhdxpx/default/article/images/line.jpg" /></li>
+  <li><a href="/cms/xycjwt/index.htm">常见问题</a></li>
+  <li><img alt="" width="2" height="36" src="http://slpx.hhu.edu.cn/cms/res_base/com_whatycms_hhdxpx/default/article/images/line.jpg" /></li>
+  <li><a href="/cms/lxwm/index.htm">联系我们</a></li>
+  <li><img alt="" width="2" height="36" src="http://slpx.hhu.edu.cn/cms/res_base/com_whatycms_hhdxpx/default/article/images/line.jpg" /> <!--<li><a href="/cms/xzzq/index.htm">下载专区</a></li>--></li>
+</ul>
+<div class="clear"></div>
+</div> <!--nav end-->
+    <div style="clear: both"></div>
+    <!--container start-->
+    <div id="container">
+    <div class="mb">
+    <div class="left"><script type="text/javascript">
+                     var focus_width=247
+                     var focus_height=196
+                     var text_height=18
+                     var swf_height = focus_height+text_height
+                     var pics="";
+                     var links="";
+                     var texts="";
+                     							 pics+='http://slpx.hhu.edu.cn/cms/res_base/com_whatycms_hhdxpx/upload/article/image/2016_4/11_28/kcyniw1iklou.jpg|';
+ links+='http://slpx.hhu.edu.cn/cms/zsxx/897.htm|';
+ texts+='2016年第二期水利安…|';
+							 pics+='http://slpx.hhu.edu.cn/cms/res_base/com_whatycms_hhdxpx/upload/article/image/2014_2/5_19/8j4lhvdfjnkg.png|';
+ links+='http://slpx.hhu.edu.cn/cms/zsxx/687.htm|';
+ texts+='第十四期全国水文站…|';
+							 pics+='http://slpx.hhu.edu.cn/cms/res_base/com_whatycms_hhdxpx/upload/article/image/2014_2/4_19/1bj9hu6cu5w4.jpg|';
+ links+='http://slpx.hhu.edu.cn/cms/zsxx/586.htm|';
+ texts+='江苏省第六期市县水…|';
+							 pics+='http://slpx.hhu.edu.cn/cms/res_base/com_whatycms_hhdxpx/upload/article/image/2014_2/4_19/f4alhu6cxlep.jpg|';
+ links+='http://slpx.hhu.edu.cn/cms/zsxx/587.htm|';
+ texts+='淮委专业技术干部培…|';
+							 pics+='http://slpx.hhu.edu.cn/cms/res_base/com_whatycms_hhdxpx/upload/article/image/2014_2/4_19/4eonhu6d34m0.jpg|';
+ links+='http://slpx.hhu.edu.cn/cms/zsxx/589.htm|';
+ texts+='河海大学精心组织积…|';
+							 pics+='http://slpx.hhu.edu.cn/cms/res_base/com_whatycms_hhdxpx/upload/article/image/2014_2/4_19/3c5zhu6d6tad.jpg|';
+ links+='http://slpx.hhu.edu.cn/cms/zsxx/590.htm|';
+ texts+='水利部松辽水利委员…|';
+							 pics+='http://slpx.hhu.edu.cn/cms/res_base/com_whatycms_hhdxpx/upload/article/image/2014_2/4_17/7ucqhu3n5b7k.jpg|';
+ links+='http://slpx.hhu.edu.cn/cms/zsxx/391.htm|';
+ texts+='江苏省2013年度第一…|';
+						 pics=pics.substring(0,pics.length-1);
+links=links.substring(0,links.length-1);
+texts=texts.substring(0,texts.length-1);
+                     document.write('<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0" width="'+ focus_width +'" height="'+ swf_height +'">');
+                     document.write('<param name="allowScriptAccess" value="sameDomain"><param name="movie" value="http://hdsd.webtrn.cn/cms/front_res/com_tag/focus1.swf" ><param name="quality" value="high"><param name="bgcolor" value="#F0F0F0">');
+                     document.write('<embed width="247" height="219" FlashVars="pics='+pics+'&links='+links+'&texts='+texts+'&borderwidth='+focus_width+'&borderheight='+focus_height+'&textheight='+text_height+'" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" quality="high" src="http://hdsd.webtrn.cn/cms/front_res/com_tag/focus1.swf"></embed>');
+                     document.write('<param name="menu" value="false"><param name=wmode value="opaque">');
+                     document.write('<param name="FlashVars" value="pics='+pics+'&links='+links+'&texts='+texts+'&borderwidth='+focus_width+'&borderheight='+focus_height+'&textheight='+text_height+'">');
+                     document.write('</object>');
+                     </script>
+
+    <div id="gzzd">
+    <div class="title">
+    <h1>规章制度</h1>
+    <h2><a href="/cms/gzzd/index.htm">更多...</a></h2>
+    </div>
+    <span class="gzzd_con"><ul>
+<html dir="ltr">
+  <head>
+    <title></title>
+  </head>
+  <body>
+    <ul>
+      <li><a title="河海大学继续教育“培训+学历”专业文化提升工程实施办法（试行）" href="http://slpx.hhu.edu.cn/cms/gzzd/591.htm">河海大学继续教育“培训+学历”专…</a></li>
+    </ul>
+  </body>
+</html><html dir="ltr">
+  <head>
+    <title></title>
+  </head>
+  <body>
+    <ul>
+      <li><a title="河海大学培训项目管理办法（试行）" href="http://slpx.hhu.edu.cn/cms/gzzd/379.htm">河海大学培训项目管理办法（试行）</a></li>
+    </ul>
+  </body>
+</html><html dir="ltr">
+  <head>
+    <title></title>
+  </head>
+  <body>
+    <ul>
+      <li><a title="河海大学成人高等教育学生学籍异动管理办法" href="http://slpx.hhu.edu.cn/cms/gzzd/597.htm">河海大学成人高等教育学生学籍异动…</a></li>
+    </ul>
+  </body>
+</html><html dir="ltr">
+  <head>
+    <title></title>
+  </head>
+  <body>
+    <ul>
+      <li><a title="河海大学成人本科生学士学位课程考试规定" href="http://slpx.hhu.edu.cn/cms/gzzd/598.htm">河海大学成人本科生学士学位课程考…</a></li>
+    </ul>
+  </body>
+</html><html dir="ltr">
+  <head>
+    <title></title>
+  </head>
+  <body>
+    <ul>
+      <li><a title="河海大学授予成人高等教育本科毕业生学士学位管理办法（修订）" href="http://slpx.hhu.edu.cn/cms/gzzd/599.htm">河海大学授予成人高等教育本科毕业…</a></li>
+    </ul>
+  </body>
+</html><html dir="ltr">
+  <head>
+    <title></title>
+  </head>
+  <body>
+    <ul>
+      <li><a title="河海大学成人高等教育学生学籍管理规定" href="http://slpx.hhu.edu.cn/cms/gzzd/600.htm">河海大学成人高等教育学生学籍管理…</a></li>
+    </ul>
+  </body>
+</html></ul>
+ </span></div>
+    <div id="xyfw">
+    <div class="title">
+    <h1>学员服务</h1>
+    </div>
+    <a class="a_1" href="/cms/jfxz/index.htm">缴费须知 </a><a class="a_2" href="/cms/xycjwt/index.htm">常见问题</a><!-- <a class="a_3" href="/cms/glwj/index.htm">管理文件</a> <a class="a_4" href="/cms/xgtz/index.htm">相关通知</a>--> <a class="a_5" href="/cms/blcx/index.htm">办理程序</a> <a class="a_6" href="/cms/zlxz/index.htm">资料下载</a></div>
+    <div id="yqlj">
+    <div class="title">
+    <h1>友情链接</h1>
+    </div><span class="yqlj_con"><select name="select" onchange="if(this.options[this.selectedIndex].value!=0){window.open(this.options[this.selectedIndex].value)};">
+    <option   value="0">----------------友情链接---------------</option>
+        <option   value="http://www.mwr.gov.cn">-----------------水利部-----------------</option>
+        <option value="http://www.cahee.org.cn">----------中国水利教育协会---------</option>
+        <option   value="http://jjy.hhu.edu.cn">--河海大学远程与继续教育学院--</option>
+      </select></span></div>
+  <!--  <div id="link_sl"><a href="#"><img alt="" src="http://slpx.hhu.edu.cn/cms/res_base/com_whatycms_hhdxpx/default/article/images/sljg.jpg" /></a>
+    	</div>-->
+    </div>
+    <div class="center">
+    <div class="tab3"><dl><dt><a>通知公告</a></dt><dd>
+    <div class="more"><a href="/cms/tzgg/index.htm">更多...</a></div>
+    <ul style="display: none">
+<html dir="ltr">
+  <head>
+    <title></title>
+  </head>
+  <body>
+    <ul>
+      <li><a title="关于举办第八期全国水文监测新技术应用的通知" href="http://slpx.hhu.edu.cn/cms/tzgg/922.htm">
+      <h4>关于举办第八期全国水文监测新技术应用的通知</h4>
+      <span class="a_2">2017-10-23</span> </a></li>
+    </ul>
+  </body>
+</html><html dir="ltr">
+  <head>
+    <title></title>
+  </head>
+  <body>
+    <ul>
+      <li><a title="四川省河长制工作培训班在河海大学举办" href="http://slpx.hhu.edu.cn/cms/tzgg/921.htm">
+      <h4>四川省河长制工作培训班在河海大学举办</h4>
+      <span class="a_2">2017-09-29</span> </a></li>
+    </ul>
+  </body>
+</html><html dir="ltr">
+  <head>
+    <title></title>
+  </head>
+  <body>
+    <ul>
+      <li><a title="关于举办水库运行管理与发展专题培训班的通知" href="http://slpx.hhu.edu.cn/cms/tzgg/920.htm">
+      <h4>关于举办水库运行管理与发展专题培训班的通知</h4>
+      <span class="a_2">2017-09-27</span> </a></li>
+    </ul>
+  </body>
+</html><html dir="ltr">
+  <head>
+    <title></title>
+  </head>
+  <body>
+    <ul>
+      <li><a title="关于举办水环境综合整治与生态修复培训的通知" href="http://slpx.hhu.edu.cn/cms/tzgg/918.htm">
+      <h4>关于举办水环境综合整治与生态修复培训的通知</h4>
+      <span class="a_2">2017-09-27</span> </a></li>
+    </ul>
+  </body>
+</html><html dir="ltr">
+  <head>
+    <title></title>
+  </head>
+  <body>
+    <ul>
+      <li><a title="关于举办河长制编制与实施专题培训班的通知" href="http://slpx.hhu.edu.cn/cms/tzgg/917.htm">
+      <h4>关于举办河长制编制与实施专题培训班的通知</h4>
+      <span class="a_2">2017-09-27</span> </a></li>
+    </ul>
+  </body>
+</html><html dir="ltr">
+  <head>
+    <title></title>
+  </head>
+  <body>
+    <ul>
+      <li><a title="郑州市河长制工作业务培训班在河海大学举办" href="http://slpx.hhu.edu.cn/cms/tzgg/913.htm">
+      <h4>郑州市河长制工作业务培训班在河海大学举办</h4>
+      <span class="a_2">2017-09-22</span> </a></li>
+    </ul>
+  </body>
+</html></ul>
+ </dd></dl></div>
+    <div class="banner"><a target="_blank" href="http://slaqpx.hhu.edu.cn"><img alt="" src="http://slpx.hhu.edu.cn/cms/res_base/com_whatycms_hhdxpx/default/article/images/slpxlj.jpg" /></a></div>
+    <div id="notice">
+    <div class="title">
+    <h1>培训信息</h1>
+    <h2><a href="/cms/zsxx/index.htm">更多...</a></h2>
+    </div>
+    <div class="blk_18"><a class="LeftBotton" target="_self" onmousedown="ISL_GoUp_1()" onmouseup="ISL_StopUp_1()" onmouseout="ISL_StopUp_1()" href="javascript:void(0);"><img alt="" src="http://slpx.hhu.edu.cn/cms/res_base/com_whatycms_hhdxpx/default/article/images/index_72.jpg" /></a>
+    <div id="ISL_Cont_1" class="pcont">
+    <div class="ScrCont">
+    <div id="List1_1"><a class="pl" href="http://slaqpx.hhu.edu.cn"><img alt="" src="http://slpx.hhu.edu.cn/cms/res_base/com_whatycms_hhdxpx/default/article/images/p8.jpg" />水利安全教育培训</a> 
+    									<a class="pl" href="http://slpx.hhu.edu.cn/cms/pxxm/601.htm"><img alt="" src="http://slpx.hhu.edu.cn/cms/res_base/com_whatycms_hhdxpx/default/article/images/p1.jpg" />水利（务）局长</a> 
+    									<a class="pl" href="http://slpx.hhu.edu.cn/cms/pxxm/602.htm"><img alt="" src="http://slpx.hhu.edu.cn/cms/res_base/com_whatycms_hhdxpx/default/article/images/p2.jpg" /> 水生态治理</a> 
+    									<a class="pl" href="http://slpx.hhu.edu.cn/cms/pxxm/603.htm"><img alt="" src="http://slpx.hhu.edu.cn/cms/res_base/com_whatycms_hhdxpx/default/article/images/p3.jpg" />水政监察培训</a> 
+    									<a class="pl" href="http://slpx.hhu.edu.cn/cms/pxxm/493.htm"><img alt="" src="http://slpx.hhu.edu.cn/cms/res_base/com_whatycms_hhdxpx/default/article/images/p4.jpg" />乡镇水利站长</a> 
+    									<a class="pl" href="http://slpx.hhu.edu.cn/cms/pxxm/616.htm"><img alt="" src="http://slpx.hhu.edu.cn/cms/res_base/com_whatycms_hhdxpx/default/article/images/p5.jpg" />全国水文监测</a> 
+    									<a class="pl" href="http://slpx.hhu.edu.cn/cms/pxxm/604.htm"><img alt="" src="http://slpx.hhu.edu.cn/cms/res_base/com_whatycms_hhdxpx/default/article/images/p6.jpg" />水利部定点扶贫</a> 
+    									<a class="pl" href="http://slpx.hhu.edu.cn/cms/pxxm/605.htm"><img alt="" src="http://slpx.hhu.edu.cn/cms/res_base/com_whatycms_hhdxpx/default/article/images/p7.jpg" />专业技术骨干</a>
+    									<a class="pl" href="#"><img alt="" src="http://slpx.hhu.edu.cn/cms/res_base/com_whatycms_hhdxpx/default/article/images/p10.jpg" />水利五大员培训</a>
+    									<a class="pl" href="#"><img alt="" src="http://slpx.hhu.edu.cn/cms/res_base/com_whatycms_hhdxpx/default/article/images/p11.jpg" />水利三类人员培训</a>
+    									<a class="pl" href="#"><img alt="" src="http://slpx.hhu.edu.cn/cms/res_base/com_whatycms_hhdxpx/default/article/images/p12.jpg" />施工企业标准化培训</a>
+    									<a class="pl" href="#"><img alt="" src="http://slpx.hhu.edu.cn/cms/res_base/com_whatycms_hhdxpx/default/article/images/p13.jpg" />水管单位标准化培训</a>
+    									<a class="pl" href="#"><img alt="" src="http://slpx.hhu.edu.cn/cms/res_base/com_whatycms_hhdxpx/default/article/images/p14.jpg" />项目法人标准化培训</a>
+    									<a class="pl" href="#"><img alt="" src="http://slpx.hhu.edu.cn/cms/res_base/com_whatycms_hhdxpx/default/article/images/p15.jpg" />农村水电站标准化培训</a>
+    									<a class="pl" href="#"><img alt="" src="http://slpx.hhu.edu.cn/cms/res_base/com_whatycms_hhdxpx/default/article/images/p16.jpg" />安全监督管理培训</a>
+    									<a class="pl" href="#"><img alt="" src="http://slpx.hhu.edu.cn/cms/res_base/com_whatycms_hhdxpx/default/article/images/p17.jpg" />现场作业人员安全培训</a>
+    									
+    									</div>
+    <div id="List2_1"></div>
+    </div>
+    </div>
+    <a class="RightBotton" target="_self" onmousedown="ISL_GoDown_1()" onmouseup="ISL_StopDown_1()" onmouseout="ISL_StopDown_1()" href="javascript:void(0);"><img alt="" src="http://slpx.hhu.edu.cn/cms/res_base/com_whatycms_hhdxpx/default/article/images/index_75.jpg" /></a></div>
+    <div class="tab_list"><ul>
+<html dir="ltr">
+  <head>
+    <title></title>
+  </head>
+  <body>
+    <ul>
+      <li><a title="2016年第二期水利安全生产标准化建设现场培训班在河海大学继续教育基地宜昌分基地举办" href="http://slpx.hhu.edu.cn/cms/zsxx/897.htm">2016年第二期水利安全生产标准化建设… </a></li>
+    </ul>
+  </body>
+</html><html dir="ltr">
+  <head>
+    <title></title>
+  </head>
+  <body>
+    <ul>
+      <li><a title="第十四期全国水文站站长培训班在河海大学顺利开班" href="http://slpx.hhu.edu.cn/cms/zsxx/687.htm">第十四期全国水文站站长培训班在河海… </a></li>
+    </ul>
+  </body>
+</html><html dir="ltr">
+  <head>
+    <title></title>
+  </head>
+  <body>
+    <ul>
+      <li><a title="河海大学助力扶贫县农村水利发展" href="http://slpx.hhu.edu.cn/cms/zsxx/617.htm">河海大学助力扶贫县农村水利发展 </a></li>
+    </ul>
+  </body>
+</html><html dir="ltr">
+  <head>
+    <title></title>
+  </head>
+  <body>
+    <ul>
+      <li><a title="江苏省第六期市县水利（水务）局长培训班在我校举行" href="http://slpx.hhu.edu.cn/cms/zsxx/586.htm">江苏省第六期市县水利（水务）局长培… </a></li>
+    </ul>
+  </body>
+</html><html dir="ltr">
+  <head>
+    <title></title>
+  </head>
+  <body>
+    <ul>
+      <li><a title="淮委专业技术干部培训班顺利开班" href="http://slpx.hhu.edu.cn/cms/zsxx/587.htm">淮委专业技术干部培训班顺利开班 </a></li>
+    </ul>
+  </body>
+</html><html dir="ltr">
+  <head>
+    <title></title>
+  </head>
+  <body>
+    <ul>
+      <li><a title="海委基层水文测站专业知识高级研修班顺利开班" href="http://slpx.hhu.edu.cn/cms/zsxx/588.htm">海委基层水文测站专业知识高级研修班… </a></li>
+    </ul>
+  </body>
+</html><html dir="ltr">
+  <head>
+    <title></title>
+  </head>
+  <body>
+    <ul>
+      <li><a title="河海大学精心组织积极为水利行业培养人才" href="http://slpx.hhu.edu.cn/cms/zsxx/589.htm">河海大学精心组织积极为水利行业培养… </a></li>
+    </ul>
+  </body>
+</html><html dir="ltr">
+  <head>
+    <title></title>
+  </head>
+  <body>
+    <ul>
+      <li><a title="水利部松辽水利委员会青年专业技术骨干培训班圆满结束" href="http://slpx.hhu.edu.cn/cms/zsxx/590.htm">水利部松辽水利委员会青年专业技术骨… </a></li>
+    </ul>
+  </body>
+</html><html dir="ltr">
+  <head>
+    <title></title>
+  </head>
+  <body>
+    <ul>
+      <li><a title="江苏省2013年度第一期乡镇水利站站长及管理骨干培训班在我校举行" href="http://slpx.hhu.edu.cn/cms/zsxx/391.htm">江苏省2013年度第一期乡镇水利站站长… </a></li>
+    </ul>
+  </body>
+</html><html dir="ltr">
+  <head>
+    <title></title>
+  </head>
+  <body>
+    <ul>
+      <li><a title="淮安市水利系统网络培训正式启动" href="http://slpx.hhu.edu.cn/cms/zsxx/390.htm">淮安市水利系统网络培训正式启动 </a></li>
+    </ul>
+  </body>
+</html></ul>
+</div>
+    </div>
+    </div>
+    <div class="right">
+    <div id="platform_login" style="height: 213px">
+    <div class="login_top"></div>
+    <div class="wrap_1">
+    <form method="post" action="" name="login">
+      <p><span class="nm">用户名：</span><span class="input"><input id="loginId" class="input_1" style="background-color: #faffbd;color: #999;" name="loginId" type="text" value="px+手机号,邮箱名,学号" onfocus="javascript:if(this.value=='px+手机号,邮箱名,学号'){this.value='';this.style.color='black'}" onBlur="javascript:if(this.value==''){this.value='px+手机号,邮箱名,学号';this.style.color='#999'}"/></span></p>
+      <p><span class="nm">密 码：</span><span class="input"><input id="pwd" class="input_1" type="password" style="background-color: #faffbd" name="passwd" /></span></p>
+      <p><span class="nm">验证码：</span><span class="input2"><input id="authCode" class="input_2" name="authCode" type="text" /></span><span class="yz"> <img id="img_data" title="看不清楚，点击切换！"  alt="" width="50" height="20" onClick="reloadcode()" onMouseOver="this.style.cursor='pointer'" src="/sso/authimg" /> </span></p>
+      <center><a target="_blank" style="color: red; font-size: 13px" href="/sso/login_toSearchPage.action">查询用户名</a> <a target="_blank" style="color: red; font-size: 13px" href="/sso/login_toRegisteTrainningHYTJ.action">“培训+学历”</a><!--/sso/login_toSearchCertificatePage.action 查询证书 --> <a target="_blank" style="color: red; font-size: 13px" href="/sso/login_toRegisteTrainningPostName.action">培训报名</a></center><!-- login_toRegisteTrainning -->
+      <div style="clear: both"></div>
+      <div class="login_bottom"><a id="btn" href="javascript:checkLogin();"><img alt="" width="61" height="24" src="http://slpx.hhu.edu.cn/cms/res_base/com_whatycms_hhdxpx/default/article/images/login02.jpg" /></a> <a target="_blank" href="/sso/login_toRegistePage.action"><img alt="" width="61" height="24" src="http://slpx.hhu.edu.cn/cms/res_base/com_whatycms_hhdxpx/default/article/images/login03.jpg" /></a></div>
+    </form>
+    <div id="resources" style="margin-top: 20px">
+    <div class="title2"><a href="/cms/tjkc/index.htm">更多...</a>
+    <h1>开放课程</h1>
+    </div>
+    <ul>
+<div class="img_1"><img width="200" height="48" alt="" src="http://slpx.hhu.edu.cn/cms/res_base/com_whatycms_hhdxpx/default/article/images/adv.jpg" /></div>
+<html dir="ltr">
+  <head>
+    <title></title>
+  </head>
+  <body>
+    <ul>
+      <li><a title="农村水利技术" href="http://slpx.hhu.edu.cn/cms/tjkc/676.htm">农村水利技术 </a></li>
+    </ul>
+  </body>
+</html><html dir="ltr">
+  <head>
+    <title></title>
+  </head>
+  <body>
+    <ul>
+      <li><a title="改革水价制度促进水资源管理" href="http://slpx.hhu.edu.cn/cms/tjkc/674.htm">改革水价制度促进水资源管理 </a></li>
+    </ul>
+  </body>
+</html><html dir="ltr">
+  <head>
+    <title></title>
+  </head>
+  <body>
+    <ul>
+      <li><a title="河湖与中小型水库管理" href="http://slpx.hhu.edu.cn/cms/tjkc/675.htm">河湖与中小型水库管理 </a></li>
+    </ul>
+  </body>
+</html><html dir="ltr">
+  <head>
+    <title></title>
+  </head>
+  <body>
+    <ul>
+      <li><a title="防汛防旱与应急管理" href="http://slpx.hhu.edu.cn/cms/tjkc/671.htm">防汛防旱与应急管理 </a></li>
+    </ul>
+  </body>
+</html></ul>
+</div>
+    <div id="teacher">
+    <div class="title2"><a href="/cms/msfc/index.htm">更多...</a>
+    <h1>名师风采</h1>
+    </div>
+    <ul>
+      <li><a title="叶健" href="http://slpx.hhu.edu.cn/cms/msfc/346.htm"><img alt="" src="http://slpx.hhu.edu.cn/cms/res_base/com_whatycms_hhdxpx/upload/article/image/2014_2/4_18/zmq0hu56rgs2.jpg" />
+      <h1>叶健</h1>
+      </a></li>
+    </ul><ul>
+      <li><a title="郭宁" href="http://slpx.hhu.edu.cn/cms/msfc/532.htm"><img alt="" src="http://slpx.hhu.edu.cn/cms/res_base/com_whatycms_hhdxpx/upload/article/image/2014_2/4_22/3whvhuamksnq.jpg" />
+      <h1>郭宁</h1>
+      </a></li>
+    </ul><ul>
+      <li><a title="陆永军" href="http://slpx.hhu.edu.cn/cms/msfc/546.htm"><img alt="" src="http://slpx.hhu.edu.cn/cms/res_base/com_whatycms_hhdxpx/upload/article/image/2014_2/4_18/n07zhu57fly7.jpg" />
+      <h1>陆永军</h1>
+      </a></li>
+    </ul></div>
+    </div>
+    </div>
+    </div>
+    <div style="clear: both"></div>
+    </div>
+    </div>
+    <div style="clear: both"></div>
+<!--foot start-->
+<div id="foot">
+<p>地址：江苏省南京市西康路1号&nbsp;&nbsp;&nbsp;&nbsp; 邮编：210098&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 联系电话： 025-83786716、83738339（传真） 83786250(招生)  83786362(培训)</p>
+<p>版权： copyright@&nbsp;&nbsp; 2014 <a href="http://jjy.hhu.edu.cn" target="_blank">河海大学远程与继续教育学院</a> All rights reserved.</p>
+</div>
+<!--foot end-->   <STYLE type="text/css">
+#boxad11 { border: #b5b5b5 1px solid; padding: 1px 1px 0px 1px; font-size:14px; z-index: 300; background: #FDFAE3; FLOAT: right; OVERFLOW: hidden; WIDTH: 350px; HEIGHT: 200px; RIGHT: 0px; BOTTOM: 0px; POSITION:fixed;_POSITION:absolute; /*兼容IE6*/_TOP:expression(offsetParent.scrollTop+document.documentElement.clientHeight-this.offsetHeight); /*兼容IE6*/}
+/*tit样式*/
+#boxad11 dt,#boxad11 dt #AD_tit{height:28px;line-height:28px; font-weight:bold;}
+#boxad11 dt{width:100%;background-image: url(/sy.jpg);background-repeat:repeat-x;background-position: right top;}
+#boxad11 dt #AD_tit{display:block;overflow:hidden;}
+#boxad11 dd{ width:96%; height:auto; display:block; margin:0 auto; overflow:hidden; padding:4px 0px 4px 0px;}
+#boxad11 dd p{  padding:0px; line-height:25px; margin:0px; color:#000000;}
+#boxad11 dd a{color:#000000; text-decoration:underline;}
+#boxad11 dd a:hover{color:#000000; text-decoration:underline;}
+#AD_tit{ width:70%;float:left;color:#fff;font-size:10pt;text-indent:0.8em;font-weight:bold;}
+#closead11,#zoomad11{ width:12px;	height:28px;line-height:28px; display:block; float:right; margin-right:8px;}
+#closead11{ width:12px; float:right;}
+#zoomad11{ float:right;}
+#closead11 img{ margin-top:8px}
+#zoomad11 img{ margin-top:10px}
+</STYLE>
+<script src="http://cmscdn.chinaedu.net/statics/js/hltest/jquery-1.3.1.min.js" type=text/javascript></script>
+<script src="http://cmscdn.chinaedu.net/statics/js/hltest/jquery-cookie.js" type=text/javascript></script>
+<script src="http://cmscdn.chinaedu.net/statics/js/hltest/adv.js?20150808165423" type="text/javascript"></script>
+<script>
+(function($){
+	$(function(){
+		var con = $('#boxad11'),
+		    title = $('#AD_tit'),
+		    title1 = title.html(),
+		    title2 = con.find('dt:eq(1)').find('a:eq(0)').html(),
+		    content = con.find('dd:eq(0)'),
+		    content1 = content.html(),
+		    content2 = con.find('dd:eq(1)').html(),
+		    step = 15000;
+		function tt(fn){
+			setTimeout(function(){
+				fn();				
+			},step);
+		}	
+	});
+})(jQuery)
+</script>
+<!--右下角弹窗-->
+<dl id="boxad11">
+    <dt><a id="AD_tit">培训计划报名</a><A href="javascript:;" id="closead11" ><IMG title="点击关闭" src="http://cms.chinaedu.net/statics/images/hltest/guanbi.png" border="0"/></A><A href="javascript:;"  id="zoomad11"><IMG title="点击收缩" src="http://cms.chinaedu.net/statics/images/hltest/xiao.png" border="0"/></A></dt>
+    <dd>
+        <div id="planTable"></div>
+    </dd>
+</dl>
+<!--右下角弹窗结束-->
+    
+  </body>
+</html>

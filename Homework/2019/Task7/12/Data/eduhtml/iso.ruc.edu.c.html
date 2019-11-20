@@ -1,0 +1,748 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<title>中国人民大学留学生办公室</title>
+<meta name="Keywords" content="中国人民大学留学生办公室" />
+<meta name="Description" content="中国人民大学留学生办公室" />
+<script src="js/jquery-1.10.2.min.js" type="text/javascript"></script>
+<script>
+     function chf(){
+     	var win_w=$(window).width();
+		var margin_left=(win_w-1920)/2;
+		
+	    $(".caroursel").css("margin-left",margin_left+"px");
+
+     }
+	$(function(){
+		 
+		chf()
+	 
+	});
+	$(window).resize(function(){
+
+		chf()
+	}) 
+</script>
+<script src="js/responsiveslides.min.js"></script>
+<script src="js/slide.js"></script>
+<script type="text/javascript" src="js/jquery.jcarousel.js"></script>
+<script type="text/javascript" src="js/menu.js"></script>
+<script type="text/javascript">
+
+function mycarousel_initCallback(carousel)
+{
+    // Disable autoscrolling if the user clicks the prev or next button.
+    carousel.buttonNext.bind('click', function() {
+        carousel.startAuto(0);
+    });
+
+    carousel.buttonPrev.bind('click', function() {
+        carousel.startAuto(0);
+    });
+
+    // Pause autoscrolling if the user moves with the cursor over the clip.
+    carousel.clip.hover(function() {
+        carousel.stopAuto();
+    }, function() {
+        carousel.startAuto();
+    });
+};
+
+jQuery(document).ready(function() {
+ ww = document.documentElement.clientWidth; 
+   $(".banner_w").css("width",ww+"px");
+	
+	
+	
+    jQuery('#mycarousel').jcarousel({
+        auto: 2,
+        wrap: 'last',
+        initCallback: mycarousel_initCallback
+    });
+	
+	$('.riqishuzi').mouseover(function(){
+		$(this).find('em:first').css({'background':'#ea8616'});	
+		$(this).find('em:last').css({'color':'#ea8616'});	
+		$(this).find('p a').css({'color':'#ea8616'});	
+	}).mouseout(function(){
+		$('.riqishuzi').find('em:first').css({'background':'#024272'});	
+		$('.riqishuzi').find('em:last').css({'color':'#737373'});	
+		$('.riqishuzi').find('p a').css({'color':'#585858'});	
+	});
+});
+
+
+
+
+$(window).resize(function(){
+   ww = document.documentElement.clientWidth
+ 
+   $(".banner_w").css("width",ww+"px");
+});
+
+</script>
+
+<script>
+$(function(){
+	$('.select-data a').click(function(){
+		if($(this).siblings('ul').css('display') == 'none'){
+			$(this).siblings('ul').css({'display':'block'});
+		}else{
+			$(this).siblings('ul').css({'display':'none'});
+		};
+	});	
+	
+	$('.select-data ul li').click(function(){
+		$(this).parent('ul').siblings('a').text($(this).text());
+		$('.select-data ul').css({'display':'none'});
+	});
+});
+</script>
+
+
+<link href="css/indexnew.css" rel="stylesheet" type="text/css" />
+<link type="text/css" rel="stylesheet" href="css/carousel.css">
+<link rel="stylesheet" href="css/lrtk.css">
+</head>
+<body style="min-width:1120px; overflow-x:hidden;">
+<div style="height:110px; background:#003262;">
+    <div class="top_one">
+    	<div style="width:1120px; margin:0 auto;">
+        <div class="xiala_bc fr">
+            	<div style="float:right;">
+               <!-- <div class="select-data" style="background:url(images/xiala_01.jpg) right center no-repeat;">
+                    <a href="javascript:;" style="text-indent:3px;">中文</a>
+                    <ul>
+                    	<li><a href="http://iso.ruc.edu.cn/index.php">中文</a></li>
+                        <li><a href="http://iso.ruc.edu.cn/English">ENGLISH</a></li>
+                         <li><a href="http://iso.ruc.edu.cn/hanyu">한국어</a></li>
+                    </ul>
+                </div>-->
+                  <div class="fhuijwangz">
+                <a href="http://iso.ruc.edu.cn/index.php">中文</a>
+                </div>
+                 <div class="fhuijwangz">
+                <a href="http://iso.ruc.edu.cn/English">ENGLISH</a>
+                </div>
+                 <div class="fhuijwangz">
+                <a href="http://iso.ruc.edu.cn/hanyu">한국어</a>
+                </div>
+               <!--  <div class="fhuijwangz">
+                <a href="http://iso3.ruc.edu.cn/">返回旧网站</a>
+                </div> -->
+                </div>
+        
+        	<div style="float:right; background:url(images/ssuo.jpg) no-repeat; margin-top:10px;width:212px; height:26px;">
+           <form action="search.php" method="get">
+            
+            
+            <input  name="tit" type="text" id="tit" class="sdi_uw"/>
+
+            <input name="" type="submit" value=""class="sdi_ue" />
+            </form>
+            </div></div>
+        	<a href="http://www.ruc.edu.cn/" target="_blank"><img src="images/logo_01.png" width="254" height="110" /></a>
+            <a href="http://iso.ruc.edu.cn/"><img src="images/logo_02.png" width="197" height="110" /></a>
+        </div>
+    </div> 
+</div>
+
+<!--<div class="navs">
+
+    <div id="menu">
+     
+        <ul id="nav">
+                                      
+        
+				*/
+			
+  ?>
+        <li class="mainlevel"><a href=""  ></a>
+
+        </li>
+        
+                 </ul>
+    
+    </div>
+
+</div>-->
+
+<div class="navs">
+
+    <div id="menu">
+     
+        <ul id="nav">
+                               
+        <li   class="mainlevel" ><a href="more.php?cid=1"  >学校概况 </a>
+                    <ul class="sub_nav_01" >
+                <div style="">
+                     <li><a title="" href="more.php?cid=93">人文学部</a></li>
+                                <li><a title="" href="more.php?cid=94">社会学部</a></li>
+                                <li><a title="" href="more.php?cid=95">经济学部</a></li>
+                                <li><a title="" href="more.php?cid=96">法政学部</a></li>
+                                <li><a title="" href="more.php?cid=97">理工学部</a></li>
+                                </div>
+                <div class=" clear"></div>
+            </ul> 
+                 
+        </li>
+      
+       
+                        
+        <li   class="mainlevel" ><a href="/more.php?cid=267"  >申请留学 </a>
+                    <ul class="sub_nav_01" >
+                <div style="">
+                     <li><a title="" href="/more.php?cid=267">中文本科项目</a></li>
+                                <li><a title="" href="more.php?cid=279">英文本科项目</a></li>
+                                <li><a title="" href="more.php?cid=30">中文硕士项目</a></li>
+                                <li><a title="" href="more.php?cid=77">全英文硕士项目</a></li>
+                                <li><a title="" href="more.php?cid=31">博士项目</a></li>
+                                <li><a title="" href="more.php?cid=78">普通进修项目</a></li>
+                                <li><a title="" href="more.php?cid=79">高级进修项目</a></li>
+                                <li><a title="" href="more.php?cid=80">汉语言进修项目</a></li>
+                                </div>
+                <div class=" clear"></div>
+            </ul> 
+                 
+        </li>
+      
+       
+                        
+        <li   class="mainlevel" ><a href="/more.php?cid=37"  >留学人大 </a>
+                    <ul class="sub_nav_01" >
+                <div style="">
+                     <li><a title="" href="/more.php?cid=37">学业指导</a></li>
+                                <li><a title="" href="/more.php?cid=44">生活指南</a></li>
+                                <li><a title="" href="more.php?cid=20">就业离校</a></li>
+                                </div>
+                <div class=" clear"></div>
+            </ul> 
+                 
+        </li>
+      
+       
+                        
+        <li   class="mainlevel" ><a href="/more.php?cid=70"  >奖学金 </a>
+                    <ul class="sub_nav_01" >
+                <div style="">
+                     <li><a title="" href="more.php?cid=70">中国政府奖学金（CSC）</a></li>
+                                <li><a title="" href="more.php?cid=98">汉办奖学金（CIS）</a></li>
+                                <li><a title="" href="more.php?cid=71">孔子新汉学计划奖学金</a></li>
+                                <li><a title="" href="more.php?cid=72">北京市外国留学生奖学金</a></li>
+                                <li><a title="" href="more.php?cid=73">中国人民大学外国留学生奖学金</a></li>
+                                </div>
+                <div class=" clear"></div>
+            </ul> 
+                 
+        </li>
+      
+       
+                        
+        <li   class="mainlevel" ><a href="/more.php?cid=46"  >校友之家 </a>
+                    <ul class="sub_nav_01" >
+                <div style="">
+                     <li><a title="" href="more.php?cid=46">个人信息采集</a></li>
+                                <li><a title="" href="more.php?cid=47">校友活动</a></li>
+                                <li><a title="" href="more.php?cid=105">实习招聘</a></li>
+                                </div>
+                <div class=" clear"></div>
+            </ul> 
+                 
+        </li>
+      
+       
+                        
+        <li   class="mainlevel" ><a href="/more.php?cid=36"  >新闻与通知 </a>
+                    <ul class="sub_nav_01" >
+                <div style="">
+                     <li><a title="" href="more.php?cid=36">新闻</a></li>
+                                <li><a title="" href="more.php?cid=35">通知</a></li>
+                                </div>
+                <div class=" clear"></div>
+            </ul> 
+                 
+        </li>
+      
+       
+                        
+        <li   class="mainlevel" ><a href="/more.php?cid=53"  >签证与法规 </a>
+                    <ul class="sub_nav_01" >
+                <div style="">
+                     <li><a title="" href="more.php?cid=53">出入境法规</a></li>
+                                <li><a title="" href="more.php?cid=54">校内签证管理</a></li>
+                                <li><a title="" href="more.php?cid=55">签证办理</a></li>
+                                <li><a title="" href="more.php?cid=273">实习签证申请</a></li>
+                                </div>
+                <div class=" clear"></div>
+            </ul> 
+                 
+        </li>
+      
+       
+                        
+        <li   class="mainlevel" ><a href="/more.php?cid=48"  >常见问题 </a>
+                    <ul class="sub_nav_01" >
+                <div style="">
+                     <li><a title="" href="more.php?cid=83">本科项目</a></li>
+                                <li><a title="" href="more.php?cid=84">研究生项目</a></li>
+                                <li><a title="" href="more.php?cid=85">进修生项目</a></li>
+                                <li><a title="" href="more.php?cid=52">奖学金</a></li>
+                                <li><a title="" href="more.php?cid=51">签证</a></li>
+                                <li><a title="" href="more.php?cid=48">宿舍预定</a></li>
+                                <li><a title="" href="more.php?cid=49">交通信息</a></li>
+                                <li><a title="" href="more.php?cid=50">安全提示</a></li>
+                                </div>
+                <div class=" clear"></div>
+            </ul> 
+                 
+        </li>
+      
+       
+                        
+        <li   class="mainlevel" ><a href="more.php?cid=9"  >下载专区 </a>
+                    <ul class="sub_nav_01" >
+                <div style="">
+                     <li><a title="" href="more.php?cid=62">学籍变动</a></li>
+                                <li><a title="" href="more.php?cid=63">延长学习</a></li>
+                                <li><a title="" href="more.php?cid=65">奖学金</a></li>
+                                <li><a title="" href="more.php?cid=61">请假条</a></li>
+                                <li><a title="" href="more.php?cid=174">担保书</a></li>
+                                <li><a title="" href="more.php?cid=266">留学生活动室申请表、承诺书</a></li>
+                                <li><a title="" href="more.php?cid=269">其他</a></li>
+                                <li><a title="" href="more.php?cid=274">签证办理</a></li>
+                                </div>
+                <div class=" clear"></div>
+            </ul> 
+                 
+        </li>
+      
+       
+                        
+        <li   class="mainlevel" ><a href="more.php?cid=8"  >制度规定 </a>
+                    <ul class="sub_nav_01" >
+                <div style="">
+                     <li><a title="" href="more.php?cid=57">学籍管理</a></li>
+                                <li><a title="" href="more.php?cid=58">教学管理</a></li>
+                                <li><a title="" href="more.php?cid=59">住宿管理</a></li>
+                                <li><a title="" href="more.php?cid=60">奖学金</a></li>
+                                </div>
+                <div class=" clear"></div>
+            </ul> 
+                 
+        </li>
+      
+       
+                        
+        <li   class="mainlevel" ><a href="/more.php?cid=67"  >联系我们 </a>
+                    <ul class="sub_nav_01" >
+                <div style="">
+                     <li><a title="" href="more.php?cid=67">工作分工及联系方式</a></li>
+                                <li><a title="" href="more.php?cid=68">对外接待时间安排</a></li>
+                                </div>
+                <div class=" clear"></div>
+            </ul> 
+                 
+        </li>
+      
+       
+         
+     
+     
+   
+    
+   
+        </ul>
+    
+    </div>
+
+</div>
+
+<script>
+ 
+
+$(function(){
+		    
+		   $("#nav>.mainlevel").each(function(){
+			  h_ul =$(this).find("ul").width();	
+			  h_f = $(this).width();
+			 if(h_ul>h_f){
+			 h = (h_f-h_ul)/2+"px";
+			  $(this).find("ul").css("margin-left",h)		
+			 }else{
+			  $(this).find("ul a").css("width",h_f-20+"px")		
+			  }
+			 }) 
+}); 
+</script>
+
+<script src="js/jquery.slides.js" type="text/javascript"></script>
+<script type="text/javascript" src="js/popwin.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+
+	$("a.moquu_wmaps").on('click', function(){
+		popWin.showWin("800", "475", "17素材", "http://www.17sucai.com");
+	});
+	
+});
+</script>
+<div id="moquu_wxinbc" class="moquu_wxin"><a href="http://iso.ruc.edu.cn/index.php" title="返回首页"> </a></div>
+
+<div id="moquu_wxin" class="moquu_wxin"><a href="javascript:void(0)"><div class="moquu_wxinh"></div></a></div>
+
+<div id="moquu_wshare" class="moquu_wshare"><a target="_blank" href="http://weibo.com/ruciso"><div class="moquu_wshareh"></div></a></div
+
+>
+<a id="moquu_top" href="javascript:void(0)"></a>
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+ 
+ 
+ <div class="box" style="height:450px;overflow:hidden;">
+ 	<div class = "caroursel poster-main" data-setting = '{
+		"width":1920,
+		"height":450,
+		"posterWidth":1120,
+		"posterHeight":450,
+		"scale":0.8,
+		"dealy":"2000",
+		"algin":"middle"
+	}'>
+		<ul class = "poster-list">
+			
+			
+			      			<li class = "poster-item"><a href="#"><img src="/upfile/image/20170330154624/4.jpg" width = "100%" ></a></li>
+        
+        			<li class = "poster-item"><a href="#"><img src="/upfile/image/20171017092226/微信图片_20171017090119.png" width = "100%" ></a></li>
+        
+        			<li class = "poster-item"><a href="#"><img src="/upfile/image/20171017092216/微信图片_20171017090116.jpg" width = "100%" ></a></li>
+        
+        			<li class = "poster-item"><a href="#"><img src="/upfile/image/20171017092207/微信图片_20171017090108.jpg" width = "100%" ></a></li>
+        
+        			<li class = "poster-item"><a href="#"><img src="/upfile/image/20170919092251/微信图片_201709190915572.jpg" width = "100%" ></a></li>
+        
+        		</ul>
+		<div class = "poster-btn poster-prev-btn"></div>
+		<div class = "poster-btn poster-next-btn"></div>
+	</div>
+ </div>
+   
+	
+
+	<script src="js/jquery.carousel.js"></script>
+    <script>
+        Caroursel.init($('.caroursel'))
+    </script>
+<!-- 代码 结束 -->
+<div class="yswya">
+<div class="cna">
+    <a href="http://iso.ruc.edu.cn/seach.php" target="_blank" class="c1">
+        <h1>
+        网上报名
+
+        </h1>
+    </a>
+    <a href="/more.php?cid=70" class="c2">
+        <h1>
+       奖学金 
+
+        </h1>
+    </a> 
+    <a href="/more.php?cid=53" class="c3">
+        <h1>
+        签证与法规
+
+        </h1>
+    </a>
+    <a href="/more.php?cid=9" class="c4">
+        <h1>
+        下载专区
+
+        </h1>
+    </a>  
+    <a href="/more.php?cid=46" class="c5">
+        <h1>
+        校友之家
+
+        </h1>
+    </a>  
+</div>
+<div class="clear"></div>
+</div>
+
+<div class="clear"></div>
+<div class="yswyb">
+<div class="cnb">
+ 
+	<div class="cnleft fl">
+    	<h1>新闻</h1>
+        <a class="xinwen" style=" width:345px; height:159px; display:block; overflow:hidden;" href="displaynews.php?id=1286"><img  src="/upfile/image/20171017085721/全景图.JPG" /></a>
+        <h2>五洲风雅聚明德 十方胜景入眼底</h2>
+        <p><a href="displaynews.php?id=1286"></a></p>
+        <a href="/more.php?cid=36" style="background:url(images/chagduo_01.jpg) no-repeat; margin-top:15px; float:left; width:100px; line-height:33px; text-align: center; color:#FFF;">查看更多>></a>
+    </div>
+    
+    
+    
+    
+    <div class="cnright fr">
+    	<a href="more.php?cid=35" style="float:right; line-height:35px;">查看更多>></a>
+<h1>通知</h1> 
+        <div class="cnllispan">
+            <ul>
+                                <li>
+                <a href="displaynews.php?id=1295"><span class="libiao">2017-10-18</span>NOTICE | 禁飞“低慢小”航空器</a>
+                </li>
+                
+                                <li>
+                <a href="displaynews.php?id=1288"><span class="libiao">2017-10-09</span>NOTICE | 关于保险相关问题的通知</a>
+                </li>
+                
+                                <li>
+                <a href="displaynews.php?id=1283"><span class="libiao">2017-09-28</span>NOTICE | 学历留学生新生申请一卡通流程</a>
+                </li>
+                
+                                <li>
+                <a href="displaynews.php?id=1276"><span class="libiao">2017-09-22</span>NOTICE | 关于购买保险的通知</a>
+                </li>
+                
+                                <li>
+                <a href="displaynews.php?id=1275"><span class="libiao">2017-09-20</span>NOTICE | 网上购买保险流程</a>
+                </li>
+                
+                                <li>
+                <a href="displaynews.php?id=1273"><span class="libiao">2017-09-20</span>NOTICE | 假期温馨提示</a>
+                </li>
+                
+                                <li>
+                <a href="displaynews.php?id=1272"><span class="libiao">2017-09-19</span>NOTICE | 关于提交奖学金生银行账户信息的通知</a>
+                </li>
+                
+                                
+            </ul>
+        <div class="clear"></div>    
+        </div>
+    </div>
+    <div class="clear"></div>
+</div>
+</div>
+
+<div style="background:url(images/xiangce_03.jpg) center no-repeat; height:368px; padding-top:50px; padding-bottom:50px;">
+<div class="cnb">
+	<div class="cnleft fl">
+    <a href="more.php?cid=15" style="float:right; line-height:35px;">查看更多>></a>
+    	<h1>日程</h1>
+                <div class="riqishuzi">
+        	<div style=" width:78px; float:left;margin-right:14px; display:inline;">
+        	<em>2017-10-01</em>
+            <em style="color:#737373;">2017-10-08</em>
+            </div>
+            <p><a href="displaynews.php?id=1210">10月1日-8日，放假，9月30日上课</a></p>
+        </div>
+        
+        
+                <div class="riqishuzi">
+        	<div style=" width:78px; float:left;margin-right:14px; display:inline;">
+        	<em>2017-10-13</em>
+            <em style="color:#737373;">2017-10-13</em>
+            </div>
+            <p><a href="displaynews.php?id=1237">10月13日，新生运动会</a></p>
+        </div>
+        
+        
+                <div class="riqishuzi">
+        	<div style=" width:78px; float:left;margin-right:14px; display:inline;">
+        	<em>2018-01-01</em>
+            <em style="color:#737373;">2018-01-01</em>
+            </div>
+            <p><a href="displaynews.php?id=1211">1月1日，元旦</a></p>
+        </div>
+        
+        
+                <div class="riqishuzi">
+        	<div style=" width:78px; float:left;margin-right:14px; display:inline;">
+        	<em>2018-01-10</em>
+            <em style="color:#737373;">2018-01-10</em>
+            </div>
+            <p><a href="displaynews.php?id=1285">1月10日，校学位评定委员会会议</a></p>
+        </div>
+        
+        
+                <div class="riqishuzi">
+        	<div style=" width:78px; float:left;margin-right:14px; display:inline;">
+        	<em>2018-01-21</em>
+            <em style="color:#737373;">2018-01-21</em>
+            </div>
+            <p><a href="displaynews.php?id=1212">1月21日，学期结束</a></p>
+        </div>
+        
+        
+                
+    </div>
+    
+    
+        <div class="cnright fr">
+    	<div class="clear" style="height:85px;"></div>
+    	<a href="more.php?cid=82" style="margin-right:26px; width:346px; float:left; display:block;"><img   src="images/xiangce_04.jpg" width="346" height="239" /></a>
+         
+  <script type="text/javascript" src="images/swfobject.js"></script>
+<div style="" class="video" id="CuPlayer">
+
+</div>
+
+       <div style="">
+<a href="more.php?cid=16" style="background:url(images/chagduo_01.jpg) no-repeat; margin-top:15px; float:right; width:100px; line-height:33px; text-align: center; color:#FFF;">
+查看更多>>
+</a>
+</div>
+<script type="text/javascript">
+var so = new SWFObject("CuPlayerMiniV4.swf","CuPlayerV4","336","238","9","#000000");
+so.addParam("allowfullscreen","true");
+so.addParam("allowscriptaccess","always");
+so.addParam("wmode","opaque");
+so.addParam("quality","high");
+so.addParam("salign","lt");
+so.addVariable("CuPlayerSetFile","CuPlayerSetFile.php"); //播放器配置文件地址,例SetFile.xml、SetFile.asp、SetFile.php、SetFile.aspx
+so.addVariable("CuPlayerFile","/upfile/留学生最终版.mp4"); //视频文件地址
+so.addVariable("CuPlayerImage","/upfile/image/20151206/111.jpg");//视频略缩图,本图片文件必须正确
+so.addVariable("CuPlayerWidth","336"); //视频宽度
+so.addVariable("CuPlayerHeight","238"); //视频高度
+so.addVariable("CuPlayerAutoPlay","no"); //是否自动播放
+so.addVariable("CuPlayerLogo","images/logos.png"); //Logo文件地址
+so.addVariable("CuPlayerPosition","bottom-right"); //Logo显示的位置
+so.write("CuPlayer");
+</script>
+
+  
+     </div>
+    
+         
+</div>
+</div>
+
+
+<div class="footer">
+	<div style="width:630px; margin:0 auto; padding-top:25px;">
+    <div class="figure" >
+        <ul id="mycarousel" class="jcarousel-skin-tango">
+        
+                     <li><a href="http://www.ruc.edu.cn" target="_blank"><img  src="/upfile/image/20151209/see.jpg" width="124" height="39" alt="" /></a></li>
+                        <li><a href="http://io.ruc.edu.cn/" target="_blank"><img  src="/upfile/image/20151209/jiaoliu.jpg" width="124" height="39" alt="" /></a></li>
+                        <li><a href="http://www.bjgaj.gov.cn/web/" target="_blank"><img  src="/upfile/image/20151124/gd_03.jpg" width="124" height="39" alt="" /></a></li>
+                        <li><a href="http://www.csc.edu.cn/" target="_blank"><img  src="/upfile/image/20151124/gd_04.jpg" width="124" height="39" alt="" /></a></li>
+                        <li><a href="http://www.moe.edu.cn/" target="_blank"><img  src="/upfile/image/20151209/jiaoyu.jpg" width="124" height="39" alt="" /></a></li>
+                        <li><a href="http://www.hanban.edu.cn/" target="_blank"><img  src="/upfile/image/20151209/sw.png" width="124" height="39" alt="" /></a></li>
+                        <li><a href="http://www.fmprc.gov.cn/web/" target="_blank"><img  src="/upfile/image/20151209/waijiao.jpg" width="124" height="39" alt="" /></a></li>
+                        <li><a href="http://www.bjedu.gov.cn/publish/portal27/" target="_blank"><img  src="/upfile/image/20151209/weiyuan.jpg" width="124" height="39" alt="" /></a></li>
+                        
+        </ul>
+    </div>
+    <p style=" padding-top:15px; padding-bottom:15px;"><a href="http://iso.ruc.edu.cn/more.php?cid=67">联系我们</a> | 版权所有：中国人民大学大学留学生办公室</p>
+    </div>
+</div>
+
+
+
+
+
+<script type="text/javascript">
+ $(window).load(function() { 		 	 
+   
+   
+       $(".slt").each(function(){
+	    $img = $(this).find("img");	
+		 
+			 $w = $img.width();
+             $h = $img.height();
+			
+			/*  sr = $img.attr("src")
+	           alert(sr+","+$w+","+$h)*/
+			  
+		     $bw= $(this).width();
+		     $bh= $(this).height();
+		    
+			 b1 = $w/$h;
+			 b2 = $bw/$bh;
+				
+			if(b1>b2){
+		 
+				$img.css("height","100%")
+				$wed = $bh*b1;
+ 			 $img.css("width",$wed+"px")
+			fz =($(".slt").width()-$wed)/2;
+			$img.css("margin-left",fz+"px")
+			 
+				}else{
+				
+			 
+			$img.css("width","100%")
+				$hed = $bw/b1;
+				 $img.css("height",$hed+"px")
+			fs =($(".slt").height()-$hed)/2;
+			$img.css("margin-top",fs+"px")
+			 
+			}			   
+ 									    
+						 
+ 
+	 });
+
+  
+	
+});
+</script>
+
+
+
+
+<script type="text/javascript">
+ $(window).load(function() { 		 	 
+   
+   
+       $(".xinwen").each(function(){
+	    $img = $(this).find("img");	
+		 
+			 $w = $img.width();
+             $h = $img.height();
+			
+			/*  sr = $img.attr("src")
+	           alert(sr+","+$w+","+$h)*/
+			  
+		     $bw= $(this).width();
+		     $bh= $(this).height();
+		    
+			 b1 = $w/$h;
+			 b2 = $bw/$bh;
+				
+			if(b1>b2){
+		 
+				$img.css("height","100%")
+				$wed = $bh*b1;
+ 			 $img.css("width",$wed+"px")
+			fz =($(".xinwen").width()-$wed)/2;
+			$img.css("margin-left",fz+"px")
+			 
+				}else{
+				
+			 
+			$img.css("width","100%")
+				$hed = $bw/b1;
+				 $img.css("height",$hed+"px")
+			fs =($(".xinwen").height()-$hed)/2;
+			$img.css("margin-top",fs+"px")
+			 
+			}			   
+ 									    
+						 
+ 
+	 });
+
+  
+	
+});
+</script>
+
+
+</body>
+</html>

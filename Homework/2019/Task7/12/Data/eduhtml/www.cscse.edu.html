@@ -1,0 +1,41 @@
+<html>
+<head>
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+
+    <script type="text/javascript">
+//<![CDATA[
+var portalAlias;
+portalAlias=(window.location.host + window.location.pathname).replace(/\/default\.htm/ig,"").toLowerCase();
+if(portalAlias.charAt(portalAlias.length-1) == '/') portalAlias = portalAlias.substring(0,portalAlias.length-1);
+portalAlias = decodeURIComponent(portalAlias);
+var portals ={};
+portals["www.cscse.edu.cn"] = {PortalId:0,DeployFolder:""};
+portals["www.cscse.com.cn"] = {PortalId:0,DeployFolder:""};
+portals["192.168.2.81"] = {PortalId:0,DeployFolder:""};
+portals["intranet.cscse.edu.cn"] = {PortalId:1,DeployFolder:""};
+
+
+if(portals[portalAlias]){
+  var portalRoot = portalAlias;
+  var isSub = false;
+  var hostFolder = "publish";
+  if(hostFolder.length > 0) hostFolder = "/" + hostFolder;
+  if(isSub)
+  {
+    var nIdx = portalRoot.lastIndexOf("/");
+    portalRoot = portalRoot.substring(0,nIdx);
+  }
+  var portalFolder = portals[portalAlias].DeployFolder.length > 0 ? portals[portalAlias].DeployFolder:"portal"+portals[portalAlias].PortalId;
+  window.location.replace("http://" + portalRoot + hostFolder + "/" + portalFolder);
+}else{
+  window.location.replace("http://" + portalAlias + "/default.aspx");
+}
+//]]> 
+    </script>
+
+</head>
+<body>
+</body>
+</html>

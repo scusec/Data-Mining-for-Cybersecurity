@@ -1,0 +1,601 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>南昌大学-网络中心</title>
+<link rel="stylesheet" type="text/css" href="css/style.css" media="all" />
+<script src="/cms/web/writeLog.jsp?channelID=1354"></script>
+</head>
+
+<body>
+
+<div id="wrap">
+    <div id="header">
+        
+<div class="top">
+    <img src="images/top.jpg" border="0"  usemap="#Map"/>
+    <map name="Map" id="Map">
+        <area shape="rect" coords="689,13,743,36" href="http://www.ncu.edu.cn" target="_blank" />
+        <area shape="rect" coords="759,12,810,36" href="http://wlzx.ncu.edu.cn/cms/search/advancedSearch.jsp" target="_blank" />
+        <area shape="rect" coords="823,10,874,34" href="javascript:window.external.AddFavorite('http://wlzx.ncu.edu.cn', '南昌大学网络中心')" />
+        <area shape="rect" coords="889,7,941,34" href="http://wlzx.ncu.edu.cn" onClick="this.style.behavior='url(#default#homepage)';this.setHomePage('http://wlzx.ncu.edu.cn');return(false);" style="behavior: url(#default#homepage)" />
+    </map>
+</div>
+<div class="nav">
+    <ul>
+        <li><a href="index.htm">首页</a></li>
+                            	<li><a href=zxgk/index.htm>中心概况</a></li>
+                                	<li><a href=jgsz/index.htm>机构设置</a></li>
+                                	<li><a href=fzlc/index.htm>发展历程</a></li>
+                                	<li><a href=ywlc/index.htm>业务流程</a></li>
+                                	<li><a href=fwzy/index.htm>服务资源</a></li>
+                                	<li><a href=gzzd/index.htm>规章制度</a></li>
+                                	<li><a href=gzjd/index.htm>故障解答</a></li>
+                                	<li><a href=aqdj/index.htm>等级保护</a></li>
+                                	<li><a href=yhzn/index.htm>用户指南</a></li>
+                        </ul>
+</div>        <div class="ser01">
+            
+    <div class="time">今天是 <script language="JavaScript">
+    var bsYear;
+    var bsDate;
+    var bsWeek;
+    var arrLen=8; //数组长度
+    var sValue=0; //当年的秒数
+    var dayiy=0; //当年第几天
+    var miy=0; //月份的下标
+    var iyear=0; //年份标记
+    var dayim=0; //当月第几天
+    var spd=86400; //每天的秒数
+    
+    var year1999="30;29;29;30;29;29;30;29;30;30;30;29"; //354
+    var year2000="30;30;29;29;30;29;29;30;29;30;30;29"; //354
+    var year2001="30;30;29;30;29;30;29;29;30;29;30;29;30"; //384
+    var year2002="30;30;29;30;29;30;29;29;30;29;30;29"; //354
+    var year2003="30;30;29;30;30;29;30;29;29;30;29;30"; //355
+    var year2004="29;30;29;30;30;29;30;29;30;29;30;29;30"; //384
+    var year2005="29;30;29;30;29;30;30;29;30;29;30;29"; //354
+    var year2006="30;29;30;29;30;30;29;29;30;30;29;29;30";
+    
+    var month1999="正月;二月;三月;四月;五月;六月;七月;八月;九月;十月;十一月;十二月"
+    var month2001="正月;二月;三月;四月;闰四月;五月;六月;七月;八月;九月;十月;十一月;十二月"
+    var month2004="正月;二月;闰二月;三月;四月;五月;六月;七月;八月;九月;十月;十一月;十二月"
+    var month2006="正月;二月;三月;四月;五月;六月;七月;闰七月;八月;九月;十月;十一月;十二月"
+    var Dn="初一;初二;初三;初四;初五;初六;初七;初八;初九;初十;十一;十二;十三;十四;十五;十六;十七;十八;十九;二十;廿一;廿二;廿三;廿四;廿五;廿六;廿七;廿八;廿九;三十";
+
+    var Ys=new Array(arrLen);
+    Ys[0]=919094400;Ys[1]=949680000;Ys[2]=980265600;
+    Ys[3]=1013443200;Ys[4]=1044028800;Ys[5]=1074700800;
+    Ys[6]=1107878400;Ys[7]=1138464000;
+    
+    var Yn=new Array(arrLen); //农历年的名称
+    Yn[0]="己卯年";Yn[1]="庚辰年";Yn[2]="辛巳年";
+    Yn[3]="壬午年";Yn[4]="癸未年";Yn[5]="甲申年";
+    Yn[6]="乙酉年";Yn[7]="丙戌年";
+    var D=new Date();
+    var yy=D.getFullYear();
+    var mm=D.getMonth()+1;
+    var dd=D.getDate();
+    var ww=D.getDay();
+    if (ww==0) ww="<font color=RED>星期日</font>";
+    if (ww==1) ww="星期一";
+    if (ww==2) ww="星期二";
+    if (ww==3) ww="星期三";
+    if (ww==4) ww="星期四";
+    if (ww==5) ww="星期五";
+    if (ww==6) ww="<font color=green>星期六</font>";
+    ww=ww;
+    var ss=parseInt(D.getTime() / 1000);
+    if (yy<100) yy="19"+yy;
+    
+    for (i=0;i<arrLen;i++)
+    if (ss>=Ys[i]){
+    iyear=i;
+    sValue=ss-Ys[i]; //当年的秒数
+    }
+    dayiy=parseInt(sValue/spd)+1; //当年的天数
+    
+    var dpm=year1999;
+    if (iyear==1) dpm=year2000;
+    if (iyear==2) dpm=year2001;
+    if (iyear==3) dpm=year2002;
+    if (iyear==4) dpm=year2003;
+    if (iyear==5) dpm=year2004;
+    if (iyear==6) dpm=year2005;
+    if (iyear==7) dpm=year2006;
+    if (iyear==8) dpm=year2007;
+    if (iyear==9) dpm=year2008;
+    if (iyear==10) dpm=year2009;
+    if (iyear==11) dpm=year2010;
+    if (iyear==12) dpm=year2011;
+    if (iyear==13) dpm=year2012;
+    if (iyear==14) dpm=year2013;
+    if (iyear==15) dpm=year2014;
+    
+    
+    dpm=dpm.split(";");
+    
+    var Mn=month1999;
+    if (iyear==2) Mn=month2001;
+    if (iyear==5) Mn=month2004;
+    if (iyear==7) Mn=month2006;
+    Mn=Mn.split(";");
+    
+    var Dn="初一;初二;初三;初四;初五;初六;初七;初八;初九;初十;十一;十二;十三;十四;十五;十六;十七;十八;十九;二十;廿一;廿二;廿三;廿四;廿五;廿六;廿七;廿八;廿九;三十";
+    Dn=Dn.split(";");
+    
+    dayim=dayiy;
+    
+    var total=new Array(13);
+    total[0]=parseInt(dpm[0]);
+    for (i=1;i<dpm.length-1;i++) total[i]=parseInt(dpm[i])+total[i-1];
+    for (i=dpm.length-1;i>0;i--)
+    if (dayim>total[i-1]){
+    dayim=dayim-total[i-1];
+    miy=i;
+    }
+    bsWeek=ww;
+    bsDate=yy+"年"+mm+"月";
+    bsDate2=dd;
+    bsYear="农历"+Yn[iyear];
+    bsYear2=Mn[miy]+Dn[dayim-1];
+    if (ss>=Ys[7]||ss<Ys[0]) bsYear=Yn[7];
+    function time(){
+    document.write(bsDate+bsDate2+"&nbsp;"+bsWeek);
+    }
+    </script>
+    <script>time()</script>
+    <span>欢迎进入南昌大学——网络中心！</span>
+    <a href="http://lb.ncu.edu.cn/sstd/default.aspx?DepartId=189&IsReply=%20&pageindex=0" target="_blank"><font color=red >&nbsp;&nbsp;<strong> 师生网络问题交流快捷通道</strong></font></a>
+
+    </div>
+
+            <div class="ser">
+                
+<script>
+function check()
+{
+    document.dataFormat.action='http://218.64.56.56/search/search?collId=9&query='+Utf8ToUnicode(document.all.query.value);
+     return true;
+}
+function Utf8ToUnicode(strUtf8)
+{
+        var bstr = "";
+        var nTotalChars = strUtf8.length;        // total chars to be processed.
+        var nOffset = 0;                                        // processing point on strUtf8
+        var nRemainingBytes = nTotalChars;        // how many bytes left to be converted
+        var nOutputPosition = 0;
+        var iCode, iCode1, iCode2;                        // the value of the unicode.
+
+        while (nOffset < nTotalChars)
+        {
+                iCode = strUtf8.charCodeAt(nOffset);
+                if ((iCode & 0x80) == 0)                        // 1 byte.
+                {
+                        if ( nRemainingBytes < 1 )                // not enough data
+                                break;
+
+                        bstr += String.fromCharCode(iCode & 0x7F);
+                        nOffset ++;
+                        nRemainingBytes -= 1;
+                }
+                else if ((iCode & 0xE0) == 0xC0)        // 2 bytes
+                {
+                        iCode1 =  strUtf8.charCodeAt(nOffset + 1);
+                        if ( nRemainingBytes < 2 ||                        // not enough data
+                                 (iCode1 & 0xC0) != 0x80 )                // invalid pattern
+                        {
+                                break;
+                        }
+
+                        bstr += String.fromCharCode(((iCode & 0x3F) << 6) | (         iCode1 & 0x3F));
+                        nOffset += 2;
+                        nRemainingBytes -= 2;
+                }
+                else if ((iCode & 0xF0) == 0xE0)        // 3 bytes
+                {
+                        iCode1 =  strUtf8.charCodeAt(nOffset + 1);
+                        iCode2 =  strUtf8.charCodeAt(nOffset + 2);
+                        if ( nRemainingBytes < 3 ||                        // not enough data
+                                 (iCode1 & 0xC0) != 0x80 ||                // invalid pattern
+                                 (iCode2 & 0xC0) != 0x80 )
+                        {
+                                break;
+                        }
+
+                        bstr += String.fromCharCode(((iCode & 0x0F) << 12) |
+                                        ((iCode1 & 0x3F) <<  6) |
+                                        (iCode2 & 0x3F));
+                        nOffset += 3;
+                        nRemainingBytes -= 3;
+                }
+                else                                                                // 4 or more bytes -- unsupported
+                        break;
+        }
+
+        if (nRemainingBytes != 0)
+        {
+                // bad UTF8 string.
+                return "";
+        }
+
+        return bstr;
+} 
+</script>
+
+<FORM name=searchForm  action="http://218.64.56.56/search/search" method=post autocomplete="off" charset=GBK accept-charset="gbk" onsubmit="document.charset='gbk';" target="_blank"  class="search">
+                             <input name="collId" type="hidden" value="9"/>
+                            <!-- 快速搜索栏 -->
+                           <input  type="text" class="notxt" value="输入关键字"  name="query" id="query" onblur="if(this.value=='') {this.value='输入关键字';this.form.query.style.color='#666666'}"  onclick="if(this.value=='输入关键字'){this.value='';this.form.query.style.color='#000'}" /> 
+                           <button type="submit"></button>
+                            <!-- 搜索栏结束 -->
+                                                        </FORM>
+
+            </div>
+        </div>
+    </div>
+    <div id="content">
+        
+<div id="index_left">
+    <div class="left01">
+        <div class="title"><h3>图片新闻</h3></div>
+        <div class="con">
+            <div class="flash_pic">
+                
+<SCRIPT type=text/javascript>
+var imgUrl=new Array();
+var imgLink=new Array();
+var imgName=new Array();
+var n=1;
+
+imgUrl[n] = "images/content/2014-11/20141125123737067083.jpg";
+imgLink[n] = "gzdt/18066.htm";
+var vTitle='喜报：南昌大学获得“CERNET建设突出贡献先进集体”称号';
+if (vTitle.length>15)
+vTitle=vTitle.substring(0,15)+"...";
+imgName[n] = vTitle;
+n++;
+imgUrl[n] = "";
+imgLink[n] = "gzdt/16800.htm";
+var vTitle='利用网络会议系统与中国海洋大学交流';
+if (vTitle.length>15)
+vTitle=vTitle.substring(0,15)+"...";
+imgName[n] = vTitle;
+n++;
+imgUrl[n] = "images/content/2013-06/20130621123150564580.jpg";
+imgLink[n] = "gzdt/11360.htm";
+var vTitle='网络中心网站和应用系统数据备份专题一期培训';
+if (vTitle.length>15)
+vTitle=vTitle.substring(0,15)+"...";
+imgName[n] = vTitle;
+n++;
+imgUrl[n] = "images/content/2013-04/20130424103159061963.jpg";
+imgLink[n] = "gzdt/10984.htm";
+var vTitle='中国高教学会信息化分会五届六次常务理事会暨2013江西高校教育信息化论坛在我校成功举办';
+if (vTitle.length>15)
+vTitle=vTitle.substring(0,15)+"...";
+imgName[n] = vTitle;
+n++;
+imgUrl[n] = "";
+imgLink[n] = "gzdt/9256.htm";
+var vTitle='“校园一卡通”简介（2012版）';
+if (vTitle.length>15)
+vTitle=vTitle.substring(0,15)+"...";
+imgName[n] = vTitle;
+n++;
+imgUrl[n] = "images/content/2012-07/20120720121754056688.jpg";
+imgLink[n] = "gzdt/9146.htm";
+var vTitle='我校“校园网IPv6技术升级”子项目通过现场验收';
+if (vTitle.length>15)
+vTitle=vTitle.substring(0,15)+"...";
+imgName[n] = vTitle;
+n++;
+imgUrl[n] = "images/content/2012-05/20120516121132526416.jpg";
+imgLink[n] = "gzdt/8771.htm";
+var vTitle='举办消防安全知识培训';
+if (vTitle.length>15)
+vTitle=vTitle.substring(0,15)+"...";
+imgName[n] = vTitle;
+n++;
+
+var texts = "";
+var links = "";
+var pics = "";
+var count=1;
+for(var h=1; h<n; h++) {
+if (count>6)
+break;
+if ((imgUrl[h] !="") && (imgLink[h] !="") && (imgUrl[h].indexOf(".jpg") > 0)) {
+if (imgName[h].length > 20)
+imgName[h] = imgName[h].substring(0, 20) + "...";
+texts += imgName[h] + "|";
+links += imgLink[h] + "|";
+pics += imgUrl[h] + "|"; 
+count++;
+}
+}
+texts = texts.substring(0, texts.length-1);
+links = links.substring(0, links.length-1);
+pics = pics.substring(0, pics.length-1);
+
+var focus_width=230
+var focus_height=170
+var text_height=0
+var swf_height = focus_height+text_height
+
+document.write('<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0" width="'+ focus_width +'" height="'+ swf_height +'">');
+document.write('<param name="allowScriptAccess" value="sameDomain"><param name="movie" value="images/focus.swf"><param name="quality" value="high">');
+
+document.write('<param name="menu" value="false"><param name=wmode value="opaque">');
+
+document.write('<param name="FlashVars" value="pics='+pics+'&links='+links+'&borderwidth='+focus_width+'&borderheight='+focus_height+'&textheight='+text_height+'">');
+
+document.write('<embed src="images/focus.swf" wmode="opaque" FlashVars="pics='+pics+'&links='+links+'&borderwidth='+focus_width+'&borderheight='+focus_height+'&textheight='+text_height+'" menu="false" bgcolor="#000000" quality="high" width="'+ focus_width +'" height="'+ swf_height +'" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />'); document.write('</object>'); 
+
+
+</SCRIPT>
+
+            </div>
+        </div>
+        <div class="bot"></div>
+    </div>
+    <div class="left001">
+        <div class="title"><a href="ywlc/index.htm">>>更多</a><h3>业务流程</h3></div>
+        <div class="con">
+            <div class="con_list1">
+                <ul>
+                                 <li><a title="南昌大学网络信息安全事件（风险）处置流程" href="ywlc/28535.htm">            南昌大学网络信息安全事件（风险）处置... 
+    </a></li>
+                                 <li><a title="数据交换平台数据授权申请、审批表" href="ywlc/9316.htm">            数据交换平台数据授权申请、审批表 
+    </a></li>
+                                 <li><a title="非全日制学生校园卡办理办法" href="ywlc/9285.htm">            非全日制学生校园卡办理办法 
+    </a></li>
+                                 <li><a title="校园网邮件服务单位申请流程" href="ywlc/8957.htm">            校园网邮件服务单位申请流程 
+    </a></li>
+                                 <li><a title="校园网WEBVPN用户开户流程" href="ywlc/8956.htm">            校园网WEBVPN用户开户流程 
+    </a></li>
+                                 <li><a title="南昌大学校园公寓有线网充值流程" href="ywlc/8796.htm">            南昌大学校园公寓有线网充值流程 
+    </a></li>
+                                 <li><a title="公寓有线网业务受理咨询时间及地点" href="ywlc/8795.htm">            公寓有线网业务受理咨询时间及地点 
+    </a></li>
+                                 <li><a title="学生公寓网络购买上网充值卡的说明" href="ywlc/8794.htm">            学生公寓网络购买上网充值卡的说明 
+    </a></li>
+                               </ul>
+           </div>
+       </div>
+       <div class="bot"></div>
+   </div>
+   <div class="left001">
+    <div class="title"><a href="cyxz/index.htm">>>更多</a><h3>常用下载</h3></div>
+    <div class="con">
+        <div class="con_list1">
+            <ul>
+                                                                                                                                                                            <li>
+                                    <a  title="南昌大学信息安全事件（风险）处理单" href="docs/bigfileupload/20160425103934479783.docx" target="_blank">            南昌大学信息安全事件（风险）处... 
+    </a>
+                                    </li>                                                    
+                                                                                                                                                                                                                                           <li>
+                                    <a  title="数据授权申请、审批表" href="docs/bigfileupload/20130608120117090546.doc" target="_blank">            数据授权申请、审批表 
+    </a>
+                                    </li>                                                    
+                                                                                                                                                                                                                                           <li>
+                                    <a  title="办理校园卡信息提交表" href="docs/bigfileupload/20120919115722204143.xls" target="_blank">            办理校园卡信息提交表 
+    </a>
+                                    </li>                                                    
+                                                                                                                                                                                                                                           <li>
+                                    <a  title="单位用户邮箱开户单" href="docs/bigfileupload/20120607104352381338.doc" target="_blank">            单位用户邮箱开户单 
+    </a>
+                                    </li>                                                    
+                                                                                                                                                                                                                                           <li>
+                                    <a  title="校园网WEBVPN个人开户单" href="docs/bigfileupload/20120607103805745179.doc" target="_blank">            校园网WEBVPN个人开户单 
+    </a>
+                                    </li>                                                    
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           <li>
+                                    <a  title="校园网域名申请表" href="docs/bigfileupload/20111114134627337444.doc" target="_blank">            校园网域名申请表 
+    </a>
+                                    </li>                                                    
+                                                                   <li>
+                                    <a  title="校园网域名申请及管理规则" href="docs/bigfileupload/20111114134613011328.doc" target="_blank">            校园网域名申请及管理规则 
+    </a>
+                                    </li>                                                    
+                                                                                                                           </ul>
+        </div>
+    </div>
+    <div class="bot"></div>
+          </div>
+      </div>
+       <div id="index_mid">
+       <div class="mid02">
+              <div class="title"><a href="yxtg/index.htm">>>更多</a><h3>通知公告</h3></div>
+              <div class="con">
+                  <div class="tab_list">
+          <div class="con_list1">
+             <ul>
+                              <li><span>2017-10-12</span>
+                             <a title="关于对各网站进行技术维护的通知" href="yxtg/41206.htm">关于对各网站进行技术维护的通知</a>
+                                                          <img src="/images/new.gif" border=0>
+                                                          </li>
+                              <li><span>2017-06-28</span>
+                             <a title="关于防范Petya勒索病毒攻击的预警通知" href="yxtg/39354.htm">关于防范Petya勒索病毒攻击的预警通知</a>
+                                                          </li>
+                              <li><span>2017-06-09</span>
+                             <a title="关于关闭部分教学楼校园无线网的通告" href="yxtg/38867.htm">关于关闭部分教学楼校园无线网的通告</a>
+                                                          </li>
+                              <li><span>2017-05-14</span>
+                             <a title="勒索病毒WannaCry防范处置手册" href="yxtg/38279.htm">勒索病毒WannaCry防范处置手册</a>
+                                                          </li>
+                              <li><span>2017-05-14</span>
+                             <a title="关于勒索病毒WannaCry的防范处置" href="yxtg/38281.htm">关于勒索病毒WannaCry的防范处置</a>
+                                                          </li>
+                              <li><span>2017-05-12</span>
+                             <a title="关于防范新型“蠕虫”式勒索软件病毒攻击的紧急通知" href="yxtg/38242.htm">关于防范新型“蠕虫”式勒索软件病毒攻击的紧急通知</a>
+                                                          </li>
+                              <li><span>2017-05-11</span>
+                             <a title="关于前湖行政办公楼有线网络接入设备间（一楼、三楼）维护的通知" href="yxtg/38199.htm">关于前湖行政办公楼有线网络接入设备间（一楼、三楼）维护的通知</a>
+                                                          </li>
+                              <li><span>2017-05-10</span>
+                             <a title="关于东湖校区基础教学大楼关闭老旧校园有线网络的通知" href="yxtg/38184.htm">关于东湖校区基础教学大楼关闭老旧校园有线网络的通知</a>
+                                                          </li>
+                              <li><span>2017-05-08</span>
+                             <a title="关于东湖校区启用实名制认证的通知" href="yxtg/38074.htm">关于东湖校区启用实名制认证的通知</a>
+                                                          </li>
+                              <li><span>2017-03-23</span>
+                             <a title="关于更换无线网出口设备的通知" href="yxtg/36661.htm">关于更换无线网出口设备的通知</a>
+                                                          </li>
+                              <li><span>2017-03-23</span>
+                             <a title="关于青山湖校区北院校园网汇聚机房维护的通知" href="yxtg/36659.htm">关于青山湖校区北院校园网汇聚机房维护的通知</a>
+                                                          </li>
+                              <li><span>2017-03-16</span>
+                             <a title="关于前湖实验大楼校园网汇聚机房维护的通知" href="yxtg/36339.htm">关于前湖实验大楼校园网汇聚机房维护的通知</a>
+                                                          </li>
+                          </ul>
+         </div>
+      </div>
+             </div>
+         </div>
+          <a href="http://xxwl.ncu.edu.cn/xxaq/aqjy/index.htm" target="_blank"><img src="http://xxwl.ncu.edu.cn/images/wlaqxcz2017.png" width="510" height="120" ></a>
+                                                              
+         <div class="title"></div>
+         <div class="mid02">
+              <div class="title"><a href="gzdt/index.htm">更多</a><h3>工作动态</h3></div>
+              <div class="con">
+                   <div class="tab_list">
+          <div class="con_list1">
+             <ul>
+                              <li>
+                             <span>2014-11-25</span>
+                             <a title="喜报：南昌大学获得“CERNET建设突出贡献先进集体”称号" href="gzdt/18066.htm">喜报：南昌大学获得“CERNET建设突出贡献先进集体”称号</a>
+                                                          </li>
+                              <li>
+                             <span>2014-07-18</span>
+                             <a title="利用网络会议系统与中国海洋大学交流" href="gzdt/16800.htm">利用网络会议系统与中国海洋大学交流</a>
+                                                          </li>
+                              <li>
+                             <span>2013-10-24</span>
+                             <a title="景德镇陶瓷学院现代教育中心来网络中心交流" href="gzdt/12152.htm">景德镇陶瓷学院现代教育中心来网络中心交流</a>
+                                                          </li>
+                              <li>
+                             <span>2013-06-21</span>
+                             <a title="网络中心网站和应用系统数据备份专题一期培训" href="gzdt/11360.htm">网络中心网站和应用系统数据备份专题一期培训</a>
+                                                          </li>
+                              <li>
+                             <span>2013-06-08</span>
+                             <a title="校园一卡通简介（2013版)" href="gzdt/11306.htm">校园一卡通简介（2013版)</a>
+                                                          </li>
+                              <li>
+                             <span>2013-06-08</span>
+                             <a title="关于举办网站和应用系统数据备份专题培训的通知" href="gzdt/11305.htm">关于举办网站和应用系统数据备份专题培训的通知</a>
+                                                          </li>
+                              <li>
+                             <span>2013-04-24</span>
+                             <a title="中国高教学会信息化分会五届六次常务理事会暨2013江西高校教育信息化论坛在我校成功举办" href="gzdt/10984.htm">中国高教学会信息化分会五届六次常务理事会暨2013江西高校教育信息化论坛在我校成功举办</a>
+                                                          </li>
+                              <li>
+                             <span>2012-08-23</span>
+                             <a title="“校园一卡通”简介（2012版）" href="gzdt/9256.htm">“校园一卡通”简介（2012版）</a>
+                                                          </li>
+                              <li>
+                             <span>2012-07-20</span>
+                             <a title="我校“校园网IPv6技术升级”子项目通过现场验收" href="gzdt/9146.htm">我校“校园网IPv6技术升级”子项目通过现场验收</a>
+                                                          </li>
+                              <li>
+                             <span>2012-03-12</span>
+                             <a title="举办消防安全知识培训" href="gzdt/8771.htm">举办消防安全知识培训</a>
+                                                          </li>
+                              <li>
+                             <span>2012-02-08</span>
+                             <a title="搭建测试平台测试国内外知名厂家存储产品" href="gzdt/8769.htm">搭建测试平台测试国内外知名厂家存储产品</a>
+                                                          </li>
+                              <li>
+                             <span>2012-01-16</span>
+                             <a title="2011年12月网络运行报告" href="gzdt/8797.htm">2011年12月网络运行报告</a>
+                                                          </li>
+                          </ul>
+         </div>
+      </div>
+             </div>
+         </div>
+
+
+     </div>
+     
+     <div id="index_right">
+         <div class="title"><h3>校园网服务</h3></div>
+         <div class="con1">
+             <ul>
+                  <li><span>
+	                        服务热线：83969312<br />
+接待室：<a target="_blank" href="yhzn/xywl/27967.htm#map">图文楼A103</a><br />
+投诉电话：83969308<br />
+<a target="_blank" href="yhzn/xywl/27967.htm#map"><img src="images/content/2016-03/20160330000856584303.png" border="0" width="165" height="65" alt="点击查看地图" /></a>
+                                    </span></li>
+             </ul>
+         </div>
+         <div class="bot"></div>
+         <div class="title"><h3>快速链接</h3></div>
+         <div class="con2">
+             <table width="168" border="0" align=left>
+             <tr>
+             <td><a href="http://www.ncu.edu.cn" target="_blank"><img src="images/ncu.jpg" width="165"   height="40"></a></td>
+             </tr>             
+             <tr>
+             <tr>
+             <td><a href="http://mail.ncu.edu.cn" target="_blank"><img src="images/email.jpg" width="165"   height="40"></a></td>
+             </tr>
+<tr>
+             <td align="left"><a href="http://my.ncu.edu.cn" target="_blank"><img src="images/menhu.jpg" width="165" height="40"></a></td>
+             </tr>
+             <tr>
+             <td><a href="http://oa.ncu.edu.cn" target="_blank"><img src="images/oa.jpg" width="165"   height="38"></a></td>
+             </tr>
+           <td><a href="http://news.ncu.edu.cn" target="_blank"><img src="images/news.jpg" width="165"   height="38"></a></td>
+            </tr>
+             <tr>
+             <td align="left"><a href="http://wlan.ncu.edu.cn" target="_blank"><img src="images/wlan.jpg" width="165"   height="38"></a></td>
+             </tr>
+             <tr>
+             <td align="left"><a href="http://222.204.2.80:8080/cms" target="_blank"><img src="images/btn04.jpg" width="165" height="38"></a></td>
+             </tr>
+             <tr>
+             <td align="left"><a href="mailto:net@ncu.edu.cn" target="_blank"><img src="images/info_btn.jpg" width="165" height="38"></a></td>
+             </tr>
+             <tr>
+           <td align="left"><a href="http://vpn.ncu.edu.cn" target="_blank"><img src="images/sslvpn.jpg" width="165" height="38" ></a></td>
+  </tr>
+</table>
+         </div>
+         <div class="bot"></div>
+      </div>
+</div>
+<div id="footer">
+版权所有 南昌大学——网络中心
+		<br /> 
+       您是本站第<script src="/cms/modules/channelVisitLog.jsp?parentID=1354"></script>位访问者
+<!-- Piwik -->
+<script type="text/javascript">
+  var _paq = _paq || [];
+  _paq.push(["trackPageView"]);
+  _paq.push(["enableLinkTracking"]);
+
+  (function() {
+    var u=(("https:" == document.location.protocol) ? "https" : "http") + "://tj.ncu.edu.cn/";
+    _paq.push(["setTrackerUrl", u+"piwik.php"]);
+    _paq.push(["setSiteId", "3"]);
+    var d=document, g=d.createElement("script"), s=d.getElementsByTagName("script")[0]; g.type="text/javascript";
+    g.defer=true; g.async=true; g.src=u+"piwik.js"; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<!-- End Piwik Code -->
+<div align=center id=ipv6_enabled_www_test_logo></div>
+<script language="JavaScript" type="text/javascript">
+    	var Ipv6_Js_Server = (("https:" == document.location.protocol) ? "https://" : "http://");
+	document.write(unescape("%3Cscript src='" + Ipv6_Js_Server + "www.ipv6forum.com/ipv6_enabled/sa/SA1.php?id=3565' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+
+</div>
+</div>
+</body>
+</html>
+
+</body></html>

@@ -1,0 +1,726 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+        <title>睿客网 - 中国科技大学科研教学资源中心</title>        
+        <link href="/static/css/semantic.min.css" rel="stylesheet" type="text/css">
+        <link href="/static/template/default/css/theme.css" rel="stylesheet" type="text/css">
+        <script src="/static/jquery/jquery-1.11.0.min.js"></script>
+        <script src="/static/js/semantic.js"></script>
+        <!--[if lte IE 9]>
+        <script src="/static/js/placeholder-ie.js" type="text/javascript"></script>
+        <![endif]-->
+        <script>
+            $.ajaxSetup({cache:false});
+        </script>
+    </head>
+    <body>
+                    <form method="post" class="ui form" action="http://rec.ustc.edu.cn/login" enctype="application/x-www-form-urlencoded">
+            <input name="_token" type="hidden" value="b10659512db9b94f49b1544ab3ffad93"/>
+                        <div class="ui top nomargin orange inverted menu" id="topmenu">
+                <a href="/" class="logo item">睿客网</a>
+                <a href="/" class="item"><i class="home icon"></i><b>首页</b></a>
+                <!--<a href="/share" class="ui item" id="shareitem"><i class="share icon"></i><b>分享</b></a>-->
+                <a href="/course" class="item" id="courseitem"><i class="paint basic icon"></i><b>课程</b></a>
+                <a href="/group" class="item" id="groupitem"><i class="users icon"></i><b>群组</b></a>
+                <!--<a href="/topic" class="item" id="groupitem"><i class="users icon"></i><b>话题</b></a>-->
+                <div class="right menu">
+                                            <a href="/login_cas" class="item" style="font-size:1rem;padding: 0.83em 0.95em;"><i class="sign in icon"></i><b>登 录</b></a>                    
+                                        
+                </div>                
+            </div>
+                
+            </form>
+                <!--[if lte IE 8]>
+        <div class="container"><div class="ui error message">您正在使用低版本的ie浏览器，无法正常使用睿客网，请升级到ie9及其以上版本</div></div>
+        <![endif]-->        
+<!--       <div class="container"><h2 class="ui error message">由于学校统一身份系统调整，部分用户GID发生变化，睿客网数据正在转换中，如果您发现存储的文件丢失，请勿担心，数据转换完成后即可恢复！</h2></div>--><script src="/static/js/jssor.slider.min.js"></script>
+<link href="/static/css/jssor.css" rel="stylesheet" type="text/css">
+<div id="section" class="nopadding">
+    <div class="container">
+        <div id="slider" style="position: relative; width: 1000px; height: 300px;">
+            <!-- Slides Container -->
+            <div u="slides" style="position: absolute; overflow: hidden; left: 0px; top: 0px; width: 1000px; height: 300px;">
+                <div><img u="image" src="/static/img/slider/red.jpg" />
+                    <div style="position:absolute;width:480px;height:250px;top:40px;left:40px;text-align:left;line-height:1.8em;font-size:12px;">
+                        <span style="font-size:52px;color:#FFFFFF;">睿客网</span>
+                        <br><br>
+                        <div style="font-size:2.2em;color:#FFFFFF;">中科院十二五信息化项目支持</div>
+                        <br/>
+                        <div style="font-size:2.2em;line-height:1.2em;color:#FFFFFF;padding:0 0 0 2em">用户互认
+                        </div>
+                        <div style="font-size:2.2em;line-height:1.2em;color:#FFFFFF;padding:0 0 0 4em">资源共享
+                        </div>
+                        <div style="font-size:2.2em;line-height:1.2em;color:#FFFFFF;padding:0 0 0 6em">
+                            融入中科院教育云
+                        </div>
+                    </div>                                     
+                    <img style="position:absolute;top:0;right:0;width:500px;height:300px;" src="/static/img/slider/slider4.png">
+                </div>
+                <div><img u="image" src="/static/img/slider/green.jpg" />                    
+                    <div style="position:absolute;width:400px;height:250px;top:40px;left:40px;text-align:center;line-height:1.8em;font-size:12px;">
+                        <a style="display:block;font-size:1.8em;line-height:1.8em;color:#FFFFFF;" href="http://rec.ustc.edu.cn/static/app/recustc.apk">
+                             <img style="width:200px;height:200px;" src="http://rec.ustc.edu.cn/static/app/qr.png">
+                            <br>
+                            睿客网Android App测试版下载
+                        </a>                       
+                    </div>                    
+                    <img style="position:absolute;top:0;right:0;width:500px;height:300px;" src="/static/img/slider/slider2.png">
+                </div>
+                <div><img u="image" src="/static/img/slider/blue.jpg" />
+                    <div style="position:absolute;width:480px;height:250px;top:40px;left:40px;text-align:left;line-height:1.8em;font-size:12px;">
+                        <span style="font-size:52px;color:#FFFFFF;">睿客网</span>
+                        <br><br>
+                        <span style="display:block;font-size:2.2em;color:#FFFFFF;">中国科学技术大学科研教学资源中心</span>
+                        <br/>
+                        <span style="display:block;font-size:1.6em;color:#FFFFFF;"><span style="color:rgb(240,89,64)">R</span>esearch and <span style="color:rgb(240,89,64)">E</span>ducation resource <span style="color:rgb(240,89,64)">C</span>enter of USTC</span>
+                        <br>
+                        <span style="display:block;font-size:1.8em;line-height:1.8em;color:#FFFFFF;">为您提供安全、稳定、高速的文件云存储
+                            <br>
+                            搭建开放的科研教学资源共享平台
+                        </span>                        
+                    </div>                                     
+                    <img style="position:absolute;top:0;right:0;width:500px;height:300px;" src="/static/img/slider/slider1.png">
+                </div>
+                <div><img u="image" src="/static/img/slider/green.jpg" />
+                    <div style="position:absolute;width:480px;height:250px;top:40px;left:40px;text-align:left;line-height:1.8em;font-size:12px;">
+                        <span style="font-size:52px;color:#FFFFFF;">分享</span>
+                        <br><br>
+                        <span style="display:block;font-size:2.5em;color:#FFFFFF;">是一种快乐，让手中的资源更有价值</span>
+                        <br><br>
+                        <span style="display:block;font-size:1.8em;line-height:1.8em;color:#FFFFFF;">支持多种终端，随时随地浏览
+                            <br>
+                            公开、私密、群组、好友四种分享模式
+                        </span>                        
+                    </div>
+                    <img style="position:absolute;top:0;right:0;width:500px;height:300px;" src="/static/img/slider/slider2.png">                
+                </div>
+                <div><img u="image" src="/static/img/slider/purple.jpg" />
+                    <div style="position:absolute;width:480px;height:250px;top:40px;left:40px;text-align:left;line-height:1.8em;font-size:12px;">
+                        <span style="font-size:52px;color:#FFFFFF;">课程</span>
+                        <br><br>
+                        <span style="display:block;font-size:2.5em;color:#FFFFFF;">轻松开课，传授知识与技能</span>
+                        <br><br>
+                        <span style="display:block;font-size:1.8em;line-height:1.8em;color:#FFFFFF;">支持多种格式的视频与文档在线观看
+                            <br>
+<!--                            还能开设课程群组进行讨论哦-->
+                        </span>                        
+                    </div>
+                    <img style="position:absolute;top:0;right:0;width:500px;height:300px;" src="/static/img/slider/slider3.png">
+                </div>
+<!--                <div><img u="image" src="/static/img/slider/red.jpg" />
+                    <div style="position:absolute;width:480px;height:250px;top:40px;left:40px;text-align:left;line-height:1.8em;font-size:12px;">
+                        <span style="font-size:52px;color:#FFFFFF;">群组</span>
+                        <br><br>
+                        <span style="display:block;font-size:2.5em;color:#FFFFFF;">探讨问题，共享资源</span>
+                        <br><br>
+                        <span style="display:block;font-size:1.8em;line-height:1.8em;color:#FFFFFF;">......
+                            <br>
+                            ......
+                        </span>                        
+                    </div>             
+                </div>-->
+            </div>
+            <div u="navigator" class="jssorb05" style="position:absolute;bottom:16px;right:468px;">
+                <div u="prototype" style="position:absolute;width: 16px;height: 16px;"></div>
+            </div>
+            <span u="arrowleft" class="jssora12l" style="width:30px;height:46px;top:123px;left:0px;">
+            </span>
+            <span u="arrowright" class="jssora12r" style="width:30px;height:46px;top:123px;right:0px">
+            </span>
+        </div>        
+        <div class="ui raised segment">
+            <div class="ui purple ribbon huge label">最新课程</div>
+            <div class="ui five picture items">
+                                    <div class="item">
+                        <a class="image" href="/s/mmgp0r">
+                            <img alt="" onerror="this.src='/static/img/default_course.png'" src="http://img.rec.ustc.edu.cn/course/3457.png">
+                        </a>
+                        <div class="content">
+                            <a class="name" href="/s/mmgp0r" title="Introduction to Computer Science and Programming Using Python">Introduction to Computer Science and Programming Using Python</a>
+                            <div class="description">About this course
+[[https://www.edx.org/course/introduction-computer-science-mitx-6-00-1x-9#!]]
+[[https://github.com/nilesh-patil/MITx-Foundations-of-Computer-Science]]
+This course is the first of a two-course sequence: Introduction to Computer Science and Programming Using Python, and Introduction to Computational Thinking and Data Science. Together, they are designed to help people with no prior exposure to computer science or programming learn to think computationally and write programs to tackle useful problems. Some of the people taking the two courses will use them as a stepping stone to more advanced computer science courses, but for many it will be their first and last computer science courses. This run features updated lecture videos, lecture exercises, and problem sets to use the new version of Python 3.5. Even if you took the course with Python 2.7, you will be able to easily transition to Python 3.5 in future courses, or enroll now to refresh your learning. 
+
+Since these courses may be the only formal computer science courses many of the students take, we have chosen to focus on breadth rather than depth. The goal is to provide students with a brief introduction to many topics so they will have an idea of what is possible when they need to think about how to use computation to accomplish some goal later in their career. That said, they are not "computation appreciation" courses. They are challenging and rigorous courses in which the students spend a lot of time and effort learning to bend the computer to their will.</div>
+                            <div>
+                                                                                                                                             <a class="ui small image label" href="/lector/2210" title="主讲">
+<!--                                            <img onerror="this.src='/static/img/default_face_thumb.png'" src="http://img.rec.ustc.edu.cn/lector/2210_thumb.png">-->
+                                             Eric Grimson</a>
+                                                                                                     
+                                <span class="time" title="创建于2017-01-10 12:45:56">01-10 12:45</span>
+                            </div>
+                        </div>
+                    </div>
+                                    <div class="item">
+                        <a class="image" href="/s/p3dexd">
+                            <img alt="" onerror="this.src='/static/img/default_course.png'" src="http://wlkt.ustc.edu.cn/userfiles/video_img/467a4a4cd1a8f213667784fcefb5dc9cd945e6c788.jpg">
+                        </a>
+                        <div class="content">
+                            <a class="name" href="/s/p3dexd" title="20160326中微子－幽灵粒子之谜">20160326中微子－幽灵粒子之谜</a>
+                            <div class="description">The ghost particle neutrinos is one kind of the elementary particle that   called leptons. It carries no charge and almost has no mass and no    interaction with any other particles and therefore can freely penetrate the    earth. Neutrinos can be created from many different ways, such as the Sun,    the atmosphere, the nuclear power plant and the accelerator. Mystery of    neutrinos has been fascinating scientists since it is postulated in 1930 by    W. Pauli and discovered in 1956 by Reine and Cown, and will continue be so    for many decades. This presentation will briefly review the history of the    neutrino, the source of neutrino and explain you how scientists solve the    puzzle of solar neutrino and the atmospheric neutrino, which were awarded   the Nobel prize in physics of 2015.</div>
+                            <div>
+                                                                                                                                             <a class="ui small image label" href="/lector/1694" title="主讲">
+<!--                                            <img onerror="this.src='/static/img/default_face_thumb.png'" src="http://img.rec.ustc.edu.cn/lector/1694_thumb.png">-->
+                                             赵振国</a>
+                                                                                                     
+                                <span class="time" title="创建于2016-03-28 10:03:49">03-28 10:03</span>
+                            </div>
+                        </div>
+                    </div>
+                                    <div class="item">
+                        <a class="image" href="/s/0rxt3m">
+                            <img alt="" onerror="this.src='/static/img/default_course.png'" src="http://wlkt.ustc.edu.cn/userfiles/201603/1459128743121081871.jpg">
+                        </a>
+                        <div class="content">
+                            <a class="name" href="/s/0rxt3m" title="Mechanics of Compaction and Strain Localization in Porous Rock">Mechanics of Compaction and Strain Localization in Porous Rock</a>
+                            <div class="description">个人简介: Teng-fong Wong (黃庭芳) is Professor and Director of the Earth System Science Programme, Faculty of Science, The Chinese University of Hong Kong. Before joining CUHK in January 2013, he has taught for thirty years in the State University of New York at Stony Brook, where he served as Chair of the Department of Geosciences and Associate Dean of the Graduate School. Wong's undergraduate and postgraduate degrees were from Brown, Harvard and MIT. He served on the San Andreas Fault Observatory at Depth (SAFOD) Advisory Board, and is currently on the physical sciences panel of the Hong Kong Research Grants Council. He has two US patents for an ultrasonic seepage meter for hydrogeological field measurement. He has also co-authored two monographs: Experimental Rock Deformation, The Brittle Field (with Professor Mervyn Paterson, Australian National University), and 岩石物理学 (with CAS academician 陈颙, and 刘恩儒, ExxonMobil), a volume in the 中国科学技术大学校友文库. Wong is also a recipient of the Basic Research Award of the U.S. National Committee for Rock Mechanics, SUNY Chancellor's Award for Excellence in Scholarship, as well as the Louis Néel Medal of the European Geosciences Union.</div>
+                            <div>
+                                                                                                                                             <a class="ui small image label" href="/lector/1700" title="主讲">
+<!--                                            <img onerror="this.src='/static/img/default_face_thumb.png'" src="http://img.rec.ustc.edu.cn/lector/1700_thumb.png">-->
+                                             黄庭芳</a>
+                                                                                                     
+                                <span class="time" title="创建于2016-03-28 10:03:49">03-28 10:03</span>
+                            </div>
+                        </div>
+                    </div>
+                                    <div class="item">
+                        <a class="image" href="/s/4dqmlw">
+                            <img alt="" onerror="this.src='/static/img/default_course.png'" src="http://wlkt.ustc.edu.cn/userfiles/201603/1459128590356186563.png">
+                        </a>
+                        <div class="content">
+                            <a class="name" href="/s/4dqmlw" title="高质量氧化物薄膜规模化制备中的一些科学问题探讨">高质量氧化物薄膜规模化制备中的一些科学问题探讨</a>
+                            <div class="description">　　氧化物功能薄膜不仅是基础物理研究的重要对象，也对未来的功能器件展现了光明的应用前景。报告人以晶圆级高质量外延的VO2薄膜以及集成于镍基底上的BaTiO3薄膜为例，针对拓展氧化物薄膜生长窗口和控制金属/氧化物界面两个方面探讨“控氧”的机理和方法，使用易于产业化的化学溶液生长技术，基于薄膜生长热力学模型，对生长中氧化反应动力学行为进行调控，实现了晶圆级高质量外延的VO2薄膜和界面可控的BaTiO3/Ni集成薄膜。报告中也提出了规模化制备高质量氧化物薄膜所面临的一些其它问题。</div>
+                            <div>
+                                                                                                                                             <a class="ui small image label" href="/lector/1701" title="主讲">
+<!--                                            <img onerror="this.src='/static/img/default_face_thumb.png'" src="http://img.rec.ustc.edu.cn/lector/1701_thumb.png">-->
+                                             林媛</a>
+                                                                                                     
+                                <span class="time" title="创建于2016-03-28 10:03:49">03-28 10:03</span>
+                            </div>
+                        </div>
+                    </div>
+                                    <div class="item">
+                        <a class="image" href="/s/p3njms">
+                            <img alt="" onerror="this.src='/static/img/default_course.png'" src="http://wlkt.ustc.edu.cn/userfiles/201603/1459128454172520930.jpg">
+                        </a>
+                        <div class="content">
+                            <a class="name" href="/s/p3njms" title="学术报告Towards Big Graph Processing及新南威尔士大学计算机学院招生简况交流会">学术报告Towards Big Graph Processing及新南威尔士大学计算机学院招生简况交流会</a>
+                            <div class="description">学术报告及新南威尔士大学计算机学院招生简况交流会 交流会时间：2016年3月23日下午15:50-17:30 地点：西区电三楼312-314会议室具体安排： 1.学术报告：Towards Big Graph Processing 报告人：Xuemin Lin（林学民） 2. 新南威尔士大学(UNSW)计算机学院招生简况介绍及座谈交流介绍人：Prof. Xuemin Lin, Prof. Lijun Chang, and Prof. Zengfeng Huang</div>
+                            <div>
+                                                                                                                                             <a class="ui small image label" href="/lector/1702" title="主讲">
+<!--                                            <img onerror="this.src='/static/img/default_face_thumb.png'" src="http://img.rec.ustc.edu.cn/lector/1702_thumb.png">-->
+                                             林学民</a>
+                                                                                                     
+                                <span class="time" title="创建于2016-03-28 10:03:49">03-28 10:03</span>
+                            </div>
+                        </div>
+                    </div>
+                                    <div class="item">
+                        <a class="image" href="/s/wxscv4">
+                            <img alt="" onerror="this.src='/static/img/default_course.png'" src="http://wlkt.ustc.edu.cn/userfiles/201603/1459128298309166212.png">
+                        </a>
+                        <div class="content">
+                            <a class="name" href="/s/wxscv4" title="Secure Query Services in Outsourced Cloud Environments">Secure Query Services in Outsourced Cloud Environments</a>
+                            <div class="description"></div>
+                            <div>
+                                                                                                                                             <a class="ui small image label" href="/lector/1703" title="主讲">
+<!--                                            <img onerror="this.src='/static/img/default_face_thumb.png'" src="http://img.rec.ustc.edu.cn/lector/1703_thumb.png">-->
+                                             徐建良</a>
+                                                                                                     
+                                <span class="time" title="创建于2016-03-28 10:03:49">03-28 10:03</span>
+                            </div>
+                        </div>
+                    </div>
+                                    <div class="item">
+                        <a class="image" href="/s/gmoyld">
+                            <img alt="" onerror="this.src='/static/img/default_course.png'" src="http://wlkt.ustc.edu.cn/userfiles/201603/1459127550120411400.png">
+                        </a>
+                        <div class="content">
+                            <a class="name" href="/s/gmoyld" title="向量丛模空间的Frobenius分层">向量丛模空间的Frobenius分层</a>
+                            <div class="description">吴文俊数学重点实验室代数学系列报告之八十三【李灵光】 报告题目：向量丛模空间的Frobenius分层报 告 人：李灵光 博士 同济大学数学学院时间：3月24号上午，10：00-11：00 地点：管理科研楼1518</div>
+                            <div>
+                                                                                                                                             <a class="ui small image label" href="/lector/1704" title="主讲">
+<!--                                            <img onerror="this.src='/static/img/default_face_thumb.png'" src="http://img.rec.ustc.edu.cn/lector/1704_thumb.png">-->
+                                             李灵光</a>
+                                                                                                     
+                                <span class="time" title="创建于2016-03-28 10:03:49">03-28 10:03</span>
+                            </div>
+                        </div>
+                    </div>
+                                    <div class="item">
+                        <a class="image" href="/s/bq2hzg">
+                            <img alt="" onerror="this.src='/static/img/default_course.png'" src="http://wlkt.ustc.edu.cn/userfiles/201603/1459127451239715670.jpg">
+                        </a>
+                        <div class="content">
+                            <a class="name" href="/s/bq2hzg" title="晚晴科举制度改革和中国的知识转变">晚晴科举制度改革和中国的知识转变</a>
+                            <div class="description">应科技史与科技考古系邀请，德国法兰克福东亚研究中心教授、国际著名科技史专家阿梅龙（IMO Amelung）来我校做《晚晴科举制度改革和中国的知识转变》的报告，欢迎感兴趣的广大师生积极参加。　 报告时间：3月21日（周一）14：30；　 报告地点：东区人文学院南平105会议室。　 特此通知。</div>
+                            <div>
+                                                                                                                                             <a class="ui small image label" href="/lector/1705" title="主讲">
+<!--                                            <img onerror="this.src='/static/img/default_face_thumb.png'" src="http://img.rec.ustc.edu.cn/lector/1705_thumb.png">-->
+                                             阿梅龙</a>
+                                                                                                     
+                                <span class="time" title="创建于2016-03-28 10:03:49">03-28 10:03</span>
+                            </div>
+                        </div>
+                    </div>
+                                    <div class="item">
+                        <a class="image" href="/s/ujdy11">
+                            <img alt="" onerror="this.src='/static/img/default_course.png'" src="http://wlkt.ustc.edu.cn/userfiles/201603/1458868977857863312.png">
+                        </a>
+                        <div class="content">
+                            <a class="name" href="/s/ujdy11" title="CNKI总库平台，助力学术科研">CNKI总库平台，助力学术科研</a>
+                            <div class="description">培训名称：CNKI总库平台，助力学术科研培训时间：3月23日（周三）下午2：30-4:00 培训人：CNKI高级讲师 奚亚萍培训地点：人文与社会科学学院 南平105（东区羽毛球馆旁）</div>
+                            <div>
+                                                                                                                                             <a class="ui small image label" href="/lector/1706" title="主讲">
+<!--                                            <img onerror="this.src='/static/img/default_face_thumb.png'" src="http://img.rec.ustc.edu.cn/lector/1706_thumb.png">-->
+                                             奚亚萍</a>
+                                                                                                     
+                                <span class="time" title="创建于2016-03-28 10:03:49">03-28 10:03</span>
+                            </div>
+                        </div>
+                    </div>
+                                    <div class="item">
+                        <a class="image" href="/s/0zqsda">
+                            <img alt="" onerror="this.src='/static/img/default_course.png'" src="http://wlkt.ustc.edu.cn/userfiles/201603/1458868916238138564.png">
+                        </a>
+                        <div class="content">
+                            <a class="name" href="/s/0zqsda" title="The differential structure of metric measure space">The differential structure of metric measure space</a>
+                            <div class="description">摘要：In the past ten years, the metric measure spaces with Ricci curvature bound which was proposed by Lott-Sturm-Villani, was studied by researcher from many different areas. In this talk I will introduce some recent results on the differential structure of metric measure spaces, including the non-smooth Sobolev space, Barky- Emery theory, and the notion of tangent/cotangent modules in non-smooth framework. On the metric measure spaces with curvature-dimension condition RCD (K;N), we obtainan improved Bochner inequality and propose a de nition of N-dimensional Ricci tensor.</div>
+                            <div>
+                                                                                                                                             <a class="ui small image label" href="/lector/1707" title="主讲">
+<!--                                            <img onerror="this.src='/static/img/default_face_thumb.png'" src="http://img.rec.ustc.edu.cn/lector/1707_thumb.png">-->
+                                             Bang-Xian Han</a>
+                                                                                                     
+                                <span class="time" title="创建于2016-03-28 10:03:49">03-28 10:03</span>
+                            </div>
+                        </div>
+                    </div>
+                                    <div class="item">
+                        <a class="image" href="/s/l2pntg">
+                            <img alt="" onerror="this.src='/static/img/default_course.png'" src="http://wlkt.ustc.edu.cn/userfiles/201603/1458868851408844528.png">
+                        </a>
+                        <div class="content">
+                            <a class="name" href="/s/l2pntg" title="Polymerisation-Induced Self-Assembly via RAFT Dispersion Polymerisation">Polymerisation-Induced Self-Assembly via RAFT Dispersion Polymerisation</a>
+                            <div class="description"></div>
+                            <div>
+                                                                                                                                             <a class="ui small image label" href="/lector/1708" title="主讲">
+<!--                                            <img onerror="this.src='/static/img/default_face_thumb.png'" src="http://img.rec.ustc.edu.cn/lector/1708_thumb.png">-->
+                                             Steven P. Armes</a>
+                                                                                                     
+                                <span class="time" title="创建于2016-03-28 10:03:49">03-28 10:03</span>
+                            </div>
+                        </div>
+                    </div>
+                                    <div class="item">
+                        <a class="image" href="/s/3d4yzo">
+                            <img alt="" onerror="this.src='/static/img/default_course.png'" src="http://wlkt.ustc.edu.cn/userfiles/201603/1458782223125536508.png">
+                        </a>
+                        <div class="content">
+                            <a class="name" href="/s/3d4yzo" title="晚晴科举制度改革和中国的知识转变">晚晴科举制度改革和中国的知识转变</a>
+                            <div class="description">应科技史与科技考古系邀请，德国法兰克福东亚研究中心教授、国际著名科技史专家阿梅龙（IMO Amelung）来我校做《晚晴科举制度改革和中国的知识转变》的报告，欢迎感兴趣的广大师生积极参加。　 报告时间：3月21日（周一）14：30；　 报告地点：东区人文学院南平105会议室。　 特此通知。</div>
+                            <div>
+                                                                                                                                             <a class="ui small image label" href="/lector/1705" title="主讲">
+<!--                                            <img onerror="this.src='/static/img/default_face_thumb.png'" src="http://img.rec.ustc.edu.cn/lector/1705_thumb.png">-->
+                                             阿梅龙</a>
+                                                                                                     
+                                <span class="time" title="创建于2016-03-28 10:03:49">03-28 10:03</span>
+                            </div>
+                        </div>
+                    </div>
+                                    <div class="item">
+                        <a class="image" href="/s/jixrcu">
+                            <img alt="" onerror="this.src='/static/img/default_course.png'" src="http://wlkt.ustc.edu.cn/userfiles/201603/1458782153881889170.jpg">
+                        </a>
+                        <div class="content">
+                            <a class="name" href="/s/jixrcu" title="Ultra-strength Nanomaterials: from in-situ Nanomechanics to Wearable Electronics">Ultra-strength Nanomaterials: from in-situ Nanomechanics to Wearable Electronics</a>
+                            <div class="description">Abstract: Recent advance in nanotechnology has brought forth a host of nanostructures that exhibit ultrahigh strength. These nanostructures are not only important building blocks for a broad spectrum of nanotechnology applications, but also an ideal platform to study fundamental mechanical properties. In this talk, I will discuss mechanical behavior that is derived from the dramatic dimensional reduction to the nanometer length scale. I will present two studies that reveal important roles of defects in mechanics of crystalline nanowires (NWs) using in-situ scanning and transmission electron microscopy (SEM/TEM) mechanical testing. For metal NWs containing internal twin boundaries along the NW length, we observed a time-dependent and fully reversible plastic behavior, and concluded that vacancies reduce dislocation nucleation barrier, facilitating stress relaxation, while the twin boundaries and their intrinsic stress field promote retraction of partial dislocations, resulting in full strain recovery. For single- crystalline nanowires containing point defects, we discovered giant anelastic behaviour that is up to four orders of magnitude larger than the largest anelasticity observed in bulk materials, with a timescale on the order of minutes. This behavior is due to point defect diffusion under a high strain gradient and short diffusion distance. Next I will present the interface mechanics between monolayer graphene and polymer substrate. Interfacial failure mechanisms, interfacial sliding and buckling, are identified using in-situ Raman spectroscopy and atomic force microscopy, and are supported by nonlinear shear-lag and cohesive-shear-lag models. This talk will conclude with examples and perspectives on nanomaterial-enabled stretchable/wearable electronics for health monitoring, rehabilitation and robotics. Biosketch: Yong Zhu received his B.S. degree in Mechanics and Mechanical Engineering from the University of Science and Technology of China in 1999, and his M.S. and Ph.D. degrees in Mechanical Engineering from Northwestern University in 2001 and 2005, respectively. He was a postdoctoral fellow at the University of Texas at Austin before he joined NCSU in 2007, where he is currently an Associate Professor in Department of Mechanical and Aerospace Engineering ( affiliated in Materials Science and Engineering and Biomedical Engineering). Zhu’s group conducts research at the intersection of solid mechanics and micro/nano-technology, including nanomechanics, micro/nano-electromechanical systems, and stretchable/wearable devices. He has received several awards including Sigma Xi Faculty Research Award, MAE Department Outstanding Research Award, College of Engineering Alcoa Foundation Research Achievement Award, Society of Experimental Mechanics Young Investigator Award, and ASME Sia Nemat-Nasser Early Career Award. He is a University Faculty Scholar at NCSU and the current iMechanica journal club editor.</div>
+                            <div>
+                                                                                                                                             <a class="ui small image label" href="/lector/1709" title="主讲">
+<!--                                            <img onerror="this.src='/static/img/default_face_thumb.png'" src="http://img.rec.ustc.edu.cn/lector/1709_thumb.png">-->
+                                             朱勇</a>
+                                                                                                     
+                                <span class="time" title="创建于2016-03-28 10:03:49">03-28 10:03</span>
+                            </div>
+                        </div>
+                    </div>
+                                    <div class="item">
+                        <a class="image" href="/s/4khqqv">
+                            <img alt="" onerror="this.src='/static/img/default_course.png'" src="http://wlkt.ustc.edu.cn/userfiles/201603/1458609466888677673.png">
+                        </a>
+                        <div class="content">
+                            <a class="name" href="/s/4khqqv" title="Information geometry and applications in mathematical biology and game theory">Information geometry and applications in mathematical biology and game theory</a>
+                            <div class="description">天元基金-几何与随机分析及其应用交叉平台系列讲座之十二【Jurgen Jost 】 题目： Information geometry and applications in mathematical biology and game theory 报告人：Jurgen Jost 德国马普所时间：3月18号（周五）4:00-5：00 地点：管研楼1418</div>
+                            <div>
+                                                                                                                                             <a class="ui small image label" href="/lector/64" title="主讲">
+<!--                                            <img onerror="this.src='/static/img/default_face_thumb.png'" src="http://img.rec.ustc.edu.cn/lector/64_thumb.png">-->
+                                             Jurgen Jost</a>
+                                                                                                     
+                                <span class="time" title="创建于2016-03-28 10:03:49">03-28 10:03</span>
+                            </div>
+                        </div>
+                    </div>
+                                    <div class="item">
+                        <a class="image" href="/s/4kma2h">
+                            <img alt="" onerror="this.src='/static/img/default_course.png'" src="http://wlkt.ustc.edu.cn/userfiles/201603/1458609387619444937.png">
+                        </a>
+                        <div class="content">
+                            <a class="name" href="/s/4kma2h" title="引力波、引力波源与引力波探测">引力波、引力波源与引力波探测</a>
+                            <div class="description">报告人简介： 赵文，1980年7月出生于山西。2002年7月与2006年12月分别于中国科学技术大学天文系获得学士和博士学位。之后分别于英国Cardiff University and Wales Institute of Mathematical &amp; Computational Sciences, 韩国Korea Astronomy &amp; Space Science Institute, 丹麦Niels Bohr Institute and Copenhagen University从事博士后研究。2012年11月以中科院“百人计划”到中国科学技术大学天文系任教授。主要研究方向为宇宙学和引力波，包括引力波的理论和探测，宇宙微波背景辐射，宇宙加速膨胀与暗能量，暴涨宇宙学等。截至2012年11月，已在PRD,JCAP, PLB, ApJ, MNRAS等杂志发表论文40余篇，被引用近700次。 报告摘要：　　北京时间2016年2月11日23:40左右，LIGO工作组宣称发现了黑洞并和产生的引力波信号。这是爱因斯坦预言引力波之后，整整一百年时间内，人类首次直接探测到了引力波信号，对天文学和物理学都将产生重大影响。本报告首先简要介绍引力波的理论和观测特性、宇宙中主要的引力波源、以及引力波探测科学意义。然后，我们将主要介绍目前探测引力波的几种主流方法和探测现状，以及我国在引力波探测方面的主要观测项目和进展情况。</div>
+                            <div>
+                                                                                                                                             <a class="ui small image label" href="/lector/1710" title="主讲">
+<!--                                            <img onerror="this.src='/static/img/default_face_thumb.png'" src="http://img.rec.ustc.edu.cn/lector/1710_thumb.png">-->
+                                             赵文</a>
+                                                                                                     
+                                <span class="time" title="创建于2016-03-28 10:03:49">03-28 10:03</span>
+                            </div>
+                        </div>
+                    </div>
+                            </div>
+        </div>
+        
+        <!--<div class="ui raised segment">
+            <div class="ui teal ribbon huge label">最新分享</div>
+            <div class="ui five text items">
+                                    <div class="item">                        
+                        <div class="content">
+                                                        <i class="lic shared icon"></i>
+                            <a class="name" href="/s/upqmyp" title="xilinx_ise_vivado.lic">xilinx_ise_vivado.lic</a>
+                            <div class="description"></div>
+                            <div>
+                                <a class="ui small image nomargin label" href="/u/2201601281" title="分享人"><img onerror="this.src='/static/img/default_face_thumb.png'" src="http://img.rec.ustc.edu.cn/avatar/2201601281_thumb.png">曾明亮</a>
+                                <span class="time" title="分享于2017-10-16 19:10:53">10-16 19:10</span>
+                            </div>
+                        </div>
+                    </div>
+                                    <div class="item">                        
+                        <div class="content">
+                                                        <i class="tar shared icon"></i>
+                            <a class="name" href="/s/2qyxgp" title="Xilinx_ISE_DS_Lin_14.7_1015_1.tar">Xilinx_ISE_DS_Lin_14.7_1015_1.tar</a>
+                            <div class="description"></div>
+                            <div>
+                                <a class="ui small image nomargin label" href="/u/2201601281" title="分享人"><img onerror="this.src='/static/img/default_face_thumb.png'" src="http://img.rec.ustc.edu.cn/avatar/2201601281_thumb.png">曾明亮</a>
+                                <span class="time" title="分享于2017-10-16 19:10:53">10-16 19:10</span>
+                            </div>
+                        </div>
+                    </div>
+                                    <div class="item">                        
+                        <div class="content">
+                                                        <i class="tar shared icon"></i>
+                            <a class="name" href="/s/1ebphk" title="xilinx-ise-14.7-1-x86_64.pkg.tar">xilinx-ise-14.7-1-x86_64.pkg.tar</a>
+                            <div class="description"></div>
+                            <div>
+                                <a class="ui small image nomargin label" href="/u/2201601281" title="分享人"><img onerror="this.src='/static/img/default_face_thumb.png'" src="http://img.rec.ustc.edu.cn/avatar/2201601281_thumb.png">曾明亮</a>
+                                <span class="time" title="分享于2017-10-16 19:10:53">10-16 19:10</span>
+                            </div>
+                        </div>
+                    </div>
+                                    <div class="item">                        
+                        <div class="content">
+                                                        <i class="lic shared icon"></i>
+                            <a class="name" href="/s/nrkwfe" title="msi_SSQ.lic">msi_SSQ.lic</a>
+                            <div class="description"></div>
+                            <div>
+                                <a class="ui small image nomargin label" href="/u/2201200444" title="分享人"><img onerror="this.src='/static/img/default_face_thumb.png'" src="http://img.rec.ustc.edu.cn/avatar/2201200444_thumb.png">梁文韬</a>
+                                <span class="time" title="分享于2017-09-29 14:03:23">09-29 14:03</span>
+                            </div>
+                        </div>
+                    </div>
+                                    <div class="item">                        
+                        <div class="content">
+                                                        <i class="exe shared icon"></i>
+                            <a class="name" href="/s/tlqui0" title="MaterialsStudio2017R2 pan.exe">MaterialsStudio2017R2 pan.exe</a>
+                            <div class="description"></div>
+                            <div>
+                                <a class="ui small image nomargin label" href="/u/2201200444" title="分享人"><img onerror="this.src='/static/img/default_face_thumb.png'" src="http://img.rec.ustc.edu.cn/avatar/2201200444_thumb.png">梁文韬</a>
+                                <span class="time" title="分享于2017-09-29 09:09:40">09-29 09:09</span>
+                            </div>
+                        </div>
+                    </div>
+                                    <div class="item">                        
+                        <div class="content">
+                                                        <i class="zip shared icon"></i>
+                            <a class="name" href="/s/fsvvfq" title="MaterialsStudio2017R2.zip">MaterialsStudio2017R2.zip</a>
+                            <div class="description"></div>
+                            <div>
+                                <a class="ui small image nomargin label" href="/u/2201200444" title="分享人"><img onerror="this.src='/static/img/default_face_thumb.png'" src="http://img.rec.ustc.edu.cn/avatar/2201200444_thumb.png">梁文韬</a>
+                                <span class="time" title="分享于2017-09-29 09:09:40">09-29 09:09</span>
+                            </div>
+                        </div>
+                    </div>
+                                    <div class="item">                        
+                        <div class="content">
+                                                        <i class="7z shared icon"></i>
+                            <a class="name" href="/s/mhir2c" title="e-book.7z">e-book.7z</a>
+                            <div class="description"></div>
+                            <div>
+                                <a class="ui small image nomargin label" href="/u/2201601601" title="分享人"><img onerror="this.src='/static/img/default_face_thumb.png'" src="http://img.rec.ustc.edu.cn/avatar/2201601601_thumb.png">朱河勤</a>
+                                <span class="time" title="分享于2017-09-27 12:18:16">09-27 12:18</span>
+                            </div>
+                        </div>
+                    </div>
+                                    <div class="item">                        
+                        <div class="content">
+                                                        <i class="7z shared icon"></i>
+                            <a class="name" href="/s/epxa5f" title="ppt.7z">ppt.7z</a>
+                            <div class="description"></div>
+                            <div>
+                                <a class="ui small image nomargin label" href="/u/2201601601" title="分享人"><img onerror="this.src='/static/img/default_face_thumb.png'" src="http://img.rec.ustc.edu.cn/avatar/2201601601_thumb.png">朱河勤</a>
+                                <span class="time" title="分享于2017-09-27 12:18:16">09-27 12:18</span>
+                            </div>
+                        </div>
+                    </div>
+                                    <div class="item">                        
+                        <div class="content">
+                                                        <i class="rar shared icon"></i>
+                            <a class="name" href="/s/gwwsor" title="Movies.rar">Movies.rar</a>
+                            <div class="description"></div>
+                            <div>
+                                <a class="ui small image nomargin label" href="/u/2201201610" title="分享人"><img onerror="this.src='/static/img/default_face_thumb.png'" src="http://img.rec.ustc.edu.cn/avatar/2201201610_thumb.png">谢正源</a>
+                                <span class="time" title="分享于2017-09-20 22:01:33">09-20 22:01</span>
+                            </div>
+                        </div>
+                    </div>
+                                    <div class="item">                        
+                        <div class="content">
+                                                        <i class="apk shared icon"></i>
+                            <a class="name" href="/s/ofi2sb" title="shadowsocks-nightly-4.1.8.apk">shadowsocks-nightly-4.1.8.apk</a>
+                            <div class="description"></div>
+                            <div>
+                                <a class="ui small image nomargin label" href="/u/2201201610" title="分享人"><img onerror="this.src='/static/img/default_face_thumb.png'" src="http://img.rec.ustc.edu.cn/avatar/2201201610_thumb.png">谢正源</a>
+                                <span class="time" title="分享于2017-09-20 22:01:33">09-20 22:01</span>
+                            </div>
+                        </div>
+                    </div>
+                                    <div class="item">                        
+                        <div class="content">
+                                                        <i class="msi shared icon"></i>
+                            <a class="name" href="/s/mvm2qw" title="cmake-3.7.1-win64-x64.msi">cmake-3.7.1-win64-x64.msi</a>
+                            <div class="description"></div>
+                            <div>
+                                <a class="ui small image nomargin label" href="/u/2201201267" title="分享人"><img onerror="this.src='/static/img/default_face_thumb.png'" src="http://img.rec.ustc.edu.cn/avatar/2201201267_thumb.png">张燚鑫</a>
+                                <span class="time" title="分享于2017-08-04 14:53:44">08-04 14:53</span>
+                            </div>
+                        </div>
+                    </div>
+                                    <div class="item">                        
+                        <div class="content">
+                                                        <i class="mp4 shared icon"></i>
+                            <a class="name" href="/s/f2kitr" title="Jonas Blue - Perfect Strangers ( cover by J.Fla ).mp4">Jonas Blue - Perfect Strangers ( cover by J.Fla ).mp4</a>
+                            <div class="description"></div>
+                            <div>
+                                <a class="ui small image nomargin label" href="/u/3201403159" title="分享人"><img onerror="this.src='/static/img/default_face_thumb.png'" src="http://img.rec.ustc.edu.cn/avatar/3201403159_thumb.png">朱琳</a>
+                                <span class="time" title="分享于2017-07-25 20:04:58">07-25 20:04</span>
+                            </div>
+                        </div>
+                    </div>
+                                    <div class="item">                        
+                        <div class="content">
+                                                        <i class="mp4 shared icon"></i>
+                            <a class="name" href="/s/ss2k2l" title="Me Singing - One Last Time by Ariana Grande - J.Fla.mp4">Me Singing - One Last Time by Ariana Grande - J.Fla.mp4</a>
+                            <div class="description"></div>
+                            <div>
+                                <a class="ui small image nomargin label" href="/u/3201403159" title="分享人"><img onerror="this.src='/static/img/default_face_thumb.png'" src="http://img.rec.ustc.edu.cn/avatar/3201403159_thumb.png">朱琳</a>
+                                <span class="time" title="分享于2017-07-25 20:04:57">07-25 20:04</span>
+                            </div>
+                        </div>
+                    </div>
+                                    <div class="item">                        
+                        <div class="content">
+                                                        <i class="mp4 shared icon"></i>
+                            <a class="name" href="/s/ps5qqz" title="Imagine Dragons - Thunder ( cover by J.Fla ).mp4">Imagine Dragons - Thunder ( cover by J.Fla ).mp4</a>
+                            <div class="description"></div>
+                            <div>
+                                <a class="ui small image nomargin label" href="/u/3201403159" title="分享人"><img onerror="this.src='/static/img/default_face_thumb.png'" src="http://img.rec.ustc.edu.cn/avatar/3201403159_thumb.png">朱琳</a>
+                                <span class="time" title="分享于2017-07-25 20:04:57">07-25 20:04</span>
+                            </div>
+                        </div>
+                    </div>
+                                    <div class="item">                        
+                        <div class="content">
+                                                        <i class="zip shared icon"></i>
+                            <a class="name" href="/s/cp3t0n" title="相声.zip">相声.zip</a>
+                            <div class="description"></div>
+                            <div>
+                                <a class="ui small image nomargin label" href="/u/2201200444" title="分享人"><img onerror="this.src='/static/img/default_face_thumb.png'" src="http://img.rec.ustc.edu.cn/avatar/2201200444_thumb.png">梁文韬</a>
+                                <span class="time" title="分享于2017-07-17 10:40:08">07-17 10:40</span>
+                            </div>
+                        </div>
+                    </div>
+                            </div>
+        </div>-->
+        
+<!--       <div class="ui raised segment">
+            <div class="ui red ribbon huge label">最新群组</div>
+            <div class="ui five picture items">
+                                    <div class="item">
+                        <a class="image" href="/g/89">
+                            <img alt="" onerror="this.src='/static/img/default_group_pic.png'" src="http://img.rec.ustc.edu.cn/group/89.png">
+                        </a>
+                        <div class="content">
+                            <a class="name" href="/g/89" title="ADS Lab">ADS Lab</a>
+                            <div class="description">中国科学技术大学先进数据实验室
+高性能中心410</div>
+                            <div>
+                                <a class="ui small image nomargin label" href="/u/3201402415" title="创始人"><img onerror="this.src='/static/img/default_face_thumb.png'" src="http://img.rec.ustc.edu.cn/avatar/3201402415_thumb.png">陈友旭</a>
+                                <span class="time" title="创建于2017-07-22 11:12:44">07-22 11:12</span>
+                            </div>
+                        </div>
+                    </div>
+                                    <div class="item">
+                        <a class="image" href="/g/87">
+                            <img alt="" onerror="this.src='/static/img/default_group_pic.png'" src="http://img.rec.ustc.edu.cn/group/87.png">
+                        </a>
+                        <div class="content">
+                            <a class="name" href="/g/87" title="电路基本理论">电路基本理论</a>
+                            <div class="description"></div>
+                            <div>
+                                <a class="ui small image nomargin label" href="/u/1199905765" title="创始人"><img onerror="this.src='/static/img/default_face_thumb.png'" src="http://img.rec.ustc.edu.cn/avatar/1199905765_thumb.png">尹华锐</a>
+                                <span class="time" title="创建于2017-06-23 21:07:05">06-23 21:07</span>
+                            </div>
+                        </div>
+                    </div>
+                                    <div class="item">
+                        <a class="image" href="/g/86">
+                            <img alt="" onerror="this.src='/static/img/default_group_pic.png'" src="http://img.rec.ustc.edu.cn/group/86.png">
+                        </a>
+                        <div class="content">
+                            <a class="name" href="/g/86" title="NEBULA战队">NEBULA战队</a>
+                            <div class="description">供NEBULA战队使用的工具</div>
+                            <div>
+                                <a class="ui small image nomargin label" href="/u/2201400876" title="创始人"><img onerror="this.src='/static/img/default_face_thumb.png'" src="http://img.rec.ustc.edu.cn/avatar/2201400876_thumb.png">王克浪</a>
+                                <span class="time" title="创建于2017-06-22 22:02:53">06-22 22:02</span>
+                            </div>
+                        </div>
+                    </div>
+                                    <div class="item">
+                        <a class="image" href="/g/85">
+                            <img alt="" onerror="this.src='/static/img/default_group_pic.png'" src="http://img.rec.ustc.edu.cn/group/85.png">
+                        </a>
+                        <div class="content">
+                            <a class="name" href="/g/85" title="1321002毕业照">1321002毕业照</a>
+                            <div class="description">RT</div>
+                            <div>
+                                <a class="ui small image nomargin label" href="/u/2201300627" title="创始人"><img onerror="this.src='/static/img/default_face_thumb.png'" src="http://img.rec.ustc.edu.cn/avatar/2201300627_thumb.png">袁启锋</a>
+                                <span class="time" title="创建于2017-06-04 22:27:42">06-04 22:27</span>
+                            </div>
+                        </div>
+                    </div>
+                                    <div class="item">
+                        <a class="image" href="/g/82">
+                            <img alt="" onerror="this.src='/static/img/default_group_pic.png'" src="http://img.rec.ustc.edu.cn/group/82.png">
+                        </a>
+                        <div class="content">
+                            <a class="name" href="/g/82" title="微流体">微流体</a>
+                            <div class="description">液滴生成机理</div>
+                            <div>
+                                <a class="ui small image nomargin label" href="/u/1199705458" title="创始人"><img onerror="this.src='/static/img/default_face_thumb.png'" src="http://img.rec.ustc.edu.cn/avatar/1199705458_thumb.png">何立群</a>
+                                <span class="time" title="创建于2017-05-30 16:46:48">05-30 16:46</span>
+                            </div>
+                        </div>
+                    </div>
+                                    <div class="item">
+                        <a class="image" href="/g/81">
+                            <img alt="" onerror="this.src='/static/img/default_group_pic.png'" src="http://img.rec.ustc.edu.cn/group/81.png">
+                        </a>
+                        <div class="content">
+                            <a class="name" href="/g/81" title="English Cl">English Cl</a>
+                            <div class="description"></div>
+                            <div>
+                                <a class="ui small image nomargin label" href="/u/2201501486" title="创始人"><img onerror="this.src='/static/img/default_face_thumb.png'" src="http://img.rec.ustc.edu.cn/avatar/2201501486_thumb.png">李鑫</a>
+                                <span class="time" title="创建于2017-05-09 20:25:02">05-09 20:25</span>
+                            </div>
+                        </div>
+                    </div>
+                                    <div class="item">
+                        <a class="image" href="/g/80">
+                            <img alt="" onerror="this.src='/static/img/default_group_pic.png'" src="http://img.rec.ustc.edu.cn/group/80.png">
+                        </a>
+                        <div class="content">
+                            <a class="name" href="/g/80" title="2017牯牛降">2017牯牛降</a>
+                            <div class="description">2017牯牛降</div>
+                            <div>
+                                <a class="ui small image nomargin label" href="/u/2201300469" title="创始人"><img onerror="this.src='/static/img/default_face_thumb.png'" src="http://img.rec.ustc.edu.cn/avatar/2201300469_thumb.png">范逸</a>
+                                <span class="time" title="创建于2017-05-04 16:45:41">05-04 16:45</span>
+                            </div>
+                        </div>
+                    </div>
+                                    <div class="item">
+                        <a class="image" href="/g/79">
+                            <img alt="" onerror="this.src='/static/img/default_group_pic.png'" src="http://img.rec.ustc.edu.cn/group/79.png">
+                        </a>
+                        <div class="content">
+                            <a class="name" href="/g/79" title="星云战队">星云战队</a>
+                            <div class="description">中国科大信息安全攻防战队</div>
+                            <div>
+                                <a class="ui small image nomargin label" href="/u/1200005899" title="创始人"><img onerror="this.src='/static/img/default_face_thumb.png'" src="http://img.rec.ustc.edu.cn/avatar/1200005899_thumb.png">郭玉刚</a>
+                                <span class="time" title="创建于2017-04-29 11:09:04">04-29 11:09</span>
+                            </div>
+                        </div>
+                    </div>
+                                    <div class="item">
+                        <a class="image" href="/g/78">
+                            <img alt="" onerror="this.src='/static/img/default_group_pic.png'" src="http://img.rec.ustc.edu.cn/group/78.png">
+                        </a>
+                        <div class="content">
+                            <a class="name" href="/g/78" title="2017国创-智能隐写代理">2017国创-智能隐写代理</a>
+                            <div class="description">智能隐写代理</div>
+                            <div>
+                                <a class="ui small image nomargin label" href="/u/1200005899" title="创始人"><img onerror="this.src='/static/img/default_face_thumb.png'" src="http://img.rec.ustc.edu.cn/avatar/1200005899_thumb.png">郭玉刚</a>
+                                <span class="time" title="创建于2017-04-29 10:40:49">04-29 10:40</span>
+                            </div>
+                        </div>
+                    </div>
+                                    <div class="item">
+                        <a class="image" href="/g/77">
+                            <img alt="" onerror="this.src='/static/img/default_group_pic.png'" src="http://img.rec.ustc.edu.cn/group/77.png">
+                        </a>
+                        <div class="content">
+                            <a class="name" href="/g/77" title="天线理学习小组">天线理学习小组</a>
+                            <div class="description">分享文档，讨论问题</div>
+                            <div>
+                                <a class="ui small image nomargin label" href="/u/sep303720" title="创始人"><img onerror="this.src='/static/img/default_face_thumb.png'" src="http://img.rec.ustc.edu.cn/avatar/sep303720_thumb.png">李文奇</a>
+                                <span class="time" title="创建于2017-03-18 10:42:13">03-18 10:42</span>
+                            </div>
+                        </div>
+                    </div>
+                            </div>
+        </div>-->
+    </div>
+</div>
+<script>
+    jQuery(document).ready(function($) {
+        var options = {$AutoPlay: true,
+            $BulletNavigatorOptions: {
+                $Class: $JssorBulletNavigator$,
+                $ChanceToShow: 2
+            },
+            $ArrowNavigatorOptions: {
+                $Class: $JssorArrowNavigator$,
+                $ChanceToShow: 2
+            }
+        };
+        var slider = new $JssorSlider$('slider', options);
+    });
+</script>
+        <div id="footer">
+            <div class="container">
+                <div id="copyright" class="ui horizontal tiny list">
+                    <div class="item">&copy;2014-2016 中国科学技术大学 版权所有---网络信息中心、研究生院、教务处主办</div>
+                    <div class="item">中国合肥金寨路96号</div>
+                    <div class="item">+86-551-63603498</div>
+                    <div class="item"><div class="email"></div></div>
+                </div>
+            </div>
+        </div>
+        <div id="tongji">
+<!--            <script type="text/javascript">
+                var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+                document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F4716232d91d3ce41592db41c9a7c41da' type='text/javascript'%3E%3C/script%3E"));
+            </script>-->
+        </div>
+    </body>
+</html>

@@ -1,0 +1,968 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" >
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" >
+<link rel="Shortcut Icon" href="hanbancn/hanbanico.ico">
+<link href="template/4634.files/images/style.css" rel="stylesheet" type="text/css" >
+<script src="template/4634.files/images/hua.js" type="text/javascript"></script>
+<script src="template/4634.files/_lib/jquery-1.4.2.min.js" type="text/javascript"></script>
+<script src="template/4634.files/_lib/jcarousellite_1.0.1.pack.js" type="text/javascript"></script>
+<script src="template/4634.files/_lib/main.js" type="text/javascript"></script>
+<!--<script src="template/4634.files/images/ScrollPic2.js" type="text/javascript"></script>-->
+<script src="template/4634.files/images/jsScroller.js" type="text/javascript"></script>
+<script language="javascript" type="text/javascript" src="template/4634.files/images/yao.js"></script>
+<script>
+$(function(){
+$(".nuws").hide()
+//$(".nuws").show()
+})
+</script>
+<SCRIPT type=text/javascript> 
+(function(d,D,v){d.fn.responsiveSlides=function(h){var b=d.extend({auto:!0,speed:1E3,timeout:7E3,pager:!1,nav:!1,random:!1,pause:!1,pauseControls:!1,prevText:"Previous",nextText:"Next",maxwidth:"",controls:"",namespace:"rslides",before:function(){},after:function(){}},h);return this.each(function(){v++;var e=d(this),n,p,i,k,l,m=0,f=e.children(),w=f.size(),q=parseFloat(b.speed),x=parseFloat(b.timeout),r=parseFloat(b.maxwidth),c=b.namespace,g=c+v,y=c+"_nav "+g+"_nav",s=c+"_here",j=g+"_on",z=g+"_s",
+o=d("<ul class='"+c+"_tabs "+g+"_tabs' />"),A={"float":"left",position:"relative"},E={"float":"none",position:"absolute"},t=function(a){b.before();f.stop().fadeOut(q,function(){d(this).removeClass(j).css(E)}).eq(a).fadeIn(q,function(){d(this).addClass(j).css(A);b.after();m=a})};b.random&&(f.sort(function(){return Math.round(Math.random())-0.5}),e.empty().append(f));f.each(function(a){this.id=z+a});e.addClass(c+" "+g);h&&h.maxwidth&&e.css("max-width",r);f.hide().eq(0).addClass(j).css(A).show();if(1<
+f.size()){if(x<q+100)return;if(b.pager){var u=[];f.each(function(a){a=a+1;u=u+("<li><a href='#' class='"+z+a+"'>"+a+"</a></li>")});o.append(u);l=o.find("a");h.controls?d(b.controls).append(o):e.after(o);n=function(a){l.closest("li").removeClass(s).eq(a).addClass(s)}}b.auto&&(p=function(){k=setInterval(function(){var a=m+1<w?m+1:0;b.pager&&n(a);t(a)},x)},p());i=function(){if(b.auto){clearInterval(k);p()}};b.pause&&e.hover(function(){clearInterval(k)},function(){i()});b.pager&&(l.bind("click",function(a){a.preventDefault();
+b.pauseControls||i();a=l.index(this);if(!(m===a||d("."+j+":animated").length)){n(a);t(a)}}).eq(0).closest("li").addClass(s),b.pauseControls&&l.hover(function(){clearInterval(k)},function(){i()}));if(b.nav){c="<a href='#' class='"+y+" prev'>"+b.prevText+"</a><a href='#' class='"+y+" next'>"+b.nextText+"</a>";h.controls?d(b.controls).append(c):e.after(c);var c=d("."+g+"_nav"),B=d("."+g+"_nav.prev");c.bind("click",function(a){a.preventDefault();if(!d("."+j+":animated").length){var c=f.index(d("."+j)),
+a=c-1,c=c+1<w?m+1:0;t(d(this)[0]===B[0]?a:c);b.pager&&n(d(this)[0]===B[0]?a:c);b.pauseControls||i()}});b.pauseControls&&c.hover(function(){clearInterval(k)},function(){i()})}}if("undefined"===typeof document.body.style.maxWidth&&h.maxwidth){var C=function(){e.css("width","100%");e.width()>r&&e.css("width",r)};C();d(D).bind("resize",function(){C()})}})}})(jQuery,this,0);
+$(function() {
+    $(".f426x240").responsiveSlides({
+        auto: true,
+        pager: false,
+        nav: true,
+        speed: 700,
+        maxwidth: 426
+    });
+    
+});
+var o =0;
+$(function(){ 
+$(".textBox li").width(310)
+	$(".tabBox li").eq(0).addClass("on");
+	$(".tabContent .tcon").eq(0).show(); //第一栏目显示
+	$(".tabBox li").mouseover(function() {
+		$(this).addClass("on").siblings().removeClass("on");
+		var _liNum = $(".tabBox li").index(this);
+		_tConNum = $(".tabContent .tcon").eq(_liNum);
+		_tConNum.show();
+		_tConNum.siblings().hide();
+	}); //滑过切换 
+	/*$(".tabBox li").click(function() {
+		$(this).addClass("on").siblings().removeClass("on");
+		var _liNum = $(".tabBox li").index(this);
+		_tConNum = $(".tabContent .tcon").eq(_liNum);
+		_tConNum.show();
+		_tConNum.siblings().hide();
+	}); //点击切换*/
+
+$('.jiaotu2 li').eq(0).show();
+})
+var ss = window.setInterval(ee,3000);
+function ee(){
+var t =$('.jiaotu1 li').length;
+if(o>t-1)o=0;
+{
+$('.jiaotu2 li').fadeOut(0);
+$('.jiaotu2 li').eq(o).fadeIn(1000);
+$('.jiaotu1 li').css("background-color","#fff");
+$('.jiaotu1 li').eq(o).css("background-color","#e2e1e1");
+}
+o++	;
+	};
+$(function(){
+$('.jiaotu').mouseover(function(){
+	window.clearInterval(ss);
+	})	
+$('.jiaotu').mouseout(function(){
+  ss = window.setInterval(ee,3000);
+	})	
+	})
+	ee();
+$(function(){
+var uu = $('.jiaotu1 li').length;
+for(g=0;g<uu;g++){
+$('.jiaotu1 li').eq(g).attr("id",g)
+$('.jiaotu2 li').eq(g).attr("id",g)
+	}
+})
+$(function(){
+$(".jiaotu1 li").mouseover(function(){
+var tt=$(this).attr("id");
+$('.jiaotu2 li').hide();
+$('.jiaotu2 li').eq(tt).show();
+$('.jiaotu1 li').css("background-color","#fff");
+$('.jiaotu1 li').eq(tt).css("background-color","#e2e1e1");
+	})
+})
+$(function() {
+//
+//var f=$(".uuuk li a").eq(0).attr("lang");
+//
+//$(".uuuk li a").eq(0).empty().html("<img src=\"http:\/\/www.hanban.org\/"+f+".gif\"\/>")
+
+
+
+	var j = 0;
+	var maxPic = 8;
+	var speed = 12000; //自动播放间隔
+	var wj= 0;//jQuery(".numBox li").hasClass("pptOn");
+	var page = 0;	
+    var len = parseInt(jQuery('.roll>ul>li').length/1);
+        len =len-0;
+    var t_width =parseInt(jQuery(".roll>ul>li:first").width()*1)+2;
+	var ul_width =parseInt(jQuery(".roll>ul").width()*1);
+	$(".pptList li").eq(0).show();
+	$(".textBox li").eq(0).show();
+	var urll=$(".pptList li a").eq(0).attr("href");
+	$(".jtt1").attr('href',urll)
+	<!-- 向右的点击 -->
+	jQuery('.blk14R').click(function(){
+		 wj ++ ;
+		 turnPic(wj) ;
+	 });
+
+	<!-- 向左的点击 -->
+	 jQuery('.blk14L').click(function(){
+		 wj -- ;
+		 if(wj < 1) wj = 1;
+		 turnPic(wj) ;
+	 });
+ 
+ 
+    $(".numBox li").each(function(i) {
+	    $(".numBox li").eq(i).click(function() {
+			$(this).addClass("pptOn").siblings().removeClass("pptOn");
+			$(".pptList li").eq(i).fadeIn().siblings().fadeOut();
+				var urll=$(".pptList li a").eq(i).attr("href");
+	             $(".jtt1").attr('href',urll)
+			$(".textBox li").eq(i).show().siblings().hide();
+			wj = i + 1;
+	  })});
+ 
+	function turnPic(param) {	
+	  if(param <= 4)
+	     jQuery('.roll>ul').animate({marginLeft:0}, 200);	
+	  if( param >= 5 && param <= 8)
+	   {	     
+		  var left = -t_width;
+		  left = left*(param - 4);
+		  jQuery('.roll>ul').animate({marginLeft:left}, 200);	
+	   }	  
+	  
+	  if(param > 8)
+		 {
+		   jQuery('.roll>ul').animate({marginLeft:'0'}, 1000);
+		   $(".numBox li").eq(0).click();	
+		   wj = 1;
+		 }			 
+	  $(".numBox li").eq(param - 1).click();	  
+	};	
+	var myTime= function() {			
+		wj++;			
+		turnPic(wj);		
+		}
+		var myTime = setInterval(function() {			
+			wj++;			
+			turnPic(wj);		
+		},
+		speed);	
+
+	
+	
+	
+//	$(".gglsss").click(function(){
+//	$(".gglsss a").remove()
+//	$(".gglsss").append("<iframe src=\"http:\/\/www.hanban.org\/news\/node_43300.htm\" width=\"269\" height=\"185\" scrolling=\"no\" frameborder=\"0\"  align=\"center\"><\/iframe>")
+//	})
+
+//$(".#YNews h3 a").eq(1).css({ color: "#f90", font: "14px" });
+
+}) ;
+$(function() {
+$('.newstit_R li').click(function(){ 
+	$('.jiaotu2 li').hide();
+    $('.jiaotu2 li').eq(0).show();
+	})
+	
+})
+</SCRIPT>
+<script type="text/javascript">
+	<!--
+//公共脚本文件 main.js
+function addEvent(obj,evtType,func,cap){
+    cap=cap||false;
+	if(obj.addEventListener){
+	    obj.addEventListener(evtType,func,cap);
+		return true;
+	}else if(obj.attachEvent){
+        if(cap){
+	        obj.setCapture();
+	        return true;
+	    }else{
+		    return obj.attachEvent("on" + evtType,func);
+		}
+	}else{
+		return false;
+    }
+}
+function getPageScroll(){
+    var xScroll,yScroll;
+	if (self.pageXOffset) {
+		xScroll = self.pageXOffset;
+	} else if (document.documentElement && document.documentElement.scrollLeft){
+		xScroll = document.documentElement.scrollLeft;
+	} else if (document.body) {
+		xScroll = document.body.scrollLeft;
+	}
+	if (self.pageYOffset) {
+		yScroll = self.pageYOffset;
+	} else if (document.documentElement && document.documentElement.scrollTop){
+		yScroll = document.documentElement.scrollTop;
+	} else if (document.body) {
+		yScroll = document.body.scrollTop;
+	}
+	arrayPageScroll = new Array(xScroll,yScroll);
+	return arrayPageScroll;
+}
+function GetPageSize(){
+    var xScroll, yScroll;
+    if (window.innerHeight && window.scrollMaxY) {	
+        xScroll = document.body.scrollWidth;
+        yScroll = window.innerHeight + window.scrollMaxY;
+    } else if (document.body.scrollHeight > document.body.offsetHeight){
+        xScroll = document.body.scrollWidth;
+        yScroll = document.body.scrollHeight;
+    } else {
+        xScroll = document.body.offsetWidth;
+        yScroll = document.body.offsetHeight;
+    }
+    var windowWidth, windowHeight;
+    if (self.innerHeight) {
+        windowWidth = self.innerWidth;
+        windowHeight = self.innerHeight;
+    } else if (document.documentElement && document.documentElement.clientHeight) {
+        windowWidth = document.documentElement.clientWidth;
+        windowHeight = document.documentElement.clientHeight;
+    } else if (document.body) {
+        windowWidth = document.body.clientWidth;
+        windowHeight = document.body.clientHeight;
+    }	
+    if(yScroll < windowHeight){
+        pageHeight = windowHeight;
+    } else { 
+        pageHeight = yScroll;
+    }
+    if(xScroll < windowWidth){	
+        pageWidth = windowWidth;
+    } else {
+        pageWidth = xScroll;
+    }
+    arrayPageSize = new Array(pageWidth,pageHeight,windowWidth,windowHeight-420) 
+    return arrayPageSize;
+}
+//广告脚本文件 AdMove.js
+/*
+例子
+<div id="Div2">
+    ***** content ******
+</div>
+var ad=new AdMove("Div2");
+ad.Run();
+*/
+////////////////////////////////////////////////////////
+var AdMoveConfig=new Object();
+AdMoveConfig.IsInitialized=false;
+AdMoveConfig.ScrollX=0;
+AdMoveConfig.ScrollY=0;
+AdMoveConfig.MoveWidth=0;
+AdMoveConfig.MoveHeight=0;
+AdMoveConfig.Resize=function(){
+    var winsize=GetPageSize();
+    AdMoveConfig.MoveWidth=winsize[2];
+    AdMoveConfig.MoveHeight=winsize[3];
+    AdMoveConfig.Scroll();
+}
+AdMoveConfig.Scroll=function(){
+    var winscroll=getPageScroll();
+    AdMoveConfig.ScrollX=winscroll[0];
+    AdMoveConfig.ScrollY=winscroll[1];
+}
+addEvent(window,"resize",AdMoveConfig.Resize);
+addEvent(window,"scroll",AdMoveConfig.Scroll);
+function AdMove(id){
+    if(!AdMoveConfig.IsInitialized){
+        AdMoveConfig.Resize();
+        AdMoveConfig.IsInitialized=true;
+    }
+    var obj=document.getElementById(id);
+    obj.style.position="absolute";
+    var W=AdMoveConfig.MoveWidth-obj.offsetWidth;
+    var H=AdMoveConfig.MoveHeight-obj.offsetHeight;
+    var x = W*Math.random(),y = H*Math.random();
+    var rad=(Math.random()+1)*Math.PI/6;
+    var kx=Math.sin(rad),ky=Math.cos(rad);
+    var dirx = (Math.random()<0.5?1:-1), diry = (Math.random()<0.5?1:-1);
+    var step = 1;
+    var interval;
+    this.SetLocation=function(vx,vy){x=vx;y=vy;}
+    this.SetDirection=function(vx,vy){dirx=vx;diry=vy;}
+    obj.CustomMethod=function(){
+        obj.style.left = (x + AdMoveConfig.ScrollX) + "px";
+        obj.style.top = (y + AdMoveConfig.ScrollY+420) + "px";
+        rad=(Math.random()+1)*Math.PI/6;
+        W=AdMoveConfig.MoveWidth-obj.offsetWidth;
+        H=AdMoveConfig.MoveHeight-obj.offsetHeight;
+        x = x + step*kx*dirx;
+        if (x < 0){dirx = 1;x = 0;kx=Math.sin(rad);ky=Math.cos(rad);} 
+        if (x > W){dirx = -1;x = W;kx=Math.sin(rad);ky=Math.cos(rad);}
+        y = y + step*ky*diry;
+        if (y < 0){diry = 1;y = 0;kx=Math.sin(rad);ky=Math.cos(rad);} 
+        if (y > H){diry = -1;y = H;kx=Math.sin(rad);ky=Math.cos(rad);}
+    }
+    this.Run=function(){
+        var delay = 10;
+        interval=setInterval(obj.CustomMethod,delay);
+        obj.onmouseover=function(){clearInterval(interval);}
+        obj.onmouseout=function(){interval=setInterval(obj.CustomMethod, delay);}
+    }
+}
+	//-->
+	</script>
+
+<script type="text/javascript">
+var a=function(id) {
+   return document.getElementById(id);
+}
+			function show_menuC(numC){
+				for(j=0;j<100;j++){
+					 if(j!=numC){                        
+						if(a('wtp0'+j)){              
+					  a('wtp0'+j).style.display='none'; 
+					}
+					 }
+				}
+				if(a('wtp0'+numC)){                              
+					if(a('wtp0'+numC).style.display=='block'){ 
+					  a('wtp0'+numC).style.display='none';
+					}else {
+					  a('wtp0'+numC).style.display='block'; 
+					}
+				}
+			} 
+</script>
+
+<script type="text/javascript"> 
+var intervalId = null; 
+function slideAd(id,nStayTime,sState,nMaxHth,nMinHth){ 
+  this.stayTime=nStayTime*1000 || 3000; 
+  this.maxHeigth=nMaxHth || 150; 
+  this.minHeigth=nMinHth || 1; 
+  this.state=sState || "down" ; 
+  var obj = document.getElementById(id); 
+  if(intervalId != null)window.clearInterval(intervalId); 
+  function openBox(){ 
+   var h = obj.offsetHeight; 
+   obj.style.height = ((this.state == "down") ? (h + 2) : (h - 2))+"px"; 
+    if(obj.offsetHeight>this.maxHeigth){ 
+    window.clearInterval(intervalId); 
+    intervalId=window.setInterval(closeBox,this.stayTime); 
+    } 
+    if (obj.offsetHeight<this.minHeigth){ 
+    window.clearInterval(intervalId); 
+    obj.style.display="none"; 
+    } 
+  } 
+  function closeBox(){ 
+   slideAd(id,this.stayTime,"up",nMaxHth,nMinHth); 
+  } 
+  intervalId = window.setInterval(openBox,10); 
+} 
+</script>
+<script type="text/javascript">
+$(function() {
+	$("#changLan").hover(function(){
+	$(".changLanBox").show()
+	});
+	$(".changLanBox").mouseover(function(){
+	$(".changLanBox").show()
+	});
+	$(".changLanBox").mouseout(function(){
+	$(".changLanBox").hide()
+	});
+	$("#hanbanLogo").hover(function(){
+	$(".hanbanbg").show()
+	});
+	$(".hanbanbg").mouseover(function(){
+	$(".hanbanbg").show()
+	});
+	$(".hanbanbg").mouseout(function(){
+	$(".hanbanbg").hide()
+	});
+	
+}) ;
+</script>
+
+<script type="text/javascript">
+<!--
+function startTime() 
+{ 
+var today=new Date() 
+var years=today.getFullYear(); 
+var months=today.getMonth(); 
+var d=today.getDate() 
+var h=today.getHours() 
+var m=today.getMinutes() 
+var s=today.getSeconds() 
+// add a zero in front of numbers<10 
+months=months+1 
+months=checkTime(months) 
+d=checkTime(d) 
+m=checkTime(m) 
+s=checkTime(s) 
+var weekday=new Array(7) 
+weekday[0]="星期日" 
+weekday[1]="星期一" 
+weekday[2]="星期二" 
+weekday[3]="星期三" 
+weekday[4]="星期四" 
+weekday[5]="星期五" 
+weekday[6]="星期六" 
+var w=weekday[today.getDay()] 
+document.getElementById('ShowTime').innerHTML=h+":"+m+":"+s; 
+t=setTimeout('startTime()',500) 
+} 
+function checkTime(i) 
+{ 
+if (i<10) 
+{i="0" + i} 
+return i 
+} 
+-->
+</script>
+<script>
+$(function(){
+
+setTimeout("$('.tanchu').slideUp(4000)",3000)
+setTimeout("$('.ouw').remove()",7000)
+})
+</script>
+<script type="text/javascript" src="gonneng_cn.js"></script>
+<title>孔子学院总部/国家汉办</title>
+</head>
+<body onload="startTime()">
+<div class="menuBox1">
+  <form action="https://mail.hanban.org/owa/auth/owaauth.dll" method="POST" name="logonForm" autocomplete="off" style="margin-left:5px;float:right;">
+    <input type="hidden" name="destination" value="https://mail.hanban.org/owa" >
+    <input type="hidden" name="flags" value="0" >
+    <input type="hidden" name="forcedownlevel" value="0" >
+    <table width="968">
+      <tr>
+        <td width="160"><script language="javascript" type="text/javascript" src="template/4634.files/images/calendar.js"></script></td>
+        <td id="ShowTime"></td>
+        <td width="70">汉办邮箱:</td>
+        <td width="90"><input id="userName" name="username" type="text" ></td>
+        <td width="105">@hanban.org</td>
+        <td width="40">密码:</td>
+        <td width="100"><input id="password" name="password" type="password" ></td>
+        <td width="58" style="padding-right:10px;"><input type="submit" value="登录" class="btn_submit"  ></td>
+      </tr>
+    </table>
+  </form>
+</div>
+<div class="wrap">
+  <a href=""  class="jtt1" target="_blank"><img src="template/4634.files/images/jtt.gif" border="0" style="position:absolute; top:80px; left:31px; z-index:999" ></a>
+  <div class="headbg"></div>
+  <div class="head">
+    <div class="logo"><img src="template/4634.files/images/logo(10-24-13-06-39).png" width="167" height="69" >
+        <h2><img src="template/4634.files/images/hanban(10-23-10-54-47).png" width="220" height="69" ></h2>
+    </div>
+    <div class="menuBox">
+	
+<input name=ie type=hidden value=utf-8>
+<SCRIPT language=javascript>
+function yy(formname)	{
+var url = "http://www.baidu.com/baidu";
+if (formname.s[1].checked) {
+	formname.ct.value = "2097152";
+}
+else {
+	formname.ct.value = "0";
+}
+formname.action = url;
+return true;
+}
+</SCRIPT>
+<form name="f1" onsubmit="return yy(this)">
+<input name=word size="30" maxlength="100" class="search_input">
+<input type="submit" value="&nbsp;" class="searchButton" >
+<em style="display:none;">
+<input name=tn type=hidden value="bds">
+<input name=cl type=hidden value="3">
+<input name=ct type=hidden>
+<input name=si type=hidden value="www.hanban.org">
+
+<input name=s type=radio> 互联网
+<input name=s type=radio checked style="display:none;"> www.hanban.org
+</em>
+</form>   
+
+    </div>
+    <span class="chang" id="changLan"> <a onClick="show_menuC(1)" class="language">Language</a> </span>
+    <div class="languages"  id="wtp01" onmouseover="this.style.display='block'" onmouseout="this.style.display='none'">
+      <ul>
+        <li><a href="http://www.hanban.org/">中文</a></li>   
+        <li><a href="http://english.hanban.org/">English </a></li>
+        <li><a href="http://french.hanban.org/">Français</a></li>
+        <li><a href="http://spanish.hanban.org/">Español</a></li>
+        <li><a href="http://arabic.hanban.org/">Árabe</a></li>
+      </ul>
+    </div>
+    <div style="clear:both;"></div>
+    <div class="focus_img">
+      <div id="YNews">
+<!--begin 1761661-270-1--><ul class="pptList">        <li><a href="article/2017-09/29/content_700402.htm" target="_blank"><img src="image/attachement/jpg/site2/20170929/082e5f09e7381b38817633.jpg" border="0"></a></li>        <li><a href="article/2017-09/01/content_697681.htm" target="_blank"><img src="image/attachement/jpg/site2/20170901/082e5f09e7381b13573a09.jpg" border="0"></a></li>        <li><a href="article/2017-06/20/content_690731.htm" target="_blank"><img src="image/attachement/jpg/site2/20170621/082e5f09e7381ab419f40a.jpg" border="0"></a></li>        <li><a href="article/2017-06/16/content_690419.htm" target="_blank"><img src="image/attachement/jpg/site2/20170616/f8b156b828941aae009d24.jpg" border="0"></a></li>        <li><a href="article/2017-05/10/content_683902.htm" target="_blank"><img src="image/attachement/jpg/site2/20170510/082e5f09e7381a7d0b9e3b.jpg" border="0"></a></li>        <li><a href="article/2017-04/27/content_682580.htm" target="_blank"><img src="image/attachement/jpg/site2/20170427/082e5f09e7381a6ba5df1e.jpg" border="0"></a></li>        <li><a href="article/2017-04/21/content_681840.htm" target="_blank"><img src="image/attachement/jpg/site2/20170425/082e5f09e7381a69047a42.jpg" border="0"></a></li>        <li><a href="article/2017-04/20/content_681760.htm" target="_blank"><img src="image/attachement/jpg/site2/20170420/082e5f09e7381a62581516.jpg" border="0"></a></li>           </ul><!--end 1761661-270-1-->
+<!--begin 1761662-270-1--><ul class="textBox">        <li><h3 style="padding-bottom:0px;"><a href="article/2017-09/29/content_700402.htm" target="_blank" >2017年“孔子学院开放日”在京举行</a></h3><h3 style="margin-top:0px;"><a href="article/2017-09/29/content_700402.htm" target="_blank"></a></h3><p><a href="article/2017-09/29/content_700402.htm" target="_blank">9月29日，2017年孔子学院“开放日”在京举行，24个国家驻华使领馆的外交使节，总部理事会成员单位、在京中方合作院校、社会组织、中资企业、北京市教委、东城区和西城区，以及媒体代表和孔子学院HSK考生等约400人参加了活动。</a></p><div class="read"><a href="node_270.htm" target="_blank"><img src="template/4634.files/images/more.png"></a></div></li>        <li><h3 style="padding-bottom:0px;"><a href="article/2017-09/01/content_697681.htm" target="_blank" >张高丽副总理与苏丹副总统巴克里接见“汉语桥”世界大学生中文比赛年度总冠军赵之行</a></h3><h3 style="margin-top:0px;"><a href="article/2017-09/01/content_697681.htm" target="_blank"></a></h3><p><a href="article/2017-09/01/content_697681.htm" target="_blank">当地时间8月25日，正在苏丹访问的中共中央政治局常委、国务院副总理张高丽和苏丹第一副总统兼总理巴克里接见了刚刚获得“汉语桥”世界大学生中文比赛年度总冠军的苏丹学生赵之行。</a></p><div class="read"><a href="node_270.htm" target="_blank"><img src="template/4634.files/images/more.png"></a></div></li>        <li><h3 style="padding-bottom:0px;"><a href="article/2017-06/20/content_690731.htm" target="_blank" >刘延东副总理为匈中双语学校独立孔子课堂揭牌</a></h3><h3 style="margin-top:0px;"><a href="article/2017-06/20/content_690731.htm" target="_blank"></a></h3><p><a href="article/2017-06/20/content_690731.htm" target="_blank">当地时间6月19日，国务院副总理刘延东访问匈中双语学校孔子课堂，为独立孔子课堂揭牌。</a></p><div class="read"><a href="node_270.htm" target="_blank"><img src="template/4634.files/images/more.png"></a></div></li>        <li><h3 style="padding-bottom:0px;"><a href="article/2017-06/16/content_690419.htm" target="_blank" >教育部副部长田学军到孔子学院总部调研</a></h3><h3 style="margin-top:0px;"><a href="article/2017-06/16/content_690419.htm" target="_blank"></a></h3><p><a href="article/2017-06/16/content_690419.htm" target="_blank">6月14日，教育部副部长田学军到孔子学院总部/国家汉办调研，听取汉办工作汇报，走访慰问各业务处室，为全体员工作报告。</a></p><div class="read"><a href="node_270.htm" target="_blank"><img src="template/4634.files/images/more.png"></a></div></li>        <li><h3 style="padding-bottom:0px;"><a href="article/2017-05/10/content_683902.htm" target="_blank" >李源潮副主席访问塞内加尔达喀尔大学孔子学院</a></h3><h3 style="margin-top:0px;"><a href="article/2017-05/10/content_683902.htm" target="_blank"></a></h3><p><a href="article/2017-05/10/content_683902.htm" target="_blank">当地时间5月8日，中国国家副主席李源潮访问了塞尔加尔达喀尔大学孔子学院。</a></p><div class="read"><a href="node_270.htm" target="_blank"><img src="template/4634.files/images/more.png"></a></div></li>        <li><h3 style="padding-bottom:0px;"><a href="article/2017-04/27/content_682580.htm" target="_blank" >刘延东副总理访问南非德班理工大学孔子学院</a></h3><h3 style="margin-top:0px;"><a href="article/2017-04/27/content_682580.htm" target="_blank"></a></h3><p><a href="article/2017-04/27/content_682580.htm" target="_blank">当地时间4月26日下午，国务院副总理刘延东访问德班理工大学孔子学院。</a></p><div class="read"><a href="node_270.htm" target="_blank"><img src="template/4634.files/images/more.png"></a></div></li>        <li><h3 style="padding-bottom:0px;"><a href="article/2017-04/21/content_681840.htm" target="_blank" >刘延东副总理访问约旦安曼TAG孔子学院</a></h3><h3 style="margin-top:0px;"><a href="article/2017-04/21/content_681840.htm" target="_blank"></a></h3><p><a href="article/2017-04/21/content_681840.htm" target="_blank">当地时间4月20日下午，正在约旦访问的国务院副总理刘延东考察了约旦安曼TAG孔子学院。</a></p><div class="read"><a href="node_270.htm" target="_blank"><img src="template/4634.files/images/more.png"></a></div></li>        <li><h3 style="padding-bottom:0px;"><a href="article/2017-04/20/content_681760.htm" target="_blank" >刘延东副总理访问土耳其海峡大学孔子学院</a></h3><h3 style="margin-top:0px;"><a href="article/2017-04/20/content_681760.htm" target="_blank"></a></h3><p><a href="article/2017-04/20/content_681760.htm" target="_blank">当地时间4月19日上午，刘延东副总理访问土耳其海峡大学孔子学院并出席“土耳其汉学与孔子学院发展座谈会”。</a></p><div class="read"><a href="node_270.htm" target="_blank"><img src="template/4634.files/images/more.png"></a></div></li>            </ul><!--end 1761662-270-1--><div class="rollcon" id="YNIndex"> <i class="blk14L"><img src="template/4634.files/images/but_L.gif" ></i>
+            <div class="roll">  
+              <ul class="numBox"> 
+                <li class="pptOn">1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>  
+                <li>5</li>
+                <li>6</li>  
+                <li>7</li>
+                <li>8</li>
+              </ul>
+            </div>
+          <i class="blk14R"><img src="template/4634.files/images/but_R.gif" ></i> </div>
+    </div>
+    </div>
+  </div>
+  <div class="content">
+<ul class="nav">
+<li><a target="_blank" href="hb/node_7446.htm">关于我们</a></li>
+<li><a target="_blank" href="news/">新闻中心</a></li>
+<li><a target="_blank" href="confuciousinstitutes/">孔子学院</a></li>
+<li><a target="_blank" href="teachers/">汉语教师</a></li>
+<li><a target="_blank" href="volunteers/">志愿者</a></li>
+<li><a target="_blank" href="resources/">教学资源</a></li>
+<li><a target="_blank" href="tests/">汉语考试</a></li>
+<li class="ass"><a target="_blank" href="http://ccsp.chinese.cn/">新汉学计划</a></li>
+<li><a target="_blank" href="jxj.htm">奖学金</a></li>
+<li><a target="_blank" href="chinesebridge/">汉语桥</a></li>
+<li><a target="_blank" href="cooperation/">交流合作</a></li>
+<li><a target="_blank" href="projects/">业务中心</a></li>
+</ul>
+<div class="content_A">
+<div class="news">
+<div class="Hanban_News" style="display:block;" id="inFor101">
+<div class="newstit">
+<div class="newstit_L">
+<h2>汉办新闻</h2>
+</div>
+<ul class="newstit_R">
+<li id="TG101"><img src="template/4634.files/images/but_07.gif" ><span onclick="p(1)" >汉办新闻</span></li>
+<li id="TG102"><img src="template/4634.files/images/but_051.gif" ><span onclick="p(2)" >公告<img src="hanbannew.gif" class="nuws"></span></li>
+<li id="TG103"><img src="template/4634.files/images/but_04.gif" ><span onclick="p(3)" >媒体聚焦</span></li>
+<li id="TG104" class="end"><img src="template/4634.files/images/but_06.gif" ><span onclick="p(4)" >&nbsp;专&nbsp;题</span></li>
+</ul>
+</div>
+<div class="newstxt">
+<div class="jiaotu">
+<ul class="jiaotu1">
+<li>1</li>
+<li>2</li>
+<li>3</li>
+<li>4</li>
+</ul>
+<ul class="jiaotu2">
+<li>
+<!--begin 1761663-42842-1--><div class="news_img"><a href="article/2017-10/23/content_702594.htm" target="_blank" title="砥砺奋进的五年：数据看孔院（2012-2017）"><img src="image/attachement/jpg/site2/20171023/f8b156b828941b57e5b01b.jpg" border="0" width="266" height="150" ></a></div><div class="news_imgtxt"><h3><a href="article/2017-10/23/content_702594.htm" target="_blank" title="砥砺奋进的五年：数据看孔院（2012-2017）">砥砺奋进的五年：数据看孔院（2012-2017）</a></h3><p>孔子学院创办于2004年，主要职能是面向全球开展汉语教学、传播中华文化。...</p></div><a class="genduo"><a href="node_42842.htm" class="genduo"  target="_blank">更多</a><!--end 1761663-42842-1-->
+</li>
+<li>
+<!--begin 1761664-42842-1--><div class="news_img"><a href="article/2017-10/16/content_701513.htm" target="_blank" title="2017年第二期孔子学院外方院长研修班开班"><img src="image/attachement/jpg/site2/20171016/082e5f09e7381b4e9b1d0c.jpg" border="0" width="266" height="150" ></a></div><div class="news_imgtxt"><h3><a href="article/2017-10/16/content_701513.htm" target="_blank" title="2017年第二期孔子学院外方院长研修班开班">2017年第二期孔子学院外方院长研修班开班</a></h3><p>10月15日，由孔子学院总部/国家汉办主办，厦门大学承办的2017年第二期孔子学院外方院长研修班在厦门开班，来自全球22个国家的32名孔子学院外方院长参加。...</p></div><a href="node_42842.htm" class="genduo"  target="_blank">更多</a><!--end 1761664-42842-1-->
+</li>
+<li>
+<!--begin 1761665-42842-1--><div class="news_img"><a href="article/2017-10/13/content_701354.htm" target="_blank" title="“以食为天，以天为食”香溢法兰克福书展"><img src="image/attachement/jpg/site2/20171013/082e5f09e7381b4adeb560.jpg" border="0" width="266" height="150" ></a></div><div class="news_imgtxt"><h3><a href="article/2017-10/13/content_701354.htm" target="_blank" title="“以食为天，以天为食”香溢法兰克福书展">“以食为天，以天为食”香溢法兰克福书展</a></h3><p>2017年10月11日，由孔子学院总部组织策划的“以食为天，以天为食”中国饮食文化专题展在法兰克福书展美食回廊正式拉开帷幕，开启了中国饮食文化的飘香之旅。...</p></div><a href="node_42842.htm" class="genduo"  target="_blank">更多</a><!--end 1761665-42842-1-->
+</li>
+<li>
+<!--begin 1761666-42842-1--><div class="news_img"><a href="article/2017-09/28/content_700280.htm" target="_blank" title="英国及爱尔兰孔子学院联席会议在都柏林召开"><img src="image/attachement/jpg/site2/20170928/082e5f09e7381b36a2a306.jpg" border="0" width="266" height="150" ></a></div><div class="news_imgtxt"><h3><a href="article/2017-09/28/content_700280.htm" target="_blank" title="英国及爱尔兰孔子学院联席会议在都柏林召开">英国及爱尔兰孔子学院联席会议在都柏林召开</a></h3><p>9月23日，英国及爱尔兰孔子学院联席会议在爱尔兰都柏林大学举行，来自英国、爱尔兰的31所孔子学院、部分孔子课堂及汉语教师代表等100余人参加会议。...</p></div><a href="node_42842.htm" class="genduo"  target="_blank">更多</a><!--end 1761666-42842-1-->
+</li>
+</ul>
+</div>
+<div class="clear">&nbsp;</div>
+<ul class="news_college">
+<!--begin 1761667-275-1--><li><span>10/25</span><a href="article/2017-10/25/content_702846.htm" target="_blank" title="新南威尔士大学孔子学院举办第四届“汉语之光”活动" class="text11">新南威尔士大学孔子学院 ...</a></li><li><span>10/23</span><a href="article/2017-10/23/content_702601.htm" target="_blank" title="2017年日本孔子学院协议会在大阪召开" class="text11">2017年日本孔子学院协议 ...</a></li><!--end 1761667-275-1-->
+<!--begin 1761668-275-1--><li><span>10/23</span><a href="article/2017-10/23/content_703626.htm" target="_blank" title="津巴布韦大学孔子学院举办成立十周年庆典">津巴布韦大学孔子学院举办成立十周年庆典</a></li><li><span>10/19</span><a href="article/2017-10/19/content_702129.htm" target="_blank" title="风雨十载，不忘初心——奥克兰孔子学院举办十周年庆典">风雨十载，不忘初心——奥克兰孔子学院 ...</a></li><li><span>10/19</span><a href="article/2017-10/19/content_703642.htm" target="_blank" title="用音乐鼓舞飓风灾民——迈阿密达德学院孔子学院举办“孔子学院日”活动">用音乐鼓舞飓风灾民——迈阿密达德学院 ...</a></li><li><span>10/18</span><a href="article/2017-10/18/content_701800.htm" target="_blank" title="第十届“汉语桥”世界中学生中文比赛在云南师范大学正式启动">第十届“汉语桥”世界中学生中文比赛在 ...</a></li><li><span>10/17</span><a href="article/2017-10/17/content_701781.htm" target="_blank" title="作家曹文轩与慕尼黑小读者一起“点亮”《第八号街灯》">作家曹文轩与慕尼黑小读者一起“点亮” ...</a></li><li><span>10/17</span><a href="article/2017-10/17/content_701752.htm" target="_blank" title="乒乓球推动了中纳友谊——记孔子学院杯中纳乒乓球赛">乒乓球推动了中纳友谊——记孔子学院杯 ...</a></li><!--end 1761668-275-1-->
+<li style=" background:none;">&nbsp;</li>
+<li style=" background:none;">&nbsp;</li>
+<!--begin 1761669-275-1--><li><span>10/13</span><a href="article/2017-10/13/content_701120.htm" target="_blank" title="日本武藏野大学孔子学院举办第二届汉语演讲比赛" class="text11">日本武藏野大学孔子学院 ...</a></li><li><span>10/10</span><a href="article/2017-10/10/content_700895.htm" target="_blank" title="伊斯兰堡孔子学院举行庆祝中秋节暨“孔子学院日”活动" class="text11">伊斯兰堡孔子学院举行庆 ...</a></li><!--end 1761669-275-1-->
+<!--begin 1761670-275-1--><li><span>10/10</span><a href="article/2017-10/10/content_700893.htm" target="_blank" title="玻利维亚刮起浓浓中国风，中玻同庆孔子学院日">玻利维亚刮起浓浓中国风，中玻同庆孔子 ...</a></li><li><span>10/09</span><a href="article/2017-10/09/content_702273.htm" target="_blank" title="南太平洋大学孔子学院亮相斐济华侨华人庆祝中国国庆暨中秋佳节活动">南太平洋大学孔子学院亮相斐济华侨华人 ...</a></li><li><span>10/09</span><a href="article/2017-10/09/content_702263.htm" target="_blank" title="中国援老挝国立大学孔子学院项目奠基">中国援老挝国立大学孔子学院项目奠基</a></li><li><span>10/06</span><a href="article/2017-10/06/content_702342.htm" target="_blank" title="美国肯塔基大学示范孔子学院新楼启用剪彩仪式隆重举行">美国肯塔基大学示范孔子学院新楼启用剪 ...</a></li><li><span>10/06</span><a href="article/2017-10/06/content_702343.htm" target="_blank" title="刘震云、刘雨霖开启拉美文学电影行">刘震云、刘雨霖开启拉美文学电影行</a></li><li><span>10/04</span><a href="article/2017-10/04/content_702223.htm" target="_blank" title="亚利桑那州立大学孔子学院十周年庆系列文化展演">亚利桑那州立大学孔子学院十周年庆系列 ...</a></li><!--end 1761670-275-1-->
+</ul>
+</div>
+<div class="gengduo"><a target="_blank" href="node_275.htm">更多&gt;&gt;</a></div>
+</div>
+<div class="Announcement" style="display:none;" id="inFor102">
+<div class="newstit">
+<div class="newstit_L">
+<h2>&nbsp;公&nbsp;告</h2>
+</div>
+<ul class="newstit_R">
+<li id="TG101"><img src="template/4634.files/images/but_07.gif" ><span onclick="p(1)" >汉办新闻</span></li>
+<li id="TG102"><img src="template/4634.files/images/but_05.gif" ><span onclick="p(2)"  >公告</span><img src="hanbannew.gif" class="nuws"></li>
+<li id="TG103"><img src="template/4634.files/images/but_04.gif" ><span onclick="p(3)" >媒体聚焦</span></li>
+<li id="TG104" class="end"><img src="template/4634.files/images/but_06.gif" ><span onclick="p(4)" >&nbsp;专&nbsp;题</span></li>
+
+</ul>
+</div>
+<div class="Announcementxt">
+  <!--begin 1761671-269-1--><ul class="Ann_L uuuk"><li><span>09/30</span><a href="news/article/2017-09/30/content_700486.htm" target="_blank" title="关于公开遴选加蓬邦戈大学孔子学院中方承办院校的通知" lang="">关于公开遴选加蓬邦戈大学孔子学院中方承办院校的通知</a></li><li><span>09/08</span><a href="news/article/2017-09/08/content_698240.htm" target="_blank" title="关于组织2017年国际汉语教师志愿者摄影大赛的通知">关于组织2017年国际汉语教师志愿者摄影大赛的通</a><li><span>09/05</span><a href="news/article/2017-09/05/content_697957.htm" target="_blank" title="2018年赴大洋洲汉语教师志愿者报名工作启动">2018年赴大洋洲汉语教师志愿者报名工作启动</a></li><li><span>08/31</span><a href="news/article/2017-08/31/content_697660.htm" target="_blank" title="首届汉教英雄会夏令营暨2017汉语国际教育硕士研究生教学交流大会播出时间预告">首届汉教英雄会夏令营暨2017汉语国际教育硕士研究...</a></li><li class="second"><span>08/30</span><a href="news/article/2017-08/30/content_697543.htm" target="_blank" title="关于公开遴选冈比亚大学孔子学院中方承办院校的通知">关于公开遴选冈比亚大学孔子学院中方承办院校的通知</a></li><li><span>08/03</span><a href="news/article/2017-08/03/content_695293.htm" target="_blank" title="首届“汉教英雄会”夏令营暨2017汉语国际教育硕士研究生教学交流大会获奖名单">首届“汉教英雄会”夏令营暨2017汉语国际教育硕士...</a></li><li><span>08/03</span><a href="news/article/2017-08/03/content_695288.htm" target="_blank" title="第15期“驻华外交使节汉语学习班”开课通知">第15期“驻华外交使节汉语学习班”开课通知</a></li><li><span>06/09</span><a href="news/article/2017-06/09/content_689184.htm" target="_blank" title="关于2017年汉语教师志愿者转外派教师的通知">关于2017年汉语教师志愿者转外派教师的通知</a></li></ul><!--end 1761671-269-1--><!--begin 1761672-269-1--><ul class="Ann_R"><li><a href="volunteers/article/2010-08/27/content_168560.htm" target="_blank" title="广告三"><img src="image/attachement/jpg/site2/20100920/002185d06ffe0e0138be1e.jpg" border="0" width="250" height="65"></a></li><li><a href="http://www.chinesetest.cn/index.do" target="_blank" title="广告二"><img src="image/attachement/jpg/site2/20150318/f8b156b8f1941673923d03.jpg" border="0" width="250" height="65"></a></li><li><a href="http://mtcsol.chinesecio.com/" target="_blank" title="广告一"><img src="image/attachement/jpg/site2/20100624/0023aeaa33da0d8d293907.jpg" border="0" width="250" height="65"></a></li></ul><!--end 1761672-269-1-->
+ </div>
+<div class="Ann_more"><a target="_blank" href="node_6463.htm?ab=a">进入公告中心</a></div>
+</div>
+<div class="Announcement" style="display:none;" id="inFor102">
+<div class="newstit">
+<div class="newstit_L">
+<h2>&nbsp;公&nbsp;告</h2>
+</div>
+<ul class="newstit_R">
+<li id="TG101"><img src="template/4634.files/images/but_07.gif" ><span onclick="p(1)" >汉办新闻</span></li>
+<li id="TG102"><img src="template/4634.files/images/but_05.gif" ><span onclick="p(2)"  >公告</span><img src="hanbannew.gif" class="nuws"></li>
+<li id="TG103"><img src="template/4634.files/images/but_04.gif" ><span onclick="p(3)" >媒体聚焦</span></li>
+<li id="TG104" class="end"><img src="template/4634.files/images/but_06.gif" ><span onclick="p(4)" >&nbsp;专&nbsp;题</span></li>
+</ul>
+</div>
+<div class="Announcementxt">
+  <!--begin 1761673-269-1--><ul class="Ann_L"><li><span>09/30</span><a href="news/article/2017-09/30/content_700486.htm" target="_blank" title="关于公开遴选加蓬邦戈大学孔子学院中方承办院校的通知">关于公开遴选加蓬邦戈大学孔子学院中方承办院校的通知</a></li><li><span>09/08</span><a href="news/article/2017-09/08/content_698240.htm" target="_blank" title="关于组织2017年国际汉语教师志愿者摄影大赛的通知">关于组织2017年国际汉语教师志愿者摄影大赛的通</a><li><span>09/05</span><a href="news/article/2017-09/05/content_697957.htm" target="_blank" title="2018年赴大洋洲汉语教师志愿者报名工作启动">2018年赴大洋洲汉语教师志愿者报名工作启动</a></li><li><span>08/31</span><a href="news/article/2017-08/31/content_697660.htm" target="_blank" title="首届汉教英雄会夏令营暨2017汉语国际教育硕士研究生教学交流大会播出时间预告">首届汉教英雄会夏令营暨2017汉语国际教育硕士研究...</a></li><li class="second"><span>08/30</span><a href="news/article/2017-08/30/content_697543.htm" target="_blank" title="关于公开遴选冈比亚大学孔子学院中方承办院校的通知">关于公开遴选冈比亚大学孔子学院中方承办院校的通知</a></li><li><span>08/03</span><a href="news/article/2017-08/03/content_695293.htm" target="_blank" title="首届“汉教英雄会”夏令营暨2017汉语国际教育硕士研究生教学交流大会获奖名单">首届“汉教英雄会”夏令营暨2017汉语国际教育硕士...</a></li><li><span>08/03</span><a href="news/article/2017-08/03/content_695288.htm" target="_blank" title="第15期“驻华外交使节汉语学习班”开课通知">第15期“驻华外交使节汉语学习班”开课通知</a></li><li><span>06/09</span><a href="news/article/2017-06/09/content_689184.htm" target="_blank" title="关于2017年汉语教师志愿者转外派教师的通知">关于2017年汉语教师志愿者转外派教师的通知</a></li></ul><!--end 1761673-269-1--><!--begin 1761674-269-1--><ul class="Ann_R"><li><a href="volunteers/article/2010-08/27/content_168560.htm" target="_blank" title="广告三"><img src="image/attachement/jpg/site2/20100920/002185d06ffe0e0138be1e.jpg" border="0" width="250" height="65"></a></li><li><a href="http://www.chinesetest.cn/index.do" target="_blank" title="广告二"><img src="image/attachement/jpg/site2/20150318/f8b156b8f1941673923d03.jpg" border="0" width="250" height="65"></a></li><li><a href="http://mtcsol.chinesecio.com/" target="_blank" title="广告一"><img src="image/attachement/jpg/site2/20100624/0023aeaa33da0d8d293907.jpg" border="0" width="250" height="65"></a></li></ul><!--end 1761674-269-1-->
+ </div>
+<div class="Ann_more"><a target="_blank" href="node_6463.htm?ab=a">进入公告中心</a></div>
+</div><div class="media" style="display:none;" id="__enpspecial_a2b0e1acfcd848568fe2a685df776db0">
+<div class="newstit">
+<div class="newstit_L">
+<h2>媒体聚焦</h2>
+</div>
+<ul class="newstit_R">
+<li id="TG101"><img src="template/4634.files/images/but_07.gif" ><span onclick="p(1)" >汉办新闻</span></li>
+<li id="TG102"><img src="template/4634.files/images/but_05.gif" ><span onclick="p(2)"  >公告</span><img src="hanbannew.gif" class="nuws"></li>
+<li id="TG103"><img src="template/4634.files/images/but_04.gif" ><span onclick="p(3)" >媒体聚焦</span></li>
+<li id="TG104" class="end"><img src="template/4634.files/images/but_06.gif" ><span onclick="p(4)" >&nbsp;专&nbsp;题</span></li>
+</ul>
+</div>
+<div class="mediatxt">
+<!--begin 1761675-10913-1--><ul> <li class="mediatxt_tit">国内媒体</li> <li><span>10/18</span><a href="article/2017-10/18/content_701950.htm" target="_blank" title="倾情讲好中国故事">倾情讲好中国故事</a></li> <li><span>10/18</span><a href="article/2017-10/18/content_701947.htm" target="_blank" title="泰国民众走进曼松德孔子学院中医文化日">泰国民众走进曼松德孔子学院中医文化日</a></li>  <li><span>10/18</span><a href="article/2017-10/18/content_701944.htm" target="_blank" title="约旦费城大学孔子学院举办系列活动庆祝中约建交四十周年">约旦费城大学孔子学院举办系列活动庆祝 ...</a></li> <li><span>10/17</span><a href="article/2017-10/17/content_701752.htm" target="_blank" title="乒乓球推动了中纳友谊——记孔子学院杯中纳乒乓球赛">乒乓球推动了中纳友谊——记孔子学院杯 ...</a></li> <li class="second"><span>10/11</span><a href="article/2017-10/11/content_700952.htm" target="_blank" title="首届旅比华人中秋音乐会在布鲁塞尔举行">首届旅比华人中秋音乐会在布鲁塞尔举行</a></li> <li><span>10/10</span><a href="article/2017-10/10/content_700893.htm" target="_blank" title="玻利维亚刮起浓浓中国风，中玻同庆孔子学院日">玻利维亚刮起浓浓中国风，中玻同庆孔子 ...</a></li> <li><span>10/10</span><a href="article/2017-10/10/content_700895.htm" target="_blank" title="伊斯兰堡孔子学院举行庆祝中秋节暨“孔子学院日”活动">伊斯兰堡孔子学院举行庆祝中秋节暨“孔 ...</a></li> <li><span>10/06</span><a href="article/2017-10/06/content_701176.htm" target="_blank" title="越南河内大学中国文化周精彩呈现">越南河内大学中国文化周精彩呈现</a></li> <li class="third"><a target="_blank" href="news/node_516.htm">更多>></a></li>  </ul><!--end 1761675-10913-1-->
+<!--begin 1761676-258-1--><ul><li class="mediatxt_tit">国际媒体</li><li><span>08/16</span><a href="article/2017-08/16/content_696439.htm" target="_blank" title="澳洲新闻网：澳大利亚学习中文的学生人数翻番">澳洲新闻网：澳大利亚学习中文的学 ...</a></li> <li><span>07/13</span><a href="article/2017-07/13/content_693480.htm" target="_blank" title="美媒：中国投资在巴基斯坦引发学中文热 巴学生期待未来派上用场">美媒：中国投资在巴基斯坦引发学中 ...</a></li> <li><span>06/30</span><a href="article/2017-06/30/content_692171.htm" target="_blank" title="美国圣地亚哥孔子学院新楼落成 侨领余建强捐款">美国圣地亚哥孔子学院新楼落成 侨领...</a></li> <li><span>06/30</span><a href="article/2017-06/30/content_692068.htm" target="_blank" title="俄媒：汉语正成为俄罗斯国考第五外语 学汉语变成时尚">俄媒：汉语正成为俄罗斯国考第五外 ...</a></li> <li class="second"><span>06/02</span><a href="article/2017-06/02/content_687988.htm" target="_blank" title="中国之旅，让汉语之花盛开">中国之旅，让汉语之花盛开</a></li> <li><span>05/09</span><a href="article/2017-05/09/content_683678.htm" target="_blank" title="瓦伦西亚大学孔子学院举办建院十周年院庆活动">瓦伦西亚大学孔子学院举办建院十周 ...</a></li> <li><span>05/08</span><a href="article/2017-05/08/content_683444.htm" target="_blank" title="联合国举办2017年“中文之夜”">联合国举办2017年“中文之夜”</a></li> <li><span>03/22</span><a href="article/2017-03/22/content_678412.htm" target="_blank" title="外媒：“汉语热”升温 中文成新西兰人最想学的外语">外媒：“汉语热”升温 中文成新西兰...</a></li><li class="third"><a target="_blank" href="news/node_6210.htm">更多>></a></li>  </ul><!--end 1761676-258-1--></div>
+</div><div class="media" style="display:none;" id="inFor103">
+<div class="newstit">
+<div class="newstit_L">
+<h2>媒体聚焦</h2>
+</div>
+<ul class="newstit_R">
+<li id="TG101"><img src="template/4634.files/images/but_07.gif" ><span onclick="p(1)" >汉办新闻</span></li>
+<li id="TG102"><img src="template/4634.files/images/but_05.gif" ><span onclick="p(2)"  >公告</span><img src="hanbannew.gif" class="nuws"></li>
+<li id="TG103"><img src="template/4634.files/images/but_04.gif" ><span onclick="p(3)" >媒体聚焦</span></li>
+<li id="TG104" class="end"><img src="template/4634.files/images/but_06.gif" ><span onclick="p(4)" >&nbsp;专&nbsp;题</span></li>
+</ul>
+</div>
+<div class="mediatxt">
+<!--begin 1761677-10913-1--><ul> <li class="mediatxt_tit">国内媒体</li> <li><span>10/18</span><a href="article/2017-10/18/content_701950.htm" target="_blank" title="倾情讲好中国故事">倾情讲好中国故事</a></li> <li><span>10/18</span><a href="article/2017-10/18/content_701947.htm" target="_blank" title="泰国民众走进曼松德孔子学院中医文化日">泰国民众走进曼松德孔子学院中医文化日</a></li>  <li><span>10/18</span><a href="article/2017-10/18/content_701944.htm" target="_blank" title="约旦费城大学孔子学院举办系列活动庆祝中约建交四十周年">约旦费城大学孔子学院举办系列活动庆祝 ...</a></li> <li><span>10/17</span><a href="article/2017-10/17/content_701752.htm" target="_blank" title="乒乓球推动了中纳友谊——记孔子学院杯中纳乒乓球赛">乒乓球推动了中纳友谊——记孔子学院杯 ...</a></li> <li class="second"><span>10/11</span><a href="article/2017-10/11/content_700952.htm" target="_blank" title="首届旅比华人中秋音乐会在布鲁塞尔举行">首届旅比华人中秋音乐会在布鲁塞尔举行</a></li> <li><span>10/10</span><a href="article/2017-10/10/content_700893.htm" target="_blank" title="玻利维亚刮起浓浓中国风，中玻同庆孔子学院日">玻利维亚刮起浓浓中国风，中玻同庆孔子 ...</a></li> <li><span>10/10</span><a href="article/2017-10/10/content_700895.htm" target="_blank" title="伊斯兰堡孔子学院举行庆祝中秋节暨“孔子学院日”活动">伊斯兰堡孔子学院举行庆祝中秋节暨“孔 ...</a></li> <li><span>10/06</span><a href="article/2017-10/06/content_701176.htm" target="_blank" title="越南河内大学中国文化周精彩呈现">越南河内大学中国文化周精彩呈现</a></li> <li class="third"><a target="_blank" href="news/node_516.htm">更多>></a></li>  </ul><!--end 1761677-10913-1-->
+<!--begin 1761678-258-1--><ul><li class="mediatxt_tit">国际媒体</li><li><span>08/16</span><a href="article/2017-08/16/content_696439.htm" target="_blank" title="澳洲新闻网：澳大利亚学习中文的学生人数翻番">澳洲新闻网：澳大利亚学习中文的学 ...</a></li> <li><span>07/13</span><a href="article/2017-07/13/content_693480.htm" target="_blank" title="美媒：中国投资在巴基斯坦引发学中文热 巴学生期待未来派上用场">美媒：中国投资在巴基斯坦引发学中 ...</a></li> <li><span>06/30</span><a href="article/2017-06/30/content_692171.htm" target="_blank" title="美国圣地亚哥孔子学院新楼落成 侨领余建强捐款">美国圣地亚哥孔子学院新楼落成 侨领...</a></li> <li><span>06/30</span><a href="article/2017-06/30/content_692068.htm" target="_blank" title="俄媒：汉语正成为俄罗斯国考第五外语 学汉语变成时尚">俄媒：汉语正成为俄罗斯国考第五外 ...</a></li> <li class="second"><span>06/02</span><a href="article/2017-06/02/content_687988.htm" target="_blank" title="中国之旅，让汉语之花盛开">中国之旅，让汉语之花盛开</a></li> <li><span>05/09</span><a href="article/2017-05/09/content_683678.htm" target="_blank" title="瓦伦西亚大学孔子学院举办建院十周年院庆活动">瓦伦西亚大学孔子学院举办建院十周 ...</a></li> <li><span>05/08</span><a href="article/2017-05/08/content_683444.htm" target="_blank" title="联合国举办2017年“中文之夜”">联合国举办2017年“中文之夜”</a></li> <li><span>03/22</span><a href="article/2017-03/22/content_678412.htm" target="_blank" title="外媒：“汉语热”升温 中文成新西兰人最想学的外语">外媒：“汉语热”升温 中文成新西兰...</a></li><li class="third"><a target="_blank" href="news/node_6210.htm">更多>></a></li>  </ul><!--end 1761678-258-1--></div>
+</div>
+<div class="Project" style="display:none;" id="inFor104">
+<div class="newstit">
+<div class="newstit_L">
+<h2>&nbsp;专&nbsp;题</h2>
+</div>
+<ul class="newstit_R">
+<li id="TG101"><img src="template/4634.files/images/but_07.gif" ><span onclick="p(1)" >汉办新闻</span></li>
+<li id="TG102"><img src="template/4634.files/images/but_05.gif" ><span onclick="p(2)"  >公告</span><img src="hanbannew.gif" class="nuws"></li>
+<li id="TG103"><img src="template/4634.files/images/but_04.gif" ><span onclick="p(3)" >媒体聚焦</span></li>
+<li id="TG104" class="end"><img src="template/4634.files/images/but_06.gif" ><span onclick="p(4)" >&nbsp;专&nbsp;题</span></li>
+</ul>
+</div>
+<div class="zhuanti_1">
+<div class="zhuanti_2">
+  <!--begin 1761679-274-1--><a href="http://openday.hanban.org/2017/" target="_blank"><img src="image/attachement/jpg/site2/20170926/082e5f09e7381b34485a19.jpg" border="0"></a><!--end 1761679-274-1--></div>
+<div class="zhuanti_3">
+  <!--begin 1761680-274-1--><a href="http://openday.hanban.org/2016/" target="_blank"><img src="image/attachement/jpg/site2/20170926/082e5f09e7381b34713f1a.jpg" border="0"></a><!--end 1761680-274-1--></div>
+<div class="zhuanti_4">
+  <!--begin 1761681-274-1--><a href="http://ciday.chinese.cn/" target="_blank"><img src="image/attachement/jpg/site2/20160921/082e5f09e738194ca60a07.jpg" border="0"></a><!--end 1761681-274-1--></div>
+<div class="zhuanti_5">
+  <!--begin 1761682-274-1--><a href="http://ciday.chinese.cn/2014/" target="_blank"><img src="image/attachement/gif/site2/20150924/f8b156b827f6176de7bb02.gif" border="0"></a><!--end 1761682-274-1--></div>
+</div>
+<div class="gengduo"><a target="_blank" href="node_274.htm">更多&gt;&gt;</a></div>
+</div>
+<div class="picture"> <a target="_blank" href="conference/7/"></a> <a target="_blank" href="article/2013-01/18/content_480713.htm"></a> </div>
+<div class="company">
+<ul>
+<li><a target="_blank" href="news/article/2017-04/05/content_679800.htm"><img  src="images/g1.jpg" width="205" height="83"></a></li>
+<li><a target="_blank" href="http://bridge.chinese.cn/"><img src="template/4634.files/images/hyq.gif" width="205" height="83" ></a></li>
+<li><a target="_blank" href="http://conference.chinesecio.com/conference/huigu/index.html"><img  src="template/4634.files/images/gh.gif" width="205" height="83"></a></li>
+<li><a target="_blank" href="http://ccsp.chinese.cn/"><img src="template/4634.files/images/xhxjh.gif" width="205" height="83" border="0" ></a></li>
+
+<li><a target="_blank" href="volunteers/node_6273.htm"><img src="template/4634.files/images/zhiyuan.gif"  width="205" height="83"></a></li>
+<li><a target="_blank" href="http://zengshu.hanban.org/"><img src="template/4634.files/images/pic_08.gif"  width="205" height="83"></a></li>
+<li><a target="_blank" href=" http://www.chinesecio.com/"><img src="template/4634.files/images/cio.gif"  width="205" height="83"></a></li>
+
+<li><a target="_blank" href="report/index.html"><img src="template/4634.files/images/ndbg.jpg" width="205" height="83" ></a></li>
+<li><a target="_blank" href="http://www.shihan.org.cn/"><img src="template/4634.files/images/pic_09.gif" width="203" ></a></li>
+
+<!--<li><a target="_blank" href="http://zhuanti.hanban.org/bainian"><img  src="template/4634.files/images/dbn.gif" width="205" height="83"></a></li>-->
+</ul>
+</div>
+</div>
+<div class="sidebar"><span class="map"><a href="confuciousinstitutes/node_10961.htm" target="_blank"><img src="template/4634.files/images/college_map.gif" ></a></span>
+<div class="shipin">
+<ul class="tabBox">
+<li>最新视频 </li>
+<li>最新相册 </li>
+</ul>
+<div class="tabContent" style="margin-bottom:10px;">
+<div class="tcon">
+<!--begin 1761683-21041-1--><dl><dt><a href="news/article/2017-09/30/content_700469.htm" target="_blank"><img src="image/attachement/jpg/site2/20170930/082e5f09e7381b39338202.jpg" border="0"></a><p><a href="news/article/2017-09/30/content_700469.htm" target="_blank">2017年孔子学院总部“开放日”活动在京举办-9月29日 中国新闻</a></p></dt><dd><span class="more"><Url><a href="node_43381.htm" target="_blank">更多</a></span>09-30</dd></dl><!--end 1761683-21041-1-->
+</div>
+<div class="tcon">
+  <!--begin 1761684-21040-1--><dl><dt>    <ul class="rslides f426x240"><li><a href="article/2017-10/17/content_701751.htm" target="_blank"><img src="image/attachement/jpg/site2/20171017/082e5f09e7381b4febc80f.jpg" border="0"></a><p><a href="article/2017-10/17/content_701751.htm" target="_blank">南太平洋大学孔子学院举行成立五周年及项目奠基仪式</a></p></li><li><a href="article/2017-08/30/content_697527.htm" target="_blank"><img src="image/attachement/jpg/site2/20170830/082e5f09e7381b10a77d0a.jpg" border="0"></a><p><a href="article/2017-08/30/content_697527.htm" target="_blank">纳米比亚学生中兴起“汉语热”</a></p></li><li><a href="article/2017-07/27/content_694818.htm" target="_blank"><img src="image/attachement/jpg/site2/20170727/082e5f09e7381ae3fcb834.jpg" border="0"></a><p><a href="article/2017-07/27/content_694818.htm" target="_blank">“汉语桥－少年中国”国际文化小使者夏令营举行</a></p></li><li><a href="article/2017-07/04/content_692383.htm" target="_blank"><img src="image/attachement/jpg/site2/20170704/082e5f09e7381ac593e132.jpg" border="0"></a><p><a href="article/2017-07/04/content_692383.htm" target="_blank">第四届孔子学院国际音乐夏令营开幕音乐会在京举行</a></p></li><li><a href="article/2017-06/06/content_688326.htm" target="_blank"><img src="image/attachement/jpg/site2/20170606/082e5f09e7381aa0b20f3e.jpg" border="0"></a><p><a href="article/2017-06/06/content_688326.htm" target="_blank">2017年美国书展在纽约举行</a></p></li>    </ul></dt><dd><span class="more"><Url><a href="node_11181.htm" target="_blank">更多</a></span> </dd></dl><!--end 1761684-21040-1--></div>
+</div>
+</div>
+<!--          <div class="map">
+		    <a href="http://www.hanban.org/conference/article/2012-12/17/content_477247.htm" target="_blank"><img src="template/4634.files/images/ff2.jpg" width="285" height="150" border="0" style="margin:20px 0;" ></a> </div>-->
+<script type="text/javascript">
+		   $(function(){
+	     var changeIndex=1;
+		 $('#change').change(function(){
+		   changeIndex = $("#change").val();
+		 })
+	     var $obj = $('#hot_ranks ul li');
+		 var len  = $obj.length;
+		 var i = 0;
+		 $(".videoR1").click(function(){
+		      i++;
+			  if(i==len){
+			    i = 0;
+			  }
+			  if(changeIndex==1){
+				$obj.stop(true,true).hide().eq(i).show();
+			  }else if(changeIndex==2){
+                $obj.stop(true,true).hide().eq(i).slideDown(400);
+			  }else if(changeIndex==3){
+				$obj.stop(true,true).hide().eq(i).fadeIn(600);
+			  }
+			  return false;
+		 });	
+		 $(".videoL1").click(function(){
+		      i--;
+			  if(i==-1){
+			    i = len-1;
+			  }
+              if(changeIndex==1){
+				$obj.stop(true,true).hide().eq(i).show();
+			  }else if(changeIndex==2){
+                $obj.stop(true,true).hide().eq(i).slideDown(400);
+			  }else if(changeIndex==3){
+				$obj.stop(true,true).hide().eq(i).fadeIn(600);
+			  }
+			  return false;
+		 });
+	})
+	</script>
+<div class="sideBox">
+<!--<div class="rukou"></div>-->
+<a href="http://www.cim.chinesecio.com/" target="_blank"><img src="images/yuankan.jpg"  width="280" height="80" style="margin-top:20px;" ></a>
+<a href="news/article/2017-02/16/content_672895.htm" target="_blank"><img src="images/c1.jpg" width="280" height="80" border="0" style="margin-top:20px;" ></a></div>
+</div>
+</div>
+</div>
+<div class="wrap">
+  <a href=""  class="jtt1" target="_blank"><img src="template/4634.files/images/jtt.gif" border="0" style="position:absolute; top:80px; left:31px; z-index:999" ></a></div>
+</div>
+<div style="clear:both;"></div>
+<div class="footer">
+  <div class="site_map">
+    <div id="hanbanLogo"><img src="template/4634.files/images/hanbanLogo.gif" ></div>
+    <div class="hanbanbg">
+      <h2>孔子学院总部/国家汉办</h2>
+      <div class="hanbanbg_font">国家汉办是中国教育部直属事业单位，致力于为世界各国提供汉语言文化的教学资源和服务，
+        最大限度地满足海外汉语学习者的需求，为携手发展多元文化，共同建设和谐世界做贡献。</div>
+    </div>
+    <table width="991" border="0">
+      <tr class="bold">
+        <td width="32"><a target="_blank" href=" http://www.hanban.org">首页</a></td>
+        <td width="61"><a target="_blank" href=" hb/">关于我们</a></td>
+        <td width="66"><a target="_blank" href=" news/">新闻中心</a></td>
+        <td width="104"><a target="_blank" href=" confuciousinstitutes/">孔子学院</a></td>
+        <td width="92"><a target="_blank" href=" teachers/">汉语教师</a></td>
+        <td width="108"><a target="_blank" href="volunteers/">志愿者</a></td>
+        <td width="80"><a target="_blank" href="resources/">教学资源</a></td>
+        <td width="96"><a target="_blank" href="tests/">汉语考试</a></td>
+        <td width="65"><a href="http://ccsp.chinese.cn/" target="_blank">新汉学计划</a></td>
+        <td width="103"><a target="_blank" href="chinesebridge/">汉语桥</a></td>
+        <td width="64"><a target="_blank" href="cooperation/">交流合作</a></td>
+        <td width="70"><a target="_blank" href="projects/">业务中心</a></td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td><a target="_blank" href=" /hb/">国家汉办</a></td>
+        <td><a target="_blank" href=" news/node_1401.htm">总部信息</a></td>
+        <td><a target="_blank" href=" confuciousinstitutes/node_10961.htm">关于孔子学院/课堂</a></td>
+        <td><a target="_blank" href="teachers/node_9732.htm">教师培养与培训</a></td>
+        <td><a target="_blank" href="volunteers/node_9697.htm">关于志愿者</a></td>
+        <td><a target="_blank" href="node_43181.htm">标准化资源</a></td>
+        <td><a target="_blank" href="tests/node_7475.htm">关于汉语考试</a></td>
+        <td><a href="http://ccsp.chinese.cn/node_43261.htm" target="_blank">通知公告</a></td>
+        <td><a target="_blank" href="chinesebridge/node_7489.htm">关于汉语桥</a></td>
+        <td><a target="_blank" href="cooperation/node_6181.htm">重要会见</a></td>
+        <td><a href="jxj.htm" target="_blank"><strong>奖学金</strong></a></td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td><a target="_blank" href=" hb/node_7446.htm">孔院总部</a></td>
+        <td><a target="_blank" href=" news/node_6261.htm">孔院新闻</a></td>
+        <td><a target="_blank" href=" confuciousinstitutes/node_6268.htm">活动预告</a></td>
+        <td><a target="_blank" href="teachers/node_43088.htm">核心教师</a></td>
+        <td><a target="_blank" href="volunteers/node_9654.htm">项目介绍</a></td>
+        <td><a target="_blank" href="node_43182.htm">教材资源</a></td>
+        <td><a target="_blank" href="tests/node_7486.htm">考试介绍</a></td>
+        <td><a href="http://ccsp.chinese.cn/article/2014-07/02/content_543202.htm" target="_blank">项目说明</a></td>
+        <td><a target="_blank" href="http://bridge.chinese.cn/">汉语桥比赛</a></td>
+        <td><a target="_blank" href="cooperation/node_6576.htm">重要活动</a></td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td><a target="_blank" href="hb/node_38260.htm">领导简历</a></td>
+        <td><a target="_blank" href=" news/node_254.htm">教师新闻</a></td>
+        <td><a target="_blank" href=" confuciousinstitutes/node_6262.htm">孔院论坛</a></td>
+        <td><a target="_blank" href="teachers/node_9753.htm">公派汉语教师</a> </td>
+        <td><a href="volunteers/node_6273.htm" target="_blank">《志愿者之家》杂志</a></td>
+        <td><a target="_blank" href="node_43183.htm">数字资源</a></td>
+        <td><a target="_blank" href="tests/node_7567.htm">考试服务</a></td>
+        <td><a href="http://ccsp.chinese.cn/node_43263.htm" target="_blank">项目申请</a></td>
+        <td><a target="_blank" href="chinesebridge/node_10065.htm">汉语桥校长访华</a></td>
+        <td><a target="_blank" href="cooperation/node_6575.htm">文化交流</a></td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td><a target="_blank" href=" hb/node_7445.htm">院刊</a><a target="_blank" href=" hb/node_7444.htm"></a></td>
+        <td><a target="_blank" href=" news/node_257.htm">考试新闻</a></td>
+        <td><a target="_blank" href=" confuciousinstitutes/node_6266.htm">魅力孔院</a></td>
+        <td><a target="_blank" href="teachers/node_7461.htm">汉学学者访华</a></td>
+        <td>&nbsp;</td>
+        <td><a href="http://res.chinese.cn/hanban/jiaoxueziyuan/mulu-ch.pdf" target="_blank">版权信息</a></td>
+        <td><a target="_blank" href="tests/node_7483.htm">奖学金和夏令营</a></td>
+        <td></td>
+        <td><a target="_blank" href="chinesebridge/node_6290.htm">汉语桥夏令营</a></td>
+        <td><a target="_blank" href="node_43381.htm">交流现场</a></td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td><a target="_blank" href=" hb/node_7444.htm">联系我们</a></td>
+        <td><a target="_blank" href="news/node_268.htm">志愿者新闻</a></td>
+        <td><a target="_blank" href="confuciousinstitutes/node_6265.htm">图说孔院</a></td>
+        <td><a href="teachers/node_7460.htm">基地建设</a></td>
+        <td>&nbsp;</td>
+        <td><a target="_blank" href="http://zengshu.hanban.org/">赠书</a></td>
+        <td><a target="_blank" href="tests/node_7482.htm">申办考点</a></td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td><a target="_blank" href="cooperation/node_6182.htm">合作项目</a></td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td><a target="_blank" href=" news/node_273.htm">教材新闻</a></td>
+        <td><a target="_blank" href=" confuciousinstitutes/node_7537.htm">孔院业务</a></td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td><a target="_blank" href="tests/node_7481.htm">认证海外汉语考试</a></td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td><a target="_blank" href=" news/node_253.htm">汉语桥</a></td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td><a target="_blank" href=" news/node_516.htm">媒体聚焦</a></td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+    </table>
+  </div>
+  <div id="foot">
+    <div class="hanban">
+      <h4 id="Hbhover">WWW.HANBAN.ORG</h4>
+    </div>
+    <ul>
+      <li>主办：孔子学院总部/国家汉办</li>
+      <li>地址：北京市西城区德胜门外大街129号</li>
+      <li>邮编: 100088</li>
+      <li>本站内容版权所有：孔子学院总部/国家汉办，未经许可不得转载</li>
+    </ul>
+	<p style="clear:both; margin:0 auto; font-size:14px; padding-left:280px; padding-top:30px;">版权所有 © 2014 孔子学院总部/国家汉办     京ICP 备 08002516号-5 </p>
+</div>
+</div>
+
+<div id="gg1" style="position:absolute; z-index:9999;">
+  <!--begin 1761685-11300-1--><!--end 1761685-11300-1--></div>
+<script type="text/javascript">
+    
+        var ad1=new AdMove("gg1");
+        ad1.Run();
+    //
+    </script>
+<script type="text/javascript">
+//    <!--
+//        var ad1=new AdMove("gg2");
+//        ad1.Run();
+//    //-->
+    </script>
+
+
+<!--右下角广告代码   结束-->
+<!--[if IE 6.0]>
+<script type="text/javascript" src="http://www.hanban.org/hanban/png.js"></script>
+<script type="text/javascript">
+		DD_belatedPNG.fix('img, .thumblistIn img , .b , #gg1'); 	
+</script>
+<![endif]-->
+<!-- 统计 -->
+<!--<script type="text/javascript" src="ds1/tuijian.js"></script>-->
+<!--[if IE 6.0]>
+<script type="text/javascript" src="http://www.hanban.org/hanban/png.js"></script>
+<script type="text/javascript">
+		DD_belatedPNG.fix('img, .headbg , .yourCssSelector'); 	
+</script>
+<![endif]-->
+
+<div style="display:none;" class="dsfasd">
+<script type="text/javascript" src="global/hanban_st.js"></script>
+
+</div>
+
+    			   <script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#style=-1&amp;uuid=&amp;pophcol=2&amp;lang=zh"></script><script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/bshareC0.js"></script>
+</body>
+</html>

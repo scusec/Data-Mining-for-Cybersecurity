@@ -1,0 +1,630 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+    <meta name="author" content="高健军，何爱玲，洪晧，CMS编辑部" />
+    <title>北京林业大学艺术设计学院</title>
+    <link href="images/Style.css" type="text/css" rel="stylesheet" />
+	<script type="text/javascript" src="js/jquery.min.js"></script> 
+	<script type="text/javascript">
+        <!--
+        var timeout = 500;
+        var closetimer= 0;
+        var ddmenuitem = 0;
+        // open hidden layer
+        function mopen(id)
+        {	
+	        // cancel close timer
+	        mcancelclosetime();
+
+	        // close old layer
+	        if(ddmenuitem) ddmenuitem.style.visibility = 'hidden';
+
+	        // get new layer and show it
+	        ddmenuitem = document.getElementById(id);
+	        ddmenuitem.style.visibility = 'visible';
+
+        }
+        // close showed layer
+        function mclose()
+        {
+	        if(ddmenuitem) ddmenuitem.style.visibility = 'hidden';
+        }
+
+        // go close timer
+        function mclosetime()
+        {
+	        closetimer = window.setTimeout(mclose, timeout);
+        }
+
+        // cancel close timer
+        function mcancelclosetime()
+        {
+	        if(closetimer)
+	        {
+		        window.clearTimeout(closetimer);
+		        closetimer = null;
+	        }
+        }
+
+        // close layer when click-out
+        document.onclick = mclose; 
+        // -->
+
+    </script>
+<style>
+#play{width:611px;height:310px; border:1px solid #ABABAB;}
+#playBg{margin-top:290px;z-index:1;filter:alpha(opacity=70);opacity:0.7;width:611px;position:absolute;height:20px;background:#000;}
+#playText{margin-top:290px;z-index:2;padding-left:5px;font-size:12px;font-weight:normal;width:350px; color:#fff;line-height:20px; overflow:hidden;position:absolute;cursor:pointer;}
+#playNum{margin:289px 0px 0px 480px;z-index:3; text-align:right;position:absolute;height:10px;}
+#playNum a{font-size:12px;line-height:10px;cursor:pointer;color:#fff;padding:0 3px;background:none;text-align:center}
+#playShow img{width:611px;height:310px;}
+ul,li,ol {margin:0; padding:0px; list-style:none;}
+</style>
+	</head>
+
+<body>
+    <div id="f_top">
+        <div id="f_top_con">
+            <div id="f_top_con_logo" class="logo"></div>
+            <!--<div id="f_top_form">
+			
+                <form action="http://cms.bjfu.edu.cn/cms/search/searchResults.jsp?siteID=163" method="post">
+                    <span style="color:white;display:block;float:left;width:40px;height:30px;font-size:15px;margin-top:1px;">搜索 </span>
+                    <div id="f_top_form_search">
+                         <span ><input style="margin:3px 0 0 15px;width:196px;height:26px;float:left;background:#F3F3F3;" onfocus="this.value=''" value=" " name="query" /></span>                
+                         <span><input style="width:29px;height:30px;float:left;" type="image" src="images/f_top_button.jpg"/></span>               
+                    </div>
+                </form>       
+			</div>-->
+        </div>
+    </div>
+    
+<div id="f_nav">
+		<div id="f_nav_con">
+            <ul id="sddm">
+	            <li><a href="/" onmouseover="mopen('m1')" onmouseout="mclosetime()">首 页</a>
+		            <div id="m1" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+		            </div>
+	            </li>
+	            <li class="stylenav"><a href="" onmouseover="mopen('m2')" onmouseout="mclosetime()">学院概况</a>
+		            <div id="m2" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+		            <a href="http://ad.bjfu.edu.cn/xygk/xyjj/137965.htm">学院简介</a>
+		            <a href="http://ad.bjfu.edu.cn/xygk/xrld/138016.htm">现任领导</a>
+		            <a href="/xygk/zzjg/">组织机构</a>
+		            <a href="/xygk/gzzd/">规章制度</a>
+		            </div>
+	            </li>
+	            <li class="stylenav"><a href="/szdw/" onmouseover="mopen('m3')" onmouseout="mclosetime()">师资队伍</a>
+		            <div id="m3" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+		            <a href="http://ad.bjfu.edu.cn/szdw/szgk/138033.htm">师资概况</a>
+		            <a href="/szdw/js/">教授</a>
+					<a href="/szdw/fjs/">副教授</a>
+		            <a href="/szdw/gwzj/">讲师</a>
+		            <a href="/szdw/lxxz/">外聘专家</a>
+		            </div>
+	            </li>
+	            <li class="stylenav"><a href="/xkjs/" onmouseover="mopen('m4')" onmouseout="mclosetime()">学科专业</a>
+		            <div id="m4" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+		            <a href="/xkjs/xkjj/">学科简介</a>
+		            <a href="/xkjs/jsxm/">建设项目</a>
+		            <a href="/xkjs/rcyj/">人才引进</a>
+		            </div>
+	            </li>
+	            <li class="stylenav"><a href="/kxyj/" onmouseover="mopen('m5')" onmouseout="mclosetime()">科研学术</a>
+		            <div id="m5" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+		            <a href="/kxyj/kyxm/">学术交流</a>
+		            <a href="/kxyj/kycg/">科研项目</a>
+		            <a href="/kxyj/kjfw/">成果展示</a>
+		            <a href="/kxyj/cxtd/">创新团队</a>
+		            </div>
+	            </li>
+	            <li class="stylenav"><a href="/rcpy/" onmouseover="mopen('m6')" onmouseout="mclosetime()">人才培养</a>
+		            <div id="m6" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+		            <a href="/rcpy/bksjy/">本科生教育</a>
+		            <a href="/rcpy/yjsjy/">研究生教育</a>
+		            </div>
+	            </li>
+	            <li class="stylenav"><a href="/dqgz/" onmouseover="mopen('m7')" onmouseout="mclosetime()">党群工作</a>
+		            <div id="m7" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+		            <a href="/dqgz/djgz/">党建工作</a>
+		            <a href="/dqgz/ghgz/">工会工作</a>
+		            <a href="/dqgz/jgzb/">教工支部</a>
+		            <a href="/dqgz/llxx/">理论学习</a>
+		            </div>
+	            </li>
+	            <li class="stylenav"><a href="/xsgz/" onmouseover="mopen('m8')" onmouseout="mclosetime()">学生工作</a>
+		            <div id="m8" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+		            <a href="/xsgz/xshd/">通知公告</a>
+		            <a href="/xsgz/txzz/">活动新闻</a>
+		            <a href="/xsgz/fwxx/">通报专栏</a>
+		            <a href="/xsgz/fdygz/">规章制度</a>
+		            <a href="/xsgz/bzrgz/">工作简报</a>
+					<a href="/xsgz/djzc/">党建之窗</a>
+					<a href="/xsgz/xsxzzx/">下载中心</a>
+		            </div>
+	            </li>
+	            <li class="stylenav"><a href="http://ad.bjfu.edu.cn/xyzj/" onmouseover="mopen('m9')" onmouseout="mclosetime()">培训教育</a>
+		            <div id="m9" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+		            </div>
+	            </li>
+	            <li class="stylenav"><a href="/xzzq/" onmouseover="mopen('m10')" onmouseout="mclosetime()">下载专区</a>
+		            <div id="m10" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+		            <a href="/xzzq/zzrs/">组织人事</a>
+		            <a href="/xzzq/xsky/">学术科研</a>
+		            <a href="/xzzq/yxlw/">优秀论文</a>
+		            <a href="/xzzq/qt/">其他</a>
+		            </div>
+	            </li>
+            </ul>
+		</div>
+    </div>
+    <div id="i_con">
+       <div id="i_con_con">
+           <div id="i_con_con_top">
+               <div id="i_con_con_top_left">
+                   <div id="play">
+                            <ul>
+                                <li id="playBg"></li>
+                                <li id="playText"></li>
+                                <li id="playNum"><a>1</a><a>2</a><a>3</a><a>4</a><a>5</a><a>6</a><a>7</a><a>8</a><a>9</a><a>10</a></li>
+                                <li id="playShow">
+                                
+                                                                                                                                                                                                            <a href="/xyxw/256710.htm"><img src="/images/content/2017/20171026103423577870.png" alt="            【喜迎十九大专题1】艺苑组织师生观看十九大开幕式直播畅谈感受 
+    " /></a>       
+                                                                                                                                                                                                                                                                                                            <a href="/xyxw/250702.htm"><img src="/images/content/2017/20170619103833774078.jpg" alt="            艺术设计学院2017届本科生毕业作品展开幕 
+    " /></a>       
+                                                                                                                                                                                                                                                                                                            <a href="/xyxw/250697.htm"><img src="/images/content/2017/20170619102446290122.jpg" alt="            艺术设计学院2017届研究生毕业作品展开幕 
+    " /></a>       
+                                                                                                                                                                                                                                                                                                            <a href="/xyxw/237546.htm"><img src="/images/content/2016/20161223104834519067.jpg" alt="            藝周年元旦晚会即将开幕 
+    " /></a>       
+                                                                                                                                                                                                                                                                                                            <a href="/xyxw/230249.htm"><img src="/images/content/2016/20161017082945229461.jpg" alt="            我院第二届教师作品展开幕 
+    " /></a>       
+                                                                                                                                                                                                                                                                                                            <a href="/xyxw/217304.htm"><img src="/images/content/2016/20160425144836548012.jpg" alt="            我院与洛可可设计集团展开交流学习 
+    " /></a>       
+                                                                                                                                                                                                                                                                                                            <a href="/xyxw/217138.htm"><img src="/images/content/2016/20160422162351368136.jpg" alt="            我院教职工参与校运动会部分精彩图集 
+    " /></a>       
+                                                                                                                                                                                                                                                                                                            <a href="/xyxw/202123.htm"><img src="/images/content/2016/20160120135213700809.jpg" alt="            2016年设计学类专业招生简章 
+    " /></a>       
+                                                                                                                                                                                                                                                                                                                                                                                        <a href="/xyxw/181582.htm"><img src="/images/content/2015/20150507101421065475.jpg" alt="            北京工商大学教师来我院进行学术交流 
+    " /></a>       
+                                                                                                                                                                                                                                                                                                            <a href="/xyxw/176083.htm"><img src="/images/content/2015/20150108125555558603.jpg" alt="            北京林业大学2015年设计学类专业招生简章 
+    " /></a>       
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                </li>
+                            </ul>
+                        </div><!-- end play --> 
+						<script type=text/javascript>
+						var t = n = 0, count = $("#playShow a").size();
+						$(function(){
+						$("#playShow a:not(:first-child)").hide();
+						$("#playText").html($("#playShow a:first-child").find("img").attr('alt'));
+						$("#playNum a:first").css({"background":"#FFD116",'color':'#A8471C'});
+						$("#playText").click(function(){window.open($("#playShow a:first-child").attr('href'), "_blank")});
+						$("#playNum a").click(function() {
+						   var i = $(this).text() - 1;
+						   n = i;
+						   if (i >= count) return;
+						   $("#playText").html($("#playShow a").eq(i).find("img").attr('alt'));
+						   $("#playText").unbind().click(function(){window.open($("#playShow a").eq(i).attr('href'), "_blank")})
+						   $("#playShow a").filter(":visible").hide().parent().children().eq(i).fadeIn(1200);
+						   $(this).css({"background":"#FFD116",'color':'#A8471C'}).siblings().css({"background":"none",'color':'#fff'});
+						});
+						t = setInterval("showAuto()", 5000);
+						$("#play").hover(function(){clearInterval(t)}, function(){t = setInterval("showAuto()", 5000);});
+						})
+						function showAuto()
+						{
+						n = n >= (count - 1) ? 0 : ++n;
+						$("#playNum a").eq(n).trigger('click');
+						}
+						</script>
+				</div><!-- end i_con_con_top_left -->
+                <div id="i_con_con_top_right1">
+                    <div id="i_con_con_top_right2">
+						<!--<div id="i_c_c_t_r2_t">
+							<div id="i_c_c_t_r2_t_t">通知公告</div>
+						</div>
+						<div id="i_c_c_t_r2_add"></div>
+						<div id="i_c_c_t_r2_m">
+							<table>
+																<tr><td>&#9642;<a href="" target="_blank">            2014年家庭经... 
+    </a></td></tr>
+																<tr><td>&#9642;<a href="" target="_blank">            《鹰的预言》对M... 
+    </a></td></tr>
+																<tr><td>&#9642;<a href="" target="_blank">            地中海文明-法国... 
+    </a></td></tr>
+																<tr><td>&#9642;<a href="" target="_blank">            第六届研究生“学... 
+    </a></td></tr>
+																<tr><td>&#9642;<a href="" target="_blank">            艺术设计学院研究... 
+    </a></td></tr>
+																<tr><td>&#9642;<a href="" target="_blank">            关于举办2013... 
+    </a></td></tr>
+															</table>
+						</div>-->
+						<!--通知公告-->
+					   <div style="height:245px;display:block" class="i_con_con_left_bottom_top_con">
+						   <div style="margin-left:8px;" class="i_con_con_left_bottom_top_title">
+								<div class="i_c_c_c_c_t_t_l"><a style="font-size:14px; color:#666666;">&nbsp;&nbsp;通知公告</a></div>
+								<div class="i_c_c_c_c_t_t_r"><a href="/xsgz/xshd/" title="更多" style="font-size:11px; color:#666666;"><b><i>More>></i></b></a></div>
+						   <!--<span><a href="" target="_blank"><img alt="" src="images/i_con_con_left_bottom_top_title_news.jpg" /></a></span>-->
+						   <!--<span class="table_more"><a href="#" title="更多"><b>More>></b></a></span>-->
+						   </div>
+							<div style="margin-left:15px;" class="i_con_con_left_bottom_top_con_con">    
+								<table class="tablelist">
+																		<tr>
+										<td class="tablelist_td2">&#9642;<a href="/xsgz/xshd/257188.htm" title="【本科生评优通知14】退役大学生奖学金（推荐名单）、文体优秀奖学金、学术优秀奖学金名单公示">            【本科生评优通知14】退... 
+    </a>    </td>
+										<td class="tablelist_td3">2017-10-25</td>
+									</tr> 
+																		<tr>
+										<td class="tablelist_td2">&#9642;<a href="/xsgz/xshd/257053.htm" title="【本科生评优通知13】优良学风班推荐名单公示">            【本科生评优通知13】优... 
+    </a>    </td>
+										<td class="tablelist_td3">2017-10-23</td>
+									</tr> 
+																		<tr>
+										<td class="tablelist_td2">&#9642;<a href="/xsgz/xshd/256491.htm" title="【体质测试2】17级学生体质健康测试时间及14、15级补测时间通知">            【体质测试2】17级学生... 
+    </a>    </td>
+										<td class="tablelist_td3">2017-10-18</td>
+									</tr> 
+																		<tr>
+										<td class="tablelist_td2">&#9642;<a href="/xsgz/xshd/256608.htm" title="【本科生评优通知12】2016-2017学年学习进步奖学金名单公示">            【本科生评优通知12】2... 
+    </a>    </td>
+										<td class="tablelist_td3">2017-10-18</td>
+									</tr> 
+																		<tr>
+										<td class="tablelist_td2">&#9642;<a href="/xsgz/xshd/256602.htm" title="【本科生评优通知11】2016-2017学年新科鹏举奖学金名单公示">            【本科生评优通知11】2... 
+    </a>    </td>
+										<td class="tablelist_td3">2017-10-18</td>
+									</tr> 
+																		<tr>
+										<td class="tablelist_td2">&#9642;<a href="/xsgz/xshd/256458.htm" title="【研究生评优公示3】2016-2017艺术设计学院推荐研究生国家奖学金名单公示">            【研究生评优公示3】20... 
+    </a>    </td>
+										<td class="tablelist_td3">2017-10-18</td>
+									</tr> 
+																		<tr>
+										<td class="tablelist_td2">&#9642;<a href="/xsgz/xshd/256446.htm" title="关于举办北京林业大学第二十八期团校新生班级骨干培训班的通知">            关于举办北京林业大学第二... 
+    </a>    </td>
+										<td class="tablelist_td3">2017-10-18</td>
+									</tr> 
+																		<tr>
+										<td class="tablelist_td2">&#9642;<a href="/xsgz/xshd/256396.htm" title="【研究生评优公示2】2016-2017学年研究生评优公示2（学术优秀、优秀班集体、优秀班主任）">            【研究生评优公示2】20... 
+    </a>    </td>
+										<td class="tablelist_td3">2017-10-18</td>
+									</tr> 
+																	</table>             
+							</div>     
+					   </div>
+						<div id="i_c_c_t_r2_add"></div>
+						<!--<div id="i_con_con_top_right_pic"><a href="" target="_blank"><img src="images/i_con_right_bottom_pic.jpg" alt="" /></a></div>-->                        
+                        <!--<div id="i_con_con_top_right_picon">
+                            <table>
+                                 <tr>
+                                    <td class="i_con_con_top_right_picon_table"><img src="images/mail.png" alt="" /></td>
+                                    <td class="i_con_con_top_right_picon_table_td2"><a href="http://mail.bjfu.edu.cn" target="_blank">我的邮件</a></td>
+                                 </tr>
+                                  <tr>
+                                    <td class="i_con_con_top_right_picon_table"><img src="images/digital.png" alt="" /></td>
+                                    <td class="i_con_con_top_right_picon_table_td2"><a href="http://i.bjfu.edu.cn" target="_blank">数字北林</a></td>
+                                 </tr>
+                                 <tr>
+                                    <td class="i_con_con_top_right_picon_table"><img src="images/meeting.png" alt="" /></td>
+                                    <td class="i_con_con_top_right_picon_table_td2"><a href="http://dzb.bjfu.edu.cn/#meeting" target="_blank">一周会议</a></td>
+                                 </tr>
+                                 <tr>
+                                    <td class="i_con_con_top_right_picon_table"><img src="images/timetable.png" alt="" /></td>
+                                    <td class="i_con_con_top_right_picon_table_td2"><a href="http://jwc.bjfu.edu.cn/kbcx/" target="_blank">课表查询</a></td>
+                                 </tr>
+                                 <tr>
+                                    <td class="i_con_con_top_right_picon_table"><img src="images/education.png" alt="" /></td>
+                                    <td class="i_con_con_top_right_picon_table_td2"><a href="http://jwxt.bjfu.edu.cn/jwxt/" target="_blank">教务系统</a></td>
+                                 </tr>
+                                 <tr>
+                                    <td class="i_con_con_top_right_picon_table"><img src="images/finance.png" alt="" /></td>
+                                    <td class="i_con_con_top_right_picon_table_td2"><a href="http://222.31.185.50/cx/index.aspx" target="_blank">财务系统</a></td>
+                                 </tr>
+                           </table>
+						</div>-->
+						<!--<div id="a_link" style="margin-top:12px;">
+						<form class="form_link">
+							
+<select name="selectname" size="1" class="form_select" onchange="javascript:window.open(this.options[this.selectedIndex].value)">
+                              <option value="0" >---校外链接---</option>
+                              <option value="http://www.cafa.edu.cn/"><span class="form_select">---中央美术学院---</span></option>
+                              <option value="http://www.tsinghua.edu.cn/publish/ad/"><span class="form_select">---清华美术学院---</span></option>
+                              <option value="http://www.tjarts.edu.cn/"><span class="form_select">---天津美术学院---</span></option>
+                              <option value="http://www.gzarts.edu.cn/2013/"><span class="form_select">---广州美术学院---</span></option>
+                          </select>						</form>
+						</div>-->
+						<!--首页搜索栏-->
+                        <div id="i_top_form">
+                            <form action="http://cms.bjfu.edu.cn/cms/search/searchResults.jsp?siteID=163" method="post">
+                                <!--<span style="color:white;display:block;float:left;width:40px;height:30px;font-size:15px;margin-top:1px;">搜索 </span>-->
+                                <div id="i_top_form_search">
+                                     <span ><input style="margin:5px 0 0 15px;width:180px;height:20px;float:left;border:solid gray 1px;" onfocus="this.value=''" value=" " name="query" /></span>                
+                                     <span><input style="margin:2px 0 0 15px;width:29px;height:25px;float:left;" type="image" src="images/f_top_button2.jpg"/></span>               
+                                </div>
+                            </form>       
+			            </div>
+                    </div>
+              </div>
+           </div>
+		   <div class="i_con_t">
+				<div class="i_con_t1">
+					<!--学院新闻-->
+					<div class="i_con_con_left_bottom_top_con">
+						<div class="i_con_con_left_bottom_top_title">
+							<div class="i_c_c_c_c_t_t_l"><a style="font-size:14px; color:#666666;">&nbsp;&nbsp;学院新闻</a></div>
+							<div class="i_c_c_c_c_t_t_r"><a href="/xyxw/" title="更多" style="font-size:11px; color:#666666;"><b><i>More>></i></b></a></div>
+						</div>
+						<div class="i_con_con_left_bottom_top_con_con">    
+							<table class="tablelist">
+																<tr>
+									<td class="tablelist_td2">&#9642;<a href="/xyxw/256717.htm" title="【喜迎十九大专题2】十九大报告：习近平直抵人心的这19句话">            【喜迎十九大专题2】十九大... 
+    </a>    </td>
+									<td class="tablelist_td3">2017-10-20</td>
+								</tr> 
+																<tr>
+									<td class="tablelist_td2">&#9642;<a href="/xyxw/256710.htm" title="【喜迎十九大专题1】艺苑组织师生观看十九大开幕式直播畅谈感受">            【喜迎十九大专题1】艺苑组... 
+    </a>    </td>
+									<td class="tablelist_td3">2017-10-20</td>
+								</tr> 
+																<tr>
+									<td class="tablelist_td2">&#9642;<a href="/xyxw/256227.htm" title="我院召开暑期社会实践答辩会推动实践总结">            我院召开暑期社会实践答辩会... 
+    </a>    </td>
+									<td class="tablelist_td3">2017-10-17</td>
+								</tr> 
+																<tr>
+									<td class="tablelist_td2">&#9642;<a href="/xyxw/255315.htm" title="关于如何培养优秀设计人才的中美思维碰撞">            关于如何培养优秀设计人才的... 
+    </a>    </td>
+									<td class="tablelist_td3">2017-09-29</td>
+								</tr> 
+																<tr>
+									<td class="tablelist_td2">&#9642;<a href="/xyxw/254853.htm" title="艺术设计学院师生在北京市2017年大学生工业设计大赛中荣获佳绩">            艺术设计学院师生在北京市2... 
+    </a>    </td>
+									<td class="tablelist_td3">2017-09-25</td>
+								</tr> 
+																<tr>
+									<td class="tablelist_td2">&#9642;<a href="/xyxw/254168.htm" title="我院二维码植物科普项目落地人民日报社等单位">            我院二维码植物科普项目落地... 
+    </a>    </td>
+									<td class="tablelist_td3">2017-09-18</td>
+								</tr> 
+															</table>             
+						</div>     
+					</div>
+				</div>
+				<div class="i_con_t2">
+					<!--科学研究--> 
+					<div class="i_con_con_left_bottom_top_con">
+						<div class="i_con_con_left_bottom_top_title">
+							<div class="i_c_c_c_c_t_t_l"><a style="font-size:14px; color:#666666;">&nbsp;&nbsp;学术交流与科学研究</a></div>
+							<div class="i_c_c_c_c_t_t_r"><a href="/kxyj/" title="更多" style="font-size:11px; color:#666666;"><b><i>More>></i></b></a></div>
+						</div>
+						<div class="i_con_con_left_bottom_top_con_con">
+							<table class="tablelist">
+																<tr>
+									<td class="tablelist_td2">&#9642;<a href="/kxyj/231229.htm" title="艺术设计学院软件著作权申请流程">            艺术设计学院软件著作权申请... 
+    </a></td>
+									<td class="tablelist_td3">2017-07-05</td>
+								</tr> 
+																<tr>
+									<td class="tablelist_td2">&#9642;<a href="/kxyj/231225.htm" title="艺术设计学院横向项目操作流程">            艺术设计学院横向项目操作流... 
+    </a></td>
+									<td class="tablelist_td3">2017-07-04</td>
+								</tr> 
+																<tr>
+									<td class="tablelist_td2">&#9642;<a href="/kxyj/242579.htm" title="北京林业大学横向项目管理办法">            北京林业大学横向项目管理办... 
+    </a></td>
+									<td class="tablelist_td3">2017-07-04</td>
+								</tr> 
+																<tr>
+									<td class="tablelist_td2">&#9642;<a href="/kxyj/242572.htm" title="北京林业大学经费账号、开户行等信息">            北京林业大学经费账号、开户... 
+    </a></td>
+									<td class="tablelist_td3">2017-07-03</td>
+								</tr> 
+																<tr>
+									<td class="tablelist_td2">&#9642;<a href="/kxyj/232879.htm" title="科研管理系统“印章申请”模块试运行通知">            科研管理系统“印章申请”模... 
+    </a></td>
+									<td class="tablelist_td3">2017-07-02</td>
+								</tr> 
+																<tr>
+									<td class="tablelist_td2">&#9642;<a href="/kxyj/232854.htm" title="科研经费入账办理流程">            科研经费入账办理流程 
+    </a></td>
+									<td class="tablelist_td3">2017-07-01</td>
+								</tr> 
+															</table>
+						</div>     
+					</div>
+				</div>
+				<div class="i_con_t3">
+					<!--本科生培养-->
+					<div class="i_con_con_left_bottom_top_con">
+						<div class="i_con_con_left_bottom_top_title">
+							<div class="i_c_c_c_c_t_t_l"><a style="font-size:14px; color:#666666;">&nbsp;&nbsp;本科生培养</a></div>
+							<div class="i_c_c_c_c_t_t_r"><a href="/rcpy/bksjy/" title="更多" style="font-size:11px; color:#666666;"><b><i>More>></i></b></a></div>
+						</div>
+						<div class="i_con_con_left_bottom_top_con_con">    
+							 <table class="tablelist">
+																<tr>
+									<td class="tablelist_td2">&#9642;<a href="/rcpy/bksjy/257016.htm" title="艺术设计学院关于举办第四届青年教师教学基本功（实践类）比赛复赛的通知">            艺术设计学院关于举办第四届... 
+    </a></td>
+									<td class="tablelist_td3">2017-10-24</td>
+								</tr> 
+																<tr>
+									<td class="tablelist_td2">&#9642;<a href="/rcpy/bksjy/256756.htm" title="转发北京林业大学关于征集2017年教育教学研究论文的通知">            转发北京林业大学关于征集2... 
+    </a></td>
+									<td class="tablelist_td3">2017-10-20</td>
+								</tr> 
+																<tr>
+									<td class="tablelist_td2">&#9642;<a href="/rcpy/bksjy/255611.htm" title="关于举办艺术设计学院第四届青年教师教学基本功比赛（实践类）初赛的通知">            关于举办艺术设计学院第四届... 
+    </a></td>
+									<td class="tablelist_td3">2017-10-10</td>
+								</tr> 
+																<tr>
+									<td class="tablelist_td2">&#9642;<a href="/rcpy/bksjy/254296.htm" title="关于公示艺术设计学院2018届本科生各专业综合成绩暨推免资格确定的通知">            关于公示艺术设计学院201... 
+    </a></td>
+									<td class="tablelist_td3">2017-09-19</td>
+								</tr> 
+																<tr>
+									<td class="tablelist_td2">&#9642;<a href="/rcpy/bksjy/253736.htm" title="2017级日语辅修专业招生简章">            2017级日语辅修专业招生... 
+    </a></td>
+									<td class="tablelist_td3">2017-09-12</td>
+								</tr> 
+																<tr>
+									<td class="tablelist_td2">&#9642;<a href="/rcpy/bksjy/253683.htm" title="艺术设计学院关于公开选拔2018届“2+2”保研辅导员的通知">            艺术设计学院关于公开选拔2... 
+    </a></td>
+									<td class="tablelist_td3">2017-09-12</td>
+								</tr> 
+															</table>         
+						</div>     
+					</div>
+				</div>
+			</div>
+			<div class="i_con_m">
+								<a href="/xyzj/" target="_blank"><img src="/images/content/2016/20160923151958400993.jpg" width="956" height="125"/></a>
+							</div>
+			<div class="i_con_b">
+				<div class="i_con_b1">
+					<!--研究生培养-->
+					<div class="i_con_con_left_bottom_top_con">
+						<div class="i_con_con_left_bottom_top_title">
+							<div class="i_c_c_c_c_t_t_l"><a style="font-size:14px; color:#666666;">&nbsp;&nbsp;研究生培养</a></div>
+							<div class="i_c_c_c_c_t_t_r"><a href="/rcpy/yjsjy/" title="更多" style="font-size:11px; color:#666666;"><b><i>More>></i></b></a></div>
+						</div>
+						<div class="i_con_con_left_bottom_top_con_con">
+							<table class="tablelist">
+																<tr>
+									<td class="tablelist_td2">&#9642;<a href="/rcpy/yjsjy/255516.htm" title="2018年北京林业大学艺术设计学院推荐免试研究生复试名单">            2018年北京林业大学艺术... 
+    </a></td>
+									<td class="tablelist_td3">2017-10-09</td>
+								</tr> 
+																<tr>
+									<td class="tablelist_td2">&#9642;<a href="/rcpy/yjsjy/254615.htm" title="艺术设计学院2018年接收推荐免试硕士研究生的名额和复试办法">            艺术设计学院2018年接收... 
+    </a></td>
+									<td class="tablelist_td3">2017-09-21</td>
+								</tr> 
+																<tr>
+									<td class="tablelist_td2">&#9642;<a href="/rcpy/yjsjy/254299.htm" title="转发：考研常见问题解答">            转发：考研常见问题解答 
+    </a></td>
+									<td class="tablelist_td3">2017-09-19</td>
+								</tr> 
+																<tr>
+									<td class="tablelist_td2">&#9642;<a href="/rcpy/yjsjy/248893.htm" title="艺术设计学院2017年研究生毕业答辩安排">            艺术设计学院2017年研究... 
+    </a></td>
+									<td class="tablelist_td3">2017-05-23</td>
+								</tr> 
+																<tr>
+									<td class="tablelist_td2">&#9642;<a href="/rcpy/yjsjy/244397.htm" title="2017年北京林业大学艺术设计学院研究生复试成绩公布">            2017年北京林业大学艺术... 
+    </a></td>
+									<td class="tablelist_td3">2017-03-30</td>
+								</tr> 
+																<tr>
+									<td class="tablelist_td2">&#9642;<a href="/rcpy/yjsjy/243838.htm" title="17年硕士复试调剂替增名单">            17年硕士复试调剂替增名单 
+    </a></td>
+									<td class="tablelist_td3">2017-03-23</td>
+								</tr> 
+															</table>
+						</div>     
+				   </div> 
+				</div>
+				<div class="i_con_b2">
+					<!--就业信息--> 
+					<div class="i_con_con_left_bottom_top_con">
+						<div class="i_con_con_left_bottom_top_title">
+							<div class="i_c_c_c_c_t_t_l"><a style="font-size:14px; color:#666666;">&nbsp;&nbsp;就业信息</a></div>
+							<div class="i_c_c_c_c_t_t_r"><a href="/jyxx/" title="更多" style="font-size:11px; color:#666666;"><b><i>More>></i></b></a></div>
+						</div>
+						<div class="i_con_con_left_bottom_top_con_con">
+							<table class="tablelist">
+																<tr>
+									<td class="tablelist_td2">&#9642;<a href="/jyxx/250237.htm" title="关于落实团中央关于实施2017年“千校万岗”大学生就业精准帮扶行动的通知">            关于落实团中央关于实施20... 
+    </a></td>
+									<td class="tablelist_td3">2017-06-12</td>
+								</tr> 
+																<tr>
+									<td class="tablelist_td2">&#9642;<a href="/jyxx/249491.htm" title="【就业数据】2017届本科毕业生就业数据系统填报通知（第三批） ">            【就业数据】2017届本科... 
+    </a></td>
+									<td class="tablelist_td3">2017-06-01</td>
+								</tr> 
+																<tr>
+									<td class="tablelist_td2">&#9642;<a href="/jyxx/249429.htm" title="关于推荐2017届毕业生校友工作联络员的通知">            关于推荐2017届毕业生校... 
+    </a></td>
+									<td class="tablelist_td3">2017-05-31</td>
+								</tr> 
+																<tr>
+									<td class="tablelist_td2">&#9642;<a href="/jyxx/248669.htm" title="【就业数据】2017届本科毕业生就业数据系统填报通知（第二批）">            【就业数据】2017届本科... 
+    </a></td>
+									<td class="tablelist_td3">2017-05-19</td>
+								</tr> 
+																<tr>
+									<td class="tablelist_td2">&#9642;<a href="/jyxx/248151.htm" title="【就业数据】2017届本科毕业生就业数据系统填报通知（第一批）">            【就业数据】2017届本科... 
+    </a></td>
+									<td class="tablelist_td3">2017-05-12</td>
+								</tr> 
+																<tr>
+									<td class="tablelist_td2">&#9642;<a href="/jyxx/247843.htm" title="【招聘信息】北京清控人居光电研究院有限公司招聘">            【招聘信息】北京清控人居光... 
+    </a></td>
+									<td class="tablelist_td3">2017-05-10</td>
+								</tr> 
+															</table>
+						</div>     
+				    </div>  
+				</div>
+				<div class="i_con_b3">
+					<!--学生工作-->
+					<div class="i_con_con_left_bottom_top_con">
+						<div class="i_con_con_left_bottom_top_title">
+							<div class="i_c_c_c_c_t_t_l"><a style="font-size:14px; color:#666666;">&nbsp;&nbsp;学生工作</a></div>
+							<div class="i_c_c_c_c_t_t_r"><a href="/xsgz/" title="更多" style="font-size:11px; color:#666666;"><b><i>More>></i></b></a></div>
+						</div>
+						<div class="i_con_con_left_bottom_top_con_con">
+							<table class="tablelist">
+																<tr>
+									<td class="tablelist_td2">&#9642;<a href="/xsgz/xshd/257188.htm" title="【本科生评优通知14】退役大学生奖学金（推荐名单）、文体优秀奖学金、学术优秀奖学金名单公示">            【本科生评优通知14】退役... 
+    </a></td>
+									<td class="tablelist_td3">2017-10-25</td>
+								</tr> 
+																<tr>
+									<td class="tablelist_td2">&#9642;<a href="/xsgz/xshd/257053.htm" title="【本科生评优通知13】优良学风班推荐名单公示">            【本科生评优通知13】优良... 
+    </a></td>
+									<td class="tablelist_td3">2017-10-23</td>
+								</tr> 
+																<tr>
+									<td class="tablelist_td2">&#9642;<a href="/xsgz/fwxx/256924.htm" title="宿舍卫生安全检查通报-2017年10月13日">            宿舍卫生安全检查通报-20... 
+    </a></td>
+									<td class="tablelist_td3">2017-10-23</td>
+								</tr> 
+																<tr>
+									<td class="tablelist_td2">&#9642;<a href="/xsgz/fwxx/256906.htm" title="宿舍卫生安全检查通报-2017年9月20日">            宿舍卫生安全检查通报-20... 
+    </a></td>
+									<td class="tablelist_td3">2017-10-23</td>
+								</tr> 
+																<tr>
+									<td class="tablelist_td2">&#9642;<a href="/xsgz/xshd/256491.htm" title="【体质测试2】17级学生体质健康测试时间及14、15级补测时间通知">            【体质测试2】17级学生体... 
+    </a></td>
+									<td class="tablelist_td3">2017-10-18</td>
+								</tr> 
+																<tr>
+									<td class="tablelist_td2">&#9642;<a href="/xsgz/xshd/256608.htm" title="【本科生评优通知12】2016-2017学年学习进步奖学金名单公示">            【本科生评优通知12】20... 
+    </a></td>
+									<td class="tablelist_td3">2017-10-18</td>
+								</tr> 
+															</table>
+						</div>     
+				   </div>  
+				</div>
+			</div>
+          
+       </div>
+    </div>
+    <div id="f_bottom">
+         <div id="f_foot">
+            <p style="padding-top:24px;">北京市海淀区清华东路35号 通讯地址：北京林业大学93号信箱 邮编：100083</p>
+            <p>电话：86-10-62336564 邮箱：adc@bjfu.edu.cn</p>
+            <p>Copyright &copy; 2013 北京林业大学艺术设计学院 All rights Reserved</p>
+        </div>
+    </div>
+</body>
+</html>
+</body></html>

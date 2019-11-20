@@ -1,0 +1,167 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8" /><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>
+	
+    认证-账户管理-两院课程管理系统
+
+</title><link rel="shortcut icon" href="http://static.soe.xmu.edu.cn/Themes/Default/Images/soe.ico?v=20171016" />
+
+    <!-- jquery library -->
+    <script src="http://static.soe.xmu.edu.cn/Themes/Shared/jquery.min.js" type="text/javascript"></script>
+
+    <!-- jquery validation plugin -->
+    <script src="http://static.soe.xmu.edu.cn/Themes/Shared/jquery.validate.js" type="text/javascript"></script>
+<script src="http://static.soe.xmu.edu.cn/Themes/Shared/MicrosoftMvcJQueryValidation.js" type="text/javascript"></script>
+
+    <!-- jquery ui framework -->
+    <script src="http://static.soe.xmu.edu.cn/Themes/Shared/jquery.bgiframe-2.1.2.js" type="text/javascript"></script>
+<script src="http://static.soe.xmu.edu.cn/Themes/Shared/jquery-ui.min.js" type="text/javascript"></script>
+<script src="http://static.soe.xmu.edu.cn/Themes/Shared/jquery-ui-timepicker-addon.js" type="text/javascript"></script>
+<script src="http://static.soe.xmu.edu.cn/Themes/Shared/jquery-ui-sliderAccess.js" type="text/javascript"></script>
+
+    <!-- jquery dropdown menu plugin -->
+    <script src="http://static.soe.xmu.edu.cn/Themes/Shared/fg.menu.js" type="text/javascript"></script>
+
+    <!-- jquery menu plugin -->
+    <script src="http://static.soe.xmu.edu.cn/Themes/Shared/hoverIntent.js" type="text/javascript"></script>
+<script src="http://static.soe.xmu.edu.cn/Themes/Shared/superfish.js" type="text/javascript"></script>
+<script src="http://static.soe.xmu.edu.cn/Themes/Shared/supersubs.js" type="text/javascript"></script>
+
+    <!-- jquery tree plugin -->
+    <script src="http://static.soe.xmu.edu.cn/Themes/Shared/jquery.tree.js" type="text/javascript"></script>
+<script src="http://static.soe.xmu.edu.cn/Themes/Shared/jquery.tree.checkbox.js" type="text/javascript"></script>
+
+    <!-- jquery upload plugin -->
+    <script src="http://static.soe.xmu.edu.cn/Themes/Shared/swfobject.js" type="text/javascript"></script>
+<script src="http://static.soe.xmu.edu.cn/Themes/Shared/jquery.uploadify.v2.1.4.min.js" type="text/javascript"></script>
+
+    <!-- jquery utilities -->
+    <script src="http://static.soe.xmu.edu.cn/Themes/Shared/spark.global.js?t=20150608" type="text/javascript"></script>
+<script src="/Themes/Default/wtp.course.js?t=20141023" type="text/javascript"></script>
+
+    <!-- jquery dropdown menu css -->
+    <link href="http://static.soe.xmu.edu.cn/Themes/Shared/fg.menu.css" rel="stylesheet" type="text/css" />
+
+    <!-- jquery menu css -->
+    <link href="http://static.soe.xmu.edu.cn/Themes/Shared/superfish.css?t=20141023" rel="stylesheet" type="text/css" />
+
+    <!-- jquery ui css -->
+    <link href="http://static.soe.xmu.edu.cn/Themes/Shared/ui-themes/redmond/jquery-ui.css?t=20141023" rel="stylesheet" type="text/css" />
+<link href="http://static.soe.xmu.edu.cn/Themes/Shared/jquery-ui-timepicker-addon.css?t=20141023" rel="stylesheet" type="text/css" />
+
+    <!-- jquery upload css -->
+    <link href="http://static.soe.xmu.edu.cn/Themes/Shared/uploadify.css" rel="stylesheet" type="text/css" />
+
+    <!-- wtp css -->
+    <link href="http://static.soe.xmu.edu.cn/Themes/Shared/spark.global.css?t=20141023" rel="stylesheet" type="text/css" />
+<link href="http://static.soe.xmu.edu.cn/Themes/Shared/wtp.global.css?t=20141023" rel="stylesheet" type="text/css" />
+<link href="/Themes/Default/wtp.course.css?t=20141023" rel="stylesheet" type="text/css" />
+
+
+    <script type="text/javascript">
+
+        $(function() {
+            //initialize jquery utilities for multi-language.
+            $.spark.setDefaults({
+                messages: {
+                    common: '请查阅帮助！',
+                    confirm: '确认当前操作？',
+                    //processDialog: '请稍后...',
+                    success: '请求成功！',
+                    error: '请求失败！'
+                },
+                dialog: {
+                    title: '提示',
+                    btnFirstText: '确认',
+                    btnSecondText: '取消'
+                }
+            });
+            //initialize main menu.
+            $("#default-menu-control .sf-menu").supersubs().superfish();
+            $(".click-help").clickAjaxView();
+        });
+    </script>
+
+</head>
+<body>
+    <div id="default-state">
+        
+
+<div class="top" id="logon-control">
+    <div class="content">
+        <div class="left_bar">
+            请选择语言： <a href="http://course.soe.xmu.edu.cn/Account/Authenticate?currentCulture=zh-CN&amp;ReturnUrl=%2f" title="简体中文">简体中文</a> | <a href="http://course.soe.xmu.edu.cn/Account/Authenticate?currentCulture=en-US&amp;ReturnUrl=%2f" title="English">English</a>
+        </div>
+        
+        <div class="right_bar">
+            <span class="user"><strong class="black">欢迎您！</strong></span>
+            
+            [<a href="/Account">登录</a>
+            ]
+        </div>
+    </div>
+</div>
+
+    </div>
+    <div id="default-head">
+        
+<div id="default-head-control">
+    <div id="banner" class="banner">
+    </div>
+</div>
+
+    </div>
+    <div id="default-menu">
+        
+<div id="default-menu-control">
+    <ul class="sf-menu main-menu">
+        
+    </ul>
+</div>
+
+    </div>
+    <div id="default-main">
+        
+    <div class="load-auth">
+    </div>
+
+        <div class="auto-height">
+        </div>
+    </div>
+    <div id="default-foot">
+        
+<div id="default-foot-control">
+    <div id="copyright" class="copyright">
+        Copyright &copy; 2010, All rights reserved. Technical support: <a href="mailto:qingspace@xmu.edu.cn" target="_blank">qingspace@xmu.edu.cn</a>        
+    </div>
+    <div id="bottom_nav">
+        <a href="http://www.soe.xmu.edu.cn" target="_blank">经济学院</a> | <a href="http://www.wise.xmu.edu.cn" target="_blank">王亚南经济研究院</a> <script src="http://s20.cnzz.com/stat.php?id=3089616&web_id=3089616&show=pic" language="JavaScript"></script></div>
+</div>
+
+    </div>
+    
+
+</body>
+</html>
+
+
+    <script type="text/javascript">
+
+        $(function() {
+            $(".load-auth").loadWcfAuth({
+                localLogonUrl: '/Account?returnUrl=%2F',
+                redirectUrl: '/',
+                localAuthUrl: '/Account/Authenticate',
+                //firstTimeUrl: 'http://account.soe.xmu.edu.cn/Account/ChangePassword?firstTime=True',
+                ajax: {
+                    url: 'http://account.soe.xmu.edu.cn/WcfServices/SSOService.svc/Account/RequestToken?callback=?'
+                }
+            });
+        });
+		
+    </script>
+
+

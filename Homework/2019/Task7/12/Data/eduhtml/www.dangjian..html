@@ -1,0 +1,499 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="shortcut icon" type="image/x-icon" href="/public/icon/favicon.ico" />
+<title>清华大学党建网</title>
+<link href="/publish/dangjian/css/index.css" rel="stylesheet" type="text/css" />
+<link href="/publish/dangjian/css/common.css" rel="stylesheet" type="text/css" />
+<link href="/publish/dangjian/css/grid.css" rel="stylesheet" type="text/css" />
+<script src="/publish/dangjian/js/jquery-1.4.min.js" type="text/javascript"></script>
+<script language="javascript" type="text/javascript">
+/*
+ *截取信息简介
+ *summaryStr:String 信息简介
+ *lengTh:int 截取的长度
+ */
+function cutSummary(summaryStr, lengTh) {
+ if (summaryStr.length > lengTh) {
+  summaryStr = summaryStr.substring(0, lengTh) + "...";
+ }
+ document.write(summaryStr);
+}
+/*
+ *jQuery:所有外域链接在新窗口打开
+ */
+$(document).ready(
+  function() {
+   $("a[href*='http://']:not([href*='" + location.hostname
+       + "']),[href*='https://']:not([href*='"
+       + location.hostname + "'])").addClass("external")
+     .attr("target", "_blank")
+  });
+</script><SCRIPT language="JavaScript" src="/publish/dangjian/js/global.js"></SCRIPT>
+<!-- 导航下拉菜单 -->
+<link type="text/css" rel="stylesheet" href="/publish/dangjian/css/mt_dropdown.css" />
+<SCRIPT language="JavaScript" src="/publish/dangjian/js/mt_dropdownc.min.js"></SCRIPT>
+<SCRIPT language="JavaScript" src="/publish/dangjian/js/mt_dropdown_initialize.min.js"></SCRIPT>
+<script language="JavaScript">
+<!--
+function MM_openBrWindow(theURL,winName,features) { //v2.0
+  window.open(theURL,winName,features);
+}
+$(document).ready(function(){
+  init();
+});
+//-->
+</script>
+
+<!-- 导航下拉菜单 --><body>
+<!-- 导入全局模板 -->
+<SCRIPT language="JavaScript" src="/publish/dangjian/js/global.js"></SCRIPT>
+<!-- 导航下拉菜单 -->
+<link type="text/css" rel="stylesheet" href="/publish/dangjian/css/mt_dropdown.css" />
+<SCRIPT language="JavaScript" src="/publish/dangjian/js/mt_dropdownc.min.js"></SCRIPT>
+<SCRIPT language="JavaScript" src="/publish/dangjian/js/mt_dropdown_initialize.min.js"></SCRIPT>
+<script language="JavaScript">
+<!--
+function MM_openBrWindow(theURL,winName,features) { //v2.0
+  window.open(theURL,winName,features);
+}
+$(document).ready(function(){
+  init();
+});
+//-->
+</script>
+
+<!-- 导航下拉菜单 --><SCRIPT language="JavaScript" src="/publish/dangjian/js/global_index.js"></SCRIPT><script>
+$(document).ready(function(){
+getResData();
+function getResData(){
+jQuery.getJSON("/application/visits/visits.jsp?sid=dangjian&r="+Math.random(), function(data){
+/*$("#today").empty();
+$("#today").append(data[0].today);
+$("#arverage").empty();
+$("#arverage").append(data[0].arverage);*/
+$("#total").empty();
+$("#total").append(data[0].total);
+});
+};
+});</script>
+ <!-- 整体区域开始 -->
+ <div class="wrapper">
+    
+     <!-- banner区域开始 -->
+        
+        <!-- banner区域结束 -->
+        
+        <!-- nav start -->
+  <SCRIPT language="JavaScript">
+function initMenuData(){
+if (mtDropDown.isSupported()) {
+var ms = new mtDropDownSet(mtDropDown.direction.down, 0, 0, mtDropDown.reference.bottomLeft);
+var menu88 = ms.addMenu(document.getElementById("menu_88"));
+menu88.addItem("时政资讯","/publish/dangjian/100/index.html","");
+        menu88.addItem("学习辅导","/publish/dangjian/101/index.html","");
+        var subMenu88_1 = menu88.addMenu(menu88.items[1]);
+       subMenu88_1.addItem("重要文件","/publish/dangjian/105/index.html","");
+    subMenu88_1.addItem("国事评说","/publish/dangjian/107/index.html","");
+    subMenu88_1.addItem("理论研究","/publish/dangjian/108/index.html","");
+    subMenu88_1.addItem("参考资料","/publish/dangjian/109/index.html","");
+      menu88.addItem("学习参考资料(电子版)","/publish/dangjian/102/index.html","");
+        menu88.addItem("中心组学习参考(电子版)","/publish/dangjian/103/index.html","");
+        menu88.addItem("音像资料","/publish/dangjian/104/index.html","");
+        var subMenu88_4 = menu88.addMenu(menu88.items[4]);
+       subMenu88_4.addItem("辅导报告","/publish/dangjian/256/index.html","");
+    subMenu88_4.addItem("专题片","/publish/dangjian/257/index.html","");
+      var menu90 = ms.addMenu(document.getElementById("menu_90"));
+menu90.addItem("组织部","http://bmxxfb.cic.tsinghua.edu.cn/zzb/","");
+        menu90.addItem("宣传部","http://www.tsinghua.edu.cn/publish/xcb/267/index.html","");
+        menu90.addItem("统战部","http://bmxxfb.cic.tsinghua.edu.cn/tzb/index.jsp","");
+        menu90.addItem("纪委","http://bmxxfb.cic.tsinghua.edu.cn/dflz/","");
+        menu90.addItem("离退休部","http://bmxxfb.cic.tsinghua.edu.cn/ltxgzc/","");
+        var menu94 = ms.addMenu(document.getElementById("menu_94"));
+menu94.addItem("清华史苑","/publish/dangjian/132/index.html","");
+        menu94.addItem("清华风物","/publish/dangjian/133/index.html","");
+        menu94.addItem("清华人物","/publish/dangjian/134/index.html","");
+        menu94.addItem("清华美文","/publish/dangjian/135/index.html","");
+        menu94.addItem("我与清华","/publish/dangjian/136/index.html","");
+        var menu95 = ms.addMenu(document.getElementById("menu_95"));
+menu95.addItem("马恩著作","/publish/dangjian/137/index.html","");
+        menu95.addItem("列宁著作","/publish/dangjian/138/index.html","");
+        menu95.addItem("毛泽东著作","/publish/dangjian/140/index.html","");
+        menu95.addItem("邓小平著作","/publish/dangjian/141/index.html","");
+        menu95.addItem("江泽民著作","/publish/dangjian/142/index.html","");
+        menu95.addItem("其他领导人著作","/publish/dangjian/143/index.html","");
+        var menu96 = ms.addMenu(document.getElementById("menu_96"));
+menu96.addItem("党内规章","/publish/dangjian/144/index.html","");
+        menu96.addItem("法律法规","/publish/dangjian/145/index.html","");
+        menu96.addItem("白皮书","/publish/dangjian/146/index.html","");
+        menu96.addItem("统计公报","/publish/dangjian/147/index.html","");
+        mtDropDown.renderAll();
+}
+} 
+</SCRIPT>
+ <div class="banner"></div>
+<div class="nav">
+                    <ul>
+                <li><a href="/publish/dangjian/index.html">首页</a></li>
+                <li id="menu_98"><a href="/publish/dangjian/98/index.html">党建信息</a></li>
+                <li id="menu_88"><a href="/publish/dangjian/88/index.html">学习园地</a></li>
+                <li id="menu_92"><a href="/publish/dangjian/92/index.html">学校文件</a></li>
+                <li id="menu_91"><a href="/publish/dangjian/91/index.html">校领导讲话</a></li>
+                <li id="menu_99"><a href="/publish/dangjian/99/index.html">时代先锋</a></li>
+                <li id="menu_94"><a href="/publish/dangjian/94/index.html">清华文化</a></li>
+                <li id="menu_90"><a href="/publish/dangjian/90/index.html">党务指南</a></li>
+                <li id="menu_95"><a href="/publish/dangjian/95/index.html">经典文库</a></li>
+                <li class="no_bg" id="menu_96"><a href="/publish/dangjian/96/index.html">资料库</a></li>
+            </ul>
+</div>
+        <script language="JavaScript">initMenuData();</script>        <!-- nav end -->
+       
+     <!-- 二级菜单区域开始 -->
+        <div class="s_menu">
+         
+         <!-- times区域开始 -->
+            <div class="times">
+             <p>
+     <script language=JavaScript> var version = 1.0;</script> 
+                    <script language=JavaScript1.1> var version = 1.1;</script> 
+                    <script language=JavaScript1.2> var version = 1.2;</script> 
+                    <script language=JavaScript1.3> var version = 1.3;</script>
+                    <script language="JavaScript"> 
+                    <!-- 
+                    var y=new Date(); 
+                    var gy=y.getYear(); 
+                    var dName=new Array(" (星期天)"," (星期一)"," (星期二)"," (星期三)"," (星期四)"," (星期五)"," (星期六)"); 
+                    var mName=new Array("1月","2月","3月","4月","5月","6月","7月","8月","9月","10月","11月","12月"); 
+                    if (version < 1.3) 
+                    { 
+                    if (gy<2000) 
+                    { 
+                    document.write("<FONT COLOR=\"#555\" class=\"p1\">"+"19"+y.getYear()+"年" + mName[y.getMonth()] + y.getDate() + "日" + dName[y.getDay()] + "" + "</FONT>"); 
+                    } 
+                    else 
+                    document.write("<FONT COLOR=\"#555\" class=\"p1\">"+y.getYear()+"年" + mName[y.getMonth()] + y.getDate() + "日" + dName[y.getDay()] + "" + "</FONT>"); 
+                    } 
+                    else 
+                    { 
+                    document.write("<FONT COLOR=\"#555\" class=\"p1\">"+y.getFullYear() +"年"+ mName[y.getMonth()] + y.getDate() + "日" + dName[y.getDay()] + "</FONT>"); 
+                    } 
+                    //--> 
+                    </script>
+                </p>
+            </div>
+            <!-- times区域结束 -->
+        
+            <!-- search区域开始 -->
+           <div class="search">
+<form id="searchForm" action="#" method="post" target="_blank" >
+
+            <input name="" type="text" value="站内搜索" />
+            <a href="javascript:document.getElementById('searchForm').submit();" title="搜索"></a>
+</form>
+            </div>          
+         <!-- search区域结束 -->
+        
+         <!-- login区域开始 -->
+         <!--   <div class="login">
+             <span>用户名</span>
+             <input name="" type="text" />
+                <span class="ml_18">密码</span>
+                <input name="" type="text" />
+                <a href="#" title="登录"></a>
+            </div>  -->
+            <!-- login区域结束 -->
+                                    
+      </div>        <!-- 二级菜单区域结束 -->
+        
+        <!-- 中部区域开始 -->
+        <div class="content">
+         
+            <!-- l_cont start -->
+            <div class="l_cont">
+                            
+       <!-- start -->
+                <div class="l_box_list">
+                 <h3><span>时政资讯</span><a href="/publish/dangjian/100/index.html">更多&raquo;</a></h3>
+                    <ul>
+                                           <li><a href="/publish/dangjian/100/2017/20171018133822874632298/20171018133822874632298_.html" title="习近平提出，提高保障和改善民生水平，加强和创新社会治理">习近平提出，提高保障和改...</a></li>
+                                           <li><a href="/publish/dangjian/100/2017/20171018133734942823854/20171018133734942823854_.html" title="习近平指出，既要决胜全面建成小康社会，又要开启全面建设社会主义现代化国家新征程">习近平指出，既要决胜全面...</a></li>
+                                           <li><a href="/publish/dangjian/100/2017/20171018132200202615993/20171018132200202615993_.html" title="习近平说，实现中华民族伟大复兴的中国梦是新时代中国共产党的历史使命">习近平说，实现中华民族伟...</a></li>
+                                           <li><a href="/publish/dangjian/100/2017/20171018110953500427469/20171018110953500427469_.html" title="习近平指出，中国特色社会主义进入新时代是我国发展新的历史方位">习近平指出，中国特色社会...</a></li>
+                                           <li><a href="/publish/dangjian/100/2017/20171018110857568369757/20171018110857568369757_.html" title="习近平说，过去五年取得了改革开放和社会主义现代化建设的历史性成就">习近平说，过去五年取得了...</a></li>
+                                          </ul>
+                </div>
+                <!-- end -->
+                
+                <!-- lr_box02 start -->
+<div class="l_box_list">
+                 <h3><span>活动专题</span><a href="/publish/dangjian/490/index.html">更多&raquo;</a></h3>
+</div>
+               <div class="lr_box02"><a href="/publish/dangjian/1550/index.html" target="_blank"><img src="/publish/dangjian/149/2017/20171024155144419165135/20171024155154497688731.jpg" width="205" height="57" style="margin-bottom:2px"/></a></div>
+               <div class="lr_box02"><a href="/publish/dangjian/1543/index.html" target="_blank"><img src="/publish/dangjian/149/2017/20170426161614970259817/20171009094403107285729.jpg" width="205" height="57" style="margin-bottom:2px"/></a></div>
+               <div class="lr_box02"><a href="http://wzpt.cic.tsinghua.edu.cn/publish/lxyz/index.html" target="_blank"><img src="/publish/dangjian/149/2016/20160513165608607929037/20160513221554302663236.jpg" width="205" height="57" style="margin-bottom:2px"/></a></div>
+               <div class="lr_box02"><a href="/publish/dangjian/1529/index.html" target="_blank"><img src="/publish/dangjian/149/2016/20161101095806953286658/20161101095831769954943.png" width="205" height="57" style="margin-bottom:2px"/></a></div>
+                <!-- lr_box02 end -->
+                
+                <!-- l_box03 start -->
+              <!--   <div class="l_box03 btn"><a href="#"><span>支部家园</span></a></div>  -->
+                <!-- l_box03 end -->
+            
+       <!-- start -->
+                <div class="l_box_list">
+                 <h3><span>音像资料</span><a href="/publish/dangjian/104/index.html">更多&raquo;</a></h3>
+                    <ul>
+                     <h4><a href="/publish/dangjian/256/index.html">辅导报告</a></h4>
+                                           <li><a href="/publish/dangjian/256/2015/20151218134345950800406/20151218134345950800406_.html"  title="杨伟民：十八届五中全会《建议》学习体会">杨伟民：十八届五中全会《...</a></li>
+                                          <li><a href="/publish/dangjian/256/2014/20140606112638105798864/20140606112638105798864_.html"  title="韩庆祥：新一届中央领导集体治国理政总体思路的哲学梳理">韩庆祥：新一届中央领导集...</a></li>
+                                          <li><a href="/publish/dangjian/256/2013/20131120113415387319251/20131120113415387319251_.html"  title="胡鞍钢：十八届三中全会精神解读">胡鞍钢：十八届三中全会精...</a></li>
+                                           </ul>
+                    <div class="l_line"></div>
+                    <ul>
+                     <h4><a href="/publish/dangjian/257/index.html">专题片</a></h4>
+                                            <li><a href="/publish/dangjian/257/2017/20171017155349379497574/20171017155349379497574_.html"  title="《社会主义“有点潮”》第六集 中国梦是个什么“梦”？">《社会主义“有点潮”》第...</a></li>
+                                          <li><a href="/publish/dangjian/257/2017/20171017155313375307929/20171017155313375307929_.html"  title="《社会主义“有点潮”》第五集：中国特色社会主义“特”在哪？">《社会主义“有点潮”》第...</a></li>
+                                          <li><a href="/publish/dangjian/257/2017/20171017155231503520671/20171017155231503520671_.html"  title="《社会主义“有点潮”》第四集：南湖的红船为什么能破浪前行">《社会主义“有点潮”》第...</a></li>
+                                         </ul>
+                </div>
+                <!-- end -->
+                
+            </div>
+            <!-- l_cont end -->
+            
+            <!-- c_cont start -->
+            <div class="c_cont">
+            
+                <!-- start -->
+                <div class="c_box">
+                 <h3><span>头条新闻</span><a href="/publish/dangjian/148/index.html">更多&raquo;</a></h3>
+     
+                    <!-- picnews start -->
+<div class="picnews">
+ 
+ <div class="cl_pic">
+  <!-- 图片切换开始 -->
+  <script src="/publish/dangjian/js/qhflash.js" type=text/javascript>
+  //<![CDATA[
+  //]]>
+  </script>
+        
+<div id="focusViwer" align="center">
+ <object id="focusflash" width="250" height="175" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"><param name="_cx" value="12144" /><param name="_cy" value="4128" /><param name="FlashVars" value="" /><param name="Movie" value="/publish/dangjian/images/focus.swf" /><param name="Src" value="/publish/dangjian/images/focus.swf" /><param name="WMode" value="Opaque" /><param name="Play" value="0" /><param name="Loop" value="-1" /><param name="Quality" value="High" /><param name="SAlign" value="" /><param name="Menu" value="0" /><param name="Base" value="" /><param name="AllowScriptAccess" value="sameDomain" /><param name="Scale" value="NoScale" /><param name="DeviceFont" value="0" /><param name="EmbedMovie" value="0" /><param name="BGColor" value="dadada" /><param name="SWRemote" value="" /><param name="MovieData" value="" /><param name="SeamlessTabbing" value="1" /><param name="Profile" value="0" /><param name="ProfileAddress" value="" /><param name="ProfilePort" value="0" /><param name="AllowNetworking" value="all" /><param name="AllowFullScreen" value="false" />
+ </object>
+</div>
+        
+       <script type=text/javascript>
+ //<![CDATA[
+ <!--
+  var focus_width=250   // 图片宽度
+  var focus_height=175  // 图片高度
+  var text_height=0     // 图片文字区域高度
+  var swf_height = focus_height+text_height
+var pics='';
+var links='';
+var texts='';
+pics+='/publish/dangjian/148/20170418111117123910332/1492401078258.jpg';
+links+='/publish/dangjian/148/2017/20170418111117123910332/20170418111117123910332_.html';
+texts+='我校发布新形势下共产党员行为规范';
+pics+='|';
+links+='|';
+texts+='|';
+pics+='/publish/dangjian/148/20170314105416734645722/20160314.jpg';
+links+='/publish/dangjian/148/2017/20170314105416734645722/20170314105416734645722_.html';
+texts+='中央第七巡视组专项巡视清华大学党委工作动员会召开';
+pics+='|';
+links+='|';
+texts+='|';
+pics+='/publish/dangjian/148/20170216144159105393426/1487015815307_1.jpg';
+links+='/publish/dangjian/148/2017/20170216144159105393426/20170216144159105393426_.html';
+texts+='习近平出席省部级领导干部研讨班并作重要讲话';
+pics+='|';
+links+='|';
+texts+='|';
+pics+='/publish/dangjian/148/20170122163333664587328/1484893429294(1).jpg';
+links+='/publish/dangjian/148/2017/20170122163333664587328/20170122163333664587328_.html';
+texts+='不忘初心 砥砺前行————2016年清华大学党的建...';
+pics+='|';
+links+='|';
+texts+='|';
+pics+='/publish/dangjian/148/20161209083458559787122/rmrb2016120901p39_b.jpg';
+links+='/publish/dangjian/148/2016/20161209083458559787122/20161209083458559787122_.html';
+texts+='全国高校思想政治工作会议在京召开';
+pics+='|';
+links+='|';
+texts+='|';
+pics+='/publish/dangjian/148/20161028084201117518467/20161028.jpg';
+links+='/publish/dangjian/148/2016/20161028084201117518467/20161028084201117518467_.html';
+texts+='中共十八届六中全会在京举行';
+  
+  var FocusFlash = new picFlash("/publish/dangjian/images/focus.swf", "focusflash", focus_width, swf_height, "7", "#e8e4e3", false, "High");
+  FocusFlash.addParam("allowScriptAccess", "sameDomain");
+  FocusFlash.addParam("menu", "false");
+  FocusFlash.addParam("wmode", "opaque");
+  FocusFlash.addVariable("pics", pics);
+  FocusFlash.addVariable("links", links);
+  FocusFlash.addVariable("texts", texts);
+  FocusFlash.addVariable("borderwidth", focus_width);
+  FocusFlash.addVariable("borderheight", focus_height);
+  FocusFlash.addVariable("textheight", text_height);
+  FocusFlash.write("focusViwer");
+  //-->
+ //]]>
+ </script>
+</div>
+                        <!-- 图片切换结束 -->
+                        
+                        <!-- 标签切换开始 -->
+                        <div class="cr_list">
+                          <h5><a href="/publish/dangjian/148/2017/20171024101144403691776/20171024101144403691776_.html" title="十九大代表、清华大学党委书记陈旭：“把学生培养成具有全球胜任力的人才”" >十九大代表、清华大学党委书记陈...</a></h5>
+                            <p>　　&ldquo;清华大学将全面推动学校综合改革和&lsquo;双一流&rsquo;建设，加快推进全球战略，推动高层次国际化办学和科技国际合作，把学生培养成具有全球胜任力的人才。&rdquo;十九大代表、清华大学党委书记陈旭，今天在北京团驻地接受记者采访时说。陈旭说，党的十八大以来，......<a href="/publish/dangjian/148/2017/20171024101144403691776/20171024101144403691776_.html">[详细]</a></p>
+                        </div>
+                        <!-- 标签切换结束 -->
+                                                
+                    </div>
+                    <!-- picnews end -->
+                    
+                </div>             <!-- end -->
+                             
+                <!-- start -->
+                <div class="c_box">
+                 <h3><span>党建信息</span><a href="/publish/dangjian/98/index.html">更多&raquo;</a></h3>
+                    <ul>
+                                                                         <li><a href="/publish/dangjian/98/2017/20171020151234184971451/20171020151234184971451_.html" title="精仪系召开2017年学生工作暨党建工作研讨会">精仪系召开2017年学生工作暨党建工作研讨会</a><span>2017-10-20</span></li>
+                                                                          <li><a href="/publish/dangjian/98/2017/20171020151044655592251/20171020151044655592251_.html" title="热能系组织师生员工收听收看十九大开幕会">热能系组织师生员工收听收看十九大开幕会</a><span>2017-10-20</span></li>
+                                                                          <li><a href="/publish/dangjian/98/2017/20171020150346851250107/20171020150346851250107_.html" title="精仪系组织师生收听收看十九大开幕会">精仪系组织师生收听收看十九大开幕会</a><span>2017-10-20</span></li>
+                                                                          <li><a href="/publish/dangjian/98/2017/20171020114025254794834/20171020114025254794834_.html" title="清华附中党委组织师生收看党的十九大开幕会">清华附中党委组织师生收看党的十九大开幕会</a><span>2017-10-20</span></li>
+                                                                          <li><a href="/publish/dangjian/98/2017/20171020113103917715212/20171020113103917715212_.html" title="第一附属医院党委开展理论中心组学习工作">第一附属医院党委开展理论中心组学习工作</a><span>2017-10-20</span></li>
+                                                                          <li><a href="/publish/dangjian/98/2017/20171020105232641207604/20171020105232641207604_.html" title="电机系召开党委扩大会布置党风廉政建设宣传教育月工作">电机系召开党委扩大会布置党风廉政建设宣传教育月工作</a><span>2017-10-20</span></li>
+                                                                          <li><a href="/publish/dangjian/98/2017/20171020105058160892551/20171020105058160892551_.html" title="电机系理论学习中心组召开理论学习会">电机系理论学习中心组召开理论学习会</a><span>2017-10-20</span></li>
+                                              </ul>
+                </div>
+                <!-- end -->
+                
+                <!-- start -->
+                <div class="c_box">
+                 <h3><span>学习辅导</span><a href="/publish/dangjian/101/index.html">更多&raquo;</a></h3>
+                    <ul>
+                                                  <li><a href="/publish/dangjian/101/2017/20171018103516875460346/20171018103516875460346_.html" title="习近平致中国人民大学建校80周年的贺信">习近平致中国人民大学建校80周年的贺信</a><span>2017-10-18</span></li>
+                                                 <li><a href="/publish/dangjian/101/2017/20171018103432162390907/20171018103432162390907_.html" title="习近平：坚持合作创新法治共赢 携手开展全球安全治理">习近平：坚持合作创新法治共赢 携手开展全球安全治理</a><span>2017-10-18</span></li>
+                                                 <li><a href="/publish/dangjian/101/2017/20171018100135446926302/20171018100135446926302_.html" title="前进，向着伟大复兴的中国梦！——写在党的十九大召开之际">前进，向着伟大复兴的中国梦！——写在党的十九大召开之际</a><span>2017-10-18</span></li>
+                                                 <li><a href="/publish/dangjian/101/2017/20171018095628903705549/20171018095628903705549_.html" title="人民日报社论：开辟中国特色社会主义新境界">人民日报社论：开辟中国特色社会主义新境界</a><span>2017-10-18</span></li>
+                                                 <li><a href="/publish/dangjian/101/2017/20171010153602462674953/20171010153602462674953_.html" title="牢记全党嘱托 切实履行职责">牢记全党嘱托 切实履行职责</a><span>2017-10-10</span></li>
+                                                 <li><a href="/publish/dangjian/101/2017/20170815141550912967545/20170815141550912967545_.html" title="在新的历史起点上不忘初心继往开来——一论学习贯彻习近平总书记“7·26”重要讲话精神">在新的历史起点上不忘初心继往开来——一论学习贯彻习近平总书记“...</a><span>2017-08-15</span></li>
+                                                 <li><a href="/publish/dangjian/101/2017/20170815101233627784138/20170815101233627784138_.html" title="牢牢把握中国特色社会主义这个主题——二论学习贯彻习近平总书记“7·26”重要讲话精神">牢牢把握中国特色社会主义这个主题——二论学习贯彻习近平总书记“...</a><span>2017-08-15</span></li>
+                                                      </ul>
+                </div>
+                <!-- end -->
+                <!-- start -->
+<!--
+                <div class="c_box">
+                 <h3><span>党风廉政建设</span><a href="/publish/dangjian/225/index.html">更多&raquo;</a></h3>
+                    <ul>
+                                                       </ul>
+                </div>
+-->
+                <!-- end -->
+                
+            </div>
+            <!-- c_cont start -->
+            
+            <!-- r_cont start -->
+            <div class="r_cont">
+            
+       <!-- start -->
+                <div class="l_box_list">
+                 <h3><span>党员学习平台</span><!-- <a href="/publish/dangjian/93/index.html">更多&raquo;</a> --></h3>
+                    <ul>
+                                         </ul>
+                </div>
+                <!-- end -->
+                
+                <!-- l_box03 start -->
+                <div><a href="http://www.dangjian.tsinghua.edu.cn/xxpt" target="_blank"><img src="/publish/dangjian/images/logo.png"></a></div>  
+       <!-- start -->
+                <div class="l_box_list">
+                 <h3><span>党风廉政建设</span></h3>
+                    <ul>
+     <div style="clear:both">
+                     <li style="float:left;margin-left:20px;"><a href=http://bmxxfb.cic.tsinghua.edu.cn/docinfo/board1/boardlist.jsp?columnId=02802&parentColumnId=02802 title="$user.title" target="_blank">领导讲话</a></li>
+                     <li style="float:right;margin-right:30px;"><a href=http://bmxxfb.cic.tsinghua.edu.cn/docinfo/board1/boardlist.jsp?columnId=02806&parentColumnId=02806 title="$user.title" target="_blank">法规文件</a></li>
+                     </div>
+      <div style="clear:both">
+      <li style="float:left;margin-left:20px;"><a href=http://bmxxfb.cic.tsinghua.edu.cn/docinfo/board1/boardlist.jsp?columnId=02805&parentColumnId=02805 title="$user.title" target="_blank">信息动态</a></li>
+                     <li style="float:right;margin-right:30px;"><a href=http://bmxxfb.cic.tsinghua.edu.cn/docinfo/board1/boardlist.jsp?columnId=02807&parentColumnId=02807 title="$user.title" target="_blank">典型示范</a></li>
+                     </div>
+      <div style="clear:both">
+      <li style="float:left;margin-left:20px;"><a href=http://bmxxfb.cic.tsinghua.edu.cn/docinfo/board1/boardlist.jsp?columnId=02808&parentColumnId=02808 title="$user.title" target="_blank">警钟长鸣</a></li>
+                    </div>
+     </ul>
+                </div>
+                <!-- end -->              
+       <!-- start -->
+                <div class="l_box_list">
+                 <h3><span>时代先锋</span><a href="/publish/dangjian/99/index.html">更多&raquo;</a></h3>
+                    <div class="r_box2">
+                     <div class="l_pic"><img src="/publish/dangjian/99/20160512204953698388201/0001.jpg" width="44" height="44" /></div>
+                        <div class="r_list">
+                         <h5><a href="/publish/dangjian/99/2016/20160512204953698388201/20160512204953698388201_.html">张作义：凭理想与...</a></h5>
+                            <p>　　在北京昌平南口的燕山脚下，有一座......</p>
+                        </div>
+                    </div>
+                    <div class="l_line"></div>                    <div class="r_box2">
+                     <div class="l_pic"><img src="/publish/dangjian/99/20151218164503985907180/20151218171124767349613.jpg" width="44" height="44" /></div>
+                        <div class="r_list">
+                         <h5><a href="/publish/dangjian/99/2015/20151218164503985907180/20151218164503985907180_.html">赵家和：一生情系...</a></h5>
+                            <p>　　&nbsp;题记：行胜于言，......</p>
+                        </div>
+                    </div>
+                    <div class="l_line"></div>                                                </div>
+        <!-- end -->
+       <!-- start -->
+                <div class="l_box_list">
+                 <h3><span>图说理论</span><a href="/publish/dangjian/922/index.html">更多&raquo;</a></h3>
+                    <div class="r_box2">
+                     <div class="l_pic"><img src="/publish/dangjian/922/20161115164800832855669/02.PNG" width="44" height="44" /></div>
+                        <div class="r_list">
+                         <h5><a href="/publish/dangjian/922/2016/20161115164800832855669/20161115164800832855669_.html">图解：十八大以来...</a></h5>
+                            <p>　　</p>
+                        </div>
+                    </div>
+                    <div class="l_line"></div>                    <div class="r_box2">
+                     <div class="l_pic"><img src="/publish/dangjian/922/20161115164233917786431/01.PNG" width="44" height="44" /></div>
+                        <div class="r_list">
+                         <h5><a href="/publish/dangjian/922/2016/20161115164233917786431/20161115164233917786431_.html">一图看懂总书记在...</a></h5>
+                            <p>　　</p>
+                        </div>
+                    </div>
+                    <div class="l_line"></div>                                                </div>
+        <!-- end -->
+
+             <div class="lr_box02"><a href="#" target="_blank"><img src="/publish/dangjian//columnPic/20120217094003393497640.gif" width="205" height="57" /></a></div>
+
+            <!-- r_cont end -->
+                           
+       </div>
+        <!-- 中部区域结束 -->
+        
+        <!-- 页脚区域开始 -->
+           <div class="footer" style="margin-top:10px">
+         <ul class="f_menu">
+             <li><a href="/publish/dangjian/500/index.html">关于我们</a></li>
+                <li><a href="/publish/dangjian/501/index.html">联系我们</a></li>
+                <li>
+                      <select name="select" class="f_select" style="margin-top:0px; margin-top:5px\9;"  id="select"  onchange=
+'window.open(this.options[this.selectedIndex].value)'>
+<option>友情链接</option>
+<option value="http://www.tsinghua.edu.cn" target="_blank">清华大学主页</option>
+<option value="http://news.tsinghua.edu.cn/publish/news/index.html" target="_blank">清华新闻网</option>
+<option value="http://cpc.people.com.cn/" target="_blank">中国共产党新闻网</option>
+<option value="http://www.qstheory.cn/" target="_blank">求是理论网</option>
+<option value="http://www.bjqx.org.cn/qxweb/default.aspx" target="_blank">前线网</option>
+                     </select>
+                </li>
+            </ul>
+           <p>Copyright &copy; 2011 清华大学党委宣传部&nbsp;&nbsp;All Rights Reserved.&nbsp;&nbsp;&nbsp;&nbsp;地址：北京市海淀区清华园1号 100084</p>
+</div>        <!-- 页脚区域结束 -->
+        
+</div>
+    <!-- 整体区域结束 -->
+</body>
+</html>

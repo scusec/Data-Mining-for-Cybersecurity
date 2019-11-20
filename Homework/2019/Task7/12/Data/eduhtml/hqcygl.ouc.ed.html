@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <title>登录</title>
+    <link href="/css/login/default/login.css" rel="stylesheet" type="text/css"/>
+    <script src="/js/jquery-1.11.0.min.js" type="text/javascript"></script>
+    <script src="/js/jquery.cookie.js" type="text/javascript"></script>
+
+</head>
+<body>
+    <div class="login-top">
+        <div class="login-top-warp">
+            <span>中国海洋大学后勤数字化平台-餐饮管理系统</span> <em class="yj5" onclick="AddFavorite(window.location,document.title)">
+                收藏</em>
+        </div>
+    </div>
+    <div id="login-center" class="login-center4">
+        <div class=" loing-center-warp">
+<form action="/home/Login" id="fLogin" method="post">                <span>用户登录</span>
+                <div class="login-errmsg" style="display: none;">
+                </div>
+                <div class="inputbox login-user yj3 inputbox-on">
+                    <input data-val="true" data-val-required="请输入用户名" id="txtUser" myholder="平台帐号" name="UserName" placeholder="平台账号" tabindex="1" type="text" value="" />
+                </div>
+                <div class="inputbox login-psw yj3">
+                    <input data-val="true" data-val-required="请输入密码" id="txtPsw" maxlength="20" myholder="密码" name="Password" placeholder="密码" tabindex="2" type="password" value="" />
+                </div>
+                <a class="btn but-login" id="btnOk" tabindex="3">登录</a> 
+                <div class="login-msg">
+                    
+                </div>
+<input id="ReturnUrl" name="ReturnUrl" type="hidden" value="/" /><input id="LoginType" name="LoginType" type="hidden" value="" /></form>            <div style="clear: both;">
+            </div>
+        </div>
+    </div>
+    <div class="login-footer">
+        <div class="login-footer-warp">
+            <ul>
+                <li> </li>
+              
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
+<script type="text/javascript">
+    var logining = false;
+    $(document).ready(function () {
+        var imgs = new Array("login-center4")
+        var curimg = $.cookie('loginImg');
+        var img = 1;
+        if (curimg == null) {
+            img = 1;
+        } else {
+            img = parseInt(curimg) + 1;
+        }
+        if (img > imgs.length) img = 1;
+        $.cookie('loginImg', img);
+        $("#login-center").attr("class", imgs[img - 1]);
+
+        $(".inputbox input,.inputbox textarea").focus(function () {
+            $(this).parent("div").addClass("inputbox-on");
+        });
+        $(".inputbox input,.inputbox textarea").blur(function () {
+            $(this).parent("div").removeClass("inputbox-on");
+        });
+        $("#btnOk").click(function () {
+            LoginSubmit();
+        });
+        $(document).keypress(function (event) {
+            var keycode = (event.keyCode ? event.keyCode : event.which);
+            if (keycode == '13') {
+                LoginSubmit();
+            }
+        });
+        if ("ok" != "ok") {
+            $(".login-errmsg").html("ok");
+            $(".login-errmsg").fadeIn();
+            $("#txtPsw").focus();
+        }
+        else {
+            $("#txtUser").focus();
+        }
+    });
+    //登录检查
+    function CheckLogin() {
+        var msg = "";
+        if ($("#txtUser").val() == "") {
+            $(".login-errmsg").html("你还没有输入帐号！");
+            $(".login-errmsg").fadeIn();
+            $("#txtUser").focus();
+            return false;
+        }
+        if ($("#txtPsw").val() == "") {
+            $(".login-errmsg").html("你还没有输入密码！");
+            $(".login-errmsg").fadeIn();
+            $("#txtPsw").focus();
+            return false;
+        }
+        return true;
+    }
+    function LoginSubmit() {
+        //        alert(logining);
+        if (logining) return;
+        if (CheckLogin()) {
+            logining = true;
+            $("#btnOk").html("登录中...");
+            $("#fLogin").submit();
+        }
+    }
+    function AddFavorite(sURL, sTitle) {
+        try {
+            window.external.addFavorite(sURL, sTitle);
+        }
+        catch (e) {
+            try {
+                window.sidebar.addPanel(sTitle, sURL, "");
+            }
+            catch (e) {
+                alert("加入收藏失败，请使用Ctrl+D进行添加");
+            }
+        }
+    }
+</script>

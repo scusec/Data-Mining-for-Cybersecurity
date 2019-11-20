@@ -1,0 +1,577 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="Content-Language" content="zh-CN" />
+<title>河海大学常州校区教务部</title>
+<link href="css/index.css" rel="stylesheet" type="text/css"/>
+<link href="css/default.css" rel="stylesheet" type="text/css"/>
+<style type="text/css">
+#outer{width:470px;margin:2px auto; }
+#tab{overflow:hidden;zoom:1;border:0px solid #000066; background:url(images/a.jpg)}
+#tab li{float:left; background-color:#CCCCCC;height:30px;cursor:pointer;line-height:30px;list-style-type:none;padding:0 10px;font-family:"微软雅黑"; font-size:14px}
+#tab li.current{color:#000;background:#ACC5EA; color:#0000FF; font-family:"微软雅黑"; font-size:14px; font-weight:bold}
+#content{border:0px solid #000;border-top-width:0;}
+#content ul{line-height:25px;display:none;margin:0 30px;padding:10px 0; }
+#content ul li {LIST-STYLE-IMAGE: none;LIST-STYLE-TYPE: none; height:auto}
+
+INPUT {
+PADDING-BOTTOM: 1px; MARGIN: 2px; PADDING-LEFT: 1px; PADDING-RIGHT: 1px; FONT-SIZE: 11px; PADDING-TOP: 1px
+}
+SELECT {
+PADDING-BOTTOM: 1px; MARGIN: 2px; PADDING-LEFT: 1px; PADDING-RIGHT: 1px; FONT-SIZE: 11px; PADDING-TOP: 1px
+}
+TEXTAREA {
+PADDING-BOTTOM: 1px; MARGIN: 2px; PADDING-LEFT: 1px; PADDING-RIGHT: 1px; FONT-SIZE: 11px; PADDING-TOP: 1px
+}
+.inpa {
+WIDTH: 100px
+}
+a:hover{ color:#862b79; text-decoration:underline}
+.buttom {
+BORDER-BOTTOM: #1e7ace 1px solid; BORDER-LEFT: #1e7ace 1px solid; PADDING-BOTTOM: 1px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; BACKGROUND: #d0f0ff; FONT-SIZE: 12px; BORDER-TOP: #1e7ace 1px solid; BORDER-RIGHT: #1e7ace 1px solid; PADDING-TOP: 1px
+}
+#sddm
+{	margin: 0 auto;
+	padding: 0;
+	z-index: 30;
+	background:url(../images/nav01.jpg) repeat-x;
+	width: 972px;
+	height:30px;}
+
+#sddm li
+{
+width:90px;  
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	float: left;
+	FONT-FAMILY: "微软雅黑";
+	color:#FFFFFF;
+	background:url(../images/nav01.jpg) repeat-x;
+	font-size:15px }
+#sddm li a
+{	display: block;
+	margin: 0 1px 0 0;
+	padding: 4px 14px;
+	width: 80px;
+	background:url(../images/nav01.jpg) repeat-x;
+	color:#FFFFFF;
+	text-align: center;
+	text-decoration: none}
+
+#sddm li a:hover
+{	background:url(../images/nav01.jpg) repeat-x;
+	color:#FFFFFF;
+}
+
+#sddm div
+{	position: absolute;
+	visibility: hidden;
+	margin: 0;
+	padding: 0;
+	background:url(../images/nav01.jpg) repeat-x;
+		color:#FFFFFF;
+	border: 1px solid #5970B2}
+
+	#sddm div a
+	{	position: relative;
+		display: block;
+		margin: 0;
+		padding: 5px 10px;
+		width: 80px;
+		white-space: nowrap;
+		text-align: left;
+		text-decoration: none;
+		color:#FFFFFF;
+
+		background:url(../images/nav01.jpg) repeat-x;
+		color: #2875DE;
+		FONT-FAMILY: "微软雅黑";
+		
+		fontsize: 14px}
+
+	#sddm div a:hover
+	{	background: #044DB4;
+		color: #862b79}
+</style>
+<script type="text/javascript"> 
+window.onload = function ()
+{
+	var oLi = document.getElementById("tab").getElementsByTagName("li");
+	var oUl = document.getElementById("content").getElementsByTagName("ul");
+	
+	for(var i = 0; i < oLi.length; i++)
+	{
+		oLi[i].index = i;
+		oLi[i].onmouseover = function ()
+		{
+			for(var n = 0; n < oLi.length; n++) oLi[n].className="";
+			this.className = "current";
+			for(var n = 0; n < oUl.length; n++) oUl[n].style.display = "none";
+			oUl[this.index].style.display = "block"
+		}	
+	}
+}
+var timeout         = 500;
+var closetimer		= 0;
+var ddmenuitem      = 0;
+
+// open hidden layer
+function mopen(id)
+{	
+	// cancel close timer
+	mcancelclosetime();
+
+	// close old layer
+	if(ddmenuitem) ddmenuitem.style.visibility = 'hidden';
+
+	// get new layer and show it
+	ddmenuitem = document.getElementById(id);
+	ddmenuitem.style.visibility = 'visible';
+
+}
+// close showed layer
+function mclose()
+{
+	if(ddmenuitem) ddmenuitem.style.visibility = 'hidden';
+}
+
+// go close timer
+function mclosetime()
+{
+	closetimer = window.setTimeout(mclose, timeout);
+}
+
+// cancel close timer
+function mcancelclosetime()
+{
+	if(closetimer)
+	{
+		window.clearTimeout(closetimer);
+		closetimer = null;
+	}
+}
+
+// close layer when click-out
+document.onclick = mclose; 
+</script>
+</head>
+<body>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/artDialog.jQuery.js"></script>
+<script type="text/javascript" src="js/artDialog.iframeTools.js"></script>
+<script type="text/javascript" src="js/ZF_Dialog.js"></script>
+<script type="text/javascript" src="js/change.js"></script>
+<div class="header"></div>
+<div class="nav">
+<div class="nav_con">
+<ul id="sddm">
+	<li><a href="index.aspx" onmouseover="mopen('m1')" onmouseout="mclosetime()">首页</a>	</li>
+	<li><a onmouseover="mopen('m2')" onmouseout="mclosetime()">机构设置</a>
+		<div id="m2" onmouseover="mcancelclosetime()" onmouseout="mclosetime()" style="background:url(images/nav01.jpg)">
+		<a href="ContentList.aspx?columnid=8" style="color:#FFFFFF"> 部门简介 </a>
+		<a href="ContentList.aspx?columnid=9" style="color:#FFFFFF"> 工作职责 </a>
+		<a href="ContentList.aspx?columnid=10" style="color:#FFFFFF"> 规章制度 </a>		</div>
+	</li>
+	<li><a onmouseover="mopen('m3')" onmouseout="mclosetime()">人才培养</a>
+		<div id="m3" onmouseover="mcancelclosetime()" onmouseout="mclosetime()" style="background:url(images/nav01.jpg)">
+		<a href="ContentList.aspx?columnid=11" style="color:#FFFFFF">专业设置</a>
+		<a href="ContentList.aspx?columnid=12" style="color:#FFFFFF">培养方案</a>
+
+
+		<a href="ContentList.aspx?columnid=13" style="color:#FFFFFF">英才计划</a>		
+		<a href="ContentList.aspx?columnid=14" style="color:#FFFFFF">卓越计划</a>
+		<a href="ContentList.aspx?columnid=15" style="color:#FFFFFF">创新创业</a>	</div>
+	</li>
+	<li><a onmouseover="mopen('m4')" onmouseout="mclosetime()">教学改革</a>
+		<div id="m4" onmouseover="mcancelclosetime()" onmouseout="mclosetime()" style="background:url(images/nav01.jpg)">
+		<a href="ContentList.aspx?columnid=16" style="color:#FFFFFF">专业建设</a>
+		<a href="ContentList.aspx?columnid=17" style="color:#FFFFFF">课程建设</a>
+		<a href="ContentList.aspx?columnid=18" style="color:#FFFFFF">教材建设</a>		
+		<a href="ContentList.aspx?columnid=19" style="color:#FFFFFF">教改项目</a>		</div>
+	</li>
+	<li><a onmouseover="mopen('m6')" onmouseout="mclosetime()">实践教学</a>	
+	    <div id="m6" onmouseover="mcancelclosetime()" onmouseout="mclosetime()" style="background:url(images/nav01.jpg)">
+		<a href="ContentList.aspx?columnid=20" style="color:#FFFFFF">管理规定</a>
+		<a href="ContentList.aspx?columnid=21" style="color:#FFFFFF">实验网站</a>
+		<a href="ContentList.aspx?columnid=22" style="color:#FFFFFF">创新训练</a>		
+		<a href="ContentList.aspx?columnid=23" style="color:#FFFFFF">获奖成果</a>		</div>
+	</li>
+	<li><a onmouseover="mopen('m7')" onmouseout="mclosetime()">质量保障</a>	
+	<div id="m7" onmouseover="mcancelclosetime()" onmouseout="mclosetime()" style="background:url(images/nav01.jpg)">
+		<a href="ContentList.aspx?columnid=50" style="color:#FFFFFF">学生评教</a>
+		<a href="ContentList.aspx?columnid=51" style="color:#FFFFFF">督导评教</a>
+		<a href="ContentList.aspx?columnid=52" style="color:#FFFFFF">专业评估</a>		
+		<a href="ContentList.aspx?columnid=53" style="color:#FFFFFF">课程评估</a>		</div>
+	</li>
+	<li><a onmouseover="mopen('m8')" onmouseout="mclosetime()">教师发展</a>	
+	<div id="m8" onmouseover="mcancelclosetime()" onmouseout="mclosetime()" style="background:url(images/nav01.jpg)">
+		<a href="ContentList.aspx?columnid=54" style="color:#FFFFFF">教师发展项目</a>
+		<a href="ContentList.aspx?columnid=55" style="color:#FFFFFF">教学发展活动</a>
+		<a href="ContentList.aspx?columnid=56" style="color:#FFFFFF">教学奖励</a>		</div>
+	</li>
+	<li><a  onmouseover="mopen('m9')" onmouseout="mclosetime()">学习服务</a>	
+	<div id="m9" onmouseover="mcancelclosetime()" onmouseout="mclosetime()" style="background:url(images/nav01.jpg)">
+		<a href="ContentList.aspx?columnid=74" style="color:#FFFFFF">中心简介</a>
+		<a href="ContentList.aspx?columnid=78" style="color:#FFFFFF">大学入门</a>	 
+		<a href="ContentList.aspx?columnid=75" style="color:#FFFFFF">学业帮扶</a>
+		<a href="ContentList.aspx?columnid=76" style="color:#FFFFFF">考研咨讯</a>	
+		<a href="ContentList.aspx?columnid=77" style="color:#FFFFFF">留学服务</a>	 </div>
+	</li>
+	<li><a  onmouseover="mopen('m10')" onmouseout="mclosetime()">课表查询</a>	
+	<div id="m10" onmouseover="mcancelclosetime()" onmouseout="mclosetime()" style="background:url(images/nav01.jpg)">
+		<a href="http://210.29.96.239/lskbcxAction.do?oper=lskb_lb"  target="_blank" style="color:#FFFFFF">教师课表查询</a>
+		<a href="http://210.29.96.239/bjkbcxAction.do?oper=bjkb_lb"target="_blank" style="color:#FFFFFF">班级课表查询</a>	 
+		<a href="http://210.29.96.237/jskbcxAction.do?oper=jskb_lb" target="_blank" style="color:#FFFFFF">教室课表查询</a> </div>
+	
+	</li>
+	<li><a  onmouseover="mopen('m11')" onmouseout="mclosetime()">网络视频课</a>	
+	<div id="m11" onmouseover="mcancelclosetime()" onmouseout="mclosetime()" style="background:url(images/nav01.jpg)">
+			<a href="http://hhuc.benke.chaoxing.com/"  target="_blank" style="color:#FFFFFF">尔雅视频课</a>
+		<a href="http://portals.zhihuishu.com/hhu"target="_blank" style="color:#FFFFFF">智慧树视频课</a>	 
+		<a href="http://ktzx.hhu.edu.cn/portal/" target="_blank" style="color:#FFFFFF">课堂在线</a> </div>
+	</li>
+</ul>
+</div>
+</div>
+<div class="content">
+<div class="banner" >
+    <embed height="200"  width="950" src="swf/banner1.swf" quality="high" wmode="transparent"></embed>
+</div>
+<table width="975px" class="box1">
+<tr>
+<td style="width:220px;BORDER-BOTTOM: #e1e1e1 1px solid; BORDER-LEFT: #e1e1e1 1px solid; PADDING-BOTTOM: 10px; PADDING-LEFT: 10px;PADDING-RIGHT: 10px; BACKGROUND: #fff; FLOAT: left;  BORDER-TOP: #e1e1e1 1px solid; BORDER-RIGHT: #e1e1e1 1px solid; PADDING-TOP: 0px; height:220px">
+<div class="Box1.photo">
+<div class="Box1.photo.con1">
+<h1><img alt="信息服务" src="images/title_bg.jpg" /></h1>
+<ul style="LINE-HEIGHT: 30px; PADDING-LEFT: 18px; WIDTH: 210px; TEXT-OVERFLOW: ellipsis; DISPLAY: block; WHITE-SPACE: nowrap; FLOAT: left; COLOR: #ffffff; OVERFLOW: hidden; TEXT-DECORATION: non">
+  
+  <li style="LIST-STYLE-TYPE: none; LIST-STYLE-IMAGE: none; height:35px"><A onmouseover="javascript:this.style.color='#862b79'" onmouseout="javascript:this.style.color='#000000'" href="http://jwurp.hhuc.edu.cn/" target="_blank" style="font-size:16px;color:#000000;text-decoration:none;"><img src="images/arrow3.jpg" alt="新教务系统入口一"/> 新教务系统入口一</A></li>
+  <li style="LIST-STYLE-TYPE: none; LIST-STYLE-IMAGE: none; height:35px"><A onmouseover="javascript:this.style.color='#862b79'" onmouseout="javascript:this.style.color='#000000'" href="http://jwurp.hhuc.edu.cn/" target="_blank" style="font-size:16px;color:#000000;text-decoration:none;"><img src="images/arrow3.jpg" alt="新教务系统入口二"/> 新教务系统入口二</A></li>
+  <li style="LIST-STYLE-TYPE: none; LIST-STYLE-IMAGE: none; height:35px"><A onmouseover="javascript:this.style.color='#862b79'" onmouseout="javascript:this.style.color='#000000'" href="http://jwurp.hhuc.edu.cn/" target="_blank" style="font-size:16px;color:#000000;text-decoration:none;"><img src="images/arrow3.jpg" alt="新教务系统入口三"/> 新教务系统入口三</A></li>
+  <li style="LIST-STYLE-TYPE: none; LIST-STYLE-IMAGE: none; height:35px"><A onmouseover="javascript:this.style.color='#862b79'" onmouseout="javascript:this.style.color='#000000'" href="http://bysj.hhuc.edu.cn/" target="_blank" style="font-size:16px;color:#000000;text-decoration:none;"><img src="images/arrow3.jpg" alt="毕业设计管理系统"/> 毕业设计管理系统</A></li>
+  
+
+</ul>  
+</div>
+</div>
+</td>
+<td style="width:477px;BORDER-BOTTOM: #e1e1e1 1px solid; BORDER-LEFT: #e1e1e1 1px solid; BACKGROUND: #fff; FLOAT: left; MARGIN-LEFT: 5px; BORDER-TOP: #e1e1e1 1px solid; BORDER-RIGHT: #e1e1e1 1px solid; height:230px">
+<div class="Box1.conbox1">
+<div id="outer">
+    <ul id="tab">
+        <li class="current">通知公告</li>
+        <li >教务新闻</li>
+        <li >课务信息</li>
+    </ul>
+    <div id="content">
+        <ul style="display:block;">
+            <li style="height:10px; float:right"><a href="ContentList.aspx?columnid=39" title="更多"><img src="images/more.jpg" alt=""/></a></li>
+            <li><a style="LINE-HEIGHT: 25px; PADDING-LEFT: 18px; WIDTH: 400px; TEXT-OVERFLOW: ellipsis; DISPLAY: block; WHITE-SPACE: nowrap; BACKGROUND: url(images/liststyle.jpg) no-repeat 0px 7px; COLOR: #414141; OVERFLOW: hidden; TEXT-DECORATION: none;border-bottom:1px dashed #000;" title="2017-2018学年第一学期重修选课（手工报名）缴费通知" onmouseover="javascript:this.style.color='#862b79'" onmouseout="javascript:this.style.color='#000000'" href="ContentList.aspx?columnid=39&newsid=1786"> <span id="TzggRepeater_lblTzggTitle_0"><span class='top'>[置顶]</span>2017-2018学年第一学期重修选课（手工报名）缴费通知</span></a></li>
+            
+            <li><a style="LINE-HEIGHT: 25px; PADDING-LEFT: 18px; WIDTH: 400px; TEXT-OVERFLOW: ellipsis; DISPLAY: block; WHITE-SPACE: nowrap; BACKGROUND: url(images/liststyle.jpg) no-repeat 0px 7px; COLOR: #414141; OVERFLOW: hidden; TEXT-DECORATION: none;border-bottom:1px dashed #000;" title="关于“云计算技术与应用”课程的选课通知" onmouseover="javascript:this.style.color='#862b79'" onmouseout="javascript:this.style.color='#000000'" href="ContentList.aspx?columnid=39&newsid=1784"> <span id="TzggRepeater_lblTzggTitle_1"><span class='top'>[置顶]</span>关于“云计算技术与应用”课程的选课通知</span></a></li>
+            
+            <li><a style="LINE-HEIGHT: 25px; PADDING-LEFT: 18px; WIDTH: 400px; TEXT-OVERFLOW: ellipsis; DISPLAY: block; WHITE-SPACE: nowrap; BACKGROUND: url(images/liststyle.jpg) no-repeat 0px 7px; COLOR: #414141; OVERFLOW: hidden; TEXT-DECORATION: none;border-bottom:1px dashed #000;" title="“英才计划”学术报告会通知" onmouseover="javascript:this.style.color='#862b79'" onmouseout="javascript:this.style.color='#000000'" href="ContentList.aspx?columnid=39&newsid=1798"> <span id="TzggRepeater_lblTzggTitle_2">“英才计划”学术报告会通知</span></a></li>
+            
+            <li><a style="LINE-HEIGHT: 25px; PADDING-LEFT: 18px; WIDTH: 400px; TEXT-OVERFLOW: ellipsis; DISPLAY: block; WHITE-SPACE: nowrap; BACKGROUND: url(images/liststyle.jpg) no-repeat 0px 7px; COLOR: #414141; OVERFLOW: hidden; TEXT-DECORATION: none;border-bottom:1px dashed #000;" title="第三十四期教学午餐会：管理服务贯通，助力学生成才" onmouseover="javascript:this.style.color='#862b79'" onmouseout="javascript:this.style.color='#000000'" href="ContentList.aspx?columnid=39&newsid=1793"> <span id="TzggRepeater_lblTzggTitle_3">第三十四期教学午餐会：管理服务贯通，助力学生成才</span></a></li>
+            
+            <li><a style="LINE-HEIGHT: 25px; PADDING-LEFT: 18px; WIDTH: 400px; TEXT-OVERFLOW: ellipsis; DISPLAY: block; WHITE-SPACE: nowrap; BACKGROUND: url(images/liststyle.jpg) no-repeat 0px 7px; COLOR: #414141; OVERFLOW: hidden; TEXT-DECORATION: none;border-bottom:1px dashed #000;" title="关于抽查2016-2017学年第二学期课程试卷及2017届毕业设计（论文）的通知" onmouseover="javascript:this.style.color='#862b79'" onmouseout="javascript:this.style.color='#000000'" href="ContentList.aspx?columnid=39&newsid=1788"> <span id="TzggRepeater_lblTzggTitle_4">关于抽查2016-2017学年第二学期课程试卷及2017届毕业设计（论文）的通知</span></a></li>
+            
+            <li><a style="LINE-HEIGHT: 25px; PADDING-LEFT: 18px; WIDTH: 400px; TEXT-OVERFLOW: ellipsis; DISPLAY: block; WHITE-SPACE: nowrap; BACKGROUND: url(images/liststyle.jpg) no-repeat 0px 7px; COLOR: #414141; OVERFLOW: hidden; TEXT-DECORATION: none;border-bottom:1px dashed #000;" title="关于2017-2018学年第一学期2017级学生选课的通知" onmouseover="javascript:this.style.color='#862b79'" onmouseout="javascript:this.style.color='#000000'" href="ContentList.aspx?columnid=39&newsid=1779"> <span id="TzggRepeater_lblTzggTitle_5">关于2017-2018学年第一学期2017级学生选课的通知</span></a></li>
+            	                  
+        </ul> 
+        <ul>
+            <li style="height:10px; float:right"><a href="ContentList.aspx?columnid=40" title="更多"><img src="images/more.jpg" alt=""/></a></li>
+            <li><a style="LINE-HEIGHT: 25px; PADDING-LEFT: 18px; WIDTH: 400px; TEXT-OVERFLOW: ellipsis; DISPLAY: block; WHITE-SPACE: nowrap; BACKGROUND: url(images/liststyle.jpg) no-repeat 0px 7px; COLOR: #414141; OVERFLOW: hidden; TEXT-DECORATION: none;border-bottom:1px dashed #000;" title="2016年江苏省高校计算机类及电子信息与电气工程类品牌专业建设工作交流会在常州校区召开" onmouseover="javascript:this.style.color='#862b79'" onmouseout="javascript:this.style.color='#000000'" href="ContentList.aspx?columnid=40&newsid=1496"> <span id="JwxwRepeater_lblJwxwTitle_0"><span class='top'>[置顶]</span>2016年江苏省高校计算机类及电子信息与电气工程类品牌专业建设工作交流会在常州校区召开</span></a></li>
+            
+            <li><a style="LINE-HEIGHT: 25px; PADDING-LEFT: 18px; WIDTH: 400px; TEXT-OVERFLOW: ellipsis; DISPLAY: block; WHITE-SPACE: nowrap; BACKGROUND: url(images/liststyle.jpg) no-repeat 0px 7px; COLOR: #414141; OVERFLOW: hidden; TEXT-DECORATION: none;border-bottom:1px dashed #000;" title="2016-2017学年第一学期河海大学常州校区正选后取消的课程" onmouseover="javascript:this.style.color='#862b79'" onmouseout="javascript:this.style.color='#000000'" href="ContentList.aspx?columnid=40&newsid=1319"> <span id="JwxwRepeater_lblJwxwTitle_1"><span class='top'>[置顶]</span>2016-2017学年第一学期河海大学常州校区正选后取消的课程</span></a></li>
+            
+            <li><a style="LINE-HEIGHT: 25px; PADDING-LEFT: 18px; WIDTH: 400px; TEXT-OVERFLOW: ellipsis; DISPLAY: block; WHITE-SPACE: nowrap; BACKGROUND: url(images/liststyle.jpg) no-repeat 0px 7px; COLOR: #414141; OVERFLOW: hidden; TEXT-DECORATION: none;border-bottom:1px dashed #000;" title="校区教师发展分中心举行第三十四期教学午餐会" onmouseover="javascript:this.style.color='#862b79'" onmouseout="javascript:this.style.color='#000000'" href="ContentList.aspx?columnid=40&newsid=1808"> <span id="JwxwRepeater_lblJwxwTitle_2">校区教师发展分中心举行第三十四期教学午餐会</span></a></li>
+            
+            <li><a style="LINE-HEIGHT: 25px; PADDING-LEFT: 18px; WIDTH: 400px; TEXT-OVERFLOW: ellipsis; DISPLAY: block; WHITE-SPACE: nowrap; BACKGROUND: url(images/liststyle.jpg) no-repeat 0px 7px; COLOR: #414141; OVERFLOW: hidden; TEXT-DECORATION: none;border-bottom:1px dashed #000;" title="校区教师发展分中心举行第三十三期教学午餐会" onmouseover="javascript:this.style.color='#862b79'" onmouseout="javascript:this.style.color='#000000'" href="ContentList.aspx?columnid=40&newsid=1781"> <span id="JwxwRepeater_lblJwxwTitle_3">校区教师发展分中心举行第三十三期教学午餐会</span></a></li>
+            
+            <li><a style="LINE-HEIGHT: 25px; PADDING-LEFT: 18px; WIDTH: 400px; TEXT-OVERFLOW: ellipsis; DISPLAY: block; WHITE-SPACE: nowrap; BACKGROUND: url(images/liststyle.jpg) no-repeat 0px 7px; COLOR: #414141; OVERFLOW: hidden; TEXT-DECORATION: none;border-bottom:1px dashed #000;" title="常州校区喜获两项2017年江苏省高等教育教学成果二等奖" onmouseover="javascript:this.style.color='#862b79'" onmouseout="javascript:this.style.color='#000000'" href="ContentList.aspx?columnid=40&newsid=1780"> <span id="JwxwRepeater_lblJwxwTitle_4">常州校区喜获两项2017年江苏省高等教育教学成果二等奖</span></a></li>
+            
+            <li><a style="LINE-HEIGHT: 25px; PADDING-LEFT: 18px; WIDTH: 400px; TEXT-OVERFLOW: ellipsis; DISPLAY: block; WHITE-SPACE: nowrap; BACKGROUND: url(images/liststyle.jpg) no-repeat 0px 7px; COLOR: #414141; OVERFLOW: hidden; TEXT-DECORATION: none;border-bottom:1px dashed #000;" title="常州校区召开新学期第一次本科教学督导工作会议 " onmouseover="javascript:this.style.color='#862b79'" onmouseout="javascript:this.style.color='#000000'" href="ContentList.aspx?columnid=40&newsid=1775"> <span id="JwxwRepeater_lblJwxwTitle_5">常州校区召开新学期第一次本科教学督导工作会议 </span></a></li>
+            	
+            
+        </ul>
+        <ul>
+            <li style="height:10px; float:right"><a href="ContentList.aspx?columnid=71" title="更多"><img src="images/more.jpg" alt=""/></a></li>
+            <li><a style="LINE-HEIGHT: 25px; PADDING-LEFT: 18px; WIDTH: 400px; TEXT-OVERFLOW: ellipsis; DISPLAY: block; WHITE-SPACE: nowrap; BACKGROUND: url(images/liststyle.jpg) no-repeat 0px 7px; COLOR: #414141; OVERFLOW: hidden; TEXT-DECORATION: none;border-bottom:1px dashed #000;" title="171801选课资料（班级课表、选修课课表、开课时间地点表、校历）" onmouseover="javascript:this.style.color='#862b79'" onmouseout="javascript:this.style.color='#000000'" href="ContentList.aspx?columnid=71&newsid=1751"> <span id="JwxxRepeater_lblJwxwTitle_0">171801选课资料（班级课表、选修课课表、开课时间地点表、校历）</span></a></li>
+            
+            <li><a style="LINE-HEIGHT: 25px; PADDING-LEFT: 18px; WIDTH: 400px; TEXT-OVERFLOW: ellipsis; DISPLAY: block; WHITE-SPACE: nowrap; BACKGROUND: url(images/liststyle.jpg) no-repeat 0px 7px; COLOR: #414141; OVERFLOW: hidden; TEXT-DECORATION: none;border-bottom:1px dashed #000;" title="河海大学2016-2017学年第二学期课程清单" onmouseover="javascript:this.style.color='#862b79'" onmouseout="javascript:this.style.color='#000000'" href="ContentList.aspx?columnid=71&newsid=1533"> <span id="JwxxRepeater_lblJwxwTitle_1">河海大学2016-2017学年第二学期课程清单</span></a></li>
+            
+            <li><a style="LINE-HEIGHT: 25px; PADDING-LEFT: 18px; WIDTH: 400px; TEXT-OVERFLOW: ellipsis; DISPLAY: block; WHITE-SPACE: nowrap; BACKGROUND: url(images/liststyle.jpg) no-repeat 0px 7px; COLOR: #414141; OVERFLOW: hidden; TEXT-DECORATION: none;border-bottom:1px dashed #000;" title="河海大学常州校区2016-2017学年第二学期开课时间地点表" onmouseover="javascript:this.style.color='#862b79'" onmouseout="javascript:this.style.color='#000000'" href="ContentList.aspx?columnid=71&newsid=1534"> <span id="JwxxRepeater_lblJwxwTitle_2">河海大学常州校区2016-2017学年第二学期开课时间地点表</span></a></li>
+            
+            <li><a style="LINE-HEIGHT: 25px; PADDING-LEFT: 18px; WIDTH: 400px; TEXT-OVERFLOW: ellipsis; DISPLAY: block; WHITE-SPACE: nowrap; BACKGROUND: url(images/liststyle.jpg) no-repeat 0px 7px; COLOR: #414141; OVERFLOW: hidden; TEXT-DECORATION: none;border-bottom:1px dashed #000;" title="161701开课时间地点" onmouseover="javascript:this.style.color='#862b79'" onmouseout="javascript:this.style.color='#000000'" href="ContentList.aspx?columnid=71&newsid=1419"> <span id="JwxxRepeater_lblJwxwTitle_3">161701开课时间地点</span></a></li>
+            
+            <li><a style="LINE-HEIGHT: 25px; PADDING-LEFT: 18px; WIDTH: 400px; TEXT-OVERFLOW: ellipsis; DISPLAY: block; WHITE-SPACE: nowrap; BACKGROUND: url(images/liststyle.jpg) no-repeat 0px 7px; COLOR: #414141; OVERFLOW: hidden; TEXT-DECORATION: none;border-bottom:1px dashed #000;" title="2015-2016学年第二学期课务信息" onmouseover="javascript:this.style.color='#862b79'" onmouseout="javascript:this.style.color='#000000'" href="ContentList.aspx?columnid=71&newsid=1276"> <span id="JwxxRepeater_lblJwxwTitle_4">2015-2016学年第二学期课务信息</span></a></li>
+            
+            <li><a style="LINE-HEIGHT: 25px; PADDING-LEFT: 18px; WIDTH: 400px; TEXT-OVERFLOW: ellipsis; DISPLAY: block; WHITE-SPACE: nowrap; BACKGROUND: url(images/liststyle.jpg) no-repeat 0px 7px; COLOR: #414141; OVERFLOW: hidden; TEXT-DECORATION: none;border-bottom:1px dashed #000;" title="河海大学2015-2016学年秋(两学期)课程清单" onmouseover="javascript:this.style.color='#862b79'" onmouseout="javascript:this.style.color='#000000'" href="ContentList.aspx?columnid=71&newsid=1092"> <span id="JwxxRepeater_lblJwxwTitle_5">河海大学2015-2016学年秋(两学期)课程清单</span></a></li>
+            		
+        </ul>
+    </div>
+</div>
+</div>
+</td>
+<td style="width:230px;BORDER-BOTTOM: #e1e1e1 1px solid; BORDER-LEFT: #e1e1e1 1px solid; BACKGROUND: #fff; FLOAT: left; MARGIN-LEFT: 5px; BORDER-TOP: #e1e1e1 1px solid; BORDER-RIGHT: #e1e1e1 1px solid;height:230px; background-color:#fff">
+<div class="box1.conbox2">
+<div class="box1.conbox2.con9">
+<h1 style=" height:39px"><img alt="信息服务" src="images/title9.jpg" /></h1>
+<ul style="LINE-HEIGHT: 22px; PADDING-LEFT: 18px; DISPLAY: block; WHITE-SPACE: nowrap; FLOAT: left; COLOR: #414141; OVERFLOW: hidden; TEXT-DECORATION: non; width:200px">
+<li style="LIST-STYLE-TYPE: none; LIST-STYLE-IMAGE: none; height:35px"><a onmouseover="javascript:this.style.color='#862b79'" onmouseout="javascript:this.style.color='#000000'" href="http://www.icourses.cn/home/" style="font-size:16px;color:#000000;text-decoration:none;"><img src="images/arrow2.jpg" alt=" 爱课程"/> 爱课程</a></li>
+<li style="LIST-STYLE-TYPE: none; LIST-STYLE-IMAGE: none; height:35px"><a onmouseover="javascript:this.style.color='#862b79'" onmouseout="javascript:this.style.color='#000000'" href="http://cxjy.hhuc.edu.cn/" style="font-size:16px;color:#000000;text-decoration:none;"><img src="images/arrow2.jpg" alt="创新创业" /> 创新创业</a></li>
+<li style="LIST-STYLE-TYPE: none; LIST-STYLE-IMAGE: none; height:35px"><a onmouseover="javascript:this.style.color='#862b79'" onmouseout="javascript:this.style.color='#000000'" href="http://ktzx.hhu.edu.cn/portal/" style="font-size:16px;color:#000000;text-decoration:none;"><img src="images/arrow2.jpg" alt="河海课堂在线"/> 河海课堂在线</a></li>
+<li style="LIST-STYLE-TYPE: none; LIST-STYLE-IMAGE: none; height:35px"><a onmouseover="javascript:this.style.color='#862b79'" onmouseout="javascript:this.style.color='#000000'" href="http://hhuc.fanya.chaoxing.com/portal" style="font-size:16px;color:#000000;text-decoration:none;"><img src="images/arrow2.jpg" alt="尔雅网络通识课" /> 尔雅网络通识课</a></li>
+
+
+
+
+</ul>
+</div>  
+</div></td>
+<td></td>
+</tr>
+</table>
+<div class="clear"></div>
+<div style="MARGIN-TOP: 10px"><embed height="70"  width="972" src="swf/banner.swf" quality="high"></embed>
+</div>
+<table>
+<tr>
+<td>
+<div class="box5">
+<div class="conbox5_1">
+<div class="tit2"><a class="more" href="ContentList.aspx?columnid=41"></a></div>
+<div class="con2">
+<ul>
+    
+    <li><a href="ContentList.aspx?columnid=41&newsid=1807" title="关于开展2017年江苏省高等教育教改研究课题立项申报工作的通知"> <span id="JxggRepeater_lblJxggTitle_0">关于开展2017年江苏省高等教育教改研究课题立项申报工作的通知</span></a></li>
+    
+    <li><a href="ContentList.aspx?columnid=41&newsid=1804" title="教育部办公厅关于推荐新工科研究与实践项目的通知"> <span id="JxggRepeater_lblJxggTitle_1">教育部办公厅关于推荐新工科研究与实践项目的通知</span></a></li>
+    
+    <li><a href="ContentList.aspx?columnid=41&newsid=1801" title="关于开展河海大学高等教育科学研究2016年度课题中期检查工作通知 "> <span id="JxggRepeater_lblJxggTitle_2">关于开展河海大学高等教育科学研究2016年度课题中期检查工作通知 </span></a></li>
+    
+    <li><a href="ContentList.aspx?columnid=41&newsid=1564" title="关于申报江苏省高等教育学会2016年度高等教育科学研究成果奖的通知 "> <span id="JxggRepeater_lblJxggTitle_3">关于申报江苏省高等教育学会2016年度高等教育科学研究成果奖的通知 </span></a></li>
+    
+</ul>
+</div>
+</div>
+<div class="conbox5_2">
+<div class="tit3"><a class="more" href="ContentList.aspx?columnid=42"></a></div>
+<div class="con3">
+<ul>
+  
+            <li><a href="ContentList.aspx?columnid=42&newsid=1803"  title="关于做好2017年度“徐芝纶教材奖”推荐评选工作的通知"> <span id="ZykcRepeater_lblZykcTitle_0">关于做好2017年度“徐芝纶教材奖”推荐评选工作的通知</span></a></li>
+            
+            <li><a href="ContentList.aspx?columnid=42&newsid=1598"  title="关于做好2017年新专业申报工作的通知"> <span id="ZykcRepeater_lblZykcTitle_1">关于做好2017年新专业申报工作的通知</span></a></li>
+            
+            <li><a href="ContentList.aspx?columnid=42&newsid=1501"  title="关于公布河海大学本科核心课程首席教授的通知"> <span id="ZykcRepeater_lblZykcTitle_2">关于公布河海大学本科核心课程首席教授的通知</span></a></li>
+            
+            <li><a href="ContentList.aspx?columnid=42&newsid=1457"  title="河海大学本科核心课程建设与管理办法"> <span id="ZykcRepeater_lblZykcTitle_3">河海大学本科核心课程建设与管理办法</span></a></li>
+            	
+  </ul>
+</div>
+</div>
+<div class="conbox5_3">
+<div class="tit4"><a class="more" href="ContentList.aspx?columnid=43"></a></div>
+<div class="con4">
+<ul>
+  
+            <li><a title="关于网上填写2017年度河海大学大学生创新创业训练计划项目季度检查报告的通知" href="ContentList.aspx?columnid=43&newsid=1796"> <span id="SjjxRepeater_lblSjjxTitle_0">关于网上填写2017年度河海大学大学生创新创业训练计划项目季度检查报告的通知</span></a></li>
+            
+            <li><a title="关于做好2016-2017学年实验室信息统计工作的通知" href="ContentList.aspx?columnid=43&newsid=1795"> <span id="SjjxRepeater_lblSjjxTitle_1">关于做好2016-2017学年实验室信息统计工作的通知</span></a></li>
+            
+            <li><a title="关于公布2017年6月到期的国家级、省级大学生创新创业训练计划项目验收结果的通知" href="ContentList.aspx?columnid=43&newsid=1710"> <span id="SjjxRepeater_lblSjjxTitle_2">关于公布2017年6月到期的国家级、省级大学生创新创业训练计划项目验收结果的通知</span></a></li>
+            
+            <li><a title="关于2017年度河海大学常州校区国家级、省级、校级大学生创新创业训练计划入围项目公开答辩的通知" href="ContentList.aspx?columnid=43&newsid=1709"> <span id="SjjxRepeater_lblSjjxTitle_3">关于2017年度河海大学常州校区国家级、省级、校级大学生创新创业训练计划入围项目公开答辩的通知</span></a></li>
+            
+  </ul>
+</div>
+</div>
+</div>
+</td>
+</tr>
+</table>
+<div class="box3">
+<div class="conbox4">
+<div class="tit3"><a class="more" href="ContentList.aspx?columnid=44"></a></div>
+<div class="con3">
+<ul>
+  
+            <li><a title="校区教师发展分中心举行第三十四期教学午餐会" href="ContentList.aspx?columnid=44&newsid=1809"> <span id="JxfzRepeater_lblJxfzTitle_0">校区教师发展分中心举行第三十四期教学午餐会</span></a></li>
+            
+            <li><a title="校区教师发展分中心举行第三十三期教学午餐会" href="ContentList.aspx?columnid=44&newsid=1783"> <span id="JxfzRepeater_lblJxfzTitle_1">校区教师发展分中心举行第三十三期教学午餐会</span></a></li>
+            
+            <li><a title="教师发展分中心举行第十九期教学沙龙" href="ContentList.aspx?columnid=44&newsid=1756"> <span id="JxfzRepeater_lblJxfzTitle_2">教师发展分中心举行第十九期教学沙龙</span></a></li>
+            
+            <li><a title="校区教师发展分中心举行第三十一期教学午餐会" href="ContentList.aspx?columnid=44&newsid=1662"> <span id="JxfzRepeater_lblJxfzTitle_3">校区教师发展分中心举行第三十一期教学午餐会</span></a></li>
+            
+            <li><a title="校区教师发展分中心举行第三十期教学午餐会" href="ContentList.aspx?columnid=44&newsid=1661"> <span id="JxfzRepeater_lblJxfzTitle_4">校区教师发展分中心举行第三十期教学午餐会</span></a></li>
+            
+            <li><a title="教师发展分中心举行第十八期教学沙龙" href="ContentList.aspx?columnid=44&newsid=1660"> <span id="JxfzRepeater_lblJxfzTitle_5">教师发展分中心举行第十八期教学沙龙</span></a></li>
+            
+  </ul>
+</div>
+</div>
+<div class="conbox3">
+<div class="tit2"><a class="more" href="ContentList.aspx?columnid=45"></a></div>
+<div class="con2">
+<ul>
+  
+            <li><a title="学服中心举办小河论坛" href="ContentList.aspx?columnid=45&newsid=1812"> <span id="XxfwRepeater_lblXxfwTitle_0">学服中心举办小河论坛</span></a></li>
+            
+            <li><a title="教务部学生学习服务中心举办德语学习沙龙" href="ContentList.aspx?columnid=45&newsid=1792"> <span id="XxfwRepeater_lblXxfwTitle_1">教务部学生学习服务中心举办德语学习沙龙</span></a></li>
+            
+            <li><a title="教务部学生学习服务中心举办西语、日语学习分享交流会" href="ContentList.aspx?columnid=45&newsid=1790"> <span id="XxfwRepeater_lblXxfwTitle_2">教务部学生学习服务中心举办西语、日语学习分享交流会</span></a></li>
+            
+            <li><a title="教务部学生学习服务中心举办第 22 期学生午餐会" href="ContentList.aspx?columnid=45&newsid=1787"> <span id="XxfwRepeater_lblXxfwTitle_3">教务部学生学习服务中心举办第 22 期学生午餐会</span></a></li>
+            
+            <li><a title="教务部学生学习服务中心成功举办埃克塞特大学留学交流讲座" href="ContentList.aspx?columnid=45&newsid=1785"> <span id="XxfwRepeater_lblXxfwTitle_4">教务部学生学习服务中心成功举办埃克塞特大学留学交流讲座</span></a></li>
+            
+            <li><a title="迎战高数，答疑解惑----余维虹老师主讲高数答疑讲堂" href="ContentList.aspx?columnid=45&newsid=1752"> <span id="XxfwRepeater_lblXxfwTitle_5">迎战高数，答疑解惑----余维虹老师主讲高数答疑讲堂</span></a></li>
+            
+  </ul>
+</div></div>
+<div class="conbox5">
+<div class="tit4"><a class="more" href="ContentList.aspx?columnid=46"></a></div>
+<div class="con4">
+<ul>
+  
+            <li><a title="企管院杜栋教授获得一项江苏省高教科研成果二等奖" href="ContentList.aspx?columnid=46&newsid=1234"> <span id="JxddRepeater_lblJxddTitle_0">企管院杜栋教授获得一项江苏省高教科研成果二等奖</span></a></li>
+            
+            <li><a title="疏浚中心承担的重大横向项目《疏浚研究基地总体设计及主要实验平台开发研制》顺利通过验收" href="ContentList.aspx?columnid=46&newsid=1233"> <span id="JxddRepeater_lblJxddTitle_1">疏浚中心承担的重大横向项目《疏浚研究基地总体设计及主要实验平台开发研制》顺利通过验收</span></a></li>
+            
+            <li><a title="常州移动-河海大学创新研究中心揭牌" href="ContentList.aspx?columnid=46&newsid=1232"> <span id="JxddRepeater_lblJxddTitle_2">常州移动-河海大学创新研究中心揭牌</span></a></li>
+            
+            <li><a title="物联网学院举行“专业工程教育认证的思考与实践”教学沙龙" href="ContentList.aspx?columnid=46&newsid=1003"> <span id="JxddRepeater_lblJxddTitle_3">物联网学院举行“专业工程教育认证的思考与实践”教学沙龙</span></a></li>
+            
+            <li><a title="工程训练中心顺利通过省级示范中心验收" href="ContentList.aspx?columnid=46&newsid=1002"> <span id="JxddRepeater_lblJxddTitle_4">工程训练中心顺利通过省级示范中心验收</span></a></li>
+            
+            <li><a title="机电院倪福生教授荣获严恺教育奖 " href="ContentList.aspx?columnid=46&newsid=886"> <span id="JxddRepeater_lblJxddTitle_5">机电院倪福生教授荣获严恺教育奖 </span></a></li>
+             
+  </ul>
+</div>
+</div>
+<div class="clear"></div></div>
+
+
+
+<table>
+<tr>
+<td>
+<div class="box6">
+<div class="conbox4">
+<div class="tit3"><a class="more" href="ContentList.aspx?columnid=47"></a></div>
+<div class="con3">
+<ul>
+  
+            <li><a title="河海大学（学生课余活动）借用教室审批表" href="ContentList.aspx?columnid=47&newsid=1538"> <span id="XzzxRepeater_lblXzzxTitle_0">河海大学（学生课余活动）借用教室审批表</span></a></li>
+            
+            <li><a title="学生编级改选课申请表" href="ContentList.aspx?columnid=47&newsid=1393"> <span id="XzzxRepeater_lblXzzxTitle_1">学生编级改选课申请表</span></a></li>
+            
+            <li><a title="河海大学跨专业选修课学分认定申请表（国际交流学习）" href="ContentList.aspx?columnid=47&newsid=1375"> <span id="XzzxRepeater_lblXzzxTitle_2">河海大学跨专业选修课学分认定申请表（国际交流学习）</span></a></li>
+            
+            <li><a title="常州校区课程成绩更改（补录）申请表" href="ContentList.aspx?columnid=47&newsid=1252"> <span id="XzzxRepeater_lblXzzxTitle_3">常州校区课程成绩更改（补录）申请表</span></a></li>
+            
+            <li><a title="学生学习服务中心志愿者申请表" href="ContentList.aspx?columnid=47&newsid=1139"> <span id="XzzxRepeater_lblXzzxTitle_4">学生学习服务中心志愿者申请表</span></a></li>
+            
+            <li><a title="河海大学督导听课评教表（NEW）" href="ContentList.aspx?columnid=47&newsid=1110"> <span id="XzzxRepeater_lblXzzxTitle_5">河海大学督导听课评教表（NEW）</span></a></li>
+             
+  </ul>
+</div>
+</div>
+<div class="conbox3">
+<div class="tit2"><a class="more" href="ContentList.aspx?columnid=48"></a></div>
+<div class="con2">
+<ul>
+  
+            <li><a title="教学工作简报2017年第4期（总第65期）" href="ContentList.aspx?columnid=48&newsid=1791"> <span id="XxkdRepeater_lblXxkdTitle_0">教学工作简报2017年第4期（总第65期）</span></a></li>
+            
+            <li><a title="教学工作简报2017年第3期（总第64期）" href="ContentList.aspx?columnid=48&newsid=1596"> <span id="XxkdRepeater_lblXxkdTitle_1">教学工作简报2017年第3期（总第64期）</span></a></li>
+            
+            <li><a title="教学工作简报2017年第2期（总第63期） " href="ContentList.aspx?columnid=48&newsid=1582"> <span id="XxkdRepeater_lblXxkdTitle_2">教学工作简报2017年第2期（总第63期） </span></a></li>
+            
+            <li><a title="教学工作简报（总第61期，2016年第7期）" href="ContentList.aspx?columnid=48&newsid=1519"> <span id="XxkdRepeater_lblXxkdTitle_3">教学工作简报（总第61期，2016年第7期）</span></a></li>
+            
+            <li><a title="争创一流，人文学科靠什么突围" href="ContentList.aspx?columnid=48&newsid=1514"> <span id="XxkdRepeater_lblXxkdTitle_4">争创一流，人文学科靠什么突围</span></a></li>
+            
+            <li><a title="丢掉知识“喂养” 促进“教学相长”" href="ContentList.aspx?columnid=48&newsid=1513"> <span id="XxkdRepeater_lblXxkdTitle_5">丢掉知识“喂养” 促进“教学相长”</span></a></li>
+             
+  </ul>
+</div></div>
+<div class="conbox5">
+<div class="tit4"></div>
+<div class="con4">
+<ul>
+  <li>
+    <select name="select1" onchange="if(this.selectedIndex && this.selectedIndex!=0){window.open(this.value);}this.selectedIndex=0;">
+      <option selected="selected">——校内教学院系网站——</option>
+      <option value="http://jwc.hhu.edu.cn/">河海大学教务处</option>
+      
+      <option value="http://wulwxy.hhuc.edu.cn/">物联网工程学院</option>
+      <option value="http://jidian.hhuc.edu.cn/">机电工程学院</option>
+      <option value="http://bs.hhuc.edu.cn/">企业管理学院</option>
+      <option value="http://renwsk.hhuc.edu.cn/">人文社科部</option>
+      <option value="http://wyb.hhuc.edu.cn/">外语部</option>
+      <option value="http://sports.hhuc.edu.cn/">体育部</option>
+    </select>
+  </li>
+  <li>
+    <select name="select2" onchange="if(this.selectedIndex && this.selectedIndex!=0){window.open(this.value);}this.selectedIndex=0;">
+      <option selected="selected">——兄弟高校教务网站——</option>
+      <option value="http://www.tsinghua.edu.cn/publish/jwc/619/">清华大学教务处</option>
+	  <option value="http://jw.nju.edu.cn/">南京大学教务处</option>
+	  <option value="http://jwc.seu.edu.cn/ ">东南大学教务处</option>
+	  <option value="http://www.jwc.fudan.edu.cn/">复旦大学教务处</option>
+	  <option value="http://www.teach.ustc.edu.cn/">中国科学技术大学教务处</option>
+	  <option value="http://jwc.xmu.edu.cn/">厦门科学技术大学教务处</option>
+	  <option value="http://jwc.sjtu.edu.cn/web/sjtu/198001.htm ">上海交通大学教大学教务处</option>
+      <option value="http://202.113.13.175/jwc/">天津大学教务处</option>
+      <option value="http://jwb.whu.edu.cn/">武汉大学教务处</option>
+      <option value="http://jwc.xidian.edu.cn/">西安电子科技大学教务处</option>
+      </select>
+  </li>
+  <li>
+    <select name="select3" onchange="if(this.selectedIndex && this.selectedIndex!=0){window.open(this.value);}this.selectedIndex=0;">
+    <option selected="selected">——教育主管部门网站——</option>
+    <option value="http://www.moe.edu.cn/">中华人民共和国教育部</option>
+    <option value="http://www.chsi.com.cn/">中国高教学生信息网</option>
+    <option value="http://www.ec.js.edu.cn/">江苏省教育厅</option>
+    <option value="http://www.jseea.cn/">江苏省教育考试院</option>
+    <option value="http://www.jsgjxh.cn/">江苏高等教育网</option>
+    </select>
+  </li>
+</ul>
+</div>
+<div class="tit5"></div>
+<div >
+<ul>
+  <li style="height:25px;LIST-STYLE-TYPE: none; LIST-STYLE-IMAGE: none;">&nbsp;&nbsp;&nbsp;意见邮箱:<a href="mailto:19941531@hhu.edu.cn">19941531@hhu.edu.cn</a></li>
+  <li style="height:25px;LIST-STYLE-TYPE: none; LIST-STYLE-IMAGE: none;">&nbsp;&nbsp;&nbsp;&nbsp;联系电话:0519-85100002</li>
+  <li style="height:25px;LIST-STYLE-TYPE: none; LIST-STYLE-IMAGE: none;">&nbsp;&nbsp;&nbsp;&nbsp;电子传真:0519-85100002 </li>
+</ul></div>
+</div>
+<div class="clear"></div></div></td>
+</tr>
+</table>
+
+</div>
+
+<div class="pageFoot">
+<div class="center">
+<div class="footer">
+<P><a href="http://my.hhu.edu.cn/login.portal" target="_blank">信息门户</a>︱<a 
+href="http://oas.hhuc.edu.cn/mail.nsf" target="_blank">办公邮箱</a>︱<a 
+href="http://www.hhuc.edu.cn" target="_blank">校区首页</a>︱<a 
+href="admin/login.aspx" target="_blank">后台管理</a> </P>
+<P>Copyright<span style="FONT-FAMILY: Arial"> ©</span> 2013 河海大学常州校区教务处版权所有</P>
+<P>地址：江苏常州晋陵北路200号 电话：（0519）85191819&nbsp;&nbsp; 河海大学常州校区新教学楼1楼  </P>
+</div></div></div>
+</body>
+</html>
+

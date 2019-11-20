@@ -1,0 +1,1183 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>SISU | دانشگاه مطالعات بین المللی شانگهای</title>
+<meta name="description" content="Established in 1949, Shanghai International Studies University (SISU) is a forward-looking academic institution in China, committed to preparing innovative professionals and future global leaders for a wide range of international expertise to address the critical challenges of our times." />
+<meta name="keywords" content="SISU" />
+<meta name="renderer" content="webkit">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"> 
+<link type="text/css" rel="stylesheet" href="styles/util.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="styles/right.css" media="screen" />
+
+
+<link type="text/css" rel="stylesheet" href="styles/util-Georgia.css" media="screen" />
+<!--[if IE 6]>
+    <script src="scripts/iepng.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      EvPNG.fix('*'); //EvPNG.fix('包含透明PNG图片的标签'); 多个标签之间用英文逗号隔开
+    </script>
+<![endif]-->
+<style type="text/css">
+.autovideo_obj{display:none}
+</style>
+<script type="text/javascript">var zt_oms_static_pages_cur_uri = "";</script>
+<script type="text/javascript" src="scripts/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="scripts/greensock/TweenMax.min.js"></script>
+<script type="text/javascript" src="scripts/jwplayer/jwplayer.js"></script>
+<script type="text/javascript" src="scripts/jquery.flexslider-min.js"></script>
+
+<script type="text/javascript" src="scripts/jquery.scrollto.js"></script>
+<script type="text/javascript" src="scripts/modernizr.2.7.1.js"></script>
+<script type="text/javascript" src="scripts/css3-mediaqueries.js"></script>
+<script type="text/javascript" src="scripts/retina-1.1.0.min.js"></script>
+<script type="text/javascript" src="scripts/jquery-ui-1.9.2.custom.js"></script>
+<script type="text/javascript" src="scripts/jquery.stylish-select.min.js"></script>
+
+<script type="text/javascript" src="scripts/util.js"></script>
+<script type="text/javascript" src="scripts/response.js"></script>
+
+<script type="text/javascript" src="verip_private/verip1.0.js"></script>
+<script type="text/javascript" src="verip_private/ztapps/cms/js/cms.js"></script>
+<script type="text/javascript">
+zt.cms.OP_URL = "";
+zt.cms.OP_RTL = "1";
+
+function zsCMSAutoVideo(id, vd, pos, dw, dh, vLG){
+	  if(!zt.g(id))return;
+	  var $width = $(window).width();
+
+	  var  defp = vLG ? vLG : "";
+	  if($width<=767){
+		  jwplayer(id).setup({
+			  //skin: "jwplayer/skins/simple.zip",
+			  skin: "/scripts/jwplayer/skins/blue.zip",
+			  stretching: "fill",
+			  flashplayer: "/scripts/jwplayer/player.swf",
+			  image: defp,
+			  levels: [
+				  {file: vd},
+				  {file: ""} 
+			  ],
+			  //control: false,
+			  width: $width*0.9375,
+			  height: (22*($width*0.9375))/37
+		  });
+	  }else if(768 <= $width && $width <= 1200){
+		  try{
+				  $width = zt.g(id).parentNode.parentNode.clientWidth;
+			  }catch(xcd){}
+		  jwplayer(id).setup({
+			  
+			  //skin: "jwplayer/skins/simple.zip",
+			  skin: "/scripts/jwplayer/skins/blue.zip",
+			  stretching: "fill",
+			  flashplayer: "/scripts/jwplayer/player.swf",
+			  image: defp,
+			  levels: [
+				  {file: vd},
+				  {file: ""} 
+			  ],
+			  //control: false,
+			  width: $width,
+			  height: (22*((($width))))/37
+		  });
+	  }else{
+		  try{
+				  $width = zt.g(id).parentNode.parentNode.clientWidth;
+			  }catch(xcd){}
+		  jwplayer(id).setup({
+			  //skin: "jwplayer/skins/simple.zip",
+			  skin: "/scripts/jwplayer/skins/blue.zip",
+			  stretching: "fill",
+			  flashplayer: "/scripts/jwplayer/player.swf",
+			  image: defp,
+			  levels: [
+				  {file: vd},
+				  {file: ""} 
+			  ],
+			  //control: false,
+			  width: $width,
+			  height: (22*((($width))))/37
+		  });
+	  }
+}
+var zsCMSAVS = [];
+function ShowAVS()
+{
+	try{
+		for(var i = 0; i < zsCMSAVS.length; i++)
+		{
+			var v = zsCMSAVS[i];
+			try{
+				zsCMSAutoVideo(v.id, v.url, 0, v.w, v.h, v.logo);
+			}catch(xcd){}
+		}
+	}catch(xc){}
+}
+	
+
+
+zt.addevent("load", function(){
+	//
+	//处理视频
+	var divs = document.getElementsByTagName("div");
+	for(var i = 0; i < divs.length; i++)
+	{
+		try{
+			var n = divs[i];
+			if(n.className == "autovideo_obj")
+			{
+				n.id = "zscmsautovideo_" + i;
+				
+				var un = zt.node(n, "div");
+				n.style.border = "none";
+				n.style.background = "#fff";
+				n.style.overflow = "hidden";
+				n.style.textAlign = "center";
+				
+				n.innerHTML = '<video style="background:#000" src="'+un.innerHTML+'" autoplay="autoplay" style="width:100%;height:100%;" controls="controls">你的浏览器不支持该视频的播放,点击此下载: <a href="'+un.innerHTML+'">'+un.innerHTML+'</a></video>';
+				
+				/*zsCMSAVS.push({"id":n.id,"url":un.innerHTML,"w":parseInt(n.style.width),"h":parseInt(n.style.height)});
+				n.style.width = "";
+				n.style.height = "";*/
+				n.style.display = "block";
+				n.style.width = "";
+				n.style.height = "";
+			}
+		}catch(xcd){}
+	}
+});
+
+
+function AddCOneVideo(path,logo)
+{
+	if(path != "")zsCMSAVS.push({"id":"swcontentonevideo","url":path,"logo":logo,"w":800,"h":22*800/37});
+}
+zt.addevent("load", function(){
+	$(window).resize(function(event) {
+		ShowAVS();
+	});
+	ShowAVS();
+});
+</script>
+<script type="text/javascript">
+function printPage(tr, curp, ps, cx)
+{
+	try{
+		var r = parseInt(tr);
+		var p = parseInt(curp);
+		var s = parseInt(ps);
+		
+		if(isNaN(p))p = 1;
+		if(isNaN(r))r = 0;
+		if(isNaN(s))s = 20;
+		
+		var tp = parseInt(""+(r/s))+(r%s == 0 ? 0 : 1);
+		
+		
+		
+		var str = '';
+		
+		str +=  '<a href="'+cx+(1)+'" class="num">&lt;&lt;</a>';
+		
+		str +=  '<a href="'+cx+(p - 1 < 1 ? 1 : p-1)+'" class="num">&lt;</a>';
+		
+		var j = 0;
+		var st = p-2;
+		var ed = p+2;
+		if(st < 1)st = 1;
+		if(ed > tp)ed = tp;
+		if(ed < 1)ed = 1;
+		
+		if(ed-st < 4){
+			ed = st+4;
+		}
+		
+		if(ed > tp)ed = tp;
+		
+		if(ed == tp){
+			st = tp-4;
+			if(st < 1)st = 1;
+		}
+		
+		for(var i = st; i <= ed; i++){
+			str += '<a href="'+cx+i+'" class="num'+(i == p ? ' on' : '')+'">'+i+'</a>';
+		}
+		str += '<a href="'+cx+(p + 1 > tp ? tp : p+1)+'" class="num">&gt;</a>';
+		str += '<a href="'+cx+(tp)+'" class="num">&gt;&gt;</a>';
+		document.write(str);
+		
+	}catch(xcd){}
+}
+</script>
+</head>
+
+<body data-spy="scroll" data-target=".scroll-nav">
+	<div class="WrapperW">
+    		
+    	<div class="header" id="home">
+			<div class="top-site">
+				<div class="top-site-con">
+					<h1><a href="/"><img src="/images/logo.png" alt="" /></a></h1>
+					<div class="top-site-nav right cf">
+						<div class="pc-con">
+							<ul class="cf left">
+								<li class="language">
+									<span class="title">زبان :</span><span class="lan-show" style="text-transform:uppercase">fa</span>|
+									<div class="language-list">                                    	
+                                    	<a href="http://www.shisu.edu.cn/">中文</a>
+                                    	<a href="http://en.shisu.edu.cn/">English</a><a href="http://ru.shisu.edu.cn/">Pусский</a><a href="http://de.shisu.edu.cn/">Deutsch</a><a href="http://fr.shisu.edu.cn/">Français</a><a href="http://es.shisu.edu.cn/">Español</a><a href="http://ar.shisu.edu.cn/">العربية</a><a href="http://ja.shisu.edu.cn/">日本語</a><a href="http://el.shisu.edu.cn/">Ελληνικά</a><a href="http://it.shisu.edu.cn/">Italiano</a><a href="http://pt.shisu.edu.cn/">Português</a><a href="http://ko.shisu.edu.cn/">한국어</a><a href="http://fa.shisu.edu.cn/">فارسی</a><a href="http://th.shisu.edu.cn/">ไทย</a><a href="http://vie.shisu.edu.cn/">Tiếng Việt</a><a href="http://id.shisu.edu.cn/">Bahasa Indonesia</a><a href="http://sv.shisu.edu.cn/">Svenska</a><a href="http://nl.shisu.edu.cn/">Nederlands</a><a href="http://he.shisu.edu.cn/">עברית</a><a href="http://uk.shisu.edu.cn/">Українська</a><a href="http://tr.shisu.edu.cn/">Türkçe</a><a href="http://hi.shisu.edu.cn/">हिंदी</a>
+									</div>
+								</li>
+								<li class="email">
+									<a href="http://mail.shisu.edu.cn">رايانامه</a>|
+								</li>
+								<li class="calendar">
+									<a href="/resources/academic-calendar/">تقویم</a>|
+								</li>
+							</ul>
+							<form action="/search" class="top-form right">
+								<input type="text" name="q" id="q" value="" class="text-input" />
+								<input type="submit" value="" class="submit-btn" />
+							</form>
+						</div>
+						<div class="mobile-con">
+							<form action="/search" class="top-form right">
+								<input type="text" name="q" id="q" value="" class="text-input" />
+								<input type="submit" value="" class="submit-btn" />
+							</form>
+							<a href="javascript:void(0)" class="search-btn"></a>
+							<a href="javascript:void(0)" class="nav-btn"></a>
+
+						</div>
+					</div>
+                    <!--手机端搜索框-->
+					
+				</div>
+			</div>
+			<div class="nav_site pc-nav">
+            	
+                 
+                <table class="nav-table">
+					<tr>                        
+                        
+                        <td class="first">
+						<a href="/resources/" title="امکانات و منابع">امکانات و منابع</a>
+						<ol><li><a href="/resources/academic-calendar/">تقویم آموزش</a></li><li><a href="/resources/maps-and-directions/">نقشه ها و راهنماها</a></li><li><a href="/resources/news/">اخبار</a></li><li><a href="/resources/events/">فعالیت ها</a></li><li><a href="/resources/giving-to-sisu/">اهداء به دانشگاه</a></li><li><a href="/resources/contact-us/">تماس با ما</a></li></ol></td><!--1-->
+                        <td>
+						<a href="/global/" title="امور بین المللی">امور بین المللی</a>
+						<ol><li><a href="/global/embrace-the-world/">به آغوش کشیدن جهان</a></li><li><a href="/global/global-partners/">همکاران سراسر جهان</a></li><li><a href="/global/study-abroad/">ارتباطات  با خارج از کشور</a></li><li><a href="/global/confucius-institutes/">مؤسسات کنفوسیوس</a></li></ol></td><!--2-->
+                        <td>
+						<a href="/campus-life/" title="زندگی در دانشگاه">زندگی در دانشگاه</a>
+						<ol><li><a href="/campus-life/our-campuses/">پردیس های دانشگاه</a></li><li><a href="/campus-life/events-and-traditions/">فرهنگ دانشگاه</a></li><li><a href="/campus-life/athletics-and-fitness/">تربیت بدنی</a></li></ol></td><!--3-->
+                        <td>
+						<a href="/research/" title="پژوهش">پژوهش</a>
+						<ol><li><a href="/research/research-overview/">بازنگری تحقیقات</a></li><li><a href="/research/institutes-and-centers/">مؤسسات و مراکز</a></li><li><a href="/research/libraries/">کتابخانه ها</a></li><li><a href="/research/journals-and-publications/">نشریات</a></li><li><a href="/research/university-press/">انتشارات دانشگاه</a></li></ol></td><!--4-->
+                        <td>
+						<a href="/academics/" title="آموزش">آموزش</a>
+						<ol><li><a href="/academics/schools-and-departments/">دانشکده ها و مؤسسات</a></li><li><a href="/academics/undergraduate-education/">آموزش در مقطع کارشناسی</a></li><li><a href="/academics/graduate-education/">آموزش در مقاطع کارشناسی ارشد و دکترا</a></li><li><a href="/academics/key-disciplines/">رشته های علمی کلیدی</a></li><li><a href="/academics/notable-scholars/">متخصصین معروف</a></li><li><a href="/academics/distinguished-professors/">پرفسورهای برجسته</a></li></ol></td><!--5-->
+                        <td>
+						<a href="/admissions/" title="پذیرش دانشجویان">پذیرش دانشجویان</a>
+						<ol></ol></td><!--6-->
+                        <td>
+						<a href="/about/" title="در باره دانشگاه">در باره دانشگاه</a>
+						<ol><li><a href="/about/introducing-sisu/">آشنایی با سیسو</a></li><li><a href="/about/history-at-a-glance/">تاریخچه</a></li><li><a href="/about/mission-and-vision/">رسالت و چشم انداز</a></li><li><a href="/about/identity-guidelines/">شخصیت گرافیک</a></li><li><a href="/about/university-leadership/">رؤسای دانشگاه</a></li><li><a href="/about/facts-and-figures/">آمار و ارقام</a></li></ol></td><!--7-->
+                    </tr>
+                 </table>
+                 
+			</div>
+			<div class="nav_site mobile-nav">
+            	<form action="/search" class="mobile_search">
+					<input type="text" name="q" id="q" value="" class="text-input" />
+					<input type="submit" value="" class="submit-btn" />
+				</form>
+				<ul>
+                	<li class="first">
+						<a href="/about/" title="در باره دانشگاه">در باره دانشگاه</a><i></i>
+						<ol><li><a href="/about/introducing-sisu/">آشنایی با سیسو</a></li><li><a href="/about/history-at-a-glance/">تاریخچه</a></li><li><a href="/about/mission-and-vision/">رسالت و چشم انداز</a></li><li><a href="/about/identity-guidelines/">شخصیت گرافیک</a></li><li><a href="/about/university-leadership/">رؤسای دانشگاه</a></li><li><a href="/about/facts-and-figures/">آمار و ارقام</a></li></ol></li><!--1--><li>
+						<a href="/admissions/" title="پذیرش دانشجویان">پذیرش دانشجویان</a><i></i>
+						<ol></ol></li><!--2--><li>
+						<a href="/academics/" title="آموزش">آموزش</a><i></i>
+						<ol><li><a href="/academics/schools-and-departments/">دانشکده ها و مؤسسات</a></li><li><a href="/academics/undergraduate-education/">آموزش در مقطع کارشناسی</a></li><li><a href="/academics/graduate-education/">آموزش در مقاطع کارشناسی ارشد و دکترا</a></li><li><a href="/academics/key-disciplines/">رشته های علمی کلیدی</a></li><li><a href="/academics/notable-scholars/">متخصصین معروف</a></li><li><a href="/academics/distinguished-professors/">پرفسورهای برجسته</a></li></ol></li><!--3--><li>
+						<a href="/research/" title="پژوهش">پژوهش</a><i></i>
+						<ol><li><a href="/research/research-overview/">بازنگری تحقیقات</a></li><li><a href="/research/institutes-and-centers/">مؤسسات و مراکز</a></li><li><a href="/research/libraries/">کتابخانه ها</a></li><li><a href="/research/journals-and-publications/">نشریات</a></li><li><a href="/research/university-press/">انتشارات دانشگاه</a></li></ol></li><!--4--><li>
+						<a href="/campus-life/" title="زندگی در دانشگاه">زندگی در دانشگاه</a><i></i>
+						<ol><li><a href="/campus-life/our-campuses/">پردیس های دانشگاه</a></li><li><a href="/campus-life/events-and-traditions/">فرهنگ دانشگاه</a></li><li><a href="/campus-life/athletics-and-fitness/">تربیت بدنی</a></li></ol></li><!--5--><li>
+						<a href="/global/" title="امور بین المللی">امور بین المللی</a><i></i>
+						<ol><li><a href="/global/embrace-the-world/">به آغوش کشیدن جهان</a></li><li><a href="/global/global-partners/">همکاران سراسر جهان</a></li><li><a href="/global/study-abroad/">ارتباطات  با خارج از کشور</a></li><li><a href="/global/confucius-institutes/">مؤسسات کنفوسیوس</a></li></ol></li><!--6--><li>
+						<a href="/resources/" title="امکانات و منابع">امکانات و منابع</a><i></i>
+						<ol><li><a href="/resources/academic-calendar/">تقویم آموزش</a></li><li><a href="/resources/maps-and-directions/">نقشه ها و راهنماها</a></li><li><a href="/resources/news/">اخبار</a></li><li><a href="/resources/events/">فعالیت ها</a></li><li><a href="/resources/giving-to-sisu/">اهداء به دانشگاه</a></li><li><a href="/resources/contact-us/">تماس با ما</a></li></ol></li><!--7-->
+					
+				</ul>
+				<div class="action">
+					<ul>
+						<li class="language">
+							<a href="javascript:void(0)">زبان:
+                            <span style="text-transform:uppercase">fa</span>
+                            </a>
+							<div class="language-list">
+                            	<p>Choose your language</p>
+								<a href="http://www.shisu.edu.cn/">中文</a>
+								<a href="http://en.shisu.edu.cn/">English</a><a href="http://ru.shisu.edu.cn/">Pусский</a><a href="http://de.shisu.edu.cn/">Deutsch</a><a href="http://fr.shisu.edu.cn/">Français</a><a href="http://es.shisu.edu.cn/">Español</a><a href="http://ar.shisu.edu.cn/">العربية</a><a href="http://ja.shisu.edu.cn/">日本語</a><a href="http://el.shisu.edu.cn/">Ελληνικά</a><a href="http://it.shisu.edu.cn/">Italiano</a><a href="http://pt.shisu.edu.cn/">Português</a><a href="http://ko.shisu.edu.cn/">한국어</a><a href="http://fa.shisu.edu.cn/">فارسی</a><a href="http://th.shisu.edu.cn/">ไทย</a><a href="http://vie.shisu.edu.cn/">Tiếng Việt</a><a href="http://id.shisu.edu.cn/">Bahasa Indonesia</a><a href="http://sv.shisu.edu.cn/">Svenska</a><a href="http://nl.shisu.edu.cn/">Nederlands</a><a href="http://he.shisu.edu.cn/">עברית</a><a href="http://uk.shisu.edu.cn/">Українська</a><a href="http://tr.shisu.edu.cn/">Türkçe</a><a href="http://hi.shisu.edu.cn/">हिंदी</a>
+							</div>
+						</li>
+						<li class="email"><a href="mailto:http://mail.shisu.edu.cn">رايانامه</a></li>
+						<li class="calendar"><a href="/resources/academic-calendar/">تقویم</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+        
+        
+        <div class="fixednav">
+        		
+                 
+                <table class="nav-table">
+					<tr>   
+                    	<td class="fixedlogo">
+						<a href="/"><img src="images/logo.png" alt="" /></a>
+						</td>                     
+                        
+                        <td class="first">
+						<a href="/resources/" title="امکانات و منابع">امکانات و منابع</a>
+                        </td><!--1-->
+                        <td>
+						<a href="/global/" title="امور بین المللی">امور بین المللی</a>
+                        </td><!--2-->
+                        <td>
+						<a href="/campus-life/" title="زندگی در دانشگاه">زندگی در دانشگاه</a>
+                        </td><!--3-->
+                        <td>
+						<a href="/research/" title="پژوهش">پژوهش</a>
+                        </td><!--4-->
+                        <td>
+						<a href="/academics/" title="آموزش">آموزش</a>
+                        </td><!--5-->
+                        <td>
+						<a href="/admissions/" title="پذیرش دانشجویان">پذیرش دانشجویان</a>
+                        </td><!--6-->
+                        <td>
+						<a href="/about/" title="در باره دانشگاه">در باره دانشگاه</a>
+                        </td><!--7-->
+                    </tr>
+                 </table>
+		</div>	
+        
+		
+<!--pc，pad端banner图片-->
+
+
+
+
+
+
+		<div class="banner">
+			<ul class="slides">
+            	<li>
+					<img src="/common-uploads/2017/1/up_1483267088444260_0.jpg" alt="" onclick="BOpenURL('/resources/news/content5914')" onmousemove="PHand('/resources/news/content5914',this)"/>
+					<img src="/common-uploads/2017/1/up_1483268218738625_0.jpg" alt="" class="pad-banner"  onclick="BOpenURL('')" onmousemove="PHand('',this)"/>
+                    <img src="/common-uploads/2017/1/up_14832674165203087_0.jpg" alt="" class="mobile-banner"  onclick="BOpenURL('')" onmousemove="PHand('',this)"/>
+                    <div class="text">
+                    	
+                        
+						<p class="title"><a href="/resources/news/content5914">پیگیری ارزش دانشگاه بعنوان جامعۀ مشترک اساتید و دانشجویان</a></p>
+						<p><a href="/resources/news/content5914">پیام دانشگاه مطالعات بین المللی شانگهای  به مناسبت سال نو</a></p>
+                        
+					</div>
+				</li><li>
+					<img src="/common-uploads/2016/12/up_14822337492273431_0.jpg" alt="" onclick="BOpenURL('/resources/news/content5736')" onmousemove="PHand('/resources/news/content5736',this)"/>
+					<img src="/common-uploads/2016/12/up_1482234482725932_0.jpg" alt="" class="pad-banner"  onclick="BOpenURL('')" onmousemove="PHand('',this)"/>
+                    <img src="/common-uploads/2016/12/up_14822345953703499_0.jpg" alt="" class="mobile-banner"  onclick="BOpenURL('')" onmousemove="PHand('',this)"/>
+                    <div class="text">
+                    	
+                        
+						<p class="title"><a href="/resources/news/content5736">همکاری بین المللی مطالعات آسیا و آفریقا وارد مرحلۀ جدید شد</a></p>
+						<p><a href="/resources/news/content5736">همکاری بین المللی مطالعات آسیا و آفریقا وارد مرحلۀ جدید شد</a></p>
+                        
+					</div>
+				</li><li>
+					<img src="/common-uploads/2016/12/up_1482233664965706_0.jpg" alt="" onclick="BOpenURL('/resources/news/content5733')" onmousemove="PHand('/resources/news/content5733',this)"/>
+					<img src="/common-uploads/2016/12/up_14822345188724095_0.jpg" alt="" class="pad-banner"  onclick="BOpenURL('')" onmousemove="PHand('',this)"/>
+                    <img src="/common-uploads/2016/12/up_14822345618433418_0.jpg" alt="" class="mobile-banner"  onclick="BOpenURL('')" onmousemove="PHand('',this)"/>
+                    <div class="text">
+                    	
+                        
+						<p class="title"><a href="/resources/news/content5733">شصتمین سالگرد تأسیس بخش های زبان و ادبیات انگلیسی، فرانسه و آلمانی</a></p>
+						<p><a href="/resources/news/content5733">شصتمین سالگرد تأسیس بخش های زبان و ادبیات انگلیسی، فرانسه و آلمانی</a></p>
+                        
+					</div>
+				</li><li>
+					<img src="/common-uploads/2015/3/up_14267647910473446_0.jpg" alt="" onclick="BOpenURL('/resources/news/complete_works_Goethe_translation')" onmousemove="PHand('/resources/news/complete_works_Goethe_translation',this)"/>
+					<img src="/common-uploads/2015/3/up_1426764992375971_0.jpg" alt="" class="pad-banner"  onclick="BOpenURL('')" onmousemove="PHand('',this)"/>
+                    <img src="/common-uploads/2015/3/up_1426764957288181_0.jpg" alt="" class="mobile-banner"  onclick="BOpenURL('')" onmousemove="PHand('',this)"/>
+                    <div class="text">
+                    	
+                        
+						<p class="title"><a href="/resources/news/complete_works_Goethe_translation">آثار گوته ترجمه می شود</a></p>
+						<p><a href="/resources/news/complete_works_Goethe_translation">مجموعه ی کامل آثار نویسنده ی آلمانی، یوهان ولفگانگ فون گوته ترجمه می شود</a></p>
+                        
+					</div>
+				</li><li>
+					<img src="/common-uploads/2014/8/up_14089713220271801_0.jpg" alt="" onclick="BOpenURL('')" onmousemove="PHand('',this)"/>
+					<img src="/common-uploads/2014/11/up_14168442573251565_0.jpg" alt="" class="pad-banner"  onclick="BOpenURL('')" onmousemove="PHand('',this)"/>
+                    <img src="/common-uploads/2014/11/up_14168422176524740_0.jpg" alt="" class="mobile-banner"  onclick="BOpenURL('')" onmousemove="PHand('',this)"/>
+                    <div class="text">
+                    	
+                        <p class="title">معرفی چین به جهان</p>
+						<p>چین  کارکنان سازمانهای بین المللی را بیش از پیش پرورش می کند</p>
+                        
+                        
+					</div>
+				</li><li>
+					<img src="/common-uploads/2014/8/up_14089672250261625_0.jpg" alt="" onclick="BOpenURL('')" onmousemove="PHand('',this)"/>
+					<img src="/common-uploads/2014/11/up_14168443023302030_0.jpg" alt="" class="pad-banner"  onclick="BOpenURL('')" onmousemove="PHand('',this)"/>
+                    <img src="/common-uploads/2014/11/up_14168420353403411_0.jpg" alt="" class="mobile-banner"  onclick="BOpenURL('')" onmousemove="PHand('',this)"/>
+                    <div class="text">
+                    	
+                        <p class="title">صبحانه کاری  با حسن روحانی</p>
+						<p>صبحانه کاری رئیس جمهوری ایران با جمعی از نخبگان و برجستگان چین در شانگهای برگزار شد</p>
+                        
+                        
+					</div>
+				</li>
+                
+			</ul>
+		</div>
+		<!--手机端banner图片-->
+		
+        <script>
+		function BOpenURL(u)
+		{
+			if(u != ""){
+				window.location = u;
+			}
+		}
+		function PHand(u,o)
+		{
+			if(u != "")o.style.cursor="pointer";
+		}
+		</script>
+		
+        
+
+
+<div id="news" class="news con">
+			<div class="wrap cf">
+				<div class="news-main">
+					<h2>اخبار</h2>
+					<div class="cf float-news-wrap">
+                    	
+						<div class="text-news float-news">
+							<div>
+								<img src="/common-uploads/2016/12/up_14822360034391555_0.JPG" alt="" />
+							</div>
+							<p><a href="/resources/news/content5540"><p>تفاهم نامه همکاری دانشگاه علامه طباطبائی با دانشگاه بین المللی شانگهای</p>
+
+<p align="center" class="MsoNormal" dir="RTL" style="margin-bottom:12.0pt;mso-para-margin-bottom:
+1.0gd;text-align:center;line-height:22.0pt;mso-pagination:none;mso-layout-grid-align:
+none;text-autospace:none;direction:rtl;unicode-bidi:embed"><b><span dir="LTR" lang="EN-US" style="font-size:
+20.0pt;font-family:"><o:p></o:p></span></b></p>
+</a></p>
+						</div>
+                        
+                        
+                        
+                        
+						<div class="video-news text-news float-news">
+							<div>
+								<img src="/common-uploads/2016/4/up_14612435067552746_0.jpg" alt="" />
+							</div>
+							<p><a href="/resources/news/content4201"><p align="right" class="MsoNormal" style="margin: 0cm 0cm 0pt; text-align: right; -ms-word-break: break-all;">ورود به ایران ---ارتباط و همکاری، دو تمدن چین و ایران</p></a></p>
+						</div>
+                        
+                        
+					</div>
+					<!--视频播放-->
+					<script>
+						$(document).ready(function($) {
+							$(window).resize(function(event) {
+								setVideo1("video1", "/common-uploads/2016/12/up_14822360034391555_0.JPG", 0);
+								setVideo1("video2", "/common-uploads/2016/4/up_14612435067552746_0.jpg", 1);
+							});
+							setVideo1("video1", "/common-uploads/2016/12/up_14822360034391555_0.JPG", 0);
+							setVideo1("video2", "/common-uploads/2016/4/up_14612435067552746_0.jpg", 1);
+							function setVideo1(id, vd, pos){
+								if(!zt.g(id))return;
+								var $width = $(window).width();
+								
+								var defp = "./images/temp/pic-2.jpg";
+								if(pos == 0){
+									defp = "";
+								}else{
+									defp = "";
+								}
+								if(defp == "")defp = "./images/temp/pic-2.jpg";
+								if($width<=767){
+									jwplayer(id).setup({
+										//skin: "jwplayer/skins/simple.zip",
+										skin: "./scripts/jwplayer/skins/blue.zip",
+										stretching: "fill",
+										flashplayer: "./scripts/jwplayer/player.swf",
+										image: defp,
+										levels: [
+											{file: vd},
+											{file: ""} 
+										],
+										//control: false,
+										width: $width*0.9375,
+										height: (208*($width*0.9375))/370
+									});
+								}else if(768 <= $width && $width <= 1200){
+									jwplayer(id).setup({
+										//skin: "jwplayer/skins/simple.zip",
+										skin: "./scripts/jwplayer/skins/blue.zip",
+										stretching: "fill",
+										flashplayer: "./scripts/jwplayer/player.swf",
+										image: defp,
+										levels: [
+											{file: vd},
+											{file: ""} 
+										],
+										//control: false,
+										width: (($width-48)/2)-10,
+										height: (208*((($width-48)/2)-10))/370
+									});
+								}else{
+									jwplayer(id).setup({
+										//skin: "jwplayer/skins/simple.zip",
+										skin: "./scripts/jwplayer/skins/blue.zip",
+										stretching: "fill",
+										flashplayer: "./scripts/jwplayer/player.swf",
+										image: defp,
+										levels: [
+											{file: vd},
+											{file: ""} 
+										],
+										//control: false,
+										width: 370,
+										height: 208
+									});
+								}
+							}
+						});
+					</script>                    
+                    
+					<ul class="news-list">
+						<li class="cf">
+							<a href="/resources/news/content6801" class="left">گشایش نوزدهمین کنگره ملی حزب کمونیست چین در پکن</a>
+							<a href="/resources/news/content6778" class="right">مراسم روز بزرگداشت حافظ و استقبال از دانشجویان جدید زبان و ادبیات فارسی در دانشگاه مطالعات بین المللی شانگهای برگزار شد</a>
+						</li>
+						<li class="cf">
+							<a href="/resources/news/content6742" class="left">متن سخنرانی رئیس دانشگاه سیسو در مراسم آغاز سال تحصیلی دانشگاه</a>
+							<a href="/resources/news/content6739" class="right">راه دانشگاه و زیبایی زبان : مراسم آغاز سال تحصیلی جدید دانشگاه سیسو برگزار شد</a>
+						</li>
+					</ul>
+					<a href="/resources/news/" class="more">اخبار بیشتر<i></i></a>
+				</div>
+				<div class="events">
+					<h2>فعالیت ها</h2>
+					<ul class="events-list">
+                    
+						
+                        <li>
+							<div class="time">
+								<p>10.05</p>
+								<p class="month">2017</p>
+							</div>
+							<div class="link">
+								<p><a href="/resources/events/lecture/content6741" class="right">سخنرانی لی یان سونگ رئیس دانشگاه سیسو در مراسم آغاز سال تحصیلی دانشگاه</a></p>
+								<span></span>
+							</div>
+						</li>
+                        
+                        <li>
+							<div class="time">
+								<p>06.21</p>
+								<p class="month">2017</p>
+							</div>
+							<div class="link">
+								<p><a href="/resources/events/lecture/content6489" class="right">یادگیری و کاربرد--مقیسه منتخبات کنفوسیوس با افکار حکیمان غربی</a></p>
+								<span><p dir="rtl"><span style="color: rgb(51, 51, 51); font-family: Georgia, Arial, sans-serif; font-size: 14px; line-height: 16px; text-align: left;">تیاتر شانگهای</span></p></span>
+							</div>
+						</li>
+                        
+                        <li>
+							<div class="time">
+								<p>06.09</p>
+								<p class="month">2017</p>
+							</div>
+							<div class="link">
+								<p><a href="/resources/events/lecture/content6487" class="right">مسائل توسعه اقتصادی خاور میانه</a></p>
+								<span><p dir="rtl"><span style="color: rgb(51, 51, 51); font-family: Georgia, Arial, sans-serif; font-size: 14px; line-height: 16px; orphans: 2; text-align: right; widows: 2;">اتاق704،ساختمان6،پردیس&nbsp;خونگ کو</span></p></span>
+							</div>
+						</li>
+                        
+                        <li>
+							<div class="time">
+								<p>06.09</p>
+								<p class="month">2017</p>
+							</div>
+							<div class="link">
+								<p><a href="/resources/events/lecture/content6488" class="right">مراحظه استراتژی ارتباطات چین در خارج از شبکه خبری راشاتودی</a></p>
+								<span><p><span style="color: rgb(51, 51, 51); font-family: Georgia, Arial, sans-serif; font-size: 14px; line-height: 16px; orphans: 2; text-align: left; widows: 2;">تالای پیروزی،پردیس&nbsp;خونگ کو</span></p></span>
+							</div>
+						</li>
+                        
+                        <li>
+							<div class="time">
+								<p>06.08</p>
+								<p class="month">2017</p>
+							</div>
+							<div class="link">
+								<p><a href="/resources/events/lecture/content6486" class="right">موضوع هسته ای کره شمالی : توسعه و چشم انداز</a></p>
+								<span><p dir="rtl"><span style="color: rgb(51, 51, 51); font-family: Georgia, Arial, sans-serif; font-size: 14px; line-height: 16px; orphans: 2; text-align: right; widows: 2;">اتاق ترجمه همزمان،ساختمان2،پردیس&nbsp;خونگ کو</span></p></span>
+							</div>
+						</li>
+                        
+					</ul>
+					<a href="/resources/events/" class="more">فعالیت های بیشتر<i></i></a>
+					<a href="/resources/academic-calendar/" class="more">تقویم آموزش<i></i></a>
+				</div>
+			</div>
+		</div>
+        
+		
+<div id="info" class="info con pc-con pc-info">
+			<div class="wrap">
+				<ul class="info-tab-con tab-con">
+					<li class="on">
+						<i class="stdents"></i>
+						<p>دانشجویان</p>
+					</li>
+					<li>
+						<i class="faculty"></i>
+						<p>اساتید</p>
+					</li>
+					<li>
+						<i class="parenters"></i>
+						<p>همکاران</p>
+					</li>
+					<li>
+						<i class="visitors"></i>
+						<p>مهمانها</p>
+					</li>
+				</ul>
+                
+                
+				<div class="info-tab-main tab-main">
+					<div class="info-tab-details tab-details cf stdents_con">
+						<div class="detail-wrap">
+							<a href="/academics/schools-and-departments/">
+								<div class="text text-utem-1">
+									<p>دانشکده ها و مؤسسات</p>
+									<i></i>
+								</div>
+								<div class="img-wrap">
+									<img src="/common-uploads/2014/12/up_14180119452173546_0.jpg" alt="" />
+								</div>
+							</a>
+						</div>
+						<div class="detail-wrap">
+							<a href="/academics/undergraduate-education/">
+								<div class="img-wrap">
+									<img src="/common-uploads/2014/12/up_14180120532461903_0.jpg" alt="" />
+								</div>
+								<div class="text text-utem-2">
+									<p>آموزش در مقطع کارشناسی</p>
+									<i></i>
+								</div>
+							</a>
+						</div>
+						<div class="detail-wrap">
+							<a href="/academics/graduate-education/">
+								<div class="text text-utem-3">
+									<p>آموزش در مقاطع کارشناسی ارشد و دکترا</p>
+									<i></i>
+								</div>
+								<div class="img-wrap">
+									<img src="/common-uploads/2014/12/up_14180121237801050_0.jpg" alt="" />
+								</div>
+							</a>
+						</div>
+					</div>
+                    
+					<div class="info-tab-details tab-details cf faculty_con">
+						<div class="detail-wrap">
+							<a href="/research/research-overview/">
+								<div class="text text-utem-1">
+									<p>بازنگری تحقیقات</p>
+									<i></i>
+								</div>
+								<div class="img-wrap">
+									<img src="/common-uploads/2014/12/up_14180141310611171_0.jpg" alt="" />
+								</div>
+							</a>
+						</div>
+						<div class="detail-wrap">
+							<a href="/research/institutes-and-centers/">
+								<div class="img-wrap">
+									<img src="/common-uploads/2014/12/up_14180142284532719_0.jpg" alt="" />
+								</div>
+								<div class="text text-utem-2">
+									<p>واحدهای تحقیقاتی</p>
+									<i></i>
+								</div>
+							</a>
+						</div>
+						<div class="detail-wrap">
+							<a href="/research/libraries/">
+								<div class="text text-utem-3">
+									<p>کتابخانه ها</p>
+									<i></i>
+								</div>
+								<div class="img-wrap">
+									<img src="/common-uploads/2014/12/up_14180143236574736_0.jpg" alt="" />
+								</div>
+							</a>
+						</div>
+					</div>
+                    
+					<div class="info-tab-details tab-details cf parenters_con">
+						<div class="detail-wrap">
+							<a href="/global/embrace-the-world/">
+								<div class="text text-utem-1">
+									<p>به آغوش کشیدن جهان</p>
+									<i></i>
+								</div>
+								<div class="img-wrap">
+									<img src="/common-uploads/2014/12/up_1418015362750801_0.jpg" alt="" />
+								</div>
+							</a>
+						</div>
+						<div class="detail-wrap">
+							<a href="/global/global-partners/">
+								<div class="img-wrap">
+									<img src="/common-uploads/2014/12/up_14180154965283316_0.jpg" alt="" />
+								</div>
+								<div class="text text-utem-2">
+									<p>همکاران سراسر جهان</p>
+									<i></i>
+								</div>
+							</a>
+						</div>
+						<div class="detail-wrap">
+							<a href="/global/study-abroad/">
+								<div class="text text-utem-3">
+									<p>ارتباطات  با خارج از کشور</p>
+									<i></i>
+								</div>
+								<div class="img-wrap">
+									<img src="/common-uploads/2014/12/up_14180158755271531_0.jpg" alt="" />
+								</div>
+							</a>
+						</div>
+					</div>
+					
+					<div class="info-tab-details tab-details cf visitors_con">
+						<div class="detail-wrap">
+							<a href="/resources/academic-calendar/">
+								<div class="text text-utem-1">
+									<p>تقویم آموزش</p>
+									<i></i>
+								</div>
+								<div class="img-wrap">
+									<img src="/common-uploads/2014/12/up_14180162277572484_0.jpg" alt="" />
+								</div>
+							</a>
+						</div>
+						<div class="detail-wrap">
+							<a href="/resources/maps-and-directions/">
+								<div class="img-wrap">
+									<img src="/common-uploads/2014/12/up_1418016358381656_0.jpg" alt="" />
+								</div>
+								<div class="text text-utem-2">
+									<p>نقشه ها و راهنماها</p>
+									<i></i>
+								</div>
+							</a>
+						</div>
+						<div class="detail-wrap">
+							<a href="/resources/news/">
+								<div class="text text-utem-3">
+									<p>اخبار</p>
+									<i></i>
+								</div>
+								<div class="img-wrap">
+									<img src="/common-uploads/2014/12/up_14180164502881072_0.jpg" alt="" />
+								</div>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="info con mobile-con mobile-info">
+			<div class="wrap">
+				<ul class="info-tab-con">
+					<li class="on">
+						<div class="title">
+							<i class="stdents"></i>
+							<p>دانشجویان</p>
+						</div>
+						<div class="info-tab-details cf">
+							<div class="detail-wrap">
+                                <a href="/academics/schools-and-departments/">
+                                    <div class="text text-utem-1">
+                                        <p>دانشکده ها و مؤسسات</p>
+                                        <i></i>
+                                    </div>
+                                    <div class="img-wrap">
+                                        <img src="/common-uploads/2014/12/up_14180119452173546_0.jpg" alt="" />
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="detail-wrap">
+                                <a href="/academics/undergraduate-education/">
+                                    <div class="img-wrap">
+                                        <img src="/common-uploads/2014/12/up_14180120532461903_0.jpg" alt="" />
+                                    </div>
+                                    <div class="text text-utem-2">
+                                        <p>آموزش در مقطع کارشناسی</p>
+                                        <i></i>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="detail-wrap">
+                                <a href="/academics/graduate-education/">
+                                    <div class="text text-utem-3">
+                                        <p>آموزش در مقاطع کارشناسی ارشد و دکترا</p>
+                                        <i></i>
+                                    </div>
+                                    <div class="img-wrap">
+                                        <img src="/common-uploads/2014/12/up_14180121237801050_0.jpg" alt="" />
+                                    </div>
+                                </a>
+                            </div>
+						</div>
+					</li>
+					<li>
+						<div class="title">
+							<i class="faculty"></i>
+							<p>اساتید</p>
+						</div>
+						<div class="info-tab-details cf">
+							<div class="detail-wrap">
+                                <a href="/research/research-overview/">
+                                    <div class="text text-utem-1">
+                                        <p>بازنگری تحقیقات</p>
+                                        <i></i>
+                                    </div>
+                                    <div class="img-wrap">
+                                        <img src="/common-uploads/2014/12/up_14180141310611171_0.jpg" alt="" />
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="detail-wrap">
+                                <a href="/research/institutes-and-centers/">
+                                    <div class="img-wrap">
+                                        <img src="/common-uploads/2014/12/up_14180142284532719_0.jpg" alt="" />
+                                    </div>
+                                    <div class="text text-utem-2">
+                                        <p>واحدهای تحقیقاتی</p>
+                                        <i></i>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="detail-wrap">
+                                <a href="/research/libraries/">
+                                    <div class="text text-utem-3">
+                                        <p>کتابخانه ها</p>
+                                        <i></i>
+                                    </div>
+                                    <div class="img-wrap">
+                                        <img src="/common-uploads/2014/12/up_14180143236574736_0.jpg" alt="" />
+                                    </div>
+                                </a>
+                            </div>
+						</div>
+					</li>
+					<li>
+						<div class="title">
+							<i class="parenters"></i>
+							<p>همکاران</p>
+						</div>
+						<div class="info-tab-details cf">
+							<div class="detail-wrap">
+							<a href="/global/embrace-the-world/">
+								<div class="text text-utem-1">
+									<p>به آغوش کشیدن جهان</p>
+									<i></i>
+								</div>
+								<div class="img-wrap">
+									<img src="/common-uploads/2014/12/up_1418015362750801_0.jpg" alt="" />
+								</div>
+							</a>
+						</div>
+						<div class="detail-wrap">
+							<a href="/global/global-partners/">
+								<div class="img-wrap">
+									<img src="/common-uploads/2014/12/up_14180154965283316_0.jpg" alt="" />
+								</div>
+								<div class="text text-utem-2">
+									<p>همکاران سراسر جهان</p>
+									<i></i>
+								</div>
+							</a>
+						</div>
+						<div class="detail-wrap">
+							<a href="/global/study-abroad/">
+								<div class="text text-utem-3">
+									<p>ارتباطات  با خارج از کشور</p>
+									<i></i>
+								</div>
+								<div class="img-wrap">
+									<img src="/common-uploads/2014/12/up_14180158755271531_0.jpg" alt="" />
+								</div>
+							</a>
+						</div>
+						</div>
+					</li>
+					<li>
+						<div class="title">
+							<i class="visitors"></i>
+							<p>مهمانها</p>
+						</div>
+						<div class="info-tab-details cf">
+							<div class="detail-wrap">
+                                <a href="/resources/academic-calendar/">
+                                    <div class="text text-utem-1">
+                                        <p>تقویم آموزش</p>
+                                        <i></i>
+                                    </div>
+                                    <div class="img-wrap">
+                                        <img src="/common-uploads/2014/12/up_14180162277572484_0.jpg" alt="" />
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="detail-wrap">
+                                <a href="/resources/maps-and-directions/">
+                                    <div class="img-wrap">
+                                        <img src="/common-uploads/2014/12/up_1418016358381656_0.jpg" alt="" />
+                                    </div>
+                                    <div class="text text-utem-2">
+                                        <p>نقشه ها و راهنماها</p>
+                                        <i></i>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="detail-wrap">
+                                <a href="/resources/news/">
+                                    <div class="text text-utem-3">
+                                        <p>اخبار</p>
+                                        <i></i>
+                                    </div>
+                                    <div class="img-wrap">
+                                        <img src="/common-uploads/2014/12/up_14180164502881072_0.jpg" alt="" />
+                                    </div>
+                                </a>
+                            </div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+        
+        
+ 
+        
+        
+        
+        
+        
+        
+		<div id="discover" class="discover con">
+			<div class="wrap">
+				<h2>آشنایی با سیسو</h2>
+				<p class="title-explain phone-con">دانشگاه مطالعات بین المللی شانگهای در سال۱۹۴۹ تاسیس شد و همواره تلاش خود را جهت پرورش افراد تراز بالا و پر روحیه با توانایی واقعی و متخصص در زبان های خارجی برای ارتباطات فرهنگی به کار بسته است</p>
+				<p class="title-explain pad-pc-con">دانشگاه مطالعات بین المللی شانگهای در سال۱۹۴۹ تاسیس شد و همواره تلاش خود را جهت پرورش افراد تراز بالا و پر روحیه با توانایی واقعی و متخصص در زبان های خارجی برای ارتباطات فرهنگی به کار بسته است</p>
+				<div class="discover-main cf">
+					<div class="item-1 item">
+						<a href="/campus-life/our-campuses/">
+							<img src="/common-uploads/2014/12/up_1418360201755263_0.jpg" alt="" />
+							<div class="text">
+								<span>پردیس های دانشگاه</span>
+								<p> دانشگاه مطالعات بین المللی شانگهای دارای دو پردیس در مناطق خونگ کو و سونگ جیانگ می باشد که هر کدام ویژگی های خاص خود را دارد</p>
+							</div>
+						</a>
+					</div>
+					<div class="item-2 item">
+						
+                        <a href="/campus-life/events-and-traditions/">
+							<img src="/common-uploads/2014/12/up_14180147858064435_0.jpg" alt="" />
+							<p>فرهنگ دانشگاه</p>
+						</a>
+					</div>
+					<div class="item-3 item">
+						<a href="/about/history-at-a-glance/">
+							<img src="/common-uploads/2014/12/up_1417761949133991_0.jpg" alt="" />
+							<p>تاریخچه</p>
+						</a>
+					</div>
+					<div class="item-4 item">
+						<a href="/campus-life/athletics-and-fitness/">
+							<img src="/common-uploads/2014/12/up_14180148880851987_0.jpg" alt="" />
+							<p>تربیت بدنی</p>
+						</a>
+					</div>
+					<div class="item-5 item">
+                        <div class="video2" id="dvvideo2">
+							
+						</div>
+						<a href="/about/introducing-sisu/"><p>آشنایی با سیسو</p></a>
+                        
+					</div>
+					<div class="item-6 item">
+						<div class="color-bg">
+							<span> رسالت و چشم انداز</span>
+							<p><a href="/about/mission-and-vision/">
+                            شعار دانشگاه مطالعات بین المللی شانگهای "منش والا و همت بالا، آمیزش دانش چینی با دانشهای سایر کشورها" است.
+
+” منش والا و همت بالا” از قطعات ادبی کنفوسیوس سرچشمه گرفته که در آنها گفته شده: آدم باید صادقانه حرف بزند و با صداقت عمل کند تا در زندگی با اراده باشد و با نیک نامی بمیرد. این سخن را همچنین در کتابی به نام " آثار برگزیده"  که توسط لیانگ شیانگ تانگ از سلسله جنوب  (557-502) تالیف شده می توان يافت. در آن کتاب آمده است :" آدمی با اراده و صداقت شکست ناپذیر است."</a></p>
+							<a href="/about/mission-and-vision/" class="more">بیشتر <i></i></a>
+						</div>
+					</div>
+				</div>
+				<!--视频播放-->
+				<script>
+					$(document).ready(function($) {
+						$(window).resize(function(event) {
+							setVideo2();
+						});
+						setVideo2();
+						function setVideo2(){
+							var $width = $(window).width();
+							var defp = "/common-uploads/2014/11/up_14169197099752097_0.jpg";
+							if(defp == "")defp = "./images/temp/pic-7.jpg";
+							if($width<=767){
+								jwplayer("dvvideo2").setup({
+									//skin: "jwplayer/skins/simple.zip",
+									skin: "./scripts/jwplayer/skins/blue.zip",
+									stretching: "fill",
+									flashplayer: "./scripts/jwplayer/player.swf",
+									image: defp,
+									levels: [
+										{file: "/common-uploads/2015/1/up_14203404909023812_0.mp4"},
+										{file: ""} 
+									],
+									//control: false,
+									width: $width*0.9375,
+									height: (10*($width*0.9375))/19
+								});
+							}else if(768 <= $width && $width <= 1200){
+								jwplayer("dvvideo2").setup({
+									//skin: "jwplayer/skins/simple.zip",
+									skin: "./scripts/jwplayer/skins/blue.zip",
+									stretching: "fill",
+									flashplayer: "./scripts/jwplayer/player.swf",
+									image: defp,
+									levels: [
+										{file: "/common-uploads/2015/1/up_14203404909023812_0.mp4"},
+										{file: ""} 
+									],
+									//control: false,
+									width: (($width-48)/2)-10,
+									height: (13*((($width-48)/2)-10))/19
+								});
+							}else{
+								jwplayer("dvvideo2").setup({
+									//skin: "jwplayer/skins/simple.zip",
+									skin: "./scripts/jwplayer/skins/blue.zip",
+									stretching: "fill",
+									flashplayer: "./scripts/jwplayer/player.swf",
+									image: defp,
+									levels: [
+										{file: "/common-uploads/2015/1/up_14203404909023812_0.mp4"},
+										{file: ""} 
+									],
+									//control: false,
+									width: 380,
+									height: 200
+								});
+							}
+						}
+					});
+				</script>
+			</div>
+		</div>
+        
+		<div id="links" class="links con">
+			<div class="links-main wrap">
+				<a href="/resources/giving-to-sisu/" class="link-1 link-wrap" title="اهدا به دانشگاه">اهدا به دانشگاه</a>
+				<a href="http://en.shisu.edu.cn/campus-life/communities-and-services/" class="link-2 link-wrap" title="خدمات فناوری اطلاعات">خدمات فناوری اطلاعات</a>
+				<a href="/research/university-press/" class="link-3 link-wrap" title="انتشارات دانشگاه">انتشارات دانشگاه</a>
+				<a href="/research/libraries/" class="link-4 link-wrap" title="کتابخانه ها">کتابخانه ها</a>
+			</div>
+		</div>
+        
+		<div class="footer">
+			<div class="footer-main cf">
+				<div class="footer-logo">
+					<img src="/images/logo2.png" alt="" />
+				</div>
+				<div class="addr">
+					<div class="addr1">
+<p class="bold">پردیس منطقه خونگ کو</p>
+<p>چین .شهر شانگهای. خیابان دالین غربی . پلاک550. کد پستی 200083</p></div>
+<div class="addr2">
+<p class="bold">پردیس منطقه سونگ جیانگ</p>						<p>چین .شهر شانگهای. خیابان ون شیانگ . پلاک1550. کد پستی 201620</p></div>
+				</div>
+                
+                	<div class="share">
+                        <a href="/resources/contact-us/" class="contact-us" title="Contact Us">Contact Us</a>
+                        <a href="http://twitter.com/sisushanghai" class="us_twitter" title="Contact Twitter">twitter</a>
+                        <a href="http://facebook.com/sisuers" class="us_fb" title="Contact Facebook">faceboook</a>
+                        <a href="https://www.youtube.com/channel/UCLJHquxszX7KdIk7Y_re7zQ" class="us_tsina" title="Contact Weibo">weibo</a>
+                        <a href="http://www.linkedin.com/edu/school?id=11318" class="us_weixin" title="Contact LinkedIn">LinkedIn</a>
+					</div>
+					<!-- JiaThis Button BEGIN -->
+                    
+					<script type="text/javascript" >
+					var jiathis_config={
+						summary:"",
+						shortUrl:false,
+						hideMore:true
+					}
+					</script>
+					
+                    <script type="text/javascript" src="scripts/jia.js" charset="utf-8"></script>
+					<!-- JiaThis Button END -->
+					<script>
+						$(document).ready(function($) {
+							$(".jiathis_button_weixin").attr("title","Share to WeChat");
+							$(".jiathis_button_tsina").attr("title","Share to Sina Weibo");
+							$(".jiathis_button_fb").attr("title","Share to Facebook");
+							$(".jiathis_button_twitter").attr("title","Share to Twitter");
+						});
+					</script>
+				
+			</div>
+			<div class="copylight">
+				<p>©&nbsp2017 Shanghai International Studies University - دانشگاه مطالعات بین المللی شانگهای</p>
+			</div>
+		</div>
+        <script language="javascript" charset="gb2312" src="http://stat.zhetao.com/zt-web-tools-stat.js?uid=swglobal"></script>
+        
+		
+	</div>
+
+	<div class="scroll-nav">
+        <ul class="nav" role="navigation">
+            <li class="active"><a href="#home" class="loctaion_change"><span></span></a><div class="line"></div></li>
+            <li><a href="#news" class="loctaion_change"><span></span></a><div class="line"></div></li>
+            <li><a href="#news" class="loctaion_change"><span></span></a><div class="line"></div></li>
+            <li><a href="#info" class="loctaion_change"><span></span></a><div class="line"></div></li>
+            <li><a href="#discover" class="loctaion_change"><span></span></a><div class="line"></div></li>
+            <li><a href="#links" class="loctaion_change"><span></span></a><div class="line"></div></li>
+            <li><a href="http://global.shisu.edu.cn"><span></span></a></li>
+        </ul>
+    </div>
+</body>
+</html>
+

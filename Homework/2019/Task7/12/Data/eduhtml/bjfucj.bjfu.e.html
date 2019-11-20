@@ -1,0 +1,494 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<meta name="keywords" content="北京林业大学继续教育学院,北林继续教育学院,bjfu,继续教育学院" />
+<meta name="author" content="杨大利15210505872" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<link href="css/roll.css" type="text/css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<title>北京林业大学继续教育学院</title>
+<script type="text/javascript" src="js/roll.js"></script>
+<script src="js/slide.js" type="text/javascript"></script>
+<script src="js/jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+var timeout         = 500;
+var closetimer		= 0;
+var ddmenuitem      = 0;
+
+function jsddm_open()
+{	jsddm_canceltimer();
+	jsddm_close();
+	ddmenuitem = $(this).find('ul').eq(0).css('visibility', 'visible');}
+
+function jsddm_close()
+{	if(ddmenuitem) ddmenuitem.css('visibility', 'hidden');}
+
+function jsddm_timer()
+{	closetimer = window.setTimeout(jsddm_close, timeout);}
+
+function jsddm_canceltimer()
+{	if(closetimer)
+	{	window.clearTimeout(closetimer);
+		closetimer = null;}}
+
+$(document).ready(function()
+{	$('#jsddm > li').bind('mouseover', jsddm_open);
+	$('#jsddm > li').bind('mouseout',  jsddm_timer);});
+
+document.onclick = jsddm_close;
+</script>
+
+</head>
+<body  onload="bodyload()">
+<div id="bg">
+	
+
+
+	<div id="header">
+		<div id="banner">
+			<div id="top_navbar">
+				<div id="top_nav_l"></div>
+				<div id="top_nav">
+					<ul>
+						<li><a href="http://121.195.16.32:8080/cjxy/login.jsp" target="_blank">教务管理系统</a></li>
+						<li><a href="http://211.144.154.115/index.html" target="_blank">数字化学习资源开放联盟</a></li>
+						<li><a href="http://www.ebjfu.com/" target="_blank">数字化教学平台</a></li>
+						<li><a href="http://www.ebjfu.net" target="_blank">数字化教学资源开放平台</a></li>
+					</ul>
+				</div>
+				<div id="top_nav_r"></div>
+			</div>
+		</div>
+		<div id="nav">
+			<ul id="jsddm">
+				<li><a href="/" target="_blank">首&nbsp;&nbsp;&nbsp;页</a></li>
+				<li><a href="/xygk/">学院概况</a></li>
+				<li><a href="/dtgz/">党团工作</a></li>
+				<li><a href="/zsxj/">招生学籍</a></li>
+				<li><a href="/ydx/">夜&nbsp;大&nbsp;学</a></li>
+				<li><a href="/hs/">函&nbsp;&nbsp;&nbsp;授</a></li>
+				<li><a href="http://pxzx.bjfu.edu.cn/">培&nbsp;&nbsp;&nbsp;训</a></li>
+				<li><a href="/yjsjy/">研究生教育</a></li>
+				<li><a href="http://gjjy.bjfu.edu.cn/">国际教育</a></li>
+				<li><a href="/zxks/" target="_blank">自学考试</a></li>
+				<li><a href="/ycjy/">远程教育</a></li>
+			</ul>
+	  </div>
+	</div>
+	
+	<!--header结束-->
+	
+	
+	<div id="main_wrapper">
+		<div id="main_left">
+			<div id="rqtq">
+			
+			<div style="height:1px;overflow:hidden;margin:0px 3px;background:#298138;"></div>
+			<div style="height:1px;overflow:hidden;margin:0px 2px;border-left:1px solid #298138;border-right:1px solid #298138;background:#FFF;"></div>
+			<div style="height:1px;overflow:hidden;margin:0px 1px;border-left:1px solid #298138;border-right:1px solid #298138;background:#FFF;"></div>
+			
+			<div class="rqtq3">
+				<div id="riqi">
+					<div id="zhouci">
+						<div id="zhoucishu">
+							<div>
+								<SCRIPT Language="JavaScript">
+								<!--
+								function weekNo() {
+								  var totalDays = 0;
+								  var totalDays1 = 0;
+								  now = new Date();
+								  years=now.getYear();
+								  nowmonth=now.getMonth()+1;
+								  nowdate=now.getDate();
+								//以下设置开学日期
+								  years1=2012;
+								  nowmonth1=9;
+								  nowdate1=3;
+								//以上设置开学日期
+								  if (years < 1000)
+								  years+=1900
+								  var days = new Array(12);	// Array to hold the total days in a month
+								  days[0] = 31;
+								  days[2] = 31;
+								  days[3] = 30;
+								  days[4] = 31;
+								  days[5] = 30;
+								  days[6] = 31;
+								  days[7] = 31;
+								  days[8] = 30;
+								  days[9] = 31;
+								  days[10] = 30;
+								  days[11] = 31;
+								  //  Check to see if this is a leap year
+								   if (Math.round(now.getYear()/4) == now.getYear()/4) {
+									 days[1] = 29
+								  }else{
+									 days[1] = 28
+								  }
+								//  If this is January no need for any fancy calculation otherwise figure out the
+								//  total number of days to date and then determine what week
+								if(years1 == years){
+								//////////////////////////////////////////////////////////////////////////////
+								  if (now.getMonth() == 0) {
+									 totalDays = totalDays + now.getDate() + 1;
+								  }else{
+									 var curMonth = now.getMonth();
+									 for (var count = 1; count <= curMonth; count++) {
+										 totalDays = totalDays + days[count - 1];
+									 }
+									 totalDays = totalDays + now.getDate() + 1;
+								   }
+								 ///////////////////////////////////////////////////////////////////////////  
+								   if (nowmonth1 == 1) {
+									 totalDays1 = totalDays1 + nowdate1;
+								  }else{
+									 for (var count = 1; count <= nowmonth1-1; count++) {
+										 totalDays1 = totalDays1 + days[count - 1];
+									 }
+									 totalDays1 = totalDays1 + nowdate1 + 1;
+								   }
+								//////////////////////////////////////////////////////////////////////////////
+								totalDays = totalDays - totalDays1;
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+								}else{
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+									 for (var count = 1; count <= 12; count++) {
+										 totalDays = totalDays + days[count - 1];
+									 }
+								 ///////////////////////////////////////////////////////////////////////////  
+								   if (nowmonth1 == 1) {
+									 totalDays1 = totalDays1 + nowdate1;
+								  }else{
+									 for (var count = 1; count <= nowmonth1-1; count++) {
+										 totalDays1 = totalDays1 + days[count - 1];
+									 }
+									 totalDays1 = totalDays1 + nowdate1 + 1;
+								   }
+								//////////////////////////////////////////////////////////////////////////////
+								totalDays = totalDays - totalDays1 + now.getDate();
+								}
+								//////////////////////////////////////////////////////////////////////////////
+								   //var week = Math.round(totalDays/7);
+								   if(totalDays<0){week=0;return week;}
+								   var week = parseInt(totalDays/7) + 1;
+								   return week;
+								}
+								document.write(weekNo());
+								// -->
+								</SCRIPT>
+							</div>
+						</div>
+					</div>
+					<div id="rili">
+						<div class="xqrq">
+							<div>
+							<SCRIPT Language="JavaScript">
+							<!--
+							function NowDate() {
+							  years=now.getYear();
+							  nowmonth=now.getMonth() + 1;
+							  nowdate=now.getDate();
+							  var datetime=nowmonth+"月"+nowdate+"日";
+							  return datetime;
+							}
+							document.write(NowDate());
+							// -->
+							</SCRIPT>
+							</div>
+						</div>
+						<div class="xqrq">
+							<div>
+							<SCRIPT Language="JavaScript">
+							<!--
+							function NowDateZ() {
+							  nowZhou=now.getDay();
+							  if(nowZhou==1){nowZhou='一';}
+							  if(nowZhou==2){nowZhou='二';}
+							  if(nowZhou==3){nowZhou='三';}
+							  if(nowZhou==4){nowZhou='四';}
+							  if(nowZhou==5){nowZhou='五';}
+							  if(nowZhou==6){nowZhou='六';}
+							  if(nowZhou==0){nowZhou='日';}
+							  var datetime="今天是星期"+nowZhou;
+							  return datetime;
+							}
+							document.write(NowDateZ());
+							// -->
+							</SCRIPT>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="tianqi">
+					<script type="text/javascript">
+						function showLocale(objD)
+						{
+							var str,colorhead,colorfoot;
+							var yy = objD.getYear();
+							if(yy<1900) yy = yy+1900;
+							var MM = objD.getMonth()+1;
+							if(MM<10) MM = '0' + MM;
+							var dd = objD.getDate();
+							if(dd<10) dd = '0' + dd;
+							var hh = objD.getHours();
+							if(hh<10) hh = '0' + hh;
+							var mm = objD.getMinutes();
+							if(mm<10) mm = '0' + mm;
+							var ss = objD.getSeconds();
+							if(ss<10) ss = '0' + ss;
+							var ww = objD.getDay();
+							if  ( ww==0 )  colorhead="<font color=\"#FF0000\">";
+							if  ( ww > 0 && ww < 6 )  colorhead="<font color=\"#008000\">";
+							if  ( ww==6 )  colorhead="<font color=\"#FF0000\">";
+							if  (ww==0)  ww="星期日";
+							if  (ww==1)  ww="星期一";
+							if  (ww==2)  ww="星期二";
+							if  (ww==3)  ww="星期三";
+							if  (ww==4)  ww="星期四";
+							if  (ww==5)  ww="星期五";
+							if  (ww==6)  ww="星期六";
+							colorfoot="</font>"
+							str = colorhead +  " " + hh + "：" + mm + "：" + ss + "  "  + colorfoot;
+							return(str);
+						}
+						function tick()
+						{
+							var today;
+							today = new Date();
+							document.getElementById("tianqi").innerHTML = showLocale(today);
+							window.setTimeout("tick()", 1000);
+						}
+						tick();
+						</script>
+				</div>
+			</div>
+			
+			<div style="height:1px;overflow:hidden;margin:0px 1px;border-left:1px solid #298138;border-right:1px solid #298138;background:#FFF;"></div>
+			<div style="height:1px;overflow:hidden;margin:0px 2px;border-left:1px solid #298138;border-right:1px solid #298138;background:#FFF;"></div>
+			<div style="height:1px;overflow:hidden;margin:0px 3px;background:#298138;"></div>
+			
+			</div>
+			<div id="sfrk">
+				<div id="lanmu">
+
+					<div id="lanmu_l"></div>
+					<div id="sfrk_title"><h2><a href="#" title="第三方平台入口">第三方平台入口</a></h2></div>
+					<div id="lanmu_r"></div>
+				</div>
+				<div id="sfrk_box">
+					<div class="rukou">
+						<div class="tubiao"><img src="images/qq.gif" title="QQ咨询" /></div>
+						<div class="wenzi">
+							<div class="rkname"><a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=1768589505&site=qq&menu=yes">招生信息</a><br /><a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=1768589505&site=qq&menu=yes">咨询</a></div>
+						</div>
+					</div>
+                                        <div class="rukou">
+						<div class="tubiao"><img src="images/weixin.gif" title="微信平台资讯" /></div>
+						<div class="wenzi">
+							<div class="dianji"><a href="http://bjfucj.bjfu.edu.cn/xygk/xyxw/171038.htm" target="_blank">微信平台</a></div>
+						</div>
+					</div>
+					<div class="rukou">
+						<div class="tubiao"><img src="images/renren.gif" title="人人网资讯" /></div>
+						<div class="wenzi">
+							<div class="dianji"><a href="http://zhan.renren.com/bfujxjy?from=rrprofile" target="_blank">人人网</a></div>
+						</div>
+					</div>
+					<div class="rukou">
+						<div class="tubiao"><img src="images/sina.gif" title="新浪微博资讯" /></div>
+						<div class="wenzi">
+							<div class="dianji"><a href="http://weibo.com/u/2614061843" target="_blank">新浪微博</a></div>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+			<div id="qitalj">
+				<div class="lianjie"><a href="http://jwc.bjfu.edu.cn/UploadFiles/xiaoli.mht" target="_blank"><img src="images/pic2.gif" />学校校历</a></div>
+				<div class="lianjie"><a href="http://oa.bjfu.edu.cn/oa/" target="_blank"><img src="images/pic2.gif" />OA办公系统</a></div>
+				<div class="lianjie"><a href="http://dzb.bjfu.edu.cn/#meeting" target="_blank"><img src="images/pic2.gif" />一周会议通知</a></div>
+			</div>
+		</div>
+		<div id="main_right">
+			<div id="r_left">
+				<div id="pic">
+					<div id="focusViwer">
+						<div id="imgADPlayer"></div> 
+						<script> 
+																				
+								PImgPlayer.addItem( "<a href=/hdp/256529.htm target=_blank style=color:#FFFFFF;text-decoration:none;>喜迎十九大：北林大师生热议党的十九大报告</a>", "/hdp/256529.htm", "/images/content/2017/20171019093203362670.jpg"); 		
+						
+																											
+								PImgPlayer.addItem( "<a href=/hdp/219301.htm target=_blank style=color:#FFFFFF;text-decoration:none;>全国林业院校继续教育网络课程资源联盟成立</a>", "/hdp/219301.htm", "/images/content/2016/20160518134505058609.jpg"); 		
+						
+																											
+								PImgPlayer.addItem( "<a href=/hdp/194920.htm target=_blank style=color:#FFFFFF;text-decoration:none;>我校学生在北京高校继续教育大学生英语口语竞赛中再创佳绩</a>", "/hdp/194920.htm", "/images/content/2015/20151106160623179927.png"); 		
+						
+																											
+								PImgPlayer.addItem( "<a href=/xygk/xyxw/192608.htm target=_blank style=color:#FFFFFF;text-decoration:none;>泰安林业系统办现代林业培训开班</a>", "/xygk/xyxw/192608.htm", "/images/content/2015/20151020082436032203.jpg"); 		
+						
+																											
+								PImgPlayer.addItem( "<a href=/dtgz/djgz/185341.htm target=_blank style=color:#FFFFFF;text-decoration:none;>学院举办专题党课学习</a>", "/dtgz/djgz/185341.htm", "/images/content/2015/20150626143356039505.jpg"); 		
+						
+																			PImgPlayer.init( "imgADPlayer", 400, 186+24 );   
+						</script>
+						</div>
+				</div>
+				<div id="news">
+					<div id="lanmu">
+						<div id="lanmu_l"></div>
+						<div id="news_title"><h2><a href="">最新动态</a></h2></div>
+						<div id="lanmu_r"></div>
+					</div>
+					<div id="news_box">
+						<ul class="list">
+														<li><span class="datetime">2017-10-19</span><a href="/hdp/256529.htm" target="_blank">            喜迎十九大：北林大师生热议党的十九大报告 
+    </a></li>
+														<li><span class="datetime">2017-10-18</span><a href="/xygk/xyxw/256472.htm" target="_blank">            喜迎十九大：学院全体教工参观“砥砺奋进的五年... 
+    </a></li>
+														<li><span class="datetime">2017-10-18</span><a href="/xygk/xyxw/256468.htm" target="_blank">            喜迎十九大：学院集体收看十九大开幕会并座谈交... 
+    </a></li>
+														<li><span class="datetime">2017-10-18</span><a href="/dtgz/djgz/256374.htm" target="_blank">            喜迎十九大：五千余名师生参观“砥砺奋进的五年... 
+    </a></li>
+														<li><span class="datetime">2017-10-13</span><a href="/xygk/xyxw/255911.htm" target="_blank">            培训中心举办森林防火专题培训（工作简报） 
+    </a></li>
+														<li><span class="datetime">2017-10-13</span><a href="/xygk/xyxw/255877.htm" target="_blank">            培训中心举办日照市林业系统业务素质能力提升培... 
+    </a></li>
+														<li><span class="datetime">2017-09-27</span><a href="/dtgz/djgz/255092.htm" target="_blank">            学院开展“学习塞罕坝精神”主题教育活动 
+    </a></li>
+														<li><span class="datetime">2017-09-27</span><a href="/dtgz/djgz/255091.htm" target="_blank">            学院针对党员开展国家安全教育专题讲座 
+    </a></li>
+														<li><span class="datetime">2017-09-20</span><a href="/xygk/xyxw/254486.htm" target="_blank">            宜昌市林业干部培训班在我校举办 
+    </a></li>
+														<li><span class="datetime">2017-09-20</span><a href="/dtgz/djgz/254422.htm" target="_blank">            砥砺奋进的北林14：继续教育学院积极转型创新... 
+    </a></li>
+													</ul>
+						
+					</div>
+				</div>
+			</div>
+			<div id="r_right">
+				<div id="shipin">
+					<div id="lanmu">
+						<div id="lanmu_l"></div>
+						<div id="shipin_title"><h2><a href="#" title="在线教学资源">在线教学资源</a></h2></div>
+						<div id="lanmu_r"></div>
+					</div>
+					<div id="shipin_box" style="position:relative;overflow:hidden;">
+					 <object align=middle classid="CLSID:22d6f312-b0f6-11d0-94ab-0080c74c7e95" class=OBJECT id=MediaPlayer width=333 height=272> 
+						<param name=ShowStatusBar value=0> 
+						<param name="wmode" value="transparent" />
+						<param name="WindowlessVideo" value="1" /> 
+						<param name=Filename value="http://211.144.154.115/video/jcxs.wmv"> 
+						<embed type=application/x-oleobject codebase="http://activex.microsoft.com/activex/controls/mplayer/en/nsmp2inf.cab#Version=5,1,52,701"
+						</embed> 
+					</object>
+					</div>
+				</div>
+				<div id="hzyx">
+					<div id="lanmu">
+						<div id="lanmu_l"></div>
+						<div id="hzyx_title"><h2><a href="/hzyx/" target="_blank">合作院校</a></h2></div>
+						<div id="lanmu_r"></div>
+					</div>
+					<div id="hzyx_box">
+						<div class="Area5">
+							<div class="ColE">
+								<div class="PicList">
+									<a href="javascript:toLeft();" class="prev"></a>
+									<div id="scrollbody">
+									<table>
+										<tbody>
+										<tr>
+										<td id="scroll1">
+										<table cellpadding="0" border="0" align="left" valign="center" cellspace="0">
+										<tbody><tr>
+																																			<td><div class="Pic"><a href="http://www.pxto.com.cn/JiGou/164049B415.html" target="_blank"><img  src="/images/content/2012/20120220170226310622.jpg" /></a></div></td>
+																																															<td><div class="Pic"><a href="http://www.swfc.edu.cn/" target="_blank"><img  src="/images/content/2012/20120220170129223565.jpg" /></a></div></td>
+																																															<td><div class="Pic"><a href="http://www.scly.gov.cn/article351267.html" target="_blank"><img  src="/images/content/2012/20120220165929001379.jpg" /></a></div></td>
+																																															<td><div class="Pic"><a href="http://www.xza.cn/" target="_blank"><img  src="/images/content/2012/20120220170011558478.jpg" /></a></div></td>
+																																															<td><div class="Pic"><a href="http://www.shumc.edu.cn/" target="_blank"><img  src="/images/content/2012/20120220165803789253.jpg" /></a></div></td>
+																																															<td><div class="Pic"><a href="http://www.nxst.cn/" target="_blank"><img  src="/images/content/2012/20120220165702129048.jpg" /></a></div></td>
+																																															<td><div class="Pic"><a href="http://www.jlsjyxy.net/" target="_blank"><img  src="/images/content/2012/20120220165523250826.jpg" /></a></div></td>
+																																															<td><div class="Pic"><a href="http://www.nit.edu.cn/" target="_blank"><img  src="/images/content/2012/20120220165620149911.jpg" /></a></div></td>
+																																															<td><div class="Pic"><a href="http://www.hnfjc.cn/" target="_blank"><img  src="/images/content/2012/20120220165359722316.jpg" /></a></div></td>
+																																															<td><div class="Pic"><a href="http://www.gdf.gov.cn/index.php" target="_blank"><img  src="/images/content/2012/20120220165137631646.jpg" /></a></div></td>
+																																															<td><div class="Pic"><a href="http://www.helc.edu.cn/zf/xy.asp" target="_blank"><img  src="/images/content/2012/20120220165301102240.jpg" /></a></div></td>
+																																															<td><div class="Pic"><a href="http://www.gsfc.edu.cn/" target="_blank"><img  src="/images/content/2012/20120220165051359541.jpg" /></a></div></td>
+																																															<td><div class="Pic"><a href="http://www.fjlzy.com/" target="_blank"><img  src="/images/content/2012/20120220164925233369.jpg" /></a></div></td>
+																																															<td><div class="Pic"><a href="http://www.gxstzy.cn/" target="_blank"><img  src="/images/content/2012/20120220155119178378.jpg" /></a></div></td>
+																																															<td><div class="Pic"><a href="http://www.xjlyxx.com/" target="_blank"><img  src="/images/content/2012/20120220155148989406.jpg" /></a></div></td>
+																																															<td><div class="Pic"><a href="http://www.imeic.cn/" target="_blank"><img  src="/images/content/2012/20120220164755098932.jpg" /></a></div></td>
+																																															<td><div class="Pic"><a href="http://www.tjylschool.com.cn/" target="_blank"><img  src="/images/content/2012/20120220155058125245.jpg" /></a></div></td>
+																																															<td><div class="Pic"><a href="http://www.qqhrlx.com/" target="_blank"><img  src="/images/content/2012/20120220154955239057.jpg" /></a></div></td>
+																																	</tr></tbody></table>
+										</td>
+										<td id="scroll2">
+										</td>
+										</tr>
+										</tbody>
+									</table>
+									</div>
+									<a href="javascript:toRight();" class="next"></a>
+								</div>	
+							</div>	
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	
+	<div id="footer">
+		<div id="kongbai"></div>
+		<div id="lianjie">
+			<li><a href="#">友情链接：</a></li>
+			<li style="margin-left:0;"><a href="http://www.moe.edu.cn/" target="_blank">教育部</a></li>
+			<li><a href="http://www.bjedu.gov.cn/publish/portal0/default.htm" target="_blank">北京市教委</a></li>
+			<li><a href="http://www.lypx.cn" target="_blank">中国林业教育培训网</a></li>
+			<li><a href="http://lgy.forestry.gov.cn" target="_blank">中国林业网</a></li>
+			<li><a href="http://www.forestry.gov.cn" target="_blank">国家林业局</a></li>
+			<li><a href="http://info.bjfu.edu.cn" target="_blank">数字校园平台</a></li>
+			<li><a href="http://www.xueyuanlu.cn/" target="_blank">学院路教学共同体</a></li>
+			<li><a href="http://www.jingpinke.com/index" target="_blank">国家精品课资源网</a></li>
+		</div>
+	<div id="cfooter">
+		<p>版权所有2004-2011      北京林业大学继续教育学院       <a href="http://cms.bjfu.edu.cn/" target="_blank">网站管理入口</a></p>
+	</div>
+</div>
+	
+</div>
+
+<!--float start-->
+<div id="ad" style="position: absolute;z-index:999;">
+</DIV>
+<SCRIPT type="text/javascript">
+var x = 50,y = 60
+var xin = true, yin = true
+var step = 1 
+var delay = 20
+var obj=document.getElementById("ad") 
+function floatAD() {
+var L=T=0
+var R= document.body.clientWidth-obj.offsetWidth
+var B = document.body.clientHeight-obj.offsetHeight
+obj.style.left = x + document.body.scrollLeft
+obj.style.top = y + document.body.scrollTop
+x = x + step*(xin?1:-1) 
+if (x < L) { xin = true; x = L} 
+if (x > R){ xin = false; x = R} 
+y = y + step*(yin?1:-1) 
+if (y < T) { yin = true; y = T } 
+if (y > B) { yin = false; y = B } 
+}
+var itl= setInterval("floatAD()", delay) 
+obj.onmouseover=function(){clearInterval(itl)} 
+obj.onmouseout=function(){itl=setInterval("floatAD()", delay)}
+</script>
+<!--float end --></body>
+</html>
+</body></html>

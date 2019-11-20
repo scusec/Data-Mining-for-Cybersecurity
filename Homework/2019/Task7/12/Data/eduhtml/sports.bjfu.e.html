@@ -1,0 +1,525 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<title>体育教学部-部门首页</title>
+<link type="text/css" rel="stylesheet" href="/css/style1.css" />
+<script type="text/javascript" src="/js/jquery.min.js"></script>
+<script type="text/javascript" src="/js/bigpicroll.js"></script>
+<link href="/css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript">
+$(function(){
+    $('.f_out').eq(0).css('display','block');
+});
+
+var timeout         = 500;
+var closetimer		= 0;
+var ddmenuitem      = 0;
+
+function jsddm_open()
+{	jsddm_canceltimer();
+	jsddm_close();
+	ddmenuitem = $(this).find('ul').eq(0).css('visibility', 'visible');}
+
+function jsddm_close()
+{	if(ddmenuitem) ddmenuitem.css('visibility', 'hidden');}
+
+function jsddm_timer()
+{	closetimer = window.setTimeout(jsddm_close, timeout);}
+
+function jsddm_canceltimer()
+{	if(closetimer)
+	{	window.clearTimeout(closetimer);
+		closetimer = null;}}
+        
+$(document).ready(function()
+{	$('#jsddm > li').bind('mouseover', jsddm_open);
+	$('#jsddm > li').bind('mouseout',  jsddm_timer);});
+
+document.onclick = jsddm_close;
+</script>
+<script type="text/javascript"><!--
+var LastLeftID = "";
+
+function DoMenu(emid)
+{
+ var obj = document.getElementById(emid); 
+ obj.className = (obj.className.toLowerCase() == "expanded"?"collapsed":"expanded");
+ if((LastLeftID!="")&&(emid!=LastLeftID)) //关闭上一个Menu
+ {
+  document.getElementById(LastLeftID).className = "collapsed";
+ }
+ LastLeftID = emid;
+}
+function GetMenuID()
+{
+ var MenuID="";
+ var _paramStr = new String(window.location.href);
+ var _sharpPos = _paramStr.indexOf("#");
+ 
+ if (_sharpPos >= 0 && _sharpPos < _paramStr.length - 1)
+ {
+  _paramStr = _paramStr.substring(_sharpPos + 1, _paramStr.length);
+ }
+ else
+ {
+  _paramStr = "";
+ }
+ 
+ if (_paramStr.length > 0)
+ {
+  var _paramArr = _paramStr.split("&");
+  if (_paramArr.length>0)
+  {
+   var _paramKeyVal = _paramArr[0].split("=");
+   if (_paramKeyVal.length>0)
+   {
+    MenuID = _paramKeyVal[1];
+   }
+  }
+ }
+ 
+ if(MenuID!="")
+ {
+  DoMenu(MenuID)
+ }
+}
+GetMenuID(); //*这两个function的顺序要注意一下，不然在Firefox里GetMenuID()不起效果
+-->
+</script>
+</head>
+
+<body>
+<div id="bg_wrapper">
+<div id="main_wrapper">
+    <div id="main_left">
+        
+<div id="logo">
+        </div>
+        <div id="nav2a">
+            	<ul id="nav2">
+                    <li><a onclick="DoMenu('ChildMenu1')">党建工作</a>
+                        <ul id="ChildMenu1" class="collapsed">
+                            <li><a href="http://sports.bjfu.edu.cn/djgz/163226.htm">思想建设</a></li>
+                            <li><a href="http://sports.bjfu.edu.cn/djgz/163227.htm">组织建设</a></li>
+                            <li><a href="http://sports.bjfu.edu.cn/djgz/163230.htm">党风廉政建设</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="http://sports.bjfu.edu.cn/jpkc/163232.htm">精品课程</a></li>
+                    <li><a onclick="DoMenu('ChildMenu2')">体育场馆</a>
+                        <ul id="ChildMenu2" class="collapsed">
+                            <li><a href="http://sports.bjfu.edu.cn/tycg/163239.htm">场馆概况</a></li>
+                            <li><a href="http://sports.bjfu.edu.cn/tycg/163238.htm">田家炳体育中心</a></li>
+                            <li><a href="http://sports.bjfu.edu.cn/tycg/163237.htm">田家炳体育馆</a></li>
+                            <li><a href="http://sports.bjfu.edu.cn/tycg/163235.htm">看台体育馆</a></li>
+	      					<li><a href="http://sports.bjfu.edu.cn/tycg/163234.htm">乒乓球馆</a></li>
+                        </ul>
+					</li>
+                    <li><a href="http://sports.bjfu.edu.cn/tyky/163241.htm">体育科研</a></li>
+                    <li><a href="http://sports.bjfu.edu.cn/gzzd/167482.htm">规章制度</a></li>
+                    <li><a onclick="DoMenu('ChildMenu3')">相关下载</a>
+                        <ul id="ChildMenu3" class="collapsed">
+                            <li><a href="http://sports.bjfu.edu.cn/xgxz/ylsp/">音乐视频</a></li>
+                            <li><a href="http://sports.bjfu.edu.cn/xgxz/kjzl/">课件资料</a></li>
+                            <li><a href="http://sports.bjfu.edu.cn/xgxz/wdzl/">文档资料</a></li>
+                        </ul>
+					</li>
+                </ul>
+         </div>
+        <div id="login">
+            <div id="clogin">
+              <form action="http://202.204.114.253:8080/accountservlet" method="post">
+              <input type="hidden" value="add" name="menu">
+              <input type="hidden" value="./index.asp" name="url">
+              <table cellSpacing="0" cellPadding="0" border="0" width="100%" height="65">
+                <tr>
+                  <td width="57%" height="24" align="center" valign="middle" class="n00"> <input name='UserID' type='text' class="lanyu" id="UserID" value="用户名" size='11' maxlength='20'></td>
+                  <td width="43%" align="center" valign="middle" class="n00"><select name="People">
+                    <option value="student">学生</option>
+                    <option value="teacher">教师</option>
+                    <option value="admin">管理员</option>
+                  </select></td>
+                <tr> 
+                  <td height="28" align="center" valign="middle" class="n00"><input name='UserPWD' type='password' class="lanyu" id="UserPWD" value="123456"  size='12' maxlength='20'></td>
+                  <td align="center" valign="middle" class="n00"><input name="TiJiao2" type="submit" value="登陆" /></td>
+                </tr>
+                </table>
+              <input name=CkiExp type=hidden value='-1'>
+              <input name=submitflag type=hidden value="ddddls-+++">
+            </form>
+            </div>
+        </div>
+        <div id="lianjie">
+            <div id="clianjie">
+              <form id="form2" name="form2" method="post" action="#">
+            	    <table width="100%" height="73" border="0" cellpadding="5" cellspacing="5">
+            	      <tr>
+            	        <td align="center"><label for="select"></label>
+            	          <select name="select" id="select" onchange=javascript:window.open(this.options[this.selectedIndex].value)>
+                           <option>== 校 内 链 接 ==</option>
+            	          <option value="http://www.bjfu.edu.cn/">北林主页</option>
+            	          <option value="http://jwc.bjfu.edu.cn/">北林教务处</option>
+            	          <option value="http://www.dengtian.com/">北林登天</option>
+            	          <option value="http://nic.bjfu.edu.cn/">信息中心</option>
+            	          <option value="http://xinqiao.bjfu.edu.cn/">心桥网站</option>
+						  <option value="http://youth.bjfu.edu.cn/">北林青年</option>
+						  <option value="http://rsc.bjfu.edu.cn/renshi/index.html">北林人事处</option>
+						  <option value="http://kyc.bjfu.edu.cn/">北林科技处</option>
+				          </select></td>
+          	        </tr>
+            	      <tr>
+            	        <td align="center"><label for="select2"></label>
+            	          <select name="select2" id="select2" onchange=javascript:window.open(this.options[this.selectedIndex].value)>
+                           <option>== 校 外 链 接 ==</option>
+						   <option value="http://www.moe.edu.cn/">教育部</option>
+						   <option value="http://www.sport.gov.cn/n16/index.html">国家体育总局</option>
+						   <option value="http://www.bjdtx.com/">北京大体协</option>
+						   <option value="http://www.bjedu.gov.cn/">北京市教委</option>
+						   <option value="http://www.bjsports.gov.cn/">北京市体育局</option>
+						   <option value="http://www.chinagxty.com/">中国高校体育网</option>
+						   <option value="http://www.ty121.cn/">中国教师体育网</option>
+						   <option value="http://www.schoolsports.com.cn/">中国学校体育网</option>
+            	          <option value="http://www.tsinghua.edu.cn/publish/sports/index.html">清华大学体育部</option>
+            	          <option value="http://pe.pku.edu.cn/">北京大学体育部</option>
+            	          <option value="http://www.bit.edu.cn/xxgk/xysz/tyb53/index.htm">北理工体育部</option>
+            	          <option value="http://ped.bupt.edu.cn/">北邮体育部</option>
+            	          <option value="http://www.sport.gov.cn/n16/index.html">国家体育总局</option>
+            	          <option value="http://sport.org.cn/">体总网</option>
+            	          <option value="http://www.espnstar.com.cn/">ESPNSTAR中文网</option>
+				          </select></td>
+          	        </tr>
+          	      </table>
+       	      </form>
+            </div>
+        </div>        <div id="lianxi">
+            <div id="clianxi">
+                <p style="text-indent:0\9;">传真：010-62336697</p>
+                <p style="text-indent:0\9;">邮箱：sports@bjfu.edu.cn</p>
+                <p style="text-indent:0\9;">地址：海淀区清华东路35号</p>
+            </div>
+        </div>
+
+    </div>
+    <div id="main_right">
+        
+<div id="banner">
+        </div>
+            <ul id="jsddm">
+                <li><a href="http://sports.bjfu.edu.cn">部门首页</a></li>
+                <li><a href="http://sports.bjfu.edu.cn/bmgk/163246.htm">部门概况</a>
+                    <ul>
+                        <li><a href="http://sports.bjfu.edu.cn/bmgk/163246.htm">部门简介</a></li>
+                        <li><a href="http://sports.bjfu.edu.cn/bmgk/163245.htm">现任领导</a></li>
+                        <li><a href="http://sports.bjfu.edu.cn/bmgk/163244.htm">组织机构</a></li>
+                    </ul>
+                </li>
+                <li><a href="http://sports.bjfu.edu.cn/tyjx/163253.htm">体育教学</a>
+                    <ul>
+                        <li><a href="http://sports.bjfu.edu.cn/tyjx/163253.htm">课程目标</a></li>
+                        <li><a href="http://sports.bjfu.edu.cn/tyjx/163252.htm">课程设置</a></li>
+                        <li><a href="http://sports.bjfu.edu.cn/tyjx/163251.htm">课程性质</a></li>
+                        <li><a href="http://sports.bjfu.edu.cn/tyjx/163250.htm">课程内容</a></li>
+                        <li><a href="http://sports.bjfu.edu.cn/tyjx/163249.htm">教学大纲</a></li>
+                        <li><a href="http://sports.bjfu.edu.cn/tyjx/163248.htm">专项介绍</a></li>
+                        <li><a href="http://sports.bjfu.edu.cn/tyjx/163247.htm">课程管理</a></li>
+                    </ul>
+                </li>
+                <li><a href="http://sports.bjfu.edu.cn/tzjk/163257.htm">体质健康</a>
+                    <ul>
+                        <li><a href="http://sports.bjfu.edu.cn/tzjk/163257.htm">体质健康标准</a></li>
+                        <li><a href="http://sports.bjfu.edu.cn/tzjk/163256.htm">体质监测中心</a></li>
+                        <li><a href="http://sports.bjfu.edu.cn/tzjk/163255.htm">体质测试方法</a></li>
+                        <li><a href="http://sports.bjfu.edu.cn/tzjk/163254.htm">体质成绩查询</a></li>
+                    </ul>
+                </li>
+                <li><a href="http://sports.bjfu.edu.cn/jsjs/">师资队伍</a></li>
+                <li><a href="http://sports.bjfu.edu.cn/qzty/163264.htm">群众体育</a>
+                    <ul>
+                        <li><a href="http://sports.bjfu.edu.cn/qzty/163264.htm">群众体育概况</a></li>
+                        <li><a href="http://sports.bjfu.edu.cn/qzty/163263.htm">校内性联赛</a></li>
+                        <li><a href="http://sports.bjfu.edu.cn/qzty/163262.htm">高校性联赛</a></li>
+                        <li><a href="http://sports.bjfu.edu.cn/qzty/163261.htm">校运会</a></li>
+                        <li><a href="http://sports.bjfu.edu.cn/qzty/163260.htm">教职工体育</a></li>
+                        <li><a href="http://sports.bjfu.edu.cn/qzty/163259.htm">学生体育协会</a></li>
+                    </ul>
+                </li>
+                <li><a style="width:100px;" href="http://sports.bjfu.edu.cn/jsxl/199901.htm">竞赛训练</a>
+                    <ul>
+                        <li style="font-size:12px;"><a style="width:100px;" href="http://sports.bjfu.edu.cn/jsxl/199901.htm">高水平运动队简介</a></li>
+                        <li style="font-size:12px;"><a style="width:100px;" href="http://sports.bjfu.edu.cn/jsxl/199903.htm">高水平运动员展示</a></li>
+                        <li style="font-size:12px;"><a style="width:100px;" href="http://sports.bjfu.edu.cn/jsxl/199902.htm">高水平队竞赛计划</a></li>
+                       
+                    </ul>
+                </li>
+                <li><a href="http://sports.bjfu.edu.cn/tyzx/">体育咨询</a></li>
+            </ul>        
+            <div id="pic">
+                <div id="pics">
+                    <div class="flashbox">
+                        <div class="focusNew_out flashlist">
+								                                <div class="f_out">									                                                              
+                                        <a href="http://sports.bjfu.edu.cn/tpxwl/236588.htm"><img width="642" height="302" alt="            不忘初心，砥砺前行 
+    " src="/images/content/2017/20171017162745652772.jpg" /></a>
+								
+                                 </div>
+								                             								                                <div class="f_out">									                                                              
+                                        <a href="http://sports.bjfu.edu.cn/tpxwl/170073.htm"><img width="642" height="302" alt="            党代会 
+    " src="/images/content/2017/20171020164506044920.jpg" /></a>
+								
+                                 </div>
+								                             								                                <div class="f_out">									                                                              
+                                        <a href="http://sports.bjfu.edu.cn/tpxwl/163215.htm"><img width="642" height="302" alt="            党代会全程 
+    " src="/images/content/2017/20171020143901855482.jpg" /></a>
+								
+                                 </div>
+								                             								                                <div class="f_out">									                                                              
+                                        <a href="http://sports.bjfu.edu.cn/tpxwl/163213.htm"><img width="642" height="302" alt="            党代会全程2 
+    " src="/images/content/2017/20171020144506372524.jpg" /></a>
+								
+                                 </div>
+								                             								                                <div class="f_out">									                                                              
+                                        <a href="http://sports.bjfu.edu.cn/tpxwl/163214.htm"><img width="642" height="302" alt="            党代会宣传 
+    " src="/images/content/2017/20171017163601023187.jpg" /></a>
+								
+                                 </div>
+								                                                                               </div>
+                        <div class="f_tabs">
+                            <span class="hover">1</span>
+                            <span>2</span>
+                            <span>3</span>
+                            <span>4</span>
+                            <span>5</span>
+                        </div>
+                    </div><!--flashbox end-->
+                    <script type="text/javascript">
+                        FeatureList(".flashbox",{
+                            "onclass":"hover",
+                            "offclass":"",
+                            "pause_on_act":"click",
+                            "interval":5000,
+                            "speed":5
+                        });
+                    </script>
+
+                </div>
+            </div>
+            
+            <script type="text/javascript" src="js/jquery.XYTabs.1.0.js"></script>
+            <script>
+                //<![CDATA[
+                $(function(){
+                    $('#demo1').XYTabs();
+            
+                });  
+                //]]>
+            </script>
+    
+            <div id="news">
+              <div class="box" id="demo1">
+                <ul class="tabNav">
+                    <li><a href="/xwl/xnjs/" target="_blank">校内竞赛</a></li>
+                    <li><a href="http://sports.bjfu.edu.cn/xwl/xwjs/"  target="_blank">校外竞赛</a></li>
+                    <li><a href="http://sports.bjfu.edu.cn/xwl/jyhd/"   target="_blank">教研活动</a></li>
+                    <li><a href="http://sports.bjfu.edu.cn/xwl/ghhd/" target="_blank">工会活动</a></li>
+               </ul>
+               <div class="tabCon">
+                   <div>
+                                                    <div class="cnews_c">
+                              
+                                <h3><a href="http://sports.bjfu.edu.cn/xwl/xnjs/255828.htm" target="_blank">            我校“院系杯”篮球比赛顺利闭幕 
+    </a></h3>
+                              <div class="content">
+                                  <p>10月12日，我校“院系杯”篮球赛总决赛在校篮球场进行。经过激烈比拼，园林学院获得男子组冠军，材料学院获得亚军；材料学院战胜园林学院夺得女子组桂冠。比赛结束后，主办方举行了颁奖仪式，学生工作部部长刘广超、园林学院党委书记张敬、体育教学部主任陈东、副主任姜志明、满昌慧以及各个学院辅导老师出席。
+
+
+10月12日，我校“院系杯”篮球赛总决赛在校篮球场进行。经过激烈比拼，园林学院获得男子组冠军，材料学院获得亚军；材料学院战胜园林学院夺得女子组桂冠。比赛结束后，主办方举行了颁奖仪式，学生工作部部长刘广超、园林学院党委书记张敬、体育教学部主任陈东、副主任姜志明、满昌慧以及各个学院辅导老师出席。 </p>
+                                </div>
+                            </div>
+                                                    <div class="cnews_c">
+                              
+                                <h3><a href="http://sports.bjfu.edu.cn/xwl/xnjs/254868.htm" target="_blank">            我校“院系杯”学生篮球联赛顺利开赛 
+    </a></h3>
+                              <div class="content">
+                                  <p>9月25日中午校园篮球场上，2017年北京林业大学“院系杯”篮球联赛拉开帷幕，校党委书记王洪元，党委副书记纪委书记王涛，党政办主任王士永，教务处处长黄国华，学生工作部部长刘广超，体育教学部直属党支部书记苏静，体育教学部主任陈东以及各学院领导出席了开幕仪式。 </p>
+                                </div>
+                            </div>
+                                                      <p class="more1"> <a href="http://sports.bjfu.edu.cn/xwl/xnjs/">更多</a> </p>
+                    </div>
+                    <div class="hide">
+                                                    <div class="cnews_c">
+                              
+                                <h3><a href="http://sports.bjfu.edu.cn/xwl/xwjs/257521.htm" target="_blank">            第14届首都高校越野攀登赛我校荣获佳绩 
+    </a></h3>
+                              <div class="content">
+                                  <p> 2017年10月28日上午，由北京林业大学承办、北京市教委和北京市大学生体育协会联合举办的第十四届首都高校越野登山赛在鹫峰国家森林公园举行。大体协主席杜松彭、秘书长刘启孝、训练竞赛部主任郝光安、教学群体科研部主任张威、北京林业大学副校长骆有庆以及各高校体育教学部主任、书记参加了开幕仪式。 </p>
+                                </div>
+                            </div>
+                                                    <div class="cnews_c">
+                              
+                                <h3><a href="http://sports.bjfu.edu.cn/xwl/xwjs/256262.htm" target="_blank">            首都高等学校第九届秋季学生田径运动会我校学生... 
+    </a></h3>
+                              <div class="content">
+                                  <p>由北京市教育委员会主办，北京市大学生体育协会、北京第二外国语学院承办的"首都高等学校第九届秋季学生田径运动会"于10月14日至15日举行。共有58所高校参加比赛。北京林业大学代表队由满昌慧、王涛、杨华、万秀先老师带队，共派出25名运动员参赛。我校代表队用惊艳的表现和顽强拼搏的体育精神征服了全场。 </p>
+                                </div>
+                            </div>
+                                                      <p class="more1"> <a href="http://sports.bjfu.edu.cn/xwl/xwjs/">更多</a> </p>
+                    </div>
+                    <div class="hide">
+                                                    <div class="cnews_c">
+                              
+                                <h3><a href="http://sports.bjfu.edu.cn/xwl/jyhd/257524.htm" target="_blank">            2017年首都高等学校群体工作研讨会暨群体工... 
+    </a></h3>
+                              <div class="content">
+                                  <p>为贯彻落实十九大精神，推进高校群体工作的蓬勃开展，交流群体工作的成果和经验，10月27日，北京市大学生体育协会在北京林业大学鹫峰教学实验基地召开2017年首都高等学校群体工作研讨会，北京市大学生体育协会主席杜松彭、秘书长刘启孝、教学群体科研部主任张威、首都高校群体工作研究会理事单位体育部主任、书记、副主任、工作人员等30余人参加会议。 </p>
+                                </div>
+                            </div>
+                                                    <div class="cnews_c">
+                              
+                                <h3><a href="http://sports.bjfu.edu.cn/xwl/jyhd/257358.htm" target="_blank">            十九大体育教学部四个教研室组织教师畅谈专题学... 
+    </a></h3>
+                              <div class="content">
+                                  <p>2017年10月18日至24日党的十九大胜利召开。大会主题是不忘初心，牢记使命，高举中国特色社会主义伟大旗帜，决胜全面建成小康社会，夺取新时代中国特色社会主义伟大胜利，为实现中华民族复兴的中国梦不懈奋斗。在直属党支部的安排部署下，体育教学部四个教研室迅速掀起学习宣传贯彻党的十九大精神热潮。每个教研室都组织了专门的座谈会，教师们进行了热烈的讨论和积极发言。 </p>
+                                </div>
+                            </div>
+                                                      <p class="more1"> <a href="http://sports.bjfu.edu.cn/xwl/jyhd/">更多</a> </p>
+                    </div>
+                    <div class="hide">
+                                                    <div class="cnews_c">
+                              
+                                <h3><a href="/xwl/ghhd/253230.htm" target="_blank">            体育教学部开展欢庆教师节活动 
+    </a></h3>
+                              <div class="content">
+                                  <p>桃李芬芳，花朵鲜艳，在第33个教师节到来之际，为了营造尊师重教的浓厚氛围，9月8号，体育教学部组织开展了感恩教师节活动。 </p>
+                                </div>
+                            </div>
+                                                    <div class="cnews_c">
+                              
+                                <h3><a href="/xwl/ghhd/242885.htm" target="_blank">            弘扬传统精神，交流太极文化 
+    </a></h3>
+                              <div class="content">
+                                  <p>3月12日下午，体育教学部武术教研室举办太极知识讲座，著名拳师李德印教授莅临我校，进行太极知识讲解交流。体育教学部直属党支部书记苏静，武术教研室主任吴马以及武术教研室全体教师出席组织，我校老干部，校武协学生，教工太极拳爱好者也参加了此次活动。 </p>
+                                </div>
+                            </div>
+                                                     <p class="more1"> <a href="http://sports.bjfu.edu.cn/xwl/ghhd/">更多</a> </p>
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div id="gonggao">
+              <div class="cgonggao">
+                  <a href="http://sports.bjfu.edu.cn/ggl/xsgg/" target="_blank"><h4>学生公告</h4></a>
+                    <div class="context">
+                                                    <ul class="list" style="width: 205px;">
+                                <li><a href="http://sports.bjfu.edu.cn/ggl/xsgg/215515.htm">            15级同学体育课紧急通知 
+    </a></li> 
+                            </ul>                       
+                                                    <ul class="list" style="width: 205px;">
+                                <li><a href="http://sports.bjfu.edu.cn/ggl/xsgg/213891.htm">            关于田径场运动区域划分的通知 
+    </a></li> 
+                            </ul>                       
+                                                    <ul class="list" style="width: 205px;">
+                                <li><a href="http://sports.bjfu.edu.cn/ggl/xsgg/169900.htm">            武术教研室2013-2014学... 
+    </a></li> 
+                            </ul>                       
+                                                    <ul class="list" style="width: 205px;">
+                                <li><a href="http://sports.bjfu.edu.cn/ggl/xsgg/169901.htm">            体操教研室2013-2014学... 
+    </a></li> 
+                            </ul>                       
+                                                    <ul class="list" style="width: 205px;">
+                                <li><a href="http://sports.bjfu.edu.cn/ggl/xsgg/163210.htm">            11、12级最后一次补测通知 
+    </a></li> 
+                            </ul>                       
+                                                    <ul class="list" style="width: 205px;">
+                                <li><a href="http://sports.bjfu.edu.cn/ggl/xsgg/169895.htm">            北京林业大学关于做好2014年... 
+    </a></li> 
+                            </ul>                       
+                                                <p class="more"> <a href="http://sports.bjfu.edu.cn/ggl/xsgg/">更多</a> </p>
+                   </div>
+                </div>
+                <div class="cgonggao">
+                  <a href="http://sports.bjfu.edu.cn/ggl/jsgg/" target="_blank"><h5>教师公告</h5></a>
+                    <div class="context">
+                                                    <ul class="list" style="width: 205px;">
+                                <li><a href="http://sports.bjfu.edu.cn/ggl/jsgg/169908.htm">            田家炳体育馆对学生免费开放通知 
+    </a></li> 
+                            </ul>                      
+                                                    <ul class="list" style="width: 205px;">
+                                <li><a href="http://sports.bjfu.edu.cn/ggl/jsgg/169906.htm">            2009年北京林业大学学生足球... 
+    </a></li> 
+                            </ul>                      
+                                                    <ul class="list" style="width: 205px;">
+                                <li><a href="http://sports.bjfu.edu.cn/ggl/jsgg/169904.htm">            我校篮球联赛、足球联赛、春季运... 
+    </a></li> 
+                            </ul>                      
+                                                    <ul class="list" style="width: 205px;">
+                                <li><a href="http://sports.bjfu.edu.cn/ggl/jsgg/169903.htm">            体育教学办公室办公时间特别提示 
+    </a></li> 
+                            </ul>                      
+                                                    <ul class="list" style="width: 205px;">
+                                <li><a href="http://sports.bjfu.edu.cn/ggl/jsgg/169911.htm">            北京林业大学体育教学部 
+    </a></li> 
+                            </ul>                      
+                                                    <ul class="list" style="width: 205px;">
+                                <li><a href="http://sports.bjfu.edu.cn/ggl/jsgg/163187.htm">            第四届迎奥运奔向 2008 北... 
+    </a></li> 
+                            </ul>                      
+                                                <p class="more"> <a href="http://sports.bjfu.edu.cn/ggl/jsgg/">更多</a> </p>
+                   </div>
+                </div>
+                <div class="cgonggao">
+                  <a href="http://sports.bjfu.edu.cn/ggl/dwgg/" target="_blank"><h6>党务动态</h6></a>
+                    <div class="context">
+                                                    <ul class="list" style="width: 205px;">
+                                <li><a href="http://sports.bjfu.edu.cn/ggl/dwgg/257143.htm">            十九大闭幕会体育教学部组织教师... 
+    </a></li> 
+                            </ul>                      
+                                                    <ul class="list" style="width: 205px;">
+                                <li><a href="http://sports.bjfu.edu.cn/ggl/dwgg/257090.htm">            人民日报评论员解读十九大“新声... 
+    </a></li> 
+                            </ul>                      
+                                                    <ul class="list" style="width: 205px;">
+                                <li><a href="http://sports.bjfu.edu.cn/ggl/dwgg/257089.htm">            人民日报评论员解读十九大“新声... 
+    </a></li> 
+                            </ul>                      
+                                                    <ul class="list" style="width: 205px;">
+                                <li><a href="http://sports.bjfu.edu.cn/ggl/dwgg/257088.htm">            人民日报评论员解读十九大“新声... 
+    </a></li> 
+                            </ul>                      
+                                                    <ul class="list" style="width: 205px;">
+                                <li><a href="http://sports.bjfu.edu.cn/ggl/dwgg/257013.htm">            人民日报评论员解读十九大“新声... 
+    </a></li> 
+                            </ul>                      
+                                                    <ul class="list" style="width: 205px;">
+                                <li><a href="http://sports.bjfu.edu.cn/ggl/dwgg/257012.htm">            学习十九大进行时：落实好十九大... 
+    </a></li> 
+                            </ul>                      
+                                                <p class="more"> <a href="http://sports.bjfu.edu.cn/ggl/dwgg/">更多</a> </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+<div id="footer">
+    	<div id="cfooter">
+        	<p>北京林业大学体育教学部  北京市海淀区清华东路35#</p>
+            <p>Copyright?2011 北京林业大学体育教学部 All Rights Reserved | <a href="http://cms.bjfu.edu.cn" target="_blank">文章管理</a></p>
+        </div>
+    </div><div style=" z-index:99999">
+
+<script type="text/javascript" src="images/adFloating.js"></script>
+<div id="ad_2">
+             <a href="/fdtp/252302.htm"><IMG src="/images/content/2017/20170818183416146755.png"  border=0 /></a>
+     </div>
+<script type="text/javascript">
+    var ad2=new Ad_Move("ad_2");
+    ad2.SetLocation(0, 0);
+    ad2.SetType(1);
+    ad2.Run();
+</script>
+</div>
+    </div>   
+</div>
+
+
+</body></html>

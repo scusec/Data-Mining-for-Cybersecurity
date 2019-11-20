@@ -1,0 +1,125 @@
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript">
+	//存在父页面，并且父页面不是当前系统（casLogoutView.jsp中如果不做判断会一直刷新）
+	if(window.top!=window.self && 
+			window.top.location.href.indexOf("ca.cupl.edu.cn")==-1 &&
+			window.top.location.href.indexOf("/tpass")==-1){
+				window.top.location.reload();
+	}
+	</script>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="renderer" content="webkit">
+	<link rel="stylesheet" type="text/css" href="/tpass/comm/icon/icon.css">
+    <link rel="stylesheet" type="text/css" href="/tpass/comm/icon/ie7/ie7.css">
+    <link rel="stylesheet" type="text/css" href="/tpass/comm/css/login_cupl.css">
+	<script type="text/javascript" src="/tpass/comm/icon/ie7/ie7.js"></script>
+	<title>智慧法大</title>
+</head>
+
+<body class="index bgStretcher-container" id="container_bg" style="height: 100%;">
+
+    <form id="loginForm" action="/tpass/login?service=http%3A%2F%2F61.50.134.248%2Fseeyon%2Findex.jsp" method="post">
+    <div class="login_conatiner">
+        <picture>
+           
+            <img class="login_img_01" src="/tpass/comm/image/cupl/login_container_bg_01_cupl.jpg">
+        </picture>
+        
+        <div class="login_container_box">
+           
+            <div class="floor1">
+                <div class="logo">
+                    <a class="login_logo_bg_cupl" href="http://v.cupl.edu.cn/tp_up/view?m=up" title="智慧法大">
+                        <img class="login_logo" src="/tpass/comm/image/cupl/login_logo_cupl.png" title="智慧法大">
+                        <img class="login_logo_title" src="/tpass/comm/image/cupl/login_logo_title_cupl.png" />
+                    </a>
+                </div>
+                <div class="text">
+                    <p class="login_describe_p">智慧</p><br>
+                    <p class="login_describe_p dp_02">让校园更美好！</p>
+                </div>
+            </div>
+            
+            <div class="logo_light"></div>
+            <div id="login_right_box" class="floor2">
+            
+                <span class="login_box_title">登 录</span>
+                <div class="login_error" style="display:none;">
+                	<span class="login_icon_bg"></span>
+                	<i class="ii_c091 isz_22 login_error_icon"></i>
+                    
+                </div>
+            
+                <ul class="login_box_ul">
+                    <li class="user_name">
+                        <i class="ii_e119 isz_20 login_icon"></i>
+         					<input class="login_text_01" id="un" tabindex="1" 
+         						autocomplete="off" placeholder="用户名"/>
+                    </li>
+                    <li class="user_name">
+                        <i class="ii_e118 isz_20 login_icon"></i>
+                        <input class="login_text_01" id="pd" tabindex="2" type="password"
+                        	autocomplete="off" placeholder='密码'/>
+                    </li>
+                    
+    				
+                    <li class="login_foget_bar">
+                        <input class="login_checkbox_01" type="checkbox" name="rememberMe" tabindex="3">
+                        <span class="login_span_01">自动登录</span>
+                        <a class="login_span_01 right" style="color:#930d16" href="pwd" target="_blank">忘记密码？</a>
+                    </li>
+                    <li>
+                        <button id="index_login_btn" type="button" class="login_btn_01">立即登录</button>
+                    </li>
+                    
+                    <!--
+					<li class="third_party_box">
+						<p class="blue_line"></p>
+						<p class="third_party_login">
+							<a class="qq_login" href="https://graph.qq.com/oauth2.0/authorize?client_id=100420177&response_type=code&redirect_uri=http%3A%2F%2Fedu.neusoft.com:78%2Ftpass%2Fqq"></a>
+							<a class="wechat_login"></a>
+						</p>
+					</li>
+					-->
+					<li class="login_foget_bar">
+						<span class="login_span_01">
+							为了让您有更佳的用户体验，建议您使用IE9及以上版本的浏览器，或者使用任意版本的火狐、谷歌浏览器。
+						</span>
+					</li>
+                </ul>
+
+            </div>
+            <div class="row">
+                <p class="login_copyright">&ldquo;智慧法大&rdquo;由 东软集团 提供技术支持</p>
+                <p class="login_copyright right">智慧法大 Copyright &copy; 2017</p>
+            </div>
+        
+        </div>
+        
+	      <input type="hidden" id="rsa" name="rsa"/>
+	      <input type="hidden" id="ul" name="ul"/>
+	      <input type="hidden" id="pl" name="pl"/>
+	      <input type="hidden" id="lt" name="lt" value="LT-682690-Tbd69Nlag1BQRbua3wneHStUFVPeAI-tpass" />
+	      <input type="hidden" name="execution" value="e2s1" />
+	      <input type="hidden" name="_eventId" value="submit" />
+	      
+	</div>
+	</form>
+	
+    <script type="text/javascript" src="/tpass/comm/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/tpass/comm/js/des.js"></script>
+    <script type="text/javascript" src="/tpass/comm/js/login4.js"></script>
+     
+</body>
+</html>

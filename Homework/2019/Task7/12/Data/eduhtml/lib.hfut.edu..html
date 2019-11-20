@@ -1,0 +1,1145 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:wb="http://open.weibo.com/wb">
+<head id="Head1"><title>
+	合肥工业大学图书馆
+</title><link href="WebUI/css/base.css" rel="stylesheet" type="text/css" />
+    
+    <script src="WebUI/js/iepngfix_tilebg.js" type="text/javascript"></script>
+    <link href="WebUI/css/jquery-ui.css" rel="stylesheet" type="text/css" />
+    <script src="Scripts/jquery-1.7.2.min.js" type="text/javascript"></script>
+    <script src="Scripts/jquery-ui-1.9.2.custom.js" type="text/javascript"></script>
+    <script src="Scripts/ANSI.js" type="text/javascript"></script>
+    <script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js" type="text/javascript" charset="utf-8"></script>
+    <style>
+        img, div, input
+        {
+            behavior: url("WebUI/js/iepngfix.htc");
+        }
+    </style>
+    <script>
+        function UpdateSelect() {
+            var a = $("#calisselect").val();
+            switch (a) {
+                case "99": $("#a1").html("<input type=\"radio\" name=\"rad_4\" checked=\"checked\" value=\"0\" /><label>全部字段" +
+                                "</label>" +
+                                "<input type=\"radio\" name=\"rad_4\" value=\"1\" /><label>题名</label>" +
+                                "<input type=\"radio\" name=\"rad_4\" value=\"2\" /><label>作者/出版者" +
+                                "</label>" +
+                                "&nbsp;<input type=\"radio\" name=\"rad_4\" value=\"3\" /><label>主题</label>" +
+                                "<input type=\"radio\" name=\"rad_4\" value=\"4\" /><label>ISBN/ISSN</label>"); break;
+                case "0": $("#a1").html("<input type=\"radio\" name=\"rad_4\" checked=\"checked\" value=\"0\" /><label>全部字段" +
+                                "</label>" +
+                                "<input type=\"radio\" name=\"rad_4\" value=\"1\" /><label>书名</label>" +
+                                "<input type=\"radio\" name=\"rad_4\" value=\"2\" /><label>作者/出版者" +
+                                "</label>" +
+                                "&nbsp;<input type=\"radio\" name=\"rad_4\" value=\"3\" /><label>主题</label>" +
+                                "<input type=\"radio\" name=\"rad_4\" value=\"4\" /><label>ISBN/ISSN</label><input type=\"radio\" name=\"rad_4\" value=\"5\" /><label>出版者</label>"); break;
+                case "4": $("#a1").html("<input type=\"radio\" name=\"rad_4\" checked=\"checked\" value=\"0\" /><label>全部字段" +
+                                "</label>" +
+                                "<input type=\"radio\" name=\"rad_4\" value=\"1\" /><label>书名</label>" +
+                                "<input type=\"radio\" name=\"rad_4\" value=\"2\" /><label>作者/出版者" +
+                                "</label>" +
+                                "&nbsp;<input type=\"radio\" name=\"rad_4\" value=\"3\" /><label>主题</label>" +
+                                "<input type=\"radio\" name=\"rad_4\" value=\"4\" /><label>ISBN/ISSN</label><input type=\"radio\" name=\"rad_4\" value=\"5\" /><label>出版者</label>"); break;
+                case "1": $("#a1").html("<input type=\"radio\" name=\"rad_4\" checked=\"checked\" value=\"0\" /><label>全部字段" +
+                                "</label>" +
+                                "<input type=\"radio\" name=\"rad_4\" value=\"1\" /><label>文章名</label>" +
+                                "<input type=\"radio\" name=\"rad_4\" value=\"2\" /><label>刊名" +
+                                "</label>" +
+                                "&nbsp;<input type=\"radio\" name=\"rad_4\" value=\"3\" /><label>ISSN</label>" +
+                                "<input type=\"radio\" name=\"rad_4\" value=\"4\" /><label>作者</label>"); break;
+                case "5": $("#a1").html("<input type=\"radio\" name=\"rad_4\" checked=\"checked\" value=\"0\" /><label>全部字段" +
+                                "</label>" +
+                                "<input type=\"radio\" name=\"rad_4\" value=\"1\" /><label>刊名</label>" +
+                                "<input type=\"radio\" name=\"rad_4\" value=\"2\" /><label>ISSN" +
+                                "</label>"); break;
+                case "2": $("#a1").html("<input type=\"radio\" name=\"rad_4\" checked=\"checked\" value=\"0\" /><label>全部字段" +
+                                "</label>" +
+                                "<input type=\"radio\" name=\"rad_4\" value=\"1\" /><label>刊名</label>" +
+                                "<input type=\"radio\" name=\"rad_4\" value=\"2\" /><label>ISSN" +
+                                "</label>"); break;
+                case "3": $("#a1").html("<input type=\"radio\" name=\"rad_4\" checked=\"checked\" value=\"0\" /><label>全部字段" +
+                                "</label>" +
+                                "<input type=\"radio\" name=\"rad_4\" value=\"1\" /><label>题目</label>" +
+                                "<input type=\"radio\" name=\"rad_4\" value=\"2\" /><label>作者" +
+                                "</label>" +
+                                "&nbsp;<input type=\"radio\" name=\"rad_4\" value=\"3\" /><label>导师</label>" +
+                                "<input type=\"radio\" name=\"rad_4\" value=\"4\" /><label>摘要</label><input type=\"radio\" name=\"rad_4\" value=\"5\" /><label>关键词</label>"); break;
+                case "6": $("#a1").html("<input type=\"radio\" name=\"rad_4\" checked=\"checked\" value=\"0\" /><label>全部字段" +
+                                "</label>" +
+                                "<input type=\"radio\" name=\"rad_4\" value=\"1\" /><label>题名</label>" +
+                                "<input type=\"radio\" name=\"rad_4\" value=\"2\" /><label>责任者" +
+                                "</label>" +
+                                "&nbsp;<input type=\"radio\" name=\"rad_4\" value=\"3\" /><label>关键字</label>" +
+                                "<input type=\"radio\" name=\"rad_4\" value=\"4\" /><label>ISBN/ISSN</label><input type=\"radio\" name=\"rad_4\" value=\"5\" /><label>资源类型</label>"); break;
+                default: $("#a1").html("<input type=\"radio\" name=\"rad_4\" checked=\"checked\" value=\"0\" /><label>全部字段" +
+                                "</label>" +
+                                "<input type=\"radio\" name=\"rad_4\" value=\"1\" /><label>题名</label>" +
+                                "<input type=\"radio\" name=\"rad_4\" value=\"2\" /><label>作者/出版者" +
+                                "</label>" +
+                                "&nbsp;<input type=\"radio\" name=\"rad_4\" value=\"3\" /><label>主题</label>" +
+                                "<input type=\"radio\" name=\"rad_4\" value=\"4\" /><label>ISBN/ISSN</label>"); break;
+            };
+
+        }
+        
+    </script>
+    <script type="text/javascript">
+        if (window.screen.width < 1360) {
+            var l = document.createElement("link");
+            l.setAttribute("type", "text/css");
+            l.setAttribute("rel", "stylesheet");
+            l.setAttribute("href", "WebUI/css/defaultsmall.css");
+            document.getElementsByTagName("head")[0].appendChild(l);
+            $("#hdWidth").val(1);
+        } else {
+            var l = document.createElement("link");
+            l.setAttribute("type", "text/css");
+            l.setAttribute("rel", "stylesheet");
+            l.setAttribute("href", "WebUI/css/default.css");
+            document.getElementsByTagName("head")[0].appendChild(l);
+            $("#hdWidth").val(2);
+        }
+
+        $(function () {
+            if (window.screen.width < 1366) {
+                $(".logol a img").attr("src", "../WebUI/images/logo_.png");
+            }
+        })
+
+        function colorchange(id) {
+            $(".contit a").removeClass("tl");
+            $("#a_" + id).addClass("tl");
+            $("#div_1 .concon").hide();
+            $("#concon_" + id).show();
+        }
+
+        function changediv(id) {
+            if (id == 1) {
+                $("#a_10").show();
+                $("#a_12").show();
+                $("#b_06").hide();
+                $("#b_08").hide();
+                $("#div_1").show();
+                $("#div_2").hide();
+            } else if (id == 2) {
+                $("#a_10").hide();
+                $("#a_12").hide();
+                $("#b_06").show();
+                $("#b_08").show();
+                $("#div_2").show();
+                $("#div_1").hide();
+            }
+        }
+
+        $(function () {
+            $("#dialog").dialog({
+                autoOpen: false,
+                show: "blind",
+                hide: "explode"
+            });
+        });
+
+        function showDetail(num) {
+            $("#dialogContent").html($("#divDetail" + num).html());
+            $("#dialog").dialog("open");
+            return false;
+        }
+    </script>
+    <script type="text/javascript">
+        $(function () {
+
+            $(".news a,.nav a,.a").attr("target", "_blank");
+            $(".li1 a").removeAttr("target", "_blank");
+
+            $("#ss4_1").focus(function () {
+                if ($("#ss4_1").val() == "CALIS全国高校学术资源搜索") {
+                    $("#ss4_1").val("");
+                    $("#ss4_1").css("color", "#000000");
+                }
+            })
+
+            $("#ss4_1").blur(function () {
+                if ($(this).val() == "") {
+                    $("#ss4_1").val("CALIS全国高校学术资源搜索");
+                    $("#ss4_1").css("color", "#999999");
+                }
+            })
+
+            $(".onetit ul li").each(function (i) {
+                i = i + 1;
+                $("#js" + i).mouseover(function () {
+                    ss(i);
+                });
+            });
+
+
+
+            $(".onecon").each(function (i) {
+                i = i + 1;
+                $("#ss" + i + "_1").keydown(function () {
+                    hc();
+                });
+                $("#ss" + i + "_2").click(function () {
+                    url();
+                });
+            });
+
+            $("#ss1_3").click(function () {
+                var ansi = encodeURIComponent($("#ss1_1").val());
+                url_ = "http://ss.zhizhen.com/s?sw=" + ansi + "&x=0_482";
+//                var ansi = encodeURIComponent($("#ss1_1").val());
+//                url_ = "http://fjour.blyun.com/searchFJour?Field=all&channel=searchFJour&sw=" + ansi + "&edtype=&searchtype=&view=0";
+                window.open(url_);
+            });
+        });
+
+        function openwin(id) {
+            $.ajax({
+                data: "ajax=" + id
+            });
+        }
+
+        function ss(id) {
+
+            $(".onetit ul li").each(function (i) {
+                i = i + 1;
+                $("#js" + i).parent().addClass("li" + i);
+            });
+
+
+            $("#js" + id).parent().removeClass("li" + id)
+            $("#js" + id).parent().addClass("lll" + id);
+            $(".onecon").hide();
+            $("#ss" + id).show();
+        }
+        function hc() {
+            //            if (event.keyCode == 13) {
+            //                url();
+            //            }
+        }
+
+        function str2asc(str) {
+            var n = UnicodeToAnsi(str.charCodeAt(0));
+            var s = n.toString(16);
+            return s.toUpperCase();
+        }
+        function asc2str(code) {
+            var n = AnsiToUnicode(code);
+            return String.fromCharCode(n);
+        }
+        function urlEncode(str) {
+            var ret = "";
+            var strSpecial = "!\"#$%&’()*+,/:;<=>?[]^`{|}~%";
+            var tt = "";
+            for (var i = 0; i < str.length; i++) {
+                var chr = str.charAt(i);
+                var c = str2asc(chr);
+                tt += chr + ":" + c + "n";
+                if (parseInt("0x" + c) > 0x7f) {
+                    ret += "%" + c.slice(0, 2) + "%" + c.slice(-2);
+                }
+                else {
+                    if (chr == " ")
+                        ret += "+";
+                    else if (strSpecial.indexOf(chr) != -1)
+                        ret += "%" + c.toString(16);
+                    else
+                        ret += chr;
+                }
+            }
+
+            return ret;
+        }
+
+        function url() {
+
+            var url_;
+
+            $(".onecon").each(function (i) {
+
+                i = i + 1;
+                if ($("#ss" + i).css("display") == "block") {
+
+                    var val = $("#ss" + i + " .contop input:radio[name=\"rad_" + i + "\"]:checked").val();
+
+                    if ($("#ss" + i + " .conmid select").length > 0) {
+                        var sel = $("#ss" + i + " .conmid select").val();
+                        if (sel == "qt") {
+                            var p = 1;
+                        }
+                    }
+
+                    var text = $("#ss" + i + "_1").val();
+                    text = encodeURIComponent(text);
+                    switch (i) {
+                        case 1:
+                            var ansi = encodeURIComponent($("#ss1_1").val());
+                            url_ = "http://ss.zhizhen.com/s?sw=" + ansi + "&x=0_482";
+                            break;
+                        case 2:
+                            var type = $.trim($("#ssinput2").val());
+
+                            switch (type) {
+                                case "1":
+                                    url_ = "http://210.45.242.5:8080/opac/search_adv_result.php?sType0=any&q0=" + text + "&pageSize=20&sort=score&desc=on";
+                                    break;
+                                case "2":
+                                    url_ = "http://210.45.242.5:8080/opac/search_adv_result.php?sType0=02&q0=" + text + "&pageSize=20&sort=score&desc=on";
+                                    break;
+                                case "3":
+                                    url_ = "http://210.45.242.5:8080/opac/search_adv_result.php?sType0=03&q0=" + text + "&pageSize=20&sort=score&desc=on";
+                                    break;
+                                case "4":
+                                    url_ = "http://210.45.242.5:8080/opac/search_adv_result.php?sType0=04&q0=" + text + "&pageSize=20&sort=score&desc=on";
+                                    break;
+                                case "5":
+                                    url_ = "http://210.45.242.5:8080/opac/search_adv_result.php?sType0=08&q0=" + text + "&pageSize=20&sort=score&desc=on";
+                                    break;
+                                case "6":
+                                    url_ = "http://210.45.242.5:8080/opac/search_adv_result.php?sType0=09&q0=" + text + "&pageSize=20&sort=score&desc=on";
+                                    break;
+                                case "7":
+                                    url_ = "http://210.45.242.5:8080/opac/search_adv_result.php?sType0=10&q0=" + text + "&pageSize=20&sort=score&desc=on";
+                                    break;
+                            }
+                            break;
+                        case 3:
+                            //url_ = "http://book.lib.hfut.edu.cn/search?sw=" + text + "&Field=" + val + "&ecode=UTF-8";
+			    url_ = "http://210.45.242.51:8080/search?kw=" + text + "&xc=5&searchtype=" + val;
+                            break;
+                        case 4:
+                            url_ = "http://www.yidu.edu.cn/educhina/educhina.do?skey=" + val + "&svalue=" + text + "&stype=" + sel + "&s=on";
+                            break;
+                        case 5:
+                            if (text != "") {
+                                //text = text.replace(/<\/?.+?>/g, "");                                
+                                //var val = $("input[name='rad_13']:checked").val();
+                                url_ = "http://en.hfut.findplus.cn/searchapi.html?query=" + text;
+                            } else {
+                                alert("请输入检索内容");
+                            }
+                            break;
+                    }
+                    if (url_ != undefined)
+                        window.open(url_);
+                }
+            });
+        }
+        document.onkeydown = function (e) {
+            // 兼容FF和IE和Opera   
+            var theEvent = e || window.event;
+            var code = theEvent.keyCode || theEvent.which || theEvent.charCode;
+            var activeElementId = document.activeElement.id; //当前处于焦点的元素的id   
+            if (code == 13) {
+                url(); //要触发的方法   
+                return false;
+            }
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <form name="form1" method="post" action="default.aspx" id="form1">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
+
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="CA0B0334" />
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWAgKV/sG0CgLHwYz5CYUggj17egXhJQRu72xftjpIC9Ra" />
+    <div id="dialog" title="详细信息">
+        <p id="dialogContent">
+        </p>
+    </div>
+    
+    
+ <div class="logo">
+          <div class="logor">
+             <a href="javascript:void(0);" onClick="window.external.AddFavorite(document.location.href,document.title)">加入收藏</a> | 
+             <a href="http://www.hfut.edu.cn/ch/"  >工大主页 </a> |
+             <a href="http://210.45.242.37/" target="_blank"> 老版主页</a>  | 
+	     <a href="/Default.aspx" target="_self">图书馆主页 </a>
+             
+          </div>
+          <div class="logol">
+              <a href="/Default.aspx">
+                  <img src="../WebUI/images/de_03.gif" /></a>
+              </div>
+ </div>
+    <div class="Mbox">
+        <div class="main">
+            <div class="maintop">
+            </div>
+            <div class="mainmid">
+                <div class="midr">
+                    <div class="mylibray">
+                        <div class="l_left">
+                        </div>
+                        <div class="l_mid">
+                            <div class="tit">
+                                <h1>
+                                    我的图书馆</h1>
+                            </div>
+                            <iframe scrolling="no" style="margin-left: 2px; background-color: transparent; filter: Chroma(Color=white);"
+                                frameborder="0" marginwidth="0" width="270px" height="70px" marginheight="0"
+                                src="login.html"></iframe>
+                        </div>
+                        <div class="l_right">
+                        </div>
+                    </div>
+                    <div class="news">
+                        <div class="newstit">
+                            <span class="span2" style="float: right;"><a href="bg.aspx?sec_id=180">
+                                <img src="WebUI/images/def_15.gif" />
+                            </a></span><span class="span1">
+                                <img src="WebUI/images/kk_06.gif" />
+                            </span>
+                        </div>
+                        <div class="newscon">
+                            <ul>
+                                
+                                
+                                        <li><a href="ShowPage.aspx?art_id=1908" title='我校最新SCI-E /CPCI-S收录(每周更新)'>
+                                            我校最新SCI-E /CPCI-S收录(...</a></li>
+                                    
+                                        <li><a href="ShowPage.aspx?art_id=2050" title='图书馆教育部科技查新站通知'>
+                                            图书馆教育部科技查新站通知</a></li>
+                                    
+                                        <li><a href="ShowPage.aspx?art_id=2071" title='图书馆第四届职工气排球友谊赛圆满结束'>
+                                            图书馆第四届职工气排球友谊赛圆满结束</a></li>
+                                    
+                                        <li><a href="ShowPage.aspx?art_id=2070" title='数据库试用：e搜中外文资源发现系统'>
+                                            数据库试用：e搜中外文资源发现系统</a></li>
+                                    
+                                        <li><a href="ShowPage.aspx?art_id=2069" title='数据库试用：ASTM（美国材料试验学会）数据库'>
+                                            数据库试用：ASTM（美国材料试验学会）...</a></li>
+                                    
+                                        <li><a href="ShowPage.aspx?art_id=2068" title='数据库试用：数学科学出版社（MSP）电子期刊'>
+                                            数据库试用：数学科学出版社（MSP）电子...</a></li>
+                                    
+                                        <li><a href="ShowPage.aspx?art_id=2067" title='数据库试用：欧洲数学学会(EMS)电子期刊'>
+                                            数据库试用：欧洲数学学会(EMS)电子期...</a></li>
+                                    
+                                        <li><a href="ShowPage.aspx?art_id=2066" title='ProQuest数据库培训通知'>
+                                            ProQuest数据库培训通知</a></li>
+                                    
+                                        <li><a href="ShowPage.aspx?art_id=2065" title='CNKI研学平台上线暨2017全国高校研学征文大赛（安徽站）'>
+                                            CNKI研学平台上线暨2017全国高校研...</a></li>
+                                    
+                                        <li><a href="ShowPage.aspx?art_id=2064" title='数据库试用：学问网全媒体自主学习库'>
+                                            数据库试用：学问网全媒体自主学习库</a></li>
+                                    
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="fasnav">
+                        <ul>
+                            <li>
+                                <h1>
+                                    <a href="/ShowPage.aspx?art_id=1672" target="_blank">
+                                        <img src="WebUI/images/a_19.png" /></a></h1>
+                                <h2>
+                                    <a href="/ShowPage.aspx?art_id=1672" target="_blank">座位预约</a></h2>
+                            </li>
+                            <li>
+                                <h1>
+                                    <a href="http://210.45.242.12:8000/" target="_blank">
+                                        <img src="WebUI/images/study.gif" />
+                                    </a>
+                                </h1>
+                                <h2>
+                                    <a href="http://210.45.242.12:8000/" target="_blank">校外访问</a></h2>
+                            </li>
+                            <li>
+                                <h1>
+                                    <a href="/robot.aspx" target="_blank">
+                                        <img src="WebUI/images/a_21.png" /></a></h1>
+                                <h2>
+                                    <a href="/robot.aspx" target="_blank">在线咨询</a></h2>
+                            </li>
+                            <li>
+                                <h1>
+                                    <a href="ShowPage.aspx?art_id=1430" target="_blank">
+                                        <img src="WebUI/images/a_23.png" /></a></h1>
+                                <h2>
+                                    <a href="ShowPage.aspx?art_id=1430" target="_blank">新生教育</a></h2>
+                            </li>
+                        </ul>
+                        <div class="clear">
+                        </div>
+                    </div>
+
+                    <div class="guanzhu" style="overflow:hidden;">
+			<a target="_blank" href="http://widget.weibo.com/relationship/followlogin.php?uid=2202808152&refer=localhost&language=zh_cn&rnd=1337910640946" class="a_r" style="float:left;margin-left:100px;" id="weibo"><img alt="新浪微博" src="WebUI/images/de_55.gif" /></a>
+                    <div class="a_r" style="float:left;margin-left:10px;cursor:pointer;display:block;position: relative;z-index: 999;" id="weixin"><img src="WebUI/images/de_56.gif"/></div>
+                    </div>
+                </div>
+                <div class="midl">
+                    <div class="midlone">
+                        <div class="onetit">
+                            <ul>
+                                <li class="lll1"><a href="javascript://" id="js1"></a></li>
+                                <li class="li2"><a href="javascript://" id="js2"></a></li>
+                                <li class="li3"><a href="javascript://" id="js3"></a></li>
+                                <li class="li4"><a href="javascript://" id="js4"></a></li>
+                                <li class="li5"><a href="javascript://" id="js5"></a></li>
+                            </ul>
+                            <div class="clear">
+                            </div>
+                        </div>
+                        <div class="onecon" id="ss1">
+                            
+                            <div class="conmid">
+                                <input type="text" class="text" id="ss1_1" />
+                                
+                                
+                                <input type="button" class="buttonC" id="ss1_3" />
+                            </div>
+                            <div class="clear">
+                            </div>
+                            <div class="conbom">
+                                <p>
+                                    说明：轻松发现图书馆中文资源，包括图书、期刊、学位论文、会议论文、标准、专利、报纸、视频等。
+                                    
+                                </p>
+                                <div id="divDetail1" style="display: none;">
+                                    说明：轻松发现图书馆中文资源，包括图书、期刊、学位论文、会议论文、标准、专利、报纸、视频等。
+                                </div>
+                                <span style="float: right; padding-right: 40px;"><a style="color: Red; cursor: pointer;"
+                                    onclick="showDetail('1')">详细</a></span>
+                            </div>
+                        </div>
+                        <div class="onecon twocon" style="display: none" id="ss2">
+                            <div class="conmid">
+                                <select id="ssinput2" style="float: left; height: 23px;">
+                                    <option value="1">任意词</option>
+                                    <option value="2">题名</option>
+                                    <option value="3">责任者</option>
+                                    <option value="4">主题词</option>
+                                    <option value="5">索书号</option>
+                                    <option value="6">出版社</option>
+                                    <option value="7">丛书名</option>
+                                </select>
+                                <input type="text" class="text" id="ss2_1" />
+                                <input type="button" class="button" id="ss2_2" />
+                            </div>
+                            <div class="clear">
+                            </div>
+                            <div class="conbom">
+                                <p>
+                                    说明：查找馆藏纸本图书和期刊，也可查到部分电子书刊、多媒体资源及本校学位论文
+                                </p>
+                                <div id="divDetail2" style="display: none;">
+                                    说明：查找馆藏纸本图书和期刊，也可查到部分电子书刊、多媒体资源及本校学位论文
+                                </div>
+                                <span style="float: right; padding-right: 40px;"><a style="color: Red; cursor: pointer;"
+                                    onclick="showDetail('2')">详细</a></span>
+                            </div>
+                            
+                        </div>
+                        <div class="onecon threecon" style="display: none" id="ss3">
+                            <div class="contop">
+                                <input type="radio" name="rad_3" checked="checked" value="title" /><label>标题
+                                </label>
+                                <input type="radio" name="rad_3" value="author" /><label>作者</label>
+                                <input type="radio" name="rad_3" value="keyword" /><label>关键词
+                                </label>
+                                &nbsp;<input type="radio" name="rad_3" value="isbn" /><label>isbn</label>
+                            </div>
+                            <div class="conmid">
+                                <input type="text" class="text" id="ss3_1" />
+                                <input type="button" class="button" id="ss3_2" />
+                            </div>
+                            <div class="clear">
+                            </div>
+                            <div class="conbom">
+                                <p>
+                                    说明：读者通过手机、pad 等移动设备搜索下载“超星移动图书馆”app 。下载后进入选择“安徽省--合肥工业大学”...
+                                </p>
+                                <div id="divDetail3" style="display: none;">
+                                    说明：读者通过手机、pad 等移动设备搜索下载“超星移动图书馆”app 。下载后进入选择“安徽省--合肥工业大学”，使用”我的图书馆“ 用户名和密码进行登陆。 随时查看我馆通知公告、本人图书借阅情况、实现图书预约、续借功能；随时检索我馆各类文献资源，可以在线阅读、下载全文和文献传递。
+                                </div>
+                                <span style="float: right; padding-right: 40px;"><a style="color: Red; cursor: pointer;"
+                                    onclick="showDetail('3')">详细</a></span>
+                            </div>
+                            
+                        </div>
+                        <div class="onecon fourcon" style="display: none" id="ss4">
+                            <div class="contop" id="a1">
+                                <input type="radio" name="rad_4" checked="checked" value="0" /><label>全部字段
+                                </label>
+                                <input type="radio" name="rad_4" value="1" /><label>题名</label>
+                                <input type="radio" name="rad_4" value="2" /><label>作者/出版者
+                                </label>
+                                &nbsp;<input type="radio" name="rad_4" value="3" /><label>主题</label>
+                                <input type="radio" name="rad_4" value="4" /><label>ISBN/ISSN</label>
+                            </div>
+                            <div class="conmid">
+                                <input type="text" class="text" id="ss4_1" value="CALIS全国高校学术资源搜索" style="color: #999999;" />
+                                <select class="select" id="calisselect" onchange="UpdateSelect()">
+                                    <option value="99">所有类型</option>
+                                    <option value="0">中文图书</option>
+                                    <option value="4">外文图书</option>
+                                    <option value="1">期刊文章</option>
+                                    <option value="5">中文期刊</option>
+                                    <option value="2">外文期刊</option>
+                                    <option value="3">学位论文</option>
+                                    <option value="6">特藏资源</option>
+                                </select>
+                                <input type="button" class="button" id="ss4_2" />
+                            </div>
+                            <div class="clear">
+                            </div>
+                            <div class="conbom">
+                                <p>
+                                    说明：包括360000册中文图书、3293册外文图书，我校读者可以在线查看全文，欢迎读者访问。进入界面后选择中文图书或外文图书...
+                                </p>
+                                <div id="divDetail4" style="display: none;">
+                                    说明：包括360000册中文图书、3293册外文图书，我校读者可以在线查看全文，欢迎读者访问。进入界面后选择中文图书或外文图书，在 “有电子书”前打钩，即可以检索并打开电子图书阅读。
+                                </div>
+                                <span style="float: right; padding-right: 40px;"><a style="color: Red; cursor: pointer;"
+                                    onclick="showDetail('4')">详细</a></span>
+                            </div>
+                            
+                        </div>
+                        <div class="onecon fivecon" style="display: none" id="ss5">
+                            
+                            <div class="conmid">
+                                <input type="text" class="text" id="ss5_1" />
+                                <input type="button" class="button" id="ss5_2" />
+                            </div>
+                            <div class="clear">
+                            </div>
+                            <div class="conbom">
+                                <p>
+                                    说明:对各类资源进行一站式整合检索，尤其是外文资源。系统提供外文资源发现、中文资源发现、馆藏资源发现、全文导航四大模块，整合揭示图书馆界90%以上的学术资源。
+                                </p>
+                                <div id="divDetail5" style="display: none;">
+                                    说明:对各类资源进行一站式整合检索，尤其是外文资源。系统提供外文资源发现、中文资源发现、馆藏资源发现、全文导航四大模块，整合揭示图书馆界90%以上的学术资源。
+                                </div>
+                                <span style="float: right; padding-right: 40px;"><a style="color: Red; cursor: pointer;"
+                                    onclick="showDetail('5')">详细</a></span>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="midltwo">
+                        <div class="twotit">
+                            <span class="span">
+                                <img src="WebUI/images/a_10.png" id="a_10" />
+                                <img src="WebUI/images/b_06.png" id="b_06" style="display: none; cursor: pointer;"
+                                    onclick="changediv('1')" />
+                            </span>
+                            <img src="WebUI/images/q_03.gif" />
+                            <span class="span1">
+                                <img src="WebUI/images/a_12.gif" id="a_12" onclick="changediv('2')" style="cursor: pointer;" />
+                                <img src="WebUI/images/b_08.gif" style="display: none" id="b_08" />
+                            </span>
+                        </div>
+                        <div class="twocon" id="div_1">
+                            <div class="contit">
+                                
+                                <a href="ResourceNew.aspx?typeid=6" id="a_nor" class="tl" onmouseover="colorchange('nor')"
+                                    target="_blank">中文资源</a>|<a href="ResourceNew.aspx?typeid=7" onmouseover="colorchange('type')"
+                                        id="a_type" target="_blank">外文资源</a>|<a href="ResourceNew.aspx?typeid=8" onmouseover="colorchange('ZM')"
+                                            id="a_ZM" target="_blank">特色资源</a>|<a href="/ResourceNew.aspx?typeid=9" onmouseover="colorchange('sub')"
+                                                id="a_sub" target="_blank">试用资源</a>|
+                            </div>
+                            <div class="concon" id="concon_nor">
+                                <div class="list">
+                                    
+                                            <a href='resourcen.aspx?rid=53' onclick="openwin(this.id)" id='53'
+                                                target="_blank" title='中国知网（cnki）'>
+                                                中国知网（cnki）
+                                            </a>
+                                        
+                                            <a href='resourcen.aspx?rid=38' onclick="openwin(this.id)" id='38'
+                                                target="_blank" title='维普期刊'>
+                                                维普期刊
+                                            </a>
+                                        
+                                            <a href='resourcen.aspx?rid=54' onclick="openwin(this.id)" id='54'
+                                                target="_blank" title='万方数据资源系统'>
+                                                万方数据资源系统
+                                            </a>
+                                        
+                                            <a href='resourcen.aspx?rid=55' onclick="openwin(this.id)" id='55'
+                                                target="_blank" title='读秀'>
+                                                读秀
+                                            </a>
+                                        
+                                            <a href='resourcen.aspx?rid=56' onclick="openwin(this.id)" id='56'
+                                                target="_blank" title='超星电子图书'>
+                                                超星电子图书
+                                            </a>
+                                        
+                                            <a href='resourcen.aspx?rid=37' onclick="openwin(this.id)" id='37'
+                                                target="_blank" title='方正电子图书'>
+                                                方正电子图书
+                                            </a>
+                                        
+                                            <a href='resourcen.aspx?rid=64' onclick="openwin(this.id)" id='64'
+                                                target="_blank" title='国务院发展研究中心信息网'>
+                                                国务院发展研究中心信...
+                                            </a>
+                                        
+                                            <a href='resourcen.aspx?rid=138' onclick="openwin(this.id)" id='138'
+                                                target="_blank" title='中经网产业数据库'>
+                                                中经网产业数据库
+                                            </a>
+                                        
+                                            <a href='resourcen.aspx?rid=45' onclick="openwin(this.id)" id='45'
+                                                target="_blank" title='新东方多媒体学习库'>
+                                                新东方多媒体学习库
+                                            </a>
+                                        
+                                            <a href='resourcen.aspx?rid=59' onclick="openwin(this.id)" id='59'
+                                                target="_blank" title='外研社外语资源库'>
+                                                外研社外语资源库
+                                            </a>
+                                        
+                                            <a href='resourcen.aspx?rid=63' onclick="openwin(this.id)" id='63'
+                                                target="_blank" title='GPD全球产品样本'>
+                                                GPD全球产品样本
+                                            </a>
+                                        
+                                            <a href='resourcen.aspx?rid=384' onclick="openwin(this.id)" id='384'
+                                                target="_blank" title='书香合工大'>
+                                                书香合工大
+                                            </a>
+                                        
+                                            <a href='resourcen.aspx?rid=122' onclick="openwin(this.id)" id='122'
+                                                target="_blank" title='知识视界视频库'>
+                                                知识视界视频库
+                                            </a>
+                                        
+                                            <a href='resourcen.aspx?rid=61' onclick="openwin(this.id)" id='61'
+                                                target="_blank" title='“畅想之星”非书资源管理平台'>
+                                                “畅想之星”非书资源...
+                                            </a>
+                                        
+                                            <a href='resourcen.aspx?rid=156' onclick="openwin(this.id)" id='156'
+                                                target="_blank" title='合肥工业大学图书馆馆藏书目'>
+                                                合肥工业大学图书馆馆...
+                                            </a>
+                                        
+                                            <a href='resourcen.aspx?rid=46' onclick="openwin(this.id)" id='46'
+                                                target="_blank" title='易瑞授权访问系统'>
+                                                易瑞授权访问系统
+                                            </a>
+                                        
+                                            <a href='resourcen.aspx?rid=30' onclick="openwin(this.id)" id='30'
+                                                target="_blank" title='方略学科导航系统'>
+                                                方略学科导航系统
+                                            </a>
+                                        
+                                            <a href='resourcen.aspx?rid=57' onclick="openwin(this.id)" id='57'
+                                                target="_blank" title='龙源期刊'>
+                                                龙源期刊
+                                            </a>
+                                        
+                                    
+                                </div>
+                                <a href="ResourceNew.aspx?typeid=6" class="a">
+                                    <img src="WebUI/images/h_4.jpg" />
+                                </a>
+                            </div>
+                            <div class="concon" id="concon_type" style="display: none">
+                                <div class="list">
+                                    
+                                            <a href='resourcen.aspx?rid=80' onclick="openwin(this.id)" id='80'
+                                                target="_blank">
+                                                Web of science（SCIE...
+                                            </a>
+                                        
+                                            <a href='resourcen.aspx?rid=82' onclick="openwin(this.id)" id='82'
+                                                target="_blank">
+                                                CPCI
+                                            </a>
+                                        
+                                            <a href='resourcen.aspx?rid=81' onclick="openwin(this.id)" id='81'
+                                                target="_blank">
+                                                Inspec
+                                            </a>
+                                        
+                                            <a href='resourcen.aspx?rid=74' onclick="openwin(this.id)" id='74'
+                                                target="_blank">
+                                                Ei Village
+                                            </a>
+                                        
+                                            <a href='resourcen.aspx?rid=273' onclick="openwin(this.id)" id='273'
+                                                target="_blank">
+                                                ESI(Essential Scienc...
+                                            </a>
+                                        
+                                            <a href='resourcen.aspx?rid=76' onclick="openwin(this.id)" id='76'
+                                                target="_blank">
+                                                IEEE/IET Electronic ...
+                                            </a>
+                                        
+                                            <a href='resourcen.aspx?rid=75' onclick="openwin(this.id)" id='75'
+                                                target="_blank">
+                                                Elsevier ScienceDire...
+                                            </a>
+                                        
+                                            <a href='resourcen.aspx?rid=77' onclick="openwin(this.id)" id='77'
+                                                target="_blank">
+                                                Springer LINK
+                                            </a>
+                                        
+                                            <a href='resourcen.aspx?rid=78' onclick="openwin(this.id)" id='78'
+                                                target="_blank">
+                                                John Wiley
+                                            </a>
+                                        
+                                            <a href='resourcen.aspx?rid=157' onclick="openwin(this.id)" id='157'
+                                                target="_blank">
+                                                DII (Derwent Innovat...
+                                            </a>
+                                        
+                                            <a href='resourcen.aspx?rid=86' onclick="openwin(this.id)" id='86'
+                                                target="_blank">
+                                                Science Online
+                                            </a>
+                                        
+                                            <a href='resourcen.aspx?rid=139' onclick="openwin(this.id)" id='139'
+                                                target="_blank">
+                                                Nature
+                                            </a>
+                                        
+                                            <a href='resourcen.aspx?rid=88' onclick="openwin(this.id)" id='88'
+                                                target="_blank">
+                                                Emerald
+                                            </a>
+                                        
+                                            <a href='resourcen.aspx?rid=79' onclick="openwin(this.id)" id='79'
+                                                target="_blank">
+                                                ACS（美国化学学会）
+                                            </a>
+                                        
+                                            <a href='resourcen.aspx?rid=83' onclick="openwin(this.id)" id='83'
+                                                target="_blank">
+                                                SAE（美国机动工程师协...
+                                            </a>
+                                        
+                                            <a href='resourcen.aspx?rid=84' onclick="openwin(this.id)" id='84'
+                                                target="_blank">
+                                                ProQuest（PQDT）
+                                            </a>
+                                        
+                                            <a href='resourcen.aspx?rid=85' onclick="openwin(this.id)" id='85'
+                                                target="_blank">
+                                                EBSCO（ASC+BSC+EDS）
+                                            </a>
+                                        
+                                            <a href='resourcen.aspx?rid=294' onclick="openwin(this.id)" id='294'
+                                                target="_blank">
+                                                SciFinder Web
+                                            </a>
+                                        
+                                </div>
+                                <a href="/ResourceNew.aspx?typeid=7" class="a">
+                                    <img src="WebUI/images/h_4.jpg" />
+                                </a>
+                            </div>
+                            <div class="concon" id="concon_ZM" style="display: none">
+                                <div class="list">
+                                    
+                                            <a href='resourcen.aspx?rid=108' onclick="openwin(this.id)" id='108'
+                                                target="_blank">
+                                                合工大博硕学位论文全...
+                                            </a>
+                                        
+                                            <a href='resourcen.aspx?rid=110' onclick="openwin(this.id)" id='110'
+                                                target="_blank">
+                                                李鸿章特色数据库
+                                            </a>
+                                        
+                                            <a href='resourcen.aspx?rid=111' onclick="openwin(this.id)" id='111'
+                                                target="_blank">
+                                                陈独秀特色数据库
+                                            </a>
+                                        
+                                            <a href='resourcen.aspx?rid=109' onclick="openwin(this.id)" id='109'
+                                                target="_blank">
+                                                徽商特色数据库
+                                            </a>
+                                        
+                                            <a href='resourcen.aspx?rid=107' onclick="openwin(this.id)" id='107'
+                                                target="_blank">
+                                                汽车工程特色数据库
+                                            </a>
+                                        
+                                            <a href='resourcen.aspx?rid=106' onclick="openwin(this.id)" id='106'
+                                                target="_blank">
+                                                徽州建筑文化特色库
+                                            </a>
+                                        
+                                </div>
+                                <a href="/ResourceNew.aspx?typeid=8" class="a">
+                                    <img src="WebUI/images/h_4.jpg" />
+                                </a>
+                            </div>
+                            <div class="concon" id="concon_sub" style="display: none">
+                                <div class="list">
+                                    
+                                            <a href='resourcen.aspx?rid=555' onclick="openwin(this.id)" id='555'
+                                                target="_blank">
+                                                超星期刊
+                                            </a>
+                                        
+                                            <a href='resourcen.aspx?rid=261' onclick="openwin(this.id)" id='261'
+                                                target="_blank">
+                                                专业自主学习资源库
+                                            </a>
+                                        
+                                            <a href='resourcen.aspx?rid=262' onclick="openwin(this.id)" id='262'
+                                                target="_blank">
+                                                口语伙伴交互式外语学...
+                                            </a>
+                                        
+                                            <a href='resourcen.aspx?rid=493' onclick="openwin(this.id)" id='493'
+                                                target="_blank">
+                                                智读天下数字图书馆
+                                            </a>
+                                        
+                                            <a href='resourcen.aspx?rid=267' onclick="openwin(this.id)" id='267'
+                                                target="_blank">
+                                                维普智立方知识资源系...
+                                            </a>
+                                        
+                                            <a href='resourcen.aspx?rid=269' onclick="openwin(this.id)" id='269'
+                                                target="_blank">
+                                                博看移动电子期刊阅览...
+                                            </a>
+                                        
+                                            <a href='resourcen.aspx?rid=342' onclick="openwin(this.id)" id='342'
+                                                target="_blank">
+                                                起点考研网
+                                            </a>
+                                        
+                                            <a href='resourcen.aspx?rid=359' onclick="openwin(this.id)" id='359'
+                                                target="_blank">
+                                                CNKI部分数据开通试用
+                                            </a>
+                                        
+                                            <a href='resourcen.aspx?rid=360' onclick="openwin(this.id)" id='360'
+                                                target="_blank">
+                                                GoOA开放获取论文一站...
+                                            </a>
+                                        
+                                            <a href='resourcen.aspx?rid=584' onclick="openwin(this.id)" id='584'
+                                                target="_blank">
+                                                建筑资源数据库
+                                            </a>
+                                        
+                                            <a href='resourcen.aspx?rid=469' onclick="openwin(this.id)" id='469'
+                                                target="_blank">
+                                                法律家法律职业资格考...
+                                            </a>
+                                        
+                                            <a href='resourcen.aspx?rid=505' onclick="openwin(this.id)" id='505'
+                                                target="_blank">
+                                                森途IT在线学习平台
+                                            </a>
+                                        
+                                            <a href='resourcen.aspx?rid=541' onclick="openwin(this.id)" id='541'
+                                                target="_blank">
+                                                IT技能在线学习平台“...
+                                            </a>
+                                        
+                                            <a href='resourcen.aspx?rid=558' onclick="openwin(this.id)" id='558'
+                                                target="_blank">
+                                                软件通
+                                            </a>
+                                        
+                                            <a href='resourcen.aspx?rid=587' onclick="openwin(this.id)" id='587'
+                                                target="_blank">
+                                                人大“复印报刊资料”...
+                                            </a>
+                                        
+                                            <a href='resourcen.aspx?rid=578' onclick="openwin(this.id)" id='578'
+                                                target="_blank">
+                                                泉方云图书馆
+                                            </a>
+                                        
+                                            <a href='resourcen.aspx?rid=586' onclick="openwin(this.id)" id='586'
+                                                target="_blank">
+                                                Total Materia 数据库
+                                            </a>
+                                        
+                                            <a href='resourcen.aspx?rid=312' onclick="openwin(this.id)" id='312'
+                                                target="_blank">
+                                                EBSCO电子书
+                                            </a>
+                                        
+                                </div>
+                                <a href="/ResourceNew.aspx?typeid=9" class="a">
+                                    <img src="WebUI/images/h_4.jpg" />
+                                </a>
+                            </div>
+                            
+                        </div>
+                        <div class="twocon" id="div_2" style="display: none;">
+                            <div class="concon">
+                                <div class="list">
+                                    
+                                            <a href='../bg.aspx?sec_id=168'
+                                                target="_blank">
+                                                文献传递</a>
+                                        
+                                            <a href='http://210.45.242.117//subjects_1/widgets/kjcx/?school_id=20'
+                                                target="_blank">
+                                                科技查新</a>
+                                        
+                                            <a href='http://210.45.242.3/js/index1.htm'
+                                                target="_blank">
+                                                教学培训</a>
+                                        
+                                            <a href='../bg.aspx?sec_id=170'
+                                                target="_blank">
+                                                学科馆员</a>
+                                        
+                                            <a href='downloadlist.aspx?sec_id=151'
+                                                target="_blank">
+                                                软件仓库</a>
+                                        
+                                            <a href='http://210.45.242.16/PaperLogin.action'
+                                                target="_blank">
+                                                论文提交</a>
+                                        
+                                            <a href='http://210.45.242.3/dzhtd/duzhe.htm'
+                                                target="_blank">
+                                                读者天地</a>
+                                        
+                                            <a href='../bg.aspx?sec_id=173'
+                                                target="_blank">
+                                                代查代检</a>
+                                        
+                                            <a href='http://www.ahkjwx.cn/'
+                                                target="_blank">
+                                                共享平台</a>
+                                        
+                                            <a href='../bg.aspx?sec_id=175'
+                                                target="_blank">
+                                                网海导航</a>
+                                        
+                                            <a href='../bg.aspx?sec_id=176'
+                                                target="_blank">
+                                                校外访问</a>
+                                        
+                                            <a href='../bg.aspx?sec_id=177'
+                                                target="_blank">
+                                                图书捐赠</a>
+                                        
+                                            <a href='http://210.45.242.5:8080/asord/asord_hist.php'
+                                                target="_blank">
+                                                读者荐购</a>
+                                        
+                                            <a href='/zx.aspx'
+                                                target="_blank">
+                                                参考咨询</a>
+                                        
+                                            <a href='http://210.45.242.5:8080/newbook/newbook_cls_browse.php'
+                                                target="_blank">
+                                                新书通报</a>
+                                        
+                                            <a href='http://lib.hfut.edu.cn/ShowPage.aspx?art_id=1672'
+                                                target="_blank">
+                                                座位预约</a>
+                                        
+                                            <a href='../bg.aspx?sec_id=186'
+                                                target="_blank">
+                                                新生教育</a>
+                                        
+                                    
+                                </div>
+                                <a href="/bg.aspx?cha_id=89" class="a">
+                                    <img src="WebUI/images/h_4.jpg" />
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                
+<div class="nav">
+        <ul>
+            <li><a href="bg.aspx?cha_id=89" class="a1">&nbsp;</a></li>
+            <li><a href="bg.aspx?cha_id=87" class="a2">&nbsp;</a></li>
+            <li><a href="/resourceNew.aspx" class="a3">&nbsp;</a></li>
+            <li><a href="/zx.aspx" class="a4">&nbsp;</a></li>
+            <li><a href="http://kjcx.hfut.edu.cn" target="_blank" class="a5">&nbsp;</a></li>
+        </ul>
+    </div>
+            </div>
+            <div class="mainbom">
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        
+   <div class="frendship">
+       
+             <a href="http://210.45.242.3/ShowPage.aspx?art_id=1908" target="_blank">我校最新SCI-E/CPCI-S收录</a> | 
+       
+             <a href="http://www.hfut.edu.cn/ch/" target="_blank">合肥工业大学</a> | 
+       
+             <a href="http://www.anhui.superlib.net/" target="_blank">安徽高校资源共享服务平台</a> | 
+       
+             <a href="http://210.45.210.2/TgwSite/Default.aspx" target="_blank">安徽高校图工委</a> | 
+       
+             <a href="http://ahadl.org/" target="_blank">安徽高校数字图书馆</a> | 
+       
+             <a href="http://project.calis.edu.cn/calisnew/" target="_blank">中国高等教育文献保障系统</a> | 
+       
+             <a href="http://www.cashl.edu.cn/portal/index.jsp" target="_blank">高校人文社会科学文献</a> | 
+       
+          </div>
+          <div class="copyright">
+ <p>合肥工业大学图书馆 Copyright 2010-2015 @ All Rights Reserved&nbsp;&nbsp; 建议使用IE7.0或以上版本&nbsp;&nbsp; &nbsp;&nbsp; 最佳浏览器分辨率为1366×768</p>
+ <p>地址：安徽省合肥市屯溪路193号(230009)&nbsp;&nbsp;电话：0551-62901290&nbsp;&nbsp;当前IP地址：221.224.213.42  &nbsp;&nbsp;&nbsp;&nbsp; 访问量：<em><label id="Foot_xiang1_lbl_visitCount">8520014</label></em>
+               <span class="span">
+                   <a href="../RSS/NewsRss.ashx" target="_blank">
+                   <img src="WebUI/images/rass.gif" />
+                   </a>
+                   </span>
+            </p>
+</div>
+    </div>
+    <input name="hdWidth" type="hidden" id="hdWidth" />
+        <div style="position:absolute;top:0;left:0;width:100%;display:none;" id="weixin_pop">
+	  <div style="margin:150px auto;width:360px;">
+		<img src="WebUI/images/weixin.jpg" width="360" height="360"/>
+	  </div>
+	</div>
+	<div style="position:absolute;top:0;left:0;width:100%;display:none;" id="weibo_pop">
+	  <div style="margin:150px auto;width:360px;">
+		<img src="WebUI/images/weibo.png" width="360" height="360"/>
+	  </div>
+	</div>
+
+    </form>
+
+</body>
+<script>
+
+$("#weixin").hover(
+  function () {
+    $("#weixin_pop").show();
+  }, 
+  function () {
+    $("#weixin_pop").hide();
+}
+);
+$("#weibo").hover(
+  function () {
+    $("#weibo_pop").show();
+  }, 
+  function () {
+    $("#weibo_pop").hide();
+}
+);
+
+</script>
+</html>

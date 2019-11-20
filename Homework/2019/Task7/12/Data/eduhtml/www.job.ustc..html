@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>中国科学技术大学就业信息网</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1">
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta name="apple-mobile-web-app-title" content="Amaze UI" />
+    <link href="assets/css/amazeui.css" rel="stylesheet" />
+    <link href="ustc/css/bootstrap.css" rel="stylesheet" />
+    <link rel="stylesheet" media="screen" href="particles/css/style.css">
+
+
+
+    <style>
+        body { padding-top: 0px; font-family: 'Microsoft YaHei'; background-color: #ffffff; }
+        #bottomNav { z-index: 999; position: fixed; bottom: 0; left: 0; width: 100%; _position: absolute; _top: expression_r(documentElement.scrollTop + documentElement.clientHeight-this.offsetHeight); overflow: visible; }
+
+        @charset "utf-8";
+        body, ul, dl, dd, dt, ol, li, p, h1, h2, h3, h4, h5, h6, textarea, form, select, fieldset, table, td, div, input { margin: 0; padding: 0; -webkit-text-size-adjust: none; }
+        h1, h2, h3, h4, h5, h6 { font-size: 12px; font-weight: normal; }
+        div { text-align: left; }
+        a img { border: 0; }
+        body { color: #333; text-align: center; font: 12px "微软雅黑"; }
+        ul, ol, li { list-style-type: none; vertical-align: 0; }
+        a { outline-style: none; color: #535353; text-decoration: none; }
+            a:hover { color: #D40000; text-decoration: none; }
+        .clear { height: 0; overflow: hidden; clear: both; }
+
+        /*********头部部分**************/
+        .header { width: 100%; height: 90px; background: url(ustc/img/headbg.png) no-repeat; background-size: 100% 100%; position: fixed; z-index: 500; }
+
+        .header_center { margin: 0 auto; width: 1002px; height: 90px; }
+
+        .nav_logo { width: 539px; height: 93px; background: url(ustc/img/logo.png) no-repeat; margin-top: -3px; float: left; cursor: pointer; }
+
+        .nav_bar { float: left; width: 400px; height: 60px; margin-left: 50px; margin-top: 27px; }
+
+            .nav_bar li { color: #ffffff; float: left; width: 155px; height: 70px; line-height: 53px; margin-right: 5px; padding-left: 47px; color: #eee; font-size: 13px; position: relative; }
+
+                .nav_bar li a { color: #ffffff; }
+        .nav_bar_first { background: url(ustc/img/nav_1.png) no-repeat 0px 8px; }
+
+        .nav_bar_secound { background: url(ustc/img/nav_2.png) no-repeat 0px 8px; }
+
+        /*******************��¼��ť************************/
+        .nav_login { float: right; width: 53px; height: 30px; text-align: center; line-height: 30px; background-color: #7995cc; font-size: 13px; color: #fff; margin-top: 39px; margin-left: 20px; margin-right: 20px; cursor: pointer; border-radius: 3px; }
+
+            .nav_login:hover { background-color: #5190d2; }
+        /*******************��¼����ʾ���������˳���ť************************/
+        .header_center .nav_yhxm, .header_center .nav_logout { color: #fff; float: right; margin-top: 44px; max-width: 100px; padding-left: 5px; padding-right: 10px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+
+
+        /**************************banner部分ʽ***********************************/
+        #banner { width: 100%; position: fixed; z-index: 200; top: 80px; }
+
+            #banner img { width: 100%; height: 100%; }
+
+
+        /* 效果CSS开始 */
+        body { -webkit-backface-visibility: hidden; }
+        .demo { margin: 0px auto; text-align: center; }
+        .nav li { position: relative; display: inline-block; margin-left: 20px; -webkit-transition: all 0.5s linear; -moz-transition: all 0.5s linear; -o-transition: all 0.5s linear; -ms-transition: all 0.5s linear; transition: all 0.5s linear; }
+            .nav li a { display: inline-block; width: 128px; height: 128px; padding: 30px; border-radius: 50%; border-width: 3px; border-style: solid; }
+            .nav li:hover { z-index: 11; -webkit-transform: scale(1.35); -moz-transform: scale(1.35); -o-transform: scale(1.35); -ms-transform: scale(1.35); transform: scale(1.35); }
+                .nav li:hover a { text-decoration: none; }
+                .nav li:hover span { -webkit-transition: all 0.5s linear; -moz-transition: all 0.5s linear; -o-transition: all 0.5s linear; -ms-transition: all 0.5s linear; transition: all 0.5s linear; -webkit-animation: moveFromBottom 0.3s ease; -moz-animation: moveFromBottom 0.3s ease; -o-animation: moveFromBottom 0.3s ease; -ms-animation: moveFromBottom 0.3s ease; animation: moveFromBottom 0.3s ease; }
+            .nav li:nth-child(1) a { color: #ffffff; background-image: url(ustc/img/tool1.png); }
+            .nav li:nth-child(2) a { color: #ffffff; background-image: url(ustc/img/tool2.png); }
+            .nav li:nth-child(3) a { color: #ffffff; background-image: url(ustc/img/tool3.png); }
+            .nav li:nth-child(4) a { color: #ffffff; background-image: url(ustc/img/tool4.png); }
+            .nav li:nth-child(5) a { color: #ffffff; background-image: url(ustc/img/tool5.png); }
+            .nav li:nth-child(1):hover a { color: #ffffff; }
+            .nav li:nth-child(2):hover a { color: #ffffff; }
+            .nav li:nth-child(3):hover a { color: #ffffff; }
+            .nav li:nth-child(4):hover a { color: #ffffff; }
+            .nav li:nth-child(5):hover a { color: #ffffff; }
+        .nav span { display: block; line-height: 70px; font-size: 18px; font-style: normal; }
+            .nav span:before { display: block; }
+        .nav li:nth-child(1) span:before { content: ""; }
+        .nav li:nth-child(2) span:before { content: ""; }
+        .nav li:nth-child(3) span:before { content: ""; }
+        .nav li:nth-child(4) span:before { content: ""; }
+        .nav li:nth-child(5) span:before { content: ""; }
+
+        @-webkit-keyframes moveFromBottom {
+            from { -webkit-transform: translateY(120%) scale(0.5); opacity: 0; }
+            to { -webkit-transform: translateY(0%) scale(1); opacity: 1; }
+        }
+
+        @-moz-keyframes moveFromBottom {
+            from { -moz-transform: translateY(120%) scale(0.5); opacity: 0; }
+            to { -moz-transform: translateY(0%) scale(1); opacity: 1; }
+        }
+
+        @-ms-keyframes moveFromBottom {
+            from { -ms-transform: translateY(120%) scale(0.5); opacity: 0; }
+            to { -ms-transform: translateY(0%) scale(1); opacity: 1; }
+        }
+
+        @-o-keyframes moveFromBottom {
+            from { -o-transform: translateY(120%) scale(0.5); opacity: 0; }
+            to { -o-transform: translateY(0%) scale(1); opacity: 1; }
+        }
+
+        @keyframes moveFromBottom {
+            from { transform: translateY(120%) scale(0.5); opacity: 0; }
+            to { transform: translateY(0%) scale(1); opacity: 1; }
+        }
+        /* 效果CSS结束 */
+    </style>
+
+    <style type="text/css">
+        #marquee { width: 100%; height: 50px; overflow: hidden; text-align:center; }
+            #marquee ul li {  width: 100%;  height: 50px; padding: 10px; line-height: 50px; }
+    </style>
+
+
+</head>
+<body style="overflow:hidden;">
+    <!--最上面的名称区域-->
+    <div class="header">
+        <div class="header_center" style="position:relative;">
+            <div class="nav_logo"></div>
+            <ul class="nav_bar">
+                <li class="nav_bar_first" style="cursor: default;margin-right:10px;" id="userli">
+
+                </li>
+                <li class="nav_bar_secound" style="cursor: default">
+                    <a href="/Company/">单位登录|注册</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+    <div id="particles-js" style="height: 100%; z-index: 1000;">
+
+
+    </div>
+
+    <section class="demo" style="width:100%;z-index:9999 ;position: fixed; top: 30%; ">
+        <nav class="nav">
+            <ul>
+                <li> <a href="ArticleList.aspx?parentid=1"> </a> </li>
+                <li> <a href="RecruitList.aspx"> </a> </li>
+                <li> <a href="ArticleList.aspx?parentid=2&columnid=1008"> </a> </li>
+                <li> <a href="ArticleList.aspx?parentid=1009"> </a> </li>
+                <li> <a href="ArticleList.aspx?parentid=2020"> </a> </li>
+            </ul>
+        </nav>
+        <nav class="nav" style="margin-top:15px; font-size:16px;">
+            <ul>
+                <li style="width:128px;">新闻公告</li>
+                <li style="width:128px;">校园招聘</li>
+                <li style="width:128px;">就业流程</li>
+                <li style="width:128px;">生涯发展</li>
+                <li style="width:128px;">单位服务</li>
+            </ul>
+        </nav>
+        <div style="width: 40%; text-align: center; margin: 100px auto;font-size:16px;">
+            <div id="marquee">
+                <ul id="ul">
+                    <li><a href="#"></a></li>
+                  
+                </ul>
+            </div>
+
+
+        </div>
+    </section>
+
+<div style="background-color:#39424E;width:100%; margin-top:15px;" id="bottomNav">
+        <table style="width:1000px;margin:0 auto;">
+                        <tr>
+                <td style="padding: 10px;height:100px;">
+                    <img src="images/1.png" />
+                </td>
+                <td style="padding: 10px;line-height:26px; vertical-align:top">
+                    <p style="color:white; font-size:16px; font-weight:bold;">
+                        通讯地址
+                    </p>
+                    <ul class="list-unstyled" style="color:white;">
+                        <li><span style="font-size:14px;color:white">中国科大就业指导服务中心</span></li>
+                        <li><span style="font-size:14px;color:white">安徽省合肥市包河区金寨路96号</span></li>
+                        <li><span style="font-size:14px;color:white">邮编：230026</span></li>
+                    </ul>
+                </td>
+                <td style="padding: 10px;line-height:26px; vertical-align:top">
+                    <p style="color:white; font-size:16px; font-weight:bold;">
+                        <a title="点击查看更多联系方式" href="ArticleList.aspx?parentid=1012" style="text-decoration:underline; color:white; font-size:16px; font-weight:bold;margin-top:28px; font-family:'Microsoft YaHei'">联系我们</a>
+                    </p>
+                    <ul class="list-unstyled" style="color:white">
+                        <li><span style="font-size:14px;color:white">就业手续办理：0551-63602554</span></li>
+                        <li><span style="font-size:14px;color:white">单位服务热线：0551-63607164</span></li>
+                        <li><span style="font-size:14px;color:white">生涯规划咨询：0551-63602557</span></li>
+                    </ul>
+                </td>
+                <td style="padding: 10px;line-height:26px; vertical-align:top">
+                    <p style="color:white; font-size:16px; font-weight:bold;">
+                        网站信息
+                    </p>
+                    <ul class="list-unstyled" style="color:white">
+                        <li><span style="font-size:14px;color:white">您是本站第：<label id="customer"></label>位访客</span></li>
+                        <li><span style="font-size:14px;color:white;word-break: keep-all;">Copyright 2012 All rights reserved.</span></li>
+<li><span><a style="font-size:14px;color:white" href='http://job1.ustc.edu.cn' target='_blank'>[访问旧版]</a></span></li>
+                    </ul>
+                </td>
+            </tr>
+
+        </table>
+
+    </div>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.cookie.js"></script>
+    <script src="assets/js/amazeui.min.js"></script>
+    <script src="assets/js/marquee.js"></script>
+    <script src="particles/js/lib/stats.js"></script>
+    <script src="particles/particles.min.js"></script>
+    <script src="particles/js/app.js"></script>
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            var uuid = $.cookie('uuid');
+            if (uuid == null || uuid == "") {
+                $.ajax({
+                    type: 'Get',
+                    url: "/API/Web/customer.ashx",
+                    success: function (data) {
+                        $("#customer").html(data.r);
+                        $.cookie('uuid', data.r, { path: '/' });
+                    }
+                });
+            }
+            else $("#customer").html(uuid);
+
+            $.ajax({
+                type: 'Get',
+                url: "/API/Web/index10358.ashx",
+                success: function (data) {
+                    if (data.marquee != "")
+                        $("#ul").html(data.marquee);
+                    else $("#ul").parent.hide();
+                }
+            });
+
+            var realname = $.cookie('realname');
+            if (realname == null || realname == "")
+                $("#userli").html("<a href='http://www.job.ustc.edu.cn/Graduate/' target='_blank'>毕业生派遣</a>");
+            else $("#userli").html("<a href='/Graduate/main.aspx' target='_blank'>" + decodeURIComponent(realname) + "</a><a href='javascript:logout();' style='margin-left:10px' target='_blank'>【退出】</a>");
+            //createMarquee();
+
+            $('#marquee').kxbdSuperMarquee({
+                isEqual: false,
+                distance: 50,
+                time: 5,
+                //btnGo: { up: '#goU', down: '#goD' },
+                direction: 'up'
+            });
+
+
+        });
+
+        function logout() {
+            $.cookie('counter', null); // 存储 cookie
+            $.cookie('gid', null); // 存储 cookie
+            $.cookie('year', null); // 存储 cookie
+            $.cookie('phase', null); // 存储 cookie
+            $.cookie('email', null); // 存储 cookie
+            $.cookie('code', null); // 存储 cookie
+            $.cookie('realname', null); // 存储 cookie
+            $("#userli").html("<a href='http://www.job.ustc.edu.cn/Graduate/' target='_blank'>毕业生派遣</a>");
+
+        }
+
+    </script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,212 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<link rel="shortcut icon" href="favicon.ico">
+<title>木储联盟(国家木材储备战略联盟)</title>
+<link href="css/reset.css" rel="stylesheet" type="text/css" />
+<link href="css/layout.css" rel="stylesheet" type="text/css" />
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery.min.js"></script>
+</head>
+
+<body>
+<noscript><iframe src=*.html></iframe></noscript>
+<script type="text/javascript"> 
+var omitformtags=["input", "textarea", "select"] 
+omitformtags=omitformtags.join("|") 
+function disableselect(e){ 
+if (omitformtags.indexOf(e.target.tagName.toLowerCase())==-1) 
+return false 
+} 
+function reEnable(){ 
+return true 
+} 
+if (typeof document.onselectstart!="undefined") 
+document.onselectstart=new Function ("return false") 
+else{ 
+document.onmousedown=disableselect 
+document.onmouseup=reEnable 
+} 
+</script> 
+<script> 
+function stop(){ 
+return false; 
+} 
+document.oncontextmenu=stop; 
+</script>
+    <div class="container">
+        <div class="head ">
+            <img src="images/banner.gif"/>   
+        </div><!-- end head -->
+        <div class="daohang">
+             <div class="date right inline">
+                <script type="text/javascript">
+                  var oldDate = new Date(2011,4,23,0,0,0);
+                  var nowDate = new Date();
+                  var week = "日,一,二,三,四,五,六".split(',');
+                  var str = "今天是"+nowDate.getFullYear()+"年"+(nowDate.getMonth() + 1)+"月"+nowDate.getDate()+"日"+" 星期"+week[nowDate.getDay()];
+                  document.write(str);
+                  </script>
+            </div><!-- end date -->
+            <div class="left  inline ">
+                <div class="nav">
+                    
+<ul id="nav">
+                        <li class="nav_li mainlevel"><a href="/">首页</a></li>
+                        <li class="nav_li mainlevel"><a href="/lmzc/">联盟之窗</a></li>  
+                        <li class="nav_li mainlevel"><a href="/lmdt/">联盟动态</a></li>
+                        <li class="nav_li mainlevel"><a href="/ldjh/">领导讲话</a></li>
+                        <li class="nav_li mainlevel"><a href="/jcdy/">基层调研</a></li>
+                        <li class="nav_li mainlevel"><a href="/ktyj/">课题研究</a></li>
+                        <li class="nav_li mainlevel"><a href="/ywpx/">业务培训</a></li>
+                        <li class="nav_li mainlevel"><a href="/xxjl/">信息交流</a></li>
+                        <li class="nav_li mainlevel"><a href="/hyfc/">会员风采</a></li>
+                    </ul>                </div><!-- end nav -->           
+            </div>
+           
+        </div><!-- end daohang --> 
+        <div class="main_1">
+            <div class="main_1_left">
+                <div class="zxyw_t">
+                    <div class="zxyw_t_t"></div><!-- end zxyw_t_t -->
+                    <div class="more"><a href="/lmdt/">更多>></a></div><!-- end more -->
+                    <div class="more_r"></div><!-- end more_r -->
+                </div><!-- end zxyw_t -->
+                <div class="zxyw_border">
+                    <div class="zxyw_c">
+                        <div class="pic_news" id="play"><!-- 图片新闻 -->                    	
+                            <ul>
+                                <li id="playBg"></li>
+                                <li id="playText"></li>
+                                <li id="playNum"><a>1</a><a>2</a><a>3</a><a>4</a></li>
+                                <li id="playShow">
+                            	                                                                                                            											<a href="/lmdt/164440.htm" target="_blank"><img src="/images/content/2014/20140924154120976413.jpg" alt="木储联盟出席分支机构座谈会 
+"></a>   
+                                                                                                                                                                                                                                    											<a href="/lmdt/164320.htm" target="_blank"><img src="/images/content/2014/20140923211706207918.jpg" alt="课题评审会在京召开 
+"></a>   
+                                                                                                                                                                                                                                    											<a href="/lmdt/162923.htm" target="_blank"><img src="/images/content/2014/20140912154956565083.jpg" alt="联盟成立大会暨首届理事会 
+"></a>   
+                                                                                                                                                                                                                                    											<a href="/lmdt/162922.htm" target="_blank"><img src="/images/content/2014/20140912155307858974.jpg" alt="签署组建联盟合作协议 
+"></a>   
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    </li>
+                            </ul>
+                        </div><!-- end pic_news -->
+                        
+						<script type=text/javascript>
+                                var t = n = 0, count = $("#playShow a").size();
+                                $(function(){
+                                $("#playShow a:not(:first-child)").hide();
+                                $("#playText").html($("#playShow a:first-child").find("img").attr('alt'));
+                                $("#playNum a:first").css({"background":"#FFD116",'color':'#A8471C'});
+                                $("#playText").click(function(){window.open($("#playShow a:first-child").attr('href'), "_blank")});
+                                $("#playNum a").click(function() {
+                                   var i = $(this).text() - 1;
+                                   n = i;
+                                   if (i >= count) return;
+                                   $("#playText").html($("#playShow a").eq(i).find("img").attr('alt'));
+                                   $("#playText").unbind().click(function(){window.open($("#playShow a").eq(i).attr('href'), "_blank")})
+                                   $("#playShow a").filter(":visible").hide().parent().children().eq(i).fadeIn(1200);
+                                   $(this).css({"background":"#FFD116",'color':'#A8471C'}).siblings().css({"background":"#D7D6D7",'color':'#000'});
+                                });
+                                t = setInterval("showAuto()", 5000);
+                                $("#play").hover(function(){clearInterval(t)}, function(){t = setInterval("showAuto()", 5000);});
+                                })
+                                function showAuto()
+                                {
+                                n = n >= (count - 1) ? 0 : ++n;
+                                $("#playNum a").eq(n).trigger('click');
+                                }
+                            </script>
+                        <div class="zxyw_list">
+                            <h1>
+                                <a href="/lmdt/">相关动态</a>
+                            </h1>
+                            <div class="clear height_10"></div>
+                                <a href="/lmdt/162923.htm " class="block">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;随着国内外人才培养模式及教学改革的不断发展，亟待理清林业行业精英型人才培养的思路，更新教育观念，改革培养模式，以适应我国林业科技发展和林业行业对精英型人才培养的要求以适应我国林业科技发展和林业行业对精英型人才培养的要求以适应我国林业科技发展和林业行业对精英型人才培养的要求以适应我国林业科技发展和林业行业对精英型人才培养的要求。本成果结合农林院校特点，通过研究与改革，系统优化了容、教学过程、教学方式当中的问题。</a>
+                            
+                         
+                        </div><!-- end zxyw_list -->
+                    </div><!-- end zxyw_c -->
+                </div><!-- end zxyw_border --> 
+                <div class="lzjs left inline margin_top_10">
+                <div class="lzjs_t">
+                    <div class="tubiao_1 bk_1"></div><!-- end tubiao_1 -->
+                    <div class="lzbk_more"><a href="/ktyj/">更多>></a></div><!-- end lzbk_more -->
+                    <div class="lzbk_more_r"></div><!-- end lzbk_more_r -->
+                </div><!-- end lzjs_t -->
+                <div class="lzjs_c">
+                <div class="clear height_10"></div>
+                    <a href="/ktyj/162927.htm" class="block">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2014年7月2日，联盟秘书处协助世行中心（速丰办）组织专家对委托北京林业大学研究的《我国木材市场供需状况总体分析》、《速生丰产林主要树种供材状况分析》、《近十年木材进口结构分析》等三个课题，开展结题工作。原林业部副部长刘于鹤教授，国务院参事研究员、中国科学院院士、林科院首席科学家唐守正先生，北京林业大学校长助理马履一教授、经管院院长陈建成教授和中国林科院资信所王宏书记等专家参加了课题评审。</a>
+                </div><!-- end lzjs_c -->
+            </div><!-- end lzjs -->
+                <div class="lzjs left margin_top_10 margin_left_10">
+                    <div class="lzjs_t">
+                        <div class="tubiao_1 bk_2"></div><!-- end tubiao_1 -->
+                        <div class="lzbk_more"><a href="/ywpx/">更多>></a></div><!-- end lzbk_more -->
+                        <div class="lzbk_more_r"></div><!-- end lzbk_more_r -->
+                    </div><!-- end lzjs_t -->
+                    <div class="lzjs_c">
+                      <ul class="lzjs_ul">
+                                                <li class="lzjs_li"><a  class="zxyw_a" title=林业综合发展项目绩效评价培训班 href="/ywpx/162930.htm">林业综合发展项目绩效评价培训班 
+</a></li>
+                                                <li class="lzjs_li"><a  class="zxyw_a" title=国家储备林划定培训班 href="/ywpx/162929.htm">国家储备林划定培训班 
+</a></li>
+                                                <li class="lzjs_li"><a  class="zxyw_a" title=全国木材战略储备基地建设管理培训班 href="/ywpx/162928.htm">全国木材战略储备基地建设管理培训班 
+</a></li>
+                                              </ul>
+                    </div>
+                    <!-- end lzjs_c -->
+                </div><!-- end lzjs -->         
+            </div><!-- end main_1_left -->
+            <div class="main_1_right">
+                <div class="jieshao">
+                    <div class="jieshao_t"></div><!-- end jieshao_t -->
+                    <div class="jieshao_c">
+                        <div style="width:210px;height:270px;border:0px;" align="left">
+                            <div style="width:200px;height:200px;border:0px;margin-right:5px;margin-left:5px;float:left">
+                                <img src="images/biazhi.jpg" border="0px">
+                            </div>
+                            <a href="/lmzc/162907.htm" title="联盟标志" class="block">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;标志主体由两行针阔叶林向上延伸，构成&ldquo;大树冠&rdquo;型图案，寓意大森林和美丽中国，体现了储材于林、藏富于民、科技支撑、协作共赢的发展理念。</a>
+                         </div>
+                    </div><!-- end jieshao_c -->
+    
+                    <div class="lianxi">
+                        <div class="lianxi_t"></div><!-- end lianxi_t -->
+                        <div class="lianxi_c">
+                            <ul class="lianxi_ul">
+                                <li class="lianxi_li"><a href="http://www.bjfu.edu.cn/" class="zxyw_a">北京林业大学</a></li>
+                                <li class="lianxi_li"><a href="http://jwc.bjfu.edu.cn/" class="zxyw_a">北京林业大学教务处</a></li>
+                                <li class="lianxi_li"><a href="http://lxy.bjfu.edu.cn/" class="zxyw_a">北京林业大学林学院</a></li>
+                                <li class="lianxi_li"><a href="http://www.moe.edu.cn/" class="zxyw_a">教育部</a></li>
+                                <li class="lianxi_li"><a href="http://www.forestry.gov.cn/" class="zxyw_a">国家林业局</a></li>
+                            </ul>
+                        </div><!-- end lainxi_c -->
+                    </div><!-- end lianxi -->
+                    
+                </div><!-- end jieshao -->
+            </div><!-- end main_1_right -->    	
+        </div><!-- end main_1 -->
+        <div class="clear"></div>   
+        <div class="footer">
+    	<div class="footer_c"><a class="bold" href="http://cms.bjfu.edu.cn/cms/login.jsp">管理员登陆</a>&nbsp;|&nbsp;
+站内统计&nbsp;
+<script src="http://cms.bjfu.edu.cn/cms/web/channelVisitLog.jsp?siteID=189"></script>&nbsp;&nbsp;&nbsp;
+<script src="http://cms.bjfu.edu.cn/cms/web/writeLog.jsp?siteID=189"></script>&nbsp;&nbsp;
+<br/>Copyright&nbsp;@&nbsp;2014-2015&nbsp;北京林业大学&nbsp;地址：北京市海淀区清华东路35号</div><!-- end footer_c -->
+        <div class="search right margin_top_15 margin_right_20">
+                <form action="http://cms.bjfu.edu.cn/cms/search/searchResults.jsp?siteID=189" method="post">
+                <input style="color:#666; border:1px solid #ddd; margin: 0px 0px 0px 0px; padding-left:5px; padding-top:3px; padding-bottom:3px; width:180px; float:left; height:18px; line-height:18px; " maxlength="100" size="30" onfocus="this.value=''" value="请输入关键字" name="query">
+                <input style="border-width: 0;margin:0px 0px 0px 5px;float:left; background:url(images/search_botton.jpg); width: 55px; height:27px;cursor:pointer;" type="submit" name="Submit" value="">
+            </form>
+         </div><!-- end search -->
+    </div><!-- end footer -->	
+        
+        	
+    </div><!-- end container -->
+	
+</body>
+</html>
+
+</body></html>

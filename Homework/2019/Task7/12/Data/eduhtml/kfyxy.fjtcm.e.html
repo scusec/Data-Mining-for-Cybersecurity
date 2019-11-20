@@ -1,0 +1,390 @@
+
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+
+
+
+
+
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9" />
+<title>福建中医药大学康复医学院</title>
+<meta name="Keywords" content="中医药大学康复医学院" />
+
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Cache-Control" content="no-cache" />
+<meta http-equiv="Cache-Control" content="no-store" />
+<meta http-equiv="Expires" content="0" />
+ 
+<link rel="shortcut icon"  href="/resources/favicon.ico" type="image/x-icon"/>
+
+<link rel="stylesheet" type="text/css" href="/resources/admin/style/themes/default/easyui.css"/>
+<link rel="stylesheet" type="text/css" href="/resources/admin/style/themes/icon.css"/>
+<script type="text/javascript" src="/resources/admin/jquery/jquery-1.3.1.pack.js"></script>
+<script type="text/javascript" src="/resources/admin/common/js/common.js"></script>
+<script type="text/javascript" src="/resources/admin/common/js/commonUtils.js"></script>
+<script type="text/javascript" src="/resources/admin/common/js/general.js"></script>
+<script type="text/javascript" src="/resources/admin/common/js/util.js"></script>
+<script type="text/javascript" src="/resources/admin/jquery/jquery.easyui.min.js"></script>
+<script type="text/javascript" src="/resources/admin/jquery/jquery.json-2.2.min.js"></script>
+<script type="text/javascript" src="/resources/admin/jquery/jquery.pagination.js"></script>
+<script type="text/javascript" src="/resources/admin/jquery/jquery.form.min.js"></script>
+<script type="text/javascript" src="/resources/admin/jquery/validator/formValidator.js"></script>
+<script type="text/javascript" src="/resources/admin/jquery/validator/formValidatorRegex.js"></script>
+<script type="text/javascript" src="/resources/admin/common/js/idcard.js"></script>
+<script type="text/javascript" src="/resources/admin/common/js/validateFrm.js"></script>
+<!-- scs_alert -->
+<link type="text/css" rel="stylesheet" href="/resources/tools/scs_alert/css/plug.css"/>
+<!--[if IE 6]>
+<script type="text/javascript" src="/resources/tools/scs_alert/js/iepngfix_tilebg.js"></script>
+<![endif]-->
+<script type="text/javascript" src="/resources/tools/scs_alert/js/scscms.js"></script>
+<!-- $.fnShowWindow_max(url); -->	
+<script type="text/javascript" src="/resources/tools/window_open/iss.core.js"></script>
+<script type="text/javascript">
+	function startUpload(){
+		scs_alert("努力上传中，请稍候...","loading");
+	}
+</script>
+
+
+
+<link rel="stylesheet" type="text/css"href="/resources/admin/jquery/validator/style/validator.css"  />
+<link rel="stylesheet" type="text/css" href="/resources/admin/style/page.css"/>
+
+<link href="/resources/css/style.css" rel="stylesheet" type="text/css">
+<link href="/resources/css/banner.css" rel="stylesheet" type="text/css">
+
+
+<!--Execute flickerplate-->
+<script>
+
+	$(document).ready(function() {
+		//广告栏
+		getBannerPics();
+		//学院动态
+		getLatestNew('130000000');
+		//公告
+		getAnnouncement('120000000');
+	});
+
+	function getBannerPics() {
+		var url = "/web/ad/queryByStatus?isShow=1&msgKind=1";
+		$.post(url, {}, function(data) {
+			if (data.success) {
+				var obj = data.rs;
+				var currentNum = 0;		
+				$.each(obj, function(i, ad) {
+					
+					
+					var startDate = new Date(Date.parse(ad.startDate.replace(/-/g,"/"))).getTime();
+					var endDate = new Date(Date.parse(ad.endDate.replace(/-/g,"/"))).getTime();
+					
+					var date = new Date();
+					var curTime = to_char2(date, "yyyy/mm/dd");
+					var curDate = Date.parse(curTime);
+					
+					var href = ad.adHref;
+					var className = 'item';
+					
+					var str = '';
+					var ol_str='';
+					
+					if (((startDate < curDate) || (startDate == curDate)) && ((endDate > curDate) || (endDate == curDate))) {
+						if(currentNum==0){
+							className = 'item active';
+							ol_str += '<li data-target="#carousel-example-generic" data-slide-to="'+currentNum+'" class="active"></li>';
+						}else{
+							ol_str += '<li data-target="#carousel-example-generic" data-slide-to="'+currentNum+'"></li>';
+						}
+						
+						$("#banner_ol").append(ol_str);
+						
+						str += '<div class="'+className+'">';
+						if(href!='' && href!=undefined && href!=null){
+							str += '<a href="'+href+'"><img src="'+ad.pic+'" width="100%"></a>';
+						}else{
+							str += '<img src="'+ad.pic+'" width="100%">';
+						}
+						str += '</div>';
+						$("#banner_div").append(str);
+						currentNum ++;
+					}
+				});
+				
+			} else {
+				scs_alert(data.errmsg, 'error');
+			}
+		}, 'json');
+	}
+	
+	function goToSubList(columnId){
+		var url;
+		url = pcs.common.path + "/subList?columnId="+columnId;
+		location.href = url;
+	}
+	
+	function getLatestNew(columnId){
+		var url=pcs.common.path + "/web/news/getNewsList?columnId="+columnId+"&num=4";
+		$.post(url,{},function(data){
+			if(data.success){
+				var rs=data.rs;
+				var str="";
+				if(rs==null||rs==''||rs==undefined){
+					str += '<img src="/resources/images/pic1.jpg">';
+					str += '<li class="bkys"><h2>暂无数据</h2></li>';
+					str += '<div class="clear"></div>';
+				}else{
+					var rsLen = rs.length;
+					str += '<img src="/resources/images/pic1.jpg">';
+					for(var i=0;i<rsLen;i++){
+						var obj = rs[i];
+						var classValue;
+						switch(i)
+						{
+							case 0:
+							  classValue = 'class="bkys1"';
+							  break;
+							case 1:
+							  classValue = 'class="bkys"';
+							  break;
+							case 2:
+							  classValue = '';
+							  break;
+						}
+						var content = pcs.common2.getHertSubStringCH(obj.content,90);
+						str += '<li '+classValue+'><a href="javascript:void(0);" onclick="location.href=\'/info?id='+obj.pkNews+'&columnId='+columnId+'\'"><h2>'+pcs.common2.getHertSubStringCH(obj.title,30)+'</h2><p>'+content+'</p></a></li>';
+					}
+					str += '<div class="clear"></div>';
+				}
+				$("#latestnew_ul").append(str);	
+			}else{
+				scs_alert(data.errmsg);
+			}
+		},'json');
+	}
+	
+	function getAnnouncement(columnId){
+		var url=pcs.common.path + "/web/news/getNewsList?columnId="+columnId+"&num=7";
+		$.post(url,{},function(data){
+			if(data.success){
+				var rs=data.rs;
+				var str="";
+				if(rs==null||rs==''||rs==undefined){
+					str += '<li>暂无数据</li>';
+				}else{
+					var rsLen = rs.length;
+					for(var i=0;i<rsLen;i++){
+						var obj = rs[i];
+						var classValue = '';
+						var cssValue = '';
+						if(i==0){
+							classValue = 'class="gggsdq"';
+							cssValue = 'style="background:#d51c19; color:#FFF;"';
+						}
+						
+						var date = new Date(Date.parse(obj.pubDate.replace(/-/g,"/")));
+						
+						var pubDate = date.getDate()+'/'+(date.getMonth()+1);
+						str += '<li '+classValue+'><span '+cssValue+'>'+pubDate+'月</span><a href="javascript:void(0);" onclick="location.href=\'/info?id='+obj.pkNews+'&columnId='+columnId+'\'">'+pcs.common2.getHertSubStringCH(obj.title,30)+'</a></li>';
+					}
+					str += '<div class="clear"></div>';
+				}	
+				$("#announcement_ul").append(str);	
+			}else{
+				scs_alert(data.errmsg);
+			}
+		},'json');
+	}
+	
+	
+</script>
+<!--Include flickerplate-->
+</head>
+<body>
+	
+<script type="text/javascript">
+	$(document).ready(function() {
+		change_Css();
+	});
+	function change_Css() {
+		var bar = $("#bar").val();
+		if (bar == null || bar == undefined || bar == "") {
+			bar = "0";
+		}
+		$("#presentCss" + bar).addClass("dq");
+	}
+
+	// 设置为主页 
+	function SetHome(obj, vrl) {
+		try {
+			obj.style.behavior = 'url(#default#homepage)';
+			obj.setHomePage(vrl);
+		} catch (e) {
+			if (window.netscape) {
+				try {
+					netscape.security.PrivilegeManager
+							.enablePrivilege("UniversalXPConnect");
+				} catch (e) {
+					alert("此操作被浏览器拒绝！\n请在浏览器地址栏输入“about:config”并回车\n然后将 [signed.applets.codebase_principal_support]的值设置为'true',双击即可。",'warn');
+				}
+				var prefs = Components.classes['@mozilla.org/preferences-service;1']
+						.getService(Components.interfaces.nsIPrefBranch);
+				prefs.setCharPref('browser.startup.homepage', vrl);
+			} else {
+				alert("您的浏览器不支持，请按照下面步骤操作：\n1.打开浏览器设置。\n2.点击设置网页。\n3.输入：" + vrl + "点击确定。",'warn');
+			}
+		}
+	}
+	
+	// 加入收藏 兼容360和IE6 
+	function AddFavorite(sTitle, sURL) {
+		try {
+			window.external.addFavorite(sURL, sTitle);
+		} catch (e) {
+			try {
+				window.sidebar.addPanel(sTitle, sURL, "");
+			} catch (e) {
+				alert("加入收藏失败，请使用Ctrl+D进行添加",'warn');
+			}
+		}
+	}
+	
+	function goTo(columnId,init){
+		var url;
+		if(columnId=='' || columnId==undefined || columnId==null){
+			url = pcs.common.path + "/index";
+		}else{
+			url = pcs.common.path + "/list?columnId="+columnId+"&init="+init;
+		}
+		location.href = url;
+	}
+</script>
+
+
+
+</script>
+
+<input type="hidden" id="bar" value="">
+<div class="Collectionbar">
+	<p>
+		<a href="javascript:void(0);" onclick="SetHome(this,window.location);">设为首页</a>
+		| <a href="javascript:void(0);"
+			onclick="AddFavorite(document.title,window.location);">加入收藏</a> | <a
+			href="javascript:void(0);" onclick="location.href='http://www.fjtcm.edu.cn/'">福建中医药大学首页</a>
+	</p>
+</div>
+<div class="logo">
+	<div class="tel"></div>
+</div>
+<div class="nav">
+	<a href="javascript:void(0);" onclick="goTo();" id="presentCss0">学院首页</a> | 
+	<a href="javascript:void(0);" onclick="goTo('100000000','1');" id="presentCss1">学院概况</a> | 
+	<a href="javascript:void(0);" onclick="goTo('200000000','1');" id="presentCss2">师资队伍</a> | 
+	<a href="javascript:void(0);" onclick="goTo('300000000','1');" id="presentCss3">本科教育</a> | 
+	<a href="javascript:void(0);" onclick="goTo('400000000','1');" id="presentCss4">研究生教育</a> | 
+	<a href="javascript:void(0);" onclick="goTo('500000000','1');" id="presentCss5">科学研究</a> |
+	<a href="javascript:void(0);" onclick="goTo('600000000','1');" id="presentCss6">对外合作</a> | 
+	<a href="javascript:void(0);" onclick="goTo('700000000','1');" id="presentCss7">党建工作</a> | 
+	<a href="javascript:void(0);" onclick="goTo('800000000','1');" id="presentCss8">团学工作</a> | 
+	<a href="javascript:void(0);" onclick="goTo('900000000','1');" id="presentCss9">招生就业</a>
+</div>
+
+
+	<!-- 轮播广告开始-->
+	<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+	        <ol class="carousel-indicators" id="banner_ol">
+	        
+	        </ol>
+	        <div class="carousel-inner" id="banner_div">
+	          
+	        </div>
+	        <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+	          <span class="glyphicon glyphicon-chevron-left"></span>
+	        </a>
+	        <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+	          <span class="glyphicon glyphicon-chevron-right"></span>
+	        </a>
+	      </div>
+	<script src="/resources/js/jquery.min.js"></script>
+	<script src="/resources/js/bootstrap.js"></script>
+	<!-- 轮播广告结束-->
+	
+	
+	
+	<!-- <script>
+		$(window).load(function() {
+			$('.flexslider').flexslider({
+				directionNav: false,
+				pauseOnAction: false
+			});
+		});
+	</script> -->
+	
+	<!-- 轮播广告结束-->
+	<div class="clear"></div>
+	
+	<!--学院动态 -->
+	<div class="xydt1">
+	  <div class="tdleft">
+	      <h1><span style=" float:right; font-size:12px;"><a href="javascript:void(0);" onclick="goTo('130000000','-1');">更多..</a></span>学院动态</h1>
+	      <ul id="latestnew_ul">
+	   		
+	      </ul>
+	  </div>
+	  <div class="tdright">
+		  <h1><span style=" float:right; font-size:12px;"><a href="javascript:void(0);" onclick="goTo('120000000','-1');">更多..</a></span>公告公示</h1>
+		  <ul id="announcement_ul"> 
+			
+		  </ul>
+	  </div>
+	  <div class="clear"></div>
+	</div>
+	
+	<div class="bk1">
+	  <div class="xgxz">
+	    <div class="bt">相关下载</div>
+	    <ul>
+		    <li><a href="javascript:void(0);" onclick="goTo('110000000','1');"><img src="/resources/images/icon1.png" width="140" height="140"><br>党政管理</a></li>
+		    <li><a href="javascript:void(0);" onclick="goTo('110000000','2');"><img src="/resources/images/icon2.png" width="140" height="140"><br>学术资源</a></li>
+		    <li><a href="javascript:void(0);" onclick="goTo('110000000','3');"><img src="/resources/images/icon3.png" width="140" height="140"><br>教学教务</a></li>
+		    <li><a href="javascript:void(0);" onclick="goTo('110000000','4');"><img src="/resources/images/icon4.png" width="140" height="140"><br>学生工作</a></li>
+	    </ul>
+	    <div class="clear"></div>
+	  </div>
+	</div>
+	
+	<!--友情链接 -->
+	<div class="links">
+	<div class="bt">友情链接</div>
+	<ul>
+	    <li><a href="http://www.carm.org.cn" target="_blank" ><img src="/resources/images/links/links01.jpg" title="中国康复医学会"></a></li>
+	    <li><a href="http://www.isprm.org" target="_blank"><img src="/resources/images/links/links02.jpg"  title="国际物理与康复医学学会"></a></li>
+	    <li><a href="http://www.wcpt.org" target="_blank"><img src="/resources/images/links/links03.jpg" title="世界物理治疗师联盟"></a></li>
+	    <li><a href="http://www.wfot.org" target="_blank"><img src="/resources/images/links/links04.jpg" title="世界作业治疗师联盟"></a></li>
+	    <li><a href="http://pht.hk.edu.tw/main.php" target="_blank"><img src="/resources/images/links/links05.jpg" title="台湾弘光科技大学物理治疗系"></a></li>
+	    <li><a href="https://www.creighton.edu" target="_blank"><img src="/resources/images/links/links06.jpg"  title="克瑞顿大学"></a></li>
+	    <li><a href="http://www.duq.edu" target="_blank"><img src="/resources/images/links/links07.jpg" title="杜肯大学"></a></li>
+	    <li><a href="http://www.fjkf.net" target="_blank"><img src="/resources/images/links/links08.jpg" title="附属康复医院"></a></li>
+	</ul>
+	<div class="clear"></div>
+	</div>
+
+	
+<div class="footer">
+	<div class="  footercontent">
+		<div class="left1">
+			<p>地址:福建省福州市闽侯上街邱阳路1号 邮政编码:350122</p>
+			<p>版权所有(C)福建中医药大学闽ICP备05005462</p>
+		</div>
+		<div class="right1">
+			<img src="/resources/images/tel.png" width="300" height="70">
+		</div>
+	</div>
+</div>
+</body>
+
+</html>

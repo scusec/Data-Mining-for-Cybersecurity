@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>中国科技论文在线</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="author" content="">
+    <meta http-equiv="X-UA-Compatible" Content="IE=Edge,chrome=1">
+    <meta name="renderer" content="webkit" />
+    <meta name="viewport" content="width=1100, target-densitydpi=device-dpi, user-scalable=no">
+    <link rel="shortcut icon" href="http://www.paper.edu.cn/app/static/1.0/img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="http://www.paper.edu.cn/app/static/1.0/img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="http://www.paper.edu.cn/app/static/1.0/css/index.css">
+    <script src="http://www.paper.edu.cn/app/static/1.0/js/jquery.1.12.4.min.js"></script>
+    <script src="http://www.paper.edu.cn/app/static/1.0/js/login.js"></script>
+</head>
+<script>
+    (function(){
+        var headerTop=$(".header").height();
+        $(window).scroll(function(){
+            //头部跟着滚动
+            if($(window).scrollTop()>=headerTop)
+            {
+                $(".header").addClass("fixed");
+
+            }else
+            {
+                $(".header").removeClass("fixed");
+            }
+            var gotop = $("body").scrollTop() || $(document).scrollTop();
+            if(gotop > 400){
+                //var hid = $(document).width()/2+550;
+                $('.goTop').removeClass('hide');
+                $('.goTop').css({
+                    'position':'fixed',
+                    'left':'90%',
+                    'top':'70%'
+                });
+
+        } else {
+            $('.goTop').addClass('hide');
+        }
+    });
+})();
+</script>
+
+<body >
+    <!--返回顶部-->
+    <div class="goTop hide">
+        <i href="" class="iconfont icon-back-top"></i>
+    </div>
+    <!--头部导航-->
+    <div class="top-nav">
+        <div class="width1100">
+            <ul class="right">
+                <li>
+                    <a href="http://www.paper.edu.cn/user/paper/tougao/"><i class="top-nav01"></i>投稿</a>
+                </li>
+                <li>
+                    <a href="http://www.paper.edu.cn/search/index"><i class="top-nav02"></i>检索</a>
+                </li>
+                <li>
+                    <a href="http://www.paper.edu.cn/releasepaper/subject.shtml"><i class="top-nav03"></i>学科</a>
+                </li>
+                <li>
+                   <a href="javascript:alert('全新功能正在建设，敬请期待!');"><i class="top-nav04"></i>机构</a>
+                    <!--<a href="http://www.paper.edu.cn/releasepaper/school/index.shtml"><i class="top-nav04"></i>机构</a>-->
+                </li>
+                <li>
+                    <a href="http://oa.paper.edu.cn/"><i class="top-nav05"></i>OA</a>
+                </li>
+                <!--<li class="hasuserbox" id="user_login">-->
+                <li id="user_login">
+                    <a class="login" onclick="loginbox()" href="javascript:void(0)">登录</a>
+                </li>
+                <!--<li class="marit10" id="user_register">-->
+                <li class="marit10 hassetting" id="user_register">
+                    <a class="quickRegister" href="http://www.paper.edu.cn/user/register/index">快速注册</a>
+                </li>
+                <li id="user_quit" class="marit10 hassetting">
+                </li>
+                <li>
+                    <i class="shu"></i>
+                    <a href="http://en.paper.edu.cn/">
+                        <span class="bule">English</span>
+                    </a>
+                </li>
+                <!-- <li>
+                    <a href="http://www.paper.edu.cn/jpuser/main">
+                        <span class="bule">进入精品组稿</span>
+                    </a>
+                </li> -->
+            </ul>
+        </div>
+    </div>
+    <!--nav导航-->
+    <div class="header width1100">
+        <div class="logo left">
+            <a href="http://www.paper.edu.cn/">
+                <img src="http://www.paper.edu.cn/app/static/1.0/img/lw_logo.png">
+            </a>
+        </div>
+        <div class="header-nav right">
+            <ul>
+                <li class="active_index">
+                    <a href="http://www.paper.edu.cn/">首页</a>
+                    <i></i>
+                    <b></b>
+                </li>
+                <li class="active_releasepaper">
+                    <a href="http://www.paper.edu.cn/releasepaper/index.shtml">首发</a>
+                    <i></i>
+                    <b></b>
+                </li>
+                <li class="active_journal">
+                    <a href="http://www.paper.edu.cn/journal/index.shtml">期刊</a>
+                    <i></i>
+                    <b></b>
+                </li>
+                <li class="active_scholar">
+                    <a href="http://www.paper.edu.cn/lwzx/scholar">学者</a>
+                    <i></i>
+                    <b></b>
+                </li>
+                <li class="active_scholar">
+                    <a href="javascript:alert('学术社区构建中......敬请期待！!');">社区</a>
+                    <i></i>
+                    <b></b>
+                </li>
+            </ul>
+        </div>
+        <div class="adress">
+            <i></i> 您当前所在位置：
+            <a href="http://www.paper.edu.cn/" class="index_title">首页</a>
+        </div>
+    </div>
+    <!--弹出框-->
+    <div class="alerx-box" id="notice" style="display: none;z-index: 99999">
+        <div class="alert">
+            <!-- 提示-->
+            <div class="alert-phone2">
+                <div class="alert-title">
+                    <img src="http://www.paper.edu.cn/app/static/1.0/img/alert_logo.png">提示
+                    <i class="iconfont icon-icon right" id="notclose"></i>
+                </div>
+                <div class="alert-content">
+                    <p class="alert-text" id="alert_text2"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <input id="baseurl" value="http://www.paper.edu.cn/" type="hidden">
+    <div class="alerx-box" id="loginbox" style="display: none;">
+        <div class="alert">
+            <!-- 提示-->
+            <!--登录弹出框-->
+            <div class="alert-login">
+                <div class="alert-title">
+                    <img src="http://www.paper.edu.cn/app/static/1.0/img/alert_logo.png">登录到中国科技论文在线
+                    <i class="iconfont icon-icon right" id="loginclose"></i>
+                </div>
+                <div class="alert-login-content">
+                    <div class="tab-title">
+                        <span class="active">账号密码登录</span>
+                        <span class="tab-right">短信快速登录</span>
+                    </div>
+                    <!--账号登录-->
+                    <div class="tab-content">
+                        <form id="loginAlert">
+                            <p class="alert-input"><i class="iconfont icon-yonghu1"></i>
+                                <input type="text" placeholder="手机号/邮箱/昵称" name="user_account" required="ture"><i class="iconfont icon-icon"></i>
+                            </p>
+                            <p class="alert-input"><i class="iconfont icon-iconfontlock"></i>
+                                <input type="password" placeholder="密码" name="user_pwd" required="ture"><i class="iconfont icon-keyboard"></i>
+                            </p>
+                            <p class="alert-input" style="position:relative;">
+                              <input style="width:80px" required="ture" class="setting-login-yzm" name="imgcode" type="text" size='4' placeholder="验证码" />
+                              <span class="setting-login-change right" ><a style="font-size: 12px;" onclick="changess();" href="javascript:void(0)">看不清，换一个</a></span>
+                              <span style="position: absolute;left:78px;" class="setting-login-yzmimg right"><img  id="checkcode"  src="http://www.paper.edu.cn/user/login/checkcode/"/></span>
+                            </p>
+                            <input type="hidden" name="lgtype" value="1" id="lgtype" required="ture" />
+                            <p class="alert-check">
+                                <span>
+                              <label for="autoLogin" class="redcheck redchecked"></label> 
+                              <input type="checkbox" id="autoLogin" checked="true" >下次自动登录
+                              </span>
+                            </p>
+                            <input type="submit" class="loginBtn" value="登录">
+                            <p class="login-help"><a class="right" href="http://www.paper.edu.cn/user/person/forgotPass">无法访问您的账户？</a></p>
+                        </form>
+                    </div>
+                    <!--短信登录-->
+                    <div class="tab-content tab-content2">
+                        <form id="loginPhone">
+                            <p class="alert-input"><i class="iconfont icon-shouji"></i>
+                                <input type="text" placeholder="手机号" name="user_phone" id="userphone2"  required="ture"><i class="iconfont icon-icon"></i>
+                            </p>
+                            <p class="alert-input alert-code">
+                                <input type="text" placeholder="验证码" name="user_code" required="ture">
+                                <button type="button" class="getCode" onclick="authcode(this,2);return false;" >获取验证码</button>
+                            </p>
+                            <input type="hidden" name="lgtype" value="2" required="ture"/>
+                            <input type="submit" class="loginBtn" value="登录">
+                        </form>
+                    </div>
+                    <p class="login-center" id="zhlg_error"></p>
+                </div>
+                <div class="alert-footer">
+                    <a href="">快速登录</a>
+                    <a id="qqurl"><i class="iconfont icon-qq"></i></a>
+                    <a id="weibourl"><i class="iconfont icon-zliconweibo01"></i></a>
+                    <a id="weixinurl"><i class="iconfont icon-disanfangweixin"></i></a>
+                    <a class="right" href="http://www.paper.edu.cn/user/register/index">前往注册</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--跟随导航栏-->
+    <div class="movenav top-nav" style="display: none">
+        <div class="movenav-logo left"><img src="http://www.paper.edu.cn/app/static/1.0/img/lw_logo.png"></div>
+        <div class="movebignav left">
+            <ul>
+                <li class="active_index">
+                    <a href="http://www.paper.edu.cn/">首页</a>
+                </li>
+                <li class="active_releasepaper">
+                    <a href="http://www.paper.edu.cn/releasepaper/index.shtml">首发</a>
+                </li>
+                <li class="active_journal">
+                    <a href="http://www.paper.edu.cn/journal/index.shtml">期刊</a>
+                </li>
+                <li class="active_scholar">
+                    <a href="http://www.paper.edu.cn/lwzx/scholar">学者</a>
+                </li>
+                <li class="active_scholar">
+                    <a href="javascript:alert('学术社区构建中......敬请期待！!');">社区</a>
+                </li>
+            </ul>
+        </div>
+        <ul class="right">
+            <li>
+                <a target="_blank" href="http://www.paper.edu.cn/user/paper/tougao"><i class="top-nav01"></i>投稿</a>
+            </li>
+            <li>
+                <a target="_blank" href="http://www.paper.edu.cn/search/index"><i class="top-nav02"></i>检索</a>
+            </li>
+            <li>
+                <a target="_blank" href="http://www.paper.edu.cn/releasepaper/subject.shtml"><i class="top-nav03"></i>学科</a>
+            </li>
+            <li>
+                <a target="_blank" href="http://www.paper.edu.cn/releasepaper/school/index.shtml"><i class="top-nav04"></i>机构</a>
+            </li>
+            <li>
+                <a target="_blank" href="http://oa.paper.edu.cn/"><i class="top-nav05"></i>OA</a>
+            </li>
+            <!--<li class="hasuserbox" id="user_logins">-->
+            <li id="user_logins">
+                <a class="login" onclick="loginbox()" href="javascript:void(0)">登录</a>
+            </li>
+            <!--<li id="user_registers">-->
+            <li class="marit10 hassetting" id="user_registers">
+                <a class="quickRegister" href="http://www.paper.edu.cn/user/register/index">快速注册</a>
+            </li>
+            <li id="user_quits" class="marit10 hassetting">
+            </li>
+            <li>
+                <i class="shu"></i>
+                <a target="_blank" href="http://www.paper.edu.cn/lwzx/en">
+                    <span class="bule">English</span>
+                </a>
+            </li>
+            <!-- <li>
+                <a href="http://www.paper.edu.cn/jpuser/main">
+                    <span class="bule">进入精品组稿</span>
+                </a>
+            </li> -->
+        </ul>
+    </div>
+    <script>
+        $(window).scroll(function(){
+            var height = $("body").scrollTop() || $(document).scrollTop();
+            if(height>148){
+                $('.movenav').show();
+            }else{
+                $('.movenav').hide();
+            }
+        });
+    </script>
+
+<link href="http://www.paper.edu.cn/app/static/1.0/css/owl.carousel.css" rel="stylesheet" type="text/css">
+<link href="http://www.paper.edu.cn/app/static/1.0/css/animate.css" type="text/css" rel="stylesheet">
+<input id="baseurl" value="http://www.paper.edu.cn/" type="hidden">
+<!--主要内容-->
+<div class="main width1100">
+    <div class="runimg">
+        <!--轮播图-->
+        <div id="owl-demo" class="owl-carousel" style="height: 415px;display: block">
+                        <a class="item" target="_blank" href="http:&#47;&#47;www&#46;paper&#46;edu&#46;cn&#47;releasepaper">
+                <img src="&#47;uploads&#47;carousel&#47;8efc8f8f2c98ceedd4dedc464a05ab91&#46;jpg" alt="首页首发" style="width: 1100px; height: 415px">
+                                <div class="runtext">
+                    <span class="halfbox"></span>
+                    <p><span class="runtext-title">首发论文总数</span></p>
+                    <p class="totalnum"><span>95682</span>篇</p>
+                    <p class="updateTime"><i class="iconfont icon-biao"></i>最新更新<span>2017-10-28</span></p>
+                    <span class="halfbox halfboxbot"></span>
+                </div>
+                            </a>
+                        <a class="item" target="_blank" href="http:&#47;&#47;www&#46;paper&#46;edu&#46;cn&#47;releasepaper&#47;content&#47;201710-78">
+                <img src="&#47;uploads&#47;carousel&#47;c960c9a05eda5523c4201f75b03fca83&#46;png" alt="表面硫化方式制备ZnO&#47;ZnS核壳纳米结构及其发光性质研究" style="width: 1100px; height: 415px">
+                            </a>
+                        <a class="item" target="_blank" href="http:&#47;&#47;www&#46;paper&#46;edu&#46;cn&#47;lwzx&#47;scholar">
+                <img src="&#47;uploads&#47;carousel&#47;bb1f54c8b7ff9ae99aa35efe384b5573&#46;jpg" alt="首页学者" style="width: 1100px; height: 415px">
+                                <div class="runtext">
+                    <span class="halfbox"></span>
+                    <p><span class="runtext-title">知名学者总数</span></p>
+                    <p class="totalnum"><span>137752</span>篇</p>
+                    <p class="updateTime"><i class="iconfont icon-biao"></i>最新更新<span>2017-10-28</span></p>
+                    <span class="halfbox halfboxbot"></span>
+                </div>
+                            </a>
+                        <a class="item" target="_blank" href="http:&#47;&#47;www&#46;paper&#46;edu&#46;cn&#47;journal&#47;index&#46;shtml">
+                <img src="&#47;uploads&#47;carousel&#47;66fd13c45c2536b0231abf146a4db99a&#46;jpg" alt="首页期刊" style="width: 1100px; height: 415px">
+                                <div class="runtext">
+                    <span class="halfbox"></span>
+                    <p><span class="runtext-title">期刊论文总数</span></p>
+                    <p class="totalnum"><span>1299153</span>篇</p>
+                    <p class="updateTime"><i class="iconfont icon-biao"></i>最新更新<span>2017-10-28</span></p>
+                    <span class="halfbox halfboxbot"></span>
+                </div>
+                            </a>
+                        <a class="item" target="_blank" href="http:&#47;&#47;www&#46;paper&#46;edu&#46;cn&#47;lwzx&#47;youxiu&#95;new">
+                <img src="&#47;uploads&#47;carousel&#47;5aaadc6bf6fe207c7a573362a8b5371e&#46;jpg" alt="首页精品" style="width: 1100px; height: 415px">
+                            </a>
+            
+        </div>
+        <!--登录框-->
+        <div class="mini-login">
+            <p class="mini-login-title"><span>用户登录</span>/<a href="http://www.paper.edu.cn/user/register/index">注册</a></p>
+            <form id="loginIndex">
+            <p class="mini-input">
+                <i class="iconfont icon-yonghu"></i>
+                <b></b>
+                <input type="text" placeholder="手机号/邮箱/昵称" name="user_account" required="ture">
+            </p>
+            <p class="mini-input">
+                <i class="iconfont icon-mima1"></i>
+                <b></b>
+                <input type="password" placeholder="密码" name="user_pwd" required="ture">
+                <input type="hidden" value="1" name="lgtype" required="ture">
+            </p>
+            <p class="mini-input" style="position:relative;">
+              <input  style="width:80px;height: 26px;line-height: 26px; padding-left: 6px; position: relative;top: 1px;width: 72px;" required="ture" name="imgcode" type="text" size='4' placeholder="验证码" />
+              <span class="setting-login-change right" ><a style="font-size:12px;" onclick="changess1();" href="javascript:void(0)">看不清，换一个</a></span>
+              <span style="position: absolute;left:78px;" class="setting-login-yzmimg right"><img  id="checkcode1"  src="http://www.paper.edu.cn/user/login/checkcode/"/></span>
+            </p>
+            <p class="mini-help"><!-- <a href="http://www.paper.edu.cn/lwzx/jpuser/main/">进入精品组稿</a> --><a href="http://highlights.paper.edu.cn">进入精品组稿</a><a class="right" href="http://www.paper.edu.cn/user/person/forgotPass">无法访问您的账户?</a></p>
+            <p class="login-center" id="zhlg_error1"></p>
+            <p class="mini-btn">
+            <input  type="submit"  value="登&nbsp;录">
+            <!-- <a href="javascript:void(0)" id="loginSub">登<i class="halfem"></i>录</a> -->
+            </p>
+            </form>
+            <p class="mini-san">
+                第三方授权登录
+                <a class="login_weixin" href="javascript:void(0);" onclick="thirdlogin('weixin');"><i class="iconfont icon-weixin"></i></a>
+                <a class="login_qq" href="javascript:void(0);" onclick="thirdlogin('qq');"><i class="iconfont icon-qq"></i></a>
+                <a class="login_weibo" href="javascript:void(0);" onclick="thirdlogin('weibo');"><i class="iconfont icon-iconfontweibowukuang"></i></a>
+            </p>
+        </div>
+    </div>
+</div>
+<!--期刊检索-->
+<div class="journal-search">
+    <p class="botsanjiao"><i></i></p>
+    <p class="search-title">科技论文跨平台全文检索</p>
+    <!--<p class="search-nav">
+        <em><a href="javascript:;">首发论文 </a><b></b></em>
+        <em><a href="javascript:;">学者专著 </a><b></b></em>
+        <em><a href="javascript:;">OA期刊 </a><b></b></em>
+        <em><a href="javascript:;">机构资源 </a><b></b></em>
+        <em><a href="javascript:;">社区话题 </a></em>
+    </p>-->
+    <div class="search-box">
+        <div class="search-input">
+            <i class="search-icon"></i>
+            <input type="text" name="searchContent" value="">
+        </div>
+        <button class="search-btn" onclick="window.location.href='http://www.paper.edu.cn/search/simple?searchContent='+$(this).prev('div').children('input').val();">检索</button>
+        <button class="search-btn search-senior" onclick="window.location.href='http://www.paper.edu.cn/search/index?searchContent='+$(this).prev().prev('div').children('input').val();">高级检索</button>
+    </div>
+</div>
+<!--分类列表-->
+<div class="index-books width1100">
+    <ul>
+        <li>
+            <a target="_blank" href="http://www.paper.edu.cn/releasepaper/index.shtml">
+                <i class="searchbox-back"></i>
+                <p class="searchbox-title">首发<b></b>论文库</p>
+                <p class="searchbox-info">最大最规范预印本论文库</p>
+                <img src="http://www.paper.edu.cn/app/static/1.0/img/searchbox01.png">
+                <em class="search-qp"><i class="iconfont icon-qipao2"></i><span >0</span></em>
+                <p class="searchbox-number">在库论文<span>95682</span>篇 <i class="halfem"></i>今日更新</p>
+            </a>
+        </li>
+        <li>
+            <a target="_blank" href="http://www.paper.edu.cn/journal/index.shtml">
+                <i class="searchbox-back"></i>
+                <p class="searchbox-title">期刊<b></b>论文库</p>
+                <p class="searchbox-info">全免费OA论文库</p>
+                <img src="http://www.paper.edu.cn/app/static/1.0/img/searchbox02.png">
+                <em class="search-qp"><i class="iconfont icon-qipao2"></i><span >0</span></em>
+                <p class="searchbox-number">在库论文<span>1299153</span>篇 <i class="halfem"></i>今日更新</p>
+            </a>
+        </li>
+        <li>
+            <a href="http://www.paper.edu.cn/lwzx/scholar">
+                <i class="searchbox-back"></i>
+                <p class="searchbox-title">知名<b></b>学者库</p>
+                <p class="searchbox-info">学者主题OA论文库及学者关系库</p>
+                <img src="http://www.paper.edu.cn/app/static/1.0/img/searchbox03.png">
+                <em class="search-qp"><i class="iconfont icon-qipao2"></i><span >0</span></em>
+                <p class="searchbox-number">在库学者论文<span>137752</span>篇 <i class="halfem"></i>今日更新</p>
+            </a>
+        </li>
+        <li class="nomar">
+            <a href="javascript:alert('学术社区构建中......敬请期待！');">
+                <i class="searchbox-back" style="visibility: hidden"></i>
+                <p class="searchbox-title">学术<b></b>社区</p>
+                <p class="searchbox-info">最新、最全、最科学，一站互动</p>
+                <img src="http://www.paper.edu.cn/app/static/1.0/img/searchbox04.png">
+                <!--<em class="search-qp"><i class="iconfont icon-qipao2"></i><span >0</span></em>-->
+                <p class="searchbox-number">在库论文<span>0</span>篇 <i class="halfem"></i>今日更新</p>
+            </a>
+        </li>
+    </ul>
+</div>
+
+<script type="text/javascript" src="http://www.paper.edu.cn/app/static/1.0/js/owl.carousel.min.js"></script>
+<script type="text/javascript" src="http://www.paper.edu.cn/app/static/1.0/js/Html/index.js"></script>
+
+<!--中国科技论文在线相关-->
+<div class="online-about">
+    <div class="width1100">
+        <ul class="left">
+            <li>
+                <p><i class="iconfont icon-weixin"></i>关注微信</p>
+                <img style="width: 90px; height: 90px" src="http://www.paper.edu.cn/app/static/1.0/img/weixin.png">
+                <p>中国科技论文在线</p>
+            </li>
+            <li>
+                <p><i class="iconfont icon-iconfontweibowukuang"></i>关注微博</p>
+                <img style="width: 90px; height: 90px" src="http://www.paper.edu.cn/app/static/1.0/img/guanzhu.gif">
+                <p>中国科技论文在线</p>
+            </li>
+            <li>
+                <p>
+                    <i>
+                        <img src="http://www.paper.edu.cn/app/static/1.0/img/alert_logo.png" style="position: relative; width: 16px; top: 9px;">
+                    </i>
+                    关注微网站
+                </p>
+                <img style="width: 90px; height: 90px" src="http://www.paper.edu.cn/app/static/1.0/img/qrcode.png">
+                <p>中国科技论文在线</p>
+            </li>
+        </ul>
+        <div class="right">
+            <p class="online-title">中国科技论文在线</p>
+            <p class="online-text">中国科技论文在线是经教育部批准，由教育部科技发展中心主办， 利用现代信息技术手段，打破传统出版物的概念，针对论文发表困难，学术交流渠道窄，不利于研究成果快速、高效地转化为现实生产力而创建的科技论文网站。给科研人员提供一个方便、快捷的交流平台，提供及时发表成果和新观点的有效渠道，从而使新成果得到及时推广，科研创新思想得到及时交流。 </p>
+            <ul class="onlineBtn">
+                <li class="tem-introduction"><a target="_blank" href="http://www.paper.edu.cn/templates/introduction.shtml">在线简介</a></li>
+                <li class="tem-service"><a target="_blank" href="http://www.paper.edu.cn/templates/service.shtml">服务条款</a></li>
+                <li class="tem-novice"><a target="_blank" href="http://www.paper.edu.cn/templates/novice.shtml">新手帮助</a></li>
+                <li class="tem-problem"><a target="_blank" href="http://www.paper.edu.cn/templates/problem.shtml">常见问题</a></li>
+                <li class="tem-consultant"><a target="_blank" href="http://www.paper.edu.cn/templates/consultant.shtml">顾问委员会</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!--中国科技论文在线相关-->
+<div class="online-about templateOnline shoufaOnline">
+    <div class="width1100">
+        <div class="alist">
+            <p>
+                <a target="_blank" href="http://www.moe.edu.cn/">中华人民共和国教育部</a>
+                <a target="_blank" href="http://www.dost.moe.edu.cn/">教育部科学技术司</a>
+                <a target="_blank" href="http://www.cutech.edu.cn/cn/index.htm">教育部科技发展中心</a>
+                <a target="_blank" href="http://www.edu.cn/">中国教育与科研计算机网</a>
+                <a target="_blank" href="http://www.cdgdc.edu.cn/">教育部学位与研究生教育发展中心</a>
+                <a target="_blank" href="http://www.csc.edu.cn/" class="nomar">国家留学基金委</a>
+            </p>
+            <p class="linetwo">
+                <a target="_blank" href="http://www.chaxin.edu.cn/">教育部科技查新服务平台</a>
+                <a target="_blank" href="http://www.meeting.edu.cn/">中国学术会议在线</a>
+                <a target="_blank" href="http://teacher.eol.cn/">中国教育人力资源系统</a>
+                <a target="_blank" href="http://www.jyb.cn/">中国教育新闻网</a>
+                <a target="_blank" href="http://www.chisa.edu.cn/">神州学人</a>
+                <a target="_blank" href="http://www.eol.cn/">中国教育在线</a>
+                <a target="_blank" href="http://www.shop.edu.cn/">团队文档库</a>
+                <a target="_blank" href="http://oa.paper.edu.cn/" class="nomar">OA在线资源集成平台</a>
+            </p>
+        </div>
+    </div>
+</div>
+
+<!--页面底部-->
+<div class="footer">
+    <div class="width1100 indexfoot">
+        <div class="left">
+            <p class="footlist"><span>中国科技论文在线 版权所有</span></p>
+            <p class="footlist">
+                <em class="fmar"><a target="_blank" href="http://www.paper.edu.cn/">网站地图</a>|</em>
+                <em><a target="_blank" href="http://www.paper.edu.cn/">在线首页</a>|</em>
+                <em><a target="_blank" href="http://www.paper.edu.cn/templates/introduction.shtml">在线简介</a>|</em>
+                <em><a target="_blank" href="http://www.paper.edu.cn/templates/service.shtml">服务条款</a>|</em>
+                <em><a target="_blank" href="http://www.paper.edu.cn/templates/contact.shtml">联系我们</a></em>
+            </p>
+            <p class="footer-number">
+                <span>
+                    <a href="http://www.miitbeian.gov.cn/publish/query/indexFirst.action" target="_blank">京ICP备15006316号-2</a> |
+                    <a href="http://www.paper.edu.cn/templates/xuke.shtml" target="_blank">网络出版服务许可证 （总）网出证（京）字第257号</a>
+                    | 文保网安备案号：1101080066
+                </span>
+            </p>
+            <p class="footer-from">
+                <em>主管 :<a href="http://www.moe.edu.cn/" target="_blank">中华人民共和国教育部</a></em>
+                <em>主办 :<a href="http://www.cutech.edu.cn/cn/index.htm" target="_blank">教育部科技发展中心</a></em>
+            </p>
+            <p class="footer-from"><em class="nomari">技术支持 :<a href="http://www.cer.net/" target="_blank">赛尔互联（北京）教育科技有限公司</a></em></p>
+        </div>
+        <div class="right">
+            <p class="footlist"><span>CONTACT US</span></p>
+            <p>中华人民共和国北京市海淀区中关村大街35号</p>
+            <p class="foot-rightP"><span>Tel: </span>86-10-62514688</p>
+            <p class="foot-rightP"><span>Fax: </span>86-10-62514767</p>
+            <p class="foot-rightP"><span>Email: </span>paper@cutech.edu.cn</p>
+        </div>
+    </div>
+</div>
+<!--返回顶部-->
+<div class="goTop hide">
+    <i href="" class="iconfont icon-back-top"></i>
+</div>
+<!-- js文件写在页面最底部 -->
+</body>
+<script src="http://www.paper.edu.cn/app/static/1.0/js/comment.js" type="text/javascript"></script>
+<script>
+    $(function(){
+        $.ajax({
+            url: 'http://www.paper.edu.cn/index/getSession',
+            type: "GET",
+            dataType: 'JSON',
+            jsonp: 'callback',
+            jsonpCallback: 'callback',
+            dataFilter: function (data, type) {
+                return data;
+            },
+            success: function (json) {
+                $('#user_login').html(json.msg.user_login);
+                $('#user_logins').html(json.msg.user_login);
+                $('#user_register').html(json.msg.user_register);
+                $('#user_registers').html(json.msg.user_register);
+                $('#user_quit').html(json.msg.user_quit);
+                $('#user_quits').html(json.msg.user_quit);
+                $('.mini-login').html(json.msg.mini_login);
+                //登录名称长度
+                if($('.user-name2').height()>33){
+                    $('.user-name2').css('font-size','18px');
+                }
+                return false;
+            },
+            error: function (XMLHttpRequest, textStatus, errorThrown) {
+                return false;
+            }
+        });
+       
+    })
+    $('.goTop').bind('click', function(){
+        $('html, body').animate({
+            scrollTop: 0
+        }, 300);
+    });
+</script>
+</html>

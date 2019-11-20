@@ -1,0 +1,802 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html><head><title>浙江农林大学暨阳学院图书馆</title>
+
+
+
+
+<meta content="text/html; charset=UTF-8" http-equiv="Content-type"><link rel="Shortcut Icon" href="static/favicon.ico">
+<meta name="ROBOTS" content="ALL">
+<meta content="no" http-equiv="imagetoolbar">
+<meta name="MSSmartTagsPreventParsing" content="true">
+<meta name="Copyright" content="This site's design and contents Copyright (c) 2010 东湖信息技术服务中心.">
+<meta name="keywords" content="网站管理系统">
+<meta name="description" content="提供专业网站、系统的建设服务.">
+<meta name="copyright" content="东湖信息技术服务中心">
+<meta name="author" content="fish走出地球"><link rel="stylesheet" type="text/css" href="dfiles/14362/static/front/default/css/base2.css" media="screen"><script type="text/javascript" src="dfiles/14362/static/front/default/js/jquery.min.js"></script><script type="text/javascript" src="dfiles/14362/static/front/default/js/thickbox.js"></script><script type="text/javascript" src="dfiles/14362/static/front/default/js/jquery.backstretch.min.js"></script><script type="text/javascript">
+        function AddFavorite(title, url) {
+            try {
+                window.external.addFavorite(url, title);
+            }
+            catch (e) {
+                try {
+                    window.sidebar.addPanel(title, url, "");
+                }
+                catch (e) {
+                    alert("抱歉，您所使用的浏览器无法完成此操作。\n\n加入收藏失败，请使用Ctrl+D进行添加");
+                }
+            }
+        }
+        
+        </script><link rel="stylesheet" type="text/css" href="dfiles/14362/static/front/default/css/style.css"><link rel="stylesheet" type="text/css" href="dfiles/14362/static/front/default/css/thickbox.css"><link rel="stylesheet" type="text/css" href="dfiles/14362/static/front/default/css/base_2col.css"><link rel="stylesheet" type="text/css" href="dfiles/14362/static/front/default/css/homepage2.css">
+
+<!--Announced by Visual SiteBuilder 9-->
+<link rel="stylesheet" type="text/css" href="_sitegray/_sitegray_d.css" />
+<script language="javascript" src="_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232307003475455525643055748 -->
+<link rel="stylesheet" type="text/css" href="index.vsb.css" />
+<META Name="keywords" Content="暨阳学院，图书馆" />
+<script type="text/javascript" src="system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1001,'/index.jsp',-1,1158594810)</script>
+</head>
+<body id="generic" class="default" target="_blank"><a href="xwgg.htm"></a><a href="info/1052/1170.htm"></a><a href="index/gdtp/xstj.htm"></a>
+<div id="wrapper">
+<div id="header">
+<div id="header_logo_bar">
+<div id="bgpic"><!--#begineditable name="首图变换" viewid="44892"--><style type="text/css">
+ul,li{
+    padding:0;
+    margin:0;
+    list-style:none;}
+#flashBoxu_u0_{
+    width:810px;
+    height:275px;
+    border:0px solid #EEE;
+    position:relative;
+    margin-left: auto;
+    margin-right: auto;}
+#flashBoxu_u0_ img{
+    /*初始不要显示*/
+    display:none;
+    /*用边框来实现空位，因为margin和paading有时会引起些麻烦*/
+    border:0px solid #FFF;}
+#flashBoxu_u0_ ul{
+    position:absolute;
+    right:7px;
+    bottom:3px;
+    font:9px tahoma;}
+#flashBoxu_u0_ ul li{
+    display:block;
+    float:left;
+    width:12px;
+    height:12px;
+    line-height:12px;
+    margin-right:3px;
+    border:0px solid #999;
+    background:#F0F0F0;
+    text-align:center;
+    cursor:pointer;}
+#flashBoxu_u0_ ul li.hover{
+    border-color:red;
+    background:#FFE1E1;
+    color:red;}
+</style>
+<script type="text/javascript">
+function flashBoxCtrl(o){
+    this.obj=document.getElementById(o);
+    //这个私有方法虽然写了，但暂时没用到
+    function addListener(ele,eventName,functionBody){
+        if (ele.attachEvent){
+            ele.attachEvent("on"+eventName, functionBody);
+        }else if (ele.addEventListener){
+            ele.addEventListener("on"+eventName,functionBody, false);
+        }else{
+            return false;
+        }
+    }
+    //初始化
+    this.init=function(){
+        var objImg=this.obj.getElementsByTagName("img");
+        var tagLength=objImg.length;
+        if (tagLength>0){
+            var oUl=document.createElement("ul");
+            oUl.setAttribute("id",o+"numTag");
+            for (var i=0;i<tagLength;i++){
+                var oLi=oUl.appendChild(document.createElement("li"));
+                if (i==0){
+                    oLi.setAttribute("class","hover"); //初始化时把第一个设置为高亮
+                    oLi.setAttribute("className","hover");
+                }
+                //设置标签的数字
+                oLi.appendChild(document.createTextNode((i+1)));
+            }
+            this.obj.appendChild(oUl);
+            objImg[0].style.display="block";
+            //设置标签事件
+            var oTag=this.obj.getElementsByTagName("li");
+            for (var i=0;i<oTag.length;i++){
+                var flag = 0;
+                var temp = 0;
+                var timeout=null;
+                var step = function(){
+                    for (j=0;j<oTag.length;j++){
+                        oTag[j].className="";
+                        objImg[j].style.display="none";
+                    }
+                    this.className="hover";
+                    flag = flag>=oTag.length-1?0:flag+1;
+                    objImg[flag].style.display="block";
+                    oTag[flag].className = "hover";
+                    timeout = setTimeout(step,6000);
+                };
+                oTag[i].onmouseover=function(){
+                    for (j=0;j<oTag.length;j++){
+                        oTag[j].className="";
+                        objImg[j].style.display="none";
+                        temp = j;
+                    }
+                    this.className="hover";
+                    objImg[this.innerHTML-1].style.display="block";
+                    temp = this.innerHTML-1;
+                    flag = i;
+                    clearInterval(timeout);
+                }
+                oTag[i].onmouseout = function(){
+                    for (j=0;j<oTag.length;j++){
+                        oTag[j].className="";
+                        objImg[j].style.display="none";
+                    }
+                    flag = temp;
+                    objImg[temp].style.display="block";
+                    oTag[temp].className = "hover";
+                    timeout = setTimeout(step,6000);
+                }
+                if(i==0)
+                {
+                    timeout = setTimeout(step,6000);
+                }
+            }
+        }
+    };
+    //自动滚动的方法还没写
+    this.imgRoll=function(){};
+    //生成对象时自动加载init()方法以初始化对象
+    this.init();
+}
+</script>
+<table cellspacing="0" cellpadding="0" border="0"><tr><td><div id="flashBoxu_u0_"><img src="images/004.jpg" border="0" width="810" height="275" /><img src="images/003.jpg" border="0" width="810" height="275" /><img src="001.jpg" border="0" width="810" height="275" /><img src="images/002.jpg" border="0" width="810" height="275" /><img src="images/12.jpg" border="0" width="810" height="275" /></div></td></tr></table><SCRIPT language="JavaScript">new flashBoxCtrl("flashBoxu_u0_");</SCRIPT><!--#endeditable-->&nbsp;</div>
+<div id="nav-top">
+<ul>
+<li><a href="javascript:void(0);" onclick="AddFavorite('浙江农林大学暨阳学院图书馆','http://jylib.zafu.edu.cn/')">收藏本站</a> </li>
+<li><a href="http://www.zjyc.edu.cn/" target="_blank">学院首页</a> </li>
+<li><a href="http://10.10.28.223/auth/login.do?service=http%3A%2F%2F10.10.28.223%2Foa%2Findex.do" target="_blank">办公系统</a> </li></ul></div>
+<div id="nav-top3"><iframe height="20" marginheight="0" src="http://i.tianqi.com/index.php?c=code&amp;id=1&amp;icon=1&amp;py=zhuji&amp;wind=0&amp;num=1" frameborder="0" width="275" name="I1" marginwidth="0" scrolling="no"></iframe></div>
+<div id="nav-global"><!--#begineditable name="网站导航" viewid="42472"--><ul class="nav">
+<li class="parent"><a href="index.htm">首页</a>
+ </li>
+<li class="parent"><a href="info/1019/1131.htm">我的图书馆</a>
+ </li>
+<li class="parent"><a href="tsjg.htm">图书荐购</a>
+ </li>
+<li class="parent"><a href="http://da.zjyc.edu.cn/">档案室</a>
+ </li>
+<li class="parent"><a href="http://zjyc.check.cnki.net/">论文检测</a>
+ </li>
+</ul><!--#endeditable--></div><div id="nav-global1"><table width="200" border="0">
+  <tr>
+    <td width="80"></td>
+    <td><!--#begineditable name="简单检索" viewid="44696"-->
+
+
+
+
+
+<form action="jgjsy.jsp?wbtreeid=1001" method="post" name="a44696a" onsubmit="return subsearchdataa44696a()" style="display: inline">
+  <input type="hidden" name="Find" value="find"><input type="hidden" name="entrymode" value="1"><input type="hidden" id="INTEXT2" name="INTEXT2" value=""><input type="hidden" name="news_search_code">
+ <table border="0" cellspacing="1" cellpadding="0">
+      <tr>
+           <td Valign="middle" nowrap="nowrap" height="22">
+                 <span style="font-size:9pt">站内搜索：</span>
+                  <input type="hidden" name="condition" value="0">   </td><td>
+                <span id="intextspana44696a"></span>
+                <iframe id="intextframea44696a" src="about:blank" scrolling="no" frameborder="0" style="position:absolute;top:0px;left:0px;display:none"></iframe>
+                <input size="12" name="INTEXT" style="height:18px">
+           </td>
+           <td align="absmiddle" nowrap="nowrap" height="1">
+                <input type="image" src="system/resource/images/research/seach22.gif" align="absmiddle" valign="bottom" style="cursor: hand">
+           </td>
+      </tr>
+ </table>
+</form>
+<script>
+String.prototype.trim　= function()       
+{              
+    var t = this.replace(/(^\s*)|(\s*$)/g, "");     
+    return t.replace(/(^　*)|(　*$)/g, "");     
+}  
+function subsearchdataa44696a()
+{ 
+    if(document.a44696a.INTEXT.value.trim()=="")
+    {
+        alert("请输入查询关键字！");
+        return false;
+    }
+    if(checkDataa44696a(document.a44696a))
+    {
+       return true;  
+    }
+    return false;
+}       
+</script>
+
+    <script language="JavaScript" src="_dwr/engine.js"></script>
+    <script language="JavaScript" src="_dwr/util.js"></script>
+    <script language="JavaScript" src="_dwr/interface/NewsSearchDWR.js"></script>
+    <script language="JavaScript" src="system/resource/js/vsb_news_search.js"></script>
+    <script language="JavaScript" src="system/resource/js/vsb_news_search_entry.js"></script>  
+    <script language="JavaScript" src="system/resource/js/language.js"></script>
+    <script language="JavaScript" src="system/resource/js/base64.js"></script>
+    <script language="JavaScript" src="system/resource/js/formfunc.js"></script>    
+    
+    <script>    
+    news_searcha44696a = new vsb_news_search();
+    news_searcha44696a.isShowCode=false;
+    news_searcha44696a.tooltipid = 'tooltipa44696a';
+    news_searcha44696a.apptag = 'intextspana44696a';
+    news_searcha44696a.frametag = 'intextframea44696a';
+    news_search_entrya44696a = new vsb_news_search_entry();
+    news_search_entrya44696a.formname = "a44696a";
+    news_search_entrya44696a.news_search_obj = news_searcha44696a; 
+    news_search_entrya44696a.querytxtsize = 155
+    news_search_entrya44696a.yzmts ="您的查询过于频繁，请输入验证码后继续查询";
+    news_search_entrya44696a.qdstyle ="";
+    news_search_entrya44696a.qdname = "确定";
+    news_search_entrya44696a.qxstyle = "";
+    news_search_entrya44696a.qxname = "取消";    
+    function checkDataa44696a(formname)
+    {    
+        return news_search_entrya44696a.checkdata(formname)   
+    }
+    </script>
+<script language="javascript" src="system/resource/js/base64.js"></script> 
+<!--#endeditable--></td>
+  </tr>
+</table>
+</div></div></div><!-- END Header -->
+<div id="columnwrap">
+<div id="content-main">
+<div id="tzgg_div">
+<div id="type1" class="type">
+<h1>本馆概况</h1><!--#begineditable name="本馆概况导航" viewid="42612"-->            <ul>
+    <li><a href="bggk/bgjj.htm">本馆简介</a></li>
+    <li><a href="bggk/kfsj.htm">开放时间</a></li>
+    <li><a href="bggk/jgsz.htm">机构设置</a></li>
+    <li><a href="bggk/gzbj.htm">馆藏布局</a></li>
+    <li><a href="bggk/gzzd.htm">规章制度</a></li>
+    <li><a href="bggk/gsfm.htm">馆舍风貌</a></li>
+</ul><!--#endeditable--></div>
+<div id="type2" class="type">
+<h1>馆藏资源</h1><!--#begineditable name="馆藏资源导航" viewid="42617"-->            <ul>
+    <li><a href="gzzy/wdtsg.htm">我的图书馆</a></li>
+    <li><a href="http://library.zjyc.edu.cn/SearchBookSimple.aspx">馆藏目录</a></li>
+    <li><a href="http://library.zjyc.edu.cn/NewBookReport.aspx">新书通告</a></li>
+    <li><a href="http://www.gtarsc.com">金融数据库</a></li>
+    <li><a href="http://lib.zafu.edu.cn/zy/sjk.htm">数据库</a></li>
+    <li><a href="http://gaoxiao.wsbgt.com/Web/index.aspx">网上报告厅</a></li>
+</ul><!--#endeditable--></div>
+<div id="type3" class="type">
+<h1>读者指南</h1><!--#begineditable name="数字资源导航" viewid="42618"-->            <ul>
+    <li><a href="dzzn/ykt.htm">一卡通</a></li>
+    <li><a href="dzzn/tsjh.htm">图书借还</a></li>
+    <li><a href="dzzn/cjwt.htm">常见问题</a></li>
+    <li><a href="dzzn/zzwy.htm">自助文印</a></li>
+    <li><a href="dzzn/cyxz.htm">常用下载</a></li>
+    <li><a href="dzzn/ztfjb.htm">中图法简表</a></li>
+</ul><!--#endeditable--></div>
+<div id="type4" class="type">
+<h1>相关链接</h1><!--#begineditable name="相关链接" viewid="42616"--><script language="javascript" src="system/resource/js/dynclicks.js"></script><script language="javascript" src="system/resource/js/openlink.js"></script><UL>
+     <li style="width:120px"><a href="http://www.zafu.edu.cn/" target="_blank">浙江农林大学</a></li>
+     <li style="width:120px"><a href="http://lib.zafu.edu.cn/" target="_blank">浙农林大图书馆</a></li>
+     <li style="width:120px"><a href="http://zadl.zj.edu.cn/wps/portal" target="_blank">ZADL门户网站</a></li>
+     <li style="width:120px"><a href="http://www.zjinfo.gov.cn/" target="_blank">浙江省科技网</a></li>
+     <li style="width:120px"><a href="https://vpn.zafu.edu.cn/" target="_blank">VPN系统</a></li>
+     <li style="width:120px"><a href="http://mail.zafu.edu.cn/" target="_blank">邮件系统</a></li>
+</UL><!--#endeditable--></div></div></div><!-- END #content-main -->
+<div id="content-related">
+<div id="lxfs_div" style="margin-top: 5px;height: 340px;margin-left: 20px">
+<h1 class="title_h1"><span class="more"><a href="xwgg.htm" target="_blank">更多…</a></span></h1>
+<div class="content_div"><!--#begineditable name="新闻公告" viewid="42611"--><ul>
+   <li>
+            
+            <span class="time">2017年10月16日</span>
+                           
+            
+            <a href="info/1031/1486.htm" target="_blank" title="图书馆关于征求2018年中文期刊订购意见的通知">
+                     
+            
+            
+               图书馆关于征求2018年中文期刊...
+            
+             </a></li>
+
+   <li>
+            
+            <span class="time">2017年09月27日</span>
+                           
+            
+            <a href="info/1031/1466.htm" target="_blank" title="图书馆勤工助学岗位招聘通知">
+                     
+            
+            
+               图书馆勤工助学岗位招聘通知
+            
+             </a></li>
+
+   <li>
+            
+            <span class="time">2017年09月15日</span>
+                           
+            
+            <a href="info/1031/1456.htm" target="_blank" title="图书馆开展2017级新生入馆教育">
+                     
+            
+            
+               [<font color="blue">图</font>] 图书馆开展2017级新生入馆教育
+            
+             </a></li>
+
+   <li>
+            
+            <span class="time">2017年06月28日</span>
+                           
+            
+            <a href="info/1031/1447.htm" target="_blank" title="图书馆关于2017年暑期开放安排的通知">
+                     
+            
+            
+               图书馆关于2017年暑期开放安排...
+            
+             </a></li>
+
+</ul><script>_showDynClickBatch(['dynclicks_u7_1486','dynclicks_u7_1466','dynclicks_u7_1456','dynclicks_u7_1447'],[1486,1466,1456,1447],"wbnews", 1158594810)</script>
+<!--#endeditable--></div>
+<div id="hdpt" style="height: 100px">
+<h1 class="h2"></h1>
+<div style="margin-top: 5px;width: 325px;float: left">
+<table width="325" height="150">
+<tbody>
+<tr>
+<td valign="top" width="325" align="left"><!--#begineditable name="常用数据库图片列表" viewid="45234"--><table align="center">
+            <tr>
+                <td>
+                        <a href="http://192.168.27.12/kns55/brief/result.aspx?dbPrefix=CJFQ" title="" onclick="_addDynClicks(&#34;wbimage&#34;, 1158594810, 11875)" target="_blank">
+                            <img src="cysjk/cnki.jpg" border="0" width="175" height="30">
+                        </a>  
+                </td>
+                <td>
+                        <a href="http://192.168.27.13/C/periodical.aspx" title="" onclick="_addDynClicks(&#34;wbimage&#34;, 1158594810, 11876)" target="_blank">
+                            <img src="cysjk/wfszqk.jpg" border="0" width="175" height="30">
+                        </a>  
+                </td>
+        </tr>
+        <tr>
+                <td>
+                        <a href="http://www.duxiu.com/" title="" onclick="_addDynClicks(&#34;wbimage&#34;, 1158594810, 11877)" target="_blank">
+                            <img src="cysjk/dx.jpg" border="0" width="175" height="30">
+                        </a>  
+                </td>
+                <td>
+                        <a href="http://www.sslibrary.com/" title="" onclick="_addDynClicks(&#34;wbimage&#34;, 1158594810, 11878)" target="_blank">
+                            <img src="cysjk/cxdzts.jpg" border="0" width="175" height="30">
+                        </a>  
+                </td>
+        </tr>
+        <tr>
+                <td>
+                        <a href="http://www.gtarsc.com/Home" title="" onclick="_addDynClicks(&#34;wbimage&#34;, 1158594810, 11881)" target="_blank">
+                            <img src="cysjk/gtasj.jpg" border="0" width="175" height="30">
+                        </a>  
+                </td>
+        </tr>
+</table><!--#endeditable-->&nbsp;</td></tr></tbody></table></div></div>
+<div style="height: 80px"></div></div></div><!--#begineditable name="广告图片" viewid="43751"-->  
+  
+  
+  
+<script language="javascript" src="system/resource/js/prototype.js"></script><script language="javascript" src="system/resource/js/ajax.js"></script>  
+<SCRIPT language="JavaScript">  
+self.onError=null;  
+lastScrollXu9=0;
+lastScrollYu9=0;
+NS=(document.layeru9)?1:0;
+IE=(document.all)?1:0;  
+function moveu9()  
+{  
+    try
+    {
+        diffYu9=(document.documentElement && document.documentElement.scrollTop)?document.documentElement.scrollTop:document.body.scrollTop;
+        diffXu9=(document.documentElement&&document.documentElement.scrollLeft)?document.documentElement.scrollLeft:document.body.scrollLeft;
+     
+        if(diffYu9!=lastScrollYu9)
+        {
+            percent =.1*(diffYu9-lastScrollYu9);  
+            if(percent>0)
+                percent=Math.ceil(percent);
+            else 
+                percent=Math.floor(percent);  
+            document.getElementById("layeru9").style.top=parseInt(document.getElementById("layeru9").style.top)+percent+"px";
+                
+            lastScrollYu9=lastScrollYu9+percent;
+        }  
+        
+        
+        if(diffXu9!=lastScrollXu9)
+        {
+            percent=.1*(diffXu9-lastScrollXu9);  
+            if(percent>0)
+                percent=Math.ceil(percent);else percent = Math.floor(percent);  
+           
+                    document.getElementById("layeru9").style.Left+=percent;
+             
+             lastScrollXu9=lastScrollXu9+percent;
+         }
+    }
+    catch(e)
+    {
+    
+    }
+}  
+        action =window.setInterval('moveu9()',1);  
+    </SCRIPT>  
+  
+<SCRIPT language="JavaScript">  
+    
+    function imageCloseu9(id)  
+    {  
+        document.getElementById(id).style.display = 'none';  
+    }  
+</SCRIPT>  
+
+<DIV id="layeru9" style="Z-INDEX:2;left:60px;POSITION:absolute;TOP:50px">  
+    <table border="0" cellpadding="0" cellspacing="0">  
+        <tr>  
+        <td>  
+              
+            <a href="images/guanggao/11.jpg" target="_blank" onclick="addClickTimes(11171,1158594810,'wbimage')">
+                <img src="images/guanggao/11.jpg" border="0"></a><br>  
+              
+                    <img src="system/resource/images/component/close.gif" align="right" border="0" onClick="imageCloseu9('layeru9')">  
+              
+            </td>  
+            </tr>  
+            </table>  
+</div>  <!--#endeditable-->
+<div class="clear">
+<table border="0" width="973">
+<tbody>
+<tr>
+<td height="8" colspan="2" align="left"><img alt="" src="index_files/5/z_m_/jyph1.jpg" width="382" height="33"></td>
+<td height="5" align="right">&nbsp;</td>
+<td height="5" background="index_files/5/z_m_/xstj.jpg" width="418" align="right" style="background-repeat: no-repeat"></td>
+<td width="116" align="center" style="background-repeat: no-repeat">&nbsp;<a href="index/gdtp/xstj.htm" target="_blank"><span>更多...</span> </a></td>
+<tr>
+<td height="50" width="4" align="right">&nbsp;</td>
+<td width="378">&nbsp;<!--#begineditable name="系统平台" viewid="150433"-->
+
+
+
+
+
+<table border="0" cellpadding="0" cellspacing="0">
+    <tr>
+    <td><a href="http://my.zjyc.edu.cn" target="_blank" onclick="_addDynClicks('wbimage',1158594810,23527)"><img src="images/xtpt/mh.jpg" width="170" height="75" hspace="1" vspace="1" border="0" alt="校园门户" title="校园门户"></a></td>
+        <td><a href="http://zjyc.check.cnki.net/" target="_blank" onclick="_addDynClicks('wbimage',1158594810,11990)"><img src="images/xtpt/lwjc.jpg" width="170" height="75" hspace="1" vspace="1" border="0"></a></td>
+        </tr>
+        <tr>
+    <td><a href="http://10.10.28.10/" target="_blank" onclick="_addDynClicks('wbimage',1158594810,11988)"><img src="images/xtpt/daxt.jpg" width="170" height="75" hspace="1" vspace="1" border="0"></a></td>
+        <td><a href="http://vpn.zjyc.edu.cn/login" target="_blank" onclick="_addDynClicks('wbimage',1158594810,23528)"><img src="images/xtpt/vpn.jpg" width="170" height="75" hspace="1" vspace="1" border="0"></a></td>
+        </tr>
+        </table><!--#endeditable--></td>
+<td width="2" align="right">&nbsp;</td>
+<td colspan="2" align="left"><!--#begineditable name="新书推荐滚动图片文章" viewid="45225"-->                  
+                   
+<script language="javascript" src="system/resource/js/vsbpreloadimg.js"></script>
+<TABLE width="550" height="140" cellSpacing="0" cellPadding="0" align="center" border="0">                   
+  <TR>                   
+    <TD>                   
+      <DIV id="u_u11_demo" style="OVERFLOW: hidden;WIDTH: 550px">
+      <TABLE cellSpacing="0" cellPadding="0" align="left" border="0" cellspace="0">                   
+        <TR>                   
+          <TD id="u_u11_demo1" vAlign="top">
+           <table width="550" border="0" cellpadding="0" cellspacing="0">
+            <tr>                   
+                               
+                <td width="120" valign="top" align="center" style="padding-left:1px;padding-right:1px">
+                <div style="Padding: 0px;width: 120px"><table cellpadding="1" cellspacing="0" bgcolor="#f5f5f5" style="border:1px solid #e3e3e3"><tr><td width="120" height="130" valign="middle" align="center"><a href="info/1052/1479.htm" target="_blank"><img border="0" name="u_u11_img" src="system/resource/images/loading.gif" alt="食帖15:便当灵感集" hspace="0" vspace="0"></a></td></tr></table></div>
+                               
+                <div class="titlestyle45225" style="text-align:center;vertical-align:bottom">食帖15:便当灵...</div>
+                               
+                </td>                   
+                               
+                <td width="120" valign="top" align="center" style="padding-left:1px;padding-right:1px">
+                <div style="Padding: 0px;width: 120px"><table cellpadding="1" cellspacing="0" bgcolor="#f5f5f5" style="border:1px solid #e3e3e3"><tr><td width="120" height="130" valign="middle" align="center"><a href="info/1052/1478.htm" target="_blank"><img border="0" name="u_u11_img" src="system/resource/images/loading.gif" alt="如何听懂音乐" hspace="0" vspace="0"></a></td></tr></table></div>
+                               
+                <div class="titlestyle45225" style="text-align:center;vertical-align:bottom">如何听懂音乐</div>
+                               
+                </td>                   
+                               
+                <td width="120" valign="top" align="center" style="padding-left:1px;padding-right:1px">
+                <div style="Padding: 0px;width: 120px"><table cellpadding="1" cellspacing="0" bgcolor="#f5f5f5" style="border:1px solid #e3e3e3"><tr><td width="120" height="130" valign="middle" align="center"><a href="info/1052/1477.htm" target="_blank"><img border="0" name="u_u11_img" src="system/resource/images/loading.gif" alt="“一带一路”战略研究" hspace="0" vspace="0"></a></td></tr></table></div>
+                               
+                <div class="titlestyle45225" style="text-align:center;vertical-align:bottom">“一带一路”...</div>
+                               
+                </td>                   
+                               
+                <td width="120" valign="top" align="center" style="padding-left:1px;padding-right:1px">
+                <div style="Padding: 0px;width: 120px"><table cellpadding="1" cellspacing="0" bgcolor="#f5f5f5" style="border:1px solid #e3e3e3"><tr><td width="120" height="130" valign="middle" align="center"><a href="info/1052/1476.htm" target="_blank"><img border="0" name="u_u11_img" src="system/resource/images/loading.gif" alt="毛泽东诗词精读" hspace="0" vspace="0"></a></td></tr></table></div>
+                               
+                <div class="titlestyle45225" style="text-align:center;vertical-align:bottom">毛泽东诗词精读</div>
+                               
+                </td>                   
+                               
+                <td width="120" valign="top" align="center" style="padding-left:1px;padding-right:1px">
+                <div style="Padding: 0px;width: 120px"><table cellpadding="1" cellspacing="0" bgcolor="#f5f5f5" style="border:1px solid #e3e3e3"><tr><td width="120" height="130" valign="middle" align="center"><a href="info/1052/1391.htm" target="_blank"><img border="0" name="u_u11_img" src="system/resource/images/loading.gif" alt="强军策" hspace="0" vspace="0"></a></td></tr></table></div>
+                               
+                <div class="titlestyle45225" style="text-align:center;vertical-align:bottom">强军策</div>
+                               
+                </td>                   
+                               
+                <td width="120" valign="top" align="center" style="padding-left:1px;padding-right:1px">
+                <div style="Padding: 0px;width: 120px"><table cellpadding="1" cellspacing="0" bgcolor="#f5f5f5" style="border:1px solid #e3e3e3"><tr><td width="120" height="130" valign="middle" align="center"><a href="info/1052/1390.htm" target="_blank"><img border="0" name="u_u11_img" src="system/resource/images/loading.gif" alt="网红经济3.0:自媒体时代的掘金机会" hspace="0" vspace="0"></a></td></tr></table></div>
+                               
+                <div class="titlestyle45225" style="text-align:center;vertical-align:bottom">网红经济3.0:...</div>
+                               
+                </td>                   
+                               
+                <td width="120" valign="top" align="center" style="padding-left:1px;padding-right:1px">
+                <div style="Padding: 0px;width: 120px"><table cellpadding="1" cellspacing="0" bgcolor="#f5f5f5" style="border:1px solid #e3e3e3"><tr><td width="120" height="130" valign="middle" align="center"><a href="info/1052/1389.htm" target="_blank"><img border="0" name="u_u11_img" src="system/resource/images/loading.gif" alt="大国大城:当代中国的统一、发展与平衡" hspace="0" vspace="0"></a></td></tr></table></div>
+                               
+                <div class="titlestyle45225" style="text-align:center;vertical-align:bottom">大国大城:当代...</div>
+                               
+                </td>                   
+                               
+                <td width="120" valign="top" align="center" style="padding-left:1px;padding-right:1px">
+                <div style="Padding: 0px;width: 120px"><table cellpadding="1" cellspacing="0" bgcolor="#f5f5f5" style="border:1px solid #e3e3e3"><tr><td width="120" height="130" valign="middle" align="center"><a href="info/1052/1388.htm" target="_blank"><img border="0" name="u_u11_img" src="system/resource/images/loading.gif" alt="为师之道" hspace="0" vspace="0"></a></td></tr></table></div>
+                               
+                <div class="titlestyle45225" style="text-align:center;vertical-align:bottom">为师之道</div>
+                               
+                </td>                   
+                               
+            </tr>                   
+           </table>                   
+          </TD>                   
+          <TD id="u_u11_demo2" vAlign="top">&nbsp;</TD>                   
+        </TR>                   
+      </TABLE>                   
+      </DIV>                   
+    </TD>
+  </TR>                   
+</TABLE>                   
+<SCRIPT language="javascript">
+    var u_u11_imgs = new VsbPreloadImgArray();
+    
+    //初始化图片
+    function u_u11_init_img()
+    {
+
+            u_u11_imgs.addImg("\/__local\/1\/45\/48\/7A1823E54D4C4CAFEE3ED57945D_0E45F89A_5A53.jpg", "0", u_u11_onimgload);
+
+            u_u11_imgs.addImg("\/__local\/0\/7D\/C6\/C5816E97C5D7BB126F28EB409F6_39494D98_698F.jpg", "1", u_u11_onimgload);
+
+            u_u11_imgs.addImg("\/__local\/A\/ED\/A4\/0F13D931610801E21056B4077E4_ABEB49A5_3622.jpg", "2", u_u11_onimgload);
+
+            u_u11_imgs.addImg("\/__local\/5\/28\/9B\/B9362994CC02D97914C49B83B89_6479CF04_4865.jpg", "3", u_u11_onimgload);
+
+            u_u11_imgs.addImg("\/__local\/1\/84\/12\/4191EA826429B542893D9EC2D2B_2738AD54_2FCB.jpg", "4", u_u11_onimgload);
+
+            u_u11_imgs.addImg("\/__local\/8\/7E\/38\/1E3A53F91D520181F287324E50A_4B5082DE_195F.jpg", "5", u_u11_onimgload);
+
+            u_u11_imgs.addImg("\/__local\/F\/70\/D5\/1908827AC37FAB0E7B5EE9BA15D_A8DD3B24_1AF7.jpg", "6", u_u11_onimgload);
+
+            u_u11_imgs.addImg("\/__local\/C\/93\/60\/C43B09923C14376AD7C3440CA58_FBE9F1A7_246B.jpg", "7", u_u11_onimgload);
+
+    }
+    function u_u11_onimgload(img, imgid)
+    {
+        var imgobjs = document.getElementsByName("u_u11_img");
+        var imgindex = new Number(imgid);
+        
+        img.showImg(imgobjs[imgindex], 120, 130, true, true);
+        img.showImg(imgobjs[imgindex+ 8], 120, 130, true, true);
+    }
+
+    var u_u11_MyMar;
+    var u_u11_speed3;
+    var u_u11_move = true;
+    var u_u11_movenum = 0;
+    var u_u11_pos = null; //td位置组
+    
+    function u_u11_initpos()
+    {
+        u_u11_pos = new Array();
+        
+        var tds1 = document.getElementById("u_u11_demo1").childNodes[0].rows[0].cells;
+        
+        for(i = 0 ;i < tds1.length; i++)
+        {
+            u_u11_pos[u_u11_pos.length] = tds1[i].offsetLeft;
+        }
+        
+        var tds2 = document.getElementById("u_u11_demo2").childNodes[0].rows[0].cells;
+        var tds2offset = document.getElementById("u_u11_demo2").offsetLeft;
+        for(i = 0 ;i < tds2.length; i++)
+        {
+            u_u11_pos[u_u11_pos.length] = tds2[i].offsetLeft + tds2offset;
+        }
+    }
+    function u_u11_getpos(scrollpos)
+    {
+        for(i = 0; i < u_u11_pos.length; i++)
+        {
+            if(scrollpos < u_u11_pos[i])
+                return i-1;
+        }
+    }
+
+    function u_u11_Marquee() 
+    {
+        try 
+        { 
+            if(!u_u11_move)
+                return;
+            
+            var demoobj = document.getElementById("u_u11_demo");
+            var demo1obj = document.getElementById("u_u11_demo1");
+            //滚动步长
+            var scrollstep = 1
+            
+            //当前位置
+            var oldscrollLeft = demoobj.scrollLeft;
+            
+            //更新后的位置, 已考虑过回滚
+            var newscrollLeft = (oldscrollLeft + scrollstep)%demo1obj.scrollWidth;
+            
+            demoobj.scrollLeft = newscrollLeft; 
+            
+        } 
+        catch(e) 
+        { 
+        } 
+    } 
+    function u_u11_clearInterval()
+    {
+        clearInterval(u_u11_MyMar);
+    }
+    
+    function u_u11_setInterval()
+    {
+        u_u11_MyMar = setInterval(u_u11_Marquee,u_u11_speed3);
+    }
+    
+    function u_u11_stopmove()
+    {
+        u_u11_move = false;
+    }
+    function u_u11_startmove()
+    {
+        u_u11_move = true;
+    }
+    
+    function u_u11_init()
+    {
+        u_u11_speed3 = 10;
+        if(u_u11_speed3 < 1)
+        {
+            u_u11_speed3 = 1;
+        }
+        
+        document.getElementById("u_u11_demo").onmouseover = u_u11_stopmove;
+        document.getElementById("u_u11_demo").onmouseout = u_u11_startmove;
+        document.getElementById("u_u11_demo2").innerHTML = document.getElementById("u_u11_demo1").innerHTML;
+        
+        u_u11_init_img();
+
+        u_u11_setInterval();
+
+    }
+    
+    u_u11_init();
+</SCRIPT> <!--#endeditable-->&nbsp;</td></tr></tbody></table>
+<p>
+<table border="0" width="100%" bgcolor="#4c94cf">
+<tbody>
+<tr>
+<td width="22"></td>
+<td width="39">&nbsp;</td>
+<td width="82" style="padding-bottom: 0px;line-height: 20px;padding-left: 4px;padding-right: 4px;padding-top: 0px"><a href="hdpt/dzly.htm"><font color="white">读者留言</font></a></td>
+<td width="52">&nbsp;</td>
+<td width="86" style="padding-bottom: 0px;line-height: 20px;padding-left: 4px;padding-right: 4px;padding-top: 0px"><a href="hdpt/cjwt.htm"><font color="white">常见问题</font></a></td>
+<td width="59">&nbsp;</td>
+<td width="94" style="padding-bottom: 0px;line-height: 20px;padding-left: 4px;padding-right: 4px;padding-top: 0px"><a href="hdpt/lxwm.htm"><font color="white">联系我们</font></a></td>
+<td width="47">&nbsp;</td>
+<td width="190" style="line-height: 16px;padding-left: 5px"><font color="white">总服务台:0575-87760058</font></td>
+<td width="31">&nbsp;</td>
+<td width="232" style="line-height: 16px;padding-left: 5px"><font color="white">网络维护热线:0575-87760060</font></td></tr></tbody></table></p>
+<div>
+<div class="clear"></div><!-- END #content-related --></div><!-- END #columnwrap --><!--#begineditable name="版权" viewid="42474"--><!-- 版权内容请在本组件"内容配置-版权"处填写 -->
+<div id="footer"><P>Copyright <SPAN style="font-size: 20px">©</SPAN> 2013～浙江农林大学暨阳学院图书馆·版权所有 <A href="admin"></A><BR>地址：浙江.绍兴.诸暨市浦阳路77号&nbsp;&nbsp;邮编：311800&nbsp;&nbsp;联系电话：0575-87760058&nbsp;&nbsp;传真：0575-87760058<BR></P></div><!--#endeditable--></div><!-- END #container -->
+<div>
+<div id="img" style="position: absolute">
+<p><!--#begineditable name="图片列表" viewid="42476"--><table align="center">
+    </table><!--#endeditable--></p></div><script language="JavaScript"><!--
+  
+  <!--   Begin  
+  var   xPos   =   20;  
+  var   yPos   =   600;  
+  var   step   =   1;  
+  var   delay   =   30;    
+  var   height   =   0;  
+  var   Hoffset   =   0;  
+  var   Woffset   =   0;  
+  var   yon   =   0;  
+  var   xon   =   0;  
+  var   pause   =   true;  
+  var   interval;  
+  img.style.top   =   yPos;  
+  function   changePos()   {  
+  width   =   document.body.clientWidth;  
+  height   =   document.body.clientHeight;  
+  Hoffset   =   img.offsetHeight;  
+  Woffset   =   img.offsetWidth;  
+  img.style.left   =   xPos   +   document.body.scrollLeft+"px";  
+  img.style.top   =   yPos   +   document.body.scrollTop+"px";  
+  if   (yon)   {  
+  yPos   =   yPos   +   step;  
+  }  
+  else   {  
+  yPos   =   yPos   -   step;  
+  }  
+  if   (yPos   <   0)   {  
+  yon   =   1;  
+  yPos   =   0;  
+  }  
+  if   (yPos   >=   (height   -   Hoffset))   {  
+  yon   =   0;  
+  yPos   =   (height   -   Hoffset);  
+  }  
+  if   (xon)   {  
+  xPos   =   xPos   +   step;  
+  }  
+  else   {  
+  xPos   =   xPos   -   step;  
+  }  
+  if   (xPos   <   0)   {  
+  xon   =   1;  
+  xPos   =   0;  
+  }  
+  if   (xPos   >=   (width   -   Woffset))   {  
+  xon   =   0;  
+  xPos   =   (width   -   Woffset);  
+        }  
+  }  
+  function   start()   {  
+  img.visibility   =   "visible";  
+  interval   =   setInterval('changePos()',   delay);  
+  }  
+  function   pause_resume()   {  
+  if(pause)   {  
+  clearInterval(interval);  
+  pause   =   false;  
+  window.open("http://grs.zju.edu.cn/degree/nocontrol/dbgl/stu_dbgl_replypublic.htm");
+  }  
+  else   {  
+  interval   =   setInterval('changePos()',delay);  
+  pause   =   true;
+        }  
+  }  
+  start();  
+  //     End   -->  
+  
+//--></script></div></div></div>
+
+</body></html>

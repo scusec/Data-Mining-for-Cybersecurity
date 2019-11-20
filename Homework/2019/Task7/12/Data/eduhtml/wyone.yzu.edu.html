@@ -1,0 +1,590 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+登陆 - 扬州大学外语教学网 - 外语教学科研管理资源共享一体化平台</title>
+<link rel="shortcut icon" href="http://wyone.yzu.edu.cn/public/themes/classic/favicon.ico" />
+<meta name="keywords" content="扬州大学外语教学网|教学一体化平台" />
+<meta name="description" content="扬州大学外语教学网教学一体化平台" />
+<script>
+	var _UID_   = '';
+	var _MID_   = '';
+	var _ROOT_  = '';
+	var _THEME_ = 'http://wyone.yzu.edu.cn/public/themes/classic';
+	var _PUBLIC_ = 'http://wyone.yzu.edu.cn/public';
+	var _LENGTH_ = 140;
+	
+</script>
+<!-- 全局风格CSS -->
+<link href="http://wyone.yzu.edu.cn/public/themes/classic/main.css?20171028" rel="stylesheet" type="text/css" />
+<link href="http://wyone.yzu.edu.cn/public/themes/classic/layout.css?20171028" rel="stylesheet" type="text/css" />
+<link href="http://wyone.yzu.edu.cn/public/js/tbox/box.css" rel="stylesheet" type="text/css" />
+<!-- 核心JS加载 -->
+<script type="text/javascript" src="http://wyone.yzu.edu.cn/public/js/jquery.js"></script>
+<script type="text/javascript" src="http://wyone.yzu.edu.cn/public/js/common.js?20120829"></script>
+<script type="text/javascript" src="http://wyone.yzu.edu.cn/public/js/tbox/box.js"></script>
+<script type="text/javascript" src="http://wyone.yzu.edu.cn/public/js/scrolltopcontrol.js"></script>
+<script src="http://wyone.yzu.edu.cn/public/js/jquery.jgrow.min.js"></script>
+
+<!-- 编辑器样式文件 -->
+<link href="http://wyone.yzu.edu.cn/public/js/editor/editor/theme/base-min.css" rel="stylesheet"/>
+<!--[if lt IE 8]>
+<link href="http://wyone.yzu.edu.cn/public/js/editor/editor/theme/cool/editor-pkg-sprite-min.css" rel="stylesheet"/>
+<![endif]-->
+<!--[if gte IE 8]><!-->
+<link href="http://wyone.yzu.edu.cn/public/js/editor/editor/theme/cool/editor-pkg-min-datauri.css" rel="stylesheet"/>
+<!--<![endif]-->
+
+</head>
+<body class="body_bg">
+<div class="div_body">
+
+<div class="header_bg">
+    <div class="header">
+      <div class="logo"style="height:60px;text-align:right;width:360px"><a href="http://wyone.yzu.edu.cn/index" style="width:300px;"></a></div>
+      <div class="nav_sub">
+      	      	<a href="http://wyone.yzu.edu.cn/register">注册</a>&nbsp;|&nbsp;
+      	<a href="http://wyone.yzu.edu.cn/login">登录</a>
+      </div>
+	  <div class="nav" style="width:300px;">
+		<form action="http://wyone.yzu.edu.cn/index.php?app=home&mod=user&act=searchsource" id="quick_search_form" method="post">
+		<div class="soso"><label id="_header_search_label" style="display: block;" onclick="$(this).hide();$('#_header_search_text').focus();">搜资源</label><input type="text" class="so_text" value="" name="k" id="_header_search_text" onblur="if($(this).val()=='') $('#_header_search_label').show();"/><input name="" type="button" onclick="$('#quick_search_form').submit()" class="so_btn hand"/></div>
+		<script>
+		if($('#_header_search_text').val()=='')
+		$('#_header_search_label').show();
+		else
+		$('#_header_search_label').hide();
+		</script>
+		<input type="hidden" name="__hash__" value="c7f4c55290b88eb08dbaae4ad340f028" /></form>
+	  </div>
+  </div>
+</div>
+<script>
+$(document).ready(function(){
+	$("#header_dropdown_hall").hover(
+		function(){ $(this).addClass("hover"); },
+		function(){ $(this).removeClass("hover"); }
+	);
+	$("#header_dropdown_teach").hover(
+		function(){ $(this).addClass("hover"); },
+		function(){ $(this).removeClass("hover"); }
+	);
+	$("#header_dropdown_technology").hover(
+		function(){ $(this).addClass("hover"); },
+		function(){ $(this).removeClass("hover"); }
+	);
+	$("#header_dropdown_knowlage").hover(
+		function(){ $(this).addClass("hover"); },
+		function(){ $(this).removeClass("hover"); }
+	);
+	$("#header_dropdown_research").hover(
+		function(){ $(this).addClass("hover"); },
+		function(){ $(this).removeClass("hover"); }
+	);
+	$("#header_dropdown_manage").hover(
+		function(){ $(this).addClass("hover"); },
+		function(){ $(this).removeClass("hover"); }
+	);
+	$("#header_dropdown_app").hover(
+	    function(){ $(this).addClass("hover"); },
+	    function(){ $(this).removeClass("hover"); }
+	);
+	$("#header_dropdown_message").hover(
+	    function(){ $(this).addClass("hover"); },
+	    function(){ $(this).removeClass("hover"); }
+    );
+	$("#header_dropdown_comunity").hover(
+	    function(){ $(this).addClass("hover"); },
+	    function(){ $(this).removeClass("hover"); }
+    );
+//	$("#header_dropdown_course").hover(
+//	    function(){ $(this).addClass("hover"); },
+//	    function(){ $(this).removeClass("hover"); }
+//    );
+			$("tr[overstyle='on']").hover(
+			  function () {
+			    $(this).addClass("bg_hover");
+			  },
+			  function () {
+			    $(this).removeClass("bg_hover");
+			  }
+			);
+	
+	});
+</script>
+<link href="/apps/home/Tpl/default/Public/login.css?20171028" rel="stylesheet" type="text/css" />
+
+<script>function pigai_logout_callback(re){}</script>
+<script type="text/javascript" src="/apps/home/Tpl/default/Public/js/jquery.sohu.tw.min.0.0.4.js"></script>
+<script type="text/javascript" src="/apps/home/Tpl/default/Public/js/tw.new.index.min.0.0.10.js"></script>
+<script type="text/javascript" src="/apps/home/Tpl/default/Public/js/slides.min.jquery.js"></script>
+<script type="text/javascript" src="http://www.pigai.org/?a=logoutjs&rand=6039"></script>
+<script>
+$(document).ready(function(){
+	setInterval(function(){
+		if('' != $('#username').val())$('#_login_email_label').hide();
+		if('' != $('#password').val())$('#_login_password_label').hide();}, 100);
+});
+
+function loginTab(id)
+{
+	if( id == "lbCommon" )
+	{
+		$("#lbStudent").removeClass("on");
+		$("#lbCommon").addClass("on");
+		$("#commonBox").css( 'display','' );
+		$("#studentBox").css( 'display','none' );
+		$("#statBox").css( 'display','' );
+		$("#loginType").val( 'local' );
+		//loginfrm.action = 'http://wyone.yzu.edu.cn/index.php?app=home&mod=Public&act=doLogin';
+	}
+	else if( id == "lbStudent" )
+	{
+		$("#lbCommon").removeClass("on");
+		$("#lbStudent").addClass("on");
+		$("#commonBox").css( 'display','none' );
+		$("#studentBox").css( 'display','' );
+		$("#statBox").css( 'display','none' );
+		$("#loginType").val( 'student' );
+		//loginfrm.action = 'http://www.pigai.org/index.php?a=login';
+	}
+}
+
+//function loginFromPigai() {
+//	ui.box.load( U('home/Public/loginFromPigai'),{title:'编辑教学工作'});
+//}
+</script>
+<style>
+.loginTab{width:250px;height:35px;overflow:hidden;clear:both;}
+.loginTabCommon,.loginTabStudent{background-image:url(http://wyone.yzu.edu.cn/public/themes/classic/images/login_tit_bg.png);width:124px;height:35px;overflow:hidden;position:relative;line-height:35px;font-weight:600;border-right:1px #b7c2c9 solid;float:left;font-size:14px;text-align:center;+line-height:35px;background-repeat:repeat-x;color:#808080;cursor:pointer;}
+.loginTabStudent{width:124px;border-right:none;}
+.on{background:none;}
+.talking a{color:#d14d0e;}
+</style>
+
+<div class="body">
+	<!--marquee vspace="2" behavior="alternate" scrollamount="2" align="baseline" onMouseOut="this.start()" onMouseOver="this.stop()" style="width:960px;color:#73647b" ><b>最近登录教师位 资源数 资源下载次 资源阅读次 微博数</b></marquee-->
+	<div class="slogan">
+				
+		<div class="login">
+			<div class="loginTab">
+				<div id="lbCommon" class="loginTabCommon on" onclick="javascript:loginTab(this.id);">
+					登录
+				</div>
+				<div id="lbStudent" class="loginTabStudent" onclick="javascript://loginTab(this.id);">
+					<!--学生首次登录-->
+				</div>
+			</div>
+			<div id="ppcontid" class="logform">
+				<form action="http://wyone.yzu.edu.cn/index.php?app=home&mod=Public&act=doLogin" method="post" name="loginfrm" id="loginfrm">
+				<input type="hidden" name="refurl" id="refurl" value="http://wyone.yzu.edu.cn/index.php?app=home&mod=Public&act=doLogin"> 
+				<input type="hidden" name="loginType" id="loginType" value="local"> 
+				<!--div class="regbtn2"  style="height:46px;*height:auto; position:relative"><a href="http://wyone.yzu.edu.cn/register" title="立即注册"> &nbsp;</a></div-->
+				<div id="commonBox">
+				<div style="height:24px;">
+					<select name="school" id="school" style="height:21px;width:80px;font-size:12px;">
+						<option value="821">扬州大学</option>
+					</select>
+					<select name="college" id="college" style="height:21px;width:109px;*width:107px;font-size:12px;">
+						<option value="@wyxy.yzu.edu.cn">外国语学院</option>
+					</select>
+				</div>
+				<div class="frm" style="height:20px;*height:auto; position:relative">
+					<label id="_login_email_label" class="form_label" style="display:block;" onclick="$(this).hide();$('#username').focus();">邮箱</label>
+					<input type="text" id="username" name="username" class="text" title="邮箱" autocomplete="off" value="" onblur="if($(this).val()=='') $('#_login_email_label').show();" onfocus="$('#_login_email_label').hide();" />
+				</div>
+				<div class="frm" style="height:20px;*height:auto; position:relative">
+					<label id="_login_password_label" class="form_label" style="display:block;" onclick="$(this).hide();$('#password').focus();">密码</label>
+					<input type="password" title="密码" value="" id="password" name="password" class="text" style="display: inline;" onblur="if($(this).val()=='') $('#_login_password_label').show();" onfocus="$('#_login_password_label').hide();" />
+				</div>
+				</div>
+				
+				<div id="studentBox" style="display:none">
+					<div class="frm" style="height:26px;*height:auto; position:relative">
+						<label id="_login_IDcard_label" class="form_label" style="display:block;" onclick="$(this).hide();$('#idcard').focus();">身份证号</label>
+						<input type="text" id="idcard" name="idcard" class="text" title="身份证号" autocomplete="off" value="" onblur="if($(this).val()=='') $('#_login_IDcard_label').show();" onfocus="$('#_login_IDcard_label').hide();" />
+					</div>
+				</div>
+								<div class="frm" style="height:20px;*height:auto;"><input name="verify" type="text" class="text alM" title="验证码" id="verify" style="width:50px;" value="" />
+				&nbsp;<a href="javascript:void(0);" onclick="changeverify()"><img src="http://wyone.yzu.edu.cn/index.php?app=home&mod=Public&act=verify" id="verifyimg" alt="换一张" class="alM" /></a></div>				
+				<div class="frm" id="statBox">
+				<label>
+				<input name="remember" type="checkbox" value="1" />
+				记住登录状态</label>
+				<a class="fuc0" href="http://wyone.yzu.edu.cn/sendPassword">忘记密码？</a>
+				</div>
+
+				<div class="frm" style="margin:0px auto; padding:5px 0 0; width:85px">
+					<input type="submit" value="登 录" class="logbtn hand" onclick="document.getElementById('refurl').value=document.getElementById('refurl').value+'&verify='+document.getElementById('verify').value;" />
+				</div>
+				<input type="hidden" name="__hash__" value="c7f4c55290b88eb08dbaae4ad340f028" /></form>
+				
+								<div class="c"></div>
+				<div class="frm alC lh30" style="border-top:1px solid #C9C9C9; margin-top: 20px;">
+				您也可以通过批改网账号进行登录！
+				<a href="http://wyone.yzu.edu.cn/index.php?app=home&mod=Public&act=loginFromPigai">批改网登录</a>
+				</div>
+			</div>
+		</div>
+	</div><!-- slogan end-->
+
+	<div class="login_main">
+		<div class="colL">
+
+			<!---div class="mobi">
+				<div class="tit">
+				<h3>用手机上微博</h3>
+				</div>
+				<p class="lh30 cGray2">手机访问 <a href="http://t.thinksns.com/wap" target="_blank">http://t.thinksns.com/wap</a></p>
+				<p>
+				<a href="http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=437764397&mt=8" target="_blank">
+				<img src="/apps/home/Tpl/default/Public/images/iphone_app.jpg" />
+				</a>
+				</p>
+			</div--->
+
+						
+		    <div class="tit">
+		      <h3>最新通知</h3>
+		    </div>
+		    		    <ul class="notice">
+		      <li>
+				<em>9-20</em><a href="http://wyone.yzu.edu.cn/index.php?app=notice&mod=Index&act=noticeDetail&id=2310" title="外国语学院关于中秋节国庆节放假的通知">外国语学院关于中秋节国庆节...</a>
+			  </li><li>
+				<em>7-6</em><a href="http://wyone.yzu.edu.cn/index.php?app=notice&mod=Index&act=noticeDetail&id=2309" title="2017年暑假值班表">2017年暑假值班表</a>
+			  </li><li>
+				<em>7-6</em><a href="http://wyone.yzu.edu.cn/index.php?app=notice&mod=Index&act=noticeDetail&id=2308" title="关于2016-2017学年暑假和2017-2018学年秋学期开学安排的通知">关于2016-2017学年暑假和20...</a>
+			  </li><li>
+				<em>6-30</em><a href="http://wyone.yzu.edu.cn/index.php?app=notice&mod=Index&act=noticeDetail&id=2307" title="关于统计2017年春学期教学工作量的通知">关于统计2017年春学期教学...</a>
+			  </li><li>
+				<em>5-22</em><a href="http://wyone.yzu.edu.cn/index.php?app=notice&mod=Index&act=noticeDetail&id=2306" title="关于做好2017年申报高、中级职务人员教学科研审核工作的通知">关于做好2017年申报高、中...</a>
+			  </li><li>
+				<em>5-16</em><a href="http://wyone.yzu.edu.cn/index.php?app=notice&mod=Index&act=noticeDetail&id=2305" title="外国语学院关于防止勒索病毒感染事件处理措施的通知">外国语学院关于防止勒索病毒...</a>
+			  </li><li>
+				<em>1-13</em><a href="http://wyone.yzu.edu.cn/index.php?app=notice&mod=Index&act=noticeDetail&id=2304" title="外国语学院2017年寒假值班表">外国语学院2017年寒假值班...</a>
+			  </li><li>
+				<em>1-11</em><a href="http://wyone.yzu.edu.cn/index.php?app=notice&mod=Index&act=noticeDetail&id=2303" title="2016年度教学工作量公示（第二次）">2016年度教学工作量公示（...</a>
+			  </li>		    </ul>
+			<div class="c"></div>
+			
+			<div class="tit">
+			<h3>快捷入口</h3>
+			</div>
+			<ul class="entrance">
+			<li>
+			<a href="http://eol.yzu.edu.cn/" target="_blank">扬州大学网络教学综合平台（EOL）</a>
+			</li>
+			<li>
+			<a href="http://58.192.132.3/npels/" target="_blank">新理念大学英语网络教学系统</a>
+			</li>
+			<li>
+			<a href="http://58.192.132.2" target="_blank">新视野大学英语网络教学系统</a>
+			</li>
+			<li>
+			<a href="http://pigai.yzu.edu.cn/" target="_blank">英语作文批改网（校内镜像）</a>
+			</li>
+			<li>
+			<a href="http://58.192.138.130:8085/jasinda/login/index.jsp" target="_blank">语言学科网络平台</a>
+			</li>
+			<li>
+			<a href="http://wyxy4.yzu.edu.cn/" target="_blank">大学英语网络课程教学资源</a>
+			</li>
+			<li>
+			<a href="http://wyone.yzu.edu.cn/index.php?app=source&mod=Index&act=index" target="_blank">公共资源</a>
+			</li>
+			</ul>
+		</div>
+		<div class="colC">
+			<div class="tit" style="height:26px;line-height:26px;margin-top:12px;overflow:hidden;">
+				<dl style="font-size:14px;float:left">
+					<dt style="font-weight:bold;float:left;width:80px;">推荐资源</dt>
+					<dd style="margin-left:80px;text-align:right;width:298px;font-size:12px;">
+											</dd>
+				</dl>
+			</div>
+						<div class="twis" id="tw_content">
+				<dl class="list_weibo">
+					<div class="lineD_btm pm10 mt10 pb5">
+						<div class="userPic"><a href='http://wyone.yzu.edu.cn/@42121' class='username' target='_blank'><img src=http://wyone.yzu.edu.cn/data/uploads/avatar/42121/middle.jpg></a></div>
+						<div style="margin-left:70px;">
+							<div style="min-height: 33px; _height:33px; _overflow:visible;"><strong><a href='http://wyone.yzu.edu.cn/@42121' class='username' target='_blank'>俞洪亮[T]</a>: </strong><span class="ugc"><a href="http://wyone.yzu.edu.cn/src/564/42121">英语专业口头产出性技能教学建设成果总结报告_version 2</a><br>以输出为驱动的课程建设（口语、口译）</span></div>
+							<div class="mt5">
+								<em title="1970-01-01 08:00">2014-02-11 16:16</em>
+								<em style="float:right">评论(0)</em>
+								<em style="float:right">下载(23)&nbsp;&nbsp;</em>
+							</div>
+						</div>
+					</div>
+				</dl><dl class="list_weibo">
+					<div class="lineD_btm pm10 mt10 pb5">
+						<div class="userPic"><a href='http://wyone.yzu.edu.cn/@42121' class='username' target='_blank'><img src=http://wyone.yzu.edu.cn/data/uploads/avatar/42121/middle.jpg></a></div>
+						<div style="margin-left:70px;">
+							<div style="min-height: 33px; _height:33px; _overflow:visible;"><strong><a href='http://wyone.yzu.edu.cn/@42121' class='username' target='_blank'>俞洪亮[T]</a>: </strong><span class="ugc"><a href="http://wyone.yzu.edu.cn/src/563/42121">全国高校英语专业教学改革与发展学术研讨会发言提纲_扬州大学_俞洪亮</a><br>商务英语发言摘要</span></div>
+							<div class="mt5">
+								<em title="1970-01-01 08:00">2014-02-11 16:13</em>
+								<em style="float:right">评论(0)</em>
+								<em style="float:right">下载(12)&nbsp;&nbsp;</em>
+							</div>
+						</div>
+					</div>
+				</dl><dl class="list_weibo">
+					<div class="lineD_btm pm10 mt10 pb5">
+						<div class="userPic"><a href='http://wyone.yzu.edu.cn/@12085' class='username' target='_blank'><img src=http://wyone.yzu.edu.cn/data/uploads/avatar/12085/middle.jpg></a></div>
+						<div style="margin-left:70px;">
+							<div style="min-height: 33px; _height:33px; _overflow:visible;"><strong><a href='http://wyone.yzu.edu.cn/@12085' class='username' target='_blank'>王金铨[T]</a>: </strong><span class="ugc"><a href="http://wyone.yzu.edu.cn/src/557/12085">Sample for Learning WORDFAST</a><br></span></div>
+							<div class="mt5">
+								<em title="1970-01-01 08:00">2013-05-17 16:34</em>
+								<em style="float:right">评论(0)</em>
+								<em style="float:right">下载(13)&nbsp;&nbsp;</em>
+							</div>
+						</div>
+					</div>
+				</dl><dl class="list_weibo">
+					<div class="lineD_btm pm10 mt10 pb5">
+						<div class="userPic"><a href='http://wyone.yzu.edu.cn/@445575' class='username' target='_blank'><img src=http://wyone.yzu.edu.cn/public/themes/classic/images/user_pic_middle.gif></a></div>
+						<div style="margin-left:70px;">
+							<div style="min-height: 33px; _height:33px; _overflow:visible;"><strong><a href='http://wyone.yzu.edu.cn/@445575' class='username' target='_blank'>夏建新[T]</a>: </strong><span class="ugc"><a href="http://wyone.yzu.edu.cn/src/551/445575">日语敬语新规文件的趣旨_夏建新</a><br></span></div>
+							<div class="mt5">
+								<em title="1970-01-01 08:00">2013-03-19 15:48</em>
+								<em style="float:right">评论(0)</em>
+								<em style="float:right">下载(2607)&nbsp;&nbsp;</em>
+							</div>
+						</div>
+					</div>
+				</dl><dl class="list_weibo">
+					<div class="lineD_btm pm10 mt10 pb5">
+						<div class="userPic"><a href='http://wyone.yzu.edu.cn/@42121' class='username' target='_blank'><img src=http://wyone.yzu.edu.cn/data/uploads/avatar/42121/middle.jpg></a></div>
+						<div style="margin-left:70px;">
+							<div style="min-height: 33px; _height:33px; _overflow:visible;"><strong><a href='http://wyone.yzu.edu.cn/@42121' class='username' target='_blank'>俞洪亮[T]</a>: </strong><span class="ugc"><a href="http://wyone.yzu.edu.cn/src/515/42121">国家中长期教育改革规划纲要</a><br>建议大家从中寻找教改课题</span></div>
+							<div class="mt5">
+								<em title="1970-01-01 08:00">2012-09-05 18:33</em>
+								<em style="float:right">评论(0)</em>
+								<em style="float:right">下载(28)&nbsp;&nbsp;</em>
+							</div>
+						</div>
+					</div>
+				</dl><dl class="list_weibo">
+					<div class="lineD_btm pm10 mt10 pb5">
+						<div class="userPic"><a href='http://wyone.yzu.edu.cn/@445528' class='username' target='_blank'><img src=http://wyone.yzu.edu.cn/public/themes/classic/images/user_pic_middle.gif></a></div>
+						<div style="margin-left:70px;">
+							<div style="min-height: 33px; _height:33px; _overflow:visible;"><strong><a href='http://wyone.yzu.edu.cn/@445528' class='username' target='_blank'>周领顺[T]</a>: </strong><span class="ugc"><a href="http://wyone.yzu.edu.cn/src/291/445528">译者行为与“求真—务实”连续统评价模式——译者行为</a><br>外语教学, 2010年01期本文基于对译者属性和翻译本质的认识,并在...</span></div>
+							<div class="mt5">
+								<em title="1970-01-01 08:00">2012-09-03 11:50</em>
+								<em style="float:right">评论(0)</em>
+								<em style="float:right">下载(23)&nbsp;&nbsp;</em>
+							</div>
+						</div>
+					</div>
+				</dl><dl class="list_weibo">
+					<div class="lineD_btm pm10 mt10 pb5">
+						<div class="userPic"><a href='http://wyone.yzu.edu.cn/@445528' class='username' target='_blank'><img src=http://wyone.yzu.edu.cn/public/themes/classic/images/user_pic_middle.gif></a></div>
+						<div style="margin-left:70px;">
+							<div style="min-height: 33px; _height:33px; _overflow:visible;"><strong><a href='http://wyone.yzu.edu.cn/@445528' class='username' target='_blank'>周领顺[T]</a>: </strong><span class="ugc"><a href="http://wyone.yzu.edu.cn/src/172/445528">学术翻译研究与批评论纲</a><br>外语研究, 2008年01期 学术翻译属于科学翻译,可大致分为交际意...</span></div>
+							<div class="mt5">
+								<em title="1970-01-01 08:00">2012-08-28 09:33</em>
+								<em style="float:right">评论(0)</em>
+								<em style="float:right">下载(5)&nbsp;&nbsp;</em>
+							</div>
+						</div>
+					</div>
+				</dl><dl class="list_weibo">
+					<div class="lineD_btm pm10 mt10 pb5">
+						<div class="userPic"><a href='http://wyone.yzu.edu.cn/@12085' class='username' target='_blank'><img src=http://wyone.yzu.edu.cn/data/uploads/avatar/12085/middle.jpg></a></div>
+						<div style="margin-left:70px;">
+							<div style="min-height: 33px; _height:33px; _overflow:visible;"><strong><a href='http://wyone.yzu.edu.cn/@12085' class='username' target='_blank'>王金铨[T]</a>: </strong><span class="ugc"><a href="http://wyone.yzu.edu.cn/src/81/12085">中国学生大规模汉译英测试机助评分模型的研究与构建</a><br>现代外语, 2009年04期 以往的翻译自动评价系统局限于机器译文评...</span></div>
+							<div class="mt5">
+								<em title="1970-01-01 08:00">2012-08-21 17:41</em>
+								<em style="float:right">评论(0)</em>
+								<em style="float:right">下载(3)&nbsp;&nbsp;</em>
+							</div>
+						</div>
+					</div>
+				</dl>			</div>		</div>
+
+	<div class="colR">
+		<!---div class="tit">
+			<div class="opt">关注数</div>
+			<h3>人气推荐</h3>
+		</div>
+		<ul class="tpl">
+					</ul--->
+
+		<div class="tit">
+			<div class="opt">资源数/下载数</div>
+			<h3>资源排行</h3>
+		</div>
+		<ul class="tpl">
+						<li class="lineD_btm"> 
+				<a target="_blank" href="http://wyone.yzu.edu.cn/@72811"> 
+				<i class="num">32/10596</i> 
+				<strong class="nm">邱林</strong> 
+				<var>1</var> 
+				<span class="avt"> <img alt="邱林" src="http://wyone.yzu.edu.cn/data/uploads/avatar/72811/middle.jpg"> <i class="png"></i> </span> 
+				</a> 
+			</li><li class="lineD_btm"> 
+				<a target="_blank" href="http://wyone.yzu.edu.cn/@445575"> 
+				<i class="num">7/3779</i> 
+				<strong class="nm">夏建新</strong> 
+				<var>2</var> 
+				<span class="avt"> <img alt="夏建新" src="http://wyone.yzu.edu.cn/public/themes/classic/images/user_pic_middle.gif"> <i class="png"></i> </span> 
+				</a> 
+			</li><li class="lineD_btm"> 
+				<a target="_blank" href="http://wyone.yzu.edu.cn/@42121"> 
+				<i class="num">23/159</i> 
+				<strong class="nm">俞洪亮</strong> 
+				<var>3</var> 
+				<span class="avt"> <img alt="俞洪亮" src="http://wyone.yzu.edu.cn/data/uploads/avatar/42121/middle.jpg"> <i class="png"></i> </span> 
+				</a> 
+			</li><li class="lineD_btm"> 
+				<a target="_blank" href="http://wyone.yzu.edu.cn/@12085"> 
+				<i class="num">21/124</i> 
+				<strong class="nm">王金铨</strong> 
+				<var>4</var> 
+				<span class="avt"> <img alt="王金铨" src="http://wyone.yzu.edu.cn/data/uploads/avatar/12085/middle.jpg"> <i class="png"></i> </span> 
+				</a> 
+			</li><li class="lineD_btm"> 
+				<a target="_blank" href="http://wyone.yzu.edu.cn/@28032"> 
+				<i class="num">14/44</i> 
+				<strong class="nm">秦旭</strong> 
+				<var>5</var> 
+				<span class="avt"> <img alt="秦旭" src="http://wyone.yzu.edu.cn/data/uploads/avatar/28032/middle.jpg"> <i class="png"></i> </span> 
+				</a> 
+			</li><li class="lineD_btm"> 
+				<a target="_blank" href="http://wyone.yzu.edu.cn/@445526"> 
+				<i class="num">5/40</i> 
+				<strong class="nm">于建华</strong> 
+				<var>6</var> 
+				<span class="avt"> <img alt="于建华" src="http://wyone.yzu.edu.cn/public/themes/classic/images/user_pic_middle.gif"> <i class="png"></i> </span> 
+				</a> 
+			</li><li class="lineD_btm"> 
+				<a target="_blank" href="http://wyone.yzu.edu.cn/@445528"> 
+				<i class="num">38/38</i> 
+				<strong class="nm">周领顺</strong> 
+				<var>7</var> 
+				<span class="avt"> <img alt="周领顺" src="http://wyone.yzu.edu.cn/public/themes/classic/images/user_pic_middle.gif"> <i class="png"></i> </span> 
+				</a> 
+			</li><li class="lineD_btm"> 
+				<a target="_blank" href="http://wyone.yzu.edu.cn/@24797"> 
+				<i class="num">3/22</i> 
+				<strong class="nm">梁丁强</strong> 
+				<var>8</var> 
+				<span class="avt"> <img alt="梁丁强" src="http://wyone.yzu.edu.cn/public/themes/classic/images/user_pic_middle.gif"> <i class="png"></i> </span> 
+				</a> 
+			</li><li class="lineD_btm"> 
+				<a target="_blank" href="http://wyone.yzu.edu.cn/@445532"> 
+				<i class="num">2/21</i> 
+				<strong class="nm">叶蓉</strong> 
+				<var>9</var> 
+				<span class="avt"> <img alt="叶蓉" src="http://wyone.yzu.edu.cn/public/themes/classic/images/user_pic_middle.gif"> <i class="png"></i> </span> 
+				</a> 
+			</li><li class="lineD_btm"> 
+				<a target="_blank" href="http://wyone.yzu.edu.cn/@40764"> 
+				<i class="num">12/18</i> 
+				<strong class="nm">吴华佳</strong> 
+				<var>10</var> 
+				<span class="avt"> <img alt="吴华佳" src="http://wyone.yzu.edu.cn/data/uploads/avatar/40764/middle.jpg"> <i class="png"></i> </span> 
+				</a> 
+			</li>					</ul>
+	</div>
+</div>
+<div class="c"></div>
+<div class="footer_bg">
+<div class="footer">
+	<div class="menu">
+			</div>
+	<div>
+		Powered by&nbsp;&nbsp; 词酷（北京）科技有限公司 京ICP备07502658号 
+			</div>
+</div>
+</div>
+</div>
+
+</body>
+</html>
+
+<!--body end-->
+<script type="text/javascript">
+	var since_id = "417";
+
+	$(function(){
+		init();
+	});
+
+	function init() {
+		$("ul.tpl").find("li").hover(function(){
+			$(this).addClass("hover");
+			},function(){
+			$(this).removeClass("hover");
+		});
+
+			$('#slides').slides({
+				preload: true,
+				//preloadImage: '/apps/home/Tpl/default/Public/images/loading.gif',
+				play: 5000,
+				pause: 2500,
+				hoverPause: true,
+				container: "imgb",
+				animationStart: function(current){
+					$('.caption').animate({
+						bottom:-35
+					},100);
+				},
+				animationComplete: function(current){
+					$('.caption').animate({
+						bottom:0
+					},200);
+				},
+				slidesLoaded: function() {
+					$('.caption').animate({
+						bottom:0
+					},200);
+				}
+			});
+	}
+
+	setInterval("showRecent()",50000);
+
+	function changeverify() {
+		var date = new Date();
+		var ttime = date.getTime();
+		var url = "http://wyone.yzu.edu.cn/index.php?app=home&mod=Public&act=verify";
+		$('#verifyimg').attr('src',url+'&'+ttime);
+	}
+
+	function showRecent() {
+		$.post("http://wyone.yzu.edu.cn/index.php?app=home&mod=Public&act=fetchNew", {since_id:since_id}, function(txt){
+			if (txt != 0) {
+				var obj = eval('(' + txt + ')');
+				var html = '';
+				html += '<dl class="list_weibo"><div class="lineD_btm pm10 mt10 pb5" id="weibo_'+obj.weibo_id+'">';
+				html += '<div class="userPic">'+obj.user_pic+'</div>';
+				html += '<div style="margin-left:70px"><div style="min-height: 33px;_height:33px; _overflow:visible;"><strong>'+obj.uname+': </strong><span class="ugc">'+obj.content+'</span></div>';
+				html += '<div class="mt10">';
+				html += '<em title="'+obj.friendly_date+'" class="tm">'+obj.friendly_date+'</em>';
+				html += '</div></div></div></dl>';
+				$('#tw_content').prepend(html);
+
+				since_id = obj.weibo_id;
+			}
+		});
+	}
+//$(function() {
+//var interval = 5000;
+//var slide    =  setInterval(slideIt,interval);
+//	function slideIt() {
+//	  var obj = $('dl','#tw_content');//定义一个变量obj，把id为guduk里的所有<span></span>标签赋给它
+//	  obj.last().hide().prev().hide();//倒数2个隐藏
+//	  obj.last().insertBefore(obj.first()).slideDown(1000);//把id为guduk里的最后一组<span></span>标签插到最前面（这样容器里的<span></span>标签就可以循环起来）
+//	  obj.last().prev().fadeOut(500);//第5个span淡出	
+//	};
+//
+//	$('#tw_content').mouseover(function() {
+//		clearInterval(slide);//当鼠标移上去的时候停止下滑
+//	}).mouseout(function() {
+//		slide = setInterval(slideIt,interval);//当鼠标移开的时候继续下滑
+//	});
+//
+//	//slideIt();
+//});
+</script>

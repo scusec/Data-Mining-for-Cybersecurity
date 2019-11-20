@@ -1,0 +1,596 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html><head><title>集美大学教务处</title><META Name="keywords" Content="集美大学教务处" />
+
+
+
+
+
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type"><link rel="stylesheet" type="text/css" href="css/css.css"><link rel="stylesheet" type="text/css" href="css/lrtk.css"><!--导航js--><script src="js/jquery.min.js" type="text/javascript"></script><script type="text/javascript">
+var timeout         = 500;
+var closetimer      = 0;
+var ddmenuitem      = 0;
+
+function jsddm_open()
+{   jsddm_canceltimer();
+    jsddm_close();
+    ddmenuitem = $(this).find('ul').eq(0).css('visibility', 'visible');}
+
+function jsddm_close()
+{   if(ddmenuitem) ddmenuitem.css('visibility', 'hidden');}
+
+function jsddm_timer()
+{   closetimer = window.setTimeout(jsddm_close, timeout);}
+
+function jsddm_canceltimer()
+{   if(closetimer)
+    {   window.clearTimeout(closetimer);
+        closetimer = null;}}
+
+$(document).ready(function()
+{   $('#jsddm > li').bind('mouseover', jsddm_open);
+    $('#jsddm > li').bind('mouseout',  jsddm_timer);});
+
+document.onclick = jsddm_close;
+  </script>
+
+<!--Announced by Visual SiteBuilder 9-->
+<link rel="stylesheet" type="text/css" href="_sitegray/_sitegray_d.css" />
+<script language="javascript" src="_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:7765626265723230777847545257554403060000 -->
+<link rel="stylesheet" type="text/css" href="index.vsb.css" />
+<script type="text/javascript" src="/system/resource/js/vsbscreen.min.js" id="_vsbscreen" devices="pc|mobile|pad"></script>
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1001,'/index.jsp',-1,1313740528)</script>
+</head>
+<body style="zoom: 1"><!--头部-->
+<div id="head">
+<div class="top"><!--logo-->
+<div class="top_left"><img src="images/logo.png" width="403" height="91"></div><!--right-->
+<div class="top_right">
+<div class="top_right_sw"><!--#begineditable name="主页|收藏" viewid="4210" tagname="主页|收藏" action="" layout="" contype="" stylesysid="" template="" tplstyle="" clone="0" istemp=""-->
+<script language="javascript">
+function dosuba4210a()
+{
+    try{
+        var ua = navigator.userAgent.toLowerCase();
+        if(ua.indexOf("msie 8")>-1)
+        {
+            window.external.AddToFavoritesBar(document.location.href,document.title,"");//IE8
+        }else if(ua.toLowerCase().indexOf("rv:")>-1)
+        {
+            window.external.AddToFavoritesBar(document.location.href,document.title,"");//IE11+
+        }else{
+            if (document.all) 
+            {
+                window.external.addFavorite(document.location.href, document.title);
+            }else if(window.sidebar)
+            {
+                window.sidebar.addPanel( document.title, document.location.href, "");//firefox
+            }
+            else
+            {
+                alert(hotKeysa4210a());
+            }
+        }
+
+    }
+    catch (e){alert("无法自动添加到收藏夹，请使用 Ctrl + d 手动添加");}
+}
+function hotKeysa4210a() 
+{
+    var ua = navigator.userAgent.toLowerCase(); 
+    var str = "";    
+    var isWebkit = (ua.indexOf('webkit') != - 1); 
+    var isMac = (ua.indexOf('mac') != - 1);     
+    if (ua.indexOf('konqueror') != - 1) 
+    {  
+        str = 'CTRL + B'; // Konqueror   
+    } 
+    else if (window.home || isWebkit || isMac) 
+    {        
+        str = (isMac ? 'Command/Cmd' : 'CTRL') + ' + D'; // Netscape, Safari, iCab, IE5/Mac   
+    }
+    return ((str) ? '无法自动添加到收藏夹，请使用' + str + '手动添加' : str);
+}
+function setHomepagea4210a()
+{
+    var url = document.location.href;
+    if (document.all)
+    {
+        document.body.style.behavior='url(#default#homepage)';
+        document.body.setHomePage(url);
+    }
+    else if (window.sidebar)
+    {
+        if(window.netscape)
+        {
+             try{
+                  netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
+             }catch (e){
+                   alert("该操作被浏览器拒绝，如果想启用该功能，请在地址栏内输入 about:config,然后将项 signed.applets.codebase_principal_support 值该为true");
+             }
+        }
+    var prefs = Components.classes['@mozilla.org/preferences-service;1'].getService(Components. interfaces.nsIPrefBranch);
+    prefs.setCharPref('browser.startup.homepage',url);
+    }
+    else
+    {
+        alert("浏览器不支持自动设为首页，请手动设置");
+    }
+}
+</script>
+<A href="javascript:setHomepagea4210a()" style="TEXT-DECORATION: none;">设为首页</a> 丨<A onclick="javascript:dosuba4210a();" href="#" style="TEXT-DECORATION: none;"> 加为收藏</a> 丨 <a href="http://210.34.129.67/jwc/" target="_blank">旧版主页</a><!--#endeditable--></div>
+<div class="top_right_ser"><!--#begineditable name="全文检索" viewid="4211" tagname="全文检索" action="" layout="" contype="" stylesysid="" template="" tplstyle="" clone="0" istemp=""--><script type="text/javascript">
+    function _nl_ys_check(){
+        
+        var keyword = document.getElementById('showkeycode4211').value;
+        if(keyword==null||keyword==""){
+            alert("请输入你要检索的内容！");
+            return false;
+        }
+        if(window.toFF==1)
+        {
+            document.getElementById("lucenenewssearchkeyword4211").value = Simplized(keyword );
+        }else
+        {
+            document.getElementById("lucenenewssearchkeyword4211").value = keyword;            
+        }
+        var  base64 = new Base64();
+        document.getElementById("lucenenewssearchkeyword4211").value = base64.encode(document.getElementById("lucenenewssearchkeyword4211").value);
+        new VsbFormFunc().disableAutoEnable(document.getElementById("showkeycode4211"));
+        return true;
+    } 
+</script>
+<form action="list_search.jsp?wbtreeid=1001" method="post" id="au1a" name="au1a" onsubmit="return _nl_ys_check()" style="display: inline">
+ <input type="hidden" id="lucenenewssearchkeyword4211" name="lucenenewssearchkeyword" value=""><input type="hidden" id="_lucenesearchtype4211" name="_lucenesearchtype" value="1"><input type="hidden" id="searchScope4211" name="searchScope" value="0">
+ <table width="0" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td><input name="showkeycode" id="showkeycode4211" type="text" value="关键字搜索..." onFocus="this.value=''" onBlur="if(!value){value=defaultValue;}" class="ser">
+</td>
+    <td><input name="button" value="" type="submit" class="but" /></td>
+  </tr>
+</table>
+</form><script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/formfunc.js"></script>
+<!--#endeditable--></div></div>
+<div class="clear"></div></div><!--menu-->
+<div class="menu"><!--#begineditable name="网站导航" viewid="164098" tagname="网站导航" action="" layout="" contype="" stylesysid="" template="" tplstyle="" clone="" istemp=""--><div class="nav">
+<ul id="jsddm">
+    <li class="nav-items"><a href="index.htm"><span class="item-name">首页</span></a>
+    </li>
+    <li class="nav-items"><a href="bmjj.htm"><span class="item-name">部门简介</span></a>
+        <UL class="sub-nav">
+                  <LI class="nav-item"><A href="bmjj/bmzz.htm">部门职责</A></LI>
+                  <LI class="nav-item"><A href="bmjj/gwsz.htm">岗位设置</A></LI>
+                  <LI class="nav-item"><A href="bmjj/lxfs.htm">联系方式</A></LI>
+        </UL>
+    </li>
+    <li class="nav-items"><a href="gzzd.htm"><span class="item-name">规章制度</span></a>
+        <UL class="sub-nav">
+                  <LI class="nav-item"><A href="gzzd/jxjbgf.htm">教学基本规范</A></LI>
+                  <LI class="nav-item"><A href="gzzd/jxjsygg.htm">教学建设与改革</A></LI>
+                  <LI class="nav-item"><A href="gzzd/rcjxyxjgl.htm">日常教学与学籍管理</A></LI>
+                  <LI class="nav-item"><A href="gzzd/sjjxgl.htm">实践教学管理</A></LI>
+                  <LI class="nav-item"><A href="gzzd/jxzljk.htm">教学质量监控</A></LI>
+                  <LI class="nav-item"><A href="gzzd/xxqtwj.htm">学校其他文件</A></LI>
+                  <LI class="nav-item"><A href="gzzd/sjbmwj.htm">上级部门文件</A></LI>
+        </UL>
+    </li>
+    <li class="nav-items"><a href="tztg.htm"><span class="item-name">通知通告</span></a>
+        <UL class="sub-nav">
+                  <LI class="nav-item"><A href="tztg/jwk.htm">教务科</A></LI>
+                  <LI class="nav-item"><A href="tztg/sjjxk.htm">实践教学科</A></LI>
+                  <LI class="nav-item"><A href="tztg/jxk.htm">教学科</A></LI>
+                  <LI class="nav-item"><A href="tztg/zlglk.htm">质量管理科</A></LI>
+                  <LI class="nav-item"><A href="tztg/dmtzx.htm">多媒体中心</A></LI>
+                  <LI class="nav-item"><A href="tztg/qt.htm">其他</A></LI>
+        </UL>
+    </li>
+    <li class="nav-items"><a href="zyjs.htm"><span class="item-name">专业建设</span></a>
+        <UL class="sub-nav">
+                  <LI class="nav-item"><A href="zyjs/zysz.htm">专业设置</A></LI>
+                  <LI class="nav-item"><A href="zyjs/pyfa.htm">培养方案</A></LI>
+                  <LI class="nav-item"><A href="zyjs/zypg.htm">专业评估</A></LI>
+        </UL>
+    </li>
+    <li class="nav-items"><a href="kcjs.htm"><span class="item-name">课程建设</span></a>
+        <UL class="sub-nav">
+                  <LI class="nav-item"><A href="kcjs/jpzygxk.htm">精品资源共享课</A></LI>
+                  <LI class="nav-item"><A href="kcjs/wlkc.htm">网络课程</A></LI>
+                  <LI class="nav-item"><A href="kcjs/zxkfkc.htm">在线开放课程</A></LI>
+        </UL>
+    </li>
+    <li class="nav-items"><a href="jxgg.htm"><span class="item-name">教学改革</span></a>
+        <UL class="sub-nav">
+                  <LI class="nav-item"><A href="jxgg/jgxm.htm">教改项目</A></LI>
+                  <LI class="nav-item"><A href="jxgg/jxcg.htm">教学成果</A></LI>
+                  <LI class="nav-item"><A href="jxgg/ggkjxgg.htm">公共课教学改革</A></LI>
+                  <LI class="nav-item"><A href="jxgg/jxcgsb.htm">教学成果申报</A></LI>
+        </UL>
+    </li>
+    <li class="nav-items"><a href="bkjxgc.htm"><span class="item-name">本科教学工程</span></a>
+        <UL class="sub-nav">
+                  <LI class="nav-item"><A href="bkjxgc/jxtd.htm">教学团队</A></LI>
+                  <LI class="nav-item"><A href="bkjxgc/jxms3.htm">教学名师</A></LI>
+                  <LI class="nav-item"><A href="bkjxgc/zyjh3.htm">卓越计划</A></LI>
+                  <LI class="nav-item"><A href="bkjxgc/syjxsfzx1.htm">实验教学示范中心</A></LI>
+                  <LI class="nav-item"><A href="bkjxgc/xnfzsyjxzx.htm">虚拟仿真实验教学中心</A></LI>
+                  <LI class="nav-item"><A href="bkjxgc/dcxm.htm">大创项目</A></LI>
+                  <LI class="nav-item"><A href="bkjxgc/fwcytszy.htm">服务产业特色专业</A></LI>
+                  <LI class="nav-item"><A href="bkjxgc/yyxzbsdzyq.htm">应用型转变试点专业群</A></LI>
+                  <LI class="nav-item"><A href="bkjxgc/cxcyzy.htm">创新创业专业</A></LI>
+        </UL>
+    </li>
+    <li class="nav-items"><a href="sjjx.htm"><span class="item-name">实践教学</span></a>
+        <UL class="sub-nav">
+                  <LI class="nav-item"><A href="sjjx/sysjsygl.htm">实验室建设与管理</A></LI>
+                  <LI class="nav-item"><A href="sjjx/syjx.htm">实验教学</A></LI>
+                  <LI class="nav-item"><A href="sjjx/sxjx.htm">实习教学</A></LI>
+                  <LI class="nav-item"><A href="sjjx/sysaq.htm">实验室安全</A></LI>
+        </UL>
+    </li>
+    <li class="nav-items"><a href="http://www.jmu.edu.cn/"><span class="item-name">学校首页</span></a>
+    </li>
+</ul>
+</div>
+
+
+<!--#endeditable--></div></div><!--中间-->
+<div id="conter"><!--banner-->
+<div class="banner"><script type="text/javascript" src="js/jquery.1.8.2.min.js"></script><script type="text/javascript" src="js/jquery.foucs.js"></script>
+<div id="bannerSlide">
+<div id="index_b_hero">
+<div class="hero-wrap">
+<ul class="heros clearfix">
+<li class="hero"><a href="" target="_blank"><img src="images/201501.jpg"></a> </li>
+<li class="hero"><a href="" target="_blank"><img src="images/201502.jpg"></a> </li>
+<li class="hero"><a href="" target="_blank"><img src="images/201503.jpg"></a> </li>
+<li class="hero"><a href="" target="_blank"><img src="images/201501.jpg"></a> </li>
+<li class="hero"><a href="" target="_blank"><img src="images/201502.jpg"></a> </li>
+<li class="hero"><a href="" target="_blank"><img src="images/201503.jpg"></a> </li></ul></div>
+<div class="helper">
+<div class="mask-left"></div>
+<div class="mask-right"></div><a class="prev icon-arrow-a-left"></a><a class="next icon-arrow-a-right"></a></div></div></div><script type="text/javascript"> 
+$.foucs({ direction: 'left' }); 
+</script></div><!--内容-->
+<div class="con_mid"><!--left-->
+<div class="left"><!--日历-->
+<div class="rl">
+<div class="rl_nav"><span>第<script language="JavaScript">
+Date.prototype.getWeek = function(startDate) {
+var onejan = new Date(startDate);
+return Math.ceil((((this - onejan) / 86400000) + onejan.getDay()-1)/7);
+}
+var scoolBeginDate = "2017/09/11"
+var now = new Date();
+var weekno = now.getWeek(scoolBeginDate);
+ document.write(weekno);
+</script>教学周</span>教学日历</div>
+<div class="rl_font"><iframe height="189" marginheight="0" src="date.html" frameborder="0" width="217" allowtransparency marginwidth="0" scrolling="no" style="margin-top: 0px"></iframe></div></div><!--名师讲堂-->
+<div class="ms">
+<div class="ms_nav"><span><a href="bkjz.htm">更多+</a></span>百科讲座</div>
+<div class="ms_font"><!--#begineditable name="名师讲堂" viewid="4214" tagname="名师讲堂" action="" layout="" contype="" stylesysid="" template="" tplstyle="" clone="0" istemp=""--><script language="javascript" src="/system/resource/js/dynclicks.js"></script><ul>
+   <li><a href="info/1112/3159.htm" target="_blank" title="科学人文素养大讲堂第16讲：美籍华裔离散文学,以伍慧明的《骨》为例">科学人文素养大讲堂第16讲...</a></li>
+   <li><a href="info/1112/3158.htm" target="_blank" title="【科学人文素养大讲堂】航海学院邵哲平教授做“学好专业知识适应国家发展战略要求”的讲座">【科学人文素养大讲堂】航...</a></li>
+   <li><a href="info/1112/3157.htm" target="_blank" title="科学人文素养大讲堂】厦大王宇教授来校作讲座">科学人文素养大讲堂】厦大...</a></li>
+   <li><a href="info/1112/3154.htm" target="_blank" title="科学人文素养大讲堂第15讲：学好专业知识适应国家发展战略需求">科学人文素养大讲堂第15讲...</a></li>
+   <li><a href="info/1112/3153.htm" target="_blank" title="科学人文素养大讲堂第14讲：“过客”与“小城女子”">科学人文素养大讲堂第14讲...</a></li>
+</ul><script>_showDynClickBatch(['dynclicks_u3_3159','dynclicks_u3_3158','dynclicks_u3_3157','dynclicks_u3_3154','dynclicks_u3_3153'],[3159,3158,3157,3154,3153],"wbnews", 1313740528)</script>
+<!--#endeditable--></div></div></div><!--教务新闻-->
+<div class="jw">
+<div class="jw_nav"><span><a href="index/jwxw.htm">更多+</a></span>教务新闻</div>
+<div class="jw_font">
+<div class="top"><!--#begineditable name="图片文章列表" viewid="4273" tagname="图片文章列表" action="" layout="" contype="" stylesysid="" template="" tplstyle="" clone="0" istemp=""--><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script type="text/javascript" src="/system/resource/js/news/webbertpltitlelist.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+    $("#tpltitlelistc4273").KinSlideshow();
+    })
+</script>
+<div id="tpltitlelistc4273" style="visibility:hidden;">
+        <a href="info/1047/3147.htm" target="_blank" title="我校召开IEET认证委员会专家实地访评工作协调会"><img src="/__local/C/3D/91/58240C108CAB35F0B64A323739E_F5D8F9CB_3B558.jpg" alt1="我校召开IEET认证委员会专家实地访评工作协调会" width="268" height="150" /></a>
+        <a href="info/1047/3123.htm" target="_blank" title="学校召开新学期教学工作会议"><img src="/__local/2/52/E5/B374D04AA54E0C6B0BBB8308CB6_5B5DD363_3E08A.jpg" alt1="学校召开新学期教学工作会议" width="268" height="150" /></a>
+        <a href="info/1047/3055.htm" target="_blank" title="校领导检查学校开学前准备工作情况"><img src="/__local/D/EF/16/DF0A2DE140F7E638F6B41B91796_353CFFFF_11AD1.jpg" alt1="校领导检查学校开学前准备工作情况" width="268" height="150" /></a>
+        <a href="info/1047/3009.htm" target="_blank" title="校领导巡视检查期末考试工作"><img src="/__local/2/A7/AA/1F866BD8B21C37FA2CD2CA21CBE_3864E4DF_10F09.jpg?e=.jpg" alt1="校领导巡视检查期末考试工作" width="268" height="150" /></a>
+</div><script>_showDynClickBatch(['dynclicks_u4_3147','dynclicks_u4_3123','dynclicks_u4_3055','dynclicks_u4_3009'],[3147,3123,3055,3009],"wbnews", 1313740528)</script>
+<!--#endeditable--></div>
+<div class="bot"><!--#begineditable name="教务新闻1" viewid="180107" tagname="教务新闻1" action="" layout="" contype="" stylesysid="" template="" tplstyle="" clone="" istemp="true"--><ul>
+   <li><SPAN>10-19</SPAN><a href="info/1047/3147.htm" target="_blank" title="我校召开IEET认证委员会专家实地访评工作协调会">我校召开IEET认证委员会专家...</a></li>
+   <li><SPAN>09-30</SPAN><a href="info/1047/3123.htm" target="_blank" title="学校召开新学期教学工作会议">学校召开新学期教学工作会议</a></li>
+   <li><SPAN>09-27</SPAN><a href="info/1047/3111.htm" target="_blank" title="我校召开新学期教学督导工作会议">我校召开新学期教学督导工作会议</a></li>
+   <li><SPAN>09-11</SPAN><a href="info/1047/3055.htm" target="_blank" title="校领导检查学校开学前准备工作情况">校领导检查学校开学前准备工...</a></li>
+   <li><SPAN>09-11</SPAN><a href="info/1047/3054.htm" target="_blank" title="我校4个项目获2017年福建省教学成果奖">我校4个项目获2017年福建省教...</a></li>
+   <li><SPAN>06-27</SPAN><a href="info/1047/3009.htm" target="_blank" title="校领导巡视检查期末考试工作">校领导巡视检查期末考试工作</a></li>
+   <li><SPAN>06-17</SPAN><a href="info/1047/2986.htm" target="_blank" title="省教育厅实验室安全检查组来我校检查指导实验室安全工作">省教育厅实验室安全检查组来...</a></li>
+</ul><script>_showDynClickBatch(['dynclicks_u5_3147','dynclicks_u5_3123','dynclicks_u5_3111','dynclicks_u5_3055','dynclicks_u5_3054','dynclicks_u5_3009','dynclicks_u5_2986'],[3147,3123,3111,3055,3054,3009,2986],"wbnews", 1313740528)</script>
+<!--#endeditable--></div></div></div><!--通知公告-->
+<div class="tz">
+<div class="jw_nav"><span><a href="tztg.htm">更多+</a></span>通知公告</div>
+<div class="tz_font"><!--#begineditable name="通知公告" viewid="4216" tagname="通知公告" action="" layout="" contype="" stylesysid="" template="" tplstyle="" clone="0" istemp=""--><ul>
+   <li><SPAN>10-12</SPAN><a href="info/1020/3131.htm" target="_blank" title="报名网址更新：关于2017年下半年CET-SET（全国大学英语四、六级考试口语考试）报名工作的通知">报名网址更新：关于2017年下半...</a></li>
+   <li><SPAN>09-19</SPAN><a href="info/1021/3080.htm" target="_blank" title="20171学期跨校互选平台（网络选修课程）在线学习的通知">20171学期跨校互选平台（网络选...</a></li>
+   <li><SPAN>10-25</SPAN><a href="info/1021/3156.htm" target="_blank" title="关于2017-2018学年第一学期港澳台侨留学生高等数学、线性代数单独开班的通知">关于2017-2018学年第一学期港澳...</a><img src="images/new.jpg" /></li>
+   <li><SPAN>10-24</SPAN><a href="info/1021/3052.htm" target="_blank" title="关于20171学期公选课的通知">关于20171学期公选课的通知</a></li>
+   <li><SPAN>10-23</SPAN><a href="info/1020/3155.htm" target="_blank" title="关于做好2017-2018学年第一学期《形势与政策》课程重新学习安排的通知">关于做好2017-2018学年第一学期...</a></li>
+   <li><SPAN>10-19</SPAN><a href="info/1021/3151.htm" target="_blank" title="《集美大学图书馆网络资源检索与服务导引》培训课程表">《集美大学图书馆网络资源检索...</a></li>
+   <li><SPAN>10-17</SPAN><a href="info/1020/3145.htm" target="_blank" title="关于开展2017-2018学年第一学期本科生创新创业素质拓展类学分认定的通知">关于开展2017-2018学年第一学期...</a></li>
+   <li><SPAN>10-16</SPAN><a href="info/1021/3143.htm" target="_blank" title="关于转发《中国高等教育学会关于开展高校双创教育实践研究专项课题申报工作的通知》的通知">关于转发《中国高等教育学会关...</a></li>
+   <li><SPAN>10-16</SPAN><a href="info/1020/3142.htm" target="_blank" title="关于“科学人文素养大讲堂”学分确认的通知">关于“科学人文素养大讲堂”学...</a></li>
+   <li><SPAN>10-13</SPAN><a href="info/1021/3138.htm" target="_blank" title="关于网上借教室系统恢复使用的通知">关于网上借教室系统恢复使用的通知</a></li>
+   <li><SPAN>10-13</SPAN><a href="info/1021/3137.htm" target="_blank" title="关于2017级学生参加《Python程序设计基础》学习的通知">关于2017级学生参加《Python程...</a></li>
+   <li><SPAN>10-12</SPAN><a href="info/1161/3136.htm" target="_blank" title="关于填报集美大学教学管理人员2016年度发表教学论文统计表的通知">关于填报集美大学教学管理人员2...</a></li>
+   <li><SPAN>10-12</SPAN><a href="info/1021/3135.htm" target="_blank" title="关于2017-2018学年第二学期课表排课进度及上报开课计划的通知">关于2017-2018学年第二学期课表...</a></li>
+</ul><script>_showDynClickBatch(['dynclicks_u6_3131','dynclicks_u6_3080','dynclicks_u6_3156','dynclicks_u6_3052','dynclicks_u6_3155','dynclicks_u6_3151','dynclicks_u6_3145','dynclicks_u6_3143','dynclicks_u6_3142','dynclicks_u6_3138','dynclicks_u6_3137','dynclicks_u6_3136','dynclicks_u6_3135'],[3131,3080,3156,3052,3155,3151,3145,3143,3142,3138,3137,3136,3135],"wbnews", 1313740528)</script>
+<!--#endeditable--></div></div><!--快速导航-->
+<div class="ks">
+<div class="ks_nav">快速通道</div>
+<div class="ks_font"><script>
+startList = function() {
+if (document.all&&document.getElementById) {
+navRoot = document.getElementById("nav");
+for (i=0; i<navRoot.childNodes.length; i++) {
+node = navRoot.childNodes[i];
+if (node.nodeName=="LI") {
+node.onmouseover=function() {
+this.className+=" over";
+}
+node.onmouseout=function() {
+this.className=this.className.replace(" over", "");
+}
+}
+}
+}
+}
+window.onload=startList;
+</script>
+<ul id="nav">
+<li class="pt"><a href="http://jwgl4.jmu.edu.cn/" target="_blank">
+<div class="h1"></div>教务系统（教师）</a> <!--<UL>
+<LI><A href="http://jxgl.csiic.com:8080/" target="_blank">毕业证查询</A> </LI>
+<LI><A href="http://www.chsi.com.cn/" target="_blank">学籍查询</A> </LI></UL>--></li>
+<li><a href="http://jwgl3.jmu.edu.cn/" target="_blank">
+<div class="h2"></div>教务系统（学生）</a> </li>
+<li><a href="http://jmu.fanya.chaoxing.com/portal" target="_blank">
+<div class="h3"></div>网络教学平台</a> </li>
+<li><a href="http://192.168.30.13/english/" target="_blank">
+<div class="h9"></div>外语网络教学平台</a> </li>
+<li><a href="http://school.zhihuishu.com/jmu" target="_blank">
+<div class="h8"></div>智慧树网</a> </li>
+<li><a href="http://jmu.gaoxiaobang.com/" target="_blank">
+<div class="h4"></div>形势与政策慕课</a> </li>
+<li><a href="http://99.jmu.edu.cn/" target="_blank">
+<div class="h5"></div>集大通</a> </li>
+<li><a href="http://www.fooc.org.cn/fooc/course.jsp" target="_blank">
+<div class="h6"></div>福课联盟课程</a> </li>
+<li><a href="http://jwc.jmu.edu.cn/info/1066/1062.htm" target="_blank">
+<div class="h7"></div>自习教室</a> </li>
+<!--
+<UL>
+<LI><A href="http://www.icourses.edu.cn/imooc">慕课课程</A> </LI>
+<LI><A href="http://open.163.com/">网易公开课网址</A> </LI>
+<LI><A href="http://opencla.cntv.cn/">新浪公开课网址</A> </LI>
+<LI><A href="http://222.24.19.30/resource/jpk_nav/index_xiao.htm">各高校精品课</A> </LI>
+<LI><A href="http://www.icourses.cn/home/">中国大学视频公开课</A> </LI>
+<LI><A href="http://www.class.cn/index/open">中国教育在线资源平台</A> </LI>
+<LI><A href="http://www.jingpinke.com/">国家精品课程资源网</A> </LI>
+<LI><A href="http://oc.xjtu.edu.cn/">西安交通大学公开课</A> </LI>
+<LI><A href="http://www.jpkcw.com/">全国高校精品课程网</A> </LI></UL></LI>
+<LI><A href="/system/go.jsp?treeid=1081&amp;apptype=treetemp&amp;urltype=tree.TreeTempUrl" target="_blank">
+<DIV class="h7"></DIV></A> </LI></UL><!--end--></div></div>
+<div class="clear"></div><!--快速导航结束--></div>
+<div class="con_bot"><!--图标-->
+<div class="tb">
+<ul>
+<li><a class="fenlei1" href="bszn.htm">
+<div></div>办事指南</a> </li>
+<li><a class="fenlei2" href="xzzx.htm">下载中心</a> </li>
+<li><a class="fenlei4" href="jxgzjb.htm">教学工作简报</a> </li>
+<li><a class="fenlei3" href="jsfb.htm">教室分布</a> </li>
+<li><a class="fenlei7" href="sksj.htm">上课时间</a> </li>
+<li><a class="fenlei8" href="xl.htm">校历</a> </li>
+<li><a class="fenlei5" href="jwxx_list.jsp?urltype=tree.TreeTempUrl&wbtreeid=1111">教务信箱</a> </li>
+<li><a class="fenlei6" href="list.jsp?urltype=tree.TreeTempUrl&wbtreeid=1202">教务文件</a> </li>
+
+
+</ul></div><!--友情链接-->
+<div class="lj">
+<ul>
+<li><!--#begineditable name="管理部门" viewid="4227" tagname="管理部门" action="" layout="" contype="" stylesysid="" template="" tplstyle="" clone="0" istemp=""-->    
+    
+    
+    
+  
+
+    
+<script language="javascript">    
+<!--    
+    function doLinksu7(o)    
+    {    
+        var link=document.getElementsByName("su7")[0];    
+        var index=link.selectedIndex;    
+        if (index==-1 || index>=link.options.length)    
+        {    
+          return;    
+        }    
+        var value = link.options[index].value;    
+        var obj = document.getElementById("hu7");    
+        obj.href = value;
+        var wburlid =link.options[index].getAttribute("aa4227aa");
+        _addDynClicks('wburl',1313740528,wburlid)
+            
+                     obj.target = "_blank"
+                    
+         if(document.all){
+          obj.click();     
+        }         
+         else 
+        { 
+          window.open(value);
+         }
+       
+       if(o.selectedIndex != 0)    
+       {    
+           o.selectedIndex = 0;    
+       }    
+    }    
+-->    
+</script>  
+<table>    
+    <tr><td align="center">    
+            <span class="titlestyle4227"></span> <a id="hu7"></a>    
+            <select name="su7" class="selectstyle4227" onChange="doLinksu7(this)">    
+                <option value="">　　　--管理部门--</option>    
+                <option vsbhrefname="value" aa4227aa="13325" value="http://xiaoban.jmu.edu.cn/">学校办公室    
+                <option vsbhrefname="value" aa4227aa="13326" value="http://jiwei.jmu.edu.cn/">纪委、监察审计处    
+                <option vsbhrefname="value" aa4227aa="13327" value="http://zzb.jmu.edu.cn/">组织部    
+                <option vsbhrefname="value" aa4227aa="13328" value="http://xcb.jmu.edu.cn/">宣传部    
+                <option vsbhrefname="value" aa4227aa="13329" value="http://tzb.jmu.edu.cn/">统战部    
+                <option vsbhrefname="value" aa4227aa="13330" value="http://xsc.jmu.edu.cn/">学工部（学生处）    
+                <option vsbhrefname="value" aa4227aa="13331" value="http://dangxiao.jmu.edu.cn/">党校    
+                <option vsbhrefname="value" aa4227aa="13332" value="http://fzgh.jmu.edu.cn/">发展规划处    
+                <option vsbhrefname="value" aa4227aa="13333" value="http://rsc.jmu.edu.cn/">人事处    
+                <option vsbhrefname="value" aa4227aa="13334" value="http://iced.jmu.edu.cn/">国际合作交流处    
+                <option vsbhrefname="value" aa4227aa="13335" value="http://jwc.jmu.edu.cn/">教务处    
+                <option vsbhrefname="value" aa4227aa="13336" value="http://yjs.jmu.edu.cn/">研究生处    
+                <option vsbhrefname="value" aa4227aa="13337" value="http://zsb.jmu.edu.cn/">招生办    
+                <option vsbhrefname="value" aa4227aa="13338" value="http://kyc.jmu.edu.cn/">科研处    
+                <option vsbhrefname="value" aa4227aa="13339" value="http://bwc.jmu.edu.cn/">保卫处    
+                <option vsbhrefname="value" aa4227aa="13340" value="http://ltxc.jmu.edu.cn/">离退休工作处    
+                <option vsbhrefname="value" aa4227aa="13341" value="http://cwc.jmu.edu.cn/">财务处    
+                <option vsbhrefname="value" aa4227aa="13342" value="http://jjc.jmu.edu.cn/">基建处    
+                <option vsbhrefname="value" aa4227aa="13343" value="http://zcc.jmu.edu.cn/">资产与后勤管理处    
+                </select>    
+        </td><tr></table><!--#endeditable--></li>
+<li><!--#begineditable name="教学单位" viewid="4228" tagname="教学单位" action="" layout="" contype="" stylesysid="" template="" tplstyle="" clone="0" istemp=""-->    
+    
+    
+    
+  
+
+    
+<script language="javascript">    
+<!--    
+    function doLinksu8(o)    
+    {    
+        var link=document.getElementsByName("su8")[0];    
+        var index=link.selectedIndex;    
+        if (index==-1 || index>=link.options.length)    
+        {    
+          return;    
+        }    
+        var value = link.options[index].value;    
+        var obj = document.getElementById("hu8");    
+        obj.href = value;
+        var wburlid =link.options[index].getAttribute("aa4228aa");
+        _addDynClicks('wburl',1313740528,wburlid)
+            
+                     obj.target = "_blank"
+                    
+         if(document.all){
+          obj.click();     
+        }         
+         else 
+        { 
+          window.open(value);
+         }
+       
+       if(o.selectedIndex != 0)    
+       {    
+           o.selectedIndex = 0;    
+       }    
+    }    
+-->    
+</script>  
+<table>    
+    <tr><td align="center">    
+            <span class="titlestyle4228"></span> <a id="hu8"></a>    
+            <select name="su8" class="selectstyle4228" onChange="doLinksu8(this)">    
+                <option value="">　　　--教学单位--</option>    
+                <option vsbhrefname="value" aa4228aa="13239" value="http://nav.jmu.edu.cn/">航海学院    
+                <option vsbhrefname="value" aa4228aa="13240" value="http://mei.jmu.edu.cn/">轮机工程学院    
+                <option vsbhrefname="value" aa4228aa="13241" value="http://fishery.jmu.edu.cn/">水产学院    
+                <option vsbhrefname="value" aa4228aa="13242" value="http://bec.jmu.edu.cn/">食品与生物工程学院    
+                <option vsbhrefname="value" aa4228aa="13243" value="http://phys.jmu.edu.cn/">体育学院    
+                <option vsbhrefname="value" aa4228aa="13244" value="http://cjc.jmu.edu.cn/">财经学院    
+                <option vsbhrefname="value" aa4228aa="13245" value="http://teacher.jmu.edu.cn/">教师教育学院    
+                <option vsbhrefname="value" aa4228aa="13246" value="http://ms.jmu.edu.cn/">工商管理学院    
+                <option vsbhrefname="value" aa4228aa="13247" value="http://com.jmu.edu.cn">音乐学院    
+                <option vsbhrefname="value" aa4228aa="13248" value="http://arts.jmu.edu.cn/">美术学院    
+                <option vsbhrefname="value" aa4228aa="13249" value="http://ie.jmu.edu.cn/">信息工程学院    
+                <option vsbhrefname="value" aa4228aa="13250" value="http://me.jmu.edu.cn/">机械与能源工程学院    
+                <option vsbhrefname="value" aa4228aa="13251" value="http://cec.jmu.edu.cn/">计算机工程学院    
+                <option vsbhrefname="value" aa4228aa="13252" value="http://sci.jmu.edu.cn/">理学院    
+                <option vsbhrefname="value" aa4228aa="13253" value="http://sfl.jmu.edu.cn/">外国语学院    
+                <option vsbhrefname="value" aa4228aa="13254" value="http://soc.jmu.edu.cn/">法学院    
+                <option vsbhrefname="value" aa4228aa="13255" value="http://chin.jmu.edu.cn/">文学院    
+                <option vsbhrefname="value" aa4228aa="13256" value="http://engtech.jmu.edu.cn/">工程技术学院    
+                <option vsbhrefname="value" aa4228aa="13257" value="http://ae.jmu.edu.cn/">继续教育学院    
+                <option vsbhrefname="value" aa4228aa="13258" value="http://oec.jmu.edu.cn/">海外教育学院    
+                <option vsbhrefname="value" aa4228aa="13259" value="http://szb.jmu.edu.cn">马克思主义学院    
+                <option vsbhrefname="value" aa4228aa="13260" value="http://chengyi.jmu.edu.cn/">诚毅学院    
+                </select>    
+        </td><tr></table><!--#endeditable--></li>
+<li><!--#begineditable name="校外站点" viewid="4229" tagname="校外站点" action="" layout="" contype="" stylesysid="" template="" tplstyle="" clone="0" istemp=""-->    
+    
+    
+    
+  
+
+    
+<script language="javascript">    
+<!--    
+    function doLinksu9(o)    
+    {    
+        var link=document.getElementsByName("su9")[0];    
+        var index=link.selectedIndex;    
+        if (index==-1 || index>=link.options.length)    
+        {    
+          return;    
+        }    
+        var value = link.options[index].value;    
+        var obj = document.getElementById("hu9");    
+        obj.href = value;
+        var wburlid =link.options[index].getAttribute("aa4229aa");
+        _addDynClicks('wburl',1313740528,wburlid)
+            
+                     obj.target = "_blank"
+                    
+         if(document.all){
+          obj.click();     
+        }         
+         else 
+        { 
+          window.open(value);
+         }
+       
+       if(o.selectedIndex != 0)    
+       {    
+           o.selectedIndex = 0;    
+       }    
+    }    
+-->    
+</script>  
+<table>    
+    <tr><td align="center">    
+            <span class="titlestyle4229"></span> <a id="hu9"></a>    
+            <select name="su9" class="selectstyle4229" onChange="doLinksu9(this)">    
+                <option value="">　　　--校外站点--</option>    
+                <option vsbhrefname="value" aa4229aa="13231" value="http://www.gov.cn/">国务院    
+                <option vsbhrefname="value" aa4229aa="13233" value="http://www.moe.edu.cn/">国家教育部    
+                <option vsbhrefname="value" aa4229aa="33087" value="http://www.heec.edu.cn/">教育部高等教育教学评估中心    
+                <option vsbhrefname="value" aa4229aa="13321" value="http://www.chsi.com.cn/">中国高等教育学生信息网    
+                <option vsbhrefname="value" aa4229aa="13322" value="http://www.cdgdc.edu.cn/">中国学位与研究生教育信息网    
+                <option vsbhrefname="value" aa4229aa="13323" value="http://www.hie.edu.cn/">中国高等教育学会    
+                <option vsbhrefname="value" aa4229aa="13232" value="http://www.fujian.gov.cn/">福建省政府    
+                <option vsbhrefname="value" aa4229aa="13234" value="http://www.fjedu.gov.cn/">福建省教育厅    
+                <option vsbhrefname="value" aa4229aa="13230" value="http://www.xm.gov.cn/">厦门市政府    
+                <option vsbhrefname="value" aa4229aa="13324" value="http://pg.fjedu.gov.cn/html/">福建省教育评估研究中心    
+                </select>    
+        </td><tr></table><!--#endeditable--></li></ul></div></div></div><!--底部-->
+<div id="footer"><!--#begineditable name="版权" viewid="4213" tagname="版权" action="" layout="" contype="" stylesysid="" template="" tplstyle="" clone="0" istemp=""--><!-- 版权内容请在本组件"内容配置-版权"处填写 -->
+<div class="bot_left" align="center" style="text-align: center">
+    © <a>版权所有</a>&nbsp;集美大学教务处&nbsp;&nbsp;&nbsp;地址：福建省厦门市集美区银江路185号&nbsp;&nbsp;&nbsp;&nbsp;
+</div>
+<div class="bot_right" align="center">
+    传真：0592-6181395&nbsp;&nbsp;&nbsp;邮箱：<a href="mailto:jwc@jmu.edu.cn">jwc@jmu.edu.cn</a><br />
+</div><!--#endeditable--></div>
+
+</body></html>

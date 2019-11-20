@@ -1,0 +1,2105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- <meta charset="utf-8" /> -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="renderer" content="webkit"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1"/>
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
+    <meta http-equiv="Pragma" content="no-cache"/>
+    <meta http-equiv="Cache-Control" content="no-cache"/>
+    <meta http-equiv="Expires" content="0"/>
+
+    <title></title>
+
+    <script type='text/javascript' src="resources/js/jquery-2.1.1.min.js"></script>
+    <!--国际化-->
+    <script type='text/javascript' src="resources/js/plugins/i18n/jquery.i18n.js"></script>
+    <script src="resources/js/plugins/i18n/jquery.i18n.messagestore.js"></script>
+    <script src="resources/js/plugins/i18n/jquery.i18n.fallbacks.js"></script>
+    <script src="resources/js/plugins/i18n/jquery.i18n.parser.js"></script>
+    <script src="resources/js/plugins/i18n/jquery.i18n.emitter.js"></script>
+    <script src="resources/js/plugins/i18n/jquery.i18n.language.js"></script>
+    <script type='text/javascript' src="portal/custom/conf/school.js"></script>
+
+    <script>
+        function appDataSendStatus(status) {
+        }
+        /**
+         * 判断浏览器类型,是否要显示浏览器支持页面
+         * chrome、safari、IE9+的浏览器返回false,表示是支持的类型，其他的返回true表示不支持
+         * @returns {boolean}
+         */
+        function getOs() {
+            var flag = true;
+            var OsObject = window.navigator.userAgent;
+            if (OsObject.indexOf("Safari") > 0) {
+                flag = false;
+            } else if (OsObject.indexOf("Chrome") > 0) {
+                if (window.navigator.webkitPersistentStorage) {
+                    flag = false;
+                }
+            } else if (OsObject.indexOf("Firefox") > 0) {
+//                flag = false;
+            }
+            if (!!window.ActiveXObject || "ActiveXObject" in window) {
+
+                if (OsObject.indexOf("MSIE") > 0) {
+                    var version = OsObject.match(/MSIE \d+/i);
+                    var versionNum = version[0].match(/\d+/i);
+                    if (parseInt(versionNum) >= 9) {
+                        flag = false;
+                    }
+                } else if (OsObject.toLowerCase().indexOf("trident") > -1 && OsObject.indexOf("rv") > -1) {
+                    flag = false;
+                }
+            }
+
+            if (!flag) {
+                flag = filterNavigatorNoSupport(OsObject);
+            }
+            return flag;
+        }
+        /**
+         * 过滤非主流浏览器
+         * @param OsObject
+         * @returns {boolean}
+         */
+        function filterNavigatorNoSupport(OsObject) {
+            //搜狗 MetaSr  遨游 Maxthon QQ QQBrowser  猎豹 LBBROWSER  百度 BIDUBrowser  淘宝 TaoBrowser UC  UBrowser
+            if (OsObject.indexOf("MetaSr") > 0 || OsObject.indexOf("UBrowser") > 0 || OsObject.indexOf("Maxthon") > 0 || OsObject.indexOf("QQBrowser") > 0 || OsObject.indexOf("LBBROWSER") > 0 || OsObject.indexOf("BIDUBrowser") > 0 || OsObject.indexOf("TaoBrowser") > 0) {
+                return true;
+            }
+            return false;
+        }
+
+        if (getOs()) {
+            window.location.href = "../portal/browerTips.html";
+        }
+
+        if (/*@cc_on!@*/false) {
+            document.documentElement.className += ' ie' + document.documentMode;
+        }
+        if (/*@cc_on!@*/true) {
+            document.documentElement.className += ' ie' + document.documentMode;
+        }
+
+    </script>
+    <!--换肤的动作-->
+    <script src="portal/js/plugins/changeSkin.js"></script>
+    <!-- <link rel="stylesheet" href="portal/css/cyan/amp.css">
+    <link rel="stylesheet" href="portal/css/cyan/skin.css"> -->
+    <!--字体图标-->
+    <link rel="stylesheet" href="portal/font-awesome/iconfont.css">
+
+    <!--widget依赖-->
+    <script src="resources/widget/webcomponents/compatibility.js"></script>
+    <script src="resources/widget/webcomponents/webcomponents-lite.min.js"></script>
+
+    <link rel="stylesheet" href="portal/custom/css/school.css">
+
+    <!--[if lte IE 11]>
+    <link type="text/css" rel="stylesheet" href="portal/css/ie.css">
+    <![endif]-->
+
+</head>
+<body style='overflow: hidden;min-width: 1152px;'>
+<!-- 主页面加载之前的提示页面-->
+<article style="min-width: 1152px;">
+	<section>
+		 
+	<style type="text/css">
+		.amp-loading-page {
+			background-color:#EEEEEE;
+			width:100%;
+			height:100%;
+			position:absolute;
+			text-align:center;
+			min-width: 1152px;
+		}
+		.app-loading {
+		    position: absolute;
+		    opacity: 1;
+		    top: 150px;
+		    left: -60px;
+		    margin-left: 50%;
+		    z-index: 0;
+		    text-align: center;
+		} 
+		 .spinner {
+		  margin: 100px auto 0;
+		  width: 150px;
+		  text-align: center;
+		}
+		 
+		.spinner > div {
+		  width: 30px;
+		  height: 30px;
+		  background-color: #0f6ada;
+		 
+		  border-radius: 100%;
+		  display: inline-block;
+		  -webkit-animation: bouncedelay 1.4s infinite ease-in-out;
+		  animation: bouncedelay 1.4s infinite ease-in-out;
+		  /* Prevent first frame from flickering when animation starts */
+		  -webkit-animation-fill-mode: both;
+		  animation-fill-mode: both;
+		}
+		 
+		.spinner .bounce1 {
+		  -webkit-animation-delay: -0.32s;
+		  animation-delay: -0.32s;
+		}
+		 
+		.spinner .bounce2 {
+		  -webkit-animation-delay: -0.16s;
+		  animation-delay: -0.16s;
+		}
+		 
+		@-webkit-keyframes bouncedelay {
+		  0%, 80%, 100% { -webkit-transform: scale(0.0) }
+		  40% { -webkit-transform: scale(1.0) }
+		}
+		 
+		@keyframes bouncedelay {
+		  0%, 80%, 100% {
+		    transform: scale(0.0);
+		    -webkit-transform: scale(0.0);
+		  } 40% {
+		    transform: scale(1.0);
+		    -webkit-transform: scale(1.0);
+		  }
+		}
+	</style>
+		<div id="ampLoadingPage" class="amp-loading-page">
+			请耐心等待......
+			<div class="app-loading" id="ampAppLoading">
+				<div class="spinner">
+					<div class="bounce1"></div>
+					<div class="bounce2"></div>
+					<div class="bounce3"></div>
+				</div>
+			</div>
+			<div></div>
+		</div>
+	</section>
+
+</article>
+
+<!--语言切换加载的进度条-->
+<article id="ampProgressBar" class="amp-zIndex-lv1 amp-animate-opacity amp-progressbar amp-hide"
+         amp-page-flag="true">
+
+	<div class="amp-amp-progressba-box amp-animated amp-animate-move-top-in">
+
+		 <div class="amp-progressbar-content">
+			 <img src="portal/images/personalCenter/progressbar.gif"/>
+
+			 <span>Changing Language</span>
+		</div> 
+
+	</div>
+
+</article>
+
+<!--头部页面-->
+<!--页头模块-->
+
+<header id="ampPageHeader" class="amp-header" style="min-width: 1152px;">
+    <!--logo图-->
+    <img class="amp-header-child amp-header-logo" src="portal/custom/img/logo/logo-mini.png" />
+
+    <!--头部导航-->
+    <nav class="amp-header-child amp-header-nav amp-clearfix-child amp-ml-8" id="ampHeaderNav">
+        <!--home页按钮--> <i id="ampPageHeaderHomeIcon" class="iconfont icon-home1 amp-active amp-tab-item amp-hover-slow-motion" data-menu-id="370c3bef-d631-48fc-9566-1122e2527bc9" data-title="办事大厅"></i>
+        <!--个人中心页按钮--> <i id="ampPageHeaderPersonalIcon" class="iconfont icon-pc1 amp-tab-item amp-hover-slow-motion" data-menu-id="e490407f-9620-4516-95c4-b7154da6371b" data-title="个人中心"></i>
+        <!--      <i id="ampPageHeaderExpandIcon" class="iconfont icon-gongzuoquqiehuan amp-tab-item amp-i-hide amp-hover-slow-motion"></i>
+    -->
+    </nav>
+
+<!--拓展项-->
+<div id="ampExtend" class="amp-extend amp-hide"></div>
+
+<!--搜索块-->
+<div id="ampPageHeaderSearch" class="amp-header-search amp-animate-left">
+    <!--搜索框-->
+    <div class="amp-header-search-input ampHeaderSearchFlag">
+        <!--搜索按钮图标--> <i id="ampPageHeaderSearchIcon" class="iconfont icon-sousuo"></i>
+        <!--搜索input框-->
+        <input id="ampPageHeaderSearchInput" class="amp-pageheader-search-input" type="text" value="" maxlength="20"/>
+        <!--搜索结果数-->
+        <span id="ampHeaderSearchResult"></span>
+        <!--最新服务数-->
+        <div id="ampHeaderNewAppLabel" class="amp-ml-8"></div>
+    </div>
+    <div id="ampServiceSearch" class="amp-service-search-input ampServiceSearchFlag amp-hide amp-service-search-input-nologin">
+     
+    </div>
+
+    <!--关闭搜索按钮-->
+    <div id="ampPageHeaderSearchClose" class="amp-header-search-close amp-animate-opacity" data-i18n="closeSearch">关闭搜索</div>
+</div>
+
+<!--右侧工具块-->
+<nav class="amp-header-tool amp-header-child amp-pull-right amp-clearfix-child">
+    <div id="ampNoLoginTool" class="amp-hide amp-header-no-login amp-clearfix-child amp-hover-slow-motion">
+        <!--登录按钮-->
+        <div id="ampLoginBtn" class="amp-pull-right amp-pt-4 amp-hover-underline" data-i18n="login">登录</div>
+        <!--人头图标-->
+        <i class="iconfont icon-user1 amp-pull-right amp-mr-4"></i>
+    </div>
+
+<div id="ampHasLoginTool" class="amp-hide amp-header-has-login amp-clearfix-child">
+    <div id="ampHeaderToolUserName" class="amp-pull-right amp-mt-4 amp-cursor-point amp-tool-username-lh"></div>
+    <img id="ampHeaderToolUser" width="28" height="28" class="amp-pull-right amp-mr-8 amp-cycle amp-user-photo" has-photo='0' src="portal/images/icons/user-role-teacher.png" />
+    <span id="ampHeaderToolSkin" class="amp-pull-right amp-mr-16 amp-mt-4">
+        <i class="iconfont icon-skin amp-hover-slow-motion"></i>
+    </span>
+
+    <span id="ampHeaderToolFeedback" class="amp-pull-right amp-mr-16 amp-mt-4">
+        <i class="iconfont icon-wenti1 amp-hover-slow-motion"></i>
+    </span>
+
+
+    <!--中英文国际化切换-->
+    <div id="ampInternationTool" class="amp-internation-tool">
+        <span class="amp-internation-zh-icon amp-hide ampInterZhIcon amp-mr-2">
+           中文 
+        </span>
+        <span class="amp-internation-en-icon amp-hide ampInterEnIcon amp-mr-2">
+            English
+        </span>
+        <i class="iconfont icon-down1"></i>
+        
+    </div>
+
+    <!--消息图标-->
+    <!--   <div id="ampHeaderNoReadMessage" class="amp-pull-right amp-mr-16">
+    <div id="ampHeaderNoReadMessageNum" class="amp-message-num amp-hide"></div>
+    <i class="iconfont icon-xiaoxi amp-mt-2"></i>
+</div>
+-->
+</div>
+
+</nav>
+</header>
+
+<!--办事大厅-->
+<div id="ampEhallBody" class="amp-l-position amp-ehall-body amp-animate-opacity amp-hide">
+    <!--登录首页-->
+    <!--
+登录首页
+-->
+
+<!--slide模块-->
+<article class="amp-pt-header bh-slide amp-active amp-zIndex-lv1" amp-page-flag="true" role="slide" slide-index="1" slide-direction="vertical" id="ampLoginInArticle">
+<!-- 背景图片-->
+	<!-- 	 <div id="ampLoginPageBgImg" class="amp-login-img"></div>  -->
+	<article id="ampLoginArticle" class="amp-login">	
+		<div id="ampLoginRoleNav" class="amp-login-content">
+			<header id="ampLoginHeader" class="amp-ehall-header amp-login-header amp-animated amp-animate-move-bottom-in">
+				<div id="ampLoginHeaderContent">
+					
+				<h3 class="amp-role-nav-h3"></h3>
+				<span></span>
+				</div>
+				
+			</header>
+			<div id="ampHasNoLogin" class="amp-has-nologin-btn  amp-animated amp-animate-move-bottom-in amp-hover-slow-motion">
+				<!--中文标题-->
+				<span data-i18n="login">登录</span>
+			</div>
+			<div id="ampHasLogin" class="amp-has-login-btn amp-hide amp-animated amp-animate-move-bottom-in">
+				<!--中文标题-->
+				<span data-i18n="welcome">欢迎您,</span>
+				<span class="amp-username"></span>
+			</div>
+
+		</div>
+		<div class="amp-login-bottom-desc amp-animate-move-bottom-in" id="ampLoginInBottomDesc">
+			<span class="amp-login-text"  data-i18n="hereWeProvide">我们为你准备了丰富的校园服务</span>
+			<span class="amp-login-icon-gunlun amp-mt-8 icon">
+				<i class="iconfont icon-gunlun"></i>
+			</span>			 
+		</div>
+
+	</article>
+</article>
+    <!--推荐服务-->
+    <!--
+办事大厅  推荐服务模块
+-->
+
+<!--slide模块-->
+<article class="amp-pt-header bh-slide amp-zIndex-lv1" amp-page-flag="true" role="slide" slide-index="1" slide-direction="vertical" id="ampEhallSlideIndex">
+    <article id="ampEhallArticle" class="amp-ehall">
+        <!--头部背景图-->
+        <header id="ampEhallHeader" class="amp-ehall-header amp-animated amp-animate-move-bottom-in">
+            <div class="amp-hide amp-ehall-header-title" id="ampEhallHeaderContent">
+                <h3 class="amp-role-nav-h3"></h3>
+                <span></span>
+            </div>
+
+        </header>
+        <!--角色tab站位区-->
+        <div id="ampEhallRoleNavPlaceHolder" class="amp-role-nav-placeholder amp-animated amp-animate-move-bottom-in"></div>
+        <!--分隔线-->
+        <div class="amp-split amp-animated amp-animate-move-bottom-in" data-i18n="recommendedService">推荐服务</div>
+        <!--推荐服务列表区-->
+        <section id="ampRecommendSection" class="amp-animated amp-animate-move-bottom-in"></section>
+    </article>
+</article>
+    <!--应用分类-->
+    <!--办事大厅  应用分类模块-->
+
+<!--slide模块-->
+<article id="ampClassifyArticle" class="amp-pt-header bh-slide amp-classify amp-zIndex-lv1" amp-page-flag="true" role="slide" slide-index="2" slide-direction="vertical">
+
+    <!--角色tab站位区-->
+    <div id="ampClassifyRoleNavPlaceHolder" class="amp-role-nav-placeholder amp-animated amp-animate-move-bottom-in"></div>
+
+    <!--应用分类列表去-->
+    <section id="ampClassifySection" class="amp-animated amp-animate-move-bottom-in"></section>
+
+    <footer id="ampPageFooter" class="amp-page-footer">
+
+    </footer>
+</article>
+</div>
+<!--创建桌面-->
+ <!--创建桌面--> 
+
+ <article id="ampDesktopCreatArticle" class="amp-desktop-creat amp-animated amp-animate-opacity   amp-desktop-creat-zIndex-lv1 amp-hide" amp-page-flag="true">
+
+   <section id="ampDesktopCreatSection" class="amp-DesktopCreat-section">
+
+     <!-- 添加关闭按钮 --> 
+     <div id="ampDesktopCreatClose" class="amp-desktop-creat-close"> <i class="iconfont icon-chacha"></i>
+     </div>
+
+     <!-- 桌面list--> 
+     <div>
+
+       <div class="amp-desktop-creat-header">
+         <div>
+           <h2>新建桌面</h2>
+           <span>请选择您需要的桌面类型</span>
+         </div>
+         <!-- 桌面items--> 
+         <div id="ampDesktopCreatNav" class="amp-desktop-creat-nav-item amp-animated amp-animate-move-bottom-in"></div>
+       </div>
+
+       <!--  桌面小工具预览 --> 
+       <div class="amp-desktop-creat-do">
+         <div class="amp-split amp-animated amp-animate-move-bottom-in">桌面小工具预览</div>
+         <div id="ampDesktopCreatDo" class="amp-ehall-nav-item amp-desktop-creat-nav-item amp-active">
+         <!--中文标题--> 
+         <h3>
+           <i class="iconfont icon-51 amp-mr-8"></i>
+           创建该桌面
+         </h3>
+       </div>
+     </div>
+
+     <!-- 桌面widgets--> 
+     <div class="amp-desktop-creat-wiget-items">
+       <div id="ampDesktopContents" class="amp-tab-content amp-desktop-content"></div>
+     </div>
+
+   </div>
+
+ </section>
+
+ </article>
+
+<!--添加小工具-->
+<!--  添加小工具 
+
+<article id="ampAddSmalltoolArticle" class="amp-add-smalltool amp-animated  amp-animate-opacity amp-add-smalltool-zIndex-lv1 amp-hide" amp-page-flag="true">
+
+  <section id="ampAddSmalltoolSection">
+    添加关闭按钮 
+    <div id="ampDesktopCreatClose" class="amp-desktop-creat-close"> <i class="iconfont icon-chacha"></i>
+    </div>
+
+    <div class="amp-add-smalltool-header">
+      <div>
+        <h2>添加小工具</h2>
+        <div class="amp-split amp-add-smalltool-split amp-animated amp-animate-move-bottom-in">选择需要的小工具，添加到学生桌面</div>
+      </div>
+    </div>
+
+    标签 +widgets 卡片 
+    <div class="amp-add-smalltool-content">
+
+      标签items 
+      <div class="amp-add-smalltool-nav" id="ampAddSmalltoolNav">
+        <ul class="amp-pull-left amp-clearfix-child" id="ampAddSmalltoolLabels"></ul>
+      </div>
+
+      widgets卡片 
+      <div class="amp-add-smalltool-widgets" id="ampAddSmalltoolWidgets"></div>
+      <div class="amp-ehall-nav-item amp-add-smalltool-goback" id="ampAddSmalltoolGoback">
+        <h3>返回桌面</h3>
+      </div>
+    </div>
+    返回桌面按钮 </section>
+</article> -->
+
+<!--服务中心-->
+<!--服务中心-->
+
+<article id="ampServiceArticle" class="amp-service amp-animated amp-animate-move-top-out amp-zIndex-lv2 amp-hide" amp-page-flag="true">
+    <!--左侧栏-->
+    <aside></aside>
+
+    <!--搜索结果块-->
+    <article id="ampServiceRightContent">
+        <!--搜索结果label列表-->
+        <nav id="ampServiceLabelNav" class="amp-service-nav amp-mb-16"></nav>
+
+        <!--搜索结果-->
+        <section id="ampServiceSection" class="amp-service-section">
+            <!--最新应用 当搜索结果为空或所有时显示-->
+            <div id="ampServiceCenterNewApps"></div>
+            <!--搜索结果APP-->
+            <div id="ampServiceCenterSearchApps"></div>
+        </section>
+    </article>
+</article>
+
+<!--个人中心-->
+<!--个人中心模块-->
+
+<article id="ampPersonalArticle" class="amp-height-no-header amp-personal amp-zIndex-lv1 amp-animate-opacity amp-hide"
+         amp-page-flag="true">
+    <!--左侧栏-->
+    <aside id="ampPersonalAsideLeft" amp-position="left"
+           class="amp-tab amp-aside-box amp-mini amp-personal-aside-left amp-hide amp-pt-16 amp-animated amp-animate-move-left-in amp-zIndex-lv1">
+        <div id="ampPersonalAsideLeftMini" amp-role="ampAsideBoxMini" class="amp-aside-box-mini">
+            <div class="amp-aside-box-mini-cont">
+                <div amp-id="myFavorite" class="amp-aside-box-mini-item amp-hover-slow-motion">
+                    <i class="iconfont icon-aixin"></i>
+                    <div class="amp-str-cut"  data-i18n="myFavorites">我的收藏</div>
+                </div>
+                <div amp-id="allCanUseApps" class="amp-aside-box-mini-item amp-hover-slow-motion">
+                    <i class="iconfont icon-liebiao1"></i>
+                    <div class="amp-str-cut" data-i18n="availableApps">可用应用</div>
+                </div>
+                <div amp-id="canUseCards" class="amp-aside-box-mini-item amp-triangle amp-hover-slow-motion">
+                    <i class="iconfont icon-yingyong1"></i>
+                    <div class="amp-str-cut" data-i18n="availableCards">可用卡片</div>
+                </div>
+            </div>
+        </div>
+
+        <div id="ampPersonalAsideLeftNormal" class="amp-aside-box-normal">
+            <div id="ampPersonalAsideLeftTabHead" class="amp-clearfix-child  amp-personcenter-asideleft-tabhead">
+                <div class="amp-tab-item amp-active amp-left-tab-item" amp-id="myFavorite" >
+                    <i class="iconfont icon-aixin1 amp-mr-16"></i>
+                    <span  data-i18n="myFavorites">我的收藏</span>
+                </div>
+                <div class="amp-tab-item amp-left-tab-item" amp-id="allCanUseApps" >
+                    <i class="iconfont icon-liebiao1 amp-mr-16"></i>
+                    <span  data-i18n="availableApps">可用应用</span>
+                </div>
+                <div class="amp-tab-item amp-left-tab-item" amp-id="canUseCards" >
+                    <i class="iconfont icon-yingyong1 amp-mr-16"></i>
+                    <span  data-i18n="availableCards">可用卡片</span>
+                </div>
+            </div>
+
+            <div id="ampPersonalAsideLeftTabContent"
+                 class="amp-tab-content amp-relative-height-inherit amp-personalcenter-asideContent-bg">
+                <div id="ampPersonalAsideLeftMyFavorite" amp-id="myFavorite"
+                     class="amp-clearfix-child amp-personal-asideleft-myfavorite">
+                </div>
+                <div id="ampPersonalAsideLeftAllCanUseApps" class="amp-hide amp-relative-height-inherit"
+                     amp-id="allCanUseApps"></div>
+                <div id="ampPersonalAsideLeftCanUseCards"
+                     class="amp-hide amp-relative-height-inherit amp-personal-asideleft-canuse-card"
+                     amp-id="canUseCards"></div>
+
+            </div>
+        </div>
+
+        <div id="ampPersonalAsideLeftClose" class="amp-aside-box-close amp-hover-slow-motion" amp-role="ampAsideBoxClose"></div>
+    </aside>
+
+    <!--中间栏-->
+    <section id="ampPersonalMainWidgetSection" class="amp-personal-center amp-animate-personal-center" amp-left-state="mini" amp-right-state="mini">
+        <div id="ampDesktopNav" class="amp-desktop-nav amp-tab amp-clearfix-child amp-animate-personal-center"></div>
+
+        <div id="ampDesktopContent" class="amp-tab-content amp-desktop-content amp-animate-personal-center amp-clearfix"></div>
+        <div id="msg_end" style="height:0px; overflow:hidden"></div>
+    </section>
+
+    <!--右侧栏-->
+    <aside id="ampPersonalAsideRight" amp-position="right"
+           class="amp-aside-box amp-mini amp-personal-aside-right amp-hide amp-mt-16 amp-animated amp-animate-move-right-in amp-zIndex-lv10">
+        <!--右侧mini状态-->
+        <div amp-role="ampAsideBoxMini" class="amp-aside-box-mini">
+            <div id="ampPersonalAsideRightMini" class="amp-aside-box-mini-cont">
+                <div amp-id="task" class="amp-aside-box-mini-item amp-aside-box-hide amp-hover-slow-motion" id="dbTask">
+                    <label class="amp-tag amp-m-4 amp-hide"></label>
+                    <i class="iconfont icon-daiban"></i>
+                    <div class="amp-str-cut" data-i18n="ToDo">待办事项</div>
+                    <span class="amp-task-count" id="ampDbTaskCount"></span>
+                </div>
+                <div amp-id="task" class="amp-aside-box-mini-item amp-aside-box-hide amp-hover-slow-motion" id="lcgzTask">
+                    <label class="amp-tag amp-m-4 amp-hide"></label>
+                    <i class="iconfont icon-liucheng"></i>
+                    <div class="amp-str-cut" data-i18n="process">流程跟踪</div>
+                     <span class="amp-task-count" id="ampLcgzTaskCount"></span>
+                </div>
+                <div amp-id="task" class="amp-aside-box-mini-item amp-aside-box-hide amp-hover-slow-motion" id="zqfwTask">
+                    <label class="amp-tag amp-m-4 amp-hide"></label>
+                    <i class="iconfont icon-daibantixing"></i>
+                    <div class="amp-str-cut" data-i18n="cycleService">周期服务</div>
+                     <span class="amp-task-count" id="ampzqfwTaskCount"></span>
+                </div>
+                <div amp-id="message" class="amp-aside-box-mini-item amp-hover-slow-motion">
+                    <label class="amp-tag amp-m-4 amp-hide"></label>
+                    <i class="iconfont icon-xiaoxi"></i>
+                    <div class="amp-str-cut" data-i18n="unreadMessage">未读消息</div>
+                     <span class="amp-task-count" id="ampMessageTaskCount"></span>
+                </div>
+            </div>
+        </div>
+
+        <!--右侧正常状态-->
+        <div id="ampPersonalAsideRightNormal" class="amp-aside-box-normal amp-tab">
+
+            <div id="ampPersonalAsideRightTabHead" class="amp-clearfix-child amp-personcenter-asideright-tabhead">
+                <div class="amp-tab-item amp-left-tab-item amp-aside-right-tab-item" amp-id="task">
+                 <span class="amp-red-corner amp-hide"></span>
+                    <span data-i18n="tasks">任务</span>(
+                    <span id="taskSumCount">0</span>
+                    )
+                </div>
+                <div class="amp-tab-item  amp-left-tab-item amp-aside-right-tab-item" amp-id="message" >
+                <span class="amp-red-corner amp-hide"></span>
+                    <span data-i18n="messages">消息</span>(
+                    <span id="messageSumCount">0</span>
+                    )
+                </div>
+            </div>
+
+            <div id="ampPersonalAsideRightTabContent" class="amp-tab-content amp-relative-height-inherit amp-personalcenter-asideContent-bg">
+                <div id="ampPersonalAsideRightTask" amp-id="task"
+                     class="amp-clearfix-child amp-personal-aside-right-task amp-pt-16">
+                     <div class="amp-personal-aside-right-task-box hasAsideRIghtFlag">
+                         <div class="amp-personal-aside-right-task-item"><span data-i18n="ToDo" >待办事项</span><span class="task-item-count" id="dbTaskCountTotal">0</span>
+                             <i class="amp-arrow ampTaskArrowFlag" amp-id="dbTask"></i>
+                         </div>
+                         <div id="ampPersonalAsideRightDbTaskItem" class="amp-personal-aside-right-task-item-content amp-hide">
+                         </div>
+                     </div>
+                     <div class="amp-personal-aside-right-task-box hasAsideRIghtFlag">
+                           <div class="amp-personal-aside-right-task-item"><span data-i18n="process" >流程跟踪</span><span class="task-item-count"  id="lcgzTaskCountTotal">0</span>
+                           <i class="amp-arrow ampTaskArrowFlag" amp-id="lcgzTask"></i></div>
+                          <div id="ampPersonalAsideRightLcgzTaskItem" class="amp-personal-aside-right-task-item-content amp-hide">
+                         </div>
+                     </div>
+                    
+                     <div class="amp-personal-aside-right-task-box">
+                         <div class="amp-personal-aside-right-task-item"><span data-i18n="cycleService" >周期服务</span><span class="task-item-count" id="zqfwTaskCountTotal">0</span><i class="amp-arrow ampTaskArrowFlag"  amp-id="zqfwTask"></i></div> 
+                           <div id="ampPersonalAsideRightZqfwTaskItem" class="amp-personal-aside-right-task-item-content ampPersonalAsideRightZqfwTaskItemFlag amp-hide">
+                         </div>
+                     </div>
+                     <div id="ampTaskEmptyPage" class="amp-hide">
+                           <div class="amp-personal-empty-page">
+                             <img src="portal/images/personalCenter/no-data.png"/>                         
+                             <!--widget标题-->                         
+                             <div class="amp-pt-8 amp-undecoration" data-i18n="enjoyNoTask" >享受轻松的时光吧~您没有任务</div>
+                         </div>      
+
+                     </div>
+                    
+                </div>
+                <div id="ampPersonalAsideRightMessage" class="amp-hide amp-relative-height-inherit" amp-id="message">
+                    <div id="ampPersonalMessageHeader" class="amp-message-header">
+                        <span amp-type="allRead" class="amp-mr-8" data-i18n="readAll">全部设为已读</span>
+                        <span amp-type="goMessageCenter" data-i18n="messageCenter">消息中心 &gt;</span>
+                    </div>
+                    <div class="amp-personal-message" id="ampTagMessages"></div>
+                </div>
+
+            </div>
+        </div>
+
+        <div id="ampPersonalAsideRightClose" class="amp-aside-box-close amp-hover-slow-motion" amp-role="ampAsideBoxClose"></div>
+
+    </aside>
+    <!--<div id="ampPersonalAsideRightStateChangeBtn"-->
+    <!--class="amp-personal-aside-right-normal-close amp-animate-right-opacity"></div>-->
+
+</article>
+
+<!--引导页-->
+<article id="ampBootPage" class="amp-zIndex-lv1 amp-animate-opacity amp-hide amp-bootpage"
+         amp-page-flag="true">
+
+	<div class="amp-boot-box amp-animated amp-animate-move-top-in" id="ampBootBox">
+
+		<div class="amp-bootpage-introduce" id="ampBootPageIntroduce">
+			<div class="amp-boot-leftaside ampBootArrow" amp-position="left">
+				<div class="amp-boot-leftarrow" id="ampBootLeftArrow">
+					<img src="portal/images/bootPage/uleft.png" width="23" height="41"/>
+				</div>
+			</div>
+			<div class="amp-boot-mainaside">
+				<ul id="ampBootMainSide">
+					
+				</ul>
+				<!--图片热区-->
+				<div class="amp-boot-mainside-rq amp-hide" id="ampBootMainSideRQ">
+					<div class="amp-boot-enter" id="ampBootEnter"></div>
+					<div class="amp-boot-reload" id="ampBootReload"></div>
+				</div>
+
+			</div>
+			<div class="amp-boot-rightaside ampBootArrow" amp-position="right">
+				<div id="ampBootRightArrow" >
+					<img src="portal/images/bootPage/uright.png" width="23" height="41"/>
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+
+</article>
+
+<div id="iframeList" class="iframeBlock animated" style="overflow:hidden !important;">
+</div>
+
+
+<!--背景图-->
+<!--  <div id="ampPageLoginBgImg" class="amp-page-login-bg-img amp-login-img"></div> -->
+<div id="ampPageBgImg" class="amp-page-bg-img amp-login-img"></div>
+
+<!--背景透明遮罩层-->
+<div id="ampPageBgCover" class="amp-page-bg-cover amp-hide"></div>
+
+
+<input id='analysisUserName' value='T3RoZXI=' type="hidden"/>
+
+<!--各种模板-->
+<!--各种html模板-->
+
+<!--显示所有应用信息卡片-->
+<script type="text/template" id="tpl-app-card">
+    <!--appFlag标识该节点为APP-->
+   <!--  <div class="amp-app-card-box"> -->
+    <div class="hoverAppFlag appFlag amp-app-card @customClass" @attributes>
+       @ehallAppHotNewFlag
+        <!--应用图片-->
+        <img class="amp-mr-8" src="@img"/>
+      <!--   <div class="amp-app-card-desc amp-animated amp-animate-move-bottom-in">说明</div> -->
+        <!--应用信息-->
+        <div class="amp-app-card-info">
+            <!--
+            应用标题
+            appTitleFlag标识该节点在鼠标移入时显示收藏图标
+            -->
+            <div class="amp-app-card-title amp-str-cut amp-mb-4 appTitleFlag">@title</div>
+
+            <!--应用所属分类-->
+            <div class="amp-app-card-category amp-mb-4 amp-str-cut"  title="@catetooltip">@category</div>
+            <!--应用扩展信息-->
+            <div class="amp-app-card-extend">
+                <!--评价星级-->
+                @star
+                <!--应用权限-->@permission</div>
+        </div>
+  <!--   </div> -->
+    </div>
+</script>
+
+<script type="text/template" id="tpl-hover-app-card">
+<div class="appFlag amp-app-card-hover-big amp-animate-height-opacity-fast @classie9" @attributeBig>
+    <!-- @appCardHoverHotNewFlag -->
+    <div class="amp-app-card-big-head">
+        <span title="@bibTitleTip">@Bigtitle</span>
+        @iShowHtml
+        <div class="amp-app-card-title-big amp-str-cut appTitleFlag"></div>
+    </div>
+
+    <div class="amp-app-card-big-content">
+        <div class="amp-card-big-img">
+            <img width="48" height="48" class="amp-mr-8" src="@imgBig"/>
+        </div>
+        <div class="amp-card-big-box">
+
+            <div class="amp-app-card-category-big amp-mb-4 amp-str-cut"  title="@catetooltip">@categoryBig</div>
+
+            <div class="amp-card-star-big amp-mb-8">@starBig</div>
+            <div class="amp-app-card-favorite-big amp-pt-4">
+                <span></span>
+                <span>@favoriteCount@collected</span>
+            </div>
+        </div>
+        @permission      
+    </div>
+
+</div>
+
+</script>
+
+
+<!-- <script type="text/template" id="tpl-hover-app-card">
+  <div class="appFlag amp-app-card-big amp-app-card-big-bottom amp-animate-height-opacity-fast" @attributeBig>
+       @appCardHoverHotNewFlag
+       <div class="amp-app-card-big-head">
+            <div class="amp-app-card-extend">@permissionBig</div>
+            应用图片        
+            <div class="amp-card-big-img"><img width="72" height="72" class="amp-mr-8" src="@imgBig"/></div>         
+          <div class="amp-card-desc"><i class="iconfont icon-information1 ampAppdescFlag" @attributedescBig></i></div>
+          @iShowHtml
+            <div class="amp-app-card-title-big amp-str-cut amp-mb-4 appTitleFlag"></div> 
+        </div>
+        <div class="amp-app-card-big-content">
+         <div class="amp-card-title-big"><span title="@bibTitleTip">@Bigtitle</span></div>
+         <div class="amp-card-star-big amp-mb-8">@starBig</div>
+         <div class="amp-app-card-category-big amp-mb-4 amp-str-cut"  title="@catetooltip">@categoryBig</div>
+         <div class="amp-app-card-favorite-big"><span></span><span data-i18n="myFavorites">@favoriteCount人收藏</span></div>
+       </div>
+  </div>
+
+</script> -->
+
+<!--所有信息卡片hover的效果-->
+<script type="text/template" id="tpl-hover-app-card-group">
+    <div class="amp-hover-app-card-group amp-pull-left">@content</div>
+</script>
+<!--搜索中心卡片hover的效果-->
+<script type="text/template" id="tpl-hover-service-center-app-card-group">
+    <div class="amp-hover-app-card-group amp-pull-left amp-service-center-app-group">@content</div>
+</script>
+
+<script type="text/template" id="tpl-hover-app-card-i-icon">
+      <div class="amp-card-desc"><i class="iconfont icon-information1 ampAppdescFlag" @attributedescBig></i></div>
+</script>
+
+
+<script type="text/template" id="tpl-single-hover-app-card-i-icon">
+     <i class="iconfont icon-information1 ampAppdescFlag" @attributedesc></i>
+</script>
+
+<!--显示所有应用信息卡片-->
+<script type="text/template" id="tpl-service-app-card">
+    <!--appFlag标识该节点为APP-->
+    <div class="appFlag amp-app-card @customClass" @attributes>
+       @ehallAppHotNewFlag
+        <!--应用图片-->
+        <img class="amp-mr-8" src="@img"/>
+        <!-- <div class="amp-app-card-desc amp-animated amp-animate-move-bottom-in">说明</div> -->
+        <!--应用信息-->
+        <div class="amp-app-card-info">
+            <!--
+            应用标题
+            appTitleFlag标识该节点在鼠标移入时显示收藏图标
+            -->
+            <div class="amp-app-card-title amp-str-cut amp-mb-4 appTitleFlag">@title</div>
+
+            <!--应用所属分类-->
+            <div class="amp-app-card-category amp-mb-4 amp-str-cut"  title="@catetooltip">@category</div>
+            <!--应用扩展信息-->
+            <div class="amp-app-card-extend">
+                <!--评价星级-->
+                @star
+                <!--应用权限-->@permission</div>
+        </div>
+        
+    </div>
+</script>
+
+
+
+
+<script type="text/template" id="tpl-ehall-app-card-desc">
+     <div class="amp-card-desc" id="ampAppdescFlag"><i class="iconfont icon-wenti1 ampAppdescFlag" @attributeBig></i></div>
+</script>
+
+<script type="text/template" id="tpl-ehall-app-hot-flag-card">
+     <div class="amp-ehall-hot-new-flag-card amp-ehallapp-hot-flag-card"><span class="amp-ehapp-app-hot-content" data-i18n="hot">@text</span></div>
+</script>
+
+<script type="text/template" id="tpl-ehall-app-new-flag-card">
+     <div class="amp-ehall-hot-new-flag-card amp-ehallapp-new-flag-card"><span class="amp-ehapp-app-new-content" data-i18n="new">@text</span></div>
+</script>
+
+<!--简单应用卡片-->
+<script type="text/template" id="tpl-app-card-single">
+    <div class="amp-app-card-single amp-clearfix-child">
+        <!--用于图片-->
+        <img src="@img"/>
+        <!--应用标题-->
+        <h5 class="amp-str-cut">@title</h5>
+    </div>
+</script>
+<!--收藏简单应用卡片-->
+<script type="text/template" id="tpl-app-card-single-myfavorite">
+    <div class="amp-app-card-single amp-clearfix-child  amp-app-card-myfavorite">
+        <!--用于图片-->
+        <img src="@img"/>
+        <!--应用标题-->
+        <h5 class="amp-str-cut">@title</h5>
+    </div>
+</script>
+
+<!--所有信息卡片和简单卡片组-->
+<script type="text/template" id="tpl-app-card-group">
+    <div class="amp-app-card-group amp-pull-left">@content</div>
+</script>
+
+<!--应用分类卡片-->
+<script type="text/template" id="tpl-classify-card">
+    <div class="amp-classify-apps amp-animate-trans amp-rotateY amp-mr-8 @hideRotateYClass" amp-classify-id="@classifyId">
+        <!--头部-->
+        <div class="amp-classify-apps-header">
+            <!--中文标题-->
+            <h3 title="@TipChTitle">@ChTitle</h3>
+            <!--应用总项数-->
+            <div class="amp-pt-8">@aTotalOf@appSumCount@item</div>
+        </div>
+        <!--应用列表-->
+        <div class="amp-classify-apps-content">@apps</div>
+    </div>
+</script>
+
+<!--简单应用样式,缩小版-->
+<script type="text/template" id="tpl-app-single">
+    <div class="appFlag appTitleFlag amp-app-single amp-clearfix-child amp-hover-slow-motion" amp-fav-icon-t="9" amp-fav-icon-r="6" @attributes>
+        <!--应用图片-->
+        <img src="@img"/>
+        <!--标题-->
+        <h5 class="amp-str-cut">@title</h5>
+        @iShowIconHtml
+    <!--     <i class="iconfont icon-information1 amp-app-single-i-icon"></i> -->
+    </div>
+</script>
+
+<!-- 办事大厅 分类页面的i图标tpl -->
+<script type="text/template" id="tpl-app-single-i-icon">
+  <i class="iconfont icon-information1 amp-app-single-i-icon ampAppdescFlag" @attributedescBig></i>    
+</script>
+
+
+<!--复杂应用样式,缩小版-->
+<script type="text/template" id="tpl-app-complex">
+    <div class="appTitleFlag amp-app-complex amp-clearfix-child amp-hover-slow-motion"  @attributes card-name="@cardName" app-id="@appId" cardNickName="@cardNickName" desktop-id="@desktopId" app-card-wid="@cardWid">
+        <!--应用图片-->
+        <img class="amp-app-complex-img" src="@img"/>
+        <!--标题-->
+        <h5 class="amp-str-cut @hasUnReadMark">@title</h5>
+        <div class="amp-app-complex-btn @hasBtnClass"></div>
+    </div>
+</script>
+
+<!--带分类条的应用列表块-->
+<script type="text/template" id="tpl-bar-apps-block">
+    <div class="amp-bar-apps-block">
+        <!--头部-->
+        <header class="amp-bar-apps-block-header">
+            <!--分类标题-->
+            <span class="">@title</span>
+            <!--应用总数-->
+            <span>(@count)</span>
+
+            <span class="ampClearFlag amp-ml-24 amp-cursor-point amp-color-primary-lv1 @clearClass"> <i class="iconfont icon-ordinaryrefresh"></i>
+                @deleteAllResults
+            </span>
+        </header>
+        <!--应用列表-->
+        <div class="amp-bar-apps-block-apps amp-clearfix-child">@apps</div>
+    </div>
+</script>
+
+<!--带分类条的应用列表块-->
+<script type="text/template" id="tpl-bar-apps-block-1">
+    <div class="amp-bar-apps-block-1">
+        <!--头部-->
+        <header>@title</header>
+        <!--应用列表-->
+        <div>@content</div>
+    </div>
+</script>
+
+<!--空桌面的页面-->
+<script type="text/template" id="tpl-desktop-ampty-page">
+    <div class="amp-bg-color-gray-lv4 amp-empty-desktop-page amp-empty-page" id="ampEmptyDesktopPage">
+    <div class="empty-desktop-container">
+        <div id="emptyDesktopCreate" class="empty-desktop-create amp-animate-all-fast" >@createANewDesktop</div>
+        <span >@openANewServiceExperience</span>
+       </div>
+    </div>
+</script>
+
+<script type="text/template" id="tpl-CanUseCards-ampty-page">
+    <div class="amp-bg-color-gray-lv4 amp-empty-canUseCards-page amp-empty-page" id="ampEmptyDesktopPage">
+    <div class="empty-canUseCards-container">
+        @pleaseCreateANewDesktop
+       </div>
+    </div>
+</script>
+
+<!--角色tab-->
+<script type="text/template" id="tpl-role-nav">
+    <nav id="@navId" class="amp-ehall-nav amp-animate-top amp-zIndex-lv1 @customClass">@content</nav>
+</script>
+<!--角色tab节点-->
+<script type="text/template" id="tpl-role-nav-item">
+    <div class="text-center amp-hover-slow-motion amp-ehall-nav-item @activeClass" amp-role-id="@roleId">
+        <!--中文标题-->
+        <h3 class="amp-role-nav-h3">@chTitle</h3>
+        <!--英文标题-->
+        <div>@enTitle</div>
+    </div>
+</script>
+<script type="text/template" id="tpl-role-nav-item-en">
+    <div class="text-center amp-hover-slow-motion amp-ehall-nav-item amp-ehall-nav-item-en @activeClass" amp-role-id="@roleId">
+        <!--中文标题-->
+        <h3 class="amp-role-nav-h3">@enTitle</h3>
+    </div>
+</script>
+<!--侧边栏添加widget卡片-->
+<script type="text/template" id="tpl-widget-add-card-aside">
+    <div class="amp-app-card-single amp-clearfix-child amp-pull-left">
+        <div class="amp-widget-add-icon amp-pull-left"></div>
+        <h5 class="amp-str-cut">@addApps</h5>
+    </div>
+</script>
+
+<!--主区域添加widget卡片-->
+<script type="text/template" id="tpl-widget-add-card-main">
+    <div class="amp-widget amp-animated amp-hide amp-widget-add amp-widget-card-center amp-card-hasno-drag  amp-desktop-tool ampLoadingCompleteFlag">
+        <div class="amp-widget-add-icon amp-mb-8">
+               <i class="iconfont icon-jia5"></i>
+        </div>
+        <div class="amp-widget-add-tool"  @styleEn >@addAppCards</div>
+    </div>
+</script>
+
+<!--主区域拖拽widget卡片-->
+<script type="text/template" id="tpl-widget-drag-card-main">
+    <div class="amp-widget amp-animated  amp-animate-move-bottom-in  amp-widget-drag 
+    amp-card-hasno-drag amp-widget-drag-hide amp-widget-card-center ampLoadingCompleteFlag ampLoadingDragCompleteFlag amp-desktop-tool">
+        <div class="amp-widget-drag-icon amp-mb-8"> <i class="iconfont icon-download"></i>
+        </div>
+        <div class="amp-widget-drag-desc" >@selectTheApp</div>
+    </div>
+</script>
+
+<!--主区域失去权限的widget卡片-->
+<script type="text/template" id="tpl-widget-lost-permission-card">
+    <div class="amp-widget  amp-animated amp-hide @widgetId amp-widget-lost-permisson amp-widget-only-drag" widget-id="@widgetid" widget-wid="@widgetWid" app-id="@appId">@content</div>
+</script>
+
+<script type="text/template" id="tpl-widget-lost-permission-card-content">
+   <div class="amp-widget-lost-permission-content">
+   <div class="amp-mb-8"><i class="iconfont icon-lock"></i></div>
+    <span data-i18n="youAreNotAuthorizedToUseService">您失去了使用权限,请联系管理员</span>
+   </div>
+</script>
+
+<!--主区域widget卡片-->
+<script type="text/template" id="tpl-widget-main-item">
+    <div class="amp-widget amp-widget-only-drag amp-hide @widgetId @dragClass @recommedCard" widget-id="@widgetid" widget-wid="@widgetWid" app-id="@appId" app-key="@appKey">@content</div>
+</script>
+
+<!--侧边栏正常widget模块-->
+<script type="text/template" id="tpl-widget-aside-normal-item">
+    <div class="amp-widget-aside-normal @widgetId">@content</div>
+</script>
+
+<!--侧边栏mini widget模块-->
+<script type="text/template" id="tpl-widget-aside-mini-item">
+    <div amp-id="@itemId" class="amp-aside-box-mini-item">
+        <label class="amp-tag amp-m-4 @hideClass">@num</label>
+        <img src="@img"/>
+        <div class="amp-str-cut">@title</div>
+    </div>
+</script>
+
+
+<!--提示信息框-->
+<script type="text/template" id="tpl-prompt">
+    <div class="amp-prompt amp-animate-top-opacity @promptStateClass" amp-role="prompt">
+        <!--状态图标--> <i class="iconfont @stateIconClass amp-prompt-state-icon"></i>
+        <!--提示内容-->
+        <span>@content</span>
+        <!--关闭按钮-->
+        <i class="amp-prompt-close iconfont icon-guanbi"></i>
+    </div>
+</script>
+
+<!--应用详情-->
+<script type="text/template" id="tpl-app-detail">
+    <div id="ampDetail" class="amp-detail-wrap">
+        <div class="amp-detail" amp-role="dialog">
+            <!--关闭按钮-->
+            <i class="iconfont icon-chacha"></i>
+
+            <div class="amp-detail-container">
+                <header class="amp-detail-header">
+                 <!--应用图片-->
+                <div class="amp-detail-img">
+                <img src="@img"></div>
+                <div class="amp-detail-title">
+                   <!--标题-->
+                    <h3 data-amp-app-title >@title</h3>
+                    <div class="amp-header-detail-category-v amp-mt-8">
+                        <!--版本-->
+                        <span title="@title_category">@version @category</span>
+                        <!--类别-->
+                     <!--    <span></span> -->
+                    </div>  
+                </div>
+                </header>
+                <div class="amp-detail-introduction" data-amp-app-service >@serviceDescription</div>
+                <!--详情-->
+                <div id="ampDetailIntroduction" class="amp-detail-body">
+                <div id="ampDetailIntroductionContent" class="amp-detail-content"></div>
+                </div>
+
+                <footer>
+                    <!--进入服务按钮-->
+                    <div id="ampDetailEnter" class="amp-detail-enter @enterClass">@enterText</div>
+
+                    <!--不再显示checkbox-->
+                    <div class="amp-checkbox @unviewClass">
+                        <label>
+                            <input id="ampDetailUnViewInput" type="checkbox" value="@unviewabledescription">
+                            <i class="amp-checkbox-helper"></i>
+                            <div >@doNotShow</div>
+                        </label>
+                    </div>
+
+                    <!--登陆提示-->
+                    <div class="amp-detail-login @loginClass">
+                        <!--登陆按钮-->
+                        <span class="amp-detail-login-btn">@loginbtn</span>
+                        <span class="amp-detail-login-text">@checkUsageRight</span>
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </div>
+</script>
+
+<script type="text/template" id="tpl-folder">
+    <div id="ampFolder" class="amp-detail-wrap">
+        <div class="amp-detail amp-folder" amp-role="dialog">
+            <!--关闭按钮-->
+            <i class="iconfont icon-chacha"></i>
+
+            <div class="amp-folder-container">
+                <header class="amp-folder-header">
+                    <!--标题-->
+                    <h3 title="@tipTitle">@title</h3>
+                    <div>
+                        <span>@aTotalOf</span><span>@appCount</span><span>@services</span>
+                    </div>
+                </header>
+
+                <!--详情-->
+                <div class="amp-folder-app-list" id="ampFolderAppList">@appList</div>
+
+                <footer class="amp-folder-footer">
+                    <div id="ampFolderFavoriteBtn" class="amp-folder-favorite-btn @favoriteBtnClass"> <i class="iconfont icon-aixin"></i><span>@favoriteText</span></div>
+                </footer>
+            </div>
+        </div>
+    </div>
+</script>
+
+<script type="text/template" id="tpl-header-user-info">
+    <div id="ampHeaderUserInfo" class="amp-header-user-info amp-animate-trans-fast">
+        <section class="amp-clearfix-child">
+            <div class="user-photo-box">
+                <img id="user-photo" src="@userPhotoSrc" has-photo="@hasPhoto"/>    
+            <!--   <div class="user-photo-hover bh-emapAvartar-btn" id="userPhotoHover"><span>@photoText</span></div> -->
+            </div>
+
+            <div class="user-photo-info">
+                <div class="amp-header-user-info-name amp-str-cut">@username</div>
+            </div>
+        </section>
+        @personalCenterHtml 
+        @siteTypeHtml
+        @adminBtn
+        <div id="ampHeaderUserInfoLogoutBtn" class="amp-bg-color-danger-lv1 amp-color-white-lv1 amp-animate-all-fast">@signOut</div>
+    </div>
+</script>
+
+<!-- 个人中心可配置 -->
+<script type="text/template" id="tpl-header-user-info-personal-center">
+      <div id="ampHeaderPersonalCenter" class="amp-animate-all-fast">
+           @personalCenter
+        </div>   
+</script>
+
+
+<script type="text/template" id="tpl-portal-site-model">
+    <div id="ampPortalSiteModel" class="amp-animate-all-fast">@siteTypeName</div> 
+</script>
+
+<script type="text/template" id="tpl-header-user-skin">
+    <div id="ampHeaderUserSkin" class="amp-header-user-skin amp-animate-trans-fast">
+        <div class="skin-head"> <i class="iconfont icon-chacha  amp-pull-right amp-skin-close"></i>
+            <h3 class="amp-pull-left">@skin</h3>
+        </div>
+
+        <div class="bh-switch fontsize12">
+            <label class="bh-switch-label">@eyeShieldMode：</label>
+            <input id="skinSwitch" class="mui-switch mui-switch-animbg" type="checkbox" checked />
+            <label class="bh-switch-helper"></label>
+            <label id="skinSwitchText" class="bh-switch-text" open-text="打开" close-text="关闭">@skinSwitchText</label>
+        </div>
+
+        <!-- 存放皮肤的位置-->
+        <div class="skin-content amp-pt-16" id="ampSkinContent">
+            @skinContent
+        </div>
+
+        <div class="bh-skin-layer"></div>
+
+    </div>
+</script>
+
+<script type="text/template" id="tpl-skin-item">
+     <div class="amp-skin-item @switchCheckFlag" amp-skin="@newSkinName">
+         <img src=@smallImgSrc width="100" height="56"/>
+         <div class="skin-item-name skin-item-name-@skinbg"><span>@skinName</span></div>
+         <div class="skin-item-footer">
+           <span></span><span></span><span></span><span></span>
+         </div>  
+         <div class="skin-item-check">@selectSkin</div>
+         <span class="amp-skin-use"><i class="iconfont icon-shiyongzhong1 amp-mr-4"></i>@inUse</span>
+    </div> 
+</script>
+
+<script type="text/template" id="tpl-label-line">
+    <div class="amp-label-line amp-clearfix-child">
+        <label class="amp-pull-left" amp-service-id="@serviceId">@labelName</label>
+        <ul class="amp-pull-left amp-clearfix-child">@labelList</ul>
+    </div>
+</script>
+
+<script type="text/template" id="tpl-sub-label-line">
+    <div class="amp-label-line amp-clearfix-child serviceCenterSubLabelFlag">
+        <label class="amp-pull-left" amp-service-id="@serviceId">@labelName</label>
+        <ul class="amp-pull-left amp-clearfix-child">@labelList</ul>
+    </div>
+</script>
+
+<script type="text/template" id="tpl-sub-label-line-item">
+    <li class="amp-label-line-item amp-hover-slow-motion amp-pull-left amp-mb-4 @active ampSubLabelItem" amp-label-id="@labelId" amp-label-flag="@labelFlag">@labelName</li>
+</script>
+
+<script type="text/template" id="tpl-label-line-item">
+    <li class="amp-label-line-item amp-hover-slow-motion amp-pull-left amp-mb-4 @active @hasSubLabelFlag" amp-label-id="@labelId" amp-label-flag="@labelFlag" amp-label-type="@labelType">@labelName</li>
+</script>
+
+<script type="text/template" id="tpl-category-tab">
+  <div class="amp-canUseApp-search"> <i id="ampPersonalAsideLeftAllCanUseCardsSearchIcon" class="iconfont icon-sousuo"></i>
+      <input id="ampPersonalAsideLeftAllCanUseCardsSearchInput" type="text" value="" placeholder="@searchAvailableCards" maxlength="20">
+      <span id="ampPersonalAsideleftCanusecardDelete"> <i id="ampPersonalAsideLeftAllCanUseCardsDeleteIcon" class="iconfont icon-chacha1"></i>
+      </span>
+  </div>
+    <div class="amp-category-tab">
+        <ul id=@tabUlId>@header</ul>
+        <div id="ampCategoryTabContent" class="amp-category-tabcontent">@content</div>
+    </div>
+</script>
+
+<script type="text/template" id="tpl-category-tab-head-item">
+<li class="@customClass @hasUnReadMarkClass amp-hover-slow-motion @hasSubCategoryFlag @subCategoryState" amp-id="@id"><span class="amp-left-aside-canuseapp-name" title="@titleName">@name</span><span class="amp-app-count">@appCount</span>
+</li>
+</script>
+
+<script type="text/template" id="tpl-sub-category-tab-head-item">
+<li class="amp-canuseapp-sub-category amp-hide amp-animated amp-animate-move-top-in" amp-id="@id" amp-subid="@subId" >
+<span class="amp-circle-dot"></span>
+    <span class="amp-left-aside-canuseapp-name">@name</span>
+    <span class="amp-app-count">@appCount</span>
+</li>
+</script>
+
+<script type="text/template" id="tpl-category-tab-content-item">
+    <div class="amp-category-content-item @customClass " id="@num" amp-id="@id">@content</div>
+</script>
+
+<script type="text/template" id="tpl-canUseApp-tab">
+       <div class="amp-canUseApp-search"> <i id="ampPersonalAsideLeftAllCanUseAppsSearchIcon" class="iconfont icon-sousuo"></i>
+            <input id="ampPersonalAsideLeftAllCanUseAppsSearchInput" type="text" value="" placeholder="@searchAvailableServices" maxlength="20">
+            <span id="ampPersonalAsideleftCanuseappDelete"> <i id="ampPersonalAsideLeftAllCanUseAppsDeleteIcon" class="iconfont icon-chacha1"></i>
+            </span>
+        </div>
+    <div class="amp-category-tab">
+
+        <ul id="ampPersonalAsideLeftAllCanUseAppsTabUl">@header</ul>
+        <div id="ampPersonalAsideLeftAllCanUseAppsTabContent" class="amp-category-tabcontent">
+        <!--     <div class="amp-canUseApp-search">
+            <i id="ampPersonalAsideLeftAllCanUseAppsSearchIcon" class="iconfont icon-sousuo"></i>
+            <input id="ampPersonalAsideLeftAllCanUseAppsSearchInput" type="text" value="" placeholder="搜索可用服务" maxlength="20">
+            <span id="ampPersonalAsideleftCanuseappDelete"> <i id="ampPersonalAsideLeftAllCanUseAppsDeleteIcon" class="iconfont icon-chacha1"></i></span>
+        </div> -->
+
+            @content
+        </div>
+    </div>
+</script>
+<script type="text/template" id="tpl-canUseApp-tab-content-item">
+    <div class="amp-category-content-item @customClass " amp-classify="@classify" id="@id">@content</div>
+</script>
+<script type="text/template" id="tpl-app-single-canUseApp">
+    <div class="appFlag appTitleFlag amp-app-single amp-clearfix-child amp-hover-slow-motion @appBelongFlag" amp-fav-icon-t="@top" amp-fav-icon-r="8" @attributes >
+        @dragAppFlag
+        <!--应用图片-->
+        <img src="@img"/>
+        <!--标题-->
+        <h5 class="amp-str-cut">
+            @title
+        </h5>
+@iShowIconHtml
+      <!--    <i class="iconfont icon-information1"></i>  -->
+    </div>
+</script>
+<script type="text/template" id="tpl-app-single-myfaviriteDragApp">
+        <i class="amp-app-single-drag iconfont icon-drag1"></i>
+</script>
+
+
+<script type="text/template" id="tpl-loading-frame">
+    <div class="amp-loading @customClass" amp-role="loading">@content</div>
+</script>
+
+<script type="text/template" id="tpl-aside-appList">
+    <div class="amp-aside-apps">
+        <h5>@title</h5>
+        <div class="amp-mt-16">@content</div>
+    </div>
+</script>
+
+<script type="text/template" id="tpl-search-no-data">
+    <div class="amp-search-no-data">
+        <img src="portal/images/prompt/search-no-data-new.png" />
+        <div class="amp-search-no-data-desc">@sorryWeCannotFind</div>
+    </div>
+</script>
+
+<script type="text/template" id="tpl-ehall-app-head">
+    <!-- <div class="amp-split amp-animated amp-animate-move-bottom-in">@text</div> -->
+    <div class="amp-split amp-animated amp-active" >@recommendedService</div>
+</script>
+
+<script type="text/template" id="tpl-personalCenterSet-btn">
+    <div class="amp-tab-item amp-left-tab-item amp-desktop-nav-icon ampDesktopAddFlag amp-desktop-nav-btn ampDesktopBtn amp-hover-slow-motion" id="ampDesktopAddBtn"><i class="iconfont icon-jia"></i></div>
+    <div class="amp-tab-item amp-left-tab-item amp-desktop-nav-icon ampDesktopSetFlag amp-desktop-nav-btn ampDesktopBtn amp-hover-slow-motion"><i class="iconfont icon-set"></i></div>
+</script>
+<!-- 
+<script type="text/template" id="tpl-personalCenterAdd-btn">
+<div class="amp-tab-item amp-desktop-nav-icon  amp-desktop-add-input-container ampDesktopCreatBtn">
+    <input type="text" id="ampDesktopCreatInput" class="amp-desktop-add-input" maxlength="8" placeholder="给桌面取个名字"/>
+    <div class="amp-desktop-set-list-input-count"></div>
+</div>
+<div class="amp-tab-item amp-desktop-nav-icon amp-desktop-save ampDesktopCreatBtn">
+    <i class="iconfont icon-32gougou"></i>
+</div>
+<div class="amp-tab-item amp-desktop-nav-icon amp-desktop-del ampDesktopCreatBtn">
+    <i class="iconfont icon-chacha"></i>
+</div>
+</script>
+-->
+<script type="text/template" id="tpl-desktop-creat-nav">
+    <nav class="amp-ehall-nav amp-desktop-creat-nav amp-animate-top amp-zIndex-lv1">@content</nav>
+</script>
+<script type="text/template" id="tpl-desktop-creat-nav-item">
+      <div class="amp-ehall-nav-item amp-desktop-creat-nav-item @activeClass"  amp-desktop-id="@desktopId">
+               <h3>@title</h3>
+      </div>
+</script>
+
+<!-- 创建桌面widget卡片-->
+<script type="text/template" id="tpl-widget-desktop-creat-item">
+    <div class="amp-widget amp-animated amp-hide @widgetId">@content
+      <div class="amp-widget-desktop-creat-mb"></div>
+    </div>
+</script>
+
+<!-- 推荐卡片提醒tpl-->
+<script type="text/template" id="tpl-card-recommed">
+     <div class="amp-recommed-card-container" id="ampRecommendBtn">
+         <div class="content">
+             <h3 class="amp-mb-8">@recommendedCard</h3>
+             <span >@thePlatformAdministrator</span>
+             <div>
+
+                 <div class="amp-bg-color-primary-lv1 amp-color-white-lv1 amp-recommend-keep">
+                     <span class="recommend-keep-title" >@keep</span>
+                     <span class="desktop-title" id="ampDesktopTitle"> <i class="iconfont icon-down"></i>
+                     </span>
+
+                 </div>
+                 <div  class="amp-ml-8 amp-color-black-lv1 amp-recommend-no-need">@iDoNotNeedIt</div>
+
+                 <div class="amp-recommend-show-desktopnav amp-animate-move-bottom-in" id="ampRecommendShowDesktop">
+                    <span class="desktop-desc" >@keepTheCardIn:</span>
+                    @desktopnacContent
+                 </div>
+
+             </div>
+         </div>
+         <s> <i></i>
+         </s>
+     </div>
+</script>
+
+<!-- 推荐卡片中的桌面显示tpl-->
+<script type="text/template" id="tpl-recommend-desktop-nav">
+    <span class="recommend-keep-desktop-nav" title="@desktopName" desktop-id="@desktopId" desktop-type="@desktopType" card-wid="@cardWid">@desktopName</span>
+</script>
+
+
+<!-- 添加小工具widget卡片-->
+<script type="text/template" id="tpl-widget-add-smalltool-item">
+    <div class="amp-widget amp-widget-add-smalltool-item amp-animated amp-hide @widgetId ">@content
+     <div class="amp-widget-add-smalltool-mb" id="ampWidgetAddSmalltoolMb">@mbcontent</div>
+    </div>
+</script>
+
+<script type="text/template" id="tpl-add-smalltool-labels">
+   <li class="amp-label-line-item amp-pull-left" amp-label-id="@labelId">@labelName</li>
+</script>
+
+<script type="text/template" id="tpl-add-smalltool-add-icon">
+    <h3><i class="iconfont icon-32gougou amp-mr-8"></i><span data-i18n="added">已添加</span></h3>
+</script>
+
+<script type="text/template" id="tpl-add-smalltool-mb-content">
+      <!--widgets卡片上的内容-->  
+       <div class="amp-widget-add-smalltool-mb-content amp-animate-top-opacity">     
+        <h2>@title</h2>
+        <div class="amp-widget-add-smalltool-mb-label-item amp-mb-8">
+             <ul class="amp-clearfix-child">
+              <li class="amp-label-line-item amp-pull-left @active" >@educationalAffairs</li>
+              <li class="amp-label-line-item amp-pull-left @active" >@studentAffairs</li>
+              <li class="amp-label-line-item amp-pull-left @active" >@personnel</li>
+           </ul>
+        </div>
+        <div class="amp-widget-add-smalltool-mb-description amp-mb-16">@content</div>
+        <div class="amp-widget-add-smalltool-mb-btn">
+              <div id="ampAddSmalltool" class="amp-ehall-nav-item amp-desktop-creat-nav-item amp-active">  
+                 <h3><i class="iconfont icon-51 amp-mr-8"></i>@addGadgets</h3>
+               </div>
+        </div>
+         </div>  
+</script>
+
+<script type="text/template" id="tpl-desktop-set-page">
+    <div class="amp-desktop-set-wrap amp-animate-opacity" amp-role="dialog">
+        <div class="amp-desktop-set-cell">
+            <div class="amp-desktop-set" id="ampDesktopSet">
+                <i class="iconfont icon-chacha amp-desktop-set-close-icon"></i>
+                <div class="amp-desktop-set-header">
+                    <div class="amp-desktop-set-title">@desktopSettings</div>
+                    <div class="amp-desktop-set-subTitle"><span>@aTotalOf</span><span id="desktopCount">@desktopListCount</span ><span>@desktops</span></div>
+                </div>
+                <div class="amp-desktop-set-container">
+                    <div id="ampDesktopSortContainer">@desktopListHtml</div>
+                    <div class="amp-bg-color-primary-hover-lv4 amp-desktop-set-list" id="ampDesktopCreatContainer">
+                               @deskopsetCreatHtml
+                       <!--  <div class="amp-desktop-set-list-left"><i class="iconfont icon-51 amp-desktop-set-create-icon"></i></div>
+                       <div class="amp-desktop-set-list-create">新建</div> -->
+                    </div>
+                </div>
+                <div class="amp-desktop-set-footer"><a class="amp-desktop-set-close-btn">@complete</a></div>
+            </div>
+        </div>
+    </div>
+</script>
+
+<!-- 新建按钮的tpl-->
+<script type="text/template" id="tpl-desktop-set-creat-container">
+  <div class="amp-desktop-set-list-left"> <i class="iconfont icon-51 amp-desktop-set-create-icon"></i>
+  </div>
+  <div class="amp-desktop-set-list-center ">
+      <div class="amp-desktop-set-list-name create">
+          <span class="createName" >@create</span>
+      </div>
+      <div class="amp-desktop-set-list-input-container">
+          <input type="text" class="amp-desktop-set-list-input @textPaddingRight" maxlength="@desktopLength" value="@newDesktop" id="ampdesktopSetCreateInput">
+          <div class="amp-desktop-set-list-input-count @rightNumClass">
+              <span amp-input-role="actual">5</span>
+              /
+              <span amp-input-role="all">@desktopLength</span>
+          </div>
+      </div>
+  </div>
+  <div class="amp-desktop-set-list-confirm" amp-btn-role="delete">
+      <div class="amp-desktop-set-list-confirm-text">@saveDesktop</div>
+      <div class="amp-desktop-set-list-btn-block">
+          <div class="amp-desktop-set-list-btn amp-create-save-btn"> <i class="iconfont icon-32gougou amp-desktop-create-save-icon"></i>
+          </div>
+          <div class="amp-desktop-set-list-btn amp-create-cancel-btn">
+              <i class="iconfont icon-chacha amp-desktop-set-cancel-icon"></i>
+          </div>
+      </div>
+  </div>
+</script>
+
+<script type="text/template" id="tpl-desktop-set-container">
+    <div class="amp-bg-color-primary-hover-lv4 amp-desktop-set-list" amp-desktop-id="@desktopId" amp-desktop-type="@desktopType" amp-desktop-seq="@desktopSeq">
+        <div class="amp-desktop-set-list-left"><i class="iconfont icon-drag amp-desktop-set-drag-icon"></i></div>
+        <div class="amp-desktop-set-list-center">
+            <div class="amp-desktop-set-list-name"><span class="desktopName">@desktopName</span> <span class="defaultDesktopMes">@defaultDesktopMessage</span></div>
+            <div class="amp-desktop-set-list-input-container">
+                <input type="text" class="amp-desktop-set-list-input @textPaddingRight" maxlength="@desktopLength" />
+                <div class="amp-desktop-set-list-input-count @rightNumClass">
+                    <span amp-input-role="actual"></span>/<span amp-input-role="all">@desktopLength</span>
+                </div>
+            </div>
+        </div>
+        <div class="amp-desktop-set-list-toolbar">
+            <span class="@setRefresh"><i class="iconfont icon-ordinaryrefresh tooltipFlag amp-desktop-set-restore-icon" data-tooltip-title="@recover"></i></span>
+            <span class="@setShanchu"><i class="iconfont icon-shanchu amp-desktop-set-delete-icon tooltipFlag" data-tooltip-title="@delete"></i></span>
+        </div>
+        <div class="amp-desktop-set-list-confirm">
+            <div class="amp-desktop-set-list-confirm-text"></div>
+            <div class="amp-desktop-set-list-btn-block">
+                <div class="amp-desktop-set-list-btn amp-confirm-btn"><i class="iconfont icon-32gougou amp-desktop-set-confirm-icon"></i></div>
+                <div class="amp-desktop-set-list-btn amp-cancel-btn"><i class="iconfont icon-chacha amp-desktop-set-cancel-icon"></i></div>
+            </div>
+        </div>
+    </div>
+</script>
+
+<!-- 未读消息tpl-->
+<script type="text/template" id="tpl-tag-messages">
+    <div class="amp-message-item amp-animated" amp-cut-type="@cutType" amp-message-id="@messageId">
+        <div class="amp-message-icon"><img width="28" height="28" src="portal/images/personalCenter/message.png"/></div>
+
+        <i class="iconfont icon-chacha"></i>
+        <div class="amp-message-title amp-str-cut amp-mb-4" title="@title">@title</div>
+        <div class="amp-message-category amp-mb-4">
+            <span>@type</span>
+            |
+            <span>@time</span>
+        </div>
+        <div class="amp-message-description amp-animate-height">
+            <div class="amp-message-small">@smallContent</div>
+            <div class="amp-message-full">@fullContent</div>
+        </div>
+        <i class="amp-arrow"></i>
+    </div>
+</script>
+
+<!-- 我的收藏添加tpl-->
+<script type="text/template" id="tpl-favorite-tool">
+       
+         <div class="amp-app-single amp-clearfix-child amp-hover-slow-motion amp-favorite-icon-jia">
+             <!--应用图片-->
+             <i class="iconfont icon-jia5 amp-pull-left"></i>
+             <!--标题-->
+             <h5 class="amp-str-cut" >@addApps</h5>
+
+         </div>
+</script>
+
+
+<!-- 获取个人中心页面空页面的tpl-->
+<script type="text/template" id="tpl-personal-empty-page">
+     <div class="amp-personal-empty-page">
+         <img src="portal/images/personalCenter/u16197.png"/>                         
+         <!--widget标题-->                         
+         <div class="amp-pt-8 no-underline">@message</div>
+     </div>       
+</script>
+
+<!-- 获取周期服务页面空页面的tpl-->
+<script type="text/template" id="tpl-personal-aside-zqfw-empty-page">
+     <div class="amp-personal-empty-page">
+         <img src="portal/images/personalCenter/no-data.png"/>                         
+         <!--widget标题-->                         
+         <div class="amp-pt-8 amp-undecoration">@message</div>
+     </div>       
+</script>
+
+
+
+<!-- 管理员新增桌面提醒tpl-->
+<script type="text/template" id="tpl-admin-new-desktop">
+     <div class="amp-admin-new-desktop-recommed" id="ampAdminNewDesktopRecommed" amp-type="dialog">
+         <div class="content">
+             <h3 class="amp-mb-8">@newDesktops</h3>
+             <span>@administratorSetNewDesktop</span>
+             <div  class="amp-ml-8 amp-color-black-lv1 amp-recommend-i-know" >@iKnow</div>
+         </div>
+         <s> <i></i>
+         </s>
+     </div>
+</script>
+
+    
+<!--用户创建桌面弹框-->
+<script type="text/template" id="tpl-create-desktop">
+     <div class="amp-create-desktop amp-animated amp-animate-move-top-in" amp-type="dialog" id="ampAdminNewDesktop">
+         <div class="content">
+             <h1 class="amp-mb-8" >@desktopName</h1>
+             <div><input id="ampCreateDesktopInput" type="text" class="amp-desktop-set-list-input" maxlength="@desktopLength" value="@newDesktop"></div>
+             <div  class="amp-create-footer-btn">
+               <div class="amp-create-btn amp-create-btn-save amp-mr-8" >@save</div>
+               <div class="amp-create-btn amp-create-btn-cancel" >@cancel</div>
+             </div>
+         </div>
+         <s> <i></i>
+         </s>
+     </div>
+</script>
+
+<!--搜索中心搜索历史弹框 tpl-->
+<!-- <script type="text/template" id="tpl-services-searchHistory">
+     <div class="amp-services-searchHistory amp-animated amp-animate-move-top-in" id="ampServicesSearchHistory">
+     <div class="title amp-mb-8" data-i18n="deleteAllResults"recentlySearchedServices>您最近搜索过:</div>
+      <div class="content">
+          @searchHistoryContent
+       </div>
+     </div>
+</script> -->
+<script type="text/template" id="tpl-services-searchHistory-item">
+     <span class="amp-mb-8 amp-service-searchHistory-item">@searchHistoryItem</span>
+</script>
+
+
+
+
+<script type="text/template" id="tpl-header">
+  <!--   <header id="ampLoginHeaderAnimateBlock" class="amp-ehall-login-header amp-ehall-header amp-animate-top amp-zIndex-lv1"> -->
+        <div id="ampTplHeader" class="amp-ehall-login-header amp-animate-top amp-zIndex-lv1 amp-hide"> 
+        <h3>@title</h3>
+     <span>@enTitle</span>
+     </div>
+
+<!-- </header> -->
+</script>
+<script type="text/template" id="tpl-header-en">
+
+    <div id="ampTplHeader" class="amp-ehall-login-header amp-animate-top amp-zIndex-lv1 amp-hide">
+        <h3 style="font-size: 22px;">@enTitle</h3>
+    </div>
+
+</script>
+<!-- 审批意见弹框-->
+
+<script type="text/template" id="tpl-approval-comments">
+    <div id="ampApprovalComments" class="amp-detail-wrap">
+        <div class="amp-detail" amp-role="dialog">
+            <!--关闭按钮-->
+            <i class="iconfont icon-chacha"></i>
+
+            <div class="amp-folder-container">
+                <header class="amp-folder-header">
+                    <!--标题-->
+                    <h3 >@approvalAdvice</h3>
+                    <div>
+                        <span class="amp-dialog-title"></span>
+                    </div>
+                </header>
+
+                <!--详情-->
+                <div class="amp-folder-app-list" id="ampFolderAppList">@appList</div>
+
+                <footer class="amp-folder-footer">
+                    <div id="ampApprovalCommentsClose" class="amp-approval-comment-close"> @close</div>
+                </footer>
+            </div>
+        </div>
+    </div>
+</script>
+
+
+
+<script type="text/template" id="tpl-aside-right-process-item">
+       <div class="aside-process-item amp-card-service-item" on-click="openProcess" url="@formUrl" appId="@appId" taskId="@taskId">
+           @imgHtm
+           <div class="content">
+               <div class="processName" title="@fulltaskTitle">
+                  @taskTitle
+                  @isDisplayData
+               </div>
+               <div class="task-type @taskTypeColor " >@todoList</div>
+               <span class="create-time">@createTime</span>
+               <div class="view-comment">
+                   <a href="javascript: void(0);" appId="@spyjAppId" processIntanceId="@processInstanceId">@approvalAdvice</a>
+               </div>
+               <div class="check-flow">
+                   <a href="javascript: void(0);" appId="@lctappId" processIntanceId="@lctprocessInstanceId">@flowChart</a>
+               </div>
+           </div>
+           <div class="clearfix"></div>
+       </div>
+</script>
+
+<script type="text/template" id="tpl-aside-right-process-item-img">
+     <div class="image">
+         <img src="portal/images/icons/user-role-teacher.png" />     
+     </div>
+
+</script>
+
+<script type="text/template" id="tpl-aside-right-process-item-displayData">
+       <span class="dataNumber">
+           <span>(</span>
+         @dataNum
+           <span>@items)</span>
+       </span>
+</script>
+
+<script type="text/template" id="tpl-aside-right-process-item-zqfwData">
+
+      <div class="serviceItem amp-card-service-item appFlag" @attrStr>
+          <div class="content">
+              <img src="@middleIcon">      
+              <!-- <img src="resources/img/test.png">      
+              -->
+              <div class="title">
+                  <h5>@appName</h5>
+                  <h6 class="data">@displayDate</h6>
+              </div>
+          </div>
+          <div class="@tipClass">@tipTxt</div>
+      </div>
+</script>
+
+<script type="text/template" id="tpl-aside-right-process-item-more">
+    
+  <div class="right-side-do-more aside-process-item" on-click="openApp"><span>@seeMore</span><span>@total</span><span>@item</span> <span>></span></div>
+</script>
+
+<script type="text/template" id="tpl-aside-right-process-item-open">
+    
+  <div class="right-side-do-more aside-process-item" on-click="openApp">@text</div>
+</script>
+
+<!-- 桌面 存在滚动条时顶部被切断 处理效果为模糊 -->
+   <script type="text/template" id="tpl-personal-center-desktop-blur">
+ <div class="amp-personl-center-desktop-blur" id="amp-desktopBlur">
+   @content
+ </div>   
+</script>
+<script type="text/template" id="tpl-personal-center-desktop-blur-item">
+ <div class="amp-personl-center-desktop-blur-item"></div>   
+</script> 
+
+<script type="text/template" id="tpl-header-help-info">
+    <div id="ampHeaderHelpInfo" class="amp-header-help-info amp-animate-trans-fast">
+      <span >@help</span>
+      <ul>
+          <li class="amp-help-feedback" id="ampHelpFeedbak" >@problemFeedback</li>
+          <li class="amp-help-bootpage" id="ampHelpBootpage" >@replayBootAnimation</li>
+         <li  <span><a href="http://nic.whu.edu.cn/index.php/article/index/id/92/cid/6.html" target="_blank"><font color="red">新门户使用指南</font></a></span>
+         </li>
+      </ul>        
+    </div>
+	 
+      
+    
+</script>
+
+
+<script type="text/template" id="tpl-header-extend-list">
+<span class="amp-extend-list extendItemFlag" title="@extendName" data-menu-id="@menuId"
+      data-url="@menuUrl" data-name="@dataName">@extendName</span>
+</script>
+
+<script type="text/template" id="tpl-header-expand">
+     <div class="amp-header-expand  amp-animate-trans-fast" id="ampHeaderExpand">
+      <div class="content">
+       <ul>
+      @expandContent
+       </ul>
+   </div>
+     </div>
+</script>
+
+<script type="text/template" id="tpl-header-expand-item">
+   <li class="amp-expand-item extendItemFlag" data-menu-id="@menuId" data-url="@menuUrl" data-name="@dataName">@menuName</li>
+</script>
+
+<script type="text/template" id="tpl-header-expand-more">
+<span class="amp-extend-more" id="ampExtendMore">...</span>
+</script>
+
+<!--中英文切换 国际化tpl-->
+<script type="text/template" id="tpl-header-internation-ue">
+   <div class="amp-internation-ue-box amp-animate-trans-fast" id="ampInterNationUeBox">
+       <ul>
+           <li data-lang='zh_CN' class='ampItemLang'>
+            <!--    <img src='portal/images/header/u3801.png' width='20' height='20' class='amp-mr-8'/>   --> 
+               <span>中文</span>
+           </li>
+           <li data-lang='en_US' class='ampItemLang'>
+            <!--    <img src='portal/images/header/u1207.png' width='20' height='20' class='amp-mr-8'/>    -->
+               <span>English</span>
+           </li>
+       </ul>
+   </div>
+</script>
+
+<!-- 我的收藏添加tpl-->
+<script type="text/template" id="tpl-canUseApp-group-apps">
+        <div class="amp-canUseApp-group-app amp-pull-left">
+            <div class="amp-can-use-app-h5">
+               <span>@subCategoryName</span>
+            </div>
+
+            @canUseAppListHtml
+
+        </div>
+</script>
+
+<!-- 联想搜索 历史弹框-->
+    <script type="text/template" id="tpl-service-searchName">
+      <div class="amp-searchName-box" id="ampSearchNameBox">
+        <ul>
+            @searchItems
+        </ul>
+          
+      </div>
+    </script>
+     <script type="text/template" id="tpl-service-searchName-item">
+         <li class="amp-service-searchName-item" amp-appname="@searchname" title="@searchname">
+         <img src="@mormalImg"><span>@appName</span></li>
+     </script>
+      <script type="text/template" id="tpl-service-searchName-nodata">
+         <li>@noData</li>
+     </script>
+
+  <script type="text/template" id="tpl-service-history-box">
+      <div class="amp-service-history-dialog" id="ampHistoryBox">
+        <ul>
+            @searchItems
+        </ul>
+          
+      </div>
+  </script>
+
+
+  <!-- 左侧边栏收藏夹-->
+<script type="text/template" id="tpl-myfavorite-apps-tab">
+    <div class="amp-category-tab">
+        <ul id=@tabUlId>@header</ul>
+        <div id="ampMyFavoriteCategoryTabContent" class="amp-category-tabcontent">@content</div>
+    </div>
+</script>
+
+<script type="text/template" id="tpl-myfavorite-set">
+    <div class="amp-myfavorite-set" id="ampMyfavoriteSetBtn">
+        <ul>
+            <li class="amp-hover-slow-motion favoriteArrangeFlag" amp-id="favoriteset"> 
+            <i class="iconfont icon-shezhi1 amp-mr-8"></i>
+                <span>@organize</span>
+            </li>
+            <li class="amp-hover-slow-motion amp-hide amp-myfavorite-set-save favoriteSaveFlag" amp-id="favoriteset" > 
+            <i class="iconfont icon-32gougou1 amp-mr-8"></i>
+                <span>@save</span>
+            </li>
+            <li class="amp-hover-slow-motion amp-hide favoriteCancelFlag" amp-id="favoriteset">
+                <i class="iconfont icon-chacha1 amp-mr-8"></i>
+                <span>@cancel</span>
+            </li>
+        </ul>
+
+    </div>
+</script>
+
+
+<script type="text/template" id="tpl-myfavorite-app-tab-item">
+<li class="amp-hover-slow-motion @activeClass" amp-id="@id" amp-folder="@ampFavoriteType">
+  <i class="iconfont icon-wenjianjia amp-pull-left amp-mr-4 @showiconFlag"></i>
+    <span class="amp-left-aside-canuseapp-name">@name</span>
+    <span class="amp-app-count">@appCount</span>
+    <span class="amp-app-delete amp-hide"><i class="iconfont icon-shanchu1"></i></span>
+</li>
+</script>
+
+<script type="text/template" id="tpl-myfavorite-create-folder">
+<li class="amp-hover-slow-motion myfavorite-create-folder" amp-id="create"> <i class="iconfont icon-jia5 amp-pull-left amp-mr-4"></i>
+    <span class="amp-left-aside-canuseapp-name">@createNewFolder</span>
+</li>
+</script>
+
+<!-- 我的收藏新建文件夹tpl-->
+<script type="text/template" id="tpl-myfavorite-create-folder-page">
+     <div class="amp-myfavorite-create-folder" id="ampMyFavoriteCreateFolder">
+         <div class="content">
+             <h3 class="amp-mb-8">@createNewFolder</h3>
+             <span>@folderCan</span>
+             <div class="amp-folder-input">
+                 <input type="text" maxlength="@folderLength" value="@newFolder" class="amp-folder-set-input" id="ampFolderInput"/>
+               <!--   <div class="amp-desktop-set-list-input-count">
+                   <span amp-input-role="actual">4</span>
+                   /
+                   <span amp-input-role="all">8</span>
+               </div> -->
+             </div>
+
+             <div class="amp-folder-btn">
+                 <div class="amp-bg-color-primary-lv1 amp-color-white-lv1 amp-folder-save" id="ampFolderSave">@confirm</div>
+                 <div  class="amp-ml-8 amp-color-black-lv1 amp-folder-cancle" id="ampFolderCancle">@cancel</div>
+             </div>
+         </div>
+         <div>
+			<i class="iconfont icon-down1 amp-create-folder-icon-down"></i>
+         <div>
+     </div>
+</script>
+
+
+<!-- 收藏 弹出模态框-->
+<script type="text/template" id="tpl-app-favorite">
+    <div id="ampFavorite" class="amp-favorite-wrap" amp-favoriteapp-id="@appId" amp-favoriteapp-type="@appType"  amp-favoriteapp-name="@appName" amp-module-name="@moduleName">
+        <div class="amp-favorite-detail" amp-role="dialog">
+            <!--关闭按钮--> <i class="iconfont icon-chacha"></i>
+            <div class="amp-favorite-detail-container">
+                <header class="amp-favorite-detail-header">
+
+                    <div class="amp-favorite-detail-title">
+                        <h3>@chooseFolder</h3>
+                        <div class="amp-mt-8">
+                            <span>@putInSpecificFolder</span>
+                        </div>
+                    </div>
+                </header>
+
+                <div id="ampFavoriteFolders" class="amp-favorite-detail-body amp-mt-16">@folderContrent</div>
+                <footer>
+                    <!--收藏按钮-->    
+                    <div id="ampAppFavorite" class="amp-favorite-detail-btn">@collect</div>
+
+                </footer>
+
+            </div>
+        </div>
+    </div>
+</script>
+
+<script type="text/template" id="tpl-favorite-folder-item">
+ <div class="amp-favorite-detail-folder-item amp-mr-2 amp-mb-2 @activeClass" amp-folder-id="@folderId">
+     <span>@folderName</span>
+     <div class="triangle-bottomright selectedFlag">
+     <i class="iconfont icon-32gougou"></i>
+     </div>
+ </div>
+</script> 
+
+<script type="text/template" id="tpl-favorite-folder-create">
+ <div class="amp-favorite-detail-folder-item amp-mr-2 amp-mb-2 favoriteDetailFolderInputFlag">
+     <div class="amp-favorite-detail-folder-create"> <i class="iconfont icon-jia4 amp-mr-2"></i>
+         <span>@create</span>
+     </div>
+     <div class="amp-favorite-detail-input-container amp-hide">
+         <input type="text" id="ampFavoriteDetailFolderInput" class="amp-favorite-detail-input" maxlength="@folderLength" placeholder="@newFolder" value="">
+         <!--<div class="amp-favorite-detail-input-count">
+             <span amp-input-role="actual">0</span>/<span amp-input-role="all">@folderLength</span>
+         </div>-->
+     </div>
+     <div class="triangle-bottomright amp-hide"> <i class="iconfont icon-32gougou"></i>
+     </div>
+ </div>
+</script> 
+
+<script type="text/template" id="tpl-card-favorite-addApp">
+<widget-app-item class="style-scope pc-card-html-4786696181711234-01">
+    <div class="appFlag style-scope widget-app-item"  @attributeBig>
+        <div class="widget-recommend-item  amp-bg-color-primary-hover-lv4 style-scope pc-card-html-4786696181711234-01">
+            <div class="widget-image style-scope pc-card-html-4786696181711234-01">
+                <img class="style-scope pc-card-html-4786696181711234-01" src="@appItemmiddleIcon"></div>
+            <div class="widget-information style-scope pc-card-html-4786696181711234-01">
+                <div class="widget-title appTitleFlag style-scope pc-card-html-4786696181711234-01" data-fav-icon-r="0" title="@titleappItemappName">@appItemappName</div>
+
+            </div>
+        </div>
+    </div>
+</widget-app-item>
+
+</script>
+
+<script type="text/template" id="tpl-card-favorite-addNewFolder">
+  <li class="amp-hover-slow-motion amp-divider-color amp-bg-color-primary-hover-lv3 card-myfavorite-li card-myfavorite-li-readd style-scope pc-card-html-4786696181711234-01" amp-type="amp-hide" amp-id="@folderId"   on-click="showContentApps"> 
+  <i class="iconfont icon-wenjianjia card-myfavorite-icon-wenjianjia style-scope pc-card-html-4786696181711234-01"></i>
+   
+     <span class="amp-left-aside-canuseapp-name card-myfavorite-folderName style-scope pc-card-html-4786696181711234-01">@folderName</span>
+     <span class="amp-app-count style-scope pc-card-html-4786696181711234-01">0</span>
+ </li>
+</script>
+
+ <script type="text/template" id="tpl-card-favorite-addNewFolderContent">
+  <div class="card-myFavorite-content-item" has-scroll="true" amp-classify="@folderId" amp-isShow="@activeClass">
+    <div class="widget-recommend-item amp-bg-color-primary-hover-lv4 widget-recommend-item-nodata amp-favorite-icon-jia style-scope pc-card-html-4786696181711234-01">
+        <div class="widget-nodata style-scope pc-card-html-4786696181711234-01"> <i class="iconfont icon-jia5 amp-pull-left amp-mr-8 style-scope pc-card-html-4786696181711234-01"></i>
+            <div class="widget-information style-scope pc-card-html-4786696181711234-01">
+                <div class="widget-title appTitleFlag style-scope pc-card-html-4786696181711234-01" title="添加应用">添加应用</div>
+            </div>
+        </div>
+    </div>
+ </script>
+
+<!-- 引导页加载图片-->
+<script type="text/template" id="tpl-bootpage-img-gif">
+  <li show-index="0" bg-slide='boot'>
+      <img src="portal/images/bootPage/uboot1.gif"/>  
+  </li>
+  <li show-index="1" bg-slide='boot'>
+      <img src="portal/images/bootPage/uboot2.gif"/>  
+  </li>
+  <li show-index="2" bg-slide='boot'>
+      <img src="portal/images/bootPage/uboot3.gif"/>  
+  </li>
+  <li show-index="3" bg-slide='boot'>
+      <img src="portal/images/bootPage/uboot4.gif"/>  
+  </li>
+  <li show-index="4" bg-slide='boot'>
+      <img src="portal/images/bootPage/uboot5.gif"/>  
+  </li>
+</script>
+
+<!--我的收藏卡片空页面添加应用-->
+<script type="text/template" type="text/template" id="tpl-card-myfavrite-addapp">
+<div class="widget-recommend-item amp-bg-color-primary-hover-lv4 widget-recommend-item-nodata amp-favorite-icon-jia style-scope pc-card-html-4786696181711234-01">
+    <div class="widget-nodata style-scope pc-card-html-4786696181711234-01"> <i class="iconfont icon-jia5 amp-pull-left amp-mr-8 style-scope pc-card-html-4786696181711234-01"></i>
+        <div class="widget-information style-scope pc-card-html-4786696181711234-01">
+            <div class="widget-title appTitleFlag style-scope pc-card-html-4786696181711234-01" title="@addApp">@addApp</div>
+        </div>
+    </div>
+</div>
+</script>
+
+
+<!--搜索中心 搜索框-->
+<script type="text/template" type="text/template" id="tpl-serviceCenter-sousuo-input">
+    <div class="amp-service-history-box amp-pull-left" id="ampServiceHistoryBox">
+            <span class="amp-service-history amp-ml-12 amp-pull-left">@history</span>
+            <i class="iconfont icon-down1 amp-pull-left"></i>
+
+             <span class="amp-service-split amp-pull-left"></span>
+        </div>
+
+        <input id="ampServiceSearchInput" class="amp-pageheader-search-input amp-pull-left ampserviceSearchInputFlag" value="" placeholder="@placeholder" type="text"  maxlength="20"/>
+        <!--搜索按钮图标-->
+        <span class="amp-service-sousuo" id="ampServiceSousuo">
+            <i class="iconfont icon-sousuo"></i>
+        </span>
+</script>
+
+
+<!--复旦办事大厅模板定制-->
+<script type="text/template" type="text/template" id="tpl-ehall-fudan">
+      <article id="ampFuDanEhallArticle" class="amp-ehall">
+          <!--头部背景图-->      
+          <header id="ampEhallHeader" class="amp-ehall-header amp-animated amp-animate-move-bottom-in">
+              <div class="amp-hide amp-ehall-header-title" id="ampEhallHeaderContent">
+                  <h3 class="amp-role-nav-h3"></h3>
+                  <span></span>
+              </div>
+
+              <div class="amp-ehall-banner-search-container"> <i id="ampPageHeaderSearchIcon" class="iconfont icon-sousuo"></i>
+                  <input class="banner-search-input amp-ml-8" id="bannerSearchInput" maxlength="20" type="text" placeholder="@placeholderStr"></div>
+
+              <section id="ampRecommendSection" class="amp-animated amp-animate-move-bottom-in amp-fudan-recommend-section"></section>
+              <div id="ampFudanEhallPage" class="amp-apps-page amp-fundan-apps-page">@pageHtml</div>
+          </header>
+
+          <div class="amp-login-bottom-desc amp-animate-move-bottom-in" id="ampLoginInBottomDesc">
+              <span class="amp-login-text"  data-i18n="hereWeProvide">我们为你准备了丰富的校园服务</span>
+              <span class="amp-login-icon-gunlun amp-mt-8 amp-fudan-gunlun-icon"> <i class="iconfont icon-gunlun"></i>
+              </span>
+          </div>
+      </article>
+</script>
+
+<script type="text/template" type="text/template" id="tpl-header-fudan-tab">
+
+ <!--home页按钮--> 
+ <i id="ampPageHeaderHomeIcon" class="iconfont  amp-active amp-tab-item amp-hover-slow-motion amp-head-fudan-tab" data-menu-id="370c3bef-d631-48fc-9566-1122e2527bc9" data-title="办事大厅">办事大厅</i>
+ <!--个人中心页按钮--> 
+ <i id="ampPageHeaderPersonalIcon" class="iconfont amp-tab-item amp-hover-slow-motion amp-head-fudan-tab" data-menu-id="e490407f-9620-4516-95c4-b7154da6371b" data-title="个人中心">个人中心</i>
+
+</script>
+
+
+
+
+
+
+
+
+
+
+    
+
+ 
+
+
+
+<!--前端配置文件-->
+<script type='text/javascript' src="portal/js/conf/constant.js"></script>
+
+
+<!--mock数据-->
+<!--<script type='text/javascript' src="portal/src/mock/recommend.js"></script>-->
+<!--<script type='text/javascript' src="portal/src/mock/classify.js"></script>-->
+
+<!--美化滚动条-->
+<script type='text/javascript' src="resources/js/plugins/niceScroll/jquery.nicescroll.min.js"></script>
+<script src="resources/js/plugins/sortable/Sortable-1.3.0.js"></script>
+
+<!--门户js-->
+<script type='text/javascript' src="portal/js/amp.min.js"></script>
+<script type='text/javascript' src="portal/js/separatePlugins.min.js"></script>
+<!--定制脚本处理-->
+<script type='text/javascript' src="portal_custom/js/amp_custom.js"></script>
+
+<!-- 处理IE9 placeholder 不显示 -->
+<!--[if IE 9]>
+<script src="resources/js/plugins/placeholder/placeholder.js"></script>
+<![endif]-->
+
+<script type='text/javascript' src="resources/js/ua-parser.min.js"></script>
+<script type='text/javascript' src="resources/js/AmpUserActionDataSend.js"></script>
+<script type='text/javascript' src="resources/js/openAppSendData.js"></script>
+<script type='text/javascript' src="resources/js/AmpUserActionDataSendNew.js"></script>
+<script type='text/javascript' src="resources/js/openAppSendDataNew.js"></script>
+<script type='text/javascript' src="resources/js/jquery.jcryption-1.1.js"></script>
+<script type='text/javascript' src="resources/js/base64.min.js"></script>
+
+<!-- 图片上传并裁剪功能 start-->
+<!-- <script src="http://res.wisedu.com/bower_components/cropper/cropper.min.js"></script>
+<script type='text/javascript' src="resources/js/plugins/fileupload/emapAvatarUpload.js"></script>
+<script type='text/javascript' src="resources/js/plugins/fileupload/jquery.fileupload.js"></script> -->
+<!-- 图片上传并裁剪功能 end-->
+
+<script type="text/javascript" src="http://data.campusphere.cn/pipe-data/useraction/track.min.js"></script>
+<script>
+    var _hmt = _hmt || [];
+    (function () {
+        /*var hm = document.createElement("script");
+         hm.src = "//hm.baidu.com/hm.js?9dd8166a7e40aee730296a8bd9605020";
+         var s = document.getElementsByTagName("script")[0];
+         s.parentNode.insertBefore(hm, s);*/
+
+        //修改title的值
+        document.title = AMPConfigure.windowTitle;
+
+        if (localStorage.changeLanguageFlag == 'true') {
+            $('#ampProgressBar').removeClass('amp-hide').addClass('amp-active');
+        }
+        if (typeof tracker == 'object')
+            tracker.load(AMPConfigure.schoolId, "amp", "应用管理平台");
+    })();
+</script>
+</body>
+</html>

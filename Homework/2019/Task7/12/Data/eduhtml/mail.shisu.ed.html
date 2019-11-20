@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+		<meta name="keywords" content="网易企业邮箱,登录企业邮箱,企业邮箱注册,电子邮箱" />
+		<meta name="description" content="网易企业邮箱登录页面繁体版，帮助用户登录企业邮箱，开启随时随地，极速收发的便捷体验。" />
+		<meta name="title" content="网易企业邮箱 - 企业信息化专业解决方案">
+		<title>上海外国语大学 - 邮箱用户登录</title>
+		<link href="http://mimghz.qiye.163.com/o/domain/201709111800/index/css/global.css" rel="stylesheet" type="text/css" />
+		<link href="http://mimghz.qiye.163.com/o/domain/201709111800/index/css/user.css" rel="stylesheet" type="text/css" />
+		<style type="text/css">
+			.login-mod h2, .intro-mod h2, .news-mod h2 {
+				background-image:url(http://mimghz.qiye.163.com/o/domain/201709111800/index/css/../img/bg_cn_noqiye.png);
+				background-repeat:no-repeat;
+			}
+			.login-mod-wrapper {
+				width: 413px;
+				height: 355px;
+				position: absolute;
+				top:40px;
+				left: 498px;
+			}
+			.login-mod-form {
+				background: url(http://mimghz.qiye.163.com/o/domain/201709111800/index/css/../img/loginFormBg.png) no-repeat;
+			}
+			.login-mod-qr {
+				background: url(http://mimghz.qiye.163.com/o/domain/201709111800/index/css/../img/bg_qr_expand.png) no-repeat;
+			}
+			.login-mod .fi-notit {
+				padding-left:30px;
+			}
+			.login-qr {
+				position: absolute;
+				left: 350px;
+				top: 291px;
+				width: 64px;
+				height: 64px;
+				cursor: pointer;
+			}
+			.login-qr-1 {
+				background: url(http://mimghz.qiye.163.com/o/domain/201709111800/index/css/../img/ic_qr.png) no-repeat;
+			}
+			.login-qr-1-hover {
+				left: 349px;
+				background: url(http://mimghz.qiye.163.com/o/domain/201709111800/index/css/../img/ic_qr_hover.png) no-repeat;
+			}
+			.app-download {
+				float:left;
+				margin-left:10px;
+				padding-left:20px;
+				margin-top:6px;
+			}
+			.app-download-android {
+				background:url(http://mimghz.qiye.163.com/o/domain/201709111800/index/css/../img/ic_android.png) no-repeat;
+			}
+			.app-download-iphone {
+				background:url(http://mimghz.qiye.163.com/o/domain/201709111800/index/css/../img/ic_apple.png) no-repeat;
+			}
+			.app-download-link {
+				color: #9eb8a0;
+				text-decoration: none;
+			}
+			.logo {
+				width:150px;
+				height:40px;
+				background: url(http://mailhz.qiye.163.com/qiyeimage/logo/test_shisu_edu_cn/15053768145311505376814531.png) no-repeat 0 0;
+			}
+			.fi{
+				padding: 5px 0 !important;
+			}
+			#err-wrapper{
+				width: 170px !important;
+			}
+		</style>
+		<link href="http://mimghz.qiye.163.com/o/domain/201709111800/index/css/custom.css" rel="stylesheet" type="text/css" />
+		<!--[if lt ie 9]>
+		<style type="text/css">
+			.logo {
+				background: none;
+				filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://mailhz.qiye.163.com/qiyeimage/logo/test_shisu_edu_cn/15053768145311505376814531.png', sizingMethod='scale');
+			}
+		</style>
+		<![endif]-->
+	</head>
+	<body>
+		<div class="page">
+			<div class="header">
+				<h1 class="logo"></h1>
+				<div class="toplinks">
+                    <a href="/?hl=zh_TW" target="_self">繁體版</a> |
+                        <a href="/?hl=en_US" target="_self">English</a>
+                        
+                         |
+                        <a href="http://qiye.163.com/entry/help/help-client.htm">帮助</a>
+                            </div>
+			</div>
+			<div class="body">
+				<div class="part main-part" id="main-part">
+					<div id="login-mod-wrapper" class="login-mod-wrapper login-mod-form">
+						<div class="mod login-mod  ">
+							<form name="loginform" id="loginform" action="https://entryhz.qiye.163.com/domain/domainEntLogin" method="post" onsubmit="return frmvalidator();">
+								<input type="hidden" name="ch" id="ch" value="">
+								<input type="hidden" name="pubid" id="pubid" value="">
+								<input type="hidden" name="passtype" id="passtype" value="">
+								<input type="hidden" name="support_verify_code" id="support_verify_code" value="1">
+								<input type="hidden" name="domain" id="domain" value="shisu.edu.cn" />
+									<script type="text/javascript">
+										window.myDomain = "shisu.edu.cn";
+										window.isCommonPage = false;
+										if(window.myDomain == "qiye.163.com"){
+											window.isCommonPage = true;
+										}
+									</script>
+								<h2>
+									企业用户登录
+								</h2>
+								<div class="fi">
+									<label class="tit">
+										用户名
+									</label>
+									<input type="text" name="account_name" id="account_name" class="ipt-t ipt-sample" value="" />
+								</div>
+								<div class="fi">
+									<label class="tit">
+										密 码
+									</label>
+									<input type="password" class="ipt-t" name="password" id="password" value=""/>
+								</div>
+								<!-- 新增验证码 -->
+								<div id="verifyCodeWrap" class="fi f-dn">
+									<label class="tit">验证码</label>
+									<input type="text" name="verify_code" id="verify_code" style="float:left;width:140px;height:24px;line-height:24px;" class="ipt-sample">
+									<a id="codeImgWrap" style="float:left;width:100px;height:30px;padding:0;margin:0;display:block;cursor:pointer;" href="javascript:void(0);">
+										<img src="" style="width:100%;height:100%;">
+									</a>
+								</div>
+								<div class="fi" style="clear:both;">
+									<label for="remUsername">
+										<input name="remUser" id="remUsername" value="1" type="checkbox" class="ipt-c" />
+										记住用户名
+									</label>
+									&nbsp;&nbsp;
+									<input type="hidden" name="secure" value="1"/>
+									<label for="secure">
+										<input id="secure" disabled="disabled" value="1" checked type="checkbox" class="ipt-c"/>
+										SSL安全登录
+									</label>
+									&nbsp;&nbsp;
+									<label for="all_secure">
+										<input name="all_secure" id="all_secure" value="1" type="checkbox" class="ipt-c"/>
+										全程SSL
+									</label>
+								</div>
+								<div class="fi fi-notit f-cb">
+									<input type="submit" class="ipt-b" value="登　录" style="float:left;" id="submit-btn" />
+                                    <div id="app-download-wrapper">
+                                        <div class="app-download app-download-android">
+                                            <a class="app-download-link" href="http://u.163.com/androidds4" target="_blank">Android版</a>&nbsp;
+                                        </div>
+                                        <div class="app-download app-download-iphone">
+                                            <a class="app-download-link" href="http://u.163.com/iosds4" target="_blank">iPhone版</a>
+                                        </div>
+                                    </div>
+									<table id="err-wrapper" class="err f-dn">
+										<tr>
+											<td id="msgpid"></td>
+										</tr>
+									</table>
+								</div>
+								<div class="goto" style="margin-top:0;">
+										<a href="/admin.jsp" class="gotoLink" target="_blank">管理员登录</a>
+                                        <a class="gotoLink" id="resetPwd">忘记密码？</a>
+										</div>
+								</form>
+						</div>
+                        <div id="login-qr-1" class="login-qr login-qr-1"></div>
+                    <div class="m-codebox js-codebox f-zindex-10 login-mod-form">
+						<!-- 安全登录 -->
+						<div id="appLoginTab" class="appLoginTab">
+							<div id="appLoginWait" style="display: block;">
+								<h3>手机扫码 安全防盗</h3>
+								<div id="appCodeWrap" class="appCodeWrap allowmove">
+									<div class="appCode-example"></div>
+									<div id="appCodeBox" class="appCodeBox">
+										<img id="appCode" class="appCode" width="130" height="130" src="https://mail.qiye.163.com/mailapp/commonweb/qrcode/getqrcode.do?w=130&h=130">
+										<div id="appCodeRefresh" class="appCodeRefresh" style="display: none;">
+											<div class="appCode-wrap"><p>二维码已失效<br>请点击刷新</p></div>
+										</div>
+									</div>
+								</div>
+								<p id="appLoginTxt" class="appLoginTxt txt-err"></p>
+								<p class="appLogin-hint">使用 邮箱大师 扫描二维码登录</p>
+								<p class="appLoginlink"><a id="howToUseApp" class="howToUseApp" href="javascript:void(0)">如何使用</a><var>|</var><a href="http://mail.163.com/dashi/" target="_blank">下载邮箱大师</a></p>
+							</div>
+							<div id="appLoginScan" class="appLoginScan" style="display:none">
+								<div class="appLogin-scanSuc"></div>
+								<p class="appLogin-scantxt txt-suc">成功扫描，请在手机上确认登录</p>
+								<a id="appLoginRestart" class="appLoginRestart" href="javascript:void(0)">返回重新扫描</a>
+							</div>
+						</div>
+						<a class="closeentry js-closeentry" href="javascript:;" hidefocus="true"></a>
+						</div>
+                    </div>
+				</div>
+				<div class="part sec-part">
+						</div>
+				</div>
+			<div class="footer">
+                <div class="link">
+                        <a href="http://global.shisu.edu.cn" target="_blank">SISU Global</a>
+                        <a href="http://www.shisu.edu.cn" target="_blank">上外官网</a>
+                        <a href="http://www.shisu.edu.cn/about/introducing-sisu" target="_blank">认识上外</a>
+                        <a href="http://news.shisu.edu.cn" target="_blank">上外新闻</a>
+                        <a href="http://portal.shisu.edu.cn" target="_blank">信息平台</a>
+                        <a href="http://www.itc.shisu.edu.cn" target="_blank">IT 服务</a>
+                        </div>
+
+                    <div class="right">
+                        <span>
+                            © 上海外国语大学 Shanghai International Studies University - SISU</span>
+                    </div>
+                </div>
+		</div>
+	</body>
+	<script type="text/javascript">
+	var isDefaultBg = false,
+		currentBanner = 'http://mailhz.qiye.163.com/qiyeimage/bg/test_shisu_edu_cn/15064806591461506480659146.png',
+		currentStyle = '3',
+		addresses = '',
+        errMsg = '',
+        domainType = 'hz' || 'bj';
+        pageType = 'normal';
+        verifyCodeUrl = 'http://entryhz.qiye.163.com/domain/getverifycode.jsp';
+        // verifyCode = 'false';
+		if(window.location.href.indexOf('code=true') > -1){
+			verifyCode = 'true'
+		}else{
+			verifyCode = 'false';
+		}
+	</script>
+	<!--用于返回错误提示，和domainType值-->
+	<script type="text/javascript" src="../js/loginjs.jsp"></script>
+	<script type="text/javascript" src="http://mimghz.qiye.163.com/o/domain/201709111800/index/css/../js/jquery.js"></script>
+	<script type="text/javascript" src="http://mimghz.qiye.163.com/o/domain/201709111800/index/css/../js/jquery-migrate.js"></script>
+	<script type="text/javascript" src="http://mimghz.qiye.163.com/o/domain/201709111800/index/css/../js/lang_zhcn.js"></script>
+	<script type="text/javascript" src="http://mimghz.qiye.163.com/o/domain/201709111800/index/css/../js/select_network.js"></script>
+	<script type="text/javascript" src="http://mimghz.qiye.163.com/o/domain/201709111800/index/css/../js/login_util.js"></script>
+	<script type="text/javascript" src="http://mimghz.qiye.163.com/o/domain/201709111800/index/css/../js/jquery.jsonp-2.4.0.min.js"></script>
+    <script type="text/javascript" src="http://mimghz.qiye.163.com/o/domain/201709111800/index/css/../js/select_banner.js"></script>
+    <script type="text/javascript" src="http://mimghz.qiye.163.com/o/domain/201709111800/index/css/../js/reset_pwd.js"></script>
+    <script type="text/javascript" src="http://mimg.qiye.163.com/o/index/lib/scripts/qiye_algorithm.js"></script>
+</html>

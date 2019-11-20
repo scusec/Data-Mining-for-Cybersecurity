@@ -1,0 +1,801 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="中央音乐学院" />
+<meta name="description" content="中央音乐学院" />
+<title>中央音乐学院</title>
+<link href="/Portal/Tpl/templates/default/css/base.css" rel="stylesheet" type="text/css" />
+<link href="/Portal/Tpl/templates/default/css/style.css" rel="stylesheet" type="text/css" />
+<script src="/Portal/Tpl/templates/default/js/jquery-1.11.1.min.js" type="text/javascript"></script>
+
+</head>
+<body class="w_1280">
+<div class="ylxy_mian">
+<!--头部start-->
+<div class="headtop">
+  <div class="logobox"><img src="/Portal/Tpl/templates/default/images/logo.png"></div>
+
+  <div class="searchbox">
+    <div class="left searchcont">
+	<form id="formSearch" name="formSearch" method="get" action="/index.php" target="_blank">
+
+   <input id="option" name="option" value="default,search" type="hidden" />
+    <input id="searchWord" name="searchWord" type="text" class="search_input" value="请输入关键词" onfocus="if(this.value=='请输入关键词'){this.value='';this.style.color='#333'}" onblur="if(this.value==''){this.value='请输入关键词';this.style.color='#999'}">
+	<input  class="search_btn" type="button" id="search_bn"  name="search_bn" onclick="javascript:if (document.getElementById('searchWord').value == ''||document.getElementById('searchWord').value == '请输入关键词') alert('请输入关键词'); else document.getElementById('formSearch').submit();">
+	<input  class="search_btn2" type="button" onclick="adsearch();">
+	</form>
+	</div>
+	<div class="loginbox">
+	   <div class="islogin" id="islogin" style="display:none">
+	   <span id="nickname"></span><a onclick="loginout()" href="javascript:void(0)">退出</a>
+	   </div>
+	   <div class="dlbox" id="dlbox">
+	    <a href="login" class="signin">登录</a>
+		<fieldset id="signin_menu">
+          <div class="signin_cont l_tabs" id="tabbox">
+		     <h3>		     	<a class="current" href="javascript:void(0)">央音教师</a>		     	<a href="javascript:void(0)">央音学生</a>		     	<a href="javascript:void(0)">发布员</a>		     </h3>
+			  <div class="content">
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+				  <tr>
+					<td class="tb_title">一卡通号</td>
+					<td ><input id="userName" name="userName" type="text" class="l_input"></td>
+				  </tr>
+				  <tr>
+				
+					<td class="tb_title">密码</td>
+					<td ><input id="passWord" name="passWord" type="password" class="l_input"></td>
+				  </tr>
+				   <tr>
+				
+					<td class="tb_title">验证码</td>
+					<td>
+					<input class="yzm_input" id="verificationCode" name="verificationCode" maxlength="4" type="text">
+					&nbsp;<img id="seccodeImg" src="http://video.ccom.edu.cn/Portal/seccode.php" border=0 onclick="javascript:this.src = 'http://video.ccom.edu.cn/Portal/seccode.php?' + Math.random();" style="cursor:pointer"/>
+					</td>
+				  </tr>
+				    <tr>
+				
+					<td colspan="2" class="codebox">
+					<div class="btnloginline">
+					<input onclick="userType1($('#userName').val(),$('#passWord').val(),$('#verificationCode').val())" type="button"  class="btnlogin">
+					</div>
+					</td>
+					
+				  </tr>
+				</table>
+ 
+              </div>
+			  <div class="content" style="display:none">
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+				  <tr>
+					<td class="tb_title">一卡通号</td>
+					<td ><input id="userName2" name="userName2" type="text" class="l_input"></td>
+				  </tr>
+				  <tr>
+				
+					<td class="tb_title">密码</td>
+					<td ><input id="passWord2" name="passWord2" type="password" class="l_input"></td>
+				  </tr>
+				   <tr>
+				
+					<td class="tb_title">验证码</td>
+					<td>
+					<input class="yzm_input" id="verificationCode2" name="verificationCode2" maxlength="4" type="text">
+					&nbsp;<img id="seccodeImg" src="http://video.ccom.edu.cn/Portal/seccode.php" border=0 onclick="javascript:this.src = 'http://video.ccom.edu.cn/Portal/seccode.php?' + Math.random();" style="cursor:pointer"/>
+					</td>
+				  </tr>
+				    <tr>
+				
+					<td colspan="2" class="codebox">
+					<div class="btnloginline">
+					<input onclick="userType2($('#userName2').val(),$('#passWord2').val(),$('#verificationCode2').val())" type="button"  class="btnlogin">
+					</div>
+					</td>
+					
+				  </tr>
+				</table>
+              </div>
+			  <div class="content" style="display:none">
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+				  <tr>
+					<td class="tb_title">用户名</td>
+					<td ><input id="userName3" name="userName3" type="text" class="l_input"></td>
+				  </tr>
+				  <tr>
+				
+					<td class="tb_title">密码</td>
+					<td ><input id="passWord3" name="passWord3" type="password" class="l_input"></td>
+				  </tr>
+				   <tr>
+				
+					<td class="tb_title">验证码</td>
+					<td>
+					<input class="yzm_input" id="verificationCode3" name="verificationCode3" maxlength="4" type="text">
+					&nbsp;<img id="seccodeImg" src="http://video.ccom.edu.cn/Portal/seccode.php" border=0 onclick="javascript:this.src = 'http://video.ccom.edu.cn/Portal/seccode.php?' + Math.random();" style="cursor:pointer"/>
+					</td>
+				  </tr>
+				    <tr>
+				
+					<td colspan="2" class="codebox">
+					<div class="btnloginline">
+					<input onclick="userType3($('#userName3').val(),$('#passWord3').val(),$('#verificationCode3').val())" type="button"  class="btnlogin">
+					</div>
+					</td>
+					
+				  </tr>
+				</table>
+              </div>
+		  </div>
+        </fieldset>
+	   </div>
+	</div>
+  </div>
+  <script type="text/javascript">
+		$(document).ready(function(){  
+			   isLogin();
+		}); 
+  </script>
+
+  <script type="text/javascript">
+        $(document).ready(function() {
+
+            $(".signin").click(function(e) {          
+				e.preventDefault();
+                $("fieldset#signin_menu").toggle();
+				$(".signin").toggleClass("menu-open");
+            });
+			
+			$("fieldset#signin_menu").mouseup(function() {
+				return false
+			});
+			$(document).mouseup(function(e) {
+				if($(e.target).parent("a.signin").length==0) {
+					$(".signin").removeClass("menu-open");
+					$("fieldset#signin_menu").hide();
+				}
+			});			
+			
+        });
+</script> 
+</div>
+<!--头部end-->
+<!--导航start-->
+<div class="ylxy_nav">
+	<ul class="yn_ul">
+    	<li id="home" ><a href="http://video.ccom.edu.cn">首页</a></li>
+		
+
+
+         <li id='T_Menu_136'><a href="http://video.ccom.edu.cn/index.php?option=com_content&ItemId=136">音乐活动</a></li>
+        
+
+         <li id='T_Menu_134'><a href="http://video.ccom.edu.cn/index.php?option=com_content&ItemId=134">音乐节</a></li>
+        
+
+         <li id='T_Menu_140'><a href="http://video.ccom.edu.cn/index.php?option=com_content&ItemId=140">音乐比赛</a></li>
+        
+
+         <li id='T_Menu_139'><a href="http://video.ccom.edu.cn/index.php?option=com_content&ItemId=139">艺术实践</a></li>
+        
+
+         <li id='T_Menu_138'><a href="http://video.ccom.edu.cn/index.php?option=com_content&ItemId=138">毕业演出</a></li>
+        
+
+         <li id='T_Menu_137'><a href="http://video.ccom.edu.cn/index.php?option=com_content&ItemId=137">学术研讨</a></li>
+        
+
+         <li id='T_Menu_135'><a href="http://video.ccom.edu.cn/index.php?option=com_content&ItemId=135">大师课堂</a></li>
+        
+
+         <li id='T_Menu_143'><a href="http://video.ccom.edu.cn/index.php?option=com_content&ItemId=143">国际交流</a></li>
+        
+
+		<li><a href="http://live.ccom.edu.cn:8080/chat/live" target="_blank"><img src="/Portal/Tpl/templates/default/images/live_pd.png"></a></li>
+        <li><a href="http://lib.video.ccom.edu.cn:8080/" target="_blank">馆藏音视频点播（校内）</a></li>
+    </ul>
+</div>
+<!--导航end--><!--焦点图start-->
+<div class="home_focus">
+	<SCRIPT src="/Portal/Tpl/templates/default/js/slide.js" type="text/javascript"></SCRIPT>
+<div id="slide_fade" class="slide_fade">
+	<div class="box">
+		<ul class="list" id="indexlive">
+			
+		</ul>
+	</div>
+	<ul class="btn" id="livesmall">
+		
+		
+	</ul>
+</div>
+
+</div>
+<!--焦点图end-->
+<div class="blank20"></div>
+<!--乐音快拍start-->
+<div class="lykp_mian">
+	<div class="lswq_bt">
+    	<div class="lswq_com"><span class="lswq_more"><a href="/index.php?option=default,bllist&bid=4"><img src="/Portal/Tpl/templates/default/images/t_m.png" width="24" height="24"></a></span><span class="lstext_bt">乐音快拍</span></div>
+    </div>
+    <div class="lykp_list">
+    	<ul id="blbig">    		
+                
+            <div class="clear"></div>
+        </ul>
+       	<div class="blank30"></div> 
+    </div>
+    <div class="sptj_list">
+    	<ul id="blsma">
+    		
+                   
+        </ul>
+		 <div class="clear"></div>
+    </div>    
+</div>
+<!--乐音快拍end-->
+<!--视频推荐start-->
+<div class="lykp_mian">
+	<div class="lswq_bt">
+    	<div class="lswq_com"><span class="lstext_bt">视频推荐</span></div>
+    </div>
+    <div class="blank30"></div>
+    <!---滑动区1start--->                            
+    <div class="hdm01">
+		
+        <h3>
+
+<a href="http://video.ccom.edu.cn/index.php?option=com_content&ItemId=136">音乐活动</a>
+<a href="http://video.ccom.edu.cn/index.php?option=com_content&ItemId=134">音乐节</a>
+<a href="http://video.ccom.edu.cn/index.php?option=com_content&ItemId=140">音乐比赛</a>
+<a href="http://video.ccom.edu.cn/index.php?option=com_content&ItemId=139">艺术实践</a>
+<a href="http://video.ccom.edu.cn/index.php?option=com_content&ItemId=138">毕业演出</a>
+<a href="http://video.ccom.edu.cn/index.php?option=com_content&ItemId=137">学术研讨</a>
+<a href="http://video.ccom.edu.cn/index.php?option=com_content&ItemId=135">大师课堂</a>
+<a href="http://video.ccom.edu.cn/index.php?option=com_content&ItemId=143">国际交流</a>
+</h3>
+		
+
+
+        <div class="content">        	
+            <div class="sptj_list" >
+            	<div class="lswq_bt" style="width:1250px; margin:0 auto;">
+                    <div class="lswq_com"><span class="lswq_more"><a href="http://video.ccom.edu.cn/index.php?option=com_content&ItemId=136"><img src="/Portal/Tpl/templates/default/images/t_m.png" width="24" height="24"></a></span></div>
+                </div>
+                <div class="blank20"></div>
+                <ul>
+				
+
+
+                	                    <li class="li_first">
+                                            <div class="sptj_pic"> <a href="http://video.ccom.edu.cn/index.php?option=com_content&id=3367"><img src="http://stream.live.ccom.edu.cn/vod/picturelib_two/2017/05/04/29dc11c51bb2434891cc114ebe7c7a5e_p_snap_1.jpg" width="380" height="285" /></a></div>
+                        <div class="sptj_bt"><a href="http://video.ccom.edu.cn/index.php?option=com_content&id=3367">“一带一路”音乐教育联盟成立大会宣传片</a></div>
+                    </li>
+                
+
+                	                    <li>
+                                            <div class="sptj_pic"> <a href="http://video.ccom.edu.cn/index.php?option=com_content&id=3347"><img src="http://stream.live.ccom.edu.cn/vod/picturelib_two/2017/01/21/47729df7629347fe9d8ced7008ada9c6_p_snap_1.jpg" width="380" height="285" /></a></div>
+                        <div class="sptj_bt"><a href="http://video.ccom.edu.cn/index.php?option=com_content&id=3347">中央音乐学院考级委员会官方视频</a></div>
+                    </li>
+                
+
+                	                    <li>
+                                            <div class="sptj_pic"> <a href="http://video.ccom.edu.cn/index.php?option=com_content&id=3349"><img src="http://stream.live.ccom.edu.cn/vod/picturelib_two/2017/01/21/b741737777244ae18204dc87fce2acad_p_snap_1.jpg" width="380" height="285" /></a></div>
+                        <div class="sptj_bt"><a href="http://video.ccom.edu.cn/index.php?option=com_content&id=3349">2016年暑假考级优秀生汇报音乐会视频</a></div>
+                    </li>
+                
+
+                	                    <li class="li_first">
+                                            <div class="sptj_pic"> <a href="http://video.ccom.edu.cn/index.php?option=com_content&id=2867"><img src="http://stream.live.ccom.edu.cn/vod/picturelib_one/2016/5/31/1464681418_620.jpg" width="380" height="285" /></a></div>
+                        <div class="sptj_bt"><a href="http://video.ccom.edu.cn/index.php?option=com_content&id=2867">2014-2015学年度开学典礼暨教师节庆祝大会</a></div>
+                    </li>
+                
+
+                	                    <li>
+                                            <div class="sptj_pic"> <a href="http://video.ccom.edu.cn/index.php?option=com_content&id=2854"><img src="http://video.ccom.edu.cn/default/categories/2014-07-11/1405070024_473.png" width="380" height="285" /></a></div>
+                        <div class="sptj_bt"><a href="http://video.ccom.edu.cn/index.php?option=com_content&id=2854">克里现场演奏视频</a></div>
+                    </li>
+                
+
+                	                    <li>
+                                            <div class="sptj_pic"> <a href="http://video.ccom.edu.cn/index.php?option=com_content&id=1015"><img src="http://stream.live.ccom.edu.cn/vod/picturelib_one/2016/3/19/1458389057_957.png" width="380" height="285" /></a></div>
+                        <div class="sptj_bt"><a href="http://video.ccom.edu.cn/index.php?option=com_content&id=1015">一、弦乐二重奏</a></div>
+                    </li>
+                
+
+                    <div class="clear"></div>        
+                </ul>
+            </div>   
+             
+        </div>
+		
+
+        <div class="content">        	
+            <div class="sptj_list" >
+            	<div class="lswq_bt" style="width:1250px; margin:0 auto;">
+                    <div class="lswq_com"><span class="lswq_more"><a href="http://video.ccom.edu.cn/index.php?option=com_content&ItemId=134"><img src="/Portal/Tpl/templates/default/images/t_m.png" width="24" height="24"></a></span></div>
+                </div>
+                <div class="blank20"></div>
+                <ul>
+				
+
+
+                	                    <li class="li_first">
+                                            <div class="sptj_pic"> <a href="http://video.ccom.edu.cn/index.php?option=com_content&id=3041"><img src="http://stream.live.ccom.edu.cn/vod/picturelib_one/2016/6/17/1466133052_672.jpg" width="380" height="285" /></a></div>
+                        <div class="sptj_bt"><a href="http://video.ccom.edu.cn/index.php?option=com_content&id=3041">中央音乐学院建校75周年校庆典礼</a></div>
+                    </li>
+                
+
+                	                    <li>
+                                            <div class="sptj_pic"> <a href="http://video.ccom.edu.cn/index.php?option=com_content&id=3043"><img src="http://stream.live.ccom.edu.cn/vod/picturelib_two/2016/06/17/6c4738598ff74e05b2f9c6d4711ece66_p_snap_1.jpg" width="380" height="285" /></a></div>
+                        <div class="sptj_bt"><a href="http://video.ccom.edu.cn/index.php?option=com_content&id=3043">中央音乐学院75周年校庆 郎朗获母校首个荣誉博士学位</a></div>
+                    </li>
+                
+
+                	                    <li>
+                                            <div class="sptj_pic"> <a href="http://video.ccom.edu.cn/index.php?option=com_content&id=2853"><img src="http://video.ccom.edu.cn/Images/1387508712420.jpg" width="380" height="285" /></a></div>
+                        <div class="sptj_bt"><a href="http://video.ccom.edu.cn/index.php?option=com_content&id=2853">拉赫玛尼诺夫马拉松-钢协(1)</a></div>
+                    </li>
+                
+
+                	                    <li class="li_first">
+                                            <div class="sptj_pic"> <a href="http://video.ccom.edu.cn/index.php?option=com_content&id=657"><img src="http://stream.live.ccom.edu.cn/vod/picturelib_one/2016/3/20/1458463151_220.png" width="380" height="285" /></a></div>
+                        <div class="sptj_bt"><a href="http://video.ccom.edu.cn/index.php?option=com_content&id=657">国际演出系列</a></div>
+                    </li>
+                
+
+                	                    <li>
+                                            <div class="sptj_pic"> <a href="http://video.ccom.edu.cn/index.php?option=com_content&id=640"><img src="http://stream.live.ccom.edu.cn/vod/picturelib_one/2016/3/20/1458464200_953.png" width="380" height="285" /></a></div>
+                        <div class="sptj_bt"><a href="http://video.ccom.edu.cn/index.php?option=com_content&id=640">中国青年作曲家电子音乐作曲比赛A、B组获奖作品音乐会之一、遥远之声</a></div>
+                    </li>
+                
+
+                	                    <li>
+                                            <div class="sptj_pic"> <a href="http://video.ccom.edu.cn/index.php?option=com_content&id=659"><img src="http://stream.live.ccom.edu.cn/vod/picturelib_one/2016/3/20/1458463084_341.png" width="380" height="285" /></a></div>
+                        <div class="sptj_bt"><a href="http://video.ccom.edu.cn/index.php?option=com_content&id=659">电子音乐大师班系列</a></div>
+                    </li>
+                
+
+                    <div class="clear"></div>        
+                </ul>
+            </div>   
+             
+        </div>
+		
+
+        <div class="content">        	
+            <div class="sptj_list" >
+            	<div class="lswq_bt" style="width:1250px; margin:0 auto;">
+                    <div class="lswq_com"><span class="lswq_more"><a href="http://video.ccom.edu.cn/index.php?option=com_content&ItemId=140"><img src="/Portal/Tpl/templates/default/images/t_m.png" width="24" height="24"></a></span></div>
+                </div>
+                <div class="blank20"></div>
+                <ul>
+				
+
+
+                	                    <li class="li_first">
+                                            <div class="sptj_pic"> <a href="http://video.ccom.edu.cn/index.php?option=com_content&id=3333"><img src="http://stream.live.ccom.edu.cn/vod/picturelib_two/2016/11/04/f5c6c2e6a5f245e68ede71f0bd45461f_p_snap_1.jpg" width="380" height="285" /></a></div>
+                        <div class="sptj_bt"><a href="http://video.ccom.edu.cn/index.php?option=com_content&id=3333">颁奖仪式暨获奖者音乐会 The Award Ceremony &amp; Winners&#039;Concert...</a></div>
+                    </li>
+                
+
+                	                    <li>
+                                            <div class="sptj_pic"> <a href="http://video.ccom.edu.cn/index.php?option=com_content&id=3327"><img src="http://stream.live.ccom.edu.cn/vod/picturelib_two/2016/11/04/5780d03d71f4498a9d974d4d20e5d10d_p_snap_1.jpg" width="380" height="285" /></a></div>
+                        <div class="sptj_bt"><a href="http://video.ccom.edu.cn/index.php?option=com_content&id=3327">第一届北京肖邦国际青少年比赛开幕音乐会（下半场）</a></div>
+                    </li>
+                
+
+                	                    <li>
+                                            <div class="sptj_pic"> <a href="http://video.ccom.edu.cn/index.php?option=com_content&id=3325"><img src="http://stream.live.ccom.edu.cn/vod/picturelib_two/2016/11/04/07b1e4d9f7ff49a29814e7f4999882c1_p_snap_1.jpg" width="380" height="285" /></a></div>
+                        <div class="sptj_bt"><a href="http://video.ccom.edu.cn/index.php?option=com_content&id=3325">第一届北京肖邦国际青少年比赛开幕音乐会（上半场）</a></div>
+                    </li>
+                
+
+                	                    <li class="li_first">
+                                            <div class="sptj_pic"> <a href="http://video.ccom.edu.cn/index.php?option=com_content&id=3188"><img src="http://stream.live.ccom.edu.cn/vod/picturelib_two/2016/10/30/04b0a0f0edc0473e8be45b4c0d134faf_p_snap_1.jpg" width="380" height="285" /></a></div>
+                        <div class="sptj_bt"><a href="http://video.ccom.edu.cn/index.php?option=com_content&id=3188">青年组决赛：陈学弘Chen Xuehong</a></div>
+                    </li>
+                
+
+                	                    <li>
+                                            <div class="sptj_pic"> <a href="http://video.ccom.edu.cn/index.php?option=com_content&id=3187"><img src="http://stream.live.ccom.edu.cn/vod/picturelib_two/2016/10/29/83ba3a8084624d6388cd9ada65e0cdd3_p_snap_1.jpg" width="380" height="285" /></a></div>
+                        <div class="sptj_bt"><a href="http://video.ccom.edu.cn/index.php?option=com_content&id=3187">青年组决赛：彼得·帕夫拉克Piotr Pawlak</a></div>
+                    </li>
+                
+
+                	                    <li>
+                                            <div class="sptj_pic"> <a href="http://video.ccom.edu.cn/index.php?option=com_content&id=3186"><img src="http://stream.live.ccom.edu.cn/vod/picturelib_two/2016/10/29/a118312edeae41f6b850d04b5688abb5_p_snap_1.jpg" width="380" height="285" /></a></div>
+                        <div class="sptj_bt"><a href="http://video.ccom.edu.cn/index.php?option=com_content&id=3186">青年组决赛：李哲Li Zhe</a></div>
+                    </li>
+                
+
+                    <div class="clear"></div>        
+                </ul>
+            </div>   
+             
+        </div>
+		
+
+        <div class="content">        	
+            <div class="sptj_list" >
+            	<div class="lswq_bt" style="width:1250px; margin:0 auto;">
+                    <div class="lswq_com"><span class="lswq_more"><a href="http://video.ccom.edu.cn/index.php?option=com_content&ItemId=139"><img src="/Portal/Tpl/templates/default/images/t_m.png" width="24" height="24"></a></span></div>
+                </div>
+                <div class="blank20"></div>
+                <ul>
+				
+
+
+                	                    <li class="li_first">
+                                            <div class="sptj_pic"> <a href="http://video.ccom.edu.cn/index.php?option=com_content&id=2531"><img src="http://stream.live.ccom.edu.cn/vod/picturelib_two/2016/2/17/1455689883_686.png" width="380" height="285" /></a></div>
+                        <div class="sptj_bt"><a href="http://video.ccom.edu.cn/index.php?option=com_content&id=2531">大提琴演奏会（一）</a></div>
+                    </li>
+                
+
+                	                    <li>
+                                            <div class="sptj_pic"> <a href="http://video.ccom.edu.cn/index.php?option=com_content&id=1697"><img src="http://stream.live.ccom.edu.cn/vod/picturelib_two/2016/2/23/1456207451_502.png" width="380" height="285" /></a></div>
+                        <div class="sptj_bt"><a href="http://video.ccom.edu.cn/index.php?option=com_content&id=1697">九、钢琴组曲《镜头三》I《雾中远山》 II《林之妖舞》 III《花鼓》</a></div>
+                    </li>
+                
+
+                	                    <li>
+                                            <div class="sptj_pic"> <a href="http://video.ccom.edu.cn/index.php?option=com_content&id=1692"><img src="http://stream.live.ccom.edu.cn/vod/picturelib_two/2016/2/23/1456207668_303.png" width="380" height="285" /></a></div>
+                        <div class="sptj_bt"><a href="http://video.ccom.edu.cn/index.php?option=com_content&id=1692">四、大提琴与长笛的二重奏《色色空空》I 《空》 II《色》</a></div>
+                    </li>
+                
+
+                	                    <li class="li_first">
+                                            <div class="sptj_pic"> <a href="http://video.ccom.edu.cn/index.php?option=com_content&id=1645"><img src="http://stream.live.ccom.edu.cn/vod/picturelib_two/2016/2/24/1456328108_606.png" width="380" height="285" /></a></div>
+                        <div class="sptj_bt"><a href="http://video.ccom.edu.cn/index.php?option=com_content&id=1645">八、电视剧《不觉流水年长》的插曲 为小提琴与乐队而作</a></div>
+                    </li>
+                
+
+                	                    <li>
+                                            <div class="sptj_pic"> <a href="http://video.ccom.edu.cn/index.php?option=com_content&id=1644"><img src="http://stream.live.ccom.edu.cn/vod/picturelib_two/2016/2/24/1456328132_536.png" width="380" height="285" /></a></div>
+                        <div class="sptj_bt"><a href="http://video.ccom.edu.cn/index.php?option=com_content&id=1644">七、一朵开花的树（无伴奏合唱）</a></div>
+                    </li>
+                
+
+                	                    <li>
+                                            <div class="sptj_pic"> <a href="http://video.ccom.edu.cn/index.php?option=com_content&id=1254"><img src="http://stream.live.ccom.edu.cn/vod/picturelib_two/2016/2/24/1456328281_374.png" width="380" height="285" /></a></div>
+                        <div class="sptj_bt"><a href="http://video.ccom.edu.cn/index.php?option=com_content&id=1254">附中室内乐团专场（一）</a></div>
+                    </li>
+                
+
+                    <div class="clear"></div>        
+                </ul>
+            </div>   
+             
+        </div>
+		
+
+        <div class="content">        	
+            <div class="sptj_list" >
+            	<div class="lswq_bt" style="width:1250px; margin:0 auto;">
+                    <div class="lswq_com"><span class="lswq_more"><a href="http://video.ccom.edu.cn/index.php?option=com_content&ItemId=138"><img src="/Portal/Tpl/templates/default/images/t_m.png" width="24" height="24"></a></span></div>
+                </div>
+                <div class="blank20"></div>
+                <ul>
+				
+
+
+                	                    <li class="li_first">
+                                            <div class="sptj_pic"> <a href="http://video.ccom.edu.cn/index.php?option=com_content&id=107"><img src="http://stream.live.ccom.edu.cn/vod/picturelib_one/2016/3/16/1458096290_357.png" width="380" height="285" /></a></div>
+                        <div class="sptj_bt"><a href="http://video.ccom.edu.cn/index.php?option=com_content&id=107">作曲系音乐会</a></div>
+                    </li>
+                
+
+                	                    <li>
+                                            <div class="sptj_pic"> <a href="http://video.ccom.edu.cn/index.php?option=com_content&id=1553"><img src="http://stream.live.ccom.edu.cn/vod/picturelib_one/2016/3/15/1458006710_830.png" width="380" height="285" /></a></div>
+                        <div class="sptj_bt"><a href="http://video.ccom.edu.cn/index.php?option=com_content&id=1553">一、声歌系九七级牛莎莎毕业音乐会</a></div>
+                    </li>
+                
+
+                	                    <li>
+                                            <div class="sptj_pic"> <a href="http://video.ccom.edu.cn/index.php?option=com_content&id=1515"><img src="http://stream.live.ccom.edu.cn/vod/picturelib_one/2016/3/15/1458019172_188.png" width="380" height="285" /></a></div>
+                        <div class="sptj_bt"><a href="http://video.ccom.edu.cn/index.php?option=com_content&id=1515">五、第五钢琴协奏曲《皇帝》</a></div>
+                    </li>
+                
+
+                	                    <li class="li_first">
+                                            <div class="sptj_pic"> <a href="http://video.ccom.edu.cn/index.php?option=com_content&id=1420"><img src="http://stream.live.ccom.edu.cn/vod/picturelib_one/2016/3/16/1458093844_693.png" width="380" height="285" /></a></div>
+                        <div class="sptj_bt"><a href="http://video.ccom.edu.cn/index.php?option=com_content&id=1420">三、我亲爱的爸爸-选自歌剧《贾尼·斯基基》O mio babbino caro</a></div>
+                    </li>
+                
+
+                	                    <li>
+                                            <div class="sptj_pic"> <a href="http://video.ccom.edu.cn/index.php?option=com_content&id=1464"><img src="http://stream.live.ccom.edu.cn/vod/picturelib_one/2016/3/15/1458025314_124.png" width="380" height="285" /></a></div>
+                        <div class="sptj_bt"><a href="http://video.ccom.edu.cn/index.php?option=com_content&id=1464">管弦系2002年本科毕业考试(2)</a></div>
+                    </li>
+                
+
+                	                    <li>
+                                            <div class="sptj_pic"> <a href="http://video.ccom.edu.cn/index.php?option=com_content&id=1535"><img src="http://stream.live.ccom.edu.cn/vod/picturelib_one/2016/3/15/1458010637_400.png" width="380" height="285" /></a></div>
+                        <div class="sptj_bt"><a href="http://video.ccom.edu.cn/index.php?option=com_content&id=1535">七、我感到－－选自《魔笛》Ach,ich fuhi&#039;s</a></div>
+                    </li>
+                
+
+                    <div class="clear"></div>        
+                </ul>
+            </div>   
+             
+        </div>
+		
+
+        <div class="content">        	
+            <div class="sptj_list" >
+            	<div class="lswq_bt" style="width:1250px; margin:0 auto;">
+                    <div class="lswq_com"><span class="lswq_more"><a href="http://video.ccom.edu.cn/index.php?option=com_content&ItemId=137"><img src="/Portal/Tpl/templates/default/images/t_m.png" width="24" height="24"></a></span></div>
+                </div>
+                <div class="blank20"></div>
+                <ul>
+				
+
+
+                	                    <li class="li_first">
+                                            <div class="sptj_pic"> <a href="http://video.ccom.edu.cn/index.php?option=com_content&id=2849"><img src="http://video.ccom.edu.cn/Images/1384935113185.jpg" width="380" height="285" /></a></div>
+                        <div class="sptj_bt"><a href="http://video.ccom.edu.cn/index.php?option=com_content&id=2849">“人声乐器的奥秘”韩丽艳 第一讲</a></div>
+                    </li>
+                
+
+                	                    <li>
+                                            <div class="sptj_pic"> <a href="http://video.ccom.edu.cn/index.php?option=com_content&id=828"><img src="http://stream.live.ccom.edu.cn/vod/picturelib_one/2016/3/11/1457663626_714.png" width="380" height="285" /></a></div>
+                        <div class="sptj_bt"><a href="http://video.ccom.edu.cn/index.php?option=com_content&id=828">“现代音乐”艺术沙龙 二会</a></div>
+                    </li>
+                
+
+                	                    <li>
+                                            <div class="sptj_pic"> <a href="http://video.ccom.edu.cn/index.php?option=com_content&id=763"><img src="http://stream.live.ccom.edu.cn/vod/picturelib_one/2016/3/11/1457663572_758.png" width="380" height="285" /></a></div>
+                        <div class="sptj_bt"><a href="http://video.ccom.edu.cn/index.php?option=com_content&id=763">姜夔讲座</a></div>
+                    </li>
+                
+
+                	                    <li class="li_first">
+                                            <div class="sptj_pic"> <a href="http://video.ccom.edu.cn/index.php?option=com_content&id=702"><img src="http://stream.live.ccom.edu.cn/vod/picturelib_one/2016/3/11/1457663509_168.png" width="380" height="285" /></a></div>
+                        <div class="sptj_bt"><a href="http://video.ccom.edu.cn/index.php?option=com_content&id=702">音乐学系五十周年历史回顾</a></div>
+                    </li>
+                
+
+                	                    <li>
+                                            <div class="sptj_pic"> <a href="http://video.ccom.edu.cn/index.php?option=com_content&id=691"><img src="http://stream.live.ccom.edu.cn/vod/picturelib_one/2016/3/10/1457601766_871.png" width="380" height="285" /></a></div>
+                        <div class="sptj_bt"><a href="http://video.ccom.edu.cn/index.php?option=com_content&id=691">钢琴系国际钢琴比赛裁判经讲座</a></div>
+                    </li>
+                
+
+                	                    <li>
+                                            <div class="sptj_pic"> <a href="http://video.ccom.edu.cn/index.php?option=com_content&id=415"><img src="http://stream.live.ccom.edu.cn/vod/picturelib_one/2016/3/11/1457664628_346.png" width="380" height="285" /></a></div>
+                        <div class="sptj_bt"><a href="http://video.ccom.edu.cn/index.php?option=com_content&id=415">教育部长江学者讲座教授</a></div>
+                    </li>
+                
+
+                    <div class="clear"></div>        
+                </ul>
+            </div>   
+             
+        </div>
+		
+
+        <div class="content">        	
+            <div class="sptj_list" >
+            	<div class="lswq_bt" style="width:1250px; margin:0 auto;">
+                    <div class="lswq_com"><span class="lswq_more"><a href="http://video.ccom.edu.cn/index.php?option=com_content&ItemId=135"><img src="/Portal/Tpl/templates/default/images/t_m.png" width="24" height="24"></a></span></div>
+                </div>
+                <div class="blank20"></div>
+                <ul>
+				
+
+
+                	                    <li class="li_first">
+                                            <div class="sptj_pic"> <a href="http://video.ccom.edu.cn/index.php?option=com_content&id=3430"><img src="http://stream.live.ccom.edu.cn/vod/picturelib_one/2017/10/23/1508728642_528.jpg" width="380" height="285" /></a></div>
+                        <div class="sptj_bt"><a href="http://video.ccom.edu.cn/index.php?option=com_content&id=3430">一场震撼心灵的思想政治理论课——俞峰院长十九大前夕讲给未来艺术事业接班人的一次思...</a></div>
+                    </li>
+                
+
+                	                    <li>
+                                            <div class="sptj_pic"> <a href="http://video.ccom.edu.cn/index.php?option=com_content&id=3355"><img src="http://stream.live.ccom.edu.cn/vod/picturelib_two/2017/04/11/963b8bb8542f4d479065084308d42552_p_snap_1.jpg" width="380" height="285" /></a></div>
+                        <div class="sptj_bt"><a href="http://video.ccom.edu.cn/index.php?option=com_content&id=3355">“国家艺术基金中国青年指挥人才培养项目”第一期指挥大师班精彩回顾</a></div>
+                    </li>
+                
+
+                	                    <li>
+                                            <div class="sptj_pic"> <a href="http://video.ccom.edu.cn/index.php?option=com_content&id=851"><img src="http://stream.live.ccom.edu.cn/vod/picturelib_one/2016/3/12/1457770905_334.png" width="380" height="285" /></a></div>
+                        <div class="sptj_bt"><a href="http://video.ccom.edu.cn/index.php?option=com_content&id=851">谭盾讲座（一）</a></div>
+                    </li>
+                
+
+                	                    <li class="li_first">
+                                            <div class="sptj_pic"> <a href="http://video.ccom.edu.cn/index.php?option=com_content&id=540"><img src="http://stream.live.ccom.edu.cn/vod/picturelib_one/2016/3/11/1457675260_833.png" width="380" height="285" /></a></div>
+                        <div class="sptj_bt"><a href="http://video.ccom.edu.cn/index.php?option=com_content&id=540">陈圆大提琴授教（1）</a></div>
+                    </li>
+                
+
+                	                    <li>
+                                            <div class="sptj_pic"> <a href="http://video.ccom.edu.cn/index.php?option=com_content&id=126"><img src="http://stream.live.ccom.edu.cn/vod/picturelib_one/2016/3/11/1457675502_569.png" width="380" height="285" /></a></div>
+                        <div class="sptj_bt"><a href="http://video.ccom.edu.cn/index.php?option=com_content&id=126">古柏杜丽娜对音乐的创作回顾与展望</a></div>
+                    </li>
+                
+
+                	                    <li>
+                                            <div class="sptj_pic"> <a href="http://video.ccom.edu.cn/index.php?option=com_content&id=108"><img src="http://stream.live.ccom.edu.cn/vod/picturelib_one/2016/3/11/1457676091_500.png" width="380" height="285" /></a></div>
+                        <div class="sptj_bt"><a href="http://video.ccom.edu.cn/index.php?option=com_content&id=108">李岚淸中国近代音乐史座谈（1）</a></div>
+                    </li>
+                
+
+                    <div class="clear"></div>        
+                </ul>
+            </div>   
+             
+        </div>
+		
+
+        <div class="content">        	
+            <div class="sptj_list" >
+            	<div class="lswq_bt" style="width:1250px; margin:0 auto;">
+                    <div class="lswq_com"><span class="lswq_more"><a href="http://video.ccom.edu.cn/index.php?option=com_content&ItemId=143"><img src="/Portal/Tpl/templates/default/images/t_m.png" width="24" height="24"></a></span></div>
+                </div>
+                <div class="blank20"></div>
+                <ul>
+				
+
+
+                	                    <li class="li_first">
+                                            <div class="sptj_pic"> <a href="http://video.ccom.edu.cn/index.php?option=com_content&id=168"><img src="http://stream.live.ccom.edu.cn/vod/picturelib_one/2016/3/10/1457596477_285.png" width="380" height="285" /></a></div>
+                        <div class="sptj_bt"><a href="http://video.ccom.edu.cn/index.php?option=com_content&id=168">学术发言（十）专题讨论：爵士音乐研究</a></div>
+                    </li>
+                
+
+                	                    <li>
+                                            <div class="sptj_pic"> <a href="http://video.ccom.edu.cn/index.php?option=com_content&id=169"><img src="http://stream.live.ccom.edu.cn/vod/picturelib_one/2016/3/10/1457596406_143.png" width="380" height="285" /></a></div>
+                        <div class="sptj_bt"><a href="http://video.ccom.edu.cn/index.php?option=com_content&id=169">研讨会：当代社会变革环境中的传统音乐</a></div>
+                    </li>
+                
+
+                	                    <li>
+                                            <div class="sptj_pic"> <a href="http://video.ccom.edu.cn/index.php?option=com_content&id=162"><img src="http://stream.live.ccom.edu.cn/vod/picturelib_one/2016/3/10/1457597011_655.png" width="380" height="285" /></a></div>
+                        <div class="sptj_bt"><a href="http://video.ccom.edu.cn/index.php?option=com_content&id=162">综合音乐会（非洲传统音乐表演、二胡与爵士、 韩国伽倻琴演奏等）</a></div>
+                    </li>
+                
+
+                	                    <li class="li_first">
+                                            <div class="sptj_pic"> <a href="http://video.ccom.edu.cn/index.php?option=com_content&id=140"><img src="http://stream.live.ccom.edu.cn/vod/picturelib_one/2016/3/10/1457596089_925.png" width="380" height="285" /></a></div>
+                        <div class="sptj_bt"><a href="http://video.ccom.edu.cn/index.php?option=com_content&id=140">中国传统音乐表演（中央音乐学院民乐系师生）</a></div>
+                    </li>
+                
+
+                	                    <li>
+                                            <div class="sptj_pic"> <a href="http://video.ccom.edu.cn/index.php?option=com_content&id=127"><img src="http://stream.live.ccom.edu.cn/vod/picturelib_one/2016/3/1/1456810959_363.png" width="380" height="285" /></a></div>
+                        <div class="sptj_bt"><a href="http://video.ccom.edu.cn/index.php?option=com_content&id=127">达巴教授非洲音乐工作坊（一）</a></div>
+                    </li>
+                
+
+                	                    <li>
+                                            <div class="sptj_pic"> <a href="http://video.ccom.edu.cn/index.php?option=com_content&id=129"><img src="http://stream.live.ccom.edu.cn/vod/picturelib_one/2016/3/1/1456811163_720.png" width="380" height="285" /></a></div>
+                        <div class="sptj_bt"><a href="http://video.ccom.edu.cn/index.php?option=com_content&id=129">2005年·北京 中·非音乐对话——非洲音乐国际学术研讨会 开幕式</a></div>
+                    </li>
+                
+
+                    <div class="clear"></div>        
+                </ul>
+            </div>   
+             
+        </div>
+		
+
+       
+     </div>                                                      
+    <!---滑动区1end--->
+    
+    
+    
+    
+</div>    
+<!--视频推荐end-->
+
+﻿<div class="footer2015">
+	<div class="lsf_com">
+		<div class="footlwz_link">
+			<a href="http://video.ccom6.edu.cn"><img src="/Portal/Tpl/templates/default/images/footlwz_link.png" width="96" height="96"></a>
+		</div>
+		<div class="footerleft">
+			<p class="footc">音院网站[<a href="http://www.ccom.edu.cn/">中文版</a>][<a href="http://en.ccom.edu.cn/">英文版</a>]</p>
+			<p>本站中央音乐学院网络信息中心技术维护 客服服务热线：010-66425909 建议使用IE7+浏览器观看</p>
+			<p>Copyright © 2010-2016 Central Conservatory of Music. All rights reserved.</p>
+		</div>
+		<div class="footerright"> <img src="/Portal/Tpl/templates/default/images/ewm.png"> </div>
+		<div class="clear"></div>
+	</div>
+</div>
+<script>
+	jQuery(function() {
+		jQuery('.hdm01>h3>a').mouseover(function() {
+			TabSelect(".hdm01>h3>a", ".hdm01>div.content", "current", jQuery(this))
+		});
+		jQuery('.hdm01>h3>a').eq(0).trigger("mouseover");
+	});
+	jQuery(function() {
+		jQuery('.l_tabs>h3>a').mousedown(function() {
+			TabSelect(".l_tabs>h3>a", ".l_tabs>div.content", "current", jQuery(this))
+		});
+		jQuery('.l_tabs>h3>a').eq(0).trigger("mousedown");
+	});
+	 //tab function 
+	 function TabSelect(tab,con,addClass,obj) {        var jQuery_self = obj;        var jQuery_nav = jQuery(tab);            jQuery_nav.removeClass(addClass),        jQuery_self.addClass(addClass);            var jQuery_index = jQuery_nav.index(jQuery_self);        var jQuery_con = jQuery(con);        jQuery_con.hide(),        jQuery_con.eq(jQuery_index).show();    }
+	$("#tabbox").find("a").on("click",function(){
+		$("#tabbox").find("a").each(function(){
+			$(this).removeClass("current");
+		})
+		$(this).addClass("current")
+		$(".content").each(function(){
+			$(this).css("display","none");
+		})
+		$(".content").eq($(this).index()).css("display","block");
+	})
+</script></div>
+ <script>
+    var chaturl ="http://live.ccom.edu.cn:8080/chat/live";
+    var getjson ="http://live.ccom.edu.cn:8080/chat/portal/getFocusInfoServlet?callback=?";
+	
+    $.getJSON(getjson, function(data){
+	 
+	if(data.LiveChatList.length == 0){
+	  $.each(data.AlbumList,function(i,item){
+	 
+	  if(item.isFinish=="1"){
+	  var html="<li><img src="+item.imgUrl+"><div class=live_box><a class=enterzj href="+chaturl+"/albumlist.html?albumid="+item.categoryID+" target=_blank>进入专辑</a></div></li>";
+	  var htmlsmall = "<li><a href="+chaturl+"/albumlist.html?albumid="+item.categoryID+" target=_blank><img src="+item.slImgUrl+"></a></li>"
+	  }else
+	  {
+     var html="<li><img src="+item.imgUrl+"><div class=live_box><a class=enterzj href="+chaturl+"/album.html?albumid="+item.categoryID+" target=_blank>进入专辑</a></div></li>";
+	  var htmlsmall = "<li><a href="+chaturl+"/album.html?albumid="+item.categoryID+" target=_blank><img src="+item.slImgUrl+"></a></li>"
+      }
+	 $("#indexlive").append(html);
+	
+      $("#livesmall").append(htmlsmall);
+	  
+	});
+	}
+	else{
+	  $.each(data.LiveChatList,function(i,item){
+
+	 var html="<li><img src="+item.imgUrl+"><div class=live_box><a class=enterlive href="+chaturl+"/live.html?id="+item.chatID+" target=_blank>直播</a><a class=enterzj href="+chaturl+"/album.html?albumid="+item.materailGroupID+" target=_blank>进入专辑</a></div></li>";
+	  var htmlsmall = "<li><a href="+chaturl+"/live.html?id="+item.chatID+" target=_blank><img src="+item.slImgUrl+"></a></li>"
+	 $("#indexlive").append(html);
+	 
+	 $("#livesmall").append(htmlsmall);
+	 
+	 });
+	 }
+
+$("#slide_fade").cxSlide({
+	events:"mouseover",
+	type:"fade", 
+	speed:300
+});
+    });
+	/////
+
+
+ $("#home").addClass("ynav_home");
+
+    var mmsURL = "http://mms.ccomvideo.ccom.edu.cn:8080/mms4.4.3/"; 
+	
+ var getjson=mmsURL+"disclose/listRecommendProgramByCategoryId.jspa?contentCount=5&callback=?";
+    $.getJSON(getjson, function(data){
+	   $.each(data.data.programList,function(i,item){
+	   if(i<2){
+	   var html="<li class=lykp_lqk><a href=/index.php?option=default,blview&id="+item.id+"><img src="+item.picUrl+" width=610 height=315 ><span><strong>"+item.title+"</strong></span></a></li>"
+	   $("#blbig").append(html);
+            } 
+	    if(i>1){
+		var html="<li>";
+		if( ( i - 2 ) % 3 ==0 ) html = "<li class='li_first'>";
+		html += "<div class=sptj_pic><a href=/index.php?option=default,blview&id="+item.id+"><img src="+item.picUrl+" width=380 height=285 ></a></div><div class=sptj_bt><a href=/index.php?option=default,blview&id="+item.id+">"+item.title+"</a></div></li>"
+         
+	   $("#blsma").append(html);
+            } 
+	   })
+	})
+</script>
+
+</body>
+</html>

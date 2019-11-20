@@ -1,0 +1,946 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <title>中央音乐学院考级委员会</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+    <meta name="description" content="简介">
+    <meta name="keywords" content="关键字">
+    <!-- Cmui Style-->
+<link rel="stylesheet" href="/Public/static/css/cmui.ccom.min.css">
+<!-- Jquery -->
+<script src="/Public/static/js/jquery.min.js"></script>
+<!-- Cmui Javascript-->
+<script src="/Public/static/js/cmui.min.js"></script>
+<script src="/Public/static/js/jquery.flexslider-min.js"></script>
+<script src="/Public/static/js/My97DatePicker/WdatePicker.js"></script>
+<!-- custom -->
+<link rel="stylesheet" href="/Public/static/css/custom.css">
+<link rel="stylesheet" href="/Public/static/css/common.css">
+<!-- <link rel="stylesheet" href="css/style.css"> -->
+<link rel="stylesheet" href="/Public/static/css/flexslider.css">
+<style>
+ul{ list-style:none;}
+.out_link{width:60px;position:fixed;right:45px;bottom:100px; z-index:101;}
+.out_link img{margin-bottom:18px;cursor:pointer; backface-visibility:hidden;}
+.out_link li:hover img{transform:rotate(180deg);-webkit-transform:rotateY(180deg);-moz-transform:rotateY(180deg);-ms-transform:rotateY(180deg);-o-transform:rotateY(180deg); transition:0.4s;-webkit-transition:0.4s;-moz-transition:0.4s;-ms-transition:0.4s;-o-transition:0.4s;}
+.rote{transform:rotateY(180deg);position:absolute;left:40;}
+.out_link li:hover .rote{transform:rotateY(360deg)}
+</style>
+<ul class="out_link" style='display:none;'>
+    <li><img title="演奏演唱报名入口" alt="演奏演唱报名入口" src="/Public/static/images/Tenxun3.png"><a href="#"><img title="演奏演唱报名入口" alt="演奏演唱报名入口" class="rote" src="/Public/static/images/Tenxun3.png"></a></li>
+    <li><img title="音乐基础报名入口" alt="音乐基础报名入口" src="/Public/static/images/emill2.png"><a href="#"><img title="音乐基础报名入口" alt="音乐基础报名入口" class="rote" src="/Public/static/images/emill2.png"></a></li>
+    <li><a href="#top"><img src="/Public/static/images/top.png"><img class="rote" src="/Public/static/images/top.png"></a></li>
+</ul>
+    <script>
+        $(function() {
+            // banner
+            $('.flexslider').flexslider({
+                animation: 'fade',
+                slideDirection: 'horizontal',
+                animationLoop: true,
+                slideshow: true,
+                slideshowSpeed: 6000,
+                animationSpeed: 500,
+                pauseOnHover: true,
+                directionNav: false,
+                controlNav: true
+            })
+        });
+    </script>
+</head>
+<style type="text/css">
+	.xspan{
+		transform: rotate(-45deg);
+		-ms-transform: rotate(-45deg);		/* IE 9 */
+		-webkit-transform: rotate(-45deg);	/* Safari and Chrome */
+		-o-transform: rotate(-45deg);		/* Opera */
+		-moz-transform: rotate(-45deg);
+	}
+</style>
+<body>
+
+<div class="shade" style="display:none; z-index:10000"></div>
+<div class="exam_room" style="display:none">
+	<!-- 准考证信息 -->  
+	<input type="button" value="关&nbsp;&nbsp;闭" onclick="exampoint_hide();"/>         
+</div>
+	
+<div class="chengji" style="display:none;">
+	<!-- <h3>查询结果</h3>
+    <img class="clos" src="/Public/static/images/clo-1.jpg">
+    <p style="height:3px;background-color:#E4D3D3;width:300px;margin-left:auto;margin-right:auto;margin-top:3px;margin-bottom:15px;"></p> -->
+    
+    
+</div>
+
+
+
+
+<div class="page">
+    <!-- top -->
+<div class="header">
+    <div class="wrap">
+        <div class="logo">
+            <a href="#"><img src="/Public/static/images/logo.png"></a>
+        </div>
+        <div class="header-operation">
+        
+        		<div class="group qrcode">
+                <a class="btn link md">
+                    <i class="m-r-xs" style="float:left;margin-top:-3px"><img src="/Public/static/images/pen1_03.png"></i><p style="float:right;margin-top:4px;">联系客服</p>
+                </a>
+                <div class="pen_box header-dorpdown">
+                	<p class="pen1"><a href="javascript:void(0);" data-href="http://wpa.qq.com/msgrd?v=3&uin=3412916189&site=qq&menu=yes"><!-- <img src="/Public/static/images/pen2_03.png"> --><span style="color:white">010-66425733</span></a></p>
+                    <p class="pen2"><a href="javascript:void(0);" data-href="http://wpa.qq.com/msgrd?v=3&uin=3411890372&site=qq&menu=yes"><!-- <img src="/Public/static/images/pen2_03.png"> --><span style="color:white">010-66414137</span></a></p>
+                    <p class="pen_w">周一至周五</p>
+                    <p class="pen_t">08:30-17:30</p>
+                     <p class="pen_t" style="font-size:12px;margin-top:10px;">客服邮箱<br>3491942135<br>@qq.com </p>
+                </div>
+               <!-- <img class="header-dorpdown" src="http://web.yangyin.cc//Public/static/images/wechat-qr.png">-->
+     			</div>
+        	
+        
+            <div class="group qrcode">
+                <a class="btn link md" href="javascript:void(0)">
+                    <i class="cm-weixin m-r-xs"></i>关注
+                </a>
+                <img class="header-dorpdown" src="/Public/static/images/wechat-qr.png">
+            </div>
+            <div class="group qrcode">
+                <a class="btn link md" href="javascript:void(0)">
+                    <i class="cm-phone m-r-xs"></i>手机站
+                </a>
+                <img class="header-dorpdown" src="/Public/static/images/wechat-qr.png">
+            </div>
+            <div class="group inline m-l-xxl" style='display:none;'>
+                <a href="" class="btn danger sm outline">EN</a>
+                <a href="" class="btn danger sm">中文</a>
+            </div>
+        </div>
+    </div>
+   <!--  <p class="top_p" style="line-height:24px;">
+    <a href="http://wpa.qq.com/msgrd?v=3&uin=3412916189&site=qq&menu=yes">
+    <img border="0" src="http://wpa.qq.com/pa?p=2:3412916189:41" alt="点击添加客服咨询" title="客服QQ"></a>
+    <a  href="http://wpa.qq.com/msgrd?v=3&uin=3411890372&site=qq&menu=yes">
+    <img border="0" src="http://wpa.qq.com/pa?p=2:3411890372:41" alt="点击添加客服咨询" title="客服QQ"></a> 周一至周五&nbsp;&nbsp;08:30-17:30<br>
+	客服邮箱：3491942135@qq.com&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;其他非工作时间</p> -->
+	
+
+	
+</div>
+<div class="navbar">
+    <nav class="wrap">
+        <div class="nav-content">
+            <ul class="item pull-left" id="menu">
+                <li ><a href="#">首页</a></li>
+                <li><a href="#">考级动态</a></li>
+                <li><a href="#">考点介绍</a></li>
+                <!-- <li><a href="#">海外考级</a></li> -->
+                <li><a href="#">考级教材</a></li>
+                <li><a href="#">考级花絮</a></li>
+                <li><a href="/About/examapply.html">报名须知</a></li>
+                <li><a href="#">关于我们</a></li>
+            </ul>
+            <div class="item pull-right nav-reg">
+                <a href="#">注册</a>
+                    <span class="line">|</span>
+                    <a href="#">登录</a>
+                    
+            </div>
+        </div>
+    </nav>
+</div>
+
+
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+
+        // $('#menu li').mouseenter(function () {
+        //     var index = $(this).parent().children().index(this);
+        //     $(this).parent().children().each(function () {
+        //         if ($(this).hasClass('active')) {
+        //             $(this).removeClass('active');
+        //         }
+        //     });
+        //     $(this).addClass('active');
+        // });
+        /*mouseenter$('#Top .Toolbar2 .CentreBox .Menu').each(function () {
+            if (!$(this).hasClass('Hide')) {
+                $(this).addClass('Hide');
+            }
+        });
+        $('#Top .Toolbar2 .CentreBox .Menu').eq(index).removeClass('Hide');*/
+    });
+
+
+            /* $('#Top .Toolbar2 .CentreBox .Menu').each(function () {
+                if (!$(this).hasClass('Hide')) {
+                    $(this).addClass('Hide');
+                }
+            });
+            $('#Top .Toolbar2 .CentreBox .Menu').eq(index).removeClass('Hide');
+        });
+
+        $('#Top .Toolbar2 .CentreBox .Menu ul li a').mouseenter(function () {
+         var index = $('#Top .Toolbar2 .CentreBox .Menu ul li a').index(this);
+         $('#Top .Toolbar2 .CentreBox .Menu ul li').each(function () {
+         if ($(this).hasClass('Select')) {
+         $(this).removeClass('Select');
+         }
+         });
+         $(this).parent().addClass('Select');
+         });*/
+</script>
+
+    <div class="banner flexslider">
+        <ul class="slides">
+            <li class="index-banner-1">
+                <div class="wrap">
+                    <div class="banner-box banner-box1 pull-right">
+                        <h4>Standard Grade Examination Committee Of The <br>Central Conservatory Of Music</h4>
+                        <h3>中央音乐学院</h3>
+                        <h2>考级委员会</h2>
+                        <div class="group enter">
+                            <a class="btn" href="#">演奏演唱专业考级报名</a>
+                            <a class="btn pull-right" href="#">音乐基础知识考试报名</a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li style="background-image: url('/Public/static/images/banner-2.jpg');">
+                <div class="wrap">
+                    <div class="banner-box banner-box2 slogan">
+                        <h2>中央音乐学院校外音乐水平考级</h2>
+                        <ul>
+                            <li class="t">权威</li>
+                            <li class="t">规范</li>
+                            <li class="t">科学</li>
+                            <li class="t">公正</li>
+                        </ul>
+                        <div class="group enter">
+                            <a class="btn" href="#">演奏演唱专业考级报名</a>
+                            <a class="btn pull-right" href="#">音乐基础知识考试报名</a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li style="background-color: #fdefce">
+                <div class="wrap" style="background-image: url('/Public/static/images/banner-4.jpg');">
+                    <div class="banner-box banner-box2 center">
+                        <h4>Standard Grade Examination Committee Of The <br>Central Conservatory Of Music</h4>
+                        <h3>中 央 音 乐 学 院</h3>
+                        <h2>考 级 委 员 会</h2>
+                        <div class="group enter">
+                            <a class="btn" href="#">演奏演唱专业考级报名</a>
+                            <a class="btn pull-right" href="#">音乐基础知识考试报名</a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="query-list-sm">
+        <div class="item area">
+            <div class="query-icon area"><span class="title">考区查询</span></div>
+            <form action="" class="group inline" style="padding:7px 20px;">
+                <input type="text" class="cx_left kaoqusmall" placeholder="请输入考区名称(北京)">
+                <img class="cx" data-ele='kaoqusmall' onclick='targetexam(this);' src="/Public/static/images/sreach_icon1.png">
+            </form>
+        </div>
+        <div class="item field">
+            <div class="query-icon field"><span class="title">考场查询</span></div>
+            <form action="" class="group inline" style="padding:7px 20px;">
+                <input type="text" class="cx_left" name="litsearchanme" id="litsearchanme" placeholder="请输入所在考区">
+                <input type="text" class="cx_left" name="litsearchcard" id="litsearchcard" placeholder="请输入考区名称">
+                <img id="kc1" class="cx" src="/Public/static/images/sreach_icon2.png" onclick="littlesearch();">
+            </form>
+        </div>
+        <div class="item score">
+            <div class="query-icon score"><span class="title">成绩查询</span></div>
+            <form action="" class="group inline" style="padding:7px 20px;">
+                <input type="text" class="cx_left" id="uname1" placeholder="请输入姓名">
+                <input type="text" class="cx_left" id="examnum1" placeholder="请输入准考证号">
+                <img id="cj1" class="cx" src="/Public/static/images/sreach_icon3.png" onclick="checkreslit();">
+            </form>
+        </div>
+        <div class="item express">
+            <div class="query-icon score"><span class="title">证书追踪</span></div>
+            <form action="" class="group inline" style="padding:7px 20px;">
+                <input type="text" name='szuser' class="cx_left" id="uname1" placeholder="请输入姓名">
+                <input type="text" name='szexamnum' class="cx_left" id="examnum1" placeholder="请输入准考证号">
+                <img id="cj1" class="cx" src="/Public/static/images/sreach_icon4.png" onclick="searchZ('szuser', 'szexamnum');">
+            </form>
+        </div>
+    </div>
+     <div class="wrap">
+        <div class="query-list">
+            <div class="item">
+                <div class="query-icon area"></div>
+                <p>考区查询</p>
+                <div class="query-check">
+                    <form action="">
+                        <div class="query-icon area">
+                            <span>考区查询</span>
+                        </div>
+                        <input type="text" style="height:30px; margin-top:12px" class="form kaoqubig" name="areaname" id="areaname" placeholder="请输入考区名称(北京)">
+                        <div class="group">
+                            <input type="button" data-ele='kaoqubig' style="height:35px;margin-left:80px;margin-top:0px;" class="btn lg area" value="查 询" onclick="targetexam(this);">
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+            
+            <div class="item">
+                <div class="query-icon field"></div>
+                <p>考场查询</p>
+                <div class="query-check">
+                    <form action="">
+                        <div class="query-icon field" style="height:95px; background-position:center 15px;">
+                            <span>考场查询</span>
+                        </div>
+                         <input type="text" style="height:30px; margin-top:12px" name="username" id="searchname" class="kq form" placeholder="请输入姓名">
+                        <input type="text" style="height:30px; margin-top:12px"  name="examcard"  id="searchcard" class="form" placeholder="请输入准考证号">
+                        <div class="group">
+                            <input id="kc" type="button" style="height:35px;margin-left:80px;margin-top:-8px;" onclick="bigsearch();" class="btn lg field" value="查 询">
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="item">
+                <div class="query-icon score"></div>
+                <p>成绩查询</p>
+                <div class="query-check">
+                    <form>
+                        <div class="query-icon score" style="height:95px; background-position:center 15px;">
+                            <span>成绩查询</span>
+                        </div>
+                        <input type="text" name="useranme" style="height:30px; margin-top:12px" id="username" class="kq form" placeholder="请输入姓名">
+                        <input type="text" name="examnum" style="height:30px; margin-top:12px"  id="examnum" class="form" placeholder="请输入准考证号">
+                        <div class="group">
+                            <input id="cj" type="button" style="height:35px;margin-left:85px;margin-top:-8px;padding:0;" class="btn lg score" value="查 询" onclick="checkres();">
+                        </div>
+                    </form>
+                    
+                </div>
+            </div>
+            
+            
+            <div class="item">
+                <div class="query-icon express"></div>
+                <p>证书跟踪</p>
+                <div class="query-check">
+                    <form action="">
+                        <div class="query-icon express">
+                            <span>证书跟踪</span>
+                        </div>
+                        <input type="text" name="zuser" style="height:30px; margin-top:12px" id="username" class="kq form" placeholder="请输入姓名">
+                        <input type="text" name="zexamnum" style="height:30px; margin-top:12px"  id="examnum" class="form" placeholder="请输入准考证号">
+                        <!-- <label>请输入证书编号</label> 
+                        <input type="text" class="form lg" placeholder="请输入快递单号">-->
+                        <div class="group">
+                            <!-- 
+                            	<button type="submit" class="btn lg express"></button>
+                            <button type="reset" class="btn lg default pull-right"></button>
+                             -->
+                            <input onclick='searchZ("zuser", "zexamnum")' id="cj" type="button" style="margin-left:85px;height:30px;margin-top:-8px;padding:0;background:grey;" class="btn lg score" value="查 询" />
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="wrap">
+        <div class="container">
+            <div class="left-content">
+                <div class="title">
+                    <h2>考级公告</h2>
+                    <p style='margin-top:-20px;text-align:right;width:100%;'><a href='#' style="color:#d72324;margin-right:30px;font-size:14px;">查看全部&gt;&gt;</a></p>
+                </div>
+                <div class="index-gg" style="height:160px;">
+                    <div class="gg-left thumb">
+                        <img src="/Public/static/images/new-screenshot-img/1.png">
+                    </div>
+                    <div class="gg-right">
+                        <ul class="article-list notice">
+                        <li style='font-size:16px;height:30px;'>
+                                <a href="#"> 【2017-09-28】中央音乐学院2017年冬季姜杰钢琴城考点...</a>
+                            </li><li style='font-size:16px;height:30px;'>
+                                <a href="#"> 【2017-09-08】中央音乐学院2017年秋季清华大学考点（...</a>
+                            </li><li style='font-size:16px;height:30px;'>
+                                <a href="#"> 【2017-09-08】2017年暑假演奏演唱专业考级及音基考试...</a>
+                            </li><li style='font-size:16px;height:30px;'>
+                                <a href="#"> 【2017-08-10】2017年暑假演奏演唱专业考级准考证打印...</a>
+                            </li>                    </ul> 
+                </div>
+                <div style='width:100%;clear:both;'></div>
+            </div>
+                <div class="title">
+                    <h2>考级资讯</h2>
+                    <p style='margin-top:-20px;text-align:right;padding-right:30px;color:red;'><a href="#" style='color:#d72324;font-size:14px;' class="p-l-md">查看全部&gt;&gt;</a></p>
+                </div>
+                
+                <ul class="article-list news li-bg">
+                    <li style='height:105px;margin:15px 0;padding:0 0;clear:both;'>
+                            <div class="thumb" style='margin-top:8px;width:70px;height:70px;'>
+                                <a href="#">
+                                	<!-- 
+                                	<span style='padding-top:30px;line-height:40px;width:190px;height:134px;display:inline-block;background:rgb(242,242,242);'>
+                                		<p style='font-size:48px;text-align:center;'>08</p>
+                                		<p style='font-size:28px;text-align:center;'>2017.09</p>
+                                	</span>
+                                	 -->
+                                	<span style='display:inline-block;width:60px;height:60px;border:5px solid #E1DCD2;'>
+                                		<p style='font-size:14px;padding-left:3px;;margin-top:3px;'>09</p>
+                       					<span class='xspan' style='position:absolute;left:8px;top:30px;width:40px;border:1px solid #E1DCD2;font-size:58px;display:inline-block;'></span>
+                       					<p style='font-size:14px;text-align:right;padding-right:4px;margin-top:5px;'>08</p>
+                                	</span>
+                                </a>
+                            </div>
+                            <div class="content" style='padding:0 0;'>
+                                <h2><a href="#"> 中央音乐学院考级委员会钢琴考官招聘启事</a></h2>
+                                <div class="info" style='padding:0 0;margin:0 0;'><p style='padding:0 0;margin:0 0;'></p>
+                                
+                                </div>
+                            </div>
+                        </li><li style='height:105px;margin:15px 0;padding:0 0;clear:both;'>
+                            <div class="thumb" style='margin-top:8px;width:70px;height:70px;'>
+                                <a href="#">
+                                	<!-- 
+                                	<span style='padding-top:30px;line-height:40px;width:190px;height:134px;display:inline-block;background:rgb(242,242,242);'>
+                                		<p style='font-size:48px;text-align:center;'>07</p>
+                                		<p style='font-size:28px;text-align:center;'>2017.09</p>
+                                	</span>
+                                	 -->
+                                	<span style='display:inline-block;width:60px;height:60px;border:5px solid #E1DCD2;'>
+                                		<p style='font-size:14px;padding-left:3px;;margin-top:3px;'>09</p>
+                       					<span class='xspan' style='position:absolute;left:8px;top:30px;width:40px;border:1px solid #E1DCD2;font-size:58px;display:inline-block;'></span>
+                       					<p style='font-size:14px;text-align:right;padding-right:4px;margin-top:5px;'>07</p>
+                                	</span>
+                                </a>
+                            </div>
+                            <div class="content" style='padding:0 0;'>
+                                <h2><a href="#"> 2017年秋季中央音乐学院校外音乐水平考级（ 清华大学考点）简章</a></h2>
+                                <div class="info" style='padding:0 0;margin:0 0;'><p style='padding:0 0;margin:0 0;'>清华大学艺术教育中心（蒙民伟楼）坐落于清华大学校园内，紧邻西大操场，是学生文化活动的重要场馆。自上世纪90年代至2014年一直承担钢琴、手风琴、小提琴、长笛、萨克斯、单簧管等专业的校外考级工作，于每</p>
+                                
+                                </div>
+                            </div>
+                        </li><li style='height:105px;margin:15px 0;padding:0 0;clear:both;'>
+                            <div class="thumb" style='margin-top:8px;width:70px;height:70px;'>
+                                <a href="#">
+                                	<!-- 
+                                	<span style='padding-top:30px;line-height:40px;width:190px;height:134px;display:inline-block;background:rgb(242,242,242);'>
+                                		<p style='font-size:48px;text-align:center;'>07</p>
+                                		<p style='font-size:28px;text-align:center;'>2017.09</p>
+                                	</span>
+                                	 -->
+                                	<span style='display:inline-block;width:60px;height:60px;border:5px solid #E1DCD2;'>
+                                		<p style='font-size:14px;padding-left:3px;;margin-top:3px;'>09</p>
+                       					<span class='xspan' style='position:absolute;left:8px;top:30px;width:40px;border:1px solid #E1DCD2;font-size:58px;display:inline-block;'></span>
+                       					<p style='font-size:14px;text-align:right;padding-right:4px;margin-top:5px;'>07</p>
+                                	</span>
+                                </a>
+                            </div>
+                            <div class="content" style='padding:0 0;'>
+                                <h2><a href="#"> 中央音乐学院考级新一届手风琴专家委员会成立</a></h2>
+                                <div class="info" style='padding:0 0;margin:0 0;'><p style='padding:0 0;margin:0 0;'>2017年7月4日下午两点半，中央音乐学院考级新一届手风琴专家委员会成立大会暨第三套手风琴教材编写会在中央音乐学院图书馆会议室顺利召开。中央音乐学院党委副书记、考级委员会常务副主任逄焕磊，考级委员会</p>
+                                
+                                </div>
+                            </div>
+                        </li>
+
+                </ul>
+            </div>
+            <div class="right-content">
+                <div class="title">
+                    <h2>考级专题</h2>
+                </div>
+                <div class="right-zt-thumb">
+                    <a href="#" target="_blank"><img src="/Public/static/images/zt-20-04.jpg"></a>
+                </div>
+                <div class="title">
+                    <h2>考级花絮</h2>
+                </div>
+                
+                <div class="media-box"> 
+                    <ul class="media">
+                                              <li>
+                           <a href="#">
+                               <div class="thumb">
+                                   <img src="/manage/2017-09-27/59cb6d2dc823b.jpg">
+                               </div>
+                               <span style='width:180px;text-overflow:ellipsis;white-space:nowrap;overflow:hidden;' title='中央音乐学院2017暑假考级优秀生汇报音乐会高清视频'>中央音乐学院2017暑假考级优秀生汇报音乐会高清视频</span>
+                           </a>
+                       </li>
+                                              <li>
+                           <a href="#">
+                               <div class="thumb">
+                                   <img src="/manage/2017-09-21/59c30c1cd479f.jpg">
+                               </div>
+                               <span style='width:180px;text-overflow:ellipsis;white-space:nowrap;overflow:hidden;' title='中央音乐学院2017年暑假考级优秀生汇报音乐会成功举行'>中央音乐学院2017年暑假考级优秀生汇报音乐会成功举行</span>
+                           </a>
+                       </li>
+                                              <li>
+                           <a href="#">
+                               <div class="thumb">
+                                   <img src="/manage/2017-09-08/59b2066733383.jpg">
+                               </div>
+                               <span style='width:180px;text-overflow:ellipsis;white-space:nowrap;overflow:hidden;' title='2017年暑假中央音乐学院校外音乐水平考级实录'>2017年暑假中央音乐学院校外音乐水平考级实录</span>
+                           </a>
+                       </li>
+                                              <li>
+                           <a href="#">
+                               <div class="thumb">
+                                   <img src="/manage/2017-09-07/59b0c1c867122.jpg">
+                               </div>
+                               <span style='width:180px;text-overflow:ellipsis;white-space:nowrap;overflow:hidden;' title='中央音乐学院考级委员会官方视频'>中央音乐学院考级委员会官方视频</span>
+                           </a>
+                       </li>
+                                           </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="links">
+        <div class="wrap">
+            <ul>
+                <li>
+                    <a href="#" target="_blank">
+                        <img src="/Public/static/images/links/partner-1.png">
+                    </a>
+                </li>
+                <li>
+                    <a href="#" target="_blank">
+                        <img src="/Public/static/images/links/partner-2.png">
+                    </a>
+                </li>
+                <li>
+                    <a href="#" target="_blank">
+                        <img src="/Public/static/images/links/partner-3.png">
+                    </a>
+                </li>
+                <li>
+                    <a href="#" target="_blank">
+                        <img src="/Public/static/images/links/yishu3.png">
+                    </a>
+                </li>
+                <li>
+                    <a href="#" target="_blank">
+                        <img src="/Public/static/images/links/yishu2.png">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- footer /Public/static/images/new-screenshot-img/1.jpg-->
+    <!-- footer -->
+<div class="footer">
+    <div class="websiteMap">
+    	    	        <a href="#">网站地图</a>|                <a href="#">联系我们</a>|                <a href="#">隐私版权</a>            </div>
+    <div class="copyright">© Copyright www.ccom.edu.cn All Rights Reserved 京公网安备110402430057号　　京ICP备05064625号</div>
+                    <div style='width:100%;text-align:center;'>访问统计:2450371</div>
+                    </div>
+
+</div>
+<link rel="stylesheet" href="/Public/static/css/swiper.min.css">
+
+<script type="text/javascript" src="/Public/static/js/swiper/js/swiper.jquery.min.js"></script><script>
+    $('#links').swiper({
+        slidesPerView: 'auto',
+        paginationClickable: true,
+        // mousewheelControl : true,
+    });
+		
+    	//考场显示
+    	function exampoint_show()
+ 		{
+    		$(".shade").show();
+			$(".exam_room").show();
+			$("body").css("overflow-Y","hidden");
+ 		}
+ 
+    	function exampoint_hide()
+ 		{
+    		$(".shade").hide();
+			$(".exam_room").hide();
+			$("body").css("overflow","scroll");
+ 		}
+ 
+    	function _show()
+    	{
+	    	$(".shade").show();
+			$(".chengji").show();
+			$("body").css("overflow-Y","hidden");
+    	}
+    
+        function _hide()
+        {
+        	$(".chengji").hide();
+			$(".shade").hide();
+			$("body").css("overflow","scroll");
+			$(".cx_left").val("");
+			//window.location.reload();
+        }
+
+    	 
+ 
+        $(".chengji table tr:even").css("background-color","#f3edd8");
+        $(".chengji table tr td:even").css("width","75px");
+        $(".chengji table tr td:even").css("padding","0 10px 0 20px");
+        
+    	$(".clos").click(
+    		function(){
+    			$(".chengji").hide();
+    			$(".shade").hide();
+    			$("body").css("overflow","scroll");
+    			}
+    	)
+		
+    	//大屏幕查询
+    	function bigsearch()
+    	{
+    		var username = $("#searchname").val();
+            var examcard = $("#searchcard").val();
+            searcexampo(username,examcard);    	
+    	}
+    	
+    	//小屏幕查询
+    	function littlesearch()
+    	{
+             var username = $("#litsearchanme").val();
+             var examcard = $("#litsearchcard").val();
+             searcexampo(username,examcard);
+    	}
+    	
+    	//被调取的查询
+    	function searcexampo(username,examcard)
+        {
+    		if(username =="" || examcard ==""){
+                alert('查询条件不能为空');
+                window.location.reload();
+            }else{
+            	 $.ajax({
+                     type:"post",
+                     url:"#",
+                     data:{username:username,examcard:examcard},
+                      success:function(data){
+                    	  if(data == 0){
+                              alert('暂无此考生成绩信息');
+                              window.location.reload();
+                              $("#username").val("");
+                              $("#examnum").val("");
+                          }else{
+                              var res = eval(data);
+                              exampoint_show();
+                              var infotable = '';
+                              
+                            	  infotable +='<table class="table" style="width:300px; margin-left:auto; margin-right:auto;">';
+                            	  infotable +='<tbody>';
+                            	  infotable += ' <tr style="border-top:none"><td class=""><label>考生姓名：</label></td><td colspan="3">'+ res.username +'</td></tr>';
+                            	  infotable += ' <tr style="border-top:none"><td class=""><label>姓名拼音：</label></td><td colspan="3">'+ res.namespell +'</td></tr>';
+                            	  infotable += ' <tr><td class=""><label>性&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;别：</label></td><td colspan="3">'+ res.sex +'</td></tr>';
+                            	  infotable += ' <tr ><td class="" style="width:75px;"><label>专&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;业：</label></td><td class="" style="width:200px;">'+ res.examsub +'</td></tr>';
+                            	  infotable += ' <tr><td class="="><label>级&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;别：</label></td><td colspan="3">'+ res.level +'</td></tr>';
+                            	  infotable += ' <tr><td class=""><label>准 &nbsp;考&nbsp; 证：</label></td><td class="">'+ res.examnum +'</td></tr>';
+                            	  infotable += ' <tr><td class=""><label>考级时间：</label></td><td colspan="3" class="w-xxl">'+ res.examtime + '</td></tr>';
+                            	  infotable += ' <tr><td class=""><label>考点名称：</label></td><td colspan="3" class="w-xxl">'+ res.poname +'</td></tr>';
+                            	  infotable += ' <tr><td class=""><label>考点地址：</label></td> <td colspan="3">'+ res.address +'</td></tr>';
+                            	  infotable += ' <tr><td class=""><label>考场名称：</label></td><td colspan="3">'+ res.examdesc +'</td></tr> ';
+                            	  infotable +='</tbody>';
+                            	  infotable +='</table>';
+                            	  $(".exam_room").html(infotable);
+                            	  $(".exam_room").append(' <img style="position:absolute;right:20px;top:25px;width:100px;" src="/upload/'+ res.idphoto +'">');
+                            	  $(".exam_room").append(' <input type="button" value="关&nbsp;&nbsp;闭" onclick="exampoint_hide();" > ');
+                          }
+                      }
+                 });
+             }	 
+        }
+    	
+    	//考区查询
+    	function targetexam(obj)
+    	{
+    		var areaname = $("." + $(obj).attr("data-ele")).val();
+    		window.location.href = '#'+ areaname;
+    	}
+
+        function checkreslit()
+        {
+          return;
+        	var username = $("#uname1").val();
+            var examnum = $("#examnum1").val();
+        	//var username = $("#username").val();
+			//var examnum = $("#examnum").val();
+			if(username == "" || examnum == "") {
+                alert('查询条件不能为空');
+                //window.location.reload();
+                return ;
+            }
+            //checksocer(username,examnum);
+            $.post("#",{username:username, examnum:examnum},function(data){
+            	result = $.parseJSON(data);
+            	if (result.data && result.data != '') {
+            		_show();
+            		if (result.type == 'base') {
+            			var table = '<h3 style="color:#d5b345;">查询结果</h3>';
+                        table.className = 'tabchangecolor';                       
+                        table += '<img class="clos" src="/Public/static/images/clo-1.jpg" onclick="_hide();">'; 
+                        table +=' <p style="height:3px;background-color:#E4D3D3;width:300px;margin-left:auto;margin-right:auto;margin-top:3px;margin-bottom:15px;"></p>';
+                        table +='<table>';
+                        table +='<tr><td>考生姓名：</td><td>'+ result.data.username +'</td></tr>';
+                        table +='<tr><td>性&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;别：</td><td>'+ (result.data.sex == 0 ? "男" : "女") +'</td></tr>';
+                        table +='<tr><td>身份证号：</td><td>'+ result.data.identitynumber +'</td></tr>'; 
+                        table +='<tr><td>考&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;点：</td><td>'+ result.data.exampointname +'</td></tr>';
+                        table +='<tr><td>考试日期：</td><td>'+ result.data.examtime +'</td></tr>';
+                        table +='<tr><td>准考证号：</td><td>'+ result.data.examcardnum +'</td></tr>';
+                        table +='<tr><td>科&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;目：</td><td>'+ "音乐基础知识(" + result.data.levename +')</td></tr>';
+                        table +='<tr><td>成&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;绩：</td><td style="color:black">'+ result.data.remark +'</td></tr>';
+                        table +='</table>';
+                        $(".chengji").html(table);
+                       	var socdiv = document.createElement("div");
+   						socdiv.className="graded";
+						var ppp = '';
+						//ppp += '<p style="text-align:center;border-bottom:0;">视唱分:'+ result.data.sightsing +'分</p>';
+						//ppp += '<p style="text-align:center;border-right:0;border-left:0;border-bottom:0;">模唱分：'+ result.data.modelsoc +'分</p>';
+						//ppp += '<p style="text-align:center;border-bottom:0;">乐理练耳分：'+ result.data.basesoc +'分</p>';
+						ppp += '<p style="text-align:center;width:300px;border-bottom:0; font-size:13px">乐理<span style="display:inline-block;">•</span>视唱练耳分：'+ result.data.basesoc +'分</p>';
+						ppp += '<div class="clearfix"></div>';
+						ppp += '<p style="text-align:center;width:300px;border-bottom:1 solid black; font-size:13px">音乐常识分：'+ result.data.changsoc +'分</p>';
+						//ppp += '<p style="text-align:center;width:300px; font-size:13px">总成绩：<span style="color:red;">'+ result.data.socer +'分</span></p>';
+						$(".chengji").append(socdiv);
+						$(socdiv).html(ppp);
+						//$(".chengji").css("background", "yellow");
+            		} else {
+            			var table = '<h3 style="color:#d5b345;">查询结果</h3>';
+                        table.className = 'tabchangecolor';
+    					                            
+                        table += '<img class="clos" src="/Public/static/images/clo-1.jpg" onclick="_hide();">'; 
+                        table +=' <p style="height:3px;background-color:#E4D3D3;width:300px;margin-left:auto;margin-right:auto;margin-top:3px;margin-bottom:15px;"></p>';
+                        table +='<table>';
+                        table +='<tr><td>考生姓名：</td><td>'+ result.data.name +'</td></tr>';
+                        table +='<tr><td>性&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;别：</td><td>'+ (result.data.sex == 0 ? "男" : "女") +'</td></tr>';
+                        table +='<tr><td>身份证号：</td><td>'+ result.data.identitynumber +'</td></tr>'; 
+                        table +='<tr><td>考&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;点：</td><td>'+ result.data.exampointname +'</td></tr>';
+                        table +='<tr><td>考试日期：</td><td>'+ result.data.examtime +'</td></tr>';
+                        table +='<tr><td>准考证号：</td><td>'+ result.data.examcardnum +'</td></tr>';
+                        table +='<tr><td>科&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;目：</td><td>'+ result.data.subjectname +'</td></tr>';
+                        table += ' <tr><td class="="><label>级&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;别：</label></td><td colspan="3">'+ result.data.level +'</td></tr>';
+                        table +='<tr><td>成&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;绩：</td><td style="color:black">'+ result.data.remark +'</td></tr>';
+                        table +='</table>';
+                        $(".chengji").html(table);
+            		}
+            	} else {
+            		alert("暂无此考生成绩！");
+            	}
+            });
+        }
+         //大屏幕查询 先赋值再调用
+		function checkres()
+		{
+      return;
+			var username = $("#username").val();
+			var examnum = $("#examnum").val();
+			if(username == "" || examnum == "") {
+                alert('查询条件不能为空');
+                //window.location.reload();
+                return ;
+            }
+            //checksocer(username,examnum);
+            $.post("#",{username:username, examnum:examnum},function(data){
+            	result = $.parseJSON(data);
+            	if (result.data && result.data != '') {
+            		_show();
+            		if (result.type == 'base') {
+            			var table = '<h3 style="color:#d5b345;">查询结果</h3>';
+                        table.className = 'tabchangecolor';                       
+                        table += '<img class="clos" src="/Public/static/images/clo-1.jpg" onclick="_hide();">'; 
+                        table +=' <p style="height:3px;background-color:#E4D3D3;width:300px;margin-left:auto;margin-right:auto;margin-top:3px;margin-bottom:15px;"></p>';
+                        table +='<table>';
+                        table +='<tr><td>考生姓名：</td><td>'+ result.data.username +'</td></tr>';
+                        table +='<tr><td>性&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;别：</td><td>'+ (result.data.sex == 0 ? "男" : "女") +'</td></tr>';
+                        table +='<tr><td>身份证号：</td><td>'+ result.data.identitynumber +'</td></tr>'; 
+                        table +='<tr><td>考&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;点：</td><td>'+ result.data.exampointname +'</td></tr>';
+                        table +='<tr><td>考试日期：</td><td>'+ result.data.examtime +'</td></tr>';
+                        table +='<tr><td>准考证号：</td><td>'+ result.data.examcardnum +'</td></tr>';
+                        table +='<tr><td>科&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;目：</td><td>'+ "音乐基础知识(" + result.data.levename +')</td></tr>';
+                        table += ' <tr><td class="="><label>级&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;别：</label></td><td colspan="3">'+ result.data.levename +'</td></tr>';
+                        table +='<tr><td>成&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;绩：</td><td style="color:black">'+ result.data.remark +'</td></tr>';
+                        table +='</table>';
+                        $(".chengji").html(table);
+                       	var socdiv = document.createElement("div");
+   						socdiv.className="graded";
+						var ppp = '';
+						//ppp += '<p style="text-align:center;border-bottom:0;">视唱分:'+ result.data.sightsing +'分</p>';
+						//ppp += '<p style="text-align:center;border-right:0;border-left:0;border-bottom:0;">模唱分：'+ result.data.modelsoc +'分</p>';
+						//ppp += '<p style="text-align:center;border-bottom:0;">乐理练耳分：'+ result.data.basesoc +'分</p>';
+						ppp += '<p style="text-align:center;width:300px;border-bottom:0; font-size:13px">乐理<span style="display:inline-block;">•</span>视唱练耳分：'+ result.data.basesoc +'分</p>';
+						ppp += '<div class="clearfix"></div>';
+						ppp += '<p style="text-align:center;width:300px;border-bottom:1 solid black; font-size:13px">音乐常识分：'+ result.data.changsoc +'分</p>';
+						//ppp += '<p style="text-align:center;width:300px; font-size:13px">总成绩：<span style="color:red;">'+ result.data.socer +'分</span></p>';
+						$(".chengji").append(socdiv);
+						$(socdiv).html(ppp);
+						//$(".chengji").css("background", "yellow");
+            		} else {
+            			var table = '<h3 style="color:#d5b345;">查询结果</h3>';
+                        table.className = 'tabchangecolor';
+    					                            
+                        table += '<img class="clos" src="/Public/static/images/clo-1.jpg" onclick="_hide();">'; 
+                        table +=' <p style="height:3px;background-color:#E4D3D3;width:300px;margin-left:auto;margin-right:auto;margin-top:3px;margin-bottom:15px;"></p>';
+                        table +='<table>';
+                        table +='<tr><td>考生姓名：</td><td>'+ result.data.name +'</td></tr>';
+                        table +='<tr><td>性&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;别：</td><td>'+ (result.data.sex == 0 ? "男" : "女") +'</td></tr>';
+                        table +='<tr><td>身份证号：</td><td>'+ result.data.identitynumber +'</td></tr>'; 
+                        table +='<tr><td>考&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;点：</td><td>'+ result.data.exampointname +'</td></tr>';
+                        table +='<tr><td>考试日期：</td><td>'+ result.data.examtime +'</td></tr>';
+                        table +='<tr><td>准考证号：</td><td>'+ result.data.examcardnum +'</td></tr>';
+                        table +='<tr><td>科&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;目：</td><td>'+ result.data.subjectname +'</td></tr>';
+                        table += ' <tr><td class="="><label>级&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;别：</label></td><td colspan="3">'+ result.data.level +'</td></tr>';
+                        table +='<tr><td>成&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;绩：</td><td style="color:black">'+ result.data.remark +'</td></tr>';
+                        table +='</table>';
+                        $(".chengji").html(table);
+            		}
+            	} else {
+            		alert("暂无此考生成绩！");
+            	}
+            });
+            
+		}
+         
+        
+		//成绩查询
+        function checksocer(username,examnum)
+        {
+           if(username =="" || examnum ==""){
+                alert('查询条件不能为空');
+                window.location.reload();
+            }else{
+                 $.ajax({
+                    type:"post",
+                    url:"#",
+                    data:{username:username,examnum:examnum},
+                     success:function(data){
+                        if(data == 0){
+                            alert('暂无此考生成绩信息');
+                            window.location.reload();
+                            $("#username").val("");
+                            $("#examnum").val("");
+                        } else {
+                            var res = eval(data);
+                            _show();
+                            var table = '<h3 style="color:#d5b345;">查询结果</h3>';
+                            table.className = 'tabchangecolor';
+							                            
+                            table += '<img class="clos" src="/Public/static/images/clo-1.jpg" onclick="_hide();">'; 
+                            table +=' <p style="height:3px;background-color:#E4D3D3;width:300px;margin-left:auto;margin-right:auto;margin-top:3px;margin-bottom:15px;"></p>';
+                            table +='<table>';
+                            table +='<tr><td>考生姓名：</td><td>'+ res.username +'</td></tr>';
+                            table +='<tr><td>性&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;别：</td><td>'+ res.sex +'</td></tr>';
+                            table +='<tr><td>身份证号：</td><td>'+ res.identitynumber +'</td></tr>'; 
+                            table +='<tr><td>考&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;点：</td><td>'+ res.pointname +'</td></tr>';
+                            table +='<tr><td>考试日期：</td><td>'+ res.examtime +'</td></tr>';
+                            table +='<tr><td>准考证号：</td><td>'+ res.examnum +'</td></tr>';
+                            table +='<tr><td>科&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;目：</td><td>'+ res.subject +'</td></tr>';
+                            table += ' <tr><td class="="><label>级&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;别：</label></td><td colspan="3">'+ res.data.level +'</td></tr>';
+                            table +='<tr><td>成&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;绩：</td><td style="color:black">'+ res.remark +'</td></tr>';
+                            table +='</table>';
+                            $(".chengji").html(table);
+                            var sightsing = res.sightsing;
+                            if(sightsing != null){
+                            	var socdiv = document.createElement("div");
+								socdiv.className="graded";
+								
+     							var ppp = '';
+     							ppp += '<p style="text-align:center;border-bottom:0;">视唱分:'+ res.sightsing +'分</p>';
+     							ppp += '<p style="text-align:center;border-right:0;border-left:0;border-bottom:0;">模唱分：'+ res.modelsoc +'分</p>';
+     							ppp += '<p style="text-align:center;border-bottom:0;">乐理练耳分：'+ res.basesoc +'分</p>';
+     							ppp += '<p style="text-align:center;width:300px;border-bottom:0; font-size:13px">乐理<span style="display:inline-block;">•</span>视唱练耳分合计：'+ res.smball +'分</p>';
+     							ppp += '<div class="clearfix"></div>';
+     							ppp += '<p style="text-align:center;width:300px;border-bottom:0; font-size:13px">常识分：'+ res.changsoc +'分</p>';
+     							ppp += '<p style="text-align:center;width:300px; font-size:13px">总成绩：<span style="color:black;">'+ res.socer +'分</span></p>';
+     							
+     							$(".chengji").append(socdiv);
+     							$(socdiv).html(ppp);
+                            }
+                        }
+                    }
+                });  
+            } 
+        }
+		
+        function searchZ(username, examnum)
+        {
+          return;
+        	_show();
+            var table = '<h3 style="color:#d5b345;">物流结果</h3>';
+            table.className = 'tabchangecolor';                      
+            table += '<img class="clos" src="/Public/static/images/clo-1.jpg" onclick="_hide();">'; 
+            table +=' <p style="height:3px;background-color:#E4D3D3;width:300px;margin-left:auto;margin-right:auto;margin-top:3px;margin-bottom:15px;"></p>';
+            table += "<div style='padding-left:30px;' >查询中，请稍后！</div>";
+            $(".chengji").html(table);
+            return;
+        	$.post("#",{username:$("input[name='" + username + "']").val(), examcardnum:$("input[name='" + examnum + "']").val()},function(content){
+				try{
+					data = $.parseJSON(content);
+				}catch(e){
+					data = {"result":"err"};
+				}
+				//data = $.parseJSON(data);
+				if (data.result == 'true' || data.result == true) {
+					if (data.data) {
+						_show();
+                        var table = '<h3 style="color:#d5b345;">物流结果</h3>';
+                        table.className = 'tabchangecolor';                      
+                        table += '<img class="clos" src="/Public/static/images/clo-1.jpg" onclick="_hide();">'; 
+                        table +=' <p style="height:3px;background-color:#E4D3D3;width:300px;margin-left:auto;margin-right:auto;margin-top:3px;margin-bottom:15px;"></p>';
+                        table += "<div style='padding-left:30px;' >" + "你的快递单号:" + data.data + "</div>";
+                        $(".chengji").html(table);
+					} else {
+						_show();
+                        var table = '<h3 style="color:#d5b345;">物流结果</h3>';
+                        table.className = 'tabchangecolor';
+                        table += '<img class="clos" src="/Public/static/images/clo-1.jpg" onclick="_hide();">'; 
+                        table +=' <p style="height:3px;background-color:#E4D3D3;width:300px;margin-left:auto;margin-right:auto;margin-top:3px;margin-bottom:15px;"></p>';
+                        table += "<div style='padding-left:30px;' >暂无物流信息！</div>";
+                        $(".chengji").html(table);
+					}
+				} else {
+					_show();
+                    var table = '<h3 style="color:#d5b345;">物流结果</h3>';
+                    table.className = 'tabchangecolor';
+                    table += '<img class="clos" src="/Public/static/images/clo-1.jpg" onclick="_hide();">'; 
+                    table +=' <p style="height:3px;background-color:#E4D3D3;width:300px;margin-left:auto;margin-right:auto;margin-top:3px;margin-bottom:15px;"></p>';
+                    table += "<div style='padding-left:30px;' >查询失败，请稍后再查！</div>";
+                    $(".chengji").html(table);
+				}
+			});
+        }
+		
+        function getSfInfo(mailno)
+		{
+      return;
+			my.dialog.dialog({width:'400px', height:"200px", content_background:"white", content:'查询中', title:"物流信息"});
+			$.post("#",{mailno:mailno},function(content){
+				data = $.parseJSON(content);
+				//data = $.parseJSON(data);
+				if (data.result == 'ok') {
+					if (data.data.childs) {
+						$(".dialog-content").html(data.data.childs[0].childs[0].attr.remark);
+					} else {
+						$(".dialog-content").html("暂无结果");
+					}
+					
+				} else {
+					$(".dialog-content").html("查询失败");
+				}
+			});
+		}
+</script>
+<div align="center" style="display:none;width:100%; height:50px; color:white; line-height:50px;position:fixed;left:0;top:0; background-color:black; opacity:0.5; z-index:500"><span>本网站建议使用WIN8及以上系统，使用IE10以上，谷歌，搜狗，极速360，火狐浏览器。</span></div>
+</body>
+
+</html>

@@ -1,0 +1,590 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    
+<meta charset="gb2312">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="北京林业大学信息学院,北林信息学院">
+<meta name="Author" content="计算机14-1 程涛">
+<link rel="shortcut icon" href="http://paradisehell.org/web/xinxi/favicon.ico">
+<title>北京林业大学信息学院</title>
+<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="http://paradisehell.org/web/xinxi/main.css">
+<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+<!--[if lt IE 9]>
+    <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->    <link rel="stylesheet" type="text/css" href="http://paradisehell.org/web/xinxi/index.css"/>
+</head>
+<body>
+
+<!-- 顶部 -->
+<div id="top">
+    <div class="container">
+        <img src="http://paradisehell.org/web/xinxi/logo.jpg"/>
+    </div>
+</div>
+<!-- 导航 -->
+<div id="top-nav">
+    <div class="container">
+        <nav class="navbar navbar-default navbar-no-boder" id="nav-main">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#nav-main-collapse"
+                        aria-expanded="false">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="navbar-collapse collapse" id="nav-main-collapse" aria-expanded="false" style="height: 1px;">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="/" >
+                            首页
+                        </a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" onclick="return false;" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                           aria-haspopup="true" aria-expanded="true">
+                            学院概况
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/xygk/245928.htm?tab=1">学院简介</a></li>
+                            <li><a href="/xygk/248202.htm?tab=2">党政领导</a></li>
+                            <li><a href="/xygk/245931.htm?tab=3">组织机构</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" onclick="return false;" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                           aria-haspopup="true" aria-expanded="true">
+                            师资队伍
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/szdw/249046.htm?tab=1">教师队伍</a></li>
+                            <li><a href="/szdw/jsfc/?tab=2">教授风采</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" onclick="return false;" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                           aria-haspopup="true" aria-expanded="true">
+                            学科建设
+                        </a>
+                        <ul class="dropdown-menu">
+                                                                                            <li>
+                                        <a href="/xkjs/xkjj/?tab=1">学科简介</a>
+                                    </li>
+                                                                                                <li>
+                                        <a href="/xkjs/bkzy/256618.htm?tab=2">本科专业</a>
+                                    </li>
+                                                                                                <li>
+                                        <a href="/xkjs/sbsxwd/?tab=3">硕博士学位点</a>
+                                    </li>
+                                                                                    </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" onclick="return false;" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                           aria-haspopup="true" aria-expanded="true">
+                            科研学术
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="/kyxs/248162.htm?tab=1">科研成果</a>
+                            </li>
+                                                                                    <li>
+                                <a href="/kyxs/kyxm/?tab=2">科研项目</a>
+                            </li>
+                                                                                    <li>
+                                <a href="/kyxs/kyfw/?tab=3">科研服务</a>
+                            </li>
+                                                                                    <li>
+                                <a href="/kyxs/cxtd/?tab=4">创新团队</a>
+                            </li>
+                                                                                </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" onclick="return false;" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                           aria-haspopup="true" aria-expanded="true">
+                            人才培养
+                        </a>
+                        <ul class="dropdown-menu">
+                                                                                    <li>
+                                <a href="/rcpy/bks/?tab=1">
+                                    本科生
+                                </a>
+                            </li>
+                                                                                    <li>
+                                <a href="/rcpy/yjs/?tab=2">
+                                    研究生
+                                </a>
+                            </li>
+                                                                                    <li>
+                                <a href="/rcpy/jxcg/?tab=3">
+                                    教学成果
+                                </a>
+                            </li>
+                                                                                    <li>
+                                <a href="/rcpy/syjx/?tab=4">
+                                    实验教学
+                                </a>
+                            </li>
+                                                                                    <li>
+                                <a href="/rcpy/jypx/?tab=5">
+                                    教育培训
+                                </a>
+                            </li>
+                                                                                </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="http://xxdt.bjfu.edu.cn/djztw/" target="_blank">党建工作</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="http://xxdt.bjfu.edu.cn/" target="_blank">学生工作</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" onclick="return false;" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                           aria-haspopup="true" aria-expanded="true">
+                            平台建设
+                        </a>
+                        <ul class="dropdown-menu">
+                                                                                    <li>
+                                <a href="/ptjs/lyxxhyjs/?tab=1">
+                                    林业信息化研究所
+                                </a>
+                            </li>
+                                                                                    <li>
+                                <a href="/ptjs/jsjxh/?tab=2">
+                                    计算机学会
+                                </a>
+                            </li>
+                                                                                </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" onclick="return false;" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                           aria-haspopup="true" aria-expanded="true">
+                            工会之家
+                        </a>
+                        <ul class="dropdown-menu">
+                                                                                    <li>
+                                <a href="/ghzj/ghhd/?tab=1">
+                                    工会活动
+                                </a>
+                            </li>
+                                                                                </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</div><!-- 主体内容 -->
+<div class="container">
+    <div class="row list">
+        <div class="col-lg-4 index-list">
+            <div class="title row">
+                <p class="col-xs-9">图片新闻</p>
+                <a class="col-xs-3">more &gt; </a>
+            </div>
+            <div class="line"></div>
+            <div id="slider" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                                                                                                                        <li data-target="#slider" data-slide-to="0" class="active"></li>
+                                                                                                                                                        <li data-target="#slider" data-slide-to="1"></li>
+                                                                                                                                                        <li data-target="#slider" data-slide-to="2"></li>
+                                                                                                                                                        <li data-target="#slider" data-slide-to="3"></li>
+                                                                                                                                                        <li data-target="#slider" data-slide-to="4"></li>
+                                                                                        </ol>
+                <div class="carousel-inner" role="listbox">
+                                                                                                                        <div class="item active">
+                                <a href="十九大">
+                                    <img src="/images/content/2017/20171026112509029583.jpg" class="img-responsive" title="更加紧密十九大">
+                                </a>
+                            </div>
+                                                                                                                                                        <div class="item">
+                                <a href="http://it.bjfu.edu.cn/xydt/253251.htm">
+                                    <img src="/images/content/2017/20170910160105406897.jpg" class="img-responsive" title="2017智慧园林高峰论坛成功举办">
+                                </a>
+                            </div>
+                                                                                                                                                        <div class="item">
+                                <a href="http://it.bjfu.edu.cn/xydt/254950.htm">
+                                    <img src="/images/content/2017/20170926165832735175.jpg" class="img-responsive" title="信息学院教师座谈会圆满召开">
+                                </a>
+                            </div>
+                                                                                                                                                        <div class="item">
+                                <a href="http://it.bjfu.edu.cn/xydt/256469.htm">
+                                    <img src="/images/content/2017/20171018171941408008.png" class="img-responsive" title="信息学院集中观看十九大开幕并座谈交流">
+                                </a>
+                            </div>
+                                                                                                                                                        <div class="item">
+                                <a href="http://it.bjfu.edu.cn/xydt/255053.htm">
+                                    <img src="/images/content/2017/20170927144153859517.jpg" class="img-responsive" title="信息学院部署十九大安全维稳工作">
+                                </a>
+                            </div>
+                                                                                        </div>
+                <a class="left carousel-control" href="#slider" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#slider" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+        <div class="col-lg-8 index-list index-vertical-list">
+            <div class="title row">
+                <p class="col-xs-9">学院动态</p>
+                <a class="col-xs-3" href="/xydt/">more &gt; </a>
+            </div>
+            <div class="line"></div>
+            <ul>
+                                <li>
+                    <span class="square"></span>
+                    <a class="col-xs-9" href="/xydt/256469.htm" title="信息学院集中观看十九大开幕并座谈交流">信息学院集中观看十九大开幕并座谈交流</a>
+                    <p class="col-xs-3">2017-10-18</p>
+                </li>
+                                <li>
+                    <span class="square"></span>
+                    <a class="col-xs-9" href="/xydt/255053.htm" title="信息学院部署十九大安全维稳工作">信息学院部署十九大安全维稳工作</a>
+                    <p class="col-xs-3">2017-09-27</p>
+                </li>
+                                <li>
+                    <span class="square"></span>
+                    <a class="col-xs-9" href="/xydt/254950.htm" title="信息学院教师座谈会圆满召开">信息学院教师座谈会圆满召开</a>
+                    <p class="col-xs-3">2017-09-26</p>
+                </li>
+                                <li>
+                    <span class="square"></span>
+                    <a class="col-xs-9" href="/xydt/254787.htm" title="信息学院2018年研究生招生咨询会成功举办">信息学院2018年研究生招生咨询会成功举办</a>
+                    <p class="col-xs-3">2017-09-25</p>
+                </li>
+                                <li>
+                    <span class="square"></span>
+                    <a class="col-xs-9" href="/xydt/253251.htm" title="2017智慧园林高峰论坛成功举办">2017智慧园林高峰论坛成功举办</a>
+                    <p class="col-xs-3">2017-09-10</p>
+                </li>
+                                <li>
+                    <span class="square"></span>
+                    <a class="col-xs-9" href="/xydt/252402.htm" title="2017智慧园林高峰论坛召开通知">2017智慧园林高峰论坛召开通知</a>
+                    <p class="col-xs-3">2017-08-30</p>
+                </li>
+                                <li>
+                    <span class="square"></span>
+                    <a class="col-xs-9" href="/xydt/249633.htm" title="信息学院院长助理拟任人选公示">信息学院院长助理拟任人选公示</a>
+                    <p class="col-xs-3">2017-06-04</p>
+                </li>
+                            </ul>
+        </div>
+    </div>
+    <div class="row list">
+        <div class="col-lg-4 index-list">
+            <div id="bottom-left-top">
+                <div class="title row">
+                    <p class="col-xs-9">通知公告</p>
+                    <a class="col-xs-3" href="/tz/">more &gt; </a>
+                </div>
+                <div class="line"></div>
+                <ul>
+                                        <li>
+                        <span class="square"></span>
+                        <a class="col-xs-9" href="/tz/257401.htm" title="北京林业大学信息学院2018年博士研究生招生实施方案">北京林业大学信息学院2018年博士研究生招生实施方案</a>
+                        <p class="col-xs-3">2017-10-27</p>
+                    </li>
+                                        <li>
+                        <span class="square"></span>
+                        <a class="col-xs-9" href="/tz/253004.htm" title="2018年信息学院研究生招生宣讲会召开通知">2018年信息学院研究生招生宣讲会召开通知</a>
+                        <p class="col-xs-3">2017-09-06</p>
+                    </li>
+                                        <li>
+                        <span class="square"></span>
+                        <a class="col-xs-9" href="/tz/246192.htm" title="关于召开2017年天地空立体化森林观测论坛的通知">关于召开2017年天地空立体化森林观测论坛的通知</a>
+                        <p class="col-xs-3">2017-04-22</p>
+                    </li>
+                                        <li>
+                        <span class="square"></span>
+                        <a class="col-xs-9" href="/tz/246193.htm" title="北京林业大学信息学院2017年硕士研究生招生考生考核结果公示">北京林业大学信息学院2017年硕士研究生招生考生考核结果公示</a>
+                        <p class="col-xs-3">2017-04-22</p>
+                    </li>
+                                        <li>
+                        <span class="square"></span>
+                        <a class="col-xs-9" href="/tz/246194.htm" title="北京林业大学信息学院博士研究生“申请-审核制”招生考生考核结果公示">北京林业大学信息学院博士研究生“申请-审核制”招生考生考核结果公示</a>
+                        <p class="col-xs-3">2017-04-22</p>
+                    </li>
+                                        <li>
+                        <span class="square"></span>
+                        <a class="col-xs-9" href="/tz/246195.htm" title="任免公示（信息党发[2017]3号）">任免公示（信息党发[2017]3号）</a>
+                        <p class="col-xs-3">2017-04-22</p>
+                    </li>
+                                        <li>
+                        <span class="square"></span>
+                        <a class="col-xs-9" href="/tz/246196.htm" title="信息学院院长助理拟任人选公示">信息学院院长助理拟任人选公示</a>
+                        <p class="col-xs-3">2017-04-22</p>
+                    </li>
+                                        <li>
+                        <span class="square"></span>
+                        <a class="col-xs-9" href="/tz/246197.htm" title="任免通知（信息发〔2017〕5号）">任免通知（信息发〔2017〕5号）</a>
+                        <p class="col-xs-3">2017-04-22</p>
+                    </li>
+                                        <li>
+                        <span class="square"></span>
+                        <a class="col-xs-9" href="/tz/246198.htm" title="北京林业大学信息学院2017年软件工程非全日制专硕复试及补录办法">北京林业大学信息学院2017年软件工程非全日制专硕复试及补录办法</a>
+                        <p class="col-xs-3">2017-04-22</p>
+                    </li>
+                                    </ul>
+            </div>
+            <div id="bottom-left-bottom" class="index-vertical-list">
+                <ul class="row">
+                    <li class="col-xs-6">
+                        <a class="left" href="http://dzb.bjfu.edu.cn/" target="_blank">一周会议</a>
+                    </li>
+                    <li class="col-xs-6">
+                        <a href="/zspx/">招生培训</a>
+                    </li>
+                    <li class="col-xs-6">
+                        <a class="left" href="/xztd/">下载通道</a>
+                    </li>
+                    <li class="col-xs-6">
+                        <a href="http://jwc.bjfu.edu.cn/UploadFiles/xiaoli.mht" target="_blank">校历查看</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-lg-8 index-list index-vertical-list">
+            <div id="bottom-right-top">
+                <div class="title row">
+                    <p class="col-xs-9">科研学术</p>
+                    <a class="col-xs-3" href="/kyxs/">more &gt; </a>
+                </div>
+                <div class="line"></div>
+                <ul>
+                                        <li>
+                        <span class="square"></span>
+                        <a class="col-xs-9" href="/kyxs/252314.htm" title="信息学院科研教学工作奖励公示">信息学院科研教学工作奖励公示</a>
+                        <p class="col-xs-3">2017-08-19</p>
+                    </li>
+                                        <li>
+                        <span class="square"></span>
+                        <a class="col-xs-9" href="/kyxs/252315.htm" title="学科前沿讲座：从神经网络到深度学习">学科前沿讲座：从神经网络到深度学习</a>
+                        <p class="col-xs-3">2017-08-19</p>
+                    </li>
+                                        <li>
+                        <span class="square"></span>
+                        <a class="col-xs-9" href="/kyxs/252316.htm" title="关于“信息学院第五届青年学术研讨会”奖励的公示">关于“信息学院第五届青年学术研讨会”奖励的公示</a>
+                        <p class="col-xs-3">2017-08-19</p>
+                    </li>
+                                        <li>
+                        <span class="square"></span>
+                        <a class="col-xs-9" href="/kyxs/252318.htm" title="学科前沿讲座：数据可视化技术的发展及研究现状">学科前沿讲座：数据可视化技术的发展及研究现状</a>
+                        <p class="col-xs-3">2017-08-19</p>
+                    </li>
+                                        <li>
+                        <span class="square"></span>
+                        <a class="col-xs-9" href="/kyxs/252317.htm" title="《虚拟现实技术在数字表演中的应用 》讲座通知">《虚拟现实技术在数字表演中的应用 》讲座通知</a>
+                        <p class="col-xs-3">2017-08-19</p>
+                    </li>
+                                    </ul>
+            </div>
+            <div id="bottom-right-bottom">
+                <div class="title row">
+                    <p class="col-xs-9">本科培养</p>
+                    <a class="col-xs-3" href="/rcpy/bks/">more &gt; </a>
+                </div>
+                <div class="line"></div>
+                <ul>
+                                        <li>
+                        <span class="square"></span>
+                        <a class="col-xs-9" href="/rcpy/bks/252306.htm?tab=1" title="信息学院2016年接收推荐免试硕士研究生的复试办法">信息学院2016年接收推荐免试硕士研究生的复试办法</a>
+                        <p class="col-xs-3">2017-08-19</p>
+                    </li>
+                                        <li>
+                        <span class="square"></span>
+                        <a class="col-xs-9" href="/rcpy/bks/252307.htm?tab=1" title="信息学院推荐2016届免试攻读研究生上机考试和面试工作安排">信息学院推荐2016届免试攻读研究生上机考试和面试工作安排</a>
+                        <p class="col-xs-3">2017-08-19</p>
+                    </li>
+                                        <li>
+                        <span class="square"></span>
+                        <a class="col-xs-9" href="/rcpy/bks/252308.htm?tab=1" title="信息学院推荐2016届免试攻读研究生工作安排">信息学院推荐2016届免试攻读研究生工作安排</a>
+                        <p class="col-xs-3">2017-08-19</p>
+                    </li>
+                                        <li>
+                        <span class="square"></span>
+                        <a class="col-xs-9" href="/rcpy/bks/252310.htm?tab=1" title="北京林业大学信息学院2015届推免生复试名单公布">北京林业大学信息学院2015届推免生复试名单公布</a>
+                        <p class="col-xs-3">2017-08-19</p>
+                    </li>
+                                        <li>
+                        <span class="square"></span>
+                        <a class="col-xs-9" href="http://jwc.bjfu.edu.cn/jwkx/188710.html?tab=1" title="转：北京林业大学推荐2016届优秀应届本科毕业生免试攻读研究生工作方案">转：北京林业大学推荐2016届优秀应届本科毕业生免试攻读研究生工作方案</a>
+                        <p class="col-xs-3">2017-08-19</p>
+                    </li>
+                                    </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 底部 -->
+<footer>
+    <div id="service">
+        <div class="container">
+            <div class="row">
+                <h3 class="col-lg-2">综合服务</h3>
+                <div class="col-lg-10">
+                    <ul class="list-inline row">
+                        <li class="col-lg-2">
+                            <a href="http://jwc.bjfu.edu.cn/" target="_blank">教务管理系统</a>
+                        </li>
+                        <li class="col-lg-2">
+                            <a href="http://xgxt.bjfu.edu.cn/xgxt/" target="_blank">学生信息管理系统</a>
+                        </li>
+                        <li class="col-lg-2">
+                            <a href="http://202.204.121.52/login.aspx" target="_blank">会议室借用系统</a>
+                        </li>
+                        <li class="col-lg-2">
+                            <a href="http://gsmis.bjfu.edu.cn/newyjsmis/index.html" target="_blank">研究生管理系统</a>
+                        </li>
+                        <li class="col-lg-2">
+                            <a href="http://job.bjfu.edu.cn/" target="_blank">本科生就业信息网</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="link">
+        <div class="container">
+            <div class="row">
+                <h3 class="col-lg-2">校外链接:</h3>
+                <div class="col-lg-10">
+                    <ul class="list-unstyled list-inline row">
+                        <li class="col-lg-2">
+                            <select class="form-control"
+                                    onchange="javascript:window.open(this.options[this.selectedIndex].value)"
+                                    name="select">
+                                <option selected="">--院系链接--</option>
+                                <option value="http://cos.bjfu.edu.cn/" target="_blank">理学院</option>
+                                <option value="http://graduate.bjfu.edu.cn/" target="_blank">研究生院</option>
+                                <option value="http://biology.bjfu.edu.cn" target="_blank">生物学院</option>
+                                <option value="http://yuanlin.bjfu.edu.cn" target="_blank">园林学院</option>
+                                <option value="http://shby.bjfu.edu.cn" target="_blank">水保学院</option>
+                                <option value="http://lxy.bjfu.edu.cn" target="_blank">林学院</option>
+                                <option value="http://clxy.bjfu.edu.cn" target="_blank">材料学院</option>
+                                <option value="http://em.bjfu.edu.cn" target="_blank">经济管理学院</option>
+                                <option value="http://renwen.bjfu.edu.cn" target="_blank">人文学院</option>
+                                <option value="http://it.bjfu.edu.cn/" target="_blank">信息学院</option>
+                                <option value="http://zrbhq.bjfu.edu.cn" target="_blank">-保护区学院-</option>
+                                <option value="http://www.bjfu.edu.cn" target="_blank">环境学院</option>
+                                <option value="http://sports.bjfu.edu.cn" target="_blank">体育部</option>
+                                <option value="http://gxy.bjfu.edu.cn" target="_blank">工学院</option>
+                                <option value="http://waiyu.bjfu.edu.cn" target="_blank">外语学院</option>
+                            </select>
+                        </li>
+                        <li class="col-lg-2">
+                            <select class="form-control"
+                                    onchange="javascript:window.open(this.options[this.selectedIndex].value)"
+                                    name="select">
+                                <option selected="">--职能处室--</option>
+                                <option value="http://dzb.bjfu.edu.cn" target="_blank">校长办公室</option>
+                                <option value="http://zsb.bjfu.edu.cn" target="_blank">招生办公室</option>
+                                <option value="http://zcc.bjfu.edu.cn:8090/zcc/" target="_blank">资产管理处
+                                </option>
+                                <option value="http://zwc.bjfu.edu.cn/Index.Asp" target="_blank">总务产业管理处</option>
+                                <option value="http://xsc.bjfu.edu.cn" target="_blank">校学生处</option>
+                                <option value="http://222.31.185.50" target="_blank">校财务处</option>
+                                <option value="http://www.bjfu.edu.cn/aa/dianzixw/index.asp" target="_blank">
+                                    北林在线
+                                </option>
+                                <option value="http://nic.bjfu.edu.cn" target="_blank">信息中心</option>
+                                <option value="http://zzb.bjfu.edu.cn/" target="_blank">组织部</option>
+                                <option value="http://xsc.bjfu.edu.cn/" target="_blank">学生管理科</option>
+                                <option value="$cms.getUrl($article)" target="_blank">体育教学部</option>
+                                <option value="http://rsc.bjfu.edu.cn/renshi/index.html" target="_blank">
+                                    校人事处
+                                </option>
+                                <option value="http://www2.bjfu.edu.cn/aa/heart.htm" target="_blank">心理咨询中心
+                                </option>
+                                <option value="http://www.lib.bjfu.edu.cn" target="_blank">图书馆</option>
+                                <option value="http://job.bjfu.edu.cn" target="_blank">就业服务中心</option>
+                            </select>
+                        </li>
+                        <li class="col-lg-2">
+                            <select class="form-control"
+                                    onchange="javascript:window.open(this.options[this.selectedIndex].value)"
+                                    name="select">
+                                <option selected="">--农林院校--</option>
+                                <option value="http://www.nefu.edu.cn/">东北林业大学</option>
+                                <option value="http://www.njfu.edu.cn">南京林业大学</option>
+                                <option value="http://www.zafu.edu.cn/">浙江农林大学</option>
+                                <option value="http://www.fafu.edu.cn/">福建农林大学</option>
+                                <option value="http://www.nwsuaf.edu.cn/">西北农林科技大学</option>
+                                <option value="http://www.swfc.edu.cn/">西南林业大学</option>
+                                <option value="http://www.csuft.edu.cn/">中南林业科技大学</option>
+                            </select>
+                        </li>
+                        <li class="col-lg-2">
+                            <select class="form-control"
+                                    onchange="javascript:window.open(this.options[this.selectedIndex].value)"
+                                    name="select">
+                                <option selected="">--研究机构--</option>
+                                <option value="http://www.forestry.gov.cn/">国家林业局</option>
+                                <option value="http://www.forestry.ac.cn/">中国林科院</option>
+                                <option value="http://www.lknet.ac.cn/informatics.htm">中国林学会</option>
+                                <option value="http://www.cfsdc.org/">林业数据中心</option>
+                            </select>
+                        </li>
+                        <li class="col-lg-2">
+                            <select class="form-control"
+                                    onchange="javascript:window.open(this.options[this.selectedIndex].value)"
+                                    name="select">
+                                <option selected="">--专题网站--</option>
+                                <option value="http://172.19.40.58:8089" target="_blank">节能监管平台</option>
+                                <option value="http://202.204.124.221/" target="_blank">经管实验教学</option>
+                                <option value="http://i.bjfu.edu.cn" target="_blank">数字校园平台</option>
+                                <option value="http://vpn.bjfu.edu.cn" target="_blank">VPN系统</option>
+                                <option value="http://ecard.bjfu.edu.cn" target="_blank">校园一卡通</option>
+                                <option value="http://nvs.bjfu.edu.cn/" target="_blank">网络流量监控</option>
+                                <option value="http://oa.bjfu.edu.cn" target="_blank">OA办公系统</option>
+                                <option value="http://60.bjfu.edu.cn" target="_blank">校庆网</option>
+                                <option value="http://i.bjfu.edu.cn" target="_blank">信息公开网</option>
+                                <option value="http://blonline.bjfu.edu.cn/" target="_blank">北林在线</option>
+                                <option value="http://zsb.bjfu.edu.cn/" target="_blank">招生办公室</option>
+                                <option value="http://app.bjfu.edu.cn/xcb/media/user/2012-09-26/show.html" target="_blank">北林报</option>
+                                <option value="http://i.bjfu.edu.cn" target="_blank">高校新闻网</option>
+                                <option value="http://3d.bjfu.edu.cn" target="_blank">虚拟地图</option>
+                                <option value="http://xgxt.bjfu.edu.cn" target="_blank">学工系统</option>
+                                <option value="http://jkcjzx.bjfu.edu.cn/" target="_blank">教学促进中心</option>
+                                <option value="http://bwc.bjfu.edu.cn/aqjyzt/" target="_blank">安全教育网</option>
+                                <option value="http://jjh.bjfu.edu.cn/" target="_blank">林业敬业奖励基金网</option>
+                            </select>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="address">
+        <div class="container">
+            <div class="col-lg-4">
+                Copyright &#169;2017 北京林业大学信息学院 Allright reserved
+            </div>
+            <div class="col-lg-2">
+                电话 : 010-62336230
+            </div>
+            <div class="col-lg-2">
+                邮箱&nbsp;:&nbsp;<a href="mailto:it@bjfu.edu.cn">it@bjfu.edu.cn</a>
+            </div>
+            <div class="col-lg-3">
+                地址 : 海淀区清华东路35号150信箱
+            </div>
+            <div class="col-lg-1">
+                邮编 : 100083
+            </div>
+        </div>
+    </div>
+</footer>
+<script rel="script" src="http://paradisehell.org/web/xinxi/main.min.js" charset="UTF-8"></script></body>
+</html>
+</body></html>

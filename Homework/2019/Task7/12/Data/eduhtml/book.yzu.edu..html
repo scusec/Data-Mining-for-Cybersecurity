@@ -1,0 +1,398 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Bookplus</title>
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8" />
+<link href="images/index.css" rel="stylesheet" type="text/css" />
+<link href="images/loginfc.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/system.js"></script>
+<script type="text/javascript" src="js/img_load.js"></script>
+<script type="text/javascript" src="js/login.js"></script>
+
+<script type="text/javascript" src="js/search.js"></script>
+<script type="text/javascript" src="js/layout-desktop.min.js"  charset="utf-8"></script>
+<script type="text/javascript" src="js/HMPG.js"></script>
+<link rel="stylesheet" type="text/css" href="images/layout-col1-carousel.css"/>
+<link type="text/css" rel="stylesheet" href="images/dwm.extensions.css">
+<meta property="wb:webmaster" content="814e4af7205f70b1" />
+<SCRIPT LANGUAGE="JavaScript">
+//屏蔽可忽略的js脚本错误
+function killErr(){
+	return true;
+}
+window.onerror=killErr;
+var isLoggedIn = false;
+</SCRIPT>
+<style>
+.searchsort_btn p {	
+	position: absolute;	
+    top:28px;
+	background:#FFFFFF;
+	display: none;
+	border: 1px solid #E7ECF3;
+	border-top:0;
+    left: -1px;
+    padding-bottom: 1px;
+    width:103px;
+	z-index:20;
+}
+</style>
+</head>
+<body>
+<div class="warp">
+	<div class="head_index">
+		<div id="logo"><img src="images/logo.gif"></div>
+		<ul id="head_menu">
+			<li class="sss selected" onmouseover="click_head_menu(this)"><a href="index.php">首页</a></li>
+			<li class="sss" onmouseover="click_head_menu(this)"><a href="javascript:void(0);" onclick="change(1)">推荐图书</a></li>
+			<li onmouseover="click_head_menu(this)"><a href="javascript:void(0);" onclick="change(5)">馆藏书刊</a></li>
+			<li onmouseover="click_head_menu(this)"><a href="javascript:void(0);" onclick="change(6)">期刊推送</a></li>
+			<li onmouseover="click_head_menu(this)"><a href="javascript:void(0);" onclick="change(4)">我的书架</a></li>
+			<li onmouseover="click_head_menu(this)"><a href="javascript:void(0);" onclick="change(2)">借阅信息</a></li>
+			<li onmouseover="click_head_menu(this)"><a href="http://202.195.60.188">扬州大学图书馆</a></li>
+		</ul>
+	</div>
+	<div class="center_index">
+<div id="board">
+<div id="outer">
+
+<script type="text/javascript">
+if (!$.localization) {$.localization = {};}
+$.localization.selectACountryMessage = "";$.localization.selectCityMessage = "";
+$.listRegionsUi= new Object();
+var AllAvailableTags = {},availableTags = {},availableTagsFinnair = {},availableTagsOrigin = {};availableTags = AllAvailableTags;availableTagsFinnair = AllAvailableTagsFinnair;availableTagsOrigin = AllAvailableTagsOrigin;
+</script>
+<script type="text/javascript">
+$.wdsSrvUser = {loggedIn: '0'};$.wdsSrvI18N = {};$.wdsSrvI18N.label = {};$.wdsSrvI18N.error = {};$.wdsSrvI18N.url   = {};$.wdsSrvI18N.label.months            = [];$.isFromStartOver=false;$.EXTERNAL_ID_3="";
+</script>
+<script id="WDSSrvFlightsTemplate" type="text/text"> 
+<div id="<#=WDSSearchPage.getDomIdPrefix()#>BlocSearchDiv" class="tabs subTabs tabsBlocSearch"></div> 
+<div id="<#=WDSSearchPage.getDomIdPrefix()#>RoundTripDiv" class="canvas canvasSearch canvasSearchReturn"></div>
+</script>
+<script id="WDSSrvHolidaysTemplate" type="text/text">
+<input type="text" id="<#=obj.fldToDate#>" name="<#=obj.fldToDate#>" title="" />
+</script>
+<script id="WDSSrvHotelsTemplate" type="text/text" > 
+<input type="text" id="<#=obj.fldCountry#>" name="<#=obj.fldCountry#>"/>
+</script>
+<script id="WDSSrvMainFlightTemplate" type="text/text" ><span class="clearer"><span>&nbsp;</span></span></script>
+<script id="WDSSrvRoundTripTemplate" type="text/text">
+<# if (obj.txtFromCityAsSelect) { #> <# } else { #> <input type="text" id="<#=obj.txtFromCityId#>" name="<#=obj.txtFromCityId#>" title=""/> <# } #> 
+<# if (obj.txtToCityAsSelect) { #> <# } else { #> <input type="text" id="<#=obj.txtToCityId#>" name="<#=obj.txtToCityId#>"  title=""/> <# } #> 
+</script>
+<script type="text/javascript">
+$.wdsSrvProfileType = 'user';
+$.fromAYServicing = 'null';
+var prefilledInput = "";
+var selectedCardOnStartup = "";
+var selectedServiceCardOnStartup = "";
+</script>
+<script type="text/javascript">
+$(document).ready(function() {
+    // Search for overrides
+    $('.card-override').each(function() {
+        var self = $(this);
+        var thumb = self.children().eq(0);
+        var content = self.children().eq(1);
+        var classes = self.attr('class');
+        // Remove classes and move them to parent container.
+        self.removeClass(classes);
+        var parent = self.parents('.card');
+        parent.addClass(classes);
+        parent.children().eq(0).html(thumb);
+        parent.children().eq(1).html(content);
+    });
+});
+</script>
+<div id="inner">
+<div id="flow" class="flow">
+<div class="frame">
+<div class="content">
+<div>
+<div id="carousel" class="carousel" style="height:520px;">
+	<div class="carouselHidden">
+		<div class="carouselCard" id="position1"></div>
+		<div id="position2"></div>
+		<div id="position3"></div>
+		<div id="position4"></div>
+		<div id="position5"></div>
+		<div id="position6"></div>
+	</div>
+
+	<div cardid="1" position="1" id="card1" class="card active">
+		<div id="thumb1" class="frame">
+			<h2 style="border-bottom: 1px solid #ffffff;" class="cardTitle">推荐图书</h2>
+			<div style="border-top: 1px solid #e4e5e9; height: 254px; background: url(images/tjts.jpg) no-repeat 0 0;" class="cardRadius">&nbsp;</div>
+		</div>
+		<div style="display:none" id="activeCard1" class="frame">
+			<strong class="cardTitle titMyTravel">推荐图书</strong>
+			<div id="WDSSrvFlightsDiv" class="section sectionFlights opened" style="display:none"></div>
+			<div id="WDSSrvHotelsDiv" class="section sectionHotel closed" style="display:none" ></div>
+			<!---->
+			<div class="dwm-content" id="HMPG_Card1">
+				<div class="override card unactive card-override">
+					<div class="frame">
+						<h2 style="border-bottom: 1px solid #EFF4F6;" class="cardTitle">推荐图书</h2>
+						<div style="border-top: 1px solid #FFFFFF; height: 254px; background: url(images/tjts.jpg) no-repeat 0 0px;" class="cardRadius">&nbsp;</div>
+					</div>
+					<div>
+						<div style="background: transparent url(images/tjts.png) no-repeat left top; background-size:100%;" class="dwm-content">
+							<table>
+								<tbody>
+								<tr>
+								<td class="ay_styles" id="ay_sty1">
+									<span><a href="hotbook_list.php">&nbsp;</a></span>
+									<span><a href="newbook_list.php">&nbsp;</a></span>
+									<span><a href="top_review.php">&nbsp;</a></span>
+								</td>
+								</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>	
+			<!---->
+		</div>
+	</div>
+
+	<div position="2" cardid="2" class="card unactive" id="card2">
+		<div id="thumb2" class="frame">
+			<h2 style="border-bottom: 1px solid #EFF4F6;" class="cardTitle">借阅信息</h2>
+			<div style="border-top: 1px solid #e4e5e9; height: 254px; background: url(images/jyxx.jpg) no-repeat 0 0px;" class="cardRadius">&nbsp;</div>
+		</div>
+		<div style="display:none" id="activeCard2" class="frame">
+			<div class="dwm-content" id="HMPG_Card2">
+				<div class="override card unactive card-override">
+					<div class="frame">
+						<h2 style="border-bottom: 1px solid #EFF4F6;" class="cardTitle">借阅信息</h2>
+						<div style="border-top: 1px solid #FFFFFF; height: 254px; background: url(images/jyxx.jpg) no-repeat 0 0px;" class="cardRadius">&nbsp;</div>
+					</div>
+					<div>
+						<div style="background: transparent url(images/jyxx.png) no-repeat left top; background-size:100%;" class="dwm-content">
+							<table>
+								<tr>
+									<td class="ay_styles" id="ay_jyxx" style="padding-left:98px;padding-top:58px;">
+										<span><a href="book_lst.php">&nbsp;</a></span>
+										<span><a href="book_hist.php">&nbsp;</a></span>
+										<span><a href="preg.php">&nbsp;</a></span>
+										<span><a href="fine_pec.php">&nbsp;</a></span>
+									</td>
+								</tr>
+								<tr>
+									<td class="ay_styles" id="ay_jyxx" style="padding-left:98px;">
+										<span><a href="fine_owe.php">&nbsp;</a></span>
+										<span><a href="relegate.php">&nbsp;</a></span>
+										<span><a href="reder_infor.php">&nbsp;</a></span>
+										<span><a href="http://uas.js.calis.edu.cn:8090/amconsole/AuthServices?verb=login&goto=http://ill.jalis.org.cn/gateway/Default.aspx" target="_blank">&nbsp;</a></span>
+									</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div position="3" cardid="3" class="card unactive" id="card3">
+		<div id="thumb3" class="frame">
+		</div>
+		<div style="display:none" id="activeCard3" class="frame">
+			<div class="dwm-content" id="HMPG_Card3">
+				<div class="override card unactive card-override">
+					<div class="frame">
+						<h2 style="border-bottom: 1px solid #EFF4F6;" class="cardTitle">个人登录</h2>
+						<div style="border-top: 1px solid #FFFFFF; height: 254px; background: url(images/grdl.jpg) no-repeat scroll 0pt 0px transparent;" class="cardRadius">&nbsp;</div>
+					</div>
+					<div>
+						<div style="background-color: transparent; background-image: url(images/grdl.png); background-repeat: no-repeat; background-attachment: scroll; background-position: left top; background-clip: border-box; background-origin: padding-box; background-size:100%;" class="dwm-content">
+							<!--<h2 style="border-bottom: 1px solid #ffffff;" class="cardTitle">个人登录</h2>-->
+							<table>
+								<tbody>
+								<tr>
+								<td class="ay_styles" style="padding-top:139px;">
+									<div class="left" id="index_left1">
+																				<span style="padding-left:138px;">(提示：一卡通号位数不足6位的在前面</span>
+										<br><span style="padding-left:138px;">补齐数字0)</span>
+										<p>
+											<span id="in_name">用户名: </span>
+											<span class="in_form-input">
+												<input type="text" class="txt" id="user_id"  onkeypress='huiche(event,1)'>
+											</span>
+										</p>
+										<!--<p id="cho_o">
+												<input type="text" class="txt" id="user_id"  onkeypress='huiche(event)'>//回
+											<span id="choose1" class="select" onclick="change_se(1)">证件号</span>
+											<span id="choose2" onclick="change_se(2)" style="margin-left:35px;">Email</span></p>-->
+										
+										<p>
+											<span id="in_name">密&nbsp;&nbsp;码: </span>
+											<span class="in_form-input">
+												<input type="password" class="txt" id="user_pwd"  onkeypress='huiche(event,1)'>	
+											</span>
+										</p>
+										<div class="in_sub_m">
+											<span id="in_buttom" style="margin-left:250px;" onclick="check_user(1)">登&nbsp;&nbsp;录</span>
+											<input type="hidden" id="subjects" value="">
+										</div>
+																			</div>
+									<div class="right">
+										<p><a href="javascript:toSinaLogin();"><img src="images/wb.gif"></a> <a href="javascript:toRenrenLogin();"><img src="images/rr.gif"></a><!--<a href="javascript:toQzoneLogin();"><img src="images/qqz.gif"></a></p>
+										<p> <a href="javascript:toDbanLogin();"><img src="images/dy.gif"></a></p>-->
+									</div>
+								</td>
+								</tr>
+								</tbody>
+							</table>
+						</div>	
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div position="4" cardid="4" class="card unactive" id="card4">
+		<div id="thumb4" class="frame"></div>
+		<div style="display:none" id="activeCard4" class="frame">
+			<div class="dwm-content" id="HMPG_Card4">
+				<div class="override card unactive card-override card-finnair-plus">
+					<div class="frame">
+						<h2 style="border-bottom: 1px solid #EFF4F6;" class="cardTitle">我的书架</h2>
+						<div style="border-top: 1px solid #FFFFFF; height: 254px; background: url(images/wdsj.jpg) no-repeat 0 0px;" class="cardRadius">&nbsp;</div>
+					</div>
+				<div>
+				<div style="background-color: transparent; background-image: url(images/wdsj.png); background-repeat: no-repeat; background-attachment: scroll; background-position: left top; background-clip: border-box; background-origin: padding-box; background-size:100%;" class="dwm-content">
+					<!--<h2 style="border-bottom: 1px solid #ffffff;" class="cardTitle">我的书架</h2>-->
+					<table>
+						<tbody>
+						<tr>
+							<td class="ay_styles" id="ay_sty1">
+								<span><a href="book_shelf.php">&nbsp;</a></span>
+								<span><a href="my_tag.php">&nbsp;</a></span>
+								<span><a href="book_read.php">&nbsp;</a></span>
+							</td>
+						</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+	</div>
+
+
+	<div position="5" cardid="5" class="card unactive" id="card5">
+		<div id="thumb5" class="frame"></div>
+		<div style="display:none" id="activeCard5" class="frame">
+			<div class="dwm-content" id="HMPG_Card5">
+				<div class="override card unactive card-override">
+					<div class="frame">
+						<h2 style="border-bottom: 1px solid #EFF4F6;" class="cardTitle">馆藏书刊</h2>
+						<div style="border-top: 1px solid #FFFFFF; height: 254px; background: url(images/znss.jpg) no-repeat scroll 0pt 0px transparent;" class="cardRadius">&nbsp;</div>
+					</div>
+				<div>
+				<div style="background-color: transparent; background-image: url(images/znss.png); background-repeat: no-repeat; background-attachment: scroll; background-position: left top; background-clip: border-box; background-origin: padding-box; background-size:100%;" class="dwm-content">
+					<!--<h2 style="border-bottom: 1px solid #ffffff;" class="cardTitle">站内搜索</h2>-->
+					<table>
+						<tbody>
+						<tr>
+						<td class="ay_styles" style="padding:170px 0 0 81px;">
+							<div id="key_op"><input type="text" id="keyword_op" onkeypress='s_huiche(event)' style="color:#999" value="请输入任意关键词" onfocus="OnFocusFun(this,'请输入任意关键词')" onblur="OnBlurFun(this,'请输入任意关键词')"></div>
+							<div onmouseover="allCategoryShow(4);" onmouseout="allCategoryHide(4);" class="searchsort_btn">
+								<a href="#"><span id="Show_Category_Name4">题名</span></a>
+								<p id="search_all_category4" style="display: none;">
+									<a onclick="selectCategory('title',4,this);" href="javascript:void(0)"><span id="Show_Category_Name4">题名</span></a>
+									<a onclick="selectCategory('author',4,this);" href="javascript:void(0)"><span>责任者</span></a>
+									<a onclick="selectCategory('keyword',4,this);" href="javascript:void(0)"><span>主题词</span></a>
+									<a onclick="selectCategory('isbn',4,this);" href="javascript:void(0)"><span>ISBN</span></a>
+									<a onclick="selectCategory('publisher',4,this);" href="javascript:void(0)"><span>出版社</span></a>
+								</p>
+							</div>
+							<input type="hidden" id="catalog" value="" ><!-- 存放下拉框的值-->
+							<div id="submit" onclick="search_opac()">&nbsp;</div>
+						</td>
+						</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	</div>
+	</div>
+
+
+	<div position="6" cardid="6" class="card unactive" id="card6">
+		<div id="thumb6" class="frame"></div>
+		<div style="display:none" id="activeCard6" class="frame">
+			<div class="dwm-content" id="HMPG_Card6">
+				<div class="override card unactive card-override">
+					<div class="frame">
+						<h2 style="border-bottom: 1px solid #EFF4F6;" class="cardTitle">期刊推送</h2>
+						<div style="border-top: 1px solid #FFFFFF; height: 254px; background: url(images/qkts.jpg) no-repeat scroll 0pt 0px transparent;" class="cardRadius">&nbsp;</div>
+					</div>
+					<div>
+						<div style="background-color: transparent; background-image: url(images/qkts.png); background-repeat: no-repeat; background-attachment: scroll; background-position: left top; background-clip: border-box; background-origin: padding-box; background-size:100%;" class="dwm-content">
+							<!--<h2 style="border-bottom: 1px solid #ffffff;" class="cardTitle">期刊推送</h2>-->
+							<table>
+								<tbody>
+								<tr>
+								<td class="ay_styles" style="padding-left:226px;padding-top:136px;">
+									<span><a href="book_per.php">&nbsp;</a></span>
+									<span style="margin-left:102px;"><a href="my_per.php">&nbsp;</a></span>
+								</td>
+								</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</div></div></div></div></div></div></div>
+	</div>
+	<div style="height:10px;clear:both;">&nbsp;</div>
+	<div class="foot_index"><div id="foot">Copyright 2013 Bookplus Powered by Smartlib All Rights Reserved</div></div>
+</div>
+<div id="append_login"></div><!--加载登录浮尘-->
+</body>
+</html>
+<script type="text/javascript" src="js/login_fc.js"></script>
+<script>
+function change(id){
+	$('#card'+id).click();
+}
+function click_head_menu(obj){
+	oo=document.getElementById("head_menu").getElementsByTagName('li');
+	for(var i=0;i<oo.length;i++){
+		oo[i].className='';
+		if(i==0){
+			oo[i].className='sss';
+		}
+	}
+	obj.className='selected';
+	$(obj).next("li").addClass('sss');
+	obj.className='selected';
+}
+
+function allCategoryShow(tag){
+document.getElementById('search_all_category'+tag).style.display = "block";
+}
+function allCategoryHide(tag){
+document.getElementById('search_all_category'+tag).style.display =  "none";
+}
+function selectCategory(val,tag,obj){ 
+	document.getElementById('catalog').value=val;
+    document.getElementById('search_all_category'+tag).style.display = "none";
+    var text = obj.childNodes[0].innerHTML;
+    document.getElementById('Show_Category_Name'+tag).innerHTML=text;
+
+}
+
+</script>

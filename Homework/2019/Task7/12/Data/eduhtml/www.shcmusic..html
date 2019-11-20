@@ -1,0 +1,858 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+<head>
+ <title>上海音乐学院</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link rel="stylesheet" type="text/css" href="wf.css">
+		<script language="javascript" src="js/jquery.min.js"></script>
+		<script language="javascript" src="js/js.js"></script>
+
+<link href="/css/orbit.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="/js/jquery.foundation.orbit.js"></script>
+<script type="text/javascript" src="/js/jquery.easing.1.3.js"></script>
+
+<link href="ban/wf.css" rel="stylesheet" type="text/css">
+</head>
+     
+<body>
+
+
+
+    
+<script type="text/javascript">
+    function changexyxw(cid) {
+        if (cid == "2") {
+            $("#img_02").attr("src", "images/de_lmqh_a_02.jpg");
+            $("#div_05").hide();
+            $("#img_01").attr("src", "images/de_lmqh_b_01.jpg");
+            $("#div_01").show();
+        }
+        else {
+            $("#img_02").attr("src", "images/de_lmqh_b_02.jpg");
+            $("#div_05").show();
+            $("#img_01").attr("src", "images/de_lmqh_a_01.jpg");
+            $("#div_01").hide();
+        }
+        $("#a_xyxw").attr("href", "getpage.aspx?cid=" + cid);
+
+    }
+    function changexygg(cid) {
+        if (cid != "3") {
+            $("#img_04").attr("src", "images/de_lmqh_a_04.jpg");
+            $("#div_04").hide();
+            $("#img_05").attr("src", "images/de_lmqh_b_05.jpg");
+            $("#div_02").show();
+        }
+        else {
+            $("#img_04").attr("src", "images/de_lmqh_b_04.jpg");
+            $("#div_04").show();
+            $("#img_05").attr("src", "images/de_lmqh_a_05.jpg");
+            $("#div_02").hide();
+        }
+        $("#a_xygg").attr("href", "getpage.aspx?cid=" + cid);
+
+    }
+
+
+    function advance_search() {
+        if ($("#search_info").val() == "") {
+            alert("请输入搜索关键词！");
+            return;
+        }
+        window.location.href = "search.aspx?kbody=" + encodeURI($("#search_info").val());
+    }
+
+
+</script>
+
+
+
+
+
+<div class="main box hearder_bg">
+
+
+ <div class="wrap_1190">
+
+<!-- <img src="images/top101.png"> -->
+
+
+
+
+  <div class="main box main_header">
+   
+      <div id="carousel1" >
+          
+                  <a href="#" target="_blank" title="" data-caption="#htmlCaption14"><img border="0" width="1190.0" height="500.0" data-caption="#htmlCaption14" src="/File/FileDownLoad.ashx?fileCode=4c3e3c3a-c7eb-4601-98d4-64e750b50c6f" ></a>
+              
+                  <a href="#" target="_blank" title="" data-caption="#htmlCaption13"><img border="0" width="1190.0" height="500.0" data-caption="#htmlCaption13" src="/File/FileDownLoad.ashx?fileCode=c21fb398-ac86-4b66-8bc8-14814f025e26" ></a>
+              
+                  <a href="#" target="_blank" title="" data-caption="#htmlCaption10"><img border="0" width="1190.0" height="500.0" data-caption="#htmlCaption10" src="/File/FileDownLoad.ashx?fileCode=d78d6b6f-45d8-48ba-bb76-930f54d2821b" ></a>
+              
+                  <a href="#" target="_blank" title="" data-caption="#htmlCaption5"><img border="0" width="1190.0" height="500.0" data-caption="#htmlCaption5" src="/File/FileDownLoad.ashx?fileCode=0616e581-41fd-4c09-8e9d-bbd563f09ad6" ></a>
+              
+                  <a href="#" target="_blank" title="" data-caption="#htmlCaption3"><img border="0" width="1190.0" height="500.0" data-caption="#htmlCaption3" src="/File/FileDownLoad.ashx?fileCode=c6d48b9f-4dda-418c-a8a6-63ed0183031b" ></a>
+              
+                  <a href="#" target="_blank" title="" data-caption="#htmlCaption2"><img border="0" width="1190.0" height="500.0" data-caption="#htmlCaption2" src="/File/FileDownLoad.ashx?fileCode=615f6baf-cbf6-473e-8b7e-f4f4bf199653" ></a>
+              
+      </div>
+     <div id="captions">
+         
+                  <div class="main header_txt" id="htmlCaption14"></div>
+              
+                  <div class="main header_txt" id="htmlCaption13"></div>
+              
+                  <div class="main header_txt" id="htmlCaption10"></div>
+              
+                  <div class="main header_txt" id="htmlCaption5"></div>
+              
+                  <div class="main header_txt" id="htmlCaption3"></div>
+              
+                  <div class="main header_txt" id="htmlCaption2"></div>
+              
+    </div>
+
+
+
+<div class="main box header_links_search_bg"></div>
+
+   <div class="main box header_links_search">
+
+    <div class="main header_links"><a href="getpage.aspx?cid=116">在校学生</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="getpage.aspx?cid=119">教职员工</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="getpage.aspx?cid=286">毕业校友</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="getpage.aspx?cid=122">未来学生</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="http://js.shcmusic.edu.cn" target="blank">应用门户</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="gotopage.aspx?url=aHR0cDovL29hLnNoY211c2ljLmVkdS5jbg==">办公系统</a></div>
+	<div class="side header-search">
+	 <dl>
+
+<form name="ctl00" method="post" action="./" id="ctl00">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTEyNzAwMjIwMjMPZBYIAgEPFgIeC18hSXRlbUNvdW50AgYWDGYPZBYCZg8VBAACMTQCMTRFL0ZpbGUvRmlsZURvd25Mb2FkLmFzaHg/ZmlsZUNvZGU9NGMzZTNjM2EtYzdlYi00NjAxLTk4ZDQtNjRlNzUwYjUwYzZmZAIBD2QWAmYPFQQAAjEzAjEzRS9GaWxlL0ZpbGVEb3duTG9hZC5hc2h4P2ZpbGVDb2RlPWMyMWZiMzk4LWFjODYtNGI2Ni04YmM4LTE0ODE0ZjAyNWUyNmQCAg9kFgJmDxUEAAIxMAIxMEUvRmlsZS9GaWxlRG93bkxvYWQuYXNoeD9maWxlQ29kZT1kNzhkNmI2Zi00NWQ4LTQ4YmEtYmI3Ni05MzBmNTRkMjgyMWJkAgMPZBYCZg8VBAABNQE1RS9GaWxlL0ZpbGVEb3duTG9hZC5hc2h4P2ZpbGVDb2RlPTA2MTZlNTgxLTQxZmQtNGMwOS04ZTlkLWJiZDU2M2YwOWFkNmQCBA9kFgJmDxUEAAEzATNFL0ZpbGUvRmlsZURvd25Mb2FkLmFzaHg/ZmlsZUNvZGU9YzZkNDhiOWYtNGRkYS00MThjLWE4YTYtNjNlZDAxODMwMzFiZAIFD2QWAmYPFQQAATIBMkUvRmlsZS9GaWxlRG93bkxvYWQuYXNoeD9maWxlQ29kZT02MTVmNmJhZi1jYmY2LTQ3M2UtOGI3ZS1mNGY0YmYxOTk2NTNkAgIPFgIfAAIGFgxmD2QWAmYPFQICMTQAZAIBD2QWAmYPFQICMTMAZAICD2QWAmYPFQICMTAAZAIDD2QWAmYPFQIBNQBkAgQPZBYCZg8VAgEzAGQCBQ9kFgJmDxUCATIAZAIEDxYCHgNzcmMFRXZpZXdfbmV3c3BpY18wLmFzcHg/Y2lkPTQ4JndpZHRoPTM0NSZoZWlnaHQ9MjMzJmltZ2ZpZWxkPVpteGtYelE0WHpFPWQCCw8WAh8BBUJ2aWV3X25ld3NwaWNfMC5hc3B4P2NpZD0xMTMmd2lkdGg9Mjg5JmhlaWdodD0xNzQmaW1nZmllbGQ9Y0dodmRHOXpkZFvKCoCEm0JYXzRjpqJZDprqahiZujQP24Da/e1paqO+" />
+
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="CA0B0334" />
+
+	  <dt><input name="search_info" type="text" id="search_info" class="intro_search_tex" value="输入关键字" onkeypress="go()" onFocus="if (value ==&#39;输入关键字&#39;){value =&#39;&#39;}" onBlur="if (value ==&#39;&#39;){value=&#39;输入关键字&#39;}" /></dt>
+	  <dd><input name="" type="button" onclick="advance_search()"  class="intro_search_btn"></dd>
+      
+        <input type="submit" name="btn1" value="" id="btn1" class="input_02" style="display:none" />
+        </form>
+       
+	 </dl>
+	</div>
+   </div>
+
+   <div class="main logo"><img src="images/logo.jpg"></div>
+   <div class="main menu">
+    <ul>
+	 <li><a href="getpage.aspx"><img src="images/a_menu_01.png"></a></li>
+	 <li><img src="images/menu_sx.png"></li>
+	 <li class="li_hover" id="11"><a href="getpage.aspx?cid=11"><img src="images/menu_02.png"></a>
+         
+   <!--学院概况-->
+   
+	 </li>
+	 <li><img src="images/menu_sx.png"></li>
+	 <li class="li_hover" id="17"><a href="getpage.aspx?cid=17"><img src="images/menu_03.png"></a>
+         
+   
+   <!--组织机构-->
+   <div id="div_17" class="main header_zzjg_xl" style="display:none;">
+    <div class="main box header_erbg">
+    <div class="main d1l">
+	 <div class="main box erj">
+	  <ul>
+	   <li><a href="getpage.aspx?cid=18">处级党政职能机构</a></li>
+	  </ul>
+	 </div>
+        <div class='main sanj'><ul><li><a href="getpage.aspx?cid=137">党委办公室</a></li><li><a href="getpage.aspx?cid=138">院长办公室</a></li><li><a href="getpage.aspx?cid=359">组织部</a></li><li><a href="getpage.aspx?cid=139">人事处</a></li><li><a href="getpage.aspx?cid=140">宣传部</a></li><li><a href="getpage.aspx?cid=456">统战部</a></li><li><a href="getpage.aspx?cid=141">纪委、监察处</a></li><li><a href="getpage.aspx?cid=349">审计处</a></li><li><a href="getpage.aspx?cid=142">学工部、学生处</a></li><li><a href="getpage.aspx?cid=143">武装部、保卫处</a></li><li><a href="getpage.aspx?cid=144">教务处</a></li><li><a href="getpage.aspx?cid=145">研究生部</a></li><li><a href="getpage.aspx?cid=146">科研处</a></li><li><a href="getpage.aspx?cid=147">学科办</a></li><li><a href="getpage.aspx?cid=148">艺术处</a></li><li><a href="getpage.aspx?cid=149">财务处</a></li><li><a href="getpage.aspx?cid=150">国际交流处、港澳台办公室</a></li><li><a href="getpage.aspx?cid=151">后勤处</a></li><li><a href="getpage.aspx?cid=379">基建处</a></li><li><a href="getpage.aspx?cid=152">资产管理处</a></li><li><a href="getpage.aspx?cid=153">零陵路校区管委会办公室</a></li><li><a href="getpage.aspx?cid=298">院志办</a></li></ul></div>
+	 
+	</div>
+	<div class="main d2l">
+	 <div class="main box erj">
+	  <ul>
+	   <li><a href="getpage.aspx?cid=19">教学服务及研究机构</a></li>
+	  </ul>
+	 </div>
+        <div class='main sanj'><ul><li><a href="getpage.aspx?cid=405">贺绿汀中国音乐高等研究院</a></li><li><a href="getpage.aspx?cid=434">上海音乐艺术发展中心</a></li><li><a href="getpage.aspx?cid=278">音乐研究所</a></li><li><a href="getpage.aspx?cid=416">博士后流动站</a></li><li><a href="getpage.aspx?cid=154">图书馆</a></li><li><a href="getpage.aspx?cid=155">东方乐器博物馆</a></li><li><a href="getpage.aspx?cid=313">校史馆</a></li><li><a href="getpage.aspx?cid=157">出版社</a></li><li><a href="getpage.aspx?cid=158">学报</a></li><li><a href="getpage.aspx?cid=159">教育信息技术中心</a></li><li><a href="getpage.aspx?cid=392">语言文字网</a></li></ul></div>
+	 
+	</div>
+	<div class="main d3l">
+	 <div class="main box erj">
+	  <ul>
+	   <li><a href="getpage.aspx?cid=20">群众组织</a></li>
+	  </ul>
+	 </div>
+        <div class='main sanj'><ul><li><a href="getpage.aspx?cid=160">工会</a></li><li><a href="getpage.aspx?cid=161">共青团</a></li><li><a href="getpage.aspx?cid=162">妇委会</a></li></ul></div>
+	 
+	</div>
+	<div class="main d4l">
+	 <div class="main box erj">
+	  <ul>
+	   <li><a href="getpage.aspx?cid=21">其他</a></li>
+	  </ul>
+	 </div>
+        <div class='main sanj'><ul><li><a href="getpage.aspx?cid=163">上海上音资产经营有限责任公司</a></li><li><a href="getpage.aspx?cid=460">上海音乐学院教育发展基金会</a></li></ul></div>
+	 
+	</div>
+	</div>
+   </div>
+   
+	 </li>
+	 <li><img src="images/menu_sx.png"></li>
+	 <li class="li_hover" id="22"><a href="getpage.aspx?cid=22"><img src="images/menu_04.png"></a>
+         
+   <!--教学部门-->
+   <div  id="div_22" class="main header_jsbm_xl" style="display:none;">
+    <div class="main d1l">
+	 <div class="main box erj">
+	  <ul>
+	   <li><a href="getpage.aspx?cid=23">音乐学系</a></li>
+	  </ul>
+	 </div>
+	</div>
+	<div class="main d1l">
+	 <div class="main box erj">
+	  <ul>
+	   <li><a href="getpage.aspx?cid=24">作曲系</a></li>
+	  </ul>
+	 </div>
+	</div>
+	<div class="main d1l">
+	 <div class="main box erj">
+	  <ul>
+	   <li><a href="getpage.aspx?cid=25">指挥系</a></li>
+	  </ul>
+	 </div>
+	</div>
+	<div class="main d1l">
+	 <div class="main box erj">
+	  <ul>
+	   <li><a href="getpage.aspx?cid=26">钢琴系</a></li>
+	  </ul>
+	 </div>
+	</div>
+	<div class="main d1l">
+	 <div class="main box erj">
+	  <ul>
+	   <li><a href="getpage.aspx?cid=27">声乐歌剧系</a></li>
+	  </ul>
+	 </div>
+	</div>
+	<div class="main d1l">
+	 <div class="main box erj">
+	  <ul>
+	   <li><a href="getpage.aspx?cid=28">管弦系</a></li>
+	  </ul>
+	 </div>
+	</div>
+	<div class="main d1l">
+	 <div class="main box erj">
+	  <ul>
+	   <li><a href="getpage.aspx?cid=29">民乐系</a></li>
+	  </ul>
+	 </div>
+	</div>
+	<div class="main d1l">
+	 <div class="main box erj">
+	  <ul>
+	   <li><a href="getpage.aspx?cid=30">音乐教育系</a></li>
+	  </ul>
+	 </div>
+	</div>
+	<div class="main d1l">
+	 <div class="main box erj">
+	  <ul>
+	   <li><a href="getpage.aspx?cid=31">音乐戏剧系</a></li>
+	  </ul>
+	 </div>
+	</div>
+	<div class="main d1l">
+	 <div class="main box erj">
+	  <ul>
+	   <li><a href="getpage.aspx?cid=32">音乐工程系</a></li>
+	  </ul>
+	 </div>
+	</div>
+	<div class="main d1l">
+	 <div class="main box erj">
+	  <ul>
+	   <li><a href="getpage.aspx?cid=33">现代器乐与打击乐系</a></li>
+	  </ul>
+	 </div>
+	</div>
+	<div class="main d1l">
+	 <div class="main box erj">
+	  <ul>
+	   <li><a href="getpage.aspx?cid=34">艺术管理系</a></li>
+	  </ul>
+	 </div>
+	</div>
+	<div class="main d1l">
+	 <div class="main box erj">
+	  <ul>
+	   <li><a href="getpage.aspx?cid=35">数字媒体学院(筹)</a></li>
+	  </ul>
+	 </div>
+	</div>
+	<div class="main d1l">
+	 <div class="main box erj">
+	  <ul>
+	   <li><a href="getpage.aspx?cid=36">公共基础部(思政中心)</a></li>
+	  </ul>
+	 </div>
+	</div>
+	<div class="main d1l">
+	 <div class="main box erj">
+	  <ul>
+	   <li><a href="getpage.aspx?cid=37">附中(附小)</a></li>
+	  </ul>
+	 </div>
+	</div>
+   </div>
+   
+	 </li>
+	 <li><img src="images/menu_sx.png"></li>
+	 <li class="li_hover" id="134"><a href="getpage.aspx?cid=134"><img src="images/menu_05.png"></a>
+         
+   <!--人才教育-->
+   <div id="div_134" class="main header_rcjy_xl" style="display:none;">
+    <div class="main d1l">
+	 <div class="main box erj">
+	  <ul>
+	   <li><a href="getpage.aspx?cid=38">本科教育</a></li>
+	  </ul>
+	 </div>
+        <div class='main sanj'><ul><li><a href="getpage.aspx?cid=260">工作动态</a></li><li><a href="getpage.aspx?cid=261">招生信息</a></li><li><a href="getpage.aspx?cid=262">学籍管理</a></li><li><a href="getpage.aspx?cid=263">教学质量监控与研究中心</a></li><li><a href="getpage.aspx?cid=264">精品课程</a></li></ul></div>
+	</div>
+	<div class="main d1l">
+	 <div class="main box erj">
+	  <ul>
+	   <li><a href="getpage.aspx?cid=39">研究生教育</a></li>
+	  </ul>
+	 </div>
+        <div class='main sanj'><ul><li><a href="getpage.aspx?cid=266">工作动态</a></li><li><a href="getpage.aspx?cid=267">招生信息</a></li><li><a href="getpage.aspx?cid=268">研究生培养</a></li><li><a href="getpage.aspx?cid=269">学位管理</a></li><li><a href="getpage.aspx?cid=270">科研与实践</a></li></ul></div>
+	</div>
+	<div class="main d1l">
+	 <div class="main box erj">
+	  <ul>
+	   <li><a href="getpage.aspx?cid=40">留学生教育</a></li>
+	  </ul>
+	 </div>
+        <div class='main sanj'><ul><li><a href="getpage.aspx?cid=41">部门动态</a></li><li><a href="getpage.aspx?cid=49">部门介绍</a></li><li><a href="getpage.aspx?cid=50">奖学金</a></li><li><a href="getpage.aspx?cid=135">汉语培训</a></li><li><a href="getpage.aspx?cid=136">短期项目</a></li><li><a href="getpage.aspx?cid=375">联系我们</a></li><li><a href="getpage.aspx?cid=376">友情链接</a></li><li><a href="getpage.aspx?cid=377">相关下载</a></li><li><a href="getpage.aspx?cid=378">上海高校外国留学生英语授课示范性课程</a></li></ul></div>
+	</div>
+	<div class="main d1l">
+	 <div class="main box erj">
+	  <ul>
+	   <li><a href="getpage.aspx?cid=42">社会教育</a></li>
+	  </ul>
+	 </div>
+        <div class='main sanj'><ul><li><a href="getpage.aspx?cid=273">成人教育</a></li><li><a href="getpage.aspx?cid=272">通知公告</a></li><li><a href="getpage.aspx?cid=274">音乐考级</a></li><li><a href="getpage.aspx?cid=275">音乐培训</a></li></ul></div>
+	</div>
+   </div>
+   
+	 </li>
+	 <li><img src="images/menu_sx.png"></li>
+	 <li class="li_hover" id="43"><a href="getpage.aspx?cid=43"><img src="images/menu_06.png"></a>
+         
+   
+   <!--校友之窗-->
+   <div id="div_43" class="main header_xyzc_xl" style="display:none;">
+    <div class="main d1l">
+	 <div class="main box erj">
+	  <ul>
+	   <li><a href="getpage.aspx?cid=44">校友通讯</a></li>
+	  </ul>
+	 </div>
+        
+	</div>
+	<div class="main d1l">
+	 <div class="main box erj">
+	  <ul>
+	   <li><a href="getpage.aspx?cid=164">校友投稿</a></li>
+	  </ul>
+	 </div>
+        
+	</div>
+   </div>
+   
+
+	 </li>
+	</ul>
+   </div>
+
+
+   
+   
+   
+
+<script type="text/javascript">
+    function advance_search() {
+        //        var a = BASE64.encoder($("#search_info").val());
+
+        var a = $("#search_info").val();
+    
+        if (a == "") {
+            alert("请输入搜索关键词！");
+            return;
+        }
+        document.getElementById("btn1").click();
+
+    }
+    function go() {
+        if (event.keyCode == 13) advance_search();
+    }
+
+    $(".li_hover").hover(function () {
+        var id = "div_"+$(this).attr("id");
+        var $div = $("#" + id);
+        $div.show();
+
+        $(this).hover(function () {
+        }, function () {
+            $div.hide();
+        });
+
+    }).hover(function () {
+        var $img = $($(this).find("img")[0]);
+        var src = $img.attr("src").replace("images/menu", "images/menu_b");
+        $img.attr("src", src);
+    }, function () {
+        var $img = $($(this).find("img")[0]);
+        var src = $img.attr("src").replace("images/menu_b", "images/menu");
+        $img.attr("src", src);
+    });
+
+
+</script>
+  </div>
+  <div class="clear"></div>
+
+
+<div class="main box shcmusic_banner">
+   <div class="main box bg_pic"><img src="ban/shmusic_pic_01.jpg"></div>
+   <div class="main box jinru">
+    <ul>
+	 <li>
+	  <dl>
+	   <dt>距建校90周年还有 <a style="color:#FFD490;" id="tim"></a> 天</dt>
+	   <dd><a href="90_xiaoqing/index.aspx"><img src="ban/shmusic_pic_01.png"></a></dd>
+	  </dl>
+	 </li>
+	</ul>
+   </div>  
+  </div>
+
+<script>
+
+     $(function () {
+
+         var mydate = new Date();
+         var str = "" + mydate.getFullYear() + "/";
+         str += (mydate.getMonth() + 1) + "/";
+         str += mydate.getDate() + "";
+
+         var time1 =Date.parse(new Date(str));
+
+
+         var time2 =1511740800000;
+
+         //var time2 = Date.parse(new Date("2017-11-27"));
+
+         var nDays =Math.abs(parseInt((time2-time1)/1000/3600/24));
+         $("#tim").html(nDays);
+     })
+ </script>
+
+
+ </div>
+</div>
+
+<div class="main box">
+ <div class="wrap_1170">
+
+
+
+  <div class="main box h20"></div>
+  <div class="main box">
+   <div class="main de_xwhd_xyxw">
+    <div class="main de_xwhd">
+	 <div class="main box de_lmys_01">
+	  <dl><dt><img src="images/de_lm_01.jpg"></dt><dd><a href="getpage.aspx?cid=48">更多+</a></dd></dl>
+	 </div>
+	 <div class="main de_xwhd_pic">
+	  <div class="main box de_pic_qh01">
+          <iframe id="news" width="345px" height="233px" src="view_newspic_0.aspx?cid=48&amp;width=345&amp;height=233&amp;imgfield=ZmxkXzQ4XzE=" frameborder="no" scrolling="no"></iframe>
+      </div>
+	  
+	 </div>
+	</div>
+	<div class="side de_xyxw">
+     <div class="main box de_lmys_02">
+	  <div class="main L">
+	   <dl><dd><img id="img_01" src="images/de_lmqh_b_01.jpg" onmouseover="changexyxw('2')"></dd><dt><img src="images/de_lmqh_a_03.jpg"></dt><dd><img id="img_02" src="images/de_lmqh_a_02.jpg" onmouseover="changexyxw('294')"></dd></dl>
+	  </div>
+	  <div class="side R"><a id="a_xyxw" href="getpage.aspx?cid=2">更多+</a></div>
+	 </div>
+	 <div class="main box de_sjbk_01" id="div_01">
+	  <ul>
+	   <li>
+            
+	               <dl><dt><a target="_blank"  href="getpage.aspx?cid=2&id=1638" title="上音《丝路追梦》荣获市舞台艺术作品评选优秀作品奖">上音《丝路追梦》荣获市舞台艺术作品评...</a></dt><dd>[2017-10-27]</dd></dl>
+                
+	               <dl><dt><a target="_blank"  href="getpage.aspx?cid=2&id=1637" title="院领导慰问俞丽拿教授">院领导慰问俞丽拿教授</a></dt><dd>[2017-10-27]</dd></dl>
+                
+	               <dl><dt><a target="_blank"  href="getpage.aspx?cid=2&id=1636" title="上音完成2017年度党建课题中期检查交流工作">上音完成2017年度党建课题中期检查...</a></dt><dd>[2017-10-24]</dd></dl>
+                
+	               <dl><dt><a target="_blank"  href="getpage.aspx?cid=2&id=1635" title="上海市领导干部专题研讨班《音乐艺术与优美人格》在上音开班">上海市领导干部专题研讨班《音乐艺术与...</a></dt><dd>[2017-10-24]</dd></dl>
+                
+	               <dl><dt><a target="_blank"  href="getpage.aspx?cid=2&id=1634" title="上音师生第一时间收看十九大开幕会，反响热烈">上音师生第一时间收看十九大开幕会，反...</a></dt><dd>[2017-10-19]</dd></dl>
+                
+	               <dl><dt><a target="_blank"  href="getpage.aspx?cid=2&id=1633" title="“上音大学生理论讲习社”举办十九大精神学习交流活动">“上音大学生理论讲习社”举办十九大精...</a></dt><dd>[2017-10-19]</dd></dl>
+                
+	               <dl><dt><a target="_blank"  href="getpage.aspx?cid=2&id=1629" title="【喜迎十九大·砥砺奋进的五年】一流学科建设步步登高">【喜迎十九大·砥砺奋进的五年】一流学...</a></dt><dd>[2017-10-17]</dd></dl>
+                
+	               <dl><dt><a target="_blank"  href="getpage.aspx?cid=2&id=1627" title="第43届国际计算机音乐大会在上音举办">第43届国际计算机音乐大会在上音举办</a></dt><dd>[2017-10-17]</dd></dl>
+                
+	   </li>
+	  </ul>
+	 </div>
+
+         <div class="main box de_sjbk_04" id="div_05" style="display:none;">
+	  <ul>
+	   <li>
+            
+                   
+	               <dl><dt><a target="_blank"  href="getpage.aspx?cid=294&id=502" title="上音新闻中心聘任新一批学生记者"><span>[宣传部]</span>上音新闻中心聘任新一批学生记者</a></dt><dd>[10-27]</dd></dl>
+                
+                   
+	               <dl><dt><a target="_blank"  href="getpage.aspx?cid=294&id=501" title="上音师生赴澳门理工大学交流访问"><span>[民乐系]</span>上音师生赴澳门理工大学交流访问</a></dt><dd>[10-27]</dd></dl>
+                
+                   
+	               <dl><dt><a target="_blank"  href="getpage.aspx?cid=294&id=500" title="上音研究生慰问边防武警官兵"><span>[研究生部]</span>上音研究生慰问边防武警官兵</a></dt><dd>[10-27]</dd></dl>
+                
+                   
+	               <dl><dt><a target="_blank"  href="getpage.aspx?cid=294&id=498" title="上音工会重阳之际探望退休劳模"><span>[院工会]</span>上音工会重阳之际探望退休劳模</a></dt><dd>[10-27]</dd></dl>
+                
+                   
+	               <dl><dt><a target="_blank"  href="getpage.aspx?cid=294&id=496" title="上音管弦系学生柳鸣获得北京国际音乐节“青年音乐家奖”"><span>[管弦系]</span>上音管弦系学生柳鸣获得北京国际音...</a></dt><dd>[10-19]</dd></dl>
+                
+                   
+	               <dl><dt><a target="_blank"  href="getpage.aspx?cid=294&id=495" title="【喜迎十九大】上音学子的歌声在世纪公园上空唱响"><span>[宣传部]</span>【喜迎十九大】上音学子的歌声在世...</a></dt><dd>[10-17]</dd></dl>
+                
+                   
+	               <dl><dt><a target="_blank"  href="getpage.aspx?cid=294&id=494" title="研究生部师生赴美学术交流"><span>[研究生部]</span>研究生部师生赴美学术交流</a></dt><dd>[10-16]</dd></dl>
+                
+                   
+	               <dl><dt><a target="_blank"  href="getpage.aspx?cid=294&id=493" title="上音召开新学期全体外国留学生大会"><span>[国际交流处]</span>上音召开新学期全体外国留学生大会</a></dt><dd>[10-13]</dd></dl>
+                
+	   </li>
+	  </ul>
+	 </div>
+	</div>
+   </div>
+   <div class="side de_xygg">
+     <div class="main box de_lmys_02">
+	  <div class="main L">
+	   <dl><dd><img id="img_04" src="images/de_lmqh_b_04.jpg" onmouseover="changexygg('3')"></dd><dt><img src="images/de_lmqh_a_03.jpg"></dt><dd><img id="img_05" src="images/de_lmqh_a_05.jpg" onmouseover="changexygg('293')"></dd></dl>
+	  </div>
+	  <div class="side R"><a id="a_xygg" href="getpage.aspx?cid=3">更多+</a></div>
+	 </div>
+    
+	<div class="main box de_sjbk_02" id="div_04">
+	 <ul>
+	  <li>
+	   
+            
+	               <dl><dt><a target="_blank"  href="getpage.aspx?cid=3&id=398" title="上海音乐学院高层次人才公开选聘公告">上海音乐学院高层次人才公开选聘公告</a></dt><dd>[2017-10-25]</dd></dl>
+                
+	               <dl><dt><a target="_blank"  href="getpage.aspx?cid=3&id=396" title="关于公布2017高等音乐艺术院校第十届民乐作品（民族管弦乐）比赛决赛入围作品的公告">关于公布2017高等音乐艺术院校第十...</a></dt><dd>[2017-10-10]</dd></dl>
+                
+	               <dl><dt><a target="_blank"  href="getpage.aspx?cid=3&id=395" title="上海音乐学院2018届毕业生推介会邀请函">上海音乐学院2018届毕业生推介会邀...</a></dt><dd>[2017-10-10]</dd></dl>
+                
+	               <dl><dt><a target="_blank"  href="getpage.aspx?cid=3&id=394" title="上海音乐艺术发展中心招聘公告">上海音乐艺术发展中心招聘公告</a></dt><dd>[2017-09-22]</dd></dl>
+                
+	               <dl><dt><a target="_blank"  href="getpage.aspx?cid=3&id=393" title="2017高等音乐艺术院校第十届民乐作品（民族管弦乐）比赛赛事通知">2017高等音乐艺术院校第十届民乐作...</a></dt><dd>[2017-09-15]</dd></dl>
+                
+	               <dl><dt><a target="_blank"  href="getpage.aspx?cid=3&id=392" title="“2017作曲理论学科建设国际高峰论坛”通知">“2017作曲理论学科建设国际高峰论...</a></dt><dd>[2017-09-15]</dd></dl>
+                
+	               <dl><dt><a target="_blank"  href="getpage.aspx?cid=3&id=391" title="上音-英皇联合学院项目制工作人员招聘公告">上音-英皇联合学院项目制工作人员招聘...</a></dt><dd>[2017-07-07]</dd></dl>
+                
+	               <dl><dt><a target="_blank"  href="getpage.aspx?cid=3&id=390" title="2017年上海市艺术学研究生学术论坛——全国优秀筝乐作品、筝乐研究论文评选活动简章">2017年上海市艺术学研究生学术论坛...</a></dt><dd>[2017-07-06]</dd></dl>
+                
+	  </li>
+	 </ul>
+	</div>
+        <div class="main box de_sjbk_03" id="div_02" style="display:none;">
+	  <ul>
+	   <li>
+	               <dl><dt><a target="_blank"  href="getpage.aspx?cid=293&id=300" title="【人民网】2017上海音乐学院国际打击乐节暨第二届IPEA国际打击乐比赛国庆击响">【人民网】2017上海音乐学院国际打...</a></dt><dd>[2017-10-11]</dd></dl>
+                
+	               <dl><dt><a target="_blank"  href="getpage.aspx?cid=293&id=303" title="【青年报】上海当代音乐周聚焦“亚洲”与“对话”">【青年报】上海当代音乐周聚焦“亚洲”...</a></dt><dd>[2017-10-11]</dd></dl>
+                
+	               <dl><dt><a target="_blank"  href="getpage.aspx?cid=293&id=302" title="【光明网】上音打造中国声乐艺术学术高地">【光明网】上音打造中国声乐艺术学术高...</a></dt><dd>[2017-10-11]</dd></dl>
+                
+	               <dl><dt><a target="_blank"  href="getpage.aspx?cid=293&id=301" title="【澎湃新闻】上海音乐学院国际打击乐节国庆开锣">【澎湃新闻】上海音乐学院国际打击乐节...</a></dt><dd>[2017-10-11]</dd></dl>
+                
+	               <dl><dt><a target="_blank"  href="getpage.aspx?cid=293&id=299" title="【东方网】上音打击乐节暨第二届IPEA国际打击乐比赛国庆鸣锣开打">【东方网】上音打击乐节暨第二届IPE...</a></dt><dd>[2017-10-11]</dd></dl>
+                
+	               <dl><dt><a target="_blank"  href="getpage.aspx?cid=293&id=298" title="【青年报】上海音乐学院成立中国声乐艺术中心 廖昌永：建立声乐艺术中国学派">【青年报】上海音乐学院成立中国声乐艺...</a></dt><dd>[2017-10-11]</dd></dl>
+                
+	               <dl><dt><a target="_blank"  href="getpage.aspx?cid=293&id=297" title="【中新网】第十届上海当代音乐周将开幕 设“亚洲”与“对话”两大主题">【中新网】第十届上海当代音乐周将开幕...</a></dt><dd>[2017-10-11]</dd></dl>
+                
+	               <dl><dt><a target="_blank"  href="getpage.aspx?cid=293&id=296" title="【文汇报】“燕回东湖”再放歌 武汉举办系列活动纪念“中国之莺”周小燕百年诞辰">【文汇报】“燕回东湖”再放歌 武汉举...</a></dt><dd>[2017-10-11]</dd></dl>
+                
+	   </li>
+	  </ul>
+	 </div>
+   </div>
+  </div>
+  <div class="clear"></div>
+ </div>
+</div>
+
+<div class="main box">
+ <div class="wrap_1170">
+  <div class="main box h10"></div>
+  <div class="main de_yssj">
+   <div class="main box de_lmys_01">
+    <dl><dt><img src="images/de_lm_04.jpg"></dt><dd><a href="getpage.aspx?cid=4">更多+</a></dd></dl>
+   </div>
+   <div class="main box">
+    <div class="main de_jcsp_hbq">
+	 <div class="main de_jcsp">
+	  <div class="main L_lm"><a href="getpage.aspx?cid=112"><img src="images/de_yssj_01.jpg"></a></div>
+	  <div class="side R_sj">
+	   <ul>
+	    <li>
+	
+	               <dl><dt><a target="_blank" style="color:red;"  href="getpage.aspx?cid=433" title="学习贯彻全国高校思政工作会议精神">学习贯彻全国高校思政工作会议精神</a></dt><dd></dd></dl>
+                
+	               <dl><dt><a target="_blank" style="color:red;"  href="getpage.aspx?cid=404" title="“两学一做”学习教育">“两学一做”学习教育</a></dt><dd></dd></dl>
+                
+	               <dl><dt><a target="_blank" style=""  href="getpage.aspx?cid=400" title="2016丝绸之路音乐学院院长论坛">2016丝绸之路音乐学院院长论坛</a></dt><dd></dd></dl>
+                
+	               <dl><dt><a target="_blank" style=""  href="getpage.aspx?cid=401" title="2016第33届上海之春国际音乐节">2016第33届上海之春国际音乐节</a></dt><dd></dd></dl>
+                
+            
+	               <dl><dt><a target="_blank"  href="getpage.aspx?cid=112&id=14" title="徐坚强教授作品 蓝柳 2012年3月26日瑞典site">徐坚强教授作品 蓝柳 201...</a></dt><dd>[2015-11-06]</dd></dl>
+                
+	               <dl><dt><a target="_blank"  href="getpage.aspx?cid=112&id=13" title="2015数媒毕业音乐会">2015数媒毕业音乐会</a></dt><dd>[2015-07-07]</dd></dl>
+                
+	               <dl><dt><a target="_blank"  href="getpage.aspx?cid=112&id=10" title="廖昌永 《天边》">廖昌永 《天边》</a></dt><dd>[2015-04-28]</dd></dl>
+                
+	               <dl><dt><a target="_blank"  href="getpage.aspx?cid=112&id=9" title="廖昌永《多情的土地》">廖昌永《多情的土地》</a></dt><dd>[2015-04-28]</dd></dl>
+                
+	               <dl><dt><a target="_blank"  href="getpage.aspx?cid=112&id=3" title="黄河颂">黄河颂</a></dt><dd>[2015-04-28]</dd></dl>
+                
+	    </li>
+	   </ul>
+	  </div>
+	 </div>
+	 <div class="side de_hbq">
+
+	  <div class="main L_lm"><a href="getpage.aspx?cid=113">
+
+<img src="images/de_yssj_02.jpg"></a></div>
+	  <div class="side R_pic_qh">
+          <iframe id="news_113" width="289px" height="174px" src="view_newspic_0.aspx?cid=113&amp;width=289&amp;height=174&amp;imgfield=cGhvdG9z" frameborder="no" scrolling="no"></iframe>
+	  </div>
+	 </div>
+	</div>
+	<div class="side de_htyc">
+	 <div class="main L_lm"><a href="getpage.aspx?cid=114"><img src="images/de_yssj_03.jpg"></a></div>
+	 <div class="side R_sj">
+	  <ul>
+	   <li>
+	    
+            
+	               <dl><dt><a target="_blank"  href="getpage.aspx?cid=114&id=124">贺绿汀音乐厅2017年11月份演出信息表</a></dt></dl>
+                
+	               <dl><dt><a target="_blank"  href="getpage.aspx?cid=114&id=123">贺绿汀音乐厅2017年10月份演出信息表</a></dt></dl>
+                
+	               <dl><dt><a target="_blank"  href="getpage.aspx?cid=114&id=122">贺绿汀音乐厅2017年9月份演出信息表</a></dt></dl>
+                
+	               <dl><dt><a target="_blank"  href="getpage.aspx?cid=114&id=121">贺绿汀音乐厅2017年8月份演出信息表</a></dt></dl>
+                
+	               <dl><dt><a target="_blank"  href="getpage.aspx?cid=114&id=120">贺绿汀音乐厅2017年7月份演出信息表</a></dt></dl>
+                
+	               <dl><dt><a target="_blank"  href="getpage.aspx?cid=114&id=119">贺绿汀音乐厅2017年6月份演出信息表</a></dt></dl>
+                
+	   </li>
+	  </ul>
+	 </div>
+	</div>
+   </div>
+  </div>
+  <div class="clear"></div>
+ </div>
+</div>
+
+<div class="main box">
+ <div class="wrap_1170">
+  <div class="main box h10"></div>
+  <div class="main de_Blinks">
+   <ul>
+    <li><a target="_blank" href="http://wmzx.shcmusic.edu.cn/"><img src="images/de_links01.png"></a></li>
+	<li><a target="_blank" href="http://dwgk.shcmusic.edu.cn/"><img src="images/de_links02.png"></a></li>
+	<li><a target="_blank" href="http://xxgk.shcmusic.edu.cn/"><img src="images/de_links03.png"></a></li>
+        <li><a target="_blank" href="http://www.shcmusic.edu.cn/intro_17_children.aspx?cid=392"><img src="images/de_links06.png"></a></li>
+	<li><a target="_blank" href="getpage.aspx?cid=16"><img src="images/de_links04.png"></a></li>
+	<li><a target="_blank" href="getpage.aspx?cid=129"><img src="images/de_links05.png"></a></li>
+   </ul>
+  </div>
+  <div class="clear"></div>
+ </div>
+</div>
+
+<div class="main box">
+ <div class="wrap_1170">
+  <div class="main box h10"></div>
+  <div class="main box de_wx_yydl_links02">
+   <div class="main de_wx_yydl">
+
+    <div class="main de_weixin" id="img_wx">
+     <div class="main de_weixin_pic"><img src="images/weixin.jpg"></div>
+     <div class="main de_weixin_tc" id="img_wx_l" style="display:none;" ><img src="images/weixin1.jpg"></div>
+    </div>
+
+    <div class="main de_weixin" id="img_wx_2">
+     <div class="main de_weixin_pic"><img src="images/weixin2.jpg"></div>
+     <div class="main de_weixin_tc" id="img_wx_3" style="display:none;" ><img src="images/weixin3.jpg"></div> 
+    </div>
+
+   <div class="main de_weixin" id="img_wx_5">
+     <div class="main de_weixin_pic"><img src="images/erm01.png"></div>
+     <div class="main de_weixin_tc" id="img_wx_6" style="display:none;" ><img src="images/erwm03.png"></div> 
+    </div>
+  
+
+
+    <div class="main de_yydl">
+	 <dl>
+	  <dt><a target="_blank" href="http://js.shcmusic.edu.cn/"><img src="images/de_yydl01.jpg"></a></dt>
+<!--
+<dd><a target="_blank" href="http://enjoy.eastday.com/SIFF/32SSMIF-SCM/index.html"><img src="images/de_blinks_01.jpg"></a></dd>
+-->
+<!--	  <dd><input type="text" id="username" class="intro_yydlk" value="用户名" onFocus="if (value =='用户名'){value =''}" onBlur="if (value ==''){value='用户名'}"></dd>
+	  <dd><input type="password" id="userpass" class="intro_yydlk" value="" /></dd>
+	  <dd><input name="" type="button" onclick="login()" class="intro_yydlbtn"></dd>
+-->
+	 </dl>
+    </div>
+
+   </div>
+   <div class="side de_links02">
+    <ul>
+	 <li><a target="_blank" href="getpage.aspx?cid=296"><img src="images/de_links_01.jpg"></a></li>
+	 <li><a target="_blank" href="getpage.aspx?cid=297"><img src="images/de_links_02.jpg"></a></li>
+	 <li><a target="_blank" href="getpage.aspx?cid=129"><img src="images/de_links_03.jpg"></a></li>
+	</ul>
+   </div>
+  </div>
+  <div class="main box h20"></div>
+  <div class="clear"></div>
+ </div>
+</div>
+
+
+<div class="main box footer">
+ <div class="wrap_1190">
+  <div class="main box">
+   <div class="main L_logo_bq">
+    <div class="main L_logo"><img src="images/footer_01.jpg"></div>
+	<div class="side R_bq">
+	 <dl>
+	  <dt><a href="intro_124.aspx">联系我们</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="http://mail.shcmusic.edu.cn/">邮箱登陆</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="/intro_125.aspx">院 历</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="/intro_sitemap.aspx">网站地图</a></dt>
+	  <dd>© Copyright 2015 All rights reserved&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">技术支持：上海雨和信息技术有限公司</a></dd>
+	 </dl>
+
+	</div>
+   </div>
+<script type="text/javascript">document.write(unescape("%3Cspan id='_ideConac' %3E%3C/span%3E%3Cscript   src='http://dcs.conac.cn/js/02/000/0000/60878113/CA020000000608781130001.js' type='text/javascript'%3E%3C/script%3E"));</script>
+
+<div style=" margin-top:26px;"> 
+   <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31009102000034" ><img style=" margin-left:50px;" src="images/gaba.png" style="float:left"><p style="float:left;height:20px;line-height:20px;margin:0px 0px 0px 5px;color:white">沪公网安备:31009102000034</p> </a>
+</div>
+
+  <!-- <div class="side de_xl_links">
+    <ul>
+	 <li>
+	  <dl>
+          
+          <select name='select' class='input_xl'  onchange="if(this.options[this.selectedIndex].value!=''){window.open(this.options[this.selectedIndex].value,'newwin');}"><option selected>&nbsp;&nbsp;&nbsp;&nbsp;校内链接</option><option value='http://shcmadc.com' style='text-align: center'>&nbsp;&nbsp;&nbsp;&nbsp;上海音乐艺术发展中心</option><option value='http://oriit.shcmusic.edu.cn' style='text-align: center'>&nbsp;&nbsp;&nbsp;&nbsp;数字媒体艺术学院</option></select>
+	  </dl>
+	 </li>
+	 <li>
+	  <dl> <select name='select' class='input_xl'  onchange="if(this.options[this.selectedIndex].value!=''){window.open(this.options[this.selectedIndex].value,'newwin');}"><option selected>&nbsp;&nbsp;&nbsp;&nbsp;校外链接</option><option value='www.jointinst.com' style='text-align: center'>&nbsp;&nbsp;&nbsp;&nbsp;上音-英皇联合学院</option></select></dl>
+	 </li>
+	</ul>
+   </div>  -->
+  </div>
+  <div class="clear"></div>  
+ </div>
+</div>
+
+
+
+
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#carousel1").orbit({
+                animation: "horizontal-push",
+                animationSpeed: 1800,
+                timer: true,
+                advanceSpeed: 8000,
+                captions: true,
+                afterLoadComplete: function () {
+                    myOrbit = this;
+                }
+            });
+
+            $("#img_wx").hover(function () {
+                var $div = $("#img_wx_l");
+                $div.show();
+
+                $(this).hover(function () {
+                }, function () {
+                    $div.hide();
+                });
+
+            });
+
+            $("#img_wx_2").hover(function () {
+                var $div = $("#img_wx_3");
+                $div.show();
+
+                $(this).hover(function () {
+                }, function () {
+                    $div.hide();
+                });
+
+            });
+
+           $("#img_wx_5").hover(function () {
+                var $div = $("#img_wx_6");
+                $div.show();
+
+                $(this).hover(function () {
+                }, function () {
+                    $div.hide();
+                });
+
+            });
+
+
+
+        });
+
+      
+    </script>
+    
+    
+    <!--漂浮-->
+    
+    
+    
+   
+    
+    
+</body>
+</html>

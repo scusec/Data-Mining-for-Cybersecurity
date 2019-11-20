@@ -1,0 +1,679 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head xmlns=""> 
+  <title>福建中医药大学科研处</title> 
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type" /> 
+  <link rel="stylesheet" type="text/css" href="/r/cms/kyc/olddj3/css/dj3/main.css" /> 
+  <script src="/r/cms/front.js" type="text/javascript"></script> 
+  <script src="/r/cms/jquery.js" type="text/javascript"></script> 
+  <script type="text/javascript">
+$(function() {
+  Cms.siteFlow("",location.href, document.referrer);
+});
+</script> 
+  <style type="text/css">
+a{font-size:12px;}
+.f_left h2 a{  font-size:22px;color:#0553a5;}</style> 
+  <!-- 鼠标放置图片滚动 --> 
+  <script type="text/javascript">
+
+var dir=1;//每步移动像素，大＝快
+var speed=10;//循环周期（毫秒）大＝慢
+var MyMar=null;
+
+function Marquee(){//正常移动
+	var scrollbox = document.getElementById("scrollbox");
+	var scrollcopy = document.getElementById("scrollcopy");
+	if(dir>0&&(scrollcopy.offsetWidth-scrollbox.scrollLeft)<=0){
+		scrollbox.scrollLeft=0;
+	}
+	if(dir<0 &&(scrollbox.scrollLeft<=0)){
+		scrollbox.scrollLeft=scrollcopy.offsetWidth;
+	}
+		scrollbox.scrollLeft+=dir;
+}
+
+function onmouseoverMy(){
+	window.clearInterval(MyMar);
+}//暂停移动
+
+function onmouseoutMy() {
+	MyMar=setInterval(Marquee,speed);
+}//继续移动
+
+function r_left(){
+	if(dir==-1)
+	dir=1;
+}//换向左移
+
+function r_right(){
+	if(dir==1)
+	dir=-1;
+}//换向右移
+
+function IsIE(){
+	var browser=navigator.appName
+	if((browser=="Netscape")){
+		return false;
+	}
+	else if(browser=="Microsoft Internet Explorer"){
+		return true;
+	}else{
+		return null;
+	}
+}
+
+var _IsIE = IsIE();
+var _MousePX = 0;
+var _MousePY = 0;
+var _DivLeft = 0;
+var _DivRight = 0;
+var _AllDivWidth = 0;
+var _AllDivHeight = 0;
+
+function MoveDiv(e){
+
+	var obj = document.getElementById("scrollbox");
+	_MousePX = _IsIE ? (document.body.scrollLeft + event.clientX) : e.pageX;
+	_MousePY = _IsIE ? (document.body.scrollTop + event.clientY) : e.pageY;
+	//Opera Browser Can Support ''window.event'' and ''e.pageX''
+	
+	var obj1 = null;
+
+	if(obj.getBoundingClientRect){
+		//IE
+		obj1 = document.getElementById("scrollbox").getBoundingClientRect();
+		_DivLeft = obj1.left;
+		_DivRight = obj1.right;
+		_AllDivWidth = _DivRight - _DivLeft;
+	}else if(document.getBoxObjectFor){
+		//FireFox
+		obj1 = document.getBoxObjectFor(obj); 
+		var borderwidth = (obj.style.borderLeftWidth != null && obj.style.borderLeftWidth != "") ? parseInt(obj.style.borderLeftWidth) : 0;
+		_DivLeft = parseInt(obj1.x) - parseInt(borderwidth);
+		_AllDivWidth = Cut_Px(obj.style.width);
+		_DivRight = _DivLeft + _AllDivWidth;
+	}else{
+		//Other Browser(Opera)
+		_DivLeft = obj.offsetLeft;
+		_AllDivWidth = Cut_Px(obj.style.width);
+		var parent = obj.offsetParent;
+		
+		if(parent != obj){
+			while (parent){  
+				_DivLeft += parent.offsetLeft; 
+				parent = parent.offsetParent;
+			}
+		}
+		_DivRight = _DivLeft + _AllDivWidth;
+	}
+
+	var pos1,pos2;
+	pos1 = parseInt(_AllDivWidth * 0.4) + _DivLeft;
+	pos2 = parseInt(_AllDivWidth * 0.6) + _DivLeft;
+
+	if(_MousePX > _DivLeft && _MousePX < _DivRight){
+		if(_MousePX > _DivLeft && _MousePX < pos1){
+			r_left(); //Move left
+		}
+		else if(_MousePX < _DivRight && _MousePX > pos2){
+			r_right(); //Move right
+		}
+		if(_MousePX > pos1 && _MousePX < pos2){
+			onmouseoverMy(); //Stop
+			MyMar=null;
+		}else if(_MousePX < pos1 || _MousePX > pos2){
+			if(MyMar==null){
+				MyMar=setInterval(Marquee,speed);
+			}
+		}
+	}
+}
+
+function Cut_Px(cswidth){
+	cswidth = cswidth.toLowerCase();
+	if(cswidth.indexOf("px") != -1){
+		cswidth.replace("px","");
+		cswidth = parseInt(cswidth);
+	}
+	return cswidth;
+}
+
+function MoveOutDiv(){
+	if(MyMar == null){
+		MyMar=setInterval(Marquee,speed);
+	}
+}
+</script> 
+  <!--   --> 
+  <!--图片切换效果--> 
+  <script type="text/javascript" src="http://www.itxueyuan.org/uploads/javascript/jquery.js"></script> 
+  <script type="text/javascript">
+
+$(document).ready(function() {
+	$(".imageRotation").each(function(){
+		// 获取有关参数
+		var imageRotation = this,  // 取得 图片轮换容器
+			imageBox = $(imageRotation).children(".imageBox")[0],  // 取得 图片容器
+			icoBox = $(imageRotation).children(".icoBox")[0],  // 取得 图标容器
+			icoArr = $(icoBox).children(),  // 取得所有图标，并保存为数组
+			imageWidth = $(imageRotation).width(),  // 图片宽度
+			imageNum = $(imageBox).children().size(),  // 图片数量
+			imageReelWidth = imageWidth*imageNum,  // 图片容器宽度
+			activeID = parseInt($($(icoBox).children(".active")[0]).attr("rel")),  // 当前图片ID
+			nextID = 0,  // 下张图片ID
+			setIntervalID,  // setInterval() 函数ID
+			intervalTime = 4000,  // 间隔时间
+			speed =500;  // 执行速度
+		
+		// 设置 图片容器 的宽度
+		$(imageBox).css({'width' : imageReelWidth + "px"});
+		
+		// 图片轮换函数
+		var rotate=function(clickID){
+			if(clickID){ nextID = clickID; }
+			else{ nextID=activeID<=3 ? activeID+1 : 1; }
+			
+			$(icoArr[activeID-1]).removeClass("active");
+			$(icoArr[nextID-1]).addClass("active");
+			$(imageBox).animate({left:"-"+(nextID-1)*imageWidth+"px"} , speed);
+			
+			activeID = nextID;
+		}
+		setIntervalID=setInterval(rotate,intervalTime);
+		
+		$(imageBox).hover(
+			function(){ clearInterval(setIntervalID); },
+			function(){ setIntervalID=setInterval(rotate,intervalTime); }
+		);	
+		
+		$(icoArr).click(function(){
+			clearInterval(setIntervalID);
+			var clickID = parseInt($(this).attr("rel"));
+			rotate(clickID);
+			setIntervalID=setInterval(rotate,intervalTime);
+		});
+	});
+});
+</script> 
+  <style type="text/css">
+  ul {
+    list-style-image:url(list-style.gif);
+  }
+  pre {
+    font-family: "Lucida Console", "Courier New", Verdana;
+    border: 1px solid #CCC;
+    background: #f2f2f2;
+    padding: 10px;
+  }
+  code {
+    font-family: "Lucida Console", "Courier New", Verdana;
+    margin: 0;
+    padding: 0;
+  }
+
+  #gallery {
+    padding: 4px;
+	border:1px solid #cccccc;
+  }
+ 
+
+.imageRotation{
+	height:257px;
+	width:378px;
+	overflow:hidden;  /*--超出容器的所有元素都不可见--*/
+	position:relative;  /*--相对定位--*/
+	border:1px solid #eee;
+	background-color:#eee;
+	bodrer-radius:5px;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	}
+
+.imageBox{
+	position:absolute;  /*--固定定位--*/
+	height:235px;
+	top:0px;
+	left:0px;
+	overflow:hidden;
+	}
+.imageBox img {
+	display:block;
+	float:left;
+	border:none;
+        width:378px;
+        heigth:235px;
+	}
+
+.icoBox{
+	position:absolute;  /*--固定定位--*/
+	bottom:4px;
+	left:300px;
+	width:76px;
+	height:12px;
+	text-align:center;
+	line-height:40px;
+	}
+.icoBox span{
+	display:block;
+	float:left;
+	height:12px;
+	width:12px;
+	margin-left:3px;
+	overflow:hidden;
+	background:url("/r/cms/kyc/olddj3/img/images/ico.png") 0px 0px no-repeat;
+	cursor:pointer;
+	}
+.icoBox span.active {
+	background-position:0px -12px;
+	cursor:default;
+	}
+  </style> 
+ </head> 
+ <body xmlns=""> 
+  <div class="wrap"> 
+   <!-- header start --> 
+   <!-- header end --> 
+   <!--  nav start  --><script language="JavaScript">
+function correctPNG() // correctly handle PNG transparency in Win IE 5.5 & 6.
+{
+var arVersion = navigator.appVersion.split("MSIE")
+var version = parseFloat(arVersion[1])
+if ((version >= 5.5) && (document.body.filters)){
+for(var j=0; j<document.images.length; j++){
+var images = document.images[j]
+var imagesName = images.src.toUpperCase()
+if (imagesName.substring(imagesName.length-3, imagesName.length) == "PNG"){
+var imagesID = (images.id) ? "id='" + images.id + "' " : ""
+var imagesClass = (images.className) ? "class='" + images.className + "' " : ""
+var imagesTitle = (images.title) ? "title='" + images.title + "' " : "title='" + images.alt + "' "
+var imagesStyle = "display:inline-block;" + images.style.cssText
+var strNewHTML = "<span " + imagesID + imagesClass + imagesTitle+ " style=\"" + "width:" + images.width + "px; height:" + images.height + "px;" + imagesStyle + ";"
++ "filter:progid:DXImageTransform.Microsoft.AlphaImageLoader"+ "(src=\'" + images.src + "\', sizingMethod='scale');\"></span>"
+images.outerHTML = strNewHTML
+j = j-1
+}
+}
+}
+}
+window.attachEvent("onload", correctPNG);
+</script>
+
+
+<script src="/r/cms/front.js" type="text/javascript"></script>
+<script src="/r/cms/jquery.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(function() {
+  Cms.siteFlow("",location.href, document.referrer);
+});
+</script>
+
+
+<div class="top_bg"><img src="/u/cms/kyc/201405/17081755sgko.jpg" width="1147" border="0" height="160" /></div>
+
+
+
+<div class="header"> 
+ <img src=/u/cms/kyc/201405/20001933owzr.png border="0"  height="88"/>
+  </div>		
+<div class="nav">
+<table width="1147" height="15" border="0" cellpadding="0" cellspacing="0" style="margin:0 auto;">
+<tr>                                                                                                   
+<th align="center"><img src="/r/cms/kyc/olddj3/img/images/n_bottom.gif" width="1147"  ></th>			
+</tr>
+</table>
+	  <table width="1147" height="39" border="0" cellpadding="0" cellspacing="0">
+		<tr>                                       
+			<td align="center" nowrap="nowrap"><a href="/">首页</a></td>
+			<td align="center" nowrap="nowrap"><a href="http://kycnew.fjtcm.edu.cn:80/zzjg20140517050654.jhtml" >组织机构</a></td>
+			<td align="center" nowrap="nowrap"><a href="http://kycnew.fjtcm.edu.cn/gjzrkxjjwwj20140518045127/index.jhtml" >规章制度</a></td>
+			<td align="center" nowrap="nowrap"><a href="http://kycnew.fjtcm.edu.cn/kydt20140517052553/index.jhtml" >科研焦点</a></td>
+			<td align="center" nowrap="nowrap"><a href="http://kycnew.fjtcm.edu.cn/tzgg20140517053433/index.jhtml" >科研管理</a></td>
+			<td align="center" nowrap="nowrap"><a href="http://kycnew.fjtcm.edu.cn:80/xsdt20140517051529/index.jhtml" >学术动态</a></td>
+			<td align="center" nowrap="nowrap"><a href="http://kycnew.fjtcm.edu.cn:80/xfjs20140517052227/index.jhtml" >学风建设</a></td>
+			<td align="center" nowrap="nowrap"><a href="http://210.34.64.83" >实验动物中心</a></td>
+			<td align="center" nowrap="nowrap"><a href="http://kyglxt.fjtcm.edu.cn" >科研管理系统</a></td>
+			<td align="center" nowrap="nowrap"><a href="http://kycnew.fjtcm.edu.cn/fjadmin/fjcms/login.do?returnUrl=/fjadmin/fjcms/index.do" >管理后台</a></td>
+			<td align="center" nowrap="nowrap"><a href="http://www.fjtcm.edu.cn/" >学校主页</a></td>
+			</tr>
+	  </table>
+	</div> 
+   <!-- nav end --> 
+   <div class="main"> 
+    <div class="center"> 
+     <!-- top start --> 
+     <div class="first"> 
+      <!--  --> 
+      <table> 
+       <tbody> 
+        <tr> 
+         <td nowrap="" valign="top"> 
+          <div id="container"> 
+           <div class="imageRotation"> 
+            <div class="imageBox">
+                
+             <a href="http://kycnew.fjtcm.edu.cn:80/xytp20140517071050/63703.jhtml" title="校园图片1"><img src="/u/cms/kyc/201405/170750343j71.jpg" class="image0" width="378" height="235" /></a>  
+             <a href="http://kycnew.fjtcm.edu.cn:80/xytp20140517071050/63701.jhtml" title="校园图片3"><img src="/u/cms/kyc/201405/17075020u37c.jpg" class="image0" width="378" height="235" /></a>  
+             <a href="http://kycnew.fjtcm.edu.cn:80/xytp20140517071050/63700.jhtml" title="校园图片5"><img src="/u/cms/kyc/201405/17075000bu0z.jpg" class="image0" width="378" height="235" /></a>  
+             <a href="http://kycnew.fjtcm.edu.cn:80/xytp20140517071050/63699.jhtml" title="校园图片6"><img src="/u/cms/kyc/201405/17075120oz08.jpg" class="image0" width="378" height="235" /></a>   
+            </div> 
+            <div class="icoBox"> 
+             <span class="active" rel="1">1</span> 
+             <span rel="2">2</span> 
+             <span rel="3">3</span> 
+             <span rel="4">4</span> 
+            </div> 
+           </div> 
+          </div> </td> 
+         <td nowrap="" valign="top"> 
+          <div class="f_right"> 
+           <div class="friendslink" style="height: 256px;"> 
+            <table width="100%" border="0" cellpadding="0" cellspacing="0" class="frind_table"> 
+             <tbody> 
+              <tr> 
+               <td width="30" nowrap=""><img src="/r/cms/kyc/olddj3/img/images/rightbg_01.gif" /></td> 
+               <td class="table_td" width="20%" nowrap="">通知公告</td> 
+               <td class="table_td1" width="80%" nowrap=""><span><a href="/tzgg20140517053433/index.jhtml">more</a></span></td> 
+              </tr> 
+             </tbody> 
+            </table> 
+            <!--<h4><span style="font-weight:normal;"><a href="/tzgg20140517053433/index.jhtml">more</a></span><a href="/tzgg20140517053433/index.jhtml" style="color:#ffffff; line-height:30px;margin-bottom:10px; font-size:14px;"></a>通知公告</h4> --> 
+            <div class="div_ul">
+             <ul>
+              <li><a href="http://kycnew.fjtcm.edu.cn:80/tzgg20140517053433/113294.jhtml" title="转发省教育厅关于做好2017年度下半年中青年教师教育科研项目结题工作的通知">转发省教育厅关于做好2017年度下半年中青年教师教育科研项...</a></li>               <li><a href="http://kycnew.fjtcm.edu.cn:80/tzgg20140517053433/113292.jhtml" title="关于签订报送2017年省卫生计生科研人才培养项目合同书的通知">关于签订报送2017年省卫生计生科研人才培养项目合同书的通知</a></li>               <li><a href="http://kycnew.fjtcm.edu.cn:80/tzgg20140517053433/113284.jhtml" title="转发关于福建省康复重点实验室联合福建省康复产业研究院开放课题申报的通知">转发关于福建省康复重点实验室联合福建省康复产业研究院开...</a></li>               <li><a href="http://kycnew.fjtcm.edu.cn:80/tzgg20140517053433/113265.jhtml" title="关于推荐第十二届社会科学优秀成果奖学科评审组（初评）专家人选的通知">关于推荐第十二届社会科学优秀成果奖学科评审组（初评）专...</a></li>               <li><a href="http://kycnew.fjtcm.edu.cn:80/tzgg20140517053433/113192.jhtml" title="关于做好2018年度国家社会科学基金项目第一轮申报工作的补充通知">关于做好2018年度国家社会科学基金项目第一轮申报工作的补...</a></li>               <li><a href="http://kycnew.fjtcm.edu.cn:80/tzgg20140517053433/113126.jhtml" title="转发福建省教育厅办公室关于开展2017年度高校科研实验室安全检查的通知">转发福建省教育厅办公室关于开展2017年度高校科研实验室安...</a></li>               <li><a href="http://kycnew.fjtcm.edu.cn:80/tzgg20140517053433/113055.jhtml" title="转发福建省科学技术厅关于转发科技部国际合作司举办东亚峰会新能源论坛的通知">转发福建省科学技术厅关于转发科技部国际合作司举办东亚峰...</a></li>               <li><a href="http://kycnew.fjtcm.edu.cn:80/tzgg20140517053433/112999.jhtml" title="转发国家中医药管理局科技司关于组织中医药科技平台基本情况调查的函">转发国家中医药管理局科技司关于组织中医药科技平台基本情...</a></li>               <li><a href="http://kycnew.fjtcm.edu.cn:80/tzgg20140517053433/112964.jhtml" title="关于填报2017年度科研经费管理情况表的通知">关于填报2017年度科研经费管理情况表的通知</a></li>  
+             </ul>  
+            </div> 
+           </div> 
+          </div> </td> 
+         <td nowrap="" valign="top"> 
+          <div class="f_right"> 
+           <!--  特别推荐start --> 
+           <div class="friendslink" style="height: 256px"> 
+            <table width="100%" border="0" cellpadding="0" cellspacing="0" class="frind_table"> 
+             <tbody> 
+              <tr> 
+               <td width="30" nowrap=""><img src="/r/cms/kyc/olddj3/img/images/rightbg_01.gif" border="0" /></td> 
+               <td class="table_td" width="20%" nowrap="">学术动态</td> 
+               <td class="table_td1" width="80%" nowrap=""><span><a href="/xsdt20140517051529/index.jhtml">more</a></span></td> 
+              </tr> 
+             </tbody> 
+            </table> 
+            <!--<h4><span style="font-weight:normal;"><a href="/xsdt20140517051529/index.jhtml">more</a></span>学术动态</h4>--> 
+            <div class="div_ul">
+                
+             <ul> 
+              <li><a href="http://kycnew.fjtcm.edu.cn:80/xsdt20140517051529/105812.jhtml" title="“旗山讲坛院士行”学术报告会--程京院士《探秘艺术与生命健康》">“旗山讲坛院士行”学术报告会--程京院士《探秘艺术与生命...</a></li> 
+             </ul>  
+             <ul> 
+              <li><a href="http://kycnew.fjtcm.edu.cn:80/xsdt20140517051529/105811.jhtml" title="“旗山讲坛院士行”学术报告会--顾晓松院士《组织工程技术与神经再生》">“旗山讲坛院士行”学术报告会--顾晓松院士《组织工程技术...</a></li> 
+             </ul>  
+             <ul> 
+              <li><a href="http://kycnew.fjtcm.edu.cn:80/xsdt20140517051529/105801.jhtml" title="“旗山讲坛院士行”学术报告会--张运院士《心血管重构研究现状》">“旗山讲坛院士行”学术报告会--张运院士《心血管重构研究...</a></li> 
+             </ul>  
+             <ul> 
+              <li><a href="http://kycnew.fjtcm.edu.cn:80/xsdt20140517051529/105680.jhtml" title="中国工程院副院长樊代明院士学术报告《HIM 走向医学发展新时代》">中国工程院副院长樊代明院士学术报告《HIM 走向医学发展新...</a></li> 
+             </ul>  
+             <ul> 
+              <li><a href="http://kycnew.fjtcm.edu.cn:80/xsdt20140517051529/105369.jhtml" title="关于举办中国工程院樊代明院士学术报告会的通知">关于举办中国工程院樊代明院士学术报告会的通知</a></li> 
+             </ul>  
+             <ul> 
+              <li><a href="http://kycnew.fjtcm.edu.cn:80/xsdt20140517051529/95662.jhtml" title="学术讲座材料—关于国家社科基金申报的几个问题—省党校李永杰教授">学术讲座材料—关于国家社科基金申报的几个问题—省党校李...</a></li> 
+             </ul>  
+             <ul> 
+              <li><a href="http://kycnew.fjtcm.edu.cn:80/xsdt20140517051529/64051.jhtml" title="学术讲座通知——朱伟东教授（5月23日）">学术讲座通知——朱伟东教授（5月23日）</a></li> 
+             </ul>  
+             <ul> 
+              <li><a href="http://kycnew.fjtcm.edu.cn:80/xsdt20140517051529/72758.jhtml" title="讲座时间更改通知（沈剑刚教授讲座4月22日改为21日）">讲座时间更改通知（沈剑刚教授讲座4月22日改为21日）</a></li> 
+             </ul>  
+             <ul> 
+              <li><a href="http://kycnew.fjtcm.edu.cn:80/xsdt20140517051529/63891.jhtml" title="学术讲座通知——“2014年旗山讲坛--院士行”学术报告会（4月21日）">学术讲座通知——“2014年旗山讲坛--院士行”学术报告会...</a></li> 
+             </ul>   
+            </div> 
+           </div> 
+           <!--  特别推荐end  --> 
+          </div> </td> 
+        </tr> 
+        <tr> 
+         <td nowrap="" valign="top"> 
+          <div class="listbox"> 
+           <table width="100%" border="0" cellpadding="0" cellspacing="0" class="frind_table"> 
+            <tbody> 
+             <tr> 
+              <td width="20%" nowrap="" class="table_td4">科研动态</td> 
+              <td class="table_td2" width="21" nowrap=""><img src="/r/cms/kyc/olddj3/img/images/titlebg_03.gif" border="0" /></td> 
+              <td class="table_td3" width="80%" align="right" nowrap=""><span><a href="/kydt20140517052553/index.jhtml">more</a></span></td> 
+             </tr> 
+            </tbody> 
+           </table> 
+           <!--<h4><span><a href="/kydt20140517052553/index.jhtml">more</a></span>科研动态</h4>-->  
+           <ul>
+            <li><a href="http://kycnew.fjtcm.edu.cn:80/kydt20140517052553/108754.jhtml" title="中国工程院副院长、工程院院士樊代明到我校作学术报告">中国工程院副院长、工程院院士樊代明到我校作学术报告</a></li>             <li><a href="http://kycnew.fjtcm.edu.cn:80/kydt20140517052553/108436.jhtml" title="我校召开2017年度国家自然科学基金项目申报培训工作会">我校召开2017年度国家自然科学基金项目申报培训工作会</a></li>             <li><a href="http://kycnew.fjtcm.edu.cn:80/kydt20140517052553/107945.jhtml" title="我校举办“旗山讲坛院士行”学术报告会">我校举办“旗山讲坛院士行”学术报告会</a></li>             <li><a href="http://kycnew.fjtcm.edu.cn:80/kydt20140517052553/107944.jhtml" title="中国工程院副院长、工程院院士樊代明到我校作学术报告">中国工程院副院长、工程院院士樊代明到我校作学术报告</a></li>             <li><a href="http://kycnew.fjtcm.edu.cn:80/kydt20140517052553/107943.jhtml" title="我校举办2016年新立项国家自然科学基金项目培训会">我校举办2016年新立项国家自然科学基金项目培训会</a></li>             <li><a href="http://kycnew.fjtcm.edu.cn:80/kydt20140517052553/107941.jhtml" title="我校4项发明专利获闽侯县科技文体局奖励        ">我校4项发明专利获闽侯县科技文体局奖励        </a></li>  
+           </ul>  
+          </div> </td> 
+         <td nowrap="" valign="top"> 
+          <div class="listbox"> 
+           <table width="100%" border="0" cellpadding="0" cellspacing="0" class="frind_table"> 
+            <tbody> 
+             <tr> 
+              <td width="20%" nowrap="" class="table_td4">规章制度</td> 
+              <td class="table_td2" width="21" nowrap=""><img src="/r/cms/kyc/olddj3/img/images/titlebg_03.gif" border="0" /></td> 
+              <td class="table_td3" width="80%" align="right" nowrap=""><span><a href="/gzzd20140517051551/index.jhtml">more</a></span></td> 
+             </tr> 
+            </tbody> 
+           </table> 
+           <!--<h4><span><a href="/gzzd20140517051551/index.jhtml">more</a></span>规章制度</h4>-->  
+           <ul>
+            <li><a href="http://kycnew.fjtcm.edu.cn:80/gzzd20140517051551/63799.jhtml" title="福建省人民政府关于加快医药产业发展十二条措施">福建省人民政府关于加快医药产业发展十二条措施</a></li>             <li><a href="http://kycnew.fjtcm.edu.cn:80/gzzd20140517051551/63798.jhtml" title="福建省科学技术厅关于进一步推进科技计划项目管理改革的意见">福建省科学技术厅关于进一步推进科技计划项目管理改革的意见</a></li>             <li><a href="http://kycnew.fjtcm.edu.cn:80/gzzd20140517051551/63796.jhtml" title="校办〔2013〕59号福建中医药大学关于印发科技合同管理办法的通知">校办〔2013〕59号福建中医药大学关于印发科技合同管理办法...</a></li>             <li><a href="http://kycnew.fjtcm.edu.cn:80/gzzd20140517051551/63794.jhtml" title="校办〔2010〕81号福建中医药大学办公室关于印发科研管理若干制度的通知">校办〔2010〕81号福建中医药大学办公室关于印发科研管理若...</a></li>             <li><a href="http://kycnew.fjtcm.edu.cn:80/gzzd20140517051551/63790.jhtml" title="中医药科技成果登记办法">中医药科技成果登记办法</a></li>             <li><a href="http://kycnew.fjtcm.edu.cn:80/gzzd20140517051551/63788.jhtml" title="福建省中青年教师教育科研项目管理暂行办法">福建省中青年教师教育科研项目管理暂行办法</a></li>  
+           </ul>  
+          </div> </td> 
+         <td nowrap="" valign="top"> 
+          <div class="listbox"> 
+           <table width="100%" border="0" cellpadding="0" cellspacing="0" class="frind_table"> 
+            <tbody> 
+             <tr> 
+              <td width="20%" nowrap="" class="table_td4">下载专区</td> 
+              <td class="table_td2" width="21" nowrap=""><img src="/r/cms/kyc/olddj3/img/images/titlebg_03.gif" border="0" /></td> 
+              <td class="table_td3" width="80%" align="right" nowrap=""><span><a href="/xzzq20140517053527/index.jhtml">more</a></span></td> 
+             </tr> 
+            </tbody> 
+           </table> 
+           <!--<h4><span><a href="/xzzq20140517053527/index.jhtml">more</a></span>下载专区</h4>-->  
+           <ul>
+            <li><a href="http://kycnew.fjtcm.edu.cn:80/xzzq20140517053527/101642.jhtml" title="所有项目结题材料模版2017.6修订">所有项目结题材料模版2017.6修订</a></li>             <li><a href="http://kycnew.fjtcm.edu.cn:80/xzzq20140517053527/86706.jhtml" title="合同协议申请材料——科技合同专用章申请2014.11.17">合同协议申请材料——科技合同专用章申请2014.11.17</a></li>             <li><a href="http://kycnew.fjtcm.edu.cn:80/xzzq20140517053527/96500.jhtml" title="经费调整说明申请表2015.11.18修订">经费调整说明申请表2015.11.18修订</a></li>             <li><a href="http://kycnew.fjtcm.edu.cn:80/xzzq20140517053527/98024.jhtml" title="科研项目事项变更申请表（延期中止等）2015.12修订">科研项目事项变更申请表（延期中止等）2015.12修订</a></li>             <li><a href="http://kycnew.fjtcm.edu.cn:80/xzzq20140517053527/113273.jhtml" title="中西医结合基础综合实验室">中西医结合基础综合实验室</a></li>             <li><a href="http://kycnew.fjtcm.edu.cn:80/xzzq20140517053527/113272.jhtml" title="闽台中医药科研合作基地">闽台中医药科研合作基地</a></li>  
+           </ul>  
+          </div> </td> 
+        </tr> 
+       </tbody> 
+      </table> 
+      <div class="line_h">
+        &nbsp; 
+      </div> 
+      <!-- 时代先锋 strat --> 
+      <div class="last"> 
+       <div class="lastleft"> 
+        <img width="36" height="149" alt="" src="/r/cms/kyc/olddj3/img/images/last.jpg" /> 
+       </div> 
+       <div class="lastright"> 
+        <!--  --> 
+        <div id="scrollbox" class="scroll" onmouseout="MoveOutDiv();" onmousemove="MoveDiv(event);"> 
+         <div id="scrollcon" style="width: 100%"> 
+          <table border="0" cellspacing="0" cellpadding="0" width="100%"> 
+           <tbody> 
+            <tr> 
+             <td valign="top"> 
+              <table width="100%">
+               <tbody> 
+                <tr>
+                 <td> 
+                  <div class="listimg"> 
+                   <a href="http://kycnew.fjtcm.edu.cn:80/kydt20140517052553/75647.jhtml"><img src="/u/cms/kyc/201406/12092756hxig.jpg" width="150" height="107" /></a> 
+                  </div> <span title="我校举办第四次中药资源普查福建省试点工作实施方案培训会">我校举办第四次中...</span></td>                  <td> 
+                  <div class="listimg"> 
+                   <a href="http://kycnew.fjtcm.edu.cn:80/kydt20140517052553/74450.jhtml"><img src="/u/cms/kyc/201406/05203648xgh5.jpg" width="150" height="107" /></a> 
+                  </div> <span title="全国中西医结合活血化瘀研究学术大会在福州召开">全国中西医结合活...</span></td>                  <td> 
+                  <div class="listimg"> 
+                   <a href="http://kycnew.fjtcm.edu.cn:80/kydt20140517052553/74448.jhtml"><img src="/u/cms/kyc/201406/05203458i4r4.jpg" width="150" height="107" /></a> 
+                  </div> <span title="香港理工大学陈智轩教授来校交流访问">香港理工大学陈智...</span></td>                  <td> 
+                  <div class="listimg"> 
+                   <a href="http://kycnew.fjtcm.edu.cn:80/kydt20140517052553/74447.jhtml"><img src="/u/cms/kyc/201406/05203240527b.jpg" width="150" height="107" /></a> 
+                  </div> <span title="我校举办片仔癀科研情况讨论会">我校举办片仔癀科...</span></td>                  <td> 
+                  <div class="listimg"> 
+                   <a href="http://kycnew.fjtcm.edu.cn:80/kydt20140517052553/74445.jhtml"><img src="/u/cms/kyc/201406/05202322mcqw.jpg" width="150" height="107" /></a> 
+                  </div> <span title="科研处开展廉政教育专题学习活动">科研处开展廉政教...</span></td>                  <td> 
+                  <div class="listimg"> 
+                   <a href="http://kycnew.fjtcm.edu.cn:80/kydt20140517052553/74443.jhtml"><img src="/u/cms/kyc/201406/05201151nc3n.jpg" width="150" height="107" /></a> 
+                  </div> <span title="我校国家科技部国际合作项目通过科技厅验收">我校国家科技部国...</span></td>                  <td> 
+                  <div class="listimg"> 
+                   <a href="http://kycnew.fjtcm.edu.cn:80/kydt20140517052553/74082.jhtml"><img src="/u/cms/kyc/201406/02003721t6qo.jpg" width="150" height="107" /></a> 
+                  </div> <span title="科研处赴骨伤学院调研">科研处赴骨伤学院...</span></td>                  <td> 
+                  <div class="listimg"> 
+                   <a href="http://kycnew.fjtcm.edu.cn:80/kydt20140517052553/74081.jhtml"><img src="/u/cms/kyc/201406/020035527tda.jpg" width="150" height="107" /></a> 
+                  </div> <span title="科研处赴中西医结合学院调研">科研处赴中西医结...</span></td>                  <td> 
+                  <div class="listimg"> 
+                   <a href="http://kycnew.fjtcm.edu.cn:80/kydt20140517052553/74080.jhtml"><img src="/u/cms/kyc/201406/02004157y6rn.jpg" width="150" height="107" /></a> 
+                  </div> <span title="科研处赴中医学院调研">科研处赴中医学院...</span></td>                  <td> 
+                  <div class="listimg"> 
+                   <a href="http://kycnew.fjtcm.edu.cn:80/kydt20140517052553/74079.jhtml"><img src="/u/cms/kyc/201406/02003025j6eh.jpg" width="150" height="107" /></a> 
+                  </div> <span title="科研处赴药学院调研">科研处赴药学院调研</span></td>                  <td> 
+                  <div class="listimg"> 
+                   <a href="http://kycnew.fjtcm.edu.cn:80/kydt20140517052553/74077.jhtml"><img src="/u/cms/kyc/201406/02001834suhc.jpg" width="150" height="107" /></a> 
+                  </div> <span title="国家卫生计生委食品司副司长张磊时一行来我校调研">国家卫生计生委食...</span></td>                  <td> 
+                  <div class="listimg"> 
+                   <a href="http://kycnew.fjtcm.edu.cn:80/kydt20140517052553/74076.jhtml"><img src="/u/cms/kyc/201406/02001632i7os.jpg" width="150" height="107" /></a> 
+                  </div> <span title="省人口和计划生育科学技术研究所来我校调研">省人口和计划生育...</span></td>                  <td> 
+                  <div class="listimg"> 
+                   <a href="http://kycnew.fjtcm.edu.cn:80/kydt20140517052553/74075.jhtml"><img src="/u/cms/kyc/201406/020008036ots.jpg" width="150" height="107" /></a> 
+                  </div> <span title="台湾阳明大学李光申教授为我校师生举办讲座">台湾阳明大学李光...</span></td>                  <td> 
+                  <div class="listimg"> 
+                   <a href="http://kycnew.fjtcm.edu.cn:80/kydt20140517052553/74071.jhtml"><img src="/u/cms/kyc/201406/02000018qy80.jpg" width="150" height="107" /></a> 
+                  </div> <span title="北京大学药学院蔡少青教授来我校进行学术交流">北京大学药学院蔡...</span></td>                  <td> 
+                  <div class="listimg"> 
+                   <a href="http://kycnew.fjtcm.edu.cn:80/kydt20140517052553/74070.jhtml"><img src="/u/cms/kyc/201406/0123580854md.jpg" width="150" height="107" /></a> 
+                  </div> <span title="省中西医结合老年性疾病重点实验室通过现场考核">省中西医结合老年...</span></td>                  <td> 
+                  <div class="listimg"> 
+                   <a href="http://kycnew.fjtcm.edu.cn:80/kydt20140517052553/74069.jhtml"><img src="/u/cms/kyc/201406/01235459rrca.jpg" width="150" height="107" /></a> 
+                  </div> <span title="美国费城托马斯杰费逊大学医院专家来我校讲座">美国费城托马斯杰...</span></td>                  <td> 
+                  <div class="listimg"> 
+                   <a href="http://kycnew.fjtcm.edu.cn:80/kydt20140517052553/74067.jhtml"><img src="/u/cms/kyc/201406/01234749zrlp.jpg" width="150" height="107" /></a> 
+                  </div> <span title="我校举办“2014年旗山讲坛--院士行” 学术报告会">我校举办“2014年...</span></td>                  <td> 
+                  <div class="listimg"> 
+                   <a href="http://kycnew.fjtcm.edu.cn:80/kydt20140517052553/74066.jhtml"><img src="/u/cms/kyc/201406/01233151ev48.jpg" width="150" height="107" /></a> 
+                  </div> <span title="香港大学沈剑刚教授应邀到我校访问并作学术报告">香港大学沈剑刚教...</span></td>                  <td> 
+                  <div class="listimg"> 
+                   <a href="http://kycnew.fjtcm.edu.cn:80/kydt20140517052553/74064.jhtml"><img src="/u/cms/kyc/201406/01231756ospj.jpg" width="150" height="107" /></a> 
+                  </div> <span title="我校召开国家中医药管理局中医康复研究中心工作汇报会">我校召开国家中医...</span></td>                  <td> 
+                  <div class="listimg"> 
+                   <a href="http://kycnew.fjtcm.edu.cn:80/kydt20140517052553/63977.jhtml"><img src="/u/cms/kyc/201405/18011911rz8a.jpg" width="150" height="107" /></a> 
+                  </div> <span title="我校福建省高校产学合作科技重大项目通过科技厅验收">我校福建省高校产...</span></td>                  <td> 
+                  <div class="listimg"> 
+                   <a href="http://kycnew.fjtcm.edu.cn:80/kydt20140517052553/63976.jhtml"><img src="/u/cms/kyc/201405/18011700jb7h.jpg" width="150" height="107" /></a> 
+                  </div> <span title="省科技厅来我校调研">省科技厅来我校调研</span></td>                  <td> 
+                  <div class="listimg"> 
+                   <a href="http://kycnew.fjtcm.edu.cn:80/kydt20140517052553/63974.jhtml"><img src="/u/cms/kyc/201405/180112313cb1.jpg" width="150" height="107" /></a> 
+                  </div> <span title="我校举办2014年国家自然科学基金项目申报培训会">我校举办2014年国...</span></td>                  <td> 
+                  <div class="listimg"> 
+                   <a href="http://kycnew.fjtcm.edu.cn:80/kydt20140517052553/63972.jhtml"><img src="/u/cms/kyc/201405/18011040xnz8.jpg" width="150" height="107" /></a> 
+                  </div> <span title="认知障碍康复研究、中医健康状态整体动态辨识研究汇报会在我校召开">认知障碍康复研究...</span></td>                  <td> 
+                  <div class="listimg"> 
+                   <a href="http://kycnew.fjtcm.edu.cn:80/kydt20140517052553/63966.jhtml"><img src="/u/cms/kyc/201405/18010550pmvw.jpg" width="150" height="107" /></a> 
+                  </div> <span title="世界中医药学会联合会伦理审查委员会对我校4家附属单位中医药临床研究伦理审查平台进行评估">世界中医药学会联...</span></td>                  <td> 
+                  <div class="listimg"> 
+                   <a href="http://kycnew.fjtcm.edu.cn:80/kydt20140517052553/63964.jhtml"><img src="/u/cms/kyc/201405/18010126lgn5.jpg" width="150" height="107" /></a> 
+                  </div> <span title="财政部行业科研专项项目暨科技部“十二五”科技支撑计划课题实施部署会在福州召开">财政部行业科研专...</span></td>                  <td> 
+                  <div class="listimg"> 
+                   <a href="http://kycnew.fjtcm.edu.cn:80/kydt20140517052553/63960.jhtml"><img src="/u/cms/kyc/201405/18005915y4b0.jpg" width="150" height="107" /></a> 
+                  </div> <span title="复旦大学脑科学研究院王云教授应邀来校访问交流">复旦大学脑科学研...</span></td>                  <td> 
+                  <div class="listimg"> 
+                   <a href="http://kycnew.fjtcm.edu.cn:80/kydt20140517052553/63958.jhtml"><img src="/u/cms/kyc/201405/180056130ge4.jpg" width="150" height="107" /></a> 
+                  </div> <span title="华东地区高等中医药院校第25次科研协作会议在我校隆重召开">华东地区高等中医...</span></td>                  <td> 
+                  <div class="listimg"> 
+                   <a href="http://kycnew.fjtcm.edu.cn:80/kydt20140517052553/63956.jhtml"><img src="/u/cms/kyc/201405/18005414qadp.jpg" width="150" height="107" /></a> 
+                  </div> <span title="澳华中医学会会长张翼教授为我校师生作讲座">澳华中医学会会长...</span></td>                  <td> 
+                  <div class="listimg"> 
+                   <a href="http://kycnew.fjtcm.edu.cn:80/kydt20140517052553/63953.jhtml"><img src="/u/cms/kyc/201405/18005218rpnq.jpg" width="150" height="107" /></a> 
+                  </div> <span title="“十二五”国家科技支撑计划“功能障碍的中医康复临床规范和评价研究” 项目启动会在我校召开">“十二五”国家科...</span></td>                  <td> 
+                  <div class="listimg"> 
+                   <a href="http://kycnew.fjtcm.edu.cn:80/kydt20140517052553/63951.jhtml"><img src="/u/cms/kyc/201405/18004957rcbf.jpg" width="150" height="107" /></a> 
+                  </div> <span title="我校举办中医药伦理审查高级培训班 ">我校举办中医药伦...</span></td>                  <td> 
+                  <div class="listimg"> 
+                   <a href="http://kycnew.fjtcm.edu.cn:80/kydt20140517052553/63948.jhtml"><img src="/u/cms/kyc/201405/18004806y5p8.jpg" width="150" height="107" /></a> 
+                  </div> <span title="中国工程院院士程京教授为我校师生作专题学术讲座">中国工程院院士程...</span></td>                  <td> 
+                  <div class="listimg"> 
+                   <a href="http://kycnew.fjtcm.edu.cn:80/kydt20140517052553/63938.jhtml"><img src="/u/cms/kyc/201405/18003723l3ra.jpg" width="150" height="107" /></a> 
+                  </div> <span title="省科技厅到我校开展社发处重点项目结题验收工作">省科技厅到我校开...</span></td>                  <td> 
+                  <div class="listimg"> 
+                   <a href="http://kycnew.fjtcm.edu.cn:80/kydt20140517052553/63936.jhtml"><img src="/u/cms/kyc/201405/18003515ed2y.jpg" width="150" height="107" /></a> 
+                  </div> <span title="我校福建省运动功能康复重点实验室通过科技厅验收">我校福建省运动功...</span></td>                  <td> 
+                  <div class="listimg"> 
+                   <a href="http://kycnew.fjtcm.edu.cn:80/kydt20140517052553/63935.jhtml"><img src="/u/cms/kyc/201405/1800330183cb.jpg" width="150" height="107" /></a> 
+                  </div> <span title="中西医结合研究院举办蛋白质谱分析-MALDI-TOF技术培训">中西医结合研究院...</span></td>                  <td> 
+                  <div class="listimg"> 
+                   <a href="http://kycnew.fjtcm.edu.cn:80/kydt20140517052553/63932.jhtml"><img src="/u/cms/kyc/201405/18003049cdr1.jpg" width="150" height="107" /></a> 
+                  </div> <span title="省科技厅调研小组到我校开展2013年高校产学合作科技重大项目申报调研">省科技厅调研小组...</span></td>                  <td> 
+                  <div class="listimg"> 
+                   <a href="http://kycnew.fjtcm.edu.cn:80/kydt20140517052553/63929.jhtml"><img src="/u/cms/kyc/201405/18002845mb8o.jpg" width="150" height="107" /></a> 
+                  </div> <span title="希腊Spandidos教授一行二人来我校中西医结合研究院开展合作与交流">希腊Spandidos教...</span></td>                  <td> 
+                  <div class="listimg"> 
+                   <a href="http://kycnew.fjtcm.edu.cn:80/kydt20140517052553/63926.jhtml"><img src="/u/cms/kyc/201405/18002644cl8s.jpg" width="150" height="107" /></a> 
+                  </div> <span title="同济大学特聘教授朱伟东应邀来我校参观交流">同济大学特聘教授...</span></td>                  <td> 
+                  <div class="listimg"> 
+                   <a href="http://kycnew.fjtcm.edu.cn:80/kydt20140517052553/63921.jhtml"><img src="/u/cms/kyc/201405/18002424wwlt.jpg" width="150" height="107" /></a> 
+                  </div> <span title="2012中国医师协会中西医结合医师大会暨福建中西医结合研究院学术年会在福州召开">2012中国医师协会...</span></td>                  <td> 
+                  <div class="listimg"> 
+                   <a href="http://kycnew.fjtcm.edu.cn:80/kydt20140517052553/63917.jhtml"><img src="/u/cms/kyc/201405/18002109k0l3.jpg" width="150" height="107" /></a> 
+                  </div> <span title="省科协第十二届学术年会开幕式暨大会特邀报告会在我校召开">省科协第十二届学...</span></td>                  <td> 
+                  <div class="listimg"> 
+                   <a href="http://kycnew.fjtcm.edu.cn:80/kydt20140517052553/63915.jhtml"><img src="/u/cms/kyc/201405/18001856gb1w.jpg" width="150" height="107" /></a> 
+                  </div> <span title="科技厅到我校开展省自然科学基金杰青项目结题验收工作">科技厅到我校开展...</span></td>                  <td> 
+                  <div class="listimg"> 
+                   <a href="http://kycnew.fjtcm.edu.cn:80/kydt20140517052553/63912.jhtml"><img src="/u/cms/kyc/201405/18001646ab50.jpg" width="150" height="107" /></a> 
+                  </div> <span title="同济大学医学院孙毅教授到我校开展学术交流">同济大学医学院孙...</span></td>                  <td> 
+                  <div class="listimg"> 
+                   <a href="http://kycnew.fjtcm.edu.cn:80/kydt20140517052553/63910.jhtml"><img src="/u/cms/kyc/201405/18001431j9uw.jpg" width="150" height="107" /></a> 
+                  </div> <span title="俄克拉荷马州立大学健康科学中心专家应邀到我校进行学术交流">俄克拉荷马州立大...</span></td>                  <td> 
+                  <div class="listimg"> 
+                   <a href="http://kycnew.fjtcm.edu.cn:80/kydt20140517052553/63898.jhtml"><img src="/u/cms/kyc/201405/1800040195vj.jpg" width="150" height="107" /></a> 
+                  </div> <span title="中国工程院副院长樊代明院士应邀来我校讲座">中国工程院副院长...</span></td>                  <td> 
+                  <div class="listimg"> 
+                   <a href="http://kycnew.fjtcm.edu.cn:80/kydt20140517052553/63897.jhtml"><img src="/u/cms/kyc/201405/18000102cqrl.jpg" width="150" height="107" /></a> 
+                  </div> <span title="北京中医药大学刘建平教授应邀来我校讲座">北京中医药大学刘...</span></td>                  <td> 
+                  <div class="listimg"> 
+                   <a href="http://kycnew.fjtcm.edu.cn:80/kydt20140517052553/63895.jhtml"><img src="/u/cms/kyc/201405/17235943ukky.jpg" width="150" height="107" /></a> 
+                  </div> <span title="香港中文大学梁秉中教授到我校访问并商讨科研合作事宜">香港中文大学梁秉...</span></td>  
+                </tr>  
+               </tbody> 
+              </table> </td> 
+             <td> 
+              <div id="scrollcopy" style="width: 100%">
+                &nbsp; 
+              </div> </td> 
+            </tr> 
+           </tbody> 
+          </table> 
+         </div> 
+        </div> 
+        <!--  --> 
+       </div> 
+      </div> 
+      <!-- 时代先锋end --> 
+      <div class="line_h">
+        &nbsp; 
+      </div> 
+     </div> 
+     <!--  底部--> 
+     <div class="footer1"> 
+     <p>地址:福建省福州市闽侯上街邱阳路1号 邮政编码:350122</p>
+<p>版权所有(C)福建中医药大学闽ICP备05005462</p>
+     </div> 
+    </div> 
+    <!-- 底部end --> 
+   </div> 
+  </div> 
+  <!--  --> 
+  <script type="text/javascript">
+ document.getElementById("scrollcopy").innerHTML = document.getElementById("scrollcon").innerHTML;
+ MyMar=setInterval(Marquee,speed);
+</script> 
+  <!--  -->   
+ </body>
+</html>

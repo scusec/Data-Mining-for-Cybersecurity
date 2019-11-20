@@ -1,0 +1,290 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>中央音乐学院</title>
+    <link href="Scripts/jquery-ui-1.9.2/themes/base/jquery.ui.all.css" rel="stylesheet" />
+    <script src="Scripts/jquery-ui-1.9.2/jquery-1.8.3.js"></script>
+    <script src="Scripts/jquery-ui-1.9.2/external/jquery.bgiframe-2.1.2.js"></script>
+    <script src="Scripts/jquery-ui-1.9.2/ui/jquery-ui.js"></script>
+    <link href="Scripts/jquery-ui-1.9.2/demos/demos.css" rel="stylesheet" />
+
+    <link href="Content/css.css" rel="stylesheet" type="text/css" />
+    <script src="Scripts/jquery.cookie.js"></script>
+    <script type="text/javascript">
+        $(function () {
+
+            if ($.cookie("ccomTeacher") == "true") {
+                $("#teacherAuto").attr("checked", true);
+                $("#teacherUser").val($.cookie("ccomTeaUser"));
+                $("#teacherPwd").val($.cookie("ccomTeaPwd"));
+            }
+            if ($.cookie("ccomStudent") == "true") {
+                $("#studentAuto").attr("checked", true);
+                $("#studentUser").val($.cookie("ccomStuUser"));
+                $("#studentPwd").val($.cookie("ccomStuPwd"));
+            }
+        });
+        //记住用户名密码 
+        function save() {
+            if ($("#teacherAuto").prop("checked")) {
+
+                $.cookie("ccomTeacher", "true", { expires: 5 }); //存储一个带5天期限的cookie 
+                $.cookie("ccomTeaUser", $("#teacherUser").val(), { expires: 5 });
+                $.cookie("ccomTeaPwd", $("#teacherPwd").val(), { expires: 5 });
+            } else {
+                $.cookie("ccomTeacher", "false", { expire: -1 });
+                $.cookie("ccomTeaUser", "", { expires: -1 });
+                $.cookie("coomTeaPwd", "", { expires: -1 });
+            }
+            if ($("#studentAuto").prop("checked")) {
+
+                $.cookie("ccomStudent", "true", { expires: 5 }); //存储一个带5天期限的cookie 
+                $.cookie("ccomStuUser", $("#studentUser").val(), { expires: 5 });
+                $.cookie("ccomStuPwd", $("#studentPwd").val(), { expires: 5 });
+            } else {
+                $.cookie("ccomStudent", "false", { expire: -1 });
+                $.cookie("ccomStuUser", "", { expires: -1 });
+                $.cookie("coomStuPwd", "", { expires: -1 });
+            }
+        };
+
+        function teacherLogin() {
+            if ($("#teacherUser").val() == "" || $("#teacherPwd").val() == "") {
+                //$.messager.alert('输入有误', '教职工登录账号或密码不能为空！', 'error');
+                ShowMessage('输入有误', '教职工登录账号或密码不能为空！');
+                return;
+            }
+
+            save();
+            $.ajax({
+                type: "POST",
+                url: "HandlerLogin.ashx?userName=" + $("#teacherUser").val() + "&userPwd=" + escape($("#teacherPwd").val()) + "&userType=teacher",
+                data: null,
+                datatype: "json",
+                success: function (result) {
+                    var obj = $.parseJSON(result);
+                    if (obj.errcode == "0") {
+                        window.location.href = obj.url;
+                    }
+                    else {
+                        //$.messager.alert('登录失败', obj.errmsg, 'error');
+                        ShowMessage('登录失败', obj.errmsg);
+                    }
+                }
+            });
+        }
+        function str_encrypt(str) {
+            var output = new Array();
+            var i, s;
+            for (i = 0; i < str.length; i++) {
+                output += "\\" + str.charCodeAt(i).toString(8);
+            }
+            return output;
+        }
+        /*8进制解密*/
+        function str_decrypt(str) {
+            var output = new Array();
+            var i;
+            var s = str.split("\\");
+            for (i = 1; i < s.length; i++) {
+                output += String.fromCharCode(parseInt(s[i], 8));
+            }
+            return output;
+        }
+        function StudentLogin() {
+            if ($("#studentUser").val() == "" || $("#studentPwd").val() == "") {
+                //$.messager.alert('输入有误', '学生登录账号或密码不能为空！', 'error');
+                ShowMessage('输入有误', '学生登录账号或密码不能为空！');
+                return;
+            }
+
+            save();
+
+            $.ajax({
+                type: "POST",
+                url: "HandlerLogin.ashx?userName=" + $("#studentUser").val() + "&userPwd=" + escape($("#studentPwd").val()) + "&userType=student",
+                data: null,
+                datatype: "json",
+                success: function (result) {
+                    var obj = $.parseJSON(result);
+                    if (obj.errcode == "0") {
+                        window.location.href = obj.url;
+                    }
+                    else {
+                        //$.messager.alert('登录失败', obj.errmsg, 'error');
+                        ShowMessage('登录失败', obj.errmsg);
+                    }
+                }
+            });
+        }
+
+        function ShowMessage(title, msg) {
+            //$("#AlertMessage").dialog({
+            //    resizable: false,
+            //    height: 140,
+            //    modal: true,
+            //    buttons: {
+            //        "Delete all items": function () {
+            //            $(this).dialog("close");
+            //        },
+            //        Cancel: function () {
+            //            $(this).dialog("close");
+            //        }
+            //    }
+            //});
+            $('#AlertMessageBody').html(msg);
+            $('#AlertMessage').attr('title', title);
+            $('#AlertMessage').dialog({
+                resizable: false,
+                width: 300,
+                modal: true,
+                buttons: {
+                    '我知道了': function () {
+                        $(this).dialog("close");
+                    }
+                }
+            });
+        }
+
+    </script>
+</head>
+<body>
+    <script type="text/javascript">
+        var type = 1;//默认为老师
+        function box1() {
+            type = 1;
+            document.getElementById('box1').style.display = "block";
+            document.getElementById('box2').style.display = "none";
+
+            document.getElementById('box1-an').style.background = "url(images/tb4.gif)";
+            document.getElementById('box1-an').style.color = "#fff";
+            document.getElementById('box2-an').style.background = "url(images/tb3.gif)";
+            document.getElementById('box2-an').style.color = "#666";
+        }
+        function box2() {
+            type = 2;
+            document.getElementById('box1').style.display = "none";
+            document.getElementById('box2').style.display = "block";
+
+            document.getElementById('box1-an').style.background = "url(images/tb3.gif)";
+            document.getElementById('box1-an').style.color = "#666";
+            document.getElementById('box2-an').style.background = "url(images/tb4.gif)";
+            document.getElementById('box2-an').style.color = "#fff";
+        }
+
+        document.onkeydown = function (event) {
+            var e = event || window.event || arguments.callee.caller.arguments[0];
+            if (e && e.keyCode == 13) {
+                if (type == 1) {
+                    teacherLogin();
+                }
+                else {
+                    StudentLogin();
+                }
+            }
+        };
+    </script>
+
+    <div class="top">
+        <ul>
+            <li class="logo">
+                <img src="images/logo.gif" /></li>
+            <li class="logo2"><span class="zi1">@电子邮箱</span><br />
+                webmail.ccom.edu.cn</li>
+            <li class="kf">客服电话：66425909</li>
+        </ul>
+    </div>
+    <div style="width: 100%; float: left;">
+        <div style="width: 1000px; margin: auto; padding-bottom: 10px; text-align: right;">
+            <a class="toptitle" target="_blank" href="http://oldmail.ccom.edu.cn">旧邮箱入口</a>
+        </div>
+    </div>
+    <div class="center">
+        <ul class="dlk">
+            <div class="yhdl">用户登录</div>
+            <div class="jiaoshi">
+                <ul>
+                    <!--<li id="box1-an" onmouseover="box1()">教师</li>
+                    <li id="box2-an" onmouseover="box2()">学生</li>-->
+                    <li id="box1-an" onclick="box1()" style="cursor:pointer">教师</li>
+                    <li id="box2-an" onclick="box2()" style="cursor:pointer">学生</li>
+                </ul>
+            </div>
+
+            <div class="js-text" id="box1">
+                <ul>
+                    <li class="srk">
+                        <input id="teacherUser" name="userName" type="text" style="border: solid 1px #fff; height: 36px; line-height: 36px;" placeholder="账号/别名">
+                        <span class="ym">@ccom.edu.cn</span>
+                    </li>
+                    <li class="srk2">
+                        <input id="teacherPwd" name="userPwd" type="password" style="width: 265px; border: solid 1px #fff; height: 36px; line-height: 36px;" placeholder="密码">
+                    </li>
+                    <li>
+                        <input type="button" class="dl" style="width: 320px;" value="登 录" onclick="javascript: teacherLogin()"></li>
+                    <li class="zddl" style="margin-bottom: 0;">
+                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                            <tr>
+                                <td width="7%"><span>
+                                    <input id="teacherAuto" name="ckAuto" type="checkbox" value="" style="width: 13px; height: 13px; margin: 0; padding: 0;"></span></td>
+                                <td width="42%" align="left">5天内自动登陆</td>
+                                <td width="30%"><a class="a1" href="EmailSlave.html">别名设置</a></td>
+                                <td width="21%" align="right"><a href="http://exmail.qq.com/cgi-bin/readtemplate?check=false&t=biz_rf_portal#recovery" class="a1">找回密码？</a></td>
+                            </tr>
+                        </table>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="js-text" id="box2" style="display: none;">
+                <form id="Form2" action="HandlerLogin.ashx" method="post">
+                    <ul>
+                        <li class="srk">
+                            <input id="studentUser" name="userName" type="text" style="border: solid 1px #fff; height: 36px; line-height: 36px; width: 128px;" placeholder="账号/别名">
+                            <span class="ym">@mail.ccom.edu.cn</span>
+                        </li>
+                        <li class="srk2">
+                            <input id="studentPwd" name="userPwd" type="password" style="width: 265px; border: solid 1px #fff; height: 36px; line-height: 36px;" placeholder="密码">
+                        </li>
+                        <li>
+                            <input type="button" class="dl" style="width: 320px;" value="登 录" onclick="javascript: StudentLogin()"></li>
+                        <li class="zddl" style="margin-bottom: 0;">
+                            <!--<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="6%"><span><input name="" type="checkbox" value="" style=" width:13px; height:13px; margin:0; padding:0;"></span></td>
+    <td width="50%">5天内自动登陆</td>
+    <td width="44%">11</td>-->
+                            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                <tr>
+                                    <td width="7%"><span>
+                                        <input id="studentAuto" type="checkbox" value="" style="width: 13px; height: 13px; margin: 0; padding: 0;"></span></td>
+                                    <td width="42%" align="left">5天内自动登陆</td>
+                                    <td width="30%"><a class="a1" href="EmailSlave.html">别名设置</a></td>
+                                    <td width="21%" align="right"><a href="http://exmail.qq.com/cgi-bin/readtemplate?check=false&t=biz_rf_portal#recovery" class="a1">找回密码？</a></td>
+                                </tr>
+                            </table>
+
+
+                        </li>
+                    </ul>
+                </form>
+            </div>
+        </ul>
+    </div>
+    <div class="bottom">
+        <ul>
+            <li>中央音乐学院邮件系统由网络信息中心维护，腾讯企业邮技术支持<br />
+                <br />
+                © Copyright Central Conservatory of Music,www.ccom.edu.cn All Rights Reserved<br />
+                京公网安备110402430057号&nbsp;&nbsp;&nbsp;&nbsp;京ICP备05064625号</li>
+        </ul>
+    </div>
+
+    <div id="AlertMessage" title="登录失败">
+
+        <p id="AlertMessageBody" style="float: left; margin: 0 7px 20px 0; font-weight: bold;"></p>
+
+    </div>
+</body>
+</html>

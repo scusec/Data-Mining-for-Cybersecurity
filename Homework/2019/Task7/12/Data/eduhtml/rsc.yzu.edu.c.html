@@ -1,0 +1,483 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="/script/page.css" type=text/css rel=stylesheet>
+<script language="javascript" src="/module/jslib/jquery/jquery.js"></script>
+
+<meta http-equiv="x-ua-compatible" content="ie=7" />
+<title>扬州大学人事处</title>
+<meta name="Keywords" content="内容管理、内容管理发布（CMS）系统、信息发布、新闻采编发系统、知识管理、知识门户、政府门户、教育门户、企业门户、竞争情报系统、抓取系统、信息采集、信息雷达系统、电子政务、电子政务解决方案、办公系统、OA、网站办公系统"><meta name='Generator' content='大汉版通'><meta name='Author' content='大汉网络'>
+<meta name='Maketime' content='2017-10-25 15:03:53'>
+<meta name="sitename" content="扬州大学人事处">
+<meta name="siteurl"  content="http://rsc.yzu.edu.cn/index.html">
+<meta name="guild"    content="">
+<meta name="district"    content="">
+<meta name="sitecatalog"    content="">
+
+<link href="/images/3221/css.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/images/3221/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="/images/3221/multimenu.js"></script>
+<script src="/images/3221/swfobject_modified.js" type="text/javascript"></script>
+<script type="text/javascript">
+function showLocale(objD)
+{
+	var str,colorhead,colorfoot;
+	var yy = objD.getYear();
+	if(yy<1900) yy = yy+1900;
+	var MM = objD.getMonth()+1;
+	if(MM<10) MM = '0' + MM;
+	var dd = objD.getDate();
+	if(dd<10) dd = '0' + dd;
+	var hh = objD.getHours();
+	if(hh<10) hh = '0' + hh;
+	var mm = objD.getMinutes();
+	if(mm<10) mm = '0' + mm;
+	var ss = objD.getSeconds();
+	if(ss<10) ss = '0' + ss;
+	var ww = objD.getDay();
+	if  ( ww==0 )  colorhead="<font color=\"#fff\">";
+	if  ( ww > 0 && ww < 6 )  colorhead="<font color=\"#fff\">";
+	if  ( ww==6 )  colorhead="<font color=\"#fff\">";
+	if  (ww==0)  ww="星期日";
+	if  (ww==1)  ww="星期一";
+	if  (ww==2)  ww="星期二";
+	if  (ww==3)  ww="星期三";
+	if  (ww==4)  ww="星期四";
+	if  (ww==5)  ww="星期五";
+	if  (ww==6)  ww="星期六";
+	colorfoot="</font>"
+	str = colorhead + yy + "-" + MM + "-" + dd + " " + hh + ":" + mm + ":" + ss + "  " + ww + colorfoot;
+	return(str);
+}
+function tick()
+{
+	var today;
+	today = new Date();
+	document.getElementById("localtime").innerHTML = showLocale(today);
+	window.setTimeout("tick()", 1000);
+}
+window.onload=function(){tick();}
+
+function divFloat(divID,xpos,ypos,showClose){
+	var floatDiv;
+	if (typeof divID =="object"){
+	   floatDiv = divID ;
+	} else {
+	   floatDiv =  document.getElementById(divID);
+	}
+	//设置漂浮
+	var x,y;
+	var itl;
+	x = xpos ? xpos : 50;
+	y = ypos ? ypos : 60;
+	var xin = true, yin = true;
+	var step = 1;
+	var delay = 30;
+	var obj=document.getElementById(divID);
+	function floatAD() {
+		if(floatDiv.style.display=="none" && typeof itl !=="undefined"){
+		  clearInterval(itl);
+		}		
+		var cWidth = document.documentElement.scrollWidth || document.body.clientWidth;
+		var cHeight = document.documentElement.scrollHeight || document.body.clientHeight;
+		
+		var R= cWidth - obj.offsetWidth;
+		var B = cHeight - obj.offsetHeight;
+		obj.style.left = x +"px";
+		obj.style.top = y +"px";
+		x = x + step*(xin?1:-1);
+		if (x <= 0) { xin = true; x = 0;}
+		if (x > R){ xin = false; x = R;}
+		y = y + step*(yin?1:-1)
+		if (y <= 0) { yin = true; y = 0 ;}
+		if (y > B) { yin = false; y = B ;}
+	}
+	if(floatDiv.style.display!="none"){
+	  itl= setInterval(floatAD, delay);
+	}
+	//动态切换
+	var aLinks = floatDiv.getElementsByTagName("A");	
+	var k = 0 ;
+	var j=aLinks.length;
+	if((aLinks.length)<1){
+		return false;//没有可显示的A元素
+	}
+	
+	var st;
+	var hasSingleALinkShow=false;
+	for(var P=0;P<j;P++){
+		if(aLinks[P].style.display!="none"){
+			if(hasSingleALinkShow!=true){
+			   hasSingleALinkShow = true;
+			} else {
+			  aLinks[P].style.display ="none";
+			}
+		}
+	}
+	if(!hasSingleALinkShow){
+		aLinks[0].style.display = "";
+	}
+	var showimg = function(){
+		if(floatDiv.style.display=="none"){
+		  return false;
+		}		
+		for(var i=0;i<j;i++)
+		{
+			aLinks[i].style.display="none";		
+		}
+		aLinks[k].style.display = "block";		
+		k = ++k % j;
+		st=setTimeout(showimg , 3000);
+	}
+	if(j>1 && floatDiv.style.display!="none"){st=setTimeout(showimg , 3000);}
+	
+	//增加关闭按钮
+	if(!(typeof showClose !=="undefined" &&  showClose===false)){	
+		var closeDiv = document.createElement("div");
+		closeDiv.style.textAlign="right";
+		closeDiv.style.paddingTop="5px";
+		closeDiv.style.fontSize="12px";
+		var closeDivALink = document.createElement("a");
+		closeDivALink.setAttribute("href","javascript:void(0)");
+		closeDivALink.style.textDecoration="none";
+		closeDivALink.style.color="#666666"
+		//closeDivALink.setAttribute("style","right:0;");
+		closeDivALink.onclick=function(){
+		   floatDiv.style.display='none';
+		}
+		var textnode = document.createTextNode("关闭");
+		closeDivALink.appendChild(textnode);
+		closeDiv.appendChild(closeDivALink);
+		obj.appendChild(closeDiv);
+	}	
+	//mousever 事件
+	obj.onmouseover=function(){clearInterval(itl);clearTimeout(st)};
+	obj.onmouseout=function(){itl=setInterval(floatAD, delay);st=setTimeout(showimg , 3000);};
+}
+
+
+</script>
+</head>
+<body>
+<script type="text/javascript"> 
+   divFloat("floatAd");
+</script> 
+	<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="top" align="center" valign="middle">
+    	<table width="980" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td class="topbanner">
+            	<div id="localtime" style="float:left; color:#FFF; margin-top:100px; font-size:14px; font-weight:bold; margin-left:20px;  width:300px; height:30px;"></div>
+                <div style="float:left; width:502px; height:111px; margin-left:140px; margin-top:35px;">
+               	  <object id="FlashID" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="502" height="111">
+                	  <param name="movie" value="/images/3221/top.swf" />
+                	  <param name="quality" value="high" />
+                	  <param name="wmode" value="transparent" />
+                	  <param name="swfversion" value="8.0.35.0" />
+                	  <!-- 此 param 标签提示使用 Flash Player 6.0 r65 和更高版本的用户下载最新版本的 Flash Player。如果您不想让用户看到该提示，请将其删除。 -->
+                	  <param name="expressinstall" value="/images/3221/expressInstall.swf" />
+                	  <!-- 下一个对象标签用于非 IE 浏览器。所以使用 IECC 将其从 IE 隐藏。 -->
+                	  <!--[if !IE]>-->
+                	  <object type="application/x-shockwave-flash" data="/images/3221/top.swf" width="502" height="111">
+                	    <!--<![endif]-->
+                	    <param name="quality" value="high" />
+                	    <param name="wmode" value="transparent" />
+                	    <param name="swfversion" value="8.0.35.0" />
+                	    <param name="expressinstall" value="/images/3221/expressInstall.swf" />
+                	    <!-- 浏览器将以下替代内容显示给使用 Flash Player 6.0 和更低版本的用户。 -->
+                	    <div>
+                	      <h4>此页面上的内容需要较新版本的 Adobe Flash Player。</h4>
+                	      <p><a href="http://www.adobe.com/go/getflashplayer"><img src="http://www.adobe.co/images/3221/shared/download_buttons/get_flash_player.gif" alt="获取 Adobe Flash Player" width="112" height="33" /></a></p>
+              	      </div>
+                	    <!--[if !IE]>-->
+              	    </object>
+                	  <!--<![endif]-->
+              	  </object>
+                </div>
+            </td>
+          </tr>
+        </table>
+    </td>
+  </tr>
+  <tr>
+    <td height="41" bgcolor="#1b7de2"><table width="980" border="0" cellspacing="0" cellpadding="0" height="41" align="center">
+  <tr>
+    <td width="750" class="menu" id="trmenu" valign="top">
+    	<ul>
+        	<li><a href="/">首页</a></li>
+            <li><a href="/col/col6826/index.html" rel="dropMenu01">部门概况</a></li>
+            <li><a href="/col/col37586/index.html" rel="dropMenu02">规章制度</a></li>
+            <li><a href="/col/col15182/index.html" rel="dropMenu03">师资队伍</a></li>
+            <li><a href="/col/col41283/index.html" rel="dropMenu04">师德教育</a></li>
+            <li><a href="/col/col37583/index.html" rel="dropMenu05">人才服务</a></li>
+            <li><a href="/col/col37585/index.html" rel="dropMenu06">八面来风</a></li>
+            <li style="background:none;"><a href="/col/col8979/index.html" rel="dropMenu07">下载专区</a></li>
+        </ul>
+         <!-- 下拉菜单开始 -->
+                <div id="dropMenu01" class="dropMenu">
+                    <a href="/col/col6826/index.html">部门简介</a>
+                    <a href="/col/col6825/index.html">工作职责</a>
+                    <a href="/col/col15741/index.html">联系电话</a>
+                </div>
+                <div id="dropMenu02" class="dropMenu">
+                    <a href="/col/col37586/index.html">国家制度</a>
+                    <a href="/col/col37587/index.html">省级制度</a>
+                    <a href="/col/col37588/index.html">学校制度</a>
+                </div>
+                <div id="dropMenu03" class="dropMenu" style="width:110px;">
+                    <a href="/col/col15182/index.html">院士</a>
+                    <a href="/col/col15183/index.html">国家级荣誉称号</a>
+                    <a href="/col/col15184/index.html">省部级荣誉称号</a>
+                    <a href="/col/col15185/index.html">百千万人才工程</a>
+                    <a href="/col/col15186/index.html">国家杰出青年基金</a>
+                    <a href="/col/col15187/index.html">新世纪人才计划</a>
+                    <a href="/col/col15188/index.html">优秀团队</a>
+                    <a href="/col/col15189/index.html">省“333工程”</a>
+                    <a href="/col/col15190/index.html">省“青蓝工程”</a>
+                </div>
+                <div id="dropMenu04" class="dropMenu">
+                    <a href="/col/col41283/index.html">形势政策</a>
+                    <a href="/col/col41284/index.html">学习参考</a>
+                    <a href="/col/col41285/index.html">师德楷模</a>
+                    <a href="/col/col41286/index.html">学习交流</a>
+                </div>
+                <div id="dropMenu05" class="dropMenu">
+                    <a href="/col/col37583/index.html">人才项目</a>
+                    <a href="/col/col37590/index.html">工作流程</a>
+                    <a href="/col/col37589/index.html">常见问题</a>
+                </div>
+                <div id="dropMenu07" class="dropMenu">
+                    <a href="/col/col8979/index.html">职务聘任</a>
+                    <a href="/col/col8978/index.html">师资管理</a>
+                    <a href="/col/col15068/index.html">培养选拔</a>
+                    <a href="/col/col8981/index.html">人才服务</a>
+                    <a href="/col/col8983/index.html">工资福利</a>
+                    <a href="/col/col8982/index.html">考核奖惩</a>
+                    <a href="/col/col8980/index.html">出国出境</a>
+                    <a href="/col/col8984/index.html">在职培训</a>
+                </div>
+                <!-- 右侧弹出结束-->
+                <!--下拉菜单结束 -->
+    </td>
+    <td width="230">
+    	<form action='/module/sitesearch/index.jsp?columnid=360&webid=29&modalunitid=55404' method='post' name='sitesearch' id='sitesearch'>                  <table> <tr> <td align='right'><input type='text' name='keyvalue' value='' style='border:1px solid #dbe3e6; height:25px; width:150px;'/></td>  <td><input value='' src='/images/3221/search.jpg' type='image' width='31' height='27' class='loadingbut' style='cursor:hand' onclick='sitesearch.submit()'></td>                    </tr>                  </table>  </form>
+    </td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+    <td class="middlecon">
+    	<table width="980" border="0" cellspacing="0" cellpadding="0" align="center" class="content">
+  <tr>
+    <td colspan="5" height="20"></td>
+    </tr>
+  <tr>
+    <td class="xyfg" valign="top" align="center">
+    	<script type="text/javascript">var _width = 285; var _height = 190;var text_height = 18;var flash_height = _height + text_height;var pic_arr = new Array();var link_arr = new Array();var text_arr = new Array();var i = 0;
+pic_arr[i] = "/picture/0/1512101550101387403.jpg";link_arr[i] = "/art/2015/12/10/art_37597_497139.html";text_arr[i] = "梧桐季";i++;
+pic_arr[i] = "/picture/0/1512101549306701349.jpg";link_arr[i] = "/art/2015/12/10/art_37597_497138.html";text_arr[i] = "朗月湖";i++;
+for(var kk=0;kk<pic_arr.length;kk++){
+ if(pic_arr[kk]==""){
+ pic_arr.splice(kk,1);
+ link_arr.splice(kk,1);
+ text_arr.splice(kk,1);
+ kk--;
+ }
+}
+
+var p = pic_arr.join("|");var l = link_arr.join("|");var t = text_arr.join("|");var f = "http://2015.yzu.edu.cn/flash/0/090217094208.swf";document.write('<object ID="focus_flash" classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0" width="'+ _width +'" height="'+ flash_height +'">');document.write('<param name="allowScriptAccess" value="sameDomain"><param name="movie" value="'+f+'"><param name="quality" value="high"><param name="bgcolor">');document.write('<param name="menu" value="false"><param name=wmode value="transparent">');document.write('<param name="FlashVars" value="pics='+p+'&links='+l+'&texts='+t+'&borderwidth='+_width+'&borderheight='+_height+'&textheight='+text_height+'">');document.write('<embed ID="focus_flash" src="'+f+'" wmode="opaque" FlashVars="pics='+p+'&links='+l+'&texts='+t+'&borderwidth='+_width+'&borderheight='+_height+'&textheight='+text_height+'" menu="false" quality="high" width="'+ _width +'" height="'+ flash_height +'" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />');document.write('</object>');</script>
+    </td>
+    <td width="15"></td>
+    <td class="tzgg" valign="top">
+    	<table width="100%" border="0" cellspacing="0" cellpadding="0">
+                <tr height="32" class="tzggtitle">
+                  <td width="80" align="center" id="tab0" class="tabCurrent" onClick="selectTag(0)" style="border:1px solid #dedede;"><span>通知公告</span></td>
+                  <td width="200" style="border:1px solid #dedede; border-left:none; border-right:none;"> </td>
+                  <td width="40" style="border:1px solid #dedede; border-left:none;"><a href="/col/col6836/index.html" id="moreLink01"><img src="/images/3221/more.jpg"/></a></td>
+                  </tr>
+              <tr>
+                <td colspan="5" valign="top" height="15">
+                  </td>
+                <tr>
+                  <td colspan="5" valign="top">
+                    <div id="tabtzgg" class="text">
+                      <script language='javascript' src="/module/jslib/jquery/artdialog/artDialog.min.js"></script><script language='javascript' src="/module/permissionread/permissionunit.jsp?columnid=6836&unitid=55408&permissiontype=1&unitfilepath="></script>
+                      </div>
+                    </td>
+                  </tr>
+  </table>
+
+    </td>
+    <td width="15"></td>
+    <td class="rsdt" valign="top">
+    	<h3><span><a href="/col/col37592/index.html"><img src="/images/3221/more.jpg" /></a></span>人事动态</h3>
+         <table width='100%' cellspacing='0' cellpadding='0' border='0'>
+<tr>
+<td style='background-color:null'>
+  <ul><li><a href='/art/2017/9/30/art_37592_569186.html' title='人事处2017年10月工作要点' target=_blank>人事处2017年10月工作要点</a></li></ul>
+</td></tr>
+<tr>
+<td style='background-color:null'>
+  <ul><li><a href='/art/2017/9/18/art_37592_568117.html' title='扬州大学音乐学院举办青年教师职业规划汇报会' target=_blank>扬州大学音乐学院举办青年教师职业规划...</a></li></ul>
+</td></tr>
+<tr>
+<td style='background-color:null'>
+  <ul><li><a href='/art/2017/9/5/art_37592_566994.html' title='人事处2017年9月工作要点' target=_blank>人事处2017年9月工作要点</a></li></ul>
+</td></tr>
+<tr>
+<td style='background-color:null'>
+  <ul><li><a href='/art/2017/6/5/art_37592_559432.html' title='人事处2017年6月工作要点' target=_blank>人事处2017年6月工作要点</a></li></ul>
+</td></tr>
+<tr>
+<td style='background-color:null'>
+  <ul><li><a href='/art/2017/5/2/art_37592_554026.html' title='人事处2017年5月工作要点' target=_blank>人事处2017年5月工作要点</a></li></ul>
+</td></tr>
+<tr>
+<td style='background-color:null'>
+  <ul><li><a href='/art/2017/3/31/art_37592_551139.html' title='人事处2017年4月工作要点' target=_blank>人事处2017年4月工作要点</a></li></ul>
+</td>
+</tr></table>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="5" height="20"></td>
+    </tr>
+  <tr>
+    <td valign="top" class="lxwm">
+    	<h3>联系我们</h3>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td class="lxwmlist">
+            	<ul style="padding-bottom:20px;">
+                	<li><strong>办公室：</strong>87971831  wanghua@yzu.edu.cn</li>
+                    <li><strong>人事科：</strong>87971876  rsk@yzu.edu.cn</li>
+                    <li><strong>师资科：</strong>87971871  shizb@yzu.edu.cn</li>
+                    <li><strong>劳资科：</strong>87971872  lzk@yzu.edu.cn</li>
+                    <li><strong>人才工作办公室：</strong>87971833  rcb@yzu.edu.cn</li>
+                    <li><strong>人事档案室：</strong>87979310  rsda@yzu.edu.cn</li>
+                    <li><strong>博士后管理办公室：</strong>87971888  bsh@yzu.edu.cn</li>
+                </ul>
+            </td>
+          </tr>
+          <tr>
+            <td class="lxwmpic">
+            	<ul>
+                	<li><a href="mailto:wglu@yzu.edu.cn"><img src="/images/3221/czxx.jpg"/></a></li>
+                    <li><a href="tencent://message/?uin=374342932&Site=人事处&Menu=yes"><img src="/images/3221/zxzx.jpg"/></a></li>
+                </ul>
+            </td>
+          </tr>
+          <tr>
+            <td height="25" align="center" valign="middle"><select name="select" onchange="javascript:if (this.selectedIndex==0) return false;window.open(this.options[this.selectedIndex].value)" style="width:252px; text-align:center; vertical-align:middle;"><option value="default">========友情链接==========</option>
+             <option value="http://hr.nju.edu.cn/urp-portal/portal/group/HuDept">南京大学</option>
+             <option value="http://rsc.seu.edu.cn/">东南大学</option>
+             <option value="http://rsc.nuaa.edu.cn/index.asp">南京航空航天大学</option>
+             <option value="http://rsc.njust.edu.cn/nlg/">南京理工大学</option>
+             <option value="http://pd.cumt.edu.cn/">中国矿业大学</option>
+             <option value="http://rsc.hhu.edu.cn/">河海大学</option>
+             <option value="http://rsrcw.njau.edu.cn/">南京农业大学</option>
+             <option value="http://renshi.jiangnan.edu.cn/">江南大学</option>
+             <option value="http://rsc.cpu.edu.cn/">中国药科大学</option>
+             <option value="http://rsc.njnu.edu.cn/rsc_news/index.htm">南京师范大学</option>
+             <option value="http://rsc.suda.edu.cn/">苏州大学</option>
+             <option value="http://rsc.njmu.edu.cn/">南京医科大学</option>
+             <option value="http://rsc.njucm.edu.cn/index.aspx">南京中医药大学</option>
+             <option value="http://rczyb.njtech.edu.cn/">南京工业大学</option>
+             <option value="http://rsc.ujs.edu.cn/pub/cms">江苏大学</option>
+             <option value="http://rsc.njue.edu.cn/">南京财经大学</option>
+             <option value="http://rsc.nuist.edu.cn">南京信息工程大学</option>
+             <option value="http://renshi.njfu.edu.cn/index.asp">南京林业大学</option>
+             <option value="http://rsc.xznu.edu.cn/">江苏师范大学</option>
+             <option value="http://rsc.ntu.edu.cn/">南通大学</option>
+             <option value="http://rsc.njupt.edu.cn">南京邮电大学</option>
+             <option value="http://www.tsinghua.edu.cn/docsn/rsc/rscpag/index.html">清华大学</option>
+             <option value="http://hr.pku.edu.cn/">北京大学</option>
+             <option value="http://rsc.ruc.edu.cn/">中国人民大学</option>
+             <option value="http://www.hr.fudan.edu.cn/">复旦大学</option>
+             <option value="http://hr.sjtu.edu.cn/">上海交通大学</option>
+             <option value="http://hr.tongji.edu.cn/">同济大学</option>
+            </select></td>
+          </tr>
+        </table>
+    </td>
+    <td width="15"></td>
+    <td valign="top" class="rczp">
+    	<h3><span><a href="/col/col37594/index.html"><img src="/images/3221/more.jpg" /></a></span>人才招聘</h3>
+         <table width='100%' cellspacing='0' cellpadding='0' border='0'>
+<tr>
+<td style='background-color:null'>
+  <ul><li><span>03-16</span><a href='/art/2017/3/16/art_37594_546570.html' title='扬州大学2017年人才招聘公告' target=_blank>扬州大学2017年人才招聘公告</a></li></ul>
+</td></tr>
+<tr>
+<td style='background-color:null'>
+  <ul><li><span>09-05</span><a href='/art/2017/9/5/art_37594_567001.html' title='扬州大学首届国际青年学者论坛诚邀海内外青年才俊' target=_blank>扬州大学首届国际青年学者论坛诚邀海内外青年才俊</a></li></ul>
+</td></tr>
+<tr>
+<td style='background-color:null'>
+  <ul><li><span>06-23</span><a href='/art/2017/6/23/art_37594_561897.html' title='扬州大学附属医院2017年公开招聘人事代理工作人员公告（二）' target=_blank>扬州大学附属医院2017年公开招聘人事代理工作人员...</a></li></ul>
+</td></tr>
+<tr>
+<td style='background-color:null'>
+  <ul><li><span>06-14</span><a href='/art/2017/6/14/art_37594_560591.html' title='扬州大学财务处拟聘用人员公示' target=_blank>扬州大学财务处拟聘用人员公示</a></li></ul>
+</td></tr>
+<tr>
+<td style='background-color:null'>
+  <ul><li><span>06-08</span><a href='/art/2017/6/8/art_37594_559983.html' title='扬州大学财务处2017年招聘工作人员体检公告' target=_blank>扬州大学财务处2017年招聘工作人员体检公告</a></li></ul>
+</td></tr>
+<tr>
+<td style='background-color:null'>
+  <ul><li><span>05-16</span><a href='/art/2017/5/16/art_37594_557550.html' title='扬州大学财务处招聘工作人员启事' target=_blank>扬州大学财务处招聘工作人员启事</a></li></ul>
+</td></tr>
+<tr>
+<td style='background-color:null'>
+  <ul><li><span>04-11</span><a href='/art/2017/4/11/art_37594_552110.html' title='扬州大学附属医院2017年公开招聘医学人才公告' target=_blank>扬州大学附属医院2017年公开招聘医学人才公告</a></li></ul>
+</td></tr>
+<tr>
+<td style='background-color:null'>
+  <ul><li><span>03-16</span><a href='/art/2017/3/16/art_37594_546573.html' title='扬州大学2017年校特聘教授、讲座教授招聘公告' target=_blank>扬州大学2017年校特聘教授、讲座教授招聘公告</a></li></ul>
+</td></tr>
+<tr>
+<td style='background-color:null'>
+  <ul><li><span>03-16</span><a href='/art/2017/3/16/art_37594_546571.html' title='扬州大学2017年博士后研究人员招聘公告' target=_blank>扬州大学2017年博士后研究人员招聘公告</a></li></ul>
+</td>
+</tr></table>
+    </td>
+    <td width="15"></td>
+    <td class="ztlm" valign="top">
+    	<h3>专题栏目</h3>
+        <div class="quicklink">
+        	<ul>
+            	<li style="margin-top:12px;"><a href="http://rczp.yzu.edu.cn/" target="_blank"><img src="/images/3221/quicklink01.jpg"/></a></li>
+                <li><a href="http://rs.yzu.edu.cn" target="_blank"><img src="/images/3221/quicklink02.jpg"/></a></li>
+                <li><a href="/col/col12508/index.html" target="_blank"><img src="/images/3221/quicklink03.jpg"/></a></li>
+                <li><a href="/col/col40283/index.html" target="_blank"><img src="/images/3221/quicklink04.jpg"/></a></li>
+                <li><a href="/col/col38722/index.html" target="_blank"><img src="/images/3221/quicklink05.jpg"/></a></li>
+            </ul>
+        </div>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="5" height="20"></td>
+    </tr>
+</table>
+
+    </td>
+  </tr>
+  <tr>
+    <td height="118" class="bottom">Copyright @ 2015 扬州大学人事处 All Rights Reserved<br/>办公地点：扬州大学荷花池校区行政楼5楼    通信地址：扬州市大学南路88号 <br/> 邮编：225009  传真：0514-87971831  E-mail：rsc@yzu.edu.cn</td>
+  </tr>
+</table>
+<script type="text/javascript">
+<!--
+swfobject.registerObject("FlashID");
+//-->
+    </script>
+
+
+<!-- visitcount Begin --><iframe src='./module/visitcount/visit.jsp?type=1&i_webid=29&i_columnid=360' name="vishidden" id="vishidden" frameborder="0" style="width:0; height:0; display:none"></iframe><!-- visitcount End -->
+</body>
+</html>
+ <a href='http://www.hanweb.com' style='display:none'>Produced By 大汉网络 大汉版通发布系统</a><script language="javascript" src='/script/pagecontrol.js'></script>

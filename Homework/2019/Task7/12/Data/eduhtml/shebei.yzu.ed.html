@@ -1,0 +1,532 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="/script/page.css" type=text/css rel=stylesheet>
+<script language="javascript" src="/module/jslib/jquery/jquery.js"></script>
+
+<meta http-equiv="x-ua-compatible" content="ie=7" />
+<title>实验室与设备管理处</title>
+<meta name="Keywords" content="内容管理、内容管理发布（CMS）系统、信息发布、新闻采编发系统、知识管理、知识门户、政府门户、教育门户、企业门户、竞争情报系统、抓取系统、信息采集、信息雷达系统、电子政务、电子政务解决方案、办公系统、OA、网站办公系统"><meta name='Generator' content='大汉版通'><meta name='Author' content='大汉网络'>
+<meta name='Maketime' content='2017-10-27 10:19:23'>
+<meta name="sitename" content="实验室与设备管理处">
+<meta name="siteurl"  content="http://shebei.yzu.edu.cn/index.html">
+<meta name="guild"    content="">
+<meta name="district"    content="">
+<meta name="sitecatalog"    content="">
+
+<link href="/images/265/css.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/images/265/Tfunction.js"></script>
+</head>
+
+<body>
+<table width="920" border="0" align="center" cellpadding="0" cellspacing="0" background="/images/265/sbc_top.jpg">
+  <tr>
+    <td height="187"> </td>
+    <td width="110" valign="top"><DIV align="right" style="text-align:right; position:absolute; top:12px ">
+            <SCRIPT language=JavaScript>
+function Year_Month(){ 
+    var now = new Date(); 
+    var yy = now.getYear(); 
+    var mm = now.getMonth()+1; 
+    var cl = '<font color="#0000df">'; 
+    if (now.getDay() == 0) cl = '<font color="#c00000">'; 
+    if (now.getDay() == 6) cl = '<font color="#00c000">'; 
+    return(cl +  yy + '年' + mm + '月</font>'); }
+ function Date_of_Today(){ 
+    var now = new Date(); 
+    var cl = '<font color="#ff0000">'; 
+    if (now.getDay() == 0) cl = '<font color="#c00000">'; 
+    if (now.getDay() == 6) cl = '<font color="#00c000">'; 
+    return(cl +  now.getDate() + '</font>'); }
+ function Day_of_Today(){ 
+    var day = new Array(); 
+    day[0] = "星期日"; 
+    day[1] = "星期一"; 
+    day[2] = "星期二"; 
+    day[3] = "星期三"; 
+    day[4] = "星期四"; 
+    day[5] = "星期五"; 
+    day[6] = "星期六"; 
+    var now = new Date(); 
+    var cl = '<font color="#0000df">'; 
+    if (now.getDay() == 0) cl = '<font color="#c00000">'; 
+    if (now.getDay() == 6) cl = '<font color="#00c000">'; 
+    return(cl +  day[now.getDay()] + '</font>'); }
+ function CurentTime(){ 
+    var now = new Date(); 
+    var hh = now.getHours(); 
+    var mm = now.getMinutes(); 
+    var ss = now.getTime() % 60000; 
+    ss = (ss - (ss % 1000)) / 1000; 
+    var clock = hh+':'; 
+    if (mm < 10) clock += '0'; 
+    clock += mm+':'; 
+    if (ss < 10) clock += '0'; 
+    clock += ss; 
+    return(clock); } 
+function refreshCalendarClock(){ 
+document.all.calendarClock1.innerHTML = Year_Month(); 
+document.all.calendarClock2.innerHTML = Date_of_Today(); 
+document.all.calendarClock3.innerHTML = Day_of_Today(); 
+document.all.calendarClock4.innerHTML = CurentTime(); }
+ var webUrl = webUrl; 
+document.write('<table border="0" cellpadding="0" cellspacing="0"><tr><td>'); 
+document.write('<table id="CalendarClockFreeCode" border="0" cellpadding="0" cellspacing="0" width="60" height="70" ');
+document.write('style="position:absolute;visibility:hidden" bgcolor="#ffffff">');
+document.write('<tr><td align="center"><font ');
+document.write('style="cursor:hand;color:#ff0000;font-family:宋体;font-size:14pt;line-height:120%" ');
+if (webUrl != 'netflower'){ 
+   document.write('</td></tr><tr><td align="center"><font ');
+   document.write('style="cursor:hand;color:#2000ff;font-family:宋体;font-size:9pt;line-height:110%" ');
+} 
+document.write('</td></tr></table>'); 
+document.write('<table border="0" cellpadding="0" cellspacing="0" width="61"  height="70">');
+document.write('<tr><td valign="top" width="100%" height="100%">');
+document.write('<table border="0" cellpadding="0" cellspacing="0" bordercolordark="#FFFFFF" width="58" bgcolor="#ffffff" height="67">');
+document.write('<tr><td align="center" width="100%" height="100%" >');
+document.write('<font id="calendarClock1" style="font-family:宋体;font-size:7pt;line-height:120%"> </font><br>');
+document.write('<font id="calendarClock2" style="color:#ff0000;font-family:Arial;font-size:14pt;line-height:120%"> </font><br>');
+document.write('<font id="calendarClock3" style="font-family:宋体;font-size:9pt;line-height:120%"> </font><br>');
+document.write('<font id="calendarClock4" style="color:#100080;font-family:宋体;font-size:8pt;line-height:120%"><b> </b></font>');
+document.write('</td></tr></table>');
+document.write('</td></tr></table>'); 
+document.write('</td></tr></table>'); 
+setInterval('refreshCalendarClock()',1000);
+</SCRIPT>
+</DIV></td>
+  </tr>
+</table>
+<table width="920" height="33" border="0" align="center" cellpadding="0" cellspacing="0" style="background-image:url(/images/265/sbc_menubg.jpg); background-repeat:repeat-x;" class="menu">
+  <tr>
+    <td width="100"><a href="http://shebei.yzu.edu.cn/">首页</a></td>
+    <td><img src="/images/265/sbc_menuline.jpg" width="2" height="33" /></td>
+    <td width="110" onmouseover="document.getElementById('sub1').style.display='block'" onmouseout="document.getElementById('sub1').style.display='none'"><a href="/col/col6333/index.html">部门概况</a></td>
+    <td><img src="/images/265/sbc_menuline.jpg" width="2" height="33" /></td>
+    <td width="140" onmouseover="document.getElementById('sub2').style.display='block'" onmouseout="document.getElementById('sub2').style.display='none'"><a href="/col/col28941/index.html">计划项目管理</a></td>
+    <td><img src="/images/265/sbc_menuline.jpg" width="2" height="33" /></td>
+    <td width="130" onmouseover="document.getElementById('sub3').style.display='block'" onmouseout="document.getElementById('sub3').style.display='none'"><a href="/col/col28946/index.html">实验室管理</a></td>
+    <td><img src="/images/265/sbc_menuline.jpg" width="2" height="33" /></td>
+    <td width="140" onmouseover="document.getElementById('sub4').style.display='block'" onmouseout="document.getElementById('sub4').style.display='none'"><a href="/col/col28963/index.html">设备供应管理</a></td>
+    <td><img src="/images/265/sbc_menuline.jpg" width="2" height="33" /></td>
+    <td onmouseover="document.getElementById('sub5').style.display='block'" onmouseout="document.getElementById('sub5').style.display='none'"><a href="/col/col28968/index.html">设备安全与维修管理</a></td>
+    <td><img src="/images/265/sbc_menuline.jpg" width="2" height="33" /></td>
+    <td width="110"><a href="/col/col6341/index.html">下载专区</a></td>
+  </tr>
+</table>
+<table width="920" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#e1e5ea">
+  <tr>
+    <td height="26" class="submenut"><!-- start submenu -->
+      <div id="sub1" onmouseover="document.getElementById('sub1').style.display='block'" onmouseout="document.getElementById('sub1').style.display='none'">
+           <a href="/col/col6333/index.html">部门简介</a>| 
+           <a href="/col/col6334/index.html">机构设置</a>| 
+           <a href="/col/col28903/index.html">联系电话</a>|
+           <a href="/col/col28904/index.html">现任领导</a> 
+      </div>
+      <div id="sub2" onmouseover="document.getElementById('sub2').style.display='block'" onmouseout="document.getElementById('sub2').style.display='none'">
+           <a href="/col/col28941/index.html">工作职责</a>| 
+           <a href="/col/col28942/index.html">办事指南</a>|
+           <a href="/col/col28943/index.html">规章制度</a>|
+           <a href="/col/col28944/index.html">计划申报</a>| 
+           <a href="/col/col28945/index.html">计划审批</a>  
+      </div>
+      <div id="sub3" onmouseover="document.getElementById('sub3').style.display='block'" onmouseout="document.getElementById('sub3').style.display='none'">           <a href="/col/col28946/index.html">工作职责</a>|
+           <a href="/col/col28947/index.html">办事指南</a>|
+           <a href="/col/col28948/index.html">规章制度</a>|
+           <a href="/col/col28949/index.html">日常事务</a>|
+           <a href="/col/col28950/index.html">实验队伍建设</a>|
+           <a href="/col/col28961/index.html">建设项目管理</a>|
+           <a href="/col/col28962/index.html">资产报废调剂</a>
+	  </div>
+      <div id="sub4" onmouseover="document.getElementById('sub4').style.display='block'" onmouseout="document.getElementById('sub4').style.display='none'">
+           <a href="/col/col28963/index.html">工作职责</a>|
+           <a href="/col/col28964/index.html">办事指南</a>|
+           <a href="/col/col28965/index.html">规章制度</a>|
+           <a href="/col/col28966/index.html">教学实验设备采购</a>|
+           <a href="/col/col28967/index.html">非教学实验设备采购</a>
+      </div>
+      <div id="sub5" onmouseover="document.getElementById('sub5').style.display='block'" onmouseout="document.getElementById('sub5').style.display='none'">
+           <a href="/col/col28968/index.html">工作职责</a>|
+           <a href="/col/col28969/index.html">办事指南</a>|
+           <a href="/col/col28970/index.html">规章制度</a>|
+           <a href="/col/col28971/index.html">设备安全监控</a>|
+           <a href="/col/col6342/index.html">设备维修</a>
+      </div>
+      <!-- end submenu -->
+    </td>
+  </tr>
+</table>
+<div style="background:#fff; padding:10px; width:900px; margin:0 auto">
+<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="196" rowspan="2" valign="top" class="left" bgcolor="#eef4f6"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr class="navline">
+        <td style="background-image:url(/images/265/sbc_nav02.jpg); background-repeat:no-repeat; background-position:center" class="leftnav01">本周安排</td>
+        <td> </td>
+        <td align="right" class="more"><a href="/col/col28981/index.html">更多>></a></td>
+      </tr>
+      <tr>
+        <td height="110" colspan="3" valign="top" style="padding:5px">
+        <marquee direction=up align="bottom" height="100%" width="100%" onmouseout=this.start() onmouseover=this.stop() scrollamount="1" scrolldelay="0">
+        <table width='100%' cellspacing='0' cellpadding='0' border='0'>
+<tr>
+<td style='background-color:null'>
+<table cellpadding='0' cellspacing='0' border='0' width=185'>
+<tr>
+<td style="border-bottom:1px dashed #d1d8e1; white-space: normal; line-height:24px"><img src='/picture/0/130823153136651.jpg' align='absmiddle' border='0'>&nbsp;10月26日 下午 机械设计制造及其自动化专业认证现场考查工作协调会</td>
+</tr></table></td></tr>
+<tr>
+<td style='background-color:null'>
+<table cellpadding='0' cellspacing='0' border='0' width=185'>
+<tr>
+<td style="border-bottom:1px dashed #d1d8e1; white-space: normal; line-height:24px"><img src='/picture/0/130823153136651.jpg' align='absmiddle' border='0'>&nbsp;10月27日 下午 扬州大学大型仪器设备管理工作会议</td>
+</tr></table></td>
+</tr></table><tr><td></td></tr>
+        </marquee> 
+        </td>
+        </tr>
+    </table>
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+       <tr>
+          <td align="center"><a href="/col/col20541/index.html"><img src="/images/265/sbc_pic1.jpg" width="196" height="54" /></a></td>
+        </tr>
+        <tr>
+          <td height="6"></td>
+        </tr>
+        <tr>
+          <td align="center"><a href="http://10.191.0.29/"  target="_blank"><img src="/images/265/sys.jpg" width="196" height="54" /></a></td>
+        </tr>
+        <tr>
+          <td height="6"></td>
+        </tr>
+        <tr>
+          <td align="center"><a href="http://58.192.138.103/" target="_blank"><img src="/images/265/sbc_pic2.jpg" width="196" height="54" /></a></td>
+        </tr>
+        <tr>
+          <td height="6"></td>
+        </tr>
+        <tr>
+          <td align="center"><a href="http://10.253.24.3/" target="_blank"><img src="/images/265/sbc_pic3.jpg" width="196" height="54" /></a></td>
+        </tr>
+        <tr>
+          <td height="6"></td>
+        </tr>
+        <tr>
+          <td align="center"><a href="/col/col6339/index.html"><img src="/images/265/sbc_pic4.jpg" width="196" height="54" /></a></td>
+        </tr>
+        <tr>
+          <td height="6"></td>
+        </tr>
+        <tr>
+          <td align="center"><a href="mailto:shebei@yzu.edu.cn"><img src="/images/265/sbc_pic5.jpg" width="196" height="54" /></a></td>
+        </tr>
+        <tr>
+          <td height="12"></td>
+        </tr>
+      </table>
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td><SELECT style="BACKGROUND-COLOR: #ffffff; WIDTH: 196px; FONT-SIZE: 12px" onchange="javascript:if (this.selectedIndex==0) return false;window.open(this.options[this.selectedIndex].value)" size=1 name=select4> <OPTION selected>==== 学院链接 ====</OPTION> <OPTION value=http://wxy.yzu.edu.cn/>文学院</OPTION> <OPTION value=http://shfzxy.yzu.edu.cn/>社会发展学院</OPTION> <OPTION value=http://fxy.yzu.edu.cn/>法学院</OPTION>  <OPTION value=http://marx.yzu.edu.cn/>马克思主义学院</OPTION><OPTION value=http://jykxxy.yzu.edu.cn/>教育科学学院</OPTION> <OPTION value=http://jykxxy.yzu.edu.cn/>（师范学院）</OPTION> <OPTION value=http://xwcmxy.yzu.edu.cn/>新闻与传媒学院</OPTION> <OPTION value=http://wgyxy.yzu.edu.cn/>外国语学院</OPTION> <OPTION value=http://sxxy.yzu.edu.cn/>数学科学学院</OPTION> <OPTION value=http://wlxy.yzu.edu.cn/>物理科学与技术学院</OPTION> <OPTION value=http://hxhg.yzu.edu.cn/>化学化工学院</OPTION> <OPTION value=http://tyxy.yzu.edu.cn/>体育学院</OPTION> <OPTION value=http://jxgcxy.yzu.edu.cn/>机械工程学院</OPTION> <OPTION value=http://xxgcxy.yzu.edu.cn/>信息工程学院</OPTION> <OPTION value=http://jgxy.yzu.edu.cn/>建筑科学与工程学院</OPTION> <OPTION value=http://slxy.yzu.edu.cn/>水利科学与工程学院</OPTION> <OPTION value=http://ndxy.yzu.edu.cn/>能源与动力工程学院</OPTION> <OPTION value=http://hjxy.yzu.edu.cn/>环境科学与工程学院</OPTION> <OPTION value=http://nxy.yzu.edu.cn/>农学院</OPTION> <OPTION value=http://ybxy.yzu.edu.cn/>园艺与植物保护学院</OPTION> <OPTION value=http://dkxy.yzu.edu.cn/>动物科学与技术学院</OPTION> <OPTION value=http://syxy.yzu.edu.cn/>兽医学院</OPTION> <OPTION value=http://sjxy.yzu.edu.cn/>生物科学与技术学院</OPTION> <OPTION value=http://yxy.yzu.edu.cn/>医学院</OPTION> <OPTION value=http://sxy.yzu.edu.cn/>商学院</OPTION> <OPTION value=http://lyxy.yzu.edu.cn/>旅游烹饪学院</OPTION> <OPTION value=http://skxy.yzu.edu.cn/>（食品科学与工程学院）</OPTION> <OPTION value=http://ysxy.yzu.edu.cn/>艺术学院</OPTION> <OPTION value=http://glxy.yzu.edu.cn/>广陵学院</OPTION></SELECT></td>
+        </tr>
+        <tr>
+          <td height="6"></td>
+        </tr>
+        <tr>
+          <td><SELECT style="BACKGROUND-COLOR: #ffffff; WIDTH: 196px; FONT-SIZE: 12px" onchange="javascript:if (this.selectedIndex==0) return false;window.open(this.options[this.selectedIndex].value)" size=1 name=select4> <OPTION selected>==== 部门链接 ====</OPTION><OPTION value=http://www.yzu.edu.cn>扬州大学</OPTION> <OPTION value=http://nc.yzu.edu.cn/movie>软件</OPTION> <OPTION value=http://jwjc.yzu.edu.cn/>纪委（监察处）</OPTION> <OPTION value=http://dwbgs.yzu.edu.cn/>党委办公室</OPTION> <OPTION value=http://zzb.yzu.edu.cn/>组织部</OPTION> <OPTION value=http://dwxcb.yzu.edu.cn/>宣传部</OPTION> <OPTION value=http://dwtzb.yzu.edu.cn/>统战部</OPTION> <OPTION value=http://xgc.yzu.edu.cn/>学工部</OPTION> <OPTION value=http://bwc.yzu.edu.cn/>保卫部（处）</OPTION> <OPTION value=http://gonghui.yzu.edu.cn/>工会</OPTION> <OPTION value=http://tuanwei.yzu.edu.cn/>团委</OPTION> <OPTION value=http://xzbgs.yzu.edu.cn/>校长办公室</OPTION> <OPTION value=http://jwc.yzu.edu.cn/>教务处</OPTION> <OPTION value=http://zhaoban.yzu.edu.cn/>（招办）</OPTION> <OPTION value=http://yjsc.yzu.edu.cn/>研究生处（院）</OPTION> <OPTION value=http://zrkxc.yzu.edu.cn/>科学技术处</OPTION> <OPTION value=http://rwskc.yzu.edu.cn/>人文社科处</OPTION> <OPTION value=http://cjc.yzu.edu.cn/>继续教育处（院）</OPTION> <OPTION value=http://international.yzu.edu.cn/>国际合作与交流（港澳台办公室）</OPTION> <OPTION value=http://rsc.yzu.edu.cn/>人事处</OPTION> <OPTION value=http://coe.yzu.edu.cn/>海外教育学院</OPTION> <OPTION value=http://cwc.yzu.edu.cn/>财务处</OPTION> <OPTION value=http://gz.yzu.edu.cn/>国有资产管理处</OPTION> <OPTION value=http://sjc.yzu.edu.cn/>审计处</OPTION> <OPTION value=http://hqglc.yzu.edu.cn/>后勤保障处</OPTION> <OPTION value=http://cggl.yzu.edu.cn/>采购管理办公室</OPTION> <OPTION value=http://jjc.yzu.edu.cn/>基建处</OPTION> <OPTION value=http://shebei.yzu.edu.cn/>实验室与设备管理处</OPTION> <OPTION value=http://cszx.yzu.edu.cn/>（测试中心）</OPTION> <OPTION value=http://kjcyc.yzu.edu.cn/>资产经营有限公司</OPTION> <OPTION value=http://fzbgs.yzu.edu.cn/>发展办公室</OPTION> <OPTION value=http://ltxc.yzu.edu.cn/>离退休处</OPTION> <OPTION value=http://hqjt.yzu.edu.cn/>后勤服务集团</OPTION> <OPTION value=http://lib.yzu.edu.cn/>图书馆</OPTION> <OPTION value=http://pgzx.yzu.edu.cn/>教育教学评估中心</OPTION> <OPTION value=http://xbbjb.yzu.edu.cn/>学报编辑部</OPTION> <OPTION value=http://dangan.yzu.edu.cn/>档案馆</OPTION> <OPTION value=http://xxzx.yzu.edu.cn/>信息中心</OPTION> <OPTION value=http://synmc.yzu.edu.cn/>实验农牧场</OPTION> <OPTION value=http://xkb.yzu.edu.cn/>重点学科建设办公室</OPTION></SELECT></td>
+        </tr>
+        <tr>
+          <td height="6"></td>
+        </tr>
+        <tr>
+          <td><SELECT style="BACKGROUND-COLOR: #ffffff; WIDTH: 196px; FONT-SIZE: 12px" onchange="javascript:if (this.selectedIndex==0) return false;window.open(this.options[this.selectedIndex].value)" size=1 name=select3> <OPTION selected>==== 对外链接 ====</OPTION> <OPTION value=http:///>对外链接</OPTION></SELECT></td>
+        </tr>
+      </table></td>
+    <td width="10"></td>
+    <td width="403" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0" style="background-image:url(/images/265/sbc_nav01bg.jpg); background-repeat:repeat-x">
+      <tr>
+        <td height="24" style="background-image: url(/images/265/sbc_nav01.jpg); background-repeat:no-repeat;" class="nav02">处务新闻</td>
+        <td width="40"><a href="/col/col11161/index.html"><img src="/images/265/sbc_more.jpg" /></a></td>
+      </tr>
+      </table><table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td height="167" valign="top" style="padding:10px 10px 0 10px">
+        <table width='100%' cellspacing='0' cellpadding='0' border='0'>
+<tr>
+<td style='background-color:null'>
+<table cellpadding='0' cellspacing='0' border='0' width='100%'>
+<tr>
+<td style="border-bottom:1px dashed #d1d8e1" height="24"><img src='/picture/0/130823154239078.jpg' align='absmiddle' border='0'>&nbsp;<a href='/art/2017/10/27/art_11161_572191.html' title='我处召开危险物品分库后续建设方案专家论证会' target=_blank>我处召开危险物品分库后续建设方案专家论证会</a></td>
+<td width='32' align='left' style='color:#8f8f8f;border-bottom:1px dashed #d1d8e1'>10-27</td>
+</tr></table></td></tr>
+<tr>
+<td style='background-color:null'>
+<table cellpadding='0' cellspacing='0' border='0' width='100%'>
+<tr>
+<td style="border-bottom:1px dashed #d1d8e1" height="24"><img src='/picture/0/130823154239078.jpg' align='absmiddle' border='0'>&nbsp;<a href='/art/2017/10/27/art_11161_572190.html' title='我处举办危险物品建账管理培训' target=_blank>我处举办危险物品建账管理培训</a></td>
+<td width='32' align='left' style='color:#8f8f8f;border-bottom:1px dashed #d1d8e1'>10-27</td>
+</tr></table></td></tr>
+<tr>
+<td style='background-color:null'>
+<table cellpadding='0' cellspacing='0' border='0' width='100%'>
+<tr>
+<td style="border-bottom:1px dashed #d1d8e1" height="24"><img src='/picture/0/130823154239078.jpg' align='absmiddle' border='0'>&nbsp;<a href='/art/2017/10/27/art_11161_572189.html' title='我处举办“实验室安全教育与考试系统”的使用培训' target=_blank>我处举办“实验室安全教育与考试系统”的使用培训</a></td>
+<td width='32' align='left' style='color:#8f8f8f;border-bottom:1px dashed #d1d8e1'>10-27</td>
+</tr></table></td></tr>
+<tr>
+<td style='background-color:null'>
+<table cellpadding='0' cellspacing='0' border='0' width='100%'>
+<tr>
+<td style="border-bottom:1px dashed #d1d8e1" height="24"><img src='/picture/0/130823154239078.jpg' align='absmiddle' border='0'>&nbsp;<a href='/art/2017/10/27/art_11161_572187.html' title='我处举办危险物品保管及安全管理培训' target=_blank>我处举办危险物品保管及安全管理培训</a></td>
+<td width='32' align='left' style='color:#8f8f8f;border-bottom:1px dashed #d1d8e1'>10-27</td>
+</tr></table></td></tr>
+<tr>
+<td style='background-color:null'>
+<table cellpadding='0' cellspacing='0' border='0' width='100%'>
+<tr>
+<td style="border-bottom:1px dashed #d1d8e1" height="24"><img src='/picture/0/130823154239078.jpg' align='absmiddle' border='0'>&nbsp;<a href='/art/2017/10/27/art_11161_572173.html' title='南京农业大学来我处调研' target=_blank>南京农业大学来我处调研</a></td>
+<td width='32' align='left' style='color:#8f8f8f;border-bottom:1px dashed #d1d8e1'>10-27</td>
+</tr></table></td></tr>
+<tr>
+<td style='background-color:null'>
+<table cellpadding='0' cellspacing='0' border='0' width='100%'>
+<tr>
+<td style="border-bottom:1px dashed #d1d8e1" height="24"><img src='/picture/0/130823154239078.jpg' align='absmiddle' border='0'>&nbsp;<a href='/art/2017/10/18/art_11161_570783.html' title='我处组织全体党员群众观看十九大开幕会' target=_blank>我处组织全体党员群众观看十九大开幕会</a></td>
+<td width='32' align='left' style='color:#8f8f8f;border-bottom:1px dashed #d1d8e1'>10-18</td>
+</tr></table></td></tr>
+<tr>
+<td style='background-color:null'>
+<table cellpadding='0' cellspacing='0' border='0' width='100%'>
+<tr>
+<td style="border-bottom:1px dashed #d1d8e1" height="24"><img src='/picture/0/130823154239078.jpg' align='absmiddle' border='0'>&nbsp;<a href='/art/2017/9/27/art_11161_568955.html' title='学校召开危险物品专项整治工作紧急会议' target=_blank>学校召开危险物品专项整治工作紧急会议</a></td>
+<td width='32' align='left' style='color:#8f8f8f;border-bottom:1px dashed #d1d8e1'>09-27</td>
+</tr></table></td>
+</tr></table><tr><td></td></tr></td>
+  </tr>
+  <tr>
+    <td height="10"></td>
+  </tr>
+</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" style="background-image:url(/images/265/sbc_nav01bg.jpg); background-repeat:repeat-x">
+      <tr>
+        <td height="24" style="background-image: url(/images/265/sbc_nav01.jpg); background-repeat:no-repeat;" class="nav02">通知公告</td>
+        <td width="40"><a href="/col/col6345/index.html"><img src="/images/265/sbc_more.jpg" /></a></td>
+      </tr>
+      </table>
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td height="178" valign="top" style="padding:10px 10px 0 10px">
+    <table width='100%' cellspacing='0' cellpadding='0' border='0'>
+<tr>
+<td style='background-color:null'>
+<table cellpadding='0' cellspacing='0' border='0' width='100%'>
+<tr>
+<td style="border-bottom:1px dashed #d1d8e1" height="24"><img src='/picture/0/130823154239078.jpg' align='absmiddle' border='0'>&nbsp;<a href='/art/2017/10/25/art_6345_571820.html' title='关于举办实验室安全培训的通知' target=_blank>关于举办实验室安全培训的通知</a></td>
+<td width='32' align='left' style='color:#8f8f8f;border-bottom:1px dashed #d1d8e1'>10-25</td>
+</tr></table></td></tr>
+<tr>
+<td style='background-color:null'>
+<table cellpadding='0' cellspacing='0' border='0' width='100%'>
+<tr>
+<td style="border-bottom:1px dashed #d1d8e1" height="24"><img src='/picture/0/130823154239078.jpg' align='absmiddle' border='0'>&nbsp;<a href='/art/2017/10/23/art_6345_571394.html' title='关于做好本科实验场所和实验设备情况统计工作的通知' target=_blank>关于做好本科实验场所和实验设备情况统计工作的通知</a></td>
+<td width='32' align='left' style='color:#8f8f8f;border-bottom:1px dashed #d1d8e1'>10-23</td>
+</tr></table></td></tr>
+<tr>
+<td style='background-color:null'>
+<table cellpadding='0' cellspacing='0' border='0' width='100%'>
+<tr>
+<td style="border-bottom:1px dashed #d1d8e1" height="24"><img src='/picture/0/130823154239078.jpg' align='absmiddle' border='0'>&nbsp;<a href='/art/2017/10/19/art_6345_570956.html' title='实验室与设备管理处值班表' target=_blank>实验室与设备管理处值班表</a></td>
+<td width='32' align='left' style='color:#8f8f8f;border-bottom:1px dashed #d1d8e1'>10-19</td>
+</tr></table></td></tr>
+<tr>
+<td style='background-color:null'>
+<table cellpadding='0' cellspacing='0' border='0' width='100%'>
+<tr>
+<td style="border-bottom:1px dashed #d1d8e1" height="24"><img src='/picture/0/130823154239078.jpg' align='absmiddle' border='0'>&nbsp;<a href='/art/2017/10/17/art_6345_570635.html' title='关于组织做好2017年度压力容器作业人员培训复审工作的通知' target=_blank>关于组织做好2017年度压力容器作业人员培训复审工作...</a></td>
+<td width='32' align='left' style='color:#8f8f8f;border-bottom:1px dashed #d1d8e1'>10-17</td>
+</tr></table></td></tr>
+<tr>
+<td style='background-color:null'>
+<table cellpadding='0' cellspacing='0' border='0' width='100%'>
+<tr>
+<td style="border-bottom:1px dashed #d1d8e1" height="24"><img src='/picture/0/130823154239078.jpg' align='absmiddle' border='0'>&nbsp;<a href='/art/2017/10/17/art_6345_570597.html' title='关于加强实验室安全工作的紧急通知' target=_blank>关于加强实验室安全工作的紧急通知</a></td>
+<td width='32' align='left' style='color:#8f8f8f;border-bottom:1px dashed #d1d8e1'>10-17</td>
+</tr></table></td></tr>
+<tr>
+<td style='background-color:null'>
+<table cellpadding='0' cellspacing='0' border='0' width='100%'>
+<tr>
+<td style="border-bottom:1px dashed #d1d8e1" height="24"><img src='/picture/0/130823154239078.jpg' align='absmiddle' border='0'>&nbsp;<a href='/art/2017/10/10/art_6345_569731.html' title='关于做好2017年国家级示范性虚拟仿真实验教学项目申报工作的通知' target=_blank>关于做好2017年国家级示范性虚拟仿真实验教学项目申...</a></td>
+<td width='32' align='left' style='color:#8f8f8f;border-bottom:1px dashed #d1d8e1'>10-10</td>
+</tr></table></td></tr>
+<tr>
+<td style='background-color:null'>
+<table cellpadding='0' cellspacing='0' border='0' width='100%'>
+<tr>
+<td style="border-bottom:1px dashed #d1d8e1" height="24"><img src='/picture/0/130823154239078.jpg' align='absmiddle' border='0'>&nbsp;<a href='/art/2017/10/9/art_6345_569589.html' title='关于组织参观第50届全国高教仪器设备展示会的通知' target=_blank>关于组织参观第50届全国高教仪器设备展示会的通知</a></td>
+<td width='32' align='left' style='color:#8f8f8f;border-bottom:1px dashed #d1d8e1'>10-09</td>
+</tr></table></td>
+</tr></table><tr><td></td></tr>
+    </td>
+  </tr>
+  <tr>
+    <td height="10"></td>
+  </tr>
+</table>
+</td>
+    <td width="10"></td>
+    <td width="260" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td height="190" align="center" style="border:1px solid #e1e5ea; padding:4px">
+        <script type="text/javascript">var _width = 250; var _height = 178;var text_height = 22;var flash_height = _height + text_height;var pic_arr = new Array();var link_arr = new Array();var text_arr = new Array();var i = 0;pic_arr[i] = "/picture/0/s1409021037327941188.jpg";link_arr[i] = "/art/2014/9/2/art_32201_461930.html";text_arr[i] = "处领导到学院工作调研";i++;pic_arr[i] = "/picture/0/s140107080322986.JPG";link_arr[i] = "/art/2014/1/7/art_32201_438879.html";text_arr[i] = "专题民主生活通报会";i++;pic_arr[i] = "/picture/0/s140107080140299.JPG";link_arr[i] = "/art/2014/1/7/art_32201_438859.html";text_arr[i] = "我处召开新学期工作会议";i++;pic_arr[i] = "/picture/0/s140107080634001.JPG";link_arr[i] = "/art/2014/1/7/art_32201_438900.html";text_arr[i] = "焦校长来我处视察工作";i++;pic_arr[i] = "/picture/0/s140107080505661.JPG";link_arr[i] = "/art/2014/1/7/art_32201_438899.html";text_arr[i] = "夏书记来我处调研工作";i++;
+for(var kk=0;kk<pic_arr.length;kk++){
+ if(pic_arr[kk]==""){
+ pic_arr.splice(kk,1);
+ link_arr.splice(kk,1);
+ text_arr.splice(kk,1);
+ kk--;
+ }
+}
+var p = pic_arr.join("|");var l = link_arr.join("|");var t = text_arr.join("|");var f = "/flash/0/slideshow.swf";document.write('<object ID="focus_flash" classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0" width="'+ _width +'" height="'+ flash_height +'">');document.write('<param name="allowScriptAccess" value="sameDomain"><param name="movie" value="'+f+'"><param name="quality" value="high"><param name="bgcolor">');document.write('<param name="menu" value="false"><param name=wmode value="transparent">');document.write('<param name="FlashVars" value="pics='+p+'&links='+l+'&texts='+t+'&borderwidth='+_width+'&borderheight='+_height+'&textheight='+text_height+'">');document.write('<embed ID="focus_flash" src="'+f+'" wmode="opaque" FlashVars="pics='+p+'&links='+l+'&texts='+t+'&borderwidth='+_width+'&borderheight='+_height+'&textheight='+text_height+'" menu="false" quality="high" width="'+ _width +'" height="'+ flash_height +'" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />');document.write('</object>');</script>
+        </td>
+      </tr>
+      <tr>
+        <td height="10"></td>
+      </tr>
+    </table>
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" style=" background-color:#e1e5ea">
+      <tr>
+        <td height="24" style="background-image: url(/images/265/sbc_nav03.jpg); background-repeat:no-repeat;" class="nav03">学院实验室工作动态</td>
+        <td width="40"><a href="/col/col6346/index.html"><img src="/images/265/sbc_more.jpg" /></a></td>
+      </tr>
+      </table>
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td height="178" valign="top" style="padding:10px 10px 0 10px">
+    <table width='100%' cellspacing='0' cellpadding='0' border='0'>
+<tr>
+<td style='background-color:null'>
+<table cellpadding='0' cellspacing='0' border='0' width='100%'>
+<tr>
+<td style="border-bottom:1px dashed #d1d8e1" height="24"><img src='/picture/0/130823153136651.jpg' align='absmiddle' border='0'> <a href='/art/2015/1/23/art_6346_474561.html' title='物理科学与技术学院实验室风采展示' target=_blank>物理科学与技术学院实验室风采展示</a></td>
+</tr></table></td></tr>
+<tr>
+<td style='background-color:null'>
+<table cellpadding='0' cellspacing='0' border='0' width='100%'>
+<tr>
+<td style="border-bottom:1px dashed #d1d8e1" height="24"><img src='/picture/0/130823153136651.jpg' align='absmiddle' border='0'> <a href='/art/2015/1/23/art_6346_474559.html' title='文学院实验室风采展示' target=_blank>文学院实验室风采展示</a></td>
+</tr></table></td></tr>
+<tr>
+<td style='background-color:null'>
+<table cellpadding='0' cellspacing='0' border='0' width='100%'>
+<tr>
+<td style="border-bottom:1px dashed #d1d8e1" height="24"><img src='/picture/0/130823153136651.jpg' align='absmiddle' border='0'> <a href='/art/2015/1/23/art_6346_474558.html' title='数学科学学院实验室风采展示' target=_blank>数学科学学院实验室风采展示</a></td>
+</tr></table></td></tr>
+<tr>
+<td style='background-color:null'>
+<table cellpadding='0' cellspacing='0' border='0' width='100%'>
+<tr>
+<td style="border-bottom:1px dashed #d1d8e1" height="24"><img src='/picture/0/130823153136651.jpg' align='absmiddle' border='0'> <a href='/art/2015/1/23/art_6346_474557.html' title='动物科学与技术学院实验室风采展示' target=_blank>动物科学与技术学院实验室风采展示</a></td>
+</tr></table></td></tr>
+<tr>
+<td style='background-color:null'>
+<table cellpadding='0' cellspacing='0' border='0' width='100%'>
+<tr>
+<td style="border-bottom:1px dashed #d1d8e1" height="24"><img src='/picture/0/130823153136651.jpg' align='absmiddle' border='0'> <a href='/art/2015/1/23/art_6346_474553.html' title='生物科学与技术学院实验室风采展示' target=_blank>生物科学与技术学院实验室风采展示</a></td>
+</tr></table></td></tr>
+<tr>
+<td style='background-color:null'>
+<table cellpadding='0' cellspacing='0' border='0' width='100%'>
+<tr>
+<td style="border-bottom:1px dashed #d1d8e1" height="24"><img src='/picture/0/130823153136651.jpg' align='absmiddle' border='0'> <a href='/art/2015/1/23/art_6346_474552.html' title='机械工程学院实验室风采展示' target=_blank>机械工程学院实验室风采展示</a></td>
+</tr></table></td></tr>
+<tr>
+<td style='background-color:null'>
+<table cellpadding='0' cellspacing='0' border='0' width='100%'>
+<tr>
+<td style="border-bottom:1px dashed #d1d8e1" height="24"><img src='/picture/0/130823153136651.jpg' align='absmiddle' border='0'> <a href='/art/2015/1/23/art_6346_474551.html' title='建筑科学与工程学院实验室风采展示' target=_blank>建筑科学与工程学院实验室风采展示</a></td>
+</tr></table></td>
+</tr></table><tr><td></td></tr>
+    </td>
+  </tr>
+  <tr>
+    <td height="10"></td>
+  </tr>
+</table>
+    </td>
+  </tr>
+  <tr>
+    <td> </td>
+    <td colspan="3" valign="top">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" style=" background-color:#e1e5ea">
+      <tr>
+        <td height="24" style="background-image: url(/images/265/sbc_nav03.jpg); background-repeat:no-repeat;" class="nav03">实验教学示范中心</td>
+        <td width="40"><a href="/col/col6328/index.html"><img src="/images/265/sbc_more.jpg" /></a></td>
+      </tr>
+      </table>
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td height="140" valign="top" style="padding:5px 10px 0 10px; border:1px solid #e1e5ea; border-top:none">
+        <div style="overflow:hidden;width:650px;">
+            <div id="demo" style="OVERFLOW: hidden; WIDTH: 640px;" align="center">
+<table cellspacing="0" cellpadding="0" align="center" border="0"><tbody><tr>
+<td id="marquePic1" valign="top"><table width='100%' cellspacing='0' cellpadding='0' border='0'>
+<tr>
+<td style=''><TABLE class="roallTable"><TR><TD align='center'>
+<a href='/art/2016/3/24/art_6328_518938.html' title='文学院——文化传播实验教学中心'><IMG SRC='/picture/0/1603240932203346363.jpg' style='border:1px solid #ccc;padding:1px;display:block;'  height="110"></a>
+</TD></TR><tr><td align="center"   style='white-space: nowrap;/* IE6 需要定义宽度 */overflow: hidden;-o-text-overflow: ellipsis;/* Opera */text-overflow:ellipsis;/* IE, Safari (WebKit) */-moz-binding: url('ellipsis.xml#ellipsis');/* Firefox */'><a href='/art/2016/3/24/art_6328_518938.html' class='bt_link' title='文学院——文化传播实验教学中心'>文学院——文化传播实...
+</a></td></tr></TABLE></td><td style=''><TABLE class="roallTable"><TR><TD align='center'>
+<a href='/art/2016/3/24/art_6328_518943.html' title='社会发展学院——社会发展实验教学中心'><IMG SRC='/picture/0/1603240836187644833.jpg' style='border:1px solid #ccc;padding:1px;display:block;'  height="110"></a>
+</TD></TR><tr><td align="center"   style='white-space: nowrap;/* IE6 需要定义宽度 */overflow: hidden;-o-text-overflow: ellipsis;/* Opera */text-overflow:ellipsis;/* IE, Safari (WebKit) */-moz-binding: url('ellipsis.xml#ellipsis');/* Firefox */'><a href='/art/2016/3/24/art_6328_518943.html' class='bt_link' title='社会发展学院——社会发展实验教学中心'>社会发展学院——社会...
+</a></td></tr></TABLE></td><td style=''><TABLE class="roallTable"><TR><TD align='center'>
+<a href='/art/2016/3/24/art_6328_518945.html' title='马克思主义学院——思想政治教育实验教学中心'><IMG SRC='/picture/0/1603240838568906711.jpg' style='border:1px solid #ccc;padding:1px;display:block;'  height="110"></a>
+</TD></TR><tr><td align="center"   style='white-space: nowrap;/* IE6 需要定义宽度 */overflow: hidden;-o-text-overflow: ellipsis;/* Opera */text-overflow:ellipsis;/* IE, Safari (WebKit) */-moz-binding: url('ellipsis.xml#ellipsis');/* Firefox */'><a href='/art/2016/3/24/art_6328_518945.html' class='bt_link' title='马克思主义学院——思想政治教育实验教学中心'>马克思主义学院——思...
+</a></td></tr></TABLE></td><td style=''><TABLE class="roallTable"><TR><TD align='center'>
+<a href='/art/2016/3/24/art_6328_518946.html' title='法学院——法学实验教学中心'><IMG SRC='/picture/0/1603240839498526892.jpg' style='border:1px solid #ccc;padding:1px;display:block;'  height="110"></a>
+</TD></TR><tr><td align="center"   style='white-space: nowrap;/* IE6 需要定义宽度 */overflow: hidden;-o-text-overflow: ellipsis;/* Opera */text-overflow:ellipsis;/* IE, Safari (WebKit) */-moz-binding: url('ellipsis.xml#ellipsis');/* Firefox */'><a href='/art/2016/3/24/art_6328_518946.html' class='bt_link' title='法学院——法学实验教学中心'>法学院——法学实验教...
+</a></td></tr></TABLE></td><td style=''><TABLE class="roallTable"><TR><TD align='center'>
+<a href='/art/2016/3/24/art_6328_518947.html' title='教育科学学院（师范学院）——教育科学实验教学中心'><IMG SRC='/picture/0/1603240934509353350.jpg' style='border:1px solid #ccc;padding:1px;display:block;'  height="110"></a>
+</TD></TR><tr><td align="center"   style='white-space: nowrap;/* IE6 需要定义宽度 */overflow: hidden;-o-text-overflow: ellipsis;/* Opera */text-overflow:ellipsis;/* IE, Safari (WebKit) */-moz-binding: url('ellipsis.xml#ellipsis');/* Firefox */'><a href='/art/2016/3/24/art_6328_518947.html' class='bt_link' title='教育科学学院（师范学院）——教育科学实验教学中心'>教育科学学院（师范学...
+</a></td></tr></TABLE></td><td style=''><TABLE class="roallTable"><TR><TD align='center'>
+<a href='/art/2016/3/24/art_6328_519086.html' title='新闻与传媒学院——新闻与传媒实验教学中心'><IMG SRC='/picture/0/1603241056431126091.jpg' style='border:1px solid #ccc;padding:1px;display:block;'  height="110"></a>
+</TD></TR><tr><td align="center"   style='white-space: nowrap;/* IE6 需要定义宽度 */overflow: hidden;-o-text-overflow: ellipsis;/* Opera */text-overflow:ellipsis;/* IE, Safari (WebKit) */-moz-binding: url('ellipsis.xml#ellipsis');/* Firefox */'><a href='/art/2016/3/24/art_6328_519086.html' class='bt_link' title='新闻与传媒学院——新闻与传媒实验教学中心'>新闻与传媒学院——新...
+</a></td></tr></TABLE></td><td style=''><TABLE class="roallTable"><TR><TD align='center'>
+<a href='/art/2016/3/24/art_6328_519088.html' title='外国语学院——语言实验教学中心'><IMG SRC='/picture/0/1603241058095967078.jpg' style='border:1px solid #ccc;padding:1px;display:block;'  height="110"></a>
+</TD></TR><tr><td align="center"   style='white-space: nowrap;/* IE6 需要定义宽度 */overflow: hidden;-o-text-overflow: ellipsis;/* Opera */text-overflow:ellipsis;/* IE, Safari (WebKit) */-moz-binding: url('ellipsis.xml#ellipsis');/* Firefox */'><a href='/art/2016/3/24/art_6328_519088.html' class='bt_link' title='外国语学院——语言实验教学中心'>外国语学院——语言实...
+</a></td></tr></TABLE></td><td style=''><TABLE class="roallTable"><TR><TD align='center'>
+<a href='/art/2016/3/24/art_6328_519092.html' title='数学科学学院——数学与统计学实验教学中心'><IMG SRC='/picture/0/1603241100132334843.jpg' style='border:1px solid #ccc;padding:1px;display:block;'  height="110"></a>
+</TD></TR><tr><td align="center"   style='white-space: nowrap;/* IE6 需要定义宽度 */overflow: hidden;-o-text-overflow: ellipsis;/* Opera */text-overflow:ellipsis;/* IE, Safari (WebKit) */-moz-binding: url('ellipsis.xml#ellipsis');/* Firefox */'><a href='/art/2016/3/24/art_6328_519092.html' class='bt_link' title='数学科学学院——数学与统计学实验教学中心'>数学科学学院——数学...
+</a></td></tr></TABLE></td><td style=''><TABLE class="roallTable"><TR><TD align='center'>
+<a href='/art/2016/3/24/art_6328_519104.html' title='物理科学与技术学院——物理实验教学中心'><IMG SRC='/picture/0/1603241104250879939.jpg' style='border:1px solid #ccc;padding:1px;display:block;'  height="110"></a>
+</TD></TR><tr><td align="center"   style='white-space: nowrap;/* IE6 需要定义宽度 */overflow: hidden;-o-text-overflow: ellipsis;/* Opera */text-overflow:ellipsis;/* IE, Safari (WebKit) */-moz-binding: url('ellipsis.xml#ellipsis');/* Firefox */'><a href='/art/2016/3/24/art_6328_519104.html' class='bt_link' title='物理科学与技术学院——物理实验教学中心'>物理科学与技术学院—...
+</a></td></tr></TABLE></td><td style=''><TABLE class="roallTable"><TR><TD align='center'>
+<a href='/art/2016/3/24/art_6328_519123.html' title='化学化工学院——化学实验教学中心'><IMG SRC='/picture/0/1603241119511507808.jpg' style='border:1px solid #ccc;padding:1px;display:block;'  height="110"></a>
+</TD></TR><tr><td align="center"   style='white-space: nowrap;/* IE6 需要定义宽度 */overflow: hidden;-o-text-overflow: ellipsis;/* Opera */text-overflow:ellipsis;/* IE, Safari (WebKit) */-moz-binding: url('ellipsis.xml#ellipsis');/* Firefox */'><a href='/art/2016/3/24/art_6328_519123.html' class='bt_link' title='化学化工学院——化学实验教学中心'>化学化工学院——化学...
+</a></td></tr></TABLE></td>
+</tr></table></td><td id="marquePic2" valign="top"></td></tr></tbody>  </table></div>
+<script language="javascript" type="text/javascript">
+var speed=30;marquePic2.innerHTML=marquePic1.innerHTML; function Marquee(){ if(demo.scrollLeft>=marquePic1.scrollWidth){ demo.scrollLeft=0; }else{ demo.scrollLeft++; }}; var MyMar=setInterval(Marquee,speed); demo.onmouseover=function() {clearInterval(MyMar)}; demo.onmouseout=function() 
+{MyMar=setInterval(Marquee,speed)};</script>
+                       </div>
+    </td>
+  </tr>
+</table>
+    </td>
+  </tr>
+</table>
+</div>
+<table width="920" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td height="2" bgcolor="#708296"></td>
+  </tr>
+  <tr>
+    <td height="60" align="center" style=" background-color:#f3f3f3">CopyRight © 2013 扬州大学实验室与设备管理处 版权所有<br />
+    地址：扬州市大学南路88号 邮政编码：225009 电话：0514－87991570 传真：0514－87971835 电子信箱：shebei@yzu.edu.cn</td>
+  </tr>
+</table>
+
+
+
+<!-- visitcount Begin --><iframe src='./module/visitcount/visit.jsp?type=1&i_webid=37&i_columnid=368' name="vishidden" id="vishidden" frameborder="0" style="width:0; height:0; display:none"></iframe><!-- visitcount End -->
+</body>
+</html>
+ <a href='http://www.hanweb.com' style='display:none'>Produced By 大汉网络 大汉版通发布系统</a><script language="javascript" src='/script/pagecontrol.js'></script>

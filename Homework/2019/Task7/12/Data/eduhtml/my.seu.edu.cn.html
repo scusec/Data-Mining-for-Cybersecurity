@@ -1,0 +1,448 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+    <title>东南大学信息门户登录页</title>
+    <link href="style/validation.css" rel="stylesheet" type="text/css"/>
+    <link href="login/style/login.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="login/style/style.css" type="text/css"/>
+    <script src="login/js/jquery-1.8.3.min.js"></script>
+    <script src="login/js/jquery.backstretch.min.js"></script>
+    <style>
+        span.emptyhint {
+            color: #999;
+            position: absolute;
+            float:left;
+            padding-top: 10px;
+            /*padding-bottom: 3px;*/
+            padding-left:10px;
+            z-index:2;
+            /*width:220px;*/
+        }
+    </style>
+    
+</head>
+
+<body>
+<form id="loginForm" name="loginForm" method="post" action="">
+
+            <div id="tbl_container" class="tbl_container">
+                
+                <div id="tbl_nav" class="tbl_nav clearfix">
+                    <div id="tbl_nav_a" class="tbl_nav_a">
+					<a href="http://xk.urp.seu.edu.cn/jw_css/system/showLogin.action" target="_blank" style="text-decoration: none">本科生选课</a>&nbsp;&nbsp;&nbsp;&nbsp;
+					<a href="http://ehall.seu.edu.cn/new/index.html" target="_blank" style="text-decoration: none">网上办事大厅(Beta)</a>&nbsp;&nbsp;&nbsp;&nbsp;
+					<a href="http://myold.seu.edu.cn" target="_blank" style="text-decoration: none">旧版信息门户</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="javascript:void(0)"  onclick="SetHome(this,window.location)" >设为首页</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://my.seu.edu.cn/detach.portal?.pmn=view&action=bulletinBrowser&.ia=false&.pen=bulletinBrowser&ignoreSessionInvalid=true&bulletinId=ece53e9a-5bab-11e5-9382-611af304a6f0" target="_blank" style="text-decoration: none">登录帮助</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://my.seu.edu.cn/detach.portal?.pmn=view&action=bulletinBrowser&.ia=false&.pen=bulletinBrowser&ignoreSessionInvalid=true&bulletinId=0f43516b-5e76-11e5-b107-498e3704df15" target="_blank" style="text-decoration: none">联系我们</a>
+                    </div>
+                </div>
+                <div class="bgDiv" id="bgDiv"></div>
+                <div id="tbl_header" class="tbl_header">
+                    <div id="tbl_header_logo" class="tbl_header_logo">
+                        <img src="login/images/logo.png"/>
+                    </div>
+                    <div id="tbl_header_seu" class="tbl_header_seu">
+                        
+                        <span class="tbl_header_mhr">校园信息门户</span>
+                    </div>
+                </div>
+                <div style="top: 220px; left: 70px; position: absolute;"><img style="top: 180px;" src="login/images/wxmh.png" height="188px" width="117px"></div>
+                <div class="tbl_middleCell" id="tbl_middleCell">
+                    <table width="382" id="tbl_login_tbl" class="tbl_login_tbl">
+                        <tr>
+                            <td height="80" align="center">
+                                <span class="span_Login">统一身份认证</span>
+							</td>
+                        </tr>
+                        <tr>
+                            <td height="80" align="center">
+                              <table border="0" cellpadding="0" cellspacing="0" width="30%">
+                                <tr>
+                                    <td align="center" valign="middle" height="30" width="30">
+										<a href="http://newids.seu.edu.cn/authserver/login?goto=http://my.seu.edu.cn/index.portal"><img src="login/images/login_bt.png"/></a>
+                                    </td>
+                                </tr>
+                              </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="color:#84b9ec;" align="center">
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="center" height="30">&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td style="color:#FFF" align="center"></td>
+                        </tr>
+
+                    </table>
+                </div>
+                <div class="tbl_bottomCell" id="tbl_bottomCell">
+                    <div id="tbl_ctrls" class="tbl_Ctrls" style="">
+                        <div id="btn_div" class="btn_div">
+                            <a href="javascript:void(0)" id="btn_igl" class="sc_lightdis" title="上一页">
+                                
+                                    <div id="tblPrev" class="tblPrev"></div>
+                                
+                            </a>
+                            <a href="javascript:void(0)" id="btn_igr" title="下一页" class="sc_light">
+                                
+                                    <div id="tblNext" class="tblNext"></div>
+                                
+                            </a>
+                        </div>
+                    </div>
+                    <div style="display: block;" >
+                        <div style="display: block;" id="tbl_tbar" class="tbl_tbar">
+                            
+
+                            
+                            
+                                <div class="notice">
+                                    <div class="notice_title clearfix"><span>&nbsp;&nbsp;公告通知</span>
+                                        <a href="http://my.seu.edu.cn/detach.portal?.f=bulletinBrowser&.pmn=view&groupid=all&action=bulletinsMoreView&search=true&.ia=false&.pen=bulletinBrowser&ignoreSessionInvalid=true" target="_blank"><img src="login/images/ic.png"></a>
+                                    </div>
+                                    <div class="notice_news">
+                                        <ul>
+                                            
+                                                
+                                                    <li>
+                                                        <span>2017-10-24</span>
+                                                        <img src="login/images/icon.png"/>
+                                                        <a href="detach.portal?.pmn=view&action=bulletinBrowser&.ia=false&.pen=bulletinBrowser&ignoreSessionInvalid=true&bulletinId=30fc178c-b893-11e7-84bf-910c53978f61"
+                                                           target="_blank">
+                                                            东南大学业务系统兼容性问题解决方案</a>
+                                                    </li>
+                                                
+                                                    <li>
+                                                        <span>2017-10-13</span>
+                                                        <img src="login/images/icon.png"/>
+                                                        <a href="detach.portal?.pmn=view&action=bulletinBrowser&.ia=false&.pen=bulletinBrowser&ignoreSessionInvalid=true&bulletinId=69fc2ac2-afe3-11e7-836d-a3a69bb28308"
+                                                           target="_blank">
+                                                            关于数字化校园升级及业务系统停止服务的通知</a>
+                                                    </li>
+                                                
+                                                    <li>
+                                                        <span>2017-08-21</span>
+                                                        <img src="login/images/icon.png"/>
+                                                        <a href="detach.portal?.pmn=view&action=bulletinBrowser&.ia=false&.pen=bulletinBrowser&ignoreSessionInvalid=true&bulletinId=3febd5d8-8652-11e7-805d-2384ced5d1d5"
+                                                           target="_blank">
+                                                            东南大学迎新系统操作手册及读卡器驱动下载</a>
+                                                    </li>
+                                                
+                                                    <li>
+                                                        <span>2017-06-12</span>
+                                                        <img src="login/images/icon.png"/>
+                                                        <a href="detach.portal?.pmn=view&action=bulletinBrowser&.ia=false&.pen=bulletinBrowser&ignoreSessionInvalid=true&bulletinId=9bfcd483-4f52-11e7-abd2-cf2bd3938b7a"
+                                                           target="_blank">
+                                                            关于校内用户登陆数字化校园系统被玄武盾拦截问题解决方案</a>
+                                                    </li>
+                                                
+                                                    <li>
+                                                        <span>2017-05-17</span>
+                                                        <img src="login/images/icon.png"/>
+                                                        <a href="detach.portal?.pmn=view&action=bulletinBrowser&.ia=false&.pen=bulletinBrowser&ignoreSessionInvalid=true&bulletinId=189052b3-3a9c-11e7-8560-65ea4299fa19"
+                                                           target="_blank">
+                                                            东南大学九龙湖校区宿舍区电信无线网优化建设完成通知</a>
+                                                    </li>
+                                                
+                                            
+                                        </ul>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+                    <div id="div_footer">
+                        
+                        <p>技术支持电话：025-83790808-2&nbsp;&nbsp;025-52090048&nbsp;&nbsp;&nbsp;&nbsp;技术支持邮箱：80808@seu.edu.cn&nbsp;&nbsp;&nbsp;&nbsp;109000473@seu.edu.cn</p>
+                    </div>
+                </div>
+            </div>
+
+
+<script type="text/javascript">
+
+    var bgDivObj = $("#bgDiv");
+        bgDivObj.backstretch(["login/images/bg_01.jpg","login/images/bg_02.jpg","login/images/bg_03.jpg","login/images/bg_04.jpg","login/images/bg_05.jpg","login/images/bg_06.jpg"], {duration: 3000,fade: 500});
+	var imageIndex = 1;     //图片
+	var imageCount=6;       //图片数量
+	var btn_left = document.getElementById("btn_igl");
+	var btn_right = document.getElementById("btn_igr");
+    var bt,kt,lt,btnl=document.getElementById("tblPrev"),btnr=document.getElementById("tblNext"),lt = !1;
+	$("#btn_igl").bind("click",
+			function(e) {
+				//如果是第1张图，则不响应
+				if(imageIndex==1){
+					return;
+				}else{      //加载前一张图片
+					imageIndex--;
+                    btn_right.className =btn_right.className.replace("sc_lightdis","sc_light");
+					//如果前一张是首张图片，则改变按钮样式
+					if(imageIndex==1){
+						btn_left.className = btn_left.className.replace("sc_light","sc_lightdis");
+						//btn_right.className =btn_right.className.replace("sc_lightdis","sc_light");
+					}
+					var div_img = "login/images/bg_0"+imageIndex+".jpg";
+					e.preventDefault();
+					bgDivObj.backstretch(div_img);
+				}
+			});
+    $("#btn_igl").bind("mouseenter",function(e){
+        btn(btnl,!0);
+    });
+    $("#btn_igl").bind("mouseleave",function(e){
+        btn(btnl,!1);
+    });
+    $("#btn_igr").bind("mouseenter",function(e){
+        btn(btnr,!0);
+    });
+    $("#btn_igr").bind("mouseleave",function(e){
+        btn(btnr,!1);
+    });
+
+    function btn(e,o){
+        if (e.parentElement.className.indexOf("sc_lightdis") == -1) {
+            switch (e) {
+                case btnl:
+                    self.clearInterval(bt);
+                    bt = self.setInterval(function () {
+                        ss(e, o);
+                    }, 3);
+                    break;
+                case btnr:
+                    self.clearInterval(kt);
+                    kt = self.setInterval(function () {
+                        ss(e, o);
+                    }, 3);
+                    break;
+            }
+        }
+    };
+    function ss(el, oo) {
+        var lt = navigator.userAgent && navigator.userAgent.match("Firefox/");
+        var s, c, h;
+        if (s = 0, c = 0, lt ? (h = document.defaultView.getComputedStyle(el, null).backgroundPosition,
+                    s = parseInt(h.split(" ")[0]) <= 0 ? parseInt(h.split(" ")[0]) : 0,
+                    c = parseInt(h.split(" ")[1]) <= 0 ? parseInt(h.split(" ")[1]) : 0) : s = parseInt(el.style.backgroundPositionX) <= 0 ? parseInt(el.style.backgroundPositionX) : 0,
+            oo && s == -252 || !oo && s == 0) {
+                switch (el) {
+                    case btnl:
+                        self.clearInterval(bt);
+                        break;
+                    case btnr:
+                        self.clearInterval(kt);
+                        break;
+                }
+                oo || (el.style.width = "40px", el.style.height = "40px", el.style.margin = "0 10px");
+        } else
+            s += oo ? -42 : 42, oo && (el.style.width = "42px", el.style.height = "42px", el.style.margin = "-1px 9px"), lt ? el.style.backgroundPosition = s + "px " + c + "px" : el.style.backgroundPositionX = s + "px";
+    }
+	$("#btn_igr").bind("click",
+        function(e) {
+            //如果是最后一张图，则不响应
+            if(imageIndex==imageCount){
+                return;
+            }else{
+                imageIndex++;
+                btn_left.className =btn_left.className.replace("sc_lightdis","sc_light");
+                //如果是最后一张则，改变按钮样式
+                if(imageIndex==imageCount){
+                    //btn_left.className =btn_left.className.replace("sc_lightdis","sc_light");
+                    btn_right.className = btn_right.className.replace("sc_light","sc_lightdis");
+                }
+                var div_img = "login/images/bg_0"+imageIndex+".jpg";
+                e.preventDefault();
+                bgDivObj.backstretch(div_img);
+            }
+        });
+</script>
+<script type="text/javascript">
+    /*var Login = {forwardUrl: '', loginURL: 'userPasswordValidate.portal', nameField: 'Login.Token1', pwdField: 'Login.Token2', gotoUrl: 'http://my.seu.edu.cn/loginSuccess.portal', gotoFailUrl: 'http://my.seu.edu.cn/loginFailure.portal', hideCaptcha: false};
+*/
+</script>
+<!--<script type="text/javascript" src="script/portal-login.js"></script>-->
+<script type="text/javascript">
+
+    function initPlaceHolders() {
+        if ('placeholder' in document.createElement('input')) { //如果浏览器原生支持placeholder
+            return;
+        }
+        function target(e) {
+            var e = e || window.event;
+            return e.target || e.srcElement;
+        };
+        function _getEmptyHintEl(el) {
+            var hintEl = el.hintEl;
+            return hintEl && g(hintEl);
+        };
+        function blurFn(e) {
+            var el = target(e);
+            if (!el || el.tagName != 'INPUT' && el.tagName != 'TEXTAREA') return;//IE下，onfocusin会在div等元素触发
+            var emptyHintEl = el.__emptyHintEl;
+            if (emptyHintEl) {
+                //clearTimeout(el.__placeholderTimer||0);
+                //el.__placeholderTimer=setTimeout(function(){//在360浏览器下，autocomplete会先blur再change
+                if (el.value) emptyHintEl.style.display = 'none';
+                else emptyHintEl.style.display = '';
+                //},600);
+            }
+        };
+        function focusFn(e) {
+            var el = target(e);
+            if (!el || el.tagName != 'INPUT' && el.tagName != 'TEXTAREA') return;//IE下，onfocusin会在div等元素触发
+            var emptyHintEl = el.__emptyHintEl;
+            if (emptyHintEl) {
+                //clearTimeout(el.__placeholderTimer||0);
+                emptyHintEl.style.display = 'none';
+            }
+        };
+        if (document.addEventListener) {//ie
+            document.addEventListener('focus', focusFn, true);
+            document.addEventListener('blur', blurFn, true);
+        }
+        else {
+            document.attachEvent('onfocusin', focusFn);
+            document.attachEvent('onfocusout', blurFn);
+        }
+
+        var elss = [document.getElementsByTagName('input'), document.getElementsByTagName('textarea')];
+        for (var n = 0; n < 2; n++) {
+            var els = elss[n];
+            for (var i = 0; i < els.length; i++) {
+                var el = els[i];
+                var placeholder = el.getAttribute('placeholder'),
+                        emptyHintEl = el.__emptyHintEl;
+                if (placeholder && !emptyHintEl) {
+                    emptyHintEl = document.createElement('span');
+                    emptyHintEl.innerHTML = placeholder;
+                    emptyHintEl.className = 'emptyhint';
+                    emptyHintEl.onclick = function (el) {
+                        return function () {
+                            try {
+                                el.focus();
+                            } catch (ex) {
+                            }
+                        }
+                    }(el);
+                    if (el.value) emptyHintEl.style.display = 'none';
+                    el.parentNode.insertBefore(emptyHintEl, el);
+                    el.__emptyHintEl = emptyHintEl;
+                }
+            }
+        }
+    }
+    initPlaceHolders();
+    function SetHome(obj,vrl){
+        try{
+            obj.style.behavior='url(#default#homepage)';obj.setHomePage(vrl);
+        }
+        catch(e){
+            if(window.netscape) {
+                try {
+                    netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
+                }
+                catch (e) {
+                    alert("此操作被浏览器拒绝！\n请在浏览器地址栏输入“about:config”并回车\n然后将 [signed.applets.codebase_principal_support]的值设置为'true',双击即可。");
+                }
+                var prefs = Components.classes['@mozilla.org/preferences-service;1'].getService(Components.interfaces.nsIPrefBranch);
+                prefs.setCharPref('browser.startup.homepage',vrl);
+            }
+        }
+    }
+
+    function usernameOnkeyDown(e){
+        if (!e || e.tagName != 'INPUT' && e.tagName != 'TEXTAREA') return;//IE下，onfocusin会在div等元素触发
+        var emptyHintEl = e.__emptyHintEl;
+        if (emptyHintEl) {
+            if (e.value) emptyHintEl.style.display = 'none';
+            else emptyHintEl.style.display = '';
+        }
+    }
+
+    function passwordOnkeyDown(obj){
+        if(obj.value.length>=5){
+            jQuery("#ipt_submit").css("border","1px solid #ffb900");
+            jQuery("#ipt_submit").css("background-color","#ffb900");
+        }
+    }
+
+  
+  
+</script>
+
+<script language="javascript">
+	//tbl_middleCell
+	/*$(function () {	
+		changeDivTop();
+	})
+	window.onresize=function(){  
+          changeDivTop();  
+			//changelt()
+			
+            }  
+	
+	function changeDivTop(){
+		 var screenheight = document.body.screenHeight;
+		//index-content
+		$("#tbl_middleCell").css({'top':screenHeight/9});
+		if(screenheight<600){
+			$("#tbl_header").css({'top':60});
+		}
+	}		*/
+			
+		if(document.body.offsetHeight<=600){
+		  jQuery("#tbl_middleCell").css("top","100px");
+		  jQuery("#tbl_middleCell").css("right","50px");
+		  jQuery("#tbl_header").css("top","60px");
+		  jQuery("#tbl_header").css("left","50px");
+	  	}
+		else if(document.body.offsetHeight<=800){
+		  jQuery("#tbl_middleCell").css("top","150px");
+		  jQuery("#tbl_middleCell").css("right","100px");
+		  jQuery("#tbl_header").css("top","90px");
+		  jQuery("#tbl_header").css("left","70px");
+	  	}
+		else{
+		  jQuery("#tbl_middleCell").css("top","180px");
+		  jQuery("#tbl_middleCell").css("right","100px");
+		  jQuery("#tbl_header").css("top","100px");
+		  jQuery("#tbl_header").css("left","70px");
+	  	}
+	
+	
+	</script>
+
+</form>
+</body>
+</html>
+
+

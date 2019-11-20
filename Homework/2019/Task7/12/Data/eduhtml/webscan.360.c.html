@@ -1,0 +1,2020 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>library.cupl.edu.cn - 360网站安全检测 - 在线安全检测，网站漏洞修复，网址安全查询</title>
+<link rel="icon" type="image/vnd.microsoft.icon" href="http://www.360.cn/favicon.ico"/>
+<meta name="Keywords" content="安全检测,漏洞扫描,网站安全,网址安全,防sql注入,在线检测,网站扫描,360,防跨站,漏洞检测,挂马检测,篡改监控,XSS" />
+<meta name="Description" content="360网站安全检测，是360旗下的网站安全平台，为站长免费提供了网站漏洞检测、网站挂马实时监控、网站篡改实时监控、网址安全查询等服务" />
+<link href="/css/webscan6.css?v=5" rel="stylesheet" />
+<link href="/css/base.css?v=5" rel="stylesheet" />
+<script type="text/javascript" src="/js/jquery-1.6.2.min.js" ></script>
+<style>
+
+.ld-main-list{margin-bottom:10px;background:#F6F7F9;}
+.ld-main-list li{line-height:21px; text-align:left; color:#555;padding:5px 0;border-bottom:1px dashed #CCC;font-size:14px;}
+.ld-main-list span{background:#F6F7F9 url('http://webscan.360.cn/img/1231231.png') no-repeat; height:21px; line-height:21px; display:inline-block; padding-right:2px; *display:inline; *zoom:1;}
+.ld-main-list .report_step1 span {background-position: 5px -110px;}
+.ld-main-list .report_step2 span {background-position: 5px -65px;}
+.ld-main-list .report_step3 span {background-position: 5px -30px;}
+.ld-main-list .report_step4 span {background-position: 5px 5px;}
+.ld-main-list .noadmin {background:#F6F7F9;}
+.ld-main-list .yesadmin {color:#333;}
+.ld-main-list li i{padding-left:10px;font-style:normal;}
+.ld-main-list li em{color:#FC3B2C;padding-left:2px;}
+.gm_unknow_ld{background:url("http://p9.qhimg.com/t015a69e416f2373c15.png") no-repeat scroll 5px 8px #F6F7F9;color: #666666;line-height: 2.4;text-indent:3px;font-size:14px;}
+.scan-table{border-collapse:collapse;table-layout:fixed;empty-cells:show;border:1px solid #D8DEEB; margin-top:0px; margin-bottom:0px;}
+.scan-table td{border:1px solid #D8DEEB; padding-top:3px; padding-bottom:2px; color:#333;font-size:14px;}
+.scan-table th{background:#F6F7F9;font-weight:bold; color:#333;font-size:14px;}
+.scan-table td p{line-height:25px; margin-left:20px;color:#333;}
+.scan-table td .gray{color:#999;}
+.scan-table p a{ display:inline-block; *display:inline; *zoom:1;}
+.scan-table2{border:none;}
+.scan-table2 td{border:none;}
+.guesshide{color:#fff;border:1px solid #3B6E22;width:70px;background:#67A54B; text-align: center;  height:19px;font-size: 12px;line-height:19px;position: relative;cursor: pointer;display: inline-block;*display:inline; *zoom:1;}
+.guesshide-hover{background:#5C9744}
+.jg_url2_on .v9-site-good-icon{color:#0066CC; background:#E9F2FC; border-radius:8px; width:63px; height:22px; line-height:22px; display:inline-block; font-weight:normal; font-size:12px;}
+.v9-site-good-icon img{vertical-align:middle; }
+.anquanbi_tips{ left:160px; width:145px}
+.zz-desc span, .zz-desc a {
+    display: inline-block;
+    margin-left: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 90px;
+}
+.fl{float:left}
+.nt-user-wrap {
+    padding: 14px;
+}
+.nt-user-wrap dt, .nt-user-wrap dd {
+    float: left;
+}
+.clearfix:after {
+    clear: both;
+    content: "";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+.nt-user-wrap dl {
+    padding: 5px 0;
+}
+.zz-info {
+    border-bottom: 1px solid #DDDDDD;
+    padding-bottom: 5px;
+}
+.at {
+    border-top: 1px solid #DDDDDD;
+    margin-top: 15px;
+    padding-top: 15px;
+}
+.fr {
+    float: right;
+}
+
+.zz-site-tbl {
+    width: 745px;
+}
+.zz-site-tbl table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    table-layout: fixed;
+}
+.zz-site-tbl th {
+    border-bottom: 1px solid #DDDDDD;
+	text-align:left;
+}
+.zz-site-tbl th, .zz-site-tbl td {
+    padding: 10px 0 10px 10px;
+}
+.zz-site-tbl td {
+    vertical-align: top;
+}
+.wooyun_list3 {
+    width: 200px;
+}
+</style>
+</head>
+<body>
+<div id="webscan6" class="wewewewww">
+
+<div id="top_loading">正在读取...</div>
+<script type="text/javascript" src="/js/jquery.min.js"></script>
+<style>
+.my-website-user-oplist{z-index:1000;}
+.scan-info-tips{position:absolute; right:50px; top:44px; border:1px solid #bebebe; background:#fff; width:230px; z-index:100;-webkit-box-shadow: 0 2px 4px rgba(0,0,0,.2);box-shadow: 0 2px 4px rgba(0,0,0,.2);}
+.scan-info-tips li{line-height:18px; padding:5px 10px; border-top:1px dashed #E2E2E2; position:relative; margin-top:-1px; color:#333;}
+.scan-info-tips li a{color:#666; margin:0;font-size:12px;border-right: 0;}
+.scan-info-tips li a:hover{color:#000;}
+.scan-info-tips .close-tips-btn{text-align:right;}
+.scan-info-tips .close-tips-btn a{color:#999;font-size:12px;}
+.webscan-menu li{_width: 85px;}
+/*  新家的，更多按钮   */
+#menu-more{position:relative;}
+#menu-more_a:hover{line-height:42px; padding-bottom:2px;}
+#menu-more-list{position:absolute; left:-1px; top:41px; width:140px; padding-top:1px;}
+#menu-more-list dl{background:#3764B2;border: 1px solid #31528A;border-top:1px solid #3764B2;box-shadow:0 3px 6px rgba(0, 0, 0, .25);}
+#menu-more-list dd{line-height:30px; text-align:left; margin-left:0px}
+#menu-more-list dd a{font-size:14px; color:#fff; padding:2px 10px; display:block;}
+#menu-more-list dd a:hover{background:#32589B;}
+#menu-more-list{display:none;}
+
+.Bar{ position: relative; width: 150px;    /* 宽度 */ /*border: 1px solid #B1D632; padding: 1px;*/ background-color:#FFF ; display:inline-block}
+.Bar div{ display: block; position: relative; background:#68a64c;/* 进度条背景颜色 */ color: #333333; height: 15px; /* 高度 */ line-height: 15px;  /* 必须和高度一致，文本才能垂直居中 */ }
+.Bars div{ background:#090}
+.Bar div span{ position: absolute; width: 150px; /* 宽度 */ text-align: center; font-weight: bold; }
+
+.add_points_tips{position:absolute;background: none repeat scroll 0 0 #FFFFD7;border: 1px solid #EEC197;border-radius: 5px 5px 5px 5px; height:50px; width:180px; z-index:1000; line-height:40px; height:40px; left:50px; display:none; font-size:16px; font-weight:bold; text-align:center; color:#333;z-index:2000}
+.shengji_tips{color:#000;position:absolute;background: none repeat scroll 0 0 #f2f2f2;border: 1px solid #999;/*border-radius: 5px 5px 5px 5px;*/box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);width:220px; z-index:1000; left:136px; top:44px; font-size:16px; font-weight:bold; text-align:center}
+.my_use_functions p{line-height:35px; font-size:14px}
+.my_use_functions a{color:#31528a; padding-left:2px; padding-right:2px}
+
+.today_works_tips{color:#000;position:absolute;background: none repeat scroll 0 0 #f2f2f2;border: 1px solid #999;border-radius: 5px 5px 5px 5px;width:220px; z-index:1000; left:120px; font-size:16px; font-weight:bold; text-align:center}
+
+</style>
+<div id="headerbox">
+		<div class="header" style="padding-right:0;">
+			<div class="logo"><a onclick="_czc.push(['_trackEvent', '头部菜单','返回首页']);" href="/" title=""><img src="http://p6.qhimg.com/t01cbeac2c42fe484ab.png" alt="" /></a></div>
+			<div class="webscan-menu">
+				<ul style="display:inline-block; float:left">
+                	                    <li><a  href="/manage" title="我的网站" onclick="_czc.push(['_trackEvent','头部菜单','我的网站']);">我的网站</a></li>
+                                    </ul>
+                			</div>
+            <div class="user-login">
+            
+                					<div class="my-user-op">
+						 <a href="/index/login" title="登录" onclick='_gaq.push(["_trackPageview", "/home/login/from_header"]);'>登录</a>  <a href="http://i.360.cn/reg?src=pcw_webscan&destUrl=http%3A%2F%2Fwebscan.360.cn" title="注册" onclick='_gaq.push(["_trackPageview", "/home/reg/from_header"]);'>注册</a>
+                				</div>
+                <div class="scan-info-tips" style="display:none" id="user_mess_tips">
+					<ul>
+					 <li class="close-tips-btn"><a href="javascript:void(0)" title="" onclick="_czc.push(['_trackEvent', '头部菜单','关闭消息']);">我知道了，关闭提醒</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+<!--begin tips -->
+	   
+    <script type="text/javascript">
+	function closeMessage() {
+		$.ajax({	
+			dataType:  'json',
+			url : "/index/close-message2",
+			data:"close=1",
+			type: 'POST',
+			success: function(data) {
+			   $(".mycenter-news-tips").hide();
+			}
+		});
+	}
+    function closeSjBox() {
+        $.ajax({
+            dataType:  'json',
+            url : "/points/iknow",
+            type: 'POST',
+            success: function(data) {
+                if(data.state == "yes"){
+                    $(".shengji_tips").hide();
+                }else{
+                    alert(data.msg);
+                }
+            }
+        });
+    }
+	</script>
+	    <script>
+	function readmessage(obj,type,itemid){
+		$.ajax({  	
+		url : "/message/close",
+		type: 'POST',
+		dataType:  'json',
+		data:"type="+type+"&itemid="+itemid,
+		success: function(data){
+			if(data.state == "yes"){
+				 location.href=obj.href;
+				 $("#message_"+itemid+"_"+type).hide();
+			}else{
+			
+			}
+		}
+		});
+	}
+	function close_user_mess() {
+		$.ajax({  	
+		url : "/message/ajaxcloseallmessage",
+		type: 'POST',
+		success: function(data){
+			$("#user_mess_tips").css("display", "none");
+		}
+		});	
+	}
+</script>
+<!--end tips -->
+<script>
+$(function(){
+	$("#menu-more").hover(function(){
+		$("#menu-more-list").show();
+		$("#menu-more").css("background-color","#3764B2");
+		$("#menu-more").css("padding-bottom","2px");
+	},function(){
+		$("#menu-more-list").hide();
+		$("#menu-more").css("background-color","");
+		$("#menu-more").css("padding-bottom","0px");
+	})
+
+})
+</script>
+<style>
+.bdream-overlay {
+    background: radial-gradient(ellipse farthest-corner at center center , rgba(0, 0, 0, 0.4) 0px, rgba(0, 0, 0, 0.9) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+    opacity: 0;
+    position: absolute;
+    z-index: 999999;
+	display:none;
+}
+.bdream-helperLayer {
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 4px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.4);
+    position: absolute;
+    z-index: 9999998;
+	display:none;
+}
+</style>
+<div style="width: 700px; height: 72px; top: 162px; left: 601.5px;" class="bdream-helperLayer" id="bdreamHelp"></div>
+<div class="bdream-overlay" style="top: 0px; bottom: 0px; left: 0px; right: 0px; opacity: 0.8; position: fixed;" id="bdreamOverlay"></div>
+	<div class="body-main" style="min-height:0px;">
+    		    	    <div class="aside" style="background:#ffffff; padding-top:30px;">
+      <div class="nt-user-wrap">
+        <h3 class="zz-info">站长信息</h3>
+        <div style="padding-top:10px;" class="clearfix">
+          <div class="fl zz-tx"> <a href="/group/profile/uid/3384579"><img src="" width="70" height="70" title="360用户"/></a> </div>
+          <div class="fl zz-desc"> <span>资深站长</span><br>
+            <a href="/group/profile/uid/3384579">360用户</a> </div>
+        </div>
+        <dl class="clearfix">
+          <dt>网站：</dt>
+          <dd>203个</dd>
+        </dl>
+        <!--
+            <dl class="clearfix">
+              <dt>粉丝：</dt>
+              <dd>32个</dd>
+            </dl>
+            
+            <dl class="clearfix">
+              <dt>领域：</dt>
+              <dd>电商、物流</dd>
+            </dl>
+            -->
+        <dl class="clearfix">
+          <dt>简介：</dt>
+          <dd class="sum">这家伙很懒，懒得没有个人简介</dd>
+        </dl>
+        
+        <div class="at clearfix"> <!--<a class="fl" href="">+关注</a>--> <a target="_blank" class="fr" href="/group/talk-content/uid/3384579">@他</a> </div>
+        
+       <div style="margin-top:100px" id="bobao_div">
+       
+        
+               
+             
+        </div>
+      </div>
+    </div>
+    
+
+    	<div class="container" style="min-height:800px;">
+			<div class="main-con">
+                <!-- BEGIN 监控邮箱验证 -->
+            	                <!-- END 监控邮箱验证 -->
+				<div class="jg_search2 clearfix">
+	<div class="jg_searchbox">
+		<form method="get" action="/index/checkwebsite" id="checkwebsiteform" name="checkwebsiteform">
+        	<input type="text" class="jg_search_input jg_search_input_checkwebsite" id="url" name="url" value="library.cupl.edu.cn">
+			<span onClick="_gaq.push(['_trackPageview', '/checkwebsite/click_search_button']);checkwebsiteformSubmit()" class="jg_submit">检测一下</span>
+			</form>
+	</div>
+</div>
+
+					
+					<dl class="jg_url2 hd">
+		<dt><span id="share_sinaweibo" style="float:right;width:100px;"></span></dt>
+		
+        
+        <dd class="jg_url2_on" style="cursor:default"><span class="jg_siteurl" id="domain">library.cupl.edu.cn</span><a href="javascript:" onClick="to_good()" title="" class="v9-site-good-icon"><img id="good_img" src="/img/group/v9-site-good-icon2.png" alt="" /> +<span id="good_nums">0</span></a>        <div class="anquanbi_tips"></div>
+        </dd>
+		
+		<dd id="subdomains" style="padding:0px; margin:0px;"><img src="http://p6.qhimg.com/t015bb54926d89e7875.gif" /></dd>
+		<dd id="sameip" style="padding:0px; margin:0px; display:none"><img src="http://p6.qhimg.com/t015bb54926d89e7875.gif" /></dd>
+	</dl>
+	
+					<div class="webscan-body clearfix">
+		<div class="webscan-main">		
+		<div class="jg_main clearfix" style="min-height:177px;margin-bottom:22px;">
+		 
+          <div class="start-5"></div>
+          
+			<div class="jg_con">
+								<div class="jg_showbox" style="width:390px; display:none">
+			<div style="position:relative">
+					<div id="bangzhu_div">
+						<a class="closex" href="javascript:" onClick="javascript:$('#bangzhu_div').css('display','none')"></a>
+						<div style="line-height:19px;margin-top:2px;text-align:left;">
+						<span style="font-weight:bold;">为什么？</span><br>利用<span style="color:red;">同一主机</span>上面<span style="color:red;">不同网站</span>的高危漏洞得到webshell，从而入侵所有网站。<span style="color:#666;"></span>
+						</div>
+						<div>
+						<a class="bangzhu_button" onClick="_gaq.push(['_trackPageview', '/checkwebsite/pangzhu_2']);" href="/sameip/index/?url=library.cupl.edu.cn">查看与此域名同主机的网站安全状况</a>
+						</div>
+					</div>
+				</div>
+				<div class="login-user-check">				
+					<dl class="clearfix">
+					 <dt>网站漏洞</dt>
+					 <dd>
+					 <p class="fc_warning">存在警告漏洞</p>					 </dd>
+					</dl>
+					
+									<dl class="clearfix">
+					 <dt>虚假，欺诈</dt>
+					 <dd><p class="fc_loading" id="diaoyu_sec">正在读取...</p></dd>
+					</dl>
+					<dl class="clearfix">
+					 <dt>挂马，恶意</dt>
+					 <dd><p class="fc_loading" id="trojan_sec">正在读取...</p></dd>
+					</dl>
+					<dl class="clearfix">
+					 <dt>恶意篡改</dt>
+					 <dd>				 <p class="fc_security" id="cuangai_sec">正常</p>
+				 </dd>
+					</dl>
+					<dl class="clearfix">
+					 <dt>敏感内容</dt>
+					 <dd>
+					 					 		<p class="fc_security">正常</p>
+				 		                    </dd>
+				   </dl>
+				</div>
+				<div class="login-user-check login-user-check2">
+				 <h4><strong>漏洞时间：3天前</strong></h4>
+				 <ul>
+				 				  <li class="loudong_grey" >高危漏洞<span  >0</span>个页面</li>
+				  <li class="loudong_grey" >严重漏洞<span  >0</span>个页面</li>
+				  <li  >警告漏洞<span class="loudong_red" >1</span>个页面</li>
+				  <li  >轻微漏洞<span class="loudong_red" >3</span>个页面</li>
+				  				 </ul>
+				</div>
+				<div class="clear"></div>
+			</div>
+				<div class="jg_conlist" style="display:none">
+					<dl>
+					 <dt>安全级别<span id="jg_tips" class="jg_loading"></span></dt>				 
+					</dl>
+					<div class="jg_tb"><img id="query" src="http://p6.qhimg.com/t015bb54926d89e7875.gif" /></div>	
+				</div>
+				<div class="jg-bipin" style="display:none">
+					 <div class="jg-fenshu" id="div_fenshu">
+						<span id="site_score"><img src="http://p6.qhimg.com/t015bb54926d89e7875.gif" title="正在读取..."  /></span>分
+											</div>	
+					<div class="jg_tips3"><a class="showlogin" href="javascript:void(0);" onclick="to_valideWebSite();">查看网站安全报告</a></div>			<div class="mysite-info-tips" style="display: none;">
+			只检测到1个页面，其它页面也可能存在安全问题，建议您重新检测
+			</div>
+            				</div>
+			
+									<dl class="scan-v1" style="display:none;">
+						<dt></dt>
+						<dd></dd>
+					</dl>
+					<div class="scan-tips" style="display:none;"><a class="scan-tips-btn1"  href="javascript:" onClick="to_valideWebSite()"><span></span></a></div>
+				
+				<div class="jg-before3Month" style="display:none">
+				</div>
+				<div class="jg-fenshu-info" id="dabai_text_div" style="display:none">
+					<p id="dabai_text"></p>
+				</div>
+			</div>
+		</div>
+		
+		<div class="report_list">
+						
+		</div>
+		         
+        <div class="report_list">
+        	<h2 id="ldtitle" style="margin-top:20px"><a href="javascript:;" title="">网站安全漏洞</a></h2>
+			                          <div class="ld-main-list">
+             	<ul>
+                                	                    <li class="report_step2">
+						<i>存在"网站植入后门"风险，</i>安全性降低<em>10%</em>
+						 <span class="noadmin"> 漏洞信息已隐藏，只对网站管理员开放</span>  <a class="showlogin" href="javascript:void(0)" onclick="to_valideWebSite();" >请先验证权限</a>
+											</li>
+                                                    	                    <li class="report_step1">
+						<i>存在"网站敏感信息泄露"风险，</i>安全性降低<em>5%</em>
+						 <span class="noadmin"> 漏洞信息已隐藏，只对网站管理员开放</span>  <a class="showlogin" href="javascript:void(0)" onclick="to_valideWebSite();" >请先验证权限</a>
+											</li>
+                                                    	                    <li class="report_step1">
+						<i>存在"服务器配置信息泄露"风险，</i>安全性降低<em>5%</em>
+						 <span class="noadmin"> 漏洞信息已隐藏，只对网站管理员开放</span>  <a class="showlogin" href="javascript:void(0)" onclick="to_valideWebSite();" >请先验证权限</a>
+											</li>
+                                                    	                    <li class="report_step1">
+						<i>存在"网站敏感信息泄露"风险，</i>安全性降低<em>5%</em>
+						 <span class="noadmin"> 漏洞信息已隐藏，只对网站管理员开放</span>  <a class="showlogin" href="javascript:void(0)" onclick="to_valideWebSite();" >请先验证权限</a>
+											</li>
+                                                    </ul>
+             
+             </div>
+                        			
+		</div>
+		<div class="report_list">
+			<h2 id="diaoyutitle"><a href="javascript:;" title="">虚假或欺诈网站监控</a></h2>
+			<div id="report_diaoyu">
+				<div id="delayloaddiaoyu">　　正在生成信息, 请稍候　<img src="http://p6.qhimg.com/t015bb54926d89e7875.gif" />
+				</div>
+			</div>
+		</div>
+		<div class="report_list">
+			<h2 id="gmtitle"><a href="javascript:;" title="">挂马或恶意网站监控</a></h2>
+			<div id="report_gm">
+				<div id="delayloadtrojan">　　正在生成信息, 请稍候　<img src="http://p6.qhimg.com/t015bb54926d89e7875.gif" />
+				</div>
+			</div>
+		</div>	
+		<div class="report_list">
+			<h2 id="cgtitle"><a href="javascript:;" title="">黑客篡改网站监控</a></h2>
+			<div id="report_cg">
+			 			 <div class="no_webadmin">　　正常</div>
+			 						</div>
+		</div>
+		<div class="report_list">
+			<h2 id="vgtitle"><a href="javascript:;" title="敏感内容检测">网站敏感内容监控</a></h2>
+			<div id="report_vg">
+			 			 <div class="no_webadmin">　　正常</div>
+			 						</div>
+		</div>
+        <!-- begin sslcheck -->
+                <!-- end sslcheck -->
+        <div class="zz-verify" style="display:none">
+						<table class="zz-site-tbl">
+							<tbody><tr>
+								
+								<th>网站信息</th>
+								<th style="width: 210px;">网站二维码</th>
+                                <th style="width: 220px;">网站认证</th>
+							</tr>
+							<tr>
+
+								<td>
+<dl class="">
+								<dd><strong>谷歌PR：</strong><span>-</span></dd>
+												<dd><strong>ALEXA：</strong><span id="info_alexa">111367</span></dd>
+												<dd><strong>域名注册：</strong><span>-</span></dd>
+				                				<dd><strong>谷歌收录：</strong><span>-</span></dd>
+												<dd><strong>360搜索收录：</strong><span>-</span></dd>
+												<dd><strong>百度收录：</strong><span>-</span></dd>
+				                				<dd><strong>IP地址：</strong><span>61.50.134.234</span></dd>
+												<dd><strong>服务商：</strong><span>北京市 联通</span></dd>
+							</dl>
+								</td>
+								<td>
+									<img src="/tdcode/index/url/library.cupl.edu.cn">
+								</td>
+                                								<td>
+									<dl id="kx_dl"></dl>
+								</td>
+							</tr>
+						</tbody></table>
+		</div>
+		<style type="text/css">
+.ld_pl{width:510px; margin:0px auto 0;}
+.ld_txt{text-align:center; width: 90%;}
+.ld_txt textarea{width:96%; overflow-y:auto; padding:10px; line-height:21px; font-size:12px; color:#333; height:45px}
+.ld_btn{text-align:left; margin-top:10px; height:30px; line-height:30px;width: 90%; position:relative}
+.pl_list{overflow:hidden;padding-bottom:20px; width:90%; margin-top:30px}
+.pl_list dt{text-align:left;padding:3px 0;padding-left:10px;color:#888;position:relative;background:#EBF1F8; border-radius:3px;}
+.pl_list dt a{color:#014CCC;line-height:30px;margin-right:10px;}
+.pl_list dd{text-align:left;line-height:25px;color:#333;padding:5px 15px 15px;word-wrap:break-word;}
+.louchen{width:40px; height:17px; background:#FFF; text-align:center; line-height:17px; border:1px solid #ccc;  display:inline-block; *display:inline; *zoom:1; border-radius:3px;color:#333;margin-right:14px; vertical-align:top;}
+.pl_list dl{margin-bottom:15px; clear:both}
+.pl_list dd p{line-height:22px; font-size:12px; margin-left:60px;}
+.plbg2{background:#f7f7f7;}
+.pages{clear:both;padding:6px 0 4px;text-align:right;width:100%;}
+.pages a,.pages span{border:1px solid #87A1B9;padding:2px 6px;margin-left:5px;}
+.pages a:hover{background:#ebebeb; color:#6F90B8;}
+.pages span{color:#333;border:none; display:inline-block;}
+.pages .current{font-weight:bold;background:none repeat scroll 0 0 #87A1B9;color:#eee;border:1px solid #87A1B9;padding:4px 6px 5px;}
+.pages span.prev,.pages span.next{font-weight:normal;display:none;}
+.webscan_comemnt{position:relative;width: 90%;}
+.webscan_comemnt dt{text-align:left;line-height:25px; width:480px; float:left; padding-top:10px; padding-left:12px; font-size:14px}
+.webscan_comemnt dd{color:#999;line-height:20px; float:right; text-align:right; width:300px; padding-right:10px}
+.comment_link{line-height: 40px; text-align: center; width: 120px; position: absolute; top: 38px; right: 14px;}
+.comment_btn{background: none repeat scroll 0 0 #3FA156;border: 1px solid #1D7431;border-radius: 2px 2px 2px 2px;color: #FFFFFF;font-size: 14px;height: 28px;text-align: center;text-decoration: none;vertical-align: middle;width: 70px;margin-right:13px;cursor:pointer;}
+.comment_btn:hover{background: none repeat scroll 0 0 #3C9551;border: 1px solid #1D7431;}
+.captcha_span{ position:absolute; right:0; top:0; text-align:right}
+.captcha_span input,.captcha_span img{vertical-align:middle; margin-left:5px; font-size:12px; font-weight:normal}
+.captcha_span .verificationcode_comment{ border:1px solid #ccc; height:auto; width:50px; padding:2px 5px}
+.commemt_infor{ text-align:right; padding-right:5px}
+.pl_header{text-align:left; margin:30px auto 0;}
+.pl_header span{ display:inline-block; width:80px; height:28px; line-height:28px; *display:inline; *zoom:1;  text-align:center; font-size:12px; color:#333}
+.pl_list dd{ position:relative; padding-left:0px; padding-bottom:30px;}
+.pinwheel_wrap {
+    position: absolute;
+    z-index: 20001;
+}
+.pinwheel_wrap .pinwheel_layer {
+    box-shadow: 0 0 10px #CCCCCC;
+    position: static;
+}
+.pinwheel_wrap .pinwheel_layer .bg {
+    background-color: #CFCFCF;
+    padding: 2px;
+}
+.pinwheel_wrap .pinwheel_content {
+    background-color: #FFFFFF;
+}
+.pinwheel_wrap .pinwheel_default_html {
+    background-color: #FFFFFF;
+    height: 100px;
+    width: 150px;
+}
+.pinwheel_wrap .arrow {
+    background: url("/img/group/layer_arrow.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    display: block;
+    overflow: hidden;
+    position: absolute;
+}
+.pinwheel_wrap .arrow_t, .pinwheel_wrap .arrow_b {
+    background-position: 0 0;
+    height: 9px;
+    left: 20px;
+    top: -5px;
+    width: 14px;
+}
+.pinwheel_wrap .arrow_r, .pinwheel_wrap .arrow_l {
+    background-position: -8px -24px;
+    height: 14px;
+    right: -5px;
+    top: 20px;
+    width: 9px;
+}
+.pinwheel_wrap .arrow_b {
+    background-position: 0 -8px;
+    bottom: -5px;
+    top: auto;
+}
+.pinwheel_wrap .arrow_l {
+    background-position: 0 -24px;
+    left: -5px;
+    right: auto;
+}
+.pinwheel_wrap .pinwheel_loading {
+    color: #666666;
+    font-size: 12px;
+    padding: 10px 20px;
+}
+.pinwheel_wrap .pinwheel_loading div {
+    background: url("/img/group/loading.gif") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    text-indent: 20px;
+    width: 120px;
+}
+.v9-article-slideshow {
+    height: 215px;
+    margin-bottom: 25px;
+}
+.v9-user-page-pinwheel {
+    padding: 10px 0;
+    width: 300px;
+}
+#v9-user-page-pinwheel {
+    font-size: 12px;
+    position: relative;
+}
+#v9-user-page-pinwheel .v9-up-head {
+    float: left;
+    padding: 5px;
+    text-align: center;
+    width: 80px;
+}
+#v9-user-page-pinwheel .v9-up-head-right {
+    float: left;
+    line-height: 20px;
+    overflow: hidden;
+    padding: 2px 0;
+    width: 200px;
+}
+#v9-user-page-pinwheel strong {
+    font-size: 13px;
+}
+#v9-user-page-pinwheel em {
+    color: #333333;
+    font-style: normal;
+}
+#v9-user-page-pinwheel .v9-profile-male {
+    background: url("http://p0.qhimg.com/t01b985e4971622045c.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    margin-left: 4px;
+    padding-right: 4px;
+    width: 24px;
+}
+#v9-user-page-pinwheel .v9-profile-female {
+    background: url("http://p0.qhimg.com/t01b985e4971622045c.png") no-repeat scroll -25px 0 rgba(0, 0, 0, 0);
+    width: 24px;
+}
+#v9-user-page-pinwheel .v9-profile-site {
+    background: url("http://p0.qhimg.com/t01a6afdd764fc20102.png") no-repeat scroll 0 3px rgba(0, 0, 0, 0);
+    margin-left: 3px;
+    padding-left: 15px;
+    padding-right: 6px;
+    width: 24px;
+}
+#v9-user-page-pinwheel .v9-profile-city {
+    background: url("http://p4.qhimg.com/t01f9e3023ee71de6ec.png") no-repeat scroll 0 2px rgba(0, 0, 0, 0);
+    padding-left: 3px;
+    width: 100px;
+}
+#v9-user-page-pinwheel .v9-up-userlo {
+    margin: 0 8px;
+    overflow: hidden;
+}
+#v9-user-page-pinwheel .v9-up-group-post {
+    border-top: 1px solid #CCCCCC;
+    font-size: 13px;
+    margin: 9px 8px 0;
+    padding: 7px 6px;
+}
+#v9-user-page-pinwheel .v9-up-manage-group {
+    border-top: 1px solid #CCCCCC;
+    font-size: 12px;
+    margin: 0 8px;
+    padding: 7px 6px;
+}
+#v9-user-page-pinwheel .v9-up-manage-group em {
+    height: 20px;
+    line-height: 20px;
+}
+#gosend_message {
+    position: absolute;
+    right: 16px;
+    top: 5px;
+}
+#gosend_message a {
+    background: url("http://p9.qhimg.com/t01a3a394a326d22aa5.png") no-repeat scroll 6px 6px #5DB945;
+    color: #FFFFFF;
+    padding: 2px 7px 2px 25px;
+}
+#gosend_message a:hover {
+    background: url("http://p9.qhimg.com/t01a3a394a326d22aa5.png") no-repeat scroll 6px 6px #79C964;
+    text-decoration: none;
+}
+</style>
+<a name="comment_block"></a>
+<div class="ld_pl" style="width:900px;height:50px;">
+</div>
+<script type="text/javascript" src="/js/jquery.pagination.js"></script>
+<script type="text/javascript" src="/js/jquery.pinwheel-0.1.0.js" ></script>
+<script>
+var comment_token = '';
+var isSendBtn = true;
+$(document).ready(function(){
+	ajax_get_comments(1,'library.cupl.edu.cn',4);
+	$("#content").focus(function(){
+		$("#comment_error").html("");
+		$("#comment_error").css('color' ,'#FF0000');
+	});
+});	
+//获取评论
+function ajax_get_comments(pagenum,id_value,comment_type){
+    if(comment_type == 4){
+		id_value = encodeURIComponent(id_value);
+	}
+	if(!pagenum){
+		pagenum = 1;
+	}
+  $.post("/comment/ajaxlist",{
+		id_value:id_value,
+		page:pagenum,
+		comment_type:comment_type,
+		yzm:"938050b074f94a4c583ae06f32605d47",
+		ignore:new Date().getTime()
+		},
+		function(data){
+			comment_token = data.token;
+			if($("#check_web_comment")){
+				if(pagenum == 1){
+					if(data.record_count > 0){
+						if(comment_type == 4){
+							$("#check_web_comment").html('查看此网站的评论');
+						}else if(comment_type == 3){
+							$("#check_web_comment").html('查看此漏洞的评论');
+						}
+					}else{
+						if(comment_type == 4){
+							$("#check_web_comment").html('对该网站进行评论');
+						}else if(comment_type == 3){
+							$("#check_web_comment").html('对该漏洞进行评论');
+						}
+					}
+				}
+			}
+		var items_per_page = 20;
+		$("#comment_totalnums_span").html(data.record_count);
+		if(data.record_count == 0){
+			return ;
+			//data.record_count=1;
+		}
+		$("#pagination").pagination(data.record_count, {
+			num_edge_entries: 2,
+			num_display_entries: 5,
+			prev_text:'<',
+			next_text:'>',
+			callback: pageselectCallback,
+			items_per_page:items_per_page,
+			current_page:(data.cur_page-1)
+		});
+		   
+		var html_str='';    
+		for(var i=0;i<data.comments.length;i++){
+		    				html_str += '<dl class="plbg1 clearfix" id="dl_'+data.comments[i].comment_id+'"><dt><span class="louchen">'+data.comments[i].level+'楼</span><span style="line-height: 17px;padding-right: 10px;">'+data.comments[i].add_time+'</span><span style="font-weight: bold;color:#333;line-height: 17px">'+data.comments[i].user_name+'</span></dt>';			
+						if(data.comments[i].isSiter == 1){
+				html_str += '<dd><a ajax-href="/group/showuserpro/uid/'+data.comments[i].user_id+'/from/comment" class="loading_userpro"><img width="30" height="30" style="position: absolute; left: 10px; top: 6px;" src="'+data.comments[i].headlogo+'"></a><p>'+replaceTextarea1(data.comments[i].content)+'</p></dd></dl>';				
+				
+			}else{
+				html_str += '<dd><img width="30" height="30" style="position: absolute; left: 10px; top: 6px;" src="'+data.comments[i].headlogo+'"><p>'+replaceTextarea1(data.comments[i].content)+'</p></dd></dl>';
+			}
+		}
+	html_str +='';
+	$("#comments").html(html_str);
+	$('.loading_userpro').pinwheel();
+	
+	if(data.record_count <= items_per_page){
+		$("#pagination").html("");
+	}
+},'json'
+);
+}
+
+//分页回调函数
+
+function pageselectCallback(page_index, jq){
+	ajax_get_comments(page_index+1,'library.cupl.edu.cn',4);
+	return false;
+}
+/*
+function score(sco_action,id){
+	$.post("/vul/score",{sco_action:sco_action,id:id},function(data){
+		if(data && data.state == "ok"){
+			if(data.action == "up"){
+				$("#up_num").html(parseInt($("#up_num").html()) + 1);
+			}else if(data.action == "down"){
+				$("#down_num").html(parseInt($("#down_num").html()) + 1);
+			}
+		}else{
+			alert(data.msg);
+		}
+	  },
+	  "json");
+}
+*/
+	$("#add_btn").click(function(){
+		var content = $.trim($("#content").val());
+		var id_value = $("#id_value").val();
+		var comment_type = $("#comment_type").val();
+		$("#comment_error").css('color' ,'#FF0000');
+		if(content == "我来点评..."){
+			$("#comment_error").html("请输入评论内容!");
+			$("#comment_error").show();
+			$("#content").css('border-color' ,'#FF0000');
+			return false;			
+		}
+		if(content == ""){
+			$("#comment_error").html("请输入评论内容!");
+			$("#comment_error").show();
+			$("#content").css('border-color' ,'#FF0000');
+			return false;
+		}
+		if(!isSendBtn){
+			$("#comment_error").html("已经超出字数限制!");
+			$("#comment_error").show();
+			$("#content").css('border-color' ,'#FF0000');
+			return false;			
+		}
+		if($('#yzm_comment').length > 0){
+			var yzm = $('#yzm_comment').val();
+			if(yzm == ''){
+				$("#comment_error").html("请输入验证码!");
+				$("#comment_error").show();
+
+				return false;				
+			}
+		}
+		$(this).attr('disabled',true).css("background-color",'#bbbbbb').css("border-color",'#bbbbbb');
+		$.post("/comment/ajaxadd",{content:content,id_value:id_value,comment_type:comment_type,yzm:yzm,token:comment_token},function(data){
+		if(data && data.state == "ok"){
+			//alert("评论成功,等待管理员审核");
+			ajax_get_comments(1,'library.cupl.edu.cn',4);
+			$("#comment_error").css('color' ,'green');
+			$("#comment_error").html("评论成功!");
+			points_tips_func_comment();
+			$("#content").val("");
+			$("#comment_error").show();
+			if($('#yzm_comment').length > 0){
+				RefreshImage();
+			}
+			if($('#yzm_comment').length > 0){
+				$('#yzm_comment').val('');
+			}
+			$("#add_btn").removeAttr("disabled").css("background-color",'#3FA156').css("border-color",'#1D7431');
+			//$("#comment_error").fadeOut(4000);
+		}else{
+			//alert(data.msg);
+			$("#comment_error").css('color' ,'#FF0000');
+			$("#comment_error").html(data.msg);
+			$("#comment_error").show();
+			//$("#comment_error").fadeOut(4000);
+			$("#add_btn").removeAttr("disabled").css("background-color",'#3FA156').css("border-color",'#1D7431');
+		}
+	  },
+	  "json");
+
+	});
+</script>
+<script>
+$(function(){
+    $("#content").focus(function(){
+			$("#content").css('color' , '#333333');
+			$("#content").css('border-color','#333333');
+			if($("#content").val() == "我来点评..."){
+				$("#content").val('');
+			}
+			to_limitInput();
+		}).keyup(function(){
+			to_limitInput();
+		}).keydown(function(){
+			to_limitInput();
+		}).blur(function(){
+			if($("#content").val() == ""){
+				$("#content").css('color' , '#999999');
+			}
+		});
+});
+function to_limitInput(){
+	var content = $("#content").val();
+	content = $.trim(content);
+    var maxNum = 120;
+	var iLen = 0;		
+	for (i = 0; i < content.length; i++) iLen += content.charAt(i).charCodeAt() > 255 ? 1 : 0.5;
+	var retnums = Math.abs(maxNum - Math.floor(iLen));
+	$("#inputnums").html(retnums);
+	//if(retnums < 0)
+	if((maxNum - Math.floor(iLen)) >= 0){
+		isSendBtn = true;
+		$("#inputnums_text").html('还可以输入');
+		$("#inputnums").css('color' , '#666666');
+	}else{
+		$("#inputnums").css('color' , '#FF0000');
+		$("#inputnums_text").html('已超出');
+		isSendBtn = false;
+	}
+}
+function to_deleteComment(id){
+	if(id == "" || id == 0){
+		return false;
+	}
+	if(!confirm('你确认要删除此楼评论吗?')){
+		return false;
+	}
+	$.ajax({  	
+			url : "/comment/delcommemt",
+			type: 'POST',
+			dataType:  'json',
+			data:'id='+id,
+			success: function(data){
+				if(data.state == "yes"){
+					$("#dl_"+id).remove();
+				}else{
+				
+				}
+			}
+	});
+}
+</script>
+<script type="text/javascript">
+function RefreshImage()
+{
+	var imgsrc = $("#img11").attr("src");
+	if(!imgsrc)
+	{
+		$("#img11").attr("src","/index/getcaptcha2");
+	}
+	
+   var el =document.getElementById("img11");
+   el.src=el.src+'?';  //这个特别重要
+}
+function replaceTextarea1(str){
+	var reg=new RegExp("\n","g");
+	str = str.replace(reg,"<br>");
+	
+	return str;
+}
+</script>
+                        <style>
+		.searchUrls li{
+			width:150px;
+			float:left;
+			
+		}
+		</style>
+        <div class="searchUrls">
+        <h2>最近搜索：</h2>
+       	 <ul>
+         	        	<li><a target="_blank" href="/url/520jiani.cn.htm" title="520jiani.cn,520jiani.cn是什么">520jiani.cn</a></li>
+        	        	<li><a target="_blank" href="/url/bjjng.com.htm" title="bjjng.com,bjjng.com是什么">bjjng.com</a></li>
+        	        	<li><a target="_blank" href="/url/viszt.com.htm" title="viszt.com,viszt.com是什么">viszt.com</a></li>
+        	        	<li><a target="_blank" href="/url/czxczh.com.htm" title="czxczh.com,czxczh.com是什么">czxczh.com</a></li>
+        	        	<li><a target="_blank" href="/url/sdxgzj.com.htm" title="sdxgzj.com,sdxgzj.com是什么">sdxgzj.com</a></li>
+        	        	<li><a target="_blank" href="/url/kingdom.org.cn.htm" title="kingdom.org.cn,kingdom.org.cn是什么">kingdom.org.cn</a></li>
+        	        	<li><a target="_blank" href="/url/zjxas.com.htm" title="zjxas.com,zjxas.com是什么">zjxas.com</a></li>
+        	        	<li><a target="_blank" href="/url/arhh.top.htm" title="arhh.top,arhh.top是什么">arhh.top</a></li>
+        	        	<li><a target="_blank" href="/url/payaa2xu.com.htm" title="payaa2xu.com,payaa2xu.com是什么">payaa2xu.com</a></li>
+        	        	<li><a target="_blank" href="/url/sexlast.com.htm" title="sexlast.com,sexlast.com是什么">sexlast.com</a></li>
+        	        	<li><a target="_blank" href="/url/cnyifa.com.htm" title="cnyifa.com,cnyifa.com是什么">cnyifa.com</a></li>
+        	        	<li><a target="_blank" href="/url/xmdx-hn.com.htm" title="xmdx-hn.com,xmdx-hn.com是什么">xmdx-hn.com</a></li>
+        	        	<li><a target="_blank" href="/url/www.jiushiyitang.com.htm" title="www.jiushiyitang.com,www.jiushiyitang.com是什么">www.jiushiyitang.com</a></li>
+        	        	<li><a target="_blank" href="/url/www.nnwxwx.com.htm" title="www.nnwxwx.com,www.nnwxwx.com是什么">www.nnwxwx.com</a></li>
+        	        	<li><a target="_blank" href="/url/payaa1ju.com.htm" title="payaa1ju.com,payaa1ju.com是什么">payaa1ju.com</a></li>
+        	        	<li><a target="_blank" href="/url/lehuigogo.com.htm" title="lehuigogo.com,lehuigogo.com是什么">lehuigogo.com</a></li>
+        	        	<li><a target="_blank" href="/url/035qipai86.com.htm" title="035qipai86.com,035qipai86.com是什么">035qipai86.com</a></li>
+        	        	<li><a target="_blank" href="/url/035qipai88.com.htm" title="035qipai88.com,035qipai88.com是什么">035qipai88.com</a></li>
+        	        	<li><a target="_blank" href="/url/yudream.com.cn.htm" title="yudream.com.cn,yudream.com.cn是什么">yudream.com.cn</a></li>
+        	        	<li><a target="_blank" href="/url/www.wozhuan.com.htm" title="www.wozhuan.com,www.wozhuan.com是什么">www.wozhuan.com</a></li>
+        	         </ul>
+        </div>
+        		
+			</div>
+</div>
+			</div>
+		</div>
+	</div>
+</div>
+<style>#footer{margin-top: 0px;}</style>
+<div id="footer">
+	<div class="wrapper clearfix">
+		<div class="footLink f_1">
+			<h3>友情链接</h3>
+			<ul>
+				<li><a target="__blank" title="360安全卫士" href="http://www.360.cn/">360安全卫士</a></li>
+				<li><a onClick="_gaq.push(['_trackPageview', '/home/nav_b3602']);" target="_blank" title="360安全卫士企业版" href="http://b.360.cn/">企业内网安全</a></li>
+				<li><a target="_blank" title="360杀毒" href="http://sd.360.cn/">360杀毒</a></li>
+				<li><a target="_blank" title="360网址导航" href="http://hao.360.cn/">360网址导航</a></li> 
+				<li><a target="_blank" title="易通软件" href="http://www.cmseasy.cn/">易通软件</a></li> 
+				<li><a target="_blank" title="网站卫士" href="http://wangzhan.360.cn/">网站卫士</a></li>
+                <li><a href="http://www.hack-cn.com/" title="被黑网站统计" target="_blank">被黑网站统计</a></li>
+				<li><a href="http://loudong.360.cn/" title="库带计划-第三方漏洞收集" target="_blank">第三方漏洞收集</a></li>
+				<li><a href="http://bbs.vc52.cn" title="精睿论坛" target="_blank">精睿论坛</a></li>
+                <li><a href="http://seo.aizhan.com" title="seo培训" target="_blank">seo培训</a></li>
+                <li><a href="http://www.gongju.com/" title="工具网" target="_blank">工具网</a></li>
+                <li><a href="http://www.7c.com/" title="去查网" target="_blank">去查网</a></li>
+                <li><a href="http://www.links.cn" title="站长工具" target="_blank">站长工具</a></li>
+                <li><a href="http://www.chinesehongker.com" title="中国红客联盟" target="_blank">中国红客联盟</a></li>
+                <li><a href="https://www.wosign.com/products/SSL.htm" title="WoSign SSL证书" target="_blank">WoSign SSL证书</a></li>
+                <li><a href="http://www.west.cn " title="西部数码" target="_blank">西部数码</a></li>
+                <li><a href="http://www.5778.com" title="第一主机" target="_blank">第一主机</a></li>
+                <li><a href="http://zhanzhang.so.com/" title="360站长平台" target="_blank">360站长平台</a></li>
+                <li><a href="http://jk.cloud.360.cn/" title="360云监控" target="_blank">360云监控</a></li>
+                 <li><a href="http://www.dnspan.com/" title="高防DNS" target="_blank">高防DNS</a></li>
+		  <li><a href="http://www.163ns.com/webservice/" title="智能建站" target="_blank">智能建站</a></li>
+		  <li><a target="_blank" title="360杀毒" href="http://bobao.360.cn">360安全播报</a></li>
+          <li><a target="_blank" title="360云加速" href="https://cdn.cloud.360.cn/">360云加速</a></li>
+	<li><a target="_blank" title="" href="http://www.72e.net">免费建站</a></li>  
+			</ul>	
+		</div>
+		
+		<div  class="footLink f_2">
+			<h3>使用指南</h3>
+			<ul class="clearfix">
+				<li><a href="/protect/report">- 漏洞修复</a></li>
+				<li><a href="/webshell/">- 后门查杀</a></li>
+				<li><a href="/grid/index">- 9宫格</a></li>
+				<li><a href="/help/features">- 特色功能</a></li>
+				<li><a href="/product/whouse">- 成功案例</a></li>
+				<li><a href="/help/faq">- 帮助</a></li>
+				<li><a href="/news">- 安全播报</a></li>
+				<li><a href="http://ce.cloud.360.cn" target="_blank">- 站长工具</a></li>
+				<li><a href="/vul">- 常见漏洞</a></li>
+				<li><a href="http://bbs.webscan.360.cn" target="_blank">- 站长论坛</a></li>
+			</ul>
+		</div>
+        <div  class="footLink f_3">
+			<h3>对外合作</h3>
+			<ul class="clearfix">
+				<li><a href="/help/idccooperation">IDC合作</a></li>
+			</ul>
+		</div>
+		<div  class="footLink f_3">
+			<h3>关于我们</h3>
+			<ul class="clearfix">
+				<li><a href="/help/contact">联系我们</a></li>
+				<li><a href="/help/whouse">合作伙伴</a></li>
+				<li><a href="/help/agreement">用户协议</a></li>
+                <li><a href="/help/log">更新日志</a></li>
+                <li><a href="/url/search">最近关注</a></li>
+                <li><a href="/help/report">2013安全报告</a></li>
+                <!--<li><a href="http://safe.webscan.360.cn/">ASP后门扫描</a></li>-->
+                <li><a target="_blank" href="http://yingyan.360.cn">鹰眼</a></li>
+                 <li><a target="_blank" href="http://ce.webscan.360.cn/?from=360webscan_footer" onclick="_gaq.push(['_trackPageview', '/renjia/footer']);">刃甲</a></li>
+                 <li><a  href="/url/search">最新搜索</a></li>
+			</ul>
+		</div>
+		<div  class="footLink f_4">
+			<h3>关注我们</h3>
+			<ul class="im clearfix">
+				<li class="sina"><a style="color:#247CD6" href="http://weibo.com/360webscan" target="__blank">360网站安全检测微博</a></li>
+                
+
+			</ul>
+		</div>
+	</div>
+
+	<div class="ft" style="border-top: 1px dashed #CCC">
+		<p>Copyright&copy;2005-2015 360网站安全检测 <a target="_blank" href="http://www.miibeian.gov.cn">京ICP证080047号</a></p>
+	</div>
+	
+</div>
+
+<style>
+#cnzz_stat_icon_1254937590{display:none}
+</style>
+<script type="text/javascript">
+var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cspan id='cnzz_stat_icon_1254937590'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1254937590' type='text/javascript'%3E%3C/script%3E"));
+var _czc = _czc || [];
+_czc.push(["_setAccount", "1254937590"]);
+</script>
+<script src="http://s.360.cn/webscan/bc.htm?uid=&src=&ver=4&ref=http%3A%2F%2Flibrary.cupl.edu.cn%2F"></script>
+</body>
+</html>
+
+<script type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-27371609-1']);
+_gaq.push(['_addOrganic', 'soso', 'w']);
+_gaq.push(['_addOrganic', 'yodao', 'q']);
+_gaq.push(['_addOrganic', 'sogou', 'query']);
+_gaq.push(['_addOrganic', 'bing', 'q']);
+_gaq.push(['_addOrganic', 'so.com', 'q', false]);
+_gaq.push(['_addOrganic', 'so.360.cn', 'q', false]); 
+_gaq.push(['_addOrganic', 'zhidao.baidu.com', 'word',false]);
+
+_gaq.push(['_trackPageview']);
+
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+
+<script>
+var EventUtil = {
+   //注册
+   addHandler: function(element, type, handler){
+     if (element.addEventListener){
+       element.addEventListener(type, handler, false);
+     } else if (element.attachEvent){
+       element.attachEvent("on" + type, handler);
+     } else {
+       element["on" + type] = handler;
+     }
+   },
+   //移除注册
+   removeHandler: function(element, type, handler){
+     if (element.removeEventListener){
+             element.removeEventListener(type, handler, false);
+     } else if (element.detachEvent){
+             element.detachEvent("on" + type, handler);
+     } else {
+             element["on" + type] = null;
+     }
+   }             
+  };
+EventUtil.addHandler(window, 'load', loadjs2); 
+function loadjs2() {
+	$(".aside").height($(".container").height());	
+	$(".my-website-search .on").bind("click",function(e){ if ($(".my-website-search-list").css("display") == "none") { $(".my-website-search-list").show();} else {$(".my-website-search-list").hide();} e.stopPropagation();});
+	$(".user-logout").bind("mouseover",function(){ $(".my-website-user-oplist").show();});
+	$(".my-website-user-oplist").hover(function(){$(".my-website-user-oplist").show();},function(){$(".my-website-user-oplist").hide();});
+	$(document).bind("click",function(){$(".my-website-search-list").hide();});
+	$(document).bind("click",function(){$(".popup").hide();});
+}
+</script>
+<script type="text/javascript" src="/js/highslide/highslide-full.js"></script>
+<link href="/js/highslide/highslide.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="/js/jquery-ui-1.8.14.custom.js"></script>
+<link href="/css/jquery-ui-1.8.9.custom.css" rel="stylesheet" type="text/css">
+
+
+<script type="text/javascript">
+var ifsameip_end = 0;
+var score_rate = 0;
+var score_value = 0;
+
+$(document).ready(function(){
+	
+	$(".jg_submit").mousedown(function(){
+		$(this).addClass('jg_submit_over');
+	});
+	$(".jg_submit").mouseup(function(){
+		$(this).removeClass('jg_submit_over');
+	});
+	$(".show_moreurl").click(function(){
+		var tail_id;
+		tail_id = $(this).attr('reshead');
+		$('#tail_'+tail_id).slideToggle(200);
+		$(this).hide();
+	});
+	$(".show_lessurl").click(function(){
+		var tail_id;
+		tail_id = $(this).attr('restail');
+		$('#tail_'+tail_id).slideToggle(200);
+		$('#more_'+tail_id).show();
+	});
+	$(".show_moreurl_cg").click(function(){
+		var tail_id;
+		tail_id = $(this).attr('reshead_cg');
+		$('#tail_cg_'+tail_id).slideToggle(200);
+		$(this).hide();
+	});
+	$(".show_lessurl_cg").click(function(){
+		var tail_id;
+		tail_id = $(this).attr('restail_cg');
+		$('#tail_cg_'+tail_id).slideToggle(200);
+		$('#more_cg_'+tail_id).show();
+	});
+	ifsameip_end = 1;
+	getsubdomains();
+	asyncGetTrojan();
+
+		$(".site-secur-tips").mouseover(function(){
+		$(".mysite-info-tips").show();
+	}).mouseout(function(){$(".mysite-info-tips").hide();});
+	$(".mysite-info-tips").mouseover(function(){
+		$(".mysite-info-tips").show();
+	}).mouseout(function(){$(".mysite-info-tips").hide();});
+
+});
+function to_shareSinaWeibo(){
+    to_tongjiweibo();
+  var leverl_t = $("#jg_tips").text();
+  var trojan_t = $("#trojan_sec").text();
+  var trojan_text = "";
+  if(trojan_t == "被挂马"){
+  	trojan_text = "，黑客已经在您的网站上植入了木马！";
+  }
+  var tamper_text = "";
+    var sinmaWeibo_title = "";
+  if(leverl_t == "高危"){
+  	  sinmaWeibo_title = "library.cupl.edu.cn 的站长大事不好啦，经过@360网站安全检测 的安全评估，您的网站安全等级为# 高危 #"+trojan_text+tamper_text+"[怒]";
+  }else if(leverl_t == "严重"){
+  	  sinmaWeibo_title = "library.cupl.edu.cn 的站长，经过@360网站安全检测 的安全评估，您的网站安全等级为# 严重 #，很多黑客表示对您的网站很感兴趣，您必须赶快修复网站了。[哼]";	
+  }else if(leverl_t == "警告"){
+ 	sinmaWeibo_title = "library.cupl.edu.cn 的站长要注意了，经过@360网站安全检测 的安全评估，您的网站安全等级为# 警告 #，看起来是存在安全隐患的哦~~！[思考]"; 
+  }else if(leverl_t == "安全"){
+	sinmaWeibo_title = "太好啦！经过@360网站安全检测 的安全评估，library.cupl.edu.cn 目前的安全等级为# 安全 #，大家可以放心访问啦！";	  
+  }
+  if(score_value == 100){
+    score_rate = 99;
+  }
+  var score_type = 0;
+  if(score_value>=90){
+    sinmaWeibo_title_append = "仰天大笑出门去，网站安全再延续！神马美女画皮，都抵不过我的网站#五星级#！";
+    score_type = 5;
+    score_face = "[给力]";
+  }else if(score_value >= 75 && score_value < 90){
+     sinmaWeibo_title_append = "将相本无种，网站当自强！看吧，四星网站向全世界宣布我低调不张扬！";
+     score_type = 4;
+     score_face = "[威武]";
+  }else if(score_value >= 60 && score_value < 75){
+      sinmaWeibo_title_append = "是非成败转头空，网站安全有点松！快修复漏洞吧，避免黑客攻击！";
+      score_type = 3;
+      score_face = "[奥特曼]";
+  }else if(score_value >= 30 && score_value < 60){
+     sinmaWeibo_title_append = "欲穷千里目，更上一层楼，网站漏洞百出让人发愁，当心被“拖库”！！";
+     score_type = 2;
+     score_face = "[囧]";
+  }else{
+     sinmaWeibo_title_append = "山河破碎风飘絮，身世浮沉雨打萍。这个分数太不行，安全情况快要零！";
+     score_type = 1;
+     score_face = "[衰]";
+  }
+  sinmaWeibo_title = "经 @360网站安全检测 体检，library.cupl.edu.cn网站安全得分为"+score_value+"，"+score_face+"击败全国"+score_rate+"%的网站。"+sinmaWeibo_title_append+score_face;
+  if(score_value == 0){
+     sinmaWeibo_title_append = "山河破碎风飘絮，身世浮沉雨打萍。这个分数太不行，安全情况等于零！";
+     sinmaWeibo_title = "经 @360网站安全检测 体检，library.cupl.edu.cn网站安全得分为"+score_value+"，"+score_face+"处于全国垫底的行列。"+sinmaWeibo_title_append+score_face;
+     score_type = 0;
+  }
+  var weibo_pic = "http://webscan.360.cn/share/index/?type="+score_type+"&score="+score_value+"&host=library.cupl.edu.cn&percent="+score_rate;
+  var weibo_url = "http://webscan.360.cn/index/checkwebsite/?url=library.cupl.edu.cn";
+	window.open('http://service.weibo.com/share/share.php?title='+encodeURIComponent(sinmaWeibo_title)+'&url='+encodeURIComponent(weibo_url)+'&pic='+encodeURIComponent(weibo_pic)+'&appkey=2098531646&searchPic=false','_blank' ,"crollbars=no,width=600,height=450,left=75,top=20,status=no,resizable=no,location=no");
+}
+function getVulType(type)
+{
+	if(type==32)
+	{
+		return "该页面被挂马";
+	}
+	else if(type==8)
+	{
+		//return "该页面存在木马文件";
+		return "该页面存在恶意下载链接";
+	}	
+	else if(type==16)
+	{
+		return "该页面可能存在钓鱼信息";
+	}
+	else if(type==48)
+	{
+		return "恶意下载";
+	}
+	else
+	{
+		return "其他";
+	}
+}
+function getlinktype(type)
+{
+	if(type=="iframe")
+	{
+		return "<b style='color:red'>被植入不可见的恶意框架</b>";
+	}
+	else if(type=="script")
+	{
+		return "<b style='color:red'>被植入不可见的恶意脚本</b>";
+	}
+	else if(type=="exe")
+	{
+		return "<b style='color:red'>被植入木马文件</b>";
+	}	
+	else
+	{
+		return "<b style='color:red'>被植入恶意文件</b>";
+	}
+}
+function to_tongjiweibo(){
+      var leverl_t = $("#jg_tips").text();
+	  var level = 0;
+	  if(leverl_t == "高危"){
+	  	 level = 3;
+	  }else if(leverl_t == "严重"){
+	     level = 2;
+	  }else if(leverl_t == "安全"){
+	     level = 1;
+	  }else{
+	  	 level = 0;
+	  }
+	  var trojan_text = $("#trojan_sec").text();
+	  var tamper = 0;
+	  var trojan = 0;
+	  	  if(trojan_text == "被挂马" || trojan_text == "恶意下载"){
+	  	trojan = 1
+	  }
+		$.ajax({
+			  url: "/index/weibotongji",
+			  type:"POST",
+			  dataType:"json",
+			  data:"url=library.cupl.edu.cn"+"&tamper="+tamper+"&trojan="+trojan+"&level="+level,
+			  success: function(data){
+
+			  }
+		});
+
+}
+function to_tongjicheckwebsite(is_trojan){
+      var referer = "http://library.cupl.edu.cn/";
+      var leverl_t = $("#jg_tips").text();
+	  var level = 0;
+	  if(leverl_t == "高危"){
+	  	 level = 3;
+	  }else if(leverl_t == "严重"){
+	     level = 2;
+	  }else if(leverl_t == "安全"){
+	     level = 1;
+	  }else{
+	  	 level = 0;
+	  }
+		$.ajax({
+			  url: "/index/checkwebsitetongji",
+			  type:"POST",
+			  dataType:"json",
+			  data:"url=library.cupl.edu.cn"+"&level="+level+"&referer="+referer+"&is_trojan="+is_trojan,
+			  success: function(data){
+				    
+					var randdatas = data.result;
+					var htmltext = "";
+					if(randdatas.length > 0){
+						htmltext += '<h3 class="zz-info">最新安全资讯</h3>';
+						for(var i=0; i<randdatas.length; i++){
+							var title = cutstr(randdatas[i].title, 23);	
+							htmltext += '<dl class="clearfix"><dd><a style="color:#666" target="_blank" href="http://bobao.360.cn/news/detail/'+randdatas[i].id+'.html" >'+title+'</a></dd></dl>';
+						}
+						$("#bobao_div").html(htmltext);
+					}
+
+
+			  }
+		});
+
+}
+function cutstr(str,len)
+{
+   var str_length = 0;
+   var str_len = 0;
+      str_cut = new String();
+      str_len = str.length;
+      for(var i = 0;i<str_len;i++)
+     {
+        a = str.charAt(i);
+        str_length++;
+        if(escape(a).length > 4)
+        {
+         
+         str_length++;
+         }
+         str_cut = str_cut.concat(a);
+         if(str_length>=len)
+         {
+         str_cut = str_cut.concat("...");
+         return str_cut;
+         }
+    }
+  
+    if(str_length<len){
+     return  str;
+    }
+}
+function to_valideWebSite(){
+        $("#top_loading").show();
+		$.ajax({
+			  url: "/domain/add2",
+			  type:"POST",
+			  dataType:"json",
+			  data:"NewDomainBox=library.cupl.edu.cn&token_adddomain=09faf72a6f1c1938ef5b49da0a7ec70c",
+			  success: function(data){
+			     if(data.state == "paiverify" || data.state == "already_add"){
+				    window.location.href = "/manage/index/domainid/"+data.domainid;
+				 }else{
+				    $("#top_loading").hide();
+				 	alert(data.message);
+					if(data.token){
+						window.location.reload();
+					}
+				 }
+			  }
+		});
+}
+function asyncGetTrojan()
+{
+	//var url = $("input[name='url']").attr("value");
+	var url = 'library.cupl.edu.cn';
+	if(url.length>0)
+	{
+		$.ajax({
+			  url: "/index/gettrojan",
+			  type:"POST",
+			  dataType:"json",
+			  data:"url="+url+"&token=137257cd898d32797634bd821d25a663&time=1509202847",
+			  success: function(data){	
+			        var type = "";
+					var st = "";
+					var sc = "";
+					var ssc = "";
+					var trojan_list = "";
+					var isxujia = 0;
+					var isguama = 0;
+					var kx = 0;
+					var kx_state = 0;
+					var kx_url = '';
+					var is_cuangai = 0;
+					if(data.trojan){	
+						type = data.trojan.type;
+						st = data.trojan.st;
+						sc = data.trojan.sc;
+						ssc = data.trojan.ssc;
+						trojan_list = data.trojan.list;
+					}
+					if(data.kx){
+						kx_state = data.kx.state;
+						kx_url = data.kx.url;
+					}
+					var kneturl = data.knet;
+					if(kx_state == 1){
+						if(kx_url.length > 0){
+							$('#kx_dl').html('<dd><strong>网站认证：</strong></dd><dd><a href="'+kx_url+'" target="_blank" title="凭安认证"><img width="80" src="http://p8.qhimg.com/d/webscan/pingan_logo.jpg" border="0" /></a></dd>');
+						}else{
+							$('#kx_dl').html('<dd><strong>网站认证：</strong></dd><dd><img src="http://p8.qhimg.com/d/webscan/pingan_logo.jpg" border="0" /></dd>');
+						}
+						//$('#kx_dl').addClass('website-info');
+					}
+					if(kneturl){
+						$('#kx_dl').html('<dd><strong>网站认证：</strong></dd><dd><a href="'+kneturl+'" target="_blank" title="中网认证"><img width="80" src="http://p6.qhimg.com/t01d09f3a6c0799f789.png" border="0" /></a></dd>');
+						//$('#kx_dl').addClass('website-info');
+					}
+					if(type == 60 && st == 10 && sc == 115 && ssc == 1151){
+						is_cuangai = 1;
+						$("#cuangai_sec").attr("class","fc_dangerous");					
+						$("#cuangai_sec").html("遭恶意篡改");
+						
+						$("#query").attr("src", "/img/zhiming.png?v=1");
+						$("#jg_tips").text("高危");	
+						$("#jg_tips").attr("class","jg_dangerous");	
+						
+						
+						
+						$("#diaoyu_sec").attr("class","fc_security");
+						$("#diaoyu_sec").text("正常");	
+						$("#report_diaoyu").html('<div class="gm_safe">　　正常</div>');						
+						$("#report_diaoyu").show();	
+					
+						$("#trojan_sec").attr("class","fc_security");
+						$("#trojan_sec").text("正常");	
+						$("#report_gm").html('<div class="gm_safe">　　正常</div>');						
+						$("#report_gm").show();	
+						
+						
+							$("#report_cg").html('<div class="gm_info2" style="width:1295px">该网站多个子域名或页面存在异常的虚假或恶意内容，虚假和恶意的内容会诱骗访问者上当或使您的计算机感染木马或病毒，此种情况可能是因为网站被黑客入侵篡改，为了避免给您造成损失，请您谨慎访问。</div><div class="fast_conf" style="width:200px">如果您是站长，请走<a href="http://webscan.360.cn/p2p/index/domain/library.cupl.edu.cn" target="_blank">申诉通道</a></div>');
+						
+					}else if(type == 40 && st == 50){
+						is_cuangai = 1;
+						$("#cuangai_sec").attr("class","fc_dangerous");					
+						$("#cuangai_sec").html("遭恶意篡改");
+						
+						$("#query").attr("src", "/img/zhiming.png?v=1");
+						$("#jg_tips").text("高危");	
+						$("#jg_tips").attr("class","jg_dangerous");	
+						
+						
+						
+						$("#diaoyu_sec").attr("class","fc_security");
+						$("#diaoyu_sec").text("正常");	
+						$("#report_diaoyu").html('<div class="gm_safe">　　正常</div>');						
+						$("#report_diaoyu").show();	
+					
+						$("#trojan_sec").attr("class","fc_security");
+						$("#trojan_sec").text("正常");	
+						$("#report_gm").html('<div class="gm_safe">　　正常</div>');						
+						$("#report_gm").show();	
+						
+						if($("#report_cg").text().indexOf('正常') >=0){	
+							$("#report_cg").html('<div class="gm_info2" style="width:1295px">该网站多个子域名或页面存在异常的虚假或恶意内容，虚假和恶意的内容会诱骗访问者上当或使您的计算机感染木马或病毒，此种情况可能是因为网站被黑客入侵篡改，为了避免给您造成损失，请您谨慎访问。</div>');
+						}
+						
+					}else if((type == 60 && st == 20)|| (type ==70) ){
+						$("#query").attr("src", "/img/zhiming.png?v=1");
+						$("#jg_tips").text("高危");	
+						$("#jg_tips").attr("class","jg_dangerous");	
+							
+						$("#trojan_sec").attr("class","fc_dangerous");					
+						$("#trojan_sec").html("有挂马或恶意");
+						
+
+						
+						$("#diaoyu_sec").attr("class","fc_security");
+						$("#diaoyu_sec").text("正常");	
+						$("#delayloaddiaoyu").remove();	
+						$("#report_diaoyu").html('<div class="gm_safe">　　正常</div>');						
+						$("#report_diaoyu").show();	
+						if(st == 1101){
+							$("#report_gm").html('<div class="gm_info2">　　国家"扫黄打非"机关提示：您登录的网站含有大量淫秽色情等违法信息，请勿访问。色情网站常常会传播木马，从而导致账号密码、私人数据等个人信息被窃取。</div>');
+						}else{
+							$("#report_gm").html('<div class="gm_info1">　　有挂马或恶意内容</div>');	
+						}
+						$("#report_gm").show();	
+						isguama = 1;					
+					}else if(type == 60){
+						var high_text = getTrojanText(type , st , sc);
+						$("#query").attr("src", "/img/zhiming.png?v=1");
+						$("#jg_tips").text("高危");	
+						$("#jg_tips").attr("class","jg_dangerous");		
+						$("#diaoyu_sec").attr("class","fc_dangerous");					
+						$("#diaoyu_sec").html("有虚假或欺诈");
+						
+						var rowcontext = '<div class="fast_conf" style="font-size:14px;padding:0px 6px;">如果您的网站确实没有虚假或欺诈内容，请进入 <a  onclick="return hs.htmlExpand(this,{objectType:\'iframe\',width:420,height:230})" href="/manage/antitrojan/url/library.cupl.edu.cn">站长申诉通道</a> ; <br>注：根据近期站长反馈情况来看，很有可能是被黑客入侵导致挂马或钓鱼，推荐使用<a onClick="_gaq.push([\'_trackPageview\', \'/renjia/checkwebsite\']);" href="http://butian.360.cn" target="_blank">企业级安全服务</a></div>';						
+						rowcontext = '<div class="gm_info2" >'+high_text+'</div>'+rowcontext;
+						$("#report_diaoyu").html(rowcontext);						
+						$("#report_diaoyu").show();
+						
+						$("#trojan_sec").attr("class","fc_security");
+						$("#trojan_sec").text("正常");	
+						$("#report_gm").html('<div class="gm_safe">　　正常</div>');						
+						$("#report_gm").show();	
+						isxujia = 1;					
+						
+					}else if(type == 50 || (trojan_list != null && trojan_list.length > 0)){
+						$("#query").attr("src", "/img/zhiming.png?v=1");
+						$("#jg_tips").text("高危");	
+						$("#jg_tips").attr("class","jg_dangerous");	
+							
+						$("#trojan_sec").attr("class","fc_dangerous");					
+						$("#trojan_sec").html("有挂马或恶意");
+						
+
+						
+						$("#diaoyu_sec").attr("class","fc_security");
+						$("#diaoyu_sec").text("正常");	
+						$("#delayloaddiaoyu").remove();	
+						$("#report_diaoyu").html('<div class="gm_safe">　　正常</div>');						
+						$("#report_diaoyu").show();
+						if(type == 50 && st == 10 && sc == 101 ){					
+							var rowcontext = '<div class="gm_info2" >最近360安全中心收到大量用户投诉，该网站大量通过强行篡改浏览器首页或强行弹出的方式推广，造成恶劣影响。</div><div class="fast_conf">如果您的网站确实没有挂马或存在恶意内容，点击 <a  onclick="return hs.htmlExpand(this,{objectType:\'iframe\',width:420,height:230})" href="/manage/antitrojan/url/library.cupl.edu.cn">站长申诉通道</a> ; <br>注：根据近期站长反馈情况来看，很有可能是被黑客入侵导致挂马或钓鱼，推荐使用<a onClick="_gaq.push([\'_trackPageview\', \'/renjia/checkwebsite\']);" href="http://butian.360.cn" target="_blank">企业级安全服务</a></div>';						
+							$("#report_gm").html(rowcontext);	
+							$("#report_gm").show();	
+						}else{
+							var rowcontext = '<div class="gm_info2" >该网站被360互联网安全中心检测出存在大量挂马网页，访问该网页有风险。</div>';						
+							$("#report_gm").html(rowcontext);	
+							$("#report_gm").show();								
+						}
+						isguama = 1;							
+					}else{
+						$("#diaoyu_sec").attr("class","fc_security");
+						$("#diaoyu_sec").text("正常");	
+						$("#report_diaoyu").html('<div class="gm_safe">　　正常</div>');						
+						$("#report_diaoyu").show();	
+					
+						$("#trojan_sec").attr("class","fc_security");
+						$("#trojan_sec").text("正常");	
+						$("#report_gm").html('<div class="gm_safe">　　正常</div>');						
+						$("#report_gm").show();		
+						
+						//网站评级别的因素，漏洞、篡改			
+					    						
+						
+						$("#query").attr("src", "/img/warning.png?v=1");	
+													$("#jg_tips").text("警告");	
+												
+								
+						$("#jg_tips").attr("class","jg_warning");		
+												
+					}
+					//begin 分享新浪微博
+					var jg_tips = $("#jg_tips").text();
+											$("#share_sinaweibo").html('<a href="#" onclick="to_shareSinaWeibo()"><img title="共享到sina微博" style="cursor:pointer;margin-top:10px" src="http://p1.qhimg.com/t01094567c11b06d9f9.png" /></a>');
+										//end 分享新浪微博
+					//begin 统计网站完全评级
+					var is_trojan = 0;
+					if(isxujia == 1 || isguama == 1){
+						is_trojan = 1;
+					}
+					to_tongjicheckwebsite(is_trojan);
+					//end 统计网站完全评级
+					//begin 计算分数
+																	
+					
+					getWebscore(isxujia , is_cuangai, '0' , isguama , '0' , '0' , '1' , '3');
+					
+					//end 计算分数	
+							
+					//begin 挂马列表
+					var rowcontext = '<div style="margin-bottom: 8px;font-size:14px;color:#000000;border:1px solid #F0C36D;background-color:#F9EDBE;padding:0px 6px">如果您已经删除网站的木马或恶意内容，或者您的网站确实没有挂马或者不存在恶意内容，点击 <a  onclick="return hs.htmlExpand(this,{objectType:\'iframe\',width:420,height:230})" href="/manage/antitrojan/url/library.cupl.edu.cn">站长申诉通道</a> ; <br>注：根据近期站长反馈情况来看，很有可能是被黑客入侵导致挂马或钓鱼，推荐使用<a onClick="_gaq.push([\'_trackPageview\', \'/renjia/checkwebsite\']);" href="http://butian.360.cn" target="_blank">企业级安全服务</a></div>';	
+					if(trojan_list != null && trojan_list.length > 0){
+						var list = trojan_list;
+						rowcontext+= '<table width="100%" border="0" cellpadding="0" cellspacing="1" bgcolor="#cccccc" style="table-layout:fixed;word-wrap:break-word;font-size:14px;"><tr bgcolor="#F2F2F2"><th width="15%">类型</th><th width="50%" height="25">被挂马的网址</th><th>详细说明</th></tr>';
+						  
+						for(var i=0; i<list.length; i++)
+						{
+							var row = list[i];
+							if(!row)	break;
+							rowcontext+='<tr bgcolor="#FFFFFF">';
+							
+							
+							rowcontext+="<td>"+getVulType(row["type"])+"</td>";
+							rowcontext += '<td height="25">'+row["url"]+"</td>";
+							rowcontext+="<td><ul>";
+							
+							
+							if(row["relation"])
+							{	
+								var linktype= '';
+								var rellen = row["relation"].length;
+								for(var j=0;j<rellen; j++)
+								{
+									if(row["relation"][j]["tag"])
+									{
+										linktype = getlinktype(row["relation"][j]["tag"]);
+										rowcontext+="<li  class=\"g\">"+ linktype +"<br>" + row["relation"][j]["url"]+"</li>";
+									}
+								}
+							}
+							rowcontext+="</ul></td></tr>";
+						}
+						rowcontext += "</table>";
+						$("#report_gm").html(rowcontext);						
+						$("#report_gm").show();	
+					}else{
+						if((type == 60 && st == 20 && sc == 101)||(type == 60 && st == 20 && sc == 102)||(type == 60 && st == 20 && sc == 103)||(type == 70 && st == 0 && sc == 100)){
+							var rowcontext_1 = '<div style="margin-bottom:8px;font-size:14px;color:#000000;border:1px solid #F0C36D;background-color:#F9EDBE;padding:0px 6px">如果您已经删除网站的木马或恶意内容，或者您的网站确实没有挂马或者不存在恶意内容，点击 <a  onclick="return hs.htmlExpand(this,{objectType:\'iframe\',width:420,height:230})" href="/manage/antitrojan/url/library.cupl.edu.cn">站长申诉通道</a> ; <br>注：根据近期站长反馈情况来看，很有可能是被黑客入侵导致挂马或钓鱼，推荐使用<a onClick="_gaq.push([\'_trackPageview\', \'/renjia/checkwebsite\']);" href="http://butian.360.cn" target="_blank">企业级安全服务</a></div>';	
+							var high_text = getTrojanText(type , st , sc);
+							var rowcontext = '<div class="gm_info2" >'+high_text+'</div>'+rowcontext_1;
+							$("#report_gm").html(rowcontext);						
+							$("#report_gm").show();						
+						}
+					}				
+					//end   挂马列表		
+			  }
+		});
+	}
+					
+}
+function getTrojanText(type , st , sc){
+	var text = "";
+	if(type == 60){
+		if(st == 10){
+			if(sc == 100){
+				text = "该网站推广的产品或其治疗范围属于国家明令禁止进行医疗广告的范畴，或使用了违禁内容或方式，请谨慎访问。";
+			}else if(sc == 101){
+				text = "该网站含有未经证实的金融证券相关内容，如果网站存在模拟登录、未经批准收取会员费等行为，会给您造成财产损失。";
+			}else if(sc == 102){
+				text = "该网站含有未经证实的彩票相关内容，如果网站未获经营许可而向您收取会员费、预测费、保密费等费用，会给您造成财产损失。";
+			}else if(sc == 103){
+				text = "该网站含有未经证实的境外博彩相关内容或广告链接，不可靠的博彩相关内容可能给您造成财产损失，请您谨慎访问。";
+			}else if(sc == 104){
+				text = "该网站含有未经证实的中奖活动内容，虚假的中奖活动网站会要求您支付中奖相关费用或输入账号密码，请您谨慎访问。";
+			}else if(sc == 105){
+				text = "该网站存在未经证实的用户登录框内容，通过未经证实的登录框登录，可能会导致账号信息被盗，请您谨慎访问。";
+			}else if(sc == 106){
+				text = "该网站存在未经证实的商品、商户、支付等相关信息，虚假交易信息可能会给您造成财产损失，请确认是否为官方网站。";
+			}else if(sc == 107){
+				text = "该网站含有未经证实的软件下载信息，下载带有木马的软件可能对您的电脑安全造成威胁，请您谨慎访问。";
+			}else if(sc == 108){
+				text = "该网站含有大量未经证实的广告信息，虚假广告可能给您造成财产损失，请您谨慎访问。";
+			}else if(sc == 109){
+				text = "该网站含有未经证实的弹窗广告信息，误点击模仿常用软件弹窗的内容可能会给您的电脑安全造成威胁，请您谨慎访问。";
+			}else if(sc == 110){
+				text = "该网站含有大量未经证实的信息，访问含有欺诈内容的网站可能会给您造成财产损失，请您谨慎访问。";
+			}else if(sc == 111){
+				text = "该网站可能盗用其他正规网站的标识，可能会给您带来损失，请谨慎访问。";
+			}else if(sc == 112){
+				text = "该网站含有大量未经证实的招聘信息，虚假招聘网站可能会让应聘者支付保证金、保密费、手续费等各种费用，请您谨慎访问。";
+			}else if(sc == 113){
+				text = "该网站所属学校不在教育部公布的全国普通高校、院校信息库中。未经教育部批准的学校属于虚假办学，请您谨慎访问。";
+			}else if(sc == 114){
+				text = "该网站不具备中国航空运输协会颁发的机票销售代理资质，假冒的机票销售网站诱骗访问者上当，骗取您的个人信息和钱财。";
+			}else if(sc == 115){
+				text = "该网站多个子域名或页面存在虚假或恶意内容，虚假和恶意的内容会诱骗访问者上当或使您的计算机感染木马或病毒，此种情况可能是因为网站被黑客入侵篡改，为了避免给您造成损失，360安全中心已经帮您拦截，请您谨慎访问。";
+			}else if(sc == 116){
+				text = "当前页面含有大量虚假信息，误信虚假电话和账号信息可能会给您造成财产损失，请您谨慎访问。";
+			}else if(sc == 117){
+				text = "当前页面是一个假冒的话费充值网站，在假冒的话费充值网站充值将会给您造成财产损失，请谨慎访问。";
+			}else if(sc == 118){
+				text = "当前页面是一个假冒的团购网站，在假冒的团购网站购物将会给您造成财产损失，请谨慎访问。";
+			}else if(sc == 119){
+				text = "当前页面是一个假冒的网游交易网站，在假冒的网游交易网站购买商品将会给您造成财产损失，请谨慎访问。";
+			}else if(sc == 120){
+				text = "此网站可能通过混淆其他正规网站的标识来误导用户，为了避免可能会给您带来的损失，请谨慎访问。";
+			}
+		
+		}else if(st == 20){
+			if(sc == 100 || sc == 101){
+				text = "经360安全中心鉴定从此网站下载的文件包含木马病毒，为了让您的系统安全，建议您立即停止下载！";
+			}else if(sc == 103){
+				text = "该网站伪装成小说、色情或外挂网站传播木马，木马病毒侵入您的系统，可能会导致账号密码、私人数据等个人信息被窃取。";
+			}else if(sc == 102){
+				text = "最近360安全中心收到大量用户投诉，从该网站下载文件时被欺骗安装了木马等危险程序，造成主页被篡改、账户被盗等。";	
+			}
+		
+		}
+	}else if(type == 70){
+		text = "该网站当前页面带有木马或病毒，木马或病毒会给您的电脑安全造成威胁，建议立即关闭此页面。";
+	}
+	
+	return text;
+
+}
+function getsubdomains(){
+    var url = "library.cupl.edu.cn";
+	if(url == ""){
+		return;
+	}
+	$.ajax({  	
+			url : "/index/ajaxgetsubmains",
+			type: 'POST',
+			dataType:  'json',
+			data:'url=library.cupl.edu.cn',
+			success: function(data){
+				if(data.state == "yes"){
+					$("#subdomains").html('<a href="/sub/index/?url=library.cupl.edu.cn" title="子域名安全状况" onClick="_gaq.push([\'_trackPageview\', \'/checkwebsite/check_subdomain\']);">子域名安全状况</a>');
+					$("#subdomains").css('marginLeft' , '80px');
+				}else{
+					$("#subdomains").html('');
+				}
+			}
+	});	
+}
+function getsameip(){
+    var url = "library.cupl.edu.cn";
+	if(url == ""){
+		return;
+	}
+	$.ajax({  	
+			url : "/index/ajaxgetsameip",
+			type: 'POST',
+			dataType:  'json',
+			data:'url=library.cupl.edu.cn',
+			success: function(data){
+				console.log(data);
+				if(data.state == "yes"){
+					$("#sameip").html('<a href="/sameip/index/?url=library.cupl.edu.cn" title="同主机域名安全状况" onClick="_gaq.push([\'_trackPageview\', \'/checkwebsite/sameip\']);">同主机网站安全状况</a>');
+					$("#sameip").css('marginLeft' , '80px');
+					if(data.sameip_tip){
+					    $("#sameip_tips").attr("class","fc_dangerous");	
+						$("#sameip_tips").html('<a class="loudong_red" href="javascript:" style="background:url(http://p7.qhimg.com/t0150911e10db7d7f8e.gif) no-repeat 62px 6px; display:block; width:100%;" onClick="to_bangzhu();_gaq.push([\'_trackPageview\', \'/checkwebsite/pangzhu_1\']);"" title="潜在风险">潜在风险 </a>');
+					}else{
+						$("#sameip_tips").html("正常");
+						$("#sameip_tips").attr("class","fc_security");
+					}
+				}else{
+					$("#sameip").html('');
+					$("#sameip_tips").html("正常");
+					$("#sameip_tips").attr("class","fc_security");	
+				}
+				ifsameip_end = 1;
+			}
+	});	
+}
+function getWebscore(isxujia,iscuangai,isviolation,isguama,high,mid,low,info){
+    if(ifsameip_end == 0){
+		setTimeout("getWebscore("+isxujia+","+iscuangai+","+isviolation+","+isguama+",'"+high+"','"+mid+"','"+low+"','"+info+"')" , 200);
+		return false;
+	}
+	var pangzhu = 0;
+	if(isxujia == 0 && iscuangai == 0 && isviolation == 0 && isguama == 0 && high == '' && mid == '' && low == '' && info == '' ){
+		$(".scan-unknown-tip").css("display", "block");
+		$(".scan-v1").css("display", "block");	
+		$("#scan-tips-1").css("display", "block");
+				$("#ldstate").html("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;漏洞未知，只有认领了网站后才能进行漏洞检测，<a  href=\"javascript:void(0)\" onClick=\"_gaq.push(['_trackPageview', '/checkwebsite/add_domain_noveri_unknow']);to_valideWebSite()\">请点击这里</a>进行认领");
+		$("#ldstate").attr("class", "gm_unknow_ld");
+		/*$('#div_fenshu').html('<p style="font-weight: bold; font-size: 12px; margin-top: 50px;line-height:25px; text-indent:0">网站还未认领,，无法检测，安全得分未知</p>');
+		$('.showlogin').html('我是站长，我要认领');*/
+				//$('.showlogin').attr('href' , $('.showlogin').attr('href')+'&for=weizhi');
+			}else{
+		$.ajax({  	
+				url : "/webscore/index",
+				type: 'POST',
+				dataType:  'json',
+				data:'isxujia='+isxujia+'&iscuangai='+iscuangai+'&isviolation='+isviolation+'&isguama='+isguama+'&high='+high+'&mid='+mid+'&low='+low+'&info='+info+'&domain=library.cupl.edu.cn&pangzhu='+pangzhu,
+				success: function(data){
+					if(data.state == "yes"){
+						/*var score = parseInt(data.total_score);
+					    if(score >=90 && score <= 100){
+							$("#site_score").css('color' , '#638726');
+						}else if(score >= 80 && score < 90){
+							$("#site_score").css('color' , '#FF9900');
+						}else if(score >= 60 && score < 80){
+							$("#site_score").css('color' , '#FC3B2C');
+						}else if(score >= 0 && score < 60){
+							$("#site_score").css('color' , '#F00000');
+						}*/
+						var total_score = parseInt(data.total_score);
+						/*
+						if($("#sameip_tips").text() != ""){
+							if($("#sameip_tips").attr("class").toString() == 'fc_serious'){
+								total_score = parseInt(total_score - 6);
+								if(total_score < 0){
+									total_score = 0;
+								}
+							}
+						}*/
+						$("#site_score").html(total_score);
+						// begin 打败功能下线注释以下两行
+						var save_site = false;
+						
+						if(save_site && isxujia ==0 && isguama ==0 && iscuangai == 0 && isviolation ==0 && high == 0 && mid ==0 && low == 0){
+							var save_site_text = '该网站安全评分为3天前结果，不能代表最近的安全状况，建议';
+														save_site_text += '<a class="showlogin" href="/index/loginbox/?domain=library.cupl.edu.cn" onclick="return hs.htmlExpand(this,{objectType:\'iframe\'})">重新检测</a>';		
+							$(".jg-before3Month").html(save_site_text);
+							if (isguama || isxujia ||  1) {
+								$(".jg-before3Month").css('display' , 'block');
+							}
+						}else{
+							$("#dabai_text").html(data.msg);
+							if (isguama || isxujia ||  1) {
+								$("#dabai_text_div").css('display' , 'block');
+							}
+						}
+						
+						score_rate = data.rate;
+						score_value = data.total_score;
+						if(score_value >= 90){
+						  $(".start-5").show();
+						}
+
+						$("#share_sinaweibo").show();
+						// end
+						show_no_validcheck(isxujia, isguama, score_value, "3天前", 1, 1, 0, iscuangai, isviolation);
+					}else{
+						$("#site_score").html('0');
+						show_no_validcheck(isxujia, isguama, score_value, "3天前", 1, 1, 0, iscuangai, isviolation);
+					}
+				}
+		});	
+		$("#ldstate").html("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;正常");	
+	}
+}
+function to_bangzhu(){
+	$('#bangzhu_div').css('display','block');
+}
+function checkwebsiteformSubmit()
+{
+	var url = $("#url").attr("value");	
+	$('.jg_submit').addClass('jg_submit_ok');
+	$('.jg_submit').html('　读取中..');
+    $("#top_loading").show();
+	$("#checkwebsiteform").submit();
+}
+function cutstr_js(str,len)
+{
+   var str_length = 0;
+   var str_len = 0;
+      str_cut = new String();
+      str_len = str.length;
+      for(var i = 0;i<str_len;i++)
+     {
+        a = str.charAt(i);
+        str_length++;
+        if(escape(a).length > 4)
+        {
+         //中文字符的长度经编码之后大于4
+         str_length++;
+         }
+         str_cut = str_cut.concat(a);
+         if(str_length>=len)
+         {
+         str_cut = str_cut.concat("...");
+         return str_cut;
+         }
+    }
+    //如果给定字符串小于指定长度，则返回源字符串；
+    if(str_length<len){
+     return  str;
+    }
+}
+function to_snapshot(){
+	    	    $('#update_snapshot').html('<img src="/img/snapshot_loading.gif" />');
+		
+		$('#update_snapshot_dd').html('');
+		$.ajax({
+			  url: "/snapshot/index2/",
+			  type:"POST",
+			  dataType:"json",
+			  data:"url=library.cupl.edu.cn",
+			  success: function(data){
+					window.location.reload();
+			  }
+		});	
+}
+function show_no_validcheck(isxujia, isguama, score_value, scantime, is_domain_valid, isscan, isdomainsafe, iscuangai, isviolation) {
+	if (is_domain_valid || isxujia || isguama || iscuangai) {
+		if ( ($("#jg_tips").text().indexOf('高危') >=0 || $("#jg_tips").text().indexOf('严重') >=0)&& !0  && !parseInt(isxujia) && !parseInt(isguama) && !parseInt(iscuangai) && !parseInt(isviolation) && !0) {
+			if ($("#vaildnosafedomain").html()) {
+				$("#vaildnosafedomain").css("display", "block");
+				$("#dabai_text_div").css('display' , 'none');
+				$(".ld-main-list").html('<ul><li class="report_step4">&nbsp;&nbsp;站长正在努力修复网站漏洞，相关安全信息已经隐藏，天后公示安全得分</li></ul>');
+			} else {
+				$(".jg_showbox").css("display", "block");
+				$(".jg_conlist").css("display", "block");
+				$(".jg-bipin").css("display", "block");
+			}
+		} else {
+			$(".jg_showbox").css("display", "block");
+			$(".jg_conlist").css("display", "block");
+			$(".jg-bipin").css("display", "block");
+		}
+		if (parseInt(isxujia) || parseInt(isguama) || parseInt(iscuangai) || parseInt(isviolation)) {
+			$(".showlogin").click(function(){
+				_gaq.push(['_trackPageview', '/checkwebsite/add_domain_guama']);
+			}); 
+		} else if (0) {
+			$(".showlogin").click(function(){
+				_gaq.push(['_trackPageview', '/checkwebsite/add_domain_black']);
+			});
+		} else if ( score_value >= 85 ) {
+			$(".showlogin").click(function(){
+				_gaq.push(['_trackPageview', '/checkwebsite/add_domain_veri_safe']);
+			});
+		} else if ( score_value < 85 ) {
+			$(".showlogin").click(function(){
+				_gaq.push(['_trackPageview', '/checkwebsite/add_domain_veri_nosafe']);
+			});
+		}
+	} else if (isscan && isdomainsafe  && score_value>=80) {
+		scantime = scantime.replace(/(前)/g, "");
+		var str = "您的网站已经<strong class=\"red\">"+scantime+"</strong>没有检测了，上次安全得分"+score_value+"分，建议立即检测";
+		var str2 = "暂时没有发现被黑客入侵的痕迹，建议立即进行安全评估，领先黑客一步";
+		var str3 = "我是站长，我要立即检测";
+		$(".scan-v1 dt").html(str);
+		$(".scan-v1 dd").html(str2);
+		$(".scan-tips span").html(str3);
+		$(".scan-v1").css("display", "block");
+		$(".scan-tips").css("display", "block");
+		$("#dabai_text_div").css('display' , 'none');
+		$(".jg_showbox").css("display", "none");
+		$(".jg_conlist").css("display", "none");
+		$(".jg-bipin").css("display", "none");
+		$(".scan-tips-btn1").click(function() {
+			_gaq.push(['_trackPageview', '/checkwebsite/add_domain_noveri_safe']);
+		});
+	} else if (isscan) {
+		/*var str = "您的网站"+scantime+"安全得分<strong class=\"red\">"+score_value+"</strong>分，建议修复漏洞";
+		var str2 = "您可以对网站漏洞进行一键修复，避免黑客入侵，保护网站安全";
+		var str3 = "我是站长，查看检测结果";
+		$(".scan-v1 dt").html(str);
+		$(".scan-v1 dd").html(str2);
+		$(".scan-tips span").html(str3);
+		$(".scan-v1").css("display", "block");
+		$(".scan-tips").css("display", "block");*/
+		$(".jg_showbox").css("display", "block");
+		$(".jg_conlist").css("display", "block");
+		$(".jg-bipin").css("display", "block");
+		$("#dabai_text_div").css('display' , 'block');
+		
+		$(".scan-tips-btn1").click(function() {
+			_gaq.push(['_trackPageview', '/checkwebsite/add_domain_noveri_nosafe']);
+		});
+		$(".showlogin").click(function(){
+				_gaq.push(['_trackPageview', '/checkwebsite/add_domain_noveri_nosafe']);
+		});
+	} else {
+		$(".scan-unknown-tip").css("display", "block");
+		$(".scan-v1").css("display", "block");	
+		$("#scan-tips-1").css("display", "block");	
+		
+	}
+}
+function show_more_ssl() {
+	$("#more_ssl_table").css("display", "block");
+	$("#more_ssl_a").hide();
+}
+function show_solutioncg(t) {
+	if (t == 1) {
+		show_solution("cg1");
+	} else {
+		show_solution("cg2");
+	}
+}
+function to_good(){
+	$.ajax({
+		  url: "/group/good",
+		  type:"POST",
+		  dataType:"json",
+		  data:"domain=library.cupl.edu.cn&token_good=77ec14227f38441b689a1300be2f0e06&time=1509202847",
+		  success: function(data){
+				if(data.state == "yes"){
+					good_tips_func();
+					setTimeout(function(){$('#good_nums').html(parseInt($('#good_nums').html())+1);},900); 
+					
+					$('#good_img').attr("src","/img/group/v9-site-good-icon.png");
+				}
+		  }
+	});	
+	
+}
+function good_tips_func(){
+	
+	var anquanbi_obj = $('.anquanbi_tips');
+	anquanbi_obj.html('+ '+1+'赞，+1 积分');
+	anquanbi_obj.show().animate({
+		top: "-20px",
+		opacity: 1
+	},
+	"slow",
+	function() {
+		setTimeout(function() {
+			anquanbi_obj.animate({
+				top: "20px",
+				opacity: 0
+			},
+			"slow")
+		},
+		900)
+	});
+}
+</script> 
+<script type="text/javascript">
+hs.graphicsDir = '/img/graphics/';
+hs.outlineType = 'rounded-white';
+hs.wrapperClassName = 'draggable-header';
+hs.width = 775;
+hs.height = 320;
+hs.dimmingOpacity = 0.75;
+hs.align = 'center';
+var tmpshow = null;
+function show_solution(sid) {
+	tmpshow = hs.htmlExpand(null,{objectType:'iframe', src:'/jump/vulsolution/?sid='+sid+"&url=library.cupl.edu.cn", width:700, height:400 });
+}
+</script>
+<style>
+
+.wrap_remind {width:410px; padding:15px;}
+</style>

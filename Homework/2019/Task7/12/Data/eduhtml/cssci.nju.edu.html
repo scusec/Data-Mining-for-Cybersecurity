@@ -1,0 +1,248 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+	<title>中国社会科学引文索引---首页</title>
+	<link href="css/base_css.css" rel="stylesheet" type="text/css" />
+	<link href="css/index.css" rel="stylesheet" type="text/css" />
+	<script src="js/mdiv.js" type="text/javascript"></script>
+	<script src='js/jquery-1.4.2.min.js' type='text/javascript'></script>
+    <script src="js/menu.js" type="text/javascript"></script>
+	<script>
+	var save_search_year='';
+	</script>
+</head>
+
+<body style="background:#FBFAF8">
+
+<!--头部开始-->
+
+<!--头部开始-->
+
+<!--LOGO开始-->
+<div id="logo_index">
+	<div class="logo_index" ></div>
+</div>
+<!--LOGO开始-->
+
+<!--检索部分-->
+<div id="main_search" >
+	<div class="main_search">
+		<!-- 导航部分 -->
+		<ul class="wx">
+			<li id='ly_wx' class="selected">
+				<a onFocus="this.blur()" href="javascript:void(0);" onClick="$('#ly_wx').addClass('selected');$('#by_wx').removeClass('selected');$('#wx_ly').show();$('#wx_by').hide();">来源文献</a>
+			</li>
+			<li id='by_wx'>
+				<a onFocus="this.blur()" href="javascript:void(0);"  onclick="$('#by_wx').addClass('selected');$('#ly_wx').removeClass('selected');$('#wx_by').show();$('#wx_ly').hide();">被引文献</a>
+			</li>
+		</ul>
+		<!-- 导航部分 -->
+
+		<!-- 输入部分 -->
+		<div class="wx-contents">
+			<div id='wx_ly'>
+				<div class="lb_layout_1" id="selly">
+					<!-- <select id='search_type_1'></select> -->
+				</div>
+				<input class="input_new" name="keyword1" id="keyword1"  onkeydown='huichen(1,event)'/>
+				<img style="float:left;border:0;cursor:pointer;" src="images/input_6.jpg" onclick='index_search(1)'/>
+				<a href="ly_search.html" style="float:right;color:#555555;">高级检索>>></a>
+			</div>
+			<div class="libraryul" id='wx_by' style='display:none'>
+				<div class="lb_layout_1" id="selby">
+					<div id="lbarea_by"><!-- <select id='search_type_2'> --></select></div>
+				</div>
+				<input class="input_new" name="keyword2" id="keyword2"  onkeydown='huichen(2,event)'/>
+				<img style="float:left;border:0;cursor:pointer;" src="images/input_6.jpg" onclick='index_search(2)'/>
+				<a href="yw_search.html" style="float:right;color:#555555;">高级检索>>></a>
+			</div>
+		</div>
+		<!-- 输入部分 -->
+	</div>
+</div>
+<!--检索部分-->
+
+<!-- 期刊部分 -->
+<div id="main_list" style='width:640px;'>
+	<div class="main_list" style='width:640px;'>
+		<div class="main_list_head"  style='width:640px;' id='hxqkType'>来源期刊导航</div>
+		<ul id='xk_name' style='440px;'>
+			<li>载入中...</li>
+		</ul>
+	</div>
+</div>
+<div id="main_list" style='width:640px;'>
+
+</div>
+<!-- 期刊部分 -->
+
+<!-- 页脚 -->
+<script src="js/foot.js" type="text/javascript"></script>
+<!-- 页脚 -->
+
+
+</body>
+</html>
+<script src="js/web_message.js" type="text/javascript"></script>
+<script src="js/message.js" type="text/javascript"></script>
+<script src='js/user_control.js' type='text/javascript'></script>
+<script src="js/mdiv_content3.js" type="text/javascript"></script>
+
+<script>
+//show_select_value('search_type_1',search_type);
+//show_select_value('search_type_2',search_type_ly);
+ 
+function show_select_value(idname,tmp_array)
+{
+	//有问题,火孤
+	//var t=eval("document.all."+idname+".options.length=0");
+
+	for(var item in tmp_array)
+	{
+		document.getElementById(idname).options.add(new Option(tmp_array[item],item));
+	}
+}
+
+/*******************************/
+/****************设置cookie******************/
+function index_search(type)
+{
+
+
+	if(type==1)
+	{
+		var s=document.getElementById('selly').innerHTML
+		s = s.replace(/<[^>].*?>/g,"");
+		for(var item in search_type)
+		{
+			if(search_type[item]==s){var tmp_s=item;}
+		}
+		var tmp_k=document.getElementById('keyword1').value;
+
+		var tmp_123=save_search_year.split(",");
+
+	
+		var parm='title='+encodeURIComponent(tmp_k)+'+++'+tmp_s+'+++AND|||&start_year='+tmp_123[0]+'&end_year='+tmp_123[tmp_123.length-1]+'&nian=&juan=&qi=&xw1=&xw2=&wzlx=&xkfl1=&jj=&pagenum=20&order_type=nian&order_px=DESC';
+		if(tmp_k.length==0)
+		{
+			alert('检索词不能为空');
+		}
+		else
+		{
+			window.open('ly_search_view.html?'+parm,"_self");
+		}
+	}
+	else if(type==2)
+	{
+		var tmp_k=document.getElementById('keyword2').value;
+
+		var s=document.getElementById('lbarea_by').innerHTML
+		s = s.replace(/<[^>].*?>/g,"");
+		for(var item in search_type_ly)
+		{
+			if(search_type_ly[item]==s){var tmp_s=item;}
+		}
+
+		tmp_k=encodeURIComponent(tmp_k);
+
+
+		var parm='';
+
+		switch(tmp_s)
+		{
+			case '1':	parm+='&title='+tmp_k+'&title_type1=1&author=&author_type1=1&author_type2=1&ywqk=&ywqk_type1=1&ywxj=';break;
+			case '2':	parm+='&title='+tmp_k+'&title_type1=0&author=&author_type1=1&author_type2=1&ywqk=&ywqk_type1=1&ywxj=';break;
+			case '3':	parm+='&title=&title_type1=1&author='+tmp_k+'&author_type1=1&author_type2=1&ywqk=&ywqk_type1=1&ywxj=';break;
+			case '4':	parm+='&title=&title_type1=0&author='+tmp_k+'&author_type1=0&author_type2=1&ywqk=&ywqk_type1=1&ywxj=';break;
+			case '5':	parm+='&title=&title_type1=1&author='+tmp_k+'&author_type1=1&author_type2=0&ywqk=&ywqk_type1=1&ywxj=';break;
+			case '6':	parm+='&title=&title_type1=0&author=&author_type1=1&author_type2=1&ywqk='+tmp_k+'&ywqk_type1=1&ywxj=';break;
+			case '7':	parm+='&title=&title_type1=1&author=&author_type1=1&author_type2=1&ywqk='+tmp_k+'&ywqk_type1=0&ywxj=';break;
+			case '8':	parm+='&title=&title_type1=0&author=&author_type1=1&author_type2=1&ywqk='+tmp_k+'&ywqk_type1=1&ywxj=';break;
+			case '9':	parm+='&title=&title_type1=0&author=&author_type1=1&author_type2=1&ywqk=&ywqk_type1=1&ywxj='+tmp_k;break;
+		}
+
+
+		parm+='&ywnd1='+save_search_year+'&ywnd2=&ywlx=%E8%AF%B7%E9%80%89%E6%8B%A9&search_model=AND&order_type=num&order_px=DESC&pagesize=20';
+
+		if(tmp_k.length==0)
+		{
+			alert('检索词不能为空');
+		}
+		else
+		{
+			window.open('yw_search_view.html?'+parm,"_self");
+		}
+	}
+}
+/***************回车**************/
+function  huichen(type,events)   
+{ 
+    var eventSource;
+    var currentKey = events.charCode||events.keyCode;
+    if(document.all){eventSource =window.event.srcElement; }
+    else{eventSource = events.target;}
+
+	if(currentKey==13){ 
+		switch(type)
+		{
+			case 1:index_search(1);break;
+			case 2:index_search(2);break;
+			case 3:show_keyword_result(2);break;
+		}
+	} 
+}
+
+var hxQkTypeParm=1;
+document.getElementById('hxqkType').innerHTML='期刊导航：';
+for(var item in qkType_array)
+{
+	document.getElementById('hxqkType').innerHTML+='<span onclick="changeHxValue('+item+')" id="qktype'+item+'" style="cursor:hand;cursor:pointer">'+qkType_array[item]+'</span>&nbsp;&nbsp;';
+}
+
+document.getElementById('xk_name').innerHTML='';
+for(var item in xk_array)
+{
+	document.getElementById('xk_name').innerHTML+='<li><a href="javascript:getqkMessageUrl('+item+')">'+xk_array[item]+'</a></li>';
+}
+
+function changeHxValue(item)
+{
+	document.getElementById('qktype'+hxQkTypeParm).innerHTML=''+qkType_array[hxQkTypeParm];
+	document.getElementById('qktype'+item).innerHTML='◆'+qkType_array[item];
+	hxQkTypeParm=item;
+}
+changeHxValue(hxQkTypeParm);
+function getqkMessageUrl(item)
+{
+	window.open('qkdhxk.html?id='+item+'&type='+hxQkTypeParm);
+}
+
+</script>
+
+<script src='control/index_count.php'></script>
+<script>
+function blinklink()  
+{  
+	if (!document.getElementById('helpTag').style.color)  
+	{  
+		document.getElementById('helpTag').style.color="red"  
+	}  
+	if (document.getElementById('helpTag').style.color=="red")  
+	{  
+		document.getElementById('helpTag').style.color="black"  
+	}  
+	else  
+	{  
+		document.getElementById('helpTag').style.color="red"  
+	}  
+	timer=setTimeout("blinklink()",200)  
+}  
+  
+function stoptimer()  
+{  
+	clearTimeout(timer)  
+}
+//window.onload=loadnotice;
+</script>

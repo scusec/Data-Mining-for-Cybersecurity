@@ -1,0 +1,681 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0">
+    <title>数字后勤服务大厅</title>
+    <link href="/res/zghydx/pc/top.css" rel="stylesheet" type="text/css" />
+    <link href="/res/zghydx/pc/style.css" rel="stylesheet" type="text/css" />
+    <script src="/js/jquery-1.11.0.min.js" type="text/javascript"></script>
+    <script src="/js/layer/layer.min.js" type="text/javascript"></script>
+    <script src="/js/jquery.hoverdelay.js" type="text/javascript"></script>
+    <script src="/js/base.js" type="text/javascript"></script>
+    
+</head>
+<style type="text/css">
+.login-msg {
+display: none;
+}
+</style>
+<body>
+    <div class="container">
+        
+        <div class="header-tp">
+            <div style="height: 194px;">
+                
+                <div class="header-top">
+                    <div class="containerwarp">
+                        <div class="topbar-slide">
+                             <a href="http://211.64.142.82:8085/">旧版主页</a><span>|</span><a href="http://www.ouc.edu.cn/">学校首页</a><span>|</span> <a href="JavaScript:void(0);"
+                                onclick="AddFavorite('http://hqsz.ouc.edu.cn/pchome/index','数字化服务大厅');">
+                                收藏本站</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="layout-nav">
+                
+                <ul class="nav-ul">
+                        <li style="width: 10px;"></li>
+                        <li><a class="nav-a" href="http://hqsz.ouc.edu.cn/pchome/index" target="" >大厅首页</a></li>
+                        <li class="navline"></li>
+                        <li><a class="nav-a" href="http://hqsz.ouc.edu.cn/Pchome/NewsIndex/?NType=01" target="" >服务动态</a></li>
+                        <li class="navline"></li>
+                        <li><a class="nav-a" href="http://hqsz.ouc.edu.cn/Pchome/NewsIndex/?NType=02" target="" >政策法规</a></li>
+                        <li class="navline"></li>
+                        <li><a class="nav-a" href="http://hqsz.ouc.edu.cn/Pchome/serproIndex" target="" >便民服务</a></li>
+                        <li class="navline"></li>
+                        <li><a class="nav-a" href="http://hqsz.ouc.edu.cn/Pchome/DownloadIndex" target="_blank" >文档下载</a></li>
+                        <li class="navline"></li>
+                        <li><a class="nav-a" href="http://www.ouc.edu.cn" target="_blank" >学校主页</a></li>
+                        <li class="navline"></li>
+                        <li><a class="nav-a" href="http://web.ouc.edu.cn/hqjt/" target="_blank" >后勤集团主页</a></li>
+                </ul>
+                
+            </div>
+            
+        </div><div class="context-wrap">
+                
+<style type="text/css">
+.context-wrap{border: 1px solid #fff;
+</style>
+<div class="top-top-warp">
+    <div class="tt-left">
+        <div class="falshimg">
+          
+                <script type="text/javascript">
+                    var pic_width = '300';
+                    var pic_height = '250';
+                    var bgcolor = "ffffff";
+                    pics = 'http://hqsz.ouc.edu.cn/uploadpic/2017/20171020151609_4492.jpg|http://hqsz.ouc.edu.cn/uploadpic/2017/20170929104910_4310.jpg|http://hqsz.ouc.edu.cn/uploadpic/2017/20170831164313_0254.jpg|http://hqsz.ouc.edu.cn/uploadpic/2017/20170828110745_9885.jpg|http://hqsz.ouc.edu.cn/uploadpic/2017/20170825132108_4415.jpg';
+                    links = '/pchome/newsInfoDesc/80fc322e-4daa-4950-9782-a81200fada49|/pchome/newsInfoDesc/14afe2b9-f408-4732-9042-a7fd00b2617d|/pchome/newsInfoDesc/bb6141ce-01f4-439f-8464-a7e00113b886|/pchome/newsInfoDesc/d55b84de-bf9d-48dc-98e9-a7dd00b77dcf|/pchome/newsInfoDesc/47b02a3d-86f7-4891-882e-a7da00dc222c';
+                    texts = '';
+                    document.write('<embed src="http://hqsz.ouc.edu.cn/res/focus.swf" wmode="opaque" menu="false" FlashVars="pics=' + pics + '&links=' + links + '&texts=' + texts + '&borderwidth=' + pic_width + '&borderheight=' + pic_height + '&textheight=0" bgcolor=' + bgcolor + ' quality="high" width=' + pic_width + ' height=' + pic_height + ' allowScriptAccess="sameDomain" type="application/x-shockwave-flash" extendspage="http://get.adobe.com/flashplayer/"></embed>');
+                </script>
+        
+        </div>
+    </div>
+    <div class="tt-center">
+        <div class="index-box">
+            <div class="box-top">
+                <div class="box-icon">
+                </div>
+                <div class="box-title">
+                    公告通知</div>
+                <a href="/pchome/NewsIndex/?NType=0102" target="_blank">更多 >
+                </a>
+            </div>
+            <div class="box-warp">
+                <div class="newscontent" id="box-datalist-news">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tt-right">
+       
+          <div class="box-top">
+             <div class="containerwarp">
+                   <div class="topbar-login-warp" id="loginmess">
+        <div class="btn_login"><input type="button" class="btn-login" id="btnOk" data-value="登录" style=" float:left;"></div>
+       
+    </div>
+            
+</div>
+            </div>
+            
+            <div class="box-warp">
+                <ul>
+                        <li><a href="http://lg24h.ouc.edu.cn/dsh/Pchome/NewsIndex/?NType=0401">后勤热线</a> </li>
+                        <li><a href="http://lg24h.ouc.edu.cn/dsh/Pchome/NewsIndex/?NType=0401">订餐电话</a> </li>
+                        <li><a href="http://lg24h.ouc.edu.cn/dsh/Pchome/newsInfoDesc/cdc378a5-01a2-4ea9-9f55-a42f00b8a71f">订房电话</a> </li>
+                        <li><a href="http://lg24h.ouc.edu.cn/dsh/Pchome/newsInfoDesc/7edef439-d361-4c1d-85ce-a42f00b8f32c">会议服务</a> </li>
+                        <li><a href="http://lg24h.ouc.edu.cn/dsh/Pchome/newsInfoDesc/869f3e6a-71f1-4dd0-be7d-a42f00b912dc">体育场馆</a> </li>
+                        <li><a href="http://lg24h.ouc.edu.cn/dsh/Pchome/newsInfoDesc/02565a36-2d6d-43ac-bccb-a42f00b935b0">医疗服务</a> </li>
+                        <li><a href="http://lg24h.ouc.edu.cn/dsh/Pchome/newsInfoDesc/f79cf17e-d54b-4d46-b0e4-a42f00b95a2b">旅游出行</a> </li>
+                        <li><a href="http://lg24h.ouc.edu.cn/dsh/Pchome/newsInfoDesc/da4f1565-200b-4c75-9b2b-a42f00b978f7">超市购物</a> </li>
+                        <li><a href="http://hqsz.ouc.edu.cn/home/telinfolist?restype=24">火车出票</a> </li>
+                        <li><a href="http://lg24h.ouc.edu.cn/dsh/Pchome/newsInfoDesc/6bc1e178-f0df-4090-a1a0-a42f00b9b6f3">校园安保</a> </li>
+                        <li><a href="http://lg24h.ouc.edu.cn/dsh/Pchome/newsInfoDesc/96fd943c-0446-430c-a69a-a42f00b9fccd">网络服务</a> </li>
+                        <li><a href="http://lg24h.ouc.edu.cn/dsh/Pchome/newsInfoDesc/3f0141c9-5920-4d8c-9d76-a42f00ba229d">幼托服务</a> </li>
+                </ul>
+            </div>
+       
+    </div>
+</div>
+<div class="clear"></div>
+<div class="center-warp">
+</div>
+<div class="top-bottom-warp">
+    <div class="tb-left">
+        <div class="index-box">
+            <div class="box-top">
+                <div class="wxfw-icon">
+                </div>
+                <div class="box-add">
+                    <input type="button" class="btn-addsugges" value="我要发布" onclick="ViewRepair();" /></div>
+                <a href="http://lg24h.ouc.edu.cn/rsp" target="_blank">更多 ></a>
+            </div>
+            <div class="box-warp list-warp" id="wxfw-warp">
+                <ul class="list-head">
+                    <li class="cloumn-desc">标题</li>
+                    <li class="cloumn-user">申报人</li>
+                    <li class="cloumn-stime">申报时间</li>
+                    <li class="cloumn-utime">状态</li>
+                </ul>
+                <div id="box-datalist-repair">
+        </div>
+            </div>
+        </div>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $("#box-datalist-repair .list-item:odd").addClass("rowbg");
+
+            });
+        </script>
+    </div>
+    <div class="bb-right">
+        <div class="index-box">
+            <div class="box-top">
+                <div class="box-icon">
+                </div>
+            </div>
+            <div class="box-warp">
+               
+<ul class="goodforpeople">
+                <li><a class="bmfw-a" href="http://web.ouc.edu.cn/hqjt/89/3f/c1193a35135/page.htm">
+                    <img alt="校车时刻" style=" border:0; width:50px; height:50px;padding: 0 9px;"  src="/LinkImg.ashx?id=1933c039-5590-487b-bbdc-a41800ee4679.jpg" />校车时刻</a>
+                </li></ul>
+<ul class="goodforpeople">
+                <li><a class="bmfw-a" href="http://web.ouc.edu.cn/jwc/e3/62/c6517a58210/page.htm">
+                    <img alt="海大校历" style=" border:0; width:50px; height:50px;padding: 0 9px;"  src="/LinkImg.ashx?id=f9cfa1d0-e9d6-4eb4-a685-a43300b9666b.png" />海大校历</a>
+                </li></ul>
+<ul class="goodforpeople">
+                <li><a class="bmfw-a" href="http://hqsz.ouc.edu.cn/pchome/tjindex">
+                    <img alt="体检查询" style=" border:0; width:50px; height:50px;padding: 0 9px;"  src="/LinkImg.ashx?id=e5abe460-e749-4114-a457-a57901068e87.png" />体检查询</a>
+                </li></ul>
+<ul class="goodforpeople">
+                <li><a class="bmfw-a" href="http://www.8684.cn/">
+                    <img alt="公交查询" style=" border:0; width:50px; height:50px;padding: 0 9px;"  src="/LinkImg.ashx?id=b50b0216-52c5-4013-90ac-a41800eecacb.jpg" />公交查询</a>
+                </li></ul>
+<ul class="goodforpeople">
+                <li><a class="bmfw-a" href="http://www.12306.cn/mormhweb/">
+                    <img alt="火车票查询" style=" border:0; width:50px; height:50px;padding: 0 9px;"  src="/LinkImg.ashx?id=b6122153-7370-4890-9eda-a41800eee7a0.jpg" />火车票查询</a>
+                </li></ul>
+<ul class="goodforpeople">
+                <li><a class="bmfw-a" href="http://222.195.158.169/">
+                    <img alt="校园地图" style=" border:0; width:50px; height:50px;padding: 0 9px;"  src="/LinkImg.ashx?id=d75ae690-e50d-4323-a067-a49600a9d2ac.png" />校园地图</a>
+                </li></ul>
+<ul class="goodforpeople">
+                <li><a class="bmfw-a" href="http://www.qunar.com/?ex_track=auto_4e23ad93">
+                    <img alt="机票查询" style=" border:0; width:50px; height:50px;padding: 0 9px;"  src="/LinkImg.ashx?id=2ff9069c-712b-4328-b0d2-a41800eeb252.jpg" />机票查询</a>
+                </li></ul>
+<ul class="goodforpeople">
+                <li><a class="bmfw-a" href="http://www.weather.com.cn/weather/101120201.shtml">
+                    <img alt="天气预报" style=" border:0; width:50px; height:50px;padding: 0 9px;"  src="/LinkImg.ashx?id=2028e969-6874-4c84-935c-a41800ef2e1d.bmp" />天气预报</a>
+                </li></ul>
+<ul class="goodforpeople">
+                <li><a class="bmfw-a" href="http://www.hao123.com/rili">
+                    <img alt="万年历" style=" border:0; width:50px; height:50px;padding: 0 9px;"  src="/LinkImg.ashx?id=db81b998-5427-44a2-b471-a41800eefbf4.png" />万年历</a>
+                </li></ul>
+        
+            </div>
+        </div>
+    </div>
+    
+</div>
+<div class="clear">
+</div>
+
+<div class="top-bottom-warp">
+<div class="tb-left">
+        <div class="index-box">
+            <div class="box-top">
+                <div class="box-icon">
+                </div>
+                <div class="box-add">
+                    <input type="button" class="btn-addsugges" value="我要献策" onclick="NewSuggest_HYDX()" /></div>
+                <a href="http://lg24h.ouc.edu.cn/ssp" target="_blank">更多 ></a>
+            </div>
+            <div class="box-warp list-warp" id="jyxc-warp">
+                <ul class="list-head">
+                    <li class="cloumn-desc">内容</li>
+                    <li class="cloumn-user">献策人</li>
+                    <li class="cloumn-stime">阅读/回复</li>
+                    <li class="cloumn-utime">时间</li>
+                </ul>
+               <div id="box-datalist-ssp">
+        </div>
+            </div>
+        </div>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $(".box-datalist-repair li:odd").addClass("rowbg");
+            });
+        </script>
+    </div>
+
+    <div class="tb-right">
+        <div class="index-box">
+            <div class="box-warp">
+                <ul>
+                <li style="height: 45px;"><img alt="后勤数字化管理平台" style=" border:0; width:245px; height:45px;"  src="/LinkImg.ashx?id=c274b601-4dd3-459d-b60a-a41800eae522.gif" /><div style="margin-top: -31px;margin-left: 70px;"><a class="bmfw-a" href="http://hqdb.ouc.edu.cn/" style="color: #406288;">
+                    后勤数字化管理平台</a></div>
+                </li>
+                <li style="height: 45px;"><img alt="学生公寓管理平台" style=" border:0; width:245px; height:45px;"  src="/LinkImg.ashx?id=58821f8f-1c11-4375-94ee-a41800eb6347.gif" /><div style="margin-top: -31px;margin-left: 70px;"><a class="bmfw-a" href="http://hqxsgy.ouc.edu.cn/manage" style="color: #406288;">
+                    学生公寓管理平台</a></div>
+                </li>
+                <li style="height: 45px;"><img alt="餐饮管理系统" style=" border:0; width:245px; height:45px;"  src="/LinkImg.ashx?id=d9734497-ee83-448d-a450-a41800eb77b1.gif" /><div style="margin-top: -31px;margin-left: 70px;"><a class="bmfw-a" href="http://hqcygl.ouc.edu.cn/" style="color: #406288;">
+                    餐饮管理系统</a></div>
+                </li>
+                <li style="height: 45px;"><img alt="餐饮服务监督平台" style=" border:0; width:245px; height:45px;"  src="/LinkImg.ashx?id=091e4d36-055b-4eff-917d-a41800eb9c1b.gif" /><div style="margin-top: -31px;margin-left: 70px;"><a class="bmfw-a" href="http://lg24h.ouc.edu.cn/cyfw" style="color: #406288;">
+                    餐饮服务监督平台</a></div>
+                </li>
+                <li style="height: 45px;"><img alt="校园管理平台" style=" border:0; width:245px; height:45px;"  src="/LinkImg.ashx?id=db946058-c142-4461-9192-a640008fc331.gif" /><div style="margin-top: -31px;margin-left: 70px;"><a class="bmfw-a" href="http://lg24h.ouc.edu.cn/hwlh" style="color: #406288;">
+                    校园管理平台</a></div>
+                </li>
+                <li style="height: 45px;"><img alt="餐饮供应商平台" style=" border:0; width:245px; height:45px;"  src="/LinkImg.ashx?id=6ad27cc8-f9a7-47df-9f16-a6d400e2632c.jpg" /><div style="margin-top: -31px;margin-left: 70px;"><a class="bmfw-a" href="http://lg24h.ouc.edu.cn/gys/home/login" style="color: #406288;">
+                    餐饮供应商平台</a></div>
+                </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="clear">
+</div>
+<div class="operation">
+    <div class="essc">
+            <div class="essc_title">
+                    <b class="box-icon"></b>
+                    <input class="btn_essc" type="button" value="我要发布" onclick="NewMarket_HY()"/>
+                    <a id="markList" class="more2" href="/Pchome/MarketIndex">更多 ></a>
+             </div>
+            <div class="essc_content" id="essc_content">
+                   <ul class="marktitle-top">
+                       <li class="type">类型</li>
+                       <li class="title">标题</li>
+                       <li class="uname">发布人</li>
+                       <li class="click">阅读/回复</li>
+                       <li class="time">时间</li>
+                   </ul>
+                   <div id="box-datalist-market">
+        </div>
+            </div>
+    </div>
+     <script type="text/javascript">
+         $(document).ready(function () {
+             $("#essc_content .marktitle:odd").addClass("rowbg");
+         });
+        </script>
+    <div class="swzl">
+             <div class="swzl_title">
+                   <b class="box-icon"></b>
+                   <input class="btn_essc" type="button"  value="我要发布" onclick="NewLost()"/>
+                   <a id="lostList" class="more2"  href="/Pchome/LostgetIndex">更多 ></a>
+             </div>
+            <div class="swzl_content">
+                     <ul class="lostget-top">
+                       <li class="type">类型</li>
+                       <li class="title">标题</li>
+                       <li class="uname">发布人</li>
+                       <li class="click">阅读/回复</li>
+                       <li class="time">时间</li>
+                   </ul>
+                   <div id="box-datalist-Lostget">
+        </div>
+            </div>
+    </div>
+    </div>
+    <div class="clear">
+    </div>
+<div class="bottom-bottom-warp">
+    <div class="bottom-left">
+        <img src="http://hqsz.ouc.edu.cn/res/zghydx/pc/hu_man.jpg" width="312" height="242" /></div>
+    <div class="bottom-right">
+        <div class="index-box">
+            <div class="box-top">
+                 <div class="box-icon">
+                </div>
+                <div class="box-title">
+                    服务动态</div>
+                <a href="/pchome/NewsIndex/?NType=0101" target="_blank" style="margin-right: 25px;margin-top: 9px;">更多 ></a>
+            </div>
+            <div class="box-line"></div>
+            <div class="box-warp">
+                <div id="box-datalist-news2">
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="clear">
+</div>
+<div class="f_bg">
+<div class="links-warp">
+   <select>
+        <option value="">校内站点</option>
+            <option value="http://www.ouc.edu.cn/">学校首页</option>    
+            <option value="http://222.195.158.131/xsgz/">学生工作处</option>    
+            <option value="http://www2.ouc.edu.cn/grs/">研究生院</option>    
+            <option value="http://www2.ouc.edu.cn/oceanyouth/">团委</option>    
+            <option value="http://career.ouc.edu.cn/">毕业生就业指导中心</option>    
+            <option value="http://222.195.158.146/nc/index.html">网络与信息中心</option>    
+            <option value="http://www2.ouc.edu.cn/zsb/zsb/">招生办</option>    
+            <option value="http://222.195.158.66/">财务处</option>    
+            <option value="http://library.ouc.edu.cn/">图书馆</option>    
+            <option value="http://www2.ouc.edu.cn/sbc/article_index.asp">国有资产与实验室管理处</option>    
+            <option value="http://www2.ouc.edu.cn/hqc/">规划建设与后勤管理处</option>    
+            <option value="http://222.195.158.131/baowei/">保卫处</option>    
+            <option value="http://hqsz.ouc.edu.cn/home/content/807">后勤服务</option>    
+            <option value="http://jwc.ouc.edu.cn:8080/jwwz/index.html">教务处</option>    
+            <option value="http://222.195.158.131/xb/">党委校长办公室</option>    
+            <option value="http://222.195.158.131/zzb/">党委组织部</option>    
+    </select>
+    <select>
+        <option value="">全国高校</option>
+            <option value="http://zulg.zju.edu.cn/">浙江大学后勤集团</option>    
+            <option value="http://hqjt.ruc.edu.cn/">中国人民大学后勤集团</option>    
+            <option value="http://gss.snnu.edu.cn/">陕西师范大学后勤第二集团</option>    
+            <option value="http://hqjt.xmu.edu.cn/">厦门大学后勤集团</option>    
+            <option value="http://www.hqjt.ldu.edu.cn/">鲁东大学后勤集团</option>    
+            <option value="http://hqjt.ahnu.edu.cn/">安徽师范大学后勤集团</option>    
+            <option value="http://hqjt.njut.edu.cn/">南京工业大学后勤集团</option>    
+            <option value="http://hqjt.cumt.edu.cn/">中国矿业大学后勤集团</option>    
+            <option value="http://zwb.upc.edu.cn/">中国石油大学（华东）后勤集团</option>    
+    </select>
+    <select>
+        <option value="">通常网址</option>
+            <option value="http://678890.zjnu.edu.cn/">浙江师范大学数字后勤服务大厅</option>    
+            <option value="http://service.snnu.edu.cn/pchome/index">陕西师范大学数字后勤服务大厅</option>    
+            <option value="http://hq.sicnu.edu.cn/">四川师范大学数字后勤服务大厅</option>    
+            <option value="http://szhq.zzu.edu.cn/">郑州大学后勤集团数字化服务大厅</option>    
+    </select>
+    <select>
+        <option value="">友情链接</option>
+            <option value="http://www.21caas.cn/">中国院校后勤信息网</option>    
+            <option value="http://hqcahmc.ouc.edu.cn/">中国教育后勤协会思想文化建设与人力资源管理专业委员</option>    
+            <option value="http://chinacacm.org/">中国教育后勤协会</option>    
+    </select>
+</div>
+<div class="clear">
+</div>
+</div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $(".links-warp select").change(function () {
+            open($(this).val());
+        });
+        $("#btnOk,.top-exit").click(function () {
+            switch ($(this).attr("data-value")) {
+                case "登录":
+                    $.layer({
+                        type: 2,
+                        title: false,
+                        shadeClose: true,
+                        area: ['660px', '360px'],
+                        offset: ['130px', ''],
+                        iframe: { src: '/pc/account/login/win?ReturnUrl=' + location.href }
+                    });
+                    break;
+                case "退出":
+                    layer.confirm('确定要退出吗？', function () {
+                        location.href = '/pc/account/logout?ReturnUrl=' + location.href;
+                    });
+                    break;
+
+            }
+        });
+    });
+</script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $(".links-warp select").change(function () {
+            open($(this).val());
+        });
+    });
+</script>
+<script type="text/javascript">
+    var logining = false;
+    var uname = "";
+    $(document).ready(function () {
+        $("#btnOk").click(function () {
+            LoginSubmit();
+        });
+
+    });
+    $(function () {
+
+        LoadNewsData();
+        LoadSSPData();
+        LoadRepairsData();
+        LoadMarketData();
+        LoadLostgetData();
+        LoadNewsData2();
+    });
+
+    function LoadNewsData() {
+        $("#box-datalist-news").html("");
+        $("#box-datalist-news").addClass("loading");
+        var strurl = '/Pchome/NewsList';
+        $("#box-datalist-news").load(strurl, function (data) {
+
+
+            $("#box-datalist-news").removeClass("loading");
+            if (data.indexOf("/Account/Login") >= 0) {
+                location.reload();
+            }
+        });
+    }
+
+    function LoadNewsData2() {
+        $("#box-datalist-news2").html("");
+        $("#box-datalist-news2").addClass("loading");
+        var strurl = '/Pchome/NewsList2';
+        $("#box-datalist-news2").load(strurl, function (data) {
+
+
+            $("#box-datalist-news2").removeClass("loading");
+            if (data.indexOf("/Account/Login") >= 0) {
+                location.reload();
+            }
+        });
+    }
+
+    //服务监督
+    function LoadSSPData() {
+        $("#box-datalist-ssp").html("");
+        $("#box-datalist-ssp").addClass("loading");
+        var strurl = '/Pchome/SSPBasicInfo';
+        $("#box-datalist-ssp").load(strurl, function (data) {
+
+
+            $("#box-datalist-ssp").removeClass("loading");
+            if (data.indexOf("/Account/Login") >= 0) {
+                location.reload();
+            }
+        });
+    }
+    //服务申报
+    function LoadRepairsData() {
+        $("#box-datalist-repair").html("");
+        $("#box-datalist-repair").addClass("loading");
+        var strurl = '/Pchome/RepairedInfo';
+        $("#box-datalist-repair").load(strurl, function (data) {
+
+
+            $("#box-datalist-repair").removeClass("loading");
+            if (data.indexOf("/Account/Login") >= 0) {
+                location.reload();
+            }
+        });
+    }
+
+    //跳槽市场
+    function LoadMarketData() {
+        $("#box-datalist-market").html("");
+        $("#box-datalist-market").addClass("loading");
+        var strurl = '/Pchome/MarketList';
+        $("#box-datalist-market").load(strurl, function (data) {
+
+
+            $("#box-datalist-market").removeClass("loading");
+            if (data.indexOf("/Account/Login") >= 0) {
+                location.reload();
+            }
+        });
+    }
+    //失物招领
+    function LoadLostgetData() {
+        $("#box-datalist-Lostget").html("");
+        $("#box-datalist-Lostget").addClass("loading");
+        var strurl = '/Pchome/LostgetList';
+        $("#box-datalist-Lostget").load(strurl, function (data) {
+
+
+            $("#box-datalist-Lostget").removeClass("loading");
+            if (data.indexOf("/Account/Login") >= 0) {
+                location.reload();
+            }
+        });
+    }
+    function NewLost() {
+
+        if (uname.length > 0) {
+            location.href = '/Pchome/wantLostget';
+        }
+        else {
+            alert("请先登录");
+            return;
+
+        }
+    }
+    function jszing() {
+        //alert("平台正在建设中");
+        window.open("http://hqsz.ouc.edu.cn/Pchome/plating");
+    }
+    function HouqinTel() {
+        window.open("http://hqsz.ouc.edu.cn/pchome/NewsIndex/?NType=07");
+    }
+    function NewMarket_HY() {
+        if (uname.length > 0) {
+            location.href = '/Pchome/wantMarket';
+        }
+        else {
+            alert("请先登录");
+            return;
+
+        }
+
+    }
+    function ViewRepair() {
+        location.href = 'http://lg24h.ouc.edu.cn/rsp/my/wantrepair';
+    }
+    function NewSuggest_HYDX() {
+        location.href = 'http://lg24h.ouc.edu.cn/ssp';
+    }
+    function loginoff() {
+        alert("请去学校统一认证修改密码！");
+    }
+    function logOff() {
+        $.ajax({
+            type: 'post',
+            url: '/Pchome/LogOut',
+            success: function (data) {
+                window.location.reload();
+            }
+        });
+    }
+
+    //登录检查
+    function CheckLogin() {
+        var msg = "";
+        if ($("#txtUser").val() == "") {
+            $(".login-errmsg").html("你还没有输入帐号！");
+            $(".login-errmsg").fadeIn();
+            $("#txtUser").focus();
+            return false;
+        }
+        if ($("#txtPsw").val() == "") {
+            $(".login-errmsg").html("你还没有输入密码！");
+            $(".login-errmsg").fadeIn();
+            $("#txtPsw").focus();
+            return false;
+        }
+        return true;
+    }
+    function LoginSubmit() {
+        if (logining) return;
+        if (CheckLogin()) {
+            logining = true;
+            // $("#btnOk").val("登录中...");
+            $("#fLogin").submit();
+        }
+    }
+
+
+</script>
+
+                <div style=" clear:both;"></div>
+            </div>
+    </div>
+    <div class="clear">
+    </div>
+    <div class="floor-bar">
+    <div class="footer-text">
+    <br /><br />
+    版权所有：中国海洋大学后勤集团|地址：青岛市崂山区松岭路238号
+     <br /><br />
+    邮编：266100 |电话：0532-66781000|Email：hqfw@ouc.edu.cn 
+
+       
+        <br /><br />
+       Copyright 2012-2014 Ocean University of China. All rights reserved
+    </div>
+        
+    </div>
+</body>
+</html>
+<script language="javascript" type="text/javascript">
+    $(document).ready(function () {
+//        $("#searchspan").click(function () {
+//            $("#top-search-menu-item").css("display", "block");
+//        });
+//        $("#top-search-menu-item").mouseleave(function (e) {
+//            $("#top-search-menu-item").attr({ style: "display:none" });
+//        });
+        $(".top-login,.top-exit").click(function () {
+            switch ($(this).attr("data-value")) {
+                case "登录":
+                    $.layer({
+                        type: 2,
+                        title: false,
+                        shadeClose: true,
+                        area: ['660px', '360px'],
+                        offset: ['130px', ''],
+                        iframe: { src: '/pc/account/login/win?ReturnUrl=' + location.href }
+                    });
+                    break;
+                case "退出":
+                    layer.confirm('确定要退出吗？', function () {
+                        location.href = '/pc/account/logout?ReturnUrl=' + location.href;
+                    });
+                    break;
+
+            }
+        });
+        $("#nav-").addClass("nav-on");
+
+        $("#top-search-menu-item li").click(function () {
+            var stype = $(this).html();
+            $("#searchspan").html(stype);
+            $("#searchtype").val(stype);
+            $("#searchtxt").attr("placeholder", $(this).attr("title"));
+            $("#searchtxt").focus();
+        });
+        $("#searchtxt").focus(function () {
+            $(".top-search").addClass("on");
+
+        });
+        $("#searchtxt").blur(function () {
+            $(".top-search").removeClass("on");
+        });
+    });
+
+    function AddFavorite(sURL, sTitle) {
+        try {
+            window.external.addFavorite(sURL, sTitle);
+        }
+        catch (e) {
+            try {
+                window.sidebar.addPanel(sTitle, sURL, "");
+            }
+            catch (e) {
+                alert("加入收藏失败，请使用Ctrl+D进行添加");
+            }
+        }
+    }
+
+    
+   
+</script>

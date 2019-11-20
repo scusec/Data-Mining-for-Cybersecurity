@@ -1,0 +1,502 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="/script/page.css" type=text/css rel=stylesheet>
+<script language="javascript" src="/module/jslib/jquery/jquery.js"></script>
+
+<title>基建处</title>
+<meta name="Keywords" content="内容管理、内容管理发布（CMS）系统、信息发布、新闻采编发系统、知识管理、知识门户、政府门户、教育门户、企业门户、竞争情报系统、抓取系统、信息采集、信息雷达系统、电子政务、电子政务解决方案、办公系统、OA、网站办公系统"><meta name='Generator' content='大汉版通'><meta name='Author' content='大汉网络'>
+<meta name='Maketime' content='2017-08-28 10:51:21'>
+<meta name="sitename" content="基建处">
+<meta name="siteurl"  content="http://jjc.yzu.edu.cn/index.html">
+<meta name="guild"    content="">
+<meta name="district"    content="">
+<meta name="sitecatalog"    content="">
+
+<link href="/images/259/css.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/images/259/chrome.js"></script>
+<script type="text/JavaScript">
+function OpenFriendLink(url){ //v3.0
+  
+  if(url!="") window.open(url) ;
+  
+}
+</script>
+<script language="JavaScript">
+var ctimer;
+
+var lunarInfo=new Array(
+0x04bd8,0x04ae0,0x0a570,0x054d5,0x0d260,0x0d950,0x16554,0x056a0,0x09ad0,0x055d2,
+0x04ae0,0x0a5b6,0x0a4d0,0x0d250,0x1d255,0x0b540,0x0d6a0,0x0ada2,0x095b0,0x14977,
+0x04970,0x0a4b0,0x0b4b5,0x06a50,0x06d40,0x1ab54,0x02b60,0x09570,0x052f2,0x04970,
+0x06566,0x0d4a0,0x0ea50,0x06e95,0x05ad0,0x02b60,0x186e3,0x092e0,0x1c8d7,0x0c950,
+0x0d4a0,0x1d8a6,0x0b550,0x056a0,0x1a5b4,0x025d0,0x092d0,0x0d2b2,0x0a950,0x0b557,
+0x06ca0,0x0b550,0x15355,0x04da0,0x0a5d0,0x14573,0x052d0,0x0a9a8,0x0e950,0x06aa0,
+0x0aea6,0x0ab50,0x04b60,0x0aae4,0x0a570,0x05260,0x0f263,0x0d950,0x05b57,0x056a0,
+0x096d0,0x04dd5,0x04ad0,0x0a4d0,0x0d4d4,0x0d250,0x0d558,0x0b540,0x0b5a0,0x195a6,
+0x095b0,0x049b0,0x0a974,0x0a4b0,0x0b27a,0x06a50,0x06d40,0x0af46,0x0ab60,0x09570,
+0x04af5,0x04970,0x064b0,0x074a3,0x0ea50,0x06b58,0x055c0,0x0ab60,0x096d5,0x092e0,
+0x0c960,0x0d954,0x0d4a0,0x0da50,0x07552,0x056a0,0x0abb7,0x025d0,0x092d0,0x0cab5,
+0x0a950,0x0b4a0,0x0baa4,0x0ad50,0x055d9,0x04ba0,0x0a5b0,0x15176,0x052b0,0x0a930,
+0x07954,0x06aa0,0x0ad50,0x05b52,0x04b60,0x0a6e6,0x0a4e0,0x0d260,0x0ea65,0x0d530,
+0x05aa0,0x076a3,0x096d0,0x04bd7,0x04ad0,0x0a4d0,0x1d0b6,0x0d250,0x0d520,0x0dd45,
+0x0b5a0,0x056d0,0x055b2,0x049b0,0x0a577,0x0a4b0,0x0aa50,0x1b255,0x06d20,0x0ada0)
+
+var nStr1 = new Array('日','一','二','三','四','五','六','七','八','九','十','十一','腊')
+var nStr2 = new Array('初','十','廿','卅','　')
+
+//====================================== 传回农历 y年的总天数
+function lYearDays(y) {
+   var i, sum = 348
+   for(i=0x8000; i>0x8; i>>=1) sum += (lunarInfo[y-1900] & i)? 1: 0
+   return(sum+leapDays(y))
+}
+
+//====================================== 传回农历 y年闰月的天数
+function leapDays(y) {
+   if(leapMonth(y))  return((lunarInfo[y-1900] & 0x10000)? 30: 29)
+   else return(0)
+}
+
+//====================================== 传回农历 y年闰哪个月 1-12 , 没闰传回 0
+function leapMonth(y) {
+   return(lunarInfo[y-1900] & 0xf)
+}
+
+//====================================== 传回农历 y年m月的总天数
+function monthDays(y,m) {
+   return( (lunarInfo[y-1900] & (0x10000>>m))? 30: 29 )
+}
+
+//====================================== 算出农历, 传入日期物件, 传回农历日期物件
+//                                       该物件属性有 .year .month .day .isLeap .yearCyl .dayCyl .monCyl
+function Lunar(objDate) {
+
+   var i, leap=0, temp=0
+   var baseDate = new Date(1900,0,31)
+   var offset   = (objDate - baseDate)/86400000
+
+   this.dayCyl = offset + 40
+   this.monCyl = 14
+
+   for(i=1900; i<2050 && offset>0; i++) {
+      temp = lYearDays(i)
+      offset -= temp
+      this.monCyl += 12
+   }
+
+   if(offset<0) {
+      offset += temp;
+      i--;
+      this.monCyl -= 12
+   }
+
+   this.year = i
+   this.yearCyl = i-1864
+
+   leap = leapMonth(i) //闰哪个月
+   this.isLeap = false
+
+   for(i=1; i<13 && offset>0; i++) {
+      //闰月
+      if(leap>0 && i==(leap+1) && this.isLeap==false)
+         { --i; this.isLeap = true; temp = leapDays(this.year); }
+      else
+         { temp = monthDays(this.year, i); }
+
+      //解除闰月
+      if(this.isLeap==true && i==(leap+1)) this.isLeap = false
+
+      offset -= temp
+      if(this.isLeap == false) this.monCyl ++
+   }
+
+   if(offset==0 && leap>0 && i==leap+1)
+      if(this.isLeap)
+         { this.isLeap = false; }
+      else
+         { this.isLeap = true; --i; --this.monCyl;}
+
+   if(offset<0){ offset += temp; --i; --this.monCyl; }
+
+   this.month = i
+   this.day = offset + 1
+}
+
+//====================== 中文日期
+function cDay(d){
+   var s;
+
+   switch (d) {
+      case 10:
+         s = '初十'; break;
+      case 20:
+         s = '二十'; break;
+         break;
+      case 30:
+         s = '三十'; break;
+         break;
+      default :
+         s = nStr2[Math.floor(d/10)];
+         s += nStr1[d%10];
+   }
+   return(s);
+}
+
+
+function init(){
+
+if (document.all){
+	
+settimes();
+}
+}
+
+function settimes(){
+var time= new Date();
+
+hours= time.getHours();
+mins= time.getMinutes();
+secs= time.getSeconds();
+mons= (time.getMonth()+1);
+years= time.getYear(); 
+days= time.getDate(); 
+var sDObj , lDObj;
+	
+
+sDObj = new Date(years,time.getMonth(),days)    //当月一日日期
+lDObj = new Lunar(sDObj)
+
+week=time.getDay();
+switch (week)
+{
+	case 0: week="星期日"; break;
+	case 1: week="星期一"; break;
+	case 2: week="星期二"; break;
+	case 3: week="星期三"; break;
+	case 4: week="星期四"; break;
+	case 5: week="星期五"; break;
+	case 6: week="星期六"; break;
+}
+
+if (hours<10)
+hours="0"+hours;
+if(mins<10)
+mins="0"+mins;
+if (secs<10)
+secs="0"+secs;
+
+if (nStr1[lDObj.month]=="一") {
+	var nstr = "正月"+cDay(lDObj.day);
+}
+else {
+	var nstr = nStr1[lDObj.month]+"月"+cDay(lDObj.day);
+}
+var ystr = mons+"/"+days;
+var festival = "";
+switch (nstr)
+{
+	case "正月初一": festival="春节";break;
+	case "正月十五": festival="元宵节";break;
+	case "五月初五": festival="端午节";break;
+	case "八月十五": festival="中秋节";break;
+	case "九月初九": festival="重阳节";break;
+	case "腊月初八": festival="腊八节";break;
+}
+switch (ystr)
+{
+	case "1/1": festival+="元旦";break;
+	case "3/8": festival+="妇女节";break;
+	case "5/1": festival+="劳动节";break;
+	case "6/1": festival+="儿童节";break;
+	case "7/1": festival+="党的生日";break;
+	case "8/1": festival+="建军节";break;
+	case "9/10": festival+="教师节";break;
+	case "10/1": festival+="国庆节";break;
+}
+//var tim1=document.getElementById("tim1");
+//alert("<table cellpadding='0' cellspacing='0' border='0'><tr><td align='center'><font color=FFFFFF>"+years+"/"+ystr+" "+week+" "+hours+":"+mins+":"+secs+"<br>"+"农历"+(lDObj.isLeap?"闰":" ")+nstr+"  "+"</font></td></tr></table>");
+
+tim1.innerHTML="今天是： "+years+"/"+ystr+" "+week+" "+hours+":"+mins+":"+secs+" "+"农历"+(lDObj.isLeap?"闰":" ")+nstr;
+//tim1.innerHTML=years;
+setTimeout('settimes()',960);
+}
+</script>
+</head>
+
+<body>
+<table width="920" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF">
+  <tr>
+    <td><img src="/images/259/top-.jpg" width="920" height="91" alt="" /></td>
+  </tr>
+  <tr>
+    <td align="center" background="/images/259/m-bj.jpg"><table width="788" height="28" border="0" align="center" cellpadding="0" cellspacing="0">
+      <tr>
+        <td width="122" align="center" valign="middle"><a href="http://jjc.yzu.edu.cn/" class="mm">网站首页</a> </td>
+        <td width="109" align="center" valign="middle"><a href="/col/col16042/index.html" class="mm">部门简介</a></td>
+        <td width="107" align="center" valign="middle"><a href="/col/col16005/index.html" class="mm">规章制度</a></td>
+        <td width="112" align="center" valign="middle"><a href="/col/col16001/index.html" class="mm">工作动态</a></td>
+        <td width="113" align="center" valign="middle"><a href="/col/col16004/index.html" class="mm">基建成果</a></td>
+        <td width="114" align="center" valign="middle"><a href="/col/col16021/index.html" class="mm">政策法规</a></td>
+        <td width="111" align="center" valign="middle"><a href="/col/col16006/index.html" class="mm">党建工作</a></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td><img src="/images/259/img.jpg" width="920" height="192" alt="" /></td>
+  </tr>
+  <tr>
+    <td align="center" bgcolor="#cfcfcf"><table border="0" align="center" cellpadding="0" cellspacing="0" style="margin-top:5px">
+      <tr>
+        <td width="363"><img src="/images/259/yuanjiao.jpg" width="913" height="7" /></td>
+      </tr>
+      <tr>
+        <td height="33" bgcolor="#FFFFFF"><table width="900" height="36" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#ececec">
+            <tr>
+              <td width="558" height="36"><table width="489" height="28" border="0" align="center" cellpadding="0" cellspacing="0">
+                  <tr>
+                    <td width="35" align="center" valign="middle"><img src="/images/259/fdj.jpg" width="21" height="18" alt="" /></td>
+                    <td width="88" align="center" valign="middle"><span style="font-size:12px; color:2f2f2f; font-weight:bold"> 关键字搜索</span></td>
+                    <td width="366" align="center" valign="middle"><form name="sitesearch" action="/module/sitesearch/index.jsp?columnid=5565,16005,5566,16001,16002,16003,16004,5570,16006,5567,8361,8363,5569,16007,8362,5571,16008&webid=36&modalunitid=37383" method="POST"><input type="text" name="keyvalue" value="" size="30" style="height:18px;"> 
+<select name="keyword"><option value="vc_title" >标题</option><option value="vc_keyword" >关键字</option><option value="vc_abs">摘要</option></select> <input type="submit" value="检索" style="border:1px solid #CCCCCC; background-color:#FFFFFF; width:45px; height:22px"></form></td>
+                  </tr>
+              </table></td>
+              <td width="342"><div id="tim1" style="color: #000000; font-size:12px">
+                  <script>window.onload=function (){init();}</script>
+              </div></td>
+            </tr>
+        </table></td>
+      </tr>
+      <tr>
+        <td height="546" align="center" valign="top" bgcolor="#FFFFFF"><table width="900" border="0" cellspacing="0" cellpadding="0" style="margin-top:7px; border-top:1px solid #CCCCCC">
+            <tr>
+              <td width="198" height="459" align="left" valign="top" style="border-right:1px solid #CCCCCC"><table width="197" height="440" border="0" cellpadding="0" cellspacing="0" style="margin-top:7px">
+                  <tr>
+                    <td height="28" background="/images/259/zuo1.jpg" ><span style="font-size:14px; font-weight:bold; color:#0066FF; padding-left:22px">校区平面图</span></td>
+                  </tr>
+                  <tr>
+                    <td height="224" align="left" valign="top"><table width='100%' cellspacing='0' cellpadding='0' border='0'>
+<tr>
+<td style='background-color:null'><div style="font-family:'宋体'; height:24px; line-height:24px;">·<a href='/art/2010/3/30/art_5567_62009.html' title='瘦西湖校区' target=_blank>瘦西湖校区</a></div></td></tr>
+<tr>
+<td style='background-color:null'><div style="font-family:'宋体'; height:24px; line-height:24px;">·<a href='/art/2010/3/30/art_5567_62010.html' title='文汇路校区' target=_blank>文汇路校区</a></div></td></tr>
+<tr>
+<td style='background-color:null'><div style="font-family:'宋体'; height:24px; line-height:24px;">·<a href='/art/2010/3/30/art_5567_62002.html' title='荷花池校区' target=_blank>荷花池校区</a></div></td></tr>
+<tr>
+<td style='background-color:null'><div style="font-family:'宋体'; height:24px; line-height:24px;">·<a href='/art/2010/3/30/art_5567_62013.html' title='扬子津校区' target=_blank>扬子津校区</a></div></td></tr>
+<tr>
+<td style='background-color:null'><div style="font-family:'宋体'; height:24px; line-height:24px;">·<a href='/art/2010/3/30/art_5567_62012.html' title='盐阜路校区' target=_blank>盐阜路校区</a></div></td></tr>
+<tr>
+<td style='background-color:null'><div style="font-family:'宋体'; height:24px; line-height:24px;">·<a href='/art/2010/3/30/art_5567_62007.html' title='江阳路南校区' target=_blank>江阳路南校区</a></div></td></tr>
+<tr>
+<td style='background-color:null'><div style="font-family:'宋体'; height:24px; line-height:24px;">·<a href='/art/2010/3/30/art_5567_62005.html' title='江阳路北校区' target=_blank>江阳路北校区</a></div></td></tr>
+<tr>
+<td style='background-color:null'><div style="font-family:'宋体'; height:24px; line-height:24px;">·<a href='/art/2010/3/30/art_5567_62004.html' title='淮海路校区' target=_blank>淮海路校区</a></div></td>
+</tr></table><span style='float:right;clear:right;'><a href='/col/col5567/index.html' target='_blank'>更多...</a></span></td>
+                  </tr>
+                  <tr>
+                    <td height="28" background="/images/259/zuo1.jpg" ><span style="font-size:14px; font-weight:bold; color:#0066FF; padding-left:25px">友情链接</span></td>
+                  </tr>
+                  <tr>
+                    <td height="70" align="center" valign="middle"><a href="/col/col21761/index.html" target="_blank"><img src="/images/259/yzdx-img.jpg" width="187" height="47" alt=""  border="0"/></a></td>
+                  </tr>
+                  <tr>
+                    <td height="90" align="center" valign="top"><table width="162" height="90" border="0" align="center" cellpadding="0" cellspacing="0">
+                        <tr>
+                          <td align="center" valign="middle"><select name="select" style="font-size:12px; width:160px" onchange="if(this.options[this.selectedIndex].value != '') {window.open(this.options[this.selectedIndex].value);}">
+                      <option selected="selected">--校内相关站点--</option>
+                      <option value="http://jwjc.yzu.edu.cn/">纪委（监察处）</option>
+                      <option value="http://dwbgs.yzu.edu.cn/">党委办公室</option>
+                      <option value="http://zzb.yzu.edu.cn/">组织部</option>
+                      <option value="http://dwxcb.yzu.edu.cn/">宣传部</option>
+                      <option value="http://dangxiao.yzu.edu.cn/">（党校）</option>
+                      <option value="http://dwtzb.yzu.edu.cn/">统战部</option>
+                      <option value="http://xgc.yzu.edu.cn/">学工部</option>
+                      <option value="http://bwc.yzu.edu.cn/">保卫部（处）</option>
+                      <option value="http://rwb.yzu.edu.cn/">（人武部）</option>
+                      <option value="http://gonghui.yzu.edu.cn/">工会</option>
+                      <option value="http://tuanwei.yzu.edu.cn/">团委</option>
+                      <option value="http://xzbgs.yzu.edu.cn/">校长办公室</option>
+                      <option value="http://jwc.yzu.edu.cn/">教务处</option>
+                      <option value="http://zhaoban.yzu.edu.cn/">（招办）</option>
+                      <option value="http://yjsc.yzu.edu.cn/">研究生处（院）</option>
+                      <option value="http://zrkxc.yzu.edu.cn/">自然科学处</option>
+                      <option value="http://rwskc.yzu.edu.cn/">人文社科处</option>
+                      <option value="http://cjc.yzu.edu.cn/">成教处（院）</option>
+                      <option value="http://gjhzjlc.yzu.edu.cn/">国际合作与交流（港澳台办公室）</option>
+                      <option value="http://rsc.yzu.edu.cn/">人事处</option>
+                      <option value="http://hwjyxy.yzu.edu.cn/">海外教育学院</option>
+                      <option value="http://cwc.yzu.edu.cn/">财务处</option>
+                      <option value="http://gz.yzu.edu.cn/">国有资产管理处</option>
+                      <option value="http://sjc.yzu.edu.cn/">审计处</option>
+                      <option value="http://hqglc.yzu.edu.cn/">后勤管理处</option>
+                      <option value="http://jjc.yzu.edu.cn/">基建处</option>
+                      <option value="http://shebei.yzu.edu.cn/">实验室与设备管理处</option>
+                      <option value="http://cszx.yzu.edu.cn/">（测试中心）</option>
+                      <option value="http://kjcyc.yzu.edu.cn/">科技产业处</option>
+                      <option value="http://fzbgs.yzu.edu.cn/">发展办公室</option>
+                      <option value="http://ltxc.yzu.edu.cn/">离退休处</option>
+                      <option value="http://hqjt.yzu.edu.cn/">后勤服务集团</option>
+                      <option value="http://tsg.yzu.edu.cn/">图书馆</option>
+                      <option value="http://pgzx.yzu.edu.cn/">教育教学评估中心</option>
+                      <option value="http://xbbjb.yzu.edu.cn/">学报编辑部</option>
+                      <option value="http://dangan.yzu.edu.cn/">档案馆</option>
+                      <option value="http://xxzx.yzu.edu.cn/">信息中心</option>
+                      <option value="http://synmc.yzu.edu.cn/">实验农牧场</option>
+                                </select></td>
+                        </tr>
+                        <tr>
+                          <td align="center" valign="middle"><select name="友情链接" id="友情链接" onchange="if(this.options[this.selectedIndex].value != '') {window.open(this.options[this.selectedIndex].value);}" style="font-size:12px; width:160px">
+                  <option value="0" selected="selected">--相关友情链接--</option>
+                  <option value="http://www.jszj.com.cn/zaojia/">江苏工程造价信息网</option>
+                  <option value="http://www.cein.gov.cn/home/ad/jssb/default.asp">中国工程建设信息网</option>
+                  <option value="http://web.tongji.edu.cn/~tjjj/">同济大学基建处</option>
+                  <option value="http://www.tsinghua.edu.cn/qhdwzy/index.jsp">清华大学</option>
+                  <option value="http://logis.whu.edu.cn/~jjc/">武汉大学校园建设</option>
+                  <option value="http://www.zju.edu.cn/~jjb/">浙江大学基建处</option>
+                  <option value="http://www.fudan.edu.cn/new_organize/jijianchu.htm">复旦大学基建处</option>
+                  <option value="http://www.pku.edu.cn/administration/jjgcb/main.htm">北京大学基建处</option>
+                  <option value="http://jjb.ustc.edu.cn/">中国科技大学基建处</option>
+                      </select></td>
+                        </tr>
+                        <tr>
+                          <td align="center" valign="middle"><select name="友情链接" id="友情链接" onchange="if(this.options[this.selectedIndex].value != '') {window.open(this.options[this.selectedIndex].value);}" style="font-size:12px; width:160px">
+                  <option value="0" selected="selected">--其它友情链接--</option>
+                  <option value="http://www.baidu.com">百度网</option>
+                  <option value="http://www.sina.com.cn">新浪网</option>
+                  <option value="http://www.sohu.com.cn">搜狐网</option>
+                  <option value="http://www.qq.com">腾讯网</option>
+                      </select></td>
+                        </tr>
+                    </table></td>
+                  </tr>
+              </table></td>
+              <td width="504" align="center" valign="top"><table width="461" border="0" align="center" cellpadding="0" cellspacing="0" style="margin-top:12px">
+                  <tr>
+                    <td height="29" background="/images/259/zhong1.jpg" ><table width="448" border="0" cellspacing="0" cellpadding="0">
+                        <tr>
+                          <td width="96" align="left"><span style="font-size:14px ; color:#FFFFFF; font-weight:bold; padding-left:30px">工作快讯</span></td>
+                          <td width="352" align="right" valign="middle"><a href="/col/col16001/index.html" target="_blank"><img src="/images/259/more.gif" width="55" height="18"  border="0"/></a></td>
+                        </tr>
+                    </table></td>
+                  </tr>
+                  <tr>
+                    <td height="203" align="center" valign="middle"><table width="461" border="0" cellpadding="0" cellspacing="0">
+                        <tr>
+                          <td width="200" height="173" align="center" valign="top"><script type="text/javascript">var _width = 200; var _height = 145;var text_height = 22;var flash_height = _height + text_height;var pic_arr = new Array();var link_arr = new Array();var text_arr = new Array();var i = 0;pic_arr[i] = "";link_arr[i] = "/art/2017/8/28/art_16001_566364.html";text_arr[i] = "校党委书记姚冠新深入建设...";i++;pic_arr[i] = "";link_arr[i] = "/art/2017/5/16/art_16001_557719.html";text_arr[i] = "文汇路校区生命科学大楼设...";i++;pic_arr[i] = "";link_arr[i] = "/art/2017/4/21/art_16001_553105.html";text_arr[i] = "基建处召开2017年党风...";i++;pic_arr[i] = "";link_arr[i] = "/art/2017/4/12/art_16001_552263.html";text_arr[i] = "学校隆重举行瘦西湖校区教...";i++;pic_arr[i] = "";link_arr[i] = "/art/2017/4/6/art_16001_551738.html";text_arr[i] = "基建处党员干部参加警示教...";i++;var p = pic_arr.join("|");var l = link_arr.join("|");var t = text_arr.join("|");var f = "/flash/0/slideshow.swf";document.write('<object ID="focus_flash" classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0" width="'+ _width +'" height="'+ flash_height +'">');document.write('<param name="allowScriptAccess" value="sameDomain"><param name="movie" value="'+f+'"><param name="quality" value="high"><param name="bgcolor">');document.write('<param name="menu" value="false"><param name=wmode value="transparent">');document.write('<param name="FlashVars" value="pics='+p+'&links='+l+'&texts='+t+'&borderwidth='+_width+'&borderheight='+_height+'&textheight='+text_height+'">');document.write('<embed ID="focus_flash" src="'+f+'" wmode="opaque" FlashVars="pics='+p+'&links='+l+'&texts='+t+'&borderwidth='+_width+'&borderheight='+_height+'&textheight='+text_height+'" menu="false" quality="high" width="'+ _width +'" height="'+ flash_height +'" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />');document.write('</object>');</script></td>
+                          <td width="261" align="left" valign="top"><div class="tzgg1">
+                              <table width='100%' cellspacing='0' cellpadding='0' border='0'>
+<tr>
+<td style='background-color:null'><table cellpadding='0' cellspacing='0' border='0' width='100%' style="font-family:'宋体'"><tr><td>·<a href='/art/2017/8/28/art_16001_566364.html' title='校党委书记姚冠新深入建设项目现场检查工程进展情况' target=_blank>校党委书记姚冠新深入建设项目现...</a></td><td width='30' height='24' align='left' style='color:#999999'>08-28</td></tr></table></td></tr>
+<tr>
+<td style='background-color:null'><table cellpadding='0' cellspacing='0' border='0' width='100%' style="font-family:'宋体'"><tr><td>·<a href='/art/2017/5/16/art_16001_557719.html' title='文汇路校区生命科学大楼设计方案公示' target=_blank>文汇路校区生命科学大楼设计方案...</a></td><td width='30' height='24' align='left' style='color:#999999'>05-16</td></tr></table></td></tr>
+<tr>
+<td style='background-color:null'><table cellpadding='0' cellspacing='0' border='0' width='100%' style="font-family:'宋体'"><tr><td>·<a href='/art/2017/4/21/art_16001_553105.html' title='基建处召开2017年党风廉政建设暨安全工作会议' target=_blank>基建处召开2017年党风廉政建...</a></td><td width='30' height='24' align='left' style='color:#999999'>04-21</td></tr></table></td></tr>
+<tr>
+<td style='background-color:null'><table cellpadding='0' cellspacing='0' border='0' width='100%' style="font-family:'宋体'"><tr><td>·<a href='/art/2017/4/12/art_16001_552263.html' title='学校隆重举行瘦西湖校区教学楼工程开工仪式' target=_blank>学校隆重举行瘦西湖校区教学楼工...</a></td><td width='30' height='24' align='left' style='color:#999999'>04-12</td></tr></table></td></tr>
+<tr>
+<td style='background-color:null'><table cellpadding='0' cellspacing='0' border='0' width='100%' style="font-family:'宋体'"><tr><td>·<a href='/art/2017/4/6/art_16001_551738.html' title='基建处党员干部参加警示教育活动' target=_blank>基建处党员干部参加警示教育活动</a></td><td width='30' height='24' align='left' style='color:#999999'>04-06</td></tr></table></td></tr>
+<tr>
+<td style='background-color:null'><table cellpadding='0' cellspacing='0' border='0' width='100%' style="font-family:'宋体'"><tr><td>·<a href='/art/2017/3/20/art_16001_546843.html' title='我处获2016年度校园安全综合管理考核一等奖' target=_blank>我处获2016年度校园安全综合...</a></td><td width='30' height='24' align='left' style='color:#999999'>03-20</td></tr></table></td></tr>
+<tr>
+<td style='background-color:null'><table cellpadding='0' cellspacing='0' border='0' width='100%' style="font-family:'宋体'"><tr><td>·<a href='/art/2016/10/21/art_16001_535248.html' title='基建处党支部开展教学实践与施工管理交流活动' target=_blank>基建处党支部开展教学实践与施工...</a></td><td width='30' height='24' align='left' style='color:#999999'>10-21</td></tr></table></td>
+</tr></table><tr><td></td></tr>
+                          </div></td>
+                        </tr>
+                    </table></td>
+                  </tr>
+                  <tr>
+                    <td height="141" align="center" valign="top"><table width="461" border="0" cellpadding="0" cellspacing="0" style="border:1px solid #c8eafc">
+                        <tr>
+                          <td height="42" colspan="3" align="left" valign="middle" background="/images/259/zhong2.jpg"><table width="452" border="0" cellspacing="0" cellpadding="0">
+                              <tr>
+                                <td width="276"><span style="font-size:14px ; font-weight:bold; padding-left:30px; color:#016cce">优秀工程展示</span></td>
+                                <td width="158" align="right" valign="middle"><a href="/col/col8363/index.html" target="_blank"><img src="/images/259/more.gif" width="55" height="18"  border="0"/></a></td>
+                              </tr>
+                          </table></td>
+                        </tr>
+                        <tr>
+                          <td height="155" colspan="3" align="center" valign="middle" background="/images/259/tttbg.jpg"><div id="demo" style="OVERFLOW: hidden; WIDTH: 440px;" align="center">
+<table cellspacing="0" cellpadding="0" align="center" border="0"><tbody><tr><td id="marquePic1" valign="top"><table width='100%' cellspacing='0' cellpadding='0' border='0'>
+<tr>
+<td style=''><TABLE><TR><TD><a href='/art/2010/4/2/art_8363_62401.html'><IMG SRC='/picture/0/100402094932450.jpg' BORDER=0 width="140" height="100" style="display:block; padding:2px; border:1px solid #D7D4CB" ></a><a href='/art/2010/4/2/art_8363_62401.html' style="height:30px;padding-top:10px; text-align:center">荷花池校区教学主楼
+</a></TD>
+</TR></TABLE>
+</td><td style=''><TABLE><TR><TD><a href='/art/2010/4/2/art_8363_62403.html'><IMG SRC='/picture/0/100402095050466.jpg' BORDER=0 width="140" height="100" style="display:block; padding:2px; border:1px solid #D7D4CB" ></a><a href='/art/2010/4/2/art_8363_62403.html' style="height:30px;padding-top:10px; text-align:center">荷花池校区逸夫图书馆
+</a></TD>
+</TR></TABLE>
+</td><td style=''><TABLE><TR><TD><a href='/art/2010/3/30/art_8363_62046.html'><IMG SRC='/picture/0/100330135138246.jpg' BORDER=0 width="140" height="100" style="display:block; padding:2px; border:1px solid #D7D4CB" ></a><a href='/art/2010/3/30/art_8363_62046.html' style="height:30px;padding-top:10px; text-align:center">扬子津校区环境科学与...
+</a></TD>
+</TR></TABLE>
+</td><td style=''><TABLE><TR><TD><a href='/art/2010/3/30/art_8363_62045.html'><IMG SRC='/picture/0/100330135055405.jpg' BORDER=0 width="140" height="100" style="display:block; padding:2px; border:1px solid #D7D4CB" ></a><a href='/art/2010/3/30/art_8363_62045.html' style="height:30px;padding-top:10px; text-align:center">扬子津校区机械工程学...
+</a></TD>
+</TR></TABLE>
+</td><td style=''><TABLE><TR><TD><a href='/art/2010/3/30/art_8363_62044.html'><IMG SRC='/picture/0/100330134950563.jpg' BORDER=0 width="140" height="100" style="display:block; padding:2px; border:1px solid #D7D4CB" ></a><a href='/art/2010/3/30/art_8363_62044.html' style="height:30px;padding-top:10px; text-align:center">扬子津校区教学楼
+</a></TD>
+</TR></TABLE>
+</td><td style=''><TABLE><TR><TD><a href='/art/2010/3/30/art_8363_62043.html'><IMG SRC='/picture/0/100330134842691.jpg' BORDER=0 width="140" height="100" style="display:block; padding:2px; border:1px solid #D7D4CB" ></a><a href='/art/2010/3/30/art_8363_62043.html' style="height:30px;padding-top:10px; text-align:center">扬子津校区旅游烹饪与...
+</a></TD>
+</TR></TABLE>
+</td><td style=''><TABLE><TR><TD><a href='/art/2010/3/30/art_8363_62042.html'><IMG SRC='/picture/0/100330134655617.jpg' BORDER=0 width="140" height="100" style="display:block; padding:2px; border:1px solid #D7D4CB" ></a><a href='/art/2010/3/30/art_8363_62042.html' style="height:30px;padding-top:10px; text-align:center">扬子津校区能源与动力...
+</a></TD>
+</TR></TABLE>
+</td><td style=''><TABLE><TR><TD><a href='/art/2010/3/30/art_8363_62041.html'><IMG SRC='/picture/0/100330134606557.jpg' BORDER=0 width="140" height="100" style="display:block; padding:2px; border:1px solid #D7D4CB" ></a><a href='/art/2010/3/30/art_8363_62041.html' style="height:30px;padding-top:10px; text-align:center">扬子津校区学生食堂
+</a></TD>
+</TR></TABLE>
+</td><td style=''><TABLE><TR><TD><a href='/art/2010/3/30/art_8363_62040.html'><IMG SRC='/picture/0/100330134449939.jpg' BORDER=0 width="140" height="100" style="display:block; padding:2px; border:1px solid #D7D4CB" ></a><a href='/art/2010/3/30/art_8363_62040.html' style="height:30px;padding-top:10px; text-align:center">扬子津校区学生宿舍
+</a></TD>
+</TR></TABLE>
+</td>
+</tr></table></td><td id="marquePic2" valign="top"></td></tr></tbody>  </table>
+</div><script language="javascript" type="text/javascript">var speed=30;marquePic2.innerHTML=marquePic1.innerHTML; function Marquee(){ if(demo.scrollLeft>=marquePic1.scrollWidth){ demo.scrollLeft=0; }else{ demo.scrollLeft++; }}; var MyMar=setInterval(Marquee,speed); demo.onmouseover=function() {clearInterval(MyMar)}; demo.onmouseout=function() {MyMar=setInterval(Marquee,speed)};</script></td>
+                          </tr>
+                        
+                    </table></td>
+                  </tr>
+              </table></td>
+              <td width="198" align="right" valign="top" style="border-left:1px solid #CCCCCC"><table width="197" height="440" border="0" cellpadding="0" cellspacing="0" style="margin-top:7px">
+                  <tr>
+                    <td width="200" height="28" align="left" background="/images/259/zuo1.jpg" ><span style="font-size:14px; font-weight:bold; color:#0066FF; padding-left:22px">在建工程</span></td>
+                  </tr>
+                  <tr>
+                    <td height="161" align="center" valign="middle"><table cellpadding='0' cellspacing='1' border='0' bgcolor='#000000'><tr><td bgcolor='#FF0000'><a href='/art/2017/5/18/art_8361_557722.html' target='_blank'><img  src='/picture/0/1705181652373768012.jpg' border='0' width='180' height='140'></a></td></tr></table><table cellpadding='0' cellspacing='0' border='0'><tr><td><a href='/art/2017/5/18/art_8361_557722.html' class='bt_link' target='_blank'>瘦西湖校区教学楼</a></td></tr></table></td>
+                  </tr>
+                  <tr>
+                    <td height="4" align="center" valign="bottom" background="/images/259/dian-.jpg"></td>
+                  </tr>
+                  <tr>
+                    <td height="61" align="center" valign="bottom" ><a href="http://www.yzu.edu.cn/col/col129/index.html" target="_blank"><img src="/images/259/zbxx.jpg" width="193" height="53" alt=""  border="0"/></a></td>
+                  </tr>
+                  <tr>
+                    <td height="58" align="center" valign="bottom"><a href="/col/col16093/index.html" target="_blank"><img src="/images/259/jjxc.jpg" width="193" height="53" alt="" border="0"/></a></td>
+                  </tr>
+                  <tr>
+                    <td height="57" align="center" valign="bottom"><a href="/col/col8362/index.html" target="_blank"><img src="/images/259/wjxz.jpg" width="193" height="53" alt="" border="0"/></a></td>
+                  </tr>
+                  <tr>
+                    <td height="49" align="center" valign="bottom"><a href="/col/col5571/index.html" target="_blank"><img src="/images/259/lxwm.jpg" width="193" height="53" alt="" border="0"/></a></td>
+                  </tr>
+              </table></td>
+            </tr>
+          </table>
+            <table width="900" border="0" cellpadding="0" cellspacing="0">
+              <tr>
+                <td height="29" align="center" valign="middle" bgcolor="#dde7f8"><span style="font-size:12px; color:#666666">加入收藏 | 设为首页 | <a href="/col/col5571/index.html" target="_blank">联系我们</a></span></td>
+              </tr>
+            </table>
+          <table width="900" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td height="40" align="center" valign="middle"><P align=center>Copyright @ 2010 扬州大学基建处 All rights reserved&nbsp; 电话：0514-87993895 邮箱：<A href="mailto:jijian@yzu.edu.cn">jijian@yzu.edu.cn</A></P></td>
+              </tr>
+          </table></td>
+      </tr>
+    </table></td>
+  </tr>
+</table>
+
+
+<!-- visitcount Begin --><iframe src='./module/visitcount/visit.jsp?type=1&i_webid=36&i_columnid=367' name="vishidden" id="vishidden" frameborder="0" style="width:0; height:0; display:none"></iframe><!-- visitcount End -->
+</body>
+</html>
+ <a href='http://www.hanweb.com' style='display:none'>Produced By 大汉网络 大汉版通发布系统</a><script language="javascript" src='/script/pagecontrol.js'></script>

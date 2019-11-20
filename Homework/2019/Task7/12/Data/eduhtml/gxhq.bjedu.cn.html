@@ -1,0 +1,541 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<!-- saved from url=(0037)http://gxhq.bjedu.cn/publish/portal9/ -->
+<HTML lang=zh-CN>
+<HEAD id=Head>
+<META content="IE=8.0000" http-equiv="X-UA-Compatible">
+<TITLE>北京学校后勤网</TITLE>
+<META http-equiv=X-UA-Compatible content=IE=8>
+<META name=DESCRIPTION id=MetaDescription content=学校后勤处>
+<META name=KEYWORDS id=MetaKeywords content=学校后勤处>
+<META name=COPYRIGHT id=MetaCopyright content="Copyright 2009 by Huilan">
+<META name=GENERATOR id=MetaGenerator content="MSHTML 11.00.9600.18057">
+<META name=AUTHOR id=MetaAuthor content=学校后勤处--->
+<META name=RESOURCE-TYPE content=DOCUMENT>
+<META name=DISTRIBUTION content=GLOBAL>
+<META name=ROBOTS content="INDEX, FOLLOW">
+<META name=REVISIT-AFTER content="1 DAYS">
+<META name=RATING content=GENERAL>
+<META http-equiv=PAGE-ENTER content=RevealTrans(Duration=0,Transition=1)>
+<META http-equiv=Content-Type content=text/html;charset=utf-8>
+<META http-equiv=Pragma content=no-cache>
+<META http-equiv=Cache-Control content=no-cache>
+<META http-equiv=Expires content=0>
+<STYLE id=StylePlaceholder>
+.p_c .n_u,.p_r .n_u{height:208px;}
+.p_z .n_u{height:158px;}
+.h-Icons span { text-align: left; display: block; margin-right: 39px; float: right;}
+.icons1 b{ margin: 3px 0 0 30.5px !important; }
+.icons2 b{ margin: 7px 0 0 26px !important; }
+.icons3 b{ margin: 7px 0 0 26px !important; }
+.icons4 b {margin: 4px 0 0 22px !important; }
+.h-Icons a b {width:35px !important; }
+</STYLE>
+
+<link id=_Portals__default_ href="./css/global.css" rel="stylesheet" type="text/css">
+<link id=_Portals_9_Skins_home_ href="./css/index.css" rel="stylesheet" type="text/css">
+<link id=_Portals_9_Containers_mod1_ href="./css/media2.css" rel="stylesheet" type="text/css">
+<link id=_Portals_9_Containers_mod02_ href="./css/topAndfoot.css" rel="stylesheet" type="text/css">
+
+</HEAD>
+<BODY id=Body style="MARGIN: 0px">
+<link id=_Portals__default_ href="./css/top.css" rel="stylesheet" type="text/css">
+<div class="topCont">
+	<div class="topWidth">
+        <div class="topLeft">
+            今天是：<span id="dateContent"></span><em></em>
+            <!--<a id="wPlace"></a><em></em> -->
+            <a></a><a id="weather"></a><em></em>
+            <a></a><a id="wd"></a><em></em>
+            <!--<a>PM2.5:</a><a id="pm"></a><em></em> -->
+        </div>
+        <div class="topRight">
+           <!-- <div class="searchCont">
+           <form name="searchform" action="" class="form1" target="_blank" method="post">
+ 
+              <input type="text" name="searchword" class="searchText" placeholder="请输入关键词" />
+              <input type="button" class="seachBut" value="" />
+           </form>
+           </div> -->
+
+          <ul class="searchUl">
+             		<li>
+                    	<a href="#" onclick="SetHome(this,window.location)"><b class="dateIcons1"></b>设为首页</a>
+                    </li>
+                    <li>
+                    	<a href="#" onclick="AddFavorite(window.location,document.title)"><b class="dateIcons2"></b>加入收藏</a>
+                    </li>
+             </ul>
+        </div>
+    </div>
+</div>
+<div class="header" style="border-top:0">
+     <div class="logo">
+        <a class="logoHou" href="./"><img src="./images/logo.png" realTed="1" /></a>
+        <div id="kinMaxShow">
+            
+                <div>
+                      <img src="./wzsy/tbjd/201604/W020160407496018480633_1020_170.jpg" alt="展望未来"/>
+                </div>
+           
+                <div>
+                      <img src="./wzsy/tbjd/201604/W020160407495719356716_1020_170.jpg" alt="课题研究"/>
+                </div>
+           
+                <div>
+                      <img src="./wzsy/tbjd/201604/W020160407490925259812_1020_170.jpg" alt="莘莘学子"/>
+                </div>
+           
+                <div>
+                      <img src="./wzsy/tbjd/201604/W020160407489842590317_1020_170.jpg" alt="美丽校园"/>
+                </div>
+           
+        </div>
+     </div>
+     <div class="nav">
+          <ul>
+              <li>
+                    
+                  <a href="./" class="active">网站首页</a>
+                 
+              </li>
+                            
+              <li>
+                    <a href="./xwdt/">新闻动态</a>
+                   
+              </li>             
+                            
+              <li>
+                    <a href="./tzgg/">通知公告</a>
+                   
+              </li>             
+                            
+              <li>
+                    <a href="./zcwj/">政策文件</a>
+                   
+              </li>             
+                            
+              <li>
+                    <a href="./jyjl/">经验交流</a>
+                   
+              </li>             
+                            
+              <li>
+                    <a href="./wjxz/">文件下载</a>
+                   
+              </li>             
+                            
+              <li>
+                    <a href="./wsdc/">网上调查</a>
+                   
+              </li>             
+                            
+              <li>
+                    <a href="./yxtj/">优秀后勤社区推荐</a>
+                   
+              </li>             
+              
+         </ul>
+     </div>
+</div>
+
+<script src="./js/jquery-1.8.0.min.js"></script>
+<script language="javascript">
+$(function(){
+	var day="";
+       var month="";
+       var ampm="";
+       var ampmhour="";
+       var myweekday="";
+       var year="";
+       mydate=new Date();
+       myweekday=mydate.getDay();
+       mymonth=mydate.getMonth()+1;
+       myday= mydate.getDate();
+       year= mydate.getFullYear();
+       if(myweekday == 0)
+       weekday=" 星期日 ";
+       else if(myweekday == 1)
+       weekday=" 星期一 ";
+       else if(myweekday == 2)
+       weekday=" 星期二 ";
+       else if(myweekday == 3)
+       weekday=" 星期三 ";
+       else if(myweekday == 4)
+       weekday=" 星期四 ";
+       else if(myweekday == 5)
+       weekday=" 星期五 ";
+       else if(myweekday == 6)
+       weekday=" 星期六 ";
+	   var date = year+"年"+mymonth+"月"+myday+"日 "+"  "+weekday
+	   $("#dateContent").text(date);
+});
+</script>
+
+<script type="text/javascript">
+
+
+
+window.onload=function(){
+	GetWeather();
+}
+function GetWeather() {
+	    var date=new Date();
+		var cDate=date.getFullYear()+"-"+(date.getMonth()+2)+"-"+date.getDate();
+		$("#wPlace").text("北京");
+        $.getScript("http://php.weather.sina.com.cn/js.php?" + $.param({
+        city: "北京",
+        day:cDate,
+        password: "DJOYnieT8234jlsK"
+    }), function(json) {//数据返回
+        $("#weather").text(status1);
+        $("#wd").text(temperature1 + "°~"+temperature2+"°");
+		
+    });
+	
+	
+	//CreateScript('http://www.pm25.in/api/querys/pm2_5.json?callback=jsonpcallback&city=北京&avg=true&stations=no');
+	 $.ajax({
+        url: 'http://www.pm25.in/api/querys/pm2_5.json?city=北京&avg=true&stations=no',
+        dataType: "json",
+		type:'get',
+        //jsonpCallback: "callback",
+        success: function (data) {
+            console.log(data)
+        }
+    })
+}
+function CreateScript(src) {
+    $("<script><//script>").attr("src", src).appendTo("body")
+}
+function jsoncallback(data){
+	$("#pm").text(data[0].pm2_5);
+}
+
+
+function AddFavorite(sURL, sTitle)
+{
+    try
+    {
+        window.external.addFavorite(sURL, sTitle);
+    }
+    catch (e)
+    {
+        try
+        {
+            window.sidebar.addPanel(sTitle, sURL, "");
+        }
+        catch (e)
+        {
+            alert("加入收藏失败，请使用Ctrl+D进行添加");
+        }
+    }
+}
+
+function SetHome(obj,vrl){
+        try{
+                obj.style.behavior='url(#default#homepage)';obj.setHomePage(vrl);
+        }
+        catch(e){
+                if(window.netscape) {
+                        try {
+                                netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
+                        }
+                        catch (e) {
+                                alert("此操作被浏览器拒绝！\n请在浏览器地址栏输入“about:config”并回车\n然后将 [signed.applets.codebase_principal_support]的值设置为'true',双击即可。");
+                        }
+                        var prefs = Components.classes['@mozilla.org/preferences-service;1'].getService(Components.interfaces.nsIPrefBranch);
+                        prefs.setCharPref('browser.startup.homepage',vrl);
+                 }
+        }
+}
+
+</script>
+
+<div class="wrap">
+<!----------body---------->
+     <div class="public">
+     	  <div class="news">
+                  <div class="p_l">
+                        <!--banner-->
+                        <div class="wrapper">
+                                <div id="focusers">
+                                     <div id="focusWrap">
+                                         <ul>
+                                             
+                                                <li><a href="javascript:void(0)"><a href="./xwdt/201709/t20170930_32668.htm" target="_blank"><img src="./xwdt/201709/W020170930318189926236.png" alt="QQ图片20170930084110.png" width="360px" border="0"/></a></a><p><a href="javascript:void(0)"><a href="./xwdt/201709/t20170930_32668.htm" target="_blank" title="市教委举办北京市教育系统食品安全监测工作培训会">市教委举办北京市教育系统食品安全监测工作培训会</a></a></p></li>
+                                             
+                                                <li><a href="javascript:void(0)"><a href="./xwdt/201709/t20170926_32575.htm" target="_blank"><img src="./xwdt/201709/W020170926367399221208.jpg" alt="交大座谈会.jpg" width="360px" border="0"/></a></a><p><a href="javascript:void(0)"><a href="./xwdt/201709/t20170926_32575.htm" target="_blank" title="广东省教育厅李亚娟副巡视员带队调研学校后勤工作">广东省教育厅李亚娟副巡视员带队调研学校后勤工作</a></a></p></li>
+                                             
+                                                <li><a href="javascript:void(0)"><a href="./xwdt/201709/t20170921_32506.htm" target="_blank"><img src="./xwdt/201709/W020170921684361755347.png" alt="QQ图片20170921190137.png" width="360px" border="0"/></a></a><p><a href="javascript:void(0)"><a href="./xwdt/201709/t20170921_32506.htm" target="_blank" title="天津市教委考察团一行到中心调研">天津市教委考察团一行到中心调研</a></a></p></li>
+                                             
+                                                <li><a href="javascript:void(0)"><a href="./xwdt/201709/t20170907_32043.htm" target="_blank"><img src="./xwdt/201709/W020170921691008417538.png" alt="QQ图片20170921191306.png" width="360px" border="0"/></a></a><p><a href="javascript:void(0)"><a href="./xwdt/201709/t20170907_32043.htm" target="_blank" title="市教委大力开展学生公寓床上用品专项检查">市教委大力开展学生公寓床上用品专项检查</a></a></p></li>
+                                             
+                                                <li><a href="javascript:void(0)"><a href="./xwdt/201706/t20170619_20639.htm" target="_blank"><img src="./xwdt/201706/W020170619529316924654.jpg" alt="王定东委员调研学校基地直供工作.jpg" width="360px" border="0"/></a></a><p><a href="javascript:void(0)"><a href="./xwdt/201706/t20170619_20639.htm" target="_blank" title="王定东委员调研学校基地直供工作">王定东委员调研学校基地直供工作</a></a></p></li>
+                                                                                               
+                                          </ul>
+                                      </div>
+                                </div>
+                        </div>
+                  </div>
+                  <div class="p_c">
+                        <div class="p_t">
+                             <h3><b>新闻动态</b></h3>
+
+                             <span><a href="./xwdt/" target="_blank"><img src="images/more.png" /></a></span>
+                        </div>
+                        <ul class="n_u">
+                           
+		           <li>
+<span>2017-09-26</span><b></b><a href="./xwdt/201709/t20170930_32668.htm" target="_blank" title="市教委举办北京市教育系统食品安全监测工作培训会">市教委举办北京市教育系统食品安全监测工作培训会</a>
+		           </li>
+	                   
+		           <li>
+<span>2017-09-21</span><b></b><a href="./xwdt/201709/t20170926_32575.htm" target="_blank" title="广东省教育厅李亚娟副巡视员带队调研学校后勤工作">广东省教育厅李亚娟副巡视员带队调研学校后勤工作</a>
+		           </li>
+	                   
+		           <li>
+<span>2017-09-19</span><b></b><a href="./xwdt/201709/t20170921_32506.htm" target="_blank" title="天津市教委考察团一行到中心调研">天津市教委考察团一行到中心调研</a>
+		           </li>
+	                   
+		           <li>
+<span>2017-09-06</span><b></b><a href="./xwdt/201709/t20170907_32043.htm" target="_blank" title="市教委大力开展学生公寓床上用品专项检查">市教委大力开展学生公寓床上用品专项检查</a>
+		           </li>
+	                   
+		           <li>
+<span>2017-06-19</span><b></b><a href="./xwdt/201706/t20170619_20639.htm" target="_blank" title="王定东委员调研学校基地直供工作">王定东委员调研学校基地直供工作</a>
+		           </li>
+	                   
+		           <li>
+<span>2017-03-27</span><b></b><a href="./xwdt/201703/t20170323_18240.htm" target="_blank" title="北京市教委召开2017年全市学校后勤工作会">北京市教委召开2017年全市学校后勤工作会</a>
+		           </li>
+	                   
+		           <li>
+<span>2017-03-20</span><b></b><a href="./xwdt/201703/t20170323_18239.htm" target="_blank" title="教育部教育装备研究与发展中心主任曹志祥到北京调研校服工作">教育部教育装备研究与发展中心主任曹志祥到北...</a>
+		           </li>
+	                   
+		           <li>
+<span>2017-03-07</span><b></b><a href="./xwdt/201703/t20170307_18074.htm" target="_blank" title="“撸起袖子加油干，后勤再上新台阶”——记2017年学校后勤工作会暨公开党课">“撸起袖子加油干，后勤再上新台阶”——记201...</a>
+		           </li>
+	                   
+                      </ul>
+                  </div>
+          </div>
+          <div class="p_r">
+          	<div class="x_t">
+                     <h3><b>通知公告</b></h3>
+                     <span><a href="./tzgg/" target="_blank">更多>></a></span>
+                </div>
+                <ul class="n_u">
+                    
+		           <li><b></b><a href="./tzgg/201710/t20171013_32784.htm" target="_blank" title="北京市教育委员会关于做好2017-2018学年度校方责任保险及附加无过失责任保险工作的通知">北京市教育委员会关于做好2017-2018学年度校方责任保险及...</a></li>
+	            
+		           <li><b></b><a href="./tzgg/201710/t20171026_32911.htm" target="_blank" title="北京市教育委员会关于印发《北京市中小学校食堂管理办法（试行）》的通知">北京市教育委员会关于印发《北京市中小学校食堂管理办法...</a></li>
+	            
+		           <li><b></b><a href="./tzgg/201710/t20171026_32910.htm" target="_blank" title="北京市教育委员会 北京市食品药品监督管理局 北京市卫生和计划生育委员会
+　　       关于印发《北京市中小学校外供餐管理办法（试行）》的通知">北京市教育委员会 北京市食品药品监督管理局 北京市卫生...</a></li>
+	            
+		           <li><b></b><a href="./tzgg/201709/t20170930_32667.htm" target="_blank" title="北京市教育委员会关于开展高校学生食堂价格平抑资金使用管理情况专项检查的通知">北京市教育委员会关于开展高校学生食堂价格平抑资金使用...</a></li>
+	            
+		           <li><b></b><a href="./tzgg/201709/t20170913_32146.htm" target="_blank" title="关于举办北京市教育系统食品安全监测工作培训会的通知">关于举办北京市教育系统食品安全监测工作培训会的通知</a></li>
+	            
+		           <li><b></b><a href="./tzgg/201709/t20170911_32102.htm" target="_blank" title="关于开展2017年学生公交卡办理工作的通知">关于开展2017年学生公交卡办理工作的通知</a></li>
+	            
+		           <li><b></b><a href="./tzgg/201708/t20170829_31665.htm" target="_blank" title="北京市教育委员会 北京市食品药品监督管理局 北京市卫生与计划生育委员会
+　　关于开展2017年秋季开学校园及周边食品安全专项检查的通知">北京市教育委员会 北京市食品药品监督管理局 北京市卫生...</a></li>
+	            
+		           <li><b></b><a href="./tzgg/201708/t20170822_31590.htm" target="_blank" title="关于报送共享单车进校园有关工作情况的通知">关于报送共享单车进校园有关工作情况的通知</a></li>
+	            
+                </ul>
+               </div>
+     </div>
+     
+     <div class="public">
+          <div class="p_z">
+          	<div class="p_t">
+                     <h3><b>政策文件</b></h3>
+                     <span><a href="./zcwj/" target="_blank"><img src="images/more.png" /></a></span>
+                </div>
+                <ul class="n_u">
+                    
+		           <li><b></b><a href="./zcwj/201706/t20170630_23271.htm" target="_blank" title="北京市教育委员会 北京市财政局 关于调整提高北京高校学生食堂价格平抑资金标准的通知">北京市教育委员会 北京市财政局 关于调整提高北京高校学...</a></li>
+	            
+		           <li><b></b><a href="./zcwj/201707/t20170705_24082.htm" target="_blank" title="北京市教育委员会关于进一步推进高校后勤标准化创建工作的通知">北京市教育委员会关于进一步推进高校后勤标准化创建工作...</a></li>
+	            
+		           <li><b></b><a href="./zcwj/201706/t20170622_20941.htm" target="_blank" title="北京市教育委员会关于印发《北京高校标准化公寓、食堂和物业标准（2016版）》进一步推进高校后勤标准化建设工作的通知">北京市教育委员会关于印发《北京高校标准化公寓、食堂和...</a></li>
+	            
+		           <li><b></b><a href="./zcwj/201606/t20160629_14618.htm" target="_blank" title="关于印发《北京高校学生食堂价格平抑资金管理使用办法》的通知">关于印发《北京高校学生食堂价格平抑资金管理使用办法》...</a></li>
+	            
+		           <li><b></b><a href="./zcwj/201606/t20160629_14616.htm" target="_blank" title="水、电、气、暖类别及价格（2012.11.30更新）">水、电、气、暖类别及价格（2012.11.30更新）</a></li>
+	            
+		           <li><b></b><a href="./zcwj/201606/t20160629_14615.htm" target="_blank" title="【专辑】教育部加强高校学生公寓管理工作（2012.11.29更新）">【专辑】教育部加强高校学生公寓管理工作（2012.11.29更新）</a></li>
+	            
+                </ul>
+          </div>
+          <div class="p_z client">
+          	<div class="p_t">
+                     <h3><b>经验交流</b></h3>
+                     <span><a href="./jyjl/" target="_blank"><img src="images/more.png" /></a></span>
+                </div>
+                <ul class="n_u">
+                    
+		           <li><span>2016-12-01</span><b></b><a href="./jyjl/201612/t20161201_16126.htm" target="_blank" title="2016年北京高校后勤标准化工作培训会部分优秀学校交流材料">2016年北京高校后勤标准化工作培训会部分优秀...</a></li>
+	            
+		           <li><span>2016-09-30</span><b></b><a href="./jyjl/201609/t20160930_15742.htm" target="_blank" title="2016年北京市教育系统食品安全监测工作部分优秀学校交流材料">2016年北京市教育系统食品安全监测工作部分优...</a></li>
+	            
+		           <li><span>2016-09-08</span><b></b><a href="./jyjl/201609/t20160908_15461.htm" target="_blank" title="中国石油大学（北京）后勤多措并举，保障迎新秩序">中国石油大学（北京）后勤多措并举，保障迎新秩序</a></li>
+	            
+		           <li><span>2016-08-23</span><b></b><a href="http://mp.weixin.qq.com/s?__biz=MjM5NjY3NjEyMA==&mid=2653014457&idx=2&sn=dd4d03d5ecc5ef67ee6d84678a1d7216&scene=1&srcid=0823E1w7dpJzXj8oCcifvA7z#rd" target="_blank" title="最好吃的高校食堂，北京前十位都在这里">最好吃的高校食堂，北京前十位都在这里</a></li>
+	            
+		           <li><span>2014-01-28</span><b></b><a href="./jyjl/201512/t20151218_3133.htm" target="_blank" title="高校物业管理的困局与出路">高校物业管理的困局与出路</a></li>
+	            
+		           <li><span>2013-09-05</span><b></b><a href="./jyjl/201512/t20151218_3132.htm" target="_blank" title="住宿模式与大学生成长关系研究">住宿模式与大学生成长关系研究</a></li>
+	            
+                </ul>
+          </div>
+          <div class="p_r">
+          	<div class="p_g">
+                      <h3>管理机构与组织</h3>
+                </div>
+          	    <ul class="n_l" id="subContent">
+                     
+                    <li>
+                        <a href="http://www.bjedu.gov.cn/xxgk/jgszyzn/bjsjywyhjgszyzn/201603/t20160321_9327.html" target="_blank">市教委/n学校后勤处</a>
+                        <b class="orange1"></b>
+                    </li>
+                     
+                    <li>
+                        <a href="http://bslc.bjedu.cn/" target="_blank">北京学校/n后勤事务中心</a>
+                        <b class="orange2"></b>
+                    </li>
+                     
+                    <li>
+                        <a href="http://hqyjh.cueb.edu.cn" target="_blank">北京高校/n后勤研究会</a>
+                        <b class="orange3"></b>
+                    </li>
+                     
+                    <li>
+                        <a href="http://" target="_blank">北京教育学会/n中小学后勤管理分会</a>
+                        <b class="orange4"></b>
+                    </li>
+                    
+                </ul>
+          </div>
+     </div>
+     <div class="public">
+          <div class="news">
+                 <div class="c-index-banner">
+                    <ul>
+                           
+		           <li> <a href="http://www.bjedu.gov.cn/ztq/phsszt/" TARGET="_blank">
+                               <img src="./wzsy/yzxy/201604/W020160412495084887717_748_168.jpg" alt="合理膳食" width="748px" height="168px"/>
+		           </a></li>
+	                   
+		           <li> <a href="http://www.bjedu.gov.cn/ztq/phsszt/" TARGET="_blank">
+                               <img src="./wzsy/yzxy/201604/W020160412521001143671_748_168.jpg" alt="合理搭配" width="748px" height="168px"/>
+		           </a></li>
+	                   
+		           <li> <a href="http://www.bjedu.gov.cn/ztq/phsszt/" TARGET="_blank">
+                               <img src="./wzsy/yzxy/201604/W020160412537174272651_748_167.jpg" alt="营养搭配" width="748px" height="168px"/>
+		           </a></li>
+	                   
+                     </ul>
+                    <div class="bannerText"><img src="images/bannerText.png" width="311" height="73" /></div>
+                </div>
+          </div>
+          <div class="p_r c-r">
+          	<ul class="h-Icons">
+                    
+                        <li><a class="icons4" href="http://www.bjjdzg.org"  target="_blank" ><b></b><span>北京学校基地直供</span></a></li>
+                    
+                        <li><a class="icons3" href="http://111.200.254.2:8008/indexNew.aspx"  target="_blank" ><b></b><span>食品安全监测系统</span></a></li>
+                    
+                        <li><a class="icons2" href="http://jnjp.bjedu.cn"  target="_blank" ><b></b><span>节能减排应用平台</span></a></li>
+                    
+                        <li><a class="icons1" href="http://58.135.200.205/"  target="_blank" ><b></b><span>学校后勤监控平台</span></a></li>
+                    
+                </ul>
+          </div>
+     </div>
+     <div class="public" style="*margin-bottom:20px;">
+          <!------优秀后勤社区推荐------->
+          <div class="p_z">
+                <div class="p_t">
+                     <h3><b>优秀后勤社区推荐</b></h3>
+                     <span><a href="./yxtj/" target="_blank" ><img src="images/more.png" /></a></span>
+                </div>
+                <ul class="n_u">
+                    
+                        <li><b></b><a href="./yxtj/201609/t20160918_15587.htm" target="_blank" title="温馨人大">温馨人大</a></li>
+                    
+                        <li><b></b><a href="./yxtj/201609/t20160912_15487.htm" target="_blank" title="北师大后勤">北师大后勤</a></li>
+                    
+                        <li><b></b><a href="./yxtj/201609/t20160902_15411.htm" target="_blank" title="营在校园平衡膳食行动">营在校园平衡膳食行动</a></li>
+                    
+                        <li><b></b><a href="./yxtj/201604/t20160420_10764.htm" target="_blank" title="高绿一期">高绿一期</a></li>
+                    
+                </ul>
+          </div>
+          <!------网上调查------->
+          <div class="p_z client">
+          	<div class="p_t">
+                     <h3><b>网上调查</b></h3>
+                     <span><a href="./wsdc/" target="_blank"><img src="images/more.png" /></a></span>                     
+                </div>
+                <ul class="n_u">
+                    
+                </ul>
+          </div>
+          <!------联系方式------->
+          <div class="p_r">
+          	<div class="p_g telePhone">
+                     <h3>联系方式</h3>
+                </div>
+          	<ul class="n_u office" style="height:150px;">
+                    <li><b></b><a>办公电话：51686806</a></li>
+                    <li><b></b><a>传真：51686807</a></li>
+                    <li><b></b><a>邮政编码：100044</a></li>
+                    <li><b></b><a>电子邮件：bjxxhqw@126.com</a></li>
+                    <li><b></b><a>地址：海淀区高梁桥路44号</a></li>
+                </ul>
+          </div>
+     </div>
+<!----------//body---------->
+</div>
+<div class="code">
+	<img src="images/code.png" width="120" height="120" />
+</div>
+<!----------footer---------->
+     <div class="footer">
+          <div class="foot">
+              <p>Copyright © 北京学校后勤网, 2016-2020</p>
+              <p>技术支持：北京康邦科技股份有限公司　　联系电话：010-66058888</p>
+          </div>
+          <div class="code2">
+                    <img src="./images/code.png" width="120" height="120" />
+          </div>
+     </div>
+
+<script src="./js/jquery-1.7.2.min.js"></script>
+<script src="./js/jquery.kinMaxShow-1.1.min.js"></script>
+<script src="./js/scroll.js"></script>
+<script src="./js/unslider-min.js"></script>
+
+<script>
+$(document).ready(function(){ 
+    $("#kinMaxShow").kinMaxShow();  
+    $(".h-Icons li:last").addClass("iconLast");
+    $("#subContent li a").each(function(){
+	content = $(this).text();
+	content = content.replace("/n","<br>");
+        $(this).html(content);		
+    });
+
+   $(function() { $('.c-index-banner').unslider({
+      arrows: false,
+      autoplay: true
+   }) });
+})
+
+</script>
+</body>
+</html>

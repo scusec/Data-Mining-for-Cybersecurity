@@ -1,0 +1,4407 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>校友总会</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<link type="text/css" href="/_css/_system/system.css" rel="stylesheet"/>
+<link type="text/css" href="/_upload/site/1/style/89/89.css" rel="stylesheet"/>
+<link type="text/css" href="/_upload/site/00/1e/30/style/113/113.css" rel="stylesheet"/>
+       <LINK href="/_css/tpl2/default/portlet/dtjt/9/dtjt9.css" type="text/css" rel="stylesheet">
+       <LINK href="/_css/tpl2/system.css" type="text/css" rel="stylesheet"> 
+<link type="text/css" href="/_js/_portletPlugs/sudyExtend/sudyExtend.css" rel="stylesheet" />
+       <LINK href="/_css/tpl2/default/default.css" type="text/css" rel="stylesheet"> 
+<link type="text/css" href="/_js/_portletPlugs/simpleNews/css/simplenews.css" rel="stylesheet" />
+<link type="text/css" href="/_js/_portletPlugs/sudyNavi/css/sudyNav.css" rel="stylesheet" />
+
+<script language="javascript" src="/_js/jquery.min.js" sudy-wp-context="" sudy-wp-siteId="30"></script>
+<script language="javascript" src="/_js/jquery.sudy.wp.visitcount.js"></script>
+<script type="text/javascript" src="/_js/_portletPlugs/sudyExtend/sudyExtend.js"></script>
+<script type="text/javascript" src="/_js/_portletPlugs/sudyNavi/jquery.sudyNav.js"></script>
+<link href="/_upload/tpl/00/57/87/template87/extends.css" type="text/css" rel="stylesheet" media="all" />
+<script language="javascript" src="/_upload/tpl/00/57/87/template87/extends.js"></script>
+<link href="/_upload/tpl/00/57/87/template87/style.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+<!--
+.STYLE1 {
+	color: #42a00b
+}
+.STYLE2 {
+	color: #FFFFFF
+}
+.STYLE3 {
+	font-size: 16px;
+	font-weight: bold;
+}
+.STYLE4 {
+	font-size: 16px;
+	color: #FF0000;
+}
+.STYLE5 {
+	font-size: 14px
+}
+-->
+</style>
+</head>
+<script language="javascript">
+function showplan(id){
+	for(i=1;i<3;i++){
+		document.getElementById("plan"+i).className = 'searchtop';
+		document.getElementById("searchplan"+i).style.display = 'none';
+	}
+	document.getElementById("plan"+id).className = 'searchRightthis';
+	document.getElementById("searchplan"+id).style.display = 'inline';
+}
+
+function checklogin(){
+	if(document.getElementById("username").value == ""){
+		alert("请输入用户名!");
+		return false;
+	}else if(document.getElementById("password").value == ""){
+		alert("请输入密码!");
+		return false;
+	}else if(document.getElementById("validatecode").value == ""){
+		alert("请输入验证码!");
+		return false;
+	}else{
+		document.getElementById("loginform").action = 'myweb.html';
+	}
+}
+function allclassajax(url){
+//alert(url);
+var xmlHttp = new ActiveXObject("Msxml2.XMLHTTP");
+		xmlHttp.open("get",url,true);
+		xmlHttp.onreadystatechange = function(){
+			if(xmlHttp.readyState==4){
+				document.getElementById("allclassplan").innerHTML = xmlHttp.responseText;
+			}else{
+				document.getElementById("allclassplan").innerHTML = "<table bgcolor='#ffff66'><tr><td align='center'>正在读取数据中...</td></tr></table>"
+			}
+		}
+		xmlHttp.send();
+}
+function classvisitstateajax(url){
+	var xmlHttp = new ActiveXObject("Msxml2.XMLHTTP");
+			xmlHttp.open("get",url,true);
+			xmlHttp.onreadystatechange = function(){
+				if(xmlHttp.readyState==4){
+					document.getElementById("visitstateplan").innerHTML = xmlHttp.responseText;
+				}else{
+					document.getElementById("visitstateplan").innerHTML = "<table bgcolor='#ffff66'><tr><td align='center'>正在读取数据中...</td></tr></table>"
+				}
+			}
+			xmlHttp.send();
+}
+
+function classnewestajax(url){
+	var xmlHttp = new ActiveXObject("Msxml2.XMLHTTP");
+			xmlHttp.open("get",url,true);
+			xmlHttp.onreadystatechange = function(){
+				if(xmlHttp.readyState==4){
+					document.getElementById("newestclassplan").innerHTML = xmlHttp.responseText;
+				}else{
+					document.getElementById("newestclassplan").innerHTML = "<table bgcolor='#ffff66'><tr><td align='center'>正在读取数据中...</td></tr></table>"
+				}
+			}
+			xmlHttp.send();
+}
+
+function classmatebirthdayajax(url){
+	var xmlHttp = new ActiveXObject("Msxml2.XMLHTTP");
+			xmlHttp.open("get",url,true);
+			xmlHttp.onreadystatechange = function(){
+				if(xmlHttp.readyState==4){
+					document.getElementById("classmatebirthdayplan").innerHTML = xmlHttp.responseText;
+				}else{
+					document.getElementById("classmatebirthdayplan").innerHTML = "<table bgcolor='#ffff66'><tr><td align='center'>正在读取数据中...</td></tr></table>"
+				}
+			}
+			xmlHttp.send();
+}
+function searchclassmate(){
+	searchajax("search_classmate.asp?realname="+document.getElementById("realname").value);
+}
+
+function searchclass(){
+	searchajax("class_search.asp?classname="+document.getElementById("classname").value+"&university="+document.getElementById("university").value+"&joinyear="+document.getElementById("joinyear").value+"&record="+document.getElementById("record").value);
+}
+
+function searchajax(url){
+//alert(url);
+document.getElementById("mysearchplan").style.display = 'inline';
+	var xmlHttp = new ActiveXObject("Msxml2.XMLHTTP");
+			xmlHttp.open("get",url,true);
+			xmlHttp.onreadystatechange = function(){
+				if(xmlHttp.readyState==4){
+					document.getElementById("searchplan").innerHTML = xmlHttp.responseText;
+				}else{
+					document.getElementById("searchplan").innerHTML = "<table bgcolor='#ffff66'><tr><td align='center'>正在读取数据中...</td></tr></table>"
+				}
+			}
+			xmlHttp.send();
+}
+/////////////////////////////////////////////////
+</script>
+<script type="text/javascript">
+function changeDiv(displayId,hiddenIds,activeId,inactiveIds,activeImg,inactiveImgs){
+	//var imgPath="images/";
+	var hiddenDivs=hiddenIds.split(",");
+	var imgs=inactiveIds.split(",");
+	var imgNames=inactiveImgs.split(",");
+	for (i in hiddenDivs){
+		document.getElementById(hiddenDivs[i]).style.display="none";
+		document.getElementById(imgs[i]).src=imgNames[i];
+	}
+	document.getElementById(displayId).style.display="";
+	document.getElementById(activeId).src=activeImg;
+}</script>
+<script type="text/javascript">
+function changeDiv(displayId,hiddenIds,activeId,inactiveIds,activeImg,inactiveImgs){
+	//var imgPath="images/";
+	var hiddenDivs=hiddenIds.split(",");
+	var imgs=inactiveIds.split(",");
+	var imgNames=inactiveImgs.split(",");
+	for (i in hiddenDivs){
+		document.getElementById(hiddenDivs[i]).style.display="none";
+		document.getElementById(imgs[i]).src=imgNames[i];
+	}
+	document.getElementById(displayId).style.display="";
+	document.getElementById(activeId).src=activeImg;
+}</script>
+<body>
+<div id="FloatDiv88" style="\ position:absolute;display:none;top:0;left:0;z-index:9999" onmouseover="floatdivstop88()" onmouseout="floatdivstart88()">
+  <table border="0" cellspacing="0" cellpadding="0">
+    <tbody>
+      <tr align="right">
+        <td> <img src="/_upload/tpl/00/57/87/template87/images/delete.jpg" alt="关闭" width="13" height="13" onclick="deleteFloatDiv88();" /> </td>
+      </tr>
+      <tr>
+        <td>
+          <table cellspacing="0" cellpadding="0" border="0" width="264" height="286">
+            <tbody>
+              <tr>
+                <td height="286" width="100%" background="/_upload/tpl/00/57/87/template87/images/bless110.jpg" valign="top"> </td>
+              </tr>
+              <tr>
+                <td height="10" width="100%"> </td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<script language="javascript" _ue_org_tagname="script">var canmove88=1;var vmin88=2;var vmax88=5;var vr88=2;var timer188;function Chip88(chipname,width,height){this.named=chipname;this.vx=vmin88+vmax88*Math.random();this.vy=vmin88+vmax88*Math.random();this.w=width;this.h=height;this.xx=0;this.yy=0;this.timer1=null;}function movechip88(chipname){if(canmove88==1){  chip=FloatDiv88;  pageX=window.document.body.scrollLeft; pageW=window.document.body.offsetWidth-8; pageY=window.document.body.scrollTop; pageH=window.document.body.clientHeight; ; chip.xx=chip.xx+chip.vx;chip.yy=chip.yy+chip.vy; chip.vx+=vr88*(Math.random()-0.5);chip.vy+=vr88*(Math.random()-0.5);  if(chip.vx>(vmax88+vmin88)){	chip.vx=(vmax88+vmin88)*1-chip.vx;     }  if(chip.vx<(-vmax88-vmin88)){     chip.vx=(-vmax88-vmin88)*1-chip.vx;} if(chip.vy>(vmax88+vmin88)){chip.vy=(vmax88+vmin88)*1-chip.vy;  }if(chip.vy<(-vmax88-vmin88)){    chip.vy=(-vmax88-vmin88)*1-chip.vy;}if(chip.xx<=pageX){   chip.xx=pageX;   chip.vx=vmin88+vmax88*Math.random();}if(chip.xx>=pageX+pageW-chip.w){   chip.xx=pageX+pageW-chip.w;   chip.vx=-vmin88-vmax88*Math.random();}if(chip.yy<=pageY) {  chip.yy=pageY;  chip.vy=vmin88+vmax88*Math.random(); }if(chip.yy>=pageY+pageH-chip.h){chip.yy=pageY+pageH-chip.h; chip.vy=-vmin88-vmax88*Math.random(); }var a = 'document.getElementById("'+chip.named+'").style.left=chip.xx;';var b = 'document.getElementById("'+chip.named+'").style.top=chip.yy;';eval(a);eval(b);}chip.timer1=setTimeout('movechip88('+chip.named+')',100);}</script><script language="JavaScript" _ue_org_tagname="script">var FloatDiv88;function FloatDiv88(){FloatDiv88=new Chip88('FloatDiv88',100,100);movechip88('FloatDiv88');}FloatDiv88();</script><script _ue_org_tagname="script">function deleteFloatDiv88(){document.getElementById('FloatDiv88').style.display='none';}</script><script language="javascript" _ue_org_tagname="script">function floatdivstop88(){	canmove88=0;}function floatdivstart88(){canmove88=1;}</script>
+<div id="head">
+  <table width="100%" border="0" cellpadding="0" cellspacing="0" background="/_upload/tpl/00/57/87/template87/images/head_2.gif">
+    <tbody>
+      <tr>
+        <td width="319"> <img src="/_upload/tpl/00/57/87/template87/images/head_1.gif" /> </td>
+        <td valign="top">
+          <table width="98%" border="0" align="right" cellpadding="0" cellspacing="0">
+            <tbody>
+              <tr>
+                <td>
+                  <table width="195" border="0" align="right" cellpadding="0" cellspacing="0">
+                    <tbody>
+                      <tr>
+                        <td width="192" height="30" align="right" colspan="2"> <span style="font-size:14px; font-weight:bold;">东南大学<a href="http://xysq.seu.edu.cn" style=" font-size:13px;color:#F00; font-weight:bold;" target="_blank">校友社区</a>登录和注册</span> </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+              </tr>
+              <tr>
+                <td valign="bottom">
+                  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tbody>
+                      <tr>
+                        <td width="81"> </td>
+                        <td width="329" align="right" valign="bottom" class="STYLE1"> 
+                          <script type="text/javascript" _ue_org_tagname="script">
+var oldDate = new Date(2011,4,23,0,0,0);
+var nowDate = new Date();
+var week = "日,一,二,三,四,五,六".split(',');
+var str = nowDate.getFullYear()+"年"+(nowDate.getMonth() + 1)+"月"+nowDate.getDate()+"日 星期"+week[nowDate.getDay()];
+document.write(str);
+</script> 
+                        </td>
+                        <td width="17" valign="bottom"> </td>
+                        <td valign="bottom" width="176">
+                          <div align="right" class="STYLE3"> <span class="STYLE5">请从</span><a href="http://seuaa-w1.seu.edu.cn/apps/schoolfellow/schoolfellow.faces?siteId=15&amp;pageId=0" target="_self"><span style="color:#F00;">同学录</span></a><span class="STYLE5">登录和注册</span> </div>
+                        </td>
+                        <td width="10"> <a href="http://seuaa.seu.edu.cn/apps/schoolfellow/register/registerIndex.face"></a> </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+        <td width="24" align="right"> <img src="/_upload/tpl/00/57/87/template87/images/head_3.gif" /> </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div id="container_page">
+  <div id="page"> <img src="/_upload/tpl/00/57/87/template87/images/head.jpg" /> </div>
+  <div id="nav">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tbody>
+        <tr>
+          <td width="23"> <img src="/_upload/tpl/00/57/87/template87/images/main2008_19.jpg" width="23" height="36" /> </td>
+          <td background="/_upload/tpl/00/57/87/template87/images/main2008_20.jpg">
+            <div frag="面板1">
+              <div frag="窗口1" portletmode="simpleSudyNavi" configs="{'c7':'2','c4':'_self','c6':'wp1_dl','c3':'20','c8':'2','c2':'1','c5':'1'}" contents="{'c2':'0'}">
+                
+<style type="text/css"> 
+#wp_nav_w1 .wp_nav { margin:0 auto;}
+#wp_nav_w1 .wp_nav .nav-item{float:none;}
+#wp_nav_w1 .wp_nav .on {}
+#wp_nav_w1 .wp_nav .nav-item .mark { font-style:normal;}
+#wp_nav_w1 .wp_nav .nav-item a{  font-family:inherit; text-align:left;}
+#wp_nav_w1 .wp_nav .nav-item a:hover,.wp_nav .nav-item .parent{}
+#wp_nav_w1 .wp_nav .nav-item a .item-name { display:inline-block;vertical-align:top; cursor:pointer;}
+#wp_nav_w1 .wp_nav .sub-nav { border:1px solid #006ba7;line-height: 1;background: #a3d2ea;padding:1px 0px; margin-top:-2px;}
+#wp_nav_w1 .wp_nav .sub-nav .nav-item .mark {background:#f5f5f5;}
+#wp_nav_w1 .wp_nav .sub-nav .nav-item a {background: #a3d2ea;}
+#wp_nav_w1 .wp_nav .sub-nav .nav-item a .item-name { border:1px solid #64a8cf; margin:0px 2px 1px 2px;padding:0px 10px; line-height:20px;display:block;}
+#wp_nav_w1 .wp_nav .sub-nav .nav-item a:hover .item-name,.wp_nav .sub-nav .nav-item a.parent .item-name{background:#deeff8; border-color: #006ba7;}
+</style> 
+<div id="wp_nav_w1"> 
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="wp_nav" data-nav-config="{drop_v: 'down', drop_w: 'right', dir: 'y', opacity_main: '1', opacity_sub: '0.8', dWidth: '0'}"> 
+<tr> 
+<td> 
+
+                  <table height="35" border="0" align="center" cellpadding="0" cellspacing="0">
+                    <tbody>
+                      <tr>
+                        <td width="25" height="28" align="center" class="nav style2"> | </td>
+                        <td valign="middle" class="wlink">  
+ <div class="nav-item"> 
+ <div style="white-space:nowrap" class=""><a href="http://seuaa.seu.edu.cn/main.htm" title="首    页" class="" target="_self">首    页</a></div> 
+          
+</div> 
+ </td>
+                      </tr>
+                    </tbody>
+                  </table></td> 
+<td> 
+
+                  <table height="35" border="0" align="center" cellpadding="0" cellspacing="0">
+                    <tbody>
+                      <tr>
+                        <td width="25" height="28" align="center" class="nav style2"> | </td>
+                        <td valign="middle" class="wlink">  
+ <div class="nav-item"> 
+ <div style="white-space:nowrap" class=""><a href="/1627/list.htm" title="总会信息" class="" target="_self">总会信息</a></div> 
+          
+</div> 
+ </td>
+                      </tr>
+                    </tbody>
+                  </table></td> 
+<td> 
+
+                  <table height="35" border="0" align="center" cellpadding="0" cellspacing="0">
+                    <tbody>
+                      <tr>
+                        <td width="25" height="28" align="center" class="nav style2"> | </td>
+                        <td valign="middle" class="wlink">  
+ <div class="nav-item"> 
+ <div style="white-space:nowrap" class=""><a href="/1628/list.htm" title="校友分会" class="" target="_self">校友分会</a></div> 
+          
+         <ul class="sub-nav"> 
+              
+             <li class="nav-item i3-1 "> 
+                 <a href="/xjp/list.htm" title="新加坡" target="_self"><span class="item-name">新加坡</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+             <li class="nav-item i3-2 "> 
+                 <a href="/12399/list.htm" title="德国" target="_self"><span class="item-name">德国</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+             <li class="nav-item i3-3 "> 
+                 <a href="/12398/list.htm" title="澳洲" target="_self"><span class="item-name">澳洲</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+             <li class="nav-item i3-4 "> 
+                 <a href="/12397/list.htm" title="英国" target="_self"><span class="item-name">英国</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+             <li class="nav-item i3-5 "> 
+                 <a href="/12396/list.htm" title="加拿大" target="_self"><span class="item-name">加拿大</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+             <li class="nav-item i3-6 "> 
+                 <a href="/1656/list.htm" title="美国" target="_self"><span class="item-name">美国</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+             <li class="nav-item i3-7 "> 
+                 <a href="/1655/list.htm" title="台湾" target="_self"><span class="item-name">台湾</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+             <li class="nav-item i3-8 "> 
+                 <a href="/1654/list.htm" title="香港" target="_self"><span class="item-name">香港</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+             <li class="nav-item i3-9 "> 
+                 <a href="/1640/list.htm" title="江西" target="_self"><span class="item-name">江西</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+             <li class="nav-item i3-10 "> 
+                 <a href="/1653/list.htm" title="贵州" target="_self"><span class="item-name">贵州</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+             <li class="nav-item i3-11 "> 
+                 <a href="/1652/list.htm" title="山西" target="_self"><span class="item-name">山西</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+             <li class="nav-item i3-12 "> 
+                 <a href="/1649/list.htm" title="海南" target="_self"><span class="item-name">海南</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+             <li class="nav-item i3-13 "> 
+                 <a href="/1648/list.htm" title="陕西" target="_self"><span class="item-name">陕西</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+             <li class="nav-item i3-14 "> 
+                 <a href="/1647/list.htm" title="云南" target="_self"><span class="item-name">云南</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+             <li class="nav-item i3-15 "> 
+                 <a href="/1639/list.htm" title="浙江" target="_self"><span class="item-name">浙江</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+             <li class="nav-item i3-16 "> 
+                 <a href="/1646/list.htm" title="四川" target="_self"><span class="item-name">四川</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+             <li class="nav-item i3-17 "> 
+                 <a href="/1645/list.htm" title="广东" target="_self"><span class="item-name">广东</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+             <li class="nav-item i3-18 "> 
+                 <a href="/1644/list.htm" title="河南" target="_self"><span class="item-name">河南</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+             <li class="nav-item i3-19 "> 
+                 <a href="/1643/list.htm" title="湖北" target="_self"><span class="item-name">湖北</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+             <li class="nav-item i3-20 "> 
+                 <a href="/1642/list.htm" title="湖南" target="_self"><span class="item-name">湖南</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+             <li class="nav-item i3-21 "> 
+                 <a href="/1638/list.htm" title="山东" target="_self"><span class="item-name">山东</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+             <li class="nav-item i3-22 "> 
+                 <a href="/1641/list.htm" title="福建" target="_self"><span class="item-name">福建</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+             <li class="nav-item i3-23 "> 
+                 <a href="/1637/list.htm" title="安徽" target="_self"><span class="item-name">安徽</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+             <li class="nav-item i3-24 "> 
+                 <a href="/1636/list.htm" title="江苏" target="_self"><span class="item-name">江苏</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+             <li class="nav-item i3-25 "> 
+                 <a href="/1635/list.htm" title="黑龙江" target="_self"><span class="item-name">黑龙江</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+             <li class="nav-item i3-26 "> 
+                 <a href="/1634/list.htm" title="吉林" target="_self"><span class="item-name">吉林</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+             <li class="nav-item i3-27 "> 
+                 <a href="/1633/list.htm" title="辽宁" target="_self"><span class="item-name">辽宁</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+             <li class="nav-item i3-28 "> 
+                 <a href="/1631/list.htm" title="天津" target="_self"><span class="item-name">天津</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+             <li class="nav-item i3-29 "> 
+                 <a href="/1630/list.htm" title="上海" target="_self"><span class="item-name">上海</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+             <li class="nav-item i3-30 "> 
+                 <a href="/1629/list.htm" title="北京" target="_self"><span class="item-name">北京</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+             <li class="nav-item i3-31 "> 
+                 <a href="/yxfh/list.htm" title="院系分会" target="_self"><span class="item-name">院系分会</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+         </ul> 
+          
+</div> 
+ </td>
+                      </tr>
+                    </tbody>
+                  </table></td> 
+<td> 
+
+                  <table height="35" border="0" align="center" cellpadding="0" cellspacing="0">
+                    <tbody>
+                      <tr>
+                        <td width="25" height="28" align="center" class="nav style2"> | </td>
+                        <td valign="middle" class="wlink">  
+ <div class="nav-item"> 
+ <div style="white-space:nowrap" class=""><a href="http://seuaa-w1.seu.edu.cn/apps/schoolfellow/schoolfellow.faces" title="同 学 录" class="" target="_self">同 学 录</a></div> 
+          
+</div> 
+ </td>
+                      </tr>
+                    </tbody>
+                  </table></td> 
+<td> 
+
+                  <table height="35" border="0" align="center" cellpadding="0" cellspacing="0">
+                    <tbody>
+                      <tr>
+                        <td width="25" height="28" align="center" class="nav style2"> | </td>
+                        <td valign="middle" class="wlink">  
+ <div class="nav-item"> 
+ <div style="white-space:nowrap" class=""><a href="http://seuaa.seu.edu.cn/_t90/main.htm" title="校友捐赠" class="" target="_self">校友捐赠</a></div> 
+          
+         <ul class="sub-nav"> 
+              
+             <li class="nav-item i5-1 "> 
+                 <a href="/1659/list.htm" title="东南大学捐赠指南" target="_self"><span class="item-name">东南大学捐赠指南</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+             <li class="nav-item i5-2 "> 
+                 <a href="/1660/list.htm" title="庆祝东南大学建校110周年" target="_self"><span class="item-name">庆祝东南大学建校110周年</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+         </ul> 
+          
+</div> 
+ </td>
+                      </tr>
+                    </tbody>
+                  </table></td> 
+<td> 
+
+                  <table height="35" border="0" align="center" cellpadding="0" cellspacing="0">
+                    <tbody>
+                      <tr>
+                        <td width="25" height="28" align="center" class="nav style2"> | </td>
+                        <td valign="middle" class="wlink">  
+ <div class="nav-item"> 
+ <div style="white-space:nowrap" class=""><a href="/2011/list.htm" title="校友企业" class="" target="_self">校友企业</a></div> 
+          
+</div> 
+ </td>
+                      </tr>
+                    </tbody>
+                  </table></td> 
+<td> 
+
+                  <table height="35" border="0" align="center" cellpadding="0" cellspacing="0">
+                    <tbody>
+                      <tr>
+                        <td width="25" height="28" align="center" class="nav style2"> | </td>
+                        <td valign="middle" class="wlink">  
+ <div class="nav-item"> 
+ <div style="white-space:nowrap" class=""><a href="/1667/list.htm" title="校友业绩" class="" target="_self">校友业绩</a></div> 
+          
+         <ul class="sub-nav"> 
+              
+             <li class="nav-item i7-1 "> 
+                 <a href="/1668/list.htm" title="《校友业绩》丛书（第一卷）" target="_self"><span class="item-name">《校友业绩》丛书（第一卷）</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+             <li class="nav-item i7-2 "> 
+                 <a href="/1673/list.htm" title="《校友业绩》丛书（第二卷）" target="_self"><span class="item-name">《校友业绩》丛书（第二卷）</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+             <li class="nav-item i7-3 "> 
+                 <a href="/1680/list.htm" title="《校友业绩》丛书（第三卷）" target="_self"><span class="item-name">《校友业绩》丛书（第三卷）</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+         </ul> 
+          
+</div> 
+ </td>
+                      </tr>
+                    </tbody>
+                  </table></td> 
+<td> 
+
+                  <table height="35" border="0" align="center" cellpadding="0" cellspacing="0">
+                    <tbody>
+                      <tr>
+                        <td width="25" height="28" align="center" class="nav style2"> | </td>
+                        <td valign="middle" class="wlink">  
+ <div class="nav-item"> 
+ <div style="white-space:nowrap" class=""><a href="/1682/list.htm" title="《校友通讯》" class="" target="_self">《校友通讯》</a></div> 
+          
+         <ul class="sub-nav"> 
+              
+             <li class="nav-item i8-1 "> 
+                 <a href="/dndxwxytxw53q/list.htm" title="东南大学《校友通讯》53期" target="_self"><span class="item-name">东南大学《校友通讯》53期</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+             <li class="nav-item i8-2 "> 
+                 <a href="/dndxwxytxw52q/list.htm" title="东南大学《校友通讯》52期" target="_self"><span class="item-name">东南大学《校友通讯》52期</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+             <li class="nav-item i8-3 "> 
+                 <a href="/dndxwxytxw51q/list.htm" title="东南大学《校友通讯》51期" target="_self"><span class="item-name">东南大学《校友通讯》51期</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+             <li class="nav-item i8-4 "> 
+                 <a href="/dndxwzydxwxytxw50w27hk/list.htm" title="东南大学、中央大学《校友通讯》50、28期合刊" target="_self"><span class="item-name">东南大学、中央大学《校友通讯》50、28期合...</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+             <li class="nav-item i8-5 "> 
+                 <a href="/dndxwxytxw49q/list.htm" title="东南大学《校友通讯》49期" target="_self"><span class="item-name">东南大学《校友通讯》49期</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+             <li class="nav-item i8-6 "> 
+                 <a href="/1500/list.htm" title="东南大学、中央大学《校友通讯》48、26期合刊" target="_self"><span class="item-name">东南大学、中央大学《校友通讯》48、26期合...</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+             <li class="nav-item i8-7 "> 
+                 <a href="/dndxwxytxw47q/list.htm" title="东南大学《校友通讯》47期" target="_self"><span class="item-name">东南大学《校友通讯》47期</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+             <li class="nav-item i8-8 "> 
+                 <a href="/1683/list.htm" title="东南大学、中央大学《校友通讯》46、24期合刊" target="_self"><span class="item-name">东南大学、中央大学《校友通讯》46、24期合...</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+             <li class="nav-item i8-9 "> 
+                 <a href="/1695/list.htm" title="东南大学《校友通讯》45期" target="_self"><span class="item-name">东南大学《校友通讯》45期</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+             <li class="nav-item i8-10 "> 
+                 <a href="/1705/list.htm" title="东南大学《校友通讯》44期" target="_self"><span class="item-name">东南大学《校友通讯》44期</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+             <li class="nav-item i8-11 "> 
+                 <a href="/1713/list.htm" title="东南大学、中央大学《校友通讯》43、22期合刊" target="_self"><span class="item-name">东南大学、中央大学《校友通讯》43、22期合...</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+             <li class="nav-item i8-12 "> 
+                 <a href="/1719/list.htm" title="东南大学《校友通讯》42期" target="_self"><span class="item-name">东南大学《校友通讯》42期</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+             <li class="nav-item i8-13 "> 
+                 <a href="/1732/list.htm" title="东南大学《校友通讯》41期" target="_self"><span class="item-name">东南大学《校友通讯》41期</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+             <li class="nav-item i8-14 "> 
+                 <a href="/1748/list.htm" title="东南大学《校友通讯》40期" target="_self"><span class="item-name">东南大学《校友通讯》40期</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+             <li class="nav-item i8-15 "> 
+                 <a href="/1763/list.htm" title="东南大学、中央大学《校友通讯》39、20期合刊" target="_self"><span class="item-name">东南大学、中央大学《校友通讯》39、20期合...</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+             <li class="nav-item i8-16 "> 
+                 <a href="/1777/list.htm" title="东南大学《校友通讯》38期" target="_self"><span class="item-name">东南大学《校友通讯》38期</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+             <li class="nav-item i8-17 "> 
+                 <a href="/1793/list.htm" title="东南大学《校友通讯》37期" target="_self"><span class="item-name">东南大学《校友通讯》37期</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+             <li class="nav-item i8-18 "> 
+                 <a href="/1807/list.htm" title="东南大学《校友通讯》36期" target="_self"><span class="item-name">东南大学《校友通讯》36期</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+             <li class="nav-item i8-19 "> 
+                 <a href="/1822/list.htm" title="中央大学、东南大学《校友通讯》17、35期合刊" target="_self"><span class="item-name">中央大学、东南大学《校友通讯》17、35期合...</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+             <li class="nav-item i8-20 "> 
+                 <a href="/1836/list.htm" title="东南大学《校友通讯》34 期" target="_self"><span class="item-name">东南大学《校友通讯》34 期</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+             <li class="nav-item i8-21 "> 
+                 <a href="/1850/list.htm" title="东南大学《校友通讯》33 期" target="_self"><span class="item-name">东南大学《校友通讯》33 期</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+             <li class="nav-item i8-22 "> 
+                 <a href="/1862/list.htm" title="东南大学《校友通讯》32 期" target="_self"><span class="item-name">东南大学《校友通讯》32 期</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+             <li class="nav-item i8-23 "> 
+                 <a href="/1876/list.htm" title="中央大学、东南大学《校友通讯》16、31 期合刊" target="_self"><span class="item-name">中央大学、东南大学《校友通讯》16、31 期...</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+             <li class="nav-item i8-24 "> 
+                 <a href="/1889/list.htm" title="东南大学《校友通讯》30 期" target="_self"><span class="item-name">东南大学《校友通讯》30 期</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+             <li class="nav-item i8-25 "> 
+                 <a href="/1903/list.htm" title="东南大学《校友通讯》29 期" target="_self"><span class="item-name">东南大学《校友通讯》29 期</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+             <li class="nav-item i8-26 "> 
+                 <a href="/1915/list.htm" title="东南大学《校友通讯》28 期" target="_self"><span class="item-name">东南大学《校友通讯》28 期</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+             <li class="nav-item i8-27 "> 
+                 <a href="/1928/list.htm" title="中央大学、东南大学《校友通讯》14、27 期合刊" target="_self"><span class="item-name">中央大学、东南大学《校友通讯》14、27 期...</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+             <li class="nav-item i8-28 "> 
+                 <a href="/1942/list.htm" title="东南大学《校友通讯》26 期" target="_self"><span class="item-name">东南大学《校友通讯》26 期</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+             <li class="nav-item i8-29 "> 
+                 <a href="/1955/list.htm" title="东南大学《校友通讯》25 期" target="_self"><span class="item-name">东南大学《校友通讯》25 期</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+             <li class="nav-item i8-30 "> 
+                 <a href="/1967/list.htm" title="东南大学《校友通讯》24 期" target="_self"><span class="item-name">东南大学《校友通讯》24 期</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+             <li class="nav-item i8-31 "> 
+                 <a href="/1980/list.htm" title="中央大学、东南大学《校友通讯》12、23 期合刊" target="_self"><span class="item-name">中央大学、东南大学《校友通讯》12、23 期...</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+         </ul> 
+          
+</div> 
+ </td>
+                      </tr>
+                    </tbody>
+                  </table></td> 
+<td> 
+
+                  <table height="35" border="0" align="center" cellpadding="0" cellspacing="0">
+                    <tbody>
+                      <tr>
+                        <td width="25" height="28" align="center" class="nav style2"> | </td>
+                        <td valign="middle" class="wlink">  
+ <div class="nav-item"> 
+ <div style="white-space:nowrap" class=""><a href="/1990/list.htm" title="梅庵文苑" class="" target="_self">梅庵文苑</a></div> 
+          
+</div> 
+ </td>
+                      </tr>
+                    </tbody>
+                  </table></td> 
+<td> 
+
+                  <table height="35" border="0" align="center" cellpadding="0" cellspacing="0">
+                    <tbody>
+                      <tr>
+                        <td width="25" height="28" align="center" class="nav style2"> | </td>
+                        <td valign="middle" class="wlink">  
+ <div class="nav-item"> 
+ <div style="white-space:nowrap" class=""><a href="http://history.seu.edu.cn/" title="校 史 馆" class="" target="_self">校 史 馆</a></div> 
+          
+</div> 
+ </td>
+                      </tr>
+                    </tbody>
+                  </table></td> 
+<td> 
+
+                  <table height="35" border="0" align="center" cellpadding="0" cellspacing="0">
+                    <tbody>
+                      <tr>
+                        <td width="25" height="28" align="center" class="nav style2"> | </td>
+                        <td valign="middle" class="wlink">  
+ <div class="nav-item"> 
+ <div style="white-space:nowrap" class=""><a href="/2015/list.htm" title="联系我们" class="" target="_self">联系我们</a></div> 
+          
+</div> 
+ </td>
+                      </tr>
+                    </tbody>
+                  </table></td> 
+<td> 
+
+                  <table height="35" border="0" align="center" cellpadding="0" cellspacing="0">
+                    <tbody>
+                      <tr>
+                        <td width="25" height="28" align="center" class="nav style2"> | </td>
+                        <td valign="middle" class="wlink">  
+ <div class="nav-item"> 
+ <div style="white-space:nowrap" class=""><a href="http://map.seu.edu.cn" title="校园3D地图" class="" target="_blank">校园3D地图</a></div> 
+          
+</div> 
+ </td>
+                      </tr>
+                    </tbody>
+                  </table></td> 
+<td> 
+
+                  <table height="35" border="0" align="center" cellpadding="0" cellspacing="0">
+                    <tbody>
+                      <tr>
+                        <td width="25" height="28" align="center" class="nav style2"> | </td>
+                        <td valign="middle" class="wlink">  
+ <div class="nav-item"> 
+ <div style="white-space:nowrap" class=""><a href="http://seuaa-w1.seu.edu.cn/apps/schoolfellow/bless/blessMain.faces" title="校友祝福墙" class="" target="_self">校友祝福墙</a></div> 
+          
+</div> 
+ </td>
+                      </tr>
+                    </tbody>
+                  </table></td> 
+</tr> 
+</table> 
+ </div>
+              </div>
+            </div>
+          </td>
+          <td width="26"> <img src="/_upload/tpl/00/57/87/template87/images/main2008_22.jpg" /> </td>
+        </tr>
+      </tbody>
+    </table>
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tbody>
+        <tr>
+          <td height="8"> </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div id="container_content">
+    <div id="mainleft">
+      <table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#eaf5dc">
+        <tbody>
+          <tr>
+            <td height="192" align="center" valign="middle">
+              <div frag="面板11">
+                <div frag="窗口11" portletmode="tpl2_dtjt9" contents="{'c2':'1'}">
+                                  <!-- 多图交替9 图片 标题 切换 -->
+<div style="position:relative;overflow:hidden;width:220px;height:175px;">
+    <div class="dtjt9_div_img">
+        <img id="w11imgShow" name="w11imgShow" onclick="w11openWindow();" style="FILTER: revealTrans(duration=2,transition=20); border: 0; cursor: pointer;" src="/..//_css/tpl/default/images/loading.gif" width="220px" height="175px" vspace="0">
+        <div id='w11imgNumber' class="number"></div>
+    </div>
+    <div class="dtjt9_div_text">
+        <div id='w11imgTitle' class="dtjt9_div_text_title"><a href="javascript:void(0)"> </a></div>									
+    </div>
+</div>
+<script language="JavaScript" class="" >
+    var w11imgJsons = [
+    
+        
+            {
+            "src" : "/_upload/article/images/c1/77/369349e04c4a851c1d3277a12ebc/884ba472-b13b-4003-bb6a-261905ce6404.jpg",
+            "title" : "张广军校长在京看望部分北京校友",
+            "url" : "/2017/1009/c2004a200409/page.htm"
+            },
+        
+    
+        
+            {
+            "src" : "/_upload/article/images/78/72/c52269ea4be297bdf8df44818025/d8689fee-57c2-41e1-9c37-6aacba6616c3.jpg",
+            "title" : "密歇根校友会2017秋季聚会",
+            "url" : "/2017/1024/c2004a201609/page.htm"
+            },
+        
+    
+        
+            {
+            "src" : "/_upload/article/images/85/5c/5ebea961468dab9fbb482fa36e22/f72a672b-7d6b-42e7-9d03-f1d513a1a572.jpg",
+            "title" : "休斯顿校友秋日聚餐",
+            "url" : "/2017/1020/c2004a201610/page.htm"
+            },
+        
+    
+        
+            {
+            "src" : "/_upload/article/images/e4/34/41fa5b254b0dae013d03127d3d32/c4128f0d-1c84-4611-9393-cb70c6cb9ba7.jpg",
+            "title" : "硅谷校友会举行金秋烧烤活动",
+            "url" : "/2017/1016/c2004a200829/page.htm"
+            },
+        
+    
+        
+            {
+            "src" : "/_upload/article/images/ba/82/4b3aff9a4e1689f9187b45a5da5f/da169791-6831-4f1c-8558-91fed7b77fcc.jpg",
+            "title" : "悉尼校友中秋欢聚",
+            "url" : "/2017/1013/c2004a200768/page.htm"
+            },
+        
+    
+        
+            {
+            "src" : "/_upload/article/images/ac/ec/8e6371c142849fd6f94de259330c/1b9683b2-99e4-4a10-901b-7391804b4b70.jpg",
+            "title" : "墨尔本校友会举办中秋联谊活动",
+            "url" : "/2017/1013/c2004a200769/page.htm"
+            }];
+        
+    
+</script>
+<script language="JavaScript">
+            var w11imgUrl = new Array();
+            var w11imgLink = new Array();
+            var w11imgTitle = new Array();
+
+            var w11count = 0;
+            var w11running = false;
+            var w11index = 0;
+            var w11nextAdTimer;
+            var w11k = 0;
+            function w11nextAd(num) {
+                if (num >= 0 && num < w11count - 1) {
+                    w11index = num;
+                    clearTimeout(w11nextAdTimer);
+                } else {
+                    num = w11index;
+                }
+                if (w11index > w11count - 1) {
+                    w11index = 0;
+                }
+                if (!w11running) {
+                    w11running = true;
+
+                } else if (document.all) {
+                    w11imgShow.filters.revealTrans.Transition = 50;
+                    w11imgShow.filters.revealTrans.apply();
+                    w11imgShow.filters.revealTrans.play();
+                }
+                document.getElementById('w11imgShow').src = w11imgUrl[w11index];
+                if (w11imgTitle[w11index] != '') {
+                    document.getElementById('w11imgTitle').innerHTML = '<a href="javascript:w11openWindow();" title="' + w11imgTitle[w11index] + '">' + w11imgTitle[w11index] + '</a>';
+                }
+                document.getElementById('w11imgNumber').innerHTML = "";
+                w11k = 0;
+                for (var i = 0; i < w11count; i++) {
+                    w11k++;
+                    if (i != w11index) {
+                        document.getElementById('w11imgNumber').innerHTML += '<a href="javascript:w11nextAd(' + i + ')" class="nomal">' + w11k + '</a>';
+                    } else {
+                        document.getElementById('w11imgNumber').innerHTML += '<a href="javascript:w11nextAd(' + i + ')" class="current">' + w11k + '</a>';
+                    }
+                }
+
+                w11index++;
+                if (w11count > 1) {
+                    w11nextAdTimer = setTimeout("w11nextAd(-1)", 4000);
+                }
+            }
+
+            function w11openWindow() {
+                var jumpUrl = w11imgLink[w11index - 1];
+                if (jumpUrl && jumpUrl != '') {
+                    window.open(jumpUrl);
+                }
+            }
+
+            $().ready(function() {
+                try {
+                    var objs = w11imgJsons;
+                    w11count = objs.length;
+                    if (w11count == 0) {
+                        document.getElementById('w11imgShow').style.display = "none";
+                        document.getElementById('w11imgNumber').style.display = "none";
+                        document.getElementById('w11imgTitle').style.display = "none";
+                        return;
+                    }
+                    for (var i = 0; i < objs.length; i++) {
+                        w11imgUrl[i] = objs[i].src;
+                        w11imgLink[i] = objs[i].url;
+                        w11imgTitle[i] = objs[i].title;
+                    }
+                    w11nextAd(-1);
+                } catch (e) {
+
+                }
+            });
+</script>
+
+            
+                </div>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <table width="100%" border="0" cellpadding="0" cellspacing="0">
+        <tbody>
+          <tr>
+            <td valign="bottom">
+              <div frag="面板15">
+                <div frag="窗口15" portletmode="simpleNews" configs="{'c18':'yyyy-MM-dd','c6':'-1','c1':'0','c25':'240','c19':'yyyy-MM-dd','c30':'0','c29':'1','c21':'0','c20':'0','c4':'1','c39':'100','c38':'120','c7':'0','c34':'200','c23':'1','c31':'0','c16':'0','c9':'0','c3':'1','c2':'内容','c27':'480','c17':'0','c5':'_blank','c24':'1','c32':'','c26':'1','c37':'1','c28':'640','c13':'200','c33':'300','c10':'50'}" contents="{'c2':'1'}">
+                  <div id="wp_news_w15"> 
+
+                    <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                      <tbody>
+                         
+<tr>
+                          <td align="center">  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"> 
+ 
+<a href='/2013/0607/c2020a21753/page.htm' target='_blank' title='校友总会官方微博'><p align="center">  <table style="width: 94px; height: 62px" border="0" cellspacing="0" cellpadding="0" width="94">      <tbody>          <tr>              <td><a target="_blank" href="http://weibo.com/seuaa"><img border="0" alt="" src="/_upload/article/c9/52/771c976b4e48b476a19d7988600d/342df778-c4fe-4e92-acef-52d5c8a2558a.jpg" /> </a></td>          </tr>      </tbody>  </table>  </p></a>  
+</td> 
+</tr> 
+</table> 
+ </td>
+                        </tr> 
+
+                      </tbody>
+                    </table></div> 
+
+                </div>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <table width="100%" border="0" cellpadding="0" cellspacing="0">
+        <tbody>
+          <tr>
+            <td width="4" height="29"> </td>
+            <td background="/_upload/tpl/00/57/87/template87/images/main2008_26.jpg" class="bt1"> <span class="lef"> &nbsp;<img src="/_upload/tpl/00/57/87/template87/images/ico2.gif" width="24" height="26" align="absmiddle" /> &nbsp;</span><span frag="面板2"><span frag="窗口2" portletmode="windowTitle" style="display:block;text-align:left;">公告栏</span></span> </td>
+            <td width="4"> </td>
+          </tr>
+        </tbody>
+      </table>
+      <table width="100%" border="0" cellpadding="0" cellspacing="0">
+        <tbody>
+          <tr>
+            <td width="4" height="180"> </td>
+            <td valign="top" class="kuan">
+              <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                <tbody>
+                  <tr>
+                    <td height="10"> </td>
+                  </tr>
+                </tbody>
+              </table>
+              <div frag="面板12">
+                <div frag="窗口12" portletmode="simpleNews" configs="{'c8':'1','c18':'yyyy-MM-dd','c6':'-1','c1':'0','c25':'320','c19':'yyyy-MM-dd','c30':'0','c29':'1','c21':'1','c20':'0','c4':'1','c39':'300','c22':'25','c38':'100','c7':'1','c34':'180','c23':'1','c31':'0','c16':'1','c9':'0','c3':'8','c2':'标题','c27':'480','c17':'0','c5':'_blank','c24':'240','c32':'','c26':'1','c37':'1','c28':'640','c13':'-1','c33':'240','c10':'50'}" contents="{'c2':'0'}">
+                  <div id="wp_news_w12"> 
+
+                    <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+                      <tbody>
+                         
+<tr>
+                          <td width="16" height="22" align="center"> ・ </td>
+                          <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='/2016/0612/c1993a165595/page.htm' target='_blank' title='东南大学诚邀海内外英才申报“长江学者”'><font style='font-weight:bold;color:#91061D;'>东南大学诚邀海内外英才申报“长江学者”</font></a></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                        </tr> 
+<tr>
+                          <td width="16" height="22" align="center"> ・ </td>
+                          <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='/2015/0506/c1993a127913/page.htm' target='_blank' title='东南大学关于征集校史资料的启事'><font style='font-weight:bold;color:#0904B0;'>东南大学关于征集校史资料的启事</font></a></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                        </tr> 
+<tr>
+                          <td width="16" height="22" align="center"> ・ </td>
+                          <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='http://www.seu.edu.cn/37/76/c137a145270/page.htm' target='_blank' title='东南大学全球招聘学院院长启事'><font style='font-weight:bold;color:#87092F;'>东南大学全球招聘学院院长启事</font></a></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                        </tr> 
+<tr>
+                          <td width="16" height="22" align="center"> ・ </td>
+                          <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='http://news.seu.edu.cn/yldx/' target='_blank' title='东南大学“创建世界一流大学”大讨论'><font style='color:#0F0003;'>东南大学“创建世界一流大学”大讨论</font></a></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                        </tr> 
+<tr>
+                          <td width="16" height="22" align="center"> ・ </td>
+                          <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='/2011/0222/c1993a22722/page.htm' target='_blank' title='各地校友、年级班级QQ群及微博'>各地校友、年级班级QQ群及微博</a></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                        </tr> 
+<tr>
+                          <td width="16" height="22" align="center"> ・ </td>
+                          <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='/2011/0607/c1993a22729/page.htm' target='_blank' title='东南大学校歌及春晖曲(视频、MP3)'><font style='font-weight:bold;color:#7d0127;'>东南大学校歌及春晖曲(视频、MP3)</font></a></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                        </tr> 
+<tr>
+                          <td width="16" height="22" align="center"> ・ </td>
+                          <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='/2009/0224/c1993a22695/page.htm' target='_blank' title='东南大学校友信息表'>东南大学校友信息表</a></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                        </tr> 
+<tr>
+                          <td width="16" height="22" align="center"> ・ </td>
+                          <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='/2008/0520/c1993a22692/page.htm' target='_blank' title='东南大学海外校友信息表'>东南大学海外校友信息表</a></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                        </tr> 
+
+                      </tbody>
+                    </table></div> 
+
+                </div>
+              </div>
+            </td>
+            <td width="4"> </td>
+          </tr>
+        </tbody>
+      </table>
+      <table width="100%" border="0" cellpadding="0" cellspacing="0">
+        <tbody>
+          <tr>
+            <td height="19"> </td>
+          </tr>
+        </tbody>
+      </table>
+      <table width="100%" border="0" cellpadding="0" cellspacing="0">
+        <tbody>
+          <tr>
+            <td width="4" height="29"> </td>
+            <td background="/_upload/tpl/00/57/87/template87/images/main2008_26.jpg" class="bt1"> <span class="lef"> &nbsp;<img src="/_upload/tpl/00/57/87/template87/images/ico3.gif" width="24" height="26" align="absmiddle" /> &nbsp;</span><span frag="面板3" class="lef"><span frag="窗口3" portletmode="windowTitle" style="display:block;text-align:left;">校友留言</span></span> </td>
+            <td width="4"> </td>
+          </tr>
+        </tbody>
+      </table>
+      <table width="100%" border="0" cellpadding="0" cellspacing="0">
+        <tbody>
+          <tr>
+            <td width="4" height="180"> </td>
+            <td valign="top" class="kuan">
+              <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                <tbody>
+                  <tr>
+                    <td height="10"> </td>
+                  </tr>
+                </tbody>
+              </table>
+              <div frag="面板13">
+                <div frag="窗口13" portletmode="message">
+                  <iframe frameborder='0' scrolling='no' src='/_web/messageboard/messagePortlet.jsp?_p=YXM9MzAmdD04NyZkPTI3MiZwPTEmbT1TTiY_&tt=0.9709985260068285&request_locale=zh_CN&windowId=w13' style="width: 225px; height:240px;"></iframe>
+                </div>
+              </div>
+            </td>
+            <td width="4"> </td>
+          </tr>
+        </tbody>
+      </table>
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tbody>
+          <tr>
+            <td height="10"> </td>
+          </tr>
+        </tbody>
+      </table>
+      <table width="100%" border="0" cellpadding="0" cellspacing="0">
+        <tbody>
+          <tr>
+            <td height="22" align="center" valign="middle">
+              <div frag="面板14">
+                <div frag="窗口14" portletmode="siteCount">
+                  <img border="0" src="/_visitcountdisplay?siteId=30&type=1&dispMode=1&statMode=1" />
+                </div>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div id="mainright">
+      <div id="mainrightleft">
+        <div>
+          <div class="sudy-tab">
+            <ul class="tab-menu">
+              <li><a><span>动感校园</span></a></li>
+              <li><a><span>专题报道</span></a></li>
+              <li><a><span>校、院、系庆</span></a></li>
+              <li><a><span>毓秀东南</span></a></li>
+            </ul>
+            <ul class="tab-list">
+              <li>
+                <div frag="面板21">
+                  <div frag="窗口21" portletmode="simpleNews" configs="{'c8':'1','c18':'yyyy-MM-dd','c6':'30','c1':'0','c25':'320','c19':'yyyy-MM-dd','c30':'0','c29':'1','c21':'1','c20':'0','c4':'1','c39':'300','c22':'25','c38':'100','c7':'1','c34':'180','c23':'1','c31':'0','c16':'1','c9':'0','c3':'8','c2':'标题,发布时间','c27':'480','c17':'0','c5':'_blank','c24':'240','c32':'','c26':'1','c37':'1','c28':'640','c13':'-1','c33':'240','c10':'50','c42':'320','c43':'0','c40':'1','c41':'240','c36':'0','c35':'-1:-1'}" contents="{'c2':'0'}" style="height:210px;">
+                    <div id="wp_news_w21"> 
+
+                      <table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
+                        <tbody>
+                           
+<tr>
+                            <td width="20" height="7" align="center" valign="middle"> <img src="/_upload/tpl/00/57/87/template87/images/ico8.gif" width="8" height="12" /> </td>
+                            <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='/_redirect?siteId=30&columnId=1626&articleId=201507' target='_blank' title='东南大学校长张广军院士当选中国共产党第十九届中央委员会候补委员'><font style='font-weight:bold;color:#8F3C4A;'>东南大学校长张广军院士当选中国共产党第十九届中央委员会候补委...</font></a></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap">2017-10-24</div></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                          </tr>
+                          <tr>
+                            <td colspan="2" height="5" background="/_upload/tpl/00/57/87/template87/images/line.gif"> </td>
+                          </tr> 
+<tr>
+                            <td width="20" height="7" align="center" valign="middle"> <img src="/_upload/tpl/00/57/87/template87/images/ico8.gif" width="8" height="12" /> </td>
+                            <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='/2017/0922/c1626a199015/page.htm' target='_blank' title='东南大学入选一流大学A类、一流学科总数并列全国第8！'><font style='font-weight:bold;color:#9C2454;'>东南大学入选一流大学A类、一流学科总数并列全国第8！</font></a></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap">2017-09-22</div></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                          </tr>
+                          <tr>
+                            <td colspan="2" height="5" background="/_upload/tpl/00/57/87/template87/images/line.gif"> </td>
+                          </tr> 
+<tr>
+                            <td width="20" height="7" align="center" valign="middle"> <img src="/_upload/tpl/00/57/87/template87/images/ico8.gif" width="8" height="12" /> </td>
+                            <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='/2016/0612/c1626a161470/page.htm' target='_blank' title='东南大学诚邀海内外英才申报“长江学者”'><font style='font-weight:bold;color:#430DA1;'>东南大学诚邀海内外英才申报“长江学者”</font></a></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap">2016-06-12</div></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                          </tr>
+                          <tr>
+                            <td colspan="2" height="5" background="/_upload/tpl/00/57/87/template87/images/line.gif"> </td>
+                          </tr> 
+<tr>
+                            <td width="20" height="7" align="center" valign="middle"> <img src="/_upload/tpl/00/57/87/template87/images/ico8.gif" width="8" height="12" /> </td>
+                            <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='/2017/1027/c1626a201717/page.htm' target='_blank' title='【东大科研】生医学院90后科研团队突破滴血验癌难关：12项检测结果立等可取'>【东大科研】生医学院90后科研团队突破滴血验癌难关：12项检测结...</a></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap">2017-10-27</div></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                          </tr>
+                          <tr>
+                            <td colspan="2" height="5" background="/_upload/tpl/00/57/87/template87/images/line.gif"> </td>
+                          </tr> 
+<tr>
+                            <td width="20" height="7" align="center" valign="middle"> <img src="/_upload/tpl/00/57/87/template87/images/ico8.gif" width="8" height="12" /> </td>
+                            <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='/2017/1026/c1626a201686/page.htm' target='_blank' title='【19大】用制度体系保证人民当家作主--光明日报整版推出东大中特智库解读十九大理论文章'>【19大】用制度体系保证人民当家作主--光明日报整版推出东大中特...</a></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap">2017-10-26</div></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                          </tr>
+                          <tr>
+                            <td colspan="2" height="5" background="/_upload/tpl/00/57/87/template87/images/line.gif"> </td>
+                          </tr> 
+<tr>
+                            <td width="20" height="7" align="center" valign="middle"> <img src="/_upload/tpl/00/57/87/template87/images/ico8.gif" width="8" height="12" /> </td>
+                            <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='/2017/1026/c1626a201684/page.htm' target='_blank' title='薄曦校友值建筑学院90周年院庆之际捐资百万设发展基金'>薄曦校友值建筑学院90周年院庆之际捐资百万设发展基金</a></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap">2017-10-26</div></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                          </tr>
+                          <tr>
+                            <td colspan="2" height="5" background="/_upload/tpl/00/57/87/template87/images/line.gif"> </td>
+                          </tr> 
+<tr>
+                            <td width="20" height="7" align="center" valign="middle"> <img src="/_upload/tpl/00/57/87/template87/images/ico8.gif" width="8" height="12" /> </td>
+                            <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='/_redirect?siteId=30&columnId=1626&articleId=201506' target='_blank' title='东南大学举办“创业东南——创业大咖分享会”'>东南大学举办“创业东南——创业大咖分享会”</a></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap">2017-10-24</div></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                          </tr>
+                          <tr>
+                            <td colspan="2" height="5" background="/_upload/tpl/00/57/87/template87/images/line.gif"> </td>
+                          </tr> 
+<tr>
+                            <td width="20" height="7" align="center" valign="middle"> <img src="/_upload/tpl/00/57/87/template87/images/ico8.gif" width="8" height="12" /> </td>
+                            <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='/_redirect?siteId=30&columnId=1626&articleId=201230' target='_blank' title='【19大】东南大学师生积极收看党的十九大开幕会并召开座谈会'>【19大】东南大学师生积极收看党的十九大开幕会并召开座谈会</a></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap">2017-10-20</div></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                          </tr>
+                          <tr>
+                            <td colspan="2" height="5" background="/_upload/tpl/00/57/87/template87/images/line.gif"> </td>
+                          </tr> 
+
+                        </tbody>
+                      </table></div> 
+
+<div class="more"><a class="more-link" href="/1626/list.htm" title="显示更多"><span class="moretext"><img src="/_js/_portletPlugs/simpleNews/css/icon_more_1.gif" border="0"/></span></a></div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div frag="面板22">
+                  <div frag="窗口22" portletmode="simpleNews" configs="{'c8':'1','c18':'yyyy-MM-dd','c6':'30','c1':'0','c25':'320','c19':'yyyy-MM-dd','c30':'0','c29':'1','c21':'1','c20':'0','c4':'1','c39':'300','c22':'25','c38':'100','c7':'1','c34':'180','c23':'1','c31':'0','c16':'1','c9':'0','c3':'8','c2':'标题,发布时间','c27':'480','c17':'0','c5':'_blank','c24':'240','c32':'','c26':'1','c37':'1','c28':'640','c13':'-1','c33':'240','c10':'50','c42':'320','c43':'0','c40':'1','c41':'240','c36':'0','c35':'-1:-1'}" contents="{'c2':'0'}" style="height:210px;">
+                    <div id="wp_news_w22"> 
+
+                      <table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
+                        <tbody>
+                           
+<tr>
+                            <td width="20" height="7" align="center" valign="middle"> <img src="/_upload/tpl/00/57/87/template87/images/ico8.gif" width="8" height="12" /> </td>
+                            <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='/2017/0601/c2010a190548/page.htm' target='_blank' title='【115校庆】东南大学《校友通讯》115周年校庆院系寄语专刊'><font style='font-weight:bold;color:#B54768;'>【115校庆】东南大学《校友通讯》115周年校庆院系寄语专刊</font></a></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap">2017-06-01</div></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                          </tr>
+                          <tr>
+                            <td colspan="2" height="5" background="/_upload/tpl/00/57/87/template87/images/line.gif"> </td>
+                          </tr> 
+<tr>
+                            <td width="20" height="7" align="center" valign="middle"> <img src="/_upload/tpl/00/57/87/template87/images/ico8.gif" width="8" height="12" /> </td>
+                            <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='/_upload/article/files/b5/03/067dd6ad4f5f95c901b0d13779fe/67a745c6-d9b4-4d8a-8238-c0fe4b0420a2.pdf' target='_blank' title='校友总会简报：2017年第9期（总第93期）'>校友总会简报：2017年第9期（总第93期）</a></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap">2017-10-20</div></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                          </tr>
+                          <tr>
+                            <td colspan="2" height="5" background="/_upload/tpl/00/57/87/template87/images/line.gif"> </td>
+                          </tr> 
+<tr>
+                            <td width="20" height="7" align="center" valign="middle"> <img src="/_upload/tpl/00/57/87/template87/images/ico8.gif" width="8" height="12" /> </td>
+                            <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='/_upload/article/files/d2/b9/f468edc14290aff969746680a95d/442071aa-a13c-408c-91bb-02ff490286f8.pdf' target='_blank' title='校友总会简报：2017年第8期（总第92期）'>校友总会简报：2017年第8期（总第92期）</a></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap">2017-09-05</div></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                          </tr>
+                          <tr>
+                            <td colspan="2" height="5" background="/_upload/tpl/00/57/87/template87/images/line.gif"> </td>
+                          </tr> 
+<tr>
+                            <td width="20" height="7" align="center" valign="middle"> <img src="/_upload/tpl/00/57/87/template87/images/ico8.gif" width="8" height="12" /> </td>
+                            <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='/_upload/article/files/40/d5/a0b0a5ad4e9297b60383d504c881/86541a8a-3d65-4859-864c-37f2a94d12f7.pdf' target='_blank' title='校友总会简报：2017年第7期（总第91期）'>校友总会简报：2017年第7期（总第91期）</a></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap">2017-09-05</div></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                          </tr>
+                          <tr>
+                            <td colspan="2" height="5" background="/_upload/tpl/00/57/87/template87/images/line.gif"> </td>
+                          </tr> 
+<tr>
+                            <td width="20" height="7" align="center" valign="middle"> <img src="/_upload/tpl/00/57/87/template87/images/ico8.gif" width="8" height="12" /> </td>
+                            <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='/_upload/article/files/fe/75/aa76e5754fac8f06b0976376334c/cb77cbc4-3688-4336-a54d-661a058a3923.pdf' target='_blank' title='校友总会简报：2017年第6期（总第90期）'>校友总会简报：2017年第6期（总第90期）</a></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap">2017-06-30</div></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                          </tr>
+                          <tr>
+                            <td colspan="2" height="5" background="/_upload/tpl/00/57/87/template87/images/line.gif"> </td>
+                          </tr> 
+<tr>
+                            <td width="20" height="7" align="center" valign="middle"> <img src="/_upload/tpl/00/57/87/template87/images/ico8.gif" width="8" height="12" /> </td>
+                            <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='/_upload/article/files/dc/84/5790d3b540f8bbd624fab956abf6/688820aa-2750-4648-9101-6065148e25b7.pdf' target='_blank' title='校友总会简报：2017年第5期（总第89期）'>校友总会简报：2017年第5期（总第89期）</a></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap">2017-06-30</div></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                          </tr>
+                          <tr>
+                            <td colspan="2" height="5" background="/_upload/tpl/00/57/87/template87/images/line.gif"> </td>
+                          </tr> 
+<tr>
+                            <td width="20" height="7" align="center" valign="middle"> <img src="/_upload/tpl/00/57/87/template87/images/ico8.gif" width="8" height="12" /> </td>
+                            <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='/_upload/article/files/4a/48/8da6be9d49fb93f164a04fcc48d6/473f1f23-7d32-4213-aaff-fe28c43378e8.pdf' target='_blank' title='校友总会简报：2017年第4期（总第88期）'>校友总会简报：2017年第4期（总第88期）</a></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap">2017-06-30</div></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                          </tr>
+                          <tr>
+                            <td colspan="2" height="5" background="/_upload/tpl/00/57/87/template87/images/line.gif"> </td>
+                          </tr> 
+<tr>
+                            <td width="20" height="7" align="center" valign="middle"> <img src="/_upload/tpl/00/57/87/template87/images/ico8.gif" width="8" height="12" /> </td>
+                            <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='/_upload/article/files/f3/05/210d1bd947358d8e9a74e9487e56/0980e790-7354-4f99-9fce-ef705b1bf3ca.pdf' target='_blank' title='校友总会简报：2017年第3期（总第87期）'>校友总会简报：2017年第3期（总第87期）</a></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap">2017-04-10</div></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                          </tr>
+                          <tr>
+                            <td colspan="2" height="5" background="/_upload/tpl/00/57/87/template87/images/line.gif"> </td>
+                          </tr> 
+
+                        </tbody>
+                      </table></div> 
+
+<div class="more"><a class="more-link" href="/2010/list.htm" title="显示更多"><span class="moretext"><img src="/_js/_portletPlugs/simpleNews/css/icon_more_1.gif" border="0"/></span></a></div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div frag="面板40">
+                  <div frag="窗口40" portletmode="simpleNews" configs="{'c8':'1','c18':'yyyy-MM-dd','c6':'27','c1':'0','c25':'320','c19':'yyyy-MM-dd','c30':'0','c29':'1','c21':'1','c20':'0','c4':'1','c39':'300','c22':'25','c38':'100','c7':'1','c34':'180','c23':'1','c31':'0','c16':'1','c9':'0','c3':'8','c2':'标题,发布时间','c27':'480','c17':'0','c5':'_blank','c24':'240','c32':'','c26':'1','c37':'1','c28':'640','c13':'-1','c33':'240','c10':'50','c36':'0','c42':'320','c35':'-1:-1','c43':'0','c40':'1','c41':'240'}" contents="{'c2':'0'}" style="height:210px;">
+                    <div id="wp_news_w40"> 
+
+                      <table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
+                        <tbody>
+                           
+<tr>
+                            <td width="20" height="7" align="center" valign="middle"> <img src="/_upload/tpl/00/57/87/template87/images/ico8.gif" width="8" height="12" /> </td>
+                            <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='/2016/0415/c2023a155828/page.htm' target='_blank' title='【公卫院庆】东南大学公共卫生学院40周年院庆公告'><font style='font-weight:bold;color:#99082E;'>【公卫院庆】东南大学公共卫生学院40周年院庆公告</font></a></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap">2016-04-15</div></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                          </tr>
+                          <tr>
+                            <td colspan="2" height="5" background="/_upload/tpl/00/57/87/template87/images/line.gif"> </td>
+                          </tr> 
+<tr>
+                            <td width="20" height="7" align="center" valign="middle"> <img src="/_upload/tpl/00/57/87/template87/images/ico8.gif" width="8" height="12" /> </td>
+                            <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='/_redirect?siteId=30&columnId=2023&articleId=133768' target='_blank' title='【机械百年】机械工程学院“百年华诞”庆典公告'><font style='font-weight:bold;color:#A61750;'>【机械百年】机械工程学院“百年华诞”庆典公告</font></a></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap">2015-11-05</div></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                          </tr>
+                          <tr>
+                            <td colspan="2" height="5" background="/_upload/tpl/00/57/87/template87/images/line.gif"> </td>
+                          </tr> 
+<tr>
+                            <td width="20" height="7" align="center" valign="middle"> <img src="/_upload/tpl/00/57/87/template87/images/ico8.gif" width="8" height="12" /> </td>
+                            <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='/2016/0530/c2023a160265/page.htm' target='_blank' title='【公卫院庆】东南大学公共卫生学院40周年华诞校友共进生日蛋糕、共享学术盛宴、共沐人文情怀'><font style='font-weight:bold;color:#850842;'>【公卫院庆】东南大学公共卫生学院40周年华诞校友共进生日...</font></a></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap">2016-05-30</div></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                          </tr>
+                          <tr>
+                            <td colspan="2" height="5" background="/_upload/tpl/00/57/87/template87/images/line.gif"> </td>
+                          </tr> 
+<tr>
+                            <td width="20" height="7" align="center" valign="middle"> <img src="/_upload/tpl/00/57/87/template87/images/ico8.gif" width="8" height="12" /> </td>
+                            <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='/2016/0530/c2023a160266/page.htm' target='_blank' title='【公卫院庆】东南大学公共卫生学院的发展历程'>【公卫院庆】东南大学公共卫生学院的发展历程</a></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap">2016-05-29</div></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                          </tr>
+                          <tr>
+                            <td colspan="2" height="5" background="/_upload/tpl/00/57/87/template87/images/line.gif"> </td>
+                          </tr> 
+<tr>
+                            <td width="20" height="7" align="center" valign="middle"> <img src="/_upload/tpl/00/57/87/template87/images/ico8.gif" width="8" height="12" /> </td>
+                            <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='/2016/0524/c2023a160267/page.htm' target='_blank' title='【机械百年】“机缘·械逅”校友分享论坛圆满结束'>【机械百年】“机缘·械逅”校友分享论坛圆满结束</a></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap">2016-05-24</div></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                          </tr>
+                          <tr>
+                            <td colspan="2" height="5" background="/_upload/tpl/00/57/87/template87/images/line.gif"> </td>
+                          </tr> 
+<tr>
+                            <td width="20" height="7" align="center" valign="middle"> <img src="/_upload/tpl/00/57/87/template87/images/ico8.gif" width="8" height="12" /> </td>
+                            <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='/2016/0523/c2023a159540/page.htm' target='_blank' title='​【机械百年】76级机械专业汤涛校友赋诗贺机械学院百年院庆'>​【机械百年】76级机械专业汤涛校友赋诗贺机械学院百年院...</a></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap">2016-05-23</div></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                          </tr>
+                          <tr>
+                            <td colspan="2" height="5" background="/_upload/tpl/00/57/87/template87/images/line.gif"> </td>
+                          </tr> 
+<tr>
+                            <td width="20" height="7" align="center" valign="middle"> <img src="/_upload/tpl/00/57/87/template87/images/ico8.gif" width="8" height="12" /> </td>
+                            <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='/2016/0523/c2023a159542/page.htm' target='_blank' title='【机械百年】现代快报：东大机械工程学院百岁生日“最资深”校友坐首排'>【机械百年】现代快报：东大机械工程学院百岁生日“最资深...</a></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap">2016-05-23</div></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                          </tr>
+                          <tr>
+                            <td colspan="2" height="5" background="/_upload/tpl/00/57/87/template87/images/line.gif"> </td>
+                          </tr> 
+<tr>
+                            <td width="20" height="7" align="center" valign="middle"> <img src="/_upload/tpl/00/57/87/template87/images/ico8.gif" width="8" height="12" /> </td>
+                            <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='http://news.seu.edu.cn/6f/11/c5486a159505/page.htm' target='_blank' title='【机械百年】东南大学机械工程学院举行系列活动庆祝学科成立100周年'><font style='font-weight:bold;color:#820E25;'>【机械百年】东南大学机械工程学院举行系列活动庆祝学科成...</font></a></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap">2016-05-23</div></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                          </tr>
+                          <tr>
+                            <td colspan="2" height="5" background="/_upload/tpl/00/57/87/template87/images/line.gif"> </td>
+                          </tr> 
+
+                        </tbody>
+                      </table></div> 
+
+<div class="more"><a class="more-link" href="/2023/list.htm" title="显示更多"><span class="moretext"><img src="/_js/_portletPlugs/simpleNews/css/icon_more_1.gif" border="0"/></span></a></div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div frag="面板41">
+                  <div frag="窗口41" portletmode="simpleNews" configs="{'c8':'1','c36':'0','c18':'yyyy-MM-dd','c42':'320','c6':'30','c1':'1','c25':'320','c19':'yyyy-MM-dd','c30':'0','c29':'1','c21':'1','c35':'-1:-1','c4':'1','c39':'300','c22':'0','c38':'100','c7':'1','c34':'300','c23':'1','c20':'0','c31':'0','c16':'1','c9':'0','c3':'8','c2':'标题,发布时间','c27':'480','c43':'0','c17':'0','c5':'_blank','c24':'240','c32':'','c26':'1','c37':'1','c28':'640','c40':'1','c13':'200','c33':'500','c41':'240','c10':'50'}" contents="{'c2':'0'}" style="height:210px;">
+                    <div id="wp_news_w41"> 
+
+                      <table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
+                        <tbody>
+                           
+<tr>
+                            <td width="20" height="7" align="center" valign="middle"> <img src="/_upload/tpl/00/57/87/template87/images/ico8.gif" width="8" height="12" /> </td>
+                            <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='/2017/1009/c12785a200174/page.htm' target='_blank' title='【砥砺英雄榜】南京校友会“砥砺石捐赠”系列校友人物简介03：徐洪彬'>【砥砺英雄榜】南京校友会“砥砺石捐赠”系列校友人物简介03：徐...</a></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap">2017-10-09</div></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                          </tr>
+                          <tr>
+                            <td colspan="2" height="5" background="/_upload/tpl/00/57/87/template87/images/line.gif"> </td>
+                          </tr> 
+<tr>
+                            <td width="20" height="7" align="center" valign="middle"> <img src="/_upload/tpl/00/57/87/template87/images/ico8.gif" width="8" height="12" /> </td>
+                            <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='/2017/0925/c12785a199471/page.htm' target='_blank' title='【砥砺英雄榜】南京校友会“砥砺石捐赠”系列校友人物简介02：刘国耀'>【砥砺英雄榜】南京校友会“砥砺石捐赠”系列校友人物简介02：刘...</a></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap">2017-09-25</div></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                          </tr>
+                          <tr>
+                            <td colspan="2" height="5" background="/_upload/tpl/00/57/87/template87/images/line.gif"> </td>
+                          </tr> 
+<tr>
+                            <td width="20" height="7" align="center" valign="middle"> <img src="/_upload/tpl/00/57/87/template87/images/ico8.gif" width="8" height="12" /> </td>
+                            <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='/2017/0922/c12785a199353/page.htm' target='_blank' title='【东南英才】中大医院郭金和、朱海东喜获国之名医荣誉称号'>【东南英才】中大医院郭金和、朱海东喜获国之名医荣誉称号</a></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap">2017-09-22</div></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                          </tr>
+                          <tr>
+                            <td colspan="2" height="5" background="/_upload/tpl/00/57/87/template87/images/line.gif"> </td>
+                          </tr> 
+<tr>
+                            <td width="20" height="7" align="center" valign="middle"> <img src="/_upload/tpl/00/57/87/template87/images/ico8.gif" width="8" height="12" /> </td>
+                            <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='/2017/0913/c12785a197279/page.htm' target='_blank' title='【大师人物】陈梦家，可惜了的大才子'>【大师人物】陈梦家，可惜了的大才子</a></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap">2017-09-13</div></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                          </tr>
+                          <tr>
+                            <td colspan="2" height="5" background="/_upload/tpl/00/57/87/template87/images/line.gif"> </td>
+                          </tr> 
+<tr>
+                            <td width="20" height="7" align="center" valign="middle"> <img src="/_upload/tpl/00/57/87/template87/images/ico8.gif" width="8" height="12" /> </td>
+                            <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='/_redirect?siteId=30&columnId=12785&articleId=194296' target='_blank' title='【东南英才】附属中大医院邱海波教授荣获“白求恩奖章”'>【东南英才】附属中大医院邱海波教授荣获“白求恩奖章”</a></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap">2017-08-30</div></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                          </tr>
+                          <tr>
+                            <td colspan="2" height="5" background="/_upload/tpl/00/57/87/template87/images/line.gif"> </td>
+                          </tr> 
+<tr>
+                            <td width="20" height="7" align="center" valign="middle"> <img src="/_upload/tpl/00/57/87/template87/images/ico8.gif" width="8" height="12" /> </td>
+                            <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='/2017/0828/c12785a194141/page.htm' target='_blank' title='【砥砺英雄榜】南京校友会“砥砺石捐赠”系列校友人物简介01：沙敏'>【砥砺英雄榜】南京校友会“砥砺石捐赠”系列校友人物简介01：沙...</a></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap">2017-08-28</div></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                          </tr>
+                          <tr>
+                            <td colspan="2" height="5" background="/_upload/tpl/00/57/87/template87/images/line.gif"> </td>
+                          </tr> 
+<tr>
+                            <td width="20" height="7" align="center" valign="middle"> <img src="/_upload/tpl/00/57/87/template87/images/ico8.gif" width="8" height="12" /> </td>
+                            <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='/_upload/article/files/13/60/d933e86d480180d97ffb700b3665/020a83ae-91c0-4392-aede-97573376c1e1.pdf' target='_blank' title='《我的一生》：老土木系已故教授方福森自传及弟子亲友回忆集'>《我的一生》：老土木系已故教授方福森自传及弟子亲友回忆集</a></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap">2017-07-05</div></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                          </tr>
+                          <tr>
+                            <td colspan="2" height="5" background="/_upload/tpl/00/57/87/template87/images/line.gif"> </td>
+                          </tr> 
+<tr>
+                            <td width="20" height="7" align="center" valign="middle"> <img src="/_upload/tpl/00/57/87/template87/images/ico8.gif" width="8" height="12" /> </td>
+                            <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='/_redirect?siteId=30&columnId=12785&articleId=192744' target='_blank' title='中央大学土木系1940级洪光煃校友的抗战回忆录'>中央大学土木系1940级洪光煃校友的抗战回忆录</a></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap">2017-07-05</div></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                          </tr>
+                          <tr>
+                            <td colspan="2" height="5" background="/_upload/tpl/00/57/87/template87/images/line.gif"> </td>
+                          </tr> 
+
+                        </tbody>
+                      </table></div> 
+
+<div class="more"><a class="more-link" href="/12785/list.htm" title="显示更多"><span class="moretext"><img src="/_js/_portletPlugs/simpleNews/css/icon_more_1.gif" border="0"/></span></a></div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div>
+          <div class="sudy-tab">
+            <ul class="tab-menu tab-menu1">
+              <li><a><span>校友活动</span></a></li>
+              <li><a><span>校友动态</span></a></li>
+              <li><a><span>校友随笔</span></a></li>
+              <li><a><span>毕业照</span></a></li>
+            </ul>
+            <ul class="tab-list">
+              <li>
+                <div frag="面板24">
+                  <div frag="窗口24" portletmode="simpleNews" configs="{'c8':'1','c18':'yyyy-MM-dd','c6':'30','c1':'0','c25':'320','c19':'yyyy-MM-dd','c30':'0','c29':'1','c21':'1','c20':'0','c4':'1','c39':'300','c22':'25','c38':'100','c7':'1','c34':'180','c23':'1','c31':'0','c16':'1','c9':'0','c3':'8','c2':'标题,发布时间','c27':'480','c17':'0','c5':'_blank','c24':'240','c32':'','c26':'1','c37':'1','c28':'640','c13':'-1','c33':'240','c10':'50','c36':'0','c42':'320','c35':'-1:-1','c43':'0','c40':'1','c41':'240'}" contents="{'c2':'0'}" style="height:210px;">
+                    <div id="wp_news_w24"> 
+
+                      <table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
+                        <tbody>
+                           
+<tr>
+                            <td width="20" height="7" align="center" valign="middle"> <img src="/_upload/tpl/00/57/87/template87/images/ico8.gif" width="8" height="12" /> </td>
+                            <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='/2017/0103/c2016a182450/page.htm' target='_blank' title='东南大学校友社区的PC端使用说明'><font style='font-weight:bold;color:#1D0BBD;'>东南大学校友社区的PC端使用说明</font></a></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap">2017-01-03</div></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                          </tr>
+                          <tr>
+                            <td colspan="2" height="5" background="/_upload/tpl/00/57/87/template87/images/line.gif"> </td>
+                          </tr> 
+<tr>
+                            <td width="20" height="7" align="center" valign="middle"> <img src="/_upload/tpl/00/57/87/template87/images/ico8.gif" width="8" height="12" /> </td>
+                            <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='/2016/1130/c2016a177335/page.htm' target='_blank' title='东南大学校友总会微信服务系统上线，诚邀全球校友惠顾'><font style='font-weight:bold;color:#0B15B3;'>东南大学校友总会微信服务系统上线，诚邀全球校友惠顾</font></a></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap">2016-11-30</div></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                          </tr>
+                          <tr>
+                            <td colspan="2" height="5" background="/_upload/tpl/00/57/87/template87/images/line.gif"> </td>
+                          </tr> 
+<tr>
+                            <td width="20" height="7" align="center" valign="middle"> <img src="/_upload/tpl/00/57/87/template87/images/ico8.gif" width="8" height="12" /> </td>
+                            <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='/2017/1027/c2016a201714/page.htm' target='_blank' title='东大校友（南京VS苏州）2017高尔夫对抗赛暨东大南京校友会高尔夫俱乐部成立圆满举行'>东大校友（南京VS苏州）2017高尔夫对抗赛暨东大南京校友会高尔夫...</a></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap">2017-10-27</div></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                          </tr>
+                          <tr>
+                            <td colspan="2" height="5" background="/_upload/tpl/00/57/87/template87/images/line.gif"> </td>
+                          </tr> 
+<tr>
+                            <td width="20" height="7" align="center" valign="middle"> <img src="/_upload/tpl/00/57/87/template87/images/ico8.gif" width="8" height="12" /> </td>
+                            <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='/2017/1024/c2016a201523/page.htm' target='_blank' title='在枫雨中， 我们相聚––记东南大学密歇根校友会2017秋季聚会'>在枫雨中， 我们相聚––记东南大学密歇根校友会2017秋季聚会</a></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap">2017-10-25</div></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                          </tr>
+                          <tr>
+                            <td colspan="2" height="5" background="/_upload/tpl/00/57/87/template87/images/line.gif"> </td>
+                          </tr> 
+<tr>
+                            <td width="20" height="7" align="center" valign="middle"> <img src="/_upload/tpl/00/57/87/template87/images/ico8.gif" width="8" height="12" /> </td>
+                            <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='/2017/1020/c2016a201294/page.htm' target='_blank' title='建筑学院领导一行专程到上海拜访戴复东院士、吴庐生大师和蔡镇钰大师'>建筑学院领导一行专程到上海拜访戴复东院士、吴庐生大师和蔡镇钰...</a></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap">2017-10-20</div></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                          </tr>
+                          <tr>
+                            <td colspan="2" height="5" background="/_upload/tpl/00/57/87/template87/images/line.gif"> </td>
+                          </tr> 
+<tr>
+                            <td width="20" height="7" align="center" valign="middle"> <img src="/_upload/tpl/00/57/87/template87/images/ico8.gif" width="8" height="12" /> </td>
+                            <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='/2017/1020/c2016a201291/page.htm' target='_blank' title='东南大学休斯顿校友秋日聚餐'>东南大学休斯顿校友秋日聚餐</a></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap">2017-10-20</div></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                          </tr>
+                          <tr>
+                            <td colspan="2" height="5" background="/_upload/tpl/00/57/87/template87/images/line.gif"> </td>
+                          </tr> 
+<tr>
+                            <td width="20" height="7" align="center" valign="middle"> <img src="/_upload/tpl/00/57/87/template87/images/ico8.gif" width="8" height="12" /> </td>
+                            <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='/2017/1019/c2016a201203/page.htm' target='_blank' title='烟台校友会成立大会10月15日隆重召开'><font style='font-weight:bold;color:#94265A;'>烟台校友会成立大会10月15日隆重召开</font></a></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap">2017-10-20</div></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                          </tr>
+                          <tr>
+                            <td colspan="2" height="5" background="/_upload/tpl/00/57/87/template87/images/line.gif"> </td>
+                          </tr> 
+<tr>
+                            <td width="20" height="7" align="center" valign="middle"> <img src="/_upload/tpl/00/57/87/template87/images/ico8.gif" width="8" height="12" /> </td>
+                            <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='/2017/1020/c2016a201232/page.htm' target='_blank' title='有你、有我、有他----东大人2017南马群英荟（商学院组）'>有你、有我、有他----东大人2017南马群英荟（商学院组）</a></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap">2017-10-20</div></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                          </tr>
+                          <tr>
+                            <td colspan="2" height="5" background="/_upload/tpl/00/57/87/template87/images/line.gif"> </td>
+                          </tr> 
+
+                        </tbody>
+                      </table></div> 
+
+<div class="more"><a class="more-link" href="/2016/list.htm" title="显示更多"><span class="moretext"><img src="/_js/_portletPlugs/simpleNews/css/icon_more_1.gif" border="0"/></span></a></div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div frag="面板23">
+                  <div frag="窗口23" portletmode="simpleNews" configs="{'c8':'1','c18':'yyyy-MM-dd','c6':'30','c1':'0','c25':'320','c19':'yyyy-MM-dd','c30':'0','c29':'1','c21':'1','c20':'0','c4':'1','c39':'300','c22':'25','c38':'100','c7':'1','c34':'180','c23':'1','c31':'0','c16':'1','c9':'0','c3':'8','c2':'标题,发布时间','c27':'480','c17':'0','c5':'_blank','c24':'240','c32':'','c26':'1','c37':'1','c28':'640','c13':'-1','c33':'240','c10':'50','c36':'0','c42':'320','c35':'-1:-1','c43':'0','c40':'1','c41':'240'}" contents="{'c2':'0'}" style="height:210px;">
+                    <div id="wp_news_w23"> 
+
+                      <table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
+                        <tbody>
+                           
+<tr>
+                            <td width="20" height="7" align="center" valign="middle"> <img src="/_upload/tpl/00/57/87/template87/images/ico8.gif" width="8" height="12" /> </td>
+                            <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='/2017/1024/c1657a201499/page.htm' target='_blank' title='王仁贵校友主持勘察设计的嘉绍大桥斩获“菲迪克”特别优秀项目奖'>王仁贵校友主持勘察设计的嘉绍大桥斩获“菲迪克”特别优秀项目奖</a></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap">2017-10-24</div></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                          </tr>
+                          <tr>
+                            <td colspan="2" height="5" background="/_upload/tpl/00/57/87/template87/images/line.gif"> </td>
+                          </tr> 
+<tr>
+                            <td width="20" height="7" align="center" valign="middle"> <img src="/_upload/tpl/00/57/87/template87/images/ico8.gif" width="8" height="12" /> </td>
+                            <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='/2017/1016/c1657a200826/page.htm' target='_blank' title='中国移动副总裁李正茂校友被IEEE授予杰出行业领袖奖'>中国移动副总裁李正茂校友被IEEE授予杰出行业领袖奖</a></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap">2017-10-16</div></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                          </tr>
+                          <tr>
+                            <td colspan="2" height="5" background="/_upload/tpl/00/57/87/template87/images/line.gif"> </td>
+                          </tr> 
+<tr>
+                            <td width="20" height="7" align="center" valign="middle"> <img src="/_upload/tpl/00/57/87/template87/images/ico8.gif" width="8" height="12" /> </td>
+                            <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='/2017/0929/c1657a199860/page.htm' target='_blank' title='摩幻环球东大团团员致东南大学海外校友的“约会”信'>摩幻环球东大团团员致东南大学海外校友的“约会”信</a></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap">2017-09-29</div></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                          </tr>
+                          <tr>
+                            <td colspan="2" height="5" background="/_upload/tpl/00/57/87/template87/images/line.gif"> </td>
+                          </tr> 
+<tr>
+                            <td width="20" height="7" align="center" valign="middle"> <img src="/_upload/tpl/00/57/87/template87/images/ico8.gif" width="8" height="12" /> </td>
+                            <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='/2017/0928/c1657a199751/page.htm' target='_blank' title='土木工程学院束伟农校友主持设计的北京凤凰中心荣获建筑结构界国际大奖'>土木工程学院束伟农校友主持设计的北京凤凰中心荣获建筑结构界国...</a></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap">2017-09-28</div></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                          </tr>
+                          <tr>
+                            <td colspan="2" height="5" background="/_upload/tpl/00/57/87/template87/images/line.gif"> </td>
+                          </tr> 
+<tr>
+                            <td width="20" height="7" align="center" valign="middle"> <img src="/_upload/tpl/00/57/87/template87/images/ico8.gif" width="8" height="12" /> </td>
+                            <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='/_redirect?siteId=30&columnId=1657&articleId=199372' target='_blank' title='年近百岁的中央大学洪光煃老校友向土木学院发来感谢视频'>年近百岁的中央大学洪光煃老校友向土木学院发来感谢视频</a></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap">2017-09-22</div></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                          </tr>
+                          <tr>
+                            <td colspan="2" height="5" background="/_upload/tpl/00/57/87/template87/images/line.gif"> </td>
+                          </tr> 
+<tr>
+                            <td width="20" height="7" align="center" valign="middle"> <img src="/_upload/tpl/00/57/87/template87/images/ico8.gif" width="8" height="12" /> </td>
+                            <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='/2017/0918/c1657a198180/page.htm' target='_blank' title='女科学家钱璐璐校友实现天才的想法：发明全自动DNA分子机器人'>女科学家钱璐璐校友实现天才的想法：发明全自动DNA分子机器人</a></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap">2017-09-18</div></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                          </tr>
+                          <tr>
+                            <td colspan="2" height="5" background="/_upload/tpl/00/57/87/template87/images/line.gif"> </td>
+                          </tr> 
+<tr>
+                            <td width="20" height="7" align="center" valign="middle"> <img src="/_upload/tpl/00/57/87/template87/images/ico8.gif" width="8" height="12" /> </td>
+                            <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='/2017/0908/c1657a195711/page.htm' target='_blank' title='金鹏辉校友履新央行上海总部副主任兼上海分行行长，曾任央行济南分行行长'>金鹏辉校友履新央行上海总部副主任兼上海分行行长，曾任央行济南...</a></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap">2017-09-08</div></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                          </tr>
+                          <tr>
+                            <td colspan="2" height="5" background="/_upload/tpl/00/57/87/template87/images/line.gif"> </td>
+                          </tr> 
+<tr>
+                            <td width="20" height="7" align="center" valign="middle"> <img src="/_upload/tpl/00/57/87/template87/images/ico8.gif" width="8" height="12" /> </td>
+                            <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='/2017/0904/c1657a194734/page.htm' target='_blank' title='央视采访厦门城市整体夜景照明设计师——许东亮校友（81级建设系）'>央视采访厦门城市整体夜景照明设计师——许东亮校友（81级建设系）</a></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap">2017-09-04</div></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                          </tr>
+                          <tr>
+                            <td colspan="2" height="5" background="/_upload/tpl/00/57/87/template87/images/line.gif"> </td>
+                          </tr> 
+
+                        </tbody>
+                      </table></div> 
+
+<div class="more"><a class="more-link" href="/1657/list.htm" title="显示更多"><span class="moretext"><img src="/_js/_portletPlugs/simpleNews/css/icon_more_1.gif" border="0"/></span></a></div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div frag="面板44">
+                  <div frag="窗口44" portletmode="simpleNews" configs="{'c8':'1','c18':'yyyy-MM-dd','c6':'30','c1':'0','c25':'320','c19':'yyyy-MM-dd','c30':'0','c29':'1','c21':'1','c20':'0','c4':'1','c39':'300','c22':'25','c38':'100','c7':'1','c34':'180','c23':'1','c31':'0','c16':'1','c9':'0','c3':'8','c2':'标题,发布时间','c27':'480','c17':'0','c5':'_blank','c24':'240','c32':'','c26':'1','c37':'1','c28':'640','c13':'-1','c33':'240','c10':'50','c36':'0','c42':'320','c35':'-1:-1','c43':'0','c40':'1','c41':'240'}" contents="{'c2':'0'}" style="height:210px;">
+                    <div id="wp_news_w44"> 
+
+                      <table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
+                        <tbody>
+                           
+<tr>
+                            <td width="20" height="7" align="center" valign="middle"> <img src="/_upload/tpl/00/57/87/template87/images/ico8.gif" width="8" height="12" /> </td>
+                            <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='/2017/1011/c2024a200405/page.htm' target='_blank' title='一名建筑师的南工体育情怀（南京工学院1961届建筑系 曹文锋）'>一名建筑师的南工体育情怀（南京工学院1961届建筑系 曹文锋）</a></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap">2017-10-11</div></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                          </tr>
+                          <tr>
+                            <td colspan="2" height="5" background="/_upload/tpl/00/57/87/template87/images/line.gif"> </td>
+                          </tr> 
+<tr>
+                            <td width="20" height="7" align="center" valign="middle"> <img src="/_upload/tpl/00/57/87/template87/images/ico8.gif" width="8" height="12" /> </td>
+                            <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='/2017/0922/c2024a199011/page.htm' target='_blank' title='人到中年我逐渐领悟，跑得越慢，才能跑得越远（东南大学建筑学院87级 毛大庆）'>人到中年我逐渐领悟，跑得越慢，才能跑得越远（东南大学建筑学院...</a></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap">2017-09-22</div></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                          </tr>
+                          <tr>
+                            <td colspan="2" height="5" background="/_upload/tpl/00/57/87/template87/images/line.gif"> </td>
+                          </tr> 
+<tr>
+                            <td width="20" height="7" align="center" valign="middle"> <img src="/_upload/tpl/00/57/87/template87/images/ico8.gif" width="8" height="12" /> </td>
+                            <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='/2017/0914/c2024a197542/page.htm' target='_blank' title='天涯跑路——人生就是一场马拉松（东南大学生医学院90级 戴辉）'>天涯跑路——人生就是一场马拉松（东南大学生医学院90级 戴辉）</a></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap">2017-09-14</div></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                          </tr>
+                          <tr>
+                            <td colspan="2" height="5" background="/_upload/tpl/00/57/87/template87/images/line.gif"> </td>
+                          </tr> 
+<tr>
+                            <td width="20" height="7" align="center" valign="middle"> <img src="/_upload/tpl/00/57/87/template87/images/ico8.gif" width="8" height="12" /> </td>
+                            <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='/_redirect?siteId=30&columnId=2024&articleId=190627' target='_blank' title='土木学院5162级校友毕业50周年返校聚会感怀（沈绍焕）'>土木学院5162级校友毕业50周年返校聚会感怀（沈绍焕）</a></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap">2017-06-02</div></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                          </tr>
+                          <tr>
+                            <td colspan="2" height="5" background="/_upload/tpl/00/57/87/template87/images/line.gif"> </td>
+                          </tr> 
+<tr>
+                            <td width="20" height="7" align="center" valign="middle"> <img src="/_upload/tpl/00/57/87/template87/images/ico8.gif" width="8" height="12" /> </td>
+                            <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='/2017/0119/c2024a183395/page.htm' target='_blank' title='育人报国鼓励创新 东大学子青蓝辈出（原南京工学院77级 熊仁民）'>育人报国鼓励创新 东大学子青蓝辈出（原南京工学院77级 熊仁民）</a></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap">2017-01-19</div></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                          </tr>
+                          <tr>
+                            <td colspan="2" height="5" background="/_upload/tpl/00/57/87/template87/images/line.gif"> </td>
+                          </tr> 
+<tr>
+                            <td width="20" height="7" align="center" valign="middle"> <img src="/_upload/tpl/00/57/87/template87/images/ico8.gif" width="8" height="12" /> </td>
+                            <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='/2016/1211/c2024a179657/page.htm' target='_blank' title='全马“半百”记（东南大学建筑学院87级 毛大庆）'>全马“半百”记（东南大学建筑学院87级 毛大庆）</a></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap">2016-12-11</div></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                          </tr>
+                          <tr>
+                            <td colspan="2" height="5" background="/_upload/tpl/00/57/87/template87/images/line.gif"> </td>
+                          </tr> 
+<tr>
+                            <td width="20" height="7" align="center" valign="middle"> <img src="/_upload/tpl/00/57/87/template87/images/ico8.gif" width="8" height="12" /> </td>
+                            <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='/2016/1125/c2024a176450/page.htm' target='_blank' title='摄影作品：南疆十三拍（唐平瀛 东南大学电子学院91级）'>摄影作品：南疆十三拍（唐平瀛 东南大学电子学院91级）</a></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap">2016-11-25</div></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                          </tr>
+                          <tr>
+                            <td colspan="2" height="5" background="/_upload/tpl/00/57/87/template87/images/line.gif"> </td>
+                          </tr> 
+<tr>
+                            <td width="20" height="7" align="center" valign="middle"> <img src="/_upload/tpl/00/57/87/template87/images/ico8.gif" width="8" height="12" /> </td>
+                            <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='/2016/1124/c2024a176405/page.htm' target='_blank' title='2016年的感恩节，在东大，谢谢你（王晓雯 东南大学土木学院2014级硕）'>2016年的感恩节，在东大，谢谢你（王晓雯 东南大学土木学院2014...</a></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap">2016-11-24</div></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                          </tr>
+                          <tr>
+                            <td colspan="2" height="5" background="/_upload/tpl/00/57/87/template87/images/line.gif"> </td>
+                          </tr> 
+
+                        </tbody>
+                      </table></div> 
+
+<div class="more"><a class="more-link" href="/2024/list.htm" title="显示更多"><span class="moretext"><img src="/_js/_portletPlugs/simpleNews/css/icon_more_1.gif" border="0"/></span></a></div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div frag="面板48">
+                  <div frag="窗口48" portletmode="simpleNews" configs="{'c8':'1','c36':'0','c18':'yyyy-MM-dd','c42':'320','c6':'30','c1':'1','c25':'320','c19':'yyyy-MM-dd','c30':'0','c29':'1','c21':'1','c35':'-1:-1','c4':'1','c39':'300','c22':'0','c38':'100','c7':'1','c34':'300','c23':'1','c20':'0','c31':'0','c16':'1','c9':'0','c3':'8','c2':'标题,发布时间','c27':'480','c43':'0','c17':'0','c5':'_blank','c24':'240','c32':'','c26':'1','c37':'1','c28':'640','c40':'1','c13':'200','c33':'500','c41':'240','c10':'50'}" contents="{'c2':'0'}" style="height:210px;">
+                    <div id="wp_news_w48"> 
+
+                      <table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
+                        <tbody>
+                           
+<tr>
+                            <td width="20" height="7" align="center" valign="middle"> <img src="/_upload/tpl/00/57/87/template87/images/ico8.gif" width="8" height="12" /> </td>
+                            <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='/2015/0416/c12786a121966/page.htm' target='_blank' title='01建筑学院'>01建筑学院</a></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap">2015-05-19</div></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                          </tr>
+                          <tr>
+                            <td colspan="2" height="5" background="/_upload/tpl/00/57/87/template87/images/line.gif"> </td>
+                          </tr> 
+<tr>
+                            <td width="20" height="7" align="center" valign="middle"> <img src="/_upload/tpl/00/57/87/template87/images/ico8.gif" width="8" height="12" /> </td>
+                            <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='/2015/0519/c12786a124421/page.htm' target='_blank' title='02机械工程学院'>02机械工程学院</a></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap">2015-05-19</div></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                          </tr>
+                          <tr>
+                            <td colspan="2" height="5" background="/_upload/tpl/00/57/87/template87/images/line.gif"> </td>
+                          </tr> 
+<tr>
+                            <td width="20" height="7" align="center" valign="middle"> <img src="/_upload/tpl/00/57/87/template87/images/ico8.gif" width="8" height="12" /> </td>
+                            <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='/2015/0519/c12786a124449/page.htm' target='_blank' title='03能源与环境学院'>03能源与环境学院</a></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap">2015-05-19</div></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                          </tr>
+                          <tr>
+                            <td colspan="2" height="5" background="/_upload/tpl/00/57/87/template87/images/line.gif"> </td>
+                          </tr> 
+
+                        </tbody>
+                      </table></div> 
+
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tbody>
+            <tr>
+              <td width="247" valign="top">
+                <table width="100%" border="0" cellpadding="0" cellspacing="0" background="/_upload/tpl/00/57/87/template87/images/mainright5.gif">
+                  <tbody>
+                    <tr>
+                      <td width="12" height="27"> </td>
+                      <td class="bt2"> <span frag="面板10"><span frag="窗口10" portletmode="windowTitle" style="display:block;text-align:left;">校友风采</span></span> </td>
+                      <td width="72"> <span frag="面板16"><span frag="窗口16" portletmode="windowMore"><span class="more"><a class="more-link" href="/2001/list.htm" title="显示更多"><span class="moretext"><img src="/_js/_portletPlugs/simpleNews/css/icon_more_1.gif" border="0"/></span></a></span></span></span> </td>
+                      <td width="10"> </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <tbody>
+                    <tr>
+                      <td height="14"> </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <tbody>
+                    <tr>
+                      <td width="11" height="89"> </td>
+                      <td width="65" valign="top"> <img src="/_upload/tpl/00/57/87/template87/images/main1.jpg" /> </td>
+                      <td width="12"> </td>
+                      <td valign="top">
+                        <div frag="面板25">
+                          <div frag="窗口25" portletmode="simpleNews" configs="{'c8':'1','c18':'yyyy-MM-dd','c6':'10','c1':'0','c25':'320','c19':'yyyy-MM-dd','c30':'0','c29':'1','c21':'0','c20':'0','c4':'1','c39':'300','c22':'25','c38':'100','c7':'1','c34':'180','c23':'1','c31':'0','c16':'1','c9':'0','c3':'8','c2':'标题','c27':'480','c17':'0','c5':'_blank','c24':'240','c32':'','c26':'1','c37':'1','c28':'640','c13':'10','c33':'240','c10':'50'}" contents="{'c2':'0'}">
+                            <div id="wp_news_w25"> 
+
+                              <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                <tbody>
+                                   
+<tr>
+                                    <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='/2017/1024/c2001a201503/page.htm' target='_blank' title='王仁贵校友主持勘察设计的嘉绍大桥斩获“菲迪克”特别优秀项目奖'>王仁贵校友主持勘察设...</a></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                                  </tr> 
+<tr>
+                                    <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='/2017/1016/c2001a200835/page.htm' target='_blank' title='李正茂校友被IEEE授予杰出行业领袖奖'>李正茂校友被IEEE授予...</a></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                                  </tr> 
+<tr>
+                                    <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='/2017/0928/c2001a201504/page.htm' target='_blank' title='束伟农校友主持设计的北京凤凰中心荣获建筑结构界国际大奖'>束伟农校友主持设计的...</a></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                                  </tr> 
+<tr>
+                                    <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='/2017/0918/c2001a198181/page.htm' target='_blank' title='钱璐璐校友发明全自动DNA分子机器人'>钱璐璐校友发明全自动...</a></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                                  </tr> 
+<tr>
+                                    <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='/2017/0908/c2001a195712/page.htm' target='_blank' title='金鹏辉校友履新央行上海分行行长'>金鹏辉校友履新央行上...</a></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                                  </tr> 
+<tr>
+                                    <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='/2017/0904/c2001a194735/page.htm' target='_blank' title='许东亮校友：厦门城市整体夜景照明设计师'>许东亮校友：厦门城市...</a></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                                  </tr> 
+<tr>
+                                    <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='/2017/0901/c2001a194446/page.htm' target='_blank' title='荣芳校友荣获2017年度世界核妇女奖'>荣芳校友荣获2017年度...</a></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                                  </tr> 
+<tr>
+                                    <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='/2017/0615/c2001a191704/page.htm' target='_blank' title='林鸣校友：超级工程的建设者，在“唯一”中创造出“第一”'>林鸣校友：超级工程的...</a></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                                  </tr> 
+
+                                </tbody>
+                              </table></div> 
+
+                          </div>
+                        </div>
+                      </td>
+                      <td width="12"> </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </td>
+              <td> </td>
+              <td width="247" valign="top">
+                <table width="100%" border="0" cellpadding="0" cellspacing="0" background="/_upload/tpl/00/57/87/template87/images/mainright5.gif">
+                  <tbody>
+                    <tr>
+                      <td width="12" height="27"> </td>
+                      <td class="bt2"> <span frag="面板17"><span frag="窗口17" portletmode="windowTitle" style="display:block;text-align:left;">校友博客</span></span> </td>
+                      <td width="72"> <span frag="面板18"><span frag="窗口18" portletmode="windowMore"><span class="more"><a class="more-link" href="/2002/list.htm" title="显示更多"><span class="moretext"><img src="/_js/_portletPlugs/simpleNews/css/icon_more_1.gif" border="0"/></span></a></span></span></span> </td>
+                      <td width="10"> </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <tbody>
+                    <tr>
+                      <td height="14"> </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <tbody>
+                    <tr>
+                      <td width="11" height="89"> </td>
+                      <td width="65" valign="top"> <img src="/_upload/tpl/00/57/87/template87/images/main2.jpg" /> </td>
+                      <td width="12"> </td>
+                      <td valign="top">
+                        <div frag="面板26">
+                          <div frag="窗口26" portletmode="simpleNews" configs="{'c8':'1','c18':'yyyy-MM-dd','c6':'12','c1':'0','c25':'320','c19':'yyyy-MM-dd','c30':'0','c29':'1','c21':'0','c20':'0','c4':'1','c39':'300','c22':'25','c38':'100','c7':'1','c34':'180','c23':'1','c31':'0','c16':'1','c9':'0','c3':'8','c2':'标题','c27':'480','c17':'0','c5':'_blank','c24':'240','c32':'','c26':'1','c37':'1','c28':'640','c13':'12','c33':'240','c10':'50'}" contents="{'c2':'0'}">
+                            <div id="wp_news_w26"> 
+
+                              <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                <tbody>
+                                   
+<tr>
+                                    <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='http://blog.handsbrain.com/weiyu/' target='_blank' title='校友韦钰院士的BLOG '>校友韦钰院士的BLOG </a></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                                  </tr> 
+<tr>
+                                    <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='http://ngn163tech.blog.163.com/' target='_blank' title='校友倪光南院士的BLOG'>校友倪光南院士的BLOG</a></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                                  </tr> 
+<tr>
+                                    <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='http://blog.sina.com.cn/zhaomin' target='_blank' title='校友赵民的BLOG '>校友赵民的BLOG </a></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                                  </tr> 
+<tr>
+                                    <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='http://blog.sina.com.cn/wanghongdao' target='_blank' title='校友王开元的BLOG '>校友王开元的BLOG </a></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                                  </tr> 
+<tr>
+                                    <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='http://weibo.com/kincotangdong' target='_blank' title='校友唐咚的BLOG'>校友唐咚的BLOG</a></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                                  </tr> 
+<tr>
+                                    <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='http://blog.sina.com.cn/s/blog_4ab6485e0100iwgj.html' target='_blank' title='校友唐杰晖的BLOG'>校友唐杰晖的BLOG</a></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                                  </tr> 
+<tr>
+                                    <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='http://peidezhang.blog.163.com/blog/#m=0' target='_blank' title='校友张培德的BLOG'>校友张培德的BLOG</a></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                                  </tr> 
+<tr>
+                                    <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='http://blog.sina.com.cn/seug' target='_blank' title='校研究生记者团BLOG'>校研究生记者团BLOG</a></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                                  </tr> 
+
+                                </tbody>
+                              </table></div> 
+
+                          </div>
+                        </div>
+                      </td>
+                      <td width="12"> </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div id="mainrightright">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tbody>
+            <tr>
+              <td width="1"> </td>
+              <td valign="top">
+                <table width="100%" border="0" cellspacing="0" cellpadding="0" background="/_upload/tpl/00/57/87/template87/images/mainright6.gif">
+                  <tbody>
+                    <tr>
+                      <td width="2" height="27"> </td>
+                      <td class="bt1"> <span class="lef"><img src="/_upload/tpl/00/57/87/template87/images/ico5.gif" width="16" height="18" align="absmiddle" /></span><span frag="面板19"><span frag="窗口19" portletmode="windowTitle" style="display:block;text-align:left;">生日祝福</span></span> </td>
+                      <td width="72"> </td>
+                      <td width="8"> </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <table width="100%" border="0" cellspacing="0" cellpadding="0" class="bg1">
+                  <tbody>
+                    <tr>
+                      <td width="20" height="180"> </td>
+                      <td height="180" valign="top">
+                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                          <tbody>
+                            <tr>
+                              <td height="21"> </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <table style="overflow:scroll" height="140" width="100%" border="0" cellspacing="0" cellpadding="0">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <div style="width:100%;height:140;overflow-y:scroll;">
+                                  <div frag="面板30">
+                                    <div frag="窗口30" portletmode="iframe">
+                                      <iframe allowtransparency='ture' frameborder='0' width='190px' height='155px' scrolling='no' src='http://seuaa-w1.seu.edu.cn/apps/schoolfellow/portlet/schoolfellowBirthdatePortlet.jsp?siteId=15&pageId=0&c=210'></iframe>
+                                    </div>
+                                  </div>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </td>
+                      <td width="20"> </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <table width="100%" border="0" cellspacing="0" cellpadding="0" background="/_upload/tpl/00/57/87/template87/images/mainright6.gif">
+                  <tbody>
+                    <tr>
+                      <td width="2" height="27"> </td>
+                      <td class="bt1"> <span class="lef"><img src="/_upload/tpl/00/57/87/template87/images/ico6.gif" width="24" height="24" align="absmiddle" /></span><span frag="面板20"><span frag="窗口20" portletmode="windowTitle" style="display:block;text-align:left;">捐赠列表</span></span> </td>
+                      <td width="72" align="center"> <a href="http://seuef-w1.seu.edu.cn/apps/schoolfellow/contribute/contributeItemMoreList1.faces?siteId=15&pageId=0" target="_blank">更多&gt;&gt;</a> </td>
+                      <td width="8"> </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <table width="100%" border="0" cellspacing="0" cellpadding="0" class="bg2">
+                  <tbody>
+                    <tr>
+                      <td width="20" height="218"> </td>
+                      <td valign="top">
+                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                          <tbody>
+                            <tr>
+                              <td height="21"> </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <div style="width:100%;height:175;overflow-y:scroll;">
+                                  <div frag="面板31">
+                                    <div frag="窗口31" portletmode="iframe">
+                                      <iframe allowtransparency='ture' frameborder='0' width='190px' height='155px' scrolling='yes' src='http://seuaa-w1.seu.edu.cn/apps/schoolfellow/portlet/ContributeCompositorPortlet.jsp?siteId=15&pageId=0&c=50'></iframe>
+                                    </div>
+                                  </div>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </td>
+                      <td width="20"> </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <table width="100%" height="60" border="0" cellpadding="0" cellspacing="0">
+                  <tbody>
+                    <tr>
+                      <td align="center"> <a href="http://seuef-w1.seu.edu.cn/apps/onlinepay/submitForm.faces" target="_blank"><img src="/_upload/tpl/00/57/87/template87/images/1111.jpg" width="209" height="50" border="0" /></a> </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <tbody>
+                    <tr>
+                      <td> <img src="/_upload/tpl/00/57/87/template87/images/mainright9.gif" /> </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                  <tbody>
+                    <tr>
+                      <td height="130" valign="top" class="kuan">
+                        <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                          <tbody>
+                            <tr>
+                              <td height="10"> </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+                          <tbody>
+                            <tr>
+                              <td align="center" valign="middle">
+                                <div frag="面板33">
+                                  <div frag="窗口33" portletmode="simpleNews" configs="{'c8':'1','c18':'yyyy-MM-dd','c6':'11','c1':'0','c25':'320','c19':'yyyy-MM-dd','c30':'0','c29':'1','c21':'1','c20':'0','c4':'1','c39':'300','c38':'100','c7':'1','c34':'180','c23':'1','c31':'4','c16':'1','c9':'0','c3':'10','c2':'标题,图示图标,最新图标,热门图标','c27':'480','c17':'0','c5':'_blank','c24':'240','c32':'','c26':'1','c37':'1','c28':'640','c13':'11','c33':'240','c10':'50'}" contents="{'c2':'0'}">
+                                    <div class="sudy-links" id="sudy-links-w33"> 
+     <span class="links-name">东南大学链接</span> 
+     <div class="links-wrap"> 
+<div id="wp_news_w33"> 
+
+                                      <table border="0" cellspacing="0" cellpadding="0">
+                                        <tbody>
+                                           
+<tr>
+                                            <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='http://t.qq.com/seunews?pgv_ref=search.index.user1' target='_blank' title='东南大学腾迅微博'>东南大学腾迅微博</a></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                                          </tr> 
+<tr>
+                                            <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='http://seuef.seu.edu.cn/' target='_blank' title='东南大学教育基金会'>东南大学教育基金会</a></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                                          </tr> 
+<tr>
+                                            <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='http://www.seu.edu.cn' target='_blank' title='东南大学首页'>东南大学首页</a></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                                          </tr> 
+
+                                        </tbody>
+                                      </table></div> 
+
+     </div> 
+</div> 
+<script type="text/javascript"> 
+     $(function() { 
+         $("#sudy-links-w33").sudyLinks({ 
+             handle: ".links-name", 
+             wrap: ".links-wrap", 
+             trigger: "mouseenter", 
+             effect: "show", 
+             speed: 300, 
+             hidePause: 800 
+         }); 
+     });  
+</script> 
+
+                                  </div>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                          <tbody>
+                            <tr>
+                              <td height="6"> </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+                          <tbody>
+                            <tr>
+                              <td align="center" valign="middle">
+                                <div frag="面板34">
+                                  <div frag="窗口34" portletmode="simpleNews" configs="{'c8':'1','c18':'yyyy-MM-dd','c6':'11','c1':'0','c25':'320','c19':'yyyy-MM-dd','c30':'0','c29':'1','c21':'1','c20':'0','c4':'1','c39':'300','c38':'100','c7':'1','c34':'180','c23':'1','c31':'4','c16':'1','c9':'0','c3':'20','c2':'标题,图示图标,最新图标,热门图标','c27':'480','c17':'0','c5':'_blank','c24':'240','c32':'','c26':'1','c37':'1','c28':'640','c13':'11','c33':'240','c10':'50'}" contents="{'c2':'0'}">
+                                    <div class="sudy-links" id="sudy-links-w34"> 
+     <span class="links-name">校友分会</span> 
+     <div class="links-wrap"> 
+<div id="wp_news_w34"> 
+
+                                      <table border="0" cellspacing="0" cellpadding="0">
+                                        <tbody>
+                                           
+<tr>
+                                            <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='HTTPS://sites.google.com/site/seuaaia/ ' target='_blank' title='东南大学澳大利亚校友会'>东南大学澳大利亚校友会</a></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                                          </tr> 
+<tr>
+                                            <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='http://seuboston.comuv.com' target='_blank' title='东南大学美国波士顿地区校友会'>东南大学美国波士顿地区...</a></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                                          </tr> 
+<tr>
+                                            <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='https://sites.google.com/site/seuhkaa' target='_blank' title='东南大学香港校友会'>东南大学香港校友会</a></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                                          </tr> 
+<tr>
+                                            <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='http://zt.zgnt.net/ZT/XYH' target='_blank' title='东南大学南通校友会'>东南大学南通校友会</a></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                                          </tr> 
+<tr>
+                                            <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='http://dxfh.seu.edu.cn' target='_blank' title='东南大学地校分会'>东南大学地校分会</a></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                                          </tr> 
+<tr>
+                                            <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='http://www.yzseu.com/' target='_blank' title='东南大学扬州校友会'>东南大学扬州校友会</a></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                                          </tr> 
+<tr>
+                                            <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='http://www.seuczri.cn/alumniassociation/index2.jsp;jsessionid=C7E91770D9406D7CE0BF1560BC251FE2' target='_blank' title='东南大学常州校友会'>东南大学常州校友会</a></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                                          </tr> 
+<tr>
+                                            <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='http://www.ah111.com/' target='_blank' title='东南大学安徽校友会'>东南大学安徽校友会</a></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                                          </tr> 
+<tr>
+                                            <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='http://www.tjseu.org/' target='_blank' title='东南大学天津校友会'>东南大学天津校友会</a></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                                          </tr> 
+<tr>
+                                            <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='http://www.gzseu.org' target='_blank' title='东南大学广州校友会'>东南大学广州校友会</a></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                                          </tr> 
+<tr>
+                                            <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='http://www.cunjuseu.com' target='_blank' title='中央大学,东南大学 湖南校友会'>中央大学,东南大学 湖南...</a></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                                          </tr> 
+<tr>
+                                            <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='http://dndx-wx.org/index.jsp' target='_blank' title='东南大学无锡校友会'>东南大学无锡校友会</a></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                                          </tr> 
+<tr>
+                                            <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='http://www.sipedi.cn/SIPEDI/ddxyh/default.aspx' target='_blank' title='东南大学苏州校友会'>东南大学苏州校友会</a></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                                          </tr> 
+<tr>
+                                            <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='http://www.bjseu.org' target='_blank' title='东南大学北京校友会'>东南大学北京校友会</a></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                                          </tr> 
+<tr>
+                                            <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='http://www.seusz.org/' target='_blank' title='东南大学深圳校友会'>东南大学深圳校友会</a></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                                          </tr> 
+<tr>
+                                            <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='http://www.shseu.com/index1.asp' target='_blank' title='东南大学上海校友会'>东南大学上海校友会</a></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                                          </tr> 
+<tr>
+                                            <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='http://www.zjseu.org.cn' target='_blank' title='东南大学浙江校友会'>东南大学浙江校友会</a></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                                          </tr> 
+<tr>
+                                            <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='http://class.chinaren.com/school/class_list.jsp?schooluuid=2815034544942509391' target='_blank' title='东南大学ChinaRen班级录'>东南大学ChinaRen班级录</a></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                                          </tr> 
+<tr>
+                                            <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='http://me.seu.edu.cn/seu/' target='_blank' title='孔雀东南飞——东南大学机械工程学院同学录'>孔雀东南飞——东南大学机...</a></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                                          </tr> 
+
+                                        </tbody>
+                                      </table></div> 
+
+     </div> 
+</div> 
+<script type="text/javascript"> 
+     $(function() { 
+         $("#sudy-links-w34").sudyLinks({ 
+             handle: ".links-name", 
+             wrap: ".links-wrap", 
+             trigger: "mouseenter", 
+             effect: "show", 
+             speed: 300, 
+             hidePause: 800 
+         }); 
+     });  
+</script> 
+
+                                  </div>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                          <tbody>
+                            <tr>
+                              <td height="6"> </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+                          <tbody>
+                            <tr>
+                              <td align="center" valign="middle">
+                                <div frag="面板35">
+                                  <div frag="窗口35" portletmode="simpleNews" configs="{'c8':'1','c18':'yyyy-MM-dd','c6':'11','c1':'0','c25':'320','c19':'yyyy-MM-dd','c30':'0','c29':'1','c21':'1','c20':'0','c4':'1','c39':'300','c38':'100','c7':'1','c34':'180','c23':'1','c31':'4','c16':'1','c9':'0','c3':'50','c2':'标题,图示图标,最新图标,热门图标','c27':'480','c17':'0','c5':'_blank','c24':'240','c32':'','c26':'1','c37':'1','c28':'640','c13':'11','c33':'240','c10':'50'}" contents="{'c2':'0'}">
+                                    <div class="sudy-links" id="sudy-links-w35"> 
+     <span class="links-name">校友企事业</span> 
+     <div class="links-wrap"> 
+<div id="wp_news_w35"> 
+
+                                      <table border="0" cellspacing="0" cellpadding="0">
+                                        <tbody>
+                                           
+<tr>
+                                            <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='/_redirect?siteId=30&columnId=1998&articleId=195790' target='_blank' title='上海同创共展教育科技有限公司'>上海同创共展教育科技有...</a></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                                          </tr> 
+<tr>
+                                            <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='http://www.rf-8.com' target='_blank' title='深圳大地创想建筑景观规划设计有限公司'>深圳大地创想建筑景观规...</a></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                                          </tr> 
+<tr>
+                                            <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='http://www.kinco.cn/html/cn/Aboutus/Profile/' target='_blank' title='上海步科自动化股份有限公司'>上海步科自动化股份有限...</a></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                                          </tr> 
+<tr>
+                                            <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href=' http://www.vipshare.com' target='_blank' title='南京网亚计算机有限公司'>南京网亚计算机有限公司</a></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                                          </tr> 
+<tr>
+                                            <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='http://www.longdian.cn' target='_blank' title='天津市隆电电气工程有限公司'>天津市隆电电气工程有限...</a></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                                          </tr> 
+<tr>
+                                            <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='http://www.jstri.com' target='_blank' title='江苏省交通科学研究院股份有限公司'>江苏省交通科学研究院股...</a></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                                          </tr> 
+<tr>
+                                            <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='http://www.samples.com.cn/home.asp' target='_blank' title='南京三宝科技集团有限公司'>南京三宝科技集团有限公...</a></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                                          </tr> 
+<tr>
+                                            <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='http://www.jsjsy.com/main/index.asp' target='_blank' title='江苏省交通规划设计院有限公司'>江苏省交通规划设计院有...</a></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                                          </tr> 
+<tr>
+                                            <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='http://www.kingdee.com/' target='_blank' title='金蝶国际软件集团有限公司'>金蝶国际软件集团有限公...</a></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                                          </tr> 
+<tr>
+                                            <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='http://www.sziit.com.cn/' target='_blank' title='深圳信息职业技术学院'>深圳信息职业技术学院</a></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                                          </tr> 
+<tr>
+                                            <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='http://www.panda.cn/SJTCMS/html/pandagroup/index1.asp' target='_blank' title='熊猫电子'>熊猫电子</a></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                                          </tr> 
+<tr>
+                                            <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='http://www.elefirst.com/' target='_blank' title='江苏光一科技有限责任公司'>江苏光一科技有限责任公...</a></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                                          </tr> 
+<tr>
+                                            <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='http://www.gigatronworld.com/' target='_blank' title='奇佳（香港）有限公司'>奇佳（香港）有限公司</a></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                                          </tr> 
+<tr>
+                                            <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='http://www.sadi.com.cn/' target='_blank' title='深圳市建筑设计研究总院'>深圳市建筑设计研究总院</a></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                                          </tr> 
+<tr>
+                                            <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='http://www.aigotech.com.cn/' target='_blank' title='深圳市爱国者嵌入式系统科技有限公司'>深圳市爱国者嵌入式系统...</a></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                                          </tr> 
+<tr>
+                                            <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='http://www.sysu-sz.com/indexServlet?' target='_blank' title='中山大学深圳研究院'>中山大学深圳研究院</a></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                                          </tr> 
+<tr>
+                                            <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='http://www.cohl.cn/' target='_blank' title='中海地产'>中海地产</a></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                                          </tr> 
+<tr>
+                                            <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='http://www.zjhuakun.com/' target='_blank' title='浙江华坤地质发展有限公司'>浙江华坤地质发展有限公...</a></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                                          </tr> 
+<tr>
+                                            <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='http://ap.suntech-power.com/index.php' target='_blank' title='深圳尚德太阳能电力股份有限公司'>深圳尚德太阳能电力股份...</a></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                                          </tr> 
+<tr>
+                                            <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='http://www.watech.com.cn/' target='_blank' title='深圳市极水实业有限公司'>深圳市极水实业有限公司</a></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                                          </tr> 
+<tr>
+                                            <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='http://www.heda.com.cn/' target='_blank' title='北京和达投资有限公司'>北京和达投资有限公司</a></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                                          </tr> 
+<tr>
+                                            <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='http://www.winteen.com/' target='_blank' title='深圳市惠田实业有限公司'>深圳市惠田实业有限公司</a></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                                          </tr> 
+<tr>
+                                            <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='http://templet.pinsou.com/templet/1001/index.asp?bd=26323' target='_blank' title='新天下实业有限公司，深圳市神舟电脑有限公司'>新天下实业有限公司，深...</a></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                                          </tr> 
+<tr>
+                                            <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='http://www.syngaia.com/Index.aspx' target='_blank' title='新嘉源投资咨询有限公司'>新嘉源投资咨询有限公司</a></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                                          </tr> 
+<tr>
+                                            <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='http://www.net114.com/994897/' target='_blank' title='深圳市卓亚科技有限公司'>深圳市卓亚科技有限公司</a></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                                          </tr> 
+<tr>
+                                            <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='/2009/1014/c1998a27059/page.htm' target='_blank' title='爱迪尔(ADEL)集团'>爱迪尔(ADEL)集团</a></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                                          </tr> 
+<tr>
+                                            <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='http://www.magustek.com/' target='_blank' title='上海麦杰科技有限责任公司'>上海麦杰科技有限责任公...</a></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                                          </tr> 
+<tr>
+                                            <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='http://www.qingxin.com.cn/index1.htm' target='_blank' title='北京国电清新环保技术股份有限公司'>北京国电清新环保技术股...</a></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                                          </tr> 
+<tr>
+                                            <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='http://www.e-gb.com.cn/' target='_blank' title='北京东方海文信息技术有限责任公司'>北京东方海文信息技术有...</a></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                                          </tr> 
+<tr>
+                                            <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='http://www.adfaith.com/' target='_blank' title='北京正略均策管理咨询有限公司'>北京正略均策管理咨询有...</a></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                                          </tr> 
+<tr>
+                                            <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='http://www.jwdigital.com/ch/' target='_blank' title='深圳市京华数码科技有限公司'>深圳市京华数码科技有限...</a></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                                          </tr> 
+<tr>
+                                            <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='http://www.sri-harvest.cn/' target='_blank' title='北京六所和瑞科技发展有限公司'>北京六所和瑞科技发展有...</a></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                                          </tr> 
+<tr>
+                                            <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='http://www.szddby.com' target='_blank' title='深圳市东大博彦企业管理咨询有限公司'>深圳市东大博彦企业管理...</a></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                                          </tr> 
+<tr>
+                                            <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='http://campus.chinahr.com/pages/cgnpc/index.asp' target='_blank' title='中国广东核电集团有限公司'>中国广东核电集团有限公...</a></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                                          </tr> 
+<tr>
+                                            <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='http://www.jsjky.com/' target='_blank' title='江苏建筑科学研究院有限公司'>江苏建筑科学研究院有限...</a></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                                          </tr> 
+<tr>
+                                            <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='http://www.naritech.cn/' target='_blank' title='国电南瑞科技股份有限公司'>国电南瑞科技股份有限公...</a></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                                          </tr> 
+<tr>
+                                            <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='http://www.wiscom.com.cn/' target='_blank' title='江苏金智科技股份有限公司'>江苏金智科技股份有限公...</a></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                                          </tr> 
+<tr>
+                                            <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='http://www.xwesoft.com/' target='_blank' title='合肥新威尔计算机有限公司'>合肥新威尔计算机有限公...</a></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                                          </tr> 
+<tr>
+                                            <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='http://www.js-jinhua.com/index.asp' target='_blank' title='南京锦华装饰'>南京锦华装饰</a></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                                          </tr> 
+<tr>
+                                            <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='http://www.zhonghaogroup.com' target='_blank' title='江苏中浩投资实业集团有限公司'>江苏中浩投资实业集团有...</a></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                                          </tr> 
+
+                                        </tbody>
+                                      </table></div> 
+
+     </div> 
+</div> 
+<script type="text/javascript"> 
+     $(function() { 
+         $("#sudy-links-w35").sudyLinks({ 
+             handle: ".links-name", 
+             wrap: ".links-wrap", 
+             trigger: "mouseenter", 
+             effect: "show", 
+             speed: 300, 
+             hidePause: 800 
+         }); 
+     });  
+</script> 
+
+                                  </div>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                          <tbody>
+                            <tr>
+                              <td height="6"> </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+                          <tbody>
+                            <tr>
+                              <td align="center" valign="middle">
+                                <div frag="面板36">
+                                  <div frag="窗口36" portletmode="simpleNews" configs="{'c8':'1','c18':'yyyy-MM-dd','c6':'11','c1':'0','c25':'320','c19':'yyyy-MM-dd','c30':'0','c29':'1','c21':'1','c20':'0','c4':'1','c39':'300','c38':'100','c7':'1','c34':'180','c23':'1','c31':'4','c16':'1','c9':'0','c3':'50','c2':'标题,图示图标,最新图标,热门图标','c27':'480','c17':'0','c5':'_blank','c24':'240','c32':'','c26':'1','c37':'1','c28':'640','c13':'11','c33':'240','c10':'50'}" contents="{'c2':'0'}">
+                                    <div class="sudy-links" id="sudy-links-w36"> 
+     <span class="links-name">高校校友会</span> 
+     <div class="links-wrap"> 
+<div id="wp_news_w36"> 
+
+                                      <table border="0" cellspacing="0" cellpadding="0">
+                                        <tbody>
+                                           
+<tr>
+                                            <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='http://alumni.njust.edu.cn/index.html' target='_blank' title='南京理工大学校友会'>南京理工大学校友会</a></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                                          </tr> 
+<tr>
+                                            <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='http://alumni.lzu.edu.cn/' target='_blank' title='兰州大学校友总会'>兰州大学校友总会</a></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                                          </tr> 
+<tr>
+                                            <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='http://xyzh.buaa.edu.cn/' target='_blank' title='北航校友会'>北航校友会</a></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                                          </tr> 
+<tr>
+                                            <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='http://zuaa.zju.edu.cn/' target='_blank' title='浙江大学校友网'>浙江大学校友网</a></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                                          </tr> 
+<tr>
+                                            <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='http://alumni.cqu.edu.cn/WebUI/' target='_blank' title='重庆大学校友总会'>重庆大学校友总会</a></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                                          </tr> 
+<tr>
+                                            <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='http://www.sjtu.org/sjtuaa/index.php' target='_blank' title='上海交通大学校友网'>上海交通大学校友网</a></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                                          </tr> 
+<tr>
+                                            <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='http://www.nju.org.cn/' target='_blank' title='南京大学校友总会'>南京大学校友总会</a></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                                          </tr> 
+<tr>
+                                            <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='http://alumni.ustc.edu.cn/login.php' target='_blank' title='中国科大校友总会'>中国科大校友总会</a></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                                          </tr> 
+<tr>
+                                            <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='http://xyh.hust.edu.cn/' target='_blank' title='华中科技大学校友总会'>华中科技大学校友总会</a></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                                          </tr> 
+<tr>
+                                            <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='http://alumni.whu.edu.cn/' target='_blank' title='武汉大学校友总会'>武汉大学校友总会</a></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                                          </tr> 
+<tr>
+                                            <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='http://alumni.xjtu.edu.cn/web/guest' target='_blank' title='西安交通大学校友网'>西安交通大学校友网</a></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                                          </tr> 
+<tr>
+                                            <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='http://www.jlu.edu.cn/newjlu/jdxy/jdxy.htm' target='_blank' title='吉林大学校友网'>吉林大学校友网</a></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                                          </tr> 
+<tr>
+                                            <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='http://www.suaa.cn/suaa/indexload.do' target='_blank' title='中山大学校友总会'>中山大学校友总会</a></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                                          </tr> 
+<tr>
+                                            <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='http://scuaa.scu.edu.cn/' target='_blank' title='四川大学校友会'>四川大学校友会</a></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                                          </tr> 
+<tr>
+                                            <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='http://www.hitxy.org/web/' target='_blank' title='哈工大校友总会'>哈工大校友总会</a></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                                          </tr> 
+<tr>
+                                            <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='http://www.sdu.org.cn/' target='_blank' title='山东大学校友网'>山东大学校友网</a></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                                          </tr> 
+<tr>
+                                            <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='http://nkuaa.nankai.edu.cn/nkuaa/index.php' target='_blank' title='南开校友网'>南开校友网</a></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                                          </tr> 
+<tr>
+                                            <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='http://xyh.bnu.edu.cn/' target='_blank' title='北京师范大学校友总会'>北京师范大学校友总会</a></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                                          </tr> 
+<tr>
+                                            <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='http://www.tsinghua.org.cn/alumni/index.do' target='_blank' title='清华校友总会'>清华校友总会</a></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                                          </tr> 
+<tr>
+                                            <td>  
+<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+<tr> 
+<td align="left"><a href='http://www.pku.org.cn/' target='_blank' title='北京大学校友网'>北京大学校友网</a></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+<td align="left" width="30px"><div style="white-space:nowrap"></div></td> 
+ 
+</tr> 
+</table> 
+ </td>
+                                          </tr> 
+
+                                        </tbody>
+                                      </table></div> 
+
+     </div> 
+</div> 
+<script type="text/javascript"> 
+     $(function() { 
+         $("#sudy-links-w36").sudyLinks({ 
+             handle: ".links-name", 
+             wrap: ".links-wrap", 
+             trigger: "mouseenter", 
+             effect: "show", 
+             speed: 300, 
+             hidePause: 800 
+         }); 
+     });  
+</script> 
+
+                                  </div>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                          <tbody>
+                            <tr>
+                              <td height="6"> </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+                          <tbody>
+                            <tr>
+                              <td align="center" valign="middle">
+                                <div frag="面板88">
+                                  
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <div frag="面板89">
+                          
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </td>
+              <td width="4" valign="top"> </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div> </div>
+      <div id="logo">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tbody>
+            <tr>
+              <td height="10"> </td>
+            </tr>
+          </tbody>
+        </table>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tbody>
+            <tr>
+              <td width="10"> <img src="/_upload/tpl/00/57/87/template87/images/foot_1.gif" /> </td>
+              <td>
+                <div style="width:690px;height:98px;overflow:hidden">
+                  <table border="0" cellspacing="0" cellpadding="0">
+                    <tbody>
+                      <tr>
+                        <td height="98">
+                          <div frag="面板27">
+                            <div frag="窗口27" portletmode="tpl2_imgscroll2" contents="{'c2':'1'}">
+                              <div id="topw27" class="imgscroll2_top" style="width:693px;height:100%;overflow:hidden;">
+    <table id="tabw27" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+            <td id="beginw27">
+                <table width="100%" border="0" cellspacing="0" cellpadding="0" class="imgscroll2_tpl " >
+                    <tr class=" " >
+                        <td nowrap="nowrap" class=" imgscroll2_td " >
+                            <div class="imgscroll2_img">
+                                <a tailtagoutput="false" target="_blank" href="/2017/0222/c1999a184085/page.htm" title="20170108校友总会五届理事会七次会议" >
+                                    
+                                        <img alt="20170108校友总会五届理..." src="/_upload/article/images/78/3b/e5f31d1440a19d8815db14a8e8f7/1a705ea7-0ee3-4ce6-9c14-7b4f9b222dc8_s.jpg" height="98px" >
+                                    
+                                </a>
+                            </div>
+                        </td><td nowrap="nowrap" class=" imgscroll2_td " >
+                            <div class="imgscroll2_img">
+                                <a tailtagoutput="false" target="_blank" href="/2017/0222/c1999a184097/page.htm" title="20170121浙江校友会新来杭工作校友座谈会" >
+                                    
+                                        <img alt="20170121浙江校友会新来..." src="/_upload/article/images/a2/cd/3af002d742d3861d6ced147dfed1/e0179eb9-97a0-425a-ba99-d3e5a0c0acd4_s.jpg" height="98px" >
+                                    
+                                </a>
+                            </div>
+                        </td><td nowrap="nowrap" class=" imgscroll2_td " >
+                            <div class="imgscroll2_img">
+                                <a tailtagoutput="false" target="_blank" href="/2017/0222/c1999a184083/page.htm" title="20170115苏州校友会昆山分会成立" >
+                                    
+                                        <img alt="20170115苏州校友会昆山..." src="/_upload/article/images/8d/8f/8af43297413987e99fabd52ab58a/53193ac3-c32a-49dd-a5f8-f5f661d5ef5a_s.jpg" height="98px" >
+                                    
+                                </a>
+                            </div>
+                        </td><td nowrap="nowrap" class=" imgscroll2_td " >
+                            <div class="imgscroll2_img">
+                                <a tailtagoutput="false" target="_blank" href="/2017/0222/c1999a184082/page.htm" title="20170115北京校友会新春联谊会" >
+                                    
+                                        <img alt="20170115北京校友会新春..." src="/_upload/article/images/37/24/78f13cbc4a13a637cdd86c86163a/e352c343-f99b-448f-a478-8ab58a667f0a_s.jpg" height="98px" >
+                                    
+                                </a>
+                            </div>
+                        </td><td nowrap="nowrap" class=" imgscroll2_td " >
+                            <div class="imgscroll2_img">
+                                <a tailtagoutput="false" target="_blank" href="/2017/0222/c1999a184081/page.htm" title="20170115山东校友会艺术分会成立" >
+                                    
+                                        <img alt="20170115山东校友会艺术..." src="/_upload/article/images/92/b7/ccac8c6a4b1ca5a20a3d9532c0d6/7fc93fc5-c5c6-4a11-aa3b-a2ef664bebb0_s.jpg" height="98px" >
+                                    
+                                </a>
+                            </div>
+                        </td><td nowrap="nowrap" class=" imgscroll2_td " >
+                            <div class="imgscroll2_img">
+                                <a tailtagoutput="false" target="_blank" href="/2017/0222/c1999a184080/page.htm" title="200170114上海校友会艺术分会成立" >
+                                    
+                                        <img alt="200170114上海校友会艺..." src="/_upload/article/images/b0/77/8f51063f4992b1a5b77d616a1642/2d271ff0-e60a-4b67-a68e-a169bea84176_s.jpg" height="98px" >
+                                    
+                                </a>
+                            </div>
+                        </td><td nowrap="nowrap" class=" imgscroll2_td " >
+                            <div class="imgscroll2_img">
+                                <a tailtagoutput="false" target="_blank" href="/2017/0222/c1999a184079/page.htm" title="20170111香港校友会年会" >
+                                    
+                                        <img alt="20170111香港校友会年会" src="/_upload/article/images/65/d2/4ae2b63240e8afb10b41969f369a/4457d56b-ba38-4d8c-8716-0ea81275985b_s.jpg" height="98px" >
+                                    
+                                </a>
+                            </div>
+                        </td><td nowrap="nowrap" class=" imgscroll2_td " >
+                            <div class="imgscroll2_img">
+                                <a tailtagoutput="false" target="_blank" href="/2017/0222/c1999a184078/page.htm" title="20170108山西校友新春联谊" >
+                                    
+                                        <img alt="20170108山西校友新春联..." src="/_upload/article/images/4f/36/0c8f4c6341bb846f358f9eb319b2/2fc57f1f-f172-400d-825a-febf48b68273_s.jpg" height="98px" >
+                                    
+                                </a>
+                            </div>
+                        </td><td nowrap="nowrap" class=" imgscroll2_td " >
+                            <div class="imgscroll2_img">
+                                <a tailtagoutput="false" target="_blank" href="/2017/0222/c1999a184086/page.htm" title="20170108南京校友会理事会换届大会" >
+                                    
+                                        <img alt="20170108南京校友会理事..." src="/_upload/article/images/c1/73/905072294b7d9c934f6986a2224f/089d9198-f6d7-4282-b481-8f6a4812d6f0_s.jpg" height="98px" >
+                                    
+                                </a>
+                            </div>
+                        </td><td nowrap="nowrap" class=" imgscroll2_td " >
+                            <div class="imgscroll2_img">
+                                <a tailtagoutput="false" target="_blank" href="/2017/0222/c1999a184077/page.htm" title="20170107常州校友会理事年会暨医学分会成立" >
+                                    
+                                        <img alt="20170107常州校友会理事..." src="/_upload/article/images/07/9f/2b9b96a143e6a4d11d45b9ddc30a/d39b4006-7fee-44a7-bbba-c93f139db74c_s.jpg" height="98px" >
+                                    
+                                </a>
+                            </div>
+                        </td><td nowrap="nowrap" class=" imgscroll2_td " >
+                            <div class="imgscroll2_img">
+                                <a tailtagoutput="false" target="_blank" href="/2017/0222/c1999a184075/page.htm" title="20170107四川校友新春聚会" >
+                                    
+                                        <img alt="20170107四川校友新春聚..." src="/_upload/article/images/d1/f2/a69296b9492c967167b5275af135/15828b5d-4962-4ffd-abc8-aed4fa921fa2_s.jpg" height="98px" >
+                                    
+                                </a>
+                            </div>
+                        </td><td nowrap="nowrap" class=" imgscroll2_td " >
+                            <div class="imgscroll2_img">
+                                <a tailtagoutput="false" target="_blank" href="/2017/0222/c1999a184074/page.htm" title="20170102苏州校友会常熟联谊会成立" >
+                                    
+                                        <img alt="20170102苏州校友会常熟..." src="/_upload/article/images/b4/50/7cd0245247c7b1e29b5b6e724d70/7b6096c2-cda9-45e4-9f02-01849a7c156c_s.jpg" height="98px" >
+                                    
+                                </a>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+            <td id="endw27"></td>
+        </tr>
+    </table>
+</div>
+
+<script language="javascript">
+    var topw27 = document.getElementById("topw27");
+    var beginw27 = document.getElementById("beginw27");
+    var endw27 = document.getElementById("endw27");
+    var tabw27 = document.getElementById("tabw27");
+    //复制内容
+    endw27.innerHTML = beginw27.innerHTML;
+    //调整table的宽度
+    tabw27.style.width = topw27.offsetWidth * 2;
+    //循环函数
+    function marqueew27() {
+        if (endw27.offsetWidth - topw27.scrollLeft <= 0) {
+            topw27.scrollLeft -= beginw27.offsetWidth;
+        } else {
+            topw27.scrollLeft += 1;
+        }
+    }
+    //定时器
+    var mymarw27 = setInterval(marqueew27, 50);
+    //鼠标移入
+    topw27.onmouseover = function() {
+        clearInterval(mymarw27);
+    };
+    //鼠标移出
+    topw27.onmouseout = function() {
+        mymarw27 = setInterval(marqueew27, 50);
+    };
+</script>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </td>
+              <td width="11"> <img src="/_upload/tpl/00/57/87/template87/images/foot_2.gif" /> </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div id="foot">
+    <div align="center"> FootCopyright C 2007 东南大学校友总会. All Rights Reserved. 版权所有<br />
+      &nbsp;地址：南京市四牌楼2号(210096)  &nbsp;电话：025-83790230 83793313 83793234 传真:025-83793313<br />
+      &nbsp;http://seuaa.seu.edu.cn  &nbsp;EMail:seuaa@seu.edu.cn </div>
+  </div>
+</div>
+<div class="tcgg">
+  <div frag="面板110">
+    <div frag="窗口110">
+      
+    </div>
+  </div>
+</div>
+</body>
+<script type="text/javascript">
+$(function(){
+	$(".sudy-tab").sudyTab({
+			handle:".tab-menu li",		// 控制器元素，默认为.tab-menu li
+			content:".tab-list li",		// 内容体，可以有多个并以英文逗号隔开，如.tab-list li,.tab-more li,默认值为".tab-list li,.tab-more li"
+			trigger:"mouseenter",		// 触发事件，默认为"mouseenter"鼠标经过
+			start:1,					// 开始项，默认为第一个
+			autoPlay:{
+				active:true,			// 是否激活自动切换
+				interval:10000,		// 自动切换时间间隔
+				pauseHover:true		// 是否鼠标放上面时停止自动
+			}
+	});
+});
+</script>
+</html>
+ <image src="/_visitcount?siteId=30&type=1&columnId=1624" style="display:none" width="0" height="0"></image>

@@ -1,0 +1,2 @@
+<script language=javascript>	window.location.href='CN/volumn/home.shtml'
+</script>

@@ -1,0 +1,234 @@
+<html>
+
+
+
+
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>﻿河海大学统一身份认证平台</title>
+
+
+	<script language="JavaScript" src="/amserver/js/browserVersion.js"></script>
+	<script language="JavaScript" src="/amserver/js/auth.js"></script>
+	<script type="text/javascript"></script>
+
+	<script language="JavaScript">
+	function changeImg() {
+		var myimg = document.getElementById("codeImg");
+		myimg.src="/amserver/verify/image.jsp?"+Math.random();
+	}
+	</script>
+
+
+	<script language="JavaScript">
+		writeCSS('/amserver');
+		
+	    		var defaultBtn = 'Submit';
+	    		var elmCount = 0;
+			function defaultSubmit() {
+				LoginSubmit(defaultBtn);
+			}
+			function LoginSubmit(value) {
+				aggSubmit();
+				var hiddenFrm = document.forms['Login'];
+				if (hiddenFrm != null) {
+					hiddenFrm.elements['IDButton'].value = value;
+					if(document.getElementById('inputCode')!=null){
+						hiddenFrm.elements['inputCode'].value=document.getElementById('inputCode').value;
+					}
+					 if (this.submitted) {
+                					alert("The request is currently being processed");
+           					 }else {
+               						this.submitted = true;
+                					hiddenFrm.submit();
+            					}
+				}
+		    	}
+		
+	</script>
+	<script  language="JavaScript">
+	//ÖØÖÃ
+	function reset(){
+		document.getElementById("IDToken1").value="";
+		document.getElementById("IDToken2").value="";
+		var code=document.getElementById("inputCode");
+		if(code!=null) code.value="";
+	}
+ function showUrl(){
+                            location.href = "http://my.hhu.edu.cn/getBackPassword.portal";
+        }
+	</script>
+<style type="text/css">
+<!--
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+}
+.STYLE5 {
+	font-size: 12px;
+	color: #234056;
+	font-weight: lighter;
+	line-height: 24px;
+}
+.STYLE10 {
+	font-size: 12px;
+	color: #FFFFFF;
+	font-family: "ËÎÌå";
+	font-weight: lighter;
+}
+.STYLE11 {font-size: 12px; color: #536A7C; font-weight: lighter; line-height: 16px; }
+-->
+</style></head>
+<!-- @swli -->
+<body  onLoad="placeCursorOnFirstElm();">
+<table width="1118" border="0" align="left" cellpadding="0" cellspacing="0">
+  <tr>
+    <td scope="row"><table width="100%" height="37" border="0" align="left" cellpadding="0" cellspacing="0">
+      <tr>
+        <td background="/amserver/images/03_01.gif" scope="row"></td>
+      </tr>
+    </table></td>
+  </tr>
+    
+  <tr>
+    <td scope="row"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td height="1" scope="row"></td>
+  </tr>
+</table>
+      <table width="100%" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td><img src="/amserver/images/03_02.gif" width="767" height="115" alt="" /></td>
+          <td><img src="/amserver/images/03_03.gif" width="351" height="115" alt="" /></td>
+          <td rowspan="3"><img src="/amserver/images/03_04.gif" width="162" height="539" alt="" /></td>
+        </tr>
+        <tr>
+          <td><img src="/amserver/images/03_05.gif" width="767" height="210" alt="" /></td>
+          <td width="351" height="210" background="/amserver/images/03_06.gif"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <td height="45" colspan="2">&nbsp;</td>
+            </tr>
+			 
+	
+	<script language="javascript">elmCount++;</script>
+
+	
+
+	
+
+	
+	
+	<script language="javascript">elmCount++;</script>
+
+	
+	<form name="frm1" action="blank" onSubmit="defaultSubmit(); return false;">
+            <tr>
+              <td width="24%" height="30" align="right" class="STYLE5">用户名：</td>
+              <td width="76%" align="left">
+			  
+			  
+			  <INPUT size="23" type="text" name="IDToken1" id="IDToken1"  value="" style="width:190px; height:18px;" >
+			  </td>
+            </tr>
+			</form>
+	
+
+	
+
+	
+	
+	<script language="javascript">elmCount++;</script>
+
+	
+
+	
+	<form name="frm2" action="blank" onSubmit="defaultSubmit(); return false;">
+            <tr>
+              <td></td>
+            </tr>
+            <tr>
+              <td height="30" align="right" class="STYLE5">密　码：</td>
+              <td align="left">
+			  
+			  <INPUT size="23" type="password"  name="IDToken2" id="IDToken2" value="" style="width:190px; height:18px;" ></td>
+            </tr>
+			</form>
+
+	 
+	
+
+	
+	
+	
+
+            <tr>
+              <td height="5"></td>
+              <td height="5"></td>
+            </tr>
+            <tr>
+              <td height="40" colspan="2" align="center">&nbsp; 
+			  <IMG style="CURSOR: pointer" onClick="defaultSubmit()" src="/amserver/images/i01.jpg" />
+                  </label>
+			  &nbsp;&nbsp;&nbsp;&nbsp; <img src="/amserver/images/i02.jpg" width="80" height="23" border="0" onClick="showUrl()"  {/></td>
+            </tr>
+          </table>
+		 
+	
+		  </td>
+        </tr>
+        <tr>
+          <td><img src="/amserver/images/03_07.gif" width="767" height="214" alt=""/></td>
+          <td width="340" height="214" valign="top" background="/amserver/images/03_08.gif"><table width="340" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <td valign="top" scope="row" height="1"></td>
+            </tr>
+            <tr>
+              <td align="left" valign="top" class="STYLE11" scope="row">﻿账号规则：学生登录名为学号，教工登录名为工号<br />
+                ﻿密码规则：学生教工登录密码统一为身份证号码后6位，如有字母均为大写，如登录不对或无身份证情况密码请用六个8尝试。</td>
+            </tr>
+            <tr>
+              <td  align="left" scope="row">
+			  
+			 <table border="0" cellpadding="3" cellspacing="0" class="STYLE11" width="340">
+               
+				<tr><td width="1"></td>
+				<td width="99%"><iframe src="http://my.hhu.edu.cn/login/Search.jsp" style="background-color=transparent;" allowtransparency="true"  scrolling="no" frameborder="0" width="100%"> </iframe>
+				</td>
+				</tr>
+              </table>
+			  </td>
+
+            </tr>
+          </table></td>
+        </tr>
+        <tr>
+          <td height="23" colspan="3" background="/amserver/images/03_09.jpg" class="STYLE10" align="center">&nbsp;
+		  ﻿ Copyright &copy; 2012 河海大学 版权所有 
+            </td>
+               </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+
+
+
+		<form   action="/amserver/UI/Login"  style="margin:0px;display: inline;"  name="Login"  method="post">
+			<script language="javascript">
+				if (elmCount != null) {
+					for (var i = 0; i < elmCount; i++) {
+					    	document.write("<input name=\"IDToken" + i + "\" type=\"hidden\">");
+					}
+				    	document.write("<input name=\"IDButton"  + "\" type=\"hidden\">");
+				}
+			</script>
+			<input type="hidden" name="goto" value="aHR0cDovL215LmhodS5lZHUuY24=">
+			<input type="hidden" name="encoded" value="true">
+			<input type="hidden" name="inputCode" value="">
+		<input type="hidden" name="gx_charset" value="UTF-8"></form>
+
+
+</body>
+
+</html>

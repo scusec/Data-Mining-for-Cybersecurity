@@ -1,0 +1,147 @@
+
+<HTML>
+<TITLE>MySQL Web Shell 1.6, @</TITLE>
+
+<STYLE>
+BODY, TD, FORM, INPUT, SELECT {font-family: Arial; font-size: 12px;}
+.SMALL {font-size: 11px;}
+A {color: #FFFFBB; text-decoration: none;}
+A:HOVER {text-decoration: underline;}
+A.UNDL {color: #FFFFBB; text-decoration: underline;}
+A.UNDL:HOVER {color: #FFFFFF; text-decoration: underline;}
+</STYLE>
+
+<SCRIPT language="JavaScript">
+<!--
+
+var histcookies = Array();
+
+
+if(document.layers) document.captureEvents(Event.KEYPRESS)
+document.onkeypress=kpress; 
+
+function kpress(e)
+{
+  key=(document.layers)?e.which:window.event.keyCode
+  if (key == 10 && String.fromCharCode(key) == String.fromCharCode(10)) {document.queryform.submit();}
+}
+
+function selectallfrom(table)
+{ document.queryform.sqlquery.value = 'SELECT * FROM '+table; }
+
+function showcolumnsfrom(table)
+{ document.queryform.sqlquery.value = 'SHOW COLUMNS FROM '+table; }
+
+var lasthist = 0;
+var histtouched = 0;
+
+function hist(act)
+{
+  if (histcookies.length > 0)
+  {
+    var histsize = histcookies.length;
+    if (act == 'down')
+    { if (lasthist-1 >= 0) {lasthist--;} else {lasthist = 0;} }
+    if (act == 'up')
+    { if (lasthist+1 <= histsize-1) {if (histtouched) {lasthist++;}} else {lasthist = histsize-1;} }
+    document.queryform.sqlquery.value = histcookies[lasthist];
+    histtouched = 1;
+  }
+}
+
+
+function openWin(html)
+{window.open(html,'','resizable=no,menubar=no,status=no,scrollbars=no,width=350,height=200');}
+
+//-->
+</SCRIPT>
+
+<BODY TEXT="#FFFFFF" BGCOLOR="#112255" TOPMARGIN=0 LEFTMARGIN=0 MARGINWIDTH=0 MARGINHEIGHT=0>
+
+
+<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=100%><TR BGCOLOR="#CCCCCC"><TD>
+<TABLE BORDER=0 CELLSPACING=1 CELLPADDING=5 WIDTH=100%>
+<TR>
+<TD ROWSPAN=2 NOWRAP BGCOLOR="#112255" VALIGN=TOP WIDTH=1%>
+
+ <TABLE border=0 cellspacing=0 cellpadding=3>
+ <FORM action="" method=post>
+ <TR><TD bgcolor="#446688"><B>Login :</B></TD></TR>
+ <TR><TD><INPUT type=hidden name="action" value="chparam">
+ <DIV class="SMALL">
+  host:
+  <INPUT class="SMALL" size=12 style="width: 120px;" type=text name="host" value="localhost"><BR>
+  login:
+  <INPUT class="SMALL" size=12 style="width: 120px;" type=text name="login" value=""><BR>
+  password:<BR>
+  <INPUT class="SMALL" size=12 style="width: 120px;" type=password name="password"><BR>
+  database:     <INPUT class="SMALL" size=12 style="width: 120px;" type=text name="database" value="">
+    <BR><INPUT class="SMALL" style="width: 120px;" type=submit value="         login          ">
+ </DIV>
+</TD>
+</TR>
+</FORM>
+
+<TR><TD bgcolor="#446688"><B>MySQL Web Shell:</B></TD></TR>
+<TR><TD>
+<DIV class="SMALL">
+Version: 1.6<BR>
+Homepage: <A href="http://www.atz.msk.ru/mysqlwebsh.html">Go!</A><BR>
+Author: <A href="mailto:atz@atz.msk.ru">atz@atz.msk.ru</A>
+</DIV>
+</TD></TR>
+
+</TABLE>
+
+</TD>
+
+<TD BGCOLOR="#112255" VALIGN=TOP>
+<B>TABLES:</B>
+
+
+</TD></TR>
+
+<TR><TD VALIGN=TOP WIDTH=99% bgcolor="#336699">
+<TABLE border=0 cellspacing=0 cellpadding=3 width="620">
+<FORM action="" method=POST name="queryform">
+<TR>
+<TD colspan=3>
+<TABLE border=0 cellspacing=0 cellpadding=0>
+<TR><TD>&nbsp;</TD><TD>Press <B>Ctrl+Enter</B> to submit query<BR></TD></TR>
+<TR>
+<TD valign=top align=center><BR><A href="javascript: hist('up');"><IMG src="?arrowup" width=12 height=11 border=0 alt="History Back"></A><BR><BR><A href="javascript: hist('down');"><IMG src="?arrowdown" width=12 height=11 border=0 alt="History Forward"></A></TD>
+<TD>
+<INPUT type=hidden name="action" value="submit">
+<TEXTAREA name="sqlquery" wrap=off rows=12 cols=59 style="width: 610px; height: 220px; font-family: Verdana; font-size: 11px;"></TEXTAREA>
+</TD>
+</TR></TABLE>
+</TD></TR>
+<TR>
+<TD><INPUT type=submit style="width: 100px;" value="submit query"></TD>
+<TD align=center>
+<table border=0 cellspacing=0 cellpadding=2>
+<tr>
+ <td rowspan=2 align=right><B>Fetch Type:</B></td>
+ <td nowrap><input type=radio name="fetchtype" value="1" checked> all rows in one table (<A href="javascript: openWin('?action=showhelp&number=1');">help</A>)
+</tr>
+<tr>
+ <td nowrap><input type=radio name="fetchtype" value="2"> one row = one table (<A href="javascript: openWin('?action=showhelp&number=2');">help</A>)
+</tr>
+</table>
+</TD>
+<TD align=right><INPUT type=submit onClick="action.value = 'logout';" style="width: 100px;" value="logout"></TD>
+</TR>
+</FORM>
+</TABLE>
+<BR>
+
+
+
+</TD></TR></TABLE>
+</TD></TR></TABLE>
+
+
+</BODY>
+
+</HTML>
+

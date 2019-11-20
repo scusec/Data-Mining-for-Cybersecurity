@@ -1,0 +1,898 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>中国人民大学图书馆</title>
+<link type="text/css" rel="stylesheet" href="css/style.css" />
+<link href="css/middle.css" rel="stylesheet" type="text/css" />
+<script src="js/jquery-1.6.4.min.js"></script>
+<script type="text/javascript" src="js/jqueryPlugIn/jquery.blockUI.js"></script>
+<script type="text/javascript" src="js/frontNav.js"></script>
+<script src="js/tab.js" type="text/javascript"></script>
+<script src="js/js.js"></script>
+<script>
+window.onload = function(){
+	var oSearch = document.getElementById("main1_left");
+	var aDiv = oSearch.getElementsByTagName("*");
+	var aSslct = getClass(aDiv,"sslct");
+	var aTxt_sslct = getClass(aDiv,"txt_sslct");
+	var aList_sslct = getClass(aDiv,"list_sslct");
+	var target = new Array();
+	for(i=0;i<aList_sslct.length;i++){
+		aList_sslct[i].style.height = "auto";
+		target[i] = aList_sslct[i].offsetHeight;
+		aList_sslct[i].style.height = "0px";
+	}
+	for(i=0;i<aSslct.length;i++){
+		aSslct[i].index = i;
+		aSslct[i].onclick = function(){
+			var cur = this.index;
+			for(i=0;i<aSslct.length;i++){
+				move(aList_sslct[i],{height:0});
+			}
+			move(aList_sslct[cur],{height:target[cur]});
+			var aLi = aList_sslct[cur].getElementsByTagName("li");
+			for(i=0;i<aLi.length;i++){
+				aLi[i].onclick = function(){
+					aTxt_sslct[cur].innerHTML = this.getElementsByTagName("a")[0].innerHTML;
+				}
+			}
+			document.onclick = function(){
+				for(i=0;i<aSslct.length;i++){
+					if(aList_sslct[i].style.height != "0px"){
+						move(aList_sslct[i],{height:0});
+					}
+				}
+			}
+		}
+	}
+}
+</script>
+<script>
+$(document).ready(function(){
+        $.post("/webs/webnav_checkNewAddTime.action",null,function(data){
+                             var jsonobj=eval('('+data+')'); 
+                             if(jsonobj.cataid57==1){
+                                    $("#icon57").append("<b></b>");
+                             }
+                             if(jsonobj.cataid56==1){
+                                     $("#icon56").append("<b></b>");
+                             }
+                             if(jsonobj.cataid58==1){
+                                      $("#icon58").append("<b></b>");
+                             }     
+         });
+		$(".search .tit a").hover(function(){
+			var searchIndex = $(".search .tit li").index($(this).parent());
+			$(this).addClass("cur").parent().siblings().children("a").removeClass("cur");
+			$(".search .con .sCon").eq(searchIndex).show().siblings(".sCon").hide();
+		})
+		
+		$(".bulletin .tit ul li").hover(function(){
+			var bulletinIndex = $(".bulletin .tit ul li").index($(this));
+			$(this).addClass("cur").siblings().removeClass("cur");
+			$(".bulletin .con ul").eq(bulletinIndex).show().siblings().hide();
+		})
+		$(".popwin .tit a").click(function(){
+			var popwinIndex = $(".popwin .tit li").index($(this).parent());
+			$(this).addClass("cur").parent().siblings().children("a").removeClass("cur");
+			$(".popwin .popCnt .sCon").eq(popwinIndex).show().siblings(".sCon").hide();
+		})
+	
+	  $("#edit").click(function(){
+		  $(".Fast_channel").addClass("fastCur");
+		  })
+	  $("#back").click(function(){
+		  $(".Fast_channel").removeClass("fastCur");
+editJsonStr();		  
+		  })
+	  $(".Fast_channel .nav_area li").hover(function(){
+		  $(this).addClass("borderCur");
+		  },function(){
+		$(this).removeClass("borderCur");
+		})	
+	  $(".Fast_channel .nav_area li .nav-close").click(function(){
+		 $(this).parent().hide();
+		  $(this).parent().empty();
+		  editJsonStr();
+		  })	
+	   
+	   $(".Fast_channel .nav_area li .nav-rename").click(function(){
+		  $(this).siblings(".box").show();
+		  })
+		  	
+	   $(".Fast_channel .nav_area li .box p .close").click(function(){
+		  $(this).parents(".box").hide();
+		  })	
+	  
+$.post("/webs/user_checkLoginopac.action",
+		
+function(data){
+				if(data!="0"){			
+					$("#a1").hide();
+				        $("#a2").show();
+                                        //$("#a3").hide();
+				        //$("#a4").hide();
+                                        $("#a5").show();
+                                        $("#a6").show();
+				}
+				else
+				{
+					$("#a1").show();
+					$("#a2").hide();
+                                        //$("#a3").show();
+					//$("#a4").show();
+                                        $("#a5").hide();
+                                        $("#a6").hide();
+				}
+			}
+		);
+
+$("#seleNod").one("click",function(){
+		getSelecTag();
+	})
+
+	})
+
+function editJsonStr() {
+		var jsonStr = "[";
+		  jQuery("#list .nav-name").each(function(i) {
+             	var hrefVal = $.trim($(this).attr("href"));
+             	var txtVal = $.trim($(this).text());
+             	jsonStr = jsonStr + "{\"name\":\"" + txtVal +"\",\"link\":\"" + hrefVal + "\",\"order\":\"" +(i+1)+ "\"},";
+          });
+		  jsonStr = jsonStr.substr(0,jsonStr.length-1)+"]";
+		  if(jsonStr == "]") {
+		  	 jsonStr="";
+		  }
+		  $.post("/webs/nav_changeMyLinkOrder.action",{"jsonString":jsonStr},function(data){
+				 
+			}
+		  );
+	}
+
+function changeNL(aid,nid,lid) {
+		var nval = $("#"+nid).val();
+		var lval = $("#"+lid).val();
+		$("#"+aid).attr("href",lval);
+		$("#"+aid).html("<b class='icons'></b><em>"+$.trim(nval)+"</em>");
+		$(".Fast_channel .nav_area li .box p .close").parents(".box").hide();
+		editJsonStr();
+	}
+</script>
+<!--弹出框-->
+<script type="text/javascript">
+function alertinfo(id){//显示弹出层
+        $('#navName').val("");
+	$('#navUrl').val("");
+	$('#flag').val("add");
+	clearcata(0);
+	$('#cata_0').val(-1);
+
+var obj = document.getElementById(id);
+var W = screen.width;//取得屏幕分辨率宽度
+var H = screen.height;//取得屏幕分辨率高度
+var yScroll;//取滚动条高度
+if (self.pageYOffset) {
+yScroll = self.pageYOffset;
+} else if (document.documentElement && document.documentElement.scrollTop){
+yScroll = document.documentElement.scrollTop;
+} else if (document.body) {
+yScroll = document.body.scrollTop;
+}
+
+//obj.style.marginLeft= (W/2 - 200) + "px";
+//obj.style.top= (H/2 -90 - 225　+　yScroll) + "px";
+document.getElementById("popWin_bg").style.display="block";
+obj.style.display="block";
+
+var scrollstyle = scrolls();
+scrollstyle.style.overflowX = "hidden";
+scrollstyle.style.overflowY = "hidden";
+}
+function closediv(id){//关闭弹出层
+document.getElementById(id).style.display="none";
+document.getElementById("popWin_bg").style.display="none";
+
+var scrollstyle = scrolls();
+scrollstyle.style.overflowY = "auto";
+scrollstyle.style.overflowX = "hidden";
+}
+function scrolls(){//取浏览器类型
+var temp_h1 = document.body.clientHeight;
+var temp_h2 = document.documentElement.clientHeight;
+var isXhtml = (temp_h2<=temp_h1&&temp_h2!=0)?true:false;
+var htmlbody = isXhtml?document.documentElement:document.body;
+return htmlbody;
+}
+</script>
+<!--拖拽-->
+<script type="text/javascript" src="js/jquery-ui.js"></script> 
+    <script type="text/javascript">
+        jQuery(document).ready(function() {
+
+            //保存常用选择器
+            var list = jQuery("#list"); //ul
+            var show = jQuery("#show"); //输出提示
+            var orderlist = jQuery("#orderlist");   //原顺序
+            var check = jQuery("#check");   //是否更新到数据库
+
+            //保存原来的排列顺序
+            var order = [];
+            list.children("li").each(function() {
+                order.push(this.title); //原排列顺序保存在title，得到后更改title
+                jQuery(this).attr("title", "你可以拖动进行排序");
+            });
+            orderlist.val(order.join(','));
+
+            //ajax更新
+            var Update = function(itemid, itemorder) {
+                jQuery.ajax({
+                    type: "post",
+                    url: "update.aspx",
+                    data: { id: itemid, order: orderlist.val() },   //id:新的排列对应的ID,order：原排列顺序
+                    beforeSend: function() {
+                        show.html("正在更新");
+                    },
+                    success: function(req) {
+                        if (req == "100") {
+                            show.html("更新成功");
+                        }
+                        else if (req == "001") {
+                            show.html("失败，请稍后再试");
+                        }
+                        else {
+                            show.html("参数不全");
+                        }
+                    }
+                });
+            };
+
+            //调用ajax更新方法
+            var Submit = function(update) {
+                var order = [];
+                list.children("li").each(function() {
+                    order.push(this.id);
+                });
+                var itemid = order.join(',');
+                //如果单选框选中，则更新表中排列顺序
+                if (update) {
+                    Update(itemid);
+                }
+                else {
+                    show.html("");
+                }
+            };
+
+
+            //执行排列操作
+            list.sortable({
+                opacity: 0.7,
+                update: function() {
+                    Submit(check.attr("checked"));
+                }
+            });
+
+        });
+</script>
+<!--2013-12-11add-->
+<script type="text/javascript">
+function g(){
+    	if(document.documentElement&&document.documentElement.scrollTop){
+		    a=document.documentElement.scrollTop
+		}
+		else if(document.body){
+		      a=document.body.scrollTop
+		}
+		document.getElementById("div1").style.top=305+a+"px"
+}
+setInterval("g()",1)
+</script>
+<!--2013-12-11end-->
+</head>
+
+<body>
+
+
+<!--2013-12-11add-->
+<div id="div1" class="flotage">
+   <ul>
+       <li class="clearfix"><a href="">移动图书馆</a><img src="images/move.jpg" width="55" height="55" /></li>
+       <li class="clearfix"><a href="http://e.weibo.com/tsgruc/" target="_blank">人图微博</a><img src="images/sina.png" width="55" height="55" /></li>
+       <li class="clearfix" style="border:none;"><a href="">人图微信</a><img src="images/rr.jpg" width="55" height="55" /></li>
+   </ul>
+</div>
+<!--2013-12-11end--> 
+
+
+<div class="top">
+      <div align="right">
+                
+		<a href="http://m.5read.com/ruc">手机版 |</a> 
+		<a href="/webs/show/notice/82/413.html">读者须知 |</a> 
+		<a href="javascript:showDiv();" id="a1">登录 |</a>
+                <a href="javascript:quitLib();" id="a2" style="display:none;">退出登录 |</a>
+                <a href="/webs/show/notice/82/75.html">联系我们 |</a> 
+		 
+                <a href="/webs/show/notice/82/165.html">使用说明 | </a> 
+                <a href="/webs/show/notice/82/257.html">网站地图 |</a>
+                <a href="http://webold.lib.ruc.edu.cn">访问旧版</a> 
+             <!--    <a href="/webs/news_paihang.action">图书馆排行 </a>  -->
+		
+      </div>
+</div>
+
+
+<!-- 登录弹出层 -->
+<div id="loginDiv" style="display:none; text-align:left; margin-left:20px; cursor: default;width: 400px; height: 180px;">
+					<br/><br/>
+				         <span style="margin-left:65px;">账号：</span><input type="text" id="username" style="margin-left:15px;width: 150px;font:16px/1.5 宋体,Arial,Helvetica,sans-serif;"/>
+				    <br/><br/>
+				         <span style="margin-left:65px;"> 密码：</span><input type="password" id="password" style="margin-left:15px;width: 150px;font:16px/1.5 宋体,Arial,Helvetica,sans-serif;"/>
+				    <br/><br/>
+				<input type="button" value="确&nbsp;&nbsp;认" id="loginBt" onclick="loginSub();" style="margin-left:130px;"/>
+        		        <input type="button" value="取&nbsp;&nbsp;消" onclick="can();"/>
+</div>
+
+
+<script>
+function loginSub(){
+        $("#loginBt").attr("disabled", true);
+	var userName = $.trim($("#username").val());
+	var passWord = $.trim($("#password").val());
+	
+	$.post("/webs/user_logonopac.action",{userName:userName,passWord:passWord},function(data){
+		if(data == "1"){
+			can();
+			alert("登录成功！");
+			window.location.reload();
+		}else{
+			alert("账号或密码错误！");
+ $("#loginBt").attr("disabled", false);
+		}
+	});
+}
+
+function quitLib(){
+	$.post("/webs/user_quitLibopac.action",
+			function(data){
+window.location.href=window.location.href;
+                  //    $("#loginUser").val("");
+		  //  window.location.reload();      
+			}
+		);	
+}
+
+function showDiv(){
+	$.blockUI( {
+		message : $('#loginDiv'),
+		css : {
+			width : '430'
+		}
+	});
+}
+function can() {
+	$.unblockUI();
+}
+</script> 
+<div class="banner wrap">
+
+
+ <div class="logo"><img src="images/logo.gif" width="427" height="70" /></div>
+   <div class="time">
+        <b class="icons"></b>
+<p><a href="/webs/show/notice/59/55.html">开馆时间</a>：<br/>周一至周五: 7:00-22:00<br/ >周六日: 8:00-22:00<br/></p>
+</div> 
+</div>
+<div class="search">
+
+
+<div class="wrap">
+       <div class="tit">
+           <ul>
+              <li><a href="http://202.112.118.30/UnicornIndex.htm" target="_blank" class="cur">馆藏目录</a></li>
+              <li><a href="http://ss.zhizhen.com/" target="_blank">中文发现</a></li>
+              <li><a href="http://ruc.findplus.cn/" target="_blank">外文发现</a></li>
+              <li><a href="webs/res_resWeb.action">数据库</a></li>
+              <li><a href="http://search.ebscohost.com/login.aspx?authtype=uid&custid=s1196249&groupid=main&user=ruc2013&password=HaXvFCsx&profile=pfi&lang=zh-cn" target="_blank">电子期刊</a></li>
+ <li><a href="http://balis.ruc.edu.cn" target="_blank"  style="background-position: -279px -94px;width: 88px;">BALIS资源</a></li>
+              
+           </ul>
+
+       </div>
+
+
+       <div class="con">
+	   <!-- ================================馆藏======================================== -->
+<script>
+$(function() {
+	$(".search .list_sslct").prev().click(function() {
+		var ul = $(this).next(),
+			height = (ul.find("li").length * 25);
+
+		if (ul.height() == 0) {
+			$(".search .list_sslct").height(0);
+			ul.animate({'height':height},500);
+		} else {
+			ul.animate({'height':0},500);
+		}
+		
+		return false;
+	});
+	
+	$(".search .list_sslct li").click(function() {
+		var temp = $(this).attr("val");
+		
+		$(this).parent().prev().find("span").text($(this).text());
+		$(this).parent().parent().find("input").each(function() {
+			if ($(this).hasClass("hideInp")) {
+				$(this).attr("value", temp);
+			}
+		});
+	});
+	
+	$(document).bind("click", function() {
+		$(".search .list_sslct").height(0);
+	});
+});
+</script>
+          <div class="sCon" style="display:block;">
+             <div class="quick">
+			 <form name="searchform" method="post" action="http://202.112.118.30/uhtbin/cgisirsi/0/人大图书馆/0/123" target="_blank">
+                 <input type="text" class="txt" name="searchdata1"/>
+                 <div class="main1_left">
+  					 <div class="sslct">
+					  <div class="sTxt"><span class="txt_sslct">题名</span></div>
+    					 <ul class="list_sslct">
+							<li val="TI^TITLE^SERIES^Title Processing^题名"><a href="javascript:void(0)">题名</a></li>
+                            <li val="AU^AUTHOR^AUTHORS^Author Processing^著者"><a href="javascript:void(0)">著者</a></li>
+       					    <li val="GENERAL^SUBJECT^GENERAL^^所有字段"><a href="javascript:void(0)">所有字段</a></li>
+                            <li val="SU^SUBJECT^SUBJECTS^^主题"><a href="javascript:void(0)">主题</a></li>
+       					    <li val="SER^SERIES^SERIES^Title Processing^丛书"><a href="javascript:void(0)">丛书</a></li>
+                            <li val="PER^PERTITLE^SERIES^Title Processing^期刊名"><a href="javascript:void(0)">期刊名</a></li>
+       					    <li val="^ISBN^^Title Processing^ISBN"><a href="javascript:void(0)">ISBN</a></li>
+                            <li val="^ISBN^^^ISSN"><a href="javascript:void(0)">ISSN</a></li>
+    					 </ul>
+					 <input type="hidden" class="hideInp" name="srchfield1" value="TI^TITLE^SERIES^Title Processing^题名"/>
+					 <input type="hidden" name="sort_by" value="TI"/>
+     				 <input type="hidden" name="relevance" value="off">
+					 <input type="hidden" name="library" value="人大图书馆">
+ 					 </div>
+				  </div>
+                  <input type="submit" value="检索" class="icons btn" />
+			 </form>
+                  <div class="clear"></div>
+             </div>
+              <div class="word"><a href="http://202.112.118.30/uhtbin/cgisirsi/0/人大图书馆/0/29/489/X/1" target="_blank">借阅信息</a> <a href="http://202.112.118.30/uhtbin/cgisirsi/0/人大图书馆/0/29/491/X/3" target="_blank">续借</a> <a href="http://202.112.118.30/uhtbin/cgisirsi/0/人大图书馆/0/63/492/X" target="_blank">添加邮箱</a> <a href="http://202.112.118.5" target="_blank">借阅历史</a> <!--a href= "/webs/news_paihang.action">借阅排行</a--> <a href="/webs/show/notice/53/5.html">馆际互借</a> <a href="http://202.112.118.40/2004zy/yhfw/newbook/index.php" target="_blank">新书推荐</a> <a href="http://222.29.253.58:8080/poweb/" target="_blank">随书光盘</a><a href="/webs/show/notice/82/647.html">微信公众号服务</a> </div>
+         </div>
+		  <!-- ================================超星发现======================================== -->
+          <div class="sCon">
+             <div class="quick clearfix">
+			 <form action="http://ss.zhizhen.com/s.do" target="_blank">
+                 <input type="text" class="txt" name="sw"/>
+				 <input name = "go" value = "q" type = "hidden">
+				 <input type="submit" value="检索" class="icons btn" />
+			 </form>
+             </div>
+          </div>
+		  <!-- ================================外文发现======================================== -->
+  <script>
+function wwSub(){
+	var sw = $.trim($("#wwSw").val());
+	
+	if(sw == ""){
+		alert("检索词不能为空");
+		return;	
+	}
+       
+        else{
+		window.open("http://en.ruc.findplus.cn/searchapi.html?query="+encodeURIComponent(sw)+"");
+	}
+}
+		   </script>	  
+         <div class="sCon">
+             <div class="quick">
+			 <input type="text" class="txt" id="wwSw"/>
+			
+				 <input type="button" value="检索" class="icons btn" onclick="wwSub();"/>
+				 <div class="clear"></div>
+             </div>
+             </div>
+		  
+		  <!-- ================================数据库检索======================================== -->
+          <div class="sCon">
+             <div class="quick clearfix">
+			 <form action="/webs/res_resWeb.action" method="post" onsubmit="return checktxt();">
+                 <input type="text" class="txt" name="sw" id="txtsw"/><input type="submit" value="检索" class="icons btn" />
+			 </form>
+             </div>
+             <div class="word"><a href="/webs/res_resWeb.action">数据库导航</a> <a href="/webs/list/notice/58.html">试用资源</a> <a href="/webs/res_resWeb.action?cte=12&pageSizeTemp=20">多媒体资源</a><a href="http://202.112.118.61:8080/wk/index.html" target="_blank">人大文库</a>><a href="/webs/show/notice/65/653.html">古籍特藏</a>
+<a href="/webs/show/notice/65/67.html">特色资源</a></div>
+          </div>
+		  <script>
+			function checktxt() {
+				var txt = $.trim($("#txtsw").val());
+				if (txt == "") {
+					alert("检索词不能为空！");
+					return false;
+				}
+				return true;
+			}
+		</script>
+		  <!-- ================================电子期刊======================================== -->
+          <div class="sCon">
+             <div class="quick">
+			 <form name="frmAdvSearch" action="http://search.ebscohost.com/login.aspx"  accept-charset="ISO-8859-1">
+                <input name = "authtype" value = "uid" type = "hidden">
+                <input name = "custid" value = "s1196249" type = "hidden">
+                <input name = "groupid" value = "main" type = "hidden">
+                <input name = "user" value = "ruc2013" type = "hidden">
+                <input name = "password" value = "HaXvFCsx" type = "hidden">
+                <input name = "profile" value = "pfi" type = "hidden">
+                <input name = "lang" value = "zh-cn" type = "hidden">
+                <input name = "direct" value = "true" type = "hidden">
+                <input name = "site" value = "eds-live" type = "hidden">
+                <input name = "scope" value = "site" type = "hidden">
+                <input name = "type" value = "44" type = "hidden">
+                <input type="text" class="txt" name="bquery"/>
+				 <input type="submit" value="检索" class="icons btn" />
+				 <div class="clear"></div>
+			 </form>
+             </div>
+             <div class="word"><a href="http://search.ebscohost.com/login.aspx?authtype=uid&custid=s1196249&groupid=main&user=ruc2013&password=HaXvFCsx&profile=pfi&lang=zh-cn" target="_blank">电子期刊导航</a><a href="/webs/show/notice/57/167.html">其他电子刊</a> <a href="http://202.112.118.37:4237/home_tgzn/tgzn.xml" target="_blank">投稿指南</a> <a href="/webs/show/notice/65/46.html">核心期刊目录</a><a href="/webs/show/notice/53/6.html">文献传递</a></div>
+          </div>
+       </div>
+   </div> 
+</div>
+   <div class="middle-wrap">
+  <div class="ser1">
+    <ul class="snav" style="margin: 0 auto;">
+      <li class="snav_current" id="snav1" onMouseOver="javascript:doClick(this)">
+        <a href="webs/list/notice/65.html" class=" icons icon1" style="clear: both;display: block;"></a>
+        <a href="webs/list/notice/65.html" class="icon2" style="clear: both;display: block;">资源</a>
+      </li>
+      <li class="snav_link" id="snav2" onMouseOver="javascript:doClick(this)" >
+        <a href="webs/list/notice/53.html" class=" icons icon2" style="clear: both;display: block;"></a>
+        <a href="webs/list/notice/53.html" class="icon2" style="clear: both;display: block;">服务</a>
+      </li>
+      <li class="snav_link" id="snav3"onMouseOver="javascript:doClick(this)">
+        <a href="webs/list/notice/54.html" class=" icons icon3" style="clear: both;display: block;"></a>
+        <a href="webs/list/notice/54.html" class="icon2" style="clear: both;display: block;">互动</a>
+      </li>
+      <li class="snav_link" style="margin-right:0;" id="snav4" onMouseOver="javascript:doClick(this)">
+        <a href="webs/list/notice/55.html" class=" icons icon4" style="clear: both;display: block;"></a>
+        <a href="webs/list/notice/55.html" class="icon2" style="clear: both;display: block;">特别推荐</a>
+      </li>
+    </ul>
+    <div class="clear"></div>
+    <div class="snav_down">
+      
+
+<div id="ssub1" class="dis" style="display:block">
+<ul>
+<li><span class="icons"></span><a href="http://202.112.118.30/UnicornIndex.htm" target="_blank" title="馆藏目录">馆藏目录</a></li>
+<li><span class="icons"></span><a href="/webs/res_resWeb.action" target="_blank" title="数据库导航">数据库导航</a></li>
+<li><span class="icons"></span><a href="http://atoz.ebsco.com/Titles/8337?tabId=4449" target="_blank" title="电子期刊导航">电子期刊导航</a></li>
+<li><span class="icons"></span><a href="http://ruc.cn.libguides.com/index.php" target="_blank" title="学科资源导航">学科资源导航</a></li>
+<li><span class="icons"></span><a href="webs/show/notice/65/67.html" target="_blank" title="特色资源">特色资源</a></li>
+<li><span class="icons"></span><a href="webs/show/notice/65/50.html" target="_blank" title="教参资源">教参资源</a></li>
+<li><span class="icons"></span><a href="webs/res_resWeb.action?cte=12&pageSizeTemp=20" target="_blank" title="多媒体资源">多媒体资源</a></li>
+<li><span class="icons"></span><a href="webs/show/notice/65/653.html" target="_blank" title="古籍特藏">古籍特藏</a></li>
+<li><span class="icons"></span><a href="webs/show/notice/65/42.html" target="_blank" title="开放获取资源">开放获取资源</a></li>
+</ul>
+</div> 
+      
+
+<div id="ssub2" class="dis">
+<ul>
+<li><span class="icons"></span><a href="webs/show/notice/53/6.html" target="_blank" title="文献传递">文献传递</a></li>
+<li><span class="icons"></span><a href="webs/show/notice/53/11.html" target="_blank" title="ESI学科动态">ESI学科动态</a></li>
+<li><span class="icons"></span><a href="webs/show/notice/53/10.html" target="_blank" title="引文统计">引文统计</a></li>
+<li><span class="icons"></span><a href="webs/show/notice/53/13.html" target="_blank" title="多媒体服务">多媒体服务</a></li>
+<li><span class="icons"></span><a href="webs/show/notice/53/15.html" target="_blank" title="微服务">微服务</a></li>
+<li><span class="icons"></span><a href="webs/show/notice/53/4.html" target="_blank" title="借阅服务">借阅服务</a></li>
+<li><span class="icons"></span><a href="webs/show/notice/53/5.html" target="_blank" title="馆际互借">馆际互借</a></li>
+<li><span class="icons"></span><a href="webs/show/notice/53/7.html" target="_blank" title="代查代检/查新">代查代检/查新</a></li>
+<li><span class="icons"></span><a href="webs/show/notice/53/8.html" target="_blank" title="学科服务">学科服务</a></li>
+<li><span class="icons"></span><a href="webs/show/notice/53/40.html" target="_blank" title="教学/培训">教学/培训</a></li>
+<li><span class="icons"></span><a href="webs/show/notice/53/12.html" target="_blank" title="自助服务">自助服务</a></li>
+<li><span class="icons"></span><a href="webs/show/notice/53/14.html" target="_blank" title="论文制作">论文制作</a></li>
+</ul>
+</div> 
+      
+
+<div id="ssub3" class="dis">
+<ul>
+<li><span class="icons"></span><a href="webs/show/notice/54/61.html" target="_blank" title="书刊荐购">书刊荐购</a></li>
+<li><span class="icons"></span><a href="/webs/addRecRes.jsp" target="_blank" title="电子资源荐购">电子资源荐购</a></li>
+<li><span class="icons"></span><a href="webs/show/notice/54/51.html" target="_blank" title="教学参考书推荐">教学参考书推荐</a></li>
+<li><span class="icons"></span><a href="webs/show/notice/54/83.html" target="_blank" title="PQDT学位论文荐购">PQDT学位论文荐购</a></li>
+<li><span class="icons"></span><a href="webs/show/notice/54/48.html" target="_blank" title="学位论文提交">学位论文提交</a></li>
+<li><span class="icons"></span><a href="http://202.112.118.40/old/yijian/titlelist.php" target="_blank" title="意见与建议">意见与建议</a></li>
+<li><span class="icons"></span><a href="webs/show/notice/54/18.html" target="_blank" title="书刊捐赠">书刊捐赠</a></li>
+</ul>
+</div> 
+      
+
+<div id="ssub4" class="dis">
+<ul>
+<li><span class="icons"></span><a href="webs/res_resourcesGet.action?idd=190" target="_blank" title="中国期刊全文数据库">中国期刊全文数据库</a></li>
+<li><span class="icons"></span><a href="webs/show/notice/55/63.html" target="_blank" title="移动图书馆">移动图书馆</a></li>
+<li><span class="icons"></span><a href="http://www.lib.ruc.edu.cn/webs/show/notice/65/653.html" target="_blank" title="古籍特藏">古籍特藏</a></li>
+<li><span class="icons"></span><a href="http://202.112.118.61:8080/wk/index.html" target="_blank" title="人大文库">人大文库</a></li>
+<li><span class="icons"></span><a href="webs/show/notice/55/316.html" target="_blank" title="读史读经典">读史读经典</a></li>
+<li><span class="icons"></span><a href="webs/show/notice/55/315.html" target="_blank" title="新生专栏">新生专栏</a></li>
+<li><span class="icons"></span><a href="http://202.112.118.52:8777/zwx/" target="_blank" title="博士生主文献">博士生主文献</a></li>
+<li><span class="icons"></span><a href="http://ir.lib.ruc.edu.cn" target="_blank" title="机构知识库">机构知识库</a></li>
+</ul>
+</div> 
+    </div><!--snav_down-->
+  </div><!--ser1-->
+  
+  <div class="ser2">
+    <ul class="s2nav" style="margin: 0;">
+      <li class="s2nav_current" id="s2nav1" onMouseOver="javascript:doClick2(this)">
+        <a href="webs/list/notice/56.html" class=" icons icon1" style="clear: both;display: block;"></a>
+        <a href="webs/list/notice/56.html" class="icon2" style="clear: both;display: block;">新闻/公告</a>
+      </li>
+      <li class="s2nav_link" id="s2nav2" onMouseOver="javascript:doClick2(this)" >
+        <a href="webs/list/notice/57.html" class=" icons icon2" style="clear: both;display: block;"></a>
+        <a href="webs/list/notice/57.html" class="icon2" style="clear: both;display: block;">新购资源</a>
+      </li>
+      <li class="s2nav_link" id="s2nav3" onMouseOver="javascript:doClick2(this)">
+        <a href="/webs/list/notice/95.html" class=" icons icon3" style="clear: both;display: block;"></a>
+        <a href="/webs/list/notice/95.html" class="icon2" style="clear: both;display: block;">试用资源</a>
+      </li>
+      <li class="s2nav_link" id="s2nav4" onMouseOver="javascript:doClick2(this)">
+        <a href="webs/list/notice/59.html" class=" icons icon4" style="clear: both;display: block;"></a>
+        <a href="webs/list/notice/59.html" class="icon2" style="clear: both;display: block;">本馆简介</a>
+      </li>
+    </ul>
+    <div class="clear"></div>
+    <div class="s2nav_down">
+     
+
+<div id="s2sub1" class="dis" style="display:block;">
+<ul>     
+	<li><span class="icons"></span><a href="webs/show/notice/56/761.html" title="专题讲座开讲啦">专题讲座开讲啦 [10-09]</a></li>
+	<li><span class="icons"></span><a href="webs/show/notice/56/681.html" title="图书馆手机短信服务停止通知">图书馆手机短信服务.. [03-22]</a></li>
+	<li><span class="icons"></span><a href="webs/show/notice/56/764.html" title="NoteExpress文献管理与论文写作培训">NoteExpress文献管.. [10-19]</a></li>
+	<li><span class="icons"></span><a href="webs/show/notice/56/759.html" title="图书馆多功能厅2017年10月免费观影活动——用心微服务·爱在图书馆">图书馆多功能厅2017.. [09-30]</a></li>
+	<li><span class="icons"></span><a href="webs/show/notice/56/757.html" title="关于处理Elsevier Science Direct数据库过量下载账号的通告">关于处理Elsevier S.. [09-26]</a></li>
+	<li><span class="icons"></span><a href="webs/show/notice/56/756.html" title="图书馆2017年“中秋节”、“国庆节”开馆时间通知">图书馆2017年“中秋.. [09-25]</a></li>
+	<li><span class="icons"></span><a href="webs/show/notice/56/744.html" title="免费获取CASHL30多家高校图书馆外文书的通知">免费获取CASHL30多.. [09-12]</a></li>
+<li><span class="icons"></span><a href="webs/list/notice/56.html" style="color:#8C1415;float:right;">>>更多</a></li>
+      </ul>
+</div> 
+      
+
+<div id="s2sub2" class="dis" >
+<ul>     
+	<li><span class="icons"></span><a href="http://www.lib.ruc.edu.cn/webs/res_resourcesGet.action?idd=312" title="美国科学院院报（PNAS）">美国科学院院报（PN.. [09-29]</a></li>
+	<li><span class="icons"></span><a href="http://www.lib.ruc.edu.cn/webs/res_resourcesGet.action?idd=311" title="Business Expert Pres美国商务专家出版社电子图书数据库">Business Expert Pr.. [09-22]</a></li>
+	<li><span class="icons"></span><a href="http://www.lib.ruc.edu.cn/webs/res_resourcesGet.action?idd=309" title="Cairn法语数据库">Cairn法语数据库 [09-11]</a></li>
+	<li><span class="icons"></span><a href="http://www.lib.ruc.edu.cn/webs/res_resourcesGet.action?idd=306" title="大公报">大公报 [04-07]</a></li>
+	<li><span class="icons"></span><a href="http://www.lib.ruc.edu.cn/webs/res_resourcesGet.action?idd=304" title="Brill电子书">Brill电子书 [03-23]</a></li>
+	<li><span class="icons"></span><a href="http://www.lib.ruc.edu.cn/webs/res_resourcesGet.action?idd=303" title="中国进出口贸易信息分析系统">中国进出口贸易信息.. [03-17]</a></li>
+	<li><span class="icons"></span><a href="http://www.lib.ruc.edu.cn/webs/res_resourcesGet.action?idd=302" title="中国司法档案数据库•江津卷">中国司法档案数据库.. [03-17]</a></li>
+<li><span class="icons"></span><a href="webs/list/notice/57.html" style="color:#8C1415;float:right;">>>更多</a></li>
+      </ul>
+</div> 
+      
+
+<div id="s2sub3" class="dis">
+<ul>     
+	<li><span class="icons"></span><a href="webs/show/notice/95/765.html" title="Book Citation Index 图书引文索引（试用期至2017年12月19日）">Book Citation Inde.. [10-23]</a></li>
+	<li><span class="icons"></span><a href="webs/show/notice/95/763.html" title="万方全球智库（ThinkTank）（试用期至2017年11月15日）">万方全球智库（Thin.. [10-17]</a></li>
+	<li><span class="icons"></span><a href="webs/show/notice/95/762.html" title="EMED（Emerging Markets Economic Data）数据库（试用期至2018年1月11日）">EMED（Emerging Mar.. [10-17]</a></li>
+	<li><span class="icons"></span><a href="webs/show/notice/95/754.html" title="海研全球科研项目数据库（试用期至2018年4月20日）">海研全球科研项目数.. [09-22]</a></li>
+	<li><span class="icons"></span><a href="webs/show/notice/95/752.html" title="大为Innojoy专利搜索引擎（试用期至2018年1月31日）">大为Innojoy专利搜.. [09-21]</a></li>
+	<li><span class="icons"></span><a href="webs/show/notice/95/751.html" title="中国商会档案数据库·保定卷（试用期至2017年12月31日）">中国商会档案数据库.. [09-21]</a></li>
+	<li><span class="icons"></span><a href="webs/show/notice/95/750.html" title="欧洲数学学会（EMS）电子图书（试用期至2017年11月18日）">欧洲数学学会（EMS.. [09-21]</a></li>
+<li><span class="icons"></span><a href="/webs/list/notice/95.html" style="color:#8C1415;float:right;">>>更多</a></li>
+      </ul>
+</div> 
+      
+
+<div id="s2sub4" class="dis">
+<ul>
+<li style="width:131px;"><span class="icons"></span><a href="webs/show/notice/59/324.html" target="_blank" title="馆长寄语">馆长寄语</a></li>
+<li style="width:131px;"><span class="icons"></span><a href="webs/show/notice/59/21.html" target="_blank" title="图书馆简介">图书馆简介</a></li>
+<li style="width:131px;"><span class="icons"></span><a href="webs/show/notice/59/24.html" target="_blank" title="组织结构">组织结构</a></li>
+<li style="width:131px;"><span class="icons"></span><a href="webs/show/notice/59/55.html" target="_blank" title="开馆时间">开馆时间</a></li>
+<li style="width:131px;"><span class="icons"></span><a href="webs/show/notice/59/53.html" target="_blank" title="馆刊馆讯">馆刊馆讯</a></li>
+</ul>
+</div> 
+    </div><!--s2nav_down-->
+  </div><!--ser1-->
+</div><!--wrap-->
+<div style="clear:both;"></div>
+<div class="popWin_bg" id="popWin_bg"></div>
+<div id="popWin" class="popwin">
+    <div class="tit">
+       <ul>
+          <li><a href="javascript:void(0);" id="seleNod">添加分类导航</a></li>
+          <li><a href="javascript:void(0);" class="cur">添加自定义链接</a></li>
+       </ul>
+    </div>
+    <div class="popCnt">
+       <div class="sCon">
+           <p><span  id="selRoot"></span></p>
+			    <input type="hidden" id="flag"/>
+				<input type="hidden" id="dlgcataid"/>
+				<input type="hidden" id="dlgcataname"/>
+           <p align="center" class="p"><input type="button" class="btn" value="确定" onclick="addNav(1)"/> <a class="popClose" href="javascript: closediv('popWin')" title="关闭">取消</a></p>
+       </div>
+       <div class="sCon" style="display:block;">
+           <p><label>导航名称</label> <input type="text" class="txt" id="navName" name = "navName"/></p>
+           <p><label>导航链接</label> <input type="text" class="txt" id="navUrl" name = "navUrl"/></p>
+           <p align="center"><input type="button" class="btn" value="确定" onclick="addNav(2)"/> <a class="popClose" href="javascript: closediv('popWin')" title="关闭">取消</a></p>
+       </div>
+    </div>
+</div>
+
+<div class="Fast_channel">
+ <!-- 未登录状态 start -->
+   <div class="tit" id="a3">
+      <p class="fr"></p>
+      <span>快捷通道</span>
+   </div>
+   <div class="nav_area" id="a4">
+       <ul>
+           <li title="咨询台" style="z-index:2;">
+             <a class="nav-name" href="/webs/show/notice/60/45.html" ><b class="icons"></b><em>咨询台</em></a>
+           </li>
+           <li title="校外访问" style="z-index:2;">
+             <a class="nav-name" href="/webs/show/notice/67/38.html"><b class="icons"></b><em>校外访问</em></a>
+           </li>
+           <li title="研修室预约" style="z-index:2;">
+            <a class="nav-name" href="/webs/show/notice/67/39.html"><b class="icons"></b><em>研修室预约</em></a>
+           </li>
+           <li title="座位预约" style="z-index:2;">
+             <a class="nav-name" href="webs/show/notice/82/80.html" ><b class="icons"></b><em>座位预约</em></a>
+           </li>
+           <li title="借阅信息" style="z-index:2;">
+             <a class="nav-name" href="http://202.112.118.30/uhtbin/cgisirsi/0/人大图书馆/0/29/489/X/1" target="_blank"><b class="icons"></b><em>借阅信息</em></a>
+           </li>  
+           <li title="专题讲座" style="z-index:2;">
+             <a class="nav-name" href="/webs/show/notice/55/40.html" ><b class="icons"></b><em>专题讲座</em></a>
+           </li>
+           <li title="新生专栏" style="z-index:1;">
+             <a class="nav-name" href="/webs/show/notice/55/315.html" ><b class="icons"></b><em>新生专栏</em></a>
+           </li>
+           <li title="学位论文提交" style="z-index:1;">
+             <a class="nav-name" href="/webs/show/notice/54/48.html" ><b class="icons"></b><em>学位论文提交</em></a>
+           </li>
+           <li title="人大文库" style="z-index:1;">
+             <a class="nav-name" href="http://202.112.118.61:8080/wk/index.html" target="_blank"><b class="icons"></b><em>人大文库</em></a>
+           </li>
+           <li title="馆刊馆讯" style="z-index:1;">
+             <a class="nav-name" href="/webs/show/notice/59/53.html" ><b class="icons"></b><em>馆刊馆讯</em></a>
+           </li>  
+           <li title="书刊捐赠" style="z-index:1;">
+             <a class="nav-name" href="/webs/show/notice/54/18.html" ><b class="icons"></b><em>书刊捐赠</em></a>
+           </li>
+           <li title="意见与建议" style="z-index:1;">
+             <a class="nav-name" href="http://202.112.118.40/old/yijian/titlelist.php" target="_blank"><b class="icons"></b><em>意见与建议</em></a>
+           </li>    
+        </ul>
+        <div class="clear"></div>    
+   </div>
+   <!-- 未登录状态 end -->
+   <!-- 登录状态 start -->
+   <div class="tit" id="a5" style="display:none;">
+      <p class="fr"><a href="javascript: alertinfo('popWin');" class="add"><b class="icons"></b> 添加</a> <a href="javascript:void(0);" class="edit" id="edit"><b class="icons"></b> 编辑</a> <a href="javascript:void(0);" class="back" id="back"><b class="icons"></b> 返回</a></p>
+      <span>我的导航</span>
+   </div>
+   <div class="nav_area" id="a6" style="display:none;">
+
+
+ <ul id="list">
+         
+        </ul>
+         
+    <div class="clear"></div>    
+   </div>
+   <!-- 登录状态 end -->
+</div>
+
+
+<div class="foot" align="center">
+   <p> 
+   <a href="http://202.112.118.8" target="_blank">馆员园地</a>
+   <a href="/webs/show/notice/82/85.html" target="_blank">分馆</a>
+   <a href="http://www.ruc.edu.cn" target="_blank">中国人民大学</a>
+   <a href="http://bjgxtgw.ruc.edu.cn/" target="_blank">北京高校图工委</a>
+   <a href="http://bjtyh.ruc.edu.cn/" target="_blank">北京图研会</a>
+   <a href="http://balis.ruc.edu.cn" target="_blank">BALIS</a>
+   <a href="http://www.calis.edu.cn/" target="_blank">CALIS</a>
+   <a href="http://www.cashl.edu.cn/portal/index.jsp" target="_blank">CASHL</a>
+   <a href="http://www.bj.calis.edu.cn/" target="_blank">CALIS北京中心</a>
+   <a href="http://www.cadal.net/" target="_blank">CADAL</a>
+   <a href="http://202.112.118.40/fg/topwj/shzx-index.htm" target="_blank">世行知识中心</a>
+   <a href="webs/show/notice/82/86.html" target="_blank">相关链接</a>
+   <a href="/webs/show/notice/82/87.html" target="_blank">版权声明</a>
+</p>
+   <p>版权所有：中国人民大学图书馆 <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_5127394'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s9.cnzz.com/stat.php%3Fid%3D5127394%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script>
+
+</p>
+</div> 
+
+<!--div id="img" style="position: absolute; left: 27px; top: 1115px; z-index: 1000; visibility: hidden;" onMouseOver="clearInterval(interval)" onMouseOut="interval = setInterval('changePos()', delay)">
+        <div class="fu_t" style="color:#fff; font-size:12px; margin-top:14px;"><a class="close" style="position: absolute; right: 5px;" onClick="javascript: document.getElementById('img').style.display = 'none'"><img src="img/closed.png"></a></div>
+        <div style="width: 200px; height: 80px; background-color:none;">
+            <a href="http://10.22.1.10/Dlib/List.aspx?drgroupid=25&sr=25%5e小学期教参(670)&sc=VCYmQ29tbW9uTWV0YWRhdGFTZWFyY2heXlImJkluUmVzR3JvdXBeXlJWJiYyNV5eRiYmQW5kXl5TTiYmXl5TVCYmQVNDJiYm"><img src="/uploadfile/summer-school.jpg" style="height:80px;width:200px;" border="0" alt='img'></a>
+        </div>
+    </div>
+
+
+    <script type="text/javascript">
+        var xPos = 20;
+        var yPos = document.body.clientHeight;
+        var step = 1;
+        var delay = 40;
+        var height = 0;
+        var Hoffset = 0;
+        var Woffset = 0;
+        var yon = 0;
+        var xon = 0;
+        var pause = true;
+        var interval;
+        img.style.top = yPos;
+        function changePos() {
+            width = document.body.clientWidth;
+            height = document.documentElement.clientHeight;
+            Hoffset = img.offsetHeight;
+            Woffset = img.offsetWidth;
+            img.style.left = xPos + document.body.scrollLeft + 'px';
+            img.style.top = yPos + document.body.scrollTop + 'px';
+            if (yon) {
+                yPos = yPos + step;
+            }
+            else {
+                yPos = yPos - step;
+            }
+            if (yPos < 0) {
+                yon = 1;
+                yPos = 0;
+            }
+            if (yPos >= (height - Hoffset)) {
+                yon = 0;
+                yPos = (height - Hoffset);
+            }
+            if (xon) {
+                xPos = xPos + step;
+            }
+            else {
+                xPos = xPos - step;
+            }
+            if (xPos < 0) {
+                xon = 1;
+                xPos = 0;
+            }
+            if (xPos >= (width - Woffset)) {
+                xon = 0;
+                xPos = (width - Woffset);
+            }
+        }
+        function start() {
+            img.style.visibility = "visible";
+            interval = setInterval('changePos()', delay);
+        }
+        start();
+    </script-->
+
+
+
+</body>
+
+
+<script type="text/javascript">
+    document.write("<img src='webs/pv_addview.action?fromUrl=" + escape(top.document.referrer)
++ "&toUrl=" + escape(top.document.URL) + "&cataid=' style='display:none'/>");
+</script>
+
+</html>

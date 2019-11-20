@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>中央音乐学院-校友会首页</title>
+<link href="/public/css/public.css" type="text/css" rel="stylesheet">
+<link href="/public/css/style.css" type="text/css" rel="stylesheet">
+<script language="javascript" src="/public/js/jquery.min.js"></script>
+<script language="javascript" src="/public/js/kxbdSuperMarquee.js"></script>
+
+</head>
+
+<body>
+<header>
+<div class="header_wrapper">
+    <script language="javascript" src="/public/js/jquery.cookie.js"></script>
+<div class="header">
+        <div class="logo"><img src="/public/images/logo.png" width="150" height="50"></div>
+        <div class="logo_xyh"><img src="/public/images/xyh_logo.png" width="150" height="50"></div>
+        <div class="search">
+            <a href="http://www.ccom.edu.cn/" class="a_website" title="学院官网">学院官网</a>
+            <form action="/action/result.php" method="get" id="search">
+            <input type="text" placeholder="请输入关键字" id="scontent" name="keyword">
+            <a href="#" class="a_search" id="sbut">&nbsp;</a>
+            </form>
+        </div>
+    </div>
+    <div class="nav">
+        <ul>                                                                        
+            <li><a href="/" title="首页">首页</a></li>
+            <li><a href="/about/" title="关于我们">关于我们</a></li>
+            <li><a href="/activtes/" title="活动消息">活动消息</a></li>
+            <li><a href="/xydt/index.php" title="校友动态">校友动态</a></li>
+            <li><a href="/syls/" title="岁月留声">岁月留声</a></li>
+            <li><a href="/szp/" title="晒照片">晒照片</a></li>
+            <li><a href="/contact/" title="联系我们">联系我们</a></li>
+            <div class="clear"></div>
+        </ul>
+        <div id="loginoff">
+        <a href="/index.php/Index/login" class="a_login">登录</a>
+        <a href="/index.php/Index/register" class="a_reg">注册</a>
+        </div>
+        <div class="user_center" id="loginon">
+            <span id="uphone"></span>
+            <dl class="layer_user">
+                <dt>| <a href="/index.php/Upload" title="个人中心" class="a_user_center" target="_blank">个人中心</a></dt>
+                <dd><a href="/index.php/Index/loginout" title="退出" class="a_quit">退出</a></dd>  
+            </dl>        
+        </div>
+        
+        <div class="clear"></div>
+    </div>    
+    <script type="text/javascript">
+    $(function(){
+        var uid = $.cookie("uid");
+        var phone = $.cookie("phone");
+        if(uid!=null&&phone!=null)
+        {
+            $("#loginon").show();
+            $("#loginoff").hide();
+            $("#uphone").html(phone);
+        }
+        else
+        {
+            $("#loginon").hide();
+            $("#loginoff").show();
+        }
+
+
+        $("#sbut").click(function(){
+            var scontent = $("#scontent").val();
+            if(scontent == '')
+            {
+                alert("请输入搜索关键字~");
+                return false;
+            }
+            else
+            {
+                $("#search").submit();
+            }
+        })
+    })
+</script>
+</div>
+</header>
+<div style="height:155px;"></div>
+<div class="banner_wrapper">
+	<div class="banner">
+    	<ul>
+            
+<li><a href="http://alumni.ccom.edu.cn/xydt/index_detail.php?id=76" target="_blank"><img src="/uploads/20170320110601_473.jpg" width="1200" height="355" title="我院校友代博新作《弯曲的时空》亮相上海国际艺术节"></a></li>
+<li><a href="http://alumni.ccom.edu.cn/xydt/index_detail.php?id=73" target="_blank"><img src="/uploads/20161230070558_492.jpg" width="1200" height="355" title="单簧管演奏家王弢签约环球 发行首张古典演奏专辑《舒伯特》"></a></li>
+<li><a href="http://alumni.ccom.edu.cn/activtes/index_detail.php?id=20" target="_blank"><img src="/uploads/20161207131043_672.jpg" width="1200" height="355" title="赵沨同志百年诞辰纪念学术活动"></a></li>
+<li><a href="http://alumni.ccom.edu.cn/activtes/index_detail.php?id=19" target="_blank"><img src="/uploads/20161118144211_365.jpg" width="1200" height="355" title="第一届北京肖邦国际青少年钢琴比赛精彩闭幕 中国选手取得佳绩"></a></li>
+<li><a href="http://alumni.ccom.edu.cn/activtes/index_detail.php?id=18" target="_blank"><img src="/uploads/20161012142959_259.jpg" width="1200" height="355" title="第一届北京肖邦国际青少年钢琴比赛"></a></li>
+<li><a href="http://alumni.ccom.edu.cn/activtes/index_detail.php?id=17" target="_blank"><img src="/uploads/20161010143338_883.jpg" width="1200" height="355" title="于润洋教授纪念研讨会"></a></li>
+<li><a href="http://alumni.ccom.edu.cn/syls/index_detail.php?id=5" target="_blank"><img src="/uploads/20160705133753_117.jpg" width="1200" height="355" title="俞峰院长在中央音乐学院2016届毕业典礼上的讲话"></a></li>
+<li><a href="http://alumni.ccom.edu.cn/activtes/index_detail.php?id=13" target="_blank"><img src="/uploads/20151211163736_617.jpg" width="1200" height="355" title="“飞樂•超樂——中央音乐学院75周年校庆音乐会I”在国家大剧院成功举办"></a></li>
+
+        </ul>
+        <div style="clear:both;"></div>
+    </div>
+    <div class="banner_left">&nbsp;</div>
+    <div class="banner_right">&nbsp;</div>    
+</div>
+<div class="main_wrapper">
+	<div class="main">
+    	<div class="main_title">
+        	<h3>校友动态</h3>
+            <span><a href="/index.php/Upload/xydtupload" title="上传我的动态">上传我的动态</a></span>
+        </div>
+        <div class="main_trends" style="margin-bottom:20px;">
+        	<!-- <dl>
+            	<dt><img src="/public/images/img_maint1.jpg" width="300" height="220"></dt>
+                <dd>
+                	<h4>2006级钢琴系校友陈震发行专辑</h4>
+                	<p>活动时间：<span>2014.12.01 8:30</span></p>
+                    <p>活动地点：<i>校内大礼堂</i></p>
+                    <a href="javascript:void(0);" title="更多">更多</a>
+                </dd>
+            </dl>
+        	<dl>
+            	<dt><img src="/public/images/img_maint2.jpg" width="300" height="220"></dt>
+                <dd>
+                	<h4>2006级钢琴系校友陈震发行专辑</h4>
+                	<p>活动时间：<span>2014.12.01 8:30</span></p>
+                    <p>活动地点：<i>校内大礼堂</i></p>
+                    <a href="javascript:void(0);" title="更多">更多</a>
+                </dd>
+            </dl>
+        	<dl>
+            	<dt><img src="/public/images/img_maint3.jpg" width="300" height="220"></dt>
+                <dd>
+                	<h4>2006级钢琴系校友陈震发行专辑</h4>
+                	<p>活动时间：<span>2014.12.01 8:30</span></p>
+                    <p>活动地点：<i>校内大礼堂</i></p>
+                    <a href="javascript:void(0);" title="更多">更多</a>
+                </dd>
+            </dl>      --> 
+            
+<dl>
+	<dt><a href="/xydt/index_detail.php?id=79"><img src="/uploads/20170925054103_425.jpg" width="300" height="220"></a></dt>
+    <dd>
+    	<h4><a href="/xydt/index_detail.php?id=79">我院校友吴蛮新书《丝绸之路琵琶行》签售...</a></h4>
+    	<p>活动时间：2017.10.15</p>
+    	<p>活动地点：北京</p>
+        <a href="/xydt/index_detail.php?id=79" class="a_gengduo" title="更多">更多</a>
+    </dd>
+</dl>
+<dl>
+	<dt><a href="/xydt/index_detail.php?id=78"><img src="/uploads/20170925052608_613.jpg" width="300" height="220"></a></dt>
+    <dd>
+    	<h4><a href="/xydt/index_detail.php?id=78">我院校友刘宪绩发行第二张个人专辑《Guit...</a></h4>
+    	<p>活动时间：2017.09</p>
+    	<p>活动地点：马德里</p>
+        <a href="/xydt/index_detail.php?id=78" class="a_gengduo" title="更多">更多</a>
+    </dd>
+</dl>
+<dl>
+	<dt><a href="/xydt/index_detail.php?id=77"><img src="/uploads/20170917175017_240.jpg" width="300" height="220"></a></dt>
+    <dd>
+    	<h4><a href="/xydt/index_detail.php?id=77">崔君芝携丝路箜篌艺术团出席文化中国颁奖...</a></h4>
+    	<p>活动时间：2017.09.10</p>
+    	<p>活动地点：北京</p>
+        <a href="/xydt/index_detail.php?id=77" class="a_gengduo" title="更多">更多</a>
+    </dd>
+</dl>
+                  
+            <div class="clear"></div>
+        </div>
+    	<div class="main_title" style="background:#f4f4f4;">
+        	<h3>新闻</h3>
+            <!-- <span><a href="/activites/index.php" >更多</a></span> -->
+        </div>        
+        <div class="main_news">
+        	<ul>
+            	<!-- <li>
+                	<span>2015.04.08</span>
+                    <h3>中国音乐的人文回归台湾林谷芳文回归台湾林谷芳先生讲座侧记</h3>
+                    <p>第二届太平洋地区音乐院校联盟高峰会议在中国北京中央音乐学院举行。开幕式暨欢迎音乐会在式暨欢迎音乐会在我院琴房楼演奏厅举行。</p>
+                    <a href="javascript:void(0);" title="更多">更多</a>
+                </li>
+            	<li>
+                	<span>2015.04.08</span>
+                    <h3>中国音乐的人文回归台湾座侧记</h3>
+                    <p>第二届太平洋地区音乐院校联盟高峰会议在中国北京中央音乐学院举行。开幕式暨欢迎音乐会在式暨欢迎音乐会在我院琴房楼演奏厅举行。</p>
+                    <a href="javascript:void(0);" title="更多">更多</a>
+                </li>
+            	<li style="border:none;">
+                	<span>2015.04.08</span>
+                    <h3>中国音乐的人文回归台湾林谷芳文回归台湾林谷芳先生讲座侧记</h3>
+                    <p>第二届太平洋地区音乐院校联盟高峰会议在中国北京中央音乐学院举行。开幕式暨欢迎音乐会在式暨欢迎音乐会在我院琴房楼演奏厅举行。</p>
+                    <a href="javascript:void(0);" title="更多">更多</a>
+                </li> -->
+                 
+<li>
+	<span>2017-09-21</span>
+    <h3><a href="/activtes/index_detail.php?id=21">我院校友袁晨野、赵聪受邀代表中方参演2017中国“俄罗斯文化节”开幕式音乐会</a></h3>
+    <p>2017年中国“俄罗斯文化节”开幕式音乐会9月12日在广州大剧院举行，中俄两国相关人士及上千名观众现场观看了演出，中国副总理刘</p>
+    <a href="/activtes/index_detail.php?id=21" class="a_gengduo" title="更多">更多</a>
+</li>
+<li>
+	<span>2016-12-07</span>
+    <h3><a href="/activtes/index_detail.php?id=20">“赵沨同志百年诞辰纪念学术活动”即将隆重举行 </a></h3>
+    <p>为纪念中国当代著名教育家、音乐理论家、社会活动家、新中国专业音乐教育的开拓者赵沨同志诞辰一百周年，缅怀先贤，启迪后学，中</p>
+    <a href="/activtes/index_detail.php?id=20" class="a_gengduo" title="更多">更多</a>
+</li>
+<li>
+	<span>2016-10-30</span>
+    <h3><a href="/activtes/index_detail.php?id=19">第一届北京肖邦国际青少年钢琴比赛精彩闭幕 中国选手取得佳绩</a></h3>
+    <p>第一届北京肖邦国际青少年钢琴比赛“颁奖仪式暨获奖选手音乐会”于2016年10月30日晚在中央音乐学院歌剧音乐厅举行，经过半个月三</p>
+    <a href="/activtes/index_detail.php?id=19" class="a_gengduo" title="更多">更多</a>
+</li>
+ 
+                <div class="clear"></div>                              
+            </ul>
+        </div>
+    	<div class="main_title" style="background:#f4f4f4;">
+        	<h3>活动回顾</h3>
+            <!-- <span><a href="/activites/hdhg.php">更多</a></span> -->
+        </div>
+        <div class="main_activity">
+        	<ul>
+            	<!-- <li>
+                	<h2><a href="javascript:void(0);" title="">作曲系学生国际作曲大赛捷报频传</a></h2>
+                    <span>2015.04.08</span>
+                    <img  src="/public/images/img_maina1.jpg" width="420" height="200">
+                    <p>我院作曲系学生在青年艺术家组比赛中获奖。王婧超的作品获得一等奖，并获邀于同年7月至维也纳参加艺术节并亲自演奏自己的作品。大三学生田淞丰的作品得三等奖。大四学生王歆瑶的作品获得优秀奖。</p>
+                </li>
+            	<li>
+                	<h2><a href="javascript:void(0);" title="">作曲系学生国际作曲大赛捷报频传</a></h2>
+                    <span>2015.04.08</span>
+                    <img  src="/public/images/img_maina2.jpg" width="420" height="200">
+                    <p>我院作曲系学生在青年艺术家组比赛中获奖。王婧超的作品获得一等奖，并获邀于同年7月至维也纳参加艺术节并亲自演奏自己的作品。大三学生田淞丰的作品得三等奖。大四学生王歆瑶的作品获得优秀奖。</p>
+                </li>
+            	<li>
+                	<h2><a href="javascript:void(0);" title="">作曲系学生国际作曲大赛捷报频传</a></h2>
+                    <span>2015.04.08</span>
+                    <img  src="/public/images/img_maina1.jpg" width="420" height="200">
+                    <p>我院作曲系学生在青年艺术家组比赛中获奖。王婧超的作品获得一等奖，并获邀于同年7月至维也纳参加艺术节并亲自演奏自己的作品。大三学生田淞丰的作品得三等奖。大四学生王歆瑶的作品获得优秀奖。</p>
+                </li>
+            	<li>
+                	<h2><a href="javascript:void(0);" title="">作曲系学生国际作曲大赛捷报频传</a></h2>
+                    <span>2015.04.08</span>
+                    <img  src="/public/images/img_maina2.jpg" width="420" height="200">
+                    <p>我院作曲系学生在青年艺术家组比赛中获奖。王婧超的作品获得一等奖，并获邀于同年7月至维也纳参加艺术节并亲自演奏自己的作品。大三学生田淞丰的作品得三等奖。大四学生王歆瑶的作品获得优秀奖。</p>
+                </li>  -->
+                 
+<li>
+	<h2><a href="/activtes/hdhg_detail.php?id=9" title="">中央音乐学院校友会知心讲座IV—“这儿比那儿好”</a></h2>
+    <span>2015-04-28</span>
+    <img  src="/uploads/20150715233941_397.jpg" width="420" height="200">
+    <p>这儿比那儿好”是李心草第一次站上指挥台时的内心独白，就让我们细数光阴的脚步，跟随他的讲述一同回忆“光着脚丫去考试”、“洞天里的呼噜声”、“中餐馆的朝圣路”以及“指挥台上的小草”那一段段难忘的心路历程……视李宗盛为偶像的李心草，还将在讲座现场与大家一同分享这位华语流行乐坛教父的早期经典音乐作品 。</p>
+</li>
+
+<li>
+	<h2><a href="/activtes/hdhg_detail.php?id=4" title="">中央音乐学院附中—第二届校友艺术节盛大开幕</a></h2>
+    <span>2014-05-26</span>
+    <img  src="/uploads/20150616170346_852.jpg" width="420" height="200">
+    <p>为期十七天的中央音乐学院附中第二届校友艺术节，于2014年5月26日在附中校园正式拉开帷幕。本届校友艺术节，在延续上一届总体精神的基础上凸显了两大亮点：一是扩大了参与阵容：参演主体除了一部分在校优秀师生，还云集了一批远道而来、活跃在世界舞台上的知名校友</p>
+</li>
+
+<li>
+	<h2><a href="/activtes/hdhg_detail.php?id=3" title="">共赴一个甲子的约定—1954级少年班60周年座谈会</a></h2>
+    <span>2014-05-21</span>
+    <img  src="/uploads/20150616165926_455.jpg" width="420" height="200">
+    <p>	六十年前，中央音乐学院（天津老校址）迎来了一批“红领巾”学员，他们一共24人，共同构成了1954级“少年班”这个年少的集体，它也是“中央音乐学院附属中等音乐学校”的前身。物换星移、岁月更迭，今年迎来了“少年班”相识六十周年的难忘时刻，5月21日上午十点，纪念“少年班”60周年座谈会在教学楼717会议室举行，院党委郭淑兰书记、王次炤院长特委托校友会...</p>
+</li>
+
+<li>
+	<h2><a href="/activtes/hdhg_detail.php?id=2" title="">“母校传真谛 人生绽芳华”—1980级作曲系校友返校活动</a></h2>
+    <span>2014-04-10</span>
+    <img  src="/uploads/20150722202414_577.jpg" width="420" height="200">
+    <p>	2014年4月10日下午，教学楼各层欢迎屏上打出了“热烈欢迎80级校友关峡、李滨扬、郭小笛、赵石军、邵恩校友回家”的字样，一场如约而至的特别活动即将开始。两点整，“1980级作曲系校友 ‘民族魂’作品座谈会”在教学楼717室举行，中国恢复高考后我院第二届作曲专业在全国范围内仅招的五名学生（其中陈晓勇因次日抵京，无法出席），与77/78级第一届指挥系校友邵恩一同返校参加了座谈会。院领导对他们这次返校十分重视，郭淑兰书记、逄焕磊..</p>
+</li>
+
+                                
+                <div class="clear"></div>
+            </ul>
+        </div>
+        <div class="index_sun_photo">
+        	<dl>
+            	<dt>
+                	<h1>晒照片</h1>
+                    <p>人生旅程上，只有那浸透着记忆的一张张泛黄的照片，才能将让光阴荏苒的往事重现清晰……校友会邀请您晒出美好岁月的点滴瞬间，让更多的校友一同分享、纪念与回味！</p>
+                    <a href="index.php/Upload/szpupload" title="上传照片">上传照片</a>
+                </dt>
+                <dd><img src="/public/images/img_sp.jpg" width="470" height="179"></dd>
+            </dl>
+            <div class="clear"></div>
+        </div>      
+    </div>
+</div>
+
+<footer>
+	<div class="footer_wrapper">
+    	<div class="footer">
+        	<p>北京西城区鲍家街43号 邮编100031</p>
+            <p>京公网安备110402430057号　|　京ICP备05064625号 Copyright 2014 中央音乐学院版权所有</p>
+            <a href="javascript:(function(){window.open('http://v.t.sina.com.cn/share/share.php?title='+encodeURIComponent(document.title)+'&url='+encodeURIComponent(location.href)+'&source=bookmark','_blank','width=450,height=400');})()" title="新浪微博分享" class="a_footer01">&nbsp;</a>
+            <a href="javascript:void(0)" onclick="postToWb();" class="tmblog a_footer02">&nbsp;</a>
+            <a href="javascript:void(0);" onclick="window.open('http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url='+encodeURIComponent(document.location.href));return false;" title="分享到QQ空间" class="a_footer03">&nbsp;</a>
+            </ul>
+        </div>
+    </div>
+    <script type="text/javascript"> 
+        function postToWb(){ 
+        var _t = encodeURI(document.title); 
+        var _url = encodeURI(document.location); 
+        var _appkey = encodeURI("appkey");//你从腾讯获得的appkey 
+        var _pic = encodeURI('');//（列如：var _pic='图片url1|图片url2|图片url3....） 
+        var _site = 'http://www.hqfo.com.cn';//你的网站地址 
+        var _u = 'http://v.t.qq.com/share/share.php?title='+_t+'&url='+_url+'&appkey='+_appkey+'&site='+_site+'&pic='+_pic; 
+        window.open( _u,'转播到腾讯微博', 'width=700, height=680, top=0, left=0, toolbar=no, menubar=no, scrollbars=no, location=yes, resizable=no, status=no' ); 
+        } 
+    </script>
+</footer>
+
+</body>
+</html>

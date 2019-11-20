@@ -1,0 +1,627 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+    <meta name="author" content="洪皓 孙雪梦 莫勇" />
+    <title>北京林业大学学生处</title>
+    <link href="images/Style.css" type="text/css" rel="stylesheet" />
+    
+    <!--<script src="images/jquery-1.8.2.js" type="text/javascript"></script>-->
+    <script type="text/javascript" src="images/jquery-1.4.2.min.js"></script>
+    <script type="text/javascript" src="images/jcarousellite.js"></script>
+    <script type="text/javascript" src="images/easing.js"></script>
+	<script type="text/javascript" src="images/float.js"></script>
+		
+    <script type="text/javascript">
+        <!--
+        var timeout = 500;
+        var closetimer= 0;
+        var ddmenuitem = 0;
+        // open hidden layer
+        function mopen(id)
+        {	
+	        // cancel close timer
+	        mcancelclosetime();
+
+	        // close old layer
+	        if(ddmenuitem) ddmenuitem.style.visibility = 'hidden';
+
+	        // get new layer and show it
+	        ddmenuitem = document.getElementById(id);
+	        ddmenuitem.style.visibility = 'visible';
+
+        }
+        // close showed layer
+        function mclose()
+        {
+	        if(ddmenuitem) ddmenuitem.style.visibility = 'hidden';
+        }
+
+        // go close timer
+        function mclosetime()
+        {
+	        closetimer = window.setTimeout(mclose, timeout);
+        }
+
+        // cancel close timer
+        function mcancelclosetime()
+        {
+	        if(closetimer)
+	        {
+		        window.clearTimeout(closetimer);
+		        closetimer = null;
+	        }
+        }
+
+        // close layer when click-out
+        document.onclick = mclose; 
+        // -->
+        function addfavorite()
+        {
+           if (document.all)
+           {
+              window.external.addFavorite('http://xsc.bjfu.edu.cn','北京林业大学学生处');
+           }
+           else if (window.sidebar)
+           {
+              window.sidebar.addPanel('北京林业大学学生处', 'http://xsc.bjfu.edu.cn',  "");
+           }
+        }
+    </script>
+
+</head>
+<body>
+
+	//<SCRIPT type=text/javascript><!--
+       // var ad1=new AdMove("ad1");
+       // ad1.Run();
+	//多组漂浮
+	//var ad1=new AdMove("ad2");
+        //ad2.Run();
+    //-->
+	//</SCRIPT>
+    <div id="i_body">
+        <div id="i_top">
+            <ul>
+                <li><a href='#'onclick="addfavorite()">设为收藏</a></li>
+                <li><a href="http://www.bjfu.edu.cn" target="_blank">北林首页</a></li>
+            </ul>
+        </div>
+        
+        <div id="i_nav">
+            <div id="i_nav_con">
+                
+				<ul id="sddm">
+	                <li><a href="/" onmouseover="mopen('m1')" onmouseout="mclosetime()">首  页</a>
+		                <div id="m1" onmouseover="mcancelclosetime()" onmouseout="mclosetime()" style="display:none;">
+		                </div>
+	                </li>
+	                <li class="stylenav"><a href="/jgsz/137374.htm" onmouseover="mopen('m2')" onmouseout="mclosetime()">机构设置</a>
+		                <div id="m2" onmouseover="mcancelclosetime()" onmouseout="mclosetime()" style="display:none;">
+		                </div>
+	                </li>
+	                <li class="stylenav"><a href="javascript:void(0)" onmouseover="mopen('m3')" onmouseout="mclosetime()" >思想教育</a>
+		                <div id="m3" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+						<a href="/sxjy/szyj/">思政研究</a>
+		                <a href="/sxjy/sxjy3/">思想教育</a>
+						<a href="/sxjy/dwjs/">队伍建设</a>
+		                </div>
+	                </li>
+	                <li class="stylenav"><a href="javascript:void(0)" onmouseover="mopen('m4')" onmouseout="mclosetime()" >学生服务</a>
+		                <div id="m4" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+		                <a href="/xsfw/xsdh/">新生导航</a>
+		                <a href="/xsfw/bjjs/">班级建设</a>
+						<a href="http://gyb.bjfu.edu.cn" target="_blank">公寓文化建设</a>
+		                <a href="/xsfw/sbdby/">身边的榜样</a>
+						<a href="/xsfw/glgd/">管理规定</a>
+		                </div>
+	                </li>
+	                <li class="stylenav"><a href="javascript:void(0)" onmouseover="mopen('m5')" onmouseout="mclosetime()" >奖励资助</a>
+		                <div id="m5" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+		                <a href="/jlzz/zcgd/">政策规定</a>
+		                <a href="/jlzz/pjpy/">评奖评优</a>
+						<a href="/jlzz/xszz/">学生资助</a>
+		                <a href="/jlzz/qgzx/">勤工助学</a>
+		                <a href="/jlzz/lzjy/">励志教育</a>
+		                </div>
+	                </li>
+	                <li class="stylenav"><a href="javascript:void(0)" onmouseover="mopen('m6')" onmouseout="mclosetime()" >心理健康</a>
+		                <div id="m6" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+						<a href="http://www2.bjfu.edu.cn/aa/xlzx/psy2/index.asp" target="_blank">咨询预约</a>
+		                <a href="/xljk/xlcs/">心理常识</a>
+						<a href="/xljk/zxhd/">最新活动</a>
+		                </div>
+	                </li>
+	                <li class="stylenav"><a href="javascript:void(0)" onmouseover="mopen('m7')" onmouseout="mclosetime()" >国防教育</a>
+		                <div id="m7" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+						<a href="/gfjy/xsjx/">学生军训</a>
+		                <a href="/gfjy/zbgz/">征兵工作</a>
+						<a href="/gfjy/gfxc/">国防宣传</a>
+						<a href="http://gfs.bjfu.edu.cn" target="_blank">国防生工作</a>
+		                </div>
+	                </li>
+	                <li class="stylenav"><a href="/ztbd/" onmouseover="mopen('m8')" onmouseout="mclosetime()">专题报道</a>
+		                <div id="m8" onmouseover="mcancelclosetime()" onmouseout="mclosetime()" style="display:none;">
+		                </div>
+	                </li>
+					<li class="stylenav"><a href="/lxfs/137385.htm" onmouseover="mopen('m10')" onmouseout="mclosetime()">联系方式</a>
+		                <div id="m10" onmouseover="mcancelclosetime()" onmouseout="mclosetime()" style="display:none;">
+		                </div>
+	                </li>
+	                <li class="stylenav"><a href="http://xsc.bjfu.edu.cn/" target="_blank" onmouseover="mopen('m11')" onmouseout="mclosetime()">网上咨询</a>
+		                <div id="m11" onmouseover="mcancelclosetime()" onmouseout="mclosetime()" style="display:none;">
+		                </div>
+	                </li>	                
+                </ul>            </div>
+        </div>
+        <div id="i_con">
+            <div id="i_con_1">
+                <div id="i_con_1_l">
+                    <div class="i_con_1_l_t">
+                        <div class="i_con_1_l_t_1"><img alt="" src="images/i_xgdt.jpg"/></div>
+                        <div class="i_con_1_l_t_2">学工动态</div>
+                    </div>
+					<div id="i_con_1_l_add">
+																																				
+									<a href="http://xsc.bjfu.edu.cn/ztbd/yxbys/" title="" target="_blank"><img width="310" height="70" src="/images/content/2014/20140623232936275078.jpg" alt="2014年优秀毕业生风采展"/></a>
+																																																																																																																																																																																																																																								<!--<a href="" title="" target="_blank"><img width="310" height="72" src="images/example.jpg"/></a>-->
+					</div>
+					<div id="i_con_1_l_m_add"></div>
+                    <div id="i_con_1_l_m">
+                        <table>                           
+                                                        <tr>
+                                <td class="tab1_1"><img alt="" src="images/sign.jpg"/></td>
+                                <td class="tab1_2"><a href="/xgdt/239608.htm" target="_blank" title="全国学生资助管理中心向广大学生发出预警：又到开学季，千万别上当">            全国学生资助管理中心向广大学生发出预... 
+    </a></td>
+                                <td class="tab1_3">02-22</td>
+                            </tr>
+                                                        <tr>
+                                <td class="tab1_1"><img alt="" src="images/sign.jpg"/></td>
+                                <td class="tab1_2"><a href="/xgdt/228587.htm" target="_blank" title="2015-2016学年宝钢优秀学生奖的公示">            2015-2016学年宝钢优秀学生奖... 
+    </a></td>
+                                <td class="tab1_3">09-23</td>
+                            </tr>
+                                                        <tr>
+                                <td class="tab1_1"><img alt="" src="images/sign.jpg"/></td>
+                                <td class="tab1_2"><a href="/xgdt/227554.htm" target="_blank" title="经管学院组织《学生管理规定》考试促新生成长">            经管学院组织《学生管理规定》考试促新... 
+    </a></td>
+                                <td class="tab1_3">09-12</td>
+                            </tr>
+                                                        <tr>
+                                <td class="tab1_1"><img alt="" src="images/sign.jpg"/></td>
+                                <td class="tab1_2"><a href="/xgdt/217611.htm" target="_blank" title="多单位专家来我校调研高层学生公寓管理经验">            多单位专家来我校调研高层学生公寓管理... 
+    </a></td>
+                                <td class="tab1_3">04-27</td>
+                            </tr>
+                                                        <tr>
+                                <td class="tab1_1"><img alt="" src="images/sign.jpg"/></td>
+                                <td class="tab1_2"><a href="/xgdt/213428.htm" target="_blank" title="学校首批“辅导员工作室”名单出炉">            学校首批“辅导员工作室”名单出炉 
+    </a></td>
+                                <td class="tab1_3">04-01</td>
+                            </tr>
+                                                    </table>
+                    </div>
+                    <div class="i_con_1_l_b">
+                        <a href="/xgdt/" target="_blank">更多信息...</a>
+                    </div>
+                </div>            
+                <div id="i_con_1_m">
+                    <div class="i_con_1_l_t">
+                        <div class="i_con_1_l_t_1"><img alt="" src="images/i_yxgz.jpg"/></div>
+                        <div class="i_con_1_l_t_2">学院工作</div>
+                    </div>
+					<div class="i_con_1_l_m_add"></div>
+                    <div class="i_con_1_l_m">
+                        <table>
+                                                        <tr>
+                                <td class="tab1_1"><img alt="" src="images/sign.jpg"/></td>
+                                <td class="tab1_2"><a href="/xygz/245742.htm" target="_blank" title="经管学院心理情景剧大赛以爱为名孕育心灵之美">            经管学院心理情景剧大赛以爱为名孕育心... 
+    </a></td>
+                                <td class="tab1_3">04-17</td>
+                            </tr>
+                                                        <tr>
+                                <td class="tab1_1"><img alt="" src="images/sign.jpg"/></td>
+                                <td class="tab1_2"><a href="/xygz/244462.htm" target="_blank" title="林学院举办宿舍诗词大会建设“书香林舍”">            林学院举办宿舍诗词大会建设“书香林舍... 
+    </a></td>
+                                <td class="tab1_3">03-31</td>
+                            </tr>
+                                                        <tr>
+                                <td class="tab1_1"><img alt="" src="images/sign.jpg"/></td>
+                                <td class="tab1_2"><a href="/xygz/243553.htm" target="_blank" title="材料学院“谁是下一个传承人”趣味活动普及传统文化">            材料学院“谁是下一个传承人”趣味活动... 
+    </a></td>
+                                <td class="tab1_3">03-21</td>
+                            </tr>
+                                                        <tr>
+                                <td class="tab1_1"><img alt="" src="images/sign.jpg"/></td>
+                                <td class="tab1_2"><a href="/xygz/244478.htm" target="_blank" title="人文学院新生班级陆续开展“学雷锋”系列班日活动">            人文学院新生班级陆续开展“学雷锋”系... 
+    </a></td>
+                                <td class="tab1_3">03-14</td>
+                            </tr>
+                                                        <tr>
+                                <td class="tab1_1"><img alt="" src="images/sign.jpg"/></td>
+                                <td class="tab1_2"><a href="/xygz/242973.htm" target="_blank" title="经管学院第三届“寻找身边的榜样”活动结束">            经管学院第三届“寻找身边的榜样”活动... 
+    </a></td>
+                                <td class="tab1_3">03-14</td>
+                            </tr>
+                                                        <tr>
+                                <td class="tab1_1"><img alt="" src="images/sign.jpg"/></td>
+                                <td class="tab1_2"><a href="/xygz/244474.htm" target="_blank" title="人文学院召开春季宿舍长大会强调宿舍安全">            人文学院召开春季宿舍长大会强调宿舍安... 
+    </a></td>
+                                <td class="tab1_3">03-04</td>
+                            </tr>
+                                                        <tr>
+                                <td class="tab1_1"><img alt="" src="images/sign.jpg"/></td>
+                                <td class="tab1_2"><a href="/xygz/228895.htm" target="_blank" title="林学院注重自我管理，发挥党员力量，倡导和谐宿舍">            林学院注重自我管理，发挥党员力量，倡... 
+    </a></td>
+                                <td class="tab1_3">09-27</td>
+                            </tr>
+                                                        <tr>
+                                <td class="tab1_1"><img alt="" src="images/sign.jpg"/></td>
+                                <td class="tab1_2"><a href="/xygz/218872.htm" target="_blank" title="信息学院召开辅导员成长导师与班主任交流座谈会">            信息学院召开辅导员成长导师与班主任交... 
+    </a></td>
+                                <td class="tab1_3">05-13</td>
+                            </tr>
+                                                    </table>
+                    </div>
+                    <div class="i_con_1_l_b">
+                        <a href="/xygz/" target="_blank">更多信息...</a>
+                    </div>
+                </div>            
+                <div id="i_con_1_r">
+                    <div class="i_con_1_l_t">
+                        <div class="i_con_1_l_t_1"><img alt="" src="images/i_tzgg.jpg"/></div>
+                        <div class="i_con_1_l_t_2">通知公告</div>
+                    </div>
+					<div id="i_con_1_r_m_add"></div>
+                    <div id="i_con_1_r_m">
+                        <table>
+                                                        <tr>
+                                <td class="tab1_1"><img alt="" src="images/sign.jpg"/></td>
+                                <td class="tab1_2"><a href="/tzgg/255095.htm" target="_blank" title="2017年宝钢优秀学生奖的公示">            2017年宝钢优秀学生奖的公示 
+    </a></td>
+                                <td class="tab1_3">09-27</td>
+                            </tr>
+                                                        <tr>
+                                <td class="tab1_1"><img alt="" src="images/sign.jpg"/></td>
+                                <td class="tab1_2"><a href="/tzgg/254836.htm" target="_blank" title="北京林业大学2017年度辅导员系列副高级专业技术职务评审结果公示">            北京林业大学2017年度辅导员系列副... 
+    </a></td>
+                                <td class="tab1_3">09-25</td>
+                            </tr>
+                                                        <tr>
+                                <td class="tab1_1"><img alt="" src="images/sign.jpg"/></td>
+                                <td class="tab1_2"><a href="/tzgg/254223.htm" target="_blank" title="北京林业大学2018届保研辅导员复试结果公示">            北京林业大学2018届保研辅导员复试... 
+    </a></td>
+                                <td class="tab1_3">09-18</td>
+                            </tr>
+                                                        <tr>
+                                <td class="tab1_1"><img alt="" src="images/sign.jpg"/></td>
+                                <td class="tab1_2"><a href="/tzgg/253756.htm" target="_blank" title="北京林业大学2017年度辅导员系列专业技术职务评审工作方案">            北京林业大学2017年度辅导员系列专... 
+    </a></td>
+                                <td class="tab1_3">09-13</td>
+                            </tr>
+                                                        <tr>
+                                <td class="tab1_1"><img alt="" src="images/sign.jpg"/></td>
+                                <td class="tab1_2"><a href="/tzgg/250529.htm" target="_blank" title="“助学、筑梦、铸人”主题征文系列宣传活动通知">            “助学、筑梦、铸人”主题征文系列宣传... 
+    </a></td>
+                                <td class="tab1_3">06-15</td>
+                            </tr>
+                                                    </table>
+                    </div>					
+                    <div class="i_con_1_l_b">
+                        <a href="/tzgg/" target="_blank">更多信息...</a>
+                    </div>
+					<div id="i_con_1_r_add">
+						<div id="i_con_1_r_add_l">
+							<a href="http://xgxt.bjfu.edu.cn/" title="学工系统" target="_blank"><img src="images/xgxt.jpg"/></a>
+						</div>
+						<div id="i_con_1_r_add_m">
+							<div id="i_con_1_r_add_m_t">官方</div>
+							<div id="i_con_1_r_add_m_b">微信</div>
+						</div>
+						<div id="i_con_1_r_add_r">
+							<img src="images/weixin.jpg"/>
+						</div>
+					</div>
+                </div>            
+            </div>
+            <div id="i_con_2">
+                <div id="i_con_2_t">
+                    <div class="i_con_2_t_1">图片新闻</div>
+                </div>
+                <div id="i_con_2_b">
+                    <div class="carousel">
+		                <a href="javascript:void(0);" class="prev disabled" id="prev-03">&nbsp </a>
+		                <div class="jCarouselLite" id="demo-03">
+			                <ul>
+				                <!--<li><a href="" target="_blank"><img height="100" width="160" alt="" src="images/1.jpg" /></a></li>
+				                <li><a href="" target="_blank"><img height="100" width="160" alt="" src="images/2.jpg" /></a></li>
+				                <li><a href="" target="_blank"><img height="100" width="160" alt="" src="images/3.jpg" /></a></li>
+				                <li><a href="" target="_blank"><img height="100" width="160" alt="" src="images/4.jpg" /></a></li>
+				                <li><a href="" target="_blank"><img height="100" width="160" alt="" src="images/1.jpg" /></a></li>
+				                <li><a href="" target="_blank"><img height="100" width="160" alt="" src="images/2.jpg" /></a></li>
+				                <li><a href="" target="_blank"><img height="100" width="160" alt="" src="images/3.jpg" /></a></li>
+				                <li><a href="" target="_blank"><img height="100" width="160" alt="" src="images/4.jpg" /></a></li>
+				                <li><a href="" target="_blank"><img height="100" width="160" alt="" src="images/1.jpg" /></a></li>-->
+																																																															 <li><a href="http://xsc.bjfu.edu.cn/xgdt/160738.htm"  target="_blank"><img src="/images/content/2014/20140703142529820840.jpg" width="160" height="100" alt="学校开展辅导员、班主任系列专题培训" /></a></li> 
+																																																																				 <li><a href="http://xsc.bjfu.edu.cn/xgdt/159356.htm"  target="_blank"><img src="/images/content/2014/20140616082855827286.png" width="160" height="100" alt="北林报：纪念军训工作开展20年" /></a></li> 
+																																																																				 <li><a href="http://xsc.bjfu.edu.cn/xgdt/159191.htm"  target="_blank"><img src="/images/content/2014/20140612085416214262.jpg" width="160" height="100" alt="校领导带队走访学生宿舍" /></a></li> 
+																																																																				 <li><a href="http://xsc.bjfu.edu.cn/xgdt/159106.htm"  target="_blank"><img src="/images/content/2014/20140611100119150410.jpg" width="160" height="100" alt="武警部队优秀大学生干部先进事迹报告会举行" /></a></li> 
+																																																																				 <li><a href="http://xsc.bjfu.edu.cn/xgdt/157743.htm"  target="_blank"><img src="/images/content/2014/20140526100306702426.jpg" width="160" height="100" alt="525心理情景剧普及心理健康教育" /></a></li> 
+																																																																				 <li><a href="http://xsc.bjfu.edu.cn/xgdt/157740.htm"  target="_blank"><img src="/images/content/2014/20140526094639442012.png" width="160" height="100" alt="教练式辅导员专业化训练培训班结业" /></a></li> 
+																																																																				 <li><a href="http://xsc.bjfu.edu.cn/xgdt/157460.htm"  target="_blank"><img src="/images/content/2014/20140521101616751653.jpg" width="160" height="100" alt="学生军训20周年纪念座谈会召开" /></a></li> 
+																																																																				 <li><a href="http://xsc.bjfu.edu.cn/xgdt/157153.htm"  target="_blank"><img src="/images/content/2014/20140519142352552334.jpg" width="160" height="100" alt="我校2014年学生军训汇报表演展青春风采" /></a></li> 
+																																																																				 <li><a href="http://xsc.bjfu.edu.cn/xgdt/156060.htm"  target="_blank"><img src="/images/content/2014/20140508143415347880.jpg" width="160" height="100" alt="学工系统春季素质拓展活动内容丰富" /></a></li> 
+																																									                </ul>
+		                </div>
+		                <a href="javascript:void(0);" class="next" id="next-03">&nbsp </a>
+		                <div class="clear"></div>   
+	                </div><!--carousel end-->
+	                <script type="text/javascript">
+	                $(document).ready(function(){
+		                $('#demo-03').jCarouselLite({
+			                btnPrev: '#prev-03',
+			                btnNext: '#next-03',
+			                circular: false,
+			                scroll: 2
+		                });		
+	                });
+	                </script>
+                </div>
+            </div>
+            <div id="i_con_a">
+				<div id="i_con_a_l">
+					<!--<div id="i_con_a_l_t"></div>
+					<div id="i_con_a_l_b"></div>-->
+<a href = "http://newleaf.bjfu.edu.cn/" target="_blank"><img width="320" height="340" class="share_self"  frameborder="0" scrolling="no" src="http://xsc.bjfu.edu.cn/images/newleaf_1.jpg"></a>
+				</div>
+				<div id="i_con_a_m">
+					<div id="i_con_a_m_t">
+						<div class="i_con_a_m_l">
+							<div class="i_con_a_m_l_1"></div>
+							<div class="i_con_a_m_l_2">办</div>
+							<div class="i_con_a_m_l_2">事</div>
+							<div class="i_con_a_m_l_2">指</div>
+							<div class="i_con_a_m_l_2">南</div>
+						</div>
+						<div class="i_con_a_m_r">
+							<div id="i_con_a_m_t_r_t"></div>
+							<div id="i_con_a_m_t_r_b">
+								<div id="i_con_a_m_t_r_b_l"></div>
+								<div id="i_con_a_m_t_r_b_r">
+																		<div class="i_con_a_m_t_r_b">
+										<img alt="" src="images/sign.jpg"/>
+										<a href="/bszn/143801.htm" target="_blank" title="入伍学生学费补代偿及退役士兵学费资助办法">            入伍学生学费补代偿及退... 
+    </a>
+									</div>
+																		<div class="i_con_a_m_t_r_b">
+										<img alt="" src="images/sign.jpg"/>
+										<a href="/bszn/143800.htm" target="_blank" title="基层就业学费补(代)偿办法">            基层就业学费补(代)偿... 
+    </a>
+									</div>
+																		<div class="i_con_a_m_t_r_b">
+										<img alt="" src="images/sign.jpg"/>
+										<a href="/bszn/143797.htm" target="_blank" title="生源地贷款回执办理流程">            生源地贷款回执办理流程 
+    </a>
+									</div>
+																		<div class="i_con_a_m_t_r_b">
+										<img alt="" src="images/sign.jpg"/>
+										<a href="/bszn/143796.htm" target="_blank" title="国家助学贷款办理流程">            国家助学贷款办理流程 
+    </a>
+									</div>
+																		<div class="i_con_a_m_t_r_b">
+										<img alt="" src="images/sign.jpg"/>
+										<a href="/bszn/143774.htm" target="_blank" title="北林阳光助学金申请流程">            北林阳光助学金申请流程 
+    </a>
+									</div>
+																		<div class="i_con_a_m_t_r_b">
+										<img alt="" src="images/sign.jpg"/>
+										<a href="/bszn/143795.htm" target="_blank" title="银行卡丢失如何处理">            银行卡丢失如何处理 
+    </a>
+									</div>
+																		<div class="i_con_a_m_t_r_b">
+										<img alt="" src="images/sign.jpg"/>
+										<a href="/bszn/143798.htm" target="_blank" title="心理咨询预约流程">            心理咨询预约流程 
+    </a>
+									</div>
+																		<div class="i_con_a_m_t_r_b">
+										<img alt="" src="images/sign.jpg"/>
+										<a href="/bszn/143772.htm" target="_blank" title="宿舍退宿手续办理办法">            宿舍退宿手续办理办法 
+    </a>
+									</div>
+																		<div class="i_con_a_m_t_r_b">
+										<img alt="" src="images/sign.jpg"/>
+										<a href="/bszn/143775.htm" target="_blank" title="学生公寓出入证补办流程">            学生公寓出入证补办流程 
+    </a>
+									</div>
+																		<div class="i_con_a_m_t_r_b">
+										<img alt="" src="images/sign.jpg"/>
+										<a href="/bszn/137394.htm" target="_blank" title="非义务教育学生身份证明开具办法">            非义务教育学生身份证明... 
+    </a>
+									</div>
+																		<div class="i_con_a_m_t_r_b">
+										<img alt="" src="images/sign.jpg"/>
+										<a href="/bszn/137395.htm" target="_blank" title="学生保险理赔办理程序">            学生保险理赔办理程序 
+    </a>
+									</div>
+																		<div class="i_con_a_m_t_r_b">
+										<img alt="" src="images/sign.jpg"/>
+										<a href="/bszn/137393.htm" target="_blank" title="校级勤工助学申报表下载">            校级勤工助学申报表下载 
+    </a>
+									</div>
+																	</div>						
+							</div>
+						</div>
+					</div>
+					<div id="i_con_a_m_m">
+						<div class="i_con_a_m_l">
+							<div class="i_con_a_m_l_1"></div>
+							<div class="i_con_a_m_l_2">友</div>
+							<div class="i_con_a_m_l_2">情</div>
+							<div class="i_con_a_m_l_2">链</div>
+							<div class="i_con_a_m_l_2">接</div>
+						</div>
+						<div class="i_con_a_m_r">
+							<div id="i_con_a_m_r_r_t"></div>
+							<div id="i_con_a_m_r_r_b">
+								<div id="i_con_a_m_r_r_b_l"></div>
+								<div id="i_con_a_m_r_r_b_r">
+									<div class="tags_a">
+										<div class="tags_l"></div>
+										<div class="tags_r">
+											<ul id="tags">
+												<li class="selectTag"><a onClick="selectTag('tagContent0',this)" href="javascript:void(0)">校外链接</a></li>
+												<li><a onClick="selectTag('tagContent1',this)" href="javascript:void(0)">学院链接</a></li>
+												<li><a onClick="selectTag('tagContent2',this)" href="javascript:void(0)">职能部处</a></li>
+											</ul>
+										</div>
+									</div>
+									<div id="tagContent">
+										<div class="tagContent selectTag" id="tagContent0">
+											<div class="xwlj_t"></div>
+											<div class="xwlj_a"><a href="http://xgb.pku.edu.cn/home/" target="_blank">北京大学学生处</a></div>
+											<div class="xwlj_a"><a href="http://xsc.cic.tsinghua.edu.cn/docinfo/" target="_blank">清华大学学生处</a></div>
+											<div class="xwlj_a"><a href="http://xsc.ruc.edu.cn/" target="_blank">中国人民大学学生处</a></div>
+											<div class="xwlj_a"><a href="http://xsc.bnu.edu.cn/xsc1/index.php" target="_blank">北京师范大学学生处</a></div>
+											<div class="xwlj_a"><a href="http://xgb.nefu.edu.cn/xueg/" target="_blank">东北林业大学学生处</a></div>
+											<div class="xwlj_a"><a href="http://xgc.njfu.edu.cn/" target="_blank">南京林业大学学生处</a></div>
+											<div class="xwlj_a"><a href="http://xgc.hzau.edu.cn/" target="_blank">华中农业大学学生处</a></div>
+											<div class="xwlj_a"><a href="http://xuegong.nwsuaf.edu.cn/" target="_blank">西北农林大学学生处</a></div>
+										</div>
+										<div class="tagContent" id="tagContent1">
+											<div class="xylj_t"></div>
+											<div class="xylj_a"><a href="http://lxy.bjfu.edu.cn" target="_blank">林学院</a></div>
+											<div class="xylj_a"><a href="http://shuibao.bjfu.edu.cn" target="_blank">水保学院</a></div>
+											<div class="xylj_a"><a href="http://biology.bjfu.edu.cn" target="_blank">生物学院</a></div>
+											<div class="xylj_a"><a href="http://yuanlin.bjfu.edu.cn" target="_blank">园林学院</a></div>
+											<div class="xylj_a"><a href="http://em.bjfu.edu.cn" target="_blank">经济管理学院</a></div>
+											<div class="xylj_a"><a href="http://gxy.bjfu.edu.cn" target="_blank">工学院</a></div>
+											<div class="xylj_a"><a href="http://clxy.bjfu.edu.cn" target="_blank">材料学院</a></div>
+											<div class="xylj_a"><a href="http://renwen.bjfu.edu.cn" target="_blank">人文学院</a></div>
+											<div class="xylj_a"><a href="http://waiyu.bjfu.edu.cn" target="_blank">外语学院</a></div>
+											<div class="xylj_a"><a href="http://it.bjfu.edu.cn/" target="_blank">信息学院</a></div>
+											<div class="xylj_a"><a href="http://cos.bjfu.edu.cn/" target="_blank">理学院</a></div>
+											<div class="xylj_a"><a href="http://zrbhq.bjfu.edu.cn" target="_blank">自然保护区学院</a></div>
+											<div class="xylj_a"><a href="http://www.bjfu.edu.cn" target="_blank">环境工程学院</a></div>
+											<div class="xylj_a"><a href="http://bjfucj.bjfu.edu.cn" target="_blank">继续教育学院</a></div>
+											<div class="xylj_a"><a href="http://www.studybeijing.com.cn/" target="_blank">国际学院</a></div>
+											<div class="xylj_a"><a href="http://sports.bjfu.edu.cn" target="_blank">体育教学部</a></div>
+											<div class="xylj_a"><a href="http://ad.bjfu.edu.cn" target="_blank">艺术设计学院</a></div>
+										</div>
+										<div class="tagContent" id="tagContent2">
+											<div class="znbc_t"></div>
+											<div class="znbc_a"><a href="http://dzb.bjfu.edu.cn" target="_blank">党政办公室</a></div>
+											<div class="znbc_a"><a href="http://jiwei.bjfu.edu.cn/" target="_blank">纪 检</a></div>
+											<div class="znbc_a"><a href="http://zzb.bjfu.edu.cn" target="_blank">组织部(党校)</a></div>
+											<div class="znbc_a"><a href="http://www2.bjfu.edu.cn/aa/dianzixw/index.asp" target="_blank">宣 传 部</a></div>
+											<div class="znbc_a"><a href="http://tzb.bjfu.edu.cn" target="_blank">统 战 部</a></div>
+											<div class="znbc_a"><a href="http://bwc.bjfu.edu.cn" target="_blank">保 卫 部</a></div>
+											<div class="znbc_a"><a href="http://graduate.bjfu.edu.cn" target="_blank">研究生工作部</a></div>
+											<div class="znbc_a"><a href="http://jgdw.bjfu.edu.cn/" target="_blank">机关党委(工会)</a></div>
+											<div class="znbc_a"><a href="http://xinqiao.bjfu.edu.cn/" target="_blank">团委</a></div>
+											<div class="znbc_a"><a href="http://gh.bjfu.edu.cn/" target="_blank">工会</a></div>
+											<div class="znbc_a"><a href="http://ltx.bjfu.edu.cn/" target="_blank">离退休工作处</a></div>
+											<div class="znbc_s">
+												<select style="width:175px;height:20px;text-align:center;" onchange="javascript:window.open(this.options[this.selectedIndex].value)">
+													<option selected="selected" value="http://www.bjfu.edu.cn/xxgk/1002.htm" target=_blank>---------行政机构---------</option>
+													<option value="http://dzb.bjfu.edu.cn/"  target=_blank>党政办公室</option>
+													<option value="http://news.bjfu.edu.cn"  target=_blank>新闻办公室 </option>
+													<option value="http://fzghc.bjfu.edu.cn"  target=_blank>发展规划处</option>
+													<option value="http://jiwei.bjfu.edu.cn/"  target=_blank>监  察  处</option>
+													<option value="http://bwc.bjfu.edu.cn/"  target=_blank>保  卫  处</option>
+													<option value="http://graduate.bjfu.edu.cn/"  target=_blank>研究生院</option>
+													<option value="http://jwc.bjfu.edu.cn"  target=_blank>教  务  处</option>
+													<option value="http://kjc.bjfu.edu.cn"  target=_blank>科  技  处</option>
+													<option value="http://222.31.185.50/"  target=_blank>计划财务处</option>
+													<option value="http://sjc.bjfu.edu.cn"  target=_blank>审  计  处</option>
+													<option value="http://sjc.bjfu.edu.cn"  target=_blank>人  事  处</option>
+													<option value="http://fcc.bjfu.edu.cn"  target=_blank>基建房产处</option>
+													<option value="http://international.bjfu.edu.cn"  target=_blank>国际交流与合作处</option>
+													<option value="http://zjc.bjfu.edu.cn"  target=_blank>招生就业处</option>
+													<option value="http://ltx.bjfu.edu.cn"  target=_blank>离退休工作处</option>
+													<option value="http://zwc.bjfu.edu.cn"  target=_blank>总务与产业管理处</option>
+													<option value="http://sbc.bjfu.edu.cn"  target=_blank>实验室与设备管理处</option>
+													<option value="http://xxzx.bjfu.edu.cn"  target=_blank>信息中心</option>
+												</select>
+											</div>
+											<div class="znbc_sr">
+												<select style="width:175px;height:20px;text-align:center;" onchange="javascript:window.open(this.options[this.selectedIndex].value)">
+													<option selected="selected" value="http://www.bjfu.edu.cn/xxgk/1002.htm" target=_blank>--------教辅机构--------</option>
+													<option value="http://jiufeng.bjfu.edu.cn"  target=_blank>实验林场</option>
+													<option value="http://www.lib.bjfu.edu.cn"  target=_blank>图书馆</option>
+													<option value="http://nic.bjfu.edu.cn"  target=_blank>信息中心</option>
+													<option value="http://xyy.bjfu.edu.cn"  target=_blank>校医院</option>
+													<option value="http://www.bjfu.org.cn/"  target=_blank>校友会</option>
+													<option value="http://journal.bjfu.edu.cn/"  target=_blank>期刊编辑部</option>
+													<option value="http://ldhq.bjfu.edu.cn/"  target=_blank>后勤服务总公司</option>
+													<option value="http://www.beilinzichan.com/"  target=_blank>林大资产经营有限公司</option>
+													<option value="http://jsb.bjfu.edu.cn/"  target=_blank>计划生育办公室</option>
+													<option value="http://ldfx.bjfu.org.cn/"  target=_blank>林大附小</option>
+													<option value="http://jwh.bjfu.org.cn/"  target=_blank>社区居委会</option>
+													<option value="http://www.ccbfu.com/"  target=_blank>计算机实验教学中心</option>
+													<option value="http://bjfc.bjfu.org.cn/"  target=_blank>标本馆</option>
+												</select>
+											</div>
+											<div class="znbc_sr">
+												<select style="width:175px;height:20px;text-align:center;" onchange="javascript:window.open(this.options[this.selectedIndex].value)">
+													<option selected="selected" value="http://www.bjfu.edu.cn/xxgk/1002.htm" target=_blank>--------挂靠单位--------</option>
+													<option value="http://www.lyjyxh.net.cn/" target=_blank>中国林业教育学会</option>
+													<option value="http://www.sbxh.org/" target=_blank>中国水土保持学会</option>
+													<option value="#" target=_blank>中国防治荒漠化培训中心</option>
+													<option value="http://www.fnrrc.com/" target=_blank>林业局自然保护区研究中心</option>
+													<option value="http://mla.bjfu.edu.cn/" target=_blank>全国园林专硕教指委会</option>
+													<option value="http://graduate.bjfu.edu.cn/jzw/" target=_blank>全国林业专硕教指委会</option>
+												</select>
+											</div>
+										</div>
+									</div>
+									<script type="text/javascript">
+										function selectTag(showContent,selfObj){
+											// 操作标签
+											var tag = document.getElementById("tags").getElementsByTagName("li");
+											var taglength = tag.length;
+											for(i=0; i<taglength; i++){
+												tag[i].className = "";
+											}
+											selfObj.parentNode.className = "selectTag";
+											// 操作内容
+											for(i=0; j=document.getElementById("tagContent"+i); i++){
+												j.style.display = "none";
+											}
+											document.getElementById(showContent).style.display = "block";
+										}
+									</script>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="i_con_a_m_b">
+																																																																																											<div class="i_con_a_m_b_pic"><a href="http://xsc.bjfu.edu.cn/ztbd/jxztw/" target="_blank"><img width="155" height="45" src="/images/content/2014/20140503183512075189.jpg" alt="军训20周年专题网" /></a></div>
+																				
+																																																																<div class="i_con_a_m_b_pic"><a href="http://xsc.bjfu.edu.cn/ztbd/jlsfdyczzt/" target="_blank"><img width="155" height="45" src="/images/content/2013/20131220123904700064.jpg" alt="教练式辅导员成长专题" /></a></div>
+																				
+																																																																<div class="i_con_a_m_b_pic"><a href="http://xsc.bjfu.edu.cn/ztbd/2013xjjtyxgrfcz/" target="_blank"><img width="155" height="45" src="/images/content/2013/20131118174520191826.jpg" alt="2013年先进集体和个人展示" /></a></div>
+																				
+																																																																<div class="i_con_a_m_b_pic"><a href="http://news.bjfu.edu.cn/ztbd/2013xsbjzs/" target="_blank"><img width="155" height="45" src="/images/content/2013/20131115104346074751.jpg" alt="2013级新生班级展示" /></a></div>
+																				
+																																																																																																																								<!--<div class="i_con_a_m_b_pic"><a href="" target="_blank"><img width="155px" height="45px" src="images/zhuanti.jpg" /></a></div>
+						<div class="i_con_a_m_b_pic"><a href="" target="_blank"><img src="images/zhuanti.jpg" /></a></div>
+						<div class="i_con_a_m_b_pic"><a href="" target="_blank"><img src="images/zhuanti.jpg" /></a></div>
+						<div class="i_con_a_m_b_pic"><a href="" target="_blank"><img src="images/zhuanti.jpg" /></a></div>-->
+					</div>
+				</div>
+			</div>           
+        </div>
+        <div id="i_foot">
+            <div id="i_foot_top">
+            </div>
+            <div id="i_foot_bottom">
+                <p>copyright @ 2013 北京林业大学党委学生工作部、武装部 &nbsp;&nbsp;学生处</p>
+                <p>地址：北京市海淀区清华东路35号 &nbsp;&nbsp;邮编：100083</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+</body></html>

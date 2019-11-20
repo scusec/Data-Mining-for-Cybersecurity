@@ -1,0 +1,898 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8" />
+<title>南京林业大学</title>
+<meta name="generator" content="PHPCp CMS" />
+<meta name="author" content="南京林业大学" />
+<meta name="keywords" content="南京林业大学" />
+<meta name="description" content="以林业为主体，林、农、牧、渔等多种产业相结合的院校。" />
+<link href="templets/style/webstyle.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="templets/js/jquery.min.js"></script>
+<script  type="text/javascript" src="templets/js/AC_RunActiveContent.js"></script>
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_jumpMenu(targ,selObj,restore){ //v3.0
+eval(targ+".open('"+selObj.options[selObj.selectedIndex].value+"')");
+if (restore) selObj.selectedIndex=0;
+}
+
+function formchk(){
+ var addform=document.searchfrm;
+ if (addform.keyword.value==""){
+  alert("搜索关键字不能为空！");
+  addform.keyword.focus();   //用户名输入框获得焦点
+  return false;   //不提交表单
+ }
+ return true;   //输入符合要求后执行表单提交操作
+}
+
+function doMailLogin(){
+      if(login.uid1.value==""||login.password.value=="")return alert("用户名和密码不能为空！");
+       if (document.getElementById("jdselect").selectedIndex == '1'){
+                login.uid.value=login.uid1.value+"@njfu.com.cn";
+	login.action="http://mail.njfu.com.cn/coremail/index.jsp";
+	//login.user_at_domain.value="njfu.com.cn";
+               login.submit();
+       }else{
+               // login1.LoginName.value=login.uid.value;
+              //  login1.Password.value=login.password.value;
+	//login1.submit();
+                login.uid.value=login.uid1.value+"@njfu.edu.cn";
+	login.action="http://mail.njfu.edu.cn/coremail/index.jsp";
+	//login.user_at_domain.value="njfu.edu.cn";
+               login.submit();
+      }
+}
+//-->
+</script>
+<style>
+*
+{
+    border: none;
+}
+  .main_img{
+    width: 401px;
+	height: 265px;
+    margin: 0 auto;
+    overflow: hidden;
+    cursor:pointer;    
+  }
+  .main_img ul,.main_img ul li{
+    list-style: none;
+  }
+  .main_img ul li{
+    float: left;
+  }
+  .main_img ul.img_top{
+    width: 100%;
+    background: #FFF;
+    position: relative;
+  }
+   .main_img ul.img_top li{
+float: left;
+width: 19.7%;
+height: 30px;
+line-height: 30px;
+border: 1px solid #DEDFDA;
+border-right:none; 
+
+  }
+  .main_img ul li:last{
+    border-right:  1px solid #DEDFDA;
+  }
+   .main_img ul.li_img{
+    width: 20000px;
+    height: 235px;
+    overflow: hidden;
+    position: absolute;
+    left: 0px;
+    top: 30px;
+   }
+.main_img ul.li_img li{
+  width: 401px;
+height: 235px;
+border: none;
+}
+    .main_img ul.li_img li img{ 
+width: 401px;
+height: 235px;
+border: none;
+    }
+    .main_img ul.li_img li p{
+      width: 401px;
+      height: 30px;
+      line-height: 30px;
+      color: #fff;
+      position: relative;
+      top: -30px;
+      background: #000;
+filter:alpha(opacity=50);  
+      -moz-opacity:0.5;  
+      -khtml-opacity: 0.5;  
+      opacity: 0.5;  
+    }
+ 
+  .bg_red{
+    background: #166a1f;
+    color: #fff;
+  }
+  .icon_img{
+    width: 100%;
+    position: relative;
+height:40px;
+    top: 90px;
+    display:none;
+    overflow: hidden;
+  }
+  .icon_img span
+  {
+    width: 30px;
+    height: 30px;
+    display: block;
+    line-height: 30px;
+    text-align: center;
+    float: left;
+    font-size: 40px;
+color: #fff;
+background: #000;
+filter:alpha(opacity=20);  
+      -moz-opacity:0.2;  
+      -khtml-opacity: 0.2;  
+      opacity: 0.2;
+  }
+     .icon_img span:hover{
+            background: #000;
+filter:alpha(opacity=50);  
+      -moz-opacity:0.5;  
+      -khtml-opacity: 0.5;  
+      opacity: 0.5; 
+      color: #fff;
+      display: block;
+    }
+  .icon_img span.icon_left{
+    margin-left: 10px;
+  }
+   .icon_img span.icon_right{
+    margin-left: 320px;
+  }
+
+.ztw{padding-top:4px;padding-left:35px;font-size:12px;color:#000000;}
+.ztw a{padding-top:4px;padding-left:35px;font-size:12px;color:#000000;text-decoration:none;}
+.ztw a:hover{padding-top:4px;padding-left:35px;font-size:12px;color:#ff0000;text-decoration:underline;}
+
+.ntitle{color:#000000;}
+.ntitle a{color:#000000;text-decoration:none;}
+.ntitle a:hover{color:#ffffff;text-decoration:none;}
+.ntitle a:active{color:#ffffff;text-decoration:none;}
+</style>
+<script>
+var t;
+var num=0;
+var img_num=0;
+  function li_click(e,n){
+    $(e).addClass("bg_red").attr("data-n",n).siblings().removeClass("bg_red").removeAttr("data-n");
+    $(e).find("ul.li_img").show();//显示当前类型图片
+    $(e).siblings().find("ul.li_img").hide();//隐藏其他类型的图片
+    $(e).find("ul.li_img").addClass("li_show");//标记当前显示的是什么类型的图片
+    $(e).siblings().find("ul.li_img").removeClass("li_show");//标记当前显示的是什么类型的图片
+    if(!$(e).hasClass("bg_red")){
+      num=0;
+      $(".img_top li.bg_red ul.li_img").css({"left":"0px"});
+    }
+    //var wd=-((parseInt(n)-1)*401);
+    //$(".li_img").css({"position":"relative","left":wd+"px"});
+  }
+window.onload=function(){
+initImg();
+}
+function initImg(){
+ t=setInterval(function(){
+    var n=$(".img_top li.bg_red ul.li_img li").length;
+    if(img_num>=n){
+    	img_num=0;
+    	for(var i=0;i<$(".img_top li.li_bg").length;i++){
+if($(".img_top li.li_bg").eq(i).hasClass("bg_red")){
+if(i==$(".img_top li.li_bg").length-1){
+	$(".img_top li.li_bg").eq(0).mouseover();
+	initImg();
+	return;
+}
+else{
+$(".img_top li.li_bg").eq(i+1).mouseover();
+initImg();
+	return;
+}
+}
+    	}
+    }
+    img_num++;
+    var wd=-((parseInt(img_num)-1)*401);
+    $(".img_top li.bg_red ul.li_img").css({"left":wd+"px"});
+},3000);
+}
+function img_over(){
+  clearInterval(t);
+  $(".icon_img").show();
+}
+function img_out(){
+  initImg();
+   $(".icon_img").hide();
+}
+function icon_click(fx){
+  var n=$(".img_top li.bg_red ul.li_img li").length;
+  if(fx=="back"){
+    if(num<=1){
+      num=n+1;
+    }
+    num--;
+  }
+  if(fx=="next"){
+    if(num==n){
+      num=0;
+    }
+    num++;
+  }
+    var wd=-((parseInt(num)-1)*401);
+    $(".img_top li.bg_red ul.li_img").css({"left":wd+"px"});
+}
+</script>
+</head>
+<body>
+<table width="1161" height="322" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF" id="__01">
+<tr><td><img src="images/top.jpg" width="1161" height="78" /></td>
+</tr>
+  <tr>
+    <td>
+		  <div class="ck-slide">
+			<ul class="ck-slide-wrapper">
+	                 <li><a href="#"><img src="/uploads/image/20171015/20171015204112_15440.jpg" alt=""></a></li>
+	                  <li style="display:none"><a target="_blank" href="http://njfu.izhiniu.com/"><img src="uploads/1508475373.jpg" alt=""></a></li>
+	                  <li style="display:none"><a href="#"><img src="/uploads/image/20171017/20171017182602_75504.jpg" alt=""></a></li>
+	                  <li style="display:none"><a href="#"><img src="/uploads/image/20170926/20170926164203_42421.jpg" alt=""></a></li>
+	                  <li style="display:none"><a href="#"><img src="uploads/1505890231.jpg" alt=""></a></li>
+	  		  
+			</ul>
+			<a href="javascript:;" class="ctrl-slide ck-prev">上一张</a> <a href="javascript:;" class="ctrl-slide ck-next">下一张</a>
+			<div class="ck-slidebox">
+				<div class="slideWrap">
+				</div>
+			</div>
+		</div>
+		
+		<!-- js -->
+		<script src="js/jquery-1.8.3.min.js"></script>
+		<script src="js/slide.js"></script>
+		<script>
+			$('.ck-slide').ckSlide({
+				autoPlay: true
+			});
+		</script>    
+    </td>
+  </tr>
+  <tr>
+    <td width="1161" height="41" bgcolor="#166a1f"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td><ul id="sddm">
+		<li><a style="color:#ffffff" href="index.php">首页 |</a></li>
+                      <li><a style="color:#ffffff;cursor:default;" onmouseover="mopen('m1')" onmouseout="mclosetime()">南林概况&nbsp;|</a>
+              <div id="m1" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+                              <a href="info.php?id=12">学校简介</a>
+                              <a href="info.php?id=14">现任领导</a>
+                              <a href="info.php?id=13">历史沿革</a>
+                              <a href="info.php?id=15">历任领导</a>
+                              <a href="info.php?id=17">院士风采</a>
+                              <a href="http://xxgk.njfu.edu.cn/class_type.asp?id=178" target="_blank">统计数据</a>
+                            </div>
+            </li>
+                        <li><a style="color:#ffffff;cursor:default;" onmouseover="mopen('m2')" onmouseout="mclosetime()">组织机构&nbsp;|</a>
+              <div id="m2" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+                              <a href="info.php?id=3">党群组织</a>
+                              <a href="info.php?id=18">行政部门</a>
+                              <a href="info.php?id=19">直属单位</a>
+                              <a href="http://haxq.njfu.edu.cn/" target="_blank">淮安校区</a>
+                            </div>
+            </li>
+                        <li><a style="color:#ffffff;cursor:default;" onmouseover="mopen('m3')" onmouseout="mclosetime()">学院设置&nbsp;|</a>
+              <div id="m3" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+                              <a href="http://linxue.njfu.edu.cn/" target="_blank">林学院</a>
+                              <a href="http://hg.njfu.edu.cn/" target="_blank">化学工程学院</a>
+                              <a href="http://jidian.njfu.edu.cn/" target="_blank">机械电子工程学院</a>
+                              <a href="http://wood.njfu.edu.cn/" target="_blank">材料科学与工程学院</a>
+                              <a href="http://cem.njfu.edu.cn/" target="_blank">经济管理学院</a>
+                              <a href="http://tumu.njfu.edu.cn/" target="_blank">土木工程学院</a>
+                              <a href="http://renwen.njfu.edu.cn/" target="_blank">人文社会科学学院</a>
+                              <a href="http://it.njfu.edu.cn/" target="_blank">信息科学技术学院</a>
+                              <a href="http://yuanlin.njfu.edu.cn/" target="_blank">风景园林学院</a>
+                              <a href="http://science.njfu.edu.cn/" target="_blank">理学院</a>
+                              <a href="http://waiyuan.njfu.edu.cn/" target="_blank">外国语学院</a>
+                              <a href="http://art.njfu.edu.cn/" target="_blank">艺术设计学院</a>
+                              <a href="http://jiaju.njfu.edu.cn/" target="_blank">家居与工业设计学院</a>
+                              <a href="http://qg.njfu.edu.cn/" target="_blank">轻工与食品学院</a>
+                              <a href="http://jty.njfu.edu.cn/" target="_blank">汽车与交通工程学院</a>
+                              <a href="http://shengwu.njfu.edu.cn/" target="_blank">生物与环境学院</a>
+                              <a href="http://gsnfu.njfu.edu.cn/" target="_blank">研究生院</a>
+                              <a href="http://nljj.njfu.edu.cn/" target="_blank">继续教育学院、应用技术学院</a>
+                              <a href="http://sc.njfu.edu.cn/" target="_blank">南方学院</a>
+                              <a href="http://iec.njfu.edu.cn/" target="_blank">国际教育学院</a>
+                              <a href="http://tyb.njfu.edu.cn/" target="_blank">体育教育部</a>
+                              <a href="http://szw.njfu.edu.cn/" target="_blank">马克思主义学院</a>
+                              <a href="http://szw.njfu.edu.cn/szb/" target="_blank">思想政治理论教学研究部</a>
+                            </div>
+            </li>
+                        <li><a style="color:#ffffff;cursor:default;" onmouseover="mopen('m4')" onmouseout="mclosetime()">人才培养&nbsp;|</a>
+              <div id="m4" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+                              <a href="http://jwc.njfu.edu.cn/" target="_blank">本科生培养</a>
+                              <a href="http://gsnfu.njfu.edu.cn/" target="_blank">研究生培养</a>
+                              <a href="http://iec.njfu.edu.cn/" target="_blank">留学生培养</a>
+                              <a href="http://nljj.njfu.edu.cn/" target="_blank">继续教育</a>
+                              <a href="http://ctld.njfu.edu.cn/" target="_blank">教师教学发展</a>
+                            </div>
+            </li>
+                        <li><a style="color:#ffffff;cursor:default;" onmouseover="mopen('m5')" onmouseout="mclosetime()">学术科研&nbsp;|</a>
+              <div id="m5" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+                              <a href="info.php?id=113">科研机构</a>
+                              <a href="info.php?id=123">学术组织</a>
+                              <a href="http://kjc.njfu.edu.cn/news.php?id=9" target="_blank">科技成果</a>
+                              <a href="http://nldxb.njfu.edu.cn/" target="_blank">南京林业大学学报（自然科学版）</a>
+                              <a href="http://navi.cnki.net/KNavi/JournalDetail?pcode=CJFD&pykm=NJLS" target="_blank">南京林业大学学报（人文社会科学版）</a>
+                              <a href="http://lkkf.njfu.edu.cn/" target="_blank">林业工程学报</a>
+                              <a href="http://gczx.njfu.edu.cn/" target="_blank">工程中心</a>
+                            </div>
+            </li>
+                        <li><a style="color:#ffffff;cursor:default;" onmouseover="mopen('m6')" onmouseout="mclosetime()">学科建设&nbsp;|</a>
+              <div id="m6" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+                              <a href="http://gsnfu.njfu.edu.cn/html/list/29/index.aspx" target="_blank">国家级重点学科</a>
+                              <a href="http://gsnfu.njfu.edu.cn/html/list/30/index.aspx" target="_blank">省部级重点学科</a>
+                            </div>
+            </li>
+                        <li><a style="color:#ffffff;cursor:default;" onmouseover="mopen('m7')" onmouseout="mclosetime()">招生就业&nbsp;|</a>
+              <div id="m7" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+                              <a href="http://zs.njfu.edu.cn/" target="_blank">本科生招生</a>
+                              <a href="http://gsnfu.njfu.edu.cn/" target="_blank">研究生招生</a>
+                              <a href="http://eng.njfu.edu.cn/" target="_blank">留学生招生</a>
+                              <a href="http://nljj.njfu.edu.cn/" target="_blank">继续教育招生</a>
+                              <a href="http://njfu.91job.gov.cn/" target="_blank">就业网</a>
+                            </div>
+            </li>
+                        <li><a style="color:#ffffff;cursor:default;" onmouseover="mopen('m8')" onmouseout="mclosetime()">国际交流&nbsp;|</a>
+              <div id="m8" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+                              <a href="http://ghc.njfu.edu.cn/" target="_blank">国际合作处</a>
+                              <a href="http://waiban.njfu.edu.cn/pub/jspcms/p1_l63.htm" target="_blank">机构介绍</a>
+                              <a href="http://waiban.njfu.edu.cn/pub/jspcms/p1_l307.htm" target="_blank">外事信息</a>
+                              <a href="http://waiban.njfu.edu.cn/pub/jspcms/p1_l57.htm" target="_blank">国际会议</a>
+                              <a href="http://iec.njfu.edu.cn/" target="_blank">留学南林</a>
+                              <a href="http://waiban.njfu.edu.cn/pub/jspcms/p1_l309_z1.htm" target="_blank">文件下载</a>
+                            </div>
+            </li>
+                        <li><a style="color:#ffffff;cursor:default;" onmouseover="mopen('m9')" onmouseout="mclosetime()">校园文化&nbsp;|</a>
+              <div id="m9" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+                              <a href="info.php?id=102">校徽</a>
+                              <a href="info.php?id=145">校旗</a>
+                              <a href="info.php?id=146">标准色</a>
+                              <a href="info.php?id=139">校训</a>
+                              <a href="info.php?id=160">校风</a>
+                              <a href="info.php?id=140">校歌</a>
+                              <a href="http://202.119.208.139/nfuxsg/" target="_blank">校史</a>
+                              <a href="info.php?id=126">校园风光</a>
+                              <a href="info.php?id=158">VI下载</a>
+                            </div>
+            </li>
+                        <li><a style="color:#ffffff;a:hover{color:#FF0000;}" href="http://720yun.com/t/ef228wOkqyg" target="_blank">校 史 馆&nbsp;|</a>
+              <div id="m10" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+                            </div>
+            </li>
+                        <li><a style="color:#ffffff;a:hover{color:#FF0000;}" href="http://zhaopin.njfu.edu.cn/" target="_blank">人才招聘&nbsp;|</a>
+              <div id="m11" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+                            </div>
+            </li>
+                        <li><a style="color:#ffffff;a:hover{color:#FF0000;}" href="http://news.njfu.edu.cn" target="_blank">南林新闻&nbsp;|</a>
+              <div id="m12" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+                            </div>
+            </li>
+                        <li><a style="color:#ffffff;a:hover{color:#FF0000;}" href="http://v.njfu.edu.cn/" target="_blank">南林视频&nbsp;&nbsp;</a>
+              <div id="m13" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+                            </div>
+            </li>
+            </ul>
+<div style="clear:both"></div></td>
+      </tr>
+      <tr>
+        <td><table width="92%" border="0" align="center" cellpadding="0" cellspacing="0" class="EngMenu">
+          <tr>
+            <td align="center"><a href="http://eng.njfu.edu.cn/" target="_blank">HOME</a></td>
+            <td align="center"><a href="http://eng.njfu.edu.cn/info.php?id=19" target="_blank">ABOUT NFU</a></td>
+            <td align="center"><a href="http://eng.njfu.edu.cn/info.php?id=38" target="_blank">COLLEGES</a></td>
+            <td align="center"><a href="http://eng.njfu.edu.cn/info.php?id=12" target="_blank">KEY DISCIPLINES&amp;DEGREE PROGRAMS</a></td>
+            <td align="center"><a href="http://eng.njfu.edu.cn/info.php?id=13" target="_blank">RESEARCH CENTERS AND INSTITUTES</a></td>
+            <td align="center"><a href="http://eng.njfu.edu.cn/info.php?id=5" target="_blank">JOURNALS</a></td>
+            <td align="center"><a href="http://eng.njfu.edu.cn/info.php?id=9" target="_blank">INTERNATIONAL COOPERATION</a></td>
+            <td align="center"><a href="http://eng.njfu.edu.cn/info.php?id=4" target="_blank">INTERNATIONAL STUDENTS</a></td>
+            <td align="center"><a href="http://eng.njfu.edu.cn/info.php?id=8" target="_blank">CONTACTS</a></td>
+          </tr>
+        </table></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td><img src="images/head_03.jpg" width="1161" height="4" /></td>
+  </tr>
+</table>
+<script type="text/javascript">
+/*当前页面导航高亮*/
+var href = window.location.href.split('/')[window.location.href.split('/').length-1].substr(0,4);
+if(href.length>0){
+	$(document).ready(function(){$("ul.nav a[href^='"+href+"']").attr("class","on")});
+}
+else{
+	$(document).ready(function(){$("ul.nav a[href^='index']").attr("class","on")});
+}
+</script><table width="1161" height="476" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF" id="__01">
+  <tr>
+    <td rowspan="3"><img src="images/main_01.jpg" width="9" height="476" /></td>
+    <td><img src="images/main_02.jpg" width="401" height="5" /></td>
+    <td rowspan="3"><img src="images/main_03.jpg" width="13" height="476" /></td>
+    <td><img src="images/main_04.jpg" width="497" height="5" /></td>
+    <td rowspan="3"><img src="images/main_05.jpg" width="12" height="476" /></td>
+    <td><img src="images/main_06.jpg" width="218" height="5" /></td>
+    <td rowspan="3"><img src="images/main_07.jpg" width="11" height="476" /></td>
+  </tr>
+  <tr>
+    <td valign="top"><table id="__01" width="401" height="465" border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <td height="268" colspan="3" align="center" bgcolor="#e8e8e8"><div class="main_img" onmouseover="img_over()" onmouseout="img_out()">
+  <ul class="img_top">
+    <li onMouseOver="li_click(this,1)" class="li_bg bg_red"><span onclick="window.open('picnews.php?cid=149')">图片新闻</span>
+      <ul class="li_img">
+	  	  
+          <li><a  target="_blank" href="picnewsshow.php?cid=149&amp;id=2853"><img src="uploads/1508378562.JPG" /></a><p>我校师生员工集中收看党的十九大开幕盛况</p></li>
+	  	  
+          <li><a  target="_blank" href="picnewsshow.php?cid=149&amp;id=2815"><img src="uploads/1506572323.jpg" /></a><p>中国共产党南京林业大学第十六次代表大会隆重开幕</p></li>
+	  	  
+          <li><a  target="_blank" href="http://news.njfu.edu.cn/newsshow.php?cid=5&id=7231"><img src="uploads/1507688766.jpg" /></a><p>中国绿色时报：生态梦 百年南林的坚守与追求</p></li>
+	  		  
+        </ul>
+    </li>
+    <li onMouseOver="li_click(this,2)" class="li_bg"><span onclick="window.open('picnews.php?cid=150')">学术动态</span>
+     <ul class="li_img" style="display:none;">
+	  	  
+          <li><a  target="_blank" href="http://news.njfu.edu.cn/newsshow.php?cid=1&id=7263"><img src="uploads/1508378456.jpg" /></a><p>我校成功主办第二届中国青钱柳论坛</p></li>
+	  	  
+          <li><a  target="_blank" href="http://news.njfu.edu.cn/newsshow.php?cid=1&id=7248"><img src="uploads/1507687213.jpg" /></a><p>首届木本油料产业化发展高峰论坛在南林举办</p></li>
+	  	  
+          <li><a  target="_blank" href="http://news.njfu.edu.cn/newsshow.php?cid=1&id=7245"><img src="uploads/1507687827.jpg" /></a><p>材料院陈登宇副教授论文入选ESI高被引论文和ESI...</p></li>
+	  		  
+        </ul>
+    </li>
+    <li onMouseOver="li_click(this,3)" class="li_bg"><span onclick="window.open('picnews.php?cid=151')">校园生活</span>
+      <ul class="li_img" style="display:none;">
+	  	  
+          <li><a  target="_blank" href="picnewsshow.php?cid=151&amp;id=2827"><img src="uploads/1507688748.jpg" /></a><p>淮安校区举行2017级学生军训成果汇报大会</p></li>
+	  	  
+          <li><a  target="_blank" href="picnewsshow.php?cid=151&amp;id=2817"><img src="uploads/1506760847.jpg" /></a><p>我校举行迎国庆升国旗仪式</p></li>
+	  	  
+          <li><a  target="_blank" href="picnewsshow.php?cid=151&amp;id=2811"><img src="uploads/1506413407.JPG" /></a><p>沙场秋点兵　2017级新生军训汇演展英姿</p></li>
+	  		  
+        </ul>
+    </li>
+    <li onMouseOver="li_click(this,4)" class="li_bg"><span onclick="window.open('picnews.php?cid=152')">历史文化</span>
+      <ul class="li_img" style="display:none;">
+	  	  
+          <li><a  target="_blank" href="picnewsshow.php?cid=152&amp;id=2552"><img src="uploads/1490147720.jpg" /></a><p>南林人的樱花记忆</p></li>
+	  	  
+          <li><a  target="_blank" href="picnewsshow.php?cid=152&amp;id=2439"><img src="uploads/1481353666.jpg" /></a><p>镜头里的南林四季</p></li>
+	  	  
+          <li><a  target="_blank" href="http://v.njfu.edu.cn/play.asp?id=194"><img src="uploads/1452677672.jpg" /></a><p>绿色的背影</p></li>
+	  		  
+        </ul>
+    </li>
+    <li onMouseOver="li_click(this,5)" class="li_bg"><span onclick="window.open('picnews.php?cid=153')">南林视频</span>
+      <ul class="li_img" style="display:none;">
+	  	  
+          <li><a  target="_blank" href="http://v.njfu.edu.cn/vclass.asp?vcat_id=6"><img src="uploads/1508296595.jpg" /></a><p>《参军报国 准备出发》大学生版征兵公益宣传片</p></li>
+	  	  
+          <li><a  target="_blank" href="http://v.njfu.edu.cn/play.asp?id=289"><img src="uploads/1506050323.jpg" /></a><p>江苏教育频道：南林大创新新生入学教育</p></li>
+	  	  
+          <li><a  target="_blank" href="http://v.njfu.edu.cn/play.asp?id=288"><img src="uploads/image/20170920/20170920111855_76879.jpg" /></a><p>江苏城市频道：自强脑瘫学子 荣获“十佳大学生”</p></li>
+	  		  
+        </ul>
+    </li>
+  </ul>  
+  <div class="icon_img">
+    <span class="icon_left" onclick="icon_click('back')"><</span>
+    <span class="icon_right" onclick="icon_click('next')">></span>
+  </div>
+</div></td>
+      </tr>
+      <tr>
+        <td colspan="3"><img src="images/main_left_02.jpg" width="401" height="8" /></td>
+      </tr>
+      <tr>
+        <td width="325"><a href="news.php?id=116"><img src="images/main_left_03.jpg" width="325" height="31" border="0" /></a></td>
+        <td width="25" height="31" align="right" background="images/main_left_04.jpg"><a href="news.php?id=116"><img src="images/spacer.gif" width="100%" height="31" border="0" /></a></td>
+        <td width="51" align="right" background="images/main_left_04.jpg"><a href="news.php?id=116">更多...</a></td>
+      </tr>
+      <tr>
+        <td height="158" colspan="3">
+          <div style="text-align:left; line-height:25px">
+            <ul class="newslist">
+			  				  <li>
+				    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                        <td width="87%"><b><font color="#00561f">·</font></b><a  target="_blank" title="“水杉”学术讲堂（第九周）" href="http://gsnfu.njfu.edu.cn/sswh/88443.jhtml" style="color:;font-weight:;">“水杉”学术讲堂（第九周）</a></td>
+                      </tr>
+                    </table>
+				  </li>
+			  				  <li>
+				    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                        <td width="87%"><b><font color="#00561f">·</font></b><a  target="_blank" title="“水杉”学术沙龙（第九周）" href="http://gsnfu.njfu.edu.cn/sswh/88444.jhtml" style="color:;font-weight:;">“水杉”学术沙龙（第九周）</a></td>
+                      </tr>
+                    </table>
+				  </li>
+			  				  <li>
+				    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                        <td width="87%"><b><font color="#00561f">·</font></b><a  target="_blank" title="时滞系统的建模和稳定性分析方法" href="newsshow.php?cid=116&amp;id=2867" style="color:;font-weight:;">时滞系统的建模和稳定性分析方法</a></td>
+                      </tr>
+                    </table>
+				  </li>
+			  				  <li>
+				    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                        <td width="87%"><b><font color="#00561f">·</font></b><a  target="_blank" title="习近平生态文明思想的“四梁八柱”" href="newsshow.php?cid=116&amp;id=2866" style="color:;font-weight:;">习近平生态文明思想的“四梁八柱”</a></td>
+                      </tr>
+                    </table>
+				  </li>
+			  				  <li>
+				    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                        <td width="87%"><b><font color="#00561f">·</font></b><a  target="_blank" title="环境变化下气候水文研究的挑战和方向" href="newsshow.php?cid=116&amp;id=2863" style="color:;font-weight:;">环境变化下气候水文研究的挑战和方向</a></td>
+                      </tr>
+                    </table>
+				  </li>
+			  				  <li>
+				    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                        <td width="87%"><b><font color="#00561f">·</font></b><a  target="_blank" title="周丛生物及其环境效应" href="newsshow.php?cid=116&amp;id=2862" style="color:;font-weight:;">周丛生物及其环境效应</a></td>
+                      </tr>
+                    </table>
+				  </li>
+			  		    </ul>
+          </div>		</td>
+      </tr>
+    </table></td>
+    <td valign="top"><table id="__01" width="497" height="465" border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <td><a href="http://news.njfu.edu.cn/" target="_blank"><img src="images/main_center_01.jpg" width="390" height="31" border="0" /></a></td>
+        <td width="53" height="31" align="right" background="images/main_center_02.jpg"><a href="http://news.njfu.edu.cn/" target="_blank"><img src="images/spacer.gif" width="52" height="31" border="0" /></a></td>
+        <td width="54" align="right" background="images/main_center_02.jpg"><a href="http://news.njfu.edu.cn/news.php?cid=1" target="_blank">更多...</a></td>
+      </tr>
+      <tr>
+        <td height="237" colspan="3"><div style="text-align:left; line-height:26px">
+  <ul class="newslist">
+    <li>
+	  <table width="497" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td><b><font color="#00561f">·</font></b> <a title="我校召开事业发展情况通报会" href="http://news.njfu.edu.cn/newsshow.php?cid=1&id=7301" target="_blank" style="color:;font-weight:;">我校召开事业发展情况通报会</a></td>
+         </tr>
+      </table>
+    </li>
+    <li>
+	  <table width="497" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td><b><font color="#00561f">·</font></b> <a title="共青团中央“与信仰对话”全国重点报告会在我校举行" href="http://news.njfu.edu.cn/newsshow.php?cid=1&id=7304" target="_blank" style="color:;font-weight:;">共青团中央“与信仰对话”全国重点报告会在我校举行</a></td>
+         </tr>
+      </table>
+    </li>
+    <li>
+	  <table width="497" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td><b><font color="#00561f">·</font></b> <a title="我校校友蒋跃建被任命为南京市副市长" href="http://news.njfu.edu.cn/newsshow.php?cid=1&id=7303" target="_blank" style="color:;font-weight:;">我校校友蒋跃建被任命为南京市副市长</a></td>
+         </tr>
+      </table>
+    </li>
+    <li>
+	  <table width="497" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td><b><font color="#00561f">·</font></b> <a title="我校获2017南京马拉松“优秀志愿团体”荣誉称号" href="http://news.njfu.edu.cn/newsshow.php?cid=1&id=7302" target="_blank" style="color:;font-weight:;">我校获2017南京马拉松“优秀志愿团体”荣誉称号</a></td>
+         </tr>
+      </table>
+    </li>
+    <li>
+	  <table width="497" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td><b><font color="#00561f">·</font></b> <a title="我校联合主办第一届国际生物质工程材料与结构应用高峰论坛" href="http://news.njfu.edu.cn/newsshow.php?cid=1&id=7300" target="_blank" style="color:;font-weight:;">我校联合主办第一届国际生物质工程材料与结构应用高峰论坛</a></td>
+         </tr>
+      </table>
+    </li>
+    <li>
+	  <table width="497" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td><b><font color="#00561f">·</font></b> <a title="多家社会媒体报道我校师生收看热议十九大盛会情况" href="http://news.njfu.edu.cn/newsshow.php?cid=1&id=7295" target="_blank" style="color:;font-weight:;">多家社会媒体报道我校师生收看热议十九大盛会情况</a></td>
+         </tr>
+      </table>
+    </li>
+    <li>
+	  <table width="497" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td><b><font color="#00561f">·</font></b> <a title="高淳区委书记霍慧萍一行来校对接“两落地、一融合”工作" href="http://news.njfu.edu.cn/newsshow.php?cid=1&id=7296" target="_blank" style="color:;font-weight:;">高淳区委书记霍慧萍一行来校对接“两落地、一融合”工作</a></td>
+         </tr>
+      </table>
+    </li>
+    <li>
+	  <table width="497" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td><b><font color="#00561f">·</font></b> <a title="我校男女排挺进江苏省第十九届学生运动会决赛" href="http://news.njfu.edu.cn/newsshow.php?cid=1&id=7297" target="_blank" style="color:;font-weight:;">我校男女排挺进江苏省第十九届学生运动会决赛</a></td>
+         </tr>
+      </table>
+    </li>
+  </ul>
+</div></td>
+      </tr>
+      <tr>
+        <td colspan="3"><img src="images/main_center_04.jpg" width="497" height="7" /></td>
+      </tr>
+      <tr>
+        <td><a href="news.php?id=4"><img src="images/main_center_05.jpg" width="390" height="32" border="0" /></a></td>
+        <td width="53" height="32" align="right" background="images/main_center_06.jpg"><a href="news.php?id=4"><img src="images/spacer.gif" width="100%" height="31" border="0" /></a></td>
+        <td width="54" height="32" align="right" background="images/main_center_06.jpg"><a href="news.php?id=4">更多...</a></td>
+      </tr>
+      <tr>
+        <td height="158" colspan="3">
+          <div style="text-align:left; line-height:25px">
+            <ul class="newslist">
+			  				  <li>
+				    <table width="497" border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                        <td width="497"><b><font color="#00561f">·</font></b> <a  target="_blank" title="第九周会议日程" href="newsshow.php?cid=4&amp;id=2871" style="color:;font-weight:;">第九周会议日程</a></td>
+                      </tr>
+                    </table>
+		        </li>
+			  				  <li>
+				    <table width="497" border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                        <td width="497"><b><font color="#00561f">·</font></b> <a  target="_blank" title="招标公告" href="http://zbb.njfu.edu.cn/type.asp?id=135" style="color:;font-weight:;">招标公告</a></td>
+                      </tr>
+                    </table>
+		        </li>
+			  				  <li>
+				    <table width="497" border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                        <td width="497"><b><font color="#00561f">·</font></b> <a  target="_blank" title="关于召开思想政治工作会议的通知" href="http://dangban.njfu.edu.cn/typenews.asp?id=902" style="color:;font-weight:;">关于召开思想政治工作会议的通知</a></td>
+                      </tr>
+                    </table>
+		        </li>
+			  				  <li>
+				    <table width="497" border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                        <td width="497"><b><font color="#00561f">·</font></b> <a  target="_blank" title="水杉艺文空间通知" href="newsshow.php?cid=4&amp;id=2865" style="color:;font-weight:;">水杉艺文空间通知</a></td>
+                      </tr>
+                    </table>
+		        </li>
+			  				  <li>
+				    <table width="497" border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                        <td width="497"><b><font color="#00561f">·</font></b> <a  target="_blank" title="2016-2017学年国家励志奖学金评选结果公示" href="newsshow.php?cid=4&amp;id=2864" style="color:;font-weight:;">2016-2017学年国家励志奖学金评选结果公示</a></td>
+                      </tr>
+                    </table>
+		        </li>
+			  				  <li>
+				    <table width="497" border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                        <td width="497"><b><font color="#00561f">·</font></b> <a  target="_blank" title="关于本周校领导接待日的通知" href="newsshow.php?cid=4&amp;id=2819" style="color:;font-weight:;">关于本周校领导接待日的通知</a></td>
+                      </tr>
+                    </table>
+		        </li>
+			  		    </ul>
+          </div>		</td>
+      </tr>
+    </table></td>
+    <td valign="top"><table id="__" width="218" height="465" border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <td width="218" height="31"><a href="http://haxq.njfu.edu.cn/" target="_blank"><img src="images/main_right_ztw.jpg" width="218" height="31" border="0" /></a></td>
+      </tr>
+      <tr>
+        <td width="218" valign="top" bgcolor="#e7f4e9"><table width="195" border="0" align="center" cellpadding="0" cellspacing="0">
+            <tr>
+              <td height="5"></td>
+            </tr>
+            <tr>
+              <td><a href="info.php?id=125" target="_blank"><img src="images/yxnl5.jpg" width="195" height="89" border="0" style="border-color:gray;border-style:solid;" /></a></td>
+            </tr>
+            <tr>
+              <td height="5"></td>
+            </tr>
+            <tr>
+              <td height="5" align="center"><a href="info.php?id=125" target="_blank"><span style="font-family:'微软雅黑';font-size:12px; text-decoration:underline">点击播放</span></a></td>
+            </tr>
+            <tr>
+              <td height="5"></td>
+            </tr>
+        </table></td>
+      </tr>
+      <tr>
+        <form name="searchfrm" id="searchfrm" method="post" action="search.php" target="_blank">
+          <td width="218" height="32" bgcolor="#e7f4e9"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td align="center"><select name="lm" id="lm">
+                    <option value="">全部</option>
+                    <option value="122">南林新闻</option>
+                    <option value="4">通知公告</option>
+                    <option value="116">学术动态</option>
+                  </select>
+                    <input name="keyword" type="text" size="12" /></td>
+                <td><input name="image" type="image" onclick="return formchk();" src="images/search.jpg" /></td>
+              </tr>
+          </table></td>
+        </form>
+      </tr>
+      <tr>
+        <td><table id="__" width="218" height="64" border="0" cellpadding="0" cellspacing="0">
+            <tr>
+              <td><a href="http://news.njfu.edu.cn/news.php?cid=5" target="_blank"><img src="images/link_011.jpg" width="74" height="64" border="0" /></a></td>
+              <td><img src="images/link_02.jpg" width="3" height="64" /></td>
+              <td><a href="http://lib.njfu.edu.cn/" target="_blank"><img src="images/link_03.jpg" width="67" height="64" border="0" /></a></td>
+              <td><img src="images/link_04.jpg" width="3" height="64" /></td>
+              <td><a href="http://jwc.njfu.edu.cn/" target="_blank"><img src="images/link_05.jpg" width="71" height="64" border="0" /></a></td>
+            </tr>
+        </table></td>
+      </tr>
+      <tr>
+        <td width="218" height="96" background="images/main_right_05.jpg"><table width="200" border="0" align="center" cellpadding="0" cellspacing="0">
+            <form action="http://mail.njfu.com.cn/coremail/index.jsp" method="post" name="login" target="_blank" id="login" style="margin:0;padding:0">
+              <tr>
+                <td width="56" height="30" align="right"><span style="font-size:12px">用户名：</span></td>
+                <td width="144"><!-- input type="hidden" value="" name="user_at_domain" -->
+                    <input type="text" name="uid1" style="width:45px"/>
+                  &nbsp;
+                  <select name="jdselect" id="jdselect">
+                    <option value="0">教育网</option>
+                    <option value="1">电信网</option>
+                  </select>
+                  <input type="hidden" name='uid' /></td>
+              </tr>
+              <tr>
+                <td height="30" align="right"><span style="font-size:12px">密　码：</span></td>
+                <td valign="bottom"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td><input type="password"  onkeypress="if(event.keyCode==13||event.which==13){doMailLogin();}" name="password" style="width:50px;"/>
+                          <input type="hidden" name="action:login" value="" style="width:47px;"/></td>
+                      <td align="center"><img src="images/login.jpg" width="37" height="24" style="border:0px;width:37px;height:24px;cursor:pointer" onclick="doMailLogin();" /></td>
+                    </tr>
+                </table></td>
+              </tr>
+            </form>
+        </table></td>
+      </tr>
+      <tr>
+        <td height="110" bgcolor="#e6f3e9"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td align="right"><img src="images/nlwb.jpg" width="100" height="100" /></td>
+            <td><img src="images/nlwx.jpg" width="100" height="100" /></td>
+          </tr>
+        </table></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td><img src="images/main_11.jpg" width="401" height="6" /></td>
+    <td><img src="images/main_12.jpg" width="497" height="6" /></td>
+    <td><img src="images/main_13.jpg" width="218" height="6" /></td>
+  </tr>
+</table>
+<table width="1161" height="109" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF" id="__01">
+  <tr>
+    <td height="5"></td>
+  </tr>
+  <tr>
+    <td height="25" colspan="3" bgcolor="#166a1f">
+	<table align="center">
+	<tr>
+	<td height="25" align="right" bgcolor="#166a1f"><div class="index_link">|
+                  <a href="
+http://aatc.njfu.edu.cn/" target="_blank">
+            现代分析测试中心            </a> |
+                  <a href="
+http://lib.njfu.edu.cn/" target="_blank">
+            图书馆            </a> |
+                  <a href="
+http://xy.njfu.edu.cn/" target="_blank">
+            校友会            </a> |
+                  <a href="
+http://www.jsjyt.gov.cn/col/col10041/" target="_blank">
+            江苏教育党建            </a> |
+                  <a href="
+http://my.njfu.edu.cn/" target="_blank">
+            校园门户            </a> |
+                  <a href="
+http://oa.njfu.edu.cn/" target="_blank">
+            网上办公            </a> |
+                  <a href="
+http://xxgk.njfu.edu.cn/" target="_blank">
+            信息公开            </a> |
+                  <a href="
+index2015.php" target="_blank">
+            新主页测试版            </a> |
+                  <a href="
+http://map.njfu.edu.cn/" target="_blank">
+            校园地图            </a> |
+          </div>	</td>
+    <td align="left" bgcolor="#166a1f"><ul id="sddm2">
+      <li><a style="cursor:default; color:#ffffff" onmouseover="mopen('m20')" onmouseout="mclosetime()">&nbsp;健康服务&nbsp;|</a>
+            <div id="m20" onmouseover="mcancelclosetime()" onmouseout="mclosetime()"> 
+<a href="
+http://yiyuan.njfu.edu.cn/" target="_blank">
+            校医院</a>
+      <a href="
+http://jsb.njfu.edu.cn/" target="_blank">
+            计划生育</a>
+      <a href="
+http://soft.psy.com.cn/2008/nanjinglinda/" target="_blank">
+            心理健康教育网</a>
+      <a href="
+http://121.248.150.46:8080/SupSPmis/SupSPmis.html" target="_blank">
+            体检预约</a>
+      <a href="
+http://www.psy.com.cn/school/new/index.asp?u=60675" target="_blank">
+            心理测试</a>
+            </li>
+    </ul>	</td>
+    <td align="left" bgcolor="#166a1f"><ul id="sddm3">
+      <li><a style="cursor:default; color:#ffffff" onmouseover="mopen('m40')" onmouseout="mclosetime()">&nbsp;中外合作办学项目&nbsp;|</a>
+            <div id="m40" onmouseover="mcancelclosetime()" onmouseout="mclosetime()"> 
+<a href="http://202.119.208.191/iec/class_type.asp?id=243" target="_blank">林学</a>
+<a href="http://202.119.208.191/iec/class_type.asp?id=254" target="_blank">木材科学与工程</a>      </li>
+    </ul>	</td>    
+   </tr>
+  </table>  </td>
+  </tr>
+  <tr>
+    <td width="100" height="79" align="center" valign="middle" background="images/foot_03.jpg"><script type="text/javascript">document.write(unescape("%3Cspan id='_ideConac' %3E%3C/span%3E%3Cscript src='http://dcs.conac.cn/js/11/000/0000/60413022/CA110000000604130220002.js' type='text/javascript'%3E%3C/script%3E"));</script></td>
+    <td height="79" background="images/foot_03.jpg"><span style="font-family:Arial; font-size:12px; color:#545454"><a href="http://www.miibeian.gov.cn/" target="_blank">苏ICP备09031019号</a> | 报警电话:85427110 | 门诊电话:85428652 | 维修电话:85427580 | 校园地理信息系统 <br />
+      Copyright © 2003-2012 njfu.edu.cn All Rights Reserved<br />
+    版权所有 © 2003-2012 南京林业大学 保留所有权利 地址：南京市龙蟠路159号	
+	</span></td>
+    <td align="center" background="images/foot_03.jpg"><span style="font-family:Arial; font-size:12px; color:#545454"> <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=32010202010047"><img src="images/gongan.png" border="0" align="absmiddle" /></a><a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=32010202010047"><br />
+    苏公网安备 32010202010047号</a></span></td>
+  </tr>
+</table>
+<div style="visibility:hidden">
+<script src="http://v7.cnzz.com/stat.php?id=4482232&web_id=4482232" language="JavaScript"></script>
+</div><SCRIPT type=text/javascript>function hidead(){document.getElementById("ad").style.display="none";}</SCRIPT>
+<DIV id=ad style="LEFT: 58px; POSITION: absolute; TOP: 68px; z-index:999;">
+      <a href='http://www.91job.gov.cn/jobfair91/view/id/31129' target='_blank' alt='招聘会'><img src='uploads/1508718601.jpg' border=0></a>
+<DIV style="FONT-SIZE: 9pt; CURSOR: hand; z-index:999;" onclick=hidead(); align=center><STRONG>[关闭]</STRONG></DIV></DIV>
+<SCRIPT>
+var x = 50,y = 60;
+var xin = true, yin = true;
+var step = 1;
+var delay = 60;
+var height = 0;                     
+var Hoffset = 0;                    
+var Woffset = 0;                     
+var yon = 0;                    
+var xon = 0;                     
+var pause = true;
+var obj=document.getElementById("ad");
+function floatAD() {
+var L=T=0;
+var R= document.body.clientWidth-obj.offsetWidth;
+var B = document.body.clientHeight-obj.offsetHeight;
+obj.style.left = x + document.body.scrollLeft;
+obj.style.top = y + document.body.scrollTop;
+x = x + step*(xin?1:-1);
+if (x < L) { xin = true; x = L;};
+if (x > R){ xin = false; x = R;};
+y = y + step*(yin?1:-1);
+if (y < T) { yin = true; y = T; };
+if (y > B) { yin = false; y = B ;};
+}
+var itl= setInterval("floatAD()", delay);
+obj.onmouseover=function(){clearInterval(itl)};
+obj.onmouseout=function(){itl=setInterval("floatAD()", delay)};
+</SCRIPT>
+<div id="mm"></div>
+</body>
+</html>

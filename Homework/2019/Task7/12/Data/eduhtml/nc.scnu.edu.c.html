@@ -1,0 +1,721 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<title>华南师范大学网络中心</title>
+<meta name="keywords" content="校园信息化服务,网络服务,高性能计算服务,云计算服务" />
+<meta name="description" content="网络中心负责全校的网络信息化建设，职能延伸到石牌校区、大学城校区和南海校区三个校区。在“九五”、“十五”、“十一五”期间，网络中心是我校重点工程--公共服务信息平台建设的主要承建单位，负责华南师范大学“一校三区”校园网和基础公共信息服务平台软硬件规划和建设、校园网运行管理维护、为学校提供网络技术支持、学校数据中心的管理和维护等。随着华南师范大学数字校园、智慧校园建设的逐步推进，网络中心作为主要技术力量，参与学校各项信息系统与信息化应用建设。" />
+<!--index-->
+<script type="text/javascript">
+if(window.location.toString().indexOf('pref=padindex') != -1) {
+} else {
+	if(/AppleWebKit.*Mobile/i.test(navigator.userAgent) || (/MIDP|SymbianOS|NOKIA|SAMSUNG|LG|NEC|TCL|Alcatel|BIRD|DBTEL|Dopod|PHILIPS|HAIER|LENOVO|MOT-|Nokia|SonyEricsson|SIE-|Amoi|ZTE/.test(navigator.userAgent))) {
+		if(window.location.href.indexOf("?mobile")<0){
+			try {
+				if(/Android|Windows Phone|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+					window.location.href="http://mobile.scnu.edu.cn/nc";
+				}
+			} catch(e){}
+		}
+	}
+}
+</script>
+<link rel="stylesheet" type="text/css" href="//statics.scnu.edu.cn/statics/css/scnu/common.css?ver=b8myug" />
+<link rel="stylesheet" type="text/css" href="//statics.scnu.edu.cn/statics/css/nc/index.css?ver=h8kZgI" />
+<link rel="shortcut icon" href="//statics.scnu.edu.cn/statics/images/favicon.ico" />
+<script type="text/javascript" src="//statics.scnu.edu.cn/statics/js/scnu/jquery-1.11.0.min.js"></script>
+<script src="http://statics.scnu.edu.cn/statics/js/nc/highstock.js"></script>
+<script src="http://statics.scnu.edu.cn/statics/js/nc/exporting.js"></script>
+</head>
+
+<body>
+
+<div class="mininav">
+	<div class="wp">
+		<div class="funcset">
+			<a href="http://www.scnu.edu.cn" target="_blank">华南师范大学首页</a><span class="pipe">|</span>
+			<a href="http://module.scnu.edu.cn/sitemap" target="_blank">网站地图</a>
+		</div>
+		<div class="funclogin">
+			<script type="text/javascript">document.write('<iframe src="http://user.scnu.edu.cn/index.php?m=member&c=index&a=mini&forward='+encodeURIComponent(location.href)+'&siteid=2&ver=MiQ8D8vMfydQColE9XOn" allowTransparency="true" class="right" height="36" frameborder="0" scrolling="no"></iframe>')</script>
+		</div>
+	</div>
+</div>
+
+<div id="hd">
+	<div class="wp">
+		<div class="logo">
+			<h1><a href="http://nc.scnu.edu.cn/" title="华南师范大学网络中心">华南师范大学网络中心</a></h1>
+		</div>
+		<div class="nv menu">
+			<ul class="nvcat">
+				<li>
+					<p class="nvtext"><a href="http://nc.scnu.edu.cn/">首页</a><span class="pipe">|</span></p>
+					<p class="nvsummary">Index</p>
+				</li>
+				<li>
+					<p class="nvtext"><a href="http://nc.scnu.edu.cn/about/">中心简介</a><span class="pipe">|</span></p>
+					<p class="nvsummary">About</p>
+				</li>
+				<li>
+					<p class="nvtext"><a href="http://nc.scnu.edu.cn/schema/">组织机构</a><span class="pipe">|</span></p>
+					<p class="nvsummary">Organization</p>
+				</li>
+				<li>
+					<p class="nvtext"><a href="http://nc.scnu.edu.cn/userguide/">用户指南</a><span class="pipe">|</span></p>
+					<p class="nvsummary">User Guide</p>
+				</li>
+				<li>
+					<p class="nvtext"><a href="http://nc.scnu.edu.cn/download/">下载专区</a><span class="pipe">|</span></p>
+					<p class="nvsummary">Download</p>
+				</li>
+				<li>
+					<p class="nvtext"><a href="http://nc.scnu.edu.cn/policies/">政策法规</a></p>
+					<p class="nvsummary">Policies</p>
+				</li>
+			</ul>
+		</div>
+		<div class="search">
+															<a href="javascript:;" onclick="setmodel(64, $(this));" style="display:none" hidefocus="true"  class="on" >新闻</a>									<form action="http://module.scnu.edu.cn/index.php" method="get" target="_blank">
+				<input type="hidden" name="m" value="search" />
+				<input type="hidden" name="c" value="index" />
+				<input type="hidden" name="a" value="init" />
+				<input type="hidden" name="typeid" value="64" id="typeid" />
+				<input type="hidden" name="siteid" value="2" id="siteid" />
+				<div class="src_txt">
+					<input type="text" name="q" placeholder="搜索全站" />
+				</div>
+				<div class="src_btn"><input type="submit" value="" /></div>
+			</form>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript" src="http://bmyy.scnu.edu.cn/Snmp/downrate.html"></script>
+<script type="text/javascript" src="http://bmyy.scnu.edu.cn/Snmp/uprate.html"></script>
+
+<script type="text/javascript">
+$(function() {
+	var chart = new Highcharts.StockChart({
+		chart: {
+			renderTo: 'container'//指向的div的id属性
+		},
+		exporting: {
+			enabled: true //是否能导出趋势图图片
+		},
+		title : {
+			text : 'SCNUNET'//图表标题
+		},
+		xAxis: {
+			tickPixelInterval: 200,//x轴上的间隔
+			//title :{
+			//	text:"title"
+			//},
+			type: 'datetime', //定义x轴上日期的显示格式
+			labels: {
+				formatter: function() {
+					var vDate=new Date(this.value);
+					if(vDate.getHours()<8) {
+						//alert("test");
+						return (vDate.getHours()-8+24)+":"+(vDate.getMinutes());
+					} else {
+						return (vDate.getHours()-8)+":"+(vDate.getMinutes());
+					}
+				},
+				align: 'center'
+			}
+		},
+		yAxis : {
+			min: 0,
+			//max: 10000,
+			title: {
+				text: 'M/S'  //y轴上的标题
+			}
+		},
+		tooltip: {
+			//xDateFormat: '%Y-%m-%d %H %M, %A'//鼠标移动到趋势线上时显示的日期格式
+			xDateFormat: '%H:%M, %A',
+			crosshairs: [false, false]
+		},
+		rangeSelector: {
+			enabled: true,
+			buttons: [{
+				type: 'hour',
+				count: 2,
+				text: '2h'
+			},{
+				type: 'hour',
+				count: 6,
+				text: '6h'
+			},{
+				type: 'hour',
+				count: 12,
+				text: '12h'
+			},{
+				type: 'hour',
+				count: 24,
+				text: '24h'
+			}],
+			selected: 3//表示以上定义button的index,从0开始
+		},
+		credits: {
+			enabled: false,
+			href: "",
+			text: "电信出口流量图 网络中心",
+			position: {
+				align: 'left',
+				x: 38,
+				verticalAlign: 'bottom',
+				y: -3
+			}
+		},
+		series: [{
+			name: '下行流量(M/S)',//鼠标移到趋势线上时显示的属性名
+			data:usdeur,//属性值
+			type: 'areaspline',
+			threshold : null,
+			tooltip : {
+				valueDecimals : 2
+			},
+			fillColor : {
+				linearGradient : {
+					x1: 0, 
+					y1: 0, 
+					x2: 0, 
+					y2: 1
+				},
+				stops : [[0, Highcharts.getOptions().colors[0]], [1, 'rgba(0,0,0,0)']]
+			},
+			//marker : {
+			//	enabled : true,
+			//	radius : 3
+			//},
+			shadow : true
+		}]
+	});
+	$(window).load(function() {
+		var chart = $('#container').highcharts();
+		chart.addSeries({
+			name: '上行流量(M/S)',
+			data: updeur
+		});
+	});
+});
+
+
+Highcharts.theme = {
+   colors: ["#80FF00", "#7798BF", "#55BF3B", "#DF5353", "#aaeeee", "#ff0066", "#eeaaee",
+      "#55BF3B", "#DF5353", "#7798BF", "#aaeeee"],
+   chart: {
+      backgroundColor: {
+         linearGradient: { x1: 0, y1: 0, x2: 0, y2: 1 },
+         stops: [
+            [0, 'rgb(96, 96, 96)'],
+            [1, 'rgb(16, 16, 16)']
+         ]
+      },
+      borderWidth: 0,
+      borderRadius: 0,
+      plotBackgroundColor: null,
+      plotShadow: false,
+      plotBorderWidth: 0
+   },
+   title: {
+      style: {
+         color: '#FFF',
+         font: '16px Lucida Grande, Lucida Sans Unicode, Verdana, Arial, Helvetica, sans-serif'
+      }
+   },
+   subtitle: {
+      style: {
+         color: '#DDD',
+         font: '12px Lucida Grande, Lucida Sans Unicode, Verdana, Arial, Helvetica, sans-serif'
+      }
+   },
+   xAxis: {
+      gridLineWidth: 0,
+      lineColor: '#999',
+      tickColor: '#999',
+      labels: {
+         style: {
+            color: '#999',
+            fontWeight: 'bold'
+         }
+      },
+      title: {
+         style: {
+            color: '#AAA',
+            font: 'bold 12px Lucida Grande, Lucida Sans Unicode, Verdana, Arial, Helvetica, sans-serif'
+         }
+      }
+   },
+   yAxis: {
+      alternateGridColor: null,
+      minorTickInterval: null,
+      gridLineColor: 'rgba(255, 255, 255, .1)',
+      minorGridLineColor: 'rgba(255,255,255,0.07)',
+      lineWidth: 0,
+      tickWidth: 0,
+      labels: {
+         style: {
+            color: '#999',
+            fontWeight: 'bold'
+         }
+      },
+      title: {
+         style: {
+            color: '#AAA',
+            font: 'bold 12px Lucida Grande, Lucida Sans Unicode, Verdana, Arial, Helvetica, sans-serif'
+         }
+      }
+   },
+   legend: {
+      itemStyle: {
+         color: '#CCC'
+      },
+      itemHoverStyle: {
+         color: '#FFF'
+      },
+      itemHiddenStyle: {
+         color: '#333'
+      }
+   },
+   labels: {
+      style: {
+         color: '#CCC'
+      }
+   },
+   tooltip: {
+      backgroundColor: {
+         linearGradient: { x1: 0, y1: 0, x2: 0, y2: 1 },
+         stops: [
+            [0, 'rgba(96, 96, 96, .8)'],
+            [1, 'rgba(16, 16, 16, .8)']
+         ]
+      },
+      borderWidth: 0,
+      style: {
+         color: '#FFF'
+      }
+   },
+
+
+   plotOptions: {
+      series: {
+         nullColor: '#444444'
+      },
+      line: {
+         dataLabels: {
+            color: '#CCC'
+         },
+         marker: {
+            lineColor: '#333'
+         }
+      },
+      spline: {
+         marker: {
+            lineColor: '#333'
+         }
+      },
+      scatter: {
+         marker: {
+            lineColor: '#333'
+         }
+      },
+      candlestick: {
+         lineColor: 'white'
+      }
+   },
+
+   toolbar: {
+      itemStyle: {
+         color: '#CCC'
+      }
+   },
+
+   navigation: {
+      buttonOptions: {
+         symbolStroke: '#DDDDDD',
+         hoverSymbolStroke: '#FFFFFF',
+         theme: {
+            fill: {
+               linearGradient: { x1: 0, y1: 0, x2: 0, y2: 1 },
+               stops: [
+                  [0.4, '#606060'],
+                  [0.6, '#333333']
+               ]
+            },
+            stroke: '#000000'
+         }
+      }
+   },
+
+   // scroll charts
+   rangeSelector: {
+      buttonTheme: {
+         fill: {
+            linearGradient: { x1: 0, y1: 0, x2: 0, y2: 1 },
+            stops: [
+               [0.4, '#888'],
+               [0.6, '#555']
+            ]
+         },
+         stroke: '#000000',
+         style: {
+            color: '#CCC',
+            fontWeight: 'bold'
+         },
+         states: {
+            hover: {
+               fill: {
+                  linearGradient: { x1: 0, y1: 0, x2: 0, y2: 1 },
+                  stops: [
+                     [0.4, '#BBB'],
+                     [0.6, '#888']
+                  ]
+               },
+               stroke: '#000000',
+               style: {
+                  color: 'white'
+               }
+            },
+            select: {
+               fill: {
+                  linearGradient: { x1: 0, y1: 0, x2: 0, y2: 1 },
+                  stops: [
+                     [0.1, '#000'],
+                     [0.3, '#333']
+                  ]
+               },
+               stroke: '#000000',
+               style: {
+                  color: 'yellow'
+               }
+            }
+         }
+      },
+      inputStyle: {
+         backgroundColor: '#333',
+         color: 'silver'
+      },
+      labelStyle: {
+         color: 'silver'
+      }
+   },
+
+   navigator: {
+      handles: {
+         backgroundColor: '#666',
+         borderColor: '#AAA'
+      },
+      outlineColor: '#CCC',
+      maskFill: 'rgba(16, 16, 16, 0.5)',
+      series: {
+         color: '#7798BF',
+         lineColor: '#A6C7ED'
+      }
+   },
+
+   scrollbar: {
+      barBackgroundColor: {
+            linearGradient: { x1: 0, y1: 0, x2: 0, y2: 1 },
+            stops: [
+               [0.4, '#888'],
+               [0.6, '#555']
+            ]
+         },
+      barBorderColor: '#CCC',
+      buttonArrowColor: '#CCC',
+      buttonBackgroundColor: {
+            linearGradient: { x1: 0, y1: 0, x2: 0, y2: 1 },
+            stops: [
+               [0.4, '#888'],
+               [0.6, '#555']
+            ]
+         },
+      buttonBorderColor: '#CCC',
+      rifleColor: '#FFF',
+      trackBackgroundColor: {
+         linearGradient: { x1: 0, y1: 0, x2: 0, y2: 1 },
+         stops: [
+            [0, '#000'],
+            [1, '#333']
+         ]
+      },
+      trackBorderColor: '#666'
+   },
+
+   // special colors for some of the demo examples
+   legendBackgroundColor: 'rgba(48, 48, 48, 0.8)',
+   legendBackgroundColorSolid: 'rgb(70, 70, 70)',
+   dataLabelsColor: '#444',
+   textColor: '#E0E0E0',
+   maskColor: 'rgba(255,255,255,0.3)'
+};
+
+// Apply the theme
+var highchartsOptions = Highcharts.setOptions(Highcharts.theme);
+</script>
+
+
+
+<div id="focus">
+	<div class="focusPic" id="focusPic">
+		<div class="stock">
+			<div class="r stockct">
+				<a class="viewdetail" href="http://202.116.32.227/cactifree/" target="_blank">查看详细</a>
+				<div id="container" style="height: 405px; min-width: 500px; width: 500px"></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="wp cl">
+	<div class="news cl">
+		<div class="column l">
+			<h2><a href="http://nc.scnu.edu.cn/news/">新闻公告</a></h2>
+			<div class="top cl">
+												<div class="l top_pic">
+					<a href="http://nc.scnu.edu.cn/a/20170623/275.html" target="_blank"><img src="//statics.scnu.edu.cn/pics/nc/2017/0623/thumb_160_107_1498225749106185.jpg" width="160" height="107" alt=""></a>
+				</div>
+				<div class="r top_text">
+					<p class="toplink"><a href="http://nc.scnu.edu.cn/a/20170623/275.html" target="_blank" title="教育部教育信息化专家组实地抽查我校信息化试点工作">教育部教育信息化专家组实地抽查我校信...</a></p>
+					<p class="topdesc">6月22日，教育部组织专家组对我校承担的教育部第一批教育信息化试点项目&ldquo;智慧校园与优质教育资源共建共享机制探索&rdquo;进行抽查。本次抽查是……</p>
+				</div>
+											</div>
+			<ul>
+												<li><span class="time r">2017-06-23</span><a href="http://nc.scnu.edu.cn/a/20170623/275.html" target="_blank" title="教育部教育信息化专家组实地抽查我校信息化试点工作">教育部教育信息化专家组实地抽查我校信息化试点工作</a></li>
+								<li><span class="time r">2017-05-23</span><a href="http://nc.scnu.edu.cn/a/20170523/274.html" target="_blank" title="石牌校区办公区域及大学城校区部分区域电源安装询价公告">石牌校区办公区域及大学城校区部分区域电源安装询价公告</a></li>
+								<li><span class="time r">2017-05-17</span><a href="http://nc.scnu.edu.cn/a/20170517/273.html" target="_blank" title=" 关于北区教工宿舍光纤迁移通知"> 关于北区教工宿舍光纤迁移通知</a></li>
+								<li><span class="time r">2017-05-13</span><a href="http://nc.scnu.edu.cn/a/20170513/272.html" target="_blank" title="关于防范ONION勒索软件病毒攻击的紧急通知">关于防范ONION勒索软件病毒攻击的紧急通知</a></li>
+								<li><span class="time r">2017-05-03</span><a href="http://nc.scnu.edu.cn/a/20170503/271.html" target="_blank" title="关于大学城图书馆停电期间暂停校园网服务的通知">关于大学城图书馆停电期间暂停校园网服务的通知</a></li>
+								<li><span class="time r">2017-04-27</span><a href="http://nc.scnu.edu.cn/a/20170427/270.html" target="_blank" title="关于石牌校区网络中心机房停电的通知">关于石牌校区网络中心机房停电的通知</a></li>
+											</ul>
+		</div>
+		<div class="column r">
+			<h2><a href="http://nc.scnu.edu.cn/faq/">常见问题</a></h2>
+			<div class="top cl">
+												<div class="l top_pic">
+					<a href="http://nc.scnu.edu.cn/a/20140421/65.html" target="_blank"><img src="//statics.scnu.edu.cn/pics/2014/0421/thumb_160_107_20140421101628485.jpg" width="160" height="107" alt=""></a>
+				</div>
+				<div class="r top_text">
+					<p class="toplink"><a href="http://nc.scnu.edu.cn/a/20140421/65.html" target="_blank" title="移动智能终端设备设置邮箱的指引">移动智能终端设备设置邮箱的指引</a></p>
+					<p class="topdesc"> 移动智能终端时代的到来，为移动办公提供了条件。让邮箱随身走不再是梦想。通过将个人邮箱捆绑在智能手机与平板电脑上，可让我们像查阅短……</p>
+				</div>
+											</div>
+			<ul>
+												<li><span class="time r">2014-04-21</span><a href="http://nc.scnu.edu.cn/a/20140421/65.html" target="_blank" title="移动智能终端设备设置邮箱的指引">移动智能终端设备设置邮箱的指引</a></li>
+								<li><span class="time r">2014-04-21</span><a href="http://nc.scnu.edu.cn/a/20140421/61.html" target="_blank" title="ARP欺骗病毒专题">ARP欺骗病毒专题</a></li>
+								<li><span class="time r">2014-04-21</span><a href="http://nc.scnu.edu.cn/a/20140421/60.html" target="_blank" title="大学城校区不能通过认证的校园网用户进来看看吧">大学城校区不能通过认证的校园网用户进来看看吧</a></li>
+								<li><span class="time r">2014-04-21</span><a href="http://nc.scnu.edu.cn/a/20140421/59.html" target="_blank" title="能够认证不能够上网的解决办法">能够认证不能够上网的解决办法</a></li>
+								<li><span class="time r">2014-04-21</span><a href="http://nc.scnu.edu.cn/a/20140421/58.html" target="_blank" title="锐捷认证客户端常见问题解答">锐捷认证客户端常见问题解答</a></li>
+								<li><span class="time r">2014-04-21</span><a href="http://nc.scnu.edu.cn/a/20140421/57.html" target="_blank" title="大学城校区学生宿舍IP地址分配表">大学城校区学生宿舍IP地址分配表</a></li>
+											</ul>
+		</div>
+	</div>
+
+	<div class="base_srv mb30">
+		<div class="box">
+			<h2><a href="http://nc.scnu.edu.cn/basicservice/">基础服务</a></h2>
+		</div>
+		<div class="baselist cl">
+			<div class="basedetail radius">
+				<div class="basetitle">网络接入</div>
+				<div class="basedesc">核心宽带，无线，VPN专线</div>
+				<div class="baseicon"></div>
+				<div class="baseview"><a href="http://nc.scnu.edu.cn/basicservice/scnunet/">了解更多</a></div>
+			</div>
+			<div class="basedetail hpc">
+				<div class="basetitle">高性能计算</div>
+				<div class="basedesc">高性能计算共享平台</div>
+				<div class="baseicon"></div>
+				<div class="baseview"><a href="http://nc.scnu.edu.cn/basicservice/hpc/">了解更多</a></div>
+			</div>
+			<div class="basedetail sso">
+				<div class="basetitle">统一身份认证</div>
+				<div class="basedesc">开放创新、数据整合</div>
+				<div class="baseicon"></div>
+				<div class="baseview"><a href="http://nc.scnu.edu.cn/basicservice/sso/">了解更多</a></div>
+			</div>
+			<div class="basedetail cloud">
+				<div class="basetitle">信息化公共云平台</div>
+				<div class="basedesc">公有云，关键业务支撑</div>
+				<div class="baseicon"></div>
+				<div class="baseview"><a href="http://nc.scnu.edu.cn/basicservice/cloud/">了解更多</a></div>
+			</div>
+		</div>
+	</div>
+
+	<div class="info_srv mb30">
+		<div class="box">
+			<h2><a href="http://nc.scnu.edu.cn/multipleservice/">综合信息服务</a></h2>
+		</div>
+		<div class="infolist cl">
+			<div class="infodetail personal">
+				<div class="infoicon"></div>
+				<div class="infotext">
+					<strong><a href="https://sso.scnu.edu.cn" target="_blank">综合服务平台</a></strong>
+					<p>业务数据，个人数据，双向消息推送订阅的整合</p>
+				</div>
+			</div>
+			<div class="infodetail app">
+				<div class="infoicon"></div>
+				<div class="infotext">
+					<strong><a href="http://moodle.scnu.edu.cn" target="_blank" target="_blank">砺儒云课堂</a></strong>
+					<p>有先进教学理论支撑的在线教学平台</p>
+				</div>
+			</div>
+			<div class="infodetail open">
+				<div class="infoicon"></div>
+				<div class="infotext">
+					<strong><a href="https://sso.scnu.edu.cn/AccountService/user/applist.html" target="_blank">校园应用平台</a></strong>
+					<p>统一入口，统一管理，轻松访问运行各类校园应用</p>
+				</div>
+			</div>
+			<div class="infodetail mail">
+				<div class="infoicon"></div>
+				<div class="infotext">
+					<strong><a href="http://mail.scnu.edu.cn" target="_blank" target="_blank">邮箱服务</a></strong>
+					<p>多功能、大容量邮箱，是学校为广大师生提供的新邮箱服务</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="resource_srv mb30">
+		<div class="box">
+			<h2>资源服务</h2>
+		</div>
+		<div class="slist cl">
+			<div class="listc wiki">
+				<a href="http://wiki.scnu.edu.cn" target="_blank" title="进入华师百科">进入华师百科</a>
+				<div class="listc_text">
+					<strong>华师百科</strong>
+					<p>全校共同编写的华师百科全书</p>
+				</div>
+			</div>
+			<div class="listc bbs">
+				<div class="listc_text">
+					<a href="http://bbs.scnu.edu.cn" target="_blank" title="进入新陶园论坛">进入新陶园论坛</a>
+					<strong>新陶园论坛</strong>
+					<p>华师官方论坛，自由文明的交流平台</p>
+				</div>
+			</div>
+			<div class="listc ipv6">
+				<a href="http://pt.scnu.edu.cn" target="_blank" title="进入IPv6资源">进入IPv6资源</a>
+				<div class="listc_text">
+					<strong>IPv6资源</strong>
+					<p>基于IPv6的tracker分享系统</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="contact mb30 cl">
+		<div class="contact_title">
+			<a href="http://nc.scnu.edu.cn/aboutus/contact/" target="_blank"><strong>服务</strong>
+			<em>支撑</em></a>
+		</div>
+		<div class="contact_content">
+			<p>石牌校区联系电话：</p>
+			<p>020-85211498     020-85211499</p>
+			<p>联系地址：实验大楼</p>
+		</div>
+		<div class="contact_content">
+			<p>大学城校区联系电话：</p>
+			<p>020-39311498     020-39311499</p>
+			<p>联系地址：图书馆一楼</p>
+		</div>
+		<div class="contact_content">
+			<p>南海校区联系电话：</p>
+			<p>0757-86687823</p>
+			<p>联系地址：信息中心楼214</p>
+		</div>
+		<div class="contact_content" id="sinaweibo">
+		</div>
+	</div>
+</div>
+
+<div id="ft">
+	<div class="wp">
+		<p><a href="http://www.scnu.edu.cn/scnu/Demo/HSschool.jsp?code=1" target="_blank">关于华南师范大学</a><span class="pipe">|</span><a href="http://sso.scnu.edu.cn" target="_blank">统一认证</a><span class="pipe">|</span><a href="http://app.scnu.edu.cn" target="_blank">移动平台</a><span class="pipe">|</span><script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1000500212'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/z_stat.php%3Fid%3D1000500212%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script></p>
+		<p>Copyright &copy; 2017 South China Normal University. All Rights Reserved</p>
+		<p>华南师范大学 版权所有</p>
+	</div>
+</div>
+
+<!--
+<script type="text/javascript" src="//statics.scnu.edu.cn/statics/js/nc/core-accordion.js"></script>
+<script type="text/javascript" src="//statics.scnu.edu.cn/statics/js/nc/dpl-msclass_v1.js"></script>
+<script type="text/javascript">
+var lis = pc.getElems('#focusPic .slide li');
+window.focusPic = new pc.tab.scroll({
+	target: lis,
+	control:  pc.getElems('#focusPic .control .toc'),
+	//autoPlay: false,
+	type: 'click',
+	stay:3500,
+	playTo : lis.length -1
+});
+focusPic.next();
+var _prev = pc.getElem('#JPrev'),
+_next = pc.getElem('#JNext');
+pc.addEvent(_prev,'mouseenter',function(){
+	animateHover(this,1,-40)
+})
+pc.addEvent(_prev,'mouseleave',function(){
+	animateHover(this,1,-40)
+})
+pc.addEvent(_next,'mouseenter',function(){
+	animateHover(this,2,-40);
+})
+pc.addEvent(_next,'mouseleave',function(){
+	animateHover(this,2,-40)
+})
+var lis = pc.getElems('#focusTxt li'),
+tempLi = '';
+pc.each(lis,function(item){
+	pc.addEvent(item,'mouseover',function(){
+		if(!pc.hasClass(this,'hover')){
+			pc.addClass(this,'hover');
+		}
+	})
+		pc.addEvent(item,'mouseout',function(){
+		if(pc.hasClass(this,'hover')){
+			pc.removeClass(this,'hover');
+		}
+	})
+})
+function animateHover(obj,direct,m){
+	var _i = pc.getElems('i',obj)[0];
+	pc.end(_i);
+	if(direct == 1){
+		pc.animate(_i,{right : m},'swing',250);
+	} else {
+		pc.animate(_i,{left : m},'swing',250);
+	}
+}
+</script>-->
+<script type="text/javascript">
+$(window).load(function() {
+	$("#sinaweibo").append(
+		"<iframe width=\"100%\" height=\"80\" class=\"share_self\" frameborder=\"0\" scrolling=\"no\" src=\"http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=92&fansRow=2&ptype=1&speed=0&skin=5&isTitle=0&noborder=0&isWeibo=0&isFans=0&uid=5114144000&verifier=a8938224&dpc=1\"></iframe>"
+	);
+})
+</script>
+<script type="text/javascript">
+  var _paq = _paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//piwik.scnu.edu.cn/";
+    _paq.push(['setTrackerUrl', u+'piwik.php']);
+    _paq.push(['setSiteId', '1']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+</body>
+</html>

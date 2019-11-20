@@ -1,0 +1,405 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=GBK" />
+<title> 华师百科 </title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="style/iscnu_skin/hdwiki.css" rel="stylesheet" type="text/css" media="all"/>
+<link href="style/iscnu_skin/main.css" rel="stylesheet" type="text/css" media="all"/>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="lang/zh/front.js"></script>
+<script type="text/javascript" src="js/jquery.dialog-0.8.min.js"></script>
+<script type="text/javascript" src="js/login.js"></script>
+<script type="text/javascript" src="js/iscnu.js"></script>
+<!--[if lte IE 6]>
+<script type="text/javascript" src="js/ie6.js"></script>
+<![endif]-->
+<script type="text/javascript">
+	$.dialog.setConfig('base', 'http://wiki.scnu.edu.cn/style/default');
+	var g_isLogin, g_isUcenter=false, g_forward = '',g_api_url='', g_regulars = '', g_uname_minlength, g_uname_maxlength;
+			g_regulars = "";
+		g_isLogin = false;
+				g_seo_prefix = "";
+	g_seo_suffix = ".html";
+	g_uname_minlength = "3"||3;
+	g_uname_maxlength = "15"||15;
+	</script>
+</head>
+<body>
+
+<div id="header">
+	<div id="topbar">
+		<div class="topcon"></div>
+		<div class="tlink s_clear">
+			<div id="tmenu">
+				<span class="iscnutitle"><a href="https://i.scnu.edu.cn" target="_blank" title="ISCNU 信息门户">ISCNU</a></span>
+				<ul>
+															<li class="l bor_no"><a href="http://www.scnu.edu.cn" target="_blank">华南师范大学主页</a></li>
+										<li class="l bor_no"><a href="http://pt.scnu.edu.cn" target="_blank">PT</a></li>
+										<li class="l bor_no"><a href="http://bbs.scnu.edu.cn" target="_blank">论坛</a></li>
+										<li class="l bor_no"><a href="http://wiki.scnu.edu.cn" target="_blank">百科</a></li>
+														</ul>
+			</div>
+			<div id="umenu">
+				<ul>
+									<li name="register"><a href="https://my.scnu.edu.cn/passport/index.php?a=register" >注册</a></li>
+					<li name="login"><a href="index.php?user-login">登录</a></li>
+								</ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="wrap s_clear">
+		<h1><a href="http://wiki.scnu.edu.cn" title="华师百科">华师百科</a></h1>
+		<div id="srt">
+			<ul class="searchtabs">
+				<li><a id="ptsrc" href="https://pt.scnu.edu.cn/browse.php">分享</a></li>
+				<li><span class="pipe">|</span><a id="bbssrc" href="https://bbs.scnu.edu.cn/search.php">论坛</a></li>
+				<li class="cur"><span class="pipe">|</span><a id="wikisrc" href="https://wiki.scnu.edu.cn/index.php?search-kw">百科</a></li>
+			</ul>
+			<div class="src_d"></div>
+			<form name="srchfrm" id="srchfrm" method="post" action="https://wiki.scnu.edu.cn/index.php?search-kw" target="_blank">
+				<input type="text" id="srchtxt" name="searchtext" prompt="search_kw" class="f1" maxlength="25" value="" />
+				<button type="submit" name="full" id="searchsubmit" class="searchsubmit" value="true" prompt="search_submit">搜索</button>
+			</form>
+			<script type="text/javascript">
+				var topSearch;
+				topSearch = new kievSearch("srt", "srchfrm", "srchtxt", "ptsrc", "bbssrc", "wikisrc");
+				topSearch.init();
+			</script>
+		</div>
+	</div>
+</div>
+
+<div id="nav">
+	<div id="navcon">
+		<ul>
+			<li style="background:none"><a href="http://wiki.scnu.edu.cn" >首页</a></li>
+						<li><a href="category-view-2.html" >学校介绍</a></li>
+						<li><a href="category-view-58.html" >报考指南</a></li>
+						<li><a href="category-view-4.html" >教学研究</a></li>
+						<li><a href="category-view-10.html" >周边事物</a></li>
+						<li><a href="category-view-11.html" >社团组织</a></li>
+						<li><a href="category-view-17.html" >校园资源</a></li>
+						<li><a href="category-view-26.html" >站务公告</a></li>
+					</ul>
+	</div>
+	<ul id="switch_style">
+		<li><a href="doc-create.html">创建词条</a></li>
+		<li><a href="doc-sandbox.html">编辑实验</a></li>
+	</ul>
+</div>
+
+
+<div id="main" class="wiki5main s_clear">
+	<div class="content">
+<div class="l w-710 o-v">
+	<div class="l w-270">
+    	<div id="block_ctop1"><div id="zjgx" class="columns zjgx o-v style_03" bid="18">
+    <h2 class="col-h2">最近更新</h2>
+    <a href="list-recentchange.html" class="more">更多>></a>
+    <ul class="col-ul font-14 ">
+                   <li><a href="doc-view-1249.html"  class="ctm" title="华师家教部">华师家教部</a><span>2016-12-07 13:56</span></li>
+                   <li><a href="doc-view-484.html"  class="ctm" title="本部宿舍（概况）">本部宿舍（概况）</a><span>2016-12-01 00:09</span></li>
+                   <li><a href="doc-view-30037.html"  class="ctm" title="翰园">翰园</a><span>2016-04-15 15:59</span></li>
+                   <li><a href="doc-view-30008.html"  class="ctm" title="王红娟">王红娟</a><span>2015-12-17 20:38</span></li>
+                   <li><a href="doc-view-30035.html"  class="ctm" title="康陵">康陵</a><span>2015-10-31 22:29</span></li>
+                   <li><a href="doc-view-30036.html"  class="ctm" title="德陵">德陵</a><span>2015-10-31 22:29</span></li>
+           </ul>
+</div></div>
+	</div>
+	<div class="w-430 r">
+    	<div id="block_ctop2"><div id="jcct" class="columns jcct style_03" bid="19">
+<h2 class="col-h2">精彩词条</h2>
+<a href="list-focus-3.html"  class="more">更多>></a>
+    <dl class="col-dl">
+        <dd class="l"><a href="doc-view-520.html"  class="a-img"><img title="明德广场" src="uploads/200909/f_1253600207i9X2gb2g.jpg"/></a></dd>
+        <dt class="h1 a-c bold"><a href="doc-view-520.html" title="明德广场" >明德广场</a></dt>
+        <dd><p>明德广场走近大学城华师正门，会看到有“华南师范大学”六个红色大字的石碑。石碑的正后方是一个很大的圆形蓝色喷水池，经过喷水池，就来到宁静的明德广场。明德广场是一大片...<a href="doc-view-520.html" >阅读全文&gt;&gt;</a></p></dd>
+    </dl>
+    <ul class="col-ul point font-14 link_blue ">
+                    <li><a href="doc-view-2896.html" >叶剑英与华师（南方大学）</a>: &nbsp;&nbsp; &nbsp;在纪念叶剑英诞辰110周年之际，老广们不会忘记这个在自己乡土出来的革命者，曾经正视广东地方的特殊性，尽力地维护过他们的利</li>
+                    <li><a href="doc-view-2900.html" >总统府</a>: &nbsp;&nbsp; &nbsp;总统府在哪？&nbsp;&nbsp; &nbsp;答：现在图书馆所在地&nbsp;&nbsp; &nbsp;图书馆采用南</li>
+                    <li><a href="doc-view-2901.html" >一课（第一课室大楼）</a>: &nbsp;老一课：小克里姆林宫：有木棉絮飘过　典雅、古朴而幽静　老一课（泛黄的老照片by@GUOCHENGXUAN）那座巍峨的课室大楼，被学生们称作“小克里</li>
+                    <li><a href="doc-view-2867.html" >孔子像</a>: &nbsp;&nbsp; &nbsp;孔子群雕是我校石牌校区的标志性建筑。&nbsp;&nbsp; &nbsp;位于文化广场的主入口处，孔子名言“学而不厌，诲</li>
+                    <li><a href="doc-view-1498.html" >各媒体报道我校华师百科指引新生入学</a>: 摘自我校宣统部2010年9月5日新闻稿：《我校迎来万名2010级新生》
+大学生活：邀请新生参与建设“华师百科” “华师百科、新陶园论坛欢迎各位新生的到来，即将进</li>
+            </ul>
+</div></div>
+	</div>
+
+<!--ad start -->
+
+
+<!--ad end -->	
+</div>
+<div class="r w-230">
+	<div id="block_right"><div id="login-static" class="columns login-static i-login style_03" bid="20">
+	<h2 class="col-h2">登录用户</h2>
+					<span class="error" id="logintip"></span>
+		<form action="" onsubmit="return docheck();">
+		<ul class="col-ul" id="nologin" style="display:block">
+			<li><span>用户名：</span><input name="username" id="username" tabindex="3" type="text" class="inp_txt" onblur="check_username()" maxlength="32" /></li>
+			<li><span>密&nbsp;&nbsp;码：</span><input name="password" id="password"  tabindex="4" type="password" class="inp_txt" onblur="check_passwd()" maxlength="32" /></li>
+						<li class="yzm"><span>验证码：</span><input name="code" id="code"  tabindex="5" type="text" onblur="check_code()" maxlength="4" /><label class="m-lr8"><img id="verifycode" src="index.php?user-code" onclick="updateverifycode();" /></label><a href="javascript:updateverifycode();">换一个</a>
+			</li>
+						<li><input name="submit" type="submit" value="登录" class="btn_inp" tabindex="6" /><input name="Button1" type="button" value="我要注册" class="btn_inp" onclick="location.href='index.php?user-register';" /></li>
+		</ul>
+		</form>
+				<p class="novice">
+	<a href="index.php?doc-innerlink-%B9%D8%D3%DA%BB%AA%CA%A6%B0%D9%BF%C6" >关于华师百科</a>
+	<a href="index.php?doc-innerlink-%C8%E7%BA%CE%B4%B4%BD%A8%B4%CA%CC%F5" >如何创建词条</a>
+	<a href="index.php?doc-innerlink-%C8%AB%B7%BD%CE%BB%C1%CB%BD%E2%BB%AA%CA%A6" >全方位了解华师</a>
+	</p>
+<script>
+	var indexlogin = 1;
+	var loginTip1 = '用户名不能为空!';
+	var loginTip2 = "用户名长度最少3位，最多15位!";
+	var loginTip3 = '用户不存在!';
+	var logincodewrong = '验证码不匹配!';
+	var name_max_length = "15";
+	var name_min_length = "3";
+	var editPassTip1 = '密码不能为空，最多32位!';
+	var loginTip4 = '不匹配!';
+	var checkcode = "0";
+</script>
+</div><div id="reci" class="columns  reci style_03" bid="21">
+	<h2 class="col-h2">热门词条</h2>
+	<a href="list-focus-2.html" class="more">更多>></a>
+			<dl class="col-dl ">
+			<dt><a href="doc-view-586.html"  title="华南师范大学网络协会">华南师范大学网络协会...</a></dt>
+			<dd>网络协会概况
+　　华南师范大学网络协会，即Iscnu信息中心[<a href="doc-view-586.html"  class="entry">详细</a>]</dd>
+		</dl>
+			<dl class="col-dl ">
+			<dt><a href="doc-view-1249.html"  title="华师家教部">华师家教部</a></dt>
+			<dd>【家教部简介】 华南师范大学勤工助学家教部是代表学校组织学生为[<a href="doc-view-1249.html"  class="entry">详细</a>]</dd>
+		</dl>
+			<dl class="col-dl ">
+			<dt><a href="doc-view-243.html"  title="华南师范大学现有党政机构及院系负责人">华南师范大学现有党政机构及...</a></dt>
+			<dd>机关单位&nbsp;&nbsp;&nbsp;&nbsp;&nb[<a href="doc-view-243.html"  class="entry">详细</a>]</dd>
+		</dl>
+			<dl class="col-dl ">
+			<dt><a href="doc-view-411.html"  title="华南师范大学南海校区学生会部门介绍">华南师范大学南海校区学生会...</a></dt>
+			<dd>主席团学生会工作理论的探讨、研究 进行学生会内部管理，决策、统[<a href="doc-view-411.html"  class="entry">详细</a>]</dd>
+		</dl>
+			<dl class="col-dl ">
+			<dt><a href="doc-view-836.html"  title="非师范生考教师资格证的程序">非师范生考教师资格证的程序...</a></dt>
+			<dd>也是一名非师范生，我前些时间刚刚忙完考教师资格证的事情，现在就[<a href="doc-view-836.html"  class="entry">详细</a>]</dd>
+		</dl>
+			<dl class="col-dl ">
+			<dt><a href="doc-view-591.html"  title="非师范生办理教师资格证">非师范生办理教师资格证...</a></dt>
+			<dd>&nbsp;&nbsp;&nbsp;&nbsp;最近陆陆续续有[<a href="doc-view-591.html"  class="entry">详细</a>]</dd>
+		</dl>
+			<dl class="col-dl ">
+			<dt><a href="doc-view-218.html"  title="校内招待所（宾馆）">校内招待所（宾馆）...</a></dt>
+			<dd>石牌校区有华师继续教育住宿部（东19隔壁）和产业大楼招待所。[<a href="doc-view-218.html"  class="entry">详细</a>]</dd>
+		</dl>
+			<dl class="col-dl ">
+			<dt><a href="doc-view-697.html"  title="广州大学城邮局地址和邮政编码">广州大学城邮局地址和邮政编...</a></dt>
+			<dd>广州大学城邮局地址:（提醒：原设在大学城商业南区的邮局已搬到下[<a href="doc-view-697.html"  class="entry">详细</a>]</dd>
+		</dl>
+			<dl class="col-dl ">
+			<dt><a href="doc-view-594.html"  title="广州大学城住宿">广州大学城住宿...</a></dt>
+			<dd>★★信息内容：★★ 租金:元/月 居室:一室 面积:㎡ 广州大[<a href="doc-view-594.html"  class="entry">详细</a>]</dd>
+		</dl>
+			<dl class="col-dl bor_no">
+			<dt><a href="doc-view-761.html"  title="中国手语与方言手语">中国手语与方言手语...</a></dt>
+			<dd>“中国手语”是规范后的手语，好比语言中的普通话。而聋人平时所用[<a href="doc-view-761.html"  class="entry">详细</a>]</dd>
+		</dl>
+	</div></div>
+</div>
+<div class="l w-710 o-v">
+	<div class="l w-270">
+    	<div id="block_cbottoml"><div id="tjct" class="columns tjct i6-ff style_03" bid="22">
+	<h2 class="col-h2">推荐词条</h2>
+	<a href="list-focus.html" class="more">更多>></a>
+	<div>
+					<div class="jc_tj">
+			<a href="doc-view-268.html"  class="a-img"><img alt="南海校区交通指引" title="南海校区交通指引" src="style/default/recommend_l.jpg"/></a>
+			<p class="a-c"><a href="doc-view-268.html"  title="南海校区交通指引">南海校区交通指引...</a></p>
+		</div>
+							<div class="jc_tj">
+			<a href="doc-view-484.html"  class="a-img"><img alt="本部宿舍（概况）" title="本部宿舍（概况）" src="style/default/recommend_l.jpg"/></a>
+			<p class="a-c"><a href="doc-view-484.html"  title="本部宿舍（概况）">本部宿舍（概况）...</a></p>
+		</div>
+							<div class="jc_tj">
+			<a href="doc-view-213.html"  class="a-img"><img alt="大学城校区宿舍（概况）" title="大学城校区宿舍（概况）" src="style/default/recommend_l.jpg"/></a>
+			<p class="a-c"><a href="doc-view-213.html"  title="大学城校区宿舍（概况）">大学城校区宿舍（概况）...</a></p>
+		</div>
+																																								</div>
+	<ul class="col-ul point c-b">
+																							<li><a href="doc-view-2892.html"  title="计算机学院、软件学院  本科生毕业设计（论文）管理办法">计算机学院、软件学院  本...</a></li>
+											<li><a href="doc-view-2894.html"  title="古勷勤先生">古勷勤先生</a></li>
+											<li><a href="doc-view-2897.html"  title="师陶园">师陶园</a></li>
+											<li><a href="doc-view-2898.html"  title="石牌跑马场机场">石牌跑马场机场...</a></li>
+											<li><a href="doc-view-2899.html"  title="红楼">红楼</a></li>
+											<li><a href="doc-view-2878.html"  title="毕业答辩">毕业答辩</a></li>
+											<li><a href="doc-view-2582.html"  title="华南师范大学南海校区乒乓球协会">华南师范大学南海校区乒乓球...</a></li>
+											<li><a href="doc-view-709.html"  title="南海校区新生指南">南海校区新生指南...</a></li>
+											<li><a href="doc-view-2126.html"  title="选课指南">选课指南</a></li>
+											<li><a href="doc-view-689.html"  title="晔晔">晔晔</a></li>
+											<li><a href="doc-view-1090.html"  title="关于选专业的一点建议">关于选专业的一点建议...</a></li>
+											<li><a href="doc-view-219.html"  title="大学新生入学用品大全">大学新生入学用品大全...</a></li>
+						</ul>
+</div><div id="zjpl" class="columns zjpl style_03" bid="23">
+	<h2 class="col-h2">最近评论</h2>
+			<div class="pl_unit">
+			<a href="user-space-22627.html"  class="a-img1"><img alt="" src="https://bbs.scnu.edu.cn/uc_server/avatar.php?uid=22627&size=small"/></a>
+			<p><a href="comment-view-1120.html" title="这个地址已经打不开啦？"  class="block">这个地址已经打不开啦？...</a>2016-10-21 09:57</p>
+		</div>
+			<div class="pl_unit">
+			<a href="user-space-296177.html"  class="a-img1"><img alt="" src="https://bbs.scnu.edu.cn/uc_server/avatar.php?uid=296177&size=small"/></a>
+			<p><a href="comment-view-555.html" title="请问有人知道数学建模属于哪个分类的公选课吗"  class="block">请问有人知道数学建模属于哪...</a>2016-06-21 18:56</p>
+		</div>
+			<div class="pl_unit">
+			<a href="user-space-296177.html"  class="a-img1"><img alt="" src="https://bbs.scnu.edu.cn/uc_server/avatar.php?uid=296177&size=small"/></a>
+			<p><a href="comment-view-1849.html" title="求联系方式...."  class="block">求联系方式.......</a>2016-01-10 16:13</p>
+		</div>
+			<div class="pl_unit">
+			<a href="user-space-0.html"  class="a-img1"><img alt="" src="https://bbs.scnu.edu.cn/uc_server/avatar.php?uid=0&size=small"/></a>
+			<p><a href="comment-view-1345.html" title="好平淡。。。/"  class="block">好平淡。。。/...</a>2016-01-05 20:15</p>
+		</div>
+			<div class="pl_unit">
+			<a href="user-space-292043.html"  class="a-img1"><img alt="" src="https://bbs.scnu.edu.cn/uc_server/avatar.php?uid=292043&size=small"/></a>
+			<p><a href="comment-view-5167.html" title="关门点名"  class="block">关门点名</a>2015-12-23 13:10</p>
+		</div>
+	</div><div  bid="28" class="columns dwsct i6-ff list2 style_03">
+	<h2 class="col-h2">待完善词条</h2>
+	<a href="doc-cooperate.html"  class="more">更多>></a>
+	<ul class="col-ul" >
+					<li><a href="doc-innerlink-%E9%99%B6%E5%9B%AD.html"  title="陶园">陶园</a></li>
+					<li><a href="doc-innerlink-%E7%AC%AC%E4%B8%80%E8%AF%BE%E5%AE%A4%E5%A4%A7%E6%A5%BC.html"  title="第一课室大楼">第一课室大楼</a></li>
+					<li><a href="doc-innerlink-%E9%9B%8D%E5%9B%AD.html"  title="雍园">雍园</a></li>
+					<li><a href="doc-innerlink-%E6%B2%81%E5%9B%AD.html"  title="沁园">沁园</a></li>
+					<li><a href="doc-innerlink-%E6%A5%A0%E5%9B%AD.html"  title="楠园">楠园</a></li>
+					<li><a href="doc-innerlink-%E7%BF%B0%E5%9B%AD.html"  title="翰园">翰园</a></li>
+					<li><a href="doc-innerlink-%E7%94%9F%E5%91%BD%E7%A7%91%E5%AD%A6%E5%8B%B7%E5%8B%A4%E5%88%9B%E6%96%B0%E7%8F%AD.html"  title="生命科学勷勤创新班">生命科学勷勤创新班</a></li>
+					<li><a href="doc-innerlink-%E5%85%89%E7%94%B5%E5%AD%90%E5%AD%A6%E5%8B%B7%E5%8B%A4%E5%88%9B%E6%96%B0%E7%8F%AD.html"  title="光电子学勷勤创新班">光电子学勷勤创新班</a></li>
+					<li><a href="doc-innerlink-%E5%9B%BD%E5%AD%A6%E5%8B%B7%E5%8B%A4%E5%88%9B%E6%96%B0%E7%8F%AD.html"  title="国学勷勤创新班">国学勷勤创新班</a></li>
+					<li><a href="doc-innerlink-%E5%88%9D%E7%BA%A7%E5%81%A5%E7%BE%8E%E6%93%8D.html"  title="初级健美操">初级健美操</a></li>
+			</ul>
+</div></div>
+	</div>
+	<div class="w-430 r">
+    	<div id="block_cbottomr"><div id="block-pic-getlist-24" class="columns tpbk i6-ff style_03" bid="24">
+	<h2 class="col-h2">百科图片</h2>
+	<a href="pic-piclist.html"  class="more">更多>></a>
+			<div class="jc_tj">
+			<a href="pic-view-163-1549.html"  class="a-img"><img title="华南师范大学（大学城）地图"  src="uploads/201010/12861595027zz9HVUE_140.jpg"/></a>
+			<p class="a-c"><a href="pic-view-163-1549.html" >华南师范大学（大学城）地图</a></p>
+		</div>
+			<div class="jc_tj">
+			<a href="pic-view-162-1548.html"  class="a-img"><img title="华南师范大学本部地图"  src="uploads/201010/12861594308ZZAyXf2_140.jpg"/></a>
+			<p class="a-c"><a href="pic-view-162-1548.html" >华南师范大学本部地图</a></p>
+		</div>
+			<div class="jc_tj">
+			<a href="pic-view-161-1249.html"  class="a-img"><img title="华南师大勤工助学"  src="uploads/201010/1285917310IYwpAwG3_140.jpg"/></a>
+			<p class="a-c"><a href="pic-view-161-1249.html" >华南师大勤工助学</a></p>
+		</div>
+			<div class="jc_tj">
+			<a href="pic-view-106-1350.html"  class="a-img"><img title="陈雪军老师"  src="uploads/201007/1277967948eKnrkOWj_140.jpg"/></a>
+			<p class="a-c"><a href="pic-view-106-1350.html" >陈雪军老师</a></p>
+		</div>
+			<div class="jc_tj">
+			<a href="pic-view-105-1349.html"  class="a-img"><img title="郝文卓老师"  src="uploads/201007/1277964114UB6jmiX8_140.jpg"/></a>
+			<p class="a-c"><a href="pic-view-105-1349.html" >郝文卓老师</a></p>
+		</div>
+			<div class="jc_tj">
+			<a href="pic-view-104-1348.html"  class="a-img"><img title="陈灿锐老师"  src="uploads/201007/1277963864GP6uvyqz_140.jpg"/></a>
+			<p class="a-c"><a href="pic-view-104-1348.html" >陈灿锐老师</a></p>
+		</div>
+			<div class="jc_tj">
+			<a href="pic-view-103-1346.html"  class="a-img"><img title="郭妙燕老师"  src="uploads/201007/1277962910U2pBwJzA_140.jpg"/></a>
+			<p class="a-c"><a href="pic-view-103-1346.html" >郭妙燕老师</a></p>
+		</div>
+			<div class="jc_tj">
+			<a href="pic-view-102-1345.html"  class="a-img"><img title="王若薇老师"  src="uploads/201007/12779627100aUG0S1h_140.jpg"/></a>
+			<p class="a-c"><a href="pic-view-102-1345.html" >王若薇老师</a></p>
+		</div>
+			<div class="jc_tj">
+			<a href="pic-view-101-1344.html"  class="a-img"><img title="罗品超老师"  src="uploads/201007/12779623464H59uAe3_140.jpg"/></a>
+			<p class="a-c"><a href="pic-view-101-1344.html" >罗品超老师</a></p>
+		</div>
+	</div><div id="category" class="columns o-v bor-c_dl category" bid="25">
+	        <dl class="i6-ff p-b10 bor_no">
+          <dt><a href="category-view-2.html" >学校介绍</a></dt>
+                    <dd><a href="category-view-8.html">学校概况</a></dd><dd><a href="category-view-80.html">舌尖上的华师</a></dd><dd><a href="category-view-9.html">历史沿革</a></dd><dd><a href="category-view-12.html">基本情况</a></dd><dd><a href="category-view-57.html">班级介绍</a></dd><dd><a href="category-view-62.html">宿舍楼介绍</a></dd><dd><a href="category-view-63.html">教师介绍</a></dd><dd><a href="category-view-78.html">建筑与风光</a></dd>                 </dl>
+	        <dl class="i6-ff p-b10 bor_no">
+          <dt><a href="category-view-58.html" >报考指南</a></dt>
+                    <dd><a href="category-view-60.html">选专业注意事项</a></dd><dd><a href="category-view-61.html">师兄师姐的建议</a></dd>                 </dl>
+	        <dl class="i6-ff p-b10 bor_no">
+          <dt><a href="category-view-4.html" >教学研究</a></dt>
+                    <dd><a href="category-view-5.html">院系设置</a></dd><dd><a href="category-view-6.html">研究机构</a></dd><dd><a href="category-view-7.html">实验室</a></dd><dd><a href="category-view-31.html">选课指南</a></dd>                 </dl>
+	        <dl class="i6-ff p-b10 bor_no">
+          <dt><a href="category-view-10.html" >周边事物</a></dt>
+                    <dd><a href="category-view-13.html">美食购物</a></dd><dd><a href="category-view-14.html">娱乐设施</a></dd><dd><a href="category-view-15.html">周边环境</a></dd><dd><a href="category-view-16.html">便民服务</a></dd><dd><a href="category-view-28.html">公共交通</a></dd><dd><a href="category-view-46.html">IT数码</a></dd><dd><a href="category-view-49.html">新生指南</a></dd>                 </dl>
+	        <dl class="i6-ff p-b10 bor_no">
+          <dt><a href="category-view-11.html" >社团组织</a></dt>
+                    <dd><a href="category-view-21.html">团学组织</a></dd><dd><a href="category-view-22.html">学生社团</a></dd><dd><a href="category-view-23.html">俱乐部</a></dd><dd><a href="category-view-55.html">社团组织品牌活动</a></dd>                 </dl>
+	        <dl class="i6-ff p-b10 bor_no">
+          <dt><a href="category-view-17.html" >校园资源</a></dt>
+                    <dd><a href="category-view-18.html">教学服务</a></dd><dd><a href="category-view-19.html">后勤服务</a></dd><dd><a href="category-view-20.html">继续教育</a></dd><dd><a href="category-view-48.html">华师流行语</a></dd><dd><a href="category-view-47.html">学习资源</a></dd>                 </dl>
+	        <dl class="i6-ff p-b10 bor_no">
+          <dt><a href="category-view-26.html" >站务公告</a></dt>
+                    <dd><a href="category-view-50.html">联系我们</a></dd><dd><a href="category-view-51.html">华师百科基本法</a></dd><dd><a href="category-view-52.html">帮助</a></dd><dd><a href="category-view-53.html">建议投诉</a></dd><dd><a href="category-view-54.html">站务公告</a></dd>                 </dl>
+	</div></div>
+	</div>
+</div>
+
+
+<div class="c-b"></div>
+
+<div id="block_bottom"><div id="yqlj" class="columns no_col-h2 bg-gray yqlj i6-ff style_03" bid="27">
+	<ul class="col-ul list-s">
+	<li><span class="bold">友情链接:</span></li>
+		<li><a href="http://hometown.scau.edu.cn/bbs/"  title="华南农业大学唯一论坛" target="_blank">华农红满堂</a></li>
+		<li><a href="http://bbs.psyonline.cn/"  title="华南师范大学心理咨询研究中心官方论坛" target="_blank">南方心理论坛</a></li>
+		<li><a href="http://lingnanwenhua.blog.163.com/blog/"  title="" target="_blank">岭南文化协会</a></li>
+		<li><a href="http://bbs.scnu.edu.cn/"  title="" target="_blank">华师新陶园论坛</a></li>
+		</ul>
+</div></div>
+
+			<!-- content -->
+	</div>
+<!-- main -->
+</div>
+
+<div id="footer">
+	<div class="content s_clear">
+		<div class="sitelink">
+			<div class="footlogo">
+				<span class="powered">Powered By</span>
+				<p><a href="https://i.scnu.edu.cn" target="_blank" title="ISCNU">ISCNU</a></p>
+			</div>
+			<div class="innothlink">
+				<ul>
+					<strong><a href="http://bbs.scnu.edu.cn" target="_blank">新陶园论坛</a></strong>
+					<li><a href="https://bbs.scnu.edu.cn/index.php?gid=55" target="_blank">特别版块</a></li>
+					<li><a href="https://bbs.scnu.edu.cn/index.php?gid=3" target="_blank">综合信息</a></li>
+					<li><a href="https://bbs.scnu.edu.cn/index.php?gid=7" target="_blank">知性感性</a></li>
+					<li><a href="https://bbs.scnu.edu.cn/index.php?gid=11" target="_blank">文化休闲</a></li>
+					<li><a href="https://bbs.scnu.edu.cn/index.php?gid=15" target="_blank">论坛管理</a></li>
+				</ul>
+				<ul>
+					<strong><a href="http://wiki.scnu.edu.cn" target="_blank">华师百科</a></strong>
+					<li><a href="https://wiki.scnu.edu.cn/index.php?category-view-2.html" target="_blank">学校介绍</a></li>
+					<li><a href="https://wiki.scnu.edu.cn/index.php?category-view-58.html" target="_blank">报考指南</a></li>
+					<li><a href="https://wiki.scnu.edu.cn/index.php?category-view-4.html" target="_blank">教学研究</a></li>
+					<li><a href="https://wiki.scnu.edu.cn/index.php?category-view-10.html" target="_blank">周边事物</a></li>
+					<li><a href="https://wiki.scnu.edu.cn/index.php?category-view-11.html" target="_blank">社团组织</a></li>
+					<li><a href="https://wiki.scnu.edu.cn/index.php?category-view-17.html" target="_blank">校园资源</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="footlink">
+			<p class="smalltext">GMT+8, 2017-10-28 22:56 基于 <a href="http://kaiyuan.hudong.com" target="_blank">HDWiKi</a> 构建 &copy; 2010 <a href="http://www.hudong.com/" target="_blank">Hudong</a></p>
+			<p>&copy; 2017 <a href="https://i.scnu.edu.cn" target="_blank">华南师范大学网络协会</a>。保留所有权利。<span class="pipe">|</span><a href="mailto:iscnu@scnu.edu.cn">联系我们</a><span class="pipe">|</span><script type="text/javascript" src="//s139.cnzz.com/stat.php?id=1577249&web_id=1577249&show=pic"></script></p>
+					</div>
+	</div>
+</div>
+
+
+</body>
+</html>

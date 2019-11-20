@@ -1,0 +1,226 @@
+
+
+ 
+<html>
+<head>
+<title>中央音乐学院教务综合信息系统</title>
+<link href="/css/newcss/login.css" rel="stylesheet" type="text/css">
+<link href="/css/newcss/project.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+<!--
+body,td,th {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #CCCCCC;
+	scrollbar-face-color: #b0c3d4;
+	scrollbar-highlight-color: #b0c3d4;
+	scrollbar-shadow-color: #b0c3d4;
+	scrollbar-3dlight-color: #cad4de;
+	scrollbar-arrow-color:  #21426f;
+	scrollbar-track-color: #ced7e0;
+	scrollbar-darkshadow-color: #e1e5e8;
+	MARGIN: 0px;
+}
+.vv {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #ff7800;
+    border-color: #CCCCCC;
+	border-style: solid;
+	border-width: 1px;
+}
+.STYLE1 {
+	color: #666666
+}
+a:link {
+	color: #CCCCCC;
+	text-decoration: none;
+}
+a:visited {
+	color: #CCCCCC;
+	text-decoration: none;
+}
+a:hover {
+	color: #CCCCCC;
+	text-decoration: none;
+}
+a:active {
+	color: #CCCCCC;
+	text-decoration: none;
+}
+-->
+</style>
+</head>
+<script type='text/javascript'>
+function login(){
+	 if(document.loginForm.zjh.value == ""){
+		alert("请输入您的帐号");
+		document.loginForm.zjh.focus();
+		return ;
+     }
+	if(document.loginForm.mm.value == ""){
+		alert("请输入您的密码");
+		document.loginForm.mm.focus();
+		return ;
+     }
+     document.loginForm.zjh.value=document.loginForm.zjh.value.toUpperCase();
+    document.loginForm.submit();
+}
+</script>
+<body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" style="overflow:auto;">
+<!--
+<table  border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="linelogin"></td>
+  </tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0" class="mainbox">
+  <tr>
+    <td width="33">&nbsp;</td>
+    <td width="352" valign="top">
+    <form method="post" name="loginForm" action="/loginAction.do" onSubmit="return login();">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td>
+		<table width="100%" border="0" cellspacing="20" cellpadding="0">
+  			<tr>
+   			 <td height="60" class="font12" valign="bottom"> 
+   			 <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td class="font11">
+				</td>
+			</tr>
+              <tr>
+                 
+                 <td class="font12" id="welcomeMessage">
+     				<span id="welcomeMessage">欢迎来到URP综合教务系统，请输入您的帐号和密码</span>
+     			 </td>
+     			 
+              </tr>
+            </table></td>
+  			</tr>
+		</table></td>
+      </tr>   
+      <tr>
+        <td>
+		
+		<table width="100%" border="0" cellspacing="6" cellpadding="0" class="font-b">
+  			<tr>
+    			<td align="right" width="67">
+    			<span id="userName_label">帐号</span>:    			</td>
+    			<td>
+    			<input type="text" name="zjh" value="" class="input01" title="帐号" alt="notnull"></td>
+  			</tr>
+  			<tr>
+    			<td align="right" width="67">
+    			<span id="password_label">密码</span>:    			</td>
+    			<td>
+    			<input type="password" name="mm" value="" class="input01" title="密码" alt="notnull"></td>
+  			</tr>
+		</table>		</td>
+      </tr>
+      <tr>
+        <td align="center">
+		<table width="250" border="0" cellspacing="8" cellpadding="0">
+		  <tr>
+			<td align="right">
+			<input type="image" name="" src="/img/zh/login.gif" border="0" onclick="login(); return false;" id="btnSure" class="buttonImg" title="登录">         </td>
+			<td align="center">
+			<input type="image" name="" src="/img/zh/reset.gif" border="0" onclick="reset(); return false" class="buttonImg" title="重设">			</td>
+		  </tr>
+		</table>		</td>
+      </tr>
+      <tr height="100%">
+        <td align="left" valign="bottom">&nbsp;</td>
+      </tr>
+    </table>
+    </form>
+	<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="left" valign="bottom">&nbsp;</td>
+  </tr>
+   <tr>
+    <td align="left" valign="bottom">&nbsp;</td>
+  </tr>
+    <tr>
+    <td align="left" valign="bottom" class="font10black">
+</td>
+  </tr>
+</table>
+
+	</td>
+    <td width="138" align="right" valign="bottom"><img src="/img/pic/login/stamp.jpg" width="138" height="103"></td>
+  </tr>
+</table>
+
+<table width="525" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="20"><img src="/img/pic/login/bottom-left.jpg" width="20" height="27"></td>
+    <td width="490" class="bottom">版权所有 &copy; 2005-2008 北京清元优软科技有限公司 保留所有权利。</td>
+    <td width="15"><img src="/img/pic/login/bottom-right.jpg" width="15" height="27"></td>
+  </tr>
+</table>
+
+	</td>
+  </tr>
+</table>
+-->
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td background="images/bk.jpg" ><table width="909" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="552" valign="top"><table width="93%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <td><img src="images/1.jpg" width="552" height="189" /></td>
+            </tr>
+            <tr>
+              <td><img src="images/2.jpg" width="552" height="242" /></td>
+            </tr>
+            <tr>
+              <td width="552" height="33" background="images/3.jpg"><table width="520" border="0" align="center" cellpadding="0" cellspacing="0">
+<form method="post" name="loginForm" action="/loginAction.do" onSubmit="return login();" onKeyDown="enterkey()">
+                <tr>
+                 
+                  <td width="75" align="right" style="color:black;">一卡通号：</td>
+                  <td width="85"><input name="zjh" type="text" class="vv" id="zjh" value="一卡通号" size="12" onfocus="this.select();"/></td>
+                  <td width="40" align="right" style="color:black;">密码：</td>
+                  <td width="80">
+                      <input name="mm" type="password" class="vv" id="mm" value="密　码密　码" size="8" onfocus="this.select();"/></td>
+                  <td width="61"><div align="center">
+                    <input name="imageField" type="image" src="images/8.jpg" border="0" onClick="document.formName.submit()">
+                  </div></td>
+                  <td width="45"><img src="images/9.jpg" width="32" height="19" /></td>
+                </tr></form>
+              </table></td>
+            </tr>
+            <tr>
+              <td><img src="images/4.jpg" width="552" height="48" border="0" usemap="#Map" /></td>
+            </tr>
+            <tr>
+              <td><div align="center">中央音乐学院网络中心 | 封面设计<span class="STYLE1"> <a href="http://www.ccom.edu.cn">www.ccom.edu.cn</a></span></div></td>
+            </tr>
+        </table></td>
+        <td width="357" valign="top"><p>&nbsp;</p>
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td colspan="3"><img src="images/5.jpg" width="357" height="50" border="0" /></td>
+              </tr>
+              <tr>
+                <td width="1" bgcolor="#c9d4df"><img src="images/CC.GIF" width="1" height="1" /></td>
+                <td width="355" height="430" valign="top" bgcolor="#f0f0f0"><iframe marginwidth="0" marginheight="auto" src="http://www.ccom.edu.cn/szc/jfjg/jwc/jwgg/gg.html" width="355" height="430" frameborder="no" scrolling="true"></iframe></td>
+                <td width="1" bgcolor="#c9d4df"><img src="images/CC.GIF" width="1" height="1" /></td>
+              </tr>
+              <tr>
+                <td colspan="3"><img src="images/6.jpg" width="357" height="13" /></td>
+              </tr>
+          </table></td>
+      </tr>
+    </table>
+    </td>
+  </tr>
+</table>
+
+<map name="Map"><area shape="rect" coords="300,29,504,48" href="http://www.super.cn">
+<area shape="rect" coords="165,29,284,48" href="mailto:xjgl@ccom.edu.cn"></map>
+</body>
+</html>

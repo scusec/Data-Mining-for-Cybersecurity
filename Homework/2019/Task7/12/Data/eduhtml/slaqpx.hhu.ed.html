@@ -1,0 +1,327 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head xmlns="">
+	<title>全国水利安全远程教育培训平台</title>
+	<meta charset="utf-8"/>
+	<link rel="stylesheet" type="text/css" href="http://slaqpx.hhu.edu.cn/cms/res_base/www_whatycms_slaqpx/default/article/css/app.min.css">
+     <script type="text/javascript">	
+          function checkLogin(){
+			var loginIdDom = document.getElementById("loginId");
+			var pwdDom = document.getElementById("pwd");
+			var authCode = document.getElementById("authCode");
+			if(loginIdDom.value==''){
+				alert("请输入您的用户名！");
+				loginIdDom.focus();
+				return ;
+			}
+			if(pwdDom.value==''){
+				alert('请输入您的密码！');
+				pwdDom.focus();
+				return ;
+			}
+				if(authCode.value==''){
+				alert('请输入验证码！');
+				authCode.focus();
+				return ;
+			}
+					
+			if(loginIdDom.value.substr(0,2)=='px'){
+				document.login.action="/sso/login_login.action";
+				document.login.submit();
+			}else if(loginIdDom.value.substr(0,2)=='pb'){
+				document.login.action="/sso/login_login.action";
+				document.login.submit();
+	
+			}else if(loginIdDom.value.substr(0,2)=='pf'){
+				document.login.action="/sso/login_login.action";
+				document.login.submit();
+	
+			}else if(loginIdDom.value.substr(0,2)=='pz'){
+				document.login.action="/sso/login_login.action";
+				document.login.submit();
+	
+			}else if(loginIdDom.value.substr(0,2)=='ps') {
+				document.login.action="/sso/login_login.action";
+				document.login.submit();
+			}else if(loginIdDom.value.charAt(0)=='x'){
+				document.login.action="<%=dndx_dxjx %>/sso/login_login.action";
+				document.login.submit();
+				
+			}else{
+				//window.open ('show.html','top','height=100,width=400,top=0,left=0,toolbar=no,menubar=no,scrollbars=no, resizable=no,location=no, status=no');
+				alert("用户名错误！\n培训平台学生用户名需以px开头\n培训平台班主任用户名需以pb开头\n培训平台辅导教师用户名需以pf开头\n培训平台管理员用户名需以pz开头\n站点管理员用户名需以ps开头");		
+			}			
+			
+		}
+		window.document.onkeypress=function(){
+			if(event.keyCode==13)
+				checkLogin();
+		}	
+	
+		function setNull(){
+			document.getElementById("loginId").value='';
+			document.getElementById("pwd").value='';
+		}
+	
+		function reloadcode(){
+			var verify=document.getElementById('img_data');
+			verify.setAttribute('src','/sso/authimg?'+Math.random());
+		}
+	</script>
+</head>
+<body onload="reloadcode();">
+<form method="post" action="" name="login">
+	<div class="header">
+		<div class="header-color-top"></div>
+		<div class="header-body">
+			<div class="container">
+				<div class="brand"><h2><img src="http://slaqpx.hhu.edu.cn/cms/res_base/www_whatycms_slaqpx/default/article/images/logo.png" height="48" =""></h2></div>
+			</div>
+						
+		</div>
+	</div>		
+	<div class="content">
+		<div class="container">
+			<div class="banner"><img src="http://slaqpx.hhu.edu.cn/cms/res_base/www_whatycms_slaqpx/default/article/images/banner.png"></div>
+			<div class="nav">
+				<ul class="navbar">
+					<li><a href="#">首页</a></li>
+					<li><a href="/cms/tzgg/index.htm">通知公告</a></li>
+					<li><a href="/cms/xmjj/index.htm">项目介绍</a></li>
+					<li><a href="/cms/xmzs/index.htm">项目展示</a></li>
+					<li><a href="/cms/msfc/index.htm">专家风采</a></li>
+					<li><a href="/cms/cjwt/index.htm">常见问题</a></li>
+					<li><a href="/cms/yqlj/index.htm">资料下载</a></li>
+					<li><a href="http://slzscx.hhu.edu.cn/cjcx/diploma" target="_blank"><font color="red">培训证书查询</font></a><a href="http://slzscx.hhu.edu.cn/cjcx/diploma" target="_blank"><img src="http://slaqpx.hhu.edu.cn/cms/res_base/www_whatycms_slaqpx/default/article/images/icon_search.jpg"></a></li>
+                    
+				</ul>
+			</div>
+			<div class="clearfix"></div>
+			<div class="mt-10">
+				<div class="news-slider">
+					<div class="slider">
+						<div class="slider-img">
+							<ul>
+
+                                               <li><a href="http://slaqpx.hhu.edu.cn/cms/tzgg/898.htm" title="2016年第二期水利安全生产标准化建设现场培训班在河海大学继续…"><img src="http://slaqpx.hhu.edu.cn/cms/res_base/www_whatycms_slaqpx/upload/article/image/2016_4/11_29/fw02iw2tkurm.jpg" style="height:390px;"></a></li>
+                                                   <li><a href="http://slaqpx.hhu.edu.cn/cms/tzgg/806.htm" title="2015年第二期水利安全生产标准化建设培训班（合肥）在我校举办…"><img src="http://slaqpx.hhu.edu.cn/cms/res_base/www_whatycms_slaqpx/upload/article/image/2016_1/3_9/gu8yilkrretn.jpg" style="height:390px;"></a></li>
+                           
+                
+								<!--
+								<li><a href="news-view.html" title="河海大学精心组织积极为水利行业培养人才"><img src="http://slaqpx.hhu.edu.cn/cms/res_base/www_whatycms_slaqpx/default/article/images/slider-1.jpg"></a></li>
+								<li><a href="news-view.html" title="第十四期全国水文站站长培训班在河海大学顺利开班"><img src="http://slaqpx.hhu.edu.cn/cms/res_base/www_whatycms_slaqpx/default/article/images/slider-2.jpg"></a></li>
+								<li><a href="news-view.html" title="江苏省第六期市县水利（水务）局长培训班在我校举行"><img src="http://slaqpx.hhu.edu.cn/cms/res_base/www_whatycms_slaqpx/default/article/images/slider-3.jpg"></a></li>
+								<li><a href="news-view.html" title="淮委专业技术干部培训班顺利开班"><img src="http://slaqpx.hhu.edu.cn/cms/res_base/www_whatycms_slaqpx/default/article/images/slider-4.jpg"></a></li>
+								<li><a href="news-view.html" title="江苏省2013年度第一期乡镇水利站站长及管理骨干培训班在我校举行"><img src="http://slaqpx.hhu.edu.cn/cms/res_base/www_whatycms_slaqpx/default/article/images/slider-5.jpg"></a></li>
+								-->
+							</ul>								
+						</div>
+						<div class="slider-nav">
+						</div>
+						 <div class="slider-title">
+						 </div>
+						 <div class="slider-title-bg"></div>
+					</div>
+				</div>
+				<div class="login-box">
+                    <h3 class="login-title">
+						用户登录
+					</h3>							
+                    <div class="form-item">
+                        <input type="text" id="loginId" name="loginId" class="form-control login-input username-input" placeholder="请输入账号">
+                    </div>
+                    <div class="form-item">
+                        <input type="password" id="pwd" name="passwd" class="form-control login-input password-input" placeholder="请输入密码">
+                    </div>
+                    <div class="form-item">
+                        <input type="password" id="authCode" name="authCode" class="form-control login-input auth-input" placeholder="请输入验证码">
+                        <img id="img_data" title="" alt="看不清楚，点击切换！" onClick="reloadcode()" width="65px" height="30px" src="/sso/authimg" style="position:absolute;  padding:2px 5px; cursor: pointer;">
+                    </div>                    
+                    <div class="form-item btn-group">
+                        <button id="btu" type="submit" onClick="checkLogin()" class="btn btn-blue">登录</button>
+                        <button onClick="postName()" class="btn btn-default btn-register">注册报名</button>	
+                        <button onClick="findName()" class="btn btn-default btn-search">账号查询</button>	
+                    </div>					
+                </div>
+                <div class="ad-banner">
+					<ul>
+						<li><a href="http://slzscx.hhu.edu.cn/cjcx/index/cj" target="_blank"><img src="http://slaqpx.hhu.edu.cn/cms/res_base/www_whatycms_slaqpx/default/article/images/03.jpg" alt=""></a></li>
+						<li><a href="http://slzscx.hhu.edu.cn/cjcx/diploma" target="_blank"><img src="http://slaqpx.hhu.edu.cn/cms/res_base/www_whatycms_slaqpx/default/article/images/06.jpg" alt=""></a></li>
+						<li><a href=""><img src="http://slaqpx.hhu.edu.cn/cms/res_base/www_whatycms_slaqpx/default/article/images/08.jpg" alt=""></a></li>
+					</ul>
+				</div>
+				<div class="clearfix"></div>				
+			</div>
+			<div class="mt-20">
+				<div class="news block">
+					<div class="block-title">
+						<div class="block-title-inner"><h3>通知公告</h3></div>
+						<div class="more">
+							<a href="/cms/tzgg/index.htm" class="news-more">更多>></a>
+						</div>
+						<div class="clearfix"></div>
+					</div>
+					<div class="block-content">
+						<ul class="news-list">
+<li><span class="news-time">2016-03-08</span><a title="关于开展全国水利水电工程施工现场管理人员远程教育培训的通知" href="http://slaqpx.hhu.edu.cn/cms/tzgg/825.htm">关于开展全国水利水电工程施工现场管理人员远程教育培训…</a></li><li><span class="news-time">2016-03-16</span><a title="全国水利安全远程教育培训平台会员须知" href="http://slaqpx.hhu.edu.cn/cms/tzgg/840.htm">全国水利安全远程教育培训平台会员须知</a></li><li><span class="news-time">2017-09-22</span><a title="郑州市河长制工作业务培训班在河海大学举办" href="http://slaqpx.hhu.edu.cn/cms/tzgg/912.htm">郑州市河长制工作业务培训班在河海大学举办</a></li><li><span class="news-time">2017-04-20</span><a title="关于举办河长制之水环境治理与水生态修复技术培训班的通知" href="http://slaqpx.hhu.edu.cn/cms/tzgg/906.htm">关于举办河长制之水环境治理与水生态修复技术培训班的通知</a></li><li><span class="news-time">2017-03-02</span><a title="第九批水利安全生产标准化评审业务考试结果公示" href="http://slaqpx.hhu.edu.cn/cms/res_base/www_whatycms_slaqpx/upload/article/file/2017_1/3_15/tyvsj0aaz1xf.pdf">第九批水利安全生产标准化评审业务考试结果公示</a></li><li><span class="news-time">2016-11-29</span><a title="2016年第二期水利安全生产标准化建设现场培训班在河海大学继续教育基地宜昌分基地举办" href="http://slaqpx.hhu.edu.cn/cms/tzgg/898.htm">2016年第二期水利安全生产标准化建设现场培训班在河海大…</a></li><li><span class="news-time">2016-11-16</span><a title="关于2016年第二期水利安全生产标准化建设现场培训班停止报名的通知" href="http://slaqpx.hhu.edu.cn/cms/tzgg/894.htm">关于2016年第二期水利安全生产标准化建设现场培训班停止…</a></li>						</ul>
+					</div>
+				</div>
+				<div class="project block">
+					<div class="block-title">
+						<div class="block-title-inner"><h3>项目介绍</h3></div>
+						<div class="more">
+							<a href="/cms/xmjj/index.htm" class="news-more">更多>></a>
+						</div>
+						<div class="clearfix"></div>
+					</div>
+					<div class="block-content">
+						<ul class="project-list">
+<li><span class="project-time">2016-09-13</span><a title="全国水利安全远程教育培训平台课程汇总" href="http://slaqpx.hhu.edu.cn/cms/xmjj/884.htm">全国水利安全远程教育培训平台课程汇总</a></li><li><span class="project-time">2016-03-07</span><a title="水利水电工程施工现场管理人员远程教育培训" href="http://slaqpx.hhu.edu.cn/cms/xmjj/814.htm">水利水电工程施工现场管理人员远程教育培训</a></li><li><span class="project-time">2016-01-08</span><a title="水利水电施工企业三类人员安全生产管理培训" href="http://slaqpx.hhu.edu.cn/cms/xmjj/807.htm">水利水电施工企业三类人员安全生产管理培训</a></li><li><span class="project-time">2016-03-07</span><a title="水利行业新工人安全教育培训" href="http://slaqpx.hhu.edu.cn/cms/xmjj/824.htm">水利行业新工人安全教育培训</a></li><li><span class="project-time">2016-03-07</span><a title="水利行业班组长安全教育培训" href="http://slaqpx.hhu.edu.cn/cms/xmjj/823.htm">水利行业班组长安全教育培训</a></li><li><span class="project-time">2016-03-07</span><a title="水利行业现场作业人员安全教育培训" href="http://slaqpx.hhu.edu.cn/cms/xmjj/822.htm">水利行业现场作业人员安全教育培训</a></li><li><span class="project-time">2016-03-07</span><a title="水利安全生产监督管理培训" href="http://slaqpx.hhu.edu.cn/cms/xmjj/821.htm">水利安全生产监督管理培训</a></li>						</ul>
+					</div>
+				</div>
+				<div class="clearfix"></div>				
+			</div>
+			<div class="mt-0">
+				<div class="block show">
+					<div class="block-title">
+						<div class="block-title-inner"><h3>项目展示</h3></div>
+						<div class="clearfix"></div>
+					</div>
+					<div class="wave"></div>
+					<div class="clearfix"></div>
+					<div class="block-content">
+						<div class="box">
+							<div class="picbox">
+								<ul class="piclist mainlist">
+									<li><a href="http://slaqpx.hhu.edu.cn/cms/xmjj/814.htm" target="_blank"><img src="http://slaqpx.hhu.edu.cn/cms/res_base/www_whatycms_slaqpx/default/article/images/p10.jpg" /></a><p>水利五大员培训</p></li>
+									<li><a href="http://slaqpx.hhu.edu.cn/cms/xmjj/807.htm" target="_blank"><img src="http://slaqpx.hhu.edu.cn/cms/res_base/www_whatycms_slaqpx/default/article/images/p11.jpg" /></a><p>水利三类人员培训</p></li>
+									<li><a href="http://slaqpx.hhu.edu.cn/cms/xmjj/817.htm" target="_blank"><img src="http://slaqpx.hhu.edu.cn/cms/res_base/www_whatycms_slaqpx/default/article/images/p12.jpg" /></a><p>施工企业标准化培训</p></li>
+									<li><a href="http://slaqpx.hhu.edu.cn/cms/xmjj/818.htm" target="_blank"><img src="http://slaqpx.hhu.edu.cn/cms/res_base/www_whatycms_slaqpx/default/article/images/p13.jpg" /></a><p>水管单位标准化培训</p></li>
+									<li><a href="http://slaqpx.hhu.edu.cn/cms/xmjj/819.htm" target="_blank"><img src="http://slaqpx.hhu.edu.cn/cms/res_base/www_whatycms_slaqpx/default/article/images/p14.jpg" /></a><p>项目法人标准化培训</p></li>
+									<li><a href="http://slaqpx.hhu.edu.cn/cms/xmzs/901.htm" target="_blank"><img src="http://slaqpx.hhu.edu.cn/cms/res_base/www_whatycms_slaqpx/default/article/images/p15.jpg" /></a><p>农村水电站标准化培训</p></li>
+									<li><a href="http://slaqpx.hhu.edu.cn/cms/xmjj/821.htm" target="_blank"><img src="http://slaqpx.hhu.edu.cn/cms/res_base/www_whatycms_slaqpx/default/article/images/p16.jpg" /></a><p>安全监督管理培训</p></li>
+									<li><a href="http://slaqpx.hhu.edu.cn/cms/xmjj/822.htm" target="_blank"><img src="http://slaqpx.hhu.edu.cn/cms/res_base/www_whatycms_slaqpx/default/article/images/p17.jpg" /></a><p>现场作业人员安全培训</p></li>
+								</ul>
+						        <ul class="piclist swaplist"></ul>
+							</div>
+							<div class="og_prev"></div>
+							<div class="og_next"></div>
+						</div>
+						
+					</div>
+				</div>
+			</div>					
+		</div>
+	</div>
+<!--foot start-->
+    <div class="footer mt-10">
+        <div class="footer-top"></div>
+        <div class="footer-body pt-10">
+            <div class="p-10">
+                <p>
+                    <span class="ml-30">主管单位：<a href=" http://aqjd.mwr.gov.cn/" target="_blank">水利部安全监督司</a></span>
+                    <span class="ml-30">主办单位：<a href="http://www.cwec.org.cn/" target="_blank">中国水利企业协会</a></span>
+                    <span class="ml-30">承办单位：<a href="http://www.hhu.edu.cn" target="_blank">河海大学</a></span>
+                    <span class="ml-30">友情链接：
+                        <span class="footer-select">
+                          <select id="FriendLink" class="footer_sel" onchange="if(this.options[this.selectedIndex].value!=0){window.open(this.options[this.selectedIndex].value)};">
+                            <option selected="" value="0">友情链接</option>
+                            <option value="http://www.mwr.gov.cn/">中华人民共和国水利部</option>
+                            <option value="http://aqjd.mwr.gov.cn/">水利部安全监督司</option>
+                            <option value="http://www.cwec.org.cn/">中国水利企业协会</option>
+                            <option value="http://www.cahee.org.cn/">中国水利教育协会</option>
+                            <option value="http://slpx.hhu.edu.cn">基层水利队伍培训工程</option>
+                            <option value="http://www.hhu.edu.cn">河海大学</option>
+                            <option value="http://jjy.hhu.edu.cn">河海大学继续教育学院</option>
+                          </select>
+                        </span>
+                    </span>
+                </p>
+            </div>		
+            <div class="pb-15">
+                <p class="p-5">地址：江苏省南京市西康路1号 邮编：210098 办公室电话：025-83786362 技术咨询电话：025-83787318</p>
+                <p class="p-5">版权： copyright© 2014 河海大学远程与继续教育学院 All rights reserved</p>
+            </div>	
+        </div>
+    </div>
+<!--foot end--></form>
+<script src="http://slaqpx.hhu.edu.cn/cms/res_base/www_whatycms_slaqpx/default/article/js/jquery.min.js"></script>
+<script type="text/javascript" src="http://slaqpx.hhu.edu.cn/cms/res_base/www_whatycms_slaqpx/default/article/js/main.min.js"></script>
+<script>
+	$("div.slider").slider({
+		picture:".slider-img",
+		thumbPicture:".slider-nav",
+		title:".slider-title",
+		//link:".art-img a",
+		current:0,
+		effect:{
+			type:"fade",
+			speed:300
+		},
+		thumbEffect:{
+			style:"icon",
+			type:null,
+			selectedClass:"active"
+		},
+		delay:3000
+	});
+
+	$(document).ready(function(e) {
+		time = window.setInterval(function(){
+			$('.og_next').click();	
+		},5000);
+		var linum = $('.mainlist li').length,
+			licount = 4,
+			total_width = linum * 220,
+			width = 880;
+		$('.piclist').css('width', total_width + 'px');
+		$('.og_next').click(function(){
+			if($('.mainlist').is(':animated')){
+				$('.mainlist').stop(true,true);
+			}
+			if(linum > 4){
+				ml = parseInt($('.mainlist').css('left'));
+				if(licount < linum) {
+					licount += 4;
+					$('.mainlist').animate({left: ml - width + 'px'},'slow');
+				}else{
+					$('.mainlist').animate({left: 0 + 'px'});
+					licount = 4;
+				}
+			}
+		})
+		$('.og_prev').click(function(){
+			
+			if($('.mainlist').is(':animated')){
+				$('.mainlist').stop(true,true);
+			}
+			if(linum > 4){
+				ml = parseInt($('.mainlist').css('left'));
+				console.log(licount);
+				if(licount > 4) {
+					licount -= 4;
+					$('.mainlist').animate({left: ml + width + 'px'},'slow');
+				}
+			}
+		})    
+	});
+
+$(document).ready(function(){
+	$('.og_prev,.og_next').hover(function(){
+			$(this).fadeTo('fast',1);
+		},function(){
+			$(this).fadeTo('fast',0.7);
+	})
+})
+</script>
+<script>
+	function postName(){
+		window.open("/sso/login_toRegisteTrainningPostName.action?isSafe=1");
+	}
+	
+	function findName(){
+		window.open("/sso/login_toSearchPage.action");
+	}
+</script>
+</body>
+</html>

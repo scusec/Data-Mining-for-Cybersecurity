@@ -1,0 +1,503 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+    <title>河海大学校园信息门户</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+    <link href="style/validation.css" rel="stylesheet" type="text/css"/>
+    <link href="login/style/login.css" rel="stylesheet" type="text/css"/>
+    <link href="login/style/css.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+        <!--
+        .STYLE4 {color: #000000}
+        -->
+    </style>
+    <style type="text/css">
+        #container {
+            width: 98%;
+        }
+
+        .loginMore {
+            margin-top: 2px;
+            margin-right: 10px;
+            /*float:right;*/
+            text-align: right;
+        }
+        .loginMore img{
+            width: 44px;
+            height: 16px;
+            background: url(login/images/more.gif) no-repeat 2px 2px;
+        }
+        .placeholder{color:#92a4bf;font-size:14px;text-indent:10px;position:absolute;left:0;top:0;visibility:hidden;background:none;}
+        .STYLE5 {color: #3366FF}
+        select.validation-failed, input.validation-failed, textarea.validation-failed {
+            background: #fff !important;
+            border: 1px solid #00A8E6 !important;
+        }
+        .enter_userName{
+            color: #808080 !important;
+            font-style:oblique;
+            border: 1px solid #00A8E6 !important;
+        }
+        .userNameStyle{
+            color: #000 !important;
+            font-style:normal;
+            border: 1px solid #00A8E6 !important;
+        }
+        #enter_psw{
+            color: #808080 ;
+            font-style:oblique;
+            left: 8px;
+            line-height: 20px;
+            position: absolute;
+        }
+    </style>
+    <script language="Javascript">
+        function showModel222(){
+         var wnd = window.showModelessDialog('login/images/help.html','','dialogWidth=700px;dialogHeight=550px;dialogLeft=10px;dialogTop=10px;status:0;help:0;resizable:1;unadorned:1');
+        }
+        function showUrl(){
+            var s=window.screen.width+'x'+window.screen.height;
+            if(s=='1024x768'){
+                location.href = "login2.portal";
+            }
+        }
+
+    </script>
+    <script type="text/javascript">
+        function openUrl(url){
+            window.open(url);
+        }
+        function showModel(url){
+            var wnd = window.showModalDialog(url,'','dialogWidth=530px;dialogHeight=250px;dialogLeft=10px;dialogTop=10px;status:0;help:0;resizable:1;unadorned:1;status:no;');
+        }
+
+        /*function setcookie(){
+            var temp=document.getElementById("checkbox");
+            var Days = 15;
+            var exp  = new Date();
+            exp.setTime(exp.getTime() + Days*24*60*60*1000);
+            var IDToken1= document.getElementById("username");
+            var IDToken2= document.getElementById("password");
+            var tempvalue="";
+            if(temp.checked){
+                tempvalue=IDToken2.value;
+            }
+            document.cookie = "Login.Token1"+"="+escape(IDToken1.value)+";expires=" + exp.toGMTString();
+            document.cookie = "Login.Token2"+"="+escape(tempvalue)+";expires=" + exp.toGMTString();
+        }
+        
+        function loadcookie(){
+            document.getElementById("checkbox").checked=false;
+            if(document.cookie.indexOf(";")!=-1){
+                var temp=document.cookie.indexOf("1");
+                if( document.cookie.substring(temp-12,temp+1) =="Login.Token1"){
+                    document.getElementById("username").value=decodeURI(document.cookie.split(";")[0].split("=")[1]);
+                }
+                var temp1=document.cookie.indexOf("2");
+                if(document.cookie.substring(temp1-12,temp1+1) =="Login.Token2"&&document.cookie.substring(temp1+1,temp1+2)=="="){
+                    document.getElementById("password").value=decodeURI(document.cookie.split(";")[1].split("=")[1]);
+                }else{
+                    document.getElementById("password").value="";
+                }
+            }
+            changeBackGround();
+        }
+*/
+ /*
+        function changeBackGround(){
+            var str = new Array();
+            var ents = new Array(
+                    {
+                        start:new Date('2012/9/15'),
+                        end:new Date('2012/10/31'),
+                        img:'url(login/images/login_img00.jpg)'
+                    },
+                    {
+                        start:new Date('2012/4/1'),
+                        end:new Date('2012/10/26'),
+                        img:'url(login/images/login_img01.jpg)'
+                    },
+                    {
+                        start:new Date('2012/4/1'),
+                        end:new Date('2013/3/31'),
+                        img:'url(login/images/login_img04.jpg)'
+                    },
+                    {
+                        start:new Date('2012/4/1'),
+                        end:new Date('2013/9/15'),
+                        img:'url(login/images/login_img05.jpg)'
+                    }
+            );
+            var ents_lengh = ents.length;
+            var defaultImg='url(login/images/login_img.jpg)';
+            var today = new Date();
+            for (var i = 0; i < ents_lengh; i++){
+                if(ents[i].end < ents[i].start) alert('error: '+(i+1));
+                if(today <= new Date(ents[i].end.getTime()+86400000) && today >= ents[i].start){
+                    str.push(ents[i].img);
+                }
+            }
+            var r = Math.floor(Math.random()*str.length);
+            var bgImg= document.getElementById("changeBack");
+            if(str.length > 0)
+                bgImg.style.backgroundImage=str[r];
+            else
+                bgImg.style.backgroundImage=defaultImg;;
+               
+                
+        }
+*/
+
+    </script>
+
+
+    
+
+    
+
+	<script type="text/javascript">
+       function validate(){
+            var username = document.loginForm.username.value;
+            username = username.toUpperCase();
+            var password = document.loginForm.password.value;
+            var saveCookie=document.getElementById("saveCookie").checked;
+            if(document.getElementById("saveCookie").checked){
+                setCookie("username",document.getElementById("username").value,24*14,"/");
+                setCookie("password",document.getElementById("password").value,24*14,"/");
+            }else{
+                deleteCookie("username","password","/");
+            }
+            setCookie("saveCookie",document.getElementById("saveCookie").checked,24,"/");
+        }
+        window.onload = function(){
+        	
+        	document.getElementById("username").focus();
+            var userNameValue = getCookieValue("username");
+            document.getElementById("username").value = userNameValue;
+			/*
+            var usernameTip="";
+             if(userNameValue == "")
+            {
+                document.getElementById("username").className="enter_userName";
+                document.getElementById("username").value = usernameTip;
+                var username = document.getElementById("username");
+                addListener(username,"click",function(){
+                    if(username.value==usernameTip){
+                     username.value = "";
+                    document.getElementById("username").className="userNameStyle";
+                    }
+                });
+                addListener(username,"blur",function(){
+                    if(username.value==""){
+                        document.getElementById("username").className="enter_userName";
+                        username.value = usernameTip;
+                    }
+                })
+            }
+			*/
+            var passwordValue = getCookieValue("password");
+            document.getElementById("password").value = passwordValue;
+			/*
+            if(passwordValue == "")
+            {
+                  document.getElementById("enter_psw").style.display="";
+            }
+            var password = document.getElementById("password");
+            var enter_psw= document.getElementById("enter_psw");
+            addListener(password,"focus",function(){
+                document.getElementById("enter_psw").style.display="none";
+            });
+            addListener(enter_psw,"click",function(){
+                document.getElementById("enter_psw").style.display="none";
+                password.focus();
+            });
+            addListener(password,"blur",function(){
+                if(password.value==""){
+                    document.getElementById("enter_psw").style.display="";
+                }
+            });
+            addListener(enter_psw,"blur",function(){
+
+            });
+            */
+            document.getElementById("saveCookie").checked = (getCookieValue("saveCookie") == "true");
+            //changeBackGround();
+
+            
+        }
+       function addListener(element,e,fn){
+           if(element.addEventListener){
+               element.addEventListener(e,fn,false);
+           } else {
+               element.attachEvent("on" + e,fn);
+           }
+       }
+       function setCookie(name,value,hours,path){
+            var name = escape(name);
+            var value = escape(value);
+            var expires = new Date();
+            expires.setTime(expires.getTime() + hours*3600000);
+            path = path == "" ? "" : ";path=" + path;
+            _expires = (typeof hours) == "string" ? "" : ";expires=" + expires.toUTCString();
+            document.cookie = name + "=" + value + _expires + path;
+        }
+        //获取cookie值
+        function getCookieValue(name){
+            //var name = escape(name);
+            //读cookie属性，这将返回文档的所有cookie
+            var allcookies = document.cookie;
+            //查找名为name的cookie的开始位置
+            name += "=";
+            var pos = allcookies.indexOf(name);
+            //如果找到了具有该名字的cookie，那么提取并使用它的值
+            if (pos != -1){                                             //如果pos值为-1则说明搜索"version="失败
+                var start = pos + name.length;                  //cookie值开始的位置
+                var end = allcookies.indexOf(";",start);        //从cookie值开始的位置起搜索第一个";"的位置,即cookie值结尾的位置
+                if (end == -1) end = allcookies.length;        //如果end值为-1说明cookie列表里只有一个cookie
+                var value = allcookies.substring(start,end);  //提取cookie的值
+                return unescape(value);                           //对它解码
+            }
+            else return "";                                             //搜索失败，返回空字符串
+        }
+        //删除cookie
+        function deleteCookie(name1,name2,path){
+            //var name = escape(name);
+            var expires = new Date(0);
+            path = path == "" ? "" : ";path=" + path;
+            document.cookie = name1 + "="+ ";expires=" + expires.toUTCString() + path;
+            document.cookie = name2 + "="+ ";expires=" + expires.toUTCString() + path;
+        }
+        function loginclear()
+        {
+            document.loginForm.username.value="";
+            document.loginForm.password.value="";
+        }
+        document.onkeydown=function(event)
+        {
+            e = event ? event :(window.event ? window.event : null);
+            if(e.keyCode==13){
+                //执行的方法
+                validate();
+            }
+        }
+        function SetDivWidth() {
+            var isIE=!!window.ActiveXObject;
+            var isIE6=isIE&&!window.XMLHttpRequest;
+            if(isIE6) {
+                document.getElementById('pic').style.width = window.screen.width - document.getElementById('pic').offsetLeft * 2  + 'px';
+            } else {
+                document.getElementById('pic').style.width = window.screen.width + 'px';
+            }
+        }
+
+
+    </script>
+
+    
+
+</head>
+
+
+
+<body>
+<div id="bgw"><div id="bgww">
+    <form id="loginForm" name="loginForm" method="post" action="">
+    <table width="971" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF">
+      <tr>
+        <td valign="top"><table width="948" border="0" align="center" cellpadding="0" cellspacing="0">
+
+<tr>
+    <td height="92" valign="top" style="background:url(login/images/pic_01.jpg) no-repeat;"><table width="300" border="0" align="right" cellpadding="0" cellspacing="0">
+        <tr height="20">
+            <td width="100"><div align="right"></div></td>
+            <td width="100"><div align="right"></div></td>
+            <td width="34"><div align="right"></div></td>
+            <td width="48"><div align="right"></div></td>
+            <td width="120" nowrap="nowrap"><div align="right"><img src="login/images/icon_1.gif" /> <a href="#" onclick="this.style.behavior='url(#default#homepage)';this.setHomePage('http://my.hhu.edu.cn/');"  >设为首页</a></div></td>
+
+            <td width="100" nowrap="nowrap"><div align="right"><img src="login/images/icon_2.gif" /><a  href="login/images/help.html" target="_blank">登录帮助</a></div></td>
+        </tr>
+        <tr height="30">
+            <td height="18"><div align="right"></div></td>
+            <td><div align="right"></div></td>
+            <td><div align="right"></div></td>
+
+            <td><div align="right"></div></td>
+            <td><div align="right"></div></td>
+            <td><div align="right"></div></td>
+        </tr>
+        <tr height="20" >
+            <td style="text-align:right;" colspan="5">
+                <div id="loginMsg" class="err-msg" style="visibility:hidden;float:right;"></div>            </td>
+            <td><div align="right"></div></td>
+        </tr>
+        <tr><td width="100">&nbsp;</td>
+    </table>
+    </td>
+</tr>
+<tr>
+
+    <td><table width="100%" id="changeBack" background="login/images/login_img05.jpg" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+
+            <td colspan="2" width="657"></td>
+            <td width="241" valign="bottom" >
+                <table width="96%" border="0" align="center" cellpadding="0" cellspacing="0">
+                    <tr>
+                        <td valign="bottom"><table width="90%" border="0" align="center" cellpadding="0" cellspacing="0" style="margin-top:1px;">
+                            <br>
+                            <tr>
+                                <td height="30"><div align="right">用户名：</div></td>
+                                
+                                <td width="70%">
+                                	<label>
+              <input name="user"  eMsg="" type="text" id="username" class="input"  style="ime-mode:disabled;width:150px" tabindex="1"/>
+            </label>
+          
+            
+            </td>
+                            </tr>
+                            <tr>
+                                <td height="30"><div align="right">密　码：</div></td>
+                                <td><div align="center" style="position: relative;">
+                                  
+                                    <input type="password" name="pwd" id="password" action-type="text_copy" style="ime-mode:disabled;width:150px;border: 1px solid #00A8E6;" tabindex="2"/>
+                                    <span id="enter_psw" style="display: none;">请输入密码</span>
+                                </div></td>
+                            </tr>
+                            <tr height="30" id="captchaContent">
+                              <td>验证码：</td>
+                              <td><input type="text" name="captcha" size="6" tabindex="3" class="formtext" style="ime-mode:disabled;border: 1px dashed #666666;width:56px;margin-left:9px;*margin-left:7px;_margin-left:7px;">
+                                  <img id="captchaImg" src="images/s.gif" title="" width="78" height="35"></td>
+                            </tr>
+                          </table>
+                            <table width="75%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                <tr>
+                                	<td> 	
+                <div><input id="saveCookie" type="checkbox" style="border-style:solid; border:0px; border-color:#00F;" value="记住我的登录状态" /><font color="#333333" >记住密码</font></div> </td>
+                                    
+                                    <!--<td><div align="right">
+                                        <input tabindex="5" type="button"  value=" "  onclick="return getUserRandomPassword();"
+                                                     style="width:75px;height:23px;background-image:url(login/images/mm.gif);cursor:pointer;border:0;background-repeat:no-repeat;"  tabIndex="5"/>
+                                    </div></td>-->
+									<td><div aligh="right"><a href="getBackPassword.portal" target="_blank" >找回密码</a></td>
+                                </tr>
+                            </table></td>
+                    </tr>
+					 <tr height="20">
+                   <td height="35">
+                       <div align="center">
+                                       &nbsp;&nbsp;<input type="submit" name="login"  value=""  tabindex="4"
+                                               style="width:75px;height:23px;background-image:url(login/images/dl.gif);cursor:pointer;border:0;background-repeat:no-repeat;"   onclick="javascript:validate();"/>
+                            <input type="checkbox" name="isVPN" value="isVPN">VPN登陆
+                       </div>
+                   </td></tr>
+					<!--<input id="checkbox" type="checkbox" style="border-style:solid; border:0px; border-color:#00F;display:none;" value="自动登录" onclick="setcookie();" />-->
+                    <!--<tr><td align="left">&nbsp;&nbsp;&nbsp;&nbsp; 自动登录
+                        &nbsp;&nbsp;&nbsp;&nbsp;<a href="getBackPassword.portal" target="_blank" >找回密码</a>
+                    </td></tr>-->
+                </table>
+                <table width="90%" border="0" align="center" cellpadding="0" cellspacing="0">
+                    <tr>
+                        <td valign="bottom"><p class="STYLE2"><span class="STYLE4"><strong>提示：</strong>教工用户名：8位教工号<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(不变号第五位加0)；</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;学生用户名：学号；<br/>&nbsp;&nbsp;&nbsp;&nbsp;密码：初始为身份证后六位,X均为大写</br></span><a href="login/images/help.html" target="_blank" class="STYLE5" >点击详情</a>&nbsp;&nbsp;&nbsp;<a href="http://ids.hhu.edu.cn:81/amserver/UI/Login?goto=http://my.hhu.edu.cn" class="STYLE5" >查询登陆用户名</a>
+                            <br/>
+                            </span>
+                        </p></td>
+                    </tr>
+                </table></td>
+            <td width="50" valign="top" >&nbsp;</td>
+        </tr>
+    </table></td>
+
+</tr>
+<tr>
+    <td height="23" background="login/images/pic_07.jpg">&nbsp;</td>
+</tr>
+<tr>
+    <td background="login/images/pic_07.jpg"><table width="95%" border="0" align="center" cellpadding="0" cellspacing="0" class="dotline">
+        <tr>
+            <td class="dotline"><table cellspacing="0" cellpadding="0" width="100%" border="0">
+                <tbody>
+
+                <tr>
+                    <td width="16%"><img height="15" src="login/images/dot1.gif" width="9" style="margin-bottom:5px;" />河海要闻<!--<a href="http://www.hhu.edu.cn/">--></td>
+                    <td width="74%"><div align="left"></div></td>
+                </tr>
+                </tbody>
+            </table></td>
+            <td class="dotline"><table cellspacing="0" cellpadding="0" width="100%" border="0">
+                <tbody>
+                <tr>
+                    <td width="20%"><img height="15" src="login/images/dot1.gif" width="9" style="margin-bottom:5px;*margin-bottom:7px;_margin-bottom:7px;margin-right:10px;"/> 通知公告</td>
+                    <td width="80%"><div align="left"></div></td>
+                </tr>
+                </tbody>
+            </table></td>
+
+        </tr>
+        <tr>
+            <td width="50%" >
+               
+                <iframe width="94%" height="170" scrolling="no" frameborder="0"  style="text-align:left;background-color: #EEF3F7;" src="http://my.hhu.edu.cn/alone.portal?.pmn=view&.pen=pe3862">
+                </iframe>
+                
+
+            </td>
+            <td  colspan="2" style="background-color: #EEF3F7;">
+               
+                    <iframe width="94%" height="170" scrolling="no" frameborder="0"  style="text-align:left;background-color: #EEF3F7;" src="http://my.hhu.edu.cn/alone.portal?.pmn=view&.pen=pe3863">
+                    </iframe>    
+
+    </table></td>
+</tr>
+<tr>
+    <td background="login/images/pic_07.jpg">
+        <div style="height: 8px;"></div>
+        
+    </td>
+</tr>
+<tr>
+    <td height="75" background="login/images/pic_08.jpg"><div align="center">CopyRight2011&#169;河海大学</div>
+    	<span>联系电话：83787582 技术支持：025-83787591<br />
+                                              <span>技术支持邮箱：portal@hhu.edu.cn</span>     </span></td>
+
+</tr>
+</table></td>
+</tr>
+</table>
+</form>
+</div>
+</div>
+<script type="text/javascript">
+    function getUserRandomPassword(){
+        var userId=document.getElementById("username").value;
+         new Ajax.Request('getUserRandomPassword.portal', {
+            method: 'get',
+            parameters: 'userId=' + userId,
+            onSuccess:function(transport) {
+                var rp = transport.responseText;
+                alert(rp);
+            }
+        });
+    }
+</script>
+<script type="text/javascript">var Login = {forwardUrl:'',loginURL:'http://ids.hhu.edu.cn/amserver/UI/Login',nameField:'Login.Token1',pwdField:'Login.Token2',isVPN:'isVPN',gotoUrl:'http://my.hhu.edu.cn/loginSuccess.portal',gotoFailUrl:'http://my.hhu.edu.cn/loginFailure.portal',hideCaptcha:true};</script>
+<script type="text/javascript" src="script/portal-login.js"></script>
+</body>
+</html>
+
+

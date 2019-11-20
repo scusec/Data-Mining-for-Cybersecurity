@@ -1,0 +1,1767 @@
+<!DOCTYPE HTML>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="shortcut icon" type="image/x-icon" href="/styles/portals/image/logo_title.ico" media="screen" />
+
+
+
+
+
+<html>
+<head>
+<meta charset="utf-8">
+<title>
+	
+	
+	扬州大学网上竞价采购平台
+</title>
+
+
+<script type="text/javascript" src="/styles/js/jquery-1.11.1.js"></script>
+
+
+<link rel="stylesheet" href="/styles/portals/common.css"
+	type="text/css" />
+<link rel="stylesheet" href="/styles/portals/index.css"
+	type="text/css" />
+<script type="text/javascript"
+	src="/styles/portals/jquery.flexslider-min.js"></script>
+
+<link rel="stylesheet" href="/static/h-ui/css/H-ui.css" />
+<script type="text/javascript" src="/static/h-ui/js/H-ui.js"></script>
+</head>
+<style>
+.marquee_notice {
+	height: 220px;
+	overflow: hidden;
+}
+
+.marquee_school {
+	height: 380px;
+	overflow: hidden;
+}
+
+.dot-li li:before {
+	display: inline-block;
+	border-radius: 2px;
+	border: 2px solid #17619E;
+	content: '';
+	margin-right: 5px;
+}
+
+.s-title {
+	width: 450px;
+	display: block;
+	float: right;
+	padding-right: 5px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	-o-text-overflow: ellipsis;
+	white-space: nowrap;
+	word-wrap: normal;
+}
+.bid-span{
+cursor: pointer;
+}
+.bid-span1{
+cursor: pointer;
+}
+.bid-cur{
+font-weight: bold;
+color: #FF5500;
+}
+.flex-control-paging{
+display: none;
+}
+</style>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$('.flexslider').flexslider({
+			directionNav : true,
+			pauseOnAction : false
+		});
+		marquee(50, 30, 3000); /*移动高度,移动速度,间隔时间*/
+	});
+	function openWindow(url) {
+		var iWidth = 1000; //弹出窗口的宽度;
+		var iHeight = 650; //弹出窗口的高度;
+		var iTop = (window.screen.availHeight - 30 - iHeight) / 2; //获得窗口的垂直位置;
+		var iLeft = (window.screen.availWidth - 10 - iWidth) / 2; //获得窗口的水平位置;
+		window
+				.open(
+						url,
+						'_blank',
+						'height='
+								+ iHeight
+								+ ',width='
+								+ iWidth
+								+ ',top='
+								+ iTop
+								+ ',left='
+								+ iLeft
+
+								+ ',toolbar=no,menubar=no,scrollbars=yes, resizable=yes,location=no, status=yes',
+						false);
+	}
+	function openPage(url) {
+		window.open(url, "详细内容", "", false);
+	}
+
+	function showOrderByDevice(deviceType) {
+		bidForm.deviceType.value = deviceType;
+		bidForm.submit();
+	}
+	$(function(){
+		$(".bid-span").each(function(i){
+			$(this).mouseover(function(){
+				$(".bid-span").removeClass("bid-cur");
+				$(this).addClass("bid-cur");
+				$(this).parent().siblings("ul").hide();
+				$(this).parent().siblings("ul").eq(i).show();
+			});
+		});
+	});
+	
+	$(function(){
+		$(".bid-span1").each(function(i){
+			$(this).mouseover(function(){
+				$(".bid-span1").removeClass("bid-cur");
+				$(this).addClass("bid-cur");
+				$(this).parent().siblings("ul").hide();
+				$(this).parent().siblings("ul").eq(i).show();
+			});
+		});
+	});
+	
+	function gotoMenu(todoType){
+		location.href="/choose/index?todoType="+todoType;
+	}
+	
+	function hideError(){
+	$("#error").hide();
+}
+</script>
+
+<body>
+	<!DOCTYPE HTML>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/static/h-ui/css/H-ui.css" />
+<script type="text/javascript" src="/static/h-ui/js/H-ui.js"></script>
+<link href="/lib/iconfont/iconfont.css" rel="stylesheet" type="text/css" />
+<meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+<style>
+.placeholdercolor{ color:#999;}
+.textcolor{ color:#000;}
+.passWord_img {
+	background-image: url(/styles/portals/image/lock.png);
+	background-repeat: no-repeat;
+	background-position: 2px 6px; box-sizing : border-box;
+	border: solid 1px #ddd;
+	-webkit-transition: all 0.2s linear 0s;
+	-moz-transition: all 0.2s linear 0s;
+	-o-transition: all 0.2s linear 0s;
+	transition: all 0.2s linear 0s;
+	height: 30px;
+	padding-left: 20px;
+	padding-top: 4px;
+	font-size: 15px;
+	box-sizing: border-box;
+}
+.user_img {
+	background-image: url(/styles/portals/image/user.png);
+	background-repeat: no-repeat;
+	background-position: 2px 6px; box-sizing : border-box;
+	border: solid 1px #ddd;
+	-webkit-transition: all 0.2s linear 0s;
+	-moz-transition: all 0.2s linear 0s;
+	-o-transition: all 0.2s linear 0s;
+	transition: all 0.2s linear 0s;
+	height: 30px;
+	padding-left: 20px;
+	padding-top: 4px;
+	font-size: 15px;
+	box-sizing: border-box;
+}
+.passWord_img:hover,.user_img:hover {
+	border: solid 1px #3bb4f2
+}
+/*得到焦点后*/
+.passWord_img.focus,.user_img.focus {
+	border: solid 1px #0f9ae0 \9;
+	border-color: rgba(82, 168, 236, 0.8);
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px
+		rgba(102, 175, 233, 0.6)
+}
+
+.search_img {
+	background-image: url(/styles/portals/image/search.png);
+	background-repeat: no-repeat;
+	background-position: 2px 6px; box-sizing : border-box;
+	border: solid 1px #ddd;
+	-webkit-transition: all 0.2s linear 0s;
+	-moz-transition: all 0.2s linear 0s;
+	-o-transition: all 0.2s linear 0s;
+	transition: all 0.2s linear 0s;
+	height: 30px;
+	padding-left: 20px;
+	padding-top: 4px;
+	font-size: 15px;
+	box-sizing: border-box;
+}
+.search_img:hover {
+	border: solid 1px #17619E
+}
+/*得到焦点后*/
+.search_img.focus {
+	border: solid 1px #17619E \9;
+	border-color: #17619E;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px
+		rgba(102, 175, 233, 0.6)
+}
+</style>
+<script type="text/javascript">
+$(function(){  
+	 
+	  //判断浏览器是否支持placeholder属性
+	  supportPlaceholder='placeholder'in document.createElement('input'),
+	 
+	  placeholder=function(input){
+	 
+	    var text = input.attr('placeholder');
+	    if(input.val() ==""){
+	      input.val(text).addClass("placeholdercolor");
+	    }
+	 
+	    input.focus(function(){
+	 
+	      if(input.val() == text){
+	  
+	        $(this).val("");
+	      }
+	    });
+	 
+	 
+	    input.blur(function(){
+	 
+	      if(input.val() == ""){
+		    $(this).removeClass("textcolor");
+	        $(this).val(text).addClass("placeholdercolor");
+	      }else if(input.val() == text){
+	    	$(this).removeClass("textcolor");
+	        $(this).addClass("placeholdercolor");
+	      }else{
+	    	$(this).removeClass("placeholdercolor");
+	    	$(this).addClass("textcolor");
+		  }
+	    });
+	 
+	    //输入的字符不为灰色
+	    input.keydown(function(){
+	      $(this).removeClass("placeholdercolor");
+	      $(this).addClass("textcolor");
+	    });
+	  };
+	 
+	  //当浏览器不支持placeholder属性时，调用placeholder函数
+	  if(!supportPlaceholder){
+	 
+	    $("input[placeholderEnable='yes']").each(function(){
+	 
+	      text = $(this).attr("placeholder");
+	 
+	      if($(this).attr("type") == "text"){
+	 
+	        placeholder($(this));
+	      }
+	    });
+	  }
+	 
+	});
+	
+function showOrderByDeviceName(){
+	if(bidSearchForm.deviceName.value == $("#deviceName").attr('placeholder')){
+		bidSearchForm.deviceName.value = "";
+	}
+	bidSearchForm.submit();
+}
+
+function keySearch(){
+	if (event.keyCode==13){   //回车键的键值为13
+		showOrderByDeviceName();
+	}  
+}
+/*
+$(document).ready(function(){
+	
+	$("body").mousedown(function(){
+		checkCurrentUser();
+		});
+	$("body").keydown(function(){
+		checkCurrentUser();
+		});
+	});
+	*/
+	
+	
+/**
+ * 检查当前用户是否改变
+ */
+function checkCurrentUser(){
+	var url = '/choose/getCurrentUser';
+    var XHR=null;
+    if (window.XMLHttpRequest) {
+        // 非IE内核
+        XHR = new XMLHttpRequest();
+    } else if (window.ActiveXObject) {
+        // IE内核,这里早期IE的版本写法不同,具体可以查询下
+        XHR = new ActiveXObject("Microsoft.XMLHTTP");
+    } else {
+        XHR = null;
+    }
+
+    if(XHR){
+        XHR.open("GET", url);
+
+        XHR.onreadystatechange = function () {
+            if (XHR.readyState == 4) {
+            	if(XHR.status == 200){
+            		var currentUserId = XHR.responseText;
+            		if(currentUserId != ''){
+            			window.location.href='/';
+            		}
+            	}
+                
+                // 主动释放,JS本身也会回收的
+                XHR = null;
+            }
+        };
+        XHR.send();
+    }
+}
+
+function hideError(){
+	$("#error").hide();
+}
+$(function(){$(window).on("scroll",$backToTopFun);$backToTopFun();});
+
+</script>
+
+
+<!--头部-->
+<form name="loginForm" id="loginForm" action="/passport/login;JSESSIONID=6e307acd-d470-4e1d-83b1-b6213fb30217" method="post">
+<div class="headXNDX" style="position:fixed;top:0px;left:0px;right:0px;margin-left:auto;margin-right:auto;z-index:9999;width:980px;margin: 0 auto; background: #F8F9F8;border-bottom:1px solid #D7E6DA">
+	
+	<div class="header">
+		<div class="user-wrap-left ml-50">
+		<!-- 独立部署 -->
+		
+			
+			
+			
+			
+				<font style="color: #000000;">您好，欢迎来到扬州大学网上竞价采购平台！</font>
+			
+		
+		<!-- 集中部署 -->
+		
+		</div>
+		<div style="float: right;">
+		<!-- 独立部署用户 -->
+				
+<!-- 					 -->
+<!-- 						<input placeholderEnable="yes" type="text" onclick="hideError()" -->
+<!-- 						name="username" id="username" class="f-l user_img" -->
+<!-- 						style="margin-top: 4px; width: 150px;" autocomplete="on" -->
+<!-- 						placeholder="用户名" maxlength="20" nullmsg="账号不能为空"> -->
+<!-- 					<input placeholderEnable="yes" type="password" -->
+<!-- 						onclick="hideError()" name="password" class="f-l passWord_img" -->
+<!-- 						style="margin-top: 4px; margin-left: 10px; width: 150px;" -->
+<!-- 						autocomplete="off" placeholder="密码" maxlength="20" nullmsg="密码不能为空"> -->
+<!-- 					<input type="submit" class="f-l btn btn-default" value="登录 " -->
+<!-- 						style="margin-top: 4px; margin-left: 10px; border-color: #CCCCCC;"> -->
+<!-- 						 -->
+<!-- 							<a href="/coRegister" -->
+<!-- 								style="color: #17619E; padding: 0 10px 0 10px;">教师注册</a> -->
+<!-- 						 -->
+<!-- 					 -->
+<!-- 					 -->
+				
+				<!-- 中心端用户 -->
+				
+			</div>
+	</div>
+	
+</div>
+</form>
+
+<!-- 错误信息 -->
+
+
+
+<div  style="height:45px; width:980px;margin: 0 auto; "><br><br>
+</div>
+
+
+<!--logo-->
+<div class="logo_header_id" style="margin-top: 5px;">
+<div class="logo-div">
+<!-- 独立部署 -->
+
+	
+			<div class="logo-div-left" style="cursor: pointer;width: 600px" onclick="location.href='/'">
+			    
+				<img style="width: 75px;height: 75px" src="/styles/portals/image/school/11117.jpg"/>
+				
+	<!-- 			<img style="width: 76px;height: 76px" src="/styles/portals/image/school/11117.jpg"/> -->
+				<span class="f-26">扬州大学</span>
+				<span class="f-24 mt-2"  style="font-family:NSimSun ">
+				
+				
+				
+				竞价采购网
+				</span>
+			</div>
+	 
+	 
+ 
+ <!-- 集中部署高校端 -->
+ 
+   <!-- 集中部署企业端 -->
+  
+	</div>
+	
+	<div class="menu-div">
+		<ul id="menu">
+		<!-- 集中部署高校 -->
+		
+		 <!-- 集中部署非高校用用 -->
+		 
+		<!-- 单高校独立部署访问 -->
+		
+			<li class="two_grade selected"><a href="/">首页</a></li>
+			
+				<li class="two_grade "><a href="/edu/morebiddingneed/need/YZU131">竞价采购</a></li>
+			
+			
+			
+			<li class="two_grade "><a href="/edu/invitation/YZU131">招标采购</a></li>
+				
+			<li class="two_grade "><a href="/edu/help/YZU131"> 帮助中心 </a></li>
+			
+		
+		<!-- 多高校独立部署(小集中)，单高校访问 -->
+		
+		
+		<!-- 多高校独立部署(小集中)，多高校访问 -->
+		
+		
+		
+		</ul>
+	</div>
+</div>
+
+<!-- <div class="main-im"> -->
+<!-- 	<div id="open_im" class="open-im">&nbsp;</div>   -->
+<!-- 	<div class="im_main" id="im_main"> -->
+<!-- 		<div id="close_im" class="close-im"><a href="javascript:void(0);" title="点击关闭">&nbsp;</a></div> -->
+<!-- 		<a href="http://wpa.qq.com/msgrd?v=3&uin=123456789&site=qq&menu=yes" target="_blank" class="im-qq qq-a" title="在线QQ客服"> -->
+<!-- 			<div class="qq-container"></div> -->
+<!-- 			<div class="qq-hover-c"><img class="img-qq" src="http://demo.lanrenzhijia.com/2015/service0119/images/qq.png"></div> -->
+<!-- 			<span> QQ在线咨询</span> -->
+<!-- 		</a> -->
+<!-- 		<div class="im-tel"> -->
+<!-- 			<div>售前咨询热线</div> -->
+<!-- 			<div class="tel-num">020-84115293</div> -->
+<!-- 			<div>售后咨询热线</div> -->
+<!-- 			<div class="tel-num">010-12345678</div> -->
+<!-- 		</div> -->
+<!-- 		<div class="im-footer" style="position:relative"> -->
+<!-- 			<div class="weixing-container"> -->
+<!-- 				<div class="weixing-show"> -->
+<!-- 					<div class="weixing-txt">微信扫一扫<br>打开懒人之家</div> -->
+<!-- 					<img class="weixing-ma" src="http://demo.lanrenzhijia.com/2015/service0119/images/weixing-ma.jpg"> -->
+<!-- 					<div class="weixing-sanjiao"></div> -->
+<!-- 					<div class="weixing-sanjiao-big"></div> -->
+<!-- 				</div> -->
+<!-- 			</div> -->
+<!-- 			<div class="go-top"><a href="javascript:;" title="返回顶部"></a> </div> -->
+<!-- 			<div style="clear:both"></div> -->
+<!-- 		</div> -->
+<!-- 	</div> -->
+<!-- </div> -->
+	
+	 
+<!-- <link rel="stylesheet" href="/styles/portals/common.css"> -->
+<!-- <link rel="stylesheet" href="/styles/portals/help.css"> -->
+
+<!-- <script type="text/javascript" src="/styles/js/jquery-1.11.1.js"></script> -->
+<style type="text/css">
+/* suspend */
+.wqzClose {
+	position: fixed;
+	right: 20px;
+	top: 170px;
+	cursor: pointer;
+	width: 24px;
+	height: 24px;
+	background: url(/styles/portals/image/hide_right.png) center;
+}
+
+.wqzClose.hide_left {
+	background: url(/styles/portals/image/hide_left.png) center;
+}
+
+.suspend {
+	width: 160px;
+	position: fixed;
+	top: 200px;
+	right: 0;
+	overflow: hidden;
+	z-index: 9999;
+}
+
+.suspend dl {
+	width: 160px;
+	height: 198px;
+	border-radius: 25px 0 0 25px;
+	padding-left: 40px;
+}
+
+.suspend dl dt {
+	width: 120px;
+	height: 198px;
+	background: url(/styles/portals/image/suspend2.png) ;
+	position: absolute;
+	top: 0;
+	right: 0;
+	cursor: pointer;
+}
+
+/* .suspend dl dt {
+	width: 160px;
+	height: 198px;
+	background: url(/styles/portals/image/suspend.png);
+	position: absolute;
+	top: 0;
+	left: 0;
+	cursor: pointer;
+} */
+
+.suspend dl dd.suspendQQ {
+	width: 0px;
+	height: 85px;
+	background: #ffffff;
+}
+
+.suspend dl dd.suspendQQ a {
+	width: 120px;
+	height: 85px;
+	display: block;
+	background: url(/styles/portals/image/suspend.png) -40px 0;
+	overflow: hidden;
+}
+
+.suspend dl dd.suspendTel {
+	width: 0px;
+	height: 112px;
+	background: #ffffff;
+	border-top: 1px solid #e4e8ec;
+}
+
+.suspend dl dd.suspendTel a {
+	width: 0px;
+	height: 112px;
+	display: block;
+	background: url(/styles/portals/image/suspend.png) -40px -86px;
+	overflow: hidden;
+}
+.wqzlj{ text-align:right; margin:4px 10px 0 0;}
+.wqzlj>a{ float:none !important;}
+* html .suspend {
+	position: absolute;
+	left: expression(eval(document.documentElement.scrollRight));
+	top: expression(eval(document.documentElement.scrollTop +200))
+}
+</style>
+<!-- <script type="text/javascript" src="/lib/jquery.min.js"></script> -->
+<script type="text/javascript">
+	$(function() {
+		/* $(".suspend").mouseover(function() {
+			$(this).stop();
+			$(this).animate({
+				width : 160
+			}, 400);
+			// $(".dapp").animate({width:160},400);
+		});
+		$(".suspend").mouseout(function() {
+			$(this).stop();
+			$(this).animate({
+				width : 40
+			}, 400);
+			// $(".dapp").animate({width:40},400);
+		}); */
+	});
+	function openQQ() {
+
+	}
+	window._bd_share_config = {
+		"common" : {
+			"bdSnsKey" : {},
+			"bdText" : "",
+			"bdMini" : "2",
+			"bdPic" : "",
+			"bdStyle" : "0",
+			"bdSize" : "16"
+		},
+		"share" : {},
+		"image" : {
+			"viewList" : [ "weixin", "sqq", "qzone", "tsina" ],
+			"viewText" : "分享到：",
+			"viewSize" : "16"
+		},
+		"selectShare" : {
+			"bdContainerClass" : null,
+			"bdSelectMiniList" : [ "weixin", "sqq", "tsina", "qzone" ]
+		}
+	};
+	with (document)
+		0[(getElementsByTagName('head')[0] || body)
+				.appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='
+				+ ~(-new Date() / 36e5)];
+</script>
+<div class="rtSlide">
+	<!-- <div class="wqzClose"></div> -->
+	<!-- Baidu Button BEGIN -->
+	<!-- <div class="bdsharebuttonbox wqzlj"
+		style="position: fixed;top: 400px;right: 10px">
+		<a href="#" class="bds_qzone" data-cmd="qzone"></a> <a href="#"
+			class="bds_tsina" data-cmd="tsina"></a>
+		     <a href="#" class="bds_tqq" data-cmd="tqq"></a>
+		<a href="#" class="bds_sqq" data-cmd="sqq"></a> <a href="#"
+			class="bds_weixin" data-cmd="weixin"></a>
+	</div> -->
+
+	<!-- Baidu Button BEGIN -->
+	
+
+
+	<div class="suspend">
+		<a target="_blank"
+			href="http://wpa.qq.com/msgrd?v=3&uin=1846168822&site=qq&menu=yes">
+			<dl class="qqa">
+				<dt class="IE6PNG"></dt>
+				<dd class="suspendQQ"></dd>
+				<dd class="suspendTel"></dd>
+			</dl>
+		</a>
+		
+		<div class="bdsharebuttonbox wqzlj" style="position: relative;top: 0px;right: 0px; ">
+			<a href="#" class="bds_qzone" data-cmd="qzone"></a> <a href="#"
+				class="bds_tsina" data-cmd="tsina"></a>
+			<a href="#" class="bds_sqq" data-cmd="sqq"></a> <a href="#"
+				class="bds_weixin" data-cmd="weixin"></a>
+		</div>
+		
+		<div class="dapp" style="display:none;position: relative;top: 0px;right: 0px; margin:0px 0 0 40px;">
+			<div style="width:115px;"><strong>扫描下载移动APP</strong></div>
+			<a href="/downloadApp">
+				<img class="mt-5" alt="" width="110"
+				src="/styles/portals/image/Michael_QRCode.png">
+			</a>
+		</div>
+		<div class="dapp" style="position: relative;top: 0px;right: 0px; margin:0px 0 0 40px;text-align:center;padding-top:20px;">
+				<img class="mt-5" alt="" width="110"
+				src="/styles/portals/image/wechat.png">
+				<div style="width:115px;"><strong>扫描关注微信</strong></div>
+		</div>
+	</div>
+</div>
+<script>
+	$(function() {
+		/* $(".wqzClose").data("open",true).on("click",function(){
+			var speed = 800;
+			if ($(this).data("open")){
+				$(this).data("open",false).addClass("hide_left");
+				$(".qqa").children().animate({
+					left: "200px"
+				},speed);
+				$(".wqzlj").animate({
+					right: "-100px"
+				},speed);
+				$(".dapp").animate({
+					right: "-130px"
+				},speed);
+			}else{
+				$(this).data("open",true).removeClass("hide_left");
+				$(".qqa").children().animate({
+					left: "0"
+				},speed);
+				$(".wqzlj").animate({
+					right: "10px"
+				},speed);
+				$(".dapp").animate({
+					right: "8px"
+				},speed);
+			}
+		}); */
+	});
+</script>
+
+	<!--轮播-->
+	<div style="width: 980px;margin: 0 auto;"> 
+		
+	<form name="loginForm" id="loginForm" action="/passport/login;JSESSIONID=6e307acd-d470-4e1d-83b1-b6213fb30217" method="post">
+	
+		<div class="flexslider" style="width: 750px;margin-left:0;float: left">
+			<ul class="slides" >
+				
+						<li
+							style="background:url(/styles/portals/image/bannerco.jpg) 50% 0 no-repeat;"></li>
+						
+			</ul>
+		</div>
+		
+			<div class="bk-gray radius" style="width: 225px;height:265px;float:right;margin-top:15px;border:1px solid #E3E3E3">
+				
+					
+		            <div class="pd-10 " style="background-color:#e3e3e3 ;height:20px;">高校用户登录</div>
+				
+					<div style="height:120px;margin-top: 10px;">
+					<input type="hidden" id="domain"  name="domain" value="">
+					
+			            
+			            
+			            	<input placeholderEnable="yes" type="text"  onclick="hideError()" name="username" id="username" class="f-l user_img"
+									style="margin-top: 4px;margin-left:15px; width: 190px;" autocomplete="on"
+									placeholder="用户名" maxlength="20" nullmsg="账号不能为空">
+									<br>
+							<input placeholderEnable="yes" type="password"
+									onclick="hideError()" name="password" class="f-l passWord_img"
+									style="margin-top: 4px; margin-left: 15px; margin-top:10px; width:190px;"
+									autocomplete="off" placeholder="密码" maxlength="20" nullmsg="密码不能为空">
+									<br>
+							<input class="btn btn-primary size-X radius ml-15 mt-20 " style="width: 90px" type="submit" value="登录" >
+							<input class="btn btn-default radius ml-5 mt-20" type="button" style="width: 90px" value="注册"  onclick="location.href='/coRegister'">
+						
+					
+					</div>
+					<div  style="height:15px;margin: 0 auto;margin-top: 8px" >
+					<p id="error" class="c-error ml-20 f-12"  ></p>
+<!-- 					<font id="error" style="color: red;float: right;margin-right: 320px;"></font> -->
+					</div>
+				    <div style="height:40px;">
+						
+							
+				            
+							
+							
+							
+							
+							
+				            <input class="btn btn-link radius ml-5 mt-5" type="button" value="NetID登录" onclick="location.href=''">
+						
+				    </div>
+					<div style="background-color:#E3E3E3;height:25px;margin-top: 5px">
+					<input class="btn btn-link radius size-MINI ml-5 " type="button" value="供应商登录入口>>>" onclick="location.href='http://www.soeasycenter.com/'">
+					</div>
+	 					
+			 </div>
+		
+		 </form>
+	 </div>
+
+	<!--内容-->
+	<div class="index_content" style="width: 980px; margin: 0 auto;">
+	 			 
+					
+						<form name="bidForm" action="/edu/morebiddingneed/need/YZU131;JSESSIONID=6e307acd-d470-4e1d-83b1-b6213fb30217" method="post">
+							<input type="hidden" name="deviceType" value="">
+						</form>
+					 	
+		<div class="main_content">
+			<!--内容左大板块div-->
+			<div class="main_content_left">
+			    
+				<div class="main_content_left_child">
+					<p class="main_content_title_p">
+					  
+					
+						<!-- 独立部署 -->
+						<span onclick="location.href='/edu/morebidding/bidResult/YZU131'" class="bid-span bid-cur"title="查看更多">最新竞价结果</span>&nbsp;&nbsp;|&nbsp;&nbsp;<span onclick="location.href='/edu/morebiddingneed/need/YZU131'" class="bid-span"title="查看更多">最新竞价需求</span>
+					 	
+					</p>
+					<ul style="list-style: none; line-height: 30px" class="dot-li bid-ul">
+						
+						
+							
+								<li style="height: 30px">
+										<span class="postDesc_news_release_date">
+										 2017-10-28
+										</span>
+										
+										 <span class="s-title" style="width: 650px">
+										  
+										
+										 <a onclick="openPage('/edu/biddingShow/926AA28C-F524-1C22-77C4-6E84613AF168/YZU131')"
+											title="[扬州大学] 真空采血管（含7号针头）">[扬州大学] 真空采血管（含7号针头）
+										 </a>
+									   
+								</span></li>
+							
+						
+							
+								<li style="height: 30px">
+										<span class="postDesc_news_release_date">
+										 2017-10-28
+										</span>
+										
+										 <span class="s-title" style="width: 650px">
+										  
+										
+										 <a onclick="openPage('/edu/biddingShow/6F4A9B95-D0BD-6E72-ADC0-581218997F00/YZU131')"
+											title="[扬州大学] 戴尔T7910图形工作站">[扬州大学] 戴尔T7910图形工作站
+										 </a>
+									   
+								</span></li>
+							
+						
+							
+								<li style="height: 30px">
+										<span class="postDesc_news_release_date">
+										 2017-10-28
+										</span>
+										
+										 <span class="s-title" style="width: 650px">
+										  
+										
+										 <a onclick="openPage('/edu/biddingShow/75993546-8989-37F2-8D28-61F515744928/YZU131')"
+											title="[扬州大学] 移动硬盘">[扬州大学] 移动硬盘
+										 </a>
+									   
+								</span></li>
+							
+						
+							
+								<li style="height: 30px">
+										<span class="postDesc_news_release_date">
+										 2017-10-28
+										</span>
+										
+										 <span class="s-title" style="width: 650px">
+										  
+										
+										 <a onclick="openPage('/edu/biddingShow/73C4AE29-3F0E-77C3-F3ED-C2564DC2211E/YZU131')"
+											title="[扬州大学] Cleaved Caspase-3 (Asp175) (5A1E) Rabbit mAb">[扬州大学] Cleaved Caspase-3 (Asp175) (5A1E) Rabbit mAb
+										 </a>
+									   
+								</span></li>
+							
+						
+							
+								<li style="height: 30px">
+										<span class="postDesc_news_release_date">
+										 2017-10-27
+										</span>
+										
+										 <span class="s-title" style="width: 650px">
+										  
+										
+										 <a onclick="openPage('/edu/biddingShow/E4AB0EF4-B01E-6FEA-4C0A-1095332F625C/YZU131')"
+											title="[扬州大学] 气体钢瓶防爆储存柜,气体钢瓶防爆储存柜">[扬州大学] 气体钢瓶防爆储存柜,气体钢瓶防爆储存柜
+										 </a>
+									   
+								</span></li>
+							
+						
+							
+								<li style="height: 30px">
+										<span class="postDesc_news_release_date">
+										 2017-10-27
+										</span>
+										
+										 <span class="s-title" style="width: 650px">
+										  
+										
+										 <a onclick="openPage('/edu/biddingShow/E940B873-402B-E998-88CA-A59D8BF6C515/YZU131')"
+											title="[扬州大学] 移液枪,颗粒物中流量采样器">[扬州大学] 移液枪,颗粒物中流量采样器
+										 </a>
+									   
+								</span></li>
+							
+						
+							
+								<li style="height: 30px">
+										<span class="postDesc_news_release_date">
+										 2017-10-27
+										</span>
+										
+										 <span class="s-title" style="width: 650px">
+										  
+										
+										 <a onclick="openPage('/edu/biddingShow/A60E9794-E02E-8FB3-DC7A-0B92129507F7/YZU131')"
+											title="[扬州大学] 电脑台式机，戴尔外星人(Alienware),显示器,键盘,鼠标 ">[扬州大学] 电脑台式机，戴尔外星人(Alienware),显示器,键盘,鼠标 
+										 </a>
+									   
+								</span></li>
+							
+						
+							
+						
+						
+					</ul>
+					<ul style="list-style: none; line-height: 30px;display: none;" class="dot-li bid-ul">
+						<!-- 最新采购需求列表 -->
+						
+						
+						
+								<li style="height: 30px">
+								
+										<span class="postDesc_news_release_date"
+											style="float: right; margin-left: 10px"> 截止时间：2017-11-04
+										</span>
+										<span class="postDesc_news_release_date" style="float: right;">
+											发布时间：2017-10-28
+										</span>
+								 
+									<span class="s-title"> 
+										 
+										
+									  	<a onclick="openPage('/edu/biddingShow/166E96AC-8E07-432E-45EA-FC65133F120F/YZU131')" title="[扬州大学] 实验台">[扬州大学] 实验台</a>
+										 
+									</span>
+									</li>
+						
+						
+						
+								<li style="height: 30px">
+								
+										<span class="postDesc_news_release_date"
+											style="float: right; margin-left: 10px"> 截止时间：2017-11-01
+										</span>
+										<span class="postDesc_news_release_date" style="float: right;">
+											发布时间：2017-10-28
+										</span>
+								 
+									<span class="s-title"> 
+										 
+										
+									  	<a onclick="openPage('/edu/biddingShow/1F5EC0D4-34C7-41AF-0DFD-7ED4A4E06AFE/YZU131')" title="[扬州大学] 空调">[扬州大学] 空调</a>
+										 
+									</span>
+									</li>
+						
+						
+						
+								<li style="height: 30px">
+								
+										<span class="postDesc_news_release_date"
+											style="float: right; margin-left: 10px"> 截止时间：2017-10-30
+										</span>
+										<span class="postDesc_news_release_date" style="float: right;">
+											发布时间：2017-10-28
+										</span>
+								 
+									<span class="s-title"> 
+										 
+										
+									  	<a onclick="openPage('/edu/biddingShow/0E2DE56A-CA74-D99D-C8A1-B640D1124BE7/YZU131')" title="[扬州大学] 戴尔DELL灵越游匣Master15-R4645B 15.6英寸笔记本电脑,罗技G100s键盘鼠标套装 ,京天Strike S77台式电脑,京天 Strike S72台式电脑,金士顿HyperX骇客神条DDR4,8g内存">[扬州大学] 戴尔DELL灵越游匣Master15-R4645B 15.6英寸笔记本电脑,罗技G100s键盘鼠标套装 ,京天Strike S77台式电脑,京天 Strike S72台式电脑,金士顿HyperX骇客神条DDR4,8g内存</a>
+										 
+									</span>
+									</li>
+						
+						
+						
+								<li style="height: 30px">
+								
+										<span class="postDesc_news_release_date"
+											style="float: right; margin-left: 10px"> 截止时间：2017-10-30
+										</span>
+										<span class="postDesc_news_release_date" style="float: right;">
+											发布时间：2017-10-27
+										</span>
+								 
+									<span class="s-title"> 
+										 
+										
+									  	<a onclick="openPage('/edu/biddingShow/92281A32-D83E-A3E3-754B-FE092732402D/YZU131')" title="[扬州大学] DQ? Red BSA *special packaging*">[扬州大学] DQ? Red BSA *special packaging*</a>
+										 
+									</span>
+									</li>
+						
+						
+						
+								<li style="height: 30px">
+								
+										<span class="postDesc_news_release_date"
+											style="float: right; margin-left: 10px"> 截止时间：2017-10-30
+										</span>
+										<span class="postDesc_news_release_date" style="float: right;">
+											发布时间：2017-10-27
+										</span>
+								 
+									<span class="s-title"> 
+										 
+										
+									  	<a onclick="openPage('/edu/biddingShow/6C5B30F5-E493-2ACD-EEF0-FC4771B91118/YZU131')" title="[扬州大学] AMPKα1/2 siRNA">[扬州大学] AMPKα1/2 siRNA</a>
+										 
+									</span>
+									</li>
+						
+						
+						
+								<li style="height: 30px">
+								
+										<span class="postDesc_news_release_date"
+											style="float: right; margin-left: 10px"> 截止时间：2017-10-30
+										</span>
+										<span class="postDesc_news_release_date" style="float: right;">
+											发布时间：2017-10-27
+										</span>
+								 
+									<span class="s-title"> 
+										 
+										
+									  	<a onclick="openPage('/edu/biddingShow/E0535936-1788-14B9-8362-28D647023536/YZU131')" title="[扬州大学] Slide-A-Lyzer透析卡">[扬州大学] Slide-A-Lyzer透析卡</a>
+										 
+									</span>
+									</li>
+						
+						
+						
+								<li style="height: 30px">
+								
+										<span class="postDesc_news_release_date"
+											style="float: right; margin-left: 10px"> 截止时间：2017-10-29
+										</span>
+										<span class="postDesc_news_release_date" style="float: right;">
+											发布时间：2017-10-27
+										</span>
+								 
+									<span class="s-title"> 
+										 
+										
+									  	<a onclick="openPage('/edu/biddingShow/CB689CD6-FC58-CE88-6A14-22167008A4D7/YZU131')" title="[扬州大学] Total Exosome Isolation Reagent (from cell culture media)">[扬州大学] Total Exosome Isolation Reagent (from cell culture media)</a>
+										 
+									</span>
+									</li>
+						
+						
+						
+								<li style="height: 30px">
+								
+										<span class="postDesc_news_release_date"
+											style="float: right; margin-left: 10px"> 截止时间：2017-10-29
+										</span>
+										<span class="postDesc_news_release_date" style="float: right;">
+											发布时间：2017-10-27
+										</span>
+								 
+									<span class="s-title"> 
+										 
+										
+									  	<a onclick="openPage('/edu/biddingShow/10F980C3-27DD-25C1-63BA-0270204251D9/YZU131')" title="[扬州大学] HBA卡">[扬州大学] HBA卡</a>
+										 
+									</span>
+									</li>
+						
+						
+						
+					</ul>
+				</div>
+				
+				
+				<!-- 快速采购 -->
+				
+				
+				
+				
+				
+				 <div class="main_content_left_child">
+                        <p class="main_content_title_p"><img alt="" src="/styles/portals/image/bid_result.png" >
+                        		  高校采购查询&nbsp;
+                            <span style="color:#000000;float:right;font-size: 16px">
+                             
+							
+								 <a href="/edu/more/purchase/YZU131">更多&gt;&gt;</a>
+							 
+                           </span>
+                        </p>
+                        <ul style="list-style: none;line-height: 30px">
+                        <!-- 竞价竞价结果列表 -->
+                        
+                        	<li 
+                        		
+                        			class="dropright-title-li" 
+                        		
+                        		>
+                                <span class="postDesc_title" style="width: 250px">
+                               		  
+									
+										<a onclick="openPage('/edu/purchase/228C4958-50AF-757C-F33F-04EF542100DA/YZU131')" title="[北京大学] 服务器" >[北京大学] 服务器</a>
+									   
+                                </span>
+                                
+                                	<span class="postDesc_news_release_date">
+                                		
+                                	</span>
+                                
+                            </li>
+                        
+                        	<li 
+                        		
+                        			class="dropright-title-li" 
+                        		
+                        		>
+                                <span class="postDesc_title" style="width: 250px">
+                               		  
+									
+										<a onclick="openPage('/edu/purchase/6355D291-6CD9-C47F-C9CF-393028FB9E7D/YZU131')" title="[东南大学] 联想（Lenovo）AIO 520 致美一体机27英寸QHD屏" >[东南大学] 联想（Lenovo）AIO 520 致美一体机27英寸QHD屏</a>
+									   
+                                </span>
+                                
+                                	<span class="postDesc_news_release_date">
+                                		
+                                	</span>
+                                
+                            </li>
+                        
+                        	<li 
+                        		
+                        			class="dropright-title-li" 
+                        		
+                        		>
+                                <span class="postDesc_title" style="width: 250px">
+                               		  
+									
+										<a onclick="openPage('/edu/purchase/19F18AF0-3E82-A262-C06A-555FE4907CEE/YZU131')" title="[东南大学] 笔记本" >[东南大学] 笔记本</a>
+									   
+                                </span>
+                                
+                                	<span class="postDesc_news_release_date">
+                                		
+                                	</span>
+                                
+                            </li>
+                        
+                        	<li 
+                        		
+                        			class="dropright-title-li" 
+                        		
+                        		>
+                                <span class="postDesc_title" style="width: 250px">
+                               		  
+									
+										<a onclick="openPage('/edu/purchase/A7A27B4B-22F1-9A1B-6784-B912D74AC9E0/YZU131')" title="[东南大学] 多功能打印复印扫描一体机" >[东南大学] 多功能打印复印扫描一体机</a>
+									   
+                                </span>
+                                
+                                	<span class="postDesc_news_release_date">
+                                		
+                                	</span>
+                                
+                            </li>
+                        
+                        	<li 
+                        		
+                        			class="dropright-title-li" 
+                        		
+                        		>
+                                <span class="postDesc_title" style="width: 250px">
+                               		  
+									
+										<a onclick="openPage('/edu/purchase/D9177764-31CC-7F29-5FC9-816AF52B7A5E/YZU131')" title="[东南大学] 投影仪" >[东南大学] 投影仪</a>
+									   
+                                </span>
+                                
+                                	<span class="postDesc_news_release_date">
+                                		
+                                	</span>
+                                
+                            </li>
+                        
+                        	<li 
+                        		
+                        			class="dropright-title-li" 
+                        		
+                        		>
+                                <span class="postDesc_title" style="width: 250px">
+                               		  
+									
+										<a onclick="openPage('/edu/purchase/6B3B7BD7-38C6-D1DF-9CBF-A7312DF3C3C4/YZU131')" title="[东南大学] 城市更新学术委员会保密文件服务器" >[东南大学] 城市更新学术委员会保密文件服务器</a>
+									   
+                                </span>
+                                
+                                	<span class="postDesc_news_release_date">
+                                		
+                                	</span>
+                                
+                            </li>
+                        
+                        	<li 
+                        		
+                        			class="dropright-title-li" 
+                        		
+                        		>
+                                <span class="postDesc_title" style="width: 250px">
+                               		  
+									
+										<a onclick="openPage('/edu/purchase/8AA0AD61-EBF8-9432-D8D4-C9E99D722CBC/YZU131')" title="[东南大学] 弱电流放大器" >[东南大学] 弱电流放大器</a>
+									   
+                                </span>
+                                
+                                	<span class="postDesc_news_release_date">
+                                		
+                                	</span>
+                                
+                            </li>
+                        
+                        	<li 
+                        		
+                        			class="dropright-title-li" 
+                        		
+                        		>
+                                <span class="postDesc_title" style="width: 250px">
+                               		  
+									
+										<a onclick="openPage('/edu/purchase/321B04E4-F9A7-4F51-FA9B-5D3644BE3CF6/YZU131')" title="[北京大学] 微机" >[北京大学] 微机</a>
+									   
+                                </span>
+                                
+                                	<span class="postDesc_news_release_date">
+                                		
+                                	</span>
+                                
+                            </li>
+                        
+                        	<li 
+                        		
+                        			class="dropright-title-li" 
+                        		
+                        		>
+                                <span class="postDesc_title" style="width: 250px">
+                               		  
+									
+										<a onclick="openPage('/edu/purchase/09F88D79-EA4C-127D-24DD-E5903FB14F92/YZU131')" title="[北京大学] 微机" >[北京大学] 微机</a>
+									   
+                                </span>
+                                
+                                	<span class="postDesc_news_release_date">
+                                		
+                                	</span>
+                                
+                            </li>
+                        
+                        	<li 
+                        		
+                        			class="dropright-title-li" 
+                        		
+                        		>
+                                <span class="postDesc_title" style="width: 250px">
+                               		  
+									
+										<a onclick="openPage('/edu/purchase/ECB3307B-5EEA-559E-E763-6A256F6955BA/YZU131')" title="[东南大学] 笔记本电脑" >[东南大学] 笔记本电脑</a>
+									   
+                                </span>
+                                
+                                	<span class="postDesc_news_release_date">
+                                		
+                                	</span>
+                                
+                            </li>
+                        
+                        	<li 
+                        		
+                        			class="dropright-title-li" 
+                        		
+                        		>
+                                <span class="postDesc_title" style="width: 250px">
+                               		  
+									
+										<a onclick="openPage('/edu/purchase/D8CA7942-DD5A-8030-1D49-B2DA5AACD40F/YZU131')" title="[扬州大学] 笔记本电脑" >[扬州大学] 笔记本电脑</a>
+									   
+                                </span>
+                                
+                                	<span class="postDesc_news_release_date">
+                                		
+                                	</span>
+                                
+                            </li>
+                        
+                        	<li 
+                        		
+                        			class="dropright-title-li" 
+                        		
+                        		>
+                                <span class="postDesc_title" style="width: 250px">
+                               		  
+									
+										<a onclick="openPage('/edu/purchase/637CA361-8D07-862B-EAB9-3D7CD9C81C41/YZU131')" title="[北京大学] 打印机" >[北京大学] 打印机</a>
+									   
+                                </span>
+                                
+                                	<span class="postDesc_news_release_date">
+                                		
+                                	</span>
+                                
+                            </li>
+                        
+                        	<li 
+                        		
+                        			class="dropright-title-li" 
+                        		
+                        		>
+                                <span class="postDesc_title" style="width: 250px">
+                               		  
+									
+										<a onclick="openPage('/edu/purchase/48FE61CF-4629-0387-CD7A-0421EEAA4420/YZU131')" title="[北京大学] 服务器" >[北京大学] 服务器</a>
+									   
+                                </span>
+                                
+                                	<span class="postDesc_news_release_date">
+                                		
+                                	</span>
+                                
+                            </li>
+                        
+                        	<li 
+                        		
+                        			class="dropright-title-li" 
+                        		
+                        		>
+                                <span class="postDesc_title" style="width: 250px">
+                               		  
+									
+										<a onclick="openPage('/edu/purchase/E07CE1CD-3506-FA69-45F5-0F330A17D9B4/YZU131')" title="[北京大学] 微机主机" >[北京大学] 微机主机</a>
+									   
+                                </span>
+                                
+                                	<span class="postDesc_news_release_date">
+                                		
+                                	</span>
+                                
+                            </li>
+                        
+                        	<li 
+                        		
+                        			class="dropright-title-li" 
+                        		
+                        		>
+                                <span class="postDesc_title" style="width: 250px">
+                               		  
+									
+										<a onclick="openPage('/edu/purchase/7F83D4F3-73F9-45BD-E493-A4556CC0F50A/YZU131')" title="[绵阳职业技术学院] 小挂钩" >[绵阳职业技术学院] 小挂钩</a>
+									   
+                                </span>
+                                
+                                	<span class="postDesc_news_release_date">
+                                		
+                                	</span>
+                                
+                            </li>
+                        
+                        	<li 
+                        		
+                        			class="dropright-title-li" 
+                        		
+                        		>
+                                <span class="postDesc_title" style="width: 250px">
+                               		  
+									
+										<a onclick="openPage('/edu/purchase/7F83D4F3-73F9-45BD-E493-A4556CC0F50A/YZU131')" title="[绵阳职业技术学院] 卫生纸" >[绵阳职业技术学院] 卫生纸</a>
+									   
+                                </span>
+                                
+                                	<span class="postDesc_news_release_date">
+                                		
+                                	</span>
+                                
+                            </li>
+                        
+                        </ul>
+                    </div>
+                  
+				<div class="main_content_left_child">
+<!-- 					<p class="main_content_title_p"> -->
+<!-- 						帮助中心&nbsp;  -->
+<!-- 						 <a href="/edu/help/YZU131"><span style="color: #000000; float: right; font-size: 16px">更多&gt;&gt;</span></a> -->
+<!-- 					</p> -->
+					<div class="main_content_help">
+						 			 
+									
+										  <a href="/edu/help/YZU131?type=cpHelp">
+									   
+						<p class="main_content_help_title">供应商帮助</p></a>
+						<ul style="list-style: none; line-height: 30px">
+							
+								<li class="main_content_help_li">
+								 
+									
+										  <a href="/edu/helpShow/cpHelp/396032C9-A85C-90E7-E175-3BD0962F88A6/YZU131" title="大额采购网上报价指南">大额采购网上报价指南</a>
+									   
+								 	
+								</li>
+							
+								<li class="main_content_help_li">
+								 
+									
+										  <a href="/edu/helpShow/cpHelp/BBB860A3-53AC-8E2D-389A-0DEEC4CA7339/YZU131" title="交清费用，为什么权限还是禁止竞价？">交清费用，为什么权限还是禁止竞价？</a>
+									   
+								 	
+								</li>
+							
+								<li class="main_content_help_li">
+								 
+									
+										  <a href="/edu/helpShow/cpHelp/5F0BD77F-606D-F613-5D2C-9BAA4C570737/YZU131" title="多久需要交一次服务费/中标以后需要马上交服务费吗？">多久需要交一次服务费/中标以后需要马上交服务费吗？</a>
+									   
+								 	
+								</li>
+							
+								<li class="main_content_help_li">
+								 
+									
+										  <a href="/edu/helpShow/cpHelp/78936CEA-0408-AA3E-AA8B-51AF450ADEF7/YZU131" title="缴纳服务费后为什么会收到退款？">缴纳服务费后为什么会收到退款？</a>
+									   
+								 	
+								</li>
+							
+								<li class="main_content_help_li">
+								 
+									
+										  <a href="/edu/helpShow/cpHelp/976D4185-0F8E-D8F2-768E-54CE8CBBA43D/YZU131" title="怎么缴纳服务费？">怎么缴纳服务费？</a>
+									   
+								 	
+								</li>
+							
+						</ul>
+					</div>
+
+					<!-- 文档下载 开始 -->
+					<div class="main_content_help">
+					
+						
+						 
+									
+										  <p class="main_content_help_title" style="cursor: pointer;"onClick="javascript:location.href='/edu/fileList/YZU131';">资料下载</p>
+									   
+						<ul style="list-style: none; line-height: 30px">
+							
+								
+							
+								
+							
+								
+							
+								
+							
+								
+							
+						</ul>
+					</div>
+
+					<!-- 文档下载 结束 -->
+					<div class="main_content_help">
+					
+					   
+								
+									<a href="/edu/help/YZU131?type=coHelp">
+								 
+					  <p class="main_content_help_title">高校帮助</p></a>
+						<ul style="list-style: none; line-height: 30px">
+							
+								<li class="main_content_help_li">
+								 
+								
+										  <a href="/edu/helpShow/coHelp/9D04A4A5-1F8E-5F41-E48B-8E54158C5643/YZU131" title="如何重新评价已经评价过的单？">如何重新评价已经评价过的单？</a>
+								 
+								 	
+								</li>
+							
+								<li class="main_content_help_li">
+								 
+								
+										  <a href="/edu/helpShow/coHelp/BBF1A008-9CDC-D9CC-9274-BA53324DF21A/YZU131" title="高校老师在填写申购单时如果要购买的设备很多，需要怎么处理？">高校老师在填写申购单时如果要购买的设备很多，需要怎么处理？</a>
+								 
+								 	
+								</li>
+							
+								<li class="main_content_help_li">
+								 
+								
+										  <a href="/edu/helpShow/coHelp/063F8F4D-3C90-FCA0-0589-0AC3FE1853AF/YZU131" title="高校用户打印一些单据在哪可以打印？">高校用户打印一些单据在哪可以打印？</a>
+								 
+								 	
+								</li>
+							
+								<li class="main_content_help_li">
+								 
+								
+										  <a href="/edu/helpShow/coHelp/588CE13F-5E49-9832-FFAF-F9014D9B2127/YZU131" title="如何在系统中选择中标企业？">如何在系统中选择中标企业？</a>
+								 
+								 	
+								</li>
+							
+								<li class="main_content_help_li">
+								 
+								
+										  <a href="/edu/helpShow/coHelp/44EA19CF-80BF-ADAC-736A-7542C875F84C/YZU131" title="高校暂停的单在哪可以找到，且把他终止掉？">高校暂停的单在哪可以找到，且把他终止掉？</a>
+								 
+								 	
+								</li>
+							
+						</ul>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<!--内容右大板块div-->
+			<div class="main_content_right" style="magin: 0 auto;">
+				<!--内容右大板块嵌套上div-->
+				
+				
+				<div class="main_content_right_child">
+					<!--内容右大板块嵌套上div-左-->
+					<p class="main_content_right_title_p">
+						最新公告&nbsp; <span
+							style="float: right; font-size: 12px; color: #333333;"> 
+							 
+							    
+								
+										   <a href="/edu/noticeList/YZU131">>>更多</a>
+								 
+						</span>
+					</p>
+
+					<div id="marquee"
+						class="marquee_notice">
+						<div id="holder">
+							<ul>
+								
+									<li class="right_title_li"
+										style="min-height: 50px; padding- bottom: 10px;">
+							 			
+										 <a style="cursor: pointer;" onclick="openWindow('/content/notice/E46BC9C4-8923-DBB2-D11F-5B0E3DA3662C');">热烈欢迎湖北汽车工业学院加入竞价网！</a>
+										&nbsp;&nbsp;<font class="postDesc_news_release_date_marquee">[2017-09-24]
+									</font></li>
+								
+									<li class="right_title_li"
+										style="min-height: 50px; padding- bottom: 10px;">
+							 			
+										 <a style="cursor: pointer;" onclick="openWindow('/content/notice/85C99665-D3B2-6FB4-657D-5D76A559DA3C');">热烈欢迎南京大学加入竞价网！</a>
+										&nbsp;&nbsp;<font class="postDesc_news_release_date_marquee">[2017-09-08]
+									</font></li>
+								
+									<li class="right_title_li"
+										style="min-height: 50px; padding- bottom: 10px;">
+							 			
+										 <a style="cursor: pointer;" onclick="openWindow('/content/notice/1D38DF22-5E83-94AD-BA59-8406E263E9BB');">热烈欢迎北京化工大学加入竞价网！</a>
+										&nbsp;&nbsp;<font class="postDesc_news_release_date_marquee">[2017-09-08]
+									</font></li>
+								
+									<li class="right_title_li"
+										style="min-height: 50px; padding- bottom: 10px;">
+							 			
+										 <a style="cursor: pointer;" onclick="openWindow('/content/notice/FC906DC2-C7AC-B877-C560-D7BAECC63DC7');">热烈欢迎云南大学加入竞价网！</a>
+										&nbsp;&nbsp;<font class="postDesc_news_release_date_marquee">[2017-09-07]
+									</font></li>
+								
+									<li class="right_title_li"
+										style="min-height: 50px; padding- bottom: 10px;">
+							 			
+										 <a style="cursor: pointer;" onclick="openWindow('/content/notice/19851439-BA7B-1496-6BB7-9942212A59C5');">热烈欢迎江苏大学附属医院加入竞价网！</a>
+										&nbsp;&nbsp;<font class="postDesc_news_release_date_marquee">[2017-08-22]
+									</font></li>
+								
+									<li class="right_title_li"
+										style="min-height: 50px; padding- bottom: 10px;">
+							 			
+										 <a style="cursor: pointer;" onclick="openWindow('/content/notice/9BEA0387-BCF2-A557-B25A-31F0F44995D4');">热烈欢迎东南大学苏州医疗器械研究院加入竞价网！</a>
+										&nbsp;&nbsp;<font class="postDesc_news_release_date_marquee">[2017-08-04]
+									</font></li>
+								
+									<li class="right_title_li"
+										style="min-height: 50px; padding- bottom: 10px;">
+							 			
+										 <a style="cursor: pointer;" onclick="openWindow('/content/notice/C5A7DB35-9F15-DE40-5F64-3A0202EB329C');">热烈欢迎河北中医学院加入竞价网！</a>
+										&nbsp;&nbsp;<font class="postDesc_news_release_date_marquee">[2017-06-30]
+									</font></li>
+								
+									<li class="right_title_li"
+										style="min-height: 50px; padding- bottom: 10px;">
+							 			
+										 <a style="cursor: pointer;" onclick="openWindow('/content/notice/AB2263E2-4660-E739-9427-8CF53520A7F0');">热烈欢迎江苏大学加入竞价网！</a>
+										&nbsp;&nbsp;<font class="postDesc_news_release_date_marquee">[2017-06-21]
+									</font></li>
+								
+									<li class="right_title_li"
+										style="min-height: 50px; padding- bottom: 10px;">
+							 			
+										 <a style="cursor: pointer;" onclick="openWindow('/content/notice/3DC9B439-9218-65D2-05D4-B5C049461FBE');">热烈欢迎南京农业大学加入竞价网！</a>
+										&nbsp;&nbsp;<font class="postDesc_news_release_date_marquee">[2017-06-20]
+									</font></li>
+								
+									<li class="right_title_li"
+										style="min-height: 50px; padding- bottom: 10px;">
+							 			
+										 <a style="cursor: pointer;" onclick="openWindow('/content/notice/8959A95B-1AD5-BE33-06D2-FC498CE64B12');">热烈欢迎东北师范大学加入竞价网！</a>
+										&nbsp;&nbsp;<font class="postDesc_news_release_date_marquee">[2017-06-19]
+									</font></li>
+								
+							</ul>
+						</div>
+					</div>
+
+
+				</div>
+				<div class="main_content_right_child">
+					<!--内容右大板块嵌套上div-左-->
+
+					<p class="main_content_right_title_p">
+						热门竞价分类&nbsp; <span
+							style="float: right; font-size: 12px; color: #808080;">
+							  
+							    
+								
+										  <a href="/edu/morebiddingneed/need/YZU131">>>更多</a>
+								 
+						</span>
+					</p>
+					<ul style="list-style: none; line-height: 30px;">
+						
+							<li title="电子设备"><a
+								class="right_title_type_li"
+								href="javascript:showOrderByDevice('电子设备');">电子设备</a>
+								<span
+								style="float: right; font-size: 12px; color: #808080; margin- right: 10px;">
+									<a style="color: red;" href="javascript:showOrderByDevice('电子设备');">10</a>条
+							</span></li>
+						
+							<li title="仪器仪表"><a
+								class="right_title_type_li"
+								href="javascript:showOrderByDevice('仪器仪表');">仪器仪表</a>
+								<span
+								style="float: right; font-size: 12px; color: #808080; margin- right: 10px;">
+									<a style="color: red;" href="javascript:showOrderByDevice('仪器仪表');">7</a>条
+							</span></li>
+						
+							<li title="试剂"><a
+								class="right_title_type_li"
+								href="javascript:showOrderByDevice('试剂');">试剂</a>
+								<span
+								style="float: right; font-size: 12px; color: #808080; margin- right: 10px;">
+									<a style="color: red;" href="javascript:showOrderByDevice('试剂');">6</a>条
+							</span></li>
+						
+							<li title="其他"><a
+								class="right_title_type_li"
+								href="javascript:showOrderByDevice('其他');">其他</a>
+								<span
+								style="float: right; font-size: 12px; color: #808080; margin- right: 10px;">
+									<a style="color: red;" href="javascript:showOrderByDevice('其他');">3</a>条
+							</span></li>
+						
+							<li title="行政办公设备"><a
+								class="right_title_type_li"
+								href="javascript:showOrderByDevice('行政办公设备');">行政办公设备</a>
+								<span
+								style="float: right; font-size: 12px; color: #808080; margin- right: 10px;">
+									<a style="color: red;" href="javascript:showOrderByDevice('行政办公设备');">3</a>条
+							</span></li>
+						
+					</ul>
+
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--版权信息-->
+	<!DOCTYPE HTML>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--版权信息-->
+<div class="footer" style="width:980px;margin: 0 auto;">
+	
+	<p id="contactInfo">
+		技术支持热线：<font></font> 
+		高校加盟热线：<font></font>
+		客户服务QQ：<font></font>
+	</p>
+
+	<p>广州高采信息技术有限公司 | 竞价采购网 http://www.soeasycenter.com</p>
+
+	
+		<p>粤ICP备案：16035513号-1 &nbsp;&nbsp; 公安备案：44010502000524号 </p>
+	
+</div>
+
+<script type="text/javascript">
+	//ajax获取技术/客服联系方式
+	$(function(){
+		$.ajax({
+			url: "/queryContactAjax",
+			type: "post",
+			data:	{},
+			dataType:	"json",
+			success: function(data){
+				var json = JSON.parse(data.contactList);
+				
+				$("#contactInfo").find("font").each(function(index){
+					$(this).html(json[index]);
+				});
+			}
+		});		
+	});
+</script>
+
+</body>
+</html>

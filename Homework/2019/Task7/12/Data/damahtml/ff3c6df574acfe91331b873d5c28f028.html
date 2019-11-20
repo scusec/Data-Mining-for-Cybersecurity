@@ -1,0 +1,1 @@
+<center><form method=post>Password: <input type=password name=pass><input type=submit value='>>'></form></center>

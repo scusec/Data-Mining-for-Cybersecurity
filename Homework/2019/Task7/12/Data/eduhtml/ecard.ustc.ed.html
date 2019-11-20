@@ -1,0 +1,121 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>校园一卡通门户系统</title>
+<link type="text/css" rel="stylesheet" href="styles/style.css" />
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+<script type="text/javascript" src="js/commons/base.js"></script>
+<script type="text/javascript" src="/smartui/js/check105.js"></script>
+
+<!-- </script> -->
+<script type="text/javascript">
+<!--
+window.onerror = function(){return true;}
+//-->
+
+function login(){
+	var theForm = $('#loginForm')[0];
+	if(Validator.Validate(theForm, 1)){
+		$("#loginForm").submit();
+	}
+}
+
+function pageload() {
+	$("#str_accountNo").focus();
+	if(navigator.userAgent.indexOf("MSIE") > 0) {
+		document.onkeydown = function() {
+			if(13 == event.keyCode) {
+				login();
+			}
+		}
+	} else {
+		window.onkeydown = function() {
+			if(13 == event.keyCode) {
+				login();
+			}
+		}
+	}
+}
+
+
+var randomid = 1;
+function chgImage() {
+	$("#picurl").attr("src", "/smart_web_zkd/ajax/image/getImage?randomid="+randomid);
+	randomid += 1;
+	if(randomid >= 10000) randomid = 1;
+}
+
+
+function register(){
+	window.open("/smart_web_zkd/ajax/register/regPerson",'register','directories=no,left=100,top=100,width=800,height=365,scrollbars=no,resizable=no,toolbar=no').focus();
+}
+
+function resetPassword() {
+	var accountno = document.getElementById("str_accountNo").value;
+	if(accountno == null || accountno ==""){
+		alert("请输入账户");
+	    return;
+	}
+	window.open("/smart_web_zkd/ajax/login/resetpwd?accountno="+accountno,'reset','directories=no,left=400,top=200,width=600,height=365,scrollbars=no,resizable=no,toolbar=no').focus();
+}
+
+</script>
+</head>
+
+<body onload="pageload();">
+<div class="wrap">
+     <div class="head_logo"><a href="#"><img src="images/index_logo.png"></a></div>
+</div>
+<form  method="post" id="loginForm" action="/smart_web_zkd/ajax/login/index" enctype="multipart/form-data" >
+<div class="main">
+     <div class="wrap">
+          <div class="login_main">
+               <div class="logo">
+                    <h2>校园一卡通门户系统</h2>
+                    <dl>
+                    <dd>
+                     
+                    </dd>
+                    <div class="cle"></div>
+                    </dl> 
+                    <dl class="mt0">
+                    <dd class="logoW">账&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;户</dd>
+                    <dd><input type="text" class="logo_tex" id="str_accountNo" name="str_accountNo"/></dd>
+                    <div class="cle"></div>
+                    </dl>
+                    <dl>
+                    <dd class="logoW">密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码</dd>
+                    <dd><input type="password" class="logo_tex" id="str_password" name="str_password"  dataType="Require;user_name;" require="true"  msg="密码不能为空！;密码为数字、字母及组合"/></dd>
+                    <dd><a href="javascript:;" onclick="resetPassword();">忘记密码?</a></dd>
+                    <div class="cle"></div>
+                    </dl>
+                    <dl>
+                    <dd class="logoW" style="float:left;">验&nbsp;证&nbsp;码</dd>
+                    <dd style="float:left;"><input type="text" class="logo_tex" style="width:74px;" id="checkcode" name="checkcode"/></dd>
+                    <dd style="margin-left:10px; display:inline;float:left;"><img onclick="javascript:chgImage();" src="/smart_web_zkd/ajax/image/getImage" title="点击获取随机码" alt="点击获取随机码" id="picurl" name="picurl"/></dd>
+                    <div class="cle"></div>                    
+                    </dl>
+                    <dl class="logo_btn_body">
+                    <dd><img class="logo_btn" style="margin-right:20px;" title="点击登录" src="images/login.jpg" onclick="login();"/></dd>
+                    <dd><img class="logo_btn btnBbsz" title="点击注册" src="images/login_zc.jpg" onclick="javascript:register();"/></dd>
+                    <div class="cle"></div>
+                    </dl>
+                    <dl class="mt0">
+                     <dd><p>注：账户为学工号或者GID，密码为6-8位。</p></dd>
+					 <div class="cle"></div>
+                    </dl>
+					
+               </div>
+			   <div class="cle"></div>
+          </div>
+		  <div class="cle"></div>
+     </div>
+</div>
+</form>
+</body>
+</html>

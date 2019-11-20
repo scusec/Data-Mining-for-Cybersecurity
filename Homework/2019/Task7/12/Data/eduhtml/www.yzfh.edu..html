@@ -1,0 +1,674 @@
+<!DOCTYPE html PUBLIC "" "">
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>引智分会 - 首页</title>
+<script>
+					window.tenantCfg = {
+			 			tenantCode : 'yzfh',
+			 			contextPath : ''
+			 		};
+				</script>
+<link type="text/css" rel="stylesheet" href="/theme/scs/project/gj_css.css">
+<script src="/jsFrame/jquery/js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="/jsFrame/jquery/portal/fhmain.js" type="text/javascript"></script><script>
+					
+						//幻灯片效果
+						$(document).ready(function() {
+							var length = $("#banner_ul li").length;
+							// alert(length);
+							// alert($("#banner_ul li").eq(1).clone().find("img").attr("src"));
+							$("#test").html($("#banner_ul li").eq(0).clone());
+							var t = 0;
+							$("#test_info input").click(function() {
+										var value = $(this).attr("value");
+										document.getElementById("content").innerHTML = value;
+							});
+						
+							$("#test_list li").click(function() {
+								$(this).parent().children().removeClass("open");
+						
+								$(this).addClass("open");
+						
+								// console.log($(this).attr("value"));
+						
+								var tt = $(this).attr("value") - 1;
+								if (tt != t) {
+									t = tt;
+								}
+								$("#test").find("a").filter(":visible").fadeOut(500).parent().html($("#banner_ul li a").eq(t).clone().fadeIn(1000));
+								$("#test").find("img").filter(":visible").fadeOut(500).parent().html($("#banner_ul li img").eq(t).clone().fadeIn(1000));
+							});
+						
+							var value = document.getElementById("title").value;
+							document.getElementById("content").innerHTML = value;
+							setInterval(function showAuto() {
+								t++;
+								if (t == length) {
+									t = 0;
+									// console.log("从头做起");
+								}
+								$("#test_info input").eq(t).trigger('click');
+								$("#test_list li").eq(t).trigger('click');
+									// console.log($("#test_list li").eq(t));
+									// $("#test").find("img").filter(":visible").fadeOut(500).parent().html($("#banner_ul
+									// li").eq(t).clone().fadeIn(1000));
+									// $("#test").html($("#banner_ul li").eq(t).clone()).find("img").fadeIn(1000);
+									// var title = document.getElementById("test_info").innerHTML;
+									// document.getElementById("content").innerHTML = title;
+								}, 5000);
+						})
+					
+				</script><script src="/theme/scs/project/mm_menu.js" type="text/javascript"></script>
+</head>
+<body onload="MM_preloadImages('/theme/scs/project/images/gj_r2_c222.jpg','/theme/scs/project/images/gj_r2_c999.jpg','/theme/scs/project/images/gj_r2_c111.jpg','/theme/scs/project/images/gj_r2_j111111.jpg','/theme/scs/project/images/gj_r2_c1999.jpg','/theme/scs/project/images/gj_r2_c2333.jpg','/theme/scs/project/images/gj_r2_c2555.jpg','/theme/scs/project/images/gj_r2_c1444.jpg')">
+<table class="bj" cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td>
+<table cellspacing="0" cellpadding="0" align="center" border="0" width="1000">
+<tr>
+<td bgcolor="#FFFFFF" valign="top" width="1000">
+<table cellpadding="0" cellspacing="0" border="0" width="1000">
+<tr>
+<td class="logo_bj" valign="bottom" height="128" width="1000">
+<link href="/theme/scs/main.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="http://www.yzfh.edu.cn:80//easyservice-util/EasyServiceClientFullZ.js"></script><script type="text/javascript" src="http://www.yzfh.edu.cn:80//easyservice/com.cnebula.common.security.auth.ILoginService?json"></script><script type="text/javascript" src="http://www.yzfh.edu.cn:80//easyservice/com.cnebula.uas.service.saas.ISAASService?json"></script><script type="text/javascript">
+			var homePage = window.location.href;//域门户首页
+			var tenantCode = "yzfh";
+			var contextPath = "";
+			var Auth_UseUas = "false";
+			
+			//var DOMAIN_UAS_URL = "http://www.yzfh.edu.cn:80//";//实体域统一认证
+			var DOMAIN_UAS_URL = contextPath+"/"+tenantCode+"/index/login.html";//实体域统一认证
+			var CENTER_UAS_URL = "http://www.yzfh.edu.cn:80//";//中心统一认证
+			var RemoteProxy = DOMAIN_UAS_URL;
+			var CAL_src = "http://st-analytics.calis.edu.cn/calis.cal_0.01.js";
+			var use_CAL = "true";
+			var AppId = "app:yzfh.scs_000";
+			window.isReader = "";
+			var colls = [{"_id":"h12_13","siteName":"人物访谈库","siteFullPath":"interview","collName":"interview"},{"_id":"h12_3","siteName":"外籍专家信息库","siteFullPath":"ForeignExport","collName":"ForeignExport"},{"_id":"h12_4","siteName":"员工培训资源库","siteFullPath":"cultivate","collName":"cultivateResource"},{"_id":"h12_5","siteName":"项目研究信息库","siteFullPath":"studyinfo","collName":"projectStudyInfo"},{"_id":"h12_6","siteName":"国际合作案例库","siteFullPath":"international","collName":"internationalCooperation"},{"_id":"h12_7","siteName":"政策法规信息库","siteFullPath":"policyinfo","collName":"policyInfo"},{"_id":"h12_8","siteName":"学术讲座信息库","siteFullPath":"chairInfo","collName":"chairInfo"},{"_id":"s13_14","siteName":"国际会议资源库","siteFullPath":"INTMeeting","collName":"InterMeeting"},{"_id":"s8_14","siteName":"热点共商","siteFullPath":"hotspot","collName":"hotspot"}];
+		</script><script type="text/javascript" src="/jsFrame/jquery/portal/fhmain.js"></script><script type="text/javascript" src="/jsFrame/comm/auth.js"></script><script language="JavaScript1.2">mmLoadMenus();</script>
+<div style="position:absolute;top:0px;right:220px;">
+<a href="javascript:void(0)" id="welcomeInfo" onClick="toLogin();return false;" style="color:#FFFFFF;text-decoration:none;">登录</a><a href="#" id="registerInfo" style="text-decoration:none;"><span id="uinfo" style="color:#FFFFFF;">&nbsp;|&nbsp;</span></a><a href="javascript:void(0)" class="a3" onClick="toRegister();return false;" style="color:#FFFFFF;text-decoration:none;">注册&nbsp;&nbsp;</a>
+<div id="popWindow" class="hide">
+<div class="closeWindow">
+<a class="close" href="#" onClick="closePopWindow();return false;" style="margin-left:0px;">关闭</a>
+</div>
+<div style="overflow:hidden;">
+<iframe id="ifm" src="" scrolling="no" frameborder="0"></iframe>
+</div>
+</div>
+<div id="bg" class="bg"></div>
+<div class="clrDiv"></div>
+</div>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr style="line-height: 1px;">
+<td width="65" height="33"><a href="/yzfh/index/index.html"><img src="/theme/scs/project/images/gj_r2_c2.jpg" name="Image1" width="65" border="0" height="33" id="Image1" onmouseover="MM_swapImage('Image1','','/theme/scs/project/images/gj_r2_c222.jpg',1)" onmouseout="MM_swapImgRestore()"></a></td><td width="2"><img src="/theme/scs/project/images/gj_r2_c8.jpg" width="2" height="32"></td><td width="75"><img src="/theme/scs/project/images/gj_r2_c9.jpg" name="image2" width="75" height="33" id="image2" border="0" onmouseover="MM_swapImage('image2','','/theme/scs/project/images/gj_r2_c999.jpg',1);MM_showMenu(window.mm_menu_1017105716_1,0,30,null,'image2')" onmouseout="MM_swapImgRestore();MM_startTimeout();"></td><td width="2"><img src="/theme/scs/project/images/gj_r2_c8.jpg" width="2" height="32"></td><td width="75"><img src="/theme/scs/project/images/gj_r2_c11.jpg" name="image4" width="75" height="33" id="image4" border="0" onmouseover="MM_swapImage('image4','','/theme/scs/project/images/gj_r2_c111.jpg',1);MM_showMenu(window.mm_menu_1017105716_2,0,30,null,'image4')" onmouseout="MM_swapImgRestore();MM_startTimeout();"></td><td width="2"><img src="/theme/scs/project/images/gj_r2_c8.jpg" width="2" height="32"></td><td width="75"><img src="/theme/scs/project/images/gj_r2_c1777.jpg" name="image1" width="75" height="33" id="image1" border="0" onmouseover="MM_swapImage('image1','','/theme/scs/project/images/gj_r2_c17.jpg',1);MM_showMenu(window.mm_menu_1017105716_0,0,30,null,'image1')" onmouseout="MM_swapImgRestore();MM_startTimeout();"></td><td width="2"><img src="/theme/scs/project/images/gj_r2_c8.jpg" width="2" height="32"></td><td width="75"><a href="/yzfh/interview/search.html"><img src="/theme/scs/project/images/gj_r2_j11.jpg" width="75" border="0" height="33" id="Image5" onmouseover="MM_swapImage('Image5','','/theme/scs/project/images/gj_r2_j111111.jpg',1)" onmouseout="MM_swapImgRestore()"></a></td><td width="2"><img src="/theme/scs/project/images/gj_r2_c8.jpg" width="2" height="32"></td><td width="75"><a href="/yzfh/onlinePublition/preview.html?_id=s29_631"><img src="/theme/scs/project/images/gj_r2_c19.jpg" width="75" border="0" height="33" id="Image6" onmouseover="MM_swapImage('Image6','','/theme/scs/project/images/gj_r2_c1999.jpg',1)" onmouseout="MM_swapImgRestore()"></a></td><td width="2"><img src="/theme/scs/project/images/gj_r2_c8.jpg" width="2" height="32"></td><td width="75"><a href="/yzfh/hotspot/search.html"><img src="/theme/scs/project/images/gj_r2_c23.jpg" width="75" height="33" id="Image7" border="0" onmouseover="MM_swapImage('Image7','','/theme/scs/project/images/gj_r2_c2333.jpg',1)" onmouseout="MM_swapImgRestore()"></a></td><td width="2"><img src="/theme/scs/project/images/gj_r2_c8.jpg" width="2" height="32"></td><td width="75"><a href="/yzfh/index/lianxi.html"><img src="/theme/scs/project/images/gj_r2_c25.jpg" width="75" height="33" id="Image8" border="0" onmouseover="MM_swapImage('Image8','','/theme/scs/project/images/gj_r2_c2555.jpg',1)" onmouseout="MM_swapImgRestore()"></a></td><td width="2"><img src="/theme/scs/project/images/gj_r2_c8.jpg" width="2" height="32"></td><td align="right">
+                	&nbsp;<script type="text/javascript">
+		
+			var str = "请输入有意义的检索关键字";
+			function getOnblur(e){
+				if(e.value==''){
+					e.value = str;
+					e.style.color='#666';
+				}
+			}
+			function getOnfocus(e){
+				if(e.value== str){
+					e.value='';
+					e.style.color='#666';
+				}
+			}
+			function toSearch(){
+				var flag = true;
+				var q = document.getElementById("q").value;
+				var fq = document.getElementById("fq").value;
+				if(str==q){
+					document.getElementById("q").value = str;
+					flag = false;
+				}else if(q==''){
+					document.getElementById("q").value = str;
+					flag = false;
+				}
+				return flag;
+			}
+		
+	</script>
+<form onsubmit="return toSearch();" method="get" action="/yzfh/index/search.html" name="form" id="form">
+<input value="请输入有意义的检索关键字" class="qCss" onfocus="getOnfocus(this);" onblur="getOnblur(this);" name="q" type="text" id="q"><span><select class="fqCss" id="fq" name="fq"><option value="">全  部</option><option value="h12_7">外籍专家信息库</option><option value="h12_8">员工培训资源库</option><option value="h12_9">项目研究信息库</option><option value="h12_10">国际合作案例库</option><option value="h12_11">政策法规信息库</option><option value="h12_12">学术讲座信息库</option><option value="s13_17">国际会议资源库</option></select></span>
+<sapn>
+<input onclick="toSearch();" value="" class="yzfhsearchbutton" type="submit" id="yzfhsearchbutton">&nbsp;</sapn>
+</form>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+<tr>
+<td valign="top" width="685">
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+<tr>
+<td height="45" class="huit_bj1">&nbsp;</td>
+</tr>
+<tr>
+<td>
+<div id="banner">
+<ul id="banner_ul">
+<li>
+<a href="/yzfh/latestnews/view.html?_id=s29_1443"><img src="/yzfh/doWork/load.do?_id=s29_1219" border="0" id="imagecut"></a>
+</li>
+<li>
+<a href="/yzfh/latestnews/view.html?_id=s29_1442"><img src="/yzfh/doWork/load.do?_id=s29_1218" border="0" id="imagecut"></a>
+</li>
+<li>
+<a href="/yzfh/latestnews/view.html?_id=s29_1441"><img src="/yzfh/doWork/load.do?_id=s29_1215" border="0" id="imagecut"></a>
+</li>
+<li>
+<a href="/yzfh/latestnews/view.html?_id=s29_1440"><img src="/yzfh/doWork/load.do?_id=s29_1214" border="0" id="imagecut"></a>
+</li>
+<li>
+<a href="/yzfh/latestnews/view.html?_id=s29_1439"><img src="/yzfh/doWork/load.do?_id=s29_1213" border="0" id="imagecut"></a>
+</li>
+</ul>
+<div id="test"></div>
+<div id="test_info">
+<input type="hidden" id="title" value="引智分会会员高校赴德国和拉脱维亚交流访问"><input type="hidden" id="title" value="&ldquo;中国高等教育学会引智分会2016年会&rdquo;在复旦大学召开"><input type="hidden" id="title" value="引智分会&ldquo;第三届海峡两岸大学交流与合作研讨会&rdquo;在杭州举办"><input type="hidden" id="title" value="2016中国高教学会引智分会西南片区交流会在重庆大学召开"><input type="hidden" id="title" value="引智分会2016年第四期外事干部培训班在上海海关学院举办">
+</div>
+<ul id="test_list">
+<li class="open" value="1">1</li>
+<li value="2">2</li>
+<li value="3">3</li>
+<li value="4">4</li>
+<li value="5">5</li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="display:none;">
+<td height="35" class="huit_bj">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="12"></td><td align="left" class="huit_bj_font" style="color:#000000;font-weight: bold;font-size:14px;" id="content"></td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td height="248" valign="top">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="11" height="12"></td><td width="16"></td><td align="left"></td>
+</tr>
+<tr>
+<td>&nbsp;</td><td align="left"><img src="/theme/scs/project/images/award_star_bronze_1.png"></td><td align="left"><a href="/yzfh/latestnews/view.html?_id=s29_1443" style="color:#006ACD;font-size:14px;text-decoration: none;">引智分会会员高校赴德国和拉脱维亚交流访问</a>&nbsp;&nbsp;<span class="font2"><img src="/theme/scs/project/images/new.png">2017-03-10</span></td>
+</tr>
+<tr>
+<td>&nbsp;</td><td align="left"><img src="/theme/scs/project/images/award_star_bronze_1.png"></td><td align="left"><a href="/yzfh/latestnews/view.html?_id=s29_1442" style="color:#006ACD;font-size:14px;text-decoration: none;">&ldquo;中国高等教育学会引智分会2016年会&rdquo;在复旦大学召开</a>&nbsp;&nbsp;<span class="font2"><img src="/theme/scs/project/images/new.png">2017-03-10</span></td>
+</tr>
+<tr>
+<td>&nbsp;</td><td align="left"><img src="/theme/scs/project/images/award_star_bronze_1.png"></td><td align="left"><a href="/yzfh/latestnews/view.html?_id=s29_1441" style="color:#006ACD;font-size:14px;text-decoration: none;">引智分会&ldquo;第三届海峡两岸大学交流与合作研讨会&rdquo;在杭州举办</a>&nbsp;&nbsp;<span class="font2"><img src="/theme/scs/project/images/new.png">2016-12-10</span></td>
+</tr>
+<tr>
+<td>&nbsp;</td><td align="left"><img src="/theme/scs/project/images/award_star_bronze_1.png"></td><td align="left"><a href="/yzfh/latestnews/view.html?_id=s29_1440" style="color:#006ACD;font-size:14px;text-decoration: none;">2016中国高教学会引智分会西南片区交流会在重庆大学召开</a>&nbsp;&nbsp;<span class="font2"><img src="/theme/scs/project/images/new.png">2016-11-14</span></td>
+</tr>
+<tr>
+<td>&nbsp;</td><td align="left"><img src="/theme/scs/project/images/award_star_bronze_1.png"></td><td align="left"><a href="/yzfh/latestnews/view.html?_id=s29_1439" style="color:#006ACD;font-size:14px;text-decoration: none;">引智分会2016年第四期外事干部培训班在上海海关学院举办</a>&nbsp;&nbsp;<span class="font2"><img src="/theme/scs/project/images/new.png">2016-11-14</span></td>
+</tr>
+<tr>
+<td>&nbsp;</td><td align="left"><img src="/theme/scs/project/images/award_star_bronze_1.png"></td><td align="left"><a href="/yzfh/latestnews/view.html?_id=s29_1338" style="color:#006ACD;font-size:14px;text-decoration: none;">外国人来华工作许可制度试点工作启动</a>&nbsp;&nbsp;<span class="font2"><img src="/theme/scs/project/images/new.png">2016-09-21</span></td>
+</tr>
+<tr>
+<td>&nbsp;</td><td align="left"><img src="/theme/scs/project/images/award_star_bronze_1.png"></td><td align="left"><a href="/yzfh/latestnews/view.html?_id=s29_1238" style="color:#006ACD;font-size:14px;text-decoration: none;">聚焦高校新时期教育对外开放工作 --引智分会第四届常务理事会第一次会议在广东召开</a>&nbsp;&nbsp;<span class="font2"><img src="/theme/scs/project/images/new.png">2016-08-05</span></td>
+</tr>
+<tr>
+<td>&nbsp;</td><td align="left"><img src="/theme/scs/project/images/award_star_bronze_1.png"></td><td align="left"><a href="/yzfh/latestnews/view.html?_id=s29_1237" style="color:#006ACD;font-size:14px;text-decoration: none;">引智分会会员高校赴台湾高雄中山大学参会研讨</a>&nbsp;&nbsp;<span class="font2"><img src="/theme/scs/project/images/new.png">2016-07-06</span></td>
+</tr>
+<tr>
+<td height="12"></td><td align="left"></td><td align="left"></td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<link href="/theme/scs/css/lanrenzhijia.css" type="text/css" rel="stylesheet">
+<script src="/theme/scs/js/jquery-1.2.6.js" type="text/javascript"></script><script type="text/javascript" charset="utf-8" src="/theme/scs/js/lanrenzhijia.js"></script>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="46%" valign="top">
+<div style="padding-top:5px;margin:0px 0px 10px 0px;" class="tzcss">
+<a href="/yzfh/latestnews/tzsearch.html?org=tznews"><img src="/theme/scs/project/images/32.gif" style="float:right;margin:15px 10px;" border="0"></a>
+</div>
+<div style="position:relative;">
+<div style="width:320px;">
+<div style="right:0;position:absolute;color:#b2b2b2;">
+<img src="/theme/scs/project/images/new.png">2013-12-23&nbsp;&nbsp;</div>
+<div style="margin-right:120px;overflow:hidden;white-space:nowrap;width:18em;">
+<div style="overflow:hidden;white-space:nowrap;">
+														&nbsp;&nbsp;&nbsp;&nbsp;<a href="/yzfh/latestnews/view.html?_id=s28_125" style="color: #006ACD; font-size: 14px;text-decoration: none;">引智分会入会申请表</a>
+</div>
+</div>
+</div>
+</div>
+<div style="position:relative;">
+<div style="width:320px;">
+<div style="right:0;position:absolute;color:#b2b2b2;">
+<img src="/theme/scs/project/images/new.png">2013-04-25&nbsp;&nbsp;</div>
+<div style="margin-right:120px;overflow:hidden;white-space:nowrap;width:18em;">
+<div style="overflow:hidden;white-space:nowrap;">
+														&nbsp;&nbsp;&nbsp;&nbsp;<a href="/yzfh/latestnews/view.html?_id=s13_93" style="color: #006ACD; font-size: 14px;text-decoration: none;">关于引智分会信息员培训的通知</a>
+</div>
+</div>
+</div>
+</div>
+<div style="position:relative;">
+<div style="width:320px;">
+<div style="right:0;position:absolute;color:#b2b2b2;">
+<img src="/theme/scs/project/images/new.png">2013-04-25&nbsp;&nbsp;</div>
+<div style="margin-right:120px;overflow:hidden;white-space:nowrap;width:18em;">
+<div style="overflow:hidden;white-space:nowrap;">
+														&nbsp;&nbsp;&nbsp;&nbsp;<a href="/yzfh/latestnews/view.html?_id=s13_90" style="color: #006ACD; font-size: 14px;text-decoration: none;">引智分会征稿通知</a>
+</div>
+</div>
+</div>
+</div>
+<div style="position:relative;">
+<div style="width:320px;">
+<div style="right:0;position:absolute;color:#b2b2b2;">
+<img src="/theme/scs/project/images/new.png">2013-04-19&nbsp;&nbsp;</div>
+<div style="margin-right:120px;overflow:hidden;white-space:nowrap;width:18em;">
+<div style="overflow:hidden;white-space:nowrap;">
+														&nbsp;&nbsp;&nbsp;&nbsp;<a href="/yzfh/latestnews/view.html?_id=s13_79" style="color: #006ACD; font-size: 14px;text-decoration: none;">引智分会缴纳年度会费通知</a>
+</div>
+</div>
+</div>
+</div>
+</td><td width="1" bgcolor="#DADADA"></td><td width="51%" valign="top" height="200">
+<div style="padding-top:5px;" class="cgcss">
+<a href="/yzfh/latestnews/cgsearch.html?org=cgnews"><img src="/theme/scs/project/images/32.gif" style="float:right;margin:15px 10px;"></a>
+</div>
+<div id="sidebar">
+<ul class="spy">
+<li>
+<a href="/yzfh/latestnews/view.html?_id=s29_531" title=""><img width="65" height="65" src="/yzfh/doWork/load.do?_id=s29_213" title="大学国际化理论与实践（第二辑）" border="1"></a><img src="/theme/scs/project/images/book_open.png"><a href="/yzfh/latestnews/view.html?_id=s29_531" style="color: #006ACD; font-size: 14px;text-decoration: none;">大学国际化理论与实践（第二辑）</a>
+<br>
+<img src="/theme/scs/project/images/new.png"><div style="font-size: 12px;">2015-03-27</div>
+</li>
+<li>
+<a href="/yzfh/latestnews/view.html?_id=s28_119" title=""><img width="65" height="65" src="/yzfh/doWork/load.do?_id=s28_340" title="十年回眸&mdash;&mdash;纪念中国高等教育学会引进国外智力工作分会成立十周年画册" border="1"></a><img src="/theme/scs/project/images/book_open.png"><a href="/yzfh/latestnews/view.html?_id=s28_119" style="color: #006ACD; font-size: 14px;text-decoration: none;">十年回眸&mdash;&mdash;纪念中国高等教育学会引进国外智力工作分会成立十周年画册</a>
+<br>
+<img src="/theme/scs/project/images/new.png"><div style="font-size: 12px;">2013-12-10</div>
+</li>
+<li>
+<a href="/yzfh/latestnews/view.html?_id=s28_121" title=""><img width="65" height="65" src="/yzfh/doWork/load.do?_id=s28_338" title="春华秋实&mdash;&mdash;纪念中国高教学会引智分会成立十周年图片展" border="1"></a><img src="/theme/scs/project/images/book_open.png"><a href="/yzfh/latestnews/view.html?_id=s28_121" style="color: #006ACD; font-size: 14px;text-decoration: none;">春华秋实&mdash;&mdash;纪念中国高教学会引智分会成立十周年图片展</a>
+<br>
+<img src="/theme/scs/project/images/new.png"><div style="font-size: 12px;">2013-12-10</div>
+</li>
+<li>
+<a href="/yzfh/latestnews/view.html?_id=s13_94" title=""><img width="65" height="65" src="/yzfh/doWork/load.do?_id=s13_270" title="引智工作分会成立大会图集" border="1"></a><img src="/theme/scs/project/images/book_open.png"><a href="/yzfh/latestnews/view.html?_id=s13_94" style="color: #006ACD; font-size: 14px;text-decoration: none;">引智工作分会成立大会图集</a>
+<br>
+<img src="/theme/scs/project/images/new.png"><div style="font-size: 12px;">2013-04-25</div>
+</li>
+<li>
+<a href="/yzfh/latestnews/view.html?_id=s13_85" title=""><img width="65" height="65" src="/yzfh/doWork/load.do?_id=s13_269" title="大学国际化理论与实践" border="1"></a><img src="/theme/scs/project/images/book_open.png"><a href="/yzfh/latestnews/view.html?_id=s13_85" style="color: #006ACD; font-size: 14px;text-decoration: none;">大学国际化理论与实践</a>
+<br>
+<img src="/theme/scs/project/images/new.png"><div style="font-size: 12px;">2013-04-25</div>
+</li>
+<li>
+<a href="/yzfh/latestnews/view.html?_id=s13_84" title=""><img width="65" height="65" src="/yzfh/doWork/load.do?_id=s13_232" title="引进国外智力工作亲历者纪实" border="1"></a><img src="/theme/scs/project/images/book_open.png"><a href="/yzfh/latestnews/view.html?_id=s13_84" style="color: #006ACD; font-size: 14px;text-decoration: none;">引进国外智力工作亲历者纪实</a>
+<br>
+<img src="/theme/scs/project/images/new.png"><div style="font-size: 12px;">2013-04-23</div>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<script>
+		function getOpen(n){
+			if(n!='#'){
+				window.open(n);
+			}
+		}
+	</script>
+<tr style="line-height:12px;">
+<td><img src="/theme/scs/project/images/fq.jpg"></td>
+</tr>
+<tr>
+<td align="center" valign="bottom">
+<table width="95%" border="0" cellspacing="1" cellpadding="0" style="margin:20px 0px 0px 0px;">
+<tr style="line-height:45px;">
+<td align="right" style=""><a href="/yzfh/index/areasearch.html?q=%E5%8D%8E%E5%8C%97*%E4%BA%AC%E6%B4%A5%E5%86%80"><img src="/yzfh/doWork/load.do?_id=s13_242" width="225" height="125" title="华北*京津冀" border="0"></a></td><td align="left"><a href="/yzfh/index/areasearch.html?q=%E4%B8%9C%E5%8C%97*%E9%BB%91%E5%90%89%E8%BE%BD%E8%92%99"><img src="/yzfh/doWork/load.do?_id=s13_241" width="225" height="125" title="东北*黑吉辽蒙" border="0"></a></td><td align="left"><a href="/yzfh/index/areasearch.html?q=%E8%A5%BF%E5%8C%97*%E6%99%8B%E9%B2%81%E8%B1%AB%E9%99%95%E7%94%98%E9%9D%92%E5%AE%81%E6%96%B0%E8%97%8F"><img src="/yzfh/doWork/load.do?_id=s13_243" width="225" height="125" title="西北*晋鲁豫陕甘青宁新藏" border="0"></a></td>
+</tr>
+<tr style="line-height:45px;">
+<td align="right" style=""><a href="/yzfh/index/areasearch.html?q=%E8%A5%BF%E5%8D%97*%E5%B7%9D%E6%B8%9D%E6%B9%98%E9%84%82"><img src="/yzfh/doWork/load.do?_id=s13_244" width="225" height="125" title="西南*川渝湘鄂" border="0"></a></td><td align="left"><a href="/yzfh/index/areasearch.html?q=%E5%8D%8E%E4%B8%9C*%E8%8B%8F%E6%B5%99%E6%B2%AA%E7%9A%96%E8%B5%A3"><img src="/yzfh/doWork/load.do?_id=s13_245" width="225" height="125" title="华东*苏浙沪皖赣" border="0"></a></td><td align="left"><a href="/yzfh/index/areasearch.html?q=%E4%B8%9C%E5%8D%97*%E6%B7%94%E8%B4%B5%E6%A1%82%E7%B2%A4%E9%97%BD%E7%90%BC%E6%B8%AF"><img src="/yzfh/doWork/load.do?_id=s13_246" width="225" height="125" title="东南*淔贵桂粤闽琼港" border="0"></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td><td bgcolor="#DADADA" width="6"></td><td valign="top" width="309">
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+<tr>
+<td class="kanwuimage"></td>
+</tr>
+<tr>
+<td>
+<table width="100%" border="0">
+<tr>
+<td height="440" valign="top">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="100"><a href="/yzfh/onlinePublition/preview.html?_id=s29_631" class="a7"><img src="/yzfh/doWork/load.do?_id=s29_1221" border="0" width="80" height="100"></a></td><td>
+<table width="100%" border="0" cellpadding="0" cellspacing="0" class="right_hg">
+<tr>
+<td align="left"><a href="/yzfh/onlinePublition/preview.html?_id=s29_631" class="a7">大学国际</a></td>
+</tr>
+<tr>
+<td align="left" class="huit_bj_font"><a href="/yzfh/onlinePublition/preview.html?_id=s29_631" class="a7">2016第四期</a></td>
+</tr>
+</table>
+</td><td width="30" valign="top" style="padding-top:20px;padding-right:10px;">
+<p id="imag3">
+<a href="/yzfh/onlinePublition/preview.html?_id=s29_631" class="a7" style="color: #FFFFFF;">158</a>
+</p>
+	                          &nbsp;&nbsp;</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td height="1" background="/theme/scs/project/images/tu_r3_c11111.jpg"></td>
+</tr>
+</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="100"><a href="/yzfh/onlinePublition/preview.html?_id=s29_630" class="a7"><img src="/yzfh/doWork/load.do?_id=s29_1216" border="0" width="80" height="100"></a></td><td>
+<table width="100%" border="0" cellpadding="0" cellspacing="0" class="right_hg">
+<tr>
+<td align="left"><a href="/yzfh/onlinePublition/preview.html?_id=s29_630" class="a7">大学国际</a></td>
+</tr>
+<tr>
+<td align="left" class="huit_bj_font"><a href="/yzfh/onlinePublition/preview.html?_id=s29_630" class="a7">2016第三期</a></td>
+</tr>
+</table>
+</td><td width="30" valign="top" style="padding-top:20px;padding-right:10px;">
+<p id="imag2">
+<a href="/yzfh/onlinePublition/preview.html?_id=s29_630" class="a7" style="color: #FFFFFF;">195</a>
+</p>
+	                          &nbsp;&nbsp;</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td height="1" background="/theme/scs/project/images/tu_r3_c11111.jpg"></td>
+</tr>
+</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="100"><a href="/yzfh/onlinePublition/preview.html?_id=s29_529" class="a7"><img src="/yzfh/doWork/load.do?_id=s29_1113" border="0" width="80" height="100"></a></td><td>
+<table width="100%" border="0" cellpadding="0" cellspacing="0" class="right_hg">
+<tr>
+<td align="left"><a href="/yzfh/onlinePublition/preview.html?_id=s29_529" class="a7">大学国际</a></td>
+</tr>
+<tr>
+<td align="left" class="huit_bj_font"><a href="/yzfh/onlinePublition/preview.html?_id=s29_529" class="a7">2016第二期</a></td>
+</tr>
+</table>
+</td><td width="30" valign="top" style="padding-top:20px;padding-right:10px;">
+<p id="imag1">
+<a href="/yzfh/onlinePublition/preview.html?_id=s29_529" class="a7" style="color: #FFFFFF;">273</a>
+</p>
+	                          &nbsp;&nbsp;</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td height="1" background="/theme/scs/project/images/tu_r3_c11111.jpg"></td>
+</tr>
+</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="100"><a href="/yzfh/onlinePublition/preview.html?_id=s29_429" class="a7"><img src="/yzfh/doWork/load.do?_id=s29_815" border="0" width="80" height="100"></a></td><td>
+<table width="100%" border="0" cellpadding="0" cellspacing="0" class="right_hg">
+<tr>
+<td align="left"><a href="/yzfh/onlinePublition/preview.html?_id=s29_429" class="a7">大学国际</a></td>
+</tr>
+<tr>
+<td align="left" class="huit_bj_font"><a href="/yzfh/onlinePublition/preview.html?_id=s29_429" class="a7">2016第一期</a></td>
+</tr>
+</table>
+</td><td width="30" valign="top" style="padding-top:20px;padding-right:10px;">
+<p id="imag">
+<a href="/yzfh/onlinePublition/preview.html?_id=s29_429" class="a7" style="color: #FFFFFF;">371</a>
+</p>
+	                          &nbsp;&nbsp;</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td height="1" background="/theme/scs/project/images/tu_r3_c11111.jpg"></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<script>
+		function getOpen(n){
+			if(n!='#'){
+				window.open(n);
+			}
+		}
+	</script>
+<tr>
+<td><img src="/theme/scs/project/images/youqing2.jpg" width="309" height="40"></td>
+</tr>
+<tr>
+<td align="center">
+<table width="95%" border="0" cellspacing="0" cellpadding="0" height="180">
+<tr>
+<td height="16" align="left"></td>
+</tr>
+<tr>
+<td align="left"><select name="select2" onChange="getOpen(this.options[this.selectedIndex].value);"><option value="#">========引智分会理事单位=======</option><option value="http://www.muc.edu.cn/">中央民族大学</option><option value="http://www.chntheatre.edu.cn/">中央戏剧学院 </option><option value="http://www.cufe.edu.cn/">中央财经大学</option><option value="http://www.cafa.edu.cn/">中央美术学院</option><option value="http://www.ccom.edu.cn">中央音乐学院</option><option value="http://www.ruc.edu.cn/">中国人民大学</option><option value="http://www.cppsu.edu.cn/">中国人民公安大学</option><option value="http://www.cau.edu.cn/">中国农业大学 </option><option value="http://www.cams.ac.cn/">北京协和医学院</option><option value="http://www.cugb.edu.cn/">中国地质大学（北京）</option><option value="http://www.nacta.edu.cn/">中国戏曲学院  </option><option value="http://www.gscass.cn/">中国社会科学院研究生院</option><option value="http://www.cumtb.edu.cn/">中国矿业大学（北京)</option><option value="http://www.cyu.edu.cn/">中国青年政治学院</option><option value="http://www.cupl.edu.cn/">中国政法大学</option><option value="http://www.gucas.ac.cn/">中国科学院研究生院</option><option value="http://www.ccmusic.edu.cn/">中国音乐学院</option><option value="http://www.cuc.edu.cn/">中国传媒大学</option><option value="http://www.ceaie.edu.cn/">中国教育国际交流协会</option><option value="http://www.ncut.edu.cn/">北方工业大学</option><option value="http://www.pku.edu.cn/">北京大学  </option><option value="http://www.bjut.edu.cn/">北京工业大学 </option><option value="http://www.btbu.edu.cn/">北京工商大学</option><option value="http://www.bucm.edu.cn/">北京中医药大学</option><option value="http://www.buct.edu.cn/">北京化工大学 </option><option value="http://www.bfsu.edu.cn/">北京外国语大学</option><option value="http://www.bfa.edu.cn/">北京电影学院</option><option value="http://www.bipt.edu.cn/">北京石油化工学院</option><option value="http://www.njtu.edu.cn/">北京交通大学</option><option value="http://www.bsu.edu.cn/">北京体育大学</option><option value="http://www.bupt.edu.cn/">北京邮电大学</option><option value="http://www.bnu.edu.cn/">北京师范大学</option><option value="http://www.bucea.edu.cn">北京建筑工程学院</option><option value="http://www.bift.edu.cn/">北京服装学院</option><option value="http://www.bjfu.edu.cn/">北京林业大学</option><option value="http://www.bwu.edu.cn/">北京物资学院</option><option value="http://www.bistu.edu.cn/">北京信息科技大学</option><option value="http://www.bcu.edu.cn">北京城市学院</option>/
+	            <option value="http://www.ustb.edu.cn/">北京科技大学</option><option value="http://www.myzx.com.cn/">北京美国英语语言学院</option><option value="http://wwwnew.blcu.edu.cn/">北京语言大学</option><option value="http://www.buaa.edu.cn/">北京航空航天大学</option><option value="http://www.bit.edu.cn/">北京理工大学</option><option value="#">北京高校引智研究会</option><option value="http://www.bisu.edu.cn/">北京第二外国语大学</option><option value="http://www.buu.edu.cn/">北京联合大学</option><option value="http://www.ygi.edu.cn/">北京联合大学应用文理学院</option><option value="http://www.tibuu.edu.cn/">北京联合大学旅游学院</option><option value="http://www.bda.edu.cn/">北京舞蹈学院</option><option value="http://www.bigc.edu.cn/">北京印刷学院</option><option value="http://www.uibe.edu.cn/">对外经济贸易大学</option><option value="http://www.fac.edu.cn/">外交学院</option><option value="http://www.cup.edu.cn/">石油大学（北京）</option><option value="http://www.cup.edu.cn/cec/">石油大学继续教育学院</option><option value="http://www.sinopecmi.org.cn/">石油化工管理干部学院</option><option value="http://www.ncepu.edu.cn/">北京林业华北电力大学大学</option><option value="http://www.uir.cn/">国际关系学院</option><option value="http://www.cnu.edu.cn/">首都师范大学</option><option value="http://www1.cipe.net.cn/">首都体育学院</option><option value="#">师范教育分会</option><option value="http://www.ccmu.edu.cn/">首都医科大学</option><option value="http://www.cueb.edu.cn/">首都经济贸易大学</option><option value="http://www.tsinghua.edu.cn/">清华大学</option><option value="http://www.tju.edu.cn/">天津大学</option><option value="http://www.tijmu.edu.cn/">天津医科大学</option><option value="http://www.tjufe.edu.cn/">天津财经大学</option><option value="http://www.tust.edu.cn/">天津科技大学</option><option value="http://www.tjut.edu.cn/">天津理工大学</option><option value="http://www.tute.edu.cn/">天津工程师范学院</option><option value="#">天津引进国外智力工作研究会</option><option value="http://www.nankai.edu.cn/">南开大学</option><option value="http://www.hbu.edu.cn/">河北大学</option><option value="http://www.hebut.edu.cn/">河北工业大学</option><option value="http://www.sxu.edu.cn/">山西大学  </option><option value="http://www.tyut.edu.cn/">太原理工大学</option><option value="http://www.imu.edu.cn/">内蒙古大学</option><option value="http://www.imut.edu.cn/">内蒙古工业大学</option><option value="http://www.hlbrc.cn/">呼伦贝尔学院</option><option value="http://www.dlufl.edu.cn/">大连外国语学院</option><option value="http://www.dlmedu.edu.cn/">大连医科大学</option><option value="http://www.dlpu.edu.cn/">大连工业大学</option><option value="http://www.dlut.edu.cn/">大连理工大学</option><option value="http://www.dlmu.edu.cn/">大连海事大学</option><option value="http://www.neu.edu.cn/">东北大学</option><option value="http://www.dufe.edu.cn/">东北财经大学</option><option value="http://www.cmu.edu.cn/">中国医科大学</option><option value="http://www.lnu.edu.cn/">辽宁大学</option><option value="http://www.lnit.edu.cn/">辽宁工业大学</option><option value="#">辽宁高校外国专家管理工作研究会</option><option value="http://www.syau.edu.cn/">沈阳农业大学</option><option value="http://www.sut.edu.cn/">沈阳工业大学</option><option value="http://www.synu.edu.cn/">沈阳师范大学</option><option value="http://www.asnc.edu.cn/">鞍山师范学院</option><option value="http://www.nenu.edu.cn/">东北师范大学</option><option value="http://www.jlu.edu.cn/newjlu/">吉林大学</option><option value="http://www.ybu.edu.cn/">延边大学</option><option value="http://www.nefu.edu.cn/">东北林业大学</option><option value="http://www.hit.edu.cn/">哈尔滨工业大学</option><option value="http://www.hrbeu.edu.cn/">哈尔滨工程大学</option><option value="http://www.hlju.edu.cn/2011/index.html">黑龙江大学</option><option value="http://www.shu.edu.cn/IndexPage.html">上海大学</option><option value="http://www.shutcm.com/">上海中医药大学</option><option value="http://www.shfu.edu.cn/">上海海洋大学</option><option value=" http://www.shift.edu.cn/">上海对外贸易学院</option><option value=" http://www.shisu.edu.cn/">上海外国语大学</option><option value="http://www.sjtu.edu.cn/">上海交通大学</option><option value="http://www.shnu.edu.cn/">上海师范大学</option><option value=" http://www.sit.edu.cn/">上海应用技术学院</option><option value="http://www.shufe.edu.cn/structure/yuanxisz.htm">上海财经大学</option><option value="http://www.shcmusic.edu.cn/">上海音乐学院</option><option value=" http://www.shmtu.edu.cn/">上海海事大学</option><option value="http://www.usst.edu.cn/">上海理工大学</option><option value="http://www.seaie.org/gaoxiaowaishi.asp">上海市高校外事工作委员会</option><option value="http://www.celap.org.cn/Template/home/welcome.html">中国浦东干部学院</option><option value=" http://www.dhu.edu.cn/">东华大学</option><option value="http://www.ecupl.edu.cn/">华东政法大学</option><option value="http://www.ecnu.edu.cn">华东师范大学</option>/
+	             <option value="http://www.ecust.edu.cn/">华东理工大学</option><option value="http://www.tongji.edu.cn/">同济大学</option><option value="http://www.fudan.edu.cn/">复旦大学</option><option value="http://www.smmu.edu.cn/">第二军医大学</option><option value="http://www.cumt.edu.cn/">中国矿业大学</option><option value="http://www.cpu.edu.cn/">中国药科大学</option><option value="http://www.seu.edu.cn/">东南大学</option><option value="http://www.yzu.edu.cn/">扬州大学</option><option value="http://www.sytu.edu.cn/">江南大学</option><option value="#">江苏外国文教专家工作研究会</option><option value=" http://www.suda.edu.cn/">苏州大学</option><option value="http://www.hhu.edu.cn/">河海大学</option><option value="http://www.nju.edu.cn/">南京大学</option><option value="http://www.njau.edu.cn/">南京农业大学</option><option value="http://www.njnu.edu.cn/">南京师范大学</option><option value="http://www.njupt.edu.cn">南京邮电大学</option><option value="http://www.nuaa.edu.cn/">南京航空航天大学</option><option value="http://www.njust.edu.cn/">南京理工大学</option><option value="http://www.ntu.edu.cn/">南通大学</option><option value="http://www.hytc.edu.cn/">淮阴师范学院</option><option value="http://www.chinaacademyofart.com/">中国美术学院</option><option value="http://www.hzic.edu.cn/">浙江工商大学</option><option value="http://www.hutc.zj.cn/">湖州师范学院</option><option value="http://www.zju.edu.cn/">浙江大学</option><option value="http://www.zjut.edu.cn/zjutnews/index.jsp">浙江工业大学</option><option value="http://www.zjtcm.net/">浙江中医大学</option><option value="http://www.zjnu.edu.cn">浙江师范大学</option><option value="http://www.ustc.edu.cn/">中国科技大学</option><option value="http://www.hfut.edu.cn/ch/">合肥工业大学</option><option value="http://www.ahu.edu.cn/">安徽大学</option><option value="http://www.ahut.edu.cn/">安徽工业大学</option><option value="http://www.ahau.edu.cn/">安徽农业大学</option><option value="http://www2.ahnu.edu.cn/">安徽师范大学</option><option value="http://www.ahmu.edu.cn/">安徽医科大学</option><option value="http://www.aust.edu.cn/2008/">安徽理工大学</option><option value="http://www.hqu.edu.cn/">华侨大学</option><option value="http://www.xmu.edu.cn/">厦门大学</option><option value="http://www.fjnu.edu.cn/">福建师范大学</option><option value="http://www.ncu.edu.cn/">南昌大学</option><option value="http://www.nchu.edu.cn/">南昌航空工业学院</option><option value="http://www.sdu.edu.cn/">山东大学</option><option value="http://www.sdutcm.edu.cn/">山东中医药大学</option><option value="http://www.sdau.edu.cn/">山东农业大学</option><option value="http://www.sdnu.edu.cn/">山东师范大学</option><option value="http://www.sdust.edu.cn/">山东科技大学</option><option value="http://www.upc.edu.cn/">中国石油大学（华东）</option><option value="http://www.ouc.edu.cn/">中国海洋大学</option><option value="http://www.qfnu.edu.cn/">曲阜师范大学</option><option value="http://www.qdu.edu.cn/">青岛大学</option><option value="http://www.ytu.edu.cn/index.html/">烟台大学</option><option value="http://www.lcu.edu.cn/">聊城大学</option><option value="http://www.henu.edu.cn/">河南大学</option><option value="http://www.zzu.edu.cn/">郑州大学</option><option value="http://www.ctgu.edu.cn/">三峡大学</option><option value="http://www.cug.edu.cn/">中国地质大学（武汉）</option><option value="http://www.scuec.edu.cn/">中南民族大学</option><option value="http://www.znufe.edu.cn/">中南财经政法大学</option><option value="http://www.yangtzeu.edu.cn/">长江大学</option><option value="http://www.hzau.edu.cn/ch/home/">华中农业大学</option><option value="http://www.ccnu.edu.cn/">华中师范大学</option><option value="http://www.hust.edu.cn/">华中科技大学</option><option value="http://www.jhun.edu.cn/">江汉大学</option><option value="http://www.whu.edu.cn/index.html">武汉大学</option><option value="http://www.wust.edu.cn/">武汉科技大学</option><option value="http://www.wtu.edu.cn/">武汉科技学院（武汉纺织大学）</option><option value="http://www.whut.edu.cn/2012web/index.htm">武汉理工大学</option><option value="http://www.hubu.edu.cn/">湖北大学</option><option value="http://www.hbtcm.edu.cn/">湖北中医学院</option><option value="http://hbgxyz.yangtzeu.edu.cn/">湖北高校引智研究会</option><option value="http://www.nudt.edu.cn/">中国国防科学技术大学</option><option value="http://www.csu.edu.cn/">中南大学</option><option value="http://www.hnu.edu.cn/">湖南大学</option><option value="http://www.hunau.net/">湖南农业大学</option><option value="http://www.hunnu.edu.cn/">湖南师范大学</option><option value="http://www.xtu.edu.cn/index.html">湘潭大学</option><option value="http://www.gdut.edu.cn/">广东工业大学</option><option value="http://www.gtcfla.edu.cn/">广东外语艺术职业学院</option><option value="http://www.gdufs.edu.cn/">广东外语外贸大学</option><option value="http://www.gdcc.edu.cn/">广东商学院</option><option value="http://www.gdou.edu.cn/gdou/index.html">广东海洋大学</option><option value="http://www.peizheng.com.cn/">广东培正学院</option><option value="#">广东高校外国文教专家工作研究会</option><option value="http://www.gzhu.edu.cn/">广州大学</option><option value="http://www.sysu.edu.cn/2012/">中山大学</option><option value="http://www.scau.edu.cn/xw/">华南农业大学</option><option value="http://www.scnu.edu.cn/">华南师范大学</option><option value="http://www.scut.edu.cn/">华南理工大学</option><option value="http://www.szu.edu.cn/">深圳大学</option><option value="http://www.jnu.edu.cn/">暨南大学</option><option value="http://www.zqu.edu.cn/">肇庆学院</option><option value="http://www.gxu.edu.cn/">广西大学</option><option value="http://www.gxnu.edu.cn/">广西师范大学</option><option value="http://www.hainu.edu.cn/">海南大学</option><option value="http://www.hcvt.cn/">海南职业技术学院</option><option value="http://www.swnu.edu.cn/">西南大学</option><option value="http://202.202.80.96/pub/xnzf/">西南政法大学</option><option value="http://www.cqu.edu.cn/">重庆大学</option><option value="http://www.cqmu.edu.cn/">重庆医科大学</option><option value="http://www.scu.edu.cn/">四川大学</option><option value="http://www.sicau.edu.cn/">四川农业大学</option><option value="http://www.sicnu.edu.cn/">四川师范大学</option><option value="http://www.suse.edu.cn/">四川理工大学</option><option value="http://www.uestc.edu.cn/">电子科技大学</option><option value="http://www.cdut.edu.cn/">成都理工大学</option><option value="http://www.xhu.edu.cn/">西华大学</option><option value="http://www.swun.edu.cn/">西南民族大学</option><option value="http://www.swjtu.edu.cn/">西南交通大学</option><option value="http://www.swufe.edu.cn/">西南财经大学</option><option value="http://www.swust.edu.cn/">西南科技大学</option><option value="http://www.gzu.edu.cn/">贵州大学</option><option value="http://www.ynu.edu.cn/">云南大学</option><option value="http://www.ynau.edu.cn/">云南农业大学</option><option value="http://www.ynnu.edu.cn/">云南师范大学</option><option value="http://www.kmust.edu.cn/">昆明理工大学</option><option value="http://www.utibet.edu.cn/">西藏大学</option><option value="http://www.nwu.edu.cn/">西北大学</option><option value="http://www.xahu.edu.cn/">长安大学</option><option value="http://www.nwpu.edu.cn/">西北工业大学</option><option value="http://www.nwsuaf.edu.cn/">西北农林科技大学</option><option value="http://www.nwupl.edu.cn/">西北政法大学</option><option value="http://www.xisu.edu.cn/">西安外国语大学</option><option value="http://www.xidian.edu.cn/">西安电子科技大学</option><option value="http://www.xapi.edu.cn/">西安石油大学</option><option value="http://www.xjtu.edu.cn/">西安交通大学</option><option value="http://www.snnu.edu.cn/">陕西师范大学</option><option value="http://www.fmmu.edu.cn/">第四军医大学</option><option value="http://www.lzu.edu.cn/">兰州大学</option><option value="http://www.gsut.edu.cn/">兰州理工大学</option><option value="http://www.nwnu.edu.cn/">西北师范大学</option><option value="http://www.xbmu.edu.cn/">西北民族大学</option><option value="http://www.qhu.edu.cn/">青海大学</option><option value="http://www.nxu.edu.cn/">宁夏大学</option><option value="http://www.shzu.edu.cn/">石河子大学</option><option value="http://www.xju.edu.cn/">新疆大学</option><option value="http://www.cuhk.edu.hk/chinese/">香港中文大学</option><option value="http://www.ouhk.edu.hk/">香港公开大学</option><option value="http://www.cityu.edu.hk/cityu/">香港城市大学</option><option value="http://www.polyu.edu.hk/">香港理工大学</option><option value="http://www.umac.mo/">澳门大学</option><option value="http://www.sgu.edu.cn/">韶关学院</option><option value="http://www.must.edu.mo/">澳门科技大学</option><option value="http://www.ied.edu.hk/">香港教育学院</option><option value="http://www.wit.edu.cn/">武汉工程大学</option><option value="http://shanghai_edu.customs.gov.cn/">上海海关学院</option><option value="http://www.gmc.edu.cn/">贵州医科大学</option><option value="http://www.polyu.edu.hk/">阜阳师范学院</option></select></td>
+</tr>
+<tr>
+<td align="left"><a href="http://www.moe.edu.cn/" style="color: #006ACD; font-size: 14px;text-decoration: none;">中华人民共和国教育部</a>
+<br>
+<a href="#" style="color: #006ACD; font-size: 14px;text-decoration: none;">中国高等教育学会</a>
+<br>
+<a href="http://www.safea.gov.cn/" style="color: #006ACD; font-size: 14px;text-decoration: none;">中华人民共和国国家外国专家局</a>
+<br>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td height="49" class="huit_bj2">&nbsp;</td>
+</tr>
+<tr height="65">
+<td>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="45" height="45" valign="bottom"><img src="/theme/scs/project/images/new_r6_c2.jpg" width="39" height="37"></td><td height="30">
+<table width="100%" border="0" cellpadding="0" cellspacing="0" class="left_tu_hg">
+<tr>
+<td align="left" valign="baseline"><a href="/yzfh/ForeignExport/search.html" class="a4">外籍专家信息库</a> &nbsp;&nbsp;<span class="font2">共收录信息&nbsp;<strong>15</strong></span></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td height="1" background="/theme/scs/project/images/tu_r3_c11111.jpg"></td>
+</tr>
+<tr height="65">
+<td>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="45" height="45" valign="bottom"><img src="/theme/scs/project/images/new_r5_c4.jpg" width="39" height="37"></td><td height="30">
+<table width="100%" border="0" cellpadding="0" cellspacing="0" class="left_tu_hg">
+<tr>
+<td align="left" valign="baseline"><a href="/yzfh/cultivate/search.html" class="a4">员工培训资源库</a>&nbsp;&nbsp;<span class="font2">共收录信息&nbsp;<strong>30</strong></span></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td height="1" background="/theme/scs/project/images/tu_r3_c11111.jpg"></td>
+</tr>
+<tr height="65">
+<td>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="45" height="45" valign="bottom"><img src="/theme/scs/project/images/new_r5_c8.jpg" width="39" height="37"></td><td height="30">
+<table width="100%" border="0" cellpadding="0" cellspacing="0" class="left_tu_hg">
+<tr>
+<td align="left" valign="baseline"><a href="/yzfh/studyinfo/search.html" class="a4">项目研究信息库</a>&nbsp;&nbsp;<span class="font2">共收录信息&nbsp;<strong>4</strong></span></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td height="1" background="/theme/scs/project/images/tu_r3_c11111.jpg"></td>
+</tr>
+<tr height="65">
+<td>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="45" height="45" valign="bottom"><img src="/theme/scs/project/images/new_r9_c2.jpg" width="39" height="37"></td><td height="30">
+<table width="100%" border="0" cellpadding="0" cellspacing="0" class="left_tu_hg">
+<tr>
+<td align="left" valign="baseline"><a href="/yzfh/international/search.html" class="a4">国际合作案例库</a>&nbsp;&nbsp;<span class="font2">共收录信息&nbsp;<strong>16</strong></span></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td height="1" background="/theme/scs/project/images/tu_r3_c11111.jpg"></td>
+</tr>
+<tr height="65">
+<td>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="45" height="45" valign="bottom"><img src="/theme/scs/project/images/new_r9_c4.jpg" width="39" height="37"></td><td height="30">
+<table width="100%" border="0" cellpadding="0" cellspacing="0" class="left_tu_hg">
+<tr>
+<td align="left" valign="baseline"><a href="/yzfh/policyinfo/search.html" class="a4">政策法规信息库</a>&nbsp;&nbsp;<span class="font2">共收录信息&nbsp;<strong>18</strong></span></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td height="1" background="/theme/scs/project/images/tu_r3_c11111.jpg"></td>
+</tr>
+<tr height="65">
+<td>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="45" height="45" valign="bottom"><img src="/theme/scs/project/images/new_r9_c8.jpg" width="39" height="37"></td><td height="30">
+<table width="100%" border="0" cellpadding="0" cellspacing="0" class="left_tu_hg">
+<tr>
+<td align="left" valign="baseline"><a href="/yzfh/chairInfo/search.html" class="a4">学术讲座信息库</a>&nbsp;&nbsp;<span class="font2">共收录信息&nbsp;<strong>28</strong></span></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td height="1" background="/theme/scs/project/images/tu_r3_c11111.jpg"></td>
+</tr>
+<tr height="65">
+<td>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="45" height="45" valign="bottom"><img src="/theme/scs/project/images/gjhy.jpg" width="39" height="37"></td><td height="30">
+<table width="100%" border="0" cellpadding="0" cellspacing="0" class="left_tu_hg">
+<tr>
+<td align="left" valign="baseline"><a href="/yzfh/INTMeeting/search.html" class="a4">国际会议资源库</a>&nbsp;&nbsp;<span class="font2">共收录信息&nbsp;<strong>13</strong></span></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td height="7" align="center" valign="top" bgcolor="#DADADA"></td>
+</tr>
+<tr>
+<td height="64" align="center" valign="top" background="/theme/scs/project/images/gj_r29_c2.jpg">
+<table width="50%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td height="15"></td>
+</tr>
+<tr>
+<td align="center"><a href="#" class="a3">站点导航</a>&nbsp;&nbsp;<span class="bq_font"> |</span>&nbsp;&nbsp; <a href="/yzfh/index/copyright.html" class="a3">版权声明</a>&nbsp;&nbsp;<span class="bq_font"> |&nbsp;</span> &nbsp;<a href="/yzfh/index/lianxi.html" class="a3">联系我们</a> &nbsp;&nbsp;<span class="bq_font">|</span> &nbsp;<a href="#" class="a3">&nbsp;English Version</a></td>
+</tr>
+<tr>
+<td align="center" class="bq_font">All Rights Reserved | 建议使用IE7.0以上版本的浏览器</td>
+</tr>
+<tr>
+<td align="center" class="bq_font">Webmaster : msc@pku.edu.cn</td>
+</tr>
+<tr>
+<td align="center" class="bq_font">中国高教学会引智分会版权所有</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=GB2312" /><link rel="shortcut icon" href="http://www.shmtu.edu.cn/sites/shmtu.edu.cn/files/smu_logo.ico" type="image/vnd.microsoft.icon" />
+<title>上海海事大学国际教育学院 教学管理系统</title>
+<style>
+*{Font-Family: Arial, Helvetica, sans-serif, "宋体";font-size:12px;margin:0px;padding:0px;}
+body{ background:url(./images/default-bg.jpg) repeat-x;}
+select,input{border:#AACCF9 1px solid;color:#15428B;background-color:#FAFAFC;width:180px;vertical-align:middle;padding:2px;}
+select{height:22px;line-height:22px;}input{height:18px;line-height:18px;}
+.loginbtn {width:87px; height:24px; cursor:pointer; border:0px;}
+</style>
+</head>
+<script language="javascript">
+function doCheck(){
+	var f = document.input;
+	var oReg = new RegExp("^[T|S|A]{1}$","g");
+	var t = f.Operater.value;
+	if(!oReg.test(t)) {alert("请选择用户类型。\nPlease choose user type."); return false;}
+	oReg = null;
+
+	var str = f.username.value;
+	str = str.replace(/^\s+|\s+$/g,"");
+
+	if(t=='S'){
+		var oReg = new RegExp("^[a-zA-Z0-9]{6,20}$","g");		
+		if(!oReg.test(str)) {alert("学生用户的登录名（即学生号码）的长度应为6~20个字符，由a-z的英文字母或A-Z、数字0-9组成。\n login name (i.e., student number) should be 6-10 digits, comprising of 1) alphabets; or 2) combination of alphabets and digital numbers"); return false;}
+		oReg = null;
+	}else{
+		var oReg = new RegExp("^[a-zA-Z0-9\u4E00-\u9FFF]{2,20}$","g");
+		if(!oReg.test(str)) {alert("登录名的长度应为2-20个字符,由a-z的英文字母或A-Z、数字0-9和汉字组成。"); return false;}
+		oReg = null;
+	}
+	oReg = new RegExp("^[a-zA-Z0-9]{4,20}$","g");
+	var s = f.password.value;
+	if(!oReg.test(s)) {alert("密码的长度为4-20的字符，由英文字母a-z或A-Z、数字0-9组成。\npassword should be 4-20 digits, comprising of 1) alphabets; or 2) combination of alphabets and digital numbers."); return false;}
+	oReg = null;
+	return true;
+}
+function doErr(s){alert("发生错误 Err：\n\n" + s);chCode();}
+function $(id){return document.getElementById(id);}
+function chCode(){$("codekey").value='';hf.location.replace("get_token.asp");}
+</script>
+<body style="margin:0px;padding:0px;">
+<form method="post" target="hf" name="input" action="login.asp" onsubmit="return doCheck();" style="margin:0px;padding:0px;">
+<div style="height:180px;"></div>
+<div style="height:250px;text-align:center;">
+<center>
+	<div style="height:250px;width:574px;">
+		<div style="float:left;height:250px;width:40px;background:url(images/loginform_left.png) no-repeat;background-position:right top;"></div>
+		<div style="float:left;height:250px;width:368px;background:url(images/loginform_bg.png);">
+			<table border="0" cellspacing="0" cellpadding="0" width="100%">
+				<tr>
+					<td height="10" colspan="2"><img src="images/1x1.gif" width="1" height="10" /></td>
+				</tr>
+				<tr>
+					<td colspan="2"><img src="images/default-name.png" width="368" height="64" /></td>
+				</tr>
+				<tr>
+					<td height="10" colspan="2"><img src="images/1x1.gif" width="10" height="10" /></td>
+				</tr>
+				<tr>
+					<td width="168" align="right" height="28">用户类型 / User type：</td>
+					<td width="200" align="left">
+					<select name="Operater"><option value="">--&nbsp; 请选择 / Select&nbsp; --</option><option value="S">学生用户/Student</option><option value="T">教师用户/Teacher</option><option value="A" >教务人员/Administrator</option></select></td>
+				</tr>
+				<tr>
+					<td align="right" height="28">登录名 / Username：</td>
+					<td align="left"><input type="text" name="username" id="username" value="" maxlength="20"/></td>
+				</tr>
+				<tr>
+					<td align="right" height="28">密码 / Password：</td>
+					<td align="left"><input name="password" id="password" type="password" maxlength="20" value="" /></td>
+				</tr>
+				<tr>
+					<td align="right" height="28">验证码 / Verification code：</td>
+					<td valign="middle" align="left"><input name="codekey" id="codekey" style="width:50px;height:18px;" maxlength="4"/><img src="img.asp?k=A0xNWHxjqCvhKgoX%2F7QsnBzrzSqfM3aA1sXvt%2BgDYJ0guYPoAcI3kMq8vVO%2FWsQH&t=2017/10/28%2023%3A01%3A47" border="0" id="vc" style="height:23px;width:50px;" onClick="chCode()" align="absmiddle" /><input type="hidden" name="token" value="A0xNWHxjqCvhKgoX/7QsnBzrzSqfM3aA1sXvt+gDYJ0guYPoAcI3kMq8vVO/WsQH" /></td>
+				</tr>
+				<tr>
+					<td style="padding-top:10px;" colspan="2" align="center"><input type="submit" value="" style="background:url(images/btn_login.jpg);" class="loginbtn" /> &nbsp; <input type="reset" value="" style="background:url(images/btn_reset.jpg);" class="loginbtn" />
+					</td>
+				</tr>
+			</table>
+ 		</div>
+		<div style="float:right;height:250px;width:166px;background:url(images/loginform_right.png)"></div>
+	</div>
+</center>
+</div>
+</form>
+<iframe name="hf" id="hf" style="display:none;width:700px;height:300px;"></iframe>
+</body>
+</html>

@@ -1,0 +1,324 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head> 
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+  <title>群众路线教育实践活动专题网</title> 
+  <link rel="stylesheet" type="text/css" href="/r/cms/qzlx/olddj/css/dj/main.css" /> 
+  <script type="text/javascript" src="/r/cms/qzlx/olddj/js/jquery.min.js"></script> 
+  <!--图片切换效果--> 
+  <script type="text/javascript">
+$(function() {
+	var sWidth = $("#focus").width(); //获取焦点图的宽度（显示面积）
+	var len = $("#focus ul li").length; //获取焦点图个数
+	var index = 0;
+	var picTimer;
+	
+	//以下代码添加数字按钮和按钮后的半透明条，还有上一页、下一页两个按钮
+	var btn = "<div class='btnBg'></div><div class='btn'>";
+	for(var i=0; i < len; i++) {
+		btn += "<span></span>";
+	}
+	btn += "</div><div class='preNext pre'></div><div class='preNext next'></div>";
+	$("#focus").append(btn);
+	$("#focus .btnBg").css("opacity",0.5);
+
+	//为小按钮添加鼠标滑入事件，以显示相应的内容
+	$("#focus .btn span").css("opacity",0.4).mouseenter(function() {
+		index = $("#focus .btn span").index(this);
+		showPics(index);
+	}).eq(0).trigger("mouseenter");
+	//本例为左右滚动，即所有li元素都是在同一排向左浮动，所以这里需要计算出外围ul元素的宽度
+	$("#focus ul").css("width",sWidth * (len));
+	
+	//鼠标滑上焦点图时停止自动播放，滑出时开始自动播放
+	$("#focus").hover(function() {
+		clearInterval(picTimer);
+	},function() {
+		picTimer = setInterval(function() {
+			showPics(index);
+			index++;
+			if(index == len) {index = 0;}
+		},4000); //此4000代表自动播放的间隔，单位：毫秒
+	}).trigger("mouseleave");
+	
+	//显示图片函数，根据接收的index值显示相应的内容
+	function showPics(index) { //普通切换
+		var nowLeft = -index*sWidth; //根据index值计算ul元素的left值
+		$("#focus ul").stop(true,false).animate({"left":nowLeft},300); //通过animate()调整ul元素滚动到计算出的position
+		//$("#focus .btn span").removeClass("on").eq(index).addClass("on"); //为当前的按钮切换到选中的效果
+		$("#focus .btn span").stop(true,false).animate({"opacity":"0.4"},300).eq(index).stop(true,false).animate({"opacity":"1"},300); //为当前的按钮切换到选中的效果
+	}
+});
+
+</script> 
+  <style type="text/css">
+img{ border:none;}
+#focus {width:340px; height:283px; overflow:hidden; position:relative;}
+#focus ul {height:283px; position:absolute;}
+#focus ul li {float:left; width:340px; height:283px; overflow:hidden; position:relative;}
+#focus ul li div {position:absolute; overflow:hidden;}
+#focus .btnBg {position:absolute; width:340px; height:28px; left:0; bottom:0; background:#666666;Filter:alpha(opacity=50); /* ie有效 */
+-moz-opacity:0.5; /*firefox有效*/
+Opacity:0.5; /*通用，其他浏览器 有效*/
+}
+#focus .btn {position:absolute; width:330px; height:13px; padding-top:10px; padding-bottom:5px;padding-right:10px; right:0; bottom:0; text-align:right;}
+#focus .btn span {display:inline-block; _display:inline; _zoom:1; width:25px; height:10px; _font-size:0; margin-left:5px; cursor:pointer; background:#fff;}
+#focus .btn span.on {background:#fff;}
+
+</style> 
+ </head> 
+ <body> 
+  <div class="wrap">
+<script language="JavaScript">
+function correctPNG() // correctly handle PNG transparency in Win IE 5.5 & 6.
+{
+var arVersion = navigator.appVersion.split("MSIE")
+var version = parseFloat(arVersion[1])
+if ((version >= 5.5) && (document.body.filters)){
+for(var j=0; j<document.images.length; j++){
+var images = document.images[j]
+var imagesName = images.src.toUpperCase()
+if (imagesName.substring(imagesName.length-3, imagesName.length) == "PNG"){
+var imagesID = (images.id) ? "id='" + images.id + "' " : ""
+var imagesClass = (images.className) ? "class='" + images.className + "' " : ""
+var imagesTitle = (images.title) ? "title='" + images.title + "' " : "title='" + images.alt + "' "
+var imagesStyle = "display:inline-block;" + images.style.cssText
+var strNewHTML = "<span " + imagesID + imagesClass + imagesTitle+ " style=\"" + "width:" + images.width + "px; height:" + images.height + "px;" + imagesStyle + ";"
++ "filter:progid:DXImageTransform.Microsoft.AlphaImageLoader"+ "(src=\'" + images.src + "\', sizingMethod='scale');\"></span>"
+images.outerHTML = strNewHTML
+j = j-1
+}
+}
+}
+}
+window.attachEvent("onload", correctPNG);
+</script>	
+
+
+<script src="/r/cms/front.js" type="text/javascript"></script>
+<script src="/r/cms/jquery.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(function() {
+  Cms.siteFlow("",location.href, document.referrer);
+});
+</script>
+
+<div class="whole_bg">
+<div class="top_bg"><img src="/u/cms/qzlx/201404/08114219yc67.jpg" width='1147' height='160' border="0"/></div>
+
+<!-- header start -->
+	<div class="header"> 
+ <img src=/dbfile.svl?n=/u/cms/qzlx/201402/250035166oyn.png border="0"  />
+ </div>
+</div>
+<!-- header end -->
+<!--  nav start  -->
+	<div class="nav">
+<table width="1147" height="15" border="0" cellpadding="0" cellspacing="0" style="margin:0 auto;">
+<tr>                                                                                                   
+<td align="center"><img src="/r/cms/qzlx/olddj/img/images/n_bottom.gif" width="1147"  ></td>			
+</tr>
+</table>
+	  <table width="1147" height="39" border="0" cellpadding="0" cellspacing="0">
+		<tr>                                                                                                   
+<td align="center" nowrap="nowrap"><a href="/">首页</a></td>
+
+     <td align="center" nowrap="nowrap" ><a href="http://www.fjtcm.edu.cn"  target='_blank' >学校主页</a></td>
+
+
+     <td align="center" nowrap="nowrap" ><a href="http://qzlx.fjtcm.edu.cn:80/zzjg20140224183555.jhtml" >组织机构</a></td>
+
+
+     <td align="center" nowrap="nowrap" ><a href="http://qzlx.fjtcm.edu.cn:80/xxdt20140224184023/index.jhtml" >学校动态</a></td>
+
+
+     <td align="center" nowrap="nowrap" ><a href="http://qzlx.fjtcm.edu.cn:80/sjjs20140224184045/index.jhtml" >上级精神</a></td>
+
+
+     <td align="center" nowrap="nowrap" ><a href="http://qzlx.fjtcm.edu.cn:80/wjtz20140224184054/index.jhtml" >文件通知</a></td>
+
+
+     <td align="center" nowrap="nowrap" ><a href="http://qzlx.fjtcm.edu.cn:80/gzjb20140224184109/index.jhtml" >工作简报</a></td>
+
+
+     <td align="center" nowrap="nowrap" ><a href="http://qzlx.fjtcm.edu.cn:80/xxzl20140224184120/index.jhtml" >学习资料</a></td>
+
+
+     <td align="center" nowrap="nowrap" ><a href="http://qzlx.fjtcm.edu.cn:80/tszs20140224184128/index.jhtml" >他山之石</a></td>
+
+
+     <td align="center" nowrap="nowrap" ><a href="http://qzlx.fjtcm.edu.cn:80/lxwm20140225164605.jhtml" >建言献策</a></td>
+
+
+     <td align="center" nowrap="nowrap" ><a href="http://qzlx.fjtcm.edu.cn:80/jbzq20140820160916.jhtml" >举报专区</a></td>
+
+		</tr>
+	  </table>
+	</div>
+<!-- nav end -->   <!-- main start --> 
+   <div class="main"> 
+    <div class="center"> 
+     <table> 
+      <tbody> 
+       <tr> 
+        <td nowrap=""> 
+         <div id="container"> 
+          <div id="focus"> 
+           <ul>
+               
+            <li><a href="http://qzlx.fjtcm.edu.cn:80/xxdt20140224184023/77397.jhtml"><img src="/u/cms/qzlx/201407/06092603n57y.jpg" width="340" height="255" /></a></li>  
+            <li><a href="http://qzlx.fjtcm.edu.cn:80/xxdt20140224184023/77317.jhtml"><img src="/u/cms/qzlx/201407/03154902snyr.jpg" width="340" height="255" /></a></li>  
+            <li><a href="http://qzlx.fjtcm.edu.cn:80/xxdt20140224184023/77315.jhtml"><img src="/u/cms/qzlx/201407/031539481qtt.jpg" width="340" height="255" /></a></li>  
+            <li><a href="http://qzlx.fjtcm.edu.cn:80/xxdt20140224184023/73013.jhtml"><img src="/u/cms/qzlx/201405/271707307yr2.jpg" width="340" height="255" /></a></li>   
+           </ul> 
+          </div> 
+         </div></td> 
+        <td nowrap="" colspan="2" width="800"> 
+         <!-- 学校动态start  --> 
+         <div class="news"> 
+          <h4 class="title"><span><a href="/xxdt20140224184023.jhtml">more</a></span>学校动态</h4> 
+          <ul class="list_new">
+              
+           <li><span>[2014-09-27]</span><a href="http://qzlx.fjtcm.edu.cn:80/xxdt20140224184023/84042.jhtml" title="附属第二人民医院东二环分院以提高群众满意度助推医院发展">附属第二人民医院东二环分院以提高群众满意度助推医院发展</a></li>  
+           <li><span>[2014-07-22]</span><a href="http://qzlx.fjtcm.edu.cn:80/xxdt20140224184023/77822.jhtml" title="附属第三人民医院组织参观福建省革命历史纪念馆">附属第三人民医院组织参观福建省革命历史纪念馆</a></li>  
+           <li><span>[2014-07-22]</span><a href="http://qzlx.fjtcm.edu.cn:80/xxdt20140224184023/77819.jhtml" title="附属第三人民医院举行新党员入党宣誓仪式">附属第三人民医院举行新党员入党宣誓仪式</a></li>  
+           <li><span>[2014-07-22]</span><a href="http://qzlx.fjtcm.edu.cn:80/xxdt20140224184023/77818.jhtml" title="附属第三人民医院党委召开领导班子专题民主生活会情况通报会">附属第三人民医院党委召开领导班子专题民主生活会情况通报会</a></li>  
+           <li><span>[2014-07-20]</span><a href="http://qzlx.fjtcm.edu.cn:80/xxdt20140224184023/77815.jhtml" title="附属第三人民医院党委召开领导班子专题民主生活会">附属第三人民医院党委召开领导班子专题民主生活会</a></li>  
+           <li><span>[2014-07-16]</span><a href="http://qzlx.fjtcm.edu.cn:80/xxdt20140224184023/77569.jhtml" title="康复医院召开党的群众路线教育实践活动领导班子民主生活会通报会">康复医院召开党的群众路线教育实践活动领导班子民主生活会通报会</a></li>  
+           <li><span>[2014-07-12]</span><a href="http://qzlx.fjtcm.edu.cn:80/xxdt20140224184023/77492.jhtml" title="省中医药研究院召开党的群众路线教育实践活动院领导民主生活会通报会">省中医药研究院召开党的群众路线教育实践活动院领导民主生活会通报会</a></li>   
+          </ul> 
+         </div> 
+         <!-- 学校动态end --> </td> 
+       </tr> 
+       <tr> 
+        <td nowrap=""> 
+         <!-- 学习资料start --> 
+         <div class="notice"> 
+          <h4 class="c_h4"><span><a href="/xxzl20140224184120.jhtml">more</a></span>学习资料</h4> 
+          <ul class="list">
+              
+           <li><span>[2014-06-16]</span><a href="http://qzlx.fjtcm.edu.cn:80/xxzl20140224184120/76157.jhtml" title="“四下基层”是党的群众路线的实践创新">“四下基层”是党的群众路线的实践创新</a></li>  
+           <li><span>[2014-06-09]</span><a href="http://qzlx.fjtcm.edu.cn:80/xxzl20140224184120/76158.jhtml" title="习近平“四下基层”的来龙去脉">习近平“四下基层”的来龙去脉</a></li>  
+           <li><span>[2014-06-01]</span><a href="http://qzlx.fjtcm.edu.cn:80/xxzl20140224184120/76159.jhtml" title="论党的群众路线教育实践活动在党的建设史上的重要地位">论党的群众路线教育实践活动在党的建设史...</a></li>  
+           <li><span>[2014-05-27]</span><a href="http://qzlx.fjtcm.edu.cn:80/xxzl20140224184120/73681.jhtml" title="论党的群众路线教育实践活动在党的建设史上的重要地位">论党的群众路线教育实践活动在党的建设史...</a></li>  
+           <li><span>[2014-05-15]</span><a href="http://qzlx.fjtcm.edu.cn:80/xxzl20140224184120/47715.jhtml" title="认真学习贯彻习近平总书记重要论述切实把党的群众路线教育实践活动开展好——学习《习近平关于党的群众路线">认真学习贯彻习近平总书记重要论述切实把...</a></li>  
+           <li><span>[2014-05-14]</span><a href="http://qzlx.fjtcm.edu.cn:80/xxzl20140224184120/47717.jhtml" title="坚持用好批评与自我批评武器">坚持用好批评与自我批评武器</a></li>   
+          </ul> 
+         </div> 
+         <!-- 学习资料end --> </td> 
+        <td nowrap="" width="458"> 
+         <!-- 上级精神start --> 
+         <div class="notice" style="width:458px;"> 
+          <h4 class="title_1_gai"><span style="float:right;"><a href="/sjjs20140224184045.jhtml">more</a></span>上级精神</h4> 
+          <ul class="list">
+              
+           <li><span>[2014-06-14]</span><a href="http://qzlx.fjtcm.edu.cn:80/sjjs20140224184045/76152.jhtml" title="尤权：全力抓好整改落实 巩固扩大作风建设成果">尤权：全力抓好整改落实 巩固扩大作风建设成果</a></li>  
+           <li><span>[2014-06-12]</span><a href="http://qzlx.fjtcm.edu.cn:80/sjjs20140224184045/76151.jhtml" title="苏树林：切实强化作风建设 巩固扩大活动成果">苏树林：切实强化作风建设 巩固扩大活动成果</a></li>  
+           <li><span>[2014-06-10]</span><a href="http://qzlx.fjtcm.edu.cn:80/sjjs20140224184045/76150.jhtml" title="福建省委常委出席指导第二批教育实践活动联系点专题民主生活会">福建省委常委出席指导第二批教育实践活动联系点专题...</a></li>  
+           <li><span>[2014-05-29]</span><a href="http://qzlx.fjtcm.edu.cn:80/sjjs20140224184045/73680.jhtml" title="刘云山：增强问题意识 坚持问题导向">刘云山：增强问题意识 坚持问题导向</a></li>  
+           <li><span>[2014-05-27]</span><a href="http://qzlx.fjtcm.edu.cn:80/sjjs20140224184045/73677.jhtml" title="张德江：坚持不懈地加强作风建设 巩固扩大教育实践活动成果">张德江：坚持不懈地加强作风建设 巩固扩大教育实践...</a></li>  
+           <li><span>[2014-05-25]</span><a href="http://qzlx.fjtcm.edu.cn:80/sjjs20140224184045/73679.jhtml" title="政治局常委：不能用形式主义反对形式主义">政治局常委：不能用形式主义反对形式主义</a></li>   
+          </ul> 
+         </div> 
+         <!-- 上级精神end --> </td> 
+        <td nowrap="" align="top"> 
+         <!-- 工作简报start --> 
+         <div class="Guidelines" style="width:338px;"> 
+          <h4 class="title2"><span><a href="/gzjb20140224184109.jhtml">more</a></span>工作简报</h4> 
+          <div class="Guidelist" style="height:195px;"> 
+           <ul class="list">
+               
+            <li><span>[2014-04-25]</span><a href="http://qzlx.fjtcm.edu.cn:80/gzjb20140224184109/47056.jhtml" title="福建中医药大学党的群众路线教育实践活动简报第12期">福建中医药大学党的群众路线教育实践...</a></li>  
+            <li><span>[2014-04-23]</span><a href="http://qzlx.fjtcm.edu.cn:80/gzjb20140224184109/47051.jhtml" title="福建中医药大学党的群众路线教育实践活动简报第11期">福建中医药大学党的群众路线教育实践...</a></li>  
+            <li><span>[2014-04-03]</span><a href="http://qzlx.fjtcm.edu.cn:80/gzjb20140224184109/41428.jhtml" title="福建中医药大学党的群众路线教育实践活动简报第10期">福建中医药大学党的群众路线教育实践...</a></li>  
+            <li><span>[2014-03-19]</span><a href="http://qzlx.fjtcm.edu.cn:80/gzjb20140224184109/39419.jhtml" title="福建中医药大学党的群众路线教育实践活动简报第9期">福建中医药大学党的群众路线教育实践...</a></li>  
+            <li><span>[2014-03-15]</span><a href="http://qzlx.fjtcm.edu.cn:80/gzjb20140224184109/38297.jhtml" title="福建中医药大学党的群众路线教育实践活动简报第8期">福建中医药大学党的群众路线教育实践...</a></li>  
+            <li><span>[2014-03-13]</span><a href="http://qzlx.fjtcm.edu.cn:80/gzjb20140224184109/36537.jhtml" title="福建中医药大学党的群众路线教育实践活动简报第7期">福建中医药大学党的群众路线教育实践...</a></li>   
+           </ul> 
+          </div> 
+         </div> 
+         <!-- 工作简报end --> </td> 
+       </tr> 
+       <tr> 
+        <td nowrap=""> 
+         <!-- 新闻图片start --> 
+         <div class="noticecopy"> 
+          <h4 class="c_h4"><span></span>新闻图片</h4> 
+          <table width="96%" border="0" cellpadding="0" cellspacing="0" style="margin:0 auto;"> 
+           <tbody> 
+            <tr>
+                
+             <td align="center"> 
+              <div class="pic"> 
+               <a href="http://qzlx.fjtcm.edu.cn:80/xxdt20140224184023/77397.jhtml"> <img src="/u/cms/qzlx/201407/06092603n57y.jpg" width="142" height="106" /> </a> 
+              </div><p> <a href="http://qzlx.fjtcm.edu.cn:80/xxdt20140224184023/77397.jhtml" title="康复医学院召开教育实践活动领导班子专题民主生活会"> 康复医学院召开教...</a></p></td>  
+             <td align="center"> 
+              <div class="pic"> 
+               <a href="http://qzlx.fjtcm.edu.cn:80/xxdt20140224184023/77317.jhtml"> <img src="/u/cms/qzlx/201407/03154902snyr.jpg" width="142" height="106" /> </a> 
+              </div><p> <a href="http://qzlx.fjtcm.edu.cn:80/xxdt20140224184023/77317.jhtml" title="我校召开校党的群众路线教育实践活动校领导民主生活会通报会"> 我校召开校党的群...</a></p></td>   
+            </tr> 
+           </tbody> 
+          </table> 
+         </div> 
+         <!-- 新闻图片end --> </td> 
+        <td nowrap="" width="458"> 
+         <!--他山之石start --> 
+         <div class="noticecopy" style="width:458px;"> 
+          <h4 class="title_1_gai"><span style="float:right;"><a href="/tszs20140224184128.jhtml">more</a></span>他山之石</h4> 
+          <ul class="list">
+              
+           <li><span>[2014-06-19]</span><a href="http://qzlx.fjtcm.edu.cn:80/tszs20140224184128/76367.jhtml" title="中南大学三大举措帮助毕业生就业">中南大学三大举措帮助毕业生就业</a></li>  
+           <li><span>[2014-06-12]</span><a href="http://qzlx.fjtcm.edu.cn:80/tszs20140224184128/76366.jhtml" title="中国人民大学以后勤保障系统精细化 服务学校综合改革">中国人民大学以后勤保障系统精细化 服务学校综合改革</a></li>  
+           <li><span>[2014-06-10]</span><a href="http://qzlx.fjtcm.edu.cn:80/tszs20140224184128/76365.jhtml" title="福建省群众路线教育实践活动有力有序展开">福建省群众路线教育实践活动有力有序展开</a></li>  
+           <li><span>[2014-05-19]</span><a href="http://qzlx.fjtcm.edu.cn:80/tszs20140224184128/72818.jhtml" title="厦门大学创新形式开展主题群众性课外体育锻炼活动">厦门大学创新形式开展主题群众性课外体育锻炼活动</a></li>  
+           <li><span>[2014-05-15]</span><a href="http://qzlx.fjtcm.edu.cn:80/tszs20140224184128/47722.jhtml" title="黑龙江肇东市:破除陋俗 破解难题">黑龙江肇东市:破除陋俗 破解难题</a></li>  
+           <li><span>[2014-05-14]</span><a href="http://qzlx.fjtcm.edu.cn:80/tszs20140224184128/47723.jhtml" title="山西晋中：倾听百姓声音践行群众路线">山西晋中：倾听百姓声音践行群众路线</a></li>   
+          </ul> 
+         </div> 
+         <!-- 他山之石end --> </td> 
+        <td nowrap="" width="242"> 
+         <!-- 友情链接start --> 			<div class="Guidelines">
+				<h4 class="title2" style="width:338px;">
+友情链接
+</h4>
+				<div class="links" style="width:336px;">
+					<table width="100%" border="0" cellspacing="0" cellpadding="0" class="news_links">
+<tr>
+<td><a href="http://qzlx.fjsen.com/2014-05/09/content_14047130.htm" target='_blank' title="福建群众路线专题网：福建中医药大学赴上杭县才溪、古田等地开展群众路线现场教学活动"> 福建群众路线专题网...</a></td>
+
+<td><a href="http://qzlx.people.com.cn/" target='_blank' title="群众路线--人民网"> 群众路线--人民网</a></td>
+</tr>
+</tr>
+
+
+</table>				</div>
+			</div> 
+         <!-- 友情链接end --> </td> 
+       </tr> 
+      </tbody> 
+     </table> 
+     <!-- 左边start --> 
+     <div class="left"> 
+     </div> 
+    </div> 
+    <!-- 新闻图片end --> 
+   </div> 
+   <!-- 左边end  --> 
+   <!-- 中间start --> 
+   <div class="middle"> 
+   </div> 
+   <!-- 中间end  --> 
+   <!--  右边start --> 
+   <div class="right"> 
+   </div> 
+   <!-- 右边end --> 
+   <!--  底部 start--> 
+   <div class="footer1"> 
+     <p>地址:福建省福州市闽侯上街邱阳路1号 邮政编码:350122</p>
+<p>版权所有(C)福建中医药大学闽ICP备05005462</p>
+    </div> 
+   <!--  底部 end--> 
+  </div> 
+  <!-- main end -->   
+ </body>
+</html>

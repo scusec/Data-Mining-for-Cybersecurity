@@ -1,0 +1,635 @@
+
+
+<!DOCTYPE html>
+<html>
+<head lang="zh">
+    <meta charset="UTF-8">
+    <title>西南政法大学招生网</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <link rel="alternate icon" type="image/png" href="/i/favicon.png">
+    <link rel="stylesheet" id="my_link" href="css/base.css" />
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.SuperSlide.2.1.1.js"></script>
+    <script>
+        $(function () {
+            var t;
+            function setbaseFont() {
+                var w_width = $(window).width();
+                if (w_width < 720) {
+                    $("#my_link").attr("href", "css/base_wap.css");
+                    var baseFontSize = w_width / 10;
+                    $('html').css('font-size', (baseFontSize > 64 ? 64 : baseFontSize) + 'px');
+                    // 页面导航菜单
+                    $(function () {
+                        $(".icon-menu").click(function () {
+                            $('#menu').animate({ "right": "0" }, 300, 'easeInQuint', function () {
+                                $('body').css({
+                                    'position': 'fixed',
+                                    'left': '0',
+                                    'top': '0',
+                                    'width': '100%'
+                                });
+                                $('footer').hide();
+                            });
+                            $('.m_close,.shadow_nav').show();
+                        });
+
+                        $(".m_close,.shadow_nav").click(function () {
+                            $('#menu').animate({ "right": "-200px" }, 600, 'easeOutQuint');
+                            $('body').css({
+                                'position': 'relative',
+                                'left': '0',
+                                'top': '0',
+                                'height': 'auto'
+                            });
+                            $('footer').show();
+
+                            $('.m_close,.shadow_nav').hide();
+                            $(".item").removeClass('on');
+                        })
+
+                        $(".menu_btn_box li.su").click(function () {
+                            var idx = $('.menu_btn_box .item').index(this);
+                            $('.item ul').slideUp();
+                            $(".item").removeClass('on');
+                            var $btn = $(".item").eq(idx).find(".submenu")
+                            var $btn_on = $(".item");
+                            if (!$btn.is(':animated')) {
+                                $btn.slideDown();
+                                $(".item").eq(idx).addClass('on');
+                            }
+
+                        });
+
+                        $(".top_show").click(function () {
+                            $('.m_close,.shadow_nav').show();
+                            $('.head_menu').slideDown('fast');
+                            $('.m_close').hide();
+                        });
+
+                    })
+                }
+            }
+            setbaseFont();
+            $(window).on('resize', function (e) {
+                setbaseFont();
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="shadow_nav"></div>
+    <div class="top_line"></div>
+    <div class="am-topbar">
+        <div class="am-container">
+            <h1 class="am-topbar-brand">
+                <img class="logo" src="images/logo2.png">
+            </h1>
+            <a href="javascript:;" class="icon-menu"></a>
+            <div id="menu">
+                <a href="#none" class="m_close" style="display: none;"></a>
+                <div class="menus">
+                    <div class="nav menu_btn_box">
+                        <ul>
+                            <li class="item"><a href=index.htm>首 页</a></li>
+                                                        <li class="item  su ">
+                                                                                                <a class="y_sub" href="javascript:;">公告信息</a>
+                                                                <div class="sub">
+                                    <ul class="submenu">
+                                                                                <li><a href="ggxx/zxgg/index.htm">最新公告</a></li>
+                                                                            </ul>
+                                </div>
+                                                            </li>
+                                                        <li class="item  su ">
+                                                                                                <a class="y_sub" href="javascript:;">信息公开</a>
+                                                                <div class="sub">
+                                    <ul class="submenu">
+                                                                                <li><a href="http://202.202.80.68/home/one/lqcx.aspx">录取结果查询</a></li>
+                                                                                <li><a href="xxgkk/zsjz/index.htm">招生简章</a></li>
+                                                                                <li><a href="xxgkk/lnlqfsx/index.htm">历年录取分数线</a></li>
+                                                                                <li><a href="xxgkk/lnzsjh/index.htm">历年招生计划</a></li>
+                                                                            </ul>
+                                </div>
+                                                            </li>
+                                                        <li class="item ">
+                                                                <a href=http://202.202.80.68/>网上报名</a>
+                                                            </li>
+                                                        <li class="item ">
+                                                                <a href=xzbd/index.htm>西政报道</a>
+                                                            </li>
+                                                        <li class="item  su ">
+                                                                                                <a class="y_sub" href="javascript:;">走进西政</a>
+                                                                <div class="sub">
+                                    <ul class="submenu">
+                                                                                <li><a href="http://www.swupl.edu.cn/xxjj/xzgl/index.htm">西政概况</a></li>
+                                                                                <li><a href="http://jwc.swupl.edu.cn">西政人才培养</a></li>
+                                                                                <li><a href="http://jyb.swupl.edu.cn">西政就业</a></li>
+                                                                                <li><a href="http://intex.swupl.edu.cn">西政国际交流</a></li>
+                                                                                <li><a href="http://xsc.swupl.edu.cn">西政学生管理及资助</a></li>
+                                                                                <li><a href="http://xtw.swupl.edu.cn/">西政活动</a></li>
+                                                                                <li><a href="http://xyh.swupl.edu.cn">西政校友</a></li>
+                                                                                <li><a href="zjxz/xzly/index.htm">西政掠影</a></li>
+                                                                            </ul>
+                                </div>
+                                                            </li>
+                                                        <li class="item  su ">
+                                                                                                <a class="y_sub" href="javascript:;">报考指南</a>
+                                                                <div class="sub">
+                                    <ul class="submenu">
+                                                                                <li><a href="bkzn/dksw/index.htm">答考生问</a></li>
+                                                                            </ul>
+                                </div>
+                                                            </li>
+                                                        <li class="item  su ">
+                                                                                                <a class="y_sub" href="javascript:;">招生政策</a>
+                                                                <div class="sub">
+                                    <ul class="submenu">
+                                                                                <li><a href="zszc/gjjdfzc/index.htm">国家及地方政策</a></li>
+                                                                                <li><a href="zszc/xxzc/index.htm">学校政策</a></li>
+                                                                            </ul>
+                                </div>
+                                                            </li>
+                                                        <li class="item ">
+                                                                <a href=zyjs/index.htm>专业介绍</a>
+                                                            </li>
+                                                        <li class="item ">
+                                                                <a href=zsxz/index.htm>招生宣传</a>
+                                                            </li>
+                                                    </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body></html><!-- Swiper -->
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+                <div class="swiper-slide">
+            <img src="images/content/2017-09/20170913175432956929.jpg">
+        </div>
+                <div class="swiper-slide">
+            <img src="images/content/2017-09/20170913175406183801.jpg">
+        </div>
+                <div class="swiper-slide">
+            <img src="images/content/2017-07/20170713152900398308.jpg">
+        </div>
+                <div class="swiper-slide">
+            <img src="images/content/2017-07/20170713152816348215.jpg">
+        </div>
+                <div class="swiper-slide">
+            <img src="images/content/2017-07/20170713152634517189.jpg">
+        </div>
+            </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+</div>
+
+<div class="detail">
+    <div class="am-g am-container">
+        <div class="am-u-lg-12">
+            <div class="am-g">
+                <div class="am-u-lg-5 detail-mb">
+                    <div class="gg-container">
+                        <div class="list-panel-title">
+                            <span class="list-panel-title-span">最新公告</span>
+                            <p class="list-panel-title-more"><a href="ggxx/zxgg/index.htm">更多...</a></p>
+                        </div>
+                        <ul class="list-panel-content date">
+                                                        <li>
+                                <span>10月16日 </span>
+                                <a href=ggxx/zxgg/231405.htm>第四届优秀生源基地校长论坛邀请函</a>
+                            </li>
+                                                        <li>
+                                <span>10月26日 </span>
+                                <a href=ggxx/zxgg/231653.htm>西南政法大学2018年免试招收香港学生招生简章</a>
+                            </li>
+                                                        <li>
+                                <span>10月26日 </span>
+                                <a href=ggxx/zxgg/231649.htm>西南政法大学2018年中国普通高等学校联合招收澳门保送生简章</a>
+                            </li>
+                                                        <li>
+                                <span>09月14日 </span>
+                                <a href=ggxx/zxgg/229200.htm>关于提醒参加自主招生测试的考生注意上当受骗的声明</a>
+                            </li>
+                                                        <li>
+                                <span>09月14日 </span>
+                                <a href=ggxx/zxgg/229201.htm>关于更改2017年自主招生考试报名费缴费方式的通知</a>
+                            </li>
+                                                        <li>
+                                <span>09月14日 </span>
+                                <a href=ggxx/zxgg/229202.htm>2017年西南政法大学高水平运动员测试合格名单公示</a>
+                            </li>
+                                                        <li>
+                                <span>09月14日 </span>
+                                <a href=ggxx/zxgg/229203.htm>关于西南政法大学自主招生考试缴费及打印准考证相关事项的说明</a>
+                            </li>
+                                                    </ul>
+                    </div>
+                </div>
+                <div class="am-u-lg-3 detail-mb">
+                    <div class="wsbm">
+                        <a href=# target="_blank">
+                            <p>网上<br>报名</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="am-u-lg-4 detail-mb">
+                    <div class="luqu-content">
+                        <!--录取分数线-->
+                        <h1>
+                            信息公开专栏
+                        </h1>
+                        <h2>
+                            <span></span><a href="xxgkk/zsjz/index.htm" target="_blank">招生章程</a>
+                        </h2>
+                        <h2>
+                            <span></span><a href="xxgkk/lnlqfsx/index.htm">历年录取分数线</a>&nbsp;&nbsp;<span style="margin-left: 30px"></span><a href="xxgkk/lnzsjh/index.htm">历年招生计划</a>
+                        </h2>
+                        <h2>
+                            <span></span><a href="http://202.202.80.68/home/one/lqcx.aspx" target="_blank">录取结果查询</a>
+                        </h2>
+                        <h2>
+                            <span></span><a href="zlxz/index.htm" target="_blank">资料下载</a>
+                        </h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="am-u-lg-12">
+            <div class="am-g">
+                <div class="am-u-lg-5 detail-mb">
+                    <div class="gg-container xzbd_slider" style='background: #fff; overflow: hidden; height: 263px; '>
+                        <div class="bt list-panel-title" style="text-align: right;">
+                            <a href=xzbd/index.htm style=" float: left;"><span class="list-panel-title-span">西政报道</span></a>
+                            <span style="margin-right:6px; font-size:12px;" class="pageState"></span>
+                            <a class="prev"><img src="images/inbtnl.gif" /></a>
+                            <a class="next"><img src="images/inbtnr.gif" /></a>
+                        </div>
+                        <div class="sscon xzbd_slider_bd">
+                            <ul class="sul">
+                                                                <li>
+                                    <div class="li-img"><img src="images/content/2017-10/20171025170841377076.jpg"></div>
+                                    <a href=xzbd/231579.htm>我校赴澳门参加内地与澳门高等教育展</a>
+                                </li>
+                                                                <li>
+                                    <div class="li-img"><img src="images/content/2017-09/20170912101821949192.jpg"></div>
+                                    <a href=xzbd/227210.htm>西政参加福建高招咨询会--福建省考试院院长陈明庆莅临我校展位指导</a>
+                                </li>
+                                                                <li>
+                                    <div class="li-img"><img src="images/content/2017-09/20170914134229928880.png"></div>
+                                    <a href=xzbd/227209.htm>西南政法大学在浙江省湖州市设立优秀生源基地</a>
+                                </li>
+                                                                <li>
+                                    <div class="li-img"><img src=""></div>
+                                    <a href=xzbd/227208.htm>我校获批成为中国政府奖学金生委托培养院校</a>
+                                </li>
+                                                                <li>
+                                    <div class="li-img"><img src="images/content/2017-09/20170914134426442969.jpg"></div>
+                                    <a href=xzbd/227207.htm>行政法学院教师到浙江进行优秀生源基地宣传</a>
+                                </li>
+                                                                <li>
+                                    <div class="li-img"><img src="images/content/2017-09/20170914134547350032.jpg"></div>
+                                    <a href=xzbd/227206.htm>实力碾压211工程的八所普通大学，报考的都觉得捡了宝！</a>
+                                </li>
+                                                                <li>
+                                    <div class="li-img"><img src=""></div>
+                                    <a href=xzbd/227205.htm>男排健儿载誉归来 校领导赴机场祝贺</a>
+                                </li>
+                                                                <li>
+                                    <div class="li-img"><img src=""></div>
+                                    <a href=xzbd/227204.htm>80名研究生获首届“银鑫”奖学金</a>
+                                </li>
+                                                                <li>
+                                    <div class="li-img"><img src=""></div>
+                                    <a href=xzbd/227203.htm>美国蒙大拿大学孔子学院老师应邀参加2017年全美中文大会</a>
+                                </li>
+                                                                <li>
+                                    <div class="li-img"><img src=""></div>
+                                    <a href=xzbd/227202.htm>校友返校助力“双一流”建设</a>
+                                </li>
+                                                                <li>
+                                    <div class="li-img"><img src=""></div>
+                                    <a href=xzbd/227201.htm>我校与最高人民法院第五巡回法庭签署交流合作协议</a>
+                                </li>
+                                                                <li>
+                                    <div class="li-img"><img src=""></div>
+                                    <a href=xzbd/227200.htm>我校两个“三特”专业项目接受专家组验收</a>
+                                </li>
+                                                                <li>
+                                    <div class="li-img"><img src=""></div>
+                                    <a href=xzbd/227199.htm>重庆市知识产权局联手我校共建一流学科</a>
+                                </li>
+                                                                <li>
+                                    <div class="li-img"><img src=""></div>
+                                    <a href=xzbd/227198.htm>我校于四川宣汉再建一所优秀生源基地</a>
+                                </li>
+                                                                <li>
+                                    <div class="li-img"><img src=""></div>
+                                    <a href=xzbd/227197.htm>国际法学院在深圳新建三个优秀生源基地</a>
+                                </li>
+                                                                <li>
+                                    <div class="li-img"><img src=""></div>
+                                    <a href=xzbd/227196.htm>我校总结2016年本科招生工作</a>
+                                </li>
+                                                                <li>
+                                    <div class="li-img"><img src=""></div>
+                                    <a href=xzbd/227195.htm>九省优秀生源基地四十余师生西政行</a>
+                                </li>
+                                                                <li>
+                                    <div class="li-img"><img src=""></div>
+                                    <a href=xzbd/227194.htm>政治与公共管理学院新建四所优秀生源基地</a>
+                                </li>
+                                                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="am-u-lg-3 detail-mb">
+                    <div class="zx-content1" style="display: block">
+                        <h1>走进西政</h1>
+                        <ul>
+                                                        <li>
+                                <a href="http://www.swupl.edu.cn/xxjj/xzgl/index.htm" target="_blank">西政概况</a>
+                            </li>
+                                                        <li>
+                                <a href="http://jwc.swupl.edu.cn" target="_blank">西政人才培养</a>
+                            </li>
+                                                        <li>
+                                <a href="http://jyb.swupl.edu.cn" target="_blank">西政就业</a>
+                            </li>
+                                                        <li>
+                                <a href="http://intex.swupl.edu.cn" target="_blank">西政国际交流</a>
+                            </li>
+                                                        <li>
+                                <a href="http://xsc.swupl.edu.cn" target="_blank">西政学生管理及资助</a>
+                            </li>
+                                                        <li>
+                                <a href="http://xtw.swupl.edu.cn/" target="_blank">西政活动</a>
+                            </li>
+                                                        <li>
+                                <a href="http://xyh.swupl.edu.cn" target="_blank">西政校友</a>
+                            </li>
+                                                        <li>
+                                <a href="zjxz/xzly/index.htm" target="_blank">西政掠影</a>
+                            </li>
+                                                    </ul>
+                    </div>
+                </div>
+                <div class="am-u-lg-4 detail-mb">
+                    <div class="faq-content">
+                        <!--录取分数线-->
+                        <a href="bkzn/dksw/index.htm" class="title">
+                            FAQ <span style="font-size: 14px">答考生问</span>
+                        </a>
+                        <ul class="list-panel-content color-white">
+                                                        <li>
+                                <a title="问：你校今年面向重庆地区自主招生的具体做法？" href="bkzn/dksw/226191.htm" target="_blank">
+                                    ·            问：你校今年面向重庆地区自主招生的具体做... 
+                                    </a>
+                            </li>
+                                                        <li>
+                                <a title="问：你校录取新生的相关科目的要求是什么？" href="bkzn/dksw/226190.htm" target="_blank">
+                                    ·            问：你校录取新生的相关科目的要求是什么？ 
+                                    </a>
+                            </li>
+                                                        <li>
+                                <a title="问：你校录取规则是什么?" href="bkzn/dksw/226189.htm" target="_blank">
+                                    ·            问：你校录取规则是什么? 
+                                    </a>
+                            </li>
+                                                        <li>
+                                <a title="问：你校录取新生的调档比例是多少？" href="bkzn/dksw/226188.htm" target="_blank">
+                                    ·            问：你校录取新生的调档比例是多少？ 
+                                    </a>
+                            </li>
+                                                        <li>
+                                <a title="问：你校对考生的身体条件有什么要求？" href="bkzn/dksw/226187.htm" target="_blank">
+                                    ·            问：你校对考生的身体条件有什么要求？ 
+                                    </a>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="am-u-lg-12">
+            <div class="am-g">
+                <div class="am-u-lg-5 detail-mb">
+                    <div class="gg-container">
+                        <div class="list-panel-title">
+                            <span class="list-panel-title-span">招生政策</span>
+                            <p class="list-panel-title-more"><a href="zszc/index.htm">更多...</a></p>
+                        </div>
+                        <ul class="list-panel-content date">
+                                                        <li>
+                                <span>09月19日 </span>
+                                <a href=zszc/229824.htm>关于印发《中国政法大学、西南政法大学、中南财经政法大学、华东政法学院、西北政法学院和中央司法警官学院提前录取专业招生办法》的通知[2003]16号 22</a>
+                            </li>
+                                                        <li>
+                                <span>09月19日 </span>
+                                <a href=zszc/229823.htm>2017年普通高等学校招生工作规定 22</a>
+                            </li>
+                                                        <li>
+                                <span>09月19日 </span>
+                                <a href=zszc/229822.htm>重庆市教育委员会关于印发重庆市2017年全国普通高等学校招生工作实施办法的通知 22</a>
+                            </li>
+                                                        <li>
+                                <span>09月19日 </span>
+                                <a href=zszc/229821.htm>教育部办公厅关于做好2017年普通高等学校 部分特殊类型招生工作的通知 22</a>
+                            </li>
+                                                        <li>
+                                <span>09月19日 </span>
+                                <a href=zszc/229818.htm>西南政法大学优秀本科新生奖励办法 22</a>
+                            </li>
+                                                        <li>
+                                <span>12月01日 </span>
+                                <a href=zszc/229132.htm>2016年中华人民共和国普通高等学校联合招收华侨、港澳地区及台湾省学生简章 22</a>
+                            </li>
+                                                    </ul>
+                    </div>
+                </div>
+                <div class="am-u-lg-3 detail-mb">
+                    <div class="gg-container qt" style="background: #8318bd;border-color: #8318bd;">
+                        <div class="list-panel-title">
+                            <span class="list-panel-title-span">专业介绍</span>
+                        </div>
+                        <ul class="list-panel-content">
+                                                        <li>
+                                <a href=zyjs/226400.htm>            法学 
+    </a>
+                            </li>
+                                                        <li>
+                                <a href=zyjs/226402.htm>            知识产权 
+    </a>
+                            </li>
+                                                        <li>
+                                <a href=zyjs/226392.htm>            侦查学 
+    </a>
+                            </li>
+                                                        <li>
+                                <a href=zyjs/226391.htm>            治安学 
+    </a>
+                            </li>
+                                                        <li>
+                                <a href=zyjs/226390.htm>            经济犯罪侦查 
+    </a>
+                            </li>
+                                                    </ul>
+                        <a href="zyjs/index.htm" class="b_go"><img src="images/b_gt.png" /></a>
+                    </div>
+
+                </div>
+                <div class="am-u-lg-4 detail-mb">
+                    <div class="gg-container zsxc_slider">
+                        <div class="bd">
+                            <ul class="sul">
+                                                                <li>
+                                    <div class="li-img">
+                                        <a href=http://education.news.cn/2017talk/20170531b-no-portrait.htm?=eeee target="_blank">
+                                            <img src="images/content/2017-09/20170914093944623698.png">
+                                        </a>
+                                    </div>
+                                    <div class="li-txt">
+                                        <a href=http://education.news.cn/2017talk/20170531b-no-portrait.htm?=eeee target="_blank">新华访谈</a>
+                                        <p></p>
+                                    </div>
+                                </li>
+                                                                <li>
+                                    <div class="li-img">
+                                        <a href=http://education.cqnews.net/html/2017-06/08/content_41876541.htm target="_blank">
+                                            <img src="images/content/2017-09/20170914094111006736.png">
+                                        </a>
+                                    </div>
+                                    <div class="li-txt">
+                                        <a href=http://education.cqnews.net/html/2017-06/08/content_41876541.htm target="_blank">招办主任来帮忙</a>
+                                        <p></p>
+                                    </div>
+                                </li>
+                                                                <li>
+                                    <div class="li-img">
+                                        <a href=http://edu.sina.com.cn/gaokao/2017-06-02/doc-ifyfuzmy1179514.shtml target="_blank">
+                                            <img src="images/content/2017-09/20170914094229862835.png">
+                                        </a>
+                                    </div>
+                                    <div class="li-txt">
+                                        <a href=http://edu.sina.com.cn/gaokao/2017-06-02/doc-ifyfuzmy1179514.shtml target="_blank">新浪网招办主任访谈</a>
+                                        <p></p>
+                                    </div>
+                                </li>
+                                                                <li>
+                                    <div class="li-img">
+                                        <a href=http://edu.qq.com/a/20170606/050363.htm target="_blank">
+                                            <img src="images/content/2017-09/20170914135327635199.jpg">
+                                        </a>
+                                    </div>
+                                    <div class="li-txt">
+                                        <a href=http://edu.qq.com/a/20170606/050363.htm target="_blank">腾讯网招办主任访谈</a>
+                                        <p></p>
+                                    </div>
+                                </li>
+                                                                <li>
+                                    <div class="li-img">
+                                        <a href=http://202.202.80.98/yylj/31799.htm target="_blank">
+                                            <img src="images/content/2017-09/20170914135406767253.jpg">
+                                        </a>
+                                    </div>
+                                    <div class="li-txt">
+                                        <a href=http://202.202.80.98/yylj/31799.htm target="_blank">我校形象片《学在西政》</a>
+                                        <p></p>
+                                    </div>
+                                </li>
+                                                            </ul>
+                        </div>
+                        <div class="hd">
+                            <ul>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                            </ul>
+                        </div>
+                        <a href="zsxz/index.htm" class="t_go"><img src="images/x_gt.png" /></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="link am-container">
+    <ul>
+        <li>
+            友情链接：
+        </li>
+                <li>
+            <a href=http://gaokao.chsi.com.cn/ target="_blank">教育部阳光高考平台</a>
+        </li>
+                <li>
+            <a href=http://www.cqksy.cn/site/default.html target="_blank">重庆市教育考试院</a>
+        </li>
+                <li>
+            <a href=http://www.cqzk.com.cn/ target="_blank">重庆招考信息网</a>
+        </li>
+                <li>
+            <a href=http://www.swupl.edu.cn/ target="_blank">西南政法大学</a>
+        </li>
+                <li>
+            <a href=http://jwc.swupl.edu.cn/ target="_blank">西南政法大学教务处</a>
+        </li>
+            </ul>
+</div>
+
+<script src="http://api.microyan.com/swupl/sidebar/QAsidebar.js" type="text/javascript"></script>
+<script src="js/swiper.min.js" type="text/javascript"></script>
+<link href="css/swiper.min.css" rel="stylesheet" />
+<script>
+    $(".xzbd_slider").slide({ mainCell: ".sscon ul", autoPage: true, effect: "top", scroll: 2, vis: 2, trigger: "click" });
+    $(".zsxc_slider").slide({ mainCell: ".bd ul", autoPlay: true });
+    var mySwiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        paginationClickable: true,
+        observer:true,//修改swiper自己或子元素时，自动初始化swiper
+        observeParents:true//修改swiper的父元素时，自动初始化swiper
+    });
+</script>
+<style>
+    .swiper-pagination-bullet {
+        width: 10px;
+        height: 10px;
+    }
+
+    .swiper-container-horizontal > .swiper-pagination .swiper-pagination-bullet {
+        margin: 0 10px;
+    }
+
+    .swiper-pagination-bullet {
+        background: #fff;
+        opacity: 1;
+    }
+
+    .swiper-pagination-bullet-active {
+        background: #9900cc;
+    }
+
+    .swiper-container img {
+        width: 100%;
+    }
+</style>
+<div class="footer">
+    <div class="am-container">
+        <img  class="qrcode" src="images/content/2017-07/20170712092641275041.jpg">
+        <p>Copyright©2017 西南政法大学本科招生办公室</p>
+        <p>地址：重庆市渝北区宝圣大道301号 西南政法大学本科招生办公室</p>
+        <p>电子信箱：xzbkzb@swupl.edu.cn&nbsp;&nbsp;&nbsp;&nbsp;邮编：401120</p>
+        <p>电话：023-67258088 & 023-67258828 & 023-67258830</p>
+    </div>
+</div>
+
+</body></html>
+</body></html>

@@ -1,0 +1,669 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+    "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="x-ua-compatible" content="IE=7" >
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>中南财经政法大学</title>
+
+<link type="text/css" href="/_css/_system/system.css" rel="stylesheet"/>
+<link type="text/css" href="/_upload/site/1/style/1/1.css" rel="stylesheet"/>
+<link type="text/css" href="/_upload/site/00/02/2/style/2/2.css" rel="stylesheet"/>
+<link type="text/css" href="/_js/_portletPlugs/simpleNews/css/simplenews.css" rel="stylesheet" />
+<link type="text/css" href="/_js/_portletPlugs/sudyNavi/css/sudyNav.css" rel="stylesheet" />
+<link type="text/css" href="/_web/_platform/teacherHome/css/tecWebQuery.css" rel="stylesheet" />
+
+<script language="javascript" src="/_js/jquery.min.js" sudy-wp-context="" sudy-wp-siteId="2"></script>
+<script language="javascript" src="/_js/jquery.sudy.wp.visitcount.js"></script>
+<script type="text/javascript" src="/_js/_portletPlugs/sudyNavi/jquery.sudyNav.js"></script>
+<script type="text/javascript" src="/_web/_platform/teacherHome/teaInfoMain/js/teaWebQuery.js"></script>
+<script type="text/javascript" src="/_web/_platform/teacherHome/teaInfoMain/js/tecSearch.js"></script>
+<script type="text/javascript" src="/_js/json/json2.js"></script>
+<link rel="stylesheet" href="/_upload/tpl/00/04/4/template4/t_style.css" type="text/css" media="all" />
+<script type="text/javascript" src="/_upload/tpl/00/04/4/template4/extends/extends.js"></script>
+</head>
+
+<body>
+<div class="wrapper" id="header">
+  <div class="inner" frag="面板10">
+    <div class="head" frag="窗口10" portletmode="simpleSudyNavi">
+      <div id="wp_nav_w10"> 
+
+ 
+<ul class="wp_nav" data-nav-config="{drop_v: 'down', drop_w: 'right', dir: 'y', opacity_main: '1', opacity_sub: '0.8', dWidth: '0'}">
+      
+     <li class="nav-item i1 "> 
+         <a href="/main.htm" title="首页" target="_self"><span class="item-name">首页</span></a><i class="mark"></i> 
+          
+     </li> 
+      
+     <li class="nav-item i2 "> 
+         <a href="http://10.172.249.46/_web/_platform/teacherHome/web/login.jsp" title="登录" target="_blank"><span class="item-name">登录</span></a><i class="mark"></i> 
+          
+     </li> 
+      
+     <li class="nav-item i3 "> 
+         <a href="/notice/list.htm" title="通知" target="_self"><span class="item-name">通知</span></a><i class="mark"></i> 
+          
+     </li> 
+      
+</ul> 
+ 
+ 
+ </div>
+    </div>
+   <div class="aa"><a href="/"></a></div>
+  </div>
+
+  <div class="inner1" frag="面板11">
+    <div frag="窗口11" portletmode="researchTec" class="t-p-search">
+      <div class="tp-tab">
+<ul class="tab-menu">
+</ul>
+<div class="tp-search clearfix">
+<div class="search-input">
+<input class="search-title" id="keyword" name="keyword" type="text" value="" placeholder="输入关键字">
+</div>
+<div class="search-btn">
+<input class="search-submit" name="submit" type="submit" value="搜索" onclick="getData();">
+</div>
+ <input type="hidden" id="searchType" name="searchType" value="">
+</div>
+</div>
+<script> 
+$(function() {
+getSearchType("0,1,2",".tab-menu",1);
+setSudyTab(".tp-tab");
+ });
+function getData() {
+var searchType = $("#searchType").val();
+var keyword = $("#keyword").val();
+keyword = encodeURI(encodeURI(keyword));
+var durl = "http://faculty.zuel.edu.cn/searchs/list.htm?siteId=2&searchType=" + searchType + "&keyword=" + keyword;
+window.open(durl);
+}
+</script> 
+
+    </div>
+  </div>
+</div>
+<div class="wrapper" id="container">
+  <div frag="面板12" class="inner">
+    <div frag="窗口12" portletmode="recList" class="post post-1">
+      <div frag="标题栏" class="tt">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td class="tit" frag="标题">热门主页推荐</td>
+            <td><div class="more_btn"><a href="http://faculty.zuel.edu.cn/popular/list.htm" target="_blank">更多&gt;&gt;</a></div></td>
+          </tr>
+        </table>
+      </div>
+      <div class="con">
+<ul class="tp_article_list news_list clearfix news_pic" id="recLists_w12"></ul>
+<div id='rec_search_pages'></div></div>
+<script> 
+ $().ready(function(){ 
+ getRecData(1,0,2,"/_wp3services/generalQuery?queryObj=teacherHome&t=0.08832716412051811","#recLists_w12",6,6,"1,2,3,4",1,2,1)
+    }); 
+</script> 
+
+    </div>
+  </div>
+  <div class="news clearfix">
+    <div frag="面板13" class="inner">
+      <div frag="窗口13" portletmode="simpleNews" class="post post-2">
+        <div class="tt">
+          <div class="tit" frag="标题">
+            获奖动态
+          </div>
+          <div class="more_btn" frag="按钮" type="更多"><a href="/prize/list.htm" class="w13_more"><span class="more_text" frag="按钮内容">更多&gt;&gt;</span></a></div>
+        </div>
+        <div style="width: 100%">
+<div id=Div0c87ffd05a004b3c8aeaf3b2429d639d_Outer style="overflow:hidden;width:100%;">
+<table id='HS0c87ffd05a004b3c8aeaf3b2429d639d' align=left cellpadding=0 cellspacing=0 border=0><tr>
+<td id=Td0c87ffd05a004b3c8aeaf3b2429d639d_Left valign=top nowrap width='100%'><div id=Div0c87ffd05a004b3c8aeaf3b2429d639d_Adjust_Left style='width:100%;'><div id="wp_news_w13"> 
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="wp_article_list_table"> 
+<tr> 
+<td> 
+ 
+<ul class="wp_article_list"> 
+     <li class="list_item i1"> 
+         <div class="fields pr_fields"> 
+             <span class='Article_Index'>1</span> 
+             <span class='Article_Title'><a href='/_redirect?siteId=2&columnId=342&articleId=8668' target='_blank' title='舒辉波作品荣获第十届全国优秀儿童文学奖'>舒辉波作品荣获第十届全国优秀儿童文学奖</a></span> 
+         </div> 
+         <div class="fields ex_fields"> 
+              
+         </div> 
+     </li> 
+</ul> 
+</td> 
+<td> 
+ 
+<ul class="wp_article_list"> 
+     <li class="list_item i2"> 
+         <div class="fields pr_fields"> 
+             <span class='Article_Index'>2</span> 
+             <span class='Article_Title'><a href='/_redirect?siteId=2&columnId=342&articleId=8666' target='_blank' title='我校新教师张碧思夺得央视首届法语大赛总冠军'>我校新教师张碧思夺得央视首届法语大赛总冠军</a></span> 
+         </div> 
+         <div class="fields ex_fields"> 
+              
+         </div> 
+     </li> 
+</ul> 
+</td> 
+<td> 
+ 
+<ul class="wp_article_list"> 
+     <li class="list_item i3"> 
+         <div class="fields pr_fields"> 
+             <span class='Article_Index'>3</span> 
+             <span class='Article_Title'><a href='http://wellan.zuel.edu.cn/2017/0615/c1668a168937/page.htm' target='_blank' title='韩美群教授获评高校思政课教师年度影响力人物'>韩美群教授获评高校思政课教师年度影响力人物</a></span> 
+         </div> 
+         <div class="fields ex_fields"> 
+              
+         </div> 
+     </li> 
+</ul> 
+</td> 
+</tr> 
+</table></div> 
+</div></td>
+<td id=Td0c87ffd05a004b3c8aeaf3b2429d639d_Right valign=top nowrap><div id=Div0c87ffd05a004b3c8aeaf3b2429d639d_Adjust_Right style='width:100%;'><div id="wp_news_w13"> 
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="wp_article_list_table"> 
+<tr> 
+<td> 
+ 
+<ul class="wp_article_list"> 
+     <li class="list_item i1"> 
+         <div class="fields pr_fields"> 
+             <span class='Article_Index'>1</span> 
+             <span class='Article_Title'><a href='/_redirect?siteId=2&columnId=342&articleId=8668' target='_blank' title='舒辉波作品荣获第十届全国优秀儿童文学奖'>舒辉波作品荣获第十届全国优秀儿童文学奖</a></span> 
+         </div> 
+         <div class="fields ex_fields"> 
+              
+         </div> 
+     </li> 
+</ul> 
+</td> 
+<td> 
+ 
+<ul class="wp_article_list"> 
+     <li class="list_item i2"> 
+         <div class="fields pr_fields"> 
+             <span class='Article_Index'>2</span> 
+             <span class='Article_Title'><a href='/_redirect?siteId=2&columnId=342&articleId=8666' target='_blank' title='我校新教师张碧思夺得央视首届法语大赛总冠军'>我校新教师张碧思夺得央视首届法语大赛总冠军</a></span> 
+         </div> 
+         <div class="fields ex_fields"> 
+              
+         </div> 
+     </li> 
+</ul> 
+</td> 
+<td> 
+ 
+<ul class="wp_article_list"> 
+     <li class="list_item i3"> 
+         <div class="fields pr_fields"> 
+             <span class='Article_Index'>3</span> 
+             <span class='Article_Title'><a href='http://wellan.zuel.edu.cn/2017/0615/c1668a168937/page.htm' target='_blank' title='韩美群教授获评高校思政课教师年度影响力人物'>韩美群教授获评高校思政课教师年度影响力人物</a></span> 
+         </div> 
+         <div class="fields ex_fields"> 
+              
+         </div> 
+     </li> 
+</ul> 
+</td> 
+</tr> 
+</table></div> 
+</div></td></tr>
+</table>
+</div><span id=SpanScroll name=SpanScroll style="display:none;" onclick="StartScroll0c87ffd05a004b3c8aeaf3b2429d639d();"></span>
+<script language=javascript>
+
+var t0c87ffd05a004b3c8aeaf3b2429d639d;
+
+function Marquee0c87ffd05a004b3c8aeaf3b2429d639d(){
+
+if(parseInt(document.getElementById('Div0c87ffd05a004b3c8aeaf3b2429d639d_Outer').offsetWidth)>=parseInt(document.getElementById('Td0c87ffd05a004b3c8aeaf3b2429d639d_Left').offsetWidth))
+{
+	 var w = parseInt( document.getElementById('Div0c87ffd05a004b3c8aeaf3b2429d639d_Outer').offsetWidth);
+	 document.getElementById('HS0c87ffd05a004b3c8aeaf3b2429d639d').width = w*2;
+	 document.getElementById('Td0c87ffd05a004b3c8aeaf3b2429d639d_Left').width = w;
+	 document.getElementById('Td0c87ffd05a004b3c8aeaf3b2429d639d_Right').width = w;
+	 document.getElementById('Div0c87ffd05a004b3c8aeaf3b2429d639d_Adjust_Left').style.width = w;
+	 document.getElementById('Div0c87ffd05a004b3c8aeaf3b2429d639d_Adjust_Right').style.width = w;
+}
+if(document.getElementById('Td0c87ffd05a004b3c8aeaf3b2429d639d_Right').offsetWidth-document.getElementById('Div0c87ffd05a004b3c8aeaf3b2429d639d_Outer').scrollLeft<=0)
+	document.getElementById('Div0c87ffd05a004b3c8aeaf3b2429d639d_Outer').scrollLeft-=document.getElementById('Td0c87ffd05a004b3c8aeaf3b2429d639d_Left').offsetWidth;
+else
+	document.getElementById('Div0c87ffd05a004b3c8aeaf3b2429d639d_Outer').scrollLeft+=1;
+}
+
+ var evalStringInFF;function StartScroll0c87ffd05a004b3c8aeaf3b2429d639d(){
+ document.getElementById('Div0c87ffd05a004b3c8aeaf3b2429d639d_Outer').style.width=1;if(document.readyState == 'complete') {document.getElementById('Div0c87ffd05a004b3c8aeaf3b2429d639d_Outer').style.width=document.getElementById('Div0c87ffd05a004b3c8aeaf3b2429d639d_Outer').parentNode.offsetWidth;} else {window.onload=loadComplete;var str="document.getElementById('Div0c87ffd05a004b3c8aeaf3b2429d639d_Outer').style.width=document.getElementById('Div0c87ffd05a004b3c8aeaf3b2429d639d_Outer').parentNode.offsetWidth;";if(evalStringInFF==null) {evalStringInFF=str;} else { evalStringInFF+=str;}}
+ var ScrollObj0c87ffd05a004b3c8aeaf3b2429d639d;
+ ScrollObj0c87ffd05a004b3c8aeaf3b2429d639d=setInterval(Marquee0c87ffd05a004b3c8aeaf3b2429d639d,100);
+ document.getElementById('Div0c87ffd05a004b3c8aeaf3b2429d639d_Outer').onmouseover=function(){clearInterval(ScrollObj0c87ffd05a004b3c8aeaf3b2429d639d)};
+ document.getElementById('Div0c87ffd05a004b3c8aeaf3b2429d639d_Outer').onmouseout=function(){ScrollObj0c87ffd05a004b3c8aeaf3b2429d639d=setInterval(Marquee0c87ffd05a004b3c8aeaf3b2429d639d,100)};
+}function loadComplete(){eval(evalStringInFF);}StartScroll0c87ffd05a004b3c8aeaf3b2429d639d();</script></div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="wrapper" id="mid_frame">
+  <div frag="面板14" class="inner">
+    <div frag="窗口14" portletmode="departmentList" class="post post-2">
+      <div frag="标题栏" class="tt">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td class="tit" frag="标题">院系设置</td>
+            <td><div class="more_btn"><a href="http://faculty.zuel.edu.cn/nav/list.htm" target="_blank">更多&gt;&gt;</a></div></td>
+          </tr>
+        </table>
+      </div>
+      <div id="wp_news_w14"> 
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="wp_article_list_table"> 
+<tr> 
+<td> 
+ 
+<ul class="wp_article_list"> 
+     <li class="list_item i1"> 
+         <div class="fields pr_fields"> 
+             <span class='Article_Index'>1</span> 
+             <span class='Article_Title'><a href='http://faculty.zuel.edu.cn/org/list.htm?wp_tw_orgId=29&wp_tw_displayStyle=1&wp_tw_complete=1&wp_tw_orgName=%25E9%25A9%25AC%25E5%2585%258B%25E6%2580%259D%25E4%25B8%25BB%25E4%25B9%2589%25E5%25AD%25A6%25E9%2599%25A2' target='_blank' title='马克思主义学院'>马克思主义学院</a></span> 
+         </div> 
+         <div class="fields ex_fields"> 
+              
+         </div> 
+     </li> 
+</ul> 
+</td> 
+<td> 
+ 
+<ul class="wp_article_list"> 
+     <li class="list_item i2"> 
+         <div class="fields pr_fields"> 
+             <span class='Article_Index'>2</span> 
+             <span class='Article_Title'><a href='http://faculty.zuel.edu.cn/org/list.htm?wp_tw_orgId=30&wp_tw_displayStyle=1&wp_tw_complete=1&wp_tw_orgName=%25E5%2593%25B2%25E5%25AD%25A6%25E9%2599%25A2' target='_blank' title='哲学院'>哲学院</a></span> 
+         </div> 
+         <div class="fields ex_fields"> 
+              
+         </div> 
+     </li> 
+</ul> 
+</td> 
+<td> 
+ 
+<ul class="wp_article_list"> 
+     <li class="list_item i3"> 
+         <div class="fields pr_fields"> 
+             <span class='Article_Index'>3</span> 
+             <span class='Article_Title'><a href='http://faculty.zuel.edu.cn/org/list.htm?wp_tw_orgId=31&wp_tw_displayStyle=1&wp_tw_complete=1&wp_tw_orgName=%25E7%25BB%258F%25E6%25B5%258E%25E5%25AD%25A6%25E9%2599%25A2' target='_blank' title='经济学院'>经济学院</a></span> 
+         </div> 
+         <div class="fields ex_fields"> 
+              
+         </div> 
+     </li> 
+</ul> 
+</td> 
+<td> 
+ 
+<ul class="wp_article_list"> 
+     <li class="list_item i4"> 
+         <div class="fields pr_fields"> 
+             <span class='Article_Index'>4</span> 
+             <span class='Article_Title'><a href='http://faculty.zuel.edu.cn/org/list.htm?wp_tw_orgId=32&wp_tw_displayStyle=1&wp_tw_complete=1&wp_tw_orgName=%25E8%25B4%25A2%25E6%2594%25BF%25E7%25A8%258E%25E5%258A%25A1%25E5%25AD%25A6%25E9%2599%25A2' target='_blank' title='财政税务学院'>财政税务学院</a></span> 
+         </div> 
+         <div class="fields ex_fields"> 
+              
+         </div> 
+     </li> 
+</ul> 
+</td> 
+</tr> 
+<tr> 
+<td> 
+ 
+<ul class="wp_article_list"> 
+     <li class="list_item i5"> 
+         <div class="fields pr_fields"> 
+             <span class='Article_Index'>5</span> 
+             <span class='Article_Title'><a href='http://faculty.zuel.edu.cn/org/list.htm?wp_tw_orgId=33&wp_tw_displayStyle=1&wp_tw_complete=1&wp_tw_orgName=%25E9%2587%2591%25E8%259E%258D%25E5%25AD%25A6%25E9%2599%25A2' target='_blank' title='金融学院'>金融学院</a></span> 
+         </div> 
+         <div class="fields ex_fields"> 
+              
+         </div> 
+     </li> 
+</ul> 
+</td> 
+<td> 
+ 
+<ul class="wp_article_list"> 
+     <li class="list_item i6"> 
+         <div class="fields pr_fields"> 
+             <span class='Article_Index'>6</span> 
+             <span class='Article_Title'><a href='http://faculty.zuel.edu.cn/org/list.htm?wp_tw_orgId=34&wp_tw_displayStyle=1&wp_tw_complete=1&wp_tw_orgName=%25E6%25B3%2595%25E5%25AD%25A6%25E9%2599%25A2' target='_blank' title='法学院'>法学院</a></span> 
+         </div> 
+         <div class="fields ex_fields"> 
+              
+         </div> 
+     </li> 
+</ul> 
+</td> 
+<td> 
+ 
+<ul class="wp_article_list"> 
+     <li class="list_item i7"> 
+         <div class="fields pr_fields"> 
+             <span class='Article_Index'>7</span> 
+             <span class='Article_Title'><a href='http://faculty.zuel.edu.cn/org/list.htm?wp_tw_orgId=35&wp_tw_displayStyle=1&wp_tw_complete=1&wp_tw_orgName=%25E5%2588%2591%25E4%25BA%258B%25E5%258F%25B8%25E6%25B3%2595%25E5%25AD%25A6%25E9%2599%25A2' target='_blank' title='刑事司法学院'>刑事司法学院</a></span> 
+         </div> 
+         <div class="fields ex_fields"> 
+              
+         </div> 
+     </li> 
+</ul> 
+</td> 
+<td> 
+ 
+<ul class="wp_article_list"> 
+     <li class="list_item i8"> 
+         <div class="fields pr_fields"> 
+             <span class='Article_Index'>8</span> 
+             <span class='Article_Title'><a href='http://faculty.zuel.edu.cn/org/list.htm?wp_tw_orgId=36&wp_tw_displayStyle=1&wp_tw_complete=1&wp_tw_orgName=%25E5%25A4%2596%25E5%259B%25BD%25E8%25AF%25AD%25E5%25AD%25A6%25E9%2599%25A2' target='_blank' title='外国语学院'>外国语学院</a></span> 
+         </div> 
+         <div class="fields ex_fields"> 
+              
+         </div> 
+     </li> 
+</ul> 
+</td> 
+</tr> 
+<tr> 
+<td> 
+ 
+<ul class="wp_article_list"> 
+     <li class="list_item i9"> 
+         <div class="fields pr_fields"> 
+             <span class='Article_Index'>9</span> 
+             <span class='Article_Title'><a href='http://faculty.zuel.edu.cn/org/list.htm?wp_tw_orgId=37&wp_tw_displayStyle=1&wp_tw_complete=1&wp_tw_orgName=%25E6%2596%25B0%25E9%2597%25BB%25E4%25B8%258E%25E6%2596%2587%25E5%258C%2596%25E4%25BC%25A0%25E6%2592%25AD%25E5%25AD%25A6%25E9%2599%25A2' target='_blank' title='新闻与文化传播学院'>新闻与文化传播学院</a></span> 
+         </div> 
+         <div class="fields ex_fields"> 
+              
+         </div> 
+     </li> 
+</ul> 
+</td> 
+<td> 
+ 
+<ul class="wp_article_list"> 
+     <li class="list_item i10"> 
+         <div class="fields pr_fields"> 
+             <span class='Article_Index'>10</span> 
+             <span class='Article_Title'><a href='http://faculty.zuel.edu.cn/org/list.htm?wp_tw_orgId=38&wp_tw_displayStyle=1&wp_tw_complete=1&wp_tw_orgName=%25E5%25B7%25A5%25E5%2595%2586%25E7%25AE%25A1%25E7%2590%2586%25E5%25AD%25A6%25E9%2599%25A2' target='_blank' title='工商管理学院'>工商管理学院</a></span> 
+         </div> 
+         <div class="fields ex_fields"> 
+              
+         </div> 
+     </li> 
+</ul> 
+</td> 
+<td> 
+ 
+<ul class="wp_article_list"> 
+     <li class="list_item i11"> 
+         <div class="fields pr_fields"> 
+             <span class='Article_Index'>11</span> 
+             <span class='Article_Title'><a href='http://faculty.zuel.edu.cn/org/list.htm?wp_tw_orgId=39&wp_tw_displayStyle=1&wp_tw_complete=1&wp_tw_orgName=%25E4%25BC%259A%25E8%25AE%25A1%25E5%25AD%25A6%25E9%2599%25A2%25EF%25BC%2588%25E4%25BC%259A%25E8%25AE%25A1%25E7%25A1%2595%25E5%25A3%25AB%25E4%25B8%2593%25E4%25B8%259A%25E5%25AD%25A6%25E4%25BD%258D%25E6%2595%2599%25E8%2582%25B2%25E4%25B8%25AD%25E5%25BF%2583%25EF%25BC%2589' target='_blank' title='会计学院（会计硕士专业学位教育中心）'>会计学院（会计硕士专业学位教育...</a></span> 
+         </div> 
+         <div class="fields ex_fields"> 
+              
+         </div> 
+     </li> 
+</ul> 
+</td> 
+<td> 
+ 
+<ul class="wp_article_list"> 
+     <li class="list_item i12"> 
+         <div class="fields pr_fields"> 
+             <span class='Article_Index'>12</span> 
+             <span class='Article_Title'><a href='http://faculty.zuel.edu.cn/org/list.htm?wp_tw_orgId=40&wp_tw_displayStyle=1&wp_tw_complete=1&wp_tw_orgName=%25E5%2585%25AC%25E5%2585%25B1%25E7%25AE%25A1%25E7%2590%2586%25E5%25AD%25A6%25E9%2599%25A2%25EF%25BC%2588%25E5%2585%25AC%25E5%2585%25B1%25E7%25AE%25A1%25E7%2590%2586%25E7%25A1%2595%25E5%25A3%25AB%25E6%2595%2599%25E8%2582%25B2%25E4%25B8%25AD%25E5%25BF%2583%25EF%25BC%2589' target='_blank' title='公共管理学院（公共管理硕士教育中心）'>公共管理学院（公共管理硕士教育...</a></span> 
+         </div> 
+         <div class="fields ex_fields"> 
+              
+         </div> 
+     </li> 
+</ul> 
+</td> 
+</tr> 
+<tr> 
+<td> 
+ 
+<ul class="wp_article_list"> 
+     <li class="list_item i13"> 
+         <div class="fields pr_fields"> 
+             <span class='Article_Index'>13</span> 
+             <span class='Article_Title'><a href='http://faculty.zuel.edu.cn/org/list.htm?wp_tw_orgId=41&wp_tw_displayStyle=1&wp_tw_complete=1&wp_tw_orgName=%25E7%25BB%259F%25E8%25AE%25A1%25E4%25B8%258E%25E6%2595%25B0%25E5%25AD%25A6%25E5%25AD%25A6%25E9%2599%25A2' target='_blank' title='统计与数学学院'>统计与数学学院</a></span> 
+         </div> 
+         <div class="fields ex_fields"> 
+              
+         </div> 
+     </li> 
+</ul> 
+</td> 
+<td> 
+ 
+<ul class="wp_article_list"> 
+     <li class="list_item i14"> 
+         <div class="fields pr_fields"> 
+             <span class='Article_Index'>14</span> 
+             <span class='Article_Title'><a href='http://faculty.zuel.edu.cn/org/list.htm?wp_tw_orgId=42&wp_tw_displayStyle=1&wp_tw_complete=1&wp_tw_orgName=%25E4%25BF%25A1%25E6%2581%25AF%25E4%25B8%258E%25E5%25AE%2589%25E5%2585%25A8%25E5%25B7%25A5%25E7%25A8%258B%25E5%25AD%25A6%25E9%2599%25A2' target='_blank' title='信息与安全工程学院'>信息与安全工程学院</a></span> 
+         </div> 
+         <div class="fields ex_fields"> 
+              
+         </div> 
+     </li> 
+</ul> 
+</td> 
+<td> 
+ 
+<ul class="wp_article_list"> 
+     <li class="list_item i15"> 
+         <div class="fields pr_fields"> 
+             <span class='Article_Index'>15</span> 
+             <span class='Article_Title'><a href='http://faculty.zuel.edu.cn/org/list.htm?wp_tw_orgId=43&wp_tw_displayStyle=1&wp_tw_complete=1&wp_tw_orgName=%25E6%2596%2587%25E6%25BE%259C%25E5%25AD%25A6%25E9%2599%25A2' target='_blank' title='文澜学院'>文澜学院</a></span> 
+         </div> 
+         <div class="fields ex_fields"> 
+              
+         </div> 
+     </li> 
+</ul> 
+</td> 
+<td> 
+ 
+<ul class="wp_article_list"> 
+     <li class="list_item i16"> 
+         <div class="fields pr_fields"> 
+             <span class='Article_Index'>16</span> 
+             <span class='Article_Title'><a href='http://faculty.zuel.edu.cn/org/list.htm?wp_tw_orgId=44&wp_tw_displayStyle=1&wp_tw_complete=1&wp_tw_orgName=MBA%25E5%25AD%25A6%25E9%2599%25A2' target='_blank' title='MBA学院'>MBA学院</a></span> 
+         </div> 
+         <div class="fields ex_fields"> 
+              
+         </div> 
+     </li> 
+</ul> 
+</td> 
+</tr> 
+<tr> 
+<td> 
+ 
+<ul class="wp_article_list"> 
+     <li class="list_item i17"> 
+         <div class="fields pr_fields"> 
+             <span class='Article_Index'>17</span> 
+             <span class='Article_Title'><a href='http://faculty.zuel.edu.cn/org/list.htm?wp_tw_orgId=46&wp_tw_displayStyle=1&wp_tw_complete=1&wp_tw_orgName=%25E7%25BB%25A7%25E7%25BB%25AD%25E6%2595%2599%25E8%2582%25B2%25E5%25AD%25A6%25E9%2599%25A2(%25E7%25BD%2591%25E7%25BB%259C%25E6%2595%2599%25E8%2582%25B2%25E5%25AD%25A6%25E9%2599%25A2)' target='_blank' title='继续教育学院(网络教育学院)'>继续教育学院(网络教育学院)</a></span> 
+         </div> 
+         <div class="fields ex_fields"> 
+              
+         </div> 
+     </li> 
+</ul> 
+</td> 
+<td> 
+ 
+<ul class="wp_article_list"> 
+     <li class="list_item i18"> 
+         <div class="fields pr_fields"> 
+             <span class='Article_Index'>18</span> 
+             <span class='Article_Title'><a href='http://faculty.zuel.edu.cn/org/list.htm?wp_tw_orgId=48&wp_tw_displayStyle=1&wp_tw_complete=1&wp_tw_orgName=%25E4%25B8%25AD%25E9%259F%25A9%25E6%2596%25B0%25E5%25AA%2592%25E4%25BD%2593%25E5%25AD%25A6%25E9%2599%25A2' target='_blank' title='中韩新媒体学院'>中韩新媒体学院</a></span> 
+         </div> 
+         <div class="fields ex_fields"> 
+              
+         </div> 
+     </li> 
+</ul> 
+</td> 
+<td>&nbsp;</td> 
+<td>&nbsp;</td> 
+</tr> 
+</table></div> 
+
+    </div>
+  </div>
+</div>
+<div class="wrapper" id="bottom_frame">
+  <div class="inner clearfix">
+    <div frag="面板21" class="bott_left">
+      <div frag="窗口21" portletmode="hotList" class="post post-21">
+        <div frag="标题栏" class="tt">
+          <table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <td class="tit" frag="标题">热点主页点击排行</td>
+              <td><div class="more_btn"><a href="http://faculty.zuel.edu.cn/hits/list.htm" target="_blank">更多&gt;&gt;</a></div></td>
+            </tr>
+          </table>
+        </div>
+        <div class="con">
+<ul class="tp-article-list news_list clearfix news_pic" id="hotLists_w21"></ul>
+<div id='hot_search_pages'></div>
+</div>
+<script> 
+ $().ready(function(){ 
+ getHotData(1,0,2,"/_wp3services/generalQuery?queryObj=teacherHome&t=0.12081887542843917","#hotLists_w21",12,10,1,1,2,1);
+ $('.WP_ColsVisitCount').WPColListVisitCount();
+    }); 
+</script> 
+
+      </div>
+    </div>
+    <div frag="面板22" class="bott_middle">
+      <div frag="窗口22" portletmode="hotList" class="post post-22">
+        <div frag="标题栏" class="tt">
+          <table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <td class="tit" frag="标题">最新更新</td>
+              <td><div class="more_btn"><a href="http://faculty.zuel.edu.cn/update/list.htm" target="_blank">更多&gt;&gt;</a></div></td>
+            </tr>
+          </table>
+        </div>
+        <div class="con">
+<ul class="tp-article-list news_list clearfix news_pic" id="hotLists_w22"></ul>
+<div id='new_search_pages'></div>
+</div>
+<script> 
+ $().ready(function(){ 
+ getNewData(1,0,2,"/_wp3services/generalQuery?queryObj=teacherHome&t=0.4571720875356291","#hotLists_w22",12,10,1,1,2,1);
+ $('.WP_ColsVisitCount').WPColListVisitCount();
+    }); 
+</script> 
+
+      </div>
+    </div>
+    <div frag="面板23" class="bott_right">
+      <div frag="窗口23" portletmode="simpleNews" class="post post-2">
+        <div class="tt">
+          <div class="tit" frag="标题">
+            师资动态
+          </div>
+          <div class="more_btn" frag="按钮" type="更多"><a href="/info/list.htm" class="w23_more"><span class="more_text" frag="按钮内容">更多&gt;&gt;</span></a></div>
+        </div>
+        <div id="wp_news_w23"> 
+ 
+<ul class="wp_article_list"> 
+      
+     <li class="list_item i1"> 
+         <div class="fields pr_fields"> 
+             <span class='Article_Index'>1</span> 
+             <span class='Article_Title'><a href='/_redirect?siteId=2&columnId=346&articleId=8670' target='_blank' title='梁尚敏教授财税学术思想研讨会举行'>梁尚敏教授财税学术思想研讨会举...</a></span> 
+         </div> 
+         <div class="fields ex_fields"> 
+              
+         </div> 
+     </li> 
+      
+     <li class="list_item i2"> 
+         <div class="fields pr_fields"> 
+             <span class='Article_Index'>2</span> 
+             <span class='Article_Title'><a href='/_redirect?siteId=2&columnId=346&articleId=8667' target='_blank' title='我校新教师张碧思夺得央视首届法语大赛总冠军'>我校新教师张碧思夺得央视首届法...</a></span> 
+         </div> 
+         <div class="fields ex_fields"> 
+              
+         </div> 
+     </li> 
+      
+     <li class="list_item i3"> 
+         <div class="fields pr_fields"> 
+             <span class='Article_Index'>3</span> 
+             <span class='Article_Title'><a href='/_redirect?siteId=2&columnId=346&articleId=8669' target='_blank' title='舒辉波作品荣获第十届全国优秀儿童文学奖'>舒辉波作品荣获第十届全国优秀儿...</a></span> 
+         </div> 
+         <div class="fields ex_fields"> 
+              
+         </div> 
+     </li> 
+      
+     <li class="list_item i4"> 
+         <div class="fields pr_fields"> 
+             <span class='Article_Index'>4</span> 
+             <span class='Article_Title'><a href='/_redirect?siteId=2&columnId=346&articleId=7802' target='_blank' title='韩美群教授获评高校思政课教师年度影响力人物'>韩美群教授获评高校思政课教师年...</a></span> 
+         </div> 
+         <div class="fields ex_fields"> 
+              
+         </div> 
+     </li> 
+      
+     <li class="list_item i5"> 
+         <div class="fields pr_fields"> 
+             <span class='Article_Index'>5</span> 
+             <span class='Article_Title'><a href='http://wellan.zuel.edu.cn/2017/0602/c1670a167562/page.htm' target='_blank' title='中文系首次尝试以原创文学作品代替毕业论文'>中文系首次尝试以原创文学作品代...</a></span> 
+         </div> 
+         <div class="fields ex_fields"> 
+              
+         </div> 
+     </li> 
+      
+</ul> 
+</div> 
+
+      </div>
+    </div>
+  </div>
+</div>
+<div class="wrapper" id="footer">
+  <div class="footer-inner">
+    <div class="inner clearfix">
+      <div class="foot_l">
+        <p>Copyright©中南财经政法大学(ZUEL) All Rights Reserved</p>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
+
+ <image src="/_visitcount?siteId=2&type=1&columnId=2" style="display:none" width="0" height="0"></image>

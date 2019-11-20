@@ -1,0 +1,332 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head> 
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+  <title>党委宣传部</title> 
+  <link rel="stylesheet" type="text/css" href="/r/cms/dwxcb/olddj/css/dj/main.css" /> 
+  <script type="text/javascript" src="/r/cms/dwxcb/olddj/js/jquery.min.js"></script> 
+  <!--图片切换效果--> 
+  <script type="text/javascript">
+$(function() {
+	var sWidth = $("#focus").width(); //获取焦点图的宽度（显示面积）
+	var len = $("#focus ul li").length; //获取焦点图个数
+	var index = 0;
+	var picTimer;
+	
+	//以下代码添加数字按钮和按钮后的半透明条，还有上一页、下一页两个按钮
+	var btn = "<div class='btnBg'></div><div class='btn'>";
+	for(var i=0; i < len; i++) {
+		btn += "<span></span>";
+	}
+	btn += "</div><div class='preNext pre'></div><div class='preNext next'></div>";
+	$("#focus").append(btn);
+	$("#focus .btnBg").css("opacity",0.5);
+
+	//为小按钮添加鼠标滑入事件，以显示相应的内容
+	$("#focus .btn span").css("opacity",0.4).mouseenter(function() {
+		index = $("#focus .btn span").index(this);
+		showPics(index);
+	}).eq(0).trigger("mouseenter");
+	//本例为左右滚动，即所有li元素都是在同一排向左浮动，所以这里需要计算出外围ul元素的宽度
+	$("#focus ul").css("width",sWidth * (len));
+	
+	//鼠标滑上焦点图时停止自动播放，滑出时开始自动播放
+	$("#focus").hover(function() {
+		clearInterval(picTimer);
+	},function() {
+		picTimer = setInterval(function() {
+			showPics(index);
+			index++;
+			if(index == len) {index = 0;}
+		},4000); //此4000代表自动播放的间隔，单位：毫秒
+	}).trigger("mouseleave");
+	
+	//显示图片函数，根据接收的index值显示相应的内容
+	function showPics(index) { //普通切换
+		var nowLeft = -index*sWidth; //根据index值计算ul元素的left值
+		$("#focus ul").stop(true,false).animate({"left":nowLeft},300); //通过animate()调整ul元素滚动到计算出的position
+		//$("#focus .btn span").removeClass("on").eq(index).addClass("on"); //为当前的按钮切换到选中的效果
+		$("#focus .btn span").stop(true,false).animate({"opacity":"0.4"},300).eq(index).stop(true,false).animate({"opacity":"1"},300); //为当前的按钮切换到选中的效果
+	}
+});
+
+</script> 
+  <style type="text/css">
+img{ border:none;}
+#focus {width:340px; height:283px; overflow:hidden; position:relative;}
+#focus ul {height:283px; position:absolute;}
+#focus ul li {float:left; width:340px; height:283px; overflow:hidden; position:relative;}
+#focus ul li div {position:absolute; overflow:hidden;}
+#focus .btnBg {position:absolute; width:340px; height:28px; left:0; bottom:0; background:#666666;Filter:alpha(opacity=50); /* ie有效 */
+-moz-opacity:0.5; /*firefox有效*/
+Opacity:0.5; /*通用，其他浏览器 有效*/
+}
+#focus .btn {position:absolute; width:330px; height:13px; padding-top:10px; padding-bottom:5px;padding-right:10px; right:0; bottom:0; text-align:right;}
+#focus .btn span {display:inline-block; _display:inline; _zoom:1; width:25px; height:10px; _font-size:0; margin-left:5px; cursor:pointer; background:#fff;}
+#focus .btn span.on {background:#fff;}
+
+</style> 
+ </head> 
+ <body> 
+  <div class="wrap">
+<script language="JavaScript">
+function correctPNG() // correctly handle PNG transparency in Win IE 5.5 & 6.
+{
+var arVersion = navigator.appVersion.split("MSIE")
+var version = parseFloat(arVersion[1])
+if ((version >= 5.5) && (document.body.filters)){
+for(var j=0; j<document.images.length; j++){
+var images = document.images[j]
+var imagesName = images.src.toUpperCase()
+if (imagesName.substring(imagesName.length-3, imagesName.length) == "PNG"){
+var imagesID = (images.id) ? "id='" + images.id + "' " : ""
+var imagesClass = (images.className) ? "class='" + images.className + "' " : ""
+var imagesTitle = (images.title) ? "title='" + images.title + "' " : "title='" + images.alt + "' "
+var imagesStyle = "display:inline-block;" + images.style.cssText
+var strNewHTML = "<span " + imagesID + imagesClass + imagesTitle+ " style=\"" + "width:" + images.width + "px; height:" + images.height + "px;" + imagesStyle + ";"
++ "filter:progid:DXImageTransform.Microsoft.AlphaImageLoader"+ "(src=\'" + images.src + "\', sizingMethod='scale');\"></span>"
+images.outerHTML = strNewHTML
+j = j-1
+}
+}
+}
+}
+window.attachEvent("onload", correctPNG);
+</script>	
+
+
+<script src="/r/cms/front.js" type="text/javascript"></script>
+<script src="/r/cms/jquery.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(function() {
+  Cms.siteFlow("",location.href, document.referrer);
+});
+</script>
+
+<div class="whole_bg">
+<div class="top_bg"><img src="/u/cms/dwxcb/201404/180932194ncc.jpg" width='1147' height='160' border="0"/></div>
+
+<!-- header start -->
+	<div class="header"> 
+ <img src=/u/cms/dwxcb/201404/180932570sav.png border="0"  />
+ </div>
+</div>
+<!-- header end -->
+<!--  nav start  -->
+	<div class="nav">
+<table width="1147" height="15" border="0" cellpadding="0" cellspacing="0" style="margin:0 auto;">
+<tr>                                                                                                   
+<td align="center"><img src="/r/cms/dwxcb/olddj/img/images/n_bottom.gif" width="1147"  ></td>			
+</tr>
+</table>
+	  <table width="1147" height="39" border="0" cellpadding="0" cellspacing="0">
+		<tr>                                                                                                   
+<td align="center" nowrap="nowrap"><a href="/">首页</a></td>
+
+     <td align="center" nowrap="nowrap" ><a href="http://dwxcbnew.fjtcm.edu.cn:80/xyxw/index.jhtml" >校园新闻</a></td>
+
+
+     <td align="center" nowrap="nowrap" ><a href="http://dwxcbnew.fjtcm.edu.cn:80/mtzyd/index.jhtml" >媒体中医大</a></td>
+
+
+     <td align="center" nowrap="nowrap" ><a href="http://dwxcbnew.fjtcm.edu.cn:80/szjy/index.jhtml" >思政教育</a></td>
+
+
+     <td align="center" nowrap="nowrap" ><a href="http://dwxcbnew.fjtcm.edu.cn:80/wmsc/index.jhtml" >文明视窗</a></td>
+
+
+     <td align="center" nowrap="nowrap" ><a href="http://dwxcbnew.fjtcm.edu.cn:80/xczd/index.jhtml" >宣传阵地</a></td>
+
+
+     <td align="center" nowrap="nowrap" ><a href="http://dwxcbnew.fjtcm.edu.cn:80/xywh/index.jhtml" >校园文化</a></td>
+
+
+     <td align="center" nowrap="nowrap" ><a href="http://dwxcbnew.fjtcm.edu.cn:80/gzdt/index.jhtml" >工作动态</a></td>
+
+
+     <td align="center" nowrap="nowrap" ><a href="http://dwxcbnew.fjtcm.edu.cn:80/wwzn/index.jhtml" >服务指南</a></td>
+
+
+     <td align="center" nowrap="nowrap" ><a href="http://dwxcbnew.fjtcm.edu.cn:80/gywm/index.jhtml" >关于我们</a></td>
+
+
+     <td align="center" nowrap="nowrap" ><a href="http://dwxcbnew.fjtcm.edu.cn:80/spdb/index.jhtml" >视频点播</a></td>
+
+		</tr>
+	  </table>
+	</div>
+<!-- nav end -->   <!-- main start --> 
+   <div class="main"> 
+    <div class="center"> 
+     <table> 
+      <tbody> 
+       <tr> 
+        <td nowrap=""> 
+         <div id="container"> 
+          <div id="focus"> 
+           <ul>
+               
+            <li><a href="http://dwxcbnew.fjtcm.edu.cn:80/xyxw/112458.jhtml"><img src="/u/cms/dwxcb/201709/20015606t5ll.jpg" width="340" height="255" /></a></li>  
+            <li><a href="http://dwxcbnew.fjtcm.edu.cn:80/xyxw/112461.jhtml"><img src="/u/cms/dwxcb/201709/20022318fl0m.jpg" width="340" height="255" /></a></li>  
+            <li><a href="http://dwxcbnew.fjtcm.edu.cn:80/xyxw/109118.jhtml"><img src="/u/cms/dwxcb/201703/3015525265im.jpg" width="340" height="255" /></a></li>  
+            <li><a href="http://dwxcbnew.fjtcm.edu.cn:80/xyxw/109123.jhtml"><img src="/u/cms/dwxcb/201703/301559512x5o.jpg" width="340" height="255" /></a></li>   
+           </ul> 
+          </div> 
+         </div></td> 
+        <td nowrap="" colspan="2" width="800"> 
+         <!-- 校园新闻start  --> 
+         <div class="news"> 
+          <h4 class="title"><span><a href="/xyxw.jhtml">more</a></span>校园新闻</h4> 
+          <ul class="list_new">
+              
+           <li><span>[2017-10-24]</span><a href="http://dwxcbnew.fjtcm.edu.cn:80/xyxw/113161.jhtml" title="李志刚、王晓晖莅临“河洛青春讲堂”演讲">李志刚、王晓晖莅临“河洛青春讲堂”演讲</a></li>  
+           <li><span>[2017-10-23]</span><a href="http://dwxcbnew.fjtcm.edu.cn:80/xyxw/113164.jhtml" title="我校学子获全国临床护理技能大赛特等奖">我校学子获全国临床护理技能大赛特等奖</a></li>  
+           <li><span>[2017-10-23]</span><a href="http://dwxcbnew.fjtcm.edu.cn:80/xyxw/113163.jhtml" title="我校举办大学生职业生涯规划大赛">我校举办大学生职业生涯规划大赛</a></li>  
+           <li><span>[2017-10-23]</span><a href="http://dwxcbnew.fjtcm.edu.cn:80/xyxw/113162.jhtml" title="校党委书记陈立典到党委宣传部调研">校党委书记陈立典到党委宣传部调研</a></li>  
+           <li><span>[2017-10-20]</span><a href="http://dwxcbnew.fjtcm.edu.cn:80/xyxw/113165.jhtml" title="李灿东校长到学生工作部（处）调研">李灿东校长到学生工作部（处）调研</a></li>  
+           <li><span>[2017-10-19]</span><a href="http://dwxcbnew.fjtcm.edu.cn:80/xyxw/113166.jhtml" title="我校组织师生观看党的十九大开幕会直播">我校组织师生观看党的十九大开幕会直播</a></li>  
+           <li><span>[2017-10-17]</span><a href="http://dwxcbnew.fjtcm.edu.cn:80/xyxw/113167.jhtml" title="省委省政府任免我校党政主要领导">省委省政府任免我校党政主要领导</a></li>   
+          </ul> 
+         </div> 
+         <!-- 校园新闻end --> </td> 
+       </tr> 
+       <tr> 
+        <td nowrap=""> 
+         <!-- 文明视窗start --> 
+         <div class="notice"> 
+          <h4 class="c_h4"><span><a href="/wmsc.jhtml">more</a></span>文明视窗</h4> 
+          <ul class="list">
+              
+           <li><span>[2017-09-19]</span><a href="http://dwxcbnew.fjtcm.edu.cn:80/wmdt/112466.jhtml" title="习近平会见全国社会治安综合治理表彰大会代表并发表重要讲话">习近平会见全国社会治安综合治理表彰大会...</a></li>  
+           <li><span>[2017-09-12]</span><a href="http://dwxcbnew.fjtcm.edu.cn:80/wmdt/112272.jhtml" title="“砥砺奋进的五年”系列报告会第五场报告会在京举行">“砥砺奋进的五年”系列报告会第五场报告...</a></li>  
+           <li><span>[2017-09-11]</span><a href="http://dwxcbnew.fjtcm.edu.cn:80/wmdt/112266.jhtml" title="习近平致信祝贺第二十二届国际检察官联合会年会暨会员代表大会召开">习近平致信祝贺第二十二届国际检察官联合...</a></li>  
+           <li><span>[2017-09-05]</span><a href="http://dwxcbnew.fjtcm.edu.cn:80/wmlt/112268.jhtml" title="刘云山：领导干部要注重提高政治能力">刘云山：领导干部要注重提高政治能力</a></li>  
+           <li><span>[2017-08-24]</span><a href="http://dwxcbnew.fjtcm.edu.cn:80/wmdt/112270.jhtml" title="刘延东强调：让更多人共享机器人发展成果">刘延东强调：让更多人共享机器人发展成果</a></li>  
+           <li><span>[2017-08-17]</span><a href="http://dwxcbnew.fjtcm.edu.cn:80/wmlt/112275.jhtml" title="文风不是小事">文风不是小事</a></li>   
+          </ul> 
+         </div> 
+         <!-- 文明视窗end --> </td> 
+        <td nowrap="" width="458"> 
+         <!-- 思政教育start --> 
+         <div class="notice" style="width:458px;"> 
+          <h4 class="title_1_gai"><span style="float:right;"><a href="/szjy.jhtml">more</a></span>思政教育</h4> 
+          <ul class="list">
+              
+           <li><span>[2017-10-24]</span><a href="http://dwxcbnew.fjtcm.edu.cn:80/ldjh/113186.jhtml" title="中国共产党第十九次全国代表大会在京闭幕 习近平发表重要讲话">中国共产党第十九次全国代表大会在京闭幕 习近平发...</a></li>  
+           <li><span>[2017-10-20]</span><a href="http://dwxcbnew.fjtcm.edu.cn:80/zxzxx/113187.jhtml" title="如何理解坚持对党员进行民主评议？">如何理解坚持对党员进行民主评议？</a></li>  
+           <li><span>[2017-10-18]</span><a href="http://dwxcbnew.fjtcm.edu.cn:80/ldjh/113185.jhtml" title="中国共产党第十九次全国代表大会在京开幕 习近平代表第十八届中央委员会向大会作报告 ">中国共产党第十九次全国代表大会在京开幕 习近平代...</a></li>  
+           <li><span>[2017-10-12]</span><a href="http://dwxcbnew.fjtcm.edu.cn:80/zxzxx/113188.jhtml" title="怎样开展批评和自我批评？">怎样开展批评和自我批评？</a></li>  
+           <li><span>[2017-10-11]</span><a href="http://dwxcbnew.fjtcm.edu.cn:80/zxzxx/112850.jhtml" title="发扬“三种”精神 从严党内生活">发扬“三种”精神 从严党内生活</a></li>  
+           <li><span>[2017-10-09]</span><a href="http://dwxcbnew.fjtcm.edu.cn:80/xsyzcjy/112855.jhtml" title="李克强主持召开国务院常务会议">李克强主持召开国务院常务会议</a></li>   
+          </ul> 
+         </div> 
+         <!-- 思政教育end --> </td> 
+        <td nowrap="" align="top"> 
+         <!-- 媒体中医大start --> 
+         <div class="Guidelines" style="width:338px;"> 
+          <h4 class="title2"><span><a href="/mtzyd.jhtml">more</a></span>媒体中医大</h4> 
+          <div class="Guidelist" style="height:195px;"> 
+           <ul class="list">
+               
+            <li><span>[2017-10-11]</span><a href="http://dwxcbnew.fjtcm.edu.cn:80/mtzyd/113172.jhtml" title="【福建日报】我省康复医院进入艾力彼榜前五强">【福建日报】我省康复医院进入艾力彼...</a></li>  
+            <li><span>[2017-10-11]</span><a href="http://dwxcbnew.fjtcm.edu.cn:80/mtzyd/113171.jhtml" title="【福州晚报】中医健康太空舱亮相宣介会">【福州晚报】中医健康太空舱亮相宣介会</a></li>  
+            <li><span>[2017-09-28]</span><a href="http://dwxcbnew.fjtcm.edu.cn:80/mtzyd/112841.jhtml" title="【福建教育电视台】福建中医药大学与西悉尼大学签署合作协议">【福建教育电视台】福建中医药大学与...</a></li>  
+            <li><span>[2017-08-22]</span><a href="http://dwxcbnew.fjtcm.edu.cn:80/mtzyd/112249.jhtml" title="【福建日报】陈民藩：对待病人要像亲人一样">【福建日报】陈民藩：对待病人要像亲...</a></li>  
+            <li><span>[2017-08-22]</span><a href="http://dwxcbnew.fjtcm.edu.cn:80/mtzyd/112248.jhtml" title="【福建日报】杨春波：闽派中医必将发扬光大">【福建日报】杨春波：闽派中医必将发...</a></li>  
+            <li><span>[2017-08-21]</span><a href="http://dwxcbnew.fjtcm.edu.cn:80/mtzyd/112251.jhtml" title="【福建日报】福建中医药大学获批筹建中国康复产业研究院">【福建日报】福建中医药大学获批筹建...</a></li>   
+           </ul> 
+          </div> 
+         </div> 
+         <!-- 媒体中医大end --> </td> 
+       </tr> 
+       <tr> 
+        <td nowrap=""> 
+         <!-- 新闻图片start --> 
+         <div class="noticecopy"> 
+          <h4 class="c_h4"><span></span>新闻图片</h4> 
+          <table width="96%" border="0" cellpadding="0" cellspacing="0" style="margin:0 auto;"> 
+           <tbody> 
+            <tr>
+                
+             <td align="center"> 
+              <div class="pic"> 
+               <a href="http://dwxcbnew.fjtcm.edu.cn:80/xyxw/112458.jhtml"> <img src="/u/cms/dwxcb/201709/20015606t5ll.jpg" width="142" height="106" /> </a> 
+              </div><p> <a href="http://dwxcbnew.fjtcm.edu.cn:80/xyxw/112458.jhtml" title="农工党中央副主席龚建明一行到我校调研"> 农工党中央副主席...</a></p></td>  
+             <td align="center"> 
+              <div class="pic"> 
+               <a href="http://dwxcbnew.fjtcm.edu.cn:80/xyxw/112461.jhtml"> <img src="/u/cms/dwxcb/201709/20022318fl0m.jpg" width="142" height="106" /> </a> 
+              </div><p> <a href="http://dwxcbnew.fjtcm.edu.cn:80/xyxw/112461.jhtml" title="我校举行2017级新生开学典礼"> 我校举行2017级新...</a></p></td>   
+            </tr> 
+           </tbody> 
+          </table> 
+         </div> 
+         <!-- 新闻图片end --> </td> 
+        <td nowrap="" width="458"> 
+         <!--工作动态start --> 
+         <div class="noticecopy" style="width:458px;"> 
+          <h4 class="title_1_gai"><span style="float:right;"><a href="/gzdt.jhtml">more</a></span>工作动态</h4> 
+          <ul class="list">
+              
+           <li><span>[2017-10-24]</span><a href="http://dwxcbnew.fjtcm.edu.cn:80/gzdt/113174.jhtml" title="关于举办“节粮、节水、节电我先行”师生“随手拍”作品征集比赛活动的通知">关于举办“节粮、节水、节电我先行”师生“随手拍”...</a></li>  
+           <li><span>[2017-10-18]</span><a href="http://dwxcbnew.fjtcm.edu.cn:80/gzdt/113175.jhtml" title="关于报送学习宣传十九大反响体会相关信息的通知">关于报送学习宣传十九大反响体会相关信息的通知</a></li>  
+           <li><span>[2017-10-16]</span><a href="http://dwxcbnew.fjtcm.edu.cn:80/gzdt/113176.jhtml" title="关于认真组织收听收看习近平总书记在中国共产党第十九次全国代表大会上的报告的通知">关于认真组织收听收看习近平总书记在中国共产党第十...</a></li>  
+           <li><span>[2017-10-12]</span><a href="http://dwxcbnew.fjtcm.edu.cn:80/gzdt/113177.jhtml" title="关于学习贯彻省委省政府主要领导给首届“最美教师”重要回信精神的通知">关于学习贯彻省委省政府主要领导给首届“最美教师”...</a></li>  
+           <li><span>[2017-09-28]</span><a href="http://dwxcbnew.fjtcm.edu.cn:80/gzdt/113179.jhtml" title="关于征集“我们的节日·七夕节”画册素材的通知">关于征集“我们的节日·七夕节”画册素材的通知</a></li>  
+           <li><span>[2017-09-28]</span><a href="http://dwxcbnew.fjtcm.edu.cn:80/gzdt/113178.jhtml" title="关于更新宣传栏的通知">关于更新宣传栏的通知</a></li>   
+          </ul> 
+         </div> 
+         <!-- 工作动态end --> </td> 
+        <td nowrap="" width="242"> 
+         <!-- 友情链接start --> 			<div class="Guidelines">
+				<h4 class="title2" style="width:338px;">
+友情链接
+</h4>
+				<div class="links" style="width:336px;">
+					<table width="100%" border="0" cellspacing="0" cellpadding="0" class="news_links">
+<tr>
+<td><a href="http://www.fjtcm.edu.cn/" target='_blank' title="福建中医药大学"> 福建中医药大学</a></td>
+
+<td><a href="http://jswm.fjtcm.edu.cn/" target='_blank' title="杏苑文明风"> 杏苑文明风</a></td>
+</tr>
+<td><a href="http://qzlx.fjtcm.edu.cn/" target='_blank' title="校群众路线专题网"> 校群众路线专题网</a></td>
+
+<td><a href="http://www.people.com.cn/" target='_blank' title="人民网"> 人民网</a></td>
+</tr>
+<td><a href="http://www.xinhuanet.com/" target='_blank' title="新华网"> 新华网</a></td>
+
+<td><a href="http://210.34.66.109/" target='_blank' title="图书馆"> 图书馆</a></td>
+</tr>
+</tr>
+
+
+</table>				</div>
+			</div> 
+         <!-- 友情链接end --> </td> 
+       </tr> 
+      </tbody> 
+     </table> 
+     <!-- 左边start --> 
+     <div class="left"> 
+     </div> 
+    </div> 
+    <!-- 新闻图片end --> 
+   </div> 
+   <!-- 左边end  --> 
+   <!-- 中间start --> 
+   <div class="middle"> 
+   </div> 
+   <!-- 中间end  --> 
+   <!--  右边start --> 
+   <div class="right"> 
+   </div> 
+   <!-- 右边end --> 
+   <!--  底部 start--> 
+   <div class="footer1"> 
+     <p>地址:福建省福州市闽侯上街邱阳路1号 邮政编码:350122</p>
+<p>版权所有(C)福建中医药大学闽ICP备05005462</p>
+   </div> 
+   <!--  底部 end--> 
+  </div> 
+  <!-- main end -->   
+ </body>
+</html>

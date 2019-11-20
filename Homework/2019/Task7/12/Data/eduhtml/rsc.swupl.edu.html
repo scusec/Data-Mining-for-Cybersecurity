@@ -1,0 +1,514 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="windows-Target" content="_top">
+<meta http-equiv="Pragma" content="no-cache">
+<title>人事处 西南政法大学</title>
+<meta name="keywords" content="人事处,西南政法大学，西政人事处,西政人" />
+<meta name="description" content="西南政法大学人事处贯彻执行党和国家关于人事工作的方针、政策，拟定学校人事管理的规章制度。" />
+<meta name="robots" content="index,follow" />
+<meta name="author" content="cnjingke@QQ.com" />
+<meta name="copyright" content="Copyright 1994,2014年. www.swupl.edu.cn . All Rights Reserved." />
+<link rel="icon" type="image/x-icon" href="images/favicon.ico" mce_href="images/favicon.ico" />
+<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" mce_href="images/favicon.ico" />
+<link rel="apple-touch-icon" href="images/favicon.png" />
+<link href="css/renshichu.css" rel="stylesheet" type="text/css" />
+<link href="/pub/jwc/css/SWUPLstyleCss.css" rel="stylesheet" type="text/css" />
+
+<!--[if IE 6]>
+<script src="js/pngAlpha.js"></script>
+<script> DD_belatedPNG.fix('.pngfix'); </script>
+    
+<style type="text/css">
+	body { behavior:url("js/csshover.htc"); }
+</style>
+<![endif]-->
+</head>
+
+<body>
+
+<script language=JavaScript src="js/PanDuanIeJs.js"></script>
+
+<div id="allRenShiChu">
+
+<div id="renshichuTop"><!-- 顶部 图片 菜单 -->
+<div class="RSCtopBgDiv"><!--顶部图片 含 logo-->
+<style type="text/css">
+* {margin:0;padding:0;}
+body {}
+.clearfix:after {content: ".";display: block;height: 0;clear: both;visibility: hidden;}
+.clearfix {zoom:1;}
+ul, li {list-style:none;}
+img {border:0;}
+.wrapper {width:1000px;margin:0 auto;}
+/* qqshop focus */
+#focus {width:1000px;height:144px;overflow:hidden;position:relative;}
+#focus ul {height:144px;position:absolute;}
+#focus ul li {float:left;width:1000px;height:144px;overflow:hidden;position:relative;}
+#focus ul li div {position:absolute;overflow:hidden;}
+#focus .btn {position:absolute;width:1000px;height:10px;padding:5px 10px;right:0;top:0;text-align:right;}
+#focus .btn span {display:inline-block;_display:inline;_zoom:1;width:6px;height:6px;_font-size:0;margin-left:6px;cursor:pointer;background:#fff;}
+#focus .btn span.on {background-color:#fff;}
+#focus .preNext {width:10px;height:10px;position:absolute;top:134px;cursor:pointer; background-color:#FFF; }
+#focus .pre {left:0;}
+#focus .next {right:0;background-position:right top;}
+</style>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript">
+$(function() {
+ var sWidth = $("#focus").width(); //获取焦点图的宽度（显示面积）
+ var len = $("#focus ul li").length; //获取焦点图个数
+ var index = 0;
+ var picTimer;
+ 
+ //以下代码添加数字按钮和按钮后的半透明条，还有上一页、下一页两个按钮
+ var btn = "<div class='btn'>";
+ for(var i=0; i < len; i++) {
+  btn += "<span></span>";
+ }
+ btn += "</div><div class='preNext pre'></div><div class='preNext next'></div>";
+ $("#focus").append(btn);
+ $("#focus .btnBg").css("opacity",0.5);
+
+ //为小按钮添加鼠标滑入事件，以显示相应的内容
+ $("#focus .btn span").css("opacity",1).mouseenter(function() {
+  index = $("#focus .btn span").index(this);
+  showPics(index);
+ }).eq(0).trigger("mouseenter");
+
+ //上一页、下一页按钮透明度处理
+ $("#focus .preNext").css("opacity",0.2).hover(function() {
+  $(this).stop(true,false).animate({"opacity":"0.5"},300);
+ },function() {
+  $(this).stop(true,false).animate({"opacity":"0.2"},300);
+ });
+
+ //上一页按钮
+ $("#focus .pre").click(function() {
+  index -= 1;
+  if(index == -1) {index = len - 1;}
+  showPics(index);
+ });
+
+ //下一页按钮
+ $("#focus .next").click(function() {
+  index += 1;
+  if(index == len) {index = 0;}
+  showPics(index);
+ });
+
+ //本例为左右滚动，即所有li元素都是在同一排向左浮动，所以这里需要计算出外围ul元素的宽度
+ $("#focus ul").css("width",sWidth * (len));
+ 
+ //鼠标滑上焦点图时停止自动播放，滑出时开始自动播放
+ $("#focus").hover(function() {
+  clearInterval(picTimer);
+ },function() {
+  picTimer = setInterval(function() {
+   showPics(index);
+   index++;
+   if(index == len) {index = 0;}
+  },6000); //此4000代表自动播放的间隔，单位：毫秒
+ }).trigger("mouseleave");
+ 
+ //显示图片函数，根据接收的index值显示相应的内容
+ function showPics(index) { //普通切换
+  var nowLeft = -index*sWidth; //根据index值计算ul元素的left值
+  $("#focus ul").stop(true,false).animate({"left":nowLeft},300); //通过animate()调整ul元素滚动到计算出的position
+  //$("#focus .btn span").removeClass("on").eq(index).addClass("on"); //为当前的按钮切换到选中的效果
+  $("#focus .btn span").stop(true,false).animate({"opacity":"0.4"},300).eq(index).stop(true,false).animate({"opacity":"1"},300); //为当前的按钮切换到选中的效果
+ }
+});
+
+</script>
+
+<div class="wrapper">
+  <div id="focus">
+  <ul>
+<li><img src="images/RSC01.jpg"/></li>
+<li><img src="images/RSC02.jpg" /></li>
+<li><img src="images/RSC03.jpg" /></li>
+</ul>
+</div>
+</div>
+
+<div class="RSCtopLogoDiv pngfix">
+
+<div class="RSCtopLink">
+<a href="http://www.swupl.edu.cn" target="_blank">西政网</a>&nbsp;|&nbsp;<a href="http://mail.swupl.edu.cn/" target="_blank">西政邮箱</a>&nbsp;|&nbsp;
+<!--<a href="http://202.202.80.26/swupl/News_View.asp?NewsID=139" target="_blank">管理服务机构</a>-->
+</div>
+               
+</div>
+<!--顶部图片 含 logo--></div>
+<div>
+<table style="display: inline-table;" align="center" border="0" cellpadding="0" cellspacing="0" width="1000">
+<tr>
+<td class="RSCtopMenu">
+<a href=index.htm target="_top">首页</a>
+&nbsp;&nbsp;|&nbsp;&nbsp;<a href=jgsz/index.htm target="_top">机构设置</a>
+&nbsp;&nbsp;|&nbsp;&nbsp;<a href=tzgg/index.htm target="_top">通知公告</a>
+&nbsp;&nbsp;|&nbsp;&nbsp;<a href=rsdt/index.htm target="_top">人事动态</a>
+&nbsp;&nbsp;|&nbsp;&nbsp;<a href=zxns/index.htm target="_top">招贤纳士</a>
+&nbsp;&nbsp;|&nbsp;&nbsp;<a href=bshgl/xxgg/index.htm target="_top">博士后工作</a>
+&nbsp;&nbsp;|&nbsp;&nbsp;<a href=zczd/index.htm target="_top">政策制度</a>
+&nbsp;&nbsp;|&nbsp;&nbsp;<a href=jsfc/index.htm target="_top">教师风采</a>
+&nbsp;&nbsp;|&nbsp;&nbsp;<a href=gzbgxz/index.htm target="_top">下载中心</a>
+</td>
+</tr>
+</table>
+</div>
+<!-- 顶部 图片 菜单 --></div><br>
+
+<div style="text-align:center; width:100%; margin:0 auto;">
+<table width="1000" border="0" align="center" cellpadding="0" cellspacing="0" style="display: inline-table;">
+		  <tr>
+		   <td><table style="display: inline-table;" align=""left" border="0" cellpadding="0" cellspacing="0" width="158">
+			  <tr>
+			   <td><img name="renshi_2016_r2_c2" src="images/renshi_2016_r2_c2.jpg" width="158" height="84" id="renshi_2016_r2_c2" alt="" /></td>
+			  </tr>
+			  <tr>
+			   <td height="3"></td>
+			  </tr>
+			  <tr>
+			   <td><img name="renshi_2016_r6_c2" src="images/renshi_2016_r6_c2.jpg" width="158" height="84" id="renshi_2016_r6_c2" alt="" /></td>
+			  </tr>
+			  <tr>
+			   <td height="3"></td>
+			  </tr>
+			  <tr>
+			   <td><img name="renshi_2016_r9_c2" src="images/renshi_2016_r9_c2.jpg" width="158" height="84" id="renshi_2016_r9_c2" alt="" /></td>
+			  </tr>
+			</table></td>
+		   <td width="21"></td>
+		   <td valign="top"><table style="display: inline-table;" align=""left" border="0" cellpadding="0" cellspacing="0" width="400">
+			  <tr>
+			   <td><a href='rsdt/index.htm' target="_blank"><img name="renshi_2016_r2_c4" src="images/renshi_2016_r2_c4.jpg" id="renshi_2016_r2_c4" alt="" /></a></td>
+			  </tr>
+			  <tr>
+			  <td class="rscNewsTitle">
+<ul>
+  <li><a href="rsdt/218557.htm" title="学校召开2017年师资补充工作推进会">·            学校召开2017年师资补充工作推进会 
+    &nbsp;&nbsp;（03-31）</a></li>
+  <li><a href="rsdt/214734.htm" title="第四期教职工外语培训班顺利开班">·            第四期教职工外语培训班顺利开班 
+    &nbsp;&nbsp;（01-09）</a></li>
+  <li><a href="rsdt/212218.htm" title="我校与重庆市综合经济研究院签署战略合作框架协议">·            我校与重庆市综合经济研究院签署战略合作框架协... 
+    &nbsp;&nbsp;（12-20）</a></li>
+  <li><a href="rsdt/131752.htm" title="我校与最高人民法院中国应用法学研究所联合培养博士后开题报告会成功举行">·            我校与最高人民法院中国应用法学研究所联合培养... 
+    &nbsp;&nbsp;（06-22）</a></li>
+  <li><a href="rsdt/47381.htm" title="博士后领导小组工作会强调保质量扩规模">·            博士后领导小组工作会强调保质量扩规模 
+    &nbsp;&nbsp;（03-18）</a></li>
+</ul>
+</td>
+		     </tr>
+			  <tr>
+			   <td><table style="display: inline-table;" align=""left" border="0" cellpadding="0" cellspacing="0" width="400">
+				  <tr>
+<td width="200" height="115">
+<a href="images/content/2014-12/20141230010233848509.jpg" target="_blank">
+<img width="182" height="115" src="images/content/2014-12/20141230010233848509.jpg" border="0" />
+</a>
+</td>
+<td width="200" height="115">
+<a href="images/content/2014-12/20141230010335390643.jpg" target="_blank">
+<img width="182" height="115" src="images/content/2014-12/20141230010335390643.jpg" border="0" />
+</a>
+</td>
+			     </tr>
+				</table></td>
+			  </tr>
+			</table></td>
+		   <td width="30"></td>
+		   <td valign="top"><table style="display: inline-table;" align=""left" border="0" cellpadding="0" cellspacing="0" width="389">
+			  <tr>
+			   <td><a href='tzgg/index.htm' target="_blank"><img name="renshi_2016_r2_c10" src="images/renshi_2016_r2_c10.jpg" id="renshi_2016_r2_c10" alt="" /></a></td>
+			  </tr>
+			  <tr>
+<td class="rscNewsTitle">
+<ul>
+  <li><a href="tzgg/231814.htm" title="西南政法大学关于2017年思想政治理论课教师（辅导员）公开招聘现场确认及面试等相关事宜的通知">·            西南政法大学关于2017年思想政治理论课教师... 
+    &nbsp;&nbsp;（10-27）</a></li>
+  <li><a href="tzgg/231812.htm" title="西南政法大学关于2017年思想政治理论课教师（辅导员）招聘报名人数的公示">·            西南政法大学关于2017年思想政治理论课教师... 
+    &nbsp;&nbsp;（10-27）</a></li>
+  <li><a href="tzgg/228812.htm" title="关于开展“学科优秀人才支持计划”遴选工作的通知">·            关于开展“学科优秀人才支持计划”遴选工作的通... 
+    &nbsp;&nbsp;（09-12）</a></li>
+  <li><a href="tzgg/228414.htm" title="西南政法大学关于组织开展2017年专业技术职务任职资格申报评审工作的通知">·            西南政法大学关于组织开展2017年专业技术职... 
+    &nbsp;&nbsp;（09-06）</a></li>
+  <li><a href="tzgg/228378.htm" title="关于开展全国高校黄大年式教师团队创建申报活动的通知">·            关于开展全国高校黄大年式教师团队创建申报活动... 
+    &nbsp;&nbsp;（09-05）</a></li>
+  <li><a href="tzgg/228244.htm" title="关于开展不在岗人员清理上报工作的通知">·            关于开展不在岗人员清理上报工作的通知 
+    &nbsp;&nbsp;（09-04）</a></li>
+  <li><a href="tzgg/228186.htm" title="关于2017年教职工暑期健康休养活动的通知">·            关于2017年教职工暑期健康休养活动的通知 
+    &nbsp;&nbsp;（09-01）</a></li>
+  <li><a href="tzgg/226230.htm" title="人事处2017年暑假值班安排表">·            人事处2017年暑假值班安排表 
+    &nbsp;&nbsp;（07-10）</a></li>
+  <li><a href="tzgg/225900.htm" title="关于开展2017年工勤人员转岗工作的通知">·            关于开展2017年工勤人员转岗工作的通知 
+    &nbsp;&nbsp;（07-05）</a></li>
+  <li><a href="tzgg/225875.htm" title="关于第二批进编的人事代理人员填报《事业单位岗位申报表》的说明">·            关于第二批进编的人事代理人员填报《事业单位岗... 
+    &nbsp;&nbsp;（07-05）</a></li>
+</ul>
+</td>			  </tr>
+			</table></td>
+		  </tr>
+		</table>
+        
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+ <table width="1000" border="0" align="center" cellpadding="0" cellspacing="0" style="display: inline-table;">
+		  <tr>
+		   <td valign="top"><table style="display: inline-table;" align=""left" border="0" cellpadding="0" cellspacing="0" width="400">
+			  <tr>
+			   <td><a href='zxns/index.htm' target="_blank"><img name="renshi_2016_r10_c2" src="images/renshi_2016_r10_c2.jpg" width="400" height="27" id="renshi_2016_r10_c2" alt="" /></a></td>
+			  </tr>
+			  <tr>
+<td class="rscNewsTitle">
+<ul>
+  <li><a href="zxns/231744.htm" title="研究生院校内招聘启事">·            研究生院校内招聘启事 
+    &nbsp;&nbsp;（10-26）</a></li>
+  <li><a href="zxns/231870.htm" title="学生处校内招聘启事">·            学生处校内招聘启事 
+    &nbsp;&nbsp;（10-27）</a></li>
+  <li><a href="zxns/231869.htm" title="国际合作与交流处校内招聘启事">·            国际合作与交流处校内招聘启事 
+    &nbsp;&nbsp;（10-27）</a></li>
+  <li><a href="zxns/230161.htm" title="西南政法大学2017年度公开招聘思想政治理论课	教师（辅导员）简章">·            西南政法大学2017年度公开招聘思想政治理论... 
+    &nbsp;&nbsp;（09-21）</a></li>
+  <li><a href="zxns/227789.htm" title="司法鉴定与证据科学研究院校内招聘启事">·            司法鉴定与证据科学研究院校内招聘启事 
+    &nbsp;&nbsp;（07-25）</a></li>
+  <li><a href="zxns/225064.htm" title="国际教育学院校内招聘启事">·            国际教育学院校内招聘启事 
+    &nbsp;&nbsp;（06-22）</a></li>
+  <li><a href="zxns/224974.htm" title="教师发展中心校内招聘启事">·            教师发展中心校内招聘启事 
+    &nbsp;&nbsp;（06-21）</a></li>
+  <li><a href="zxns/218450.htm" title="校医院校内招聘启事">·            校医院校内招聘启事 
+    &nbsp;&nbsp;（03-30）</a></li>
+</ul>
+</td>
+			  </tr>
+			</table></td>
+		   <td>&nbsp;</td>
+		   <td valign="top"><table style="display: inline-table;" align=""left" border="0" cellpadding="0" cellspacing="0" width="180">
+			  <tr>
+			   <td><a href='jsfc/index.htm' target="_blank"><img name="renshi_2016_r10_c7" src="images/renshi_2016_r10_c7.jpg" width="183" height="27" id="renshi_2016_r10_c7" alt="" /></a></td>
+			  </tr>
+			  <tr>
+<td class="JiaoShiImg">
+<script type="text/javascript" src="js/jquery-1.3.2.min.js"></script>
+<script type="text/javascript" src="js/webwidget_slideshow_common.js"></script>
+<script language="javascript" type="text/javascript">
+            $(function() {
+                $("#webwidget_slideshow_common3").webwidget_slideshow_common({
+                    slideshow_transition_effect: 'fade_in',//slide_left slide_down fade_in
+                    slideshow_time_interval: '6000',
+                    slideshow_window_width: '180',
+                    slideshow_window_height: '130',
+                    slideshow_border_style: 'none',//dashed dotted double groove hidden inset none outset ridge solid
+                    slideshow_border_size: '0',
+                    slideshow_border_color: '#fff',
+                    slideshow_border_radius: '0',
+                    slideshow_padding_size: '0',
+                    soldeshow_background_color: '#fff'
+                });
+            });
+        </script>
+<div id="webwidget_slideshow_common3" class="webwidget_slideshow_common">
+  <ul>
+    <li><a style="line-height:180%;color:#800000;text-decoration:none; text-align:center;" href="jsfc/169256.htm" target="_blank" title="张永和：浅酌低唱的教育者">
+    <img border="0" src="/pub/xww/images/content/2016-09/20160911132526983244.jpg" /><br/>            张永和：浅酌低唱的教育者 
+    </a></li>
+    <li><a style="line-height:180%;color:#800000;text-decoration:none; text-align:center;" href="jsfc/113229.htm" target="_blank" title="培养新型媒体人才的领军人">
+    <img border="0" src="/pub/xww/images/content/2016-01/20160107182631640543.jpg" /><br/>            培养新型媒体人才的领军人 
+    </a></li>
+    <li><a style="line-height:180%;color:#800000;text-decoration:none; text-align:center;" href="jsfc/24521.htm" target="_blank" title="董鑫：矢志为学淡名利 笃行育人写春秋">
+    <img border="0" src="/pub/xww/images/content/2015-06/20150601170738511364.jpg" /><br/>            董鑫：矢志为学淡名利 笃行... 
+    </a></li>
+    <li><a style="line-height:180%;color:#800000;text-decoration:none; text-align:center;" href="jsfc/24518.htm" target="_blank" title="孙鹏：坂上种桃李 硕果满神州">
+    <img border="0" src="/pub/xww/images/content/2015-06/20150601171202838585.jpg" /><br/>            孙鹏：坂上种桃李 硕果满神... 
+    </a></li>
+    <li><a style="line-height:180%;color:#800000;text-decoration:none; text-align:center;" href="jsfc/24514.htm" target="_blank" title="刘云生：孜孜矻矻授业 踏踏实实治学">
+    <img border="0" src="/pub/xww/images/content/2015-06/20150601172043505987.jpg" /><br/>            刘云生：孜孜矻矻授业 踏踏... 
+    </a></li>
+    <li><a style="line-height:180%;color:#800000;text-decoration:none; text-align:center;" href="jsfc/24509.htm" target="_blank" title="龙大轩：阅尽书中春色 引领法史风骚">
+    <img border="0" src="/pub/xww/images/content/2015-06/20150601172842020359.jpg" /><br/>            龙大轩：阅尽书中春色 引领... 
+    </a></li>
+    <li><a style="line-height:180%;color:#800000;text-decoration:none; text-align:center;" href="jsfc/24502.htm" target="_blank" title="常怡：潜心笃志做学问 桃李天下为人师">
+    <img border="0" src="/pub/xww/images/content/2015-06/20150601173358201637.jpg" /><br/>            常怡：潜心笃志做学问 桃李... 
+    </a></li>
+    <li><a style="line-height:180%;color:#800000;text-decoration:none; text-align:center;" href="jsfc/24497.htm" target="_blank" title="秦涛：愿做小众与大众之间的一个“冰人”">
+    <img border="0" src="/pub/xww/images/content/2015-06/20150601174049574872.jpg" /><br/>            秦涛：愿做小众与大众之间的... 
+    </a></li>
+    <li><a style="line-height:180%;color:#800000;text-decoration:none; text-align:center;" href="jsfc/24496.htm" target="_blank" title="李永升：兼收并蓄研学术 内外兼修写人生">
+    <img border="0" src="/pub/xww/images/content/2015-06/20150601174158370912.jpg" /><br/>            李永升：兼收并蓄研学术 内... 
+    </a></li>
+    <li><a style="line-height:180%;color:#800000;text-decoration:none; text-align:center;" href="jsfc/24495.htm" target="_blank" title="周尚君：君子博学于法，约之以礼">
+    <img border="0" src="/pub/xww/images/content/2015-06/20150601174304748006.jpg" /><br/>            周尚君：君子博学于法，约之... 
+    </a></li>
+    <li><a style="line-height:180%;color:#800000;text-decoration:none; text-align:center;" href="jsfc/24492.htm" target="_blank" title="荆仁科：一“网”情深的精兵良将">
+    <img border="0" src="/pub/xww/images/content/2015-06/20150601174700995358.jpg" /><br/>            荆仁科：一“网”情深的精兵... 
+    </a></li>
+    <li><a style="line-height:180%;color:#800000;text-decoration:none; text-align:center;" href="jsfc/24487.htm" target="_blank" title="王煜宇：拔尖的青年人才">
+    <img border="0" src="/pub/xww/images/content/2015-06/20150601175104215695.jpg" /><br/>            王煜宇：拔尖的青年人才 
+    </a></li>
+    <li><a style="line-height:180%;color:#800000;text-decoration:none; text-align:center;" href="jsfc/24486.htm" target="_blank" title="种明钊：为学先为人的法学家">
+    <img border="0" src="/pub/xww/images/content/2015-06/20150601175442007888.jpg" /><br/>            种明钊：为学先为人的法学家 
+    </a></li>
+    <li><a style="line-height:180%;color:#800000;text-decoration:none; text-align:center;" href="jsfc/24485.htm" target="_blank" title="唐力：勤勉执着的重庆名师">
+    <img border="0" src="/pub/xww/images/content/2015-06/20150601175554937945.jpg" /><br/>            唐力：勤勉执着的重庆名师 
+    </a></li>
+    <li><a style="line-height:180%;color:#800000;text-decoration:none; text-align:center;" href="jsfc/24481.htm" target="_blank" title="袁林：用责任感撑起学术与社会的希望">
+    <img border="0" src="/pub/xww/images/content/2015-06/20150601180341986165.jpg" /><br/>            袁林：用责任感撑起学术与社... 
+    </a></li>
+    <li><a style="line-height:180%;color:#800000;text-decoration:none; text-align:center;" href="jsfc/24478.htm" target="_blank" title="梅传强：品学兼塑的师者">
+    <img border="0" src="/pub/xww/images/content/2015-06/20150601180937761251.jpg" /><br/>            梅传强：品学兼塑的师者 
+    </a></li>
+    <li><a style="line-height:180%;color:#800000;text-decoration:none; text-align:center;" href="jsfc/24476.htm" target="_blank" title="张玉敏：全国十大知识产权保护最具影响力人物">
+    <img border="0" src="/pub/xww/images/content/2015-06/20150601181032407327.jpg" /><br/>            张玉敏：全国十大知识产权保... 
+    </a></li>
+    <li><a style="line-height:180%;color:#800000;text-decoration:none; text-align:center;" href="jsfc/24475.htm" target="_blank" title="简敏：乐做教授型辅导员">
+    <img border="0" src="/pub/xww/images/content/2015-06/20150601181215492419.jpg" /><br/>            简敏：乐做教授型辅导员 
+    </a></li>
+    <li><a style="line-height:180%;color:#800000;text-decoration:none; text-align:center;" href="jsfc/24474.htm" target="_blank" title="王衡：教学科研的耕耘者">
+    <img border="0" src="/pub/xww/images/content/2015-06/20150601181337658534.jpg" /><br/>            王衡：教学科研的耕耘者 
+    </a></li>
+    <li><a style="line-height:180%;color:#800000;text-decoration:none; text-align:center;" href="jsfc/24473.htm" target="_blank" title="张怡：坚守学术良知的学者">
+    <img border="0" src="/pub/xww/images/content/2015-06/20150601181435550667.jpg" /><br/>            张怡：坚守学术良知的学者 
+    </a></li>
+    <li><a style="line-height:180%;color:#800000;text-decoration:none; text-align:center;" href="jsfc/24460.htm" target="_blank" title="喻庭亮：一颗快乐的螺丝钉">
+    <img border="0" src="/pub/xww/images/content/2015-06/20150601182211429674.jpg" /><br/>            喻庭亮：一颗快乐的螺丝钉 
+    </a></li>
+    <li><a style="line-height:180%;color:#800000;text-decoration:none; text-align:center;" href="jsfc/24455.htm" target="_blank" title="张序九：中国经济法学奠基人之一">
+    <img border="0" src="/pub/xww/images/content/2015-06/20150601182124395592.jpg" /><br/>            张序九：中国经济法学奠基人... 
+    </a></li>
+    <li><a style="line-height:180%;color:#800000;text-decoration:none; text-align:center;" href="jsfc/24438.htm" target="_blank" title="金平：中国民法当代“活化石”">
+    <img border="0" src="/pub/xww/images/content/2015-06/20150601181542848898.jpg" /><br/>            金平：中国民法当代“活化石... 
+    </a></li>
+  </ul>
+  <div style="clear: both"></div>
+</div>
+	</td>
+			  </tr>
+			</table></td>
+		   <td>&nbsp;</td>
+		   <td valign="top"><table style="display: inline-table;" align=""left" border="0" cellpadding="0" cellspacing="0" width="369">
+			  <tr>
+			   <td><a href='fwzn/index.htm' target="_blank"><img name="renshi_2016_r10_c12" src="images/renshi_2016_r10_c12.jpg" width="356" height="27" id="renshi_2016_r10_c12" alt="" /></a></td>
+			  </tr>
+			  <tr>
+<td class="rscNewsTitle" style=" padding-top:20px;">
+<ul>
+</ul>
+</td>
+			  </tr>
+			</table></td>
+		  </tr>
+		</table>
+        
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+<table width="1000" border="0" align="center" cellpadding="0" cellspacing="0" style="display: inline-table;" >
+		  <tr>
+		   <td valign="top"><table style="display: inline-table;" align=""left" border="0" cellpadding="0" cellspacing="0" width="400">
+			  <tr>
+			   <td><a href='zczd/index.htm' target="_blank"><img name="renshi_2016_r13_c2" src="images/renshi_2016_r13_c2.jpg" width="400" height="30" id="renshi_2016_r13_c2" alt="" /></a></td>
+			  </tr>
+			  <tr>
+<td class="rscNewsTitle">
+<ul>
+  <li><a href="zczd/221674.htm" title="重庆市人力资源和社会保障局关于印发《重庆市事业单位工作人员转岗管理办法（试行）》的通知">·            重庆市人力资源和社会保障局关于印发《重庆市事... 
+    &nbsp;&nbsp;（04-28）</a></li>
+  <li><a href="zczd/221660.htm" title="关于印发《西南政法大学教职工申请从事博士后研究工作暂行办法》的通知">·            关于印发《西南政法大学教职工申请从事博士后研... 
+    &nbsp;&nbsp;（04-27）</a></li>
+  <li><a href="zczd/216056.htm" title="关于印发《西南政法大学教职工值班加班管理办法》的通知">·            关于印发《西南政法大学教职工值班加班管理办法... 
+    &nbsp;&nbsp;（02-24）</a></li>
+  <li><a href="zczd/216039.htm" title="西南政法大学劳务派遣人员管理暂行办法">·            西南政法大学劳务派遣人员管理暂行办法 
+    &nbsp;&nbsp;（02-24）</a></li>
+  <li><a href="zczd/215268.htm" title="关于印发《西南政法大学教职工攻读学位管理办法》的通知">·            关于印发《西南政法大学教职工攻读学位管理办法... 
+    &nbsp;&nbsp;（01-19）</a></li>
+  <li><a href="zczd/215149.htm" title="西南政法大学人才引进办法（修订）">·            西南政法大学人才引进办法（修订） 
+    &nbsp;&nbsp;（01-18）</a></li>
+  <li><a href="zczd/215148.htm" title="西南政法大学专业技术职务申报评审工作实施细则">·            西南政法大学专业技术职务申报评审工作实施细则 
+    &nbsp;&nbsp;（01-18）</a></li>
+</ul>
+</td>
+			  </tr>
+			</table></td>
+		   <td>&nbsp;</td>
+		   <td><table style="display: inline-table;" align=""left" border="0" cellpadding="0" cellspacing="0" width="222">
+			  <tr>
+			   <td><a href='gzbgxz/index.htm' target="_blank"><img name="renshi_2016_r13_c7" src="images/renshi_2016_r13_c7.jpg" width="222" height="27" id="renshi_2016_r13_c7" alt="" /></a></td>
+			  </tr>
+			  <tr>
+			   <td class="rscNewsTitle" height="124" align="left" valign="middle" style="border:#dddddd 1px solid;">
+<ul>
+  <li><a href="gzbgxz/228273.htm" title="西南政法大学教师在学术机构兼职审批表">·            西南政法大学教师在学术机构兼... 
+    </a></li>
+  <li><a href="gzbgxz/221814.htm" title="离校手续办理单">·            离校手续办理单 
+    </a></li>
+  <li><a href="gzbgxz/221813.htm" title="终止劳务派遣用工关系办理单">·            终止劳务派遣用工关系办理单 
+    </a></li>
+  <li><a href="gzbgxz/221812.htm" title="劳务派遣人员登记表">·            劳务派遣人员登记表 
+    </a></li>
+  <li><a href="gzbgxz/221658.htm" title="西南政法大学教职工从事博士后研究申请表">·            西南政法大学教职工从事博士后... 
+    </a></li>
+  <li><a href="gzbgxz/221657.htm" title="西南政法大学教职工报考博士研究生申请表">·            西南政法大学教职工报考博士研... 
+    </a></li>
+</ul>
+</td>
+			  </tr>
+			</table></td>
+		   <td align="right">&nbsp;</td>
+		   <td align="right">
+<table width="100%" border="0">
+			     <tbody>
+			       <tr>
+			         <td align="center" valign="middle"><img src="images/tit01_gzcx.fw.png" width="81" height="81" alt=""/></td>
+			         <td align="center" valign="middle"><img src="images/tit01_rcgl.fw.png" width="81" height="81" alt=""/></td>
+			         <td align="center" valign="middle"><img src="images/tit01_zcps.fw.png" width="81" height="81" alt=""/></td>
+		           </tr>
+		         </tbody>
+		        </table>
+                <br>
+           <table style="display: inline-table;" align=""left" border="0" cellpadding="0" cellspacing="0" width="347">
+			  <tr>
+			   <td>
+<div class="SouSuoDiv" style=" padding-top:23px; width:310px;">
+<table border="0" cellspacing="0" cellpadding="0" style=" display:inline-table;" align="right">
+    <form name="dataForm" action="/cms/search/searchResults.jsp" target="_blank" method="post">
+    <input name="siteID" size="4" value="182" type = "hidden">
+      <tr>
+
+        <td><input type="text" name="query" class="ser" style="background:transparent; border:none; WIDTH: 200px; HEIGHT: 23px; line-height:23px; text-align:center;FONT-SIZE: 13px; COLOR: #cccccc; outline:none; " onBlur="if(this.value==''){this.value=this.defaultValue;}" onfocus="if(this.value==this.defaultValue){this.value='';}" value="站内搜索"></td>
+        <td width="60" align="right" valign="bottom"><input type="image" src="images/SearchButton.jpg" width="56" height="25" alt="搜索" /></td>
+      </tr>
+    </form>
+</table>
+</div>
+               </td>
+			  </tr>
+			</table></td>
+		  </tr>
+		</table>
+        
+
+</div>
+
+<div class="RSCfootDiv"><!--底部信息-->
+<table style=" display:inline-table;" align="center" width="1000" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="center" width="400"><a href="fwzn/37860.htm" target="_blank"><img src="images/TEL.jpg" width="85" height="85" alt="人事处联系电话" /></a>
+    <img src="images/MAIL.jpg" width="85" height="85" alt="人事处电子邮箱" />
+    <img src="images/WEIBO.jpg" width="85" height="85" alt="人事处微博" />
+    </td>
+    <td class="RSCfootTxt">
+西南政法大学人事处  版权所有?2014年  渝ICP备05001036号<br />
+地址：重庆市渝北区宝圣大道301号      邮编：401120</td>
+  </tr>
+</table>
+<!--底部信息--></div>
+
+</div>
+
+</body>
+</html></body></html>

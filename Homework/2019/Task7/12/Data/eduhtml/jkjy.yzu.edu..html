@@ -1,0 +1,403 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="/script/page.css" type=text/css rel=stylesheet>
+<script language="javascript" src="/module/jslib/jquery/jquery.js"></script>
+
+<title>健康教育网</title>
+<meta name="Keywords" content="内容管理、内容管理发布（CMS）系统、信息发布、新闻采编发系统、知识管理、知识门户、政府门户、教育门户、企业门户、竞争情报系统、抓取系统、信息采集、信息雷达系统、电子政务、电子政务解决方案、办公系统、OA、网站办公系统"><meta name='Generator' content='大汉版通'><meta name='Author' content='大汉网络'>
+<meta name='Maketime' content='2017-10-11 11:28:58'>
+<meta name="sitename" content="健康教育网">
+<meta name="siteurl"  content="http://jkjy.yzu.edu.cn/index.html">
+<meta name="guild"    content="">
+<meta name="district"    content="">
+<meta name="sitecatalog"    content="">
+
+<link href="/images/961/Newcss.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript">
+function divFloat(divID,xpos,ypos,showClose){
+	var floatDiv;
+	if (typeof divID =="object"){
+	   floatDiv = divID ;
+	} else {
+	   floatDiv =  document.getElementById(divID);
+	}
+	//设置漂浮
+	var x,y;
+	var itl;
+	x = xpos ? xpos : 50;
+	y = ypos ? ypos : 60;
+	var xin = true, yin = true;
+	var step = 1;
+	var delay = 30;
+	var obj=document.getElementById(divID);
+	function floatAD() {
+		if(floatDiv.style.display=="none" && typeof itl !=="undefined"){
+		  clearInterval(itl);
+		}		
+		var cWidth = document.documentElement.scrollWidth || document.body.clientWidth;
+		var cHeight = document.documentElement.scrollHeight || document.body.clientHeight;
+		
+		var R= cWidth - obj.offsetWidth;
+		var B = cHeight - obj.offsetHeight;
+		obj.style.left = x +"px";
+		obj.style.top = y +"px";
+		x = x + step*(xin?1:-1);
+		if (x <= 0) { xin = true; x = 0;}
+		if (x > R){ xin = false; x = R;}
+		y = y + step*(yin?1:-1)
+		if (y <= 0) { yin = true; y = 0 ;}
+		if (y > B) { yin = false; y = B ;}
+	}
+	if(floatDiv.style.display!="none"){
+	  itl= setInterval(floatAD, delay);
+	}
+	//动态切换
+	var aLinks = floatDiv.getElementsByTagName("A");	
+	var k = 0 ;
+	var j=aLinks.length;
+	if((aLinks.length)<1){
+		return false;//没有可显示的A元素
+	}
+	
+	var st;
+	var hasSingleALinkShow=false;
+	for(var P=0;P<j;P++){
+		if(aLinks[P].style.display!="none"){
+			if(hasSingleALinkShow!=true){
+			   hasSingleALinkShow = true;
+			} else {
+			  aLinks[P].style.display ="none";
+			}
+		}
+	}
+	if(!hasSingleALinkShow){
+		aLinks[0].style.display = "";
+	}
+	var showimg = function(){
+		if(floatDiv.style.display=="none"){
+		  return false;
+		}		
+		for(var i=0;i<j;i++)
+		{
+			aLinks[i].style.display="none";		
+		}
+		aLinks[k].style.display = "block";		
+		k = ++k % j;
+		st=setTimeout(showimg , 3000);
+	}
+	if(j>1 && floatDiv.style.display!="none"){st=setTimeout(showimg , 3000);}
+	
+	//增加关闭按钮
+	if(!(typeof showClose !=="undefined" &&  showClose===false)){	
+		var closeDiv = document.createElement("div");
+		closeDiv.style.textAlign="right";
+		closeDiv.style.paddingTop="5px";
+		closeDiv.style.fontSize="12px";
+		var closeDivALink = document.createElement("a");
+		closeDivALink.setAttribute("href","javascript:void(0)");
+		closeDivALink.style.textDecoration="none";
+		closeDivALink.style.color="#666666"
+		//closeDivALink.setAttribute("style","right:0;");
+		closeDivALink.onclick=function(){
+		   floatDiv.style.display='none';
+		}
+		var textnode = document.createTextNode("关闭");
+		closeDivALink.appendChild(textnode);
+		closeDiv.appendChild(closeDivALink);
+		obj.appendChild(closeDiv);
+	}	
+	//mousever 事件
+	obj.onmouseover=function(){clearInterval(itl);clearTimeout(st)};
+	obj.onmouseout=function(){itl=setInterval(floatAD, delay);st=setTimeout(showimg , 3000);};
+}
+</script>
+</head>
+
+<body>
+<div id="floatAd" style="position:absolute;z-index:99;">
+      <a>
+      <img src="/images/961/2016cxyy.png" usemap="#Map" border="0" />
+      <map name="Map" id="Map">
+        <area shape="rect" coords="0,1,220,49" href="http://jkjy.yzu.edu.cn/art/2017/4/12/art_3984_552196.html" target="_blank" title="健康体检预约" />
+        <area shape="rect" coords="4,55,218,108" href="/art/2016/11/15/art_3984_537357.html"  target="_blank" title="健康档案查询" />
+      </map>
+      </a>
+</div>
+<script type="text/javascript"> 
+   divFloat("floatAd");
+</script> 
+<table width="960" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td><img src="/images/961/jkjy_02.jpg" width="960" height="195" /></td>
+  </tr>
+</table>
+<table width="960" border="0" align="center" cellpadding="0" cellspacing="0" background="/images/961/jkjy_05.gif" class="menu">
+  <tr>
+    <td width="120" style="border-left:1px solid #3f9144"><a href="/">首   页</a></td>
+    <td><img src="/images/961/jkjy_07.gif" width="2" height="32" /></td>
+    <td><a href="/col/col32382/index.html">急救常识</a></td>
+    <td><img src="/images/961/jkjy_07.gif" width="2" height="32" /></td>
+    <td><a href="/col/col4010/index.html">安全用药</a></td>
+    <td><img src="/images/961/jkjy_07.gif" width="2" height="32" /></td>
+    <td><a href="/col/col4011/index.html">生活方式与健康</a></td>
+    <td><img src="/images/961/jkjy_07.gif" width="2" height="32" /></td>
+    <td><a href="/col/col3987/index.html">心理卫生</a></td>
+    <td><img src="/images/961/jkjy_07.gif" width="2" height="32" /></td>
+    <td><a href="/col/col3988/index.html">慢性病防治</a></td>
+    <td><img src="/images/961/jkjy_07.gif" width="2" height="32" /></td>
+    <td style=" border-right:1px solid #3f9144"><a href="/col/col32383/index.html">传染病防治</a></td>
+  </tr>
+</table>
+<table width="960" border="0" align="center" cellpadding="0" cellspacing="0" >
+  <tr>
+    <td width="225" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0" style="background:#e8f6e3; border:1px solid #dee9d9">
+      <tr>
+        <td style="padding:5px 5px 6px 5px">
+          <table width="100%" border="0" cellspacing="0" cellpadding="0" class="NavTitle">
+            <tr>
+              <td width="46" align="center"><img src="/images/961/jkjy_21.gif" width="25" height="25" /></td>
+              <td><span>健康档案查询</span></td>
+            </tr>
+          </table></td>
+      </tr>
+      <tr>
+        <td style="padding:0 0 8px 0"><table width="91%" height="100" border="0" align="center" cellpadding="2" cellspacing="0">
+          <tr>
+            <td align="center"><a href="/art/2016/11/15/art_3984_537357.html" target="_blank"><img src="/images/961/jzg.jpg" width="151" height="38" /></a></td>
+            </tr>
+          <tr>
+            <td align="center"><a href="http://ylgl.yzu.edu.cn/ydjkda/tradmin/Login.aspx" target="_blank"><img src="/images/961/gly.jpg" width="151" height="38" /></a></td>
+            </tr>
+        </table></td>
+      </tr>
+    </table>
+      <table width="100%" border="0" cellspacing="0" cellpadding="0" background="/images/961/jkjy_36.gif" style="background-repeat:repeat-x;border:1px solid #dee9d9; margin:8px 0; background-color:#f0f7f7">
+        <tr>
+          <td style="padding:0 3px"><table width="100%" border="0" cellspacing="0" cellpadding="0" class="noticNav">
+            <tr>
+              <td width="40" align="center" valign="middle"><img src="/images/961/jkjy_39.gif" width="15" height="15" /></td>
+              <td><span>医疗信息公告栏</span></td>
+              <td width="35"><a href="/col/col3984/index.html"><img src="/images/961/jkjy_24.gif" width="29" height="6" /></a></td>
+            </tr>
+          </table>
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td height="165" valign="top" style="padding:8px; " class="notice">
+                <MARQUEE onmouseover=this.stop() onmouseout=this.start() scrollAmount=1 scrollDelay=100 direction=up height="99%" align="top">
+                  <table width='100%' cellspacing='0' cellpadding='0' border='0'>
+<tr>
+<td style='background-color:null'><div style="line-height:24px; border-bottom:1px dashed #dde5e1"><img src='/picture/0/1402111457462223516.gif' align='absmiddle' border='0'>&nbsp;<a href='/art/2017/4/12/art_3984_552196.html' title='关于2017年扬州大学教职工体检公告' target=_blank>关于2017年扬州大学教职工体检公告</a><span style="font-size:12px; color:#2b8f58">[2017-04-12]</span></div></td></tr>
+<tr>
+<td style='background-color:null'><div style="line-height:24px; border-bottom:1px dashed #dde5e1"><img src='/picture/0/1402111457462223516.gif' align='absmiddle' border='0'>&nbsp;<a href='/art/2017/2/23/art_3984_544576.html' title='2017年医学专家坐诊信息' target=_blank>2017年医学专家坐诊信息</a><span style="font-size:12px; color:#2b8f58">[2017-02-23]</span></div></td></tr>
+<tr>
+<td style='background-color:null'><div style="line-height:24px; border-bottom:1px dashed #dde5e1"><img src='/picture/0/1402111457462223516.gif' align='absmiddle' border='0'>&nbsp;<a href='/art/2016/11/15/art_3984_537357.html' title='健康档案(门诊检查结果)查询说明' target=_blank>健康档案(门诊检查结果)查询说明</a><span style="font-size:12px; color:#2b8f58">[2016-11-15]</span></div></td></tr>
+<tr>
+<td style='background-color:null'><div style="line-height:24px; border-bottom:1px dashed #dde5e1"><img src='/picture/0/1402111457462223516.gif' align='absmiddle' border='0'>&nbsp;<a href='/art/2016/4/20/art_3984_523424.html' title='关于2016年扬州大学教职工体检公告' target=_blank>关于2016年扬州大学教职工体检公告</a><span style="font-size:12px; color:#2b8f58">[2016-04-20]</span></div></td></tr>
+<tr>
+<td style='background-color:null'><div style="line-height:24px; border-bottom:1px dashed #dde5e1"><img src='/picture/0/1402111457462223516.gif' align='absmiddle' border='0'>&nbsp;<a href='/art/2015/12/29/art_3984_512090.html' title='关于2016年医学专家定期咨询信息的公告' target=_blank>关于2016年医学专家定期咨询信息的公告</a><span style="font-size:12px; color:#2b8f58">[2015-12-29]</span></div></td></tr>
+<tr>
+<td style='background-color:null'><div style="line-height:24px; border-bottom:1px dashed #dde5e1"><img src='/picture/0/1402111457462223516.gif' align='absmiddle' border='0'>&nbsp;<a href='/art/2015/1/15/art_3984_474009.html' title='关于2015年医学专家定期咨询信息的公告' target=_blank>关于2015年医学专家定期咨询信息的公告</a><span style="font-size:12px; color:#2b8f58">[2015-01-15]</span></div></td>
+</tr></table>
+                  </marquee>
+                </td>
+              </tr>
+          </table></td>
+        </tr>
+    </table>
+      <table width="100%" border="0" cellspacing="0" cellpadding="0" style="margin-bottom:8px">
+        <tr>
+          <td><a href="/col/col4007/index.html"><img src="/images/961/jkjy_46.gif" width="225" height="59" /></a></td>
+        </tr>
+        <tr>
+          <td height="6"></td>
+        </tr>
+        <tr>
+          <td><a href="/col/col4008/index.html"><img src="/images/961/jkjy_49.gif" width="225" height="59" /></a></td>
+        </tr>
+    </table>
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td height="105" valign="top">
+           <table border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><select size="1" onchange="javascript:window.open(xlzd.options[xlzd.selectedIndex].value)" style="background-color: #f2f8fb; width: 225px; margin-bottom: 4px; font-size: 9pt" name="xlzd"> <option selected="selected">----校内友情链接----</option> <option value="http://www.yzu.edu.cn" target="_blank">扬州大学主页</option> <option value="http://xyweb.yzu.edu.cn/zwc/" target="_blank">后勤管理处</option> <option value="http://www.yzu.edu.cn/xyweb/yixy" target="_blank">医学院</option></select></td></tr><tr><td><select size="1" onchange="javascript:window.open(b.options[b.selectedIndex].value)" style="background-color: #f2f8fb; width: 225px; margin-bottom: 4px; font-size: 9pt" name="b"> <option selected="selected">----医药健康网站----</option> <option value="http://www.moh.gov.cn"></option>国家卫生部 <option value="http://www.cpic.gov.cn">中国医药价格网</option> <option value="http://www.jkb.com.cn"></option>健康报 <option value="http://www.xyxy.net"></option>中国百姓寻医问药 <option value="http://www.healthnet.org"></option>世界卫生网ProMed</select></td></tr><tr><td><strong><select size="1" onchange="javascript:window.open(c.options[c.selectedIndex].value)" style="background-color: #f2f8fb; width: 225px; margin-bottom: 4px; font-size: 9pt" name="c"> <option selected="selected">----医疗卫生单位----</option> <option value="http://www.yzsbh.com"></option>苏北人民医院 <option value="http://zy.winjia.com"></option>扬州市中医院 <option value="http://www.wjjsyy.com"></option>武警医院</select> </strong></td></tr><tr><td><strong><select size="1" onchange="javascript:window.open(abc.options[abc.selectedIndex].value)" style="background-color: #f2f8fb; width: 225px; margin-bottom: 4px; font-size: 9pt" name="abc"> <option selected="selected">----搜索引擎大全----</option> <option value="http://www.google.com">Google</option> <option value="http://www.baidu.com">百度</option></select> </strong></td></tr></tbody></table>
+          </td>
+        </tr>
+    </table></td>
+    <td width="11"> </td>
+    <td valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="458" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0" class="RightNavBg" background="/images/961/jkjy_14.gif" style="background-repeat:repeat-x; background-position:bottom">
+          <tr>
+            <td  background="/images/961/navbg_12.jpg" style="background-repeat:no-repeat; background-position:left"><span>传染病的防治</span></td>
+            <td width="35" valign="middle"><a href="/col/col32383/index.html"><img src="/images/961/jkjy_24.gif" width="29" height="6" /></a></td>
+          </tr>
+        </table>
+          <table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <td height="120" valign="top" style="padding:10px">
+                <table width='100%' cellspacing='0' cellpadding='0' border='0'>
+<tr>
+<td style='background-color:null'><div style="line-height:24px;"><span style="float:right; font-size:12px; color:#8e8e8e">[2017-04-26]</span><img src='/picture/0/1402111446227911196.gif' align='absmiddle' border='0'>&nbsp;<a href='/art/2017/4/26/art_32383_553555.html' title='结核病防治知识' target=_blank>结核病防治知识</a></div></td></tr>
+<tr>
+<td style='background-color:null'><div style="line-height:24px;"><span style="float:right; font-size:12px; color:#8e8e8e">[2017-04-10]</span><img src='/picture/0/1402111446227911196.gif' align='absmiddle' border='0'>&nbsp;<a href='/art/2017/4/10/art_32383_551991.html' title='春季常见传染病防治知识' target=_blank>春季常见传染病防治知识</a></div></td></tr>
+<tr>
+<td style='background-color:null'><div style="line-height:24px;"><span style="float:right; font-size:12px; color:#8e8e8e">[2016-04-03]</span><img src='/picture/0/1402111446227911196.gif' align='absmiddle' border='0'>&nbsp;<a href='/art/2016/4/3/art_32383_522111.html' title='急性肠道传染病的预防' target=_blank>急性肠道传染病的预防</a></div></td></tr>
+<tr>
+<td style='background-color:null'><div style="line-height:24px;"><span style="float:right; font-size:12px; color:#8e8e8e">[2016-04-03]</span><img src='/picture/0/1402111446227911196.gif' align='absmiddle' border='0'>&nbsp;<a href='/art/2016/4/3/art_32383_522110.html' title='病毒性肝炎的预防' target=_blank>病毒性肝炎的预防</a></div></td></tr>
+<tr>
+<td style='background-color:null'><div style="line-height:24px;"><span style="float:right; font-size:12px; color:#8e8e8e">[2016-03-28]</span><img src='/picture/0/1402111446227911196.gif' align='absmiddle' border='0'>&nbsp;<a href='/art/2016/3/28/art_32383_520851.html' title='什么是流行性感冒' target=_blank>什么是流行性感冒</a></div></td>
+</tr></table>
+              </td>
+            </tr>
+          </table></td>
+        <td width="12"> </td>
+        <td width="255" valign="top">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="RightNavBg2" background="/images/961/jkjy_16.gif" style="background-repeat: no-repeat; background-position:bottom; margin-top:5px">
+          <tr>
+            <td><span>急救常识</span></td>
+            <td width="35" valign="middle"><a href="/col/col32382/index.html"><img src="/images/961/more_24.gif"/></a></td>
+          </tr>
+        </table>
+          <table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <td height="140" valign="top" style="padding:10px">
+                <table width='100%' cellspacing='0' cellpadding='0' border='0'>
+<tr>
+<td style='background-color:null'><div style="line-height:24px;height:24px;"><img src='/picture/0/1402111446227911196.gif' align='absmiddle' border='0'>&nbsp;<a href='/art/2016/10/9/art_32382_533698.html' title='运动受伤后怎样能更快恢复？' target=_blank>运动受伤后怎样能更快恢复？</a></div></td></tr>
+<tr>
+<td style='background-color:null'><div style="line-height:24px;height:24px;"><img src='/picture/0/1402111446227911196.gif' align='absmiddle' border='0'>&nbsp;<a href='/art/2016/10/9/art_32382_533690.html' title='孩子意外烫伤，牢记五个步骤' target=_blank>孩子意外烫伤，牢记五个步骤</a></div></td></tr>
+<tr>
+<td style='background-color:null'><div style="line-height:24px;height:24px;"><img src='/picture/0/1402111446227911196.gif' align='absmiddle' border='0'>&nbsp;<a href='/art/2016/4/3/art_32382_522122.html' title='脑溢血急救关键 保持呼吸通畅' target=_blank>脑溢血急救关键 保持呼吸通畅</a></div></td></tr>
+<tr>
+<td style='background-color:null'><div style="line-height:24px;height:24px;"><img src='/picture/0/1402111446227911196.gif' align='absmiddle' border='0'>&nbsp;<a href='/art/2016/4/3/art_32382_522121.html' title='出现低血糖时该怎么做？' target=_blank>出现低血糖时该怎么做？</a></div></td></tr>
+<tr>
+<td style='background-color:null'><div style="line-height:24px;height:24px;"><img src='/picture/0/1402111446227911196.gif' align='absmiddle' border='0'>&nbsp;<a href='/art/2016/3/28/art_32382_520834.html' title='日常生活急救方法大汇集' target=_blank>日常生活急救方法大汇集</a></div></td>
+</tr></table>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="3" style="padding:8px 0"><img src="/images/961/jkjy_43.jpg" width="724" height="74" /></td>
+        </tr>
+      <tr>
+        <td valign="top">
+          <table width="100%" border="0" cellspacing="0" cellpadding="0" class="RightNavBg" background="/images/961/jkjy_14.gif" style="background-repeat:repeat-x; background-position:bottom">
+          <tr>
+            <td background="/images/961/navbg_12.jpg" style="background-repeat:no-repeat; background-position:left"><span>慢性病防治</span></td>
+            <td width="35" valign="middle"><a href="/col/col3988/index.html"><img src="/images/961/jkjy_24.gif" width="29" height="6" /></a></td>
+          </tr>
+        </table>
+          <table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <td height="120" valign="top" style="padding:10px">
+              <table width='100%' cellspacing='0' cellpadding='0' border='0'>
+<tr>
+<td style='background-color:null'><div style="line-height:24px;"><span style="float:right; font-size:12px; color:#8e8e8e">[2017-04-26]</span><img src='/picture/0/1402111446227911196.gif' align='absmiddle' border='0'>&nbsp;<a href='/art/2017/4/26/art_3988_553567.html' title='糖尿病“伤心”没商量' target=_blank>糖尿病“伤心”没商量</a></div></td></tr>
+<tr>
+<td style='background-color:null'><div style="line-height:24px;"><span style="float:right; font-size:12px; color:#8e8e8e">[2017-04-26]</span><img src='/picture/0/1402111446227911196.gif' align='absmiddle' border='0'>&nbsp;<a href='/art/2017/4/26/art_3988_553566.html' title='如何正确认识胆固醇' target=_blank>如何正确认识胆固醇</a></div></td></tr>
+<tr>
+<td style='background-color:null'><div style="line-height:24px;"><span style="float:right; font-size:12px; color:#8e8e8e">[2017-04-26]</span><img src='/picture/0/1402111446227911196.gif' align='absmiddle' border='0'>&nbsp;<a href='/art/2017/4/26/art_3988_553562.html' title='慢性支气管炎的注意事项' target=_blank>慢性支气管炎的注意事项</a></div></td></tr>
+<tr>
+<td style='background-color:null'><div style="line-height:24px;"><span style="float:right; font-size:12px; color:#8e8e8e">[2017-04-26]</span><img src='/picture/0/1402111446227911196.gif' align='absmiddle' border='0'>&nbsp;<a href='/art/2017/4/26/art_3988_553557.html' title='得了胆结石，该手术的别拖着' target=_blank>得了胆结石，该手术的别拖着</a></div></td></tr>
+<tr>
+<td style='background-color:null'><div style="line-height:24px;"><span style="float:right; font-size:12px; color:#8e8e8e">[2017-01-04]</span><img src='/picture/0/1402111446227911196.gif' align='absmiddle' border='0'>&nbsp;<a href='/art/2017/1/4/art_3988_542970.html' title='感染幽门螺杆菌一定要治疗吗' target=_blank>感染幽门螺杆菌一定要治疗吗</a></div></td>
+</tr></table>
+              </td>
+            </tr>
+          </table>
+          
+          <table width="100%" border="0" cellspacing="0" cellpadding="0" class="RightNavBg" background="/images/961/jkjy_14.gif" style="background-repeat:repeat-x; background-position:bottom">
+          <tr>
+            <td background="/images/961/navbg_12.jpg" style="background-repeat:no-repeat; background-position:left"><span>生活方式与健康</span></td>
+            <td width="35" valign="middle"><a href="/col/col4011/index.html"><img src="/images/961/jkjy_24.gif" width="29" height="6" /></a></td>
+          </tr>
+        </table>
+          <table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <td height="120" valign="top" style="padding:10px">
+              <table width='100%' cellspacing='0' cellpadding='0' border='0'>
+<tr>
+<td style='background-color:null'><div style="line-height:24px;"><span style="float:right; font-size:12px; color:#8e8e8e">[2017-04-26]</span><img src='/picture/0/1402111446227911196.gif' align='absmiddle' border='0'>&nbsp;<a href='/art/2017/4/26/art_4011_553563.html' title='骑车的十大好处' target=_blank>骑车的十大好处</a></div></td></tr>
+<tr>
+<td style='background-color:null'><div style="line-height:24px;"><span style="float:right; font-size:12px; color:#8e8e8e">[2017-04-10]</span><img src='/picture/0/1402111446227911196.gif' align='absmiddle' border='0'>&nbsp;<a href='/art/2017/4/10/art_4011_551993.html' title='经常熬夜的五大危害' target=_blank>经常熬夜的五大危害</a></div></td></tr>
+<tr>
+<td style='background-color:null'><div style="line-height:24px;"><span style="float:right; font-size:12px; color:#8e8e8e">[2017-01-04]</span><img src='/picture/0/1402111446227911196.gif' align='absmiddle' border='0'>&nbsp;<a href='/art/2017/1/4/art_4011_542968.html' title='怎样预防眼睛疲劳' target=_blank>怎样预防眼睛疲劳</a></div></td></tr>
+<tr>
+<td style='background-color:null'><div style="line-height:24px;"><span style="float:right; font-size:12px; color:#8e8e8e">[2017-01-04]</span><img src='/picture/0/1402111446227911196.gif' align='absmiddle' border='0'>&nbsp;<a href='/art/2017/1/4/art_4011_542967.html' title='如何健康吃元宵' target=_blank>如何健康吃元宵</a></div></td></tr>
+<tr>
+<td style='background-color:null'><div style="line-height:24px;"><span style="float:right; font-size:12px; color:#8e8e8e">[2017-01-04]</span><img src='/picture/0/1402111446227911196.gif' align='absmiddle' border='0'>&nbsp;<a href='/art/2017/1/4/art_4011_542949.html' title='雾霾天气，如何自我保护？' target=_blank>雾霾天气，如何自我保护？</a></div></td>
+</tr></table>
+              </td>
+            </tr>
+          </table>
+        </td>
+        <td> </td>
+        <td valign="top">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="RightNavBg2" background="/images/961/jkjy_16.gif" style="background-repeat:no-repeat; background-position:bottom;margin-top:5px">
+          <tr>
+            <td><span>安全用药</span></td>
+            <td width="35" valign="middle"><a href="/col/col4010/index.html"><img src="/images/961/more_24.gif"/></a></td>
+          </tr>
+        </table>
+          <table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <td height="120" valign="top" style="padding:10px">
+                <table width='100%' cellspacing='0' cellpadding='0' border='0'>
+<tr>
+<td style='background-color:null'><div style="line-height:24px;height:24px;"><img src='/picture/0/1402111446227911196.gif' align='absmiddle' border='0'>&nbsp;<a href='/art/2017/4/26/art_4010_553561.html' title='空腹不宜打吊针' target=_blank>空腹不宜打吊针</a></div></td></tr>
+<tr>
+<td style='background-color:null'><div style="line-height:24px;height:24px;"><img src='/picture/0/1402111446227911196.gif' align='absmiddle' border='0'>&nbsp;<a href='/art/2017/4/26/art_4010_553559.html' title='定期输液不能防中风' target=_blank>定期输液不能防中风</a></div></td></tr>
+<tr>
+<td style='background-color:null'><div style="line-height:24px;height:24px;"><img src='/picture/0/1402111446227911196.gif' align='absmiddle' border='0'>&nbsp;<a href='/art/2017/1/4/art_4010_542972.html' title='血糖不稳，口服药该怎么按点吃？' target=_blank>血糖不稳，口服药该怎么按点吃？</a></div></td></tr>
+<tr>
+<td style='background-color:null'><div style="line-height:24px;height:24px;"><img src='/picture/0/1402111446227911196.gif' align='absmiddle' border='0'>&nbsp;<a href='/art/2017/1/4/art_4010_542971.html' title='看包装盒选药有窍门' target=_blank>看包装盒选药有窍门</a></div></td></tr>
+<tr>
+<td style='background-color:null'><div style="line-height:24px;height:24px;"><img src='/picture/0/1402111446227911196.gif' align='absmiddle' border='0'>&nbsp;<a href='/art/2016/10/9/art_4010_533696.html' title='眼睛干涩别乱用眼药水' target=_blank>眼睛干涩别乱用眼药水</a></div></td>
+</tr></table>
+              </td>
+            </tr>
+          </table>
+          <table width="100%" border="0" cellspacing="0" cellpadding="0" class="RightNavBg2" background="/images/961/jkjy_16.gif" style="background-repeat:no-repeat; background-position:bottom;margin-top:5px">
+          <tr>
+            <td><span>心理卫生</span></td>
+            <td width="35" valign="middle"><a href="/col/col3987/index.html"><img src="/images/961/more_24.gif"/></a></td>
+          </tr>
+        </table>
+          <table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <td height="120" valign="top" style="padding:10px">
+                <table width='100%' cellspacing='0' cellpadding='0' border='0'>
+<tr>
+<td style='background-color:null'><div style="line-height:24px;height:24px;"><img src='/picture/0/1402111446227911196.gif' align='absmiddle' border='0'>&nbsp;<a href='/art/2017/4/26/art_3987_553556.html' title='春季要谨防抑郁症' target=_blank>春季要谨防抑郁症</a></div></td></tr>
+<tr>
+<td style='background-color:null'><div style="line-height:24px;height:24px;"><img src='/picture/0/1402111446227911196.gif' align='absmiddle' border='0'>&nbsp;<a href='/art/2016/3/28/art_3987_520845.html' title='高血压患者如何保持平衡心理' target=_blank>高血压患者如何保持平衡心理</a></div></td></tr>
+<tr>
+<td style='background-color:null'><div style="line-height:24px;height:24px;"><img src='/picture/0/1402111446227911196.gif' align='absmiddle' border='0'>&nbsp;<a href='/art/2016/3/28/art_3987_520760.html' title='心理平衡' target=_blank>心理平衡</a></div></td></tr>
+<tr>
+<td style='background-color:null'><div style="line-height:24px;height:24px;"><img src='/picture/0/1402111446227911196.gif' align='absmiddle' border='0'>&nbsp;<a href='/art/2015/6/15/art_3987_485193.html' title='怎样保持良好的心态　' target=_blank>怎样保持良好的心态　</a></div></td></tr>
+<tr>
+<td style='background-color:null'><div style="line-height:24px;height:24px;"><img src='/picture/0/1402111446227911196.gif' align='absmiddle' border='0'>&nbsp;<a href='/art/2015/3/24/art_3987_477343.html' title='怎样有效的心理减压' target=_blank>怎样有效的心理减压</a></div></td>
+</tr></table>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table></td>
+  </tr>
+</table>
+<table width="960" border="0" align="center" cellpadding="0" cellspacing="0" style="margin-top:10px">
+  <tr>
+    <td class="bottom">Copyright©2014 扬州大学后勤管理处  All rights received.<br/>
+地址：扬州市兴城东路36号扬州大学江阳路北校区内  邮编：225009  电话：0514-87993869  E-mail：yxpjl@yzu.edu.cn</td>
+  </tr>
+</table>
+
+
+<!-- visitcount Begin --><iframe src='./module/visitcount/visit.jsp?type=1&i_webid=77&i_columnid=3648' name="vishidden" id="vishidden" frameborder="0" style="width:0; height:0; display:none"></iframe><!-- visitcount End -->
+</body>
+</html>
+ <a href='http://www.hanweb.com' style='display:none'>Produced By 大汉网络 大汉版通发布系统</a><script language="javascript" src='/script/pagecontrol.js'></script>

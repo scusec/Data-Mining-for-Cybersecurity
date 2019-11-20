@@ -1,0 +1,425 @@
+<head>
+ <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+ <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+ <meta name="keywords" content="企业邮箱,企业邮箱登录,登录企业邮箱,163企业邮箱,企业信箱,网易企业邮箱,企业邮局,企业电子邮箱,企业邮件,企业内部邮箱,中国企业邮箱,企业邮箱网站,购买企业邮箱,反垃圾邮件,电子邮件,Email,邮箱,传真邮件,电子商务,集团邮箱,集团邮局, 集团邮件">
+ <meta name="description" content="网易企业邮箱，最专业最稳定，反垃圾技术最优秀，收发速度最快，界面操作最简洁的企业邮箱，由自主研发国内首个全中文电子邮件系统以及具有十年邮箱运营经验的网易倾力打造。">
+ <meta name="title" content="网易企业邮箱 - 企业信息化专业解决方案">
+ <title>西北农林科技大学邮件系统</title>
+
+ <link rel="shortcut icon" href="http://www.nwsuaf.edu.cn/favicon.ico">
+ <link href="http://mimg.qiye.163.com/p/vip/chd/images/global.css" rel="stylesheet" type="text/css">
+ <link href="http://mimghz.qiye.163.com/o/domain/201410101500/index/css/user.css" rel="stylesheet" type="text/css">
+ <script type="text/javascript" src="http://mimghz.qiye.163.com/o/domain/201410101500/index/css/../js/jquery.js"></script>
+
+ <style type="text/css">
+ .toplinks {
+ float: right;
+ line-height: 44px;
+ margin-top: 33px;
+ }
+ .bg {
+ background-image:url(http://mimghz.qiye.163.com/o/domain/201410101500/index/css/../img/bg20120101.gif);
+ background-repeat:no-repeat;
+ }
+ .login-mod-wrapper {
+ width: 413px;
+ height: 355px;
+ position: absolute;
+ top:40px;
+ left: 498px;
+ }
+ .login-mod-form {
+ background-image: url(http://mimg.qiye.163.com/p/vip/chd/images/loginFormBg.png);
+ background-repeat: no-repeat;
+ }
+ .login-mod-qr {
+ background: url(http://nic.nwsuaf.edu.cn/images/nwsuafew.png) no-repeat;
+ }
+ .login-mod .fi-notit {
+ padding-left:30px;
+ }
+ .login-qr {
+ position: absolute;
+ left: 350px;
+ top: 291px;
+ width: 64px;
+ height: 64px;
+ cursor: pointer;
+ }
+ .login-qr-1 {
+ background: url(http://mimghz.qiye.163.com/o/domain/201604251900/index/css/../img/ic_qr.png) no-repeat;
+ }
+ .login-qr-1-hover {
+ left: 349px;
+ background: url(http://mimghz.qiye.163.com/o/domain/201604251900/index/css/../img/ic_qr_hover.png) no-repeat;
+ }
+ .app-download {
+ float:left;
+ margin-left:10px;
+ padding-left:20px;
+ margin-top:6px;
+ }
+ .app-download-android {
+ background:url(http://mimghz.qiye.163.com/o/domain/201410101500/index/css/../img/ic_android.png) no-repeat;
+ }
+ .app-download-iphone {
+ background:url(http://mimghz.qiye.163.com/o/domain/201410101500/index/css/../img/ic_apple.png) no-repeat;
+ }
+ .app-download-link {
+ color: #5d5d5d;
+ text-decoration: none;
+ }
+ .logo {
+ height: 80px;
+ width: 761px;
+ background-image: url(http://nic.nwsuaf.edu.cn/images/logox.png);
+ background-repeat: no-repeat;
+ background-position: 0 0;
+ }
+
+
+ .login-qr {
+ position: absolute;
+ left: 350px;
+ top: 291px;
+ width: 64px;
+ height: 64px;
+ cursor: pointer;
+ }
+ .login-qr-1 {
+ background: url(http://mimg.qiye.163.com/p/vip/chd/images/ic_qr.png) no-repeat;
+ }
+ .login-qr-1-hover {
+ left: 349px;
+ background: url(http://mimg.qiye.163.com/p/vip/chd/images/ic_qr_hover.png) no-repeat;
+ }
+ .login-mod form .fi select {width:235px;}
+ #login-mod-qr {background-color:#fff;}
+ .hide {width:0;height:0;transition:all 0.2s linear;overflow:hidden;}
+ .qrShow {width:413px;height:355px}
+ </style>
+ <link href="http://mimghz.qiye.163.com/o/domain/201410101500/index/css/custom.css" rel="stylesheet" type="text/css">
+ <!--[if lt ie 9]>
+ <style type="text/css">
+ .logo {
+ background: none;
+ filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://nic.nwsuaf.edu.cn/images/logox.png', sizingMethod='scale');
+ }
+ </style>
+ <![endif]-->
+</head>
+<body>
+<div class="page">
+ <div class="header">
+ <h1 class="logo"></h1>
+ <div class="toplinks">
+ <a target="_self" onclick="change_lang('ch');" href="javascript:" style="display:none;" id="lang_ch">中文版</a>
+ <a target="_blank" onclick="change_lang('en');" href="javascript:" id="lang_en">English</a>
+ <a target="_blank" href="http://nic.nwsuaf.edu.cn/wlfw/yhzn/67969.htm" id="lang_en">帮助</a>
+ <a target="_blank" href="http://oldmail.nwsuaf.edu.cn" id="lang_en">旧版入口</a>
+ </div>
+ </div>
+ <div class="body">
+ <div class="part main-part" id="main-part" style="background-image: url(&quot;http://nic.nwsuaf.edu.cn/images/nwafumailbg.jpg&quot;);">
+ <div id="login-mod-wrapper" class="login-mod-wrapper login-mod-form">
+ <div class="mod login-mod ">
+ <form name="loginform" id="loginform" action="https://entryhz.qiye.163.com/domain/domainEntLogin" method="post" onsubmit="return frmvalidator();">
+ <input type="hidden" name="ch" id="ch">
+
+ <!-- begin 不可以去掉。验证码的参数 -->
+ <input type="hidden" name="support_verify_code" id="support_verify_code" value="1">
+ <!-- end-->
+ <h2>
+ <em class="ico"></em>
+ <div id="user_login_title">用户登录</div>
+ </h2>
+ <input type="hidden" value="0" id="language" name="language">
+ <div class="fi">
+ <label id="account_name_label" class="tit">
+ 用户名
+ </label>
+ <input type="text" value="" class="ipt-t" id="account_name" name="account_name">
+ </div>
+ <div class="fi">
+ <label class="tit" id="domain_label"> 域　名 </label>
+ <select class="ipt-t" name="domain" id="domain">
+ <option value="nwafu.edu.cn">nwafu.edu.cn</option>
+ <option value="nwsuaf.edu.cn">nwsuaf.edu.cn</option>
+ </select>
+ </div>
+ <div class="fi">
+ <label id="password_label" class="tit">
+ 密　码
+ </label>
+ <input type="password" value="" id="password" name="password" class="ipt-t">
+ </div>
+ <!-- begin 验证码部分 -->
+ <!-- class、style属性控制样式，可以修改。其他属性不建议修改 -->
+ <div id="verifyCodeWrap" class="fi" style="display: none;">
+ <label class="tit">验证码</label>
+ <!-- 验证码提示文字 -->
+ <!-- 验证码输入框 -->
+ <input type="text" name="verify_code" id="verify_code" style="float:left;width:140px;" class="ipt-sample ipt-t">
+ <!-- 验证码图片 -->
+ <a id="codeImgWrap" style="float:left;width:100px;height:30px;padding:0;margin:0;display:block;cursor:pointer;" href="javascript:void(0);">
+ <img src="" style="width:100%;height:100%;">
+ </a>
+ <div style="clear: both;"></div>
+ </div>
+ <!-- end -->
+ <div class="fi" style="padding-left:66px">
+ <input type="checkbox" class="ipt-c" value="1" id="remUsername" name="remUser">
+ <label id="remUsername_label" for="remUsername">
+ 记住用户名
+ </label>
+ &nbsp;
+ <input type="checkbox" class="ipt-c" checked="" value="1" id="secure" name="secure">
+ <label id="secure_label" for="secure">
+ SSL安全登录
+ </label>
+ &nbsp;
+				<span style="display:none">
+				<input type="checkbox" class="ipt-c" value="1" id="all_secure" name="all_secure">
+				<label id="all_secure_label" for="all_secure">
+ 全程SSL
+ </label>
+				<a target="_blank" href="http://qiye.163.com/service-solution.htm#4"><img alt="点击查看帮助" src="http://mimg.qiye.163.com/xm/qiye/index_res/img/help.gif"></a>
+				</span>
+ </div>
+ <div class="fi fi-notit f-cb" id="div_denglu" style="margin-top:15px;padding-left:121px;text-align:center">
+ <input type="submit" style="" value="登　录" class="ipt-b" id="btn_login">
+
+				<span class="goto" style="margin-top:0;padding-top:10px;background:none">
+				<span style="display:none">
+				<a id="managerLgn" target="_blank" class="gotoLink" href="http://mail.nwafu.edu.cn/admin.jsp">管理员登录</a>
+				</span>
+				&nbsp;&nbsp;
+				<a href="https://mail.qiye.163.com/mailapp/qiyeurs/?from=http%3A%2F%2Fmail.qiye.163.com%2F#/resetPwd" target="_blank" id="resetPwd" class="gotoLink">忘记密码？</a>
+				</span>
+ </div>
+
+ <div id="app-download-wrapper" style="border-top:1px solid #e8e8e8;padding-top:15px;margin-top:15px;text-align:center;padding-left:105px">
+ <div class="app-download app-download-android">
+ <a target="_blank" href="http://u.163.com/androidds4" class="app-download-link">Android</a>&nbsp;
+ </div>
+ <div class="app-download app-download-iphone">
+ <a target="_blank" href="http://u.163.com/iosds4" class="app-download-link">iPhone</a>
+ </div>
+ </div>
+ </form>
+ </div>
+ <div id="login-qr-1" class="login-qr login-qr-1"></div>
+ <script type="text/javascript">
+ <!--
+ $("#login-qr-1").hover(function(){
+ $(this).addClass("login-qr-1-hover");
+ },function(){
+ $(this).removeClass("login-qr-1-hover");
+ });
+ $("#login-qr-1").click(function(){
+ $("#login-mod-wrapper").hide();
+ $("#login-mod-qr").addClass("qrShow");
+ });
+ //-->
+ </script>
+ </div>
+ <div id="login-mod-qr" class="login-mod-wrapper login-mod-qr login-mod-wrapper-3 hide">
+ <div id="login-qr-2" class="login-qr"></div>
+ <script type="text/javascript">
+ <!--
+ $("#login-qr-2").click(function(){
+ $("#login-mod-wrapper").show();
+ $("#login-mod-qr").removeClass("qrShow");
+ });
+ //-->
+ </script>
+ </div>
+ </div>
+ <div class="part sec-part">
+ </div>
+ </div>
+ <div class="footer">
+ <div class="right">
+ <span>
+ 
+ <a href="http://nic.nwafu.edu.cn/" target="_blank">西北农林科技大学网络中心</a> </span>
+ 地址:中国&nbsp;&nbsp;陕西&nbsp;&nbsp;杨凌邰城路&nbsp;&nbsp;西北农林科技大学 &nbsp;&nbsp;邮编:712100&nbsp;&nbsp;电话:+86-029-87082976 &nbsp;&nbsp;</div>
+ </div>
+</div>
+
+
+<script type="text/javascript">
+ var isDefaultBg = false,
+ currentBanner = 'http://nic.nwsuaf.edu.cn/images/nwafumailbg.jpg',
+ currentStyle = '3',
+ addresses = '',
+ errMsg = '',
+ domainType = 'bj';
+
+ function getQueryString(name) {
+ var reg = new RegExp("(^|&amp;)" + name + "=([^&amp;]*)(&amp;|$)", "i");
+ var r = window.location.search.substr(1).match(reg);
+ if (r != null) return unescape(r[2]); return null;
+ }
+
+ function change_lang(type){
+ if(type == "ch"){
+ document.getElementById("lang_ch").style.display="none";
+ document.getElementById("lang_en").style.display="";
+ //document.getElementById("lang_tw").style.display="";
+
+ document.getElementById("account_name_label").innerHTML = "用户名";
+ document.getElementById("domain_label").innerHTML = "域&#12288;名";
+ document.getElementById("password_label").innerHTML = "密&#12288;码";
+ document.getElementById("remUsername_label").innerHTML = "记住用户名";
+ document.getElementById("secure_label").innerHTML = "SSL安全登录";
+ document.getElementById("all_secure_label").innerHTML = "全程SSL";
+ document.getElementById("btn_login").value = "登 录";
+
+ //document.getElementById("admin_login").innerHTML = "管理员登录";
+ document.getElementById("resetPwd").innerHTML = "忘记密码？";
+ document.getElementById("managerLgn").innerHTML = "管理员登录";
+ document.getElementById("language").value = "0";
+ document.getElementById("user_login_title").innerHTML = "用户登录";
+
+ document.getElementById("div_denglu").style.paddingLeft = '121px';
+
+ }
+ if(type == "en"){
+ document.getElementById("lang_ch").style.display="";
+ document.getElementById("lang_en").style.display="none";
+ //document.getElementById("lang_tw").style.display="";
+ document.getElementById("managerLgn").innerHTML = "Admin Login";
+
+ document.getElementById("domain_label").innerHTML = "Domain";
+ document.getElementById("account_name_label").innerHTML = "Username";
+ document.getElementById("password_label").innerHTML = "Password";
+ document.getElementById("remUsername_label").innerHTML = "Remember Username";
+ document.getElementById("secure_label").innerHTML = "SSL login";
+ document.getElementById("all_secure_label").innerHTML = "ALL SSL";
+ document.getElementById("btn_login").value = "Sign in";
+
+ //document.getElementById("admin_login").innerHTML = "Admin Login";
+ document.getElementById("resetPwd").innerHTML = "Forget Password？";
+ document.getElementById("language").value = "1";
+ document.getElementById("user_login_title").innerHTML = "User Login";
+
+ document.getElementById("div_denglu").style.paddingLeft = '60px';
+
+
+ }
+ if(type == "tw"){
+ document.getElementById("lang_ch").style.display="";
+ document.getElementById("lang_en").style.display="";
+ //document.getElementById("lang_tw").style.display="none";
+
+ document.getElementById("account_name_label").innerHTML = "用戶名";
+ document.getElementById("password_label").innerHTML = "密碼";
+ document.getElementById("remUsername_label").innerHTML = "記住用戶名";
+ document.getElementById("secure_label").innerHTML = "SSL安全登錄";
+ document.getElementById("all_secure_label").innerHTML = "全程SSL";
+ document.getElementById("btn_login").value = "登 錄";
+
+ //document.getElementById("admin_login").innerHTML = "管理員登錄";
+ document.getElementById("resetPwd").innerHTML = "忘記密碼？";
+ document.getElementById("language").value = "2";
+ document.getElementById("user_login_title").innerHTML = "用戶登錄";
+ }
+ }
+</script>
+<script type="text/javascript">
+ var lang = getQueryString("hl");
+ if("zh_TW" == lang)
+ change_lang('tw');
+ if("en_US" == lang)
+ change_lang('en');
+ if("zh_CN" == lang)
+ change_lang('ch');
+</script>
+<script type="text/javascript" src="//mail.qiye.163.com/js/loginjs.jsp"></script>
+<script type="text/javascript" src="http://mimghz.qiye.163.com/o/domain/201410101500/index/css/../js/jquery-migrate.js"></script>
+<script type="text/javascript" src="http://mimghz.qiye.163.com/o/domain/201410101500/index/css/../js/lang_en.js"></script>
+<script type="text/javascript" src="http://mimghz.qiye.163.com/o/domain/201410101500/index/css/../js/select_network.js"></script>
+<script type="text/javascript" src="http://mimghz.qiye.163.com/o/domain/201410101500/index/css/../js/login_util.js"></script>
+<script type="text/javascript" src="http://mimghz.qiye.163.com/o/domain/201410101500/index/css/../js/select_banner.js"></script>
+<script type="text/javascript" src="http://mimghz.qiye.163.com/o/domain/201410101500/index/css/../js/reset_pwd.js"></script>
+<!------------begin-------------->
+<script>
+ $("#login-mod-wrapper").css("background-image", "");
+ $("#loginform").css("background-color", "");
+
+ function getId(id){
+ return document.getElementById(id);
+ }
+
+ /* 获取url参数 */
+ function getQueryString (e) {
+ var t = new RegExp("(^|&)"+e+"=([^&]*)(&|$)","i");
+ var n = window.location.search.substr(1).match(t);
+ if( n != null) {
+ return unescape( n[2] );
+ }
+ return "";
+ }
+
+ /**************begin****************/
+ //请求验证码的地址 北京：http://entry.qiye.163.com/domain/getverifycode.jsp 杭州：http://entryhz.qiye.163.com/domain/getverifycode.jsp
+ verifyCodeUrl = 'http://entryhz.qiye.163.com/domain/getverifycode.jsp';
+ //是否需要显示验证码 根据页面传递的code参数获取，http://mail.xx.com/?code=true
+ var verifyCode = getQueryString('code');
+ /**************end****************/
+ //错误提示
+ var msgMap ={
+ "input.account_name":"请输入登录帐号",
+ "input.verifyCodeMsg":"请输入验证码",
+ "input.email":"请输入完整的邮箱地址",
+ "input.password":"请你输入密码",
+ "input.noat":"请使用不包括@部分帐号登录",
+
+ "input.account_name.en_US":"please enter your account",
+ "input.verifyCodeMsg.en_US":"please enter verify code",
+ "input.email.en_US":"please enter your email address",
+ "input.password.en_US":"please enter your password",
+ "input.noat.en_US":"please enter your account without '@'",
+
+ "input.account_name.zh_TW":"請輸入登錄帳號",
+ "input.verifyCodeMsg.zh_TW":"请输入驗證碼",
+ "input.email.zh_TW":"請輸入完整的郵箱地址",
+ "input.password.zh_TW":"請你輸入密碼",
+ "input.noat.zh_TW":"請使用不包括@部分的帐号登录"
+ }
+
+ function getMsg(code){
+ var value = msgMap[code + ".zh_CN"];
+ if(!value){
+ value = msgMap[code];
+ }
+ return value;
+ }
+
+ $(document).ready(function(){
+ /**************begin****************/
+ var verifyCodeWrap = getId('verifyCodeWrap');
+ var codeImgWrap = getId('codeImgWrap');
+ //点击刷新验证码方法
+ function changeVerifyCode() {
+ //时间参数防止缓存
+ var url = verifyCodeUrl + '?_searchtime=' + new Date().getTime();
+ codeImgWrap.getElementsByTagName('img')[0].src = url;
+ };
+ //添加点击刷新验证码事件
+ getId("codeImgWrap").onclick=function(){
+ changeVerifyCode();
+ };
+ //判断页面是否需要显示验证码
+ if(verifyCode === 'true'){
+ verifyCodeWrap.style.display ='';
+ changeVerifyCode();
+ }
+ /**************end****************/
+ });
+</script>
+<!------------end-------------->
+
+</body>
+

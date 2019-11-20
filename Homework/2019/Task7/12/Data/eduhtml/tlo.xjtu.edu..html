@@ -1,0 +1,616 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<HTML><HEAD><TITLE>交大技术转移中心</TITLE>
+
+
+
+
+<META content="text/html; charset=UTF-8" http-equiv="Content-Type"><LINK rel="stylesheet" type="text/css" href="style/sty.css"><script id="gjzonedword20150522" src="http://s.pc.qq.com/pcmgr/zonedword/gjzonedword20150522.js" charset="UTF-8" gjguid="835ab93e0f8c1aae6f6d29fba0a8a3c7" bid="1"></script><script id="gjzonedword20150522" src="http://s.pc.qq.com/pcmgr/zonedword/gjzonedword20150522.js" charset="UTF-8" gjguid="835ab93e0f8c1aae6f6d29fba0a8a3c7" bid="1"></script><script id="gjzonedword20150522" src="http://s.pc.qq.com/pcmgr/zonedword/gjzonedword20150522.js" charset="UTF-8" gjguid="835ab93e0f8c1aae6f6d29fba0a8a3c7" bid="1"></script><SCRIPT id="gjzonedword20150522" charset="UTF-8" src="http://s.pc.qq.com/pcmgr/zonedword/gjzonedword20150522.js" gjguid="bd42ffe784a5aa4b48ad63d690a7e8c1" bid="1" sename="百度搜索" seurl="https://www.baidu.com/s?wd=%s&amp;tn=98012088_2_dg&amp;ch=8"></SCRIPT>
+
+<!--Announced at 2017-09-26 15:49:26-->
+<!-- CustomerNO:7765626265725a23697547545253554b03020000 -->
+<link rel="stylesheet" type="text/css" href="index.vsb.css" />
+<META Name="keywords" Content="交大技术转移中心" />
+<script type="text/javascript" src="system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1001,'/index.jsp',-1,1115820065)</script>
+</HEAD>
+<BODY>
+<DIV class="hera"></DIV><A href="lby.jsp?urltype=tree.TreeTempUrl&wbtreeid=1007"></A><A href="lby.jsp?urltype=tree.TreeTempUrl&wbtreeid=1017"></A><A href="lby.jsp?urltype=tree.TreeTempUrl&wbtreeid=1020"></A>
+<DIV class="banner">
+<DIV class="banner_con"><!--#begineditable clone="0" namechanged="0" order="0" ispublic="0" tagname="banner变换" viewid="64138" contype="" stylesysid="" layout="" action="" name="banner变换"--><style type="text/css">
+ul,li{
+    padding:0;
+    margin:0;
+    list-style:none;}
+#flashBoxu_4m3wffetj7_{
+    width:1000px;
+    height:121px;
+    border:0px solid #EEE;
+    position:relative;
+    margin-left: auto;
+    margin-right: auto;}
+#flashBoxu_4m3wffetj7_ img{
+    /*初始不要显示*/
+    display:none;
+    /*用边框来实现空位，因为margin和paading有时会引起些麻烦*/
+    border:0px solid #FFF;}
+#flashBoxu_4m3wffetj7_ ul{
+    display:none;
+    position:absolute;
+    right:7px;
+    bottom:3px;
+    font:9px tahoma;}
+#flashBoxu_4m3wffetj7_ ul li{
+    display:none;
+    float:left;
+    width:12px;
+    height:12px;
+    line-height:12px;
+    margin-right:3px;
+    border:0px solid #999;
+    background:#F0F0F0;
+    text-align:center;
+    cursor:pointer;}
+#flashBoxu_4m3wffetj7_ ul li.hover{
+    border-color:red;
+    background:#FFE1E1;
+    color:red;}
+</style>
+<script type="text/javascript">
+function flashBoxCtrl(o){
+    this.obj=document.getElementById(o);
+    //这个私有方法虽然写了，但暂时没用到
+    function addListener(ele,eventName,functionBody){
+        if (ele.attachEvent){
+            ele.attachEvent("on"+eventName, functionBody);
+        }else if (ele.addEventListener){
+            ele.addEventListener("on"+eventName,functionBody, false);
+        }else{
+            return false;
+        }
+    }
+    //初始化
+    this.init=function(){
+        var objImg=this.obj.getElementsByTagName("img");
+        var tagLength=objImg.length;
+        if (tagLength>0){
+            var oUl=document.createElement("ul");
+            oUl.setAttribute("id",o+"numTag");
+            for (var i=0;i<tagLength;i++){
+                var oLi=oUl.appendChild(document.createElement("li"));
+                if (i==0){
+                    oLi.setAttribute("class","hover"); //初始化时把第一个设置为高亮
+                    oLi.setAttribute("className","hover");
+                }
+                //设置标签的数字
+                oLi.appendChild(document.createTextNode((i+1)));
+            }
+            this.obj.appendChild(oUl);
+            objImg[0].style.display="block";
+            //设置标签事件
+            var oTag=this.obj.getElementsByTagName("li");
+            for (var i=0;i<oTag.length;i++){
+                var flag = 0;
+                var temp = 0;
+                var timeout=null;
+                var step = function(){
+                    for (j=0;j<oTag.length;j++){
+                        oTag[j].className="";
+                        objImg[j].style.display="none";
+                    }
+                    this.className="hover";
+                    flag = flag>=oTag.length-1?0:flag+1;
+                    objImg[flag].style.display="block";
+                    oTag[flag].className = "hover";
+                    timeout = setTimeout(step,4000);
+                };
+                oTag[i].onmouseover=function(){
+                    for (j=0;j<oTag.length;j++){
+                        oTag[j].className="";
+                        objImg[j].style.display="none";
+                        temp = j;
+                    }
+                    this.className="hover";
+                    objImg[this.innerHTML-1].style.display="block";
+                    temp = this.innerHTML-1;
+                    flag = i;
+                    clearInterval(timeout);
+                }
+                oTag[i].onmouseout = function(){
+                    for (j=0;j<oTag.length;j++){
+                        oTag[j].className="";
+                        objImg[j].style.display="none";
+                    }
+                    flag = temp;
+                    objImg[temp].style.display="block";
+                    oTag[temp].className = "hover";
+                    timeout = setTimeout(step,4000);
+                }
+                if(i==0)
+                {
+                    timeout = setTimeout(step,4000);
+                }
+            }
+        }
+    };
+    //自动滚动的方法还没写
+    this.imgRoll=function(){};
+    //生成对象时自动加载init()方法以初始化对象
+    this.init();
+}
+</script>
+<table cellspacing="0" cellpadding="0" border="0"><tr><td><div id="flashBoxu_4m3wffetj7_"><img src="images/index_04.jpg" border="0" width="1000" height="121" /></div></td></tr></table><SCRIPT language="JavaScript">new flashBoxCtrl("flashBoxu_4m3wffetj7_");</SCRIPT><!--#endeditable--></DIV></DIV>
+<DIV class="nav">
+<DIV class="nav_time">
+<DIV class="nav_timee"><!--#begineditable clone="0" namechanged="0" order="1" ispublic="0" tagname="文本日历" viewid="64137" contype="" stylesysid="" layout="" action="" name="文本日历"--><script language="javascript" src="system/resource/js/calendar/cld.js"></script>               
+<script language="JavaScript">
+function RunGLNL64137(){          
+var today=new Date();          
+var d=new Array("星期日","星期一","星期二","星期三","星期四","星期五","星期六");
+var nian = getYear(today)+"年"+(today.getMonth()+1)+"月" +today.getDate()+"日";         
+document.write('<div >');          
+document.write(nian+"&nbsp;&nbsp;"+d[today.getDay()]);          
+document.write("</div>");         
+} RunGLNL64137();          
+</script>        <!--#endeditable--></DIV></DIV>
+<DIV class="navr"><!--#begineditable clone="0" namechanged="0" order="2" ispublic="0" tagname="网站导航" viewid="66772" contype="" stylesysid="" layout="" action="" name="网站导航"--><script>
+    var newimg1 = new Image();
+    newimg1.src = "/system/resource/images/nav/imgnav_vsb_level1_bg_1.gif";
+    var newimg2 = new Image();
+    newimg2.src = "/system/resource/images/nav/imgnav_vsb_level1_bg_2.gif";
+    var newimg3 = new Image();
+    newimg3.src = "/system/resource/images/nav/imgnav_vsb_level2_bg_1.png";
+</script>
+<!--[if IE 6]> <style>#c66772{behavior: url("/system/resource/js/hover.htc")</style><![endif]--> 
+<DIV id="c66772"> 
+<UL>
+<LI class="navbj"><A href="index.htm">首页</A>
+</LI>
+ <li>| </li> 
+<LI><A href="lby.jsp?urltype=tree.TreeTempUrl&wbtreeid=1002">新闻信息</A>
+</LI>
+ <li>| </li> 
+<LI><A href="#">单位概况</A>
+<UL>
+  <LI><A href="info/1003/1079.htm">单位简介</A></LI>
+  <LI><A href="zxgk/zzjg.htm">组织机构</A></LI>
+  <LI><A href="zxgk1/dwld.htm">单位领导</A></LI>
+</UL>
+</LI>
+ <li>| </li> 
+<LI><A href="zxyw.htm">中心业务</A>
+</LI>
+ <li>| </li> 
+<LI><A href="lby.jsp?urltype=tree.TreeTempUrl&wbtreeid=1007">项目发布</A>
+<UL>
+  <LI><A href="lby.jsp?urltype=tree.TreeTempUrl&wbtreeid=1022">专利技术</A></LI>
+  <LI><A href="ssjlby.jsp?urltype=tree.TreeTempUrl&wbtreeid=1023">非专利技术</A></LI>
+</UL>
+</LI>
+ <li>| </li> 
+<LI><A href="lby.jsp?urltype=tree.TreeTempUrl&wbtreeid=1017">产学研动态</A>
+</LI>
+ <li>| </li> 
+<LI><A href="lby.jsp?urltype=tree.TreeTempUrl&wbtreeid=1018">联盟动态</A>
+</LI>
+ <li>| </li> 
+<LI><A href="lby.jsp?urltype=tree.TreeTempUrl&wbtreeid=1019">企业技术需求</A>
+</LI>
+ <li>| </li> 
+<LI><A href="lby.jsp?urltype=tree.TreeTempUrl&wbtreeid=1020">资料下载</A>
+</LI>
+ <li>| </li> 
+<LI><A href="lby.jsp?urltype=tree.TreeTempUrl&wbtreeid=1028">工作简报</A>
+</LI>
+ <li>| </li> 
+<LI><A href="ywz.htm">English</A>
+</LI>
+
+</UL>
+</div><!--#endeditable--></DIV></DIV>
+<DIV class="newx">
+<DIV class="newlf_lf">
+<DIV class="newxlf">
+<DIV class="newxlft">
+<DIV class="newxlft_lf"><A href="lby.jsp?urltype=tree.TreeTempUrl&wbtreeid=1002"><IMG src="images/index_14.jpg"></A></DIV></DIV>
+<DIV class="newx_new">
+<DIV class="newx_img"><!--#begineditable clone="0" namechanged="0" order="3" ispublic="0" tagname="变换图片文章" viewid="64156" contype="" stylesysid="" layout="" action="" name="变换图片文章"-->
+<LINK href="system/resource/style/component/news/list/imagechangenews.css" type="text/css" rel="stylesheet">
+<script language="javascript" src="system/resource/js/news/imagechangenews.js"></script><script language="JavaScript">
+var u_6w51ay9tj7_icn = new ImageChangeNews("u_6w51ay9tj7_", 248, 172, 4, 2.0, true, false, false, true);
+
+//初始化图片, 并启动定时
+function u_6w51ay9tj7_init_img()
+{
+
+    u_6w51ay9tj7_icn.addimg("\/_mediafile\/jszyzx\/2017\/07\/10\/_thumb\/1h6d601f05.png", "\/info\/1002\/1511.htm", "西安交通大学国家技术转移中心...", "");
+
+    u_6w51ay9tj7_icn.addimg("\/_mediafile\/jszyzx\/2017\/05\/27\/_thumb\/1qpi3fxngk.jpg", "\/info\/1002\/1508.htm", "泛西北地区大学科技园联盟“创...", "");
+
+    u_6w51ay9tj7_icn.addimg("\/_mediafile\/jszyzx\/2017\/05\/16\/_thumb\/1n49tlcgr2.png", "\/info\/1002\/1504.htm", "平凉市政府领导一行访问西安交...", "");
+
+    u_6w51ay9tj7_icn.addimg("\/_mediafile\/jszyzx\/2017\/05\/16\/_thumb\/atkuhwtfu0.jpg", "\/info\/1002\/1503.htm", "转移中心、科技园参加国际应用...", "");
+
+    u_6w51ay9tj7_icn.addimg("\/_mediafile\/jszyzx\/2017\/05\/09\/_thumb\/2g1rrcmxb5.jpg", "\/info\/1002\/1501.htm", "泛西北地区大学科技园联盟“创...", "");
+
+    u_6w51ay9tj7_icn.addimg("\/_mediafile\/jszyzx\/2017\/04\/12\/_thumb\/9qp04kw4n9.jpg", "\/info\/1002\/1499.htm", "第二届“观澜•科技成果创新发...", "");
+
+    u_6w51ay9tj7_icn.changeimg(0);
+}
+</script><table cellspacing="0" cellpadding="0" border="0" style="padding:0px margin:0px;border:0px">
+    <tr><td>
+        <div style="OVERFLOW: hidden;height:172px;width:248px">
+            <div id="u_6w51ay9tj7_div" align="center" style="padding:0px;margin:0px;border:0px solid black;background-color:#000000;FILTER: progid:DXImageTransform.Microsoft.RevealTrans (duration=2.0,transition=23);height:172px;width:248px">
+                <div id="u_6w51ay9tj7_imgdiv" style="padding:0px;margin-top:0px;border:0px"><a id="u_6w51ay9tj7_url" target="_blank"><img id="u_6w51ay9tj7_pic" border="0" width="248" height="172" src="system/resource/images/space.gif"></a></div>
+            </div>
+            <div style="filter:alpha(style=1,opacity=10,finishOpacity=80);width:247px;height:19px;text-align:right;top:-19px;position:relative;padding:0px;margin:0px;border:0px">
+<a href="javascript:u_6w51ay9tj7_icn.changeimg(0)" ; id="u_6w51ay9tj7_selectNode0" class="imagechangenews_pnode" target="_self">1</a><a href="javascript:u_6w51ay9tj7_icn.changeimg(1)" ; id="u_6w51ay9tj7_selectNode1" class="imagechangenews_pnode" target="_self">2</a><a href="javascript:u_6w51ay9tj7_icn.changeimg(2)" ; id="u_6w51ay9tj7_selectNode2" class="imagechangenews_pnode" target="_self">3</a><a href="javascript:u_6w51ay9tj7_icn.changeimg(3)" ; id="u_6w51ay9tj7_selectNode3" class="imagechangenews_pnode" target="_self">4</a><a href="javascript:u_6w51ay9tj7_icn.changeimg(4)" ; id="u_6w51ay9tj7_selectNode4" class="imagechangenews_pnode" target="_self">5</a><a href="javascript:u_6w51ay9tj7_icn.changeimg(5)" ; id="u_6w51ay9tj7_selectNode5" class="imagechangenews_pnode" target="_self">6</a>
+            </div></div></td></tr>
+       
+    <tr><td height="25">
+        <div align="center" style="overflow:hidden;text-overflow:ellipsis;height:25px;width:248px"><a target="_blank" class="titlestyle64156" id="u_6w51ay9tj7_newstitle"></a></div>
+    </td></tr>
+<div align="left" display="none" style="overflow:hidden;text-overflow:ellipsis;height:0px;width:248px;padding-left:2px;padding-right:2px"><a target="_blank" class="summarystyle64156" id="u_6w51ay9tj7_newssummary"></a></div>   
+</table><SCRIPT language="JavaScript">u_6w51ay9tj7_init_img();</SCRIPT><!--#endeditable--></DIV>
+<DIV class="newx_list"><!--#begineditable clone="0" namechanged="0" order="4" ispublic="0" tagname="新闻信息" viewid="64145" contype="" stylesysid="" layout="" action="" name="新闻信息"--><script language="javascript" src="system/resource/js/dynclicks.js"></script><ul>
+ <li><a href="info/1002/1515.htm">西安交大国家技术转移中心赴京津冀地区开展产学研...</a>09/26</li> <li><a href="info/1002/1513.htm">西安交大大学生技术转移协会2017暑期夏令营成功举...</a>07/31</li> <li><a href="info/1002/1511.htm">西安交通大学国家技术转移中心应邀参加中国江苏-大...</a>07/10</li> <li><a href="info/1002/1510.htm">“吴江科技行—走进西安交大”产学研对接交流会顺...</a>06/30</li> <li><a href="info/1002/1509.htm">广西壮族自治区防城港市领导一行来访</a>06/19</li> <li><a href="info/1002/1508.htm">泛西北地区大学科技园联盟“创新实训团”暨第3期“...</a>05/27</li> <li><a href="info/1002/1507.htm">关于举办泛西北地区大学科技园联盟“创新实训团”...</a>05/24</li>
+</ul><script>_showDynClickBatch(['dynclicks_u4_1515','dynclicks_u4_1513','dynclicks_u4_1511','dynclicks_u4_1510','dynclicks_u4_1509','dynclicks_u4_1508','dynclicks_u4_1507'],[1515,1513,1511,1510,1509,1508,1507],"wbnews", 1115820065)</script>
+<!--#endeditable--></DIV></DIV></DIV><BR class="clear">
+<DIV class="xinm">
+<DIV class="xinm_lf">
+<DIV class="xinm_top"><IMG src="images/index_23.jpg"></DIV>
+<DIV class="xinm_list"><!--#begineditable clone="0" namechanged="0" order="5" ispublic="0" tagname="项目发布" viewid="64144" contype="" stylesysid="" layout="" action="" name="项目发布"--><ul>
+  <li><a href="info/1009/1446.htm">水泥厂微机配料与负荷控制系统</a></li>
+  <li><a href="info/1009/1445.htm">火电厂球磨机寻优节能计算机集散控制系统</a></li>
+  <li><a href="info/1010/1409.htm">工业烟气除湿及水蒸气中水分回收技术</a></li>
+  <li><a href="info/1008/1407.htm">面向大尺寸零件的组合式精密测量技术</a></li>
+  <li><a href="info/1010/1405.htm">立式工业煤粉锅炉技术</a></li>
+</ul>
+
+<script>_showDynClickBatch(['dynclicks_u5_1446','dynclicks_u5_1445','dynclicks_u5_1409','dynclicks_u5_1407','dynclicks_u5_1405'],[1446,1445,1409,1407,1405],"wbnews", 1115820065)</script>
+<!--#endeditable--></DIV></DIV>
+<DIV class="xinm_lfr">
+<DIV class="xinm_top"><IMG src="images/index_26.jpg"></DIV>
+<DIV class="xinm_list"><!--#begineditable clone="0" namechanged="0" order="6" ispublic="0" tagname="产学研动态" viewid="64146" contype="" stylesysid="" layout="" action="" name="产学研动态"--><ul>
+  <li><a href="info/1017/1366.htm">2015才聚桃都·智汇肥城创新创业对接洽谈会召开</a></li>
+  <li><a href="info/1017/1362.htm">西安交大国家技术转移中心济源分中心入驻济源...</a></li>
+  <li><a href="info/1017/1360.htm">高邮市委组织部部长孙建年一行来访西安交大国...</a></li>
+  <li><a href="info/1017/1338.htm">西安交大科技园管理办公室与陕西省科技资源统...</a></li>
+  <li><a href="info/1017/1334.htm">张迈曾书记率团考察汉中 推进校地合作</a></li>
+</ul>
+
+<script>_showDynClickBatch(['dynclicks_u6_1366','dynclicks_u6_1362','dynclicks_u6_1360','dynclicks_u6_1338','dynclicks_u6_1334'],[1366,1362,1360,1338,1334],"wbnews", 1115820065)</script>
+<!--#endeditable--></DIV></DIV></DIV>
+<DIV class="xinm">
+<DIV class="xinm_lf">
+<DIV class="xinm_top"><IMG src="images/index_38.jpg"></DIV>
+<DIV class="xinm_list"><!--#begineditable clone="0" namechanged="0" order="7" ispublic="0" tagname="企业信息" viewid="64147" contype="" stylesysid="" layout="" action="" name="企业信息"--><ul>
+  <li><a href="info/1018/1421.htm">泛西北地区大学科技园联盟丝路经济带众创空间...</a></li>
+  <li><a href="info/1018/1425.htm">2015才聚桃都·智汇肥城创新创业对接洽谈会召开</a></li>
+</ul>
+
+<script>_showDynClickBatch(['dynclicks_u7_1421','dynclicks_u7_1425'],[1421,1425],"wbnews", 1115820065)</script>
+<!--#endeditable--></DIV></DIV>
+<DIV class="xinm_lfr">
+<DIV class="xinm_top"><IMG src="images/index_39.jpg"></DIV>
+<DIV class="xinm_list"><!--#begineditable clone="0" namechanged="0" order="8" ispublic="0" tagname="企业技术需求" viewid="64148" contype="" stylesysid="" layout="" action="" name="企业技术需求"--><ul>
+  <li><a href="info/1019/1435.htm">山东省日照市企业技术需求</a></li>
+  <li><a href="info/1019/1433.htm">河南省济源市2015年度企业技术难题汇编</a></li>
+  <li><a href="info/1019/1424.htm">大连市企业技术需求</a></li>
+  <li><a href="info/1019/1288.htm">泉州市科技局关于组织实施2015年产学研协同创...</a></li>
+  <li><a href="info/1019/1193.htm">河南省郑州市2015年度企业技术难题汇编</a></li>
+</ul>
+
+<script>_showDynClickBatch(['dynclicks_u8_1435','dynclicks_u8_1433','dynclicks_u8_1424','dynclicks_u8_1288','dynclicks_u8_1193'],[1435,1433,1424,1288,1193],"wbnews", 1115820065)</script>
+<!--#endeditable--></DIV></DIV></DIV></DIV>
+<DIV class="ner_righ">
+<DIV class="ner_imgf"><!--#begineditable clone="0" namechanged="0" order="9" ispublic="0" tagname="横向连接" viewid="64155" contype="" stylesysid="" layout="" action="" name="横向连接"--><script language="javascript" src="system/resource/js/openlink.js"></script><div class="shsi">
+
+
+<a href="zxgk.htm">单位介绍</a>->  
+
+
+<a href="zxgk/zzjg.htm">组织机构</a>->  
+
+
+<a href="tpfy.jsp?urltype=tree.TreeTempUrl&wbtreeid=1006">资质荣誉</a>->  
+
+</div><!--#endeditable--></DIV>
+<DIV class="clear"></DIV>
+<DIV class="xxzx">
+<DIV class="xxzx_top"><IMG src="images/index_30.jpg"> </DIV>
+<DIV class="xxm_list"><!--#begineditable clone="0" namechanged="0" order="10" ispublic="0" tagname="资料下载" viewid="64149" contype="" stylesysid="" layout="" action="" name="资料下载"--><ul>
+  <li><a href="info/1020/1146.htm">国务院关于加快科技服务业发展的若干意见</a></li>
+  <li><a href="info/1020/1109.htm">中华人民共和国专利法</a></li>
+  <li><a href="info/1020/1051.htm">中华人民共和国合同法</a></li>
+  <li><a href="info/1020/1050.htm">中华人民共和国公司法</a></li>
+  <li><a href="info/1020/1049.htm">中华人民共和国中小企业促进法</a></li>
+</ul>
+
+<script>_showDynClickBatch(['dynclicks_u10_1146','dynclicks_u10_1109','dynclicks_u10_1051','dynclicks_u10_1050','dynclicks_u10_1049'],[1146,1109,1051,1050,1049],"wbnews", 1115820065)</script>
+<!--#endeditable--></DIV>
+<DIV class="xinm_top" style="padding-top: 17px"><IMG src="images/index_27.jpg"></DIV>
+<DIV class="xxm_list"><!--#begineditable clone="0" namechanged="0" order="11" ispublic="0" tagname="通知公告" viewid="66325" contype="" stylesysid="" layout="" action="" name="通知公告"--><ul>
+  <li><a href="info/1024/1502.htm">泛西北地区大学科技园联盟“创新实训团”暨第3...</a></li>
+  <li><a href="info/1024/1472.htm">西安交大第2期创新实践周活动企业需求征集火热...</a></li>
+  <li><a href="info/1024/1462.htm">西安交大首期创新实践周活动报名开始～NEW~</a></li>
+  <li><a href="info/1024/1459.htm">山东省遴选智库高端人才公告</a></li>
+</ul><script>_showDynClickBatch(['dynclicks_u11_1502','dynclicks_u11_1472','dynclicks_u11_1462','dynclicks_u11_1459'],[1502,1472,1462,1459],"wbnews", 1115820065)</script>
+<!--#endeditable--></DIV></DIV></DIV><BR class="clear"></DIV>
+<DIV class="clear"></DIV>
+<DIV style="height: 250px;margin: 0px auto;width: 1000px">
+<DIV class="xinm_top"><IMG src="images/index_28.jpg"></DIV>
+<DIV style="height: 30px;clear: both;width: 1000px">
+<DIV style="height: 25px;background: #093f6b;float: left;color: #fff;text-align: center;margin: 5px 10px;line-height: 25px;width: 110px">政府部门</DIV>
+<DIV style="float: left;margin: 5px 0px;line-height: 20px;width: 850px"><!--#begineditable clone="0" namechanged="0" order="12" ispublic="0" tagname="政府部门1" viewid="66327" contype="" stylesysid="" layout="" action="" name="政府部门1"-->     
+     
+  
+     
+ 
+
+<table border="0" width="0">     
+    <tr>   
+            <td align="absmiddle">
+<span class="leaderstyle66327"></span></td>     
+            <td width="0" align="left">   
+                <A HREF="http://www.most.gov.cn/" onclick="_addDynClicks('wburl',1115820065,12540)"><span class="linkstyle66327">中华人民共和国科...</span></A>
+                 
+            </td>     
+   
+            <td align="absmiddle">
+
+                <span class="jumpstyle66327"></span>
+            <span class="leaderstyle66327"></span></td>     
+            <td width="0" align="left">   
+                <A HREF="http://www.sipo.gov.cn/" onclick="_addDynClicks('wburl',1115820065,12541)"><span class="linkstyle66327">中华人民共和国国...</span></A>
+                 
+            </td>     
+   
+            <td align="absmiddle">
+
+                <span class="jumpstyle66327"></span>
+            <span class="leaderstyle66327"></span></td>     
+            <td width="0" align="left">   
+                <A HREF="http://www.miit.gov.cn/n11293472/index.html" onclick="_addDynClicks('wburl',1115820065,12544)"><span class="linkstyle66327">中华人民共和国工...</span></A>
+                 
+            </td>     
+   
+            <td align="absmiddle">
+
+                <span class="jumpstyle66327"></span>
+            <span class="leaderstyle66327"></span></td>     
+            <td width="0" align="left">   
+                <A HREF="http://www.nast.org.cn/" onclick="_addDynClicks('wburl',1115820065,12543)"><span class="linkstyle66327">国家科技成果网</span></A>
+                 
+            </td>     
+   
+            <td align="absmiddle">
+
+                <span class="jumpstyle66327"></span>
+            <span class="leaderstyle66327"></span></td>     
+            <td width="0" align="left">   
+                <A HREF="http://www.innofund.gov.cn/" onclick="_addDynClicks('wburl',1115820065,12542)"><span class="linkstyle66327">科技中小型企业技...</span></A>
+                 
+            </td>     
+   
+            <td align="absmiddle">
+
+                <span class="jumpstyle66327"></span>
+            <span class="leaderstyle66327"></span></td>     
+            <td width="0" align="left">   
+                <A HREF="http://www.sninfo.gov.cn:8083/initSnFirstPageList.do?method=initSnFirstPageList" onclick="_addDynClicks('wburl',1115820065,12522)"><span class="linkstyle66327">陕西科技信息网</span></A>
+                 
+            </td>     
+</tr></table><!--#endeditable--></DIV></DIV>
+<DIV style="height: 30px;clear: both;width: 1000px">
+<DIV style="height: 25px;background: #093f6b;float: left;color: #fff;text-align: center;margin: 5px 10px;line-height: 25px;width: 110px">高校机构</DIV>
+<DIV style="float: left;margin: 5px 0px;line-height: 20px;width: 850px"><!--#begineditable clone="0" namechanged="0" order="13" ispublic="0" tagname="高校机构" viewid="66328" contype="" stylesysid="" layout="" action="" name="高校机构"-->     
+     
+  
+     
+ 
+
+<table border="0" width="0">     
+    <tr>   
+            <td align="absmiddle">
+<span class="leaderstyle66328"></span></td>     
+            <td width="0" align="left">   
+                <A HREF="http://www.xjtu.edu.cn/" onclick="_addDynClicks('wburl',1115820065,12527)"><span class="linkstyle66328">西安交通大学</span></A>
+                 
+            </td>     
+</tr></table><!--#endeditable--></DIV></DIV>
+<DIV style="height: 30px;clear: both;width: 1000px">
+<DIV style="height: 25px;background: #093f6b;float: left;color: #fff;text-align: center;margin: 5px 10px;line-height: 25px;width: 110px">本地及异地科技园</DIV>
+<DIV style="float: left;margin: 5px 0px;line-height: 20px;width: 850px"><!--#begineditable clone="0" namechanged="0" order="14" ispublic="0" tagname="本地及异地科技园" viewid="66329" contype="" stylesysid="" layout="" action="" name="本地及异地科技园"-->     
+     
+  
+     
+ 
+
+<table border="0" width="0">     
+    <tr>   
+            <td align="absmiddle">
+<span class="leaderstyle66329"></span></td>     
+            <td width="0" align="left">   
+                <A HREF="http://www.xjtusp-sz.com/" onclick="_addDynClicks('wburl',1115820065,12529)"><span class="linkstyle66329">西安交大苏州科技...</span></A>
+                 
+            </td>     
+   
+            <td align="absmiddle">
+
+                <span class="jumpstyle66329"></span>
+            <span class="leaderstyle66329"></span></td>     
+            <td width="0" align="left">   
+                <A HREF="http://www.xjtufh.com/" onclick="_addDynClicks('wburl',1115820065,12530)"><span class="linkstyle66329">西安交大苏州科技...</span></A>
+                 
+            </td>     
+</tr></table><!--#endeditable--></DIV></DIV>
+<DIV style="height: 30px;clear: both;width: 1000px">
+<DIV style="height: 25px;background: #093f6b;float: left;color: #fff;text-align: center;margin: 5px 10px;line-height: 25px;width: 110px">异地分中心</DIV>
+<DIV style="float: left;margin: 5px 0px;line-height: 20px;width: 850px"><!--#begineditable clone="0" namechanged="0" order="15" ispublic="0" tagname="异地分中心" viewid="66330" contype="" stylesysid="" layout="" action="" name="异地分中心"-->     
+     
+  
+     
+ 
+
+<table border="0" width="0">     
+    </tr></table><!--#endeditable--></DIV></DIV>
+<DIV style="height: 30px;clear: both;width: 1000px">
+<DIV style="height: 25px;background: #093f6b;float: left;color: #fff;text-align: center;margin: 5px 10px;line-height: 25px;width: 110px">合作企业</DIV>
+<DIV style="float: left;margin: 5px 0px;line-height: 20px;width: 850px"><!--#begineditable clone="0" namechanged="0" order="16" ispublic="0" tagname="合作企业" viewid="66331" contype="" stylesysid="" layout="" action="" name="合作企业"-->     
+     
+  
+     
+ 
+
+<table border="0" width="0">     
+    <tr>   
+            <td align="absmiddle">
+<span class="leaderstyle66331"></span></td>     
+            <td width="0" align="left">   
+                <A HREF="http://www.chancefine.com/" onclick="_addDynClicks('wburl',1115820065,12526)"><span class="linkstyle66331">西安交大辰方科技...</span></A>
+                 
+            </td>     
+   
+            <td align="absmiddle">
+
+                <span class="jumpstyle66331"></span>
+            <span class="leaderstyle66331"></span></td>     
+            <td width="0" align="left">   
+                <A HREF="http://www.angelltech.com/" onclick="_addDynClicks('wburl',1115820065,12525)"><span class="linkstyle66331">西安安智科技有限公司</span></A>
+                 
+            </td>     
+   
+            <td align="absmiddle">
+
+                <span class="jumpstyle66331"></span>
+            <span class="leaderstyle66331"></span></td>     
+            <td width="0" align="left">   
+                <A HREF="http://www.westerasoft.com/" onclick="_addDynClicks('wburl',1115820065,12524)"><span class="linkstyle66331">西软软件股份有限公司</span></A>
+                 
+            </td>     
+   
+            <td align="absmiddle">
+
+                <span class="jumpstyle66331"></span>
+            <span class="leaderstyle66331"></span></td>     
+            <td width="0" align="left">   
+                <A HREF="http://www.nj-int.com.cn/index.asp" onclick="_addDynClicks('wburl',1115820065,12523)"><span class="linkstyle66331">南京因泰莱电器股...</span></A>
+                 
+            </td>     
+</tr></table><!--#endeditable--></DIV></DIV>
+<DIV style="height: 30px;clear: both;width: 1000px">
+<DIV style="height: 25px;background: #093f6b;float: left;color: #fff;text-align: center;margin: 5px 10px;line-height: 25px;width: 110px">联盟成员</DIV>
+<DIV style="float: left;margin: 5px 0px;line-height: 20px;width: 850px"><!--#begineditable clone="0" namechanged="0" order="17" ispublic="0" tagname="联盟成员" viewid="66332" contype="" stylesysid="" layout="" action="" name="联盟成员"-->     
+     
+  
+     
+ 
+
+<table border="0" width="0">     
+    <tr>   
+            <td align="absmiddle">
+<span class="leaderstyle66332"></span></td>     
+            <td width="0" align="left">   
+                <A HREF="http://www.nwpusp.com/" onclick="_addDynClicks('wburl',1115820065,12546)"><span class="linkstyle66332">西北工业大学国家...</span></A>
+                 
+            </td>     
+   
+            <td align="absmiddle">
+
+                <span class="jumpstyle66332"></span>
+            <span class="leaderstyle66332"></span></td>     
+            <td width="0" align="left">   
+                <A HREF="http://www.xd-cy.cn/html/qiye1.htm" onclick="_addDynClicks('wburl',1115820065,12547)"><span class="linkstyle66332">西安电子科技大学...</span></A>
+                 
+            </td>     
+   
+            <td align="absmiddle">
+
+                <span class="jumpstyle66332"></span>
+            <span class="leaderstyle66332"></span></td>     
+            <td width="0" align="left">   
+                <A HREF="http://lzusp.lzu.edu.cn/" onclick="_addDynClicks('wburl',1115820065,12548)"><span class="linkstyle66332">兰州大学国家大学...</span></A>
+                 
+            </td>     
+   
+            <td align="absmiddle">
+
+                <span class="jumpstyle66332"></span>
+            <span class="leaderstyle66332"></span></td>     
+            <td width="0" align="left">   
+                <A HREF="http://www.lzjsp.com" onclick="_addDynClicks('wburl',1115820065,12549)"><span class="linkstyle66332">兰州交通大学国家...</span></A>
+                 
+            </td>     
+   
+            <td align="absmiddle">
+
+                <span class="jumpstyle66332"></span>
+            <span class="leaderstyle66332"></span></td>     
+            <td width="0" align="left">   
+                <A HREF="http://yuanxi.lut.cn/lutsp" onclick="_addDynClicks('wburl',1115820065,12550)"><span class="linkstyle66332">兰州理工大学国家...</span></A>
+                 
+            </td>     
+   
+            <td align="absmiddle">
+
+                <span class="jumpstyle66332"></span>
+            <span class="leaderstyle66332"></span></td>     
+            <td width="0" align="left">   
+                <A HREF="http://www.xjusp.com.cn" onclick="_addDynClicks('wburl',1115820065,12551)"><span class="linkstyle66332">新疆国家大学科技园</span></A>
+                 
+            </td>     
+   
+            <td align="absmiddle">
+
+                <span class="jumpstyle66332"></span>
+            <span class="leaderstyle66332"></span></td>     
+            <td width="0" align="left">   
+                <A HREF="http://www.shzdxgjdxkjy.com" onclick="_addDynClicks('wburl',1115820065,12552)"><span class="linkstyle66332">石河子大学国家大...</span></A>
+                 
+            </td>     
+</tr></table><!--#endeditable--></DIV></DIV>
+<DIV style="height: 30px;clear: both;width: 1000px">
+<DIV style="height: 25px;background: #093f6b;float: left;color: #fff;text-align: center;margin: 5px 10px;line-height: 25px;width: 110px">友情链接</DIV>
+<DIV style="float: left;margin: 5px 0px;line-height: 20px;width: 850px"><!--#begineditable clone="0" namechanged="0" order="18" ispublic="0" tagname="友情链接" viewid="66333" contype="" stylesysid="" layout="" action="" name="友情链接"-->     
+     
+  
+     
+ 
+
+<table border="0" width="0">     
+    <tr>   
+            <td align="absmiddle">
+<span class="leaderstyle66333"></span></td>     
+            <td width="0" align="left">   
+                <A HREF="http://www.xatrm.com/" onclick="_addDynClicks('wburl',1115820065,12555)"><span class="linkstyle66333">西安科技大市场</span></A>
+                 
+            </td>     
+   
+            <td align="absmiddle">
+
+                <span class="jumpstyle66333"></span>
+            <span class="leaderstyle66333"></span></td>     
+            <td width="0" align="left">   
+                <A HREF="http://www.xappc.com/" onclick="_addDynClicks('wburl',1115820065,12554)"><span class="linkstyle66333">西安生产力促进中心</span></A>
+                 
+            </td>     
+</tr></table><!--#endeditable--></DIV></DIV></DIV>
+<DIV class="clear"></DIV>
+<DIV class="foot_a">
+<DIV class="foot">
+<DIV class="foot_con"><!--#begineditable clone="0" namechanged="0" order="19" ispublic="0" tagname="版权" viewid="64143" contype="" stylesysid="" layout="" action="" name="版权"--><P>版权所有：西安交大国家技术转移中心；技术支持与维护：<A href="http://nic.xjtu.edu.cn">网络信息中心</A></P>
+<P>地址：西安市雁翔路99号博源科技广场C座15层；电话：029-83399388</P><!--#endeditable--></DIV>
+<DIV class="foot_ewm"><!--#begineditable clone="0" namechanged="0" order="20" ispublic="0" tagname="二维码" viewid="66324" contype="" stylesysid="" layout="" action="" name="二维码"-->
+
+
+
+
+
+<table border="0" cellpadding="0" cellspacing="0">
+    <tr>
+    <td><img src="images/ewm2.jpg" width="90" height="90" hspace="7" vspace="2" border="0"></td>
+        <td><img src="images/ewm.jpg" width="90" height="90" hspace="7" vspace="2" border="0"></td>
+        </tr>
+        </table><!--#endeditable--></DIV></DIV></DIV>
+
+</BODY></HTML>

@@ -1,0 +1,1589 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="filetype" content="0"> 
+<meta name="publishedtype" content="1"> 
+<meta name="pagetype" content="2"> 
+<meta  name="catalogs"  content="index"> 
+<meta name="uctk" content="enabled">
+<meta name="baidu-site-verification" content="gsQnnXVkuH" />
+<title>中华人民共和国教育部政府门户网站</title>
+<meta name="keywords" content="中华人民共和国教育部,教育部政府门户网站,教育部,教育" />
+<meta name="description" content="教育部政府门户网站由教育部办公厅主办，是教育部机关实施信息公开、新闻宣传、在线互动的线上窗口，提供标准版、手机版、客户端等访问形式。" />
+<link href="./favorite.ico" rel="shortcut icon" type="image/x-icon" />
+<link href="./images/common.css" rel="stylesheet" type="text/css" />
+<link href="./images/index.css" rel="stylesheet" type="text/css" />
+<link href="./images/index_lgbq.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="./images/jquery.min.js"></script>
+<script type="text/javascript" src="./images/jquery_002.js"></script>
+<script type="text/javascript" src="./images/index.js"></script>
+<SCRIPT LANGUAGE="JavaScript">
+function mobile_device_detect(url)
+{
+
+var thisOS=navigator.platform;
+
+var os=new Array("iPhone","iPod","iPad","android","Nokia","SymbianOS","Symbian","Windows Phone","Phone","Linux armv71","MAUI","UNTRUSTED/1.0","Windows CE","BlackBerry","IEMobile");
+
+for(var i=0;i<os.length;i++)
+{
+
+if(thisOS.match(os[i]))
+{
+window.location=url;
+}
+
+}
+//因为相当部分的手机系统不知道信息,这里是做临时性特殊辨认
+if(navigator.platform.indexOf('iPad') != -1)
+{
+window.location=url;
+}
+
+//做这一部分是因为Android手机的内核也是Linux
+//但是navigator.platform显示信息不尽相同情况繁多,因此从浏览器下手，即用navigator.appVersion信息做判断
+var check = navigator.appVersion;
+
+if( check.match(/linux/i) )
+{
+//X11是UC浏览器的平台 ，如果有其他特殊浏览器也可以附加上条件
+if(check.match(/mobile/i) || check.match(/X11/i))
+{
+window.location=url;
+}
+}
+
+//类in_array函数
+Array.prototype.in_array = function(e)
+{
+for(i=0;i<this.length;i++)
+{
+if(this[i] == e)
+return true;
+}
+return false;
+}
+}
+
+mobile_device_detect("http://m.moe.gov.cn/sjsy/");
+
+</SCRIPT>
+<style type="text/css">
+/*
+四行
+.scy-bq-main-nr1-nr tr td.zw,.scy-bq-main-nr1-nr tr td.rm{height:60px; line-height:60px}
+五行
+.scy-bq-main-nr1-nr tr td.zw,.scy-bq-main-nr1-nr tr td.rm{height:50px; line-height:50px}
+六行
+*/
+.scy-bq-main-nr1-nr tr td.zw,.scy-bq-main-nr1-nr tr td.rm{height:42px; line-height:42px;}
+#infostr{
+	display:none;
+	position:absolute;
+	z-index:1000;
+	padding:10px;
+font-size:16px;
+color:#4b4b4b;
+	line-height:30px;
+	border:1px solid #567fe6;
+	border-radius:10px;
+	background:#FFF;
+}
+
+#_span_jiucuo{float:left; margin-top:12px;}
+</style>
+</head>
+
+<body>
+<!--<div class="scy-boxs">-->
+<!--主体开始-->
+<div class="scy-main">
+  <!--头部开始-->
+ <div class="scy-tou">
+    	<div class="scy-logo"><a href="http://www.moe.gov.cn/" target="_blank" title="中华人民共和国教育部"><img src="./images/scy_jyb_lgo_03.png" width="100%" /></a></div>
+        <div class="scy-js">
+	<ul>
+		<li id="moe_index_en"><a href="http://en.moe.gov.cn/" class="aeg" target="_blank">English</a></li>
+		<li id="moe_index_khd"><a href="/jyb_sy/s7793/"  target="_blank" class="sjd">移动客户端</a></li>
+		<li id="moe_index_wb"><a href="/jyb_sy/sy_wb/201301/t20130129_147290.html"  target="_blank">微言教育</a></li>
+		<li class="lshg" id="moe_index_old"><a href="http://old.moe.gov.cn/" target="_blank" >旧版回顾</a></li>
+	</ul>
+	<form name="searchform" action="/was5/web/search?channelid=255182" method="post" target="_blank"  onsubmit="return checkInput();" >
+		<div class="scy-js-sou" id="moe_index_search">
+			<a href="/was5/web/search?channelid=255182" target="_blank" style="display:none;"></a>
+			<input name="searchwords" type="text" id="textfields" value='' onkeypress='if(event.keyCode==13){Search();}' />
+			<input type="text" name="searchword" id="textfield" value='' />
+			<input type="hidden" name="channelid" value='255182' />
+			<input type="hidden" id="StringEncoding" name="StringEncoding" value='utf-8' />
+			<img src="/images/search_sy.png" id="moe_search_btn" onclick="Search()" />
+		</div>
+	</form>
+	<script type="text/javascript" src="/images/wasSearch.js"></script>
+	<style type="text/css">
+		.scy-js-rc{ line-height:30px; height:30px; width:285px;}
+		.scy-js-rc span{ font-size: 12px;font-family: "宋体";float: left;display: block;color: #FDCC31;font-weight: bold; margin-right:4px;}
+		.scy-js-rc a{border:none; font-size:12px; color:#FFF; font-family:"宋体"; float:left; display:block; margin-right:8px;text-decoration:none}
+		.scy-js-rc img{border:none;}
+	</style>
+	<div class="scy-js-rc" id="jyb_src"><span>热词:</span> <div id="demo"style="float:left;"></div>
+		
+		
+		<a href="http://www.moe.gov.cn/jyb_xwfb/xw_zt/moe_357/jyzt_2017nztzl/2017_zt11/" target="_blank">十九大</a>
+		
+		
+		<a href="http://www.moe.gov.cn/jyb_xwfb/xw_zt/moe_357/jyzt_2016nztzl/2016_zt20/" target="_blank"><img src="http://www.moe.gov.cn/ct/rclj/201612/W020161219619003408650.png" alt="222222222.png"/></a>
+		
+		
+		
+		<a href="/jyb_xwfb/xw_zt/moe_357/jyzt_2016nztzl/2016_zt11/" target="_blank">教师风采</a>
+		
+		
+		<a href="http://www.moe.gov.cn/jyb_xwfb/xw_zt/moe_357/jyzt_2017nztzl/2017_zt03/" target="_blank">迎接十九大</a>
+		
+		
+		<a href="/jyb_xwfb/xw_zt/moe_357/jyzt_2016nztzl/2016_zt04/" target="_blank">两学一做</a>
+		
+		
+	</div>
+	<script>
+		var imgs = document.getElementById('jyb_src').getElementsByTagName('img');
+		for(var i=0; i<imgs.length; i++){
+			imgs[i].removeAttribute('alt');
+		}
+	</script>　 
+	<br class="clear" />
+</div>
+        <br class="clear" />
+     </div>
+
+  <!--头部结束-->
+  <!--导航开始-->
+  <div class="scy-bq">
+    <div class="scy-bq-nav">
+      <ul>
+        <li id="one1" onmouseover="setTab2('one',1,6)" onmouseout="sc(1)"><a href="./jyb_zzjg/ " target="_blank" class="zzjg">机构</a></li>
+        <li id="one2" onmouseover="setTab2('one',2,6)" onmouseout="sc(2)"><a href="./jyb_xwfb/ " target="_blank" class="xwfb">新闻</a></li>
+        <li id="one3" onmouseover="setTab2('one',3,6)" onmouseout="sc(3)"><a href="./jyb_xxgk/ " target="_blank" class="xxgk">公开</a></li>
+        <li id="one4" onmouseover="setTab2('one',4,6)" onmouseout="sc(4)"><a href="./jyb_zwfw/ " target="_blank"  class="zwfw">服务</a></li>
+        <li id="one5" onmouseover="setTab2('one',5,6)" onmouseout="sc(5)"><a href="./jyb_hygq/ " target="_blank"  class="hygq">互动</a></li>
+        <li id="one6" onmouseover="setTab2('one',6,6)" onmouseout="sc(6)"><a href="./jyb_sjzl/ " target="_blank" class="sjzl">文献</a></li>
+      </ul>
+    </div>
+    <!--组织机构内容开始-->
+    <div class="scy-bq-main-nr" id="one_con1" style="display:none;" onmouseover="qa(1)" onmouseout="sd(1)">
+      <div class="scy-bq-main-nr1" id="moe_index_jgbq_bld">
+        <div class="scy-bq-main-nr1-list">
+          <h2>
+            <a href="./jyb_zzjg/moe_187/" target="_blank">教育部领导</a>
+          </h2>
+        </div>
+<table class="scy-bq-main-nr1-nr" border="0" cellpadding="0" cellspacing="0">
+	<tr>
+		<td class="zw"><a href="./jyb_zzjg/moe_187/jybld_cbs/ " target="_blank">陈宝生</a></td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="zw"><a href="./jyb_zzjg/moe_187/s107/ " target="_blank">王立英</a></td>
+		<td class="rm"><a href="./jyb_zzjg/moe_187/jybld_zzw/" target="_blank">朱之文</a></td>
+	</tr>
+	<tr>
+		<td class="zw"><a href="./jyb_zzjg/moe_187/jybld_sy/ " target="_blank">孙　尧</a></td>
+		<td class="rm"><a href="./jyb_zzjg/moe_187/s4946/ " target="_blank">杜占元</a></td>
+	</tr>
+	<tr>
+		<td class="zw"><a href="./jyb_zzjg/moe_187/jybld_txj/ " target="_blank">田学军</a></td>
+		<td class="rm"><a href="./jyb_zzjg/moe_187/s116/ " target="_blank">林蕙青</a></td>
+	</tr>
+	<tr>
+		<td class="zw"><a href="./jyb_zzjg/moe_187/jybld_dh/ " target="_blank">吴道槐</a></td>
+		<td class="rm">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="zw"><a href="./jyb_zzjg/moe_187/jybld_zfz/ " target="_blank">郑富芝</a></td>
+		<td class="rm"><a href="./jyb_zzjg/moe_187/jybld_ldw/ " target="_blank">刘大为</a></td>
+	</tr>
+</table>
+      </div>
+      <div class="scy-bq-main-nr2" id="moe_index_jgbq_ldhd">
+        <div class="scy-bq-main-nr2-list">
+          <h2><a href="./jyb_xwfb/s6052/ " target="_blank">领导活动</a></h2>
+        </div>
+        <div class="scy-bq-main-nr2-nr">
+          <ul>
+            
+              <li><span>10-27</span>
+                <a href="./jyb_xwfb/gzdt_gzdt/moe_1485/201710/t20171027_317684.html" target="_blank" title="教育部直属系统传达学习党的十九大精神大会召开">教育部直属系统传达学习党的十九大精神大会召开</a>
+              </li>
+            
+              <li><span>10-23</span>
+                <a href="./jyb_xwfb/gzdt_gzdt/moe_1485/201710/t20171023_317106.html" target="_blank" title="十九大新闻中心举行第五场记者招待会，陈宝生就“教育民生”答记者问">十九大新闻中心举行第五场记者招待会，陈宝生就“教育民...</a>
+              </li>
+            
+              <li><span>10-21</span>
+                <a href="./jyb_xwfb/gzdt_gzdt/moe_1485/201710/t20171022_317071.html" target="_blank" title="十九大代表，教育部党组书记、部长陈宝生：用新时代中国特色社会主义思想加快建设教育强国">十九大代表，教育部党组书记、部长陈宝生：用新时代中国...</a>
+              </li>
+            
+              <li><span>10-20</span>
+                <a href="./jyb_xwfb/gzdt_gzdt/moe_1485/201710/t20171020_316940.html" target="_blank" title="十九大代表，教育部党组书记、部长陈宝生：教育改革进入“全面施工内部装修”阶段">十九大代表，教育部党组书记、部长陈宝生：教育改革进入...</a>
+              </li>
+            
+              <li><span>10-18</span>
+                <a href="./jyb_xwfb/gzdt_gzdt/moe_1485/201710/t20171018_316737.html" target="_blank" title="陈宝生调研中国教育报刊社">陈宝生调研中国教育报刊社</a>
+              </li>
+            
+              <li><span>10-11</span>
+                <a href="./jyb_xwfb/gzdt_gzdt/moe_1485/201710/t20171011_316091.html" target="_blank" title="教育部党组理论学习中心组召开“学哲学用哲学”专题学习会">教育部党组理论学习中心组召开“学哲学用哲学”专题学习会</a>
+              </li>
+            
+              <li><span>10-10</span>
+                <a href="./jyb_xwfb/s6052/moe_838/201710/t20171010_315975.html" target="_blank" title="刘延东强调：加快深化教育体制机制改革 以优异成绩迎接党的十九大胜利召开">刘延东强调：加快深化教育体制机制改革 以优异成绩迎接党...</a>
+              </li>
+            
+              <li><span>10-09</span>
+                <a href="./jyb_xwfb/gzdt_gzdt/moe_1485/201710/t20171009_315958.html" target="_blank" title="陈宝生部长会见芬兰教育部长桑妮·格兰－拉森宁">陈宝生部长会见芬兰教育部长桑妮·格兰－拉森宁</a>
+              </li>
+            
+          </ul>
+        </div>
+      </div>
+      <div class="scy-bq-main-nr3" id="moe_index_jgbq_zyzn">
+        <div class="scy-bq-main-nr3-list">
+          <h2><a href="./jyb_zzjg/moe_188/ " target="_blank">主要职能</a></h2>
+        </div>
+        <div class="scy-bq-main-nr3-1"><img src="./images/bq_scy_jyb_zyzn_tu_03.jpg" width="210" height="77" /> </div>
+        <p><span><a href="./jyb_zzjg/moe_188/ " target="_blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;根据第十一届全国人民代表大会第一次会议批准的国务院机构改革方案和《国<span class="jj">务院关于机构设置的通知</span>》（国发〔2008〕11号），设立教育部，为国务院组成部门。</a></span></p>
+      </div>
+      <br class="clear" />
+    </div>
+    <!--组织机构内容结束-->
+    <!--新闻发布内容开始-->
+    <div class="scy-bq-main-xwfb" id="one_con2" style="display:none;" onmouseover="qa(2)" onmouseout="sd(2)">
+      <div class="scy-bq-main-xwfb1" id="moe_index_xwbq_gzdt">
+        <div class="scy-bq-main-xwfb1-list">
+          <h2>
+            <a href="./jyb_xwfb/gzdt_gzdt/" target="_blank">工作动态</a>
+          </h2>
+        </div>
+        <div class="scy-bq-main-xwfb1-nr">
+          <ul>
+            
+              
+              
+                <li><span>10-27</span>
+                  <a href="./jyb_xwfb/gzdt_gzdt/moe_1485/201710/t20171027_317684.html" target="_blank" title="教育部直属系统传达学习党的十九大精神大会召开">教育部直属系统传达学习党的十九大精神大会召开</a>
+                </li>
+              
+            
+              
+              
+                <li><span>10-25</span>
+                  <a href="./jyb_xwfb/gzdt_gzdt/s5987/201710/t20171025_317427.html" target="_blank" title="2016年全国教育经费执行情况统计公告发布">2016年全国教育经费执行情况统计公告发布</a>
+                </li>
+              
+            
+              
+              
+                <li><span>10-25</span>
+                  <a href="./jyb_xwfb/gzdt_gzdt/moe_1485/201710/t20171025_317425.html" target="_blank" title="孙尧赴教育部定点扶贫县调研脱贫攻坚工作">孙尧赴教育部定点扶贫县调研脱贫攻坚工作</a>
+                </li>
+              
+            
+              
+              
+                <li><span>10-24</span>
+                  <a href="./jyb_xwfb/gzdt_gzdt/moe_1485/201710/t20171024_317256.html" target="_blank" title="“赤子初心”——首届全国高校思想政治理论课学生艺术作品巡展开幕">“赤子初心”——首届全国高校思想政治理论课学生艺术作品...</a>
+                </li>
+              
+            
+          </ul>
+        </div>
+        <!--图解图说开始-->
+        <div class="scy-bq-main-xwfb2-list" id="moe_index_xwbq_tjts">
+          <ul>
+            <li id="two1" onmouseover="setTab3('two',1,4)" class="tjsp">
+              <a href="./jyb_xwfb/s7600/" target="_blank">图解教育</a>
+            </li>
+            <li id="two2" onmouseover="setTab3('two',2,4)">
+              <a href="./jyb_xwfb/s5984/" target="_blank">图说新闻</a>
+            </li>
+          </ul>
+        </div>
+        <div class="scy-bq-main-xwfb2-tj" id="two_con1">
+          <ul>
+            
+              
+                <li><a href="./jyb_xwfb/s7600/201708/t20170823_311695.html" target="_blank"><img src="./jyb_xwfb/s7600/201708/W020170823406721392676.jpg" width="145" height="94" alt="" border="0" /></a></li>
+              
+                <li><a href="./jyb_xwfb/s7600/201708/t20170817_311317.html" target="_blank"><img src="./jyb_xwfb/s7600/201708/W020170817491914336361.jpg" width="145" height="94" alt="" border="0" /></a></li>
+              
+              
+                <li class="zh"><a href="./jyb_xwfb/s7600/201707/t20170728_310255.html" target="_blank"><img src="./jyb_xwfb/s7600/201707/W020170728289383040427.jpg" width="145" height="94" alt="" border="0" /></a></li>
+              
+            
+          </ul>
+        </div>
+        <div class="scy-bq-main-xwfb2-sp" id="two_con2" style="display:none;">
+          <ul>
+            
+              
+                <li><a href="/jyb_xwfb/s5984/xw_tsxwft/201710/t20171026_317537.html" target="_blank"><img src="./jyb_xwfb/s5984/201710/W020171026344843515413.jpg" width="145" height="94" alt="" border="0" /></a></li>
+              
+                <li><a href="/jyb_xwfb/s5984/xw_tsxwft/201710/t20171012_316125.html" target="_blank"><img src="./jyb_xwfb/s5984/201710/W020171012332379577052.jpg" width="145" height="94" alt="" border="0" /></a></li>
+              
+              
+                <li class="zh"><a href="/jyb_xwfb/s5984/xw_tsxwft/201709/t20170922_315013.html" target="_blank"><img src="./jyb_xwfb/s5984/201709/W020170922327829028234.jpg" width="145" height="94" alt="" border="0" /></a></li>
+              
+            
+          </ul>
+        </div>
+        <!--图解图说结束
+        <div class="scy-bq-main-xwfb1-list" id="moe_index_xwbq_zcjd">
+          <h2>
+            <a href="./jyb_xwfb/s271/" target="_blank">政策解读</a>
+          </h2>
+        </div>-->
+      </div>
+      <div class="scy-bq-main-xwfb2">
+        
+        <!--发布会在线访谈开始-->
+        <div class="scy-bq-main-xwfb2-list">
+          <ul>
+            <li id="three1" onmouseover="setTab4('three',1,3)" class="tjsp">
+              <a href="./jyb_xwfb/xw_fbh/moe_2069/" target="_blank">发布会</a>
+            </li>
+            <li id="three2" onmouseover="setTab4('three',2,3)">
+              <a href="./jyb_xwfb/s271/" target="_blank">政策解读</a>
+            </li>
+            <li id="three3" onmouseover="setTab4('three',3,3)">
+              <a href="./jyb_xwfb/xw_ft/moe_47/ft_2017hg/" target="_blank">访谈</a>
+            </li>
+          </ul>
+        </div>
+        <div class="scy-bq-main-xwfb2-fbh" id="three_con1">
+           <a href="./jyb_xwfb/xw_fbh/moe_2069/xwfbh_2017n/201709/t20170928_315537.html" target="_blank"><img src="./jyb_xwfb/xw_fbh/moe_2069/xwfbh_2017n/201709/W020170928377651008547.jpg" width="96" height="96" border="0" /></a>
+            <div class="scy-bq-main-xwfb2-fbh-nr">
+              <h2><a href="./jyb_xwfb/xw_fbh/moe_2069/xwfbh_2017n/201709/t20170928_315537.html" target="_blank">介绍从数据看党的十八大以来我国教育改革发展有关情况</a></h2>
+              <p><a href="./jyb_xwfb/xw_fbh/moe_2069/xwfbh_2017n/201709/t20170928_315537.html" target="_blank">　　2017年9月28日10:00，教育部召开发布会，介绍从数据看党的十八大以来我国教育改革发展有关情况。</a></p>
+            </div>
+          
+          <br class="clear" />
+        </div>
+        <div class="scy-bq-main-xwfb1-nr" id="three_con2" style="display:none;">
+          <ul>
+            
+              <li><span>09-30</span>
+                <a href="./jyb_xwfb/s271/201709/t20170930_315838.html" target="_blank" title="教育部有关部门负责人就《普通高等学校辅导员队伍建设规定》答记者问">教育部有关部门负责人就《普通高等学校辅导员队伍建设规...</a>
+              </li>
+            
+              <li><span>09-21</span>
+                <a href="./jyb_xwfb/s271/201709/t20170921_314928.html" target="_blank" title="教育部、财政部、国家发展改革委有关负责人就“双一流”建设有关情况答记者问">教育部、财政部、国家发展改革委有关负责人就“双一流”...</a>
+              </li>
+            
+              <li><span>08-29</span>
+                <a href="./jyb_xwfb/s271/201708/t20170829_312607.html" target="_blank" title="教育部教师工作司负责人就《教育部办公厅 财政部办公厅关于做好职业院校教师素质提高计划2017年度项目组织实施工作的通知》答记者问">教育部教师工作司负责人就《教育部办公厅 财政部办公厅关...</a>
+              </li>
+            
+              <li><span>08-28</span>
+                <a href="./jyb_xwfb/s271/201708/t20170828_312487.html" target="_blank" title="教育部教材局负责人就义务教育三科教材统编工作答记者问">教育部教材局负责人就义务教育三科教材统编工作答记者问</a>
+              </li>
+            
+          </ul>
+        </div>
+        <div class="scy-bq-main-xwfb2-zxft" id="three_con3" style="display:none;">
+           <a href="./jyb_xwfb/xw_ft/moe_47/ft_2017hg/201707/t20170717_309442.html" target="_blank" style="float:left;"><img src="./jyb_xwfb/xw_ft/moe_47/ft_2017hg/201707/W020170717391058509322.jpg" width="96" height="96" border="0" /></a>
+            <div class="scy-bq-main-xwfb2-fbh-nr">
+              <h2><a href="./jyb_xwfb/xw_ft/moe_47/ft_2017hg/201707/t20170717_309442.html" target="_blank">国家资助助飞翔 完成学业“三不愁”</a></h2>
+              <p><a href="./jyb_xwfb/xw_ft/moe_47/ft_2017hg/201707/t20170717_309442.html" target="_blank">　　目前，我国已形成以政府主导、学校和社会各方参与的多元化社会资助政策体系，实现了“不让一个学生因为家庭经济困难而失学”的工作目标。</a></p>
+            </div>
+          
+          <br class="clear" />
+        </div>
+        <!--发布会在线访谈结束-->
+        <!--专题视频开始-->
+        <div class="scy-bq-main-xwfb2-list" id="moe_index_xwbq_ztsp">
+          <ul>
+            <li class="tjsp" id="jyztzl">
+              <a href="./jyb_xwfb/xw_zt/moe_357/" target="_blank">教育专题</a>&nbsp;|&nbsp;<a href="./jyb_xwfb/moe_2082/" target="_blank">专栏</a>
+            </li>
+            <li id="jysp">
+              <a href="./jyb_xwfb/xw_sp/" target="_blank">视频</a>
+            </li>
+          </ul>
+        </div>
+        <div class="scy-bq-main-xwfb2-tj ztsp_content" id="xwbq_ztsp_zt">
+          <ul>
+            
+              
+                <li><a href="http://www.moe.gov.cn/jyb_xwfb/xw_zt/moe_357/jyzt_2017nztzl/2017_zt11/" target="_blank"><img src="./jyb_xwfb/xw_zt/xwfb_ztbl/201709/W020171018321393874388.jpg" width="145" height="94" alt="" border="0" /></a></li>
+              
+                <li><a href="http://www.moe.gov.cn/jyb_xwfb/xw_zt/moe_357/jyzt_2017nztzl/2017_zt12/" target="_blank"><img src="./jyb_xwfb/xw_zt/xwfb_ztbl/201710/W020171016586627073367.jpg" width="145" height="94" alt="" border="0" /></a></li>
+              
+              
+                <li class="zh"><a href="http://www.moe.gov.cn/jyb_xwfb/xw_zt/moe_357/jyzt_2017nztzl/2017_zt10/" target="_blank"><img src="./jyb_xwfb/xw_zt/xwfb_ztbl/201709/W020170915376869043386.jpg" width="145" height="94" alt="" border="0" /></a></li>
+              
+            
+          </ul>
+        </div>
+        <div class="scy-bq-main-xwfb2-sp ztsp_content" id="xwbq_ztsp_sp" style="display:none;">
+          <ul>
+            
+              
+                <li><a href="http://m.news.cntv.cn/2017/03/07/VIDEKiYe3vtDGjkETlh6LhJx170307.shtml" target="_blank"><img src="./jyb_xwfb/xw_sp/xwfb_spbl/201703/W020170307579577352071.jpg" width="145" height="94" alt="" border="0" /></a></li>
+              
+                <li><a href="http://tv.people.com.cn/n1/2017/0228/c14644-29113210.html" target="_blank"><img src="./jyb_xwfb/xw_sp/xwfb_spbl/201703/W020170302501971424553.jpg" width="145" height="94" alt="" border="0" /></a></li>
+              
+              
+                <li class="zh"><a href="http://tv.cctv.com/2016/09/07/VIDEvMzOehFneIa16vXjeStr160907.shtml" target="_blank"><img src="./jyb_xwfb/xw_sp/xwfb_spbl/201609/W020160908382000312273.jpg" width="145" height="94" alt="" border="0" /></a></li>
+              
+            
+          </ul>
+        </div>
+        <!--专题视频结束-->
+      </div>
+      <br class="clear" />
+    </div>
+    <!--新闻发布内容结束-->
+    <!--信息公开内容开始-->
+    <div class="scy-bq-main-xxgk" id="one_con3" style="display:none;" onmouseover="qa(3)" onmouseout="sd(3)">
+      <div class="scy-bq-main-xxgk-left" id="moe_index_gkbq_xxgk">
+        <div class="scy-bq-main-xxgk-left-list">
+          <h2>
+            <a href="./jyb_xxgk/" target="_blank">信息公开</a>
+          </h2>
+        </div>
+        <div class="scy-bq-main-xxgk-left-nr">
+          <div class="scy-bq-main-xxgk-left-nrt">
+            <ul>
+              <li><a class="gkzn" href="./jyb_xxgk/moe_xxgk/xxgk_left/moe_guide/" target="_blank">信息公开指南</a></li>
+              <li class="zjkx" ><a class="gkgd" href="./jyb_xxgk/moe_xxgk/xxgk_left/moe_rule_more/"  target="_blank">信息公开规定</a></li>
+              <li><a href="./jyb_xxgk/moe_xxgk/xxgk_left/info_category_query/" class="gkml" target="_blank">信息公开目录</a></li>
+              <li><a href="/jyb_xxgk/moe_xxgk/xxgk_left/s8402/" target="_blank" class="sqgk">依申请公开</a></li>
+            </ul>
+          </div>
+          <div class="scy-bq-main-xxgk-left-nrb">
+            <ul>
+              <li><a href="./jyb_xxgk/moe_xxgk/xxgk_left/year_more/xxgkndbg_jybxxgkndbg/"  target="_blank">教育部<br />
+                信息公开年度报告</a></li>
+              <li><a href="./jyb_xxgk/moe_xxgk/xxgk_left/year_more/xxgkndbg_sjjyxzbmxxgkndbg/"  target="_blank">省级教育行政部门<br />
+                信息公开年度报告</a></li>
+              <li><a href="./jyb_xxgk/moe_xxgk/xxgk_left/year_more/xxgkndbg_jybzsgxxxgkndbg/"  target="_blank">教育部直属高校<br />
+                信息公开年度报告</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="scy-bq-main-xxgk-right" id="moe_index_gkbq_zywj">
+        <div class="scy-bq-main-xxgk-right-list">
+          <ul>
+            <li id="four1" onmouseover="setTab5('four',1,2)" class="zyzc"><a href="http://www.moe.gov.cn/was5/web/search?channelid=287123" target="_blank">重要文件</a></li>
+                      </ul>
+        </div>
+        <div class="scy-bq-main-xxgk-right-nr1" id="four_con1">
+          <ul>
+            
+              
+              
+                <li><span>10-25</span>
+                  <a href="/srcsite/A05/s3040/201710/t20171025_317429.html" target="_blank" title="关于2016年全国教育经费执行情况统计公告">关于2016年全国教育经费执行情况统计公告</a>
+                </li>
+              
+            
+              
+              
+                <li><span>10-23</span>
+                  <a href="/srcsite/A01/s7048/201710/t20171023_317200.html" target="_blank" title="关于全面落实高校信息公开清单做好高校信息公开年度报告工作的通知">关于全面落实高校信息公开清单做好高校信息公开年度报...</a>
+                </li>
+              
+            
+              
+              
+                <li><span>10-17</span>
+                  <a href="/srcsite/A01/s7048/201710/t20171017_316600.html" target="_blank" title="关于印发《教育部信访工作责任制实施细则》的通知">关于印发《教育部信访工作责任制实施细则》的通知</a>
+                </li>
+              
+            
+              
+              
+                <li><span>09-30</span>
+                  <a href="/srcsite/A02/s5911/moe_621/201709/t20170929_315781.html" target="_blank" title="《普通高等学校辅导员队伍建设规定》">《普通高等学校辅导员队伍建设规定》</a>
+                </li>
+              
+            
+              
+              
+                <li><span>09-27</span>
+                  <a href="/srcsite/A15/s7063/201709/t20170927_315503.html" target="_blank" title="关于学习贯彻习近平总书记给南开大学新入伍大学生重要回信精神的通知">关于学习贯彻习近平总书记给南开大学新入伍大学生重要...</a>
+                </li>
+              
+            
+              
+              
+                <li><span>09-26</span>
+                  <a href="/srcsite/A13/s7061/201709/t20170926_315339.html" target="_blank" title="关于印发《高等学校马克思主义学院建设标准（2017年本）》的通知">关于印发《高等学校马克思主义学院建设标准(2017年本...</a>
+                </li>
+              
+            
+              
+              
+                <li><span>09-19</span>
+                  <a href="/srcsite/A07/zcs_zhgg/201709/t20170919_314758.html" target="_blank" title="关于印发《职业教育东西协作行动计划滇西实施方案（2017-2020年）》的通知">关于印发《职业教育东西协作行动计划滇西实施方案(201...</a>
+                </li>
+              
+            
+              
+              
+                <li><span>09-11</span>
+                  <a href="/srcsite/A07/zcs_zhgg/201709/t20170911_314171.html" target="_blank" title="关于进一步推进职业教育信息化发展的指导意见">关于进一步推进职业教育信息化发展的指导意见</a>
+                </li>
+              
+            
+          </ul>
+        </div>
+           </div>
+      <br class="clear" />
+    </div>
+    <!--信息公开内容结束-->
+    <!--政务服务内容开始-->
+    <div class="scy-bq-main-fw" id="one_con4" style="display:none;" onmouseover="qa(4)" onmouseout="sd(4)">
+     <div class="scy-bq-main-fw-left" id="moe_index_fwbq_xzsp">
+           <div class="scy-bq-main-fw-left-list">
+          <h2>
+            <a href="./jyb_zwfw/fwxx_xzsp/" target="_blank">行政许可</a>
+          </h2>
+        </div>
+      <div class="scy-bq-main-fw-left_nr">
+     <a href="/jyb_zwfw/fwxx_xzsp/" target="_blank"><img src="./images/jyb_index_xzsp_zxsb.jpg" style="padding: 15px 10px 0px;" /></a>
+     <a href="/jyb_zwfw/fwxx_xzsp/xzsp_fwgf/201509/t20150922_209803.html" target="_blank"><img src="./images/index_fw_fwgf_news.png" style="padding: 10px 10px 0px;" /></a>
+     </div>
+     </div>
+      <div class="scy-bq-main-fw-middle" id="moe_index_fwbq_zhfw">
+        <div class="scy-bq-main-fw-middle-list">
+          <h2 class="fwShow">
+            <a href="./jyb_zwfw/zwfw_fwxx/" target="_blank">综合服务</a>
+          </h2>
+          <h2>
+            <a href="./jyb_zwfw/zwfw_gdfw/" target="_blank">各地服务</a>
+          </h2>
+        </div>
+        <div class="scy-bq-main-fw-middle-nr">
+          <div class="moe_index_fwbq_fw_cont">
+                
+                  <div class=TRS_Editor><ul id="moe_index_fwbq_zhfw_list">
+    <li><a target="_blank" href="http://www.moe.gov.cn/jyb_zwfw/zwfw_fwxx/zhfu_ky/201710/t20171010_316017.html">研招统考网报10日开始 6步走，让你报名不犯愁！</a></li>
+    <li><a target="_blank" href="http://www.moe.gov.cn/jyb_zwfw/zwfw_fwxx/zhfu_gk/201710/t20171010_315982.html">十月高考关注热点</a></li>
+    <li><a target="_blank" href="http://www.moe.gov.cn/jyb_zwfw/zwfw_fwxx/zhfu_qt/201709/t20170912_314231.html">9月中旬申请认定教师资格 5类注意事项早知道</a></li>
+    <li><a target="_blank" href="http://www.moe.gov.cn/jyb_zwfw/zwfw_fwxx/zhfu_gk/201709/t20170904_313105.html">九月高考关注热点</a></li>
+    <li><a target="_blank" href="http://www.moe.gov.cn/jyb_zwfw/zwfw_fwxx/zhfu_rx/201709/t20170901_312892.html">开学啦 大学新生必看！最全入学攻略在这里</a></li>
+    <li><a target="_blank" href="http://www.moe.gov.cn/jyb_zwfw/zwfw_ytkd/201708/t20170831_312812.html">2017年下半年中小学教师资格考试注意事项</a></li>
+    <li><a target="_blank" href="http://www.moe.gov.cn/jyb_zwfw/zwfw_fwxx/zhfu_qt/201708/t20170818_311363.html">家长和孩子们看过来 中小学开学全攻略</a></li>
+    <li><a target="_blank" href="http://www.moe.gov.cn/jyb_zwfw/zwfw_ytkd/201708/t20170815_311134.html">游学六大注意事项 让同学们“游”得好也“学”得好</a></li>
+    </ul>
+<div>&nbsp;</div></div>
+                
+          </div>
+          <ul class="moe_index_fwbq_fw_cont">
+            
+            <li><a href="./jyb_zwfw/zwfw_gdfw/gdfw_jxs/201706/t20170606_306465.html" target="_blank" title="[江西] 2017年高考问与答">[江西] 2017年高考问与答</a></li>
+            
+            <li><a href="./jyb_zwfw/zwfw_gdfw/gdfw_jxs/201710/t20171026_317595.html" target="_blank" title="[江西] 2018年普通高考报名问答">[江西] 2018年普通高考报名问答</a></li>
+            
+            <li><a href="./jyb_zwfw/zwfw_gdfw/gdfw_gss/201710/t20171026_317502.html" target="_blank" title="[甘肃] 2018年高考11月1日开始报名">[甘肃] 2018年高考11月1日开始报名</a></li>
+            
+            <li><a href="./jyb_zwfw/zwfw_gdfw/gdfw_scs/201710/t20171026_317504.html" target="_blank" title="[四川] 2018年普通高考网上报名时间11月1日-6日">[四川] 2018年普通高考网上报名时间11月1日-6日</a></li>
+            
+            <li><a href="./jyb_zwfw/zwfw_gdfw/gdfw_cqs/201710/t20171025_317407.html" target="_blank" title="[重庆] 2018年普通高校艺术类招生专业考试下月中旬报名">[重庆] 2018年普通高校艺术类招生专业考试下月中旬报名</a></li>
+            
+            <li><a href="./jyb_zwfw/zwfw_gdfw/gdfw_fjs/201710/t20171024_317265.html" target="_blank" title="[福建] 2018年普通高考11月9日开始报名">[福建] 2018年普通高考11月9日开始报名</a></li>
+            
+            <li><a href="./jyb_zwfw/zwfw_gdfw/gdfw_gx/201710/t20171019_316823.html" target="_blank" title="[广西] 普通高中学业水平考试开始报名">[广西] 普通高中学业水平考试开始报名</a></li>
+            
+            <li><a href="./jyb_zwfw/zwfw_gdfw/gdfw_lns/201710/t20171019_316822.html" target="_blank" title="[辽宁] 2018年普通高考报名即将开始">[辽宁] 2018年普通高考报名即将开始</a></li>
+            
+          </ul>
+        </div>
+      </div>
+      <div class="scy-bq-main-fw-right" id="moe_index_fwbq_bsfw">
+        <div class="scy-bq-main-fw-right-list">
+          <h2>
+            <a href="./jyb_zwfw/zwfw_bsfw/" target="_blank">办事服务</a>
+          </h2>
+        </div>
+        <div class="scy-bq-main-fw-right-nr">
+          
+            <div class=TRS_Editor><div class="scy-bq-main-zwfw-right-nr-top">
+<ul>
+    <li><a class="rz" target="_blank" href="/jyb_zwfw/zwfw_bsfw/bsfw_rz/">认证</a></li>
+    <li><a class="bl" target="_blank" href="/jyb_zwfw/zwfw_bsfw/bsfw_bl/">办理</a></li>
+</ul>
+</div>
+<div class="scy-bq-main-zwfw-right-nr-bttom">
+<ul class="dy">
+    <li><a target="_blank" href="/jump.html?url=http://www.chsi.com.cn/xlcx/bgcx.jsp#学籍与学历?cata=2147438795">学籍与学历</a></li>
+    <li><a target="_blank" href="/jump.html?url=http://www.chsi.com.cn/wssq/#学历与成绩?cata=2147438795">学历与成绩</a></li>
+    <li><a target="_blank" href="/jump.html?url=http://www.chinadegrees.cn/cn/#学位与文凭?cata=2147438795">学位与文凭</a></li>
+    <li><a target="_blank" href="/jump.html?url=http://www.cscse.edu.cn/publish/portal0/tab82/default.htm#国外文凭?cata=2147438795">国外文凭</a></li>
+    <li><a target="_blank" href="/jump.html?url=http://renzheng.cscse.edu.cn/#中外合作办学?cata=2147438795">中外合作办学</a></li>
+    <li><a target="_blank" href="/jump.html?url=http://renzheng.cscse.edu.cn/#国（境）外学历?cata=2147438795">国（境）外学历</a></li>
+</ul>
+<!--<ul class="de">
+    <li><a target="_blank" href="/jump.html?url=http://www.chsi.com.cn/xlcx/#学历?cata=2147438795">学历</a></li>
+    <li><a target="_blank" href="/jump.html?url=https://account.chsi.com.cn/passport/login?service=http%3A%2F%2Fmy.chsi.com.cn%2Farchive%2Fj_spring_cas_security_check#学籍?cata=2147438795">学籍</a></li>
+    <li><a target="_blank" href="/jump.html?url=http://www.chinadegrees.com.cn/#学位?cata=2147438795">学位</a></li>
+    <li><a target="_blank" href="/jump.html?url=http://www.ouchn.edu.cn/#开放大学课程?cata=2147438795">开放大学课程</a></li>
+    <li><a target="_blank" href="/jump.html?url=http://pets.neea.edu.cn/html1/folder/1508/211-1.htm?sid=280?op=doQueryCond&amp;sid=280&amp;pram=certi#全国英语等级考试?cata=2147438795">全国英语等级考试</a></li>
+    <li><a target="_blank" href="/jump.html?url=http://ncre.neea.edu.cn/html1/folder/1508/211-1.htm?sid=300?op=doQueryCond&amp;sid=300&amp;pram=certi#计算机等级考试?cata=2147438795">计算机等级考试</a></li>
+    <li><a target="_blank" href="/jump.html?url=http://ntce.neea.edu.cn/html1/folder/1508/211-1.htm?sid=660?op=doQueryCond&amp;sid=660&amp;pram=certi#中小学教师资格考试?cata=2147438795">中小学教师资格考试</a></li>
+    <li><a target="_blank" href="/jump.html?url=http://article.isay365.com/chafen.html#普通话分数?cata=2147438795">普通话分数</a></li>
+    <li><a target="_blank" href="/jump.html?url=http://www.jsj.edu.cn/api/index/sortlist2/2-12110#留学预警?cata=2147438795">留学预警</a></li>
+    <li><a target="_blank" href="/jump.html?url=http://www.jsj.edu.cn/api/index/mdDesc/lxzj/7#留学中介?cata=2147438795">留学中介</a></li>
+</ul>-->
+<ul class="ds">
+    <li><a target="_blank" href="/jump.html?url=http://apply.csc.edu.cn/csc/main/person/login/index.jsf#国家公派留学?cata=2147438795">国家公派留学</a></li>
+    <li><a target="_blank" href="/jump.html?url=http://www.cscse.edu.cn/publish/portal0/tab92/default.htm#留学人员档案?cata=2147438795">留学人员档案</a></li>
+    <li><a target="_blank" href="/jump.html?url=http://www.cscse.edu.cn/publish/portal0/tab89/default.htm#回国就业落户?cata=2147438795">回国就业落户</a></li>
+    <li><a target="_blank" href="/jump.html?url=http://www.neea.edu.cn/html1/folder/16103/1271-1.htm#海外考试报名?cata=2147438795">海外考试报名</a></li>
+    <li><a target="_blank" href="/jump.html?url=http://www.cedf.org.cn/cedf/other/200608/20060829/572497.html#申请基金会资?cata=2147438795">申请基金会资</a></li>
+    <li><a target="_blank" href="/jump.html?url=http://www.cedf.org.cn/zxjz/#向基金会捐赠?cata=2147438795">向基金会捐赠</a></li>
+</ul>
+</div></div>
+          
+        </div>
+      </div>
+      <br class="clear" />
+    </div>
+    <!--政务服务内容结束-->
+    <!--回应关切内容开始-->
+    <div class="scy-bq-main-hygq" id="one_con5" style="display:none;" onmouseover="qa(5)" onmouseout="sd(5)">
+      <div class="scy-bq-main-hygq1" id="moe_index_hdbq_zx"> 
+	  <img src="./jyb_hygq/images/P020150623334884497972.png" width="235" height="219" /> 
+	  <span><a href="./jyb_hygq/hygq_bzxx/bzxx_wyly/" target="_blank"><img src="./images/bq_scy_jyb_wdt_03.png" width="75" height="66" /></a></span>
+	   <span class="zjy"><a href="./jyb_hygq/hygq_zczx/zczx_wywzc/201505/t20150520_184518.html" target="_blank"><img src="./images/bq_scy_jyb_wzc_03.png" width="76" height="66" /></a></span>
+	    <span><a href="./jyb_hygq/hygq_tsjb/" target="_blank"><img src="./images/qb_scy_jyb_tsjb_03.png" width="75" height="66" /></a></span> 
+		</div>
+      <div class="scy-bq-main-hygq2" id="moe_index_hdbq_lxhs">
+        <div class="scy-bq-main-hygq2-list">
+          <h2>
+            <a href="./jyb_hygq/hygq_lxhs/" target="_blank">来信回声</a>
+          </h2>
+        </div>
+        <div class="scy-bq-main-hygq2-nr">
+          <ul>
+            
+              <li><span>09-25</span>
+                <a href="./jyb_hygq/hygq_zczx/moe_1346/s6859/201709/t20170925_315275.html" target="_blank" title="教育部还是中国成人教育协会主管单位么？">教育部还是中国成人教育协会主管单位么？</a>
+              </li>
+            
+              <li><span>09-06</span>
+                <a href="./jyb_hygq/hygq_zczx/moe_1346/moe_1352/201709/t20170906_313598.html" target="_blank" title="教育部政府门户网站哪里可以下载中小学理科仪器装备标准？">教育部政府门户网站哪里可以下载中小学理科仪器装...</a>
+              </li>
+            
+              <li><span>08-24</span>
+                <a href="./jyb_hygq/hygq_zczx/moe_1346/moe_1356/201708/t20170824_311901.html" target="_blank" title="民办高校专任教师聘入中学教师队伍，教龄怎么算？">民办高校专任教师聘入中学教师队伍，教龄怎么算？</a>
+              </li>
+            
+              <li><span>08-21</span>
+                <a href="./jyb_hygq/hygq_zczx/moe_1346/moe_1354/201708/t20170821_311504.html" target="_blank" title="本科专业“工业与民用建筑”是否更名为“土木工程（建筑工程）”？">本科专业“工业与民用建筑”是否更名为“土木工程...</a>
+              </li>
+            
+              <li><span>07-21</span>
+                <a href="./jyb_hygq/hygq_zczx/moe_1346/moe_1352/201707/t20170721_309836.html" target="_blank" title="关于子女延缓入学的咨询">关于子女延缓入学的咨询</a>
+              </li>
+            
+
+          </ul>
+        </div>
+        <div class="scy-bq-main-hygq2-nrx" id="moe_index_hdbq_zqyj">
+          <div class="scy-bq-main-hygq2-list">
+            <h2>
+              <a href="./jyb_xwfb/s248/" target="_blank">征求意见</a>
+            </h2>
+          </div>
+          <div class="scy-bq-main-hygq2-nr">
+            <ul>
+              
+                <li><span>09-19</span><a href="./jyb_xwfb/s248/201609/t20160919_281475.html" target="_blank" title="[已结束]关于对《人民教师誓词（征求意见稿）》公开征求意见的公告">[已结束]关于对《人民教师誓词(征求意见稿)》公...</a></li>
+              
+                <li><span>06-06</span><a href="./jyb_xwfb/s248/201606/t20160606_248272.html" target="_blank" title="[已结束]《普通话异读词审音表（修订稿）》征求意见公告">[已结束]《普通话异读词审音表(修订稿)》征求意...</a></li>
+              
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="scy-bq-main-hygq3">
+        <div class="scy-bq-main-hygq3-list">
+          <h2 id="moe_index_hdbq_lxxd"><a href="./jyb_hygq/hygq_bzxx/hygq_lyxd/" target="_blank">来信选登</a></h2>
+        </div>
+        <div class="scy-bq-main-hygq3-nr">
+          <p style="text-indent:2em;">
+            
+              <a href="/jyb_hygq/hygq_bzxx/hygq_lyxd/" target="_blank"><STRONG>孙**：</STRONG>我留意到有些校园内种植多年的树木，因为各种原因被砍伐。可能整洁也便于学生活动了，但还是很可惜。<br />
+<STRONG>　　姚：</STRONG>我管理的校内各种网络教育平台，大多存在学生使用频率低，忘记账号的情况。建议适时以学籍号为账号，便于学生使用。</a>
+            
+          </p>
+        </div>
+      </div>
+      <br class="clear" />
+    </div>
+    <!--回应关切内容结束-->
+    <!--数据资料内容开始-->
+    <div class="scy-bq-main-sjzl" id="one_con6" style="display:none;" onmouseover="qa(6)" onmouseout="sd(6)">
+      <div class="banner_sjzl_left">
+        <div class="banner_sjzl">
+          <div class="scy_banner_sjzl">
+            <ul id="banner_sjzl">
+              
+                <li style="display:block;"> <a href="/srcsite/A05/s3040/201710/t20171025_317429.html" target="_blank"> <img src="./jyb_sjzl/sjzl_tpxwbq/201710/W020171027295252457084.jpg" width="338" height="211" alt="" border="0" / /></a>
+                  <P>
+                    <a href="/srcsite/A05/s3040/201710/t20171025_317429.html" target="_blank">2016年全国教育经费执行情况统计公告</a>
+                  </P>
+                </li>
+              
+            </ul>
+          </div>
+          <div class="scy_ctrl" id="ctrl_sjzl">
+            <ul>
+				<script type="text/javascript">
+					var scroll_pics_sjzl = document.getElementById("banner_sjzl").getElementsByTagName("li");
+					pics_sjzl = scroll_pics_sjzl.length;
+					if(pics_sjzl>4)pics_sjzl=4;
+					document.getElementById("ctrl_sjzl").style.width=pics_sjzl*22+"px";
+					if(pics_sjzl>1)
+					{
+						document.write('<li onclick="ghSjzl(0)" class="synow"></li>');
+						for(var i = 1;i<pics_sjzl;i++)
+						{
+							document.write('<li onclick="ghSjzl('+i+')"></li>');
+						}
+					}
+				</script>
+            </ul>
+          </div>
+        </div>
+        <div class="scy-bq-main-sjzl-left">
+          <ul id="moe_index_wxbq_tw">
+            
+              <li>
+                <a href="/jyb_xwfb/s7600/201703/t20170330_301580.html" target="_blank" title="图解《2016年教育部政府信息公开工作年度报告》">图解《2016年教育部政府信息公开工作年...</a>
+              </li>
+            
+              <li>
+                <a href="/srcsite/A05/s3040/201611/t20161110_288422.html" target="_blank" title="2015年全国教育经费执行情况统计公告">2015年全国教育经费执行情况统计公告</a>
+              </li>
+            
+              <li>
+                <a href="/s78/A05/moe_702/201609/t20160901_277355.html" target="_blank" title="2015年中国学生资助发展报告">2015年中国学生资助发展报告</a>
+              </li>
+            
+          </ul>
+        </div>
+      </div>
+      <div class="scy-bq-main-sjzl-center" id="moe_index_wxbq_yw">
+        
+          <div class=TRS_Editor><h2><a target="_blank" href="/srcsite/A01/s7048/201007/t20100729_171904.html">国家中长期教育改革和发展规划纲要<br />
+（2010-2020年）</a></h2>
+<p><a target="_blank" href="/srcsite/A01/s7048/201007/t20100729_171904.html" style="color:#4b4b4b;">根据党的十七大关于“优先发展教育，建设人力资源强国”的战略部署，为促进教育事业科学发展，全面提高国民素质，加快社会主义现代化进程，制定本《教育规划纲要》。</a></p>
+<ul>
+    <li><a target="_blank" href="/srcsite/A01/s7048/201007/t20100729_171904.html">总体战略</a></li>
+    <li><a target="_blank" href="/srcsite/A01/s7048/201007/t20100729_171904.html">指导思想</a></li>
+    <li><a target="_blank" href="/srcsite/A01/s7048/201007/t20100729_171904.html">工作方针</a></li>
+</ul></div>
+        
+        <span class="jygk"><a href="./jyb_sjzl/s5990/201612/t20161219_292432.html" target="_blank"><img src="./images/bq_scy_jyb_jygk_03.png" width="141" height="40" /></span> <span><a href="./jyb_sjzl/s5990/201612/t20161219_292430.html" target="_blank"><img src="./images/bq_scy_jyb_yywzgk_03.png" width="141" height="40" /></span> </div>
+      <div class="scy-bq-main-sjzl-right" id="moe_index_wxbq_sjzl">
+        
+        
+          <h3>
+            <a href="/jyb_sjzl/sjzl_fztjgb/201707/t20170710_309042.html" target="_blank" title="2016年全国教育事业发展统计公报">2016年全国教育事业发展统计公报</a>
+          </h3>
+          <p>
+            通过统计数据，系统回顾了学前教育、义务教育、特殊教育、高中阶段教育、高等教育、成人培训与扫盲教育、民办教育七个方面的教育事业发展新进展。
+          </p>
+        
+		  
+<div class="scy-bq-main-sjzl-right-zj">
+          <h3>
+          <a href="/srcsite/A03/moe_634/201706/t20170614_306900.html" target="_blank" title="全国高等学校名单">全国高等学校名单</a>
+          </h3>
+          <p>
+            截至2017年5月31日，全国高等学校共计2914所。
+          </p>
+</div>
+		
+         
+		<h3>
+          <a href="/jyb_xxgk/moe_1777/moe_1778/201701/t20170119_295319.html" target="_blank" title="国务院印发国家教育事业发展“十三五”规划">国务院印发国家教育事业发展“十三五”规划</a>
+          </h3>
+          <p>
+            “十三五”时期，对实现教育现代化提出了前所未有的新任务、新要求。
+          </p>
+        
+		
+        
+      </div>
+      <!--数据资料内容结束-->
+	  </div>
+    </div>
+    <!--导航结束-->
+    <!--焦点图开始-->
+	<div id="jyb_index_focus">
+		<a href="javascript:;" class="arrLeft"></a>
+		<a href="javascript:;" class="arrRight"></a>
+		<div class="focusBtn">
+		
+			<a class="" href="javascript:;"></a>
+		
+			<a class="" href="javascript:;"></a>
+		
+		</div>
+		<ul class="jyb_index_focusImg">
+		
+			<li style="background:url(./jyb_sy/sy_jdt/201710/W020171026346452451097.jpg) no-repeat scroll left top;">
+				<div class="focusL"><a href="/jyb_xwfb/s5984/xw_tsxwft/201710/t20171026_317537.html" target="_blank"><img src="" /></a></div>
+				<div class="focusR"><a href="/jyb_xwfb/s5984/xw_tsxwft/201710/t20171026_317537.html" target="_blank"><img src="" /></a></div>
+				<a href="/jyb_xwfb/s5984/xw_tsxwft/201710/t20171026_317537.html" target="_blank"></a>
+			</li>
+		
+			<li style="background:url(./jyb_sy/sy_jdt/201603/W020160328534730105370.jpg) no-repeat scroll left top;">
+				<div class="focusL"><a href="http://www.moe.gov.cn/jyb_xwfb/xw_zt/moe_357/s7865/s8417/" target="_blank"><img src="" /></a></div>
+				<div class="focusR"><a href="http://www.moe.gov.cn/jyb_xwfb/xw_zt/moe_357/s7865/s8417/" target="_blank"><img src="" /></a></div>
+				<a href="http://www.moe.gov.cn/jyb_xwfb/xw_zt/moe_357/s7865/s8417/" target="_blank"></a>
+			</li>
+		
+		</ul>
+	</div>
+    <!--焦点图结束-->
+    <!--内容区域开始-->
+    <div class="scy_bottom">
+      <div class="scy_bottom-left">
+         <div class="scy_bottom-left-list index_moe_gwyxw">
+          <ul>
+            <li id="eight1" onmouseover="setTab('eight',1,3)"><a class="gwyxw" href="./jump.html?url=http://www.gov.cn/pushinfo/v150203/#中国政府网?cata=gov" target="_blank">国务院信息</a></li>
+            <li id="eight2" onmouseover="setTab('eight',2,3)" class="xxyw"><a href="./jyb_sy/sy_jyyw/ " target="_blank">教育要闻</a></li>
+            <li id="eight3" onmouseover="setTab('eight',3,3)"><a href="./jyb_xwfb/s6192/" target="_blank">战线联播</a>
+            </li>
+          </ul>
+        </div>
+        <div class="scy_bottom-left-nr1" id="eight_con1" style="display:none;height:160px; overflow:hidden;">
+          <ul id="testUl"></ul>
+        </div>
+        <div class="scy_bottom-center-nr" id="eight_con2">
+          
+            <div class=TRS_Editor><ul>
+    <li><span>10-27</span>
+    <div><a target="_blank" href="http://www.moe.gov.cn/jyb_xwfb/gzdt_gzdt/moe_1485/201710/t20171027_317684.html">教育部直属系统传达学习党的十九大精神大会召开</a></div>
+    </li>
+
+    <li><span>10-27</span>
+    <div><a target="_blank" href="http://www.moe.gov.cn/jyb_xwfb/moe_176/201710/t20171027_317625.html">刘延东：深入学习贯彻习近平总书记系列重要讲话精神推动学校体育工作再上新水平</a></div>
+    </li>
+    <li><span>10-25</span>
+    <div><a target="_blank" href="http://www.moe.gov.cn/jyb_xwfb/gzdt_gzdt/s5987/201710/t20171025_317427.html">2016年全国教育经费执行情况统计公告</a>丨<a target="_blank" href="http://www.moe.gov.cn/srcsite/A05/s3040/201710/t20171025_317429.html">文件</a></div>
+    </li>
+    <li><span>10-23</span>
+    <div><a target="_blank" href="http://www.moe.gov.cn/jyb_xwfb/gzdt_gzdt/moe_1485/201710/t20171023_317106.html">十九大记者会 陈宝生就“教育民生”答记者问</a><br />
+    <a target="_blank" href="http://mp.weixin.qq.com/s/zfWOl4Fs9v1XC4DLPsxfgg">10大"金句"</a>丨<a target="_blank" href="https://mp.weixin.qq.com/s/I262WbJDnOPZsgf3rYLlQQ">送出4个"红包"、啃下3个"硬骨头"</a></div>
+    </li>
+</ul></div>
+          
+        </div>
+        <div class="scy_bottom-left-nr1" id="eight_con3" style="display:none;">
+          <ul>
+            
+              <li><span>
+                10-27
+                </span>
+                <a href="./jyb_xwfb/s6192/s222/moe_1769/201710/t20171027_317626.html" target="_blank" title="青岛市以校园足球推动学校体育改革发展">青岛市以校园足球推动学校体育改革发展</a>
+              </li>
+            
+              <li><span>
+                10-27
+                </span>
+                <a href="./jyb_xwfb/s6192/s133/s166/201710/t20171027_317624.html" target="_blank" title="上海交通大学强化教师教书育人导向">上海交通大学强化教师教书育人导向</a>
+              </li>
+            
+              <li><span>
+                10-26
+                </span>
+                <a href="./jyb_xwfb/s6192/s222/moe_1750/201710/t20171026_317536.html" target="_blank" title="湖南省岳阳市加强教育阳光服务平台建设">湖南省岳阳市加强教育阳光服务平台建设</a>
+              </li>
+            
+              <li><span>
+                10-26
+                </span>
+                <a href="./jyb_xwfb/s6192/s133/s193/201710/t20171026_317535.html" target="_blank" title="厦门大学深挖历史文化资源推进资助育人">厦门大学深挖历史文化资源推进资助育人</a>
+              </li>
+            
+              <li><span>
+                10-25
+                </span>
+                <a href="./jyb_xwfb/s6192/s222/moe_1748/201710/t20171025_317414.html" target="_blank" title="河南省加强“双师型”教师培养培训">河南省加强“双师型”教师培养培训</a>
+              </li>
+            
+              <li><span>
+                10-25
+                </span>
+                <a href="./jyb_xwfb/s6192/s133/s185/201710/t20171025_317413.html" target="_blank" title="江南大学积极推进社会实践育人">江南大学积极推进社会实践育人</a>
+              </li>
+            
+          </ul>
+        </div>
+      </div>
+      <div class="scy_bottom-center">
+        <div class="scy_bottom-left-list">
+          <ul>
+            <li id="nine1" onmouseover="setTab1('nine',1,3)" class="xxyw"><a href="/was5/web/search?channelid=287123" target="_blank">最新文件</a></li>
+            <li id="nine2" onmouseover="setTab1('nine',2,3)"><a href="./jyb_xxgk/s5743/ " target="_blank">公告公示</a></li>
+            <li id="nine3" onmouseover="setTab1('nine',3,3)"><a href="./jyb_xxgk/s242/ " target="_blank">人事任免</a></li>
+          </ul>
+        </div>
+        <div class="scy_bottom-center-nr" id="nine_con1">
+          <ul>
+            
+              <li><span>10-25</span>
+                <a href="/srcsite/A05/s3040/201710/t20171025_317429.html" target="_blank" title="关于2016年全国教育经费执行情况统计公告">关于2016年全国教育经费执行情况统计公告</a>
+              </li>
+            
+              <li><span>10-23</span>
+                <a href="/srcsite/A01/s7048/201710/t20171023_317200.html" target="_blank" title="关于全面落实高校信息公开清单做好高校信息公开年度报告工作的通知">关于全面落实高校信息公开清单做好高校信息...</a>
+              </li>
+            
+              <li><span>10-17</span>
+                <a href="/srcsite/A01/s7048/201710/t20171017_316600.html" target="_blank" title="关于印发《教育部信访工作责任制实施细则》的通知">关于印发《教育部信访工作责任制实施细则》...</a>
+              </li>
+            
+              <li><span>09-30</span>
+                <a href="/srcsite/A02/s5911/moe_621/201709/t20170929_315781.html" target="_blank" title="《普通高等学校辅导员队伍建设规定》">《普通高等学校辅导员队伍建设规定》</a>
+              </li>
+            
+              <li><span>09-27</span>
+                <a href="/srcsite/A15/s7063/201709/t20170927_315503.html" target="_blank" title="关于学习贯彻习近平总书记给南开大学新入伍大学生重要回信精神的通知">关于学习贯彻习近平总书记给南开大学新入伍...</a>
+              </li>
+            
+              <li><span>09-26</span>
+                <a href="/srcsite/A13/s7061/201709/t20170926_315339.html" target="_blank" title="关于印发《高等学校马克思主义学院建设标准（2017年本）》的通知">关于印发《高等学校马克思主义学院建设标准...</a>
+              </li>
+            
+          </ul>
+        </div>
+        <div class="scy_bottom-center-nr" id="nine_con2" style="display:none;">
+          <ul>
+            
+              <li><span>10-25</span>
+                <a href="/jyb_xxgk/s5743/s5744/201710/t20171025_317472.html" target="_blank" title="“2017寻找最美孝心少年”大型公益活动颁奖典礼播出时间">“2017寻找最美孝心少年”大型公益活动颁奖...</a>
+              </li>
+            
+              <li><span>10-17</span>
+                <a href="/srcsite/A17/moe_938/s3276/201710/t20171017_316648.html" target="_blank" title="关于同意设立全国青少年校园足球改革试验区的函">关于同意设立全国青少年校园足球改革试验区...</a>
+              </li>
+            
+              <li><span>10-17</span>
+                <a href="/srcsite/A12/moe_1416/moe_1417/201710/t20171017_316636.html" target="_blank" title="关于举办全国高校基层党支部书记网络培训示范班的通知">关于举办全国高校基层党支部书记网络培训示...</a>
+              </li>
+            
+              <li><span>10-17</span>
+                <a href="/srcsite/A06/s7053/201710/t20171017_316632.html" target="_blank" title="关于第十三届宋庆龄奖学金评选工作的通知">关于第十三届宋庆龄奖学金评选工作的通知</a>
+              </li>
+            
+              <li><span>10-17</span>
+                <a href="/srcsite/A17/moe_794/moe_628/201710/t20171017_316628.html" target="_blank" title="关于在全国中小学开展中华优秀文化艺术传承学校创建活动的通知">关于在全国中小学开展中华优秀文化艺术传承...</a>
+              </li>
+            
+              <li><span>10-17</span>
+                <a href="/srcsite/A16/kjs_gjhz/201710/t20171017_316619.html" target="_blank" title="关于“转化医学与临床研究”等国际合作联合实验室立项建设的通知">关于“转化医学与临床研究”等国际合作联合...</a>
+              </li>
+            
+          </ul>
+        </div>
+        <div class="scy_bottom-center-nr" id="nine_con3" style="display:none;">
+          <ul>
+            
+              <li><span>10-17</span>
+                <a href="./srcsite/A04/moe_673/201710/t20171017_316650.html" target="_blank" title="中共教育部党组关于徐卫亚等同志职务任免的通知">中共教育部党组关于徐卫亚等同志职务任免的...</a>
+              </li>
+            
+              <li><span>10-17</span>
+                <a href="./srcsite/A04/moe_673/201710/t20171017_316652.html" target="_blank" title="教育部关于徐卫亚等职务任免的通知">教育部关于徐卫亚等职务任免的通知</a>
+              </li>
+            
+              <li><span>10-17</span>
+                <a href="./srcsite/A04/moe_673/201710/t20171017_316651.html" target="_blank" title="中共教育部党组关于刘祖国同志免职的通知">中共教育部党组关于刘祖国同志免职的通知</a>
+              </li>
+            
+              <li><span>09-26</span>
+                <a href="./srcsite/A04/moe_673/201709/t20170926_315375.html" target="_blank" title="教育部关于奚立峰任职的通知">教育部关于奚立峰任职的通知</a>
+              </li>
+            
+              <li><span>09-26</span>
+                <a href="./srcsite/A04/moe_673/201709/t20170926_315374.html" target="_blank" title="教育部关于张来斌等职务任免的通知">教育部关于张来斌等职务任免的通知</a>
+              </li>
+            
+              <li><span>09-26</span>
+                <a href="./srcsite/A04/moe_673/201709/t20170926_315373.html" target="_blank" title="教育部关于徐红兵任职的通知">教育部关于徐红兵任职的通知</a>
+              </li>
+            
+          </ul>
+        </div>
+      </div>
+
+      <div class="scy_bottom-right" id="moe_index_wxwb" style="padding-bottom:10px;">
+        <h2><img src="./images/index_scy_jyb-yqqt_03.png" width="53" height="55" /></h2>
+        <h3 style="padding-bottom:15px;"><span>微言教育</span><a href="./jyb_sy/sy_wb/201301/t20130129_147290.html" target="_blank">微博</a> <a href="./jyb_sy/sy_wb/201301/t20130129_147290.html" target="_blank">微信</a><a href="./jyb_sy/s7793/" target="_blank">客户端</a></h3>
+        <div id="weibo_show" style="width:250px; overflow:hidden;">
+               <iframe width="250" height="300" class="share_self" style="margin-top:-90px;"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=250&height=300&fansRow=2&ptype=0&speed=0&skin=1&isTitle=0&noborder=0&isWeibo=1&isFans=0&uid=2737798435&verifier=5192ec39&colors=ffffff,ffffff,4b4b4b,567FE6,ffffff&dpc=1"></iframe>
+        </div>
+      </div>
+    </div>
+    <div class="scy_bottom1">
+      <div class="scy_bottom1-list" id="sjzs">
+        <ul>
+          <li id="nua1" onmouseover="show('nua',1,5)" class="sjjg">
+            <a href="./jyb_zzjg/moe_350/" target="_blank">司局机构</a>
+          </li>
+          <li id="nua2" onmouseover="show('nua',2,5)"><a href="./jyb_zzjg/moe_349/ " target="_blank">直属单位</a></li>
+          <li id="nua3" onmouseover="show('nua',3,5)"><a href="./jyb_zzjg/moe_347/ " target="_blank">直属高校</a></li>
+          <li id="nua4" onmouseover="show('nua',4,5)"><a href="./jyb_sy/sy_xglj/xwfb_sjjyxz/ " target="_blank">省级教育行政部门</a></li>
+          <li id="nua5" onmouseover="show('nua',5,5)"><a href="./s78/A25/ " target="_blank">中央纪委驻部纪检组</a></li>       
+        </ul>
+      </div>
+      <div class="scy_bottom1-nr" id="nua_con1">
+        <table width="990" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="110" height="30"><a href="./s78/A01/ " target="_blank" title="办公厅">办公厅</a></td>
+            <td width="110"><a href="./s78/A02/ " target="_blank" title="政策法规司">政法司</a></td>
+            <td width="110"><a href="./s78/A03/ " target="_blank" title="发展规划司">规划司</a></td>
+            <td width="110"><a href="./s78/A27/ " target="_blank" title="综合改革司">综改司</a></td>
+            <td width="110"><a href="./s78/A04/ " target="_blank" title="人事司">人事司</a></td>
+            <td width="110"><a href="./s78/A05/ " target="_blank" title="财务司">财务司</a></td>
+            <td width="110"><a href="./s78/A26/ " target="_blank" title="教材局">教材局</a></td>
+            <td width="110"><a href="./s78/A06/ " target="_blank" title="基础教育司">基教司</a></td>
+            <td width="110"><a href="./s78/A07/ " target="_blank" title="职业教育与成人教育司">职成司</a></td>
+          </tr>
+          <tr>
+            <td height="30"><a href="./s78/A08/ " target="_blank" title="高等教育司">高教司</a></td>
+            <td><a href="./s78/A11/ " target="_blank" title="教育督导局">督导局</a></td>
+            <td><a href="./s78/A09/ " target="_blank" title="民族教育司">民族司</a></td>
+            <td><a href="./s78/A10/ " target="_blank" title="教师工作司">教师司</a></td>
+            <td><a href="./s78/A17/ " target="_blank" title="体育卫生与艺术教育司">体卫艺司</a></td>
+            <td><a href="./s78/A12/ " target="_blank" title="思想政治工作司">思政司</a></td>
+            <td><a href="./s78/A13/ " target="_blank" title="社会科学司">社科司</a></td>
+            <td><a href="./s78/A16/ " target="_blank" title="科学技术司">科技司</a></td>
+            <td><a href="./s78/A15/ " target="_blank" title="高校学生司">学生司</a></td>
+          </tr>
+          <tr>
+            <td height="30"><a href="./s78/A22/ " target="_blank" title="学位管理与研究生教育司（国务院学位委员会办公室）">研究生司<br />
+             <span> (学位办)</span></a></td>
+            <td><a href="./s78/A18/ " target="_blank" title="语言文字应用管理司">语用司</a></td>
+            <td><a href="./s78/A19/ " target="_blank" title="语言文字信息管理司">语信司</a></td>
+            <td><a href="./s78/A20/ " target="_blank" title="国际合作与交流司（港澳台办公室）">国际司<br />
+              <span>(港澳台办)</span></a></td>
+            <td><a href="./s78/A28/ " target="_blank" title="巡视工作办公室">巡视办</a></td>
+            <td><a href="./s78/A21/ " target="_blank" title="直属机关党委">机关党委</a></td>
+            <td><a href="./s78/A24/ " target="_blank" title="离退休干部局">离退休局</a></td>
+            <td><a href="./s78/A23/ " target="_blank" title="中国联合国教科文组织全国委员会秘书处">教科文</a></td>
+            <td>&nbsp;</td>
+          </tr>
+        </table>
+      </div>
+      <div class="scy_bottom1-nr" id="nua_con2" style="display:none;">
+        <table width="990" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="100" height="30"><a href="/s78/A01/s4561/" target="_blank"  title="教育部机关服务中心">服务中心</a></td>
+            <td width="100"><a href="./jump.html?url=http://www.naea.edu.cn/#国家教育行政学院?cata=zsdw" target="_blank" title="国家教育行政学院">教育行政学院</a></td>
+            <td width="100"><a href="./jump.html?url=http://www.nies.net.cn/#中国教育科学研究院?cata=zsdw" target="_blank" title="中国教育科学研究院">教科院</a></td>
+            <td width="100"><a href="./jump.html?url=http://www.ncedr.edu.cn/#教育部教育发展研究中心?cata=zsdw" target="_blank" title="教育部教育发展研究中心">发展中心</a></td>
+            <td width="100"><a href="./jump.html?url=http://shekzx.moe.edu.cn/#教育部高等学校社会科学发展研究中心?cata=zsdw" target="_blank" title="教育部高等学校社会科学发展研究中心">社科中心</a></td>
+            <td width="110"><a href="./jump.html?url=http://www.civte.edu.cn/#教育部职业技术教育中心研究所?cata=zsdw" target="_blank" title="教育部职业技术教育中心研究所">职教所</a></td>
+            <td width="100"><a href="./jump.html?url=http://www.hanban.edu.cn/#国家汉办（孔子学院总部）?cata=zsdw" target="_blank" title="国家汉办（孔子学院总部）">国家汉办</a></td>
+            <td width="110"><a href="./jump.html?url=http://www.cutech.edu.cn/#教育部科技发展中心?cata=zsdw" target="_blank" title="教育部科技发展中心">科技发展中心</a></td>
+            <td width="110"><a href="./jump.html?url=http://yys.moe.edu.cn/#语言文字应用研究所?cata=zsdw" target="_blank" title="语言文字应用研究所">语用所</a></td>
+                        </tr>
+          <tr>
+            <td height="30"><a href="./jump.html?url=http://www.ouchn.edu.cn/#国家开放大学?cata=zsdw" target="_blank" title="国家开放大学">开放大学</a></td>
+            <td><a href="./jump.html?url=http://www.ncet.edu.cn/#中央电化教育馆?cata=zsdw" target="_blank" title="中央电化教育馆">电教馆</a></td>
+            <td><a href="./jump.html?url=http://www.centv.cn/#中国教育电视台?cata=zsdw" target="_blank" title="中国教育电视台">电视台</a></td>
+            <td><a href="./jump.html?url=http://www.zbzx.edu.cn#教育装备研究与发展中心?cata=zsdw" target="_blank" title="教育装备研究与发展中心">装备中心</a></td>
+            <td><a href="./jump.html?url=http://emic.moe.edu.cn/#教育部教育管理信息中心?cata=zsdw" target="_blank" title="教育部教育管理信息中心">信息中心</a></td>
+            <td><a href="./jump.html?url=http://ncct.moe.edu.cn/#教育部基础教育课程教材发展中心?cata=zsdw" target="_blank" title="教育部基础教育课程教材发展中心">课程教材中心</a></td>
+            <td><a href="./jump.html?url=http://www.csc.edu.cn/#国家留学基金管理委员会秘书处?cata=zsdw" target="_blank" title="国家留学基金管理委员会秘书处">留学基金委</a></td>
+            <td><a href="./jump.html?url=http://fsac.moe.edu.cn/#教育部经费监管事务中心?cata=zsdw" target="_blank" title="教育部经费监管事务中心">经费监管中心</a></td>
+            <td><a href="./jump.html?url=http://mjzx.moe.edu.cn#教育部民族教育发展中心?cata=zsdw" target="_blank" title="教育部民族教育发展中心">民族教育中心</a></td>
+                     </tr>
+          <tr>
+            <td height="30"><a href="./jump.html?url=http://www.cepa.com.cn/#中国教育报刊社?cata=zsdw" target="_blank" title="中国教育报刊社">报刊社</a></td>
+            <td><a href="./jump.html?url=http://www.neea.edu.cn/#教育部考试中心?cata=zsdw" target="_blank" title="教育部考试中心">考试中心</a></td>
+            <td><a href="./jump.html?url=http://www.cscse.edu.cn/#教育部留学服务中心?cata=zsdw" target="_blank" title="教育部留学服务中心">留学服务中心</a></td>
+            <td><a href="./jump.html?url=http://www.csa.cee.edu.cn/#全国学生资助中心?cata=zsdw" target="_blank" title="全国学生资助中心">资助中心</a></td>
+            <td><a href="./jump.html?url=http://chesicc.moe.edu.cn/#全国高等学校学生信息咨询与就业指导中心?cata=zsdw" target="_blank" title="全国高等学校学生信息咨询与就业指导中心">就业中心</a></td>
+            <td><a href="./jump.html?url=http://www.cdgdc.edu.cn/#教育部学位与研究生教育发展中心?cata=zsdw" target="_blank" title="教育部学位与研究生教育发展中心">学位中心</a></td>
+            <td><a href="./jump.html?url=http://www.heec.edu.cn/#教育部高等教育教学评估中心?cata=zsdw" target="_blank" title="教育部高等教育教学评估中心">评估中心</a></td>
+            <td><a href="./jump.html?url=http://www.csdp.moe.edu.cn/#学校规建中心?cata=zsdw" target="_blank" title="学校规建中心">学校规建中心</td>
+            <td><a href="./jyb_zzjg/moe_349/ " target="_blank">更多>></a></td>
+          </tr>
+        </table>
+      </div>
+      <div class="scy_bottom1-nr" id="nua_con3" style="display:none;">
+        <table width="990" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="110" height="30"><a  target="_blank" href="./jump.html?url=http://www.pku.edu.cn/#北京大学?cata=zsgx" title="北京大学">北京大学</a> </td>
+            <td width="110"><a target="_blank" href="./jump.html?url=http://www.tsinghua.edu.cn/#清华大学?cata=zsgx" title="清华大学">清华大学</a> </td>
+            <td width="110"><a target="_blank" href="./jump.html?url=http://www.ruc.edu.cn/#中国人民大学?cata=zsgx" title="中国人民大学">中国人民大学</a> </td>
+            <td width="110"><a target="_blank" href="./jump.html?url=http://www.bnu.edu.cn/#北京师范大学?cata=zsgx" title="北京师范大学">北京师范大学</a> </td>
+            <td width="110"><a target="_blank" href="./jump.html?url=http://www.cau.edu.cn/#中国农业大学?cata=zsgx" title="中国农业大学">中国农业大学</a> </td>
+            <td width="110"><a target="_blank" href="./jump.html?url=http://www.bfsu.edu.cn/#北京外国语大学?cata=zsgx" title="北京外国语大学">北京外国语大学</a> </td>
+            <td width="110"><a target="_blank" href="./jump.html?url=http://www.blcu.edu.cn/#北京语言大学?cata=zsgx" title="北京语言大学">北京语言大学</a> </td>
+            <td width="110"><a target="_blank" href="./jump.html?url=http://www.ustb.edu.cn/#北京科技大学?cata=zsgx" title="北京科技大学">北京科技大学</a> </td>
+            <td width="110"><a target="_blank" href="./jump.html?url=http://www.buct.edu.cn/#北京化工大学?cata=zsgx" title="北京化工大学">北京化工大学</a> </td>
+          <tr>
+            <td height="30"><a target="_blank" href="./jump.html?url=http://www.bjtu.edu.cn/#北京交通大学?cata=zsgx" title="北京交通大学">北京交通大学</a> </td>
+            <td><a target="_blank" href="./jump.html?url=http://www.bupt.edu.cn/#北京邮电大学?cata=zsgx" title="北京邮电大学">北京邮电大学　</a> </td>
+			<td><a target="_blank" href="./jump.html?url=http://www.cugb.edu.cn/#中国地质大学（北京）?cata=zsgx" title="中国地质大学（北京）">中国地质大学<br><span>（北京）</span></a> </td>
+			<td><a target="_blank" href="./jump.html?url=http://www.cumtb.edu.cn/#中国矿业大学（北京）?cata=zsgx" title="中国矿业大学（北京）">中国矿业大学<br><span>（北京）</span></a> </td>
+            <td><a target="_blank" href="./jump.html?url=http://www.cup.edu.cn/#中国石油大学（北京）?cata=zsgx" title="中国石油大学（北京）">中国石油大学<br><span>（北京）</span></a> </td>
+            <td><a target="_blank" href="./jump.html?url=http://www.bjfu.edu.cn/#北京林业大学?cata=zsgx" title="北京林业大学">北京林业大学</a> </td>
+            <td><a target="_blank" href="./jump.html?url=http://www.cuc.edu.cn/#中国传媒大学?cata=zsgx" title="中国传媒大学">中国传媒大学</a> </td>
+            <td><a target="_blank" href="./jump.html?url=http://www.cufe.edu.cn/#中央财经大学?cata=zsgx" title="中央财经大学">中央财经大学</a> </td>
+            <td><a target="_blank" href="./jump.html?url=http://www.cupl.edu.cn/#中国政法大学?cata=zsgx" title="中国政法大学">中国政法大学</a> </td>
+          </tr>
+          <tr>
+            <td height="30"><a  target="_blank" href="./jump.html?url=http://www.ccom.edu.cn/#中央音乐学院?cata=zsgx" title="中央音乐学院">中央音乐学院</a> </td>
+            <td><a target="_blank" href="./jump.html?url=http://www.chntheatre.edu.cn/#中央戏剧学院?cata=zsgx" title="中央戏剧学院">中央戏剧学院</a> </td>
+            <td><a target="_blank" href="./jump.html?url=http://www.cafa.edu.cn/#中央美术学院?cata=zsgx" title="中央美术学院">中央美术学院</a> </td>
+            <td><a target="_blank" href="./jump.html?url=http://www.bucm.edu.cn#北京中医药大学?cata=zsgx" title="北京中医药大学">北京中医药大学</a> </td>
+            <td width="125"><a target="_blank" href="./jump.html?url=http://www.uibe.edu.cn/#对外经济贸易大学?cata=zsgx" title="对外经济贸易大学">对外经济贸易大学</a> </td>
+            <td><a target="_blank" href="./jump.html?url=http://www.ncepu.edu.cn/#华北电力大学?cata=zsgx" title="华北电力大学">华北电力大学</a> </td>
+            <td><a target="_blank" href="./jump.html?url=http://www.nankai.edu.cn/#南开大学?cata=zsgx" title="南开大学">南开大学</a> </td>
+            <td><a target="_blank" href="./jump.html?url=http://www.tju.edu.cn/#天津大学?cata=zsgx" title="天津大学">天津大学</a> </td>
+            <td><a target="_blank" href="./jyb_zzjg/moe_347/ ">更多>></a> </td>
+          </tr>
+        </table>
+      </div>
+      <div class="scy_bottom1-nr" id="nua_con4" style="display:none;">
+        <table width="990" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="82.5" height="30"><a  target="_blank" href="/links/jump.html?url=http://www.bjedu.gov.cn/#北京市教育委员会?cata=jyxzbm" title="北京市教育委员会">北京</a> </td>
+            <td width="82.5"><a  target="_blank" href="/links/jump.html?url=http://www.tjmec.gov.cn/#天津市教育委员会?cata=jyxzbm" title="天津市教育委员会">天津</a> </td>
+            <td width="82.5"><a  target="_blank" href="/links/jump.html?url=http://www.hee.gov.cn/#河北省教育厅?cata=jyxzbm" title="河北省教育厅">河北</a> </td>
+            <td width="82.5"><a  target="_blank" href="/links/jump.html?url=http://www.sxedu.gov.cn/#山西省教育厅?cata=jyxzbm" title="山西省教育厅">山西</a> </td>
+            <td width="82.5"><a  target="_blank" href="/links/jump.html?url=http://www.nmgov.edu.cn/#内蒙古自治区教育厅?cata=jyxzbm" title="内蒙古自治区教育厅">内蒙古</a> </td>
+            <td width="82.5"><a  target="_blank" href="/links/jump.html?url=http://www.lnen.cn/#辽宁省教育厅?cata=jyxzbm" title="辽宁省教育厅">辽宁</a> </td>
+            <td width="82.5"><a  target="_blank" href="/links/jump.html?url=http://www.jledu.gov.cn/#吉林省教育厅?cata=jyxzbm" title="吉林省教育厅">吉林</a> </td>
+            <td width="82.5"><a  target="_blank" href="/links/jump.html?url=http://www.hljedu.gov.cn/#黑龙江省教育厅?cata=jyxzbm" title="黑龙江省教育厅">黑龙江</a> </td>
+            <td width="82.5"><a  target="_blank" href="/links/jump.html?url=http://www.shmec.gov.cn/#上海市教育委员会?cata=jyxzbm" title="上海市教育委员会">上海</a> </td>
+            <td width="82.5"><a  target="_blank" href="/links/jump.html?url=http://www.ec.js.edu.cn/#江苏省教育厅?cata=jyxzbm" title="江苏省教育厅">江苏</a> </td>
+            <td width="82.5"><a  target="_blank" href="/links/jump.html?url=http://www.zjedu.gov.cn/default.html#浙江省教育厅?cata=jyxzbm" title="浙江省教育厅">浙江</a> </td>
+            <td width="82.5"><a  target="_blank" href="/links/jump.html?url=http://www.ahedu.gov.cn/#安徽省教育厅?cata=jyxzbm" title="安徽省教育厅">安徽</a>
+          <tr>
+            <td height="30"><a  target="_blank" href="/links/jump.html?url=http://www.fjedu.gov.cn/#福建省教育厅?cata=jyxzbm" title="福建省教育厅">福建</a> </td>
+            <td><a  target="_blank" href="/links/jump.html?url=http://www.jxedu.gov.cn/#江西省教育厅?cata=jyxzbm" title="江西省教育厅">江西</a> </td>
+            <td><a  target="_blank" href="/links/jump.html?url=http://www.sdedu.gov.cn/#山东省教育厅?cata=jyxzbm" title="山东省教育厅">山东</a> </td>
+            <td><a  target="_blank" href="/links/jump.html?url=http://www.haedu.gov.cn/#河南省教育厅?cata=jyxzbm" title="河南省教育厅">河南</a> </td>
+            <td><a  target="_blank" href="/links/jump.html?url=http://www.hbe.gov.cn/#湖北省教育厅?cata=jyxzbm" title="湖北省教育厅">湖北</a> </td>
+            <td><a  target="_blank" href="/links/jump.html?url=http://jyt.hunan.gov.cn/#湖南省教育厅?cata=jyxzbm" title="湖南省教育厅">湖南</a> </td>
+            <td><a  target="_blank" href="/links/jump.html?url=http://www.gdhed.edu.cn/#广东省教育厅?cata=jyxzbm" title="广东省教育厅">广东</a> </td>
+            <td><a  target="_blank" href="/links/jump.html?url=http://www.gxedu.gov.cn/#广西壮族自治区教育厅?cata=jyxzbm" title="广西壮族自治区教育厅">广西</a> </td>
+            <td><a  target="_blank" href="/links/jump.html?url=http://edu.hainan.gov.cn/#海南省教育厅?cata=jyxzbm" title="海南省教育厅">海南</a> </td>
+            <td><a  target="_blank" href="/links/jump.html?url=http://www.cqedu.cn/#重庆市教育委员会?cata=jyxzbm" title="重庆市教育委员会">重庆</a> </td>
+            <td><a  target="_blank" href="/links/jump.html?url=http://www.scedu.net/#四川省教育厅?cata=jyxzbm" title="四川省教育厅">四川</a> </td>
+            <td><a  target="_blank" href="/links/jump.html?url=http://www.gzsjyt.gov.cn/#贵州省教育厅?cata=jyxzbm" title="贵州省教育厅">贵州</a> </td>
+          </tr>
+          <tr>
+            <td height="30"><a  target="_blank" href="/links/jump.html?url=http://www.ynjy.cn/#云南省教育厅?cata=jyxzbm" title="云南省教育厅">云南</a> </td>
+            <td><a  target="_blank" href="/links/jump.html?url=http://www.xzedu.com.cn/#西藏自治区教育厅?cata=jyxzbm" title="西藏自治区教育厅">西藏</a> </td>
+            <td><a  target="_blank" href="/links/jump.html?url=http://www.snedu.gov.cn/#陕西省教育厅?cata=jyxzbm" title="陕西省教育厅">陕西</a> </td>
+            <td><a  target="_blank" href="/links/jump.html?url=http://www.gsedu.gov.cn/#甘肃省教育厅?cata=jyxzbm" title="甘肃省教育厅">甘肃</a> </td>
+            <td><a  target="_blank" href="/links/jump.html?url=http://www.qhedu.cn/#青海省教育厅?cata=jyxzbm" title="青海省教育厅">青海</a> </td>
+            <td><a  target="_blank" href="/links/jump.html?url=http://www.nxedu.gov.cn#宁夏回族自治区教育厅?cata=jyxzbm" title="宁夏回族自治区教育厅">宁夏</a> </td>
+            <td><a  target="_blank" href="/links/jump.html?url=http://www.xjedu.gov.cn/#新疆维吾尔自治区教育厅?cata=jyxzbm" title="新疆维吾尔自治区教育厅">新疆</a> </td>
+            <td><a  target="_blank" href="/links/jump.html?url=http://www.dledu.com/#大连市教育局?cata=jyxzbm" title="大连市教育局">大连</a> </td>
+            <td><a  target="_blank" href="/links/jump.html?url=http://www.qdedu.gov.cn/#青岛市教育局?cata=jyxzbm" title="青岛市教育局">青岛</a> </td>
+            <td><a  target="_blank" href="/links/jump.html?url=http://www.nbedu.gov.cn/#宁波市教育局?cata=jyxzbm" title="宁波市教育局">宁波</a> </td>
+            <td><a  target="_blank" href="/links/jump.html?url=http://www.xmedu.gov.cn/#厦门市教育局?cata=jyxzbm" title="厦门市教育局">厦门</a> </td>
+            <td><a  target="_blank" href="http://www.moe.gov.cn/jyb_sy/sy_xglj/xwfb_sjjyxz/201505/t20150522_184793.html">更多&gt;&gt;</a> </td>
+          </tr>
+        </table>
+      </div>
+      <div class="scy_bottom1-nr" id="nua_con5" style="display:none;">
+        <table width="990" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td height="30"><a href="./s78/A25/ " target="_blank" title="中央纪委驻部纪检组">中央纪委驻部纪检组</a></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <!--内容区域结束-->
+  </div>
+  <!--主体结束
+</div>-->
+<!--尾部开始-->
+<div class="scy-foot" style="overflow:visible">
+  <div class="scy-foot-nr" style="overflow:visible">
+    <div class="scy-foot-nrs">
+	<ul id="navigation">
+            	<li class="rmzf">
+                    	<a href="./jump.html?url=http://www.gov.cn/#中国政府网?cata=gov" target="_blank" id="moe_index_foot_gov">中国政府网</a>
+                </li>
+                <li onmouseover="displaySubMenu(this)" onmouseout="hideSubMenu(this)">
+					<a href="javascript:void(0);">国务院部门网站</a>
+					<ul id="moe_index_foot_gwy">
+						
+						<li><a href="http://www.ndrc.gov.cn" target="_blank">发展改革委</a></li>
+						
+						<li><a href="http://www.mfa.gov.cn" target="_blank">外交部</a></li>
+						
+						<li><a href="http://www.mod.gov.cn/" target="_blank">国防部</a></li>
+						
+						<li><a href="http://www.moe.gov.cn" target="_blank">教育部</a></li>
+						
+						<li><a href="http://www.miit.gov.cn/" target="_blank">工业和信息化部</a></li>
+						
+						<li><a href="http://www.seac.gov.cn" target="_blank">国家民委</a></li>
+						
+						<li><a href="http://www.most.gov.cn" target="_blank">科技部</a></li>
+						
+						<li><a href="http://www.mca.gov.cn" target="_blank">民政部</a></li>
+						
+						<li><a href="http://www.ccdi.gov.cn" target="_blank">监察部</a></li>
+						
+						<li><a href="http://www.mps.gov.cn" target="_blank">公安部</a></li>
+						
+						<li><a href="http://www.moj.gov.cn/" target="_blank">司法部</a></li>
+						
+						<li><a href="http://www.mof.gov.cn" target="_blank">财政部</a></li>
+						
+						<li><a href="http://www.mlr.gov.cn/" target="_blank">国土资源部</a></li>
+						
+						<li><a href="http://www.mohurd.gov.cn/" target="_blank">住房城乡建设部</a></li>
+						
+						<li><a href="http://www.mep.gov.cn/" target="_blank">环境保护部</a></li>
+						
+						<li><a href="http://www.mohrss.gov.cn/" target="_blank">人力资源社会保障部</a></li>
+						
+						<li><a href="http://www.moa.gov.cn/" target="_blank">农业部</a></li>
+						
+						<li><a href="http://www.mwr.gov.cn/" target="_blank">水利部</a></li>
+						
+						<li><a href="http://www.moc.gov.cn/" target="_blank">交通运输部</a></li>
+						
+						<li><a href="http://www.mofcom.gov.cn/" target="_blank">商务部</a></li>
+						
+						<li><a href="http://www.mcprc.gov.cn/" target="_blank">文化部</a></li>
+						
+						<li><a href="http://www.pbc.gov.cn/" target="_blank">人民银行</a></li>
+						
+						<li><a href="http://www.nhfpc.gov.cn/" target="_blank">卫生计生委</a></li>
+						
+						<li><a href="http://www.cnsa.gov.cn" target="_blank">航天局</a></li>
+						
+						<li><a href="http://www.china-language.gov.cn/" target="_blank">国家语委</a></li>
+						
+						<li><a href="http://www.audit.gov.cn/" target="_blank">审计署</a></li>
+						
+						<li><a href="http://www.caea.gov.cn" target="_blank">原子能机构</a></li>
+						
+						<li><a href="http://www.saic.gov.cn/" target="_blank">工商总局</a></li>
+						
+						<li><a href="http://www.sasac.gov.cn/" target="_blank">国资委</a></li>
+						
+						<li><a href="http://www.chinatax.gov.cn/" target="_blank">税务总局</a></li>
+						
+						<li><a href="http://www.aqsiq.gov.cn" target="_blank">质检总局</a></li>
+						
+						<li><a href="http://www.customs.gov.cn/" target="_blank">海关总署</a></li>
+						
+						<li><a href="http://www.sport.gov.cn/" target="_blank">体育总局</a></li>
+						
+						<li><a href="http://www.sda.gov.cn/WS01/CL0001/" target="_blank">食品药品监管总局</a></li>
+						
+						<li><a href="http://www.chinasafety.gov.cn/" target="_blank">安全监管总局</a></li>
+						
+						<li><a href="http://国家新闻出版广电总局.中国/" target="_blank">新闻出版广电总局</a></li>
+						
+						<li><a href="http://www.sipo.gov.cn" target="_blank">知识产权局</a></li>
+						
+						<li><a href="http://www.stats.gov.cn/" target="_blank">统计局</a></li>
+						
+						<li><a href="http://www.cnta.gov.cn/" target="_blank">旅游局</a></li>
+						
+						<li><a href="http://www.forestry.gov.cn/" target="_blank">林业局</a></li>
+						
+						<li><a href="http://www.sara.gov.cn/" target="_blank">宗教局</a></li>
+						
+						<li><a href="http://www.ggj.gov.cn/" target="_blank">国管局</a></li>
+						
+						<li><a href="http://www.counsellor.gov.cn/" target="_blank">参事室</a></li>
+						
+						<li><a href="http://www.ncac.gov.cn" target="_blank">版权局</a></li>
+						
+						<li><a href="http://www.chinalaw.gov.cn/" target="_blank">法制办</a></li>
+						
+						<li><a href="http://www.gqb.gov.cn/" target="_blank">侨办</a></li>
+						
+						<li><a href="http://www.hmo.gov.cn/" target="_blank">港澳办</a></li>
+						
+						<li><a href="http://www.gov.cn/gjjg/2005-12/26/content_137261.htm" target="_blank">国研室</a></li>
+						
+						<li><a href="http://www.gwytb.gov.cn/" target="_blank">台办</a></li>
+						
+						<li><a href="http://www.scio.gov.cn/" target="_blank">新闻办</a></li>
+						
+						<li><a href="http://cass.cssn.cn/" target="_blank">社科院</a></li>
+						
+						<li><a href="http://www.cas.cn/" target="_blank">中科院</a></li>
+						
+						<li><a href="http://www.xinhuanet.com/" target="_blank">新华社</a></li>
+						
+						<li><a href="http://www.cae.cn/" target="_blank">工程院</a></li>
+						
+						<li><a href="http://www.drc.gov.cn/" target="_blank">发展研究中心</a></li>
+						
+						<li><a href="http://www.cea.gov.cn/" target="_blank">地震局</a></li>
+						
+						<li><a href="http://www.nsa.gov.cn/" target="_blank">行政学院</a></li>
+						
+						<li><a href="http://www.cbrc.gov.cn/" target="_blank">银监会</a></li>
+						
+						<li><a href="http://www.cma.gov.cn/" target="_blank">气象局</a></li>
+						
+						<li><a href="http://www.csrc.gov.cn/" target="_blank">证监会</a></li>
+						
+						<li><a href="http://www.ssf.gov.cn/" target="_blank">社保基金会</a></li>
+						
+						<li><a href="http://www.nsfc.gov.cn/" target="_blank">自然科学基金会</a></li>
+						
+						<li><a href="http://www.circ.gov.cn/" target="_blank">保监会</a></li>
+						
+						<li><a href="http://www.chinagrain.gov.cn/" target="_blank">粮食局</a></li>
+						
+						<li><a href="http://www.nea.gov.cn/" target="_blank">能源局</a></li>
+						
+						<li><a href="http://www.gjxfj.gov.cn/" target="_blank">信访局</a></li>
+						
+						<li><a href="http://www.safea.gov.cn/" target="_blank">外专局</a></li>
+						
+						<li><a href="http://www.sastind.gov.cn/" target="_blank">国防科工局</a></li>
+						
+						<li><a href="http://www.tobacco.gov.cn/" target="_blank">烟草局</a></li>
+						
+						<li><a href="http://www.soa.gov.cn/" target="_blank">海洋局</a></li>
+						
+						<li><a href="http://www.scs.gov.cn/" target="_blank">公务员局</a></li>
+						
+						<li><a href="http://www.sbsm.gov.cn/" target="_blank">测绘地信局</a></li>
+						
+						<li><a href="http://www.caac.gov.cn/" target="_blank">民航局</a></li>
+						
+						<li><a href="http://www.post.gov.cn/" target="_blank">邮政局</a></li>
+						
+						<li><a href="http://www.nra.gov.cn/" target="_blank">铁路局</a></li>
+						
+						<li><a href="http://www.sach.gov.cn/" target="_blank">文物局</a></li>
+						
+						<li><a href="http://www.satcm.gov.cn/" target="_blank">中医药局</a></li>
+						
+						<li><a href="http://www.safe.gov.cn/" target="_blank">外汇局</a></li>
+						
+						<li><a href="http://www.saac.gov.cn/" target="_blank">档案局</a></li>
+						
+						<li><a href="http://www.chinacoal-safety.gov.cn/mkaj/" target="_blank">煤矿安监局</a></li>
+						
+						<li><a href="http://www.oscca.gov.cn/" target="_blank">密码局</a></li>
+						
+						<li><a href="http://www.cpad.gov.cn/" target="_blank">扶贫办</a></li>
+						
+						<li><a href="http://www.3g.gov.cn/" target="_blank">三峡办</a></li>
+						
+						<li><a href="http://www.nsbd.gov.cn/" target="_blank">南水北调办</a></li>
+						
+					</ul>
+                </li>
+                <li onmouseover="displaySubMenu(this)" onmouseout="hideSubMenu(this)">
+					<a href="javascript:void(0);">教育部相关网站</a>
+					<ul id="moe_index_foot_xgwz">
+						
+						<li><a href="http://www.jsj.edu.cn" target="_blank">教育涉外监管信息网</a></li>
+						
+						<li><a href="http://www.china-language.gov.cn" target="_blank">中国语言文字网</a></li>
+						
+						<li><a href="http://www.univs.cn" target="_blank">教育部中国大学生在线网</a></li>
+						
+						<li><a href="http://www.sinoss.net" target="_blank">中国高校人文社会科学...</a></li>
+						
+						<li><a href="http://www.lcjnjs.com.cn" target="_blank">全国高等医学院校大学...</a></li>
+						
+						<li><a href="http://www.zyyxzy.cn" target="_blank">全国职业院校专业设置...</a></li>
+						
+						<li><a href="http://www.qspfw.edu.cn" target="_blank">教育部全国青少年普法网</a></li>
+						
+					</ul>
+                </li>
+                <li class="zwgjy" onmouseover="displaySubMenu(this)" onmouseout="hideSubMenu(this)">
+					<a href="javascript:void(0);">驻外使（领）馆教育处</a>
+					<ul id="moe_index_foot_zwsg">
+					
+					<li>－－－美洲－－－</li>
+						
+						<li><a href="http://www.edumontreal.org/" target="_blank">驻蒙特利尔总领事馆教...</a></li>
+						
+						<li><a href="http://www.edunewyork.org/" target="_blank">驻纽约领馆教育组</a></li>
+						
+						<li><a href="http://www.edusf.org" target="_blank">驻旧金山领馆教育组</a></li>
+						
+						<li><a href="http://houston.china-consulate.org/chn/jy/" target="_blank">驻休斯顿领馆教育组</a></li>
+						
+						<li><a href="http://www.edulosangeles.org" target="_blank">驻洛杉矶总领事馆教育组</a></li>
+						
+						<li><a href="http://www.educhicago.org" target="_blank">驻芝加哥总领事馆教育组</a></li>
+						
+						<li><a href="http://www.eduembca.org" target="_blank">驻加拿大大使馆教育处</a></li>
+						
+						<li><a href="http://www.educationtoronto.org" target="_blank">驻多伦多总领事馆教育组</a></li>
+						
+						<li><a href="http://www.chinaeduvan.org" target="_blank">驻温哥华总领事馆教育组</a></li>
+						
+						<li><a href="http://www.sino-education.org/" target="_blank">驻美国使馆教育处</a></li>
+						
+					
+					<li>－－－亚非－－－</li>
+						
+						<li><a href="http://www.jiaoyuchu.org/" target="_blank">驻日本使馆教育处</a></li>
+						
+						<li><a href="http://sapporo.china-consulate.org/chn/jylx/" target="_blank">驻札幌领馆教育组</a></li>
+						
+						<li><a href="http://www.eduosaka.org/" target="_blank">驻大阪领馆教育组</a></li>
+						
+						<li><a href="http://niigata.china-consulate.org/chn/jywh/" target="_blank">驻新潟领馆教育组</a></li>
+						
+						<li><a href="http://www.edufukuoka.org/" target="_blank">驻福冈领馆教育组</a></li>
+						
+						<li><a href="http://kp.china-embassy.org/chn/zcgx/jyjl1/" target="_blank">驻朝鲜使馆教育组</a></li>
+						
+						<li><a href="http://www.chinaedukr.org/" target="_blank">驻韩国使馆教育处</a></li>
+						
+						<li><a href="http://www.edusg.org.cn/" target="_blank">驻新加坡使馆教育处</a></li>
+						
+						<li><a href="http://www.th-chinaembassyedu.org" target="_blank">驻泰国使馆教育组</a></li>
+						
+						<li><a href="http://www.egchinaedu.org" target="_blank">驻埃及使馆教育处</a></li>
+						
+						<li><a href="http://in.china-embassy.org/chn/zygx/zyjy/" target="_blank">驻印度使馆教育组</a></li>
+						
+						<li><a href="http://www.cnemedu.org" target="_blank">驻以色列使馆教育组</a></li>
+						
+						<li><a href="http://za.china-embassy.org/chn/zngxss/jyjl/" target="_blank">驻南非使馆教育组</a></li>
+						
+					
+					<li>－－－大洋洲－－－</li>
+						
+						<li><a href="http://www.chchedu.org/" target="_blank">驻克赖斯特彻奇总领馆...</a></li>
+						
+						<li><a href="http://www.edubrisbane.org/" target="_blank">驻布里斯班总领馆教育组</a></li>
+						
+						<li><a href="http://www.edu-australia.org/" target="_blank">驻澳大利亚使馆教育处</a></li>
+						
+						<li><a href="http://sydney.chineseconsulate.org" target="_blank">驻悉尼领馆教育组</a></li>
+						
+						<li><a href="http://www.edumel.org/" target="_blank">驻墨尔本领馆教育组</a></li>
+						
+						<li><a href="http://www.chinanz-education.org/" target="_blank">驻新西兰使馆教育处</a></li>
+						
+						<li><a href="http://www.aucklandmoe.org/" target="_blank">驻奥克兰领馆教育组</a></li>
+						
+					
+					<li>－－－欧洲－－－</li>
+						
+						<li><a href="http://www.chinaeduireland.org/" target="_blank">驻爱尔兰大使馆教育组</a></li>
+						
+						<li><a href="http://www.esedu.org/" target="_blank">驻西班牙使馆教育</a></li>
+						
+						<li><a href="http://www.eduirkutsk.org/" target="_blank">驻伊尔库茨克总领馆教育组</a></li>
+						
+						<li><a href="http://www.eduru.org/" target="_blank">驻俄罗斯使馆教育处</a></li>
+						
+						<li><a href="http://www.edustpeterburg.org/" target="_blank">驻圣彼得堡领馆教育组</a></li>
+						
+						<li><a href="http://by.china-embassy.org/chn/jylx/" target="_blank">驻白俄罗斯使馆双边教...</a></li>
+						
+						<li><a href="http://www.cnuaedu.org/" target="_blank">驻乌克兰使馆教育处</a></li>
+						
+						<li><a href="http://www.educnhu.org/" target="_blank">驻匈牙利使馆教育组</a></li>
+						
+						<li><a href="http://www.romaniaedu.org/" target="_blank">驻罗马尼亚使馆教育组</a></li>
+						
+						<li><a href="http://www.china-czech-edu.org/" target="_blank">驻捷克使馆教育组</a></li>
+						
+						<li><a href="http://www.edusectioninserbia.org" target="_blank">驻塞尔维亚使馆教育组</a></li>
+						
+						<li><a href="http://www.chinaembassy.bg/" target="_blank">驻保加利亚使馆教育组</a></li>
+						
+						<li><a href="http://munich.china-consulate.org/chn/jy/" target="_blank">驻慕尼黑领馆教育组</a></li>
+						
+						<li><a href="http://www.de-moe.edu.cn/" target="_blank">驻德国使馆教育处</a></li>
+						
+						<li><a href="http://www.chinaedu.be/" target="_blank">驻比利时使馆教育处</a></li>
+						
+						<li><a href="http://www.cnedu-ch.org/" target="_blank">驻瑞士使馆教育处</a></li>
+						
+						<li><a href="http://www.nl-edu.org" target="_blank">驻荷兰使馆教育处</a></li>
+						
+						<li><a href="http://www.eduembaustria.org/" target="_blank">驻奥地利使馆教育处</a></li>
+						
+						<li><a href="http://pt.china-embassy.org/chn/whjykj/" target="_blank">驻葡萄牙使馆教育组</a></li>
+						
+						<li><a href="http://www.chinaitalyedu.org/" target="_blank">驻意大利使馆教育处</a></li>
+						
+						<li><a href="http://www.cnedu.nu/" target="_blank">驻瑞典使馆教育处</a></li>
+						
+						<li><a href="http://www.fmprc.gov.cn/ce/cedk/chn/zdjl/jyjl/" target="_blank">驻丹麦使馆教育组</a></li>
+						
+						<li><a href="http://www.chinese-embassy.no/chn/zngx/jyjl/" target="_blank">驻挪威使馆教育处</a></li>
+						
+						<li><a href="http://www.education-ambchine.org/" target="_blank">驻法国使馆教育处</a></li>
+						
+						<li><a href="http://www.educn-fi.org/" target="_blank">驻芬兰使馆教育组</a></li>
+						
+						<li><a href="http://www.edu-chineseembassy-uk.org" target="_blank">驻英国使馆教育处</a></li>
+						
+						<li><a href="http://www.consulateman.org/" target="_blank">驻曼彻斯特总领事馆教育组</a></li>
+						
+					
+					</ul>
+                </li>
+            </ul>
+      
+    </div>
+<div class="scy-foot-zj"><script type="text/javascript">document.write(unescape("%3Cspan id='_ideConac' %3E%3C/span%3E%3Cscript src='http://dcs.conac.cn/js/33/000/0000/40672570/CA330000000406725700001.js' type='text/javascript'%3E%3C/script%3E"));</script><script id="_jiucuo_" sitecode='bm05000001' src='http://pucha.kaipuyun.cn/exposure/jiucuo.js'></script>
+      <ul>
+        <li class="sm" id="moe_index_foot_sm">
+          <a href="http://www.moe.gov.cn/jyb_sy/s3634/201005/t20100504_87292.html" target="_blank">网站声明</a>
+        </li>
+        <li class="dt" id="moe_index_foot_dt">
+          <a href="http://www.moe.gov.cn/jyb_sy/s3636/201707/t20170726_310121.html" target="_blank">网站地图</a>
+        </li>
+        <li class="lx" id="moe_index_foot_lx">
+          <a href="http://www.moe.gov.cn/jyb_sy/s3635/201611/t20161129_290403.html" target="_blank">联系我们</a>
+        </li>
+      </ul>
+    </div>
+    <div class="scy-foot-xia">
+      <p>教育部政府门户网站　moe.gov.cn &nbsp;&nbsp;&nbsp;&nbsp;中文域名： 教育部.政务</p>
+      <p>京ICP备10028400号&nbsp;&nbsp;&nbsp;&nbsp;版权所有：中华人民共和国教育部</p>
+    </div>
+<script type='text/javascript' src='http://static.gridsumdissector.com/js/Clients/GWD-801513-86CC7E/gs.js'></script>
+<div style="display:none">
+<script type="text/javascript">document.write(unescape("%3Cscript src='http://fwl.moe.gov.cn/webdig.js?z=1' type='text/javascript'%3E%3C/script%3E"));</script>
+<script type="text/javascript">wd_paramtracker("_wdxid=000000000000000000000000000000000000000000")</script>
+<script type="text/javascript">document.write(unescape("%3Cscript src='http://cl.webterren.com/webdig.js?z=23' type='text/javascript'%3E%3C/script%3E"));</script>
+<script type="text/javascript">wd_paramtracker("_wdxid=000000000000000000000000000000000000000000")</script>
+</div>
+  </div>
+</div>
+
+<div id="added_block">
+	<p onclick="javascript:document.getElementById('added_block').style.display='none';">关闭</p>
+	<a href="http://zygjjg.12388.gov.cn" target="_blank"><img src="./images/moe_zygjjg_jbwz.png" /></a>
+	<a href="./jyb_hygq/hygq_tsjb/201505/t20150520_184529.html" target="_blank"><img src="./jyb_hygq/hygq_tsjb/201505/W020170122374928303668.png" /></a>
+</div>
+
+</body>
+</html>

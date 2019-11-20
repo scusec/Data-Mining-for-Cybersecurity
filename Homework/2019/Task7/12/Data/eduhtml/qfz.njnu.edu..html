@@ -1,0 +1,501 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" >
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="" />
+	<meta name="keywords" content="design, css, cascading, style, sheets, xhtml, graphic design, w3c, web standards, visual, display" />
+	<meta name="description" content="网站简介" />
+	<meta name="robots" content="all" />
+	<title>纪委监察处-清风站</title>
+	<script src="js/jquery.js" type="text/javascript"></script>
+	<script src="js/pic_show.js" type="text/javascript"></script>
+	<script src="js/jquery.min.js" type="text/javascript"></script>
+	<link rel="stylesheet" href="styles/pic_show.css" type="text/css" media="all" />
+	<link rel="stylesheet" href="styles/960.css" type="text/css" media="all" />
+	<link rel="stylesheet" href="styles/reset.css" type="text/css" media="all" />
+	<link rel="stylesheet" href="styles/text.css" type="text/css" media="all" />
+	<link rel="stylesheet" href="styles/main.css" type="text/css" media="all" />
+	<link rel="stylesheet" href="styles/subhome.css" type="text/css" media="all" />
+	<link rel="stylesheet" href="styles/picnews.css" type="text/css" media="all" />
+	<script type="text/javascript">
+	    $(document).ready(function() {
+			   var currentIndex = 0;
+	            var DEMO; //函数对象
+	            var currentID = 0; //取得鼠标下方的对象ID
+	            var pictureID = 0; //索引ID
+	            $("#ifocus_piclist li").eq(0).show(); //默认
+	            autoScroll();
+	            $("#ifocus_btn li").hover(function() {
+	                StopScrolll();
+	                $("#ifocus_btn li").removeClass("current")//所有的li去掉当前的样式加上正常的样式
+	                $(this).addClass("current"); //而本身则加上当前的样式去掉正常的样式
+	                currentID = $(this).attr("id"); //取当前元素的ID
+	                pictureID = currentID.substring(currentID.length - 1); //取最后一个字符
+	                $("#ifocus_piclist li").eq(pictureID).fadeIn("slow"); //本身显示
+	                $("#ifocus_piclist li").not($("#ifocus_piclist li")[pictureID]).hide(); //除了自身别的全部隐藏
+	                $("#ifocus_tx li").hide();
+	                $("#ifocus_tx li").eq(pictureID).show();
+	
+	            }, function() {
+	                //当鼠标离开对象的时候获得当前的对象的ID以便能在启动自动时与其同步
+	                currentID = $(this).attr("id"); //取当前元素的ID
+	                pictureID = currentID.substring(currentID.length - 1); //取最后一个字符
+	                currentIndex = pictureID;
+	                autoScroll();
+	            });
+	            //自动滚动
+	            function autoScroll() {
+	                $("#ifocus_btn li:last").removeClass("current");
+	                $("#ifocus_tx li:last").hide();
+	                $("#ifocus_btn li").eq(currentIndex).addClass("current");
+	                $("#ifocus_btn li").eq(currentIndex - 1).removeClass("current");
+	                $("#ifocus_tx li").eq(currentIndex).show();
+	                $("#ifocus_tx li").eq(currentIndex - 1).hide();
+	                $("#ifocus_piclist li").eq(currentIndex).fadeIn("slow");
+	                $("#ifocus_piclist li").eq(currentIndex - 1).hide();
+	                currentIndex++; currentIndex = currentIndex >= 4 ? 0 : currentIndex;
+	                DEMO = setTimeout(autoScroll, 4000);
+	            }
+	            function StopScrolll()//当鼠标移动到对象上面的时候停止自动滚动
+	            {
+	                clearTimeout(DEMO);
+	            }
+		});
+	    </script>
+<script type="text/JavaScript">
+<!--
+function MM_jumpMenu(targ,selObj,restore){ //v3.0
+  eval(targ+".location='"+selObj.options[selObj.selectedIndex].value+"'");
+  if (restore) selObj.selectedIndex=0;
+}
+//-->
+</script>
+
+	
+</head>
+
+<body>
+
+<div class="wipper clearfix">
+	<div class="kouhao container_16 clearfix">
+			<div class=long_block_index>
+			  <div class=js_imgs_block>
+			    <div id=slideshow_wrapper>
+			      <div id=slideshow_photo><a style="z-index: 2" 
+			href="javascript:void(0)" index="1"><img border=0 
+			src="styles/img/header_bg1.jpg"></a> <a style="z-index: 1" 
+			href="javascript:void(0)" index="2"><img border=0 
+			src="styles/img/header_bg2.jpg"></a> <a style="z-index: 1" 
+			href="javascript:void(0)" target=_blank index="3"><img border=0 
+			src="styles/img/header_bg3.jpg"></a> </div>
+			      <div id=slideshow_footbar></div>
+			    </div>
+			  </div>
+			</div>
+			
+	</div>
+	<div class="container_16 clearfix">
+	    <div id="nav" class="clearfix">
+	    	<ul class="grid_12">
+	    		<li><a href="index.html"  class="active">首 页</a></li>
+	    		<li><a href="jgxx/index.html">机构信息</a></li>
+	    		<li><a href="qfdt/index.html">清风动态</a></li>
+	    		<li><a href="lzyw/index.html">廉政要闻</a></li>
+	    		<li><a href="fgzd/index.html">法规制度</a></li>
+	    		<li><a href="qfjy/index.html">清风教育</a></li>
+                <li><a href="jzcm/index.html">警钟长鸣</a></li>
+                <li><a href="xfjb/index.html">信访举报</a></li>
+	    	</ul>
+	    	<div id="searchform"  class="grid_4 alpha omega"><!-- 搜索 开始 -->
+	    	<script type="text/javascript"> 
+function googlesearch () {
+var wq=document.getElementsByName("wq")[0].value;
+var link="http://qfz.njnu.edu.cn/search.html?key="+escape(wq);
+window.open(link); }
+</script>		 
+<div id="searchwrapper">
+<input type="text" onblur="if (this.value == '') {this.value = '搜索...';}" onfocus="if (this.value == '搜索...') {this.value = '';}" title="Search..." id="searchbox" name="wq" value="搜索...">
+<input type="submit" value="" onclick="javascript:googlesearch()" id="searchsubmit">
+ </div>
+	    	</div><!-- 搜索 结束 -->
+	    </div><!-- 导航 结束 -->
+	    
+	 </div><!-- container_16 end -->
+	 
+	 <div id="contant" class="container_16 clearfix">
+	 
+	 	<div class="message grid_16">
+	 		<p><marquee id="affiche" align="left" behavior="scroll"  direction="left"  scrollamount="4" scrolldelay="100" onMouseOut="this.start()" onMouseOver="this.stop()">
+            
+            </marquee> </p>
+	 	</div>
+	 	
+	    <div class="maincontant grid_12">
+	    	
+	    	<div class="news grid_12 alpha omega">
+	    		<div class="picnews">
+	    			<!-- 图片新闻 开始 -->
+	    			
+	    						<div id="ifocus_pic">
+	    							<div id="ifocus_piclist" style="left:0; top:0;">
+  <ul>
+  
+   <li><a href="http://qfz.njnu.edu.cn/2017-9/131909_117205.html" target="_blank"><img src="http://qfz.njnu.edu.cn/wzattach/t_132213_743530.jpg" alt="中国共产党南京师范大学新一届纪律检查委员会第一次全体会议举行" /></a></li>
+  
+   <li><a href="http://qfz.njnu.edu.cn/2017-9/091135_143771.html" target="_blank"><img src="http://qfz.njnu.edu.cn/wzattach/t_091131_910921.jpg" alt="我校召开第十五届纪律检查委员会第十次全体会议" /></a></li>
+  
+   <li><a href="http://qfz.njnu.edu.cn/2017-8/152412_477703.html" target="_blank"><img src="http://qfz.njnu.edu.cn/wzattach/t_152334_539175.jpg" alt="我校新学期纪检监察工作专题学习研讨会举行" /></a></li>
+  
+   <li><a href="http://qfz.njnu.edu.cn/2017-6/100121_365897.html" target="_blank"><img src="http://qfz.njnu.edu.cn/wzattach/t_100106_434942.jpg" alt="省纪委（监察厅）领导调研我校落实党风廉政建设“两个责任”及“打铁还需自身硬”专项行动情况" /></a></li>
+  
+  </ul>
+</div>
+	    							<div id="ifocus_opdiv"></div>
+									<div id="ifocus_tx">
+  <ul>
+  
+    <li class="current">中国共产党南京师范大学新一届纪律检查委员会第一次全..</li>
+  
+    <li class="normal">我校召开第十五届纪律检查委员会第十次全体会议</li>
+  
+    <li class="normal">我校新学期纪检监察工作专题学习研讨会举行</li>
+  
+    <li class="normal">省纪委（监察厅）领导调研我校落实党风廉政建设“两个..</li>
+  
+  </ul>
+</div>
+	    						</div>
+	    						<div id="ifocus_btn">
+	    							<ul>
+
+  <li class="current" id="p0"><img src="http://qfz.njnu.edu.cn/wzattach/t_132213_743530.jpg" alt="" /></li>	
+
+  <li class="normal" id="p1"><img src="http://qfz.njnu.edu.cn/wzattach/t_091131_910921.jpg" alt="" /></li>	
+
+  <li class="normal" id="p2"><img src="http://qfz.njnu.edu.cn/wzattach/t_152334_539175.jpg" alt="" /></li>	
+
+  <li class="normal" id="p3"><img src="http://qfz.njnu.edu.cn/wzattach/t_100106_434942.jpg" alt="" /></li>	
+
+</ul>
+	    						</div>
+	    			   
+	    			<!-- 图片新闻 结束 -->
+	    		</div>
+	    		<div class="listnews">
+	    			<h6>清风动态</h6>
+					<ul>
+
+<li><a href="http://qfz.njnu.edu.cn/2017-10/113423_927558.html" title="省纪委调研我校落实“打铁还需自身硬”专项行动情况">省纪委调研我校落实“打铁还需自身硬”专项行动情..</a></li>
+
+<li><a href="http://qfz.njnu.edu.cn/2017-10/104957_539161.html" title="徐卫明书记一行赴南京大学、南京中医药大学进行纪检监察工作调研">徐卫明书记一行赴南京大学、南京中医药大学进行纪..</a></li>
+
+<li><a href="http://qfz.njnu.edu.cn/2017-9/132432_970029.html" title="中国共产党南京师范大学新一届纪律检查委员会第一次全体会议举行">中国共产党南京师范大学新一届纪律检查委员会第一..</a></li>
+
+<li><a href="http://qfz.njnu.edu.cn/2017-9/151045_926961.html" title="淮阴师范学院纪委领导一行来我校调研">淮阴师范学院纪委领导一行来我校调研</a></li>
+
+<li><a href="http://qfz.njnu.edu.cn/2017-9/090954_400297.html" title="我校召开第十五届纪律检查委员会第十次全体会议">我校召开第十五届纪律检查委员会第十次全体会议</a></li>
+
+<li><a href="http://qfz.njnu.edu.cn/2017-9/163831_296096.html" title="纪委办（监察处）党支部举行党员大会暨“打铁还需自身硬”专题培训学习会">纪委办（监察处）党支部举行党员大会暨“打铁还需..</a></li>
+
+<li><a href="http://qfz.njnu.edu.cn/2017-8/150422_869231.html" title="我校新学期纪检监察工作专题学习研讨会举行">我校新学期纪检监察工作专题学习研讨会举行</a></li>
+
+<li><a href="http://qfz.njnu.edu.cn/2017-7/145200_236346.html" title="我校传达学习省（市）属高校院所纪委书记座谈会 暨新任纪委书记集体谈话会会议精神">我校传达学习省（市）属高校院所纪委书记座谈会 ..</a></li>
+
+<li><a href="http://qfz.njnu.edu.cn/2017-7/160322_920024.html" title="2017年省教育纪检监察学会第二届 常务理事会暨江苏高校纪委书记培训班在我校举行">2017年省教育纪检监察学会第二届 常务理事会..</a></li>
+
+<li class="more"><a href="qfdt/index.html" title="">更多 >></a></li>
+</ul>
+	    		</div>
+	    	</div><!-- news 结束 -->
+	    	
+	    	<div class="grid_12 alpha omega"> 
+                   <div class="idTabs"><!-- 带标签的标题文章 begin -->
+	    	        <h2 class="tabstitle" ><span>廉政要闻</span></h2> 
+	    	      <div>
+	    	     <ul class="listshow">
+
+<li><a href="http://qfz.njnu.edu.cn/2017-10/093313_324260.html" title="打虎拍蝇：无禁区，全覆盖，零容忍!">打虎拍蝇：无禁区，全覆盖，零容忍!</a></li>
+
+<li><a href="http://qfz.njnu.edu.cn/2017-9/132753_176529.html" title="全省纪检监察系统表彰大会召开">全省纪检监察系统表彰大会召开</a></li>
+
+<li><a href="http://qfz.njnu.edu.cn/2017-9/141909_998390.html" title="2017年第八届江苏廉洁文化周在宁开幕">2017年第八届江苏廉洁文化周在宁开幕</a></li>
+
+<li><a href="http://qfz.njnu.edu.cn/2017-9/090653_738329.html" title="蒋卓庆：巡视巡察上下联动 实现全覆盖无盲区">蒋卓庆：巡视巡察上下联动 实现全覆盖无盲区</a></li>
+
+<li><a href="http://qfz.njnu.edu.cn/2017-9/090408_448691.html" title="海南:对9所省属高校党委巡视整改情况开展督查">海南:对9所省属高校党委巡视整改情况开展督查</a></li>
+
+<li><a href="http://qfz.njnu.edu.cn/2017-9/090045_562517.html" title="党的十八大以来组织部门干部监督工作综述">党的十八大以来组织部门干部监督工作综述</a></li>
+
+<li><a href="http://qfz.njnu.edu.cn/2017-9/093949_311836.html" title="王岐山出席全国纪检监察系统表彰大会并讲话">王岐山出席全国纪检监察系统表彰大会并讲话</a></li>
+
+<li><a href="http://qfz.njnu.edu.cn/2017-9/100559_146850.html" title="五集电视专题片《巡视利剑》9月7日至11日在央视播出">五集电视专题片《巡视利剑》9月7日至11日在央视播..</a></li>
+
+</ul>
+<a href="lzyw/index.html" title="" class="more">更多 >></a>	
+                 </div> 
+	    	 </div>  <!-- 带标签的标题文章  end -->
+	    	 
+	    	 <div class="idTabs"> <!-- 带标签的标题文章 begin -->
+	    	         <h2 class="tabstitle" ><span>法规制度</span></h2>
+	    	       <div>
+                    <ul class="listshow">
+
+<li><a href="http://qfz.njnu.edu.cn/2017-10/120610_336790.html" title="南京师范大学内部巡察工作实施办法（试行）">南京师范大学内部巡察工作实施办法（试行）</a></li>
+
+<li><a href="http://qfz.njnu.edu.cn/2017-10/121312_536991.html" title="南京师范大学落实“打铁还需自身硬”专项行动工作方案">南京师范大学落实“打铁还需自身硬”专项行动工作..</a></li>
+
+<li><a href="http://qfz.njnu.edu.cn/2017-9/161951_508615.html" title="中央和国家机关基层党组织 党建活动经费管理办法">中央和国家机关基层党组织 党建活动经费管理办法</a></li>
+
+<li><a href="http://qfz.njnu.edu.cn/2017-6/122835_482444.html" title="南京师范大学会议费报销管理办法">南京师范大学会议费报销管理办法</a></li>
+
+<li><a href="http://qfz.njnu.edu.cn/2017-5/161518_856199.html" title="南京师范大学党委部门联席会议制度">南京师范大学党委部门联席会议制度</a></li>
+
+<li><a href="http://qfz.njnu.edu.cn/2017-4/141541_203419.html" title="南京师范大学理工科纵向科研项目间接费用管理办法（修订版）">南京师范大学理工科纵向科研项目间接费用管理办法..</a></li>
+
+<li><a href="http://qfz.njnu.edu.cn/2017-4/105833_109582.html" title="中国共产党工作机关条例(试行)">中国共产党工作机关条例(试行)</a></li>
+
+<li><a href="http://qfz.njnu.edu.cn/2017-4/093449_630018.html" title="党政机关国内公务接待管理规定">党政机关国内公务接待管理规定</a></li>
+
+</ul>
+<a href="fgzd/index.html" title="" class="more">更多 >></a>
+	    	       </div> 
+	    	  </div>  <!-- 带标签的标题文章  end -->
+                </div>
+	    	  
+	    	  <div class="grid_12 alpha omega"> 
+                     <div class="idTabs"><!-- 带标签的标题文章 begin -->
+	    	          <h2 class="tabstitle" ><span>清风教育</span></h2>
+	    	        <div>
+	    	          <ul class="listshow">
+
+<li><a href="http://qfz.njnu.edu.cn/2017-10/085458_915959.html" title="一图读懂：习近平总书记在十八届中央纪委历次全会上的重要讲话">一图读懂：习近平总书记在十八届中央纪委历次全会..</a></li>
+
+<li><a href="http://qfz.njnu.edu.cn/2017-9/141047_582677.html" title="从一大到十八大：盘点党章历次重大修改">从一大到十八大：盘点党章历次重大修改</a></li>
+
+<li><a href="http://qfz.njnu.edu.cn/2017-9/091225_174901.html" title="一图读懂：十八大以来党的作风建设大事记">一图读懂：十八大以来党的作风建设大事记</a></li>
+
+<li><a href="http://qfz.njnu.edu.cn/2017-9/090009_847077.html" title="带您了解：中国共产党历次全国代表大会">带您了解：中国共产党历次全国代表大会</a></li>
+
+<li><a href="http://qfz.njnu.edu.cn/2017-8/114109_309547.html" title="没拿钱也被查真的委屈吗">没拿钱也被查真的委屈吗</a></li>
+
+<li><a href="http://qfz.njnu.edu.cn/2017-8/131523_545368.html" title="为什么党员之间要互称“同志”？">为什么党员之间要互称“同志”？</a></li>
+
+<li><a href="http://qfz.njnu.edu.cn/2017-8/110155_364657.html" title="从概念看全面从严治党的形成和发展">从概念看全面从严治党的形成和发展</a></li>
+
+<li><a href="http://qfz.njnu.edu.cn/2017-6/100737_321621.html" title="【镜头】河南周口如何做好党风廉政意见回复">【镜头】河南周口如何做好党风廉政意见回复</a></li>
+
+</ul>
+<a href="qfjy/index.html" title="" class="more">更多 >></a>
+	    	        </div> 
+	    	   </div>  <!-- 带标签的标题文章  end -->
+	    	   
+	    	   <div class="idTabs"> <!-- 带标签的标题文章 begin -->
+	    	       <h2 class="tabstitle" ><span>警钟长鸣</span></h2>
+	    	         <div>
+	    	           <ul class="listshow">
+
+<li><a href="http://qfz.njnu.edu.cn/2017-10/102253_102360.html" title="中共党员的100条禁令来了：务必牢记，条条都是红线！">中共党员的100条禁令来了：务必牢记，条条都是红线..</a></li>
+
+<li><a href="http://qfz.njnu.edu.cn/2017-10/112316_235680.html" title="牡丹江大学原党委副书记、校长林韧卒被开除党籍">牡丹江大学原党委副书记、校长林韧卒被开除党籍</a></li>
+
+<li><a href="http://qfz.njnu.edu.cn/2017-9/133906_545052.html" title="被巡视高校整改工作：不糊弄见真章">被巡视高校整改工作：不糊弄见真章</a></li>
+
+<li><a href="http://qfz.njnu.edu.cn/2017-9/133520_877782.html" title="吉林通报6起高校领导干部违反八项规定精神问题">吉林通报6起高校领导干部违反八项规定精神问题</a></li>
+
+<li><a href="http://qfz.njnu.edu.cn/2017-9/084431_723315.html" title="领导干部有哪些行为，岗位就要被调整？">领导干部有哪些行为，岗位就要被调整？</a></li>
+
+<li><a href="http://qfz.njnu.edu.cn/2017-4/112759_625317.html" title="党员干部发微信也有红线 这八条千万不能碰">党员干部发微信也有红线 这八条千万不能碰</a></li>
+
+<li><a href="http://qfz.njnu.edu.cn/2017-4/154214_566032.html" title="【一定之规】 家里那点事，要留留神，防微杜渐，不要护犊子">【一定之规】 家里那点事，要留留神，防微杜渐，不要..</a></li>
+
+<li><a href="http://qfz.njnu.edu.cn/2017-4/154027_126048.html" title="湖南副县长未向组织如实报告多套房产被双开">湖南副县长未向组织如实报告多套房产被双开</a></li>
+
+</ul>
+<a href="jzcm/index.html" title="" class="more">更多 >></a>
+	    	         </div> 
+	    	    </div>  <!-- 带标签的标题文章  end -->
+	    	</div>
+	    </div><!-- maincontant 结束 -->
+
+		<div class="slider grid_4 omega">
+			<div class="download maginB">
+				<a href="mailto:jw@njnu.edu.cn">纪委信箱</a>
+			</div>
+			
+			<div class="gonggao maginB">
+				<h6><span>通知公告</span></h6>
+				<ul>
+
+<li><a href="http://qfz.njnu.edu.cn/2016-12/101425_292600.html" title="关于做好2017年元旦春节期间有关工作的通知">关于做好2017年元旦春节..</a></li>
+
+<li><a href="http://qfz.njnu.edu.cn/2016-10/104037_298150.html" title="关于转发省纪委《关于认真做好学习运用〈尺·度〉动漫读本的通知》的通知">关于转发省纪委《关于认真做..</a></li>
+
+<li><a href="http://qfz.njnu.edu.cn/2016-10/103349_637557.html" title="关于转发省纪委办公厅《关于开展违规吃请和公款吃喝问题专项整治工作的通知》的通知">关于转发省纪委办公厅《关于..</a></li>
+
+<li><a href="http://qfz.njnu.edu.cn/2016-6/100037_535700.html" title="关于领取和学习《习近平关于严明党的纪律和规矩论述摘编》的通知">关于领取和学习《习近平关于..</a></li>
+
+<li><a href="http://qfz.njnu.edu.cn/2016-6/095803_443127.html" title="关于在各二级单位全面开展廉政风险防控建设工作的通知">关于在各二级单位全面开展廉..</a></li>
+
+<li><a href="http://qfz.njnu.edu.cn/2016-1/113421_936780.html" title="关于进一步加强2016年寒假春节期间作风建设的通知">关于进一步加强2016年寒..</a></li>
+
+<li><a href="http://qfz.njnu.edu.cn/2016-1/162022_992292.html" title="教育部关于做好2016年元旦春节寒假期间有关工作的通知">教育部关于做好2016年元..</a></li>
+
+</ul>
+			</div><!-- 公告 end -->
+			
+			<div id="login" class="maginB"><!-- login begin -->
+			  <h6><span>格言警句</span></h6>
+			<ul>
+
+<li><a href="http://qfz.njnu.edu.cn/2017-10/164126_677548.html" title="十九大报告：习近平直抵人心的这19句话">十九大报告：习近平直抵人心..</a></li>
+
+<li><a href="http://qfz.njnu.edu.cn/2017-9/135234_520467.html" title="政治生态也要山清水秀">政治生态也要山清水秀</a></li>
+
+<li><a href="http://qfz.njnu.edu.cn/2017-3/145027_997099.html" title=""七个有之""五个必须"">"七个有之""五个必须"</a></li>
+
+<li><a href="http://qfz.njnu.edu.cn/2016-7/104206_955139.html" title="习近平从严治党十八警句">习近平从严治党十八警句</a></li>
+
+<li><a href="http://qfz.njnu.edu.cn/2016-4/102527_108277.html" title="习近平在网信工作座谈会上的10句“干货”">习近平在网信工作座谈会上的..</a></li>
+
+<li><a href="http://qfz.njnu.edu.cn/2016-4/150125_176126.html" title="习近平的十大反腐警句">习近平的十大反腐警句</a></li>
+
+<li><a href="http://qfz.njnu.edu.cn/2015-11/091209_946980.html" title="“平语”近人——习近平如何给领导干部立“规矩”">“平语”近人——习近平如何..</a></li>
+
+<li><a href="http://qfz.njnu.edu.cn/2015-10/085502_372649.html" title="习近平反腐大白话：不懂规矩不是合格的领导干部">习近平反腐大白话：不懂规矩..</a></li>
+
+</ul>
+			</div><!-- login end -->
+			
+			
+			
+			<div class="links maginB"><!-- links begin -->
+				<h6><span>友情链接</span></h6>
+<center>
+<form name="xmlj" style="width:200px"><div align="center">
+<select name="<$随机码$>" onChange="MM_jumpMenu('parent',this,1)" style="width:200px">
+<option value="#" selected>校内站点</option>
+
+<option value="http://www.njnu.edu.cn">南京师范大学</option>
+
+<option value="http://xgc.njnu.edu.cn/">德风园</option>
+
+<option value="http://sjc.njnu.edu.cn/">审计处</option>
+
+<option value="http://grad.njnu.edu.cn/">研究生院</option>
+
+<option value="http://sun.njnu.edu.cn">南师大阳光网</option>
+
+</select>
+</div>
+</form>
+<br/>
+<form name="smwzd" style="width:200px"><div align="center">
+<select name="<$随机码$>" onChange="MM_jumpMenu('parent',this,1)" style="width:200px">
+<option value="#" selected>省内外重点高校纪委监察网站</option>
+
+<option value="http://lzwh.njfu.edu.cn/">南京林业大学廉政文化网</option>
+
+<option value="http://jjjc.hhu.edu.cn/">河海大学纪委监察</option>
+
+<option value="http://www.jwjc.fudan.edu.cn/">复旦大学纪委</option>
+
+<option value="http://www1.nju.edu.cn/cps/site/NJU/njuc/jw_new/index.php">南京大学纪委监察</option>
+
+<option value="http://jw.nuaa.edu.cn/">南京航空航天大学</option>
+
+<option value="http://202.119.81.27/">南京理工大学纪检监察审计</option>
+
+<option value="http://jwjc.ntu.edu.cn/">南通大学纪委监察</option>
+
+<option value="http://bdjw.pku.edu.cn/">北京大学纪委监察</option>
+
+<option value="http://jw.seu.edu.cn/">东南大学纪委监察</option>
+
+<option value="http://jiwei.sjtu.edu.cn/">上海交通大学纪委监察</option>
+
+</select>
+</div>
+</form>
+<br/>
+<form name="sfyxjw" style="width:200px"><div align="center">
+<select name="<$随机码$>" onChange="MM_jumpMenu('parent',this,1)" style="width:200px">
+<option value="#" selected>师范院校纪检监察网站</option>
+
+<option value="http://hhttp://www.ahnu.edu.cn/site/jwjcc/">安徽师范大学纪委监察</option>
+
+<option value="http://jiwsh.snnu.edu.cn/index.asp">陕西师范大学纪委监察审计处</option>
+
+<option value="http://jc.hunnu.edu.cn/">湖南师范大学纪委监察处</option>
+
+<option value="http://jiwei.shnu.edu.cn/">上海师范大学纪检监察</option>
+
+<option value="http://jw.zjnu.edu.cn/jwjc/">浙江师范大学纪委监察处</option>
+
+<option value="http://jjb.bnu.edu.cn/">北京师范大学纪委</option>
+
+<option value="http://jwjsc.jxnu.edu.cn/">江西师范大学纪委监审</option>
+
+<option value="http://former.scnu.edu.cn/~jwjc/indexnew.html">华南师范大学纪委监察处</option>
+
+<option value="http://jiwei.xznu.edu.cn/">江苏师范大学纪委监察网</option>
+
+<option value="http://former.scnu.edu.cn/~jwjc/indexnew.html">华南师范大学纪委监察处</option>
+
+<option value="http://202.204.208.76:8083/jjw/jjw/index.jsp">首都师范大学纪委监察处</option>
+
+<option value="http://jwjcc.ccnu.edu.cn/">华中师范大学纪委监察处</option>
+
+<option value="http://jjw.nenu.edu.cn/">东北师范大学纪监委</option>
+
+<option value="http://www.jijian.ecnu.edu.cn/">华东师范大学纪委监察处</option>
+
+<option value="http://www.jiwei.sdnu.edu.cn/">山东师范大学纪委监察室</option>
+
+<option value="http://jch.gxnu.edu.cn/">广西师范大学纪委监察</option>
+
+<option value="http://jjs.fjnu.edu.cn/">福建师范大学纪委监察审计处</option>
+
+</select>
+</div>
+</form>
+<br/>
+<form name="gjssjw" style="width:200px"><div align="center">
+<select name="<$随机码$>" onChange="MM_jumpMenu('parent',this,1)" style="width:200px">
+<option value="#" selected>国家、省、市及教育厅纪检临检察网站</option>
+
+<option value="http://www.lianzheng.com.cn/">中国反腐倡廉网</option>
+
+<option value="http://csr.mos.gov.cn">中国廉政网</option>
+
+<option value="http://www.mos.gov.cn">中国监察部</option>
+
+<option value="http://www.icacw.com/">廉政中国网</option>
+
+<option value="http://www.ccdi.gov.cn/">中央纪委监察部</option>
+
+<option value="http://www.jssjw.gov.cn/">江苏反腐倡廉网</option>
+
+</select>
+</div>
+</form>
+<br/><br/>
+</center>
+			</div><!-- links end -->
+			<div class="maginB">
+				<a href="http://qfz.njnu.edu.cn/login.html" target="_blank"><img src="img/downloads.png" alt="" /></a>
+			</div>
+			
+			
+		</div>
+
+	</div><!-- contant end -->
+	
+	<div id="footer" class="container_16">
+  <p>Copyright 2012-2014 &#169; 纪委办监察处-清风站. All rights reserved. <br>地址：纪委办-监察处，南京师范大学文苑路1号 邮政编码：210023  <a href="http://qfz.njnu.edu.cn/manage/admin/" target="_blank">&nbsp;&nbsp;</a></p>
+<p>举报电话：025-85891511 接待场所：厚生楼117室  接待时间：工作日9:00-11:00,13:30-16:30
+</p>
+	</div>
+</div>
+
+</body>
+</html>

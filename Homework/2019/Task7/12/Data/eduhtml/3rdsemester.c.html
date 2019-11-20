@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>        	    		中国政法大学网络教学平台网络教学平台
+    	    
+</title>
+<link href="/_cupl/style/index.css" type="text/css" rel="stylesheet"/>
+<script src="/js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="/js/portal.js"></script>
+<script src="/setcookie.jsp?fid=16619"  type="text/javascript"></script>
+</head>
+<body class="bg">
+	
+<input type="hidden" id="curuserId" value="" />
+<input type="hidden" id="unitdomain" value="3rdsemester.cupl.edu.cn" />
+<input type="hidden" id="unitprefix" value="cupl" />
+<input type="hidden" id="nationDESStr" value="" />	
+	
+    <div class="main">
+    	<a href="/portal" class="log"><img src="/_cupl/images/logo_03.png" width="300"></a>
+        <p class="loginFont">虚拟第三学期课程平台</p>
+        <div class="loginBtn"><a href="javascript:void(0)" class="fl denglv btn">登录</a><a href="http://3rdsemester.cupl.edu.cn/portal" class="fr btn">试听</a></div>
+		<!---登陆框开始-->
+        <div class="login">
+			<div class="close">
+				<a href="javascript:closeLogin();">
+					<span>X</span>
+				</a>
+			</div> 
+			<form  id="loginform" name="loginform" action="/login/login" method="post">   
+            	<table cellpadding="0" cellspacing="0" width="100%">
+                	<tbody>
+                    	<tr>
+                        	<td width="105" align="left" valign="top">用户名：</td>
+                            <td align="left"><input type="text" class="inp" name="uname" id="uname"/></td>
+                        </tr>
+                        <tr>
+                        	<td width="105" align="left"  valign="top">密　码：</td>
+                            <td align="left"><input type="password" class="inp" name="password" id="password"/></td>
+                        </tr>
+                        <tr>
+                        	<td width="105"></td>
+                            <td align="left">
+    							<input type="button" class="sub" value="登 录" onclick="loginFrom();">
+    							<a href="http://passport2.cupl.edu.cn/pwd/getpwd?fid=16619&refer=http://3rdsemester.cupl.edu.cn" class="for">忘记密码？</a>
+    						</td>
+                        </tr>
+                    </tbody>
+                </table>
+				<input type="hidden" value="1" name="type" id="type"/>
+         
+    			<input type="hidden" value="16619" name="fid" id="fid"/>
+				<input name="refer" type="hidden" value="http://i.mooc.cupl.edu.cn/space/index.shtml"/>
+				<input name="refer2" type="hidden" value="http://3rdsemester.cupl.edu.cn/tologin?status=2"/>
+			</form>
+        </div>	
+        <!---登陆框结束-->
+	</div>
+	
+	<!-- 在线客服公共页面 -->
+ 			<style>
+		.contactUs3{_display:none;position:fixed;_position:absolute;z-index:999;right:15px;bottom:76px;_bottom:auto;width:60px;height:60px;text-indent:-999px;overflow:hidden;background:url('/_cupl/images/kefu.png') 0px -60px;}
+		.contactUs3:hover{background-position:-71px -60px}
+		.contactUs4{_display:none;position:fixed;_position:absolute;z-index:999;right:15px;bottom:11px;_bottom:auto;width:60px;height:60px;text-indent:-999px;overflow:hidden;background:url('/_cupl/images/kefu.png') 0px -119px;}
+		.contactUs4:hover{background-position:-71px -119px}
+		</style>
+		<a  href="http://www10.53kf.com/webCompany.php?arg=10097821&style=1" target="_blank" class="contactUs3" title="在线客服"></a>	
+		<a  href="http://www2.53kf.com/webCompany.php?arg=10080899&style=1" target="_blank" class="contactUs4" title="在线客服"></a>	
+		
+<!-- 在线客服公共页面 -->
+	<script type="text/javascript">
+   	 $(function(){
+    	var heit = $(document).height();
+    	$(".main").height(heit);
+		
+		$(".denglv").click(function(){
+    		$(".login").show();
+    		$(this).parent().hide();
+    	});
+	 });
+	 
+	 function closeLogin() {
+	 	$(".login").hide();
+		$(".loginBtn").show();
+	 }
+    </script>
+</body>
+</html>

@@ -1,0 +1,1142 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<!-- The above 2 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+<meta name="description" content="">
+<meta name="author" content="">
+
+<title>华南师范大学心理学实验中心</title>
+<!--<link href="/Public/static/bootstrap/css/bootstrap.css" rel="stylesheet">
+<link href="/Public/static/bootstrap/css/bootstrap-responsive.css" rel="stylesheet">-->
+<link href="/Public/Home/css/bootstrap.css" rel="stylesheet">
+<link href="/Public/Home/css/non-responsive.css" rel="stylesheet">
+<!--<link href="/Public/static/bootstrap/css/docs.css" rel="stylesheet">
+<link href="/Public/static/bootstrap/css/onethink.css" rel="stylesheet">-->
+
+<!--index首页css-->
+<link href="/Public/Home/css/home-index.css" rel="stylesheet">
+
+<!-- 文档模型样式-->
+<link href="/Public/Home/css/home-article.css" rel="stylesheet">
+
+<!-- 用户注册、登录样式-->
+<link href="/Public/Home/css/home-register.css" rel="stylesheet">
+
+<!-- 实验预约-->
+<link href="/Public/Home/css/home-bespoke.css" rel="stylesheet">
+
+<!-- 成果管理-->
+<link href="/Public/Home/css/home-fruit.css" rel="stylesheet">
+
+<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+<script src="/Public/static/bootstrap/js/html5shiv.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+<script type="text/javascript" src="/Public/static/jquery-1.10.2.min.js"></script>
+<![endif]-->
+<!--[if gte IE 9]><!-->
+<script type="text/javascript" src="/Public/static/jquery-2.0.3.min.js"></script>
+<script type="text/javascript" src="/Public/static/bootstrap/js/bootstrap.min.js"></script>
+<!--<![endif]-->
+
+<script type="text/javascript" src="/Public/Home/JqueryUI/jquery-ui.min.js"></script>
+<link rel="stylesheet" type="text/css" href="/Public/Home/JqueryUI/jquery-ui.min.css">
+
+<script type="text/javascript" language="javascript" >
+    function display(e,str){
+        var divId='#'+ str;
+        var tdId='#'+str.substr(3);
+        var e=e||window.event;
+        var lt=$(tdId).position();
+        var x=lt.left-$(tdId).width();
+        var y=lt.top+$(tdId).height();
+        console.log("Left position: " + x + " Top position: " + y);
+        $(divId).css('left',x);
+        $(divId).css('top',y);
+        document.getElementById(str).style.display="block";
+    }
+    function disappear(e,str){
+        document.getElementById(str).style.display="none";
+    }
+    //导航高亮
+    function highlight_nav(url){
+        $('.side-sub-menu').find('a[href="'+url+'"]').closest('a').addClass('active');
+    }
+</script>
+<!--上传附件-->
+<script type="text/javascript" src="/Public/static/uploadify/jquery.uploadify.min.js"></script>
+<link rel="stylesheet" type="text/css" href="/Public/static/uploadify/uploadify.css">
+
+<!-- 页面header钩子，一般用于加载插件CSS文件和代码 -->
+
+</head>
+<body>
+	<!-- 头部 -->
+	<!-- 导航条
+================================================== -->
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="brand" href="/index.php?s=/Home/index/index.html" style="float:left;color:#458bcf;">
+                <img src="/Public/Home/images/psylab/contentlogo.png" alt="..." >&nbsp;&nbsp;<strong>心理学实验中心</strong>
+            </a>
+			<div style="position:relative;top:60px;margin-left:-204px;color:#eee;float:left;font-size:14px;">
+				教育部国家级实验教学示范中心(2009)<br>
+				广东省级虚拟仿真实验教学中心(2016)
+			</div>
+            <div class="nav-collapse collapse pull-right">
+                                    <ul class="nav" style="margin-right:50px;">
+                        <li>
+                            <a href="/index.php?s=/Home/User/login.html">登录</a>
+                        </li>
+                        <li>
+                            <a href="/index.php?s=/Home/User/register.html" style="padding-left:0;padding-right:0">注册</a>
+                        </li>
+                    </ul>            </div>
+        </div>
+    </div>
+    <div class="my-nav">
+        <div class="container ">
+            <div class="nav-collapse collapse">
+                <ul class="nav">
+                    <li>
+                                <a href="/index.php?s=/Home/Index/index.html" target="_self">中心首页</a>
+                            </li><li>
+                                <a href="/index.php?s=/Home/Article/index/category/introduce.html" target="_self">中心概况</a>
+                            </li><li>
+                                <a href="/index.php?s=/Home/Article/index/category/news.html" target="_self">中心动态</a>
+                            </li><li>
+                                <a href="/index.php?s=/Home/Article/index/category/teach.html" target="_self">实验教学</a>
+                            </li><li>
+                                <a href="/index.php?s=/Home/Article/index/category/practice.html" target="_self">创新实践</a>
+                            </li><li>
+                                <a href="/index.php?s=/Home/Article/index/category/learning.html" target="_self">资源下载</a>
+                            </li><li>
+                                <a href="/index.php?s=/Home/Article/virtual.html" target="_self">虚拟仿真</a>
+                            </li><li>
+                                <a href="/index.php?s=/Home/Lab/index.html" target="_self">中心实验室</a>
+                            </li><li>
+                                <a href="/index.php?s=/Home/Bespoke/index.html" target="_self">实验预约</a>
+                            </li><li>
+                                <a href="/index.php?s=/Home/Article/index/category/benefit.html" target="_self">效果效益</a>
+                            </li><li>
+                                <a href="/index.php?s=/Home/Fruit/index.html" target="_self">成果管理</a>
+                            </li><li>
+                                <a href="/index.php?s=/Admin/Index/index.html" target="_self">设备管理</a>
+                            </li><li>
+                                <a href="/index.php?s=/Home/Sbcl/index.html" target="_self">年度报告</a>
+                            </li>                </ul>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+	<!-- /头部 -->
+	
+	<!-- 主体 -->
+	
+    <div class="index-header" style="width:1170px;margin:0 auto;">
+        <header class="jumbotron subhead" id="overview" >
+            <link rel="stylesheet" href="/Public/Home/YuxiSlider/YuxiSlider.css">
+            <div class="demo" style="width:1170px;font-size: 0px; line-height: 0;">
+                <!--<img src="/Public/Home/images/psylab/1.jpg" style="width: 100%;height:330px;">-->
+                <a class="control prev" style="margin-top: 0px;"></a>
+				<a class="control next abs" style="margin-top: 0px;"></a><!--自定义按钮，移动端可不写-->
+                <div class="slider"><!--主体结构，请用此类名调用插件，此类名可自定义-->
+                    <ul id="sliderID">
+                        <li><a href="/index.php?s=/Home/Article/detail/root_id/39/pid/46/id/420.html">
+                                <img src="/Uploads/Picture/2017-09-21/59c317ab6d920.jpg" alt="教育部考试中心领导专家一行考察实验中心" class="imgW"/>
+								教育部考试中心领导专家一行考察实验中心</a>
+							</li><li><a href="/index.php?s=/Home/Article/detail/root_id/39/pid/46/id/419.html">
+                                <img src="/Uploads/Picture/2017-09-20/59c22a0057e40.jpg" alt="台湾辅仁大学一行来访学院实验中心" class="imgW"/>
+								台湾辅仁大学一行来访学院实验中心</a>
+							</li><li><a href="/index.php?s=/Home/Article/detail/root_id/39/pid/46/id/418.html">
+                                <img src="/Uploads/Picture/2017-09-20/59c22c0aa9a10.jpg" alt="瑞士苏黎世师范大学教授一行来访我院参观实验中心" class="imgW"/>
+								瑞士苏黎世师范大学教授一行来访我院参观实验中心</a>
+							</li><li><a href="/index.php?s=/Home/Article/detail/root_id/39/pid/46/id/417.html">
+                                <img src="/Uploads/Picture/2017-09-20/59c22ea9380e0.jpg" alt="中国广东核电集团有限公司一行考察实验中心" class="imgW"/>
+								中国广东核电集团有限公司一行考察实验中心</a>
+							</li><li><a href="/index.php?s=/Home/Article/detail/root_id/39/pid/46/id/422.html">
+                                <img src="/Uploads/Picture/2017-09-21/59c3725c33900.jpg" alt="美国南伊利诺大学黎岳庭教授参观实验中心" class="imgW"/>
+								美国南伊利诺大学黎岳庭教授参观实验中心</a>
+							</li><li><a href="/index.php?s=/Home/Article/detail/root_id/39/pid/46/id/421.html">
+                                <img src="/Uploads/Picture/2017-09-21/59c36cb8d7b90.jpg" alt="教育部高等学校国家级实验教学联席会首席技术专家郝永胜教授考察实验中心" class="imgW"/>
+								教育部高等学校国家级实验教学联席会首席技术专家郝永胜教授考察实验中心</a>
+							</li><li><a href="/index.php?s=/Home/Article/detail/root_id/39/pid/46/id/414.html">
+                                <img src="/Uploads/Picture/2017-09-21/59c376e786470.jpg" alt="西藏大学纪建洲校长一行参观考察我院实验中心" class="imgW"/>
+								西藏大学纪建洲校长一行参观考察我院实验中心</a>
+							</li>                    </ul>
+                </div>
+            </div>
+            <!--<div class="cs_description">
+                <span>
+                    华南师范大学心理学实验教学示范中心
+                    <br/>华南师范大学心理学虚拟仿真实验教学中心
+                </span>
+            </div>-->
+        </header>
+    </div>
+
+<div id="main-container" class="container">
+    <div class="row">
+        
+        
+    <div class="row news" style="margin-top: 50px">
+        <!-- Contents-->
+        <div class="col-xs-8">
+            <p class="tit news-bg">中心动态<a class="more" href="/index.php?s=/Home/Article/index/category/news.html">更多&nbsp;&nbsp;&nbsp;&nbsp;</a></p>
+            <div class="article-item">
+                    <!--【中心新闻】-->
+                    <a href="/index.php?s=/Home/Article/detail/root_id/39/pid/46/id/420.html">教育部考试中心领导专家一行考察实验中心</a>
+                    <span>[2017-09-21]</span>
+                </div><div class="article-item">
+                    <!--【中心新闻】-->
+                    <a href="/index.php?s=/Home/Article/detail/root_id/39/pid/46/id/419.html">台湾辅仁大学一行来访学院实验中心</a>
+                    <span>[2017-09-20]</span>
+                </div><div class="article-item">
+                    <!--【中心新闻】-->
+                    <a href="/index.php?s=/Home/Article/detail/root_id/39/pid/46/id/418.html">瑞士苏黎世师范大学教授一行来访我院参观实验中心</a>
+                    <span>[2017-09-11]</span>
+                </div><div class="article-item">
+                    <!--【中心新闻】-->
+                    <a href="/index.php?s=/Home/Article/detail/root_id/39/pid/46/id/417.html">中国广东核电集团有限公司一行考察实验中心</a>
+                    <span>[2017-06-23]</span>
+                </div><div class="article-item">
+                    <!--【中心新闻】-->
+                    <a href="/index.php?s=/Home/Article/detail/root_id/39/pid/46/id/422.html">美国南伊利诺大学黎岳庭教授参观实验中心</a>
+                    <span>[2017-05-23]</span>
+                </div><div class="article-item">
+                    <!--【中心新闻】-->
+                    <a href="/index.php?s=/Home/Article/detail/root_id/39/pid/46/id/421.html">教育部高等学校国家级实验教学联席会首席技术专家郝永胜教授考察实验中心</a>
+                    <span>[2017-05-23]</span>
+                </div><div class="article-item">
+                    <!--【中心新闻】-->
+                    <a href="/index.php?s=/Home/Article/detail/root_id/39/pid/46/id/414.html">西藏大学纪建洲校长一行参观考察我院实验中心</a>
+                    <span>[2017-05-17]</span>
+                </div>        </div>
+
+
+        <!--中心简介begin -->
+        <div class="col-xs-4">
+            <p class="tit info-bg">中心简介<a class="more" href=""></a></p>
+            <div>
+                <p>
+	一、历史与概况
+</p>
+<p>
+	华南师范大学心理学科由早年留学于日本东京帝国大学的老一辈心理学家阮镜清（1905－1993）教授创建于上世纪50年代初期，之后在他的带领下涌现出了肖前瑛、沈家鲜、许尚侠等一批优秀的心理学家，在教育心理、发展心理、实验心理等多个领域开展了大量的研究工作，取得丰硕成果，在国内外心理学界产生了重要影响。
+</p>
+<p>
+	1984年经原国家教委批准，在原教育系设置了心理学专业，开始招收心理学专业本科生，1985年12月经原广东省高教局批准成立心理学系。1999年12月心理学系与学校原教育学系、教育科学研究所等合并组建了教育科学学院，下辖与心理学科相关的二级机构包括心理系、应用心理系、人力资源研究所和心理应用研究中心。2012年7月心理学科从原教育科学学院独立出来，成... <a class="more" href="/index.php?s=/Home/Article/detail/root_id/90/pid/90/id/66.html"><i>详情>>&nbsp;</i></a>
+            </div>
+        </div>
+        <!-- 中心简介end -->
+
+    </div>
+
+    <div class="row psyvs" style="margin-top:20px;overflow: visible;">
+        <!-- 实验预约begin-->
+        <div class="col-xs-8 index-lab">
+            <p class="tit header-title exp-bg" style="margin-bottom: 2px">实验室预约<a class="more" href="/index.php?s=/Home/Bespoke/index.html">更多&nbsp;&nbsp;&nbsp;&nbsp;</a></p>
+            <table class="table table-bordered table-striped" style="width:100%">
+                <thead>
+                <tr>
+                    <th class="">实验室名称</th>
+                    <th>上午</th>
+                    <th>下午</th>
+                    <th>晚上</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                        <td width="49%">64导NeuroScan脑电实验室[502]</td>
+                        <td width="17%" id="3_1">
+                            <a href="#" onmouseover="display(event,'td_3_1')" onmouseout="disappear(event,'td_3_1')">
+                                    <img width="10" height="10" src="/Public/Home/images/psylab/successtip.gif">
+                                </a>
+                                                        </td>
+                        <div id="td_3_1" onmouseover="display(event,'td_3_1')" onmouseout="disappear(event,'td_3_1')" class="box">
+                                <p>
+                                    预约信息：<br/>
+                                    实验名称：语音感知<br/>
+                                    实验类型：毕业论文实验<br/>
+                                    申请实验：陈媛<br/>
+                                    导 师：王瑞明<br/>
+                                    联系电话：15918892278<br/>
+									申请理由：完成毕业论文<br/>
+                                    预约状态：成功预约'<br/>&nbsp;
+                                </p>
+                            </div>
+                            
+                        <td width="17%" id="3_2">
+                            <a href="#" onmouseover="display(event,'td_3_2')" onmouseout="disappear(event,'td_3_2')">
+                                    <img width="10" height="10" src="/Public/Home/images/psylab/successtip.gif">
+                                </a>
+                                                        </td>
+                        <div id="td_3_2" onmouseover="display(event,'td_3_2')" onmouseout="disappear(event,'td_3_2')" class="box">
+                                <p>
+                                    预约信息：<br/>
+                                    实验名称：语音感知<br/>
+                                    实验类型：毕业论文实验<br/>
+                                    申请实验：陈媛<br/>
+                                    导 师：王瑞明<br/>
+                                    联系电话：15918892278<br/>
+									申请理由：完成毕业论文<br/>
+                                    预约状态：成功预约'<br/>&nbsp;
+                                </p>
+                            </div>
+                            
+                        <td width="17%" id="3_3">
+                            <a href="#" onmouseover="display(event,'td_3_3')" onmouseout="disappear(event,'td_3_3')">
+                                    <img width="10" height="10" src="/Public/Home/images/psylab/successtip.gif">
+                                </a>
+                                                        </td>
+                        <div id="td_3_3" onmouseover="display(event,'td_3_3')" onmouseout="disappear(event,'td_3_3')" class="box">
+                                <p>
+                                    预约信息：<br/>
+                                    实验名称：语音感知<br/>
+                                    实验类型：毕业论文实验<br/>
+                                    申请实验：陈媛<br/>
+                                    导 师：王瑞明<br/>
+                                    联系电话：15918892278<br/>
+									申请理由：完成毕业论文<br/>
+                                    预约状态：成功预约'<br/>&nbsp;
+                                </p>
+                            </div>
+                                                </tr><tr>
+                        <td width="49%">BP脑电实验室2室[501]</td>
+                        <td width="17%" id="6_1">
+                             -                        </td>
+                        <div id="td_6_1" onmouseover="display(event,'td_6_1')" onmouseout="disappear(event,'td_6_1')" class="box"></div>
+                        <td width="17%" id="6_2">
+                             -                        </td>
+                        <div id="td_6_2" onmouseover="display(event,'td_6_2')" onmouseout="disappear(event,'td_6_2')" class="box"></div>
+                        <td width="17%" id="6_3">
+                             -                        </td>
+                        <div id="td_6_3" onmouseover="display(event,'td_6_3')" onmouseout="disappear(event,'td_6_3')" class="box"></div>                    </tr><tr>
+                        <td width="49%">BP脑电实验室1室[501]</td>
+                        <td width="17%" id="13_1">
+                             -                        </td>
+                        <div id="td_13_1" onmouseover="display(event,'td_13_1')" onmouseout="disappear(event,'td_13_1')" class="box"></div>
+                        <td width="17%" id="13_2">
+                            <a href="#" onmouseover="display(event,'td_13_2')" onmouseout="disappear(event,'td_13_2')">
+                                    <img width="10" height="10" src="/Public/Home/images/psylab/successtip.gif">
+                                </a>
+                                                        </td>
+                        <div id="td_13_2" onmouseover="display(event,'td_13_2')" onmouseout="disappear(event,'td_13_2')" class="box">
+                                <p>
+                                    预约信息：<br/>
+                                    实验名称：认知控制实验<br/>
+                                    实验类型：毕业论文实验<br/>
+                                    申请实验：刘璐<br/>
+                                    导 师：王凌<br/>
+                                    联系电话：13824489057<br/>
+									申请理由：<br/>
+                                    预约状态：成功预约'<br/>&nbsp;
+                                </p>
+                            </div>
+                            
+                        <td width="17%" id="13_3">
+                            <a href="#" onmouseover="display(event,'td_13_3')" onmouseout="disappear(event,'td_13_3')">
+                                    <img width="10" height="10" src="/Public/Home/images/psylab/successtip.gif">
+                                </a>
+                                                        </td>
+                        <div id="td_13_3" onmouseover="display(event,'td_13_3')" onmouseout="disappear(event,'td_13_3')" class="box">
+                                <p>
+                                    预约信息：<br/>
+                                    实验名称：认知控制实验<br/>
+                                    实验类型：毕业论文实验<br/>
+                                    申请实验：刘璐<br/>
+                                    导 师：王凌<br/>
+                                    联系电话：13824489057<br/>
+									申请理由：<br/>
+                                    预约状态：成功预约'<br/>&nbsp;
+                                </p>
+                            </div>
+                                                </tr><tr>
+                        <td width="49%">EyeLink1000眼动实验室[501]</td>
+                        <td width="17%" id="2_1">
+                            <a href="#" onmouseover="display(event,'td_2_1')" onmouseout="disappear(event,'td_2_1')">
+                                    <img width="10" height="10" src="/Public/Home/images/psylab/successtip.gif">
+                                </a>
+                                                        </td>
+                        <div id="td_2_1" onmouseover="display(event,'td_2_1')" onmouseout="disappear(event,'td_2_1')" class="box">
+                                <p>
+                                    预约信息：<br/>
+                                    实验名称：文本阅读中预期适应对心理模拟的影响<br/>
+                                    实验类型：调试程序<br/>
+                                    申请实验：苏俏宁<br/>
+                                    导 师：陈栩茜<br/>
+                                    联系电话：15521134059<br/>
+									申请理由：调试程序<br/>
+                                    预约状态：成功预约'<br/>&nbsp;
+                                </p>
+                            </div>
+                            
+                        <td width="17%" id="2_2">
+                            <a href="#" onmouseover="display(event,'td_2_2')" onmouseout="disappear(event,'td_2_2')">
+                                    <img width="10" height="10" src="/Public/Home/images/psylab/successtip.gif">
+                                </a>
+                                                        </td>
+                        <div id="td_2_2" onmouseover="display(event,'td_2_2')" onmouseout="disappear(event,'td_2_2')" class="box">
+                                <p>
+                                    预约信息：<br/>
+                                    实验名称：文本阅读中预期适应对心理模拟的影响<br/>
+                                    实验类型：调试程序<br/>
+                                    申请实验：苏俏宁<br/>
+                                    导 师：陈栩茜<br/>
+                                    联系电话：15521134059<br/>
+									申请理由：调试程序<br/>
+                                    预约状态：成功预约'<br/>&nbsp;
+                                </p>
+                            </div>
+                            
+                        <td width="17%" id="2_3">
+                            <a href="#" onmouseover="display(event,'td_2_3')" onmouseout="disappear(event,'td_2_3')">
+                                    <img width="10" height="10" src="/Public/Home/images/psylab/successtip.gif">
+                                </a>
+                                                        </td>
+                        <div id="td_2_3" onmouseover="display(event,'td_2_3')" onmouseout="disappear(event,'td_2_3')" class="box">
+                                <p>
+                                    预约信息：<br/>
+                                    实验名称：文本阅读中预期适应对心理模拟的影响<br/>
+                                    实验类型：调试程序<br/>
+                                    申请实验：苏俏宁<br/>
+                                    导 师：陈栩茜<br/>
+                                    联系电话：15521134059<br/>
+									申请理由：调试程序<br/>
+                                    预约状态：成功预约'<br/>&nbsp;
+                                </p>
+                            </div>
+                                                </tr><tr>
+                        <td width="49%">睡眠研究实验室[628]</td>
+                        <td width="17%" id="4_1">
+                             -                        </td>
+                        <div id="td_4_1" onmouseover="display(event,'td_4_1')" onmouseout="disappear(event,'td_4_1')" class="box"></div>
+                        <td width="17%" id="4_2">
+                             -                        </td>
+                        <div id="td_4_2" onmouseover="display(event,'td_4_2')" onmouseout="disappear(event,'td_4_2')" class="box"></div>
+                        <td width="17%" id="4_3">
+                            <a href="#" onmouseover="display(event,'td_4_3')" onmouseout="disappear(event,'td_4_3')">
+                                    <img width="10" height="10" src="/Public/Home/images/psylab/successtip.gif">
+                                </a>
+                                                        </td>
+                        <div id="td_4_3" onmouseover="display(event,'td_4_3')" onmouseout="disappear(event,'td_4_3')" class="box">
+                                <p>
+                                    预约信息：<br/>
+                                    实验名称：晨光模拟对睡眠惯性的影响<br/>
+                                    实验类型：毕业论文实验<br/>
+                                    申请实验：姚颖<br/>
+                                    导 师：周国富<br/>
+                                    联系电话：15625054660<br/>
+									申请理由：<br/>
+                                    预约状态：成功预约'<br/>&nbsp;
+                                </p>
+                            </div>
+                                                </tr><tr>
+                        <td width="49%">Biopac生理多导仪实验室</td>
+                        <td width="17%" id="21_1">
+                             -                        </td>
+                        <div id="td_21_1" onmouseover="display(event,'td_21_1')" onmouseout="disappear(event,'td_21_1')" class="box"></div>
+                        <td width="17%" id="21_2">
+                             -                        </td>
+                        <div id="td_21_2" onmouseover="display(event,'td_21_2')" onmouseout="disappear(event,'td_21_2')" class="box"></div>
+                        <td width="17%" id="21_3">
+                             -                        </td>
+                        <div id="td_21_3" onmouseover="display(event,'td_21_3')" onmouseout="disappear(event,'td_21_3')" class="box"></div>                    </tr><tr>
+                        <td width="49%">认知行为实验2室[523]</td>
+                        <td width="17%" id="9_1">
+                            <a href="#" onmouseover="display(event,'td_9_1')" onmouseout="disappear(event,'td_9_1')">
+                                    <img width="10" height="10" src="/Public/Home/images/psylab/successtip.gif">
+                                </a>
+                                                        </td>
+                        <div id="td_9_1" onmouseover="display(event,'td_9_1')" onmouseout="disappear(event,'td_9_1')" class="box">
+                                <p>
+                                    预约信息：<br/>
+                                    实验名称：词汇记忆实验<br/>
+                                    实验类型：科研实验<br/>
+                                    申请实验：胡慧楠<br/>
+                                    导 师：梅磊磊<br/>
+                                    联系电话：15013016223<br/>
+									申请理由：需要借用实验室，谢谢！<br/>
+                                    预约状态：成功预约'<br/>&nbsp;
+                                </p>
+                            </div>
+                            
+                        <td width="17%" id="9_2">
+                            <a href="#" onmouseover="display(event,'td_9_2')" onmouseout="disappear(event,'td_9_2')">
+                                    <img width="10" height="10" src="/Public/Home/images/psylab/successtip.gif">
+                                </a>
+                                                        </td>
+                        <div id="td_9_2" onmouseover="display(event,'td_9_2')" onmouseout="disappear(event,'td_9_2')" class="box">
+                                <p>
+                                    预约信息：<br/>
+                                    实验名称：词汇记忆实验<br/>
+                                    实验类型：科研实验<br/>
+                                    申请实验：胡慧楠<br/>
+                                    导 师：梅磊磊<br/>
+                                    联系电话：15013016223<br/>
+									申请理由：需要借用实验室，谢谢！<br/>
+                                    预约状态：成功预约'<br/>&nbsp;
+                                </p>
+                            </div>
+                            
+                        <td width="17%" id="9_3">
+                            <a href="#" onmouseover="display(event,'td_9_3')" onmouseout="disappear(event,'td_9_3')">
+                                    <img width="10" height="10" src="/Public/Home/images/psylab/successtip.gif">
+                                </a>
+                                                        </td>
+                        <div id="td_9_3" onmouseover="display(event,'td_9_3')" onmouseout="disappear(event,'td_9_3')" class="box">
+                                <p>
+                                    预约信息：<br/>
+                                    实验名称：词汇记忆实验<br/>
+                                    实验类型：科研实验<br/>
+                                    申请实验：胡慧楠<br/>
+                                    导 师：梅磊磊<br/>
+                                    联系电话：15013016223<br/>
+									申请理由：需要借用实验室，谢谢！<br/>
+                                    预约状态：成功预约'<br/>&nbsp;
+                                </p>
+                            </div>
+                                                </tr><tr>
+                        <td width="49%">认知行为实验1室[522]</td>
+                        <td width="17%" id="8_1">
+                                                            <a href="#" onmouseover="display(event,'td_8_1')" onmouseout="disappear(event,'td_8_1')">
+                                    <img width="10" height="10" src="/Public/Home/images/psylab/sh.gif">
+                                </a>
+                                                        </td>
+                                                    <div id="td_8_1" onmouseover="display(event,'td_8_1')" onmouseout="disappear(event,'td_8_1')" class="box">
+                                <p>
+                                    预约信息：<br/>
+                                    实验名称：数量认知<br/>
+                                    实验类型：毕业论文实验<br/>
+                                    申请实验：李敏<br/>
+                                    导 师：陈琦<br/>
+                                    联系电话：15625167739<br/>
+									申请理由：毕业论文实验<br/>
+                                    预约状态：申请中...<br/>&nbsp;
+                                </p>
+                            </div>
+                            
+                        <td width="17%" id="8_2">
+                                                            <a href="#" onmouseover="display(event,'td_8_2')" onmouseout="disappear(event,'td_8_2')">
+                                    <img width="10" height="10" src="/Public/Home/images/psylab/sh.gif">
+                                </a>
+                                                        </td>
+                                                    <div id="td_8_2" onmouseover="display(event,'td_8_2')" onmouseout="disappear(event,'td_8_2')" class="box">
+                                <p>
+                                    预约信息：<br/>
+                                    实验名称：数量认知<br/>
+                                    实验类型：毕业论文实验<br/>
+                                    申请实验：李敏<br/>
+                                    导 师：陈琦<br/>
+                                    联系电话：15625167739<br/>
+									申请理由：毕业论文实验<br/>
+                                    预约状态：申请中...<br/>&nbsp;
+                                </p>
+                            </div>
+                            
+                        <td width="17%" id="8_3">
+                                                            <a href="#" onmouseover="display(event,'td_8_3')" onmouseout="disappear(event,'td_8_3')">
+                                    <img width="10" height="10" src="/Public/Home/images/psylab/sh.gif">
+                                </a>
+                                                        </td>
+                                                    <div id="td_8_3" onmouseover="display(event,'td_8_3')" onmouseout="disappear(event,'td_8_3')" class="box">
+                                <p>
+                                    预约信息：<br/>
+                                    实验名称：数量认知<br/>
+                                    实验类型：毕业论文实验<br/>
+                                    申请实验：李敏<br/>
+                                    导 师：陈琦<br/>
+                                    联系电话：15625167739<br/>
+									申请理由：毕业论文实验<br/>
+                                    预约状态：申请中...<br/>&nbsp;
+                                </p>
+                            </div>
+                                                </tr><tr>
+                        <td width="49%">认知行为实验3室[525]</td>
+                        <td width="17%" id="10_1">
+                            <a href="#" onmouseover="display(event,'td_10_1')" onmouseout="disappear(event,'td_10_1')">
+                                    <img width="10" height="10" src="/Public/Home/images/psylab/successtip.gif">
+                                </a>
+                                                        </td>
+                        <div id="td_10_1" onmouseover="display(event,'td_10_1')" onmouseout="disappear(event,'td_10_1')" class="box">
+                                <p>
+                                    预约信息：<br/>
+                                    实验名称：记忆实验<br/>
+                                    实验类型：科研实验<br/>
+                                    申请实验：林军凤<br/>
+                                    导 师：梅磊磊<br/>
+                                    联系电话：15625080234<br/>
+									申请理由：恳请批准<br/>
+                                    预约状态：成功预约'<br/>&nbsp;
+                                </p>
+                            </div>
+                            
+                        <td width="17%" id="10_2">
+                            <a href="#" onmouseover="display(event,'td_10_2')" onmouseout="disappear(event,'td_10_2')">
+                                    <img width="10" height="10" src="/Public/Home/images/psylab/successtip.gif">
+                                </a>
+                                                        </td>
+                        <div id="td_10_2" onmouseover="display(event,'td_10_2')" onmouseout="disappear(event,'td_10_2')" class="box">
+                                <p>
+                                    预约信息：<br/>
+                                    实验名称：记忆实验<br/>
+                                    实验类型：科研实验<br/>
+                                    申请实验：林军凤<br/>
+                                    导 师：梅磊磊<br/>
+                                    联系电话：15625080234<br/>
+									申请理由：恳请批准<br/>
+                                    预约状态：成功预约'<br/>&nbsp;
+                                </p>
+                            </div>
+                            
+                        <td width="17%" id="10_3">
+                            <a href="#" onmouseover="display(event,'td_10_3')" onmouseout="disappear(event,'td_10_3')">
+                                    <img width="10" height="10" src="/Public/Home/images/psylab/successtip.gif">
+                                </a>
+                                                        </td>
+                        <div id="td_10_3" onmouseover="display(event,'td_10_3')" onmouseout="disappear(event,'td_10_3')" class="box">
+                                <p>
+                                    预约信息：<br/>
+                                    实验名称：记忆实验<br/>
+                                    实验类型：科研实验<br/>
+                                    申请实验：林军凤<br/>
+                                    导 师：梅磊磊<br/>
+                                    联系电话：15625080234<br/>
+									申请理由：恳请批准<br/>
+                                    预约状态：成功预约'<br/>&nbsp;
+                                </p>
+                            </div>
+                                                </tr><tr>
+                        <td width="49%">认知行为团体实验室[524]</td>
+                        <td width="17%" id="18_1">
+                             -                        </td>
+                        <div id="td_18_1" onmouseover="display(event,'td_18_1')" onmouseout="disappear(event,'td_18_1')" class="box"></div>
+                        <td width="17%" id="18_2">
+                             -                        </td>
+                        <div id="td_18_2" onmouseover="display(event,'td_18_2')" onmouseout="disappear(event,'td_18_2')" class="box"></div>
+                        <td width="17%" id="18_3">
+                             -                        </td>
+                        <div id="td_18_3" onmouseover="display(event,'td_18_3')" onmouseout="disappear(event,'td_18_3')" class="box"></div>                    </tr>
+                <tr class="date-tr">
+                    <td colspan="4" class="index-date">
+                        <table>
+                            <tbody>
+                            <tr>
+                                <td id="date-search-1" class="date-active">10/28</td>
+                                        <input type="hidden" class="date-search-1" value="1509120000">
+                                                                                <td id="date-search-2">10/29</td>
+                                        <input type="hidden" class="date-search-2" value="1509206400">                                        <td id="date-search-3">10/30</td>
+                                        <input type="hidden" class="date-search-3" value="1509292800">                                        <td id="date-search-4">10/31</td>
+                                        <input type="hidden" class="date-search-4" value="1509379200">                                        <td id="date-search-5">11/1</td>
+                                        <input type="hidden" class="date-search-5" value="1509465600">                                        <td id="date-search-6">11/2</td>
+                                        <input type="hidden" class="date-search-6" value="1509552000">                                        <td id="date-search-7">11/3</td>
+                                        <input type="hidden" class="date-search-7" value="1509638400">                            </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- 实验预约end-->
+        <!-- 中心实验室begin-->
+        <div class="col-xs-4" style="margin-top:7px;">
+            <p class="tit header-title lab-bg" style="margin-bottom: 2px">中心实验室<a class="more" href=""></a></p>
+            <div id="marquee" style="border: 1px solid #ddd;height: 433px;">
+                <ul>
+                    <li>
+                            <div ><a href="/index.php?s=/Home/Lab/detail/id/3.html">
+                                <img height="82px" src="/Uploads/Picture/2016-06-20/57675ed63c8bf.jpg" title="64导NeuroScan脑电实验室[502]"
+                                     width="111px" border=0/></a>
+                                <p>64导Ne...</p>
+                            </div>
+                        </li><li>
+                            <div ><a href="/index.php?s=/Home/Lab/detail/id/6.html">
+                                <img height="82px" src="/Uploads/Picture/2016-06-20/576790124d647.JPG" title="BP脑电实验室2室[501]"
+                                     width="111px" border=0/></a>
+                                <p>BP脑电实...</p>
+                            </div>
+                        </li><li>
+                            <div ><a href="/index.php?s=/Home/Lab/detail/id/13.html">
+                                <img height="82px" src="/Uploads/Picture/2017-01-14/5879d7704c130.JPG" title="BP脑电实验室1室[501]"
+                                     width="111px" border=0/></a>
+                                <p>BP脑电实...</p>
+                            </div>
+                        </li><li>
+                            <div ><a href="/index.php?s=/Home/Lab/detail/id/2.html">
+                                <img height="82px" src="/Uploads/Picture/2017-01-14/5879e01675ad0.JPG" title="EyeLink1000眼动实验室[501]"
+                                     width="111px" border=0/></a>
+                                <p>EyeLi...</p>
+                            </div>
+                        </li><li>
+                            <div ><a href="/index.php?s=/Home/Lab/detail/id/4.html">
+                                <img height="82px" src="/Uploads/Picture/2016-06-20/576783ede09bf.jpg" title="睡眠研究实验室[628]"
+                                     width="111px" border=0/></a>
+                                <p>睡眠研究实...</p>
+                            </div>
+                        </li><li>
+                            <div ><a href="/index.php?s=/Home/Lab/detail/id/21.html">
+                                <img height="82px" src="" title="Biopac生理多导仪实验室"
+                                     width="111px" border=0/></a>
+                                <p>Biopa...</p>
+                            </div>
+                        </li><li>
+                            <div ><a href="/index.php?s=/Home/Lab/detail/id/8.html">
+                                <img height="82px" src="/Uploads/Picture/2017-01-14/5879cde280e80.jpg" title="认知行为实验1室[522]"
+                                     width="111px" border=0/></a>
+                                <p>认知行为实...</p>
+                            </div>
+                        </li><li>
+                            <div ><a href="/index.php?s=/Home/Lab/detail/id/9.html">
+                                <img height="82px" src="/Uploads/Picture/2017-01-14/5879cde280e80.jpg" title="认知行为实验2室[523]"
+                                     width="111px" border=0/></a>
+                                <p>认知行为实...</p>
+                            </div>
+                        </li><li>
+                            <div ><a href="/index.php?s=/Home/Lab/detail/id/10.html">
+                                <img height="82px" src="/Uploads/Picture/2017-01-14/5879cde280e80.jpg" title="认知行为实验3室[525]"
+                                     width="111px" border=0/></a>
+                                <p>认知行为实...</p>
+                            </div>
+                        </li><li>
+                            <div ><a href="/index.php?s=/Home/Lab/detail/id/18.html">
+                                <img height="82px" src="/Uploads/Picture/2017-01-14/5879e2a7db0b0.JPG" title="认知行为团体实验室[524]"
+                                     width="111px" border=0/></a>
+                                <p>认知行为团...</p>
+                            </div>
+                        </li><li>
+                            <div ><a href="/index.php?s=/Home/Lab/detail/id/1.html">
+                                <img height="82px" src="/Uploads/Picture/2016-06-20/57675ed63c8bf.jpg" title="40导NeuroScan脑电实验室[503]"
+                                     width="111px" border=0/></a>
+                                <p>40导Ne...</p>
+                            </div>
+                        </li><li>
+                            <div ><a href="/index.php?s=/Home/Lab/detail/id/5.html">
+                                <img height="82px" src="/Uploads/Picture/2016-06-20/5767842cc5ff7.jpg" title="团体辅导实验室[627]"
+                                     width="111px" border=0/></a>
+                                <p>团体辅导实...</p>
+                            </div>
+                        </li><li>
+                            <div ><a href="/index.php?s=/Home/Lab/detail/id/7.html">
+                                <img height="82px" src="/Uploads/Picture/2016-06-20/5767910215f8f.JPG" title="fMRI实验室[脑成像研究中心]"
+                                     width="111px" border=0/></a>
+                                <p>fMRI实...</p>
+                            </div>
+                        </li><li>
+                            <div ><a href="/index.php?s=/Home/Lab/detail/id/12.html">
+                                <img height="82px" src="/Uploads/Picture/2017-01-14/5879cf2294a20.jpg" title="认知控制实验[508]"
+                                     width="111px" border=0/></a>
+                                <p>认知控制实...</p>
+                            </div>
+                        </li><li>
+                            <div ><a href="/index.php?s=/Home/Lab/detail/id/14.html">
+                                <img height="82px" src="/Uploads/Picture/2017-01-14/5879d8bd849e0.JPG" title="音乐疗法实验室[604]"
+                                     width="111px" border=0/></a>
+                                <p>音乐疗法实...</p>
+                            </div>
+                        </li><li>
+                            <div ><a href="/index.php?s=/Home/Lab/detail/id/15.html">
+                                <img height="82px" src="/Uploads/Picture/2017-01-14/5879ddc95c940.JPG" title="生物反馈与心理训练实验室[602]"
+                                     width="111px" border=0/></a>
+                                <p>生物反馈与...</p>
+                            </div>
+                        </li><li>
+                            <div ><a href="/index.php?s=/Home/Lab/detail/id/16.html">
+                                <img height="82px" src="/Uploads/Picture/2017-01-14/5879df04ab630.JPG" title="语音分析实验室[511]"
+                                     width="111px" border=0/></a>
+                                <p>语音分析实...</p>
+                            </div>
+                        </li><li>
+                            <div ><a href="/index.php?s=/Home/Lab/detail/id/17.html">
+                                <img height="82px" src="/Uploads/Picture/2017-01-14/5879e1ee05aa0.JPG" title="EyeLinkⅡ眼动实验室[608]"
+                                     width="111px" border=0/></a>
+                                <p>EyeLi...</p>
+                            </div>
+                        </li><li>
+                            <div ><a href="/index.php?s=/Home/Lab/detail/id/19.html">
+                                <img height="82px" src="" title="光学脑成像实验室2室[505]"
+                                     width="111px" border=0/></a>
+                                <p>光学脑成像...</p>
+                            </div>
+                        </li><li>
+                            <div ><a href="/index.php?s=/Home/Lab/detail/id/20.html">
+                                <img height="82px" src="" title="光学脑成像实验室1室[504]"
+                                     width="111px" border=0/></a>
+                                <p>光学脑成像...</p>
+                            </div>
+                        </li><li>
+                            <div ><a href="/index.php?s=/Home/Lab/detail/id/22.html">
+                                <img height="82px" src="" title="惊跳反射实验室"
+                                     width="111px" border=0/></a>
+                                <p>惊跳反射实...</p>
+                            </div>
+                        </li><li>
+                            <div ><a href="/index.php?s=/Home/Lab/detail/id/23.html">
+                                <img height="82px" src="" title="EGI脑电实验室"
+                                     width="111px" border=0/></a>
+                                <p>EGI脑电...</p>
+                            </div>
+                        </li><li>
+                            <div ><a href="/index.php?s=/Home/Lab/detail/id/24.html">
+                                <img height="82px" src="" title="神经生理解剖实验室"
+                                     width="111px" border=0/></a>
+                                <p>神经生理解...</p>
+                            </div>
+                        </li><li>
+                            <div ><a href="/index.php?s=/Home/Lab/detail/id/25.html">
+                                <img height="82px" src="" title="Tobii眼动实验室"
+                                     width="111px" border=0/></a>
+                                <p>Tobii...</p>
+                            </div>
+                        </li>                </ul>
+            </div>
+        </div>
+        <!-- 中心实验室end-->
+    </div>
+
+    <div class="row psyvs"  style="margin-top:0px;">
+        <!--虚拟仿真-->
+        <div class="col-xs-4">
+            <div class="header-title virtual-bg">虚拟仿真<a class="more" style="margin-top: 0px;" href="/index.php?s=/Home/Article/virtual.html">更多&nbsp;&nbsp;&nbsp;&nbsp;</a></div>
+            <div class="article-item">
+                    <a href="/index.php?s=/Home/Article/virtual/root_id/43/child_id/69.html">公共课《心理学》</a>
+                    <span>[2016-06-03]</span>
+                </div><div class="article-item">
+                    <a href="/index.php?s=/Home/Article/virtual/root_id/43/child_id/73.html">组织行为与消费心理</a>
+                    <span>[2016-06-05]</span>
+                </div><div class="article-item">
+                    <a href="/index.php?s=/Home/Article/virtual/root_id/43/child_id/74.html">心理咨询与治疗</a>
+                    <span>[2016-06-05]</span>
+                </div><div class="article-item">
+                    <a href="/index.php?s=/Home/Article/virtual/root_id/43/child_id/75.html">认知神经科学</a>
+                    <span>[2016-06-05]</span>
+                </div><div class="article-item">
+                    <a href="/index.php?s=/Home/Article/virtual/root_id/43/child_id/76.html">心理与行为实验</a>
+                    <span>[2016-06-05]</span>
+                </div><div class="article-item">
+                    <a href="/index.php?s=/Home/Article/virtual/root_id/43/child_id/77.html">心理统计与实验设计</a>
+                    <span>[2016-06-05]</span>
+                </div>        </div>
+        <!--虚拟仿真-->
+        <!-- 实验教学 begin-->
+        <div class="col-xs-4">
+            <div class="header-title virtual-bg">实验教学<a class="more"  style="margin-top: 0px;" href="/index.php?s=/Home/Article/index/category/teach.html">更多&nbsp;&nbsp;&nbsp;&nbsp;</a></div>
+                <!--<p class="tit">心理统计与实验设计<a class="more" href="/index.php?s=/Home/Article/index/pid/43/cid/77.html">更多</a></p>-->
+                <div class="article-item">
+                            【课件】
+                            <a href="/index.php?s=/Home/Article/detail/root_id/40/pid/55/id/25.html">脑电实验课件</a>
+                            <span>[2016-06-03]</span>
+                        </div><div class="article-item">
+                            【课件】
+                            <a href="/index.php?s=/Home/Article/detail/root_id/40/pid/55/id/24.html">EYELINK1000课...</a>
+                            <span>[2016-06-03]</span>
+                        </div><div class="article-item">
+                            【课件】
+                            <a href="/index.php?s=/Home/Article/detail/root_id/40/pid/55/id/23.html">EYELINKⅡ课件</a>
+                            <span>[2016-06-03]</span>
+                        </div><div class="article-item">
+                            【课件】
+                            <a href="/index.php?s=/Home/Article/detail/root_id/40/pid/55/id/22.html">行为观察课件</a>
+                            <span>[2016-06-03]</span>
+                        </div><div class="article-item">
+                            【仿真实验】
+                            <a href="/index.php?s=/Home/Article/detail/root_id/40/pid/54/id/21.html">虚拟仿真</a>
+                            <span>[2016-06-03]</span>
+                        </div><div class="article-item">
+                            【实验大纲】
+                            <a href="/index.php?s=/Home/Article/detail/root_id/40/pid/53/id/20.html">《人才测评案例分析》教学...</a>
+                            <span>[2016-06-03]</span>
+                        </div>        </div>
+        <!-- 实验教学 end-->
+
+        <!-- 创新实践 begin-->
+        <div class="col-xs-4">
+            <div class="header-title virtual-bg">创新实践<a class="more" style="margin-top: 0px;" href="/index.php?s=/Home/Article/index/category/practice.html">更多&nbsp;&nbsp;&nbsp;&nbsp;</a></div>
+             <div class="article-item">
+                    【研究成果】
+                    <a href="/index.php?s=/Home/Article/detail/root_id/41/pid/58/id/201.html">我院莫雷教授主持的国家社...</a>
+                    <span>[2015-10-15]</span>
+                </div><div class="article-item">
+                    【实践活动】
+                    <a href="/index.php?s=/Home/Article/detail/root_id/41/pid/59/id/200.html">华南师范大学心理学院“心...</a>
+                    <span>[2015-12-30]</span>
+                </div><div class="article-item">
+                    【实践活动】
+                    <a href="/index.php?s=/Home/Article/detail/root_id/41/pid/59/id/199.html">心理学院赴一汽-大众佛山...</a>
+                    <span>[2015-11-06]</span>
+                </div><div class="article-item">
+                    【实践活动】
+                    <a href="/index.php?s=/Home/Article/detail/root_id/41/pid/59/id/198.html">心行动•爱护航：心理学院...</a>
+                    <span>[2015-10-29]</span>
+                </div><div class="article-item">
+                    【实践活动】
+                    <a href="/index.php?s=/Home/Article/detail/root_id/41/pid/59/id/196.html">心行动•爱护航：心理学院...</a>
+                    <span>[2015-09-08]</span>
+                </div><div class="article-item">
+                    【实践活动】
+                    <a href="/index.php?s=/Home/Article/detail/root_id/41/pid/59/id/195.html">#暑期实践# 心理学院青...</a>
+                    <span>[2015-09-23]</span>
+                </div>        </div>
+        <!-- 创新实践 end-->
+    </div>
+
+
+    <!-- 中心实验室滚动JS-->
+    <script src="/Public/Home/js/jquery.kxbdMarquee.js"></script>
+    <script>
+        (function () {
+            $("#marquee").kxbdMarquee({direction: "up",scrollAmount:1,isEqual: true});
+        })();
+    </script>
+    <!-- 中心实验室滚动JS-->
+    <!-- 打开友情链接-->
+    <script type="text/JavaScript">
+        <!--
+        function MM_jumpMenu(targ, selObj, restore) { //v3.0
+            eval(targ + ".location='" + selObj.options[selObj.selectedIndex].value + "'");
+            if (restore) selObj.selectedIndex = 0;
+        }
+        //-->
+        <!-- 预约详细信息-->
+        $("td").click(function(){
+            var val = $(this).attr("id"); //定义val值为点击的此td的id值；
+            var val_id='#'+ val;
+            var val_css='.'+ val;
+            var tdValue=$(val_css).val();
+            var url='/index.php?s=/Home/Index/labBookDetail.html';
+            if(val=='date-search-1'||val=='date-search-2'||val=='date-search-3'||val=='date-search-4'||val=='date-search-5'||val=='date-search-6'||val=='date-search-7'){
+                $("#date-search-1").removeClass("date-active");
+                $("#date-search-2").removeClass("date-active");
+                $("#date-search-3").removeClass("date-active");
+                $("#date-search-4").removeClass("date-active");
+                $("#date-search-5").removeClass("date-active");
+                $("#date-search-6").removeClass("date-active");
+                $("#date-search-7").removeClass("date-active");
+                $(val_id).addClass("date-active");
+                $.get(url,{search_date:tdValue},function(data){
+                            console.log(data);
+                            var path = getRootPath();
+                            $.each(data, function(k, v) {
+                                if(v['am']==3 || v['am']==4) {
+                                    var am="#"+ v['id'] + "_1";
+                                    var am_div="td_"+ v['id'] + "_1";
+                                    var am_div_id="#"+"td_"+ v['id'] + "_1";
+                                    var am_content = '<a href="#" onmouseover=display(event,"'+am_div+'") onmouseout=disappear(event,"'+am_div+'")><img width="10" height="10" src="' + path + '/Public/Home/images/psylab/successtip.gif"></a>';
+                                    $(am).html(am_content);
+                                    var am_div_content = '<p>预约信息：<br/>实验名称：' + v['amInfo']['title'] + '<br/>实验类型：'+ v['am_experiment_type']
+                                            + '<br/>申请实验：'+v['amTruename']
+                                            + '<br/>导 师：'+ v['amTeacher']
+                                            + '<br/>联系电话：'+ v['amMobile']
+                                            +' <br/>预约状态：申请成功<br/>&nbsp;</p>';
+                                    $(am_div_id).html(am_div_content);
+                                }
+                                else if(v['am']=='0' || v['am']==1 || v['am']==2) {
+                                    var am="#"+ v['id'] + "_1";
+                                    var am_div="td_"+ v['id'] + "_1";
+                                    var am_div_id="#"+"td_"+ v['id'] + "_1";
+                                    var am_content = '<a href="#" onmouseover=display(event,"'+am_div+'") onmouseout=disappear(event,"'+am_div+'")><img width="10" height="10" src="' + path + '/Public/Home/images/psylab/sh.gif"></a>';
+                                    $(am).html(am_content);
+                                    var am_div_content = '<p>预约信息：<br/>实验名称：' + v['amInfo']['title'] + '<br/>实验类型：'+ v['am_experiment_type']
+                                            + '<br/>申请实验：'+v['amTruename']
+                                            + '<br/>导 师：'+ v['amTeacher']
+                                            + '<br/>联系电话：'+ v['amMobile']
+                                            +' <br/>预约状态：申批...<br/>&nbsp;</p>';
+                                    $(am_div_id).html(am_div_content);
+                                }
+                                else{
+                                    var am="#"+ v['id'] + "_1";
+                                    var am_div="td_"+ v['id'] + "_1";
+                                    var am_div_id="#"+"td_"+ v['id'] + "_1";
+                                    var am_content = '-';
+                                    $(am).html(am_content);
+                                    var am_div_content = '';
+                                    $(am_div_id).html(am_div_content);
+                                }
+                                if(v['pm']==3 || v['pm']==4) {
+                                    var pm="#"+ v['id'] + "_2";
+                                    var pm_div="td_"+ v['id'] + "_2";
+                                    var pm_div_id="#"+"td_"+ v['id'] + "_2";
+                                    var pm_content = '<a href="#" onmouseover=display(event,"'+pm_div+'") onmouseout=disappear(event,"'+pm_div+'")><img width="10" height="10" src="' + path + '/Public/Home/images/psylab/successtip.gif"></a>';
+                                    $(pm).html(pm_content);
+                                    var pm_div_content = '<p>预约信息：<br/>实验名称：' + v['pmInfo']['title'] + '<br/>实验类型：'+ v['pm_experiment_type']
+                                            + '<br/>申请实验：'+v['pmTruename']
+                                            + '<br/>导 师：'+ v['pmTeacher']
+                                            + '<br/>联系电话：'+ v['pmMobile']
+                                            +' <br/>预约状态：申请成功<br/>&nbsp;</p>';
+                                    $(pm_div_id).html(pm_div_content);
+                                }
+                                else if(v['pm']=='0' || v['pm']==1 || v['pm']==2) {
+                                    var pm="#"+ v['id'] + "_2";
+                                    var pm_div="td_"+ v['id'] + "_2";
+                                    var pm_div_id="#"+"td_"+ v['id'] + "_2";
+                                    var pm_content = '<a href="#" onmouseover=display(event,"'+pm_div+'") onmouseout=disappear(event,"'+pm_div+'")><img width="10" height="10" src="' + path + '/Public/Home/images/psylab/sh.gif"></a>';
+                                    $(pm).html(pm_content);
+                                    var pm_div_content = '<p>预约信息：<br/>实验名称：' + v['pmInfo']['title'] + '<br/>实验类型：'+ v['pm_experiment_type']
+                                            + '<br/>申请实验：'+v['pmTruename']
+                                            + '<br/>导 师：'+ v['pmTeacher']
+                                            + '<br/>联系电话：'+ v['pmMobile']
+                                            +' <br/>预约状态：申批...<br/>&nbsp;</p>';
+                                    $(pm_div_id).html(pm_div_content);
+                                }
+                                else{
+                                    var pm="#"+ v['id'] + "_2";
+                                    var pm_div="td_"+ v['id'] + "_2";
+                                    var pm_div_id="#"+"td_"+ v['id'] + "_2";
+                                    var pm_content = '-';
+                                    $(pm).html(pm_content);
+                                    var pm_div_content = '';
+                                    $(pm_div_id).html(pm_div_content);
+                                }
+                                if(v['gm']==3 || v['gm']==4) {
+                                    var gm="#"+ v['id'] + "_3";
+                                    var gm_div="td_"+ v['id'] + "_3";
+                                    var gm_div_id="#"+"td_"+ v['id'] + "_3";
+                                    var gm_content = '<a href="#" onmouseover=display(event,"'+gm_div+'") onmouseout=disappear(event,"'+gm_div+'")><img width="10" height="10" src="' + path + '/Public/Home/images/psylab/successtip.gif"></a>';
+                                    $(gm).html(gm_content);
+                                    var gm_div_content = '<p>预约信息：<br/>实验名称：' + v['gmInfo']['title'] + '<br/>实验类型：'+ v['gm_experiment_type']
+                                            + '<br/>申请实验：'+v['gmTruename']
+                                            + '<br/>导 师：'+ v['gmTeacher']
+                                            + '<br/>联系电话：'+ v['gmMobile']
+                                            +' <br/>预约状态：申请成功<br/>&nbsp;</p>';
+                                    $(gm_div_id).html(gm_div_content);
+                                }
+                                else if(v['gm']=='0' || v['gm']==1 || v['gm']==2) {
+                                    var gm="#"+ v['id'] + "_3";
+                                    var gm_div="td_"+ v['id'] + "_3";
+                                    var gm_div_id="#"+"td_"+ v['id'] + "_3";
+                                    var gm_content = '<a href="#" onmouseover=display(event,"'+gm_div+'") onmouseout=disappear(event,"'+gm_div+'")><img width="10" height="10" src="' + path + '/Public/Home/images/psylab/sh.gif"></a>';
+                                    $(gm).html(gm_content);
+                                    var gm_div_content = '<p>预约信息：<br/>实验名称：' + v['gmInfo']['title'] + '<br/>实验类型：'+ v['gm_experiment_type']
+                                            + '<br/>申请实验：'+v['gmTruename']
+                                            + '<br/>导 师：'+ v['gmTeacher']
+                                            + '<br/>联系电话：'+ v['gmMobile']
+                                            +' <br/>预约状态：申批...<br/>&nbsp;</p>';
+                                    $(gm_div_id).html(gm_div_content);
+                                }
+                                else{
+                                    var gm="#"+ v['id'] + "_3";
+                                    var gm_div="td_"+ v['id'] + "_3";
+                                    var gm_div_id="#"+"td_"+ v['id'] + "_3";
+                                    var gm_content = '-';
+                                    $(gm).html(gm_content);
+                                    var gm_div_content = '';
+                                    $(gm_div_id).html(gm_div_content);
+                                }
+                            })
+                        },
+                        "json"
+                );
+            }
+        })
+
+        //获取网站根目录
+        function getRootPath() {
+            var pathName = window.location.pathname.substring(1);
+            var webName = pathName == '' ? '' : pathName.substring(0, pathName.indexOf('/'));
+            return window.location.protocol + '//' + window.location.host + '/'+ webName;
+        }
+    </script>
+    <script src="/Public/Home/YuxiSlider/YuxiSlider.jQuery.min.js"></script>
+    <script>
+        //alert($(window).width()); //浏览器当前窗口可视区域宽度
+        //alert($(document).width());//浏览器当前窗口文档对象宽度
+        //alert($(document.body).width());//浏览器当前窗口文档body的宽度
+        var twidth=$(document.body).width();
+        $(".slider").YuxiSlider({
+            width:1170, //容器宽度
+            height:450, //容器高度
+            control:$('.control'), //绑定控制按钮
+            during:10000, //间隔4秒自动滑动
+            speed:2000, //移动速度0.8秒
+            mousewheel:true, //是否开启鼠标滚轮控制
+            direkey:true //是否开启左右箭头方向控制
+        });
+        $(".desc").height("50px");
+        //$(".desc > p").css('padding', '0');
+        //$(".desc > p").css("padding-left","50%");
+        $(".desc > .title > a").css("overflow","visible");
+		$("#sliderID > li").css("position","relative");
+		$("#sliderID > li").css("left","-40px");
+		$("p.title").css("padding", "1em 2em");
+    </script>
+
+    </div>
+</div>
+
+    <div class="friend-link">
+        <div class="container">
+			<div class="row">
+				<div class="col-xs-4" style="line-height:180%">
+					当前在线人数：20<br>
+					网站访问总量：21447<br>
+					年度访问总量：21447<br>
+					资源下载次数：4110<br>
+				</div>
+				<div class="col-xs-1" style="font-weight:bold;padding-top:0px;">
+					友<br>情<br>链<br>接
+				</div>
+				<div class="col-xs-3" style="padding-top:0px;line-height:180%">
+					<a href="http://sfzx.pku.edu.cn/">高等学校国家级实验教学示范中心联席会</a>&nbsp;&nbsp;<br>
+					<a href="http://psyvslab.scnu.edu.cn/">华南师范大学心理学虚拟仿真实验中心</a>&nbsp;&nbsp;<br>
+					<a href="http://psy.scnu.edu.cn/">华南师范大学心理学院</a>&nbsp;&nbsp;<br>
+					<a href="http://www.scnu.edu.cn/">华南师范大学</a>&nbsp;&nbsp;
+				</div>
+				<div class="col-xs-4">
+					&nbsp;&nbsp;
+				</div>
+			</div>
+        </div>
+    </div>
+
+
+<script type="text/javascript">
+    $(function(){
+        $(window).resize(function(){
+            $("#main-container").css("min-height", $(window).height() - 343);
+        }).resize();
+    })
+</script>
+	<!-- /主体 -->
+
+	<!-- 底部 -->
+	
+    <!-- 底部
+    ================================================== -->
+    <footer class="footer">
+      <div class="container">
+          <p> Copyright © 华南师范大学心理学院实验中心
+              <br/>地址：中国·广州 华南师范大学石牌校区心理学院&nbsp;&nbsp;邮编：510631&nbsp;&nbsp;E-Mail：zengxy@scnu.edu.cn
+          </p>
+      </div>
+    </footer>
+
+<script type="text/javascript">
+(function(){
+	var ThinkPHP = window.Think = {
+		"ROOT"   : "", //当前网站地址
+		"APP"    : "/index.php?s=", //当前项目地址
+		"PUBLIC" : "/Public", //项目公共目录地址
+		"DEEP"   : "/", //PATHINFO分割符
+		"MODEL"  : ["3", "", "html"],
+		"VAR"    : ["m", "c", "a"]
+	}
+})();
+</script>
+ <!-- 用于加载js代码 -->
+<!-- 页面footer钩子，一般用于加载插件JS文件和JS代码 -->
+<div class="hidden"><!-- 用于加载统计代码等隐藏元素 -->
+	
+</div>
+
+	<!-- /底部 -->
+</body>
+</html>

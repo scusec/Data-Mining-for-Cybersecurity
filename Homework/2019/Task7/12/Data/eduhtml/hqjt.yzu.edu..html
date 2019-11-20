@@ -1,0 +1,435 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="/script/page.css" type=text/css rel=stylesheet>
+<script language="javascript" src="/module/jslib/jquery/jquery.js"></script>
+
+<title>后勤服务集团</title>
+<meta name="Keywords" content="内容管理、内容管理发布（CMS）系统、信息发布、新闻采编发系统、知识管理、知识门户、政府门户、教育门户、企业门户、竞争情报系统、抓取系统、信息采集、信息雷达系统、电子政务、电子政务解决方案、办公系统、OA、网站办公系统"><meta name='Generator' content='大汉版通'><meta name='Author' content='大汉网络'>
+<meta name='Maketime' content='2014-01-21 17:08:44'>
+<meta name="sitename" content="后勤服务集团">
+<meta name="siteurl"  content="http://hqjt.yzu.edu.cn/index.html">
+<meta name="guild"    content="">
+<meta name="district"    content="">
+<meta name="sitecatalog"    content="">
+
+<link href="/images/301/css.css" rel="stylesheet" type="text/css" />
+<script language="JavaScript">
+var ctimer;
+
+var lunarInfo=new Array(
+0x04bd8,0x04ae0,0x0a570,0x054d5,0x0d260,0x0d950,0x16554,0x056a0,0x09ad0,0x055d2,
+0x04ae0,0x0a5b6,0x0a4d0,0x0d250,0x1d255,0x0b540,0x0d6a0,0x0ada2,0x095b0,0x14977,
+0x04970,0x0a4b0,0x0b4b5,0x06a50,0x06d40,0x1ab54,0x02b60,0x09570,0x052f2,0x04970,
+0x06566,0x0d4a0,0x0ea50,0x06e95,0x05ad0,0x02b60,0x186e3,0x092e0,0x1c8d7,0x0c950,
+0x0d4a0,0x1d8a6,0x0b550,0x056a0,0x1a5b4,0x025d0,0x092d0,0x0d2b2,0x0a950,0x0b557,
+0x06ca0,0x0b550,0x15355,0x04da0,0x0a5d0,0x14573,0x052d0,0x0a9a8,0x0e950,0x06aa0,
+0x0aea6,0x0ab50,0x04b60,0x0aae4,0x0a570,0x05260,0x0f263,0x0d950,0x05b57,0x056a0,
+0x096d0,0x04dd5,0x04ad0,0x0a4d0,0x0d4d4,0x0d250,0x0d558,0x0b540,0x0b5a0,0x195a6,
+0x095b0,0x049b0,0x0a974,0x0a4b0,0x0b27a,0x06a50,0x06d40,0x0af46,0x0ab60,0x09570,
+0x04af5,0x04970,0x064b0,0x074a3,0x0ea50,0x06b58,0x055c0,0x0ab60,0x096d5,0x092e0,
+0x0c960,0x0d954,0x0d4a0,0x0da50,0x07552,0x056a0,0x0abb7,0x025d0,0x092d0,0x0cab5,
+0x0a950,0x0b4a0,0x0baa4,0x0ad50,0x055d9,0x04ba0,0x0a5b0,0x15176,0x052b0,0x0a930,
+0x07954,0x06aa0,0x0ad50,0x05b52,0x04b60,0x0a6e6,0x0a4e0,0x0d260,0x0ea65,0x0d530,
+0x05aa0,0x076a3,0x096d0,0x04bd7,0x04ad0,0x0a4d0,0x1d0b6,0x0d250,0x0d520,0x0dd45,
+0x0b5a0,0x056d0,0x055b2,0x049b0,0x0a577,0x0a4b0,0x0aa50,0x1b255,0x06d20,0x0ada0)
+
+var nStr1 = new Array('日','一','二','三','四','五','六','七','八','九','十','十一','腊')
+var nStr2 = new Array('初','十','廿','卅','　')
+
+//====================================== 传回农历 y年的总天数
+function lYearDays(y) {
+   var i, sum = 348
+   for(i=0x8000; i>0x8; i>>=1) sum += (lunarInfo[y-1900] & i)? 1: 0
+   return(sum+leapDays(y))
+}
+
+//====================================== 传回农历 y年闰月的天数
+function leapDays(y) {
+   if(leapMonth(y))  return((lunarInfo[y-1900] & 0x10000)? 30: 29)
+   else return(0)
+}
+
+//====================================== 传回农历 y年闰哪个月 1-12 , 没闰传回 0
+function leapMonth(y) {
+   return(lunarInfo[y-1900] & 0xf)
+}
+
+//====================================== 传回农历 y年m月的总天数
+function monthDays(y,m) {
+   return( (lunarInfo[y-1900] & (0x10000>>m))? 30: 29 )
+}
+
+//====================================== 算出农历, 传入日期物件, 传回农历日期物件
+//                                       该物件属性有 .year .month .day .isLeap .yearCyl .dayCyl .monCyl
+function Lunar(objDate) {
+
+   var i, leap=0, temp=0
+   var baseDate = new Date(1900,0,31)
+   var offset   = (objDate - baseDate)/86400000
+
+   this.dayCyl = offset + 40
+   this.monCyl = 14
+
+   for(i=1900; i<2050 && offset>0; i++) {
+      temp = lYearDays(i)
+      offset -= temp
+      this.monCyl += 12
+   }
+
+   if(offset<0) {
+      offset += temp;
+      i--;
+      this.monCyl -= 12
+   }
+
+   this.year = i
+   this.yearCyl = i-1864
+
+   leap = leapMonth(i) //闰哪个月
+   this.isLeap = false
+
+   for(i=1; i<13 && offset>0; i++) {
+      //闰月
+      if(leap>0 && i==(leap+1) && this.isLeap==false)
+         { --i; this.isLeap = true; temp = leapDays(this.year); }
+      else
+         { temp = monthDays(this.year, i); }
+
+      //解除闰月
+      if(this.isLeap==true && i==(leap+1)) this.isLeap = false
+
+      offset -= temp
+      if(this.isLeap == false) this.monCyl ++
+   }
+
+   if(offset==0 && leap>0 && i==leap+1)
+      if(this.isLeap)
+         { this.isLeap = false; }
+      else
+         { this.isLeap = true; --i; --this.monCyl;}
+
+   if(offset<0){ offset += temp; --i; --this.monCyl; }
+
+   this.month = i
+   this.day = offset + 1
+}
+
+//====================== 中文日期
+function cDay(d){
+   var s;
+
+   switch (d) {
+      case 10:
+         s = '初十'; break;
+      case 20:
+         s = '二十'; break;
+         break;
+      case 30:
+         s = '三十'; break;
+         break;
+      default :
+         s = nStr2[Math.floor(d/10)];
+         s += nStr1[d%10];
+   }
+   return(s);
+}
+
+
+function init(){
+
+if (document.all){
+	
+settimes();
+}
+}
+
+function settimes(){
+var time= new Date();
+
+hours= time.getHours();
+mins= time.getMinutes();
+secs= time.getSeconds();
+mons= (time.getMonth()+1);
+years= time.getYear(); 
+days= time.getDate(); 
+var sDObj , lDObj;
+	
+
+sDObj = new Date(years,time.getMonth(),days)    //当月一日日期
+lDObj = new Lunar(sDObj)
+
+week=time.getDay();
+switch (week)
+{
+	case 0: week="星期日"; break;
+	case 1: week="星期一"; break;
+	case 2: week="星期二"; break;
+	case 3: week="星期三"; break;
+	case 4: week="星期四"; break;
+	case 5: week="星期五"; break;
+	case 6: week="星期六"; break;
+}
+
+if (hours<10)
+hours="0"+hours;
+if(mins<10)
+mins="0"+mins;
+if (secs<10)
+secs="0"+secs;
+
+if (nStr1[lDObj.month]=="一") {
+	var nstr = "正月"+cDay(lDObj.day);
+}
+else {
+	var nstr = nStr1[lDObj.month]+"月"+cDay(lDObj.day);
+}
+var ystr = mons+"/"+days;
+var festival = "";
+switch (nstr)
+{
+	case "正月初一": festival="春节";break;
+	case "正月十五": festival="元宵节";break;
+	case "五月初五": festival="端午节";break;
+	case "八月十五": festival="中秋节";break;
+	case "九月初九": festival="重阳节";break;
+	case "腊月初八": festival="腊八节";break;
+}
+switch (ystr)
+{
+	case "1/1": festival+="元旦";break;
+	case "3/8": festival+="妇女节";break;
+	case "5/1": festival+="劳动节";break;
+	case "6/1": festival+="儿童节";break;
+	case "7/1": festival+="党的生日";break;
+	case "8/1": festival+="建军节";break;
+	case "9/10": festival+="教师节";break;
+	case "10/1": festival+="国庆节";break;
+}
+//var tim1=document.getElementById("tim1");
+//alert("<table cellpadding='0' cellspacing='0' border='0'><tr><td align='center'><font color=FFFFFF>"+years+"/"+ystr+" "+week+" "+hours+":"+mins+":"+secs+"<br>"+"农历"+(lDObj.isLeap?"闰":" ")+nstr+"  "+"</font></td></tr></table>");
+
+tim1.innerHTML=""+years+"年"+ystr+" "+week+" "+hours+":"+mins+":"+secs;
+//tim1.innerHTML=years;
+setTimeout('settimes()',960);
+}
+</script>
+</head>
+<body>
+<table width="900" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td><img src="/images/301/top.jpg" width="900" height="193" /></td>
+  </tr>
+</table>
+<table width="900" border="0" align="center" cellpadding="0" cellspacing="0" style="border-top:1px solid #fff">
+  <tr>
+    <td width="714" height="28" background="/images/301/menuabg.gif" bgcolor="#0083D1" id="menu"><a href="http://hqjt.yzu.edu.cn/">网站首页</a><a href="http://hqjt.yzu.edu.cn/col/col3668/index.html" target="_blank">集团概况</a><a href="http://hqjt.yzu.edu.cn/col/col2242/index.html">机构设置</a><a href="http://hqjt.yzu.edu.cn/col/col2247/index.html" target="_blank">党建工作</a><a href="http://hqjt.yzu.edu.cn/col/col2244/index.html" target="_blank">集团简讯</a><a href="http://hqjt.yzu.edu.cn/col/col2245/index.html" target="_blank">工作动态</a><a href="http://hqjt.yzu.edu.cn/col/col2246/index.html">规章制度</a></td>
+    <td width="186" align="center" bgcolor="#0083D1"><div id="tim1" style="color:#fff; line-height:12px;"></div><SCRIPT>window.onload=function (){init();}</SCRIPT></td>
+  </tr>
+</table>
+<table width="900" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF">
+  <tr>
+    <td width="235" valign="top"><div style="padding:10px">
+      <table width="215" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td width="215"><a href="http://hqjt.yzu.edu.cn/col/col2253/index.html"><img src="/images/301/t1.gif" width="215" height="21" border="0" /></a></td>
+        </tr>
+        <tr>
+          <td height="138" valign="top"><div style="padding-top:8px"><table width='100%' cellspacing='0' cellpadding='0' border='0'>
+<tr>
+<td style='background-color:null'><div style="border-bottom:1px dotted #ccc"><span style="float:right;font-size:11px">06-04</span><a href='/art/2010/6/4/art_2253_66807.html' class='bt_link' title='会议通知（2010年6月4日星期五）' target=_blank style="color:#000; line-height:22px">·会议通知（2010年6月...</a></div></td></tr>
+<tr>
+<td style='background-color:null'><div style="border-bottom:1px dotted #ccc"><span style="float:right;font-size:11px">05-06</span><a href='/art/2010/5/6/art_2253_64933.html' class='bt_link' title='关于调整后勤服务集团理论学习中心组成员的通知' target=_blank style="color:#000; line-height:22px">·关于调整后勤服务集团理论...</a></div></td></tr>
+<tr>
+<td style='background-color:null'><div style="border-bottom:1px dotted #ccc"><span style="float:right;font-size:11px">04-28</span><a href='/art/2010/4/28/art_2253_64308.html' class='bt_link' title='关于教职工子女入园报名的通知' target=_blank style="color:#000; line-height:22px">·关于教职工子女入园报名的...</a></div></td></tr>
+<tr>
+<td style='background-color:null'><div style="border-bottom:1px dotted #ccc"><span style="float:right;font-size:11px">03-30</span><a href='/art/2010/3/30/art_2253_61950.html' class='bt_link' title='会议通知（3月31日）' target=_blank style="color:#000; line-height:22px">·会议通知（3月31日）</a></div></td></tr>
+<tr>
+<td style='background-color:null'><div style="border-bottom:1px dotted #ccc"><span style="float:right;font-size:11px">03-18</span><a href='/art/2010/3/18/art_2253_61138.html' class='bt_link' title='关于开展“效能建设年”活动的通知' target=_blank style="color:#000; line-height:22px">·关于开展“效能建设年”活...</a></div></td>
+</tr></table></div></td>
+        </tr>
+      </table>
+      <table width="215" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td width="215"><img src="/images/301/t2.gif" width="215" height="21" border="0" /></td>
+        </tr>
+        <tr>
+          <td height="138" valign="top"><table width="195" border="0" align="center" cellpadding="0" cellspacing="0" style="border-top:10px solid #fff">
+            <tr>
+              <td width="107" height="30"><a href="http://hqjt.yzu.edu.cn/col/col3844/index.html"><img src="/images/301/l1.gif" width="85" height="21" border="0" /></a></td>
+              <td width="108" align="right"><a href="http://hqjt.yzu.edu.cn/col/col3845/index.html"><img src="/images/301/l2.gif" width="85" height="21" border="0" /></a></td>
+            </tr>
+            <tr>
+              <td height="30"><a href="http://hqjt.yzu.edu.cn/col/col3846/index.html"><img src="/images/301/l3.gif" width="85" height="21" border="0" /></a></td>
+              <td align="right"><a href="http://hqjt.yzu.edu.cn/col/col3847/index.html"><img src="/images/301/l4.gif" width="85" height="21" border="0" /></a></td>
+            </tr>
+            <tr>
+              <td height="30"><a href="http://hqjt.yzu.edu.cn/col/col3848/index.html"><img src="/images/301/l5.gif" width="85" height="21" border="0" /></a></td>
+              <td align="right"><a href="http://hqjt.yzu.edu.cn/col/col3849/index.html"><img src="/images/301/l6.gif" width="85" height="21" border="0" /></a></td>
+            </tr>
+          </table>
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td height="65" align="center" style="border-bottom:5px solid #fff"><img src="/images/301/l7.gif" width="183" height="45" /></td>
+              </tr>
+            </table></td>
+        </tr>
+      </table>
+      <table width="215" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td width="215"><img src="/images/301/t3.gif" width="215" height="21" border="0" /></td>
+        </tr>
+        <tr>
+          <td height="138" valign="top"><table width="195" border="0" align="center" cellpadding="0" cellspacing="0" style="border-top:10px solid #fff">
+              <tr>
+                <td height="30" align="center" valign="middle"><a href="#"></a><a href="#">
+                  <select name="select"><option>-------集团站点链接-------</option></select>
+                </a></td>
+                </tr>
+              <tr>
+                <td height="30" align="center"><a href="#"></a><a href="#">
+                  <select name="select2"><option>-------校内站点链接-------</option></select>
+                </a></td>
+                </tr>
+              <tr>
+                <td height="30" align="center"><a href="#"></a><a href="#">
+                  <select name="select3"><option>-------校外站点链接-------</option></select>
+                </a></td>
+                </tr>
+            </table>
+              <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                  <td height="67" align="center"><a href="http://www.21caas.com" target="_blank"><img src="/images/301/l8.gif" width="215" height="47" border="0" /></a></td>
+                </tr>
+                <tr>
+                  <td height="33" align="center"><a href="mailto:caohj@yzu.edu.cn"><img src="/images/301/l9.gif" width="215" height="47" /></a></td>
+                </tr>
+            </table></td>
+        </tr>
+      </table>
+    </div></td>
+    <td width="665" valign="top"><div style="padding:10px 10px 10px 5px;">
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td style="border-bottom:1px solid #0084CF"><a href="http://hqjt.yzu.edu.cn/col/col2254/index.html"><img src="/images/301/r1.gif" width="650" height="23" border="0" /></a></td>
+          </tr>
+        <tr>
+          <td valign="top" style="padding-top:10px; padding-bottom:10px"><table width="650" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <td width="300" valign="top"><script type="text/javascript">var _width = 290; var _height = 200;var text_height = 22;var flash_height = _height + text_height;var pic_arr = new Array();var link_arr = new Array();var text_arr = new Array();var i = 0;pic_arr[i] = "/picture/0/s100905134555801.jpg";link_arr[i] = "/art/2010/9/5/art_2254_70085.html";text_arr[i] = "校领导视察集团各部门开学准备工作";i++;pic_arr[i] = "/picture/0/100705091505109.JPG";link_arr[i] = "/art/2010/7/5/art_2254_68387.html";text_arr[i] = "物管中心举办第二届维修技能竞赛";i++;pic_arr[i] = "/picture/0/100607154558992.jpg";link_arr[i] = "/art/2010/6/7/art_2254_66960.html";text_arr[i] = "集团召开2010年年度工作目标考核动员会";i++;pic_arr[i] = "/picture/0/100607082743179.jpg";link_arr[i] = "/art/2010/6/7/art_2254_66886.html";text_arr[i] = "机关党支部开展爱心捐赠活动";i++;pic_arr[i] = "/picture/0/100603094036900.jpg";link_arr[i] = "/art/2010/6/3/art_2254_66738.html";text_arr[i] = "校领导和幼儿园小朋友一起欢度“六一”国际...";i++;var p = pic_arr.join("|");var l = link_arr.join("|");var t = text_arr.join("|");var f = "/flash/0/slideshow.swf";document.write('<object ID="focus_flash" classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0" width="'+ _width +'" height="'+ flash_height +'">');document.write('<param name="allowScriptAccess" value="sameDomain"><param name="movie" value="'+f+'"><param name="quality" value="high"><param name="bgcolor">');document.write('<param name="menu" value="false"><param name=wmode value="transparent">');document.write('<param name="FlashVars" value="pics='+p+'&links='+l+'&texts='+t+'&borderwidth='+_width+'&borderheight='+_height+'&textheight='+text_height+'">');document.write('<embed ID="focus_flash" src="'+f+'" wmode="opaque" FlashVars="pics='+p+'&links='+l+'&texts='+t+'&borderwidth='+_width+'&borderheight='+_height+'&textheight='+text_height+'" menu="false" quality="high" width="'+ _width +'" height="'+ flash_height +'" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />');document.write('</object>');</script></td>
+              <td width="350" valign="top"><table width='100%' cellspacing='0' cellpadding='0' border='0'>
+<tr>
+<td style='background-color:null'><div style="border-bottom:1px dotted #ccc"><span style="float:right;font-size:11px">09-05</span><a href='/art/2010/9/5/art_2254_70085.html' class='bt_link' title='校领导视察集团各部门开学准备工作' target=_blank style="color:#000; line-height:22px">>> 校领导视察集团各部门开学准备工作</a></div></td></tr>
+<tr>
+<td style='background-color:null'><div style="border-bottom:1px dotted #ccc"><span style="float:right;font-size:11px">07-05</span><a href='/art/2010/7/5/art_2254_68387.html' class='bt_link' title='物管中心举办第二届维修技能竞赛' target=_blank style="color:#000; line-height:22px">>> 物管中心举办第二届维修技能竞赛</a></div></td></tr>
+<tr>
+<td style='background-color:null'><div style="border-bottom:1px dotted #ccc"><span style="float:right;font-size:11px">06-07</span><a href='/art/2010/6/7/art_2254_66960.html' class='bt_link' title='集团召开2010年年度工作目标考核动员会' target=_blank style="color:#000; line-height:22px">>> 集团召开2010年年度工作目标考核动员会</a></div></td></tr>
+<tr>
+<td style='background-color:null'><div style="border-bottom:1px dotted #ccc"><span style="float:right;font-size:11px">06-07</span><a href='/art/2010/6/7/art_2254_66886.html' class='bt_link' title='机关党支部开展爱心捐赠活动' target=_blank style="color:#000; line-height:22px">>> 机关党支部开展爱心捐赠活动</a></div></td></tr>
+<tr>
+<td style='background-color:null'><div style="border-bottom:1px dotted #ccc"><span style="float:right;font-size:11px">06-03</span><a href='/art/2010/6/3/art_2254_66738.html' class='bt_link' title='校领导和幼儿园小朋友一起欢度“六一”国际儿童节' target=_blank style="color:#000; line-height:22px">>> 校领导和幼儿园小朋友一起欢度“六一”国际儿童节</a></div></td></tr>
+<tr>
+<td style='background-color:null'><div style="border-bottom:1px dotted #ccc"><span style="float:right;font-size:11px">05-26</span><a href='/art/2010/5/26/art_2254_66281.html' class='bt_link' title='“2010年全国高校后勤改革发展推进工作交流研讨年会”在扬州召开' target=_blank style="color:#000; line-height:22px">>> “2010年全国高校后勤改革发展推进工作交流研讨年会”在...</a></div></td></tr>
+<tr>
+<td style='background-color:null'><div style="border-bottom:1px dotted #ccc"><span style="float:right;font-size:11px">05-25</span><a href='/art/2010/5/25/art_2254_66196.html' class='bt_link' title='后勤集团举办“红五月”上门为教职工维修服务活动' target=_blank style="color:#000; line-height:22px">>> 后勤集团举办“红五月”上门为教职工维修服务活动</a></div></td></tr>
+<tr>
+<td style='background-color:null'><div style="border-bottom:1px dotted #ccc"><span style="float:right;font-size:11px">05-24</span><a href='/art/2010/5/24/art_2254_66134.html' class='bt_link' title='商贸中心教育超市喜获扬州市“食品安全示范店”称号' target=_blank style="color:#000; line-height:22px">>> 商贸中心教育超市喜获扬州市“食品安全示范店”称号</a></div></td></tr>
+<tr>
+<td style='background-color:null'><div style="border-bottom:1px dotted #ccc"><span style="float:right;font-size:11px">05-24</span><a href='/art/2010/5/24/art_2254_66119.html' class='bt_link' title='我校开展第四届学生公寓 “优秀管理站”评比活动' target=_blank style="color:#000; line-height:22px">>> 我校开展第四届学生公寓 “优秀管理站”评比活动</a></div></td>
+</tr></table></td>
+            </tr>
+          </table></td>
+        </tr>
+      </table>
+      <table width="650" border="0" cellspacing="0" cellpadding="0" style="margin-bottom:10px">
+        <tr>
+          <td width="320"><table width="320" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <td width="320"><a href="http://hqjt.yzu.edu.cn/col/col2245/index.html"><img src="/images/301/rt1.gif" width="320" height="35" border="0" /></a></td>
+            </tr>
+            <tr>
+              <td height="122" valign="top" background="/images/301/rtbg.gif" style="padding:0 10px"><table width='100%' cellspacing='0' cellpadding='0' border='0'>
+<tr>
+<td style='background-color:null'><div style="border-bottom:1px dotted #ccc"><span style="float:right;font-size:11px">05-24</span><a href='/art/2010/5/24/art_2245_66123.html' class='bt_link' title='学生公寓中心致2010届毕业生的一封信' target=_blank style="color:#000; line-height:22px">·学生公寓中心致2010届毕业生的一封信</a></div></td></tr>
+<tr>
+<td style='background-color:null'><div style="border-bottom:1px dotted #ccc"><span style="float:right;font-size:11px">05-24</span><a href='/art/2010/5/24/art_2245_66121.html' class='bt_link' title='文明离校谱写大学生涯新篇章' target=_blank style="color:#000; line-height:22px">·文明离校谱写大学生涯新篇章</a></div></td></tr>
+<tr>
+<td style='background-color:null'><div style="border-bottom:1px dotted #ccc"><span style="float:right;font-size:11px">04-30</span><a href='/art/2010/4/30/art_2245_64497.html' class='bt_link' title='公寓中心做好“五一”节前安全检查工作' target=_blank style="color:#000; line-height:22px">·公寓中心做好“五一”节前安全检查工作</a></div></td></tr>
+<tr>
+<td style='background-color:null'><div style="border-bottom:1px dotted #ccc"><span style="float:right;font-size:11px">03-25</span><a href='/art/2010/3/25/art_2245_61612.html' class='bt_link' title='朱太康书记在公寓中心2010年工作会议上的讲话' target=_blank style="color:#000; line-height:22px">·朱太康书记在公寓中心2010年工作会议上...</a></div></td></tr>
+<tr>
+<td style='background-color:null'><div style="border-bottom:1px dotted #ccc"><span style="float:right;font-size:11px">03-17</span><a href='/art/2010/3/17/art_2245_61048.html' class='bt_link' title='朱太康书记在集团2010年工作研讨会上的讲话' target=_blank style="color:#000; line-height:22px">·朱太康书记在集团2010年工作研讨会上的...</a></div></td>
+</tr></table></td>
+            </tr>
+          </table></td>
+          <td width="330" valign="top"><table width="320" border="0" align="right" cellpadding="0" cellspacing="0">
+            <tr>
+              <td width="320"><a href="http://hqjt.yzu.edu.cn/col/col2246/index.html"><img src="/images/301/rt2.gif" width="320" height="35" border="0" /></a></td>
+            </tr>
+            <tr>
+              <td height="122" valign="top" background="/images/301/rtbg.gif" style="padding:0 10px"><table width='100%' cellspacing='0' cellpadding='0' border='0'>
+<tr>
+<td style='background-color:null'><div style="border-bottom:1px dotted #ccc"><span style="float:right;font-size:11px">04-14</span><a href='/art/2010/4/14/art_2246_63218.html' class='bt_link' title='关于明确财务报销中有关问题的通知' target=_blank style="color:#000; line-height:22px">·关于明确财务报销中有关问题的通知</a></div></td></tr>
+<tr>
+<td style='background-color:null'><div style="border-bottom:1px dotted #ccc"><span style="float:right;font-size:11px">04-20</span><a href='/art/2009/4/20/art_2246_19952.html' class='bt_link' title='扬州大学后勤服务集团在编人员岗位业绩津贴实施办法(2009)' target=_blank style="color:#000; line-height:22px">·扬州大学后勤服务集团在编人员岗位业绩津贴...</a></div></td></tr>
+<tr>
+<td style='background-color:null'><div style="border-bottom:1px dotted #ccc"><span style="float:right;font-size:11px">04-20</span><a href='/art/2009/4/20/art_2246_19858.html' class='bt_link' title='扬州大学后勤服务集团财务管理暂行办法(2007)' target=_blank style="color:#000; line-height:22px">·扬州大学后勤服务集团财务管理暂行办法(2...</a></div></td></tr>
+<tr>
+<td style='background-color:null'><div style="border-bottom:1px dotted #ccc"><span style="float:right;font-size:11px">03-27</span><a href='/art/2009/3/27/art_2246_3401.html' class='bt_link' title='扬州大学后勤服务集团用工管理暂行规定(2007)' target=_blank style="color:#000; line-height:22px">·扬州大学后勤服务集团用工管理暂行规定(2...</a></div></td></tr>
+<tr>
+<td style='background-color:null'><div style="border-bottom:1px dotted #ccc"><span style="float:right;font-size:11px">03-27</span><a href='/art/2009/3/27/art_2246_3400.html' class='bt_link' title='后勤服务集团饮食服务中心大宗物资采购管理办法(2005)' target=_blank style="color:#000; line-height:22px">·后勤服务集团饮食服务中心大宗物资采购管理...</a></div></td>
+</tr></table></td>
+            </tr>
+          </table></td>
+        </tr>
+      </table>
+	  
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td style="border-bottom:1px solid #0084CF"><a href="http://hqjt.yzu.edu.cn/col/col2255/index.html"><img src="/images/301/r2.gif" width="650" height="23" border="0" /></a></td>
+        </tr>
+        <tr>
+          <td style="padding-top:10px"><div id="demo" style="OVERFLOW: hidden; WIDTH: 650px;" align="center"><table cellspacing="0" cellpadding="0" align="center" border="0"><tbody><tr><td id="marquePic1" valign="top"><table width='100%' cellspacing='0' cellpadding='0' border='0'>
+<tr>
+<td style=''><TABLE><TR><TD><a href='http://hqjt.yzu.edu.cn/col/col2255/index.html'><IMG SRC='/picture/0/s090525162501826.JPG' BORDER=0 width="150" height="110"></a></TD>
+</TR></TABLE>
+</td><td style=''><TABLE><TR><TD><a href='http://hqjt.yzu.edu.cn/col/col2255/index.html'><IMG SRC='/picture/0/s090506091147516.jpg' BORDER=0 width="150" height="110"></a></TD>
+</TR></TABLE>
+</td><td style=''><TABLE><TR><TD><a href='http://hqjt.yzu.edu.cn/col/col2255/index.html'><IMG SRC='/picture/0/s090506091400865.JPG' BORDER=0 width="150" height="110"></a></TD>
+</TR></TABLE>
+</td><td style=''><TABLE><TR><TD><a href='http://hqjt.yzu.edu.cn/col/col2255/index.html'><IMG SRC='/picture/0/s090506101255832.JPG' BORDER=0 width="150" height="110"></a></TD>
+</TR></TABLE>
+</td><td style=''><TABLE><TR><TD><a href='http://hqjt.yzu.edu.cn/col/col2255/index.html'><IMG SRC='/picture/0/s090506105647559.JPG' BORDER=0 width="150" height="110"></a></TD>
+</TR></TABLE>
+</td><td style=''><TABLE><TR><TD><a href='http://hqjt.yzu.edu.cn/col/col2255/index.html'><IMG SRC='/picture/0/s090508105115802.JPG' BORDER=0 width="150" height="110"></a></TD>
+</TR></TABLE>
+</td><td style=''><TABLE><TR><TD><a href='http://hqjt.yzu.edu.cn/col/col2255/index.html'><IMG SRC='/picture/0/s090508105241675.JPG' BORDER=0 width="150" height="110"></a></TD>
+</TR></TABLE>
+</td><td style=''><TABLE><TR><TD><a href='http://hqjt.yzu.edu.cn/col/col2255/index.html'><IMG SRC='/picture/0/090327142404183.gif' BORDER=0 width="150" height="110"></a></TD>
+</TR></TABLE>
+</td><td style=''><TABLE><TR><TD><a href='http://hqjt.yzu.edu.cn/col/col2255/index.html'><IMG SRC='/picture/0/s090506100952665.JPG' BORDER=0 width="150" height="110"></a></TD>
+</TR></TABLE>
+</td><td style=''><TABLE><TR><TD><a href='http://hqjt.yzu.edu.cn/col/col2255/index.html'><IMG SRC='/picture/0/090327142333664.gif' BORDER=0 width="150" height="110"></a></TD>
+</TR></TABLE>
+</td>
+</tr></table></td><td id="marquePic2" valign="top"></td></tr></tbody>  </table></div><script language="javascript" type="text/javascript">var speed=30;marquePic2.innerHTML=marquePic1.innerHTML; function Marquee(){ if(demo.scrollLeft>=marquePic1.scrollWidth){ demo.scrollLeft=0; }else{ demo.scrollLeft++; }}; var MyMar=setInterval(Marquee,speed); demo.onmouseover=function() {clearInterval(MyMar)}; demo.onmouseout=function() {MyMar=setInterval(Marquee,speed)};</script></td>
+        </tr>
+      </table>
+    </div></td>
+  </tr>
+</table>
+<table width="900" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="1235" height="26" align="center" bgcolor="#0083D1" style="color:#fff; font-family:Arial, Helvetica, sans-serif">&copy; 2009 扬州大学后勤服务集团 版权所有 AllRights Reseved</td>
+  </tr>
+  <tr>
+    <td height="40" align="center" background="/images/301/footbg.gif" bgcolor="#FFFFFF">地址：中国 江苏 扬州市大学南路88号 邮编：225009 电话：0514-87978430(办) 87978436(办) Email：caohj@yzu.edu.cn</td>
+  </tr>
+</table>
+
+
+<!-- visitcount Begin --><iframe src='./module/visitcount/visit.jsp?type=1&i_webid=43&i_columnid=374' name="vishidden" id="vishidden" frameborder="0" style="width:0; height:0; display:none"></iframe><!-- visitcount End -->
+</body>
+</html>
+ <a href='http://www.hanweb.com' style='display:none'>Produced By 大汉网络 大汉版通发布系统</a><script language="javascript" src='/script/pagecontrol.js'></script>

@@ -1,0 +1,318 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>mail.ouc.edu.cn</title>
+    <base href="http://mail.ouc.edu.cn/coremail/common/index_cmxt30.jsp" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link href="index_cmxt30/login.css" rel="stylesheet" type="text/css" charset="iso-8859-1" />
+    <link href="../common/assets/78932/jquery-ui/themes/base/jquery.ui.tabs.css" rel="stylesheet"
+          type="text/css" charset="iso-8859-1">
+    
+    <script type="text/javascript">
+        var markme_msg = "请按 Ctrl-D 收藏本页";
+        var login_page_custom = {};
+        login_page_custom.locale = "zh_CN";
+    </script>
+
+    
+    
+
+
+
+
+    
+    
+        <script type="text/javascript" src="/coremail/common/assets/78932/jquery/jquery-1.8.2.min.js" charset="iso-8859-1"></script>
+    
+
+
+
+    <script type="text/javascript" src="../common/assets/login/login.js" charset="iso-8859-1"></script>
+    <script type="text/javascript" src="../common/assets/78932/js/blur.js" charset="iso-8859-1"></script>
+
+    
+    
+    
+</head>
+
+<body>
+<div class="Head">
+    <div class="logo">
+        <a href="http://www.coremail.cn" target="_blank">
+            <img style="border:0 none;" src="
+
+/coremail/s?func=getLoginLogoData"
+                 alt="Coremail 电子邮件系统">
+        </a>
+    </div>
+    <div class="Links" id="links">
+        
+        
+        <span id="homepage"><a class="MTLinks">设为首页</a> | </span>
+        
+        <span id="bookmark"><a href="javascript:bookmarkMe()">收藏本页</a> | </span>
+        
+        <span id="localeSwitch"><a href="javascript:setCookie('locale','en_US'); window.location = location;">English</a> |&nbsp;</span>
+        
+        <span id="helpIndex"><a target="_blank" href="/coremail/help/index_zh_CN.jsp">帮助</a> | </span>
+    </div>
+</div>
+
+<div class="Main" id="Main">
+<div class="MainBg" id="MainBg">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+        
+        
+            
+        
+    
+
+
+
+    
+    
+        
+    
+
+
+
+
+<form id="loginForm" method="post" action="/coremail/index.jsp?cus=1" onsubmit="return loginSubmit(this, event);">
+<div class="MainL">
+</div>
+
+    
+    
+        <div id="mainRCommon">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head></head>
+    <body>
+        <div class="MainR" style="width: 335px;">
+        <div class="Header">
+            
+            <div class="title">电子邮箱登录</div>
+            <div class="language" id="language" onclick="fadeInElement(jQ('.localePanel').get(0), this, 5, -4);">
+                <span>Language:</span>
+                <span id="languageName">简体中文</span>
+                <b class="ico icoArr"></b>
+                <input type="hidden" name="locale" id="locale" value="zh_CN" />
+            </div>
+            <div class="select_options localePanel">
+            <ul>
+                
+                    
+                    
+                        
+                    
+                    <a href="javascript:void(0);" onclick="changeLocale('zh_CN', '简体中文'); return false;">
+                        <li>
+                            <span>简体中文</span>
+                        </li>
+                    </a>
+                
+                    
+                    
+                    <a href="javascript:void(0);" onclick="changeLocale('zh_TW', '繁體中文'); return false;">
+                        <li>
+                            <span>繁體中文</span>
+                        </li>
+                    </a>
+                
+                    
+                    
+                    <a href="javascript:void(0);" onclick="changeLocale('en_US', 'English'); return false;">
+                        <li>
+                            <span>English</span>
+                        </li>
+                    </a>
+                
+            </ul>
+        </div>
+        </div>
+        
+        <div id="logArea" class="tab-content">
+            <div class="inptr">
+                <input type="text" id="uid" name="uid" class="inpUser" value="">
+                <input type="hidden" name="nodetect" value="false" />
+            </div>
+            
+                
+                
+                <div class="smallInptr"
+                     id="inpDomain" >
+                    <div class="inpDomain">
+                        <span style="float:left" id="domainVal">ouc.edu.cn</span>
+                    </div>
+                </div>
+                <input type="hidden" name="domain" id="domain" value="ouc.edu.cn" ignoreIDV="true"
+                       dvalue="">
+                
+            
+            <div class="inptr">
+                <input type="password" id="password" name="password" class="inpPW" autocomplete="off"
+                       value="">
+            </div>
+            
+            
+
+            
+                
+                
+            
+            
+            <div class="inplist">
+                <label for="saveUsername" id="saveUsernameLabel">
+                    <input type="checkbox" id="saveUsername" class="checkboxfix" checked />
+                    记住用户名
+                </label>
+                
+                    <label class="for" id="enableUseSSLLabel">
+                        <input type="checkbox" name="useSSL" class="checkboxfix" value="true"  />
+                        SSL 安全登录
+                    </label>
+                
+            </div>
+            <div class="inpB">
+                <div>
+                    <button name="action:login" type="submit" class="Button" id="login_button">
+                        登录
+                    </button>
+                </div>
+            </div>
+
+            <div class="inplist">
+                
+
+                
+                
+                
+            </div>
+            
+	<div>
+	<center>
+	<br>
+	>> <a href="http://stu.ouc.edu.cn">学生邮件系统　</a><br><br>
+	>> <a href="http://my.ouc.edu.cn">邮箱自助注册　</a><br><br>
+	>> <a href="http://my.ouc.edu.cn">新信息门户入口</a>
+	</center>
+	</div>
+        </div>
+
+        <div class="Bottom">
+            <div>
+                <div class="TLine"></div>
+                
+                <label id="faceSelectOption">
+                    <a href="javascript:void(0);" onclick="displayFacePanel(this)">
+                        
+
+
+
+
+
+
+
+
+
+
+
+
+                    </a>
+                </label>
+
+                
+                
+            </div>
+        </div>
+
+        
+        
+    </div>
+    </body>
+</html></div>
+    
+
+
+</form>
+</div>
+
+
+
+
+</div>
+
+<div class="MainM" id="newFeatures">
+    <div class="main">
+        
+            
+            
+            <dl>
+                <a href="/coremail/help/mobile_zh_CN.jsp">
+                    <b class="bico icoPhone"></b>
+                    <span class="dd">移动办公</span>
+                </a>
+            </dl>
+            
+            <dl>
+                <a href="/coremail/help/coremail_zh_CN.jsp">
+                    <b class="bico icoTemplate"></b>
+                    <span class="dd">全新风格</span>
+                </a>
+            </dl>
+            
+            <dl>
+                <a href="/coremail/help/multiSecurity_zh_CN.jsp">
+                    <b class="bico icoMultiSecurity"></b>
+                    <span class="dd">多重密保</span>
+                </a>
+            </dl>
+            
+            <dl>
+                <a href="/coremail/help/calendar_zh_CN.jsp">
+                    <b class="bico icoCalendar"></b>
+                    <span class="dd">会议与日程</span>
+                </a>
+            </dl>
+        
+    </div>
+</div>
+
+<div class="footer">
+    <div class="link">
+            <a href="http://www.coremail.cn/" target="_blank">邮件系统</a>
+            <a href="http://www.coremail.cn/" target="_blank">邮件服务器</a>
+            <a href="http://www.corpease.net/" target="_blank">企业邮箱</a>
+            <a href="http://www.icoremail.cn/" target="_blank">企业邮箱</a>
+        </div>
+    <div class="copyright" id="copyright">
+        <a href="http://www.coremail.cn" target="_blank">Coremail. &copy; Copyright 2000 - 2015 Mailtech.</a>
+    </div>
+</div>
+
+<script type="text/javascript">
+    
+    initXT3("uid");
+
+</script>
+
+
+</body>
+</html>

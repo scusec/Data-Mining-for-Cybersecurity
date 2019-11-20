@@ -1,0 +1,860 @@
+<!DOCTYPE HTML PUBliC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1">
+    <title>东南大学图书馆</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="Keywords" content="东南大学图书馆，东大图书馆，东南大学">
+    <link href="css/index.css" type="text/css" rel="stylesheet" />
+    <script type="text/javascript" language="Javascript" src="js/jquery-1.4.2.min.js"></script>
+    <meta content="MSHTML 6.00.2900.6129" name="GENERATOR" />
+</head>
+<body>
+  <div id="faq" style="right:0;top:0;position:absolute;z-index:50000;width:196px;height:100px;background-image:url(images/wu.jpg);display:none;">
+<div style="float:right;cursor:pointer;font-size:11px;" onclick="document.getElementById('faq').style.display='none';">[关闭]</div>
+<div style="float:left;width:195px;height:70px;cursor:pointer;"onclick='window.location.href="http://www.lib.seu.edu.cn/new"'></div>
+</div>
+<div class="wrap">
+    <div id="logo">
+        <EMBED style="DISPLAY: block; TEXT-AliGN: center" src="images/logo.swf" width="972" height="100" type="application/x-shockwave-flash" wmode="transparent" />
+    </div>
+    <div id="main_center">
+        <!--左侧-->
+        <div class="left">
+            <!--顶部检索区-->
+            <div class="search">
+                <ul id="nav">
+					<li id="search_4" class="selected" onmouseover="change_tab_search(4)"  onclick='openUrl(4)' style='cursor:pointer' title='一站式检索全部外文电子资源、部分中文电子期刊、纸质馆藏目录和多媒体资源，点击可高级检索'>成贤搜索</li>
+                    <li  id="search_1" onmouseover="change_tab_search(1)" onclick='openUrl(1)' style='cursor:pointer'>馆藏目录 </li>
+                    <li id="search_2" onmouseover="change_tab_search(2)"  onclick='openUrl(2)' style='cursor:pointer' title='一站式查找所有中文电子资源，包括中国知网（CNKI）、万方、维普、超星等,点击可选择高级检索。'>中文检索 </li>
+                    
+                    <li id="search_5" onmouseover="change_tab_search(5)"  onclick='openUrl(5)' style='cursor:pointer'>多媒体检索 </li>
+                </ul>
+                <!--馆藏目录-->
+                <div class="search-box" id="search_box_1" style='display:none'>
+                    <div class="search-boxrt">
+                        <div class="search-content">
+                            <div class="searchcontent">
+                                <div class="searchbox">
+                                    <div class="searchleft">
+                                        <div class="lb_layout_1" id="self"></div>
+                                        <input class="input_new_1" id="keyword1" onkeydown="huichen(1,event)" name="keyword1" /> 
+                                        <img alt="" style="BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; FLOAT: left; BORDER-BOTTOM-WIDTH: 0px; CURSOR: pointer; BORDER-RIGHT-WIDTH: 0px" onclick=search() src="images/dd_11.gif" /> 
+                                     </div>
+                                 </div>
+                                 <div style="CLEAR: both"></div>
+                            </div>
+                            说明：查找馆藏纸本图书和期刊资源，还可以利用 
+                            <A style="COLOR: red" href="http://www.libopac.seu.edu.cn:8080/opac/search_more.php">多字段检索</A> 进行查询。 
+                        </div>
+                    </div>
+                </div>
+                <!--馆藏目录-->
+                
+                <!--查找文献-->
+                <div class="search-box" id="search_box_2" style="DISPLAY: none">
+                    <div class="search-boxrt">
+                        <div class="search-content">
+                            <div class="searchcontent">
+
+									<div class="searchbox">
+                                    <div class="searchleft" id="aaaa">
+                                        <div class="lb_layout_1" id="selby" style='display:none'></div>
+										<img src='images/dd_8.gif' style='float:left;' />
+                                        <input class="input_new_1" id="book_keywords" onkeydown="huichen(4,event)" name="keyword1" style="width:455px;" /> 
+                                        <img alt='' style="BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; FLOAT: left; BORDER-BOTTOM-WIDTH: 0px; CURSOR: pointer; BORDER-RIGHT-WIDTH: 0px" onclick="get_search_book_url_1()" src="images/dd_11.gif" /> 
+                                    </div>
+                                </div>
+                                <div style="CLEAR: both;"></div>
+                            </div>
+							 说明：一站式查找所有中文电子资源，包括中国知网（CNKI）、万方、维普、超星等。  
+                        </div>
+                    </div>
+                </div>
+                <!--查找文献-->
+
+                <!--查找文献-->
+                <div class="search-box" id="search_box_4" style="DISPLAY: block">
+                    <div class="search-boxrt">
+                        <div class="search-content">
+                            <div class="searchcontent">
+									<div class="searchbox" style="WIDTH: 557px">
+                                    <div class="searchleft" id="aaaa"> 
+									 <div class="lb_layout_1" id="selfey" style='display:none'></div>
+										<img src='images/dd_8.gif' style='float:left;' />
+                                        <input class="input_new_1 input_new_5" id="qk_keyword" onkeydown="huichen(2,event)" name="keyword1" style="width:490px;" /> 
+                                        <img alt='' style="BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; FLOAT: left; BORDER-BOTTOM-WIDTH: 0px; CURSOR: pointer; BORDER-RIGHT-WIDTH: 0px" onclick="get_search_book_url_2()" src="images/dd_11.gif" />
+                                    </div>
+                                </div><br /><!--a href="http://www.lib.seu.edu.cn/dzzy/help.html"  style="float:left;font-weight:bold;" target="_blank">&nbsp;&nbsp;使用指南</a-->
+                                <div style="CLEAR: both;"></div>
+                            </div>
+							“成贤搜索”可一站式检索主要外文电子资源、纸质馆藏目录、多媒体资源和部分中文电子资源。
+
+								<div style='display:none'>
+									<input type=checkbox value='107239' name='catID' checked/>&nbsp;理学
+									<input type=checkbox value='107240' name='catID' checked/>&nbsp;人文、社科
+									<input type=checkbox value='107241' name='catID' checked/>&nbsp;生物、医药
+									<input type=checkbox value='107242' name='catID' checked/>&nbsp;土建、交通
+									<input type=checkbox value='107243' name='catID' checked/>&nbsp;电子、信息
+								</div>
+
+								<div  style='display:none'>
+									<input type=checkbox value='107244' name='catID' checked/>&nbsp;机械、动力、材料、化工
+									<input type=checkbox value='107245' name='catID' checked/>&nbsp;电气、仪器、自动化
+									<input type=checkbox value='107246' name='catID' checked/>&nbsp;其它
+								</div>
+
+                        </div>
+                    </div>
+                </div>
+                <!--查找文献-->
+
+
+
+                <!--站内检索-->
+                <div class="search-box" id="search_box_5" style="DISPLAY: none">
+                    <div class="search-boxrt">
+                        <div class="search-content">
+                            <div class="searchcontent">
+                                <div class="searchbox">
+                                    <div class="searchleft">
+                                        <div class="lb_layout_1 " id="selffy" style='width:100px'></div>
+                                        <input class="input_new_1 " id="qk_keyword2" onkeydown="huichen(3,event)" name="keyword1" style='width:354px'/> 
+                                        <img alt="" style="BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; FLOAT: left; BORDER-BOTTOM-WIDTH: 0px; CURSOR: pointer; BORDER-RIGHT-WIDTH: 0px" onclick="search3()" src="images/dd_11.gif" /> 
+                                    </div>
+                                </div>
+                                <div style="CLEAR: both"></div>
+                            </div>
+                             说明：查找本馆订购的多媒体资源，还可以利用 <A style="COLOR: red" href="http://10.9.4.30/">更多途径</A> 进行查询。  
+                        </div>
+                    </div>
+                </div>
+                <!--站内检索-->
+            </div>
+            <!--顶部检索区-->
+            <!--栏目区-->
+            <div id="menu_guide"></div>
+            <!--栏目区-->
+        </div>
+        <!--左边结束-->
+
+        <!--右侧-->
+        <div class="right">
+            <!--消息区-->
+            <div class="news">
+                <ul class="dt">
+                    <li class="selected" id="libs_message_3">
+                        <a onmouseover="init_message(news_arr,3)" href="html/list_view.htm?parent_id=1&this_id=3&id=3">新闻资讯</a> 
+                    </li>
+                    <li id="libs_message_4">
+                        <a onmouseover="init_message(resource_arr,4)"  href="html/list_view.htm?parent_id=1&this_id=4&id=4">资源动态</a> 
+                    </li>
+                    <li id="libs_message_8">
+                        <a onmouseover="init_message(talk_arr,8)"  href="html/list_view.htm?parent_id=1&this_id=8&id=8">本馆讲座</a> 
+                    </li>
+                </ul>
+                <!--内容显示区-->
+                <ul class="dd">
+                    <!--新闻中心-->
+                    <div id="library_news">载入中...</div>
+                    <!--新闻中心-->
+                </ul>
+            </div>
+            <!--消息区-->
+            
+            <div class="t_foot"></div>
+            <!--专题区-->
+            <div class="r_pic" id="zt_message"></div>
+            <!--专题区-->
+        </div>
+        <!--右侧-->
+        <!--底部友怀链接-->
+        <div style="CLEAR: both; liNE-HEIGHT: 5px; HEIGHT: 5px"></div>
+        <div class="f_link" id="links_message">
+            
+        </div>
+         <!--版本信息-->
+        <div class="footer footer2" id="footer_message">
+
+        </div>
+    </div>
+    <!--浮层-->
+    <div id="bodyly" style="DISPLAY: none; BACKGROUND: #000; FILTER: alpha(opacity=50); LEFT: 0px; POSITION: absolute; TOP: 0px; moz-opacity: .5; opacity: 0.5">
+    </div>
+    <div id="mylib_fc"  style="overflow:hidden; position:absolute;background:url(images/l_91.gif) no-repeat;width:301px;height:184px;font-size:12px;z-index:999; display:none;">
+        <div id="xsnazzy">
+            <div class="memmenul">
+                <div style="FONT-WEIGHT: bold; FONT-SIZE: 13px; COLOR: #b70000">
+                    <span style="PADDING-RIGHT: 5px; PADDING-LEFT: 0px; FONT-WEIGHT: normal; FONT-SIZE: 12px; FLOAT: right; PADDING-BOTTOM: 5px; CURSOR: pointer; PADDING-TOP: 5px" onclick="unSearchLayers();">[关闭]</span>
+                    <span id="wintit"></span> 
+                </div>
+            
+                <div style="CLEAR: both; WIDTH: 100%;padding-left:20px;padding-right:20px;">
+                    <div id="hiretypes"></div>
+                    <div id="hiretype"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> 
+
+
+
+<div id="fc_img"  style="cursor:pointer;position:absolute;left: 14px; width:117px; top: 174px; height:70px;display:none">
+
+</div>
+</body>
+</html>
+<script type="text/javascript" src="js/mdiv_content3.js"></script>
+<script type="text/javascript" src="js/index_message.js"></script>
+<script type="text/javascript" src="js/database_message_list.js"></script>
+<script type="text/javascript" src="js/web_base_message.js"></script>
+<script type="text/javascript" src="js/hot_database_message_arr.js"></script>
+<script type="text/javascript" src="js/tree_view.js"></script>
+<script type="text/javascript">
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+var x = 50,y = 60;
+var xin = true, yin = true;
+var step = 1
+var delay = 10
+var obj=document.getElementById("fc_img");
+
+
+$(document).ready(function(){ 
+    init_zt();
+    init_links();
+    init_message(news_arr,3);
+    init_tree_view(tree_index);
+    init_footer_message();
+    
+    $.post("../control/system.ashx",
+	{
+		id              :   '-1',
+		parent_id       :   '-1',
+		action          :   'index',
+		rand			:	Math.random()
+	},callback_get_contents,'json'); 
+    
+})
+function callback_get_contents(msg){}
+function change_string(contents)
+{
+    contents=contents.replace(/@@@@@/ig,"<");
+    contents=contents.replace(/#####/ig,">");
+    contents=contents.replace(/\\/ig,"");
+    return contents;
+}
+function init_footer_message()
+{
+    var txtHtml='<div>';
+    var left_daohang_arr1=left_daohang.split("|");
+    for(var item in left_daohang_arr1)
+    {
+        if(left_daohang_arr1[item].length>0)
+        { 
+            var tmp=left_daohang_arr1[item].replace(/\[|\]/ig,'').split(",");
+            txtHtml+='<span  style="color:black">';
+            txtHtml+='    <a href="'+tmp[1]+'" style="  font-size:11px;" >'+tmp[0]+'</a>';
+            txtHtml+='</span>&nbsp;&nbsp;|&nbsp;&nbsp;';
+        }
+     }
+     txtHtml=txtHtml.replace(/\|&nbsp;&nbsp;$/ig,'');
+     txtHtml+="</div>"
+     
+     txtHtml+=change_string(index_footer);
+     $('#footer_message').html(txtHtml);
+    
+}
+
+function init_zt()
+{
+	//url.replace(/58\.192\.117\.3:8080\//g, "www.libopac.seu.edu.cn:8080");
+    if(fc_tag==1)
+    {
+        $('#fc_img').html("<A href='"+fc_url+"' target='"+fc_open_tag+"'><img src='"+fc_image+"' border=0 /></a>");
+        $('#fc_img').show();
+        
+        var itl= setInterval("floatwww_qpsh_com()", delay)
+		obj.onmouseover=function(){clearInterval(itl)}
+		obj.onmouseout=function(){itl=setInterval("floatwww_qpsh_com()", delay)}
+    }
+    var txtHtml="";
+    for(var item in zt_view_arr)
+    {
+        txtHtml+="<div  style='-margin-top:-3px'>"
+        txtHtml+="  <a href='"+zt_view_arr[item]['url'].replace(/58\.192\.117\.3:8080\//g, "www.libopac.seu.edu.cn:8080/")+"' target='"+zt_view_arr[item]['open_tag']+"'><img style='cursor:pointer;'  src='"+zt_view_arr[item]['img']+"' title='"+zt_view_arr[item]['title']+"' alt='"+zt_view_arr[item]['title']+"' /></a>";
+        txtHtml+="</div>";
+    }
+    $('#zt_message').html(txtHtml);
+    init_host_database();
+}
+
+
+//浮层
+function floatwww_qpsh_com() 
+{
+	var L=T=0
+	var R= document.body.clientWidth-obj.offsetWidth
+	var B = document.body.clientHeight-obj.offsetHeight
+	
+	$('#fc_img').css('left', x + document.body.scrollLeft+"px"); 
+	$('#fc_img').css('top', y + document.body.scrollTop+"px"); 
+
+	x = x + step*(xin?1:-1)
+	if (x < L) { xin = true; x = L}
+	if (x > R){ xin = false; x = R}
+	y = y + step*(yin?1:-1)
+	if (y < T) { yin = true; y = T }
+	if (y > B) { yin = false; y = B }
+}
+function init_host_database()
+{
+    var txtHtml='<SELECT class=bbox id="hot_database_sel" style="WIDTH: 286px" onchange="open_database_url()"> ';
+    txtHtml+='<OPTION  value="" selected>-------------热门数据库导航-------------</OPTION>';
+    var num=0;
+    for(var item in hot_database_message_arr)
+    {
+        try
+        {
+            if(database_message_list[hot_database_message_arr[item]['article_id']]!=undefined)
+            {
+                txtHtml+="<option value='"+item+"'>"+database_message_list[hot_database_message_arr[item]['article_id']]+"</option>";
+                if(num++>=9){break;}   
+            }     
+        }
+        catch(e){}
+
+    }
+    txtHtml+="</select>";
+    $('#zt_message').append(txtHtml);
+}
+
+function open_database_url()
+{
+    var tmp_s=$('#hot_database_sel').val();
+    if(tmp_s.length>0)
+    {
+        window.open('html/list_2.htm?parent_id=12&this_id=-1&id='+hot_database_message_arr[tmp_s]['article_id'],"_self");
+    }
+}
+
+function init_links()
+{
+    var txtHtml="";
+    for(var item in links_arr)
+    {
+        txtHtml+='<span >'
+        txtHtml+=' <A style="COLOR:'+links_arr[item]['font_color']+';font-size:'+links_arr[item]['font_size']+'px;'+links_arr[item]['other_style']+'" href="'+links_arr[item]['url']+'" target="'+links_arr[item]['open_tag']+'" >'+links_arr[item]['title']+'</A> ';
+        txtHtml+="</span>";
+        txtHtml+='<span class="cell">&nbsp;</span>';
+    }
+    txtHtml=txtHtml.replace(/\<span class\=\"cell\"\>&nbsp;\<\/span\>$/ig,'');
+    $('#links_message').html(txtHtml);
+}
+
+function cut_title(title)
+{
+    return title.sub(36);
+}
+String.prototype.sub = function(n) 
+{    
+    var r = /[^\x00-\xff]/g;    
+    if(this.replace(r, "mm").length <= n) return this;   
+    var m = Math.floor(n/2);    
+    for(var i=m; i<this.length; i++) 
+    {    
+        if(this.substr(0, i).replace(r, "mm").length>=n) {return this.substr(0, i) +"..."; }    
+    }
+    return this;   
+}; 
+
+function init_message(tmp_arr,type)
+{
+    $('#libs_message_3').removeClass('selected');
+    $('#libs_message_4').removeClass('selected');
+    $('#libs_message_8').removeClass('selected');
+    $('#libs_message_'+type).addClass('selected');
+
+    var txtHtml='<div class="libraryul">';
+    for(var item in tmp_arr)
+    {
+        txtHtml+='<li class="la la2" onmouseover=\'this.className="laon"\'  onmouseout=\'this.className="la la2"\'>'; 
+        txtHtml+='  <A title="'+tmp_arr[item]["title"]+'"  style="WIDTH: 100%"   href="html/'+get_article_parent_tpl(type)+'?parent_id='+type+'&this_id=-1&id='+tmp_arr[item]["id"]+'" target="'+tmp_arr[item]["open_tag"]+'">';
+        txtHtml+='      <span style="color:'+tmp_arr[item]["font_color"]+' ">'+cut_title(tmp_arr[item]["title"])
+        
+        if(tmp_arr[item]["img"].length>0)
+        {
+            //txtHtml+="<img src='"+tmp_arr[item]["img"]+"' border=0 width=18 height=18/>"
+            
+        }
+        txtHtml+='  </span></A>';
+        txtHtml+="</li>";
+
+    }
+    txtHtml+="</div>";
+    $('#library_news').html(txtHtml)
+}
+//获取栏目下的文章模板
+function get_article_parent_tpl(parent_id)
+{    
+    //自己没有找父类
+    for(var item in tree_view_arr)
+    {
+        if(parent_id==tree_view_arr[item]['id'])
+        {
+            return tree_view_arr[item]['articles_tpl'];
+        }
+    }    
+}
+function init_tree_view(num)
+{
+    var txtHtml="";
+    var num=num.split(",");
+    for(var item in num)
+    {
+        txtHtml+="<span>";
+        txtHtml+="<div>";
+        txtHtml+='<table >';
+        //txtHtml+='<TBODY>';
+        txtHtml+='<tr>';
+        txtHtml+='<th vAlign=top scope=col><A href="'+get_tree_url_first(num[item])+'>'+tree_view_item[num[item]]+'</A> </th>';
+        txtHtml+='</tr>';    
+        var nums=0;    
+        var break_tag=0;
+        for(var items in tree_view_arr)
+        {
+            if(tree_view_arr[items]['parent_id']==num[item])
+            {
+                if(nums<=8)
+                {            
+                    txtHtml+='<tr>';
+                    txtHtml+='<td class=li style="BORDER-TOP-STYLE: none; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none">';
+                    txtHtml+=' <LABEL id=LABEL3 style="COLOR: black">• </LABEL>';
+                    txtHtml+='<A href="'+get_tree_url(items)+'"  target="'+tree_view_arr[items]['open_tag']+'" style="color:'+tree_view_arr[items]['font_color']+';">'+tree_view_arr[items]['title']+'</A>';
+                    if(tree_view_arr[items]["id"]==161)
+					{
+					   txtHtml+=' <img src="/upload/new1.jpg" />';
+					}
+					 if(tree_view_arr[items]["id"]==167)
+					{
+					   txtHtml+=' <img src="/upload/new1.jpg" />';
+					}
+					/*else if(tree_view_arr[items]["id"]==153)
+					{
+					   txtHtml+='<img src="/upload/new1.jpg" />';
+					}*/
+					if(tree_view_arr[items]['img'].length>0)
+                    {
+                        txtHtml+="<img src='"+tree_view_arr[items]['img']+"' border=0 />";
+						//txtHtml+="<img src='"+tree_view_arr[items]['img']+"' border=0 width='18' height='18' />";
+                    }
+                    txtHtml+='</td>';
+                    txtHtml+='</tr>'; 
+                }   
+                nums++;        
+            } 
+        }
+        //txtHtml+='</TBODY>';
+        if(nums>9)
+        {
+            txtHtml+='<tr><td  class="li" style="border-style:None;padd/ing-left:50px"><LABEL id=LABEL3 style="COLOR: black">&nbsp; </LABEL><a  style="color:#BB0A01; " href="'+get_tree_url_first(num[item])+'" target="_self">更多. . .</a></td></tr>';
+        }
+        txtHtml+='</table>';  
+        
+        txtHtml+="</div>"; 
+        txtHtml+="</span>";                
+    }
+
+    $('#menu_guide').html(txtHtml);
+}
+
+function get_tree_url(items)
+{
+    //var tree_view_type_arr={1:"栏目",2:"文章",3:"外部链接"}
+    if(tree_view_arr[items]['type']==1 && tree_view_arr[items]['step']==1 )
+    {
+
+    }
+    else if(tree_view_arr[items]['type']==1)
+    {
+        return 'html/'+tree_view_arr[items]['url']+'?parent_id='+tree_view_arr[items]['parent_id']+'&this_id='+tree_view_arr[items]['id']+'&id='+tree_view_arr[items]['id'];    
+    }
+    else if(tree_view_arr[items]['type']==2)
+    {
+        return 'html/'+tree_view_arr[items]['articles_tpl']+'?parent_id='+tree_view_arr[items]['parent_id']+'&this_id='+tree_view_arr[items]['id']+'&id='+tree_view_arr[items]['url'];
+    }
+    else if(tree_view_arr[items]['type']==3)
+    {
+        return 'html/open_url.htm?parent_id='+tree_view_arr[items]['parent_id']+'&this_id='+tree_view_arr[items]['id']+"&url="+encodeURIComponent(tree_view_arr[items]['url']);
+    }
+}
+
+function get_tree_url_first(id)
+{
+    //一级目录找子栏目
+    for(var item in tree_view_arr)
+    {
+         if(tree_view_arr[item]["parent_id"]==id)
+         {
+                if(tree_view_arr[item]['type']==1 )
+                {
+                    return 'html/'+tree_view_arr[item]['url']+'?parent_id='+tree_view_arr[item]['parent_id']+'&this_id='+tree_view_arr[item]['id']+'&id='+tree_view_arr[item]['id']+' " target="'+tree_view_arr[item]['open_tag']+'"';    
+                }
+                else if(tree_view_arr[item]['type']==2)
+                {
+                    return 'html/'+tree_view_arr[item]['articles_tpl']+'?parent_id='+tree_view_arr[item]['parent_id']+'&this_id='+tree_view_arr[item]['id']+'&id='+tree_view_arr[item]['url']+' " target="'+tree_view_arr[item]['open_tag']+'"';
+                }
+         }
+    }
+}
+
+</script>
+<script type="text/javascript">
+function openUrl(type)
+{
+	var tmpUrl='';
+	switch(type)
+	{
+		case 1:tmpUrl='http://www.libopac.seu.edu.cn:8080/opac/search_more.php';break;
+		case 2:tmpUrl='http://ss.zhizhen.com';break;
+		case 4:tmpUrl='http://120.55.89.193/eds.php?authtype=ip,guest&custid=s1397862&groupid=main&profile=eds';break;
+		case 5:tmpUrl='http://10.9.4.30';break;
+	}
+	window.open(tmpUrl);
+
+}
+
+function huichen(type,events) 
+{
+    var eventSource;
+    var currentKey = events.charCode||events.keyCode;
+    if(document.all){eventSource =window.event.srcElement;}
+    else{eventSource = events.target;} 
+	if(currentKey==13)
+	{ 
+		switch(type)
+		{
+            case 1: search(); break;
+            case 2: get_search_book_url_2(); break;
+            case 3: search3(); break;
+            case 4: get_search_book_url_1(); break;
+			case 5: check_login_message();break;
+			case 6: check_login_message_username();break;
+		}
+	} 
+}
+function change_tab_search(num) 
+{
+    $('#search_1').removeClass('selected');
+    $('#search_2').removeClass('selected');
+    $('#search_4').removeClass('selected');
+    $('#search_5').removeClass('selected');
+    $('#search_box_1').hide();
+    $('#search_box_2').hide();
+    $('#search_box_4').hide();
+    $('#search_box_5').hide();
+    $('#search_' + num).addClass('selected');
+    $('#search_box_' + num).show();
+}
+//馆藏目录检索
+function search() 
+{
+    var tmp_keywords = document.getElementById('keyword1').value;
+    var kind = document.getElementById('self').innerHTML;
+    kind = kind.replace(/<[^>].*?>/g, "");
+    kind = kind.split("\\")[1];
+    if (tmp_keywords.length == 0) { alert('检索词不能为空'); }
+    else 
+    {
+        tmp_search = tmp_keywords;
+        tmp_search = encodeURIComponent(tmp_search);
+        window.open("http://www.libopac.seu.edu.cn:8080/opac/openlink.php?strSearchType=" + kind + "&historyCount=1&strText=" + tmp_search + "&doctype=ALL&match_flag=forward&displaypg=20&sort=CATA_DATE&orderby=desc&showmode=list&dept=ALL&x=20&y=22")
+    }
+}
+//电子期刊检索
+function search2() 
+{
+    var tmp_keywords = document.getElementById('qk_keyword').value;
+    var kind = document.getElementById('selfey').innerHTML;
+    kind = kind.replace(/<[^>].*?>/g, "");
+    kind = kind.split("\\")[1];
+    if (tmp_keywords.length == 0) { alert('检索词不能为空'); }
+    else 
+    {
+
+        tmp_search = tmp_keywords;
+        tmp_search = encodeURIComponent(tmp_search);
+        window.open("http://cy5gp6fb7p.search.serialssolutions.com/?V=1.0&N=100&L=CY5GP6FB7P&S=" + kind + "&C=" + tmp_search)
+    }
+}
+function getSelect(names)
+{
+    var vals = "";
+    var eles = document.getElementsByName(names);
+    for(var i=0;i<eles.length;i++)
+    {
+		if(eles[i].checked){vals+=eles[i].value+",";}
+    }
+    vals = vals.length>0?(vals.substring(0,vals.length-1)):("");
+	return vals;
+}
+function get_search_book_url()
+{
+
+	switch(getSelect('searchlan'))
+	{
+		case '1':get_search_book_url_1();break;
+		case '2':get_search_book_url_2();break;
+	}
+}
+//整合检索
+function get_search_book_url_1() 
+{
+    var tmp_keywords = $.trim($('#book_keywords').val());
+    if (tmp_keywords.length <= 0) { alert('请输入关键字'); }
+    else 
+    {
+		 window.open("http://ss.zhizhen.com/s?sw=" + encodeURIComponent(tmp_keywords)+"&size=15&isort=0&x=0_313");
+    }
+}
+
+function get_search_book_url_2() 
+{
+    var tmp_keywords = $.trim($('#qk_keyword').val());
+   // var kind = document.getElementById('selby').innerHTML;
+   // kind = kind.replace(/<[^>].*?>/g, "");
+    //kind = kind.split("\\")[1];
+
+	//var tmpXk=getSelect('catID');
+
+    if (tmp_keywords.length <= 0) { alert('请输入关键字'); }
+	//else if(tmpXk<=0){alert('请选择检索学科')}
+    else 
+    {
+		/*
+		var tmpPPP=tmpXk.split(',');
+		var saveXk='';
+		for(var i=0;i<tmpPPP.length;i++)
+		{
+			if(tmpPPP[i].length!=0)
+			{
+				saveXk+="&catID="+tmpPPP[i];
+			}
+		}*/
+		//http://search.ebscohost.com/login.aspx
+        window.open("http://120.55.89.193/eds.php?direct=true&authtype=ip,guest&custid=s1397862&groupid=main&profile=eds&bquery=" + encodeURIComponent(tmp_keywords))
+    }
+}
+//站内检索
+function search3() 
+{
+    var tmp_keywords = document.getElementById('qk_keyword2').value;
+    var kind = document.getElementById('selffy').innerHTML;
+    kind = kind.replace(/<[^>].*?>/g, "");
+    kind = kind.split("\\")[1];
+    if (tmp_keywords.length == 0) { alert('检索词不能为空'); }
+    else 
+    {
+
+	
+        tmp_search = tmp_keywords;
+		window.open("http://10.9.4.30/index.php?m=content&c=index&a=lists&show=&catid=&keyword="+encodeURIComponent(tmp_search)+"&header_id=");
+		//window.open("http://10.9.4.30/nts/index/checkLogin?name=anonymity&password=&from=search&selectPage=100&type//="+kind+"&keyword="+encodeURIComponent(tmp_search));
+        //window.open("html/list_search.htm?keyword=" + encodeURIComponent(tmp_search) + "&type=" + kind,'_self')
+    }
+}
+//登录我的图书馆
+function JumpSearchLayers(id) 
+{
+    document.getElementById("bodyly").style.display = "block";
+    document.getElementById("bodyly").style.width = document.body.clientWidth + "px";
+
+    if (document.body.scrollHeight > document.body.clientHeight)
+    { 
+        document.getElementById("bodyly").style.height = document.body.scrollHeight + "px"; 
+    }
+    else
+    { 
+        document.getElementById("bodyly").style.height = document.body.clientHeight + "px"; 
+    }
+    document.getElementById("mylib_fc").style.display = 'block';
+    document.getElementById("mylib_fc").style.top = (document.documentElement.scrollTop + 200) + "px"; ;
+    document.getElementById("mylib_fc").style.left = (document.body.clientWidth / 2 - 150) + "px"; ;
+    document.getElementById("wintit").innerHTML = '';
+    document.getElementById("hiretype").innerHTML = '';
+    var lo="<table style='width:280px;line-height:25px;'>";
+    lo+='<tr><td style="text-align:center;color:#B70000;font-size:14px;font-weight:bold;text-align:center" colspan=2>用户登录</td></tr>';
+    lo+='<tr><td>用户名：</td><td><input type=text id="username" style="border:1px solid #D22826;width:140px;height:24px;line-height:24px;" onkeydown="huichen(5,event)" /></td></tr>';
+    lo+="<tr><td>密　码：</td><td>";
+    
+    lo += ' <input type=password id="password" style="border:1px solid #D22826;width:140px;height:24px;line-height:24px;" onkeydown="huichen(5,event)">&nbsp;';
+    lo += ' <a href="http://www.libopac.seu.edu.cn:8080/reader/get_pwd.php">忘记密码?</a>';    
+    lo+="</td></tr>";
+    lo+="<tr style='margin-top:5px;'><td></td><td>";
+    lo += ' <input type="button" value="登录" onclick="check_login_message()" id="login_b" style="background:url(../images/l_16.gif) no-repeat;width:62px;height:22px;border:none;color:white;text-align:center;cursor:pointer;margin-right:37px;"/>';
+    lo += ' <a style="height:22px;text-align:center;cursor:pointer;" href="javascript:void(0)" onclick="reset();">重置</a>';
+    
+    lo+="</td></tr>";
+    //lo+="<tr><td colspan=2>谷歌浏览器下登录，请点击地址栏最右边<img src='../images/1.jpg'>,允许弹出式窗口</td></tr>";
+    lo+="<tr><td colspan=2>&nbsp;</td></tr>";    
+    lo+="</table>"
+    $('#hiretypes').html(lo);
+
+}
+function check_login_message() 
+{
+    var tmp_username = $.trim($('#username').val());
+    var tmp_password = $.trim($('#password').val());
+    if (tmp_username.length == 0) { alert('用户名不能为空'); }
+    else if (tmp_password.length == 0) { alert('密码不能为空'); }
+    else 
+    {
+        var pare = "username=" + encodeURIComponent(tmp_username);
+        pare = pare + "&password=" + encodeURIComponent(tmp_password);
+        $('#login_b').attr({ 'disabled': 'disabled' }); //将按钮禁用
+		$('#login_b').val('登录中'); //将按钮禁用
+        var url = "http://mylib.seu.edu.cn:8989/seu/core/checkuser.php?" + pare + "&t=" + Math.random() + "&login_type=1";
+        send_url_message(url)
+    }
+}
+
+function check_login_message_username() 
+{
+
+    var tmp_username = $.trim($('#username').val());
+    if (tmp_username.length == 0) { alert('姓名不能为空'); }
+    else 
+    {
+        var pare = "username=" + encodeURIComponent(tmp_username);
+        $('#login_b1').attr({ 'disabled': 'disabled' }); //将按钮禁用
+		$('#login_b1').val('提交中'); //将按钮禁用
+		//http://58.192.117.11:8989/seu/core/red_con.php?name=sdfs
+        var url = "http://mylib.seu.edu.cn:8989/seu/core/redr_con.php?" + pare + "&t=" + Math.random() + "&login_type=1&sid="+usersid;
+        send_url_message(url)
+    }
+}
+
+/*11解决谷歌 火狐浏览器*/
+function send_url_message(url) 
+{
+    var a = document.createElement("script");
+    a.setAttribute("type", "text/javascript");
+    a.setAttribute("src", url);
+    document.body.appendChild(a);
+}
+
+/*新*/
+function unSearchLayers() 
+{
+    var objllist = document.getElementsByTagName('select');
+    for (var i = 0; i < objllist.length; i++) {
+    objllist[i].style.visibility = "";
+    }
+    document.getElementById("mylib_fc").style.display = "none";
+    document.getElementById("bodyly").style.display = "none";
+}
+function reset() 
+{
+    document.getElementById("username").value = "";
+    document.getElementById("password").value = "";
+}
+/*dataType: "script":表示容许跨域访问。*
+/*********************用户登录************************************/
+function doPost1(url) 
+{
+    $.ajax({
+    type: "post",
+    url: url,
+    dataType: "script",
+    data: {},
+    dataType: "html",
+    success: function (data) { eval(data); },
+    error: function (data) { eval(data); alert(data); }
+    });
+    return false;
+}
+function callback_login(msg) 
+{
+    if (msg.status == 'success') 
+    {
+        /*关闭登录我的图书馆*/
+        document.getElementById("mylib_fc").style.display = "none";
+        document.getElementById("bodyly").style.display = "none";
+        /*打开我的图书馆主页*/
+        window.open('http://mylib.seu.edu.cn:8989/seu/index.php?sid='+msg.SID,'_self');
+        $('#login_b').attr({ 'disabled': false }); //将按钮恢复
+		$('#login_b').val('登录'); //将按钮恢复
+        $('#username').attr({ 'readonly': 'readonly' });
+        $('#password').attr({ 'readonly': 'readonly' });
+    }
+	else if(msg.status=="认证失败")
+	{
+		usersid=msg.SID
+		document.getElementById("bodyly").style.display = "block";
+		document.getElementById("bodyly").style.width = document.body.clientWidth + "px";
+
+		if (document.body.scrollHeight > document.body.clientHeight)
+		{ 
+			document.getElementById("bodyly").style.height = document.body.scrollHeight + "px"; 
+		}
+		else
+		{ 
+			document.getElementById("bodyly").style.height = document.body.clientHeight + "px"; 
+		}
+		document.getElementById("mylib_fc").style.display = 'block';
+		document.getElementById("mylib_fc").style.top = (document.documentElement.scrollTop + 200) + "px"; ;
+		document.getElementById("mylib_fc").style.left = (document.body.clientWidth / 2 - 150) + "px"; ;
+		document.getElementById("wintit").innerHTML = '';
+		document.getElementById("hiretype").innerHTML = '';
+		var lo="<table style='width:280px;line-height:20px;'>";
+		lo+='<tr><td style="text-align:center;color:#B70000;font-size:14px;font-weight:bold;text-align:center">请输入您图书证上的姓名</td></tr>';
+		lo+="<tr><td colspan=1>&nbsp;</td></tr>";
+
+		lo+='<tr ><td style="text-align:center"><input type=text id="username" style="border:1px solid #D22826;width:140px;height:24px;line-height:24px;" onkeydown="huichen(6,event)" /></td></tr>';
+		lo+="<tr><td colspan=1>&nbsp;</td></tr>";
+		
+		lo +='<tr><td style="text-align:center;">';
+		lo += ' <input type="button" value="提交" onclick="check_login_message_username()" id="login_b1" style="background:url(../images/l_16.gif) no-repeat;width:62px;height:22px;border:none;color:white;cursor:pointer;margin-right:37px;"/>';
+		lo+="</td></tr>";
+		lo+="<tr><td colspan=1>&nbsp;</td></tr>";    
+		lo+="</table>"
+		$('#hiretypes').html(lo);
+	}
+    else 
+    {
+        alert(msg.status);
+        $('#login_b').attr({ 'disabled': false }); //将按钮恢复
+		$('#login_b').val('登录'); //将按钮恢复
+        $('#username').attr({ 'value': '' });
+        $('#password').attr({ 'value': '' });
+    }
+}
+
+function callback_login_user(msg) 
+{
+	$('#login_b1').attr({ 'disabled': false }); //将按钮恢复
+	$('#login_b1').val('提交'); //将按钮恢复
+	usersid=msg.SID
+	if (msg.status == '身份验证成功') 
+    {
+		window.open('http://mylib.seu.edu.cn:8989/seu/index.php?sid='+msg.SID,'_self');
+	}
+	else
+	{
+		alert(msg.status);
+		JumpSearchLayers();
+	}
+}
+</script>
+

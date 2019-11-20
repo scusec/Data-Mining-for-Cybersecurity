@@ -1,0 +1,490 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta name="renderer" content="webkit" /><link href="/metro/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" /><link href="/metro/assets/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" /><link href="/metro/assets/bootstrap/css/bootstrap-fileupload.css" rel="stylesheet" /><link href="/metro/assets/font-awesome/css/font-awesome.css" rel="stylesheet" /><link href="/metro/css/style.css" rel="stylesheet" /><link href="/metro/css/ex-style.css" rel="stylesheet" /><link href="/metro/css/style-responsive.css" rel="stylesheet" /><link id="style_color" href="/metro/css/style-default.css" rel="stylesheet" /><link href="/metro/css/default.css" rel="stylesheet" type="text/css" /><!--表格样式-->
+<link rel="stylesheet" href="/metro/js/artDialog-v6/css/ui-dialog.css" /><!--art dialog css-->
+<link href="/metro/js/intro-js-v1.0.0/introjs.css" rel="stylesheet" /><!--introjs.css-->
+
+<!-- js-->
+<script type="text/javascript" src="/metro/js/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="/metro/js/jquery.nicescroll.js"></script>
+<script type="text/javascript" src="/metro/assets/jquery-slimscroll/jquery-ui-1.9.2.custom.min.js"></script>
+<script type="text/javascript" src="/metro/assets/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+<script type="text/javascript" src="/metro/assets/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/metro/js/jquery.scrollTo.min.js"></script>
+<!--art dialog-->
+<script src="/metro/js/artDialog-v6/dist/dialog-min.js"></script>  <!--art dialog js-->
+<!--layer-->
+<script type="text/javascript" src="/metro/js/layer/layer.min.js"></script>
+<script type="text/javascript">
+    var topWin = (function (p, c) {
+        while (p != c) {
+            c = p;
+            p = p.parent;
+        }
+        return c;
+    })(window.parent, window);
+</script><script language="javascript" type="text/javascript" src="/metro/js/My97DatePicker/WdatePicker.js"></script><link href="/metro/assets/bootstrap/css/bootstrap-index-v3.min.css" rel="stylesheet" /><link href="/admin/css/css_index/login-page-v3.css" rel="stylesheet" type="text/css" /><title>
+	中央音乐学院招生系统考生报名
+</title>
+    <script type="text/javascript">
+        var cur_page = 1;
+        var page_num;
+        $(document).ready(function () {
+            page_num = $("#page_num").val();
+            //alert(page_num);
+            if (cur_page == 1) {
+                $("#before_page").hide();
+            }
+            else {
+                $("#before_page").show();
+            }
+            if (page_num <= 1) {
+                $("#next_page").hide();
+            }
+            else {
+                $("#next_page").show();
+            }
+            $("#before_page").click(function () {
+                cur_page -= 1;
+                $.ajax({
+                    type: "POST",
+                    url: "/AdminMetro/CCOM/notification/GetNewsByPage.ashx",
+                    data: { "action": "getList", "page": cur_page, "keyWord": "", "typeId": 0 },
+                    success: function (data) {
+                        if (data != null) {
+                            $("#news_list").empty();
+                            var result = eval(data);
+                            for (var i = 0; i < result.length; i++) {
+                                var time = "";
+                                if (result[i].News_date != null) {
+                                    time = result[i].News_date.substr(0, 8);
+                                }
+                                if (result[i].News_top == "True") {
+                                    var li = "<li class=\"notice-li\">" + "<a href=\"" + result[i].News_URL + "\" target=\"_blank\">" + "<img src=\"/images/news/news_logo2.png\"  class=\"img_logo\"/>" + "<span style=\"color:red;\">[置顶] </span>" + result[i].News_title + "</a>" + "<span class=\"date\">" + time + "</span>" + "</li>";
+                                    $("#news_list").append(li);
+                                }
+                                else {
+                                    var li = "<li class=\"notice-li\">" + "<a href=\"" + result[i].News_URL + "\"  target=\"_blank\">" + "<img src=\"/images/news/news_logo2.png\"  class=\"img_logo\"/>" + result[i].News_title + "</a>" + "<span class=\"date\">" + time + "</span>" + "</li>";
+                                    $("#news_list").append(li);
+                                }
+                            }
+                        }
+                        if (cur_page == 1) {
+
+                            $("#before_page").hide();
+                        }
+                        else {
+                            $("#before_page").show();
+
+                        }
+                        if (cur_page < page_num) {
+                            $("#next_page").show();
+                        }
+                    },
+                    error: function (data) {
+                        alert("请求数据出错");
+                    }
+                });
+            });
+            if (cur_page == page_num) {
+                $("#next_page").hide();
+            }
+            $("#next_page").click(function () {
+                cur_page += 1;
+                $.ajax({
+                    type: "POST",
+                    url: "/AdminMetro/CCOM/notification/GetNewsByPage.ashx",
+                    data: { "action": "getList", "page": cur_page, "keyWord": "", "typeId": 0 },
+                    success: function (data) {
+                        if (data != null) {
+                            $("#news_list").empty();
+                            var result = eval(data);
+                            for (var i = 0; i < result.length; i++) {
+                                var time = "";
+                                if (result[i].News_date != null) {
+                                    time = result[i].News_date.substr(0, 8);
+                                }
+                                if (result[i].News_top == "True") {
+                                    var li = "<li class=\"notice-li\">" + "<a href=\"" + result[i].News_URL + "\"  target=\"_blank\">" + "<img src=\"/images/news/news_logo2.png\"  class=\"img_logo\"/>" + "<span style=\"color:red;\">[置顶] </span>" + result[i].News_title + "</a>" + "<span class=\"date\">" + time + "</span>" + "</li>";
+                                    $("#news_list").append(li);
+                                }
+                                else {
+                                    var li = "<li class=\"notice-li\">" + "<a href=\"" + result[i].News_URL + "\"  target=\"_blank\">" + "<img src=\"/images/news/news_logo2.png\"  class=\"img_logo\"/>" + result[i].News_title + "</a>" + "<span class=\"date\">" + time + "</span>" + "</li>";
+                                    $("#news_list").append(li);
+                                }
+                            }
+                        }
+                        if (cur_page == page_num) {
+                            $("#next_page").hide();
+                        }
+                        else {
+                            $("#next_page").show();
+                        }
+                        if (cur_page > 1) {
+                            $("#before_page").show();
+                        }
+                    },
+                    error: function (data) {
+                        alert("请求数据出错");
+                    }
+                });
+            });
+        });
+        function checkRead() {
+            if (!($('#isRead').is(':checked'))) {
+                alert("请确认已阅读招生简章");
+                return;
+            }
+        }
+    </script>
+
+    <style type="text/css">
+        .body-container {
+            width: 100%;
+            min-width: 1100px;
+            min-height: 650px;
+            background-image: url(/images/login/wqbackground.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .nav {
+            width: 1280px;
+            height: 80px;
+            margin: 0 auto;
+            padding-top: 5px;
+        }
+
+        .title-txt {
+            padding-top: 38px;
+            padding-left: 15px;
+            margin-left: 370px;
+        }
+
+        .container {
+            width: 1050px;
+            height: 650px;
+            background: rgba(255, 255, 255, 0.7) none repeat scroll 0 0 !important; /*实现FF背景透明，文字不透明*/
+            margin: 0 auto;
+            max-height: 500px;
+            margin-top: 5%;
+        }
+
+        .left {
+            width: 450px;
+            height: 100%;
+           
+        }
+
+        .forImage {
+            width: 80%;
+            height: 340px;
+            max-height: 380px;
+            margin: 0 auto;
+        }
+
+        .mid {
+            height: 90%;
+            width: 1px;
+            background: url(/images/login/login-mid.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin-left: 460px;
+            margin-top: -480px;
+        }
+
+        .right {
+            width: 500px;
+            height: 100%;
+            float: right;
+            margin-top: -500px;
+            margin-right:50px;
+        }
+
+        .right_top {
+            width: 100%;
+            height: 70px;
+        }
+
+        .right_top_left {
+            width: 80%;
+            height: 40px;
+            float: left;
+           margin-top:-40px;
+           margin-left:-30px;
+        }
+
+        .right_top_right {
+            width: 45%;
+            height: 40px;
+            float: right;
+            padding-top: 20px;
+        }
+
+        .right_body {
+            width: 100%;
+            height: 100%;
+        }
+
+        .divForInput {
+            width: 100%;
+            text-align: center;
+            height: 50px;
+            margin-top: 10px;
+        }
+
+        .txt_Input {
+            width: 60%;
+            font-size: 20px;
+        }
+
+        .mybtn {
+            font-family: 黑体;
+            font-size: 22px;
+            display: block;
+            height: 40px;
+            width: 316px;
+            line-height: 40px;
+            text-align: center;
+            letter-spacing: 2px;
+            /*background: #ef6c34;*/
+            background: #3dc1f3;
+            color: white;
+            border-radius: 10px;
+            -moz-border-radius: 5px;
+            -webkit-border-radius: 5px;
+            margin-left: 93px;
+        }
+
+        .mybtn hover {
+            color: white;
+            background: #3499cd;
+            text-decoration: none;
+        }
+        .con
+        {
+            width:100%;
+            height:90%;
+    
+        }
+        .news-title {
+            margin-top:10px;
+            width: 100%;
+            height: 40px;
+        }
+
+        .news-content {
+            width: 100%;
+            height: 82%;
+            min-height:285px;
+
+        }
+
+        .news-page {
+            width: 100%;
+            height: 20px;
+            bottom:0px;
+        }
+         .notice-li {
+            margin: 0 5px -12px 0;
+            font-size: 17px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            width: 100%;
+            display: inline-block;
+            line-height: 3;
+        }
+
+            .notice-li a {
+                max-width: 330px;
+                text-overflow: ellipsis;
+                float: left;
+                margin-left: 10px;
+                white-space: nowrap;
+                display: block;
+                overflow: hidden;
+                color: black;
+            }
+
+        .date {
+            width: 100px;
+            float: right;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            margin-right: 10px;
+            display: block;
+            overflow: hidden;
+            color: black;
+        }
+         .img_logo
+        {
+            width:14px;
+            height:14px;
+            margin-top:20px;
+            margin-right:2px;
+            float:left;
+        }
+        .img_page
+        {
+            width:18px;
+            height:18px;
+            margin-top:-3px;
+        }
+         .copy-right
+        {
+            width:60%;
+            min-width:1100px;
+            margin:0 auto;
+            text-align:center;
+            font-size:20px;
+            margin-bottom:15px;
+            margin-top:4%;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="body-container">
+        <div style="background-image: url(/images/login/background.jpg); background-repeat: no-repeat; background-size: cover; width: 100%; height: 100%; min-width: 1280px; position: fixed; top: 0; bottom: 0; left: 0; right: 0; z-index: -1;">
+        </div>
+        <div style="width: 100%; height: 80px; background: rgba(245, 245, 255, 0.8); min-width: 1280px; min-height: 80px;">
+            <div class="nav">
+                <div class="logo" style="float: left; margin-left: 150px;">
+                    <a href="#">
+                        <img src="/images/login/logo5.png" alt="中央音乐学院" /></a>
+                </div>
+                <div class="title-txt">
+                    <span style="font-size: 45px; font-family: 'STKaiti'; font-weight: bold;">招生系统<span style="font-size: 30px; font-family: 'STKaiti'; font-weight: bold;"></span></span>
+                </div>
+            </div>
+        </div>
+        <form name="form1" method="post" action="" id="form1" style="height:50%;">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
+
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="0gRupNPVutBNPYLDbV+LAlmWG8bC0ND0eS58YbaCUdXDZX1vTAD8PVVgklLCiY5Y+HUlxz+xWU2oZuBNNoVmDbZH/3LiLrOOZvlliAQoq0wT1gP2tBicXdDhsq/BJA3URf1vw9siKl94+78ClOutQl0lhF/I8L7QJTgfieFv0r0fvUfI1JV0tQm7DkU=" />
+            <input type="hidden" name="page_num" id="page_num" value="5" />
+            <div class="container">
+                <div class="left">
+                    <div style="width: 100%; height: 70px;">
+                    </div>
+
+                    <div class="right_top_left">
+                            <label class="loginLabal" style="color: #3499cd; font-size: 35px;"></label>
+                        </div>
+                    <div class="divForInput" style="margin-top: 6%;">
+                        <a target="_blank" href="/AdminMetro/CCOM/register/中央音乐学院2017年本科招生简章.pdf" style="color:#8f002f; font-size: 25px;"><b>《中央音乐学院2017年本科招生简章》</b></a>
+                    </div>
+
+                    <div class="divForInput" style="margin-left: 50px; text-align: left; width: 85%; margin-top: 3%;">
+                        <div>
+                            <input id="isRead" type="checkbox" name="isRead" />
+                        </div>
+                        <div style="margin-left: 18px; margin-top: -18px;">
+                            <span style="max-width: 70%;font-size:16px;"><label for="isRead"><b style="text-align: left; max-width: 50%;">我已熟读招生简章，并同意简章中所有内容，如有违反，本人愿承担所有责任。</b></label></span>
+                        </div>
+                    </div>
+                     <div class="divForInput" style="margin-top: 8%;">
+                        <a style="color: #8f002f; font-size: 25px;" href="javascript:__doPostBack(&#39;ctl16&#39;,&#39;&#39;)"><b>进入系统</b></a>
+                        
+                     </div>
+                    <div style="width: 100%; margin: 0 auto;margin-top: 8%;  margin-left: 10%; font-size: 16px; color: #8f002f; font-weight: bold;">
+                        <span id="time">我院本科报名工作已于2017年01月26日结束</span>
+                    </div>
+                    <div style="width: 100%; margin: 0 auto; margin-top: 4%; margin-left: 10%; font-size: 16px; color: #8f002f; font-weight: bold;">
+                        <span id="time_open">报名成功考生打印准考证时间：2017-02-22 14:00起</span>
+                    </div>
+                    <div style="width: 100%; margin: 0 auto; margin-top: 8%; margin-left: 10%; font-size: 16px; color: #8f002f; font-weight: bold;">
+                        温馨提示：系统中遇到问题<a target="_blank" href="/AdminMetro/CCOM/register/ContactUs.html"> 联系我们</a>
+                    </div>
+                </div>
+                <div class="mid"></div>
+                <div class="right">
+                    <div class="right_top">
+                        
+                    </div>
+                    <div class="right_body">
+                       <div class="con">
+                            <div class="news-title">
+                                <span style="margin-left: 15px; font-size: 28px; color: black;">最新公告</span>
+                            </div>
+                            <div class="news-content">
+                                <ul id="news_list" style="overflow: hidden; text-overflow: ellipsis;"><li class="notice-li"><a href="/AdminMetro/CCOM/notification/ViewNews.aspx?id=AD8BA24D8AA62F8A"  target="_blank"><img src="/images/news/news_logo2.png" class="img_logo"/>通知</a><span class="date">2017/07/19</span></li><li class="notice-li"><a href="/AdminMetro/CCOM/notification/ViewNews.aspx?id=72101CE0AB34EAEA"  target="_blank"><img src="/images/news/news_logo2.png" class="img_logo"/>中央音乐学院2017年本科录取通知书寄出啦~</a><span class="date">2017/07/13</span></li><li class="notice-li"><a href="/AdminMetro/CCOM/notification/ViewNews.aspx?id=1B7AD82ADB29526E"  target="_blank"><img src="/images/news/news_logo2.png" class="img_logo"/>中央音乐学院2017年本科招生录取名单</a><span class="date">2017/07/13</span></li><li class="notice-li"><a href="/AdminMetro/CCOM/notification/ViewNews.aspx?id=B94422F7006EF195"  target="_blank"><img src="/images/news/news_logo2.png" class="img_logo"/>中央音乐学院2017年本科招生录取分数线</a><span class="date">2017/07/13</span></li><li class="notice-li"><a href="/AdminMetro/CCOM/notification/ViewNews.aspx?id=9AAAA38F4A391CA1"  target="_blank"><img src="/images/news/news_logo2.png" class="img_logo"/>2017年新疆协作计划本科招生专业测试合格名单</a><span class="date">2017/04/17</span></li><li class="notice-li"><a href="/AdminMetro/CCOM/notification/ViewNews.aspx?id=B9D1DD47A2998A63"  target="_blank"><img src="/images/news/news_logo2.png" class="img_logo"/>中央音乐学院2017年本科招生专业考试成绩合成比例及进入文考要求</a><span class="date">2017/04/06</span></li><li class="notice-li"><a href="/AdminMetro/CCOM/notification/ViewNews.aspx?id=EBD37274A4AC45C9"  target="_blank"><img src="/images/news/news_logo2.png" class="img_logo"/>2017年本科招生专业考试成绩合格考生政审通知</a><span class="date">2017/04/06</span></li><li class="notice-li"><a href="/AdminMetro/CCOM/notification/ViewNews.aspx?id=07E29529D24FE1A6"  target="_blank"><img src="/images/news/news_logo2.png" class="img_logo"/>中央音乐学院2017年本科招生专业考试合格名单</a><span class="date">2017/03/17</span></li></ul>
+                            </div>
+                            <div class="news-page">
+                                <div id="show_page" style="float: right; height: 100%; margin-right: 30px;margin-top:5px;">
+                                    <span>
+                                        <a style="margin-left: 5px; margin-right: 5px; font-size: 15px;" id="before_page">
+                                            <label><img src="/images/news/before_page.png"  class="img_page"/>上一页</label></a>
+                                        <a style="margin-left: 5px; margin-right: 5px; font-size: 15px;" id="next_page">
+                                            <label>下一页<img src="/images/news/next_page.png" class="img_page"/></label></a>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    
+
+            <script type="text/javascript">
+                $(function () {
+                    //检测IE
+                    var isIe6 = false;
+                    try {
+
+                        var browser = navigator.appName
+                        var trim_Version = navigator.appVersion.split(";")[1].replace(/[ ]/g, "");
+                        if (browser == "Microsoft Internet Explorer" && trim_Version == "MSIE6.0") {
+                            isIe6 = true;
+                        }
+                        else if (browser == "Microsoft Internet Explorer" && trim_Version == "MSIE7.0") {
+                            isIe6 = true;
+                        }
+                        else if (browser == "Microsoft Internet Explorer" && trim_Version == "MSIE8.0") {
+                            isIe6 = true;
+                        }
+                        else if (browser == "Microsoft Internet Explorer" && trim_Version == "MSIE9.0") {
+                            isIe6 = true;
+                        }
+
+                        var Sys = {};
+                        var ua = navigator.userAgent.toLowerCase();
+                        var s;
+                        (s = ua.match(/msie ([\d.]+)/)) ? Sys.ie = s[1] :
+                        (s = ua.match(/firefox\/([\d.]+)/)) ? Sys.firefox = s[1] :
+                        (s = ua.match(/chrome\/([\d.]+)/)) ? Sys.chrome = s[1] :
+                        (s = ua.match(/opera.([\d.]+)/)) ? Sys.opera = s[1] :
+                        (s = ua.match(/version\/([\d.]+).*safari/)) ? Sys.safari = s[1] : 0;
+                        if (Sys.ie) {//Js判断为IE浏览器  
+                        }
+                        if (Sys.firefox) {//Js判断为火狐(firefox)浏览器
+                            isIe6 = false;
+                        }
+                        if (Sys.chrome) {//Js判断为谷歌chrome浏览器
+                            isIe6 = false;
+                        }
+                        if (Sys.opera) {//Js判断为opera浏览器
+                            isIe6 = false;
+                        }
+                        if (Sys.safari) {//Js判断为苹果safari浏览器
+                            isIe6 = false;
+                        }
+                    }
+                    catch (e) {
+                    }
+                    finally {
+                        if (isIe6) {
+                            window.location.href = '/AdminMetro/CCOM/register/ie9update.html';
+                        }
+                    }
+                    //$('#txtUserName').focus();
+                });
+
+    </script>
+</body>
+</html>
+

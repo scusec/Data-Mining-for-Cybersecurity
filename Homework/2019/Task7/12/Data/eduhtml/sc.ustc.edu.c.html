@@ -1,0 +1,753 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<meta http-equiv="keywords" content="中国科学技术大学,中国科技大学,中科大,科大,学生服务中心,行政服务中心">
+<title>中国科技大学学生服务中心·行政服务中心</title>
+<link href="style.css" rel="stylesheet" type="text/css" />
+<style>
+img{border:0px;}
+</style>
+</head>
+
+<body>
+<table width="970" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td background="images/topbg.jpg" valign="bottom" height="170"><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="970" height="159">
+    <param name="movie" value="images/top.swf" />
+    <param name="quality" value="high" />
+	<param name="wmode" value="transparent">
+    <embed src="images/top.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="970" height="159"></embed>
+  </object></td>
+  </tr>
+</table>
+<table width="970" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td background="images/mbg.gif"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="5" align="center"></td>
+        <td align="center"><a href="index.php" ><img src="images/m12.gif" name="Image1" width="68" height="31" border="0" id="Image1"/></a></td>
+        <td width="20" align="center" valign="middle"><img src="images/icon1.gif" width="1" height="13" /></td>
+		
+		
+        <td align="center"><a href="list.php?MenuID=001"  onmouseover="ChangeImg('Image2','m21.gif');" onmouseout="ChangeImgBack('Image2','m2.gif');"><img src="images/m2.gif" name="Image2" width="82" height="31" border="0" id="Image2" /></a></td>
+        <td width="20" align="center" valign="middle"><img src="images/icon1.gif" width="1" height="13" /></td>
+		
+		
+		
+        <td align="center"><a href="department.php?MenuID=002"  onmouseover="ChangeImg('Image3','m31.gif');" onmouseout="ChangeImgBack('Image3','m3.gif');"><img src="images/m3.gif" name="Image3" width="82" height="31" border="0" id="Image3" /></a></td>
+        <td width="20" align="center" valign="middle"><img src="images/icon1.gif" width="1" height="13" /></td>
+		
+		
+        <td align="center"><a href="list2.php?MenuID=003"  onmouseover="ChangeImg('Image4','m41.gif');" onmouseout="ChangeImgBack('Image4','m4.gif');"><img src="images/m4.gif" name="Image4" width="82" height="31" border="0" id="Image4" /></a></td>
+        <td width="20" align="center" valign="middle"><img src="images/icon1.gif" width="1" height="13" /></td>
+		
+		
+        <td align="center"><a href="list2.php?MenuID=004"  onmouseover="ChangeImg('Image5','m51.gif');" onmouseout="ChangeImgBack('Image5','m5.gif');"><img src="images/m5.gif" name="Image5" width="82" height="31" border="0" id="Image5" /></a></td>
+        <td width="20" align="center" valign="middle"><img src="images/icon1.gif" width="1" height="13" /></td>
+		
+		
+		
+        <td align="center"><a href=" list2.php?MenuID=005"  onmouseover="ChangeImg('Image6','m61.gif');" onmouseout="ChangeImgBack('Image6','m6.gif');"><img src="images/m6.gif" name="Image6" width="82" height="31" border="0" id="Image6" /></a></td>
+        <td width="20" align="center" valign="middle"><img src="images/icon1.gif" width="1" height="13" /></td>
+		
+		
+		 <td align="center"><a href="jnp_list.php?MenuID=006"  onmouseover="ChangeImg('Image8','m81.gif');" onmouseout="ChangeImgBack('Image8','m8.gif');"><img src="images/m8.gif" name="Image8" width="112" height="31" border="0" id="Image8" /></a></td>
+        <td width="20" align="center" valign="middle"><img src="images/icon1.gif" width="1" height="13" /></td>
+
+		
+        <td align="center"><a href="gb.php?MenuID=007"  onmouseover="ChangeImg('Image7','m71.gif');" onmouseout="ChangeImgBack('Image7','m7.gif');"><img src="images/m7.gif" name="Image7" width="82" height="31" border="0" id="Image7" /></a></td>
+      </tr>
+    </table></td>
+    <td width="250" height="31" align="center" background="images/mbg.gif" class="font7">今天是 <script language="JavaScript">
+           <!--
+              currentDate = new Date()
+              with (currentDate){
+              day=getDay()
+              month=getMonth()+1
+              document.write(+getYear()+'年'+month+'月'+getDate()+'日')}
+              if (day==1)
+                  {document.write(' 星期一')}
+              if (day==2)
+                  {document.write(' 星期二')}
+              if (day==3)
+                  {document.write(' 星期三')}
+              if (day==4)
+                  {document.write(' 星期四')}
+              if (day==5)
+                  {document.write(' 星期五')}
+              if (day==6)
+                  {document.write(' 星期六')}
+              if (day==0)
+                  {document.write(' 星期日')}           
+// --> 
+</script></td>
+  </tr>
+</table>
+<script>
+function ChangeImg(ImgID,img){
+  document.getElementById(ImgID).src = "images/"+img;
+ 
+}
+
+function ChangeImgBack(ImgID,img){
+  document.getElementById(ImgID).src = "images/"+img;  
+}
+</script><table width="970" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td valign="top" bgcolor="#FFFFFF">
+    <table width="100%" height="10" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td></td>
+      </tr>
+    </table>
+    <table width="98%" border="0" align="center" cellpadding="0" cellspacing="0" class="td_B">
+      <tr>
+        <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="500" background="images/bg_01.gif"><img src="images/img_01.gif" width="140" height="29" /></td>
+            <td align="right" background="images/bg_01.gif"><a href="list.php?MenuID=001"><img src="images/more.gif" width="32" height="11" border="0" /></a></td>
+          </tr>
+          <tr>
+            <td colspan="2" valign="top">
+            <table width="100%" border="0" cellspacing="5" cellpadding="0">
+              <tr>
+                <td>
+<script type="text/javascript">
+	var order=new Array("","1","2","3");
+	var xb;
+    var pics="";
+	var links="";
+	var texts="";
+    var imgUrl=new Array();
+	var imgLink=new Array();
+	var imgText=new Array();
+</script>
+   <script>
+   imgUrl[1]="upload/13873518155801.jpg";
+imgLink[1]="detail.php?id=725";
+imgText[1]="研究生院举行中科院代培女生安全知识讲座";
+imgUrl[2]="upload/13414783986467.jpg";
+imgLink[2]="detail.php?id=692";
+imgText[2]="关于面向学校师生提供校园T恤衫/背包/伞的好消息";
+imgUrl[3]="upload/13409316783499.jpg";
+imgLink[3]="detail.php?id=687";
+imgText[3]="我校隆重举行2012届本科生毕业典礼暨学位着装授予仪式";
+  </script>
+  
+     <script>
+	var focus_width=300
+	var focus_height=220
+	var text_height=24
+	var swf_height = focus_height+text_height
+	
+	var j=0;
+		for (i=1;i<=3;i++) {
+		        xb=order[i];
+			if( (imgUrl[xb]!="") && (imgLink[xb]!="") ) {
+                              if(j !=0){
+			         pics=pics+"|";
+			         links=links+"|";
+			         texts=texts+"|";
+			      }
+                              pics=pics+imgUrl[xb];
+                              links=links+imgLink[xb];
+                              texts=texts+imgText[xb];
+			      j++;
+			} 
+		}	
+	
+	document.write('<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0" width="'+ focus_width +'" height="'+ swf_height +'">');
+	document.write('<param name="allowScriptAccess" value="sameDomain"><param name="movie" value="images/pic.swf"><param name="quality" value="high"><param name="bgcolor" value="#dfdfdf">');
+	document.write('<param name="menu" value="false"><param name=wmode value="opaque">');
+	document.write('<param name="FlashVars" value="pics='+pics+'&links='+links+'&texts='+texts+'&borderwidth='+focus_width+'&borderheight='+focus_height+'&textheight='+text_height+'">');
+	document.write('<embed src="images/pic.swf" wmode="opaque" FlashVars="pics='+pics+'&links='+links+'&texts='+texts+'&borderwidth='+focus_width+'&borderheight='+focus_height+'&textheight='+text_height+'" menu="false" bgcolor="#dfdfdf" quality="high" width="'+ focus_width +'" height="'+ focus_height +'" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />');	document.write('</object>');
+	          </script>	
+				
+				</td>
+                <td width="420" valign="top">
+				<table width="100%" border="0" cellspacing="2" cellpadding="0">
+				
+                    <tr>
+                      <td colspan="3" align="center" valign="middle" class="td_Y">
+					  
+					  <table width="95%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td height="35" align="center" valign="bottom"><a href="detail.php?id=725" target="_blank" title="研究生院举行中科院代培女生安全知识讲座" style="font-family:'黑体'; color:#CC0000; font-size:18px; line-height:30px;">研究生院举行中科院代培女生安全知识讲座</a></td>
+  </tr><tr>
+    <td  height="1" bgcolor="#EFE2C2"></td>
+  </tr>
+  <tr>
+    <td align="left">&nbsp;&nbsp;&nbsp;&nbsp;12月15日，研究生院学生服务中心邀请保卫处的贾梁燕老师在东区5104教室，为住在东区家属楼的170余位代培女生举办了一场安全知识专题讲座。...</td>
+  </tr>
+</table>
+
+					  
+					  </td>
+                    </tr>
+					
+                   <tr>
+                    <td width="15" align="center" height="24"><img src="images/icon2.gif" width="5" height="7" /></td>
+                    <td width="300">
+                    
+					 
+                    
+                 <a href="detail.php?id=725" target="_blank" title="研究生院举行中科院代培女生安全知识讲座">
+										研究生院举行中科院代培女生安全知识讲座					</a>
+                  					
+                    <img src='images/newIcon.gif'>
+                    	
+					                    
+                    </td>
+                    <td width="70" align="right" class="font999">2013-12-18</td>
+                  </tr>
+				  <tr>
+                    <td colspan="3" height="1" background="images/bg_02.gif"></td>
+                  </tr>
+                  <tr>
+                    <td width="15" align="center" height="24"><img src="images/icon2.gif" width="5" height="7" /></td>
+                    <td width="300">
+                    
+					 
+                    
+                 <a href="detail.php?id=723" target="_blank" title="关于学生服务中心招募学生志愿者的通知">
+										关于学生服务中心招募学生志愿者的通知					</a>
+                  					
+                    <img src='images/newIcon.gif'>
+                    	
+					                    
+                    </td>
+                    <td width="70" align="right" class="font999">2013-09-05</td>
+                  </tr>
+				  <tr>
+                    <td colspan="3" height="1" background="images/bg_02.gif"></td>
+                  </tr>
+                  <tr>
+                    <td width="15" align="center" height="24"><img src="images/icon2.gif" width="5" height="7" /></td>
+                    <td width="300">
+                    
+					 
+                    
+                 <a href="detail.php?id=703" target="_blank" title="关于行政服务中心办公电话变更的通知">
+										关于行政服务中心办公电话变更的通知					</a>
+                                      
+                    </td>
+                    <td width="70" align="right" class="font999">2012-07-10</td>
+                  </tr>
+				  <tr>
+                    <td colspan="3" height="1" background="images/bg_02.gif"></td>
+                  </tr>
+                  <tr>
+                    <td width="15" align="center" height="24"><img src="images/icon2.gif" width="5" height="7" /></td>
+                    <td width="300">
+                    
+					 
+                    
+                 <a href="detail.php?id=692" target="_blank" title="关于面向学校师生提供校园T恤衫/背包/伞的好消息">
+										关于面向学校师生提供校园T恤衫/背包/伞的好消息					</a>
+                                      
+                    </td>
+                    <td width="70" align="right" class="font999">2012-07-05</td>
+                  </tr>
+				  <tr>
+                    <td colspan="3" height="1" background="images/bg_02.gif"></td>
+                  </tr>
+				               
+                </table></td>
+              </tr>
+            </table></td>
+          </tr>
+        </table></td>
+      </tr>
+    </table>
+    <table width="100%" border="0" cellspacing="7" cellpadding="0">
+      <tr>
+        <td width="365" valign="top" class="td_B"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="320" background="images/bg_01.gif"><img src="images/img_02.gif" width="153" height="29" /></td>
+            <td width="40" background="images/bg_01.gif"><a href="list2.php?MenuID=003"><img src="images/more.gif" width="32" height="11" border="0" /></a></td>
+          </tr>
+          <tr>
+            <td colspan="2"><table width="100%" border="0" cellspacing="7" cellpadding="0">
+              <tr>
+                <td width="86"><img src="images/img_04.jpg" width="86" height="135" /></td>
+                <td valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td>·<a href="detail.php?id=445" target="_blank" title="行政服务中心办公电话">行政服务中心办公电话</a></td>
+                  </tr>
+                  <tr>
+                    <td>·<a href="detail.php?id=57" target="_blank" title="学生服务中心服务指南">学生服务中心服务指南</a></td>
+                  </tr>
+                  <tr>
+                    <td>·<a href="detail.php?id=539" target="_blank" title="《组织机构代码证》或《事业单位法人证书》复印件使用申请">《组织机构代码证》或《事业单位法人证书...</a></td>
+                  </tr>
+                  <tr>
+                    <td>·<a href="detail.php?id=706" target="_blank" title="党政办公室合同审核与签订流程">党政办公室合同审核与签订流程</a></td>
+                  </tr>
+                  <tr>
+                    <td>·<a href="detail.php?id=427" target="_blank" title="教学事务管理">教学事务管理</a></td>
+                  </tr>
+                  <tr>
+                    <td>·<a href="detail.php?id=426" target="_blank" title="课程和计划管理">课程和计划管理</a></td>
+                  </tr>
+				  
+                  
+                </table></td>
+              </tr>
+            </table></td>
+            </tr>
+        </table></td>
+        <td valign="top" class="td_B"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="320" background="images/bg_01.gif"><img src="images/img_03.gif" width="153" height="29" /></td>
+            <td width="40" background="images/bg_01.gif"><a href="list2.php?MenuID=004"><img src="images/more.gif" width="32" height="11" border="0" /></a></td>
+          </tr>
+          <tr>
+            <td colspan="2"><table width="100%" border="0" cellspacing="7" cellpadding="0">
+              <tr>
+                <td width="86"><img src="images/img_05.jpg" width="86" height="135" /></td>
+                <td valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td>·<a href="detail.php?id=291" target="_blank" title="行政服务中心首问负责制度">行政服务中心首问负责制度</a></td>
+                  </tr>
+                  <tr>
+                    <td>·<a href="detail.php?id=290" target="_blank" title="行政服务中心考勤管理制度">行政服务中心考勤管理制度</a></td>
+                  </tr>
+                  <tr>
+                    <td>·<a href="detail.php?id=289" target="_blank" title="行政服务中心工作人员服务规范">行政服务中心工作人员服务规范</a></td>
+                  </tr>
+                  <tr>
+                    <td>·<a href="detail.php?id=288" target="_blank" title="行政服务中心工作规范">行政服务中心工作规范</a></td>
+                  </tr>
+                  <tr>
+                    <td>·<a href="detail.php?id=77" target="_blank" title="学生服务中心考勤管理制度">学生服务中心考勤管理制度</a></td>
+                  </tr>
+                  <tr>
+                    <td>·<a href="detail.php?id=76" target="_blank" title="学生服务中心工作人员服务规范">学生服务中心工作人员服务规范</a></td>
+                  </tr>
+	
+                </table></td>
+              </tr>
+            </table></td>
+            </tr>
+        </table></td>
+      </tr>
+    </table>
+    <table width="100%" border="0" align="center" cellpadding="0" cellspacing="7">
+      <tr>
+        <td height="150" bgcolor="#BED8F1" class="td_Blue">
+            <table width="100%" border="0" cellspacing="1" cellpadding="0">
+              <tr>
+                <td height="150" bgcolor="#ECF6FF"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td><img src="images/jnp.jpg" width="87" height="28" /></td>
+                    <td align="right" style="color:#3172B9; padding-top:3px;">东区学生服务中心102办公室 3606227&nbsp;&nbsp;<a href="jnp_list.php?MenuID=006" style="text-decoration:none;">
+                    <img src="images/more.gif" width="32" height="11" border="0" /></a>&nbsp;&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td colspan="2" background="images/jnpline.jpg" height="2"></td>
+                    </tr>
+                </table>
+                <div id="demo" style="width:710px; margin-left:15px; overflow:hidden;">
+            <table width="710px" border="0" align="center" cellpadding="0" cellspacing="0">
+              <tr>
+                <td><div id="demo1">
+                    <table width="710px" border="0" align="center" cellpadding="0" cellspacing="5">
+                      <tr> 
+                        
+     <td align="center">
+     <a target="_blank"  href="jnp_detail.php?id=702">
+     <img src="upload/13418910798546.jpg" width="160" height="100" /></a>
+     </td>                  
+    
+     <td align="center">
+     <a target="_blank"  href="jnp_detail.php?id=694">
+     <img src="upload/13415461285108.jpg" width="160" height="100" /></a>
+     </td>                  
+    
+     <td align="center">
+     <a target="_blank"  href="jnp_detail.php?id=677">
+     <img src="upload/13415592205048.jpg" width="160" height="100" /></a>
+     </td>                  
+    
+     <td align="center">
+     <a target="_blank"  href="jnp_detail.php?id=674">
+     <img src="upload/13415595094951.jpg" width="160" height="100" /></a>
+     </td>                  
+    
+     <td align="center">
+     <a target="_blank"  href="jnp_detail.php?id=668">
+     <img src="upload/13418913461849.jpg" width="160" height="100" /></a>
+     </td>                  
+    
+     <td align="center">
+     <a target="_blank"  href="jnp_detail.php?id=663">
+     <img src="upload/13097698911001.jpg" width="160" height="100" /></a>
+     </td>                  
+    
+     <td align="center">
+     <a target="_blank"  href="jnp_detail.php?id=623">
+     <img src="upload/13014513762920.jpg" width="160" height="100" /></a>
+     </td>                  
+    
+     <td align="center">
+     <a target="_blank"  href="jnp_detail.php?id=622">
+     <img src="upload/13014513461155.jpg" width="160" height="100" /></a>
+     </td>                  
+    
+     <td align="center">
+     <a target="_blank"  href="jnp_detail.php?id=621">
+     <img src="upload/13014513218686.jpg" width="160" height="100" /></a>
+     </td>                  
+                                             
+                        
+                        
+                        
+                        
+                      </tr>
+                      <tr>  
+                         
+   <td align="center">
+   <a target="_blank"  href="jnp_detail.php?id=702">严济慈题词水晶摆件</a>
+   					
+    <img src='images/newIcon.gif'>
+        
+       
+   </td>                                         
+    
+   <td align="center">
+   <a target="_blank"  href="jnp_detail.php?id=694">学校50周年珍藏邮册</a>
+   					
+    <img src='images/newIcon.gif'>
+        
+       
+   </td>                                         
+    
+   <td align="center">
+   <a target="_blank"  href="jnp_detail.php?id=677">校徽</a>
+   					
+    <img src='images/newIcon.gif'>
+        
+       
+   </td>                                         
+    
+   <td align="center">
+   <a target="_blank"  href="jnp_detail.php?id=674">绒沙金孺子牛</a>
+      
+   </td>                                         
+    
+   <td align="center">
+   <a target="_blank"  href="jnp_detail.php?id=668">邮票镇纸</a>
+      
+   </td>                                         
+    
+   <td align="center">
+   <a target="_blank"  href="jnp_detail.php?id=663">竹木笔筒</a>
+      
+   </td>                                         
+    
+   <td align="center">
+   <a target="_blank"  href="jnp_detail.php?id=623">孺子铜牛</a>
+      
+   </td>                                         
+    
+   <td align="center">
+   <a target="_blank"  href="jnp_detail.php?id=622">科大星</a>
+      
+   </td>                                         
+    
+   <td align="center">
+   <a target="_blank"  href="jnp_detail.php?id=621">学校银盘</a>
+      
+   </td>                                         
+    
+  
+
+                      </tr>
+                    </table>
+                </div></td>
+                <td><div id="demo2"></div></td>
+              </tr>
+            </table>
+        </div></td>
+              </tr>
+            </table>
+            <script language="JavaScript" type="text/javascript">
+<!--
+var demo = document.getElementById("demo");
+var demo1 = document.getElementById("demo1");
+var demo2 = document.getElementById("demo2");
+
+var speed=18;   //滚动速度值，值越大速度越慢
+demo2.innerHTML = demo1.innerHTML    //克隆demo2为demo1
+function Marquee(){
+    if(demo2.offsetWidth-demo.scrollLeft<=0)    //当滚动至demo1与demo2交界时
+        demo.scrollLeft-=demo1.offsetWidth;   //demo跳到最顶端
+    else{
+        demo.scrollLeft++;
+    }
+}
+var MyMar = setInterval(Marquee,speed);        //设置定时器
+demo.onmouseover = function(){clearInterval(MyMar)}    //鼠标经过时清除定时器达到滚动停止的目的
+demo.onmouseout = function(){MyMar = setInterval(Marquee,speed)}    //鼠标移开时重设定时器
+-->
+      </script>
+        </td>
+      </tr>
+    </table>
+    <table width="100%" border="0" cellspacing="7" cellpadding="0">
+      <tr>
+        <td valign="top" bgcolor="#D8E5F6"><table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
+          <tr>
+            <td width="680"><img src="images/img_06.gif" width="218" height="28" /></td>
+            <td align="right"><a href="rzbm.html"></a></td>
+          </tr>
+          <tr>
+            <td colspan="2" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td width="8" rowspan="2" background="images/bg_03.gif" bgcolor="#FFFFFF"></td>
+                <td width="103" bgcolor="#FFFFFF"></td>
+                <td width="601" align="right" valign="top" background="images/bg_06.gif" bgcolor="#FFFFFF"></td>
+                <td align="right" valign="top" background="images/bg_06.gif" bgcolor="#FFFFFF"></td>
+                <td align="right" valign="top" background="images/bg_06.gif" bgcolor="#FFFFFF"><img src="images/bg_05.gif" width="8" height="6" /></td>
+              </tr>
+              <tr>
+                <td colspan="3" valign="top" bgcolor="#FFFFFF"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td width="15" align="center" bgcolor="#FFFFFF"><img src="images/icon3.gif" width="7" height="7" /></td>
+                    <td bgcolor="#FFFFFF"><a href="http://po.ustc.edu.cn" target="_blank">党政办公室</a></td>
+                    <td width="15" align="center" bgcolor="#FFFFFF"><img src="images/icon3.gif" width="7" height="7" /></td>
+                    <td bgcolor="#FFFFFF"><a href="http://zzb.ustc.edu.cn" target="_blank">党委组织部</a></td>
+                    <td width="15" align="center" bgcolor="#FFFFFF"><img src="images/icon3.gif" width="7" height="7" /></td>
+                    <td bgcolor="#FFFFFF"><a href="http://stuhome.ustc.edu.cn/" target="_blank">学生工作部（处）</a></td>
+                    <td width="15" align="center" bgcolor="#FFFFFF"><img src="images/icon3.gif" width="7" height="7" /></td>
+                    <td bgcolor="#FFFFFF"><a href="http://www.job.ustc.edu.cn" target="_blank">招生就业处</a></td>
+                    <td width="15" align="center" bgcolor="#FFFFFF"><img src="images/icon3.gif" width="7" height="7" /></td>
+                    <td bgcolor="#FFFFFF"><a href="http://gradschool.ustc.edu.cn/" target="_blank">研究生院（校学位办）</a></td>
+                  </tr>
+                  <tr>
+                    <td align="center" bgcolor="#FFFFFF"><img src="images/icon3.gif" width="7" height="7" /></td>
+                    <td bgcolor="#FFFFFF"><a href="http://www.teach.ustc.edu.cn/" target="_blank">教务处</a></td>
+                    <td align="center" bgcolor="#FFFFFF"><img src="images/icon3.gif" width="7" height="7" /></td>
+                    <td bgcolor="#FFFFFF"><a href="http://kjc.ustc.edu.cn/" target="_blank">科学技术处</a></td>
+                    <td align="center" bgcolor="#FFFFFF"><img src="images/icon3.gif" width="7" height="7" /></td>
+                    <td bgcolor="#FFFFFF"><a href="http://personnel.ustc.edu.cn/" target="_blank">人事师资处</a></td>
+                    <td align="center" bgcolor="#FFFFFF"><img src="images/icon3.gif" width="7" height="7" /></td>
+                    <td bgcolor="#FFFFFF"><a href="http://iao.ustc.edu.cn/" target="_blank">外事办公室</a></td>
+                    <td align="center" bgcolor="#FFFFFF"><img src="images/icon3.gif" width="7" height="7" /></td>
+                    <td bgcolor="#FFFFFF"><a href="http://finance.ustc.edu.cn" target="_blank">财务处</a></td>
+                  </tr>
+                  <tr>
+                    <td align="center" bgcolor="#FFFFFF"><img src="images/icon3.gif" width="7" height="7" /></td>
+                    <td bgcolor="#FFFFFF"><a href="http://xssq.ustc.edu.cn/" target="_blank">学生社区</a></td>
+                    <td align="center" bgcolor="#FFFFFF"><img src="images/icon3.gif" width="7" height="7" /></td>
+                    <td bgcolor="#FFFFFF"><a href="http://young.ustc.edu.cn/" target="_blank">校团委</a></td>
+                    <td align="center" bgcolor="#FFFFFF"><img src="images/icon3.gif" width="7" height="7" /></td>
+                    <td bgcolor="#FFFFFF"><a href="http://hbjg.ustc.edu.cn/" target="_blank">后备军官选培办公室</a><a href="http://www.ustc.edu.cn/zh_CN/article/7d/499a203f/" target="_blank"></a></td>
+                    <td align="center" bgcolor="#FFFFFF"><img src="images/icon3.gif" width="7" height="7" /></td>
+                    <td bgcolor="#FFFFFF"><a href="http://ustcnet.ustc.edu.cn/" target="_blank">网络信息中心</a></td>
+                    <td align="center" bgcolor="#FFFFFF"><img src="images/icon3.gif" width="7" height="7" /></td>
+                    <td bgcolor="#FFFFFF"><a href="http://lib.ustc.edu.cn" target="_blank">图书馆</a></td>
+                  </tr>
+                  <tr>
+                    <td align="center" bgcolor="#FFFFFF"><img src="images/icon3.gif" width="7" height="7" /></td>
+                    <td bgcolor="#FFFFFF"><a href="http://arch.ustc.edu.cn/" target="_blank">档案馆</a></td>
+                    <td align="center" bgcolor="#FFFFFF"><img src="images/icon3.gif" width="7" height="7" /></td>
+                    <td bgcolor="#FFFFFF"><a href="http://nodis.ustc.edu.cn/zh_CN/" target="_blank">监察审计处</a></td>
+                    <td align="center" bgcolor="#FFFFFF"><img src="images/icon3.gif" width="7" height="7" /></td>
+                    <td bgcolor="#FFFFFF"><a href="http://hospital.ustc.edu.cn/zh_CN/" target="_blank">校医院</a></td>
+                    <td align="center" bgcolor="#FFFFFF"><img src="images/icon3.gif" width="7" height="7" /></td>
+                    <td bgcolor="#FFFFFF"><a href="http://zhb.ustc.edu.cn/" target="_blank">资产与后勤管理部</a></td>
+                    <td align="center" bgcolor="#FFFFFF"><img src="images/icon3.gif" width="7" height="7" /></td>
+                    <td bgcolor="#FFFFFF"><a href="http://www.ustc.edu.cn/ggfw/xxcx/200609/t20060922_19182.html" target="_blank">汽车队</a></td>
+                  </tr>
+                </table></td>
+                <td width="8" background="images/bg_09.gif" bgcolor="#FFFFFF">&nbsp;</td>
+              </tr>
+              <tr>
+                <td valign="top" bgcolor="#FFFFFF"><img src="images/bg_04.gif" width="8" height="4" /></td>
+                <td colspan="4" align="right" valign="bottom" background="images/bg_08.gif" bgcolor="#FFFFFF"><img src="images/bg_07.gif" width="8" height="4" /></td>
+                </tr>
+            </table></td>
+            </tr>
+        </table>
+          <table width="100%" height="10" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <td></td>
+            </tr>
+          </table></td>
+      </tr>
+    </table></td>
+    <td width="215" valign="top" bgcolor="#ECF6FF"><table width="100%" border="0" cellspacing="5" cellpadding="0">
+      <tr>
+        <td align="center"><img src="images/img_09.jpg" width="203" height="77" /></td>
+      </tr>
+    </table>
+      <table width="205" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tr>
+          <td width="8"><img src="images/img_10.jpg" width="8" height="29" /></td>
+          <td width="189" background="images/bg_10.jpg" class="font3 fontB">信息搜索</td>
+          <td width="8"><img src="images/img_11.jpg" width="8" height="29" /></td>
+        </tr>
+        <tr>
+          <td colspan="3" background="images/bg_11.gif" bgcolor="#FFFFFF" class="td_B2">
+		  <table width="100%" border="0" cellspacing="5" cellpadding="0">
+            <form name="searchForm" method="post" action="search.php">
+            <tr>
+              <td rowspan="3" align="center" valign="top"><img src="images/img_12.jpg" width="45" height="47" /></td>
+              <td><input name="keyword" type="text" class="input1" id="keyword" value="请输入关键字" onMouseOver="this.focus()" onFocus="this.select()" onClick="if(this.value=='请输入关键字')this.value=''"/></td>
+            </tr>
+            <tr>
+              <td><select name="MenuID" class="input1" id="MenuID">
+                <option value="">所有栏目</option>				
+							    <option value="001">信息公告</option>
+							    <option value="002">入驻部门</option>
+							    <option value="003">服务指南</option>
+							    <option value="004">相关制度</option>
+							    <option value="005">下载中心</option>
+							    <option value="006">校园文化用品</option>
+				              </select>
+              </td>
+            </tr>
+            <tr>
+              <td><input type="image" name="imageField" id="imageField" src="images/img_13.jpg" /></td>
+            </tr>
+			</form>
+          </table></td>
+        </tr>
+      </table>
+      <table width="100%" height="10" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td></td>
+        </tr>
+      </table>
+      <table width="205" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tr>
+          <td width="8"><img src="images/img_10.jpg" width="8" height="29" /></td>
+          <td width="189" background="images/bg_10.jpg" class="font3 fontB"><a href="list2.php?MenuID=005" class="font3">最新下载</a></td>
+          <td width="8"><img src="images/img_11.jpg" width="8" height="29" /></td>
+        </tr>
+        <tr>
+          <td colspan="3" align="center" valign="top" class="td_B2"><table width="195" border="0" align="center" cellpadding="0" cellspacing="3">
+		  
+  
+            <tr>
+              <td valign="top" class="font5">·</td>
+              <td align="left" class="font5"><a href="http://poyun.ustc.edu.cn:8000/d/cfd456e5af/" class="font5" target="_blank">中国科学技术大学东区大礼堂使用申请表</a></td>
+            </tr>
+  
+            <tr>
+              <td valign="top" class="font5">·</td>
+              <td align="left" class="font5"><a href="http://po.ustc.edu.cn/fore/indexWz.jhtml?id=127" class="font5" target="_blank">中国科学技术大学《事业单位法人证书》复印件使用申请单</a></td>
+            </tr>
+  
+            <tr>
+              <td valign="top" class="font5">·</td>
+              <td align="left" class="font5"><a href="detail.php?id=729" class="font5" target="_blank">中国科学技术大学合同管理办法（试行）</a></td>
+            </tr>
+  
+            <tr>
+              <td valign="top" class="font5">·</td>
+              <td align="left" class="font5"><a href="detail.php?id=728" class="font5" target="_blank">签订合同申请表</a></td>
+            </tr>
+  
+            <tr>
+              <td valign="top" class="font5">·</td>
+              <td align="left" class="font5"><a href="detail.php?id=472" class="font5" target="_blank">研究生教育创新计划项目指南与管理办法（试行）</a></td>
+            </tr>
+  
+            <tr>
+              <td valign="top" class="font5">·</td>
+              <td align="left" class="font5"><a href="detail.php?id=471" class="font5" target="_blank">研究生访学计划申请表</a></td>
+            </tr>
+  
+            <tr>
+              <td valign="top" class="font5">·</td>
+              <td align="left" class="font5"><a href="detail.php?id=470" class="font5" target="_blank">研究生学术论坛申请书</a></td>
+            </tr>
+  
+            <tr>
+              <td valign="top" class="font5">·</td>
+              <td align="left" class="font5"><a href="detail.php?id=469" class="font5" target="_blank">研究生创新研究基金申请书</a></td>
+            </tr>
+		
+            
+          </table></td>
+        </tr>
+      </table>
+      <table width="100%" height="10" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td></td>
+        </tr>
+      </table>
+      <table width="205" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tr>
+          <td width="8"><img src="images/img_10.jpg" width="8" height="29" /></td>
+          <td width="94" background="images/bg_10.jpg" class="font3 fontB"><a href="gb.php?MenuID=006" class="font3">最新留言</a></td>
+          <td width="95" background="images/bg_10.jpg" class="font3 fontB" align="right"></td>
+          <td width="8"><img src="images/img_11.jpg" width="8" height="29" /></td>
+        </tr>
+        <tr>
+          <td colspan="4" align="center" valign="top" class="td_B2"><table width="195" border="0" align="center" cellpadding="0" cellspacing="3">
+        
+            <tr>
+                <td valign="top" class="font5">·</td>
+                <td align="left" class="font5"><a href="gb.php" class="font5">毕业生办理户口签出，怎么办理</a></td>
+              </tr>
+        
+            <tr>
+                <td valign="top" class="font5">·</td>
+                <td align="left" class="font5"><a href="gb.php" class="font5">支付宝为一卡通充值</a></td>
+              </tr>
+        
+            <tr>
+                <td valign="top" class="font5">·</td>
+                <td align="left" class="font5"><a href="gb.php" class="font5">纪念品的价格有表吗</a></td>
+              </tr>
+        
+            <tr>
+                <td valign="top" class="font5">·</td>
+                <td align="left" class="font5"><a href="gb.php" class="font5">购买纪念品在哪买</a></td>
+              </tr>
+        
+            <tr>
+                <td valign="top" class="font5">·</td>
+                <td align="left" class="font5"><a href="gb.php" class="font5">毕业延期住宿办理</a></td>
+              </tr>
+        
+            <tr>
+                <td valign="top" class="font5">·</td>
+                <td align="left" class="font5"><a href="gb.php" class="font5">学生创业问题</a></td>
+              </tr>
+        
+            <tr>
+                <td valign="top" class="font5">·</td>
+                <td align="left" class="font5"><a href="gb.php" class="font5">办理户口证件</a></td>
+              </tr>
+        
+            <tr>
+                <td valign="top" class="font5">·</td>
+                <td align="left" class="font5"><a href="gb.php" class="font5">宿舍外机器影响休息</a></td>
+              </tr>
+        
+            <tr>
+                <td valign="top" class="font5">·</td>
+                <td align="left" class="font5"><a href="gb.php" class="font5">宿舍浴室门垮下砸伤脚应该找谁</a></td>
+              </tr>
+        
+            <tr>
+                <td valign="top" class="font5">·</td>
+                <td align="left" class="font5"><a href="gb.php" class="font5">东区收发室电话</a></td>
+              </tr>
+			  
+          </table></td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+<table width="970" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td height="57" align="center" background="images/bg_12.gif" class="font6" style="font-family:Helvetica, sans-serif">Copyright 2009-2010 中国科技大学学生服务中心 All Rights Reserved. Design By <a class="font6" href="http://www.sunchn.com" target="_blank">SunChn</a></td>
+  </tr>
+</table></body>
+</html>

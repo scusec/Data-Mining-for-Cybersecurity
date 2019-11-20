@@ -1,0 +1,397 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-hans" lang="zh-hans" dir="ltr">
+  <head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=7, IE=9">
+	<meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="alternate" type="application/rss+xml" title="Front page feed" href="/rss.xml" />
+<link rel="shortcut icon" href="/misc/favicon.ico" type="image/x-icon" />
+    <title>中国人民大学学生处</title>
+    <link type="text/css" rel="stylesheet" media="all" href="/modules/acquia/cck/theme/content-module.css?x" />
+<link type="text/css" rel="stylesheet" media="all" href="/modules/acquia/filefield/filefield.css?x" />
+<link type="text/css" rel="stylesheet" media="all" href="/modules/ckeditor/ckeditor.css?x" />
+<link type="text/css" rel="stylesheet" media="all" href="/modules/node/node.css?x" />
+<link type="text/css" rel="stylesheet" media="all" href="/modules/system/defaults.css?x" />
+<link type="text/css" rel="stylesheet" media="all" href="/modules/system/system.css?x" />
+<link type="text/css" rel="stylesheet" media="all" href="/modules/system/system-menus.css?x" />
+<link type="text/css" rel="stylesheet" media="all" href="/modules/user/user.css?x" />
+<link type="text/css" rel="stylesheet" media="all" href="/modules/acquia/cck/modules/fieldgroup/fieldgroup.css?x" />
+<link type="text/css" rel="stylesheet" media="all" href="/modules/acquia/views/css/views.css?x" />
+<link type="text/css" rel="stylesheet" media="all" href="/modules/event/event.css?x" />
+<link type="text/css" rel="stylesheet" media="all" href="/themes/rucxsc/style.css?x" />
+<link type="text/css" rel="stylesheet" media="print" href="/themes/rucxsc/print.css?x" />
+    
+			<script type="text/javascript" src="/modules/jquery_update/replace/jquery.min.js?v20101209"></script> 
+		
+    <!--[if lt IE 7]>
+      <link type="text/css" rel="stylesheet" media="all" href="/themes/rucxsc/fix-ie.css" />    <![endif]-->
+	<script src="/themes/rucxsc/jquery.d.imagechange/js/jquery.d.imagechange.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="/themes/rucxsc/rucxsc_menu_process.js" type="text/javascript" charset="utf-8"></script>
+	<script src="/themes/rucxsc/rucxsc_imagechange.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript" charset="utf-8">
+		$(document).ready(function() {
+			search_value_default = "search";
+			$("#sidebar-search input").val(search_value_default);
+			
+			$("#sidebar-search input").focus(function() {
+				if ($("#sidebar-search input").val() == search_value_default) {
+					$("#sidebar-search input").val("");
+				}
+			});
+
+			$("#sidebar-search input").blur(function() {
+				if ($("#sidebar-search input").val() == "") {
+					$("#sidebar-search input").val(search_value_default);
+				}
+			});
+			
+			function search_submit() {
+				t = $("#sidebar-search input").val();
+				t2 = "/search/node/" + t;
+				if ($("#sidebar-search input").val() != search_value_default) {
+					window.location.href = t2;
+				}
+				return false;
+			}
+			
+			$("#sidebar-search input").keypress(function(event) {
+				if (event.which == '13') {
+					event.preventDefault();
+					search_submit();
+				}
+			});
+			
+			$("#sidebar-search a").click(search_submit);
+			
+			
+			
+			$("#login-login-2").click(function(){
+				$("#login-form-2").submit();
+				return false;
+			});
+
+			$("#login-login-4").click(function(){
+				$("#login-form-4").submit();
+				return false;
+			});
+			
+			
+			$("#login-item-1").mouseover(function(){
+				$("#login-item-1").removeClass();
+				$("#login-item-2").removeClass();
+				$("#login-item-3").removeClass();
+				$("#login-item-4").removeClass();
+				$("#login-item-1").addClass("login-item-1-active");
+				$("#login-item-2").addClass("login-item-2");
+				$("#login-item-3").addClass("login-item-3");
+				$("#login-item-4").addClass("login-item-4");
+				
+				$("#login-form-1").show();
+				$("#login-form-2").hide();
+				$("#login-form-3").hide();
+				$("#login-form-4").hide();
+			});			
+			$("#login-item-2").mouseover(function(){
+				$("#login-item-1").removeClass();
+				$("#login-item-2").removeClass();
+				$("#login-item-3").removeClass();
+				$("#login-item-4").removeClass();
+				$("#login-item-1").addClass("login-item-1");
+				$("#login-item-2").addClass("login-item-2-active");
+				$("#login-item-3").addClass("login-item-3");
+				$("#login-item-4").addClass("login-item-4");
+				   
+				$("#login-form-1").hide();
+				$("#login-form-2").show();
+				$("#login-form-3").hide();
+				$("#login-form-4").hide();
+			});			
+			$("#login-item-3").mouseover(function(){
+				$("#login-item-1").removeClass();
+				$("#login-item-2").removeClass();
+				$("#login-item-3").removeClass();
+				$("#login-item-4").removeClass();
+				$("#login-item-1").addClass("login-item-1");
+				$("#login-item-2").addClass("login-item-2");
+				$("#login-item-3").addClass("login-item-3-active");
+				$("#login-item-4").addClass("login-item-4");
+
+				$("#login-form-1").hide();
+				$("#login-form-2").hide();
+				$("#login-form-3").show();
+				$("#login-form-4").hide();
+			});			
+			$("#login-item-4").mouseover(function(){
+				$("#login-item-1").removeClass();
+				$("#login-item-2").removeClass();
+				$("#login-item-3").removeClass();
+				$("#login-item-4").removeClass();
+				$("#login-item-1").addClass("login-item-1");
+				$("#login-item-2").addClass("login-item-2");
+				$("#login-item-3").addClass("login-item-3");
+				$("#login-item-4").addClass("login-item-4-active");
+
+				$("#login-form-1").hide();
+				$("#login-form-2").hide();
+				$("#login-form-3").hide();
+				$("#login-form-4").show();
+			});			
+
+		});
+	</script>
+  </head>
+<body id="frontpage">
+<div id="header">
+	<div id="address-navi">
+		<ul>
+			<li><a href="/node/80" id="item-1">��У��</a></li>
+			<li><a href="/node/82" id="item-2">δ��ѧ��</a></li>
+			<li><a href="/node/81" id="item-3">Ժϵ������Ա</a></li>
+			<li><a href="/node/83" id="item-4">�ÿ�</a></li>
+		</ul>
+	</div>
+	<div id="nav">
+		<ul><li><a id='nav-item-1' href='javascript:void(0);'>关于我们</a></li><li><a id='nav-item-2' href='javascript:void(0);'>奖励资助</a></li><li><a id='nav-item-3' href='javascript:void(0);'>学生事务</a></li><li><a id='nav-item-4' href='javascript:void(0);'>思想教育</a></li><li><a id='nav-item-5' href='javascript:void(0);'>国防教育</a></li><li><a id='nav-item-6' href='javascript:void(0);'>住宿辅导</a></li><li><a id='nav-item-7' href='http://xinli.ruc.edu.cn'>心理咨询</a></li><li><a id='nav-item-8' href='javascript:void(0);'>学籍管理</a></li></ul>	</div>
+	<h1 id="site-logo">
+		<a href="/"></a>	</h1>
+</div>
+
+<p>
+  <script>
+	var x = 50,y = 60
+	var xin = true, yin = true
+	var step = 1
+	var delay = 1
+	var obj=document.getElementById("ad")
+	obj.style.left = document.screen.availWidth-50
+	obj.style.top = document.screen.availHeight/2-20
+	function floatAD() {
+		var L=T=0
+		var R= document.body.clientWidth-obj.offsetWidth
+		var B = document.body.clientHeight-obj.offsetHeight
+		obj.style.left = document.screen.availWidth-50
+		obj.style.top = document.screen.availHeight/2-20
+	}
+	</script>
+
+
+<div id="main">
+	<div id="sidebar">
+		<div id="imagechange" style="width: 377px; height: 290px;"></div>
+		<div id="sidebar-bottom"></div>
+		<div id="sidebar-bd">
+			<div id="sidebar-search">
+				<input type="text" name="search_term" value="" id="search_term" />
+				<a href="#"><img src="themes/rucxsc/images/search-icon.png" width="13" height="13" /></a>
+			</div>
+			<div id="sidebar-login">
+				<h3>���ݵ�¼</h3>
+				<div id="sidebar-login-panel">
+					<ul>
+						<li id="login-item-1" class="login-item-1-active">��������ϵͳ</li>
+						<li id="login-item-2" class="login-item-2"></li>
+						<li id="login-item-3" class="login-item-3"></li>
+						<li id="login-item-4" class="login-item-4"></li>
+					</ul>
+					<div id="login-form">
+						<form id="login-form-1">
+							<div class="caption" id="caption-1">
+								<!-- <input type="text" name="username" value="" id="username" />
+								<input type="password" name="password" value="" id="password" /> -->
+								<!-- 2016/12/28 cannot connect to xsc.ruc.edu.cn:81,change to 222.29.218.117
+								<iframe name="lorraineframe" src="http://xsc.ruc.edu.cn:81/sessions/new?embedded=1"	-->
+								<iframe name="lorraineframe" src="http://222.29.218.117:81/sessions/new?embedded=1"								width="135" height="60" frameborder="0" style="border:0"></iframe>
+							</div>							
+						</form>
+						<form id="login-form-2" action="http://ruc.edu.cn/coremail/index.jsp" method="post" target="_blank">
+							<div class="caption" id="caption-2">
+								<input type="text" name="uid" value="" id="username" />
+								<input type="password" name="password" value="" id="password" />
+								<input type="hidden" name="domain" value="ruc.edu.cn" />
+							</div>							
+							<div class="buttons">
+								<a href="#" class="login-login" id="login-login-2"></a>
+								<a href="http://ruc.edu.cn" class="login-redirect" id="login-redirect-2"></a>
+							</div>
+						</form>
+						<form id="login-form-3">
+							<a href="http://portal.ruc.edu.cn" id="login-redirect-3"></a>
+						</form>
+						<form id="login-form-4" action="http://202.112.118.30/uhtbin/cgisirsi/6P1xCybfvj/177030014/30" method="post" target="_blank">
+							<div class="caption" id="caption-4">
+								<input type="text" name="user_id" value="" id="username" />
+								<input type="password" name="password" value="" id="password" />
+							</div>							
+							<div class="buttons">
+								<a href="#" class="login-login" id="login-login-4"></a>
+								<a href="http://www.lib.ruc.edu.cn" class="login-redirect" id="login-redirect-4"></a>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div id="sidebar-info">
+				<h3>��ϵ��ʽ</h3>
+				<div id="sidebar-info-panel">
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="bd">
+		<div id="subnav">
+			<div id='subnav-1'><ul><li class='first'><a href='/node/21'>部门介绍</a></li><li><a href='/node/22'>现任领导</a></li><li><a href='/lanmu/9'>科室及人员</a></li><li><a href='/list/10'>规章制度</a></li><li><a href='/node/23'>工作资料</a></li><li><a href='/lanmu/11'>指导社团</a></li><li><a href='/node/24'>联系方式</a></li></ul></div><div id='subnav-2'><ul><li class='first'><a href='/lanmu/6'>学生奖励</a></li><li><a href='/lanmu/22'>学生资助</a></li><li><a href='/lanmu/29'>家庭经济困难学生培育</a></li></ul></div><div id='subnav-3'><ul><li class='first'><a href='/lanmu/33'>专兼职辅导员</a></li><li><a href='/lanmu/36'>三班建设</a></li><li><a href='/lanmu/41'>公寓文化建设</a></li><li><a href='/node/25'>学生纪律教育</a></li><li><a href='/node/1025'>出国政审</a></li></ul></div><div id='subnav-4'><ul><li class='first'><a href='http://reg.ruc.edu.cn/freshmen'>入学导航</a></li><li><a href='http://envi.ruc.edu.cn/xsc/'>毕业季</a></li><li><a href='http://uzone.univs.cn/school_2564.html'>形势政策课</a></li><li><a href='/list/59'>思想道德建设</a></li><li><a href='/lanmu/46'>先进性示范工程</a></li></ul></div><div id='subnav-5'><ul><li class='first'><a href='/lanmu/58'>军训</a></li><li><a href='/lanmu/58'>军事理论课</a></li><li><a href='/lanmu/58'>征兵工作</a></li></ul></div><div id='subnav-6'><ul><li class='first'><a href='/node/3487'>住宿概况</a></li><li><a href='/node/3488'>服务团队</a></li><li><a href='/node/3491'>自管会</a></li><li><a href='/node/3490'>社区展示</a></li><li><a href='/node/3489'>留言咨询</a></li><li><a href='/node/3492'>首页其他版块</a></li></ul></div><div id='subnav-7'><ul></ul></div><div id='subnav-8'><ul><li class='first'><a href='/node/3208'>学籍变动管理</a></li><li><a href='/node/3209'>在读证明、证件</a></li><li><a href='/node/3210'>电子注册</a></li><li><a href='/node/3211'>迎新及毕业生图像采集</a></li></ul></div>		</div>
+		<div id="banner">
+							
+		</div>
+		<div id="bd-content">
+			<div id="news">
+									<div id="block-views-news_headline-block_1" class="clear-block block block-views">
+
+
+  <div class="content"><div class="view view-news-headline view-id-news_headline view-display-id-block_1 view-dom-id-4">
+    
+  
+  
+      <div class="view-content">
+        <div class="views-row views-row-1 views-row-odd views-row-first views-row-last">
+    <div id="headline">
+  	
+	<div id="promo-image-container"><img  class="imagefield imagefield-field_promo_image" width="100" height="100" alt="" src="http://xsc.ruc.edu.cn/sites/default/files/13510967455924474_fu_ben_.jpg?1508469133" /></div>
+  	
+	<h3>中国人民大学党委学生工作部和校团委联合举办学习十九大报告精神学生座谈会</h3>
+  	
+	<div id='teaser'>
+	&nbsp; &nbsp; &nbsp; &nbsp;10月18日，我校党委学生工作部和校团委在学生活动中心举办学习党的十九大报告精神学生座谈会。<a href="/content/%E4%B8%AD%E5%9B%BD%E4%BA%BA%E6%B0%91%E5%A4%A7%E5%AD%A6%E5%85%9A%E5%A7%94%E5%AD%A6%E7%94%9F%E5%B7%A5%E4%BD%9C%E9%83%A8%E5%92%8C%E6%A0%A1%E5%9B%A2%E5%A7%94%E8%81%94%E5%90%88%E4%B8%BE%E5%8A%9E%E5%AD%A6%E4%B9%A0%E5%8D%81%E4%B9%9D%E5%A4%A7%E6%8A%A5%E5%91%8A%E7%B2%BE%E7%A5%9E%E5%AD%A6%E7%94%9F%E5%BA%A7%E8%B0%88%E4%BC%9A-1">(查看全文...)</a></div>
+</div>  </div>
+    </div>
+  
+  
+  
+  
+  
+  
+</div> </div>
+</div>
+								
+				<div class="delimiter"></div>
+				<div id="newslist">
+											<div id="block-views-list_frontpage_news-block_1" class="clear-block block block-views">
+
+
+  <div class="content"><div class="view view-list-frontpage-news view-id-list_frontpage_news view-display-id-block_1 news-full view-dom-id-3">
+    
+  
+  
+      <div class="view-content">
+      <div class="item-list">
+    <ul>
+          <li class="views-row views-row-1 views-row-odd views-row-first">	<a href="http://xsc.ruc.edu.cn/content/%E9%87%91%E6%AD%A3%E6%98%86%E6%95%99%E6%8E%88%E4%B8%BA%E9%A6%96%E9%83%BD%E5%A4%A7%E5%AD%A6%E7%94%9F%E2%80%9C%E4%B8%AD%E5%8D%8E%E4%BC%98%E7%A7%80%E4%BC%A0%E7%BB%9F%E6%96%87%E5%8C%96%E5%85%AC%E5%BC%80%E8%AF%BE%E2%80%9D%E4%B8%BB%E8%AE%B2%E2%80%9C-%E4%B8%AD%E5%8D%8E%E4%BC%A0%E7%BB%9F%E7%A4%BC%E4%BB%AA%E4%B8%8E%E4%BA%BA%E6%A0%BC%E5%85%BB%E6%88%90%E2%80%9D%E4%B8%BB%E9%A2%98%E8%AF%BE%E7%A8%8B">金正昆教授为首都大学生“中华优秀传统文化...</a><span>10/27</span></li>
+          <li class="views-row views-row-2 views-row-even">	<a href="http://xsc.ruc.edu.cn/content/%E6%9D%A8%E5%85%89%E6%96%8C%E6%95%99%E6%8E%88%E4%B8%BB%E8%AE%B2%E4%B8%AD%E5%9B%BD%E4%BA%BA%E6%B0%91%E5%A4%A7%E5%AD%A6%E5%AD%A6%E5%B7%A5%E7%B3%BB%E7%BB%9F%E5%8D%81%E4%B9%9D%E5%A4%A7%E7%B2%BE%E7%A5%9E%E5%AD%A6%E4%B9%A0%E7%B3%BB%E5%88%97%E6%8A%A5%E5%91%8A%E4%BC%9A%E9%A6%96%E5%9C%BA%E8%AE%B2%E5%BA%A7-4">杨光斌教授主讲中国人民大学学工系统十九大...</a><span>10/26</span></li>
+          <li class="views-row views-row-3 views-row-odd">	<a href="http://xsc.ruc.edu.cn/content/%E4%BA%BA%E5%A4%A7%E8%BE%85%E5%AF%BC%E5%91%98%E7%95%85%E8%B0%88%E5%8D%81%E4%B9%9D%E5%A4%A7%E7%B2%BE%E7%A5%9E%E5%AD%A6%E4%B9%A0%E4%BD%93%E4%BC%9A">人大辅导员畅谈十九大精神学习体会</a><span>10/26</span></li>
+          <li class="views-row views-row-4 views-row-even">	<a href="http://xsc.ruc.edu.cn/content/%E9%9D%92%E6%98%A5%E5%96%9C%E8%BF%8E%E5%8D%81%E4%B9%9D%E5%A4%A7%EF%BC%88%E4%BA%94%EF%BC%89-%E4%BA%BA%E5%A4%A7%E5%AD%A6%E5%AD%90%E7%83%AD%E8%AE%AE%E5%85%9A%E7%9A%84%E5%8D%81%E4%B9%9D%E5%A4%A7%E6%8A%A5%E5%91%8A">青春喜迎十九大（五）| 人大学子热议党的...</a><span>10/23</span></li>
+          <li class="views-row views-row-5 views-row-odd">	<a href="http://xsc.ruc.edu.cn/content/%E9%9D%92%E6%98%A5%E5%96%9C%E8%BF%8E%E5%8D%81%E4%B9%9D%E5%A4%A7%EF%BC%88%E5%9B%9B%EF%BC%89-%E4%BA%BA%E5%A4%A7%E8%BE%85%E5%AF%BC%E5%91%98%E7%83%AD%E8%AE%AE%E5%85%9A%E7%9A%84%E5%8D%81%E4%B9%9D%E5%A4%A7%E6%8A%A5%E5%91%8A">青春喜迎十九大（四）| 人大辅导员热议党...</a><span>10/22</span></li>
+          <li class="views-row views-row-6 views-row-even">	<a href="http://xsc.ruc.edu.cn/content/%E9%9D%92%E6%98%A5%E5%96%9C%E8%BF%8E%E5%8D%81%E4%B9%9D%E5%A4%A7%EF%BC%88%E4%B8%89%EF%BC%89-%E4%BA%BA%E5%A4%A7%E5%AD%A6%E5%AD%90%E7%83%AD%E8%AE%AE%E5%85%9A%E7%9A%84%E5%8D%81%E4%B9%9D%E5%A4%A7%E5%BC%80%E5%B9%95%E4%BC%9A">青春喜迎十九大（三）| 人大学子热议党的...</a><span>10/20</span></li>
+          <li class="views-row views-row-7 views-row-odd">	<a href="http://xsc.ruc.edu.cn/content/%E9%9D%92%E6%98%A5%E5%96%9C%E8%BF%8E%E5%8D%81%E4%B9%9D%E5%A4%A7%EF%BC%88%E4%BA%8C%EF%BC%89%E4%BA%BA%E5%A4%A7%E8%BE%85%E5%AF%BC%E5%91%98%E7%83%AD%E8%AE%AE%E5%85%9A%E7%9A%84%E5%8D%81%E4%B9%9D%E5%A4%A7%E5%BC%80%E5%B9%95%E4%BC%9A">青春喜迎十九大（二）|人大辅导员热议党的...</a><span>10/20</span></li>
+          <li class="views-row views-row-8 views-row-even">	<a href="http://xsc.ruc.edu.cn/content/%E6%88%91%E6%A0%A1%E5%8F%AC%E5%BC%80%E6%B7%B1%E5%85%A5%E5%AD%A6%E4%B9%A0%E8%B4%AF%E5%BD%BB%E4%B9%A0%E8%BF%91%E5%B9%B3%E6%80%BB%E4%B9%A6%E8%AE%B0%E7%BB%99%E5%8D%97%E5%BC%80%E5%A4%A7%E5%AD%A6%E6%96%B0%E5%85%A5%E4%BC%8D%E5%A4%A7%E5%AD%A6%E7%94%9F%E5%9B%9E%E4%BF%A1%E7%B2%BE%E7%A5%9E%E5%B8%88%E7%94%9F%E4%BB%A3%E8%A1%A8%E5%BA%A7%E8%B0%88%E4%BC%9A">我校召开深入学习贯彻习近平总书记给南开大...</a><span>10/20</span></li>
+          <li class="views-row views-row-9 views-row-odd views-row-last">	<a href="http://xsc.ruc.edu.cn/content/%E6%88%91%E6%A0%A1%E7%BB%84%E7%BB%87%E5%B8%88%E7%94%9F%E6%94%B6%E7%9C%8B%E4%B8%AD%E5%9B%BD%E5%85%B1%E4%BA%A7%E5%85%9A%E7%AC%AC%E5%8D%81%E4%B9%9D%E6%AC%A1%E5%85%A8%E5%9B%BD%E4%BB%A3%E8%A1%A8%E5%A4%A7%E4%BC%9A%E5%BC%80%E5%B9%95%E4%BC%9A-2">青春喜迎十九大（一）| 我校组织师生收看...</a><span>10/20</span></li>
+      </ul>
+</div>    </div>
+  
+  
+  
+  
+  
+  
+</div> </div>
+</div>
+									</div>
+				<div class="delimiter"></div>
+				<a href="/news" id="view-all">more &raquo;</a>
+			</div>
+			<div id="announcements">
+									<div id="block-views-announcementlist-block_1" class="clear-block block block-views">
+
+
+  <div class="content"><div class="view view-announcementlist view-id-announcementlist view-display-id-block_1 view-dom-id-2">
+    
+  
+  
+      <div class="view-content">
+      <div class="item-list">
+    <ul>
+          <li class="views-row views-row-1 views-row-odd views-row-first">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="http://xsc.ruc.edu.cn/content/%E7%A0%94%E7%A9%B6%E7%94%9F%E5%9B%BD%E5%AE%B6%E5%A5%96%E5%AD%A6%E9%87%91%E5%A2%9E%E8%A1%A5%E5%85%AC%E7%A4%BA">研究生国家奖学金增补公示</a></span>
+  </div>
+</li>
+          <li class="views-row views-row-2 views-row-even">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="http://xsc.ruc.edu.cn/content/%E5%85%B3%E4%BA%8E%E5%90%AF%E5%8A%A82017%E5%B9%B4%E7%AC%AC%E4%BA%8C%E6%89%B9%E5%BF%83%E5%B9%B3%E8%B4%B7%E5%AD%A6%E9%87%91%E7%94%B3%E8%AF%B7%E5%B7%A5%E4%BD%9C%E7%9A%84%E9%80%9A%E7%9F%A5-2">关于启动2017年第二批心平贷学金申请工作的通知</a></span>
+  </div>
+</li>
+          <li class="views-row views-row-3 views-row-odd">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="http://xsc.ruc.edu.cn/content/%E4%B8%AD%E5%9B%BD%E4%BA%BA%E6%B0%91%E5%A4%A7%E5%AD%A6%E7%AC%AC%E5%85%AD%E6%9C%9F%E6%9B%BE%E5%AE%AA%E6%A2%93%E2%80%9C%E4%BC%98%E7%A7%80%E5%A4%A7%E5%AD%A6%E7%94%9F%E5%A5%96%E5%8A%B1%E8%AE%A1%E5%88%92%E2%80%9D2017%E5%B9%B4%E5%BA%A6%E8%AF%84%E5%AE%A1%E7%BB%93%E6%9E%9C%E5%85%AC%E7%A4%BA">中国人民大学第六期曾宪梓“优秀大学生奖励计划”2017年度评审结果公示</a></span>
+  </div>
+</li>
+          <li class="views-row views-row-4 views-row-even">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="http://xsc.ruc.edu.cn/content/2016-2017%E5%AD%A6%E5%B9%B4%E5%9B%BD%E5%AE%B6%E5%A5%96%E5%AD%A6%E9%87%91%E3%80%81%E5%9B%BD%E5%AE%B6%E5%8A%B1%E5%BF%97%E5%A5%96%E5%AD%A6%E9%87%91-%E5%92%8C%E7%A0%94%E7%A9%B6%E7%94%9F%E5%9B%BD%E5%AE%B6%E5%A5%96%E5%AD%A6%E9%87%91%E6%8B%9F%E6%8E%A8%E8%8D%90%E5%90%8D%E5%8D%95%E5%85%AC%E7%A4%BA">2016-2017学年国家奖学金、国家励志奖学金 和研究生国家奖学金拟推荐名单公示</a></span>
+  </div>
+</li>
+          <li class="views-row views-row-5 views-row-odd views-row-last">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="http://xsc.ruc.edu.cn/content/%E5%85%B3%E4%BA%8E%E5%AD%A6%E4%B9%A0%E8%B4%AF%E5%BD%BB%E4%B9%A0%E8%BF%91%E5%B9%B3%E6%80%BB%E4%B9%A6%E8%AE%B0%E7%BB%99%E5%8D%97%E5%BC%80%E5%A4%A7%E5%AD%A6%E6%96%B0%E5%85%A5%E4%BC%8D%E5%A4%A7%E5%AD%A6%E7%94%9F%E9%87%8D%E8%A6%81%E5%9B%9E%E4%BF%A1%E7%B2%BE%E7%A5%9E%E7%9A%84%E9%80%9A%E7%9F%A5">关于学习贯彻习近平总书记给南开大学新入伍大学生重要回信精神的通知</a></span>
+  </div>
+</li>
+      </ul>
+</div>    </div>
+  
+  
+  
+  
+  
+  
+</div> </div>
+</div>
+								<div id="view-all-container">
+					<a href="/announcement" id="view-all">more &raquo;</a>
+				</div>
+			</div>
+			<div style="clear: both;"></div>
+			<div id="logo-bar">
+				<a href="/event"><img src="themes/rucxsc/images/logo-cal.png" height="31" width="88" /></a>
+				<a href="/imagevue"><img src="themes/rucxsc/images/logo-iv.gif" height="31" width="88" /></a>
+				<!-- <a href="http://envi.ruc.edu.cn/xsc/freshmen/"><img src="themes/rucxsc/images/logo-2-small.png" height="31" width="88" /></a> -->
+				<a href="http://10.22.1.49/ClientWeb/xcus/ic2/Default.aspx"><img src="themes/rucxsc/images/logo-xlzxyy.png" height="31" width="88" /></a>
+				<a href="http://xsc.ruc.edu.cn/list/63"><img src="themes/rucxsc/images/logo-blog.png" height="31" width="88" /></a>
+				<!-- <a href="/blogs"><img src="themes/rucxsc/images/logo-blog.png" height="31" width="88" /></a> -->
+				<!-- <a href="http://xinping.ruc.edu.cn/"><img src="themes/rucxsc/images/logo-5-small.png" height="31" width="88" /></a> -->
+				<!-- <a href="/links"><img src="themes/rucxsc/images/logo-link.png" height="31" width="88" /></a> node/1231/edit -->
+				<a href="http://peer.ruc.edu.cn"><img src="themes/rucxsc/images/logo-pengbei.png" height="31" width="88" /></a>
+			</div>
+			<div id="secondary-links">
+				<ul>
+					<li><a href="http://www.ruc.edu.cn">�˴���ҳ</a></li>
+					<li><a href="http://news.ruc.edu.cn/">�˴�����</a></li>
+					<li><a href="http://www.tdrd.org/">�����˴�</a></li>
+					<li><a href="http://www.rucyouth.org/">�˴�����</a></li>
+					
+					<li><a href="http://xsc.ruc.edu.cn/sitemap">��վ��ͼ</a></li>
+					<li><a href="http://xsc.ruc.edu.cn/copyrights">��Ȩ����</a></li>
+					<li><a href="/feedback"></a></li>
+
+					</ul>
+			</div>
+			<div id="footer"></div>
+		</div>
+	</div>
+	<div style="clear: both;"></div>
+	
+</div>
+<div id=AdLayer style='position:absolute; width:139px; height:90px; z-index:20; visibility:visible;; right: 0px; top: 30px'> 
+<a href="http://www.santander.com/universities"><img src='http://xsc.ruc.edu.cn/santander.jpg' border="0" height="90" width="139"></a> </div>
+</body>
+</html>

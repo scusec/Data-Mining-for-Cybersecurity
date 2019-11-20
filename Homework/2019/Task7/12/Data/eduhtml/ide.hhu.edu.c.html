@@ -1,0 +1,228 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head xmlns="">
+    <title>河海大学学历</title>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <link rel="stylesheet" href="http://ide.hhu.edu.cn/cms/res_base/com_whatycms_hhdxxl/adult/article/css/common.css" />
+    <link rel="stylesheet" href="http://ide.hhu.edu.cn/cms/res_base/com_whatycms_hhdxxl/adult/article/css/index.css" /><script type="text/javascript" src="http://ide.hhu.edu.cn/cms/res_base/com_whatycms_hhdxxl/adult/article/js/common.js"></script><script type="text/javascript" src="http://ide.hhu.edu.cn/cms/res_base/com_whatycms_hhdxxl/adult/article/js/index.js"></script><script type="text/javascript">
+//去前后空格
+String.prototype.Trim = function()    {    
+	
+	return this.replace(/(^\s*)|(\s*$)/g, "");    
+}  
+
+function login(){
+	
+	var loginId = document.getElementById("loginId").value.Trim();
+	var pwd = document.getElementById("pwd").value.Trim();
+	var authCode = document.getElementById("authCode").value.Trim();
+	var passwd = document.getElementById("passwd");
+	
+	if(loginId==""){
+		alert("用户名不能为空");
+		document.getElementById("loginId").focus();
+		return;
+	}
+	if(pwd==""){
+		alert("密码不能为空");
+		document.getElementById("pwd").focus();
+		return;
+	}
+	if(authCode==""){
+		alert("验证码不能为空");
+		document.getElementById("authCode").focus();
+		return;
+	}
+	pwd = pwd.replace(/\%/g, "%25");
+	pwd = pwd.replace(/\+/g, "%2B");
+	pwd = pwd.replace(/\&/g, "%26");
+	passwd.value=pwd;
+
+	loginForm.action="http://online-svr4.hhu.edu.cn/sso/login_login.action"
+	loginForm.submit();
+	//sendAsynchronRequest("/sso/login_login.action", "loginId="+loginId+"&passwd="+passwd+"&authCode="+authCode, loginCallBack);
+}
+
+</script>
+  </head>
+  <body xmlns="">
+    <div id="wraper"><!--页头Begin--><p><style type="text/css">
+<!--
+A:link{text-decoration:none}
+A:visited{text-decoration:none}
+A:hover {color: #ff00ff;text-decoration:underline}
+ --></style></p>
+<script language="javascript">
+function goPage(pageLink) {
+	top.location.href=pageLink;
+}
+</script>
+<div id="adv"><img alt="" width="1000" height="143" src="http://ide.hhu.edu.cn/cms/res_base/com_whatycms_hhdxxl/adult/article/images/adv0.jpg" /></div>
+<div id="nav">
+<ul id="menu">
+  <li id="menu0" class="cd_0-off" status="off"	onMouseOver="overMenu(this)" onMouseOut="outMenu(this)"	onClick="registMenu(this);goPage('/cms/');">首 页</li>
+  <li id="menu1" class="cd_0-off" status="off"	onMouseOver="overMenu(this)" onMouseOut="outMenu(this)"	onClick="registMenu(this);goPage('/cms/introduction/index.htm');">学院简介</li>
+  <li id="menu2" class="cd_0-off" status="off"	onMouseOver="overMenu(this)" onMouseOut="outMenu(this)"	onClick="registMenu(this);goPage('/cms/rules/index.htm');">规章制度</li>
+  <li id="menu3" class="cd_0-off" status="off"	onMouseOver="overMenu(this)" onMouseOut="outMenu(this)"	onClick="registMenu(this);goPage('/cms/orrespondence/index.htm');">学习中心</li>
+  <li id="menu4" class="cd_0-off" status="off"	onMouseOver="overMenu(this)" onMouseOut="outMenu(this)"	onClick="registMenu(this);goPage('/cms/problems/index.htm');">常见问题</li>
+  <li id="menu5" class="cd_0-off" status="off"	onMouseOver="overMenu(this)" onMouseOut="outMenu(this)"	onClick="registMenu(this);goPage('/cms/downloads/index.htm');">文件下载 </li>
+ <li id="menu6" class="cd_0-off"	onClick="registMenu(this);goPage('/cms/organ/index.htm');" onMouseOut="outMenu(this)"	onMouseOver="overMenu(this)" status="off" style="background: none transparent scroll repeat 0% 0%">机构设置</li></ul>
+</div> <!--页头End-->
+    <div id="content">
+    <div id="left">
+    <div id="left_adv" class="border">
+    <div><img alt="" width="261" src="http://ide.hhu.edu.cn/cms/res_base/com_whatycms_hhdxxl/adult/article/images/index_login.jpg" /></div>
+    <form action="#" name="loginForm">
+      <table border="0" cellspacing="0" cellpadding="0" width="99%" style="margin-top: -3px; background: url(http://ide.hhu.edu.cn/cms/res_base/com_whatycms_hhdxxl/adult/article/images/navBar-bg.jpg) repeat-x 50% top">
+        <tbody>
+          <tr>
+            <td>&nbsp;</td>
+            <td>
+            <table class="titles" border="0" cellspacing="0" cellpadding="0" width="200">
+              <tbody>
+                <tr>
+                  <td height="35" colspan="2"><img alt="" width="200" height="22" src="http://ide.hhu.edu.cn/cms/res_base/com_whatycms_hhdxxl/adult/article/images/k.gif" /></td>
+                </tr>
+                <tr>
+                  <td height="25" width="67" align="center">用户名</td>
+                  <td width="133"><input id="loginId" style="border-bottom: #dcdcdc 1px solid; border-left: #dcdcdc 1px solid; width: 120px; border-top: #dcdcdc 1px solid; border-right: #dcdcdc 1px solid" name="loginId" type="text" /></td>
+                </tr>
+                <tr>
+                  <td height="25" align="center">密　码</td>
+                  <td><input id="pwd" type="password" style="border-bottom: #dcdcdc 1px solid; border-left: #dcdcdc 1px solid; width: 120px; border-top: #dcdcdc 1px solid; border-right: #dcdcdc 1px solid" name="pwd" /> <input id="passwd" type="hidden" name="passwd" /></td>
+                </tr>
+                <tr>
+                  <td height="30" align="center">验证码</td>
+                  <td><input id="authCode" style="border-bottom: #dcdcdc 1px solid; border-left: #dcdcdc 1px solid; width: 60px; border-top: #dcdcdc 1px solid; border-right: #dcdcdc 1px solid" name="authCode" type="text" /><img id="imgCode" alt="" width="59" height="20" src="http://online-svr4.hhu.edu.cn/sso/authimg" /></td>
+                </tr>
+                <tr>
+                  <td height="30" colspan="2" align="center">
+                  <table border="0" cellspacing="0" cellpadding="0" width="96%" style="padding-bottom: 8px">
+                    <tbody>
+                      <tr>
+                        <td align="center"><input src="http://ide.hhu.edu.cn/cms/res_base/com_whatycms_hhdxxl/adult/article/images/login.jpg" type="image" onclick="login();" name="imageField" /></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </form>
+    </div>
+    <div class="border left_box">
+    <div class="left_box_top">
+    <h5><img alt="" width="75" height="13" src="http://ide.hhu.edu.cn/cms/res_base/com_whatycms_hhdxxl/adult/article/images/left_search.jpg" /></h5>
+    </div>
+    <div class="left_box_content"><a href="#"><img class="margin_b" alt="" width="250" height="40" src="http://ide.hhu.edu.cn/cms/res_base/com_whatycms_hhdxxl/adult/article/images/left_search_on.jpg" /> </a><a href="#"><img class="margin_b" alt="" width="250" height="40" src="http://ide.hhu.edu.cn/cms/res_base/com_whatycms_hhdxxl/adult/article/images/left_search_off.jpg" /> </a></div>
+    </div>
+    <div class="border left_box">
+    <div class="left_box_top">
+    <h5><img alt="" width="75" height="13" src="http://ide.hhu.edu.cn/cms/res_base/com_whatycms_hhdxxl/adult/article/images/left_friend_link.jpg" /></h5>
+    </div>
+    <div class="left_box_content">
+    <div><a class="friend_link" target="_blank" onfocus="this.blur()" href="http://www.mwr.gov.cn/">中国水利部</a> <a class="friend_link" target="_blank" onfocus="this.blur()" href="http://www.moe.edu.cn/">中国教育部</a> <a class="friend_link" target="_blank" onfocus="this.blur()" href="http://ple.chinawater.com.cn/">中华人民共和国水利部人事司</a> <a class="friend_link" target="_blank" onfocus="this.blur()" href="http://www.caea.org.cn/">中国成人教育协会</a> <a class="friend_link" target="_blank" onfocus="this.blur()" href="http://www.zhongguozhixie.com.cn/">中国职工教育和职业培训协会</a> <a class="friend_link" target="_blank" onfocus="this.blur()" href="http://www.cahee.org.cn/">中国水利教育协会高等教育分会</a></div>
+    </div>
+    </div>
+    </div>
+    <div id="right">
+    <div id="right_t">
+    <div class="right_title">
+    <ul class="right_nav_box">
+      <li id="one1" class="hover" onClick="setTab('one',1,2)"><span><a>学院新闻</a> </span></li>
+      <li id="one2" onClick="setTab('one',2,2)"><span><a>网络教育资讯</a> </span></li>
+    </ul>
+    <div class="more_box"><a id="one_link" onfocus="this.blur()" href="news/index.htm"><img alt="" width="37" height="12" src="http://ide.hhu.edu.cn/cms/res_base/com_whatycms_hhdxxl/adult/article/images/right_more.jpg" /> </a></div>
+    </div>
+    <div id="con_one_1" class="right_list border"><ul name="arti_list_name">
+<li>
+<a href="http://ide.hhu.edu.cn/cms/news/314.htm" title="喜报（继续教育数字化学习资源建设与应用）" onfocus="this.blur()">喜报（继续教育数字化学习资源建设与应用）</a><span>2012-07-27</span>
+</li>
+<li>
+<a href="http://ide.hhu.edu.cn/cms/news/313.htm" title="喜报（行业类继续教育数字化学习资源合作与管理机制研究）" onfocus="this.blur()">喜报（行业类继续教育数字化学习资源合作与管理机制研究）</a><span>2012-07-27</span>
+</li>
+<li>
+<a href="http://ide.hhu.edu.cn/cms/news/312.htm" title="喜报（普通高等学校继续教育数字化学习资源开放服务模式的研究及应用）" onfocus="this.blur()">喜报（普通高等学校继续教育数字化学习资源开放服务模式的研究及应用）</a><span>2012-07-27</span>
+</li>
+<li>
+<a href="http://ide.hhu.edu.cn/cms/news/311.htm" title="喜报（继续教育示范基地建设）" onfocus="this.blur()">喜报（继续教育示范基地建设）</a><span>2012-07-27</span>
+</li>
+<li>
+<a href="http://ide.hhu.edu.cn/cms/news/310.htm" title="关于2011年河海大学成招网上征求志愿的通知" onfocus="this.blur()">关于2011年河海大学成招网上征求志愿的通知</a><span>2012-07-27</span>
+</li>
+<li>
+<a href="http://ide.hhu.edu.cn/cms/news/309.htm" title="江苏省第一次全国水利普查第二阶段省级培训班在宁顺利开班" onfocus="this.blur()">江苏省第一次全国水利普查第二阶段省级培训班在宁顺利开班</a><span>2012-07-27</span>
+</li>
+<li>
+<a href="http://ide.hhu.edu.cn/cms/news/308.htm" title="关于河海大学远程教育徽标及域名方案征集的通知" onfocus="this.blur()">关于河海大学远程教育徽标及域名方案征集的通知</a><span>2012-07-27</span>
+</li>
+</ul>
+</div>
+    <div id="con_one_2" class="right_list border" style="display: none"><ul name="arti_list_name">
+</ul>
+</div>
+    </div>
+    <div id="right_m">
+    <div class="right_title"><img class="right_nav_box" alt="" width="74" height="24" src="http://ide.hhu.edu.cn/cms/res_base/com_whatycms_hhdxxl/adult/article/images/right_infor.jpg" />
+    <div class="more_box"><a onfocus="this.blur()" href="notice/index.htm"><img alt="" width="37" height="12" src="http://ide.hhu.edu.cn/cms/res_base/com_whatycms_hhdxxl/adult/article/images/right_more.jpg" /> </a></div>
+    </div>
+    <!-- 公告栏 -->
+    <div class="right_list border"><ul name="arti_list_name">
+<li>
+<a href="http://ide.hhu.edu.cn/cms/notice/321.htm" title="第一次全国水利普查数据处理试点培训班在河海大学顺利开班" onfocus="this.blur()">第一次全国水利普查数据处理试点培训班在河海大学顺利开班</a><span>2012-07-27</span>
+</li>
+<li>
+<a href="http://ide.hhu.edu.cn/cms/notice/320.htm" title="全国水文站站长培训班在河海大学顺利开班" onfocus="this.blur()">全国水文站站长培训班在河海大学顺利开班</a><span>2012-07-27</span>
+</li>
+<li>
+<a href="http://ide.hhu.edu.cn/cms/notice/319.htm" title="贵州省水利厅关于举办市、县水利局局长专业理论知识培训班的通知" onfocus="this.blur()">贵州省水利厅关于举办市、县水利局局长专业理论知识培训班的通知</a><span>2012-07-27</span>
+</li>
+<li>
+<a href="http://ide.hhu.edu.cn/cms/notice/318.htm" title="第三期云南省乡镇水管（水保）站（所）长培训班在我校举办" onfocus="this.blur()">第三期云南省乡镇水管（水保）站（所）长培训班在我校举办</a><span>2012-07-27</span>
+</li>
+<li>
+<a href="http://ide.hhu.edu.cn/cms/notice/317.htm" title="河海大学举办遵义市水利系统干部培训班" onfocus="this.blur()">河海大学举办遵义市水利系统干部培训班</a><span>2012-07-27</span>
+</li>
+<li>
+<a href="http://ide.hhu.edu.cn/cms/notice/316.htm" title="河海大学举办水利系统科级干部培训班" onfocus="this.blur()">河海大学举办水利系统科级干部培训班</a><span>2012-07-27</span>
+</li>
+<li>
+<a href="http://ide.hhu.edu.cn/cms/notice/315.htm" title="河海大学举办第二期郑州市水利设计院素能提升培训班" onfocus="this.blur()">河海大学举办第二期郑州市水利设计院素能提升培训班</a><span>2012-07-27</span>
+</li>
+</ul>
+</div>
+    </div>
+    <div id="right_b">
+    <div class="border left_box float_l">
+    <div class="left_box_top">
+    <h5><img alt="" width="57" height="13" style="margin-left: 11px" src="http://ide.hhu.edu.cn/cms/res_base/com_whatycms_hhdxxl/adult/article/images/call_student.jpg" /></h5>
+    </div>
+    <div class="left_box_content padding_b">
+    <div class="dashed_border_b"><a onfocus="this.blur()" href="/cms/enrollregulations/index.htm">招生简章</a> <a onfocus="this.blur()" href="/cms/majors/index.htm">专业介绍</a> <a onfocus="this.blur()" href="/cms/certificate/index.htm">证书样本</a></div>
+    <div class="dashed_border_b"><a onfocus="this.blur()" href="/cms/candidatenotes/index.htm">考生须知</a> <a onfocus="this.blur()" href="/cms/examflow/index.htm">报考流程</a> <a onfocus="this.blur()" href="/cms/enrollquery/index.htm">录取查询</a></div>
+    </div>
+    </div>
+    <div class="border left_box float_r">
+    <div class="left_box_top">
+    <h5><img alt="" width="57" height="13" style="margin-left: 11px" src="http://ide.hhu.edu.cn/cms/res_base/com_whatycms_hhdxxl/adult/article/images/teach.jpg" /></h5>
+    </div>
+    <div class="left_box_content left_box_content padding_b">
+    <div class="dashed_border_b"><a onfocus="this.blur()" href="/cms/teachmanagement/index.htm">教学管理</a> <a onfocus="this.blur()" href="/cms/techtimetable/index.htm">校历课表</a> <a onfocus="this.blur()" href="/cms/materialinfo/index.htm">教材信息</a></div>
+    <div class="dashed_border_b"><a onfocus="this.blur()" href="/cms/exantest/index.htm">考试考务</a> <a onfocus="this.blur()" href="/cms/educate/index.htm">教学培养</a> <!--<a href="#" onfocus="this.blur()">录取查询</a>--></div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <br clear="all" />
+    <!--页脚Begin--><div id="footer" style="padding-top: 5px;">
+<p>地址：江苏省南京市西康路1号&nbsp;&nbsp;&nbsp;&nbsp; 邮编：210098&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 办公室电话：025-83786250</p>
+<p>版权： copyright@&nbsp;&nbsp; 2012 河海大学继续教育学院 All rights reserved.</p>
+
+</div> <!--页脚End--></div>
+  </body>
+</html>

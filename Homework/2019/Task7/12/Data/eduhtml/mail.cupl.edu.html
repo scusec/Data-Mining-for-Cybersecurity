@@ -1,0 +1,154 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>中国政法大学邮件系统</title>
+<base href="http://mail.cupl.edu.cn/coremail/common/index_cm40.jsp" />
+<link href="index_cm40/login.css" rel="stylesheet" type="text/css" charset="iso-8859-1" />
+
+
+<script type="text/javascript" src="../common/js/jquery.js"></script>
+<script type="text/javascript" src="../common/login/login.js" charset="iso-8859-1"></script>
+<script type="text/javascript">
+var markme_msg = "请按 Ctrl-D 收藏本页";
+</script>
+
+
+</head>
+
+<body>
+  <div class="Head">
+    <div class="Links">
+      
+      <span id="homepage"><a class="MTLinks">设为首页</a> |</span>
+      
+      <a href="javascript:bookmarkMe()">收藏本页</a> |
+      
+      
+      
+      <a target="_blank" href="/coremail/help/index_zh_CN.jsp">帮助</a>
+    </div>
+  </div>
+
+  <div class="Main">
+      <div class="MainL">
+          <div class="LTop">
+              <div class="logo"><img style="border:0 none;" src="/coremail/s?sid=&func=getSiteLogoData"
+                                     alt="Coremail 电子邮件系统"></div>
+          </div>
+          <div class="LContent"></div>
+          <div class="LB"></div>
+      </div>
+      <div class="MainR">
+          <h3 class="Header">电子邮箱登录</h3>
+          <div class="Error">
+              <div class="NoteError"></div>
+          </div>
+          <form id="loginForm" method="post" action="/coremail/index.jsp"
+                onsubmit="return loginSubmit(this, event);">
+            <table class="loginTable">
+              <tfoot>
+                <tr>
+                  <td></td>
+                  <td colspan="2">
+                    <button name="action:login" type="submit" class="Button">
+                      登　录
+                    </button>
+
+                    
+                        <a href="/coremail/forgetpwd.jsp" onclick="recoverPwd(this);">
+                            忘记密码？
+                        </a>
+                    
+                  </td>
+                </tr>
+              </tfoot>
+              <tr>
+                <th>用户名</th>
+                <td><input type="text" id="uid" name="uid" class="input"
+                           value=""></td>
+                <td>
+                    
+                    
+                      <input type="hidden" name="nodetect" value="false"/>
+                </td>
+              </tr>
+              
+              <tr>
+                <th>密　码</th>
+                <td><input type="password" name="password" class="input" autocomplete="off"
+                           value="" /></td>
+                <td>&nbsp;</td>
+              </tr>
+              
+              
+              
+
+
+
+
+    
+    
+        <input type="hidden" name="locale" value="zh_CN" />
+    
+
+
+
+              
+
+
+
+
+
+
+
+
+
+              <tr>
+                <th></th>
+                <td colspan="2">
+                    
+                    <div>
+                        <label>
+                            <input type="checkbox" id="saveUsername" checked />
+                            在此电脑上记住用户名
+                        </label>
+                    </div>
+                </td>
+              </tr>
+            </table>
+            <table><tr><td>  1.  新入校教师和学生请登录
+    <a href="http://i.cupl.edu.cn" onclick="recoverPwd(this);" style="color:red;">
+   数字法大
+   </a>
+   自主注册邮箱，自定义用户名。   </td></tr>
+                   <tr><td>2．	请您保管好您的登录密码，保证您的密码有一定的复杂性。用户要修改密码，请进入邮件系统进行修改。</td></tr>
+                   <tr><td>3.   中国政法大学信息化建设办公室在任何时候不会以任何形式要求用户提供登录密码，如果有任何人以任何形式要求您提供登录密码，请您务必提高警惕，以防上当。</td></tr>
+           </table>
+          </form>
+          
+          
+      </div>
+
+      <div class="footer">
+          <div class="link">
+            <a href="http://www.coremail.cn/" target="_blank">邮件系统</a>
+            <a href="http://www.coremail.cn/" target="_blank">邮件服务器</a>
+            <a href="http://www.corpease.net/" target="_blank">企业邮箱</a>
+            <a href="http://www.icoremail.cn/" target="_blank">企业邮箱</a>
+        </div>
+          <div class="footerBg">
+              <div class="copyright">
+                  Copyright &copy;中国政法大学邮件系统
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <script type="text/javascript">
+      init("uid");
+  </script>
+
+
+</body>
+</html>

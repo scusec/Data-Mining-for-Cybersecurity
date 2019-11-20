@@ -1,0 +1,164 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Coremail邮件系统</title>
+<base href="http://mail.hhu.edu.cn/coremail/common/index_cm40.jsp" />
+<link href="index_cm40/login.css" rel="stylesheet" type="text/css" charset="iso-8859-1" />
+
+
+<script type="text/javascript" src="../common/js/jquery.js"></script>
+<script type="text/javascript" src="../common/login/login.js" charset="iso-8859-1"></script>
+<script type="text/javascript">
+var markme_msg = "请按 Ctrl-D 收藏本页";
+</script>
+
+
+</head>
+
+<body>
+  <div class="Head">
+    <div class="Links">
+      
+  
+	<a target="_blank" href="http://webplus.hhu.edu.cn/s/3/t/11/a/126806/info.jspy">自注册</a> |
+      
+
+	<a target="_blank" href="http://hhic.hhu.edu.cn/s/3/t/11/ad/dc/info110044.htm">注册及使用说明</a> | 
+      
+      <a href="javascript:setCookie('locale','en_US'); window.location.reload();">English Version</a> |
+      
+      <a target="_blank" href="/coremail/help/index_zh_CN.jsp">帮助</a>
+    </div>
+  </div>
+
+  <div class="Main">
+      <div class="MainL">
+          <div class="LTop">
+              <div class="logo"><a href="http://www.coremail.cn" target="_blank"><img style="border:0 none;" src="/coremail/s?func=getSiteLogoData"
+                                     alt="Coremail 电子邮件系统"></a></div>
+          </div>
+          <div class="LContent"></div>
+          <div class="LB"></div>
+      </div>
+      <div class="MainR">
+          <h3 class="Header">电子邮箱登录</h3>
+          <div class="Error">
+              <div class="NoteError"></div>
+          </div>
+          <form id="loginForm" method="post" action="/coremail/index.jsp"
+                onsubmit="return loginSubmit(this, event);">
+            <table class="loginTable">
+              <tfoot>
+                <tr>
+                  <td></td>
+                  <td colspan="2" >
+                    <button name="action:login" type="submit" class="Button">
+                      登　录
+                    </button>
+
+                    
+                        <a href="/coremail/forgetpwd.jsp" onclick="recoverPwd(this);">
+                            忘记密码？
+                        </a>
+                    
+                    &nbsp;&nbsp;
+                    
+                  </td>
+                </tr>
+              </tfoot>
+              <tr>
+                <th>用户名</th>
+                <td><input type="text" id="uid" name="uid" class="input"
+                           value=""></td>
+                <td>
+                    
+                    
+                      <input type="hidden" name="nodetect" value="false"/>
+                </td>
+              </tr>
+              
+              <tr>
+                  <th>域　名</th>
+                  <td>
+                      
+                      <select id="domain" name="domain" class="inputWidth">
+                          
+                              <option >hhu.edu.cn</option>
+                          
+                              <option >hhuc.edu.cn</option>
+                          
+                      </select>
+                  </td>
+              </tr>
+              
+              <tr>
+                <th>密　码</th>
+                <td><input type="password" name="password" class="input" autocomplete="off"
+                           value="" /></td>
+                <td>&nbsp;</td>
+              </tr>
+              
+              
+              
+
+
+
+
+    
+    
+        <input type="hidden" name="locale" value="zh_CN" />
+    
+
+
+
+              
+
+
+
+
+
+
+
+
+
+              <tr>
+                <th></th>
+                <td colspan="2">
+                    
+                    <div>
+                        <label>
+                            <input type="checkbox" id="saveUsername" checked />
+                            记住用户名
+                        </label>
+                    </div>
+                </td>
+              </tr>
+            </table>
+          </form>
+          
+          
+      </div>
+
+      <div class="footer">
+          <div class="link">
+            <a href="http://www.coremail.cn/" target="_blank">邮件系统</a>
+            <a href="http://www.coremail.cn/" target="_blank">邮件服务器</a>
+            <a href="http://www.corpease.net/" target="_blank">企业邮箱</a>
+            <a href="http://www.icoremail.cn/" target="_blank">企业邮箱</a>
+        </div>
+          <div class="footerBg">
+              <div class="copyright">
+                <a href="" target="_blank">河海大学.Copyright 2014 </a>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <script type="text/javascript">
+      init("uid");
+  </script>
+
+
+</body>
+</html>

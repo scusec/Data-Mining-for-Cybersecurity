@@ -1,0 +1,134 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<link rel="stylesheet" type="text/css" href="static/css/std.css">
+<script language="JavaScript" type="text/javascript" src="static/jquery-1.4.2.js?v=1125"></Script>
+<script language="javascript" src="static/thickbox.js"></script>
+<link rel="stylesheet" type="text/css" href="static/css/thickbox.css">
+<title>网络用户服务系统-登陆</title>
+<STYLE type=text/css>
+BODY {
+	BACKGROUND: #f29b27
+}
+.BlodPrice {
+	FONT-WEIGHT: bold; COLOR: #ff0000
+}
+.style1 {
+	COLOR: #e07c20
+}
+.inputbox {
+	BORDER-RIGHT: 0px; PADDING-RIGHT: 4px; BORDER-TOP: 0px; PADDING-LEFT: 4px; FONT-SIZE: 12px; BACKGROUND-IMAGE: url(static/images/k.gif); PADDING-BOTTOM: 4px; BORDER-LEFT: 0px; WIDTH: 201px; COLOR: #df721d; PADDING-TOP: 4px; BORDER-BOTTOM: 0px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; HEIGHT: 27px
+}
+.mybutton {
+	BORDER-RIGHT: 0px; BORDER-TOP: 0px; FONT-WEIGHT: bold; FONT-SIZE: 16px; BACKGROUND-IMAGE: url(static/images/loginbutt.gif); BORDER-LEFT: 0px; WIDTH: 145px; CURSOR: hand; COLOR: #ffffff; BORDER-BOTTOM: 0px; HEIGHT: 64px; BACKGROUND-COLOR: #f1f1ef
+}
+</STYLE>
+</HEAD>
+<BODY leftMargin=0 topMargin=0 marginheight="0" marginwidth="0">
+<TABLE height="100%" cellSpacing=0 cellPadding=0 width="100%" border=0>
+  <TBODY>
+  <TR>
+    <TD align=middle>
+      <TABLE height=20 cellSpacing=0 cellPadding=0 width="100%" background="static/images/login.jpg" border=0>
+        <TBODY>
+        <TR bgColor=#d79149>
+          <TD class=white background="static/images/bar.jpg" height=23><STRONG>&nbsp;Internet users service system</STRONG></TD>
+          <TD background="static/images/bar.jpg">&nbsp;</TD></TR></TBODY></TABLE>
+      <TABLE height=500 cellSpacing=0 cellPadding=0 width="100%"  background="static/images/login.jpg" border=0>
+        <TBODY>
+        <TR>
+          <TD  background="static/images/left.jpg">&nbsp;</TD>
+          <TD width=760  background="static/images/login.jpg">
+            <TABLE cellSpacing=0 cellPadding=0 width=566 align=center border=0>
+			<TBODY>
+              <TR align=right>
+                <TD colSpan=2><IMG height=32 src="static/images/vdnstop.jpg" width=501></TD></TR>
+              <TR align=middle>
+                <TD colSpan=2 height=20></TD></TR>
+              <TR>
+                <TD align=right>&nbsp;</TD>
+                <TD>&nbsp;</TD></TR>
+              <TR>
+                <TD align="right" width="20%"><IMG height=63 src="static/images/security.gif" width=59></TD>
+                <TD width="80%"><BR>
+                  <TABLE cellSpacing=0 cellPadding=0 width="100%">
+                    <TBODY>
+                    <TR>
+                      <TD align=right width="32%" height=35><SPAN class=style1>用户: </SPAN></TD>
+                      <TD width="68%"><INPUT class=inputbox type=text  name=username id=username></TD></TR>
+                    <TR>
+                      <TD align=right height=35><SPAN class=style1>密码:</SPAN></TD>
+                      <TD><INPUT class=inputbox type=password name=password id=password>   
+                    </TD></TR></TBODY></TABLE>
+					<BR><INPUT class=formstyle type=hidden value=gb name=lang_S></TD>
+			</TR>
+              <TR>
+                <TD height=72>&nbsp;</TD>
+                <TD align=middle>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<INPUT class=mybutton type=button value="报修人登陆" onclick="login(1)">
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<INPUT class=mybutton type=button value="管理员登陆" onclick="login(2)">
+				<script>
+					  function check()
+					  {
+					    if($("#username").val()=='')
+						{
+						 alert("请输入用户名！");
+						 return false;
+						}
+					    if($("#password").val()=='')
+						{
+						 alert("请输入密码！");
+						 return false;
+						}
+                         return true;						
+					  }
+					  function login(type)
+					  {
+					    if(check())
+						{
+						 	$.ajax({
+										type: "POST",
+										url: "ajax.php",
+										data: "ajaxdo=logincheck&username="+$("#username").val()+"&password="+$("#password").val()+"&type="+type,
+										success: function(msg){
+											switch(msg){
+												case '1':alert("密码不正确");window.location.reload();
+														break;
+												case '2':alert("用户名不存在");window.location.reload();
+														break;
+												case '3':window.location.reload();
+														break;	
+												case '4':alert("用户名或密码错误！");window.location.reload();
+														break;														
+												default:alert("未知错误..."+msg);
+											}
+										}
+									});
+						}
+					  }
+					  </script>
+                </TD></TR>
+              <TR align=right>
+                <TD colSpan=2><STRONG>注意:报修人账号为学工号且研究生学号中字母要大写，密码为一卡通查询密码。<br>管理员用户若忘记密码，请点击<a href="index.php?passinit=1&TB_iframe=true&height=150&width=500" title="密码找回" style="color:red;" class="thickbox">找回密码</a>.</STRONG> 
+                  <HR color=#dc8832 SIZE=1>
+                </TD></TR></TBODY></TABLE><BR><BR>
+			</TD>
+          <TD background="static/images/right.jpg">&nbsp;&nbsp; 
+          </TD></TR></TBODY></TABLE>
+      <TABLE cellSpacing=0 cellPadding=0 width="100%" background="static/images/login.jpg" border=0>
+        <TBODY>
+        <TR bgColor=#d79149>
+          <TD height=10><IMG height=10  src="static/images/bar.jpg" width="100%"></TD>
+		</TR>
+		</TBODY>
+		</TABLE>
+		<BR>
+		<SPAN class=white>Copyright Yangzhou University 2011 All rights reserved </SPAN>
+		</TD>
+		</TR>
+		</TBODY>
+		</TABLE>
+		</BODY>
+		</HTML>
+

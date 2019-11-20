@@ -1,0 +1,884 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>首页 北京工商大学学生处</title>
+<link href="css/xsc2011.css" rel="stylesheet" type="text/css">
+<script src="js/prototype.js"></script>
+<script src="js/scriptaculous.js"></script>
+<script type="text/javascript" src="js/util.js"></script>
+<script type="text/javascript" src="js/effects.js"></script>
+<script type="text/javascript" src="js/dragdrop.js"></script>
+<script type="text/javascript" src="js/controls.js"></script>
+<script src="js/checklogin.js"></script>
+</head>
+<body>
+
+
+<div id="xsc_head" class="Pubwidth">
+  <div style="CURSOR: pointer" class="xsclogo" onclick="javascript:window.location=&#39;/&#39;"></div>
+  <div class="logoriht">
+    <div class="topsmall"><a href="http://my.btbu.edu.cn" target="_blank"><img style="FLOAT: left" border="0" src="images/topsmall_01.gif"></a><a href="http://xsc.btbu.edu.cn/Article/ShowClass.asp?ClassID=155" target="_parent"><img style="FLOAT: left" border="0" src="images/topsmall_02.gif"></a><a href="http://www.btbu.edu.cn/images/building.jpg" target="_blank"><img style="FLOAT: left" border="0" src="images/topsmall_03.gif"></a></div>
+    <div class="search">
+                     <form name="dataForm" class="search_form" action="/cms/search/searchResults.jsp" target="_blank" method="post" accept-charset="utf-8" onsubmit="document.charset='utf-8';">
+                            <input name="siteID" value="61" type ="hidden" />
+                            <input class="notxt" value="关键字" name="query" type="text" id="keywords" onFocus="if(value==defaultValue){value='';}" onBlur="if(!value){value=defaultValue;}"
+                             onclick="if(this.value==''){this.value='';this.form.keywords.style.color='#9d9d9d'}" />
+                            <input class="notxt1" name="Submit" type="submit" value="" />
+                        </form>
+         </div>
+  </div>
+</div>
+<!--
+<div id="xsc_menu">
+  <div class="menuxsc">
+    <ul>
+      <li><a class="hide" href="index.htm">首    页</a>
+        <ul>
+        </ul>
+      </li>
+      <li class="menuline2"><img src="images/menuline1.gif"></li>
+    
+	 		    												<li><a href="jgsz/zzjg/index.htm" class="hide">机构设置</a>
+                       	<ul>
+														<li><a href="jgsz/zzjg/index.htm">组织机构</a></li>
+														<li><a href="jgsz/ldjs/index.htm">领导介绍</a></li>
+														<li><a href="jgsz/zzfg/index.htm">职责分工</a></li>
+													</ul>
+				</li>
+				<li class="menuline2"><img src="images/menuline1.gif"></li>
+																								<li><a href="zdgd/sjwj/index.htm" class="hide">制度规定</a>
+                       	<ul>
+														<li><a href="zdgd/sjwj/index.htm">上级文件</a></li>
+														<li><a href="zdgd/xxfw/index.htm">学校发文</a></li>
+														<li><a href="zdgd/xgfw/index.htm">学工发文</a></li>
+													</ul>
+				</li>
+				<li class="menuline2"><img src="images/menuline1.gif"></li>
+																								<li><a href="sxjy/tzgg/index.htm" class="hide">思想教育</a>
+                       	<ul>
+														<li><a href="sxjy/tzgg/index.htm">通知公告</a></li>
+														<li><a href="sxjy/ssyw/index.htm">时事要闻</a></li>
+														<li><a href="sxjy/xsyzc/index.htm">形势与政策</a></li>
+														<li><a href="sxjy/llyj/index.htm">理论研究</a></li>
+														<li><a href="sxjy/ljjy/index.htm">廉洁教育</a></li>
+														<li><a href="sxjy/zthd/index.htm">专题活动</a></li>
+													</ul>
+				</li>
+				<li class="menuline2"><img src="images/menuline1.gif"></li>
+																								<li><a href="xsgl/tzgg1/index.htm" class="hide">学生管理</a>
+                       	<ul>
+														<li><a href="xsgl/tzgg1/index.htm">通知公告</a></li>
+														<li><a href="xsgl/gzzd/index.htm">规章制度</a></li>
+														<li><a href="xsgl/bjjs/index.htm">班级建设</a></li>
+														<li><a href="xsgl/xfjs/index.htm">学风建设</a></li>
+														<li><a href="xsgl/pjpy1/index.htm">评奖评优</a></li>
+														<li><a href="xsgl/wjcf/index.htm">违纪处分</a></li>
+														<li><a href="xsgl/ssgl/index.htm">宿舍管理</a></li>
+													</ul>
+				</li>
+				<li class="menuline2"><img src="images/menuline1.gif"></li>
+																								<li><a href="xgdw/tzgg2/index.htm" class="hide">学工队伍</a>
+                       	<ul>
+														<li><a href="xgdw/tzgg2/index.htm">通知公告</a></li>
+														<li><a href="xgdw/tszs/index.htm">他山之石</a></li>
+														<li><a href="xgdw/dwjs/index.htm">队伍建设</a></li>
+														<li><a href="xgdw/fdypx/index.htm">辅导员培训</a></li>
+														<li><a href="xgdw/fdylt/index.htm">辅导员论坛</a></li>
+													</ul>
+				</li>
+				<li class="menuline2"><img src="images/menuline1.gif"></li>
+																								<li><a href="xsdj/xfgc/index.htm" class="hide">学生党建</a>
+                       	<ul>
+														<li><a href="xsdj/xfgc/index.htm">先锋工程</a></li>
+														<li><a href="xsdj/xsdjtzgg/index.htm">通知公告</a></li>
+														<li><a href="xsdj/llrd/index.htm">理论热点</a></li>
+														<li><a href="xsdj/lxyz/index.htm">两学一做</a></li>
+														<li><a href="xsdj/xsdjzlxz/index.htm">资料下载</a></li>
+														<li><a href="xsdj/xsdjtpxw/index.htm">图片新闻</a></li>
+													</ul>
+				</li>
+				<li class="menuline2"><img src="images/menuline1.gif"></li>
+																				<li><a href="http://gsbys.btbu.edu.cn/" class="hide">就业指导</a></li>
+				<li class="menuline2"><img src="images/menuline1.gif"></li>
+																<li><a href="http://zzzx.btbu.edu.cn/" class="hide">学生资助</a></li>
+				<li class="menuline2"><img src="images/menuline1.gif"></li>
+																				<li><a href="gfjy/tzgg3/index.htm" class="hide">国防教育</a>
+                       	<ul>
+														<li><a href="gfjy/tzgg3/index.htm">通知公告</a></li>
+														<li><a href="gfjy/jsrd/index.htm">军事热点</a></li>
+														<li><a href="gfjy/jxdt/index.htm">军训动态</a></li>
+														<li><a href="gfjy/jsll/index.htm">国护风采</a></li>
+														<li><a href="gfjy/zbrw/index.htm">征兵入伍</a></li>
+														<li><a href="gfjy/xygfs/index.htm">校园国防社</a></li>
+													</ul>
+				</li>
+				<li class="menuline2"><img src="images/menuline1.gif"></li>
+																								<li><a href="zlxz/sqbg/index.htm" class="hide">资料下载</a>
+                       	<ul>
+														<li><a href="zlxz/sqbg/index.htm">申请表格</a></li>
+														<li><a href="zlxz/cydh/index.htm">常用电话</a></li>
+														<li><a href="zlxz/bszn/index.htm">办事指南</a></li>
+														<li><a href="zlxz/blwx/index.htm">包罗万象</a></li>
+														<li><a href="zlxz/xxzl/index.htm">学习资料</a></li>
+													</ul>
+				</li>
+				<li class="menuline2"><img src="images/menuline1.gif"></li>
+												      
+    </ul>
+  </div>
+</div>
+-->
+<div id="xsc_menu">
+  <div class="menuxsc">
+    <ul>
+      <li><a class="hide" href="index.htm">首    页</a>
+        <ul>
+        </ul>
+      </li>
+      <li class="menuline2"><img src="images/menuline1.gif"></li>
+      <!--菜单分隔 -->
+      <li><a class="hide" href="jgsz/zzjg/index.htm">机构设置</a>
+        <ul>
+		          <li><a href="jgsz/zzjg/index.htm" >组织机构</a></li>
+		           <li><a href="jgsz/ldjs/index.htm" >领导介绍</a></li>
+		           <li><a href="jgsz/zzfg/index.htm" >职责分工</a></li>
+		         </ul>
+      </li>
+      <li class="menuline2"><img src="images/menuline1.gif"></li>
+      <!--菜单分隔 -->
+      <li><a class="hide" href="zdgd/index.htm">制度规定</a>
+        <ul>
+                    <li><a href="zdgd/sjwj/index.htm" >上级文件</a></li>
+		            <li><a href="zdgd/xxfw/index.htm" >学校发文</a></li>
+		            <li><a href="zdgd/xgfw/index.htm" >学工发文</a></li>
+		         </ul>
+      </li>
+      <li class="menuline2"><img src="images/menuline1.gif"></li>
+      <!--菜单分隔 -->
+      <li><a class="hide" href="sxjy/index.htm">思想教育</a>
+        
+        <ul>
+                      <li><a href="sxjy/tzgg/index.htm" >通知公告</a></li>
+		              <li><a href="sxjy/ssyw/index.htm" >时事要闻</a></li>
+		              <li><a href="sxjy/xsyzc/index.htm" >形势与政策</a></li>
+		              <li><a href="sxjy/llyj/index.htm" >理论研究</a></li>
+		              <li><a href="sxjy/ljjy/index.htm" >廉洁教育</a></li>
+		             <!--这个地方是向右弹出下级菜单开始 -->
+          <li><a class="hide" href="sxjy/zthd/index.htm">专题活动&gt;&gt;</a>
+            <ul>
+                         <li><a href="sxjy/zthd/kxdl/index.htm" >开学典礼</a></li>
+		              <li><a href="sxjy/zthd/ydksj/index.htm" >运动会瞬间</a></li>
+		              <li><a href="sxjy/zthd/bylx/index.htm" >毕业离校</a></li>
+		              <li><a href="sxjy/zthd/xxgr/index.htm" >献血光荣</a></li>
+		              <li><a href="sxjy/zthd/pjpy/index.htm" >评奖评优</a></li>
+		              <li><a href="sxjy/zthd/gq60zn/index.htm" >国庆60周年:我与祖国共奋进</a></li>
+		              <li><a href="sxjy/zthd/08ay/index.htm" >08奥运:我的奥运之旅</a></li>
+		              <li><a href="sxjy/zthd/60znxq/index.htm" >60周年校庆</a></li>
+		              <li><a href="sxjy/zthd/zlzl/index.htm" >自立之路</a></li>
+		               </ul>
+          </li>
+          <!--这个地方是向右弹出下级菜单结束 -->
+        </ul>
+      </li>
+      <li class="menuline2"><img src="images/menuline1.gif"></li>
+      <!--菜单分隔 -->
+      <li><a class="hide" href="xsgl/index.htm">学生管理</a>
+        
+        <ul>
+                     <li><a href="xsgl/tzgg1/index.htm" >通知公告</a></li>
+		              <li><a href="xsgl/gzzd/index.htm" >规章制度</a></li>
+		              <li><a href="xsgl/bjjs/index.htm" >班级建设</a></li>
+		              <li><a href="xsgl/xfjs/index.htm" >学风建设</a></li>
+		              <li><a href="xsgl/pjpy1/index.htm" >评奖评优</a></li>
+		              <li><a href="xsgl/wjcf/index.htm" >违纪处分</a></li>
+		              <li><a href="xsgl/ssgl/index.htm" >宿舍管理</a></li>
+		           </ul>
+      </li>
+
+      <li class="menuline2"><img src="images/menuline1.gif"></li>
+      <!--菜单分隔 -->
+      <li><a class="hide" href="xgdw/index.htm">学工队伍</a>
+        
+        <ul>
+                     <li><a href="xgdw/tzgg2/index.htm" >通知公告</a></li>
+		              <li><a href="xgdw/tszs/index.htm" >他山之石</a></li>
+		              <li><a href="xgdw/dwjs/index.htm" >队伍建设</a></li>
+		              <li><a href="xgdw/fdypx/index.htm" >辅导员培训</a></li>
+		              <li><a href="xgdw/fdylt/index.htm" >辅导员论坛</a></li>
+		           </ul>
+      </li>
+      <li class="menuline2"><img src="images/menuline1.gif"></li>
+      <!--菜单分隔 -->
+      <li><a class="hide" href="xsdj/index.htm" target="_blank">学生党建</a>
+        
+        <ul>
+        </ul>
+      </li>
+      <li class="menuline2"><img src="images/menuline1.gif"></li>
+      <!--菜单分隔 -->
+      <li><a class="hide" href="http://gsbys.btbu.edu.cn/" target="_blank">就业指导</a>
+        <ul>
+        </ul>
+      </li>
+      <li class="menuline2"><img src="images/menuline1.gif"></li>
+      <!--菜单分隔 -->
+      <li><a class="hide" href="http://xlzx.btbu.edu.cn/" target="_blank">心理健康</a>
+        <ul>
+        </ul>
+      </li>
+      <li class="menuline2"><img src="images/menuline1.gif"></li>
+      <!--菜单分隔 -->
+      <li><a class="hide" href="http://zzzx.btbu.edu.cn/" target="_blank">学生资助</a>
+        
+        <ul>
+        </ul>
+      </li>
+      <li class="menuline2"><img src="images/menuline1.gif"></li>
+      <!--菜单分隔 -->
+      <li><a class="hide" href="gfjy/index.htm">国防教育</a>
+        
+        <ul>
+                     <li><a href="gfjy/tzgg3/index.htm" >通知公告</a></li>
+		              <li><a href="gfjy/jsrd/index.htm" >军事热点</a></li>
+		              <li><a href="gfjy/jxdt/index.htm" >军训动态</a></li>
+		              <li><a href="gfjy/jsll/index.htm" >国护风采</a></li>
+		              <li><a href="gfjy/zbrw/index.htm" >征兵入伍</a></li>
+		              <li><a href="gfjy/xygfs/index.htm" >校园国防社</a></li>
+		           </ul>
+      </li>
+      <li class="menuline2"><img src="images/menuline1.gif"></li>
+      <!--菜单分隔 -->
+      <li><a class="hide" href="zlxz/index.htm">资料下载</a>
+        <ul>
+                       <li><a href="zlxz/sqbg/index.htm" >申请表格</a></li>
+		              <li><a href="zlxz/cydh/index.htm" >常用电话</a></li>
+		              <li><a href="zlxz/bszn/index.htm" >办事指南</a></li>
+		              <li><a href="zlxz/blwx/index.htm" >包罗万象</a></li>
+		              <li><a href="zlxz/xxzl/index.htm" >学习资料</a></li>
+		           </ul>
+      </li>
+      <!--到这里结束了 -->
+    </ul>
+  </div>
+</div><!--头部结束 -->
+<div class="clearboth"> </div>
+<!--幻灯片开始 -->
+<div class="Pubwidth1 margin1">
+  <div id="globlaslider">
+      <SCRIPT type=text/javascript>
+		var imgUrl=new Array();
+		var imgLink=new Array();
+		var imgName=new Array();
+		var n=1;
+		                
+												imgUrl[n] = "images/content/2017-02/20170228140833488757.jpg";
+				imgLink[n] = "tzgg6/tpxw4/81938.htm";
+				var vTitle='相约晨曦之一';
+				if (vTitle.length>25)
+				vTitle=vTitle.substring(0,15)+"...";
+				imgName[n] = vTitle;
+				n++;
+																imgUrl[n] = "images/content/2017-02/20170228141034342918.jpg";
+				imgLink[n] = "tzgg6/tpxw4/81936.htm";
+				var vTitle='相约晨曦之二';
+				if (vTitle.length>25)
+				vTitle=vTitle.substring(0,15)+"...";
+				imgName[n] = vTitle;
+				n++;
+																imgUrl[n] = "images/content/2017-02/20170228141104214107.jpg";
+				imgLink[n] = "tzgg6/tpxw4/81932.htm";
+				var vTitle='相约晨曦之三';
+				if (vTitle.length>25)
+				vTitle=vTitle.substring(0,15)+"...";
+				imgName[n] = vTitle;
+				n++;
+																imgUrl[n] = "images/content/2017-02/20170228141207614353.jpg";
+				imgLink[n] = "tzgg6/tpxw4/118254.htm";
+				var vTitle='相约晨曦之四';
+				if (vTitle.length>25)
+				vTitle=vTitle.substring(0,15)+"...";
+				imgName[n] = vTitle;
+				n++;
+								
+											
+				var texts = "";
+				var links = "";
+				var pics = "";
+				var count=1;
+				for(var h=1; h<n; h++) {
+				if (count>6)
+				break;
+				if ((imgUrl[h] !="") && (imgLink[h] !="") && (imgUrl[h].indexOf(".jpg") > 0)){
+					if (imgName[h].length > 20)
+					imgName[h] = imgName[h].substring(0, 20) + "...";
+					texts += imgName[h] + "|";
+					links += imgLink[h] + "|";
+					pics += imgUrl[h] + "|";
+					count++;
+					}
+				}
+				texts = texts.substring(0, texts.length-1);
+				links = links.substring(0, links.length-1);
+				pics = pics.substring(0, pics.length-1);
+				var focus_width=500
+				var focus_height=240
+				var text_height=20
+				var swf_height = focus_height+text_height
+				document.write('<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0" width="'+ focus_width +'" height="'+ swf_height +'">');
+				
+document.write('<param name="allowScriptAccess" value="sameDomain"><param name="movie" value="images/focus.swf"><param name="quality" value="high"> <param name="bgcolor" value= "#FFFFFF"> <param name="wmode" value="transparent"> ');				
+				document.write('<param name="menu" value="false"><param name=wmode value="opaque">');
+				
+				document.write('<param name="FlashVars" value="pics='+pics+'&links='+links+'&texts='+texts+'&borderwidth='+focus_width+'&borderheight='+focus_height+'&textheight='+text_height+'">');
+				
+				document.write('<embed src="images/focus.swf" wmode="opaque"  FlashVars="pics='+pics+'&links='+links+'&texts='+texts+'&borderwidth='+focus_width+'&borderheight='+focus_height+'&textheight='+text_height+'" menu="false" wmode="transparent" quality="high" width="'+ focus_width +'" height="'+ swf_height +'" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />'); document.write('</object>'); 
+</SCRIPT>
+  </div>
+  <!--幻灯片结束 -->
+  <!--通知公告开始 -->
+  <div id="xinwenzhongxin">
+    <div class="xwzx">
+      <div class="classtitle"><span style="FLOAT: right"><a class="classmore" href="tzgg6/index.htm">more </a></span><a class="classtitle1" href="tzgg6/index.htm">通知公告</a><span class="subtitle1">Notice</span> </div>
+      <div class="classline"> </div>
+      <div>
+        <div id="andyscroll">
+          <div id="scrollmessage">
+            <table width="100%" cellpadding="0" cellspacing="0">
+              <tbody>
+			                  <tr>
+                  <td width="10" valign="top" class=""><img src="images/Article_ontop9.gif" alt="固顶文章"></td>
+                  <td class="">
+				  <!--[<a class="alists" href="http://xsc.btbu.edu.cn/Article/ShowClass.asp?ClassID=102">学校通知</a>]-->
+				  <a class="alists" href="tzgg6/xxtz/128431.htm" title="关于对推荐获得2016－2017学年“戎耀奖学金”学生名单的公示" target="_self">            关于对推荐获得2016－2017学年“戎耀奖学金”学生名单的公... 
+    </a></td>
+                  <td align="right" class="" width="40">10-19</td>
+                </tr>
+				                <tr>
+                  <td width="10" valign="top" class=""><img src="images/Article_ontop9.gif" alt="固顶文章"></td>
+                  <td class="">
+				  <!--[<a class="alists" href="http://xsc.btbu.edu.cn/Article/ShowClass.asp?ClassID=102">学校通知</a>]-->
+				  <a class="alists" href="tzgg6/xxtz/128238.htm" title="关于组织本科学生参观“砥砺奋进的五年”大型成就展览的通知" target="_self">            关于组织本科学生参观“砥砺奋进的五年”大型成就展览的通知 
+    </a></td>
+                  <td align="right" class="" width="40">10-17</td>
+                </tr>
+				                <tr>
+                  <td width="10" valign="top" class=""><img src="images/Article_ontop9.gif" alt="固顶文章"></td>
+                  <td class="">
+				  <!--[<a class="alists" href="http://xsc.btbu.edu.cn/Article/ShowClass.asp?ClassID=102">学校通知</a>]-->
+				  <a class="alists" href="tzgg6/xxtz/127777.htm" title="关于开展2017级致知学堂活动的通知" target="_self">            关于开展2017级致知学堂活动的通知 
+    </a></td>
+                  <td align="right" class="" width="40">10-10</td>
+                </tr>
+				                <tr>
+                  <td width="10" valign="top" class=""><img src="images/Article_ontop9.gif" alt="固顶文章"></td>
+                  <td class="">
+				  <!--[<a class="alists" href="http://xsc.btbu.edu.cn/Article/ShowClass.asp?ClassID=102">学校通知</a>]-->
+				  <a class="alists" href="tzgg6/xxtz/127746.htm" title="关于评选2016-2017年度退伍大学生士兵“戎耀奖学金”的通知" target="_self">            关于评选2016-2017年度退伍大学生士兵“戎耀奖学金”的通... 
+    </a></td>
+                  <td align="right" class="" width="40">10-09</td>
+                </tr>
+				                <tr></tr>
+              </tbody>
+            </table>
+          </div>
+          <div id="scrollmessage">
+            <table width="100%" cellpadding="0" cellspacing="0">
+              <tbody>
+			                  <tr>
+                  <td width="10" valign="top" class=""><img src="images/Article_ontop9.gif" alt="固顶文章"></td>
+                  <td class="">
+				  <!--[<a class="alists" href="http://xsc.btbu.edu.cn/Article/ShowClass.asp?ClassID=102">学校通知</a>]-->
+				  <a class="alists" href="tzgg6/xxtz/126419.htm" title="关于组织2017级本科生《形势与政策》课网络教学的通知" target="_self">            关于组织2017级本科生《形势与政策》课网络教学的通知 
+    </a></td>
+                  <td align="right" class="" width="40">09-07</td>
+                </tr>
+				                <tr>
+                  <td width="10" valign="top" class=""><img src="images/Article_ontop9.gif" alt="固顶文章"></td>
+                  <td class="">
+				  <!--[<a class="alists" href="http://xsc.btbu.edu.cn/Article/ShowClass.asp?ClassID=102">学校通知</a>]-->
+				  <a class="alists" href="tzgg6/xxtz/126472.htm" title="关于开设2017-2018-1学期大学生心理健康视频课的通知" target="_self">            关于开设2017-2018-1学期大学生心理健康视频课的通知 
+    </a></td>
+                  <td align="right" class="" width="40">09-06</td>
+                </tr>
+				                <tr>
+                  <td width="10" valign="top" class=""><img src="images/Article_ontop9.gif" alt="固顶文章"></td>
+                  <td class="">
+				  <!--[<a class="alists" href="http://xsc.btbu.edu.cn/Article/ShowClass.asp?ClassID=102">学校通知</a>]-->
+				  <a class="alists" href="tzgg6/xxtz/126404.htm" title="关于开展2017级新生心理普查的通知" target="_self">            关于开展2017级新生心理普查的通知 
+    </a></td>
+                  <td align="right" class="" width="40">09-05</td>
+                </tr>
+				                <tr>
+                  <td width="10" valign="top" class=""><img src="images/Article_ontop9.gif" alt="固顶文章"></td>
+                  <td class="">
+				  <!--[<a class="alists" href="http://xsc.btbu.edu.cn/Article/ShowClass.asp?ClassID=102">学校通知</a>]-->
+				  <a class="alists" href="tzgg6/xxtz/126367.htm" title="关于开展2017年度秋季学期学生思想动态调查工作的通知" target="_self">            关于开展2017年度秋季学期学生思想动态调查工作的通知 
+    </a></td>
+                  <td align="right" class="" width="40">09-04</td>
+                </tr>
+				                <tr></tr>
+              </tbody>
+            </table>
+          </div>
+<br/><br/>
+        </div>
+      </div>
+      <!-- 以下是javascript代码 -->
+      <script type="text/javascript">
+<!--
+var stopscroll = false;
+var scrollElem = document.getElementById("andyscroll");
+var marqueesHeight = scrollElem.style.height;
+scrollElem.onmouseover = new Function('stopscroll = true');
+scrollElem.onmouseout  = new Function('stopscroll = false');
+var preTop = 0;
+var currentTop = 0;
+var stoptime = 0;
+var leftElem = document.getElementById("scrollmessage"); 
+scrollElem.appendChild(leftElem.cloneNode(true));
+init_srolltext();
+function init_srolltext(){
+	scrollElem.scrollTop = 0;
+	setInterval('scrollUp()', 60);//的面的这个参数25, 是确定滚动速度的, 数值越小, 速度越快
+}
+function scrollUp(){
+	if(stopscroll) return;
+	currentTop += 2; //设为1, 可以实现间歇式的滚动; 设为2, 则是连续滚动
+	if(currentTop == 19) {
+		stoptime += 1;
+		currentTop -= 1;
+		if(stoptime == 180) {
+			currentTop = 0;
+			stoptime = 0;
+		}
+	}else{
+		preTop = scrollElem.scrollTop;
+		scrollElem.scrollTop += 1;
+		if(preTop == scrollElem.scrollTop){
+			scrollElem.scrollTop = 0;
+			scrollElem.scrollTop += 1;
+		}
+	}
+}
+//-->
+</script>
+      <!--滚动结束 -->
+    </div>
+  </div>
+</div>
+<!--通知公告结束 -->
+<div class="clearboth"> </div>
+<div class="Pubwidth1 margin1 dividers"></div>
+<!--中间三栏内容开始 -->
+<div style="CLEAR: both" class="Pubwidth1 margin1">
+  <table border="0" cellspacing="0" cellpadding="0" width="1000" align="center">
+    <tbody>
+      <tr>
+        <td valign="top" width="333" align="left"><!--规章制度开始 -->
+          <div class="bankuaiwrap">
+            <div class="bankuaicon">
+              
+              <div>
+                <!--文件总览开始 -->
+                <!--标签开始 -->
+                <div id="con">
+                  <ul id="tags">
+                    <li><a href="zdgd/sjwj/index.htm" onmouseover="selectTag(&#39;tagContent0&#39;,this)">上级文件</a> </li>
+                    <li class="selectTag"><a href="zdgd/xxfw/index.htm" onmouseover="selectTag(&#39;tagContent1&#39;,this)">学校发文</a> </li>
+                    <li><a href="zdgd/xgfw/index.htm" onmouseover="selectTag(&#39;tagContent2&#39;,this)">学工发文</a> </li>
+                  </ul>
+                  <div id="tagContent">
+                    <div class="tagContent" id="tagContent0">
+                      <!--1 -->
+                      <!--内容开始 -->
+                      <table width="100%" cellpadding="0" cellspacing="0">
+                        <tbody>
+						                          <tr>
+                            <td width="10" valign="top" class=""><img src="images/Article_common9.gif" alt="普通文章"></td>
+                            <td class=""><a class="alists2" href="zdgd/sjwj/81927.htm" title="关于印发《北京工商大学大学生参军入伍工作实施方案》的通知（校发【2015】24号）" target="_self">            关于印发《北京工商大学大学生参军入伍工... 
+    </a></td>
+                            <td align="right" class="" width="40">06-15</td>
+                          </tr>
+						                            <tr>
+                            <td width="10" valign="top" class=""><img src="images/Article_common9.gif" alt="普通文章"></td>
+                            <td class=""><a class="alists2" href="zdgd/sjwj/80404.htm" title="关于开展2011年北京高校红色“1＋1”活动的通知" target="_self">            关于开展2011年北京高校红色“1＋1... 
+    </a></td>
+                            <td align="right" class="" width="40">08-19</td>
+                          </tr>
+						                            <tr></tr>
+                        </tbody>
+                      </table>
+                      <!--内容结束 -->
+                      <!--1 -->
+                    </div>
+                    <div class="tagContent selectTag" id="tagContent1">
+                      <!--2 -->
+                      <!--内容开始 -->
+                      <table width="100%" cellpadding="0" cellspacing="0">
+                        <tbody>
+                                                   <tr>
+                            <td width="10" valign="top" class=""><img src="images/Article_common9.gif" alt="普通文章"></td>
+                            <td class=""><a class="alists2" href="zdgd/xxfw/128866.htm" title="关于印发《北京工商大学学生德、智、体综合测评规定》的通知" target="_self">            关于印发《北京工商大学学生德、智、体综... 
+    </a></td>
+                            <td align="right" class="" width="40">10-26</td>
+                          </tr>
+						                            <tr>
+                            <td width="10" valign="top" class=""><img src="images/Article_common9.gif" alt="普通文章"></td>
+                            <td class=""><a class="alists2" href="zdgd/xxfw/128864.htm" title="关于印发《北京工商大学学生行为规范》的通知" target="_self">            关于印发《北京工商大学学生行为规范》的... 
+    </a></td>
+                            <td align="right" class="" width="40">10-26</td>
+                          </tr>
+						                            <tr>
+                            <td width="10" valign="top" class=""><img src="images/Article_common9.gif" alt="普通文章"></td>
+                            <td class=""><a class="alists2" href="zdgd/xxfw/128862.htm" title="关于印发《北京工商大学关于学生违纪处分程序的若干规定》的通知" target="_self">            关于印发《北京工商大学关于学生违纪处分... 
+    </a></td>
+                            <td align="right" class="" width="40">10-26</td>
+                          </tr>
+						                            <tr>
+                            <td width="10" valign="top" class=""><img src="images/Article_common9.gif" alt="普通文章"></td>
+                            <td class=""><a class="alists2" href="zdgd/xxfw/128859.htm" title="关于印发《北京工商大学学生违纪处分管理规定》的通知" target="_self">            关于印发《北京工商大学学生违纪处分管理... 
+    </a></td>
+                            <td align="right" class="" width="40">10-26</td>
+                          </tr>
+						                            <tr>
+                            <td width="10" valign="top" class=""><img src="images/Article_common9.gif" alt="普通文章"></td>
+                            <td class=""><a class="alists2" href="zdgd/xxfw/128858.htm" title="关于印发《北京工商大学优秀毕业生评选细则》的通知" target="_self">            关于印发《北京工商大学优秀毕业生评选细... 
+    </a></td>
+                            <td align="right" class="" width="40">10-26</td>
+                          </tr>
+						                            <tr>
+                            <td width="10" valign="top" class=""><img src="images/Article_common9.gif" alt="普通文章"></td>
+                            <td class=""><a class="alists2" href="zdgd/xxfw/128857.htm" title="关于印发《北京工商大学本科生奖学金实施办法》的通知" target="_self">            关于印发《北京工商大学本科生奖学金实施... 
+    </a></td>
+                            <td align="right" class="" width="40">10-26</td>
+                          </tr>
+						                            <tr>
+                            <td width="10" valign="top" class=""><img src="images/Article_common9.gif" alt="普通文章"></td>
+                            <td class=""><a class="alists2" href="zdgd/xxfw/128856.htm" title="关于印发《北京工商大学学生奖励管理办法》的通知" target="_self">            关于印发《北京工商大学学生奖励管理办法... 
+    </a></td>
+                            <td align="right" class="" width="40">10-26</td>
+                          </tr>
+						                            <tr>
+                            <td width="10" valign="top" class=""><img src="images/Article_common9.gif" alt="普通文章"></td>
+                            <td class=""><a class="alists2" href="zdgd/xxfw/128855.htm" title="关于印发《北京工商大学关于表彰二○一七届本科优秀毕业生的决定》的通知" target="_self">            关于印发《北京工商大学关于表彰二○一七... 
+    </a></td>
+                            <td align="right" class="" width="40">10-26</td>
+                          </tr>
+						                            <tr></tr>
+                        </tbody>
+                      </table>
+                      <!--内容结束 -->
+                      <!--2 -->
+                    </div>
+                    <div class="tagContent" id="tagContent2">
+                      <!--3 -->
+                      <!--内容开始 -->
+                      <table width="100%" cellpadding="0" cellspacing="0">
+                        <tbody>
+                                                     <tr>
+                            <td width="10" valign="top" class=""><img src="images/Article_common9.gif" alt="普通文章"></td>
+                            <td class=""><a class="alists2" href="zdgd/xgfw/126598.htm" title="[2017]-11关于在2017级本科生中开展“相约晨曦”晨读晨练活动的通知" target="_self">            [2017]-11关于在2017级本科... 
+    </a></td>
+                            <td align="right" class="" width="40">09-08</td>
+                          </tr>
+						                            <tr>
+                            <td width="10" valign="top" class=""><img src="images/Article_common9.gif" alt="普通文章"></td>
+                            <td class=""><a class="alists2" href="zdgd/xgfw/119031.htm" title="北工商学字【2017】8号关于印发2017年学风建设“春风行动”实施方案的通知" target="_self">            北工商学字【2017】8号关于印发20... 
+    </a></td>
+                            <td align="right" class="" width="40">03-13</td>
+                          </tr>
+						                            <tr>
+                            <td width="10" valign="top" class=""><img src="images/Article_common9.gif" alt="普通文章"></td>
+                            <td class=""><a class="alists2" href="zdgd/xgfw/117777.htm" title="北工商学字【2016】31关于表彰二○一六级本科生军训优秀学员的决定" target="_self">            北工商学字【2016】31关于表彰二○... 
+    </a></td>
+                            <td align="right" class="" width="40">02-20</td>
+                          </tr>
+						                            <tr>
+                            <td width="10" valign="top" class=""><img src="images/Article_common9.gif" alt="普通文章"></td>
+                            <td class=""><a class="alists2" href="zdgd/xgfw/117775.htm" title="北工商学字【2016】30号关于表彰二○一五级本科生军训优秀学员的决定" target="_self">            北工商学字【2016】30号关于表彰二... 
+    </a></td>
+                            <td align="right" class="" width="40">02-20</td>
+                          </tr>
+						                            <tr>
+                            <td width="10" valign="top" class=""><img src="images/Article_common9.gif" alt="普通文章"></td>
+                            <td class=""><a class="alists2" href="zdgd/xgfw/117770.htm" title="北工商学字【2016】28号北京工商大学学生创新创业扶持资金实施办法" target="_self">            北工商学字【2016】28号北京工商大... 
+    </a></td>
+                            <td align="right" class="" width="40">02-20</td>
+                          </tr>
+						                            <tr>
+                            <td width="10" valign="top" class=""><img src="images/Article_common9.gif" alt="普通文章"></td>
+                            <td class=""><a class="alists2" href="zdgd/xgfw/117768.htm" title="北工商学字【2016】13号关于表彰2016年“优秀学生党支部”、“优秀学生党员”的决定" target="_self">            北工商学字【2016】13号关于表彰2... 
+    </a></td>
+                            <td align="right" class="" width="40">02-20</td>
+                          </tr>
+						                            <tr>
+                            <td width="10" valign="top" class=""><img src="images/Article_common9.gif" alt="普通文章"></td>
+                            <td class=""><a class="alists2" href="zdgd/xgfw/117767.htm" title="北工商学字【2016】12号关于开展2016年5.25心理健康节系列活动的通知" target="_self">            北工商学字【2016】12号关于开展2... 
+    </a></td>
+                            <td align="right" class="" width="40">02-20</td>
+                          </tr>
+						                            <tr>
+                            <td width="10" valign="top" class=""><img src="images/Article_common9.gif" alt="普通文章"></td>
+                            <td class=""><a class="alists2" href="zdgd/xgfw/117766.htm" title="北工商学字【2016】9号北京工商大学2016年毕业生就业工作实施方案" target="_self">            北工商学字【2016】9号北京工商大学... 
+    </a></td>
+                            <td align="right" class="" width="40">02-20</td>
+                          </tr>
+						                            <tr></tr>
+                        </tbody>
+                      </table>
+                      <!--内容结束 -->
+                      <!--3 -->
+                    </div>
+                  </div>
+                </div>
+                <p>
+                  <script type="text/javascript">
+function selectTag(showContent,selfObj){
+	// 操作标签
+	var tag = document.getElementById("tags").getElementsByTagName("li");
+	var taglength = tag.length;
+	for(i=0; i<taglength; i++){
+		tag[i].className = "";
+	}
+	selfObj.parentNode.className = "selectTag";
+	// 操作内容
+	for(i=0; j=document.getElementById("tagContent"+i); i++){
+		j.style.display = "none";
+	}
+	document.getElementById(showContent).style.display = "block";
+	
+	
+}
+</script>
+                </p>
+                <!--标签结束 -->
+                <!--文件总览结束 -->
+              </div>
+            </div>
+          </div>
+          <!--会员登陆结束 --></td>
+        <td valign="top" width="333" align="left">&nbsp;</td>
+        <td valign="top" width="333" align="left"><!--学工报道开始 -->
+          <div class="bankuaiwrap bgcolor2">
+            <div class="bankuaicon">
+              <div class="classtitle"><a class="classtitle1" href="xgbd/index.htm">&nbsp; 学工报道</a><span class="subtitle1">Reports</span> </div>
+              <div class="classline"> </div>
+              <div>
+                <!--内容开始 -->
+                <table width="100%" cellpadding="0" cellspacing="5" border="0" align="center">
+                  <tbody>
+                    <tr valign="top">
+					                      <td align="center"><a class="" href="xgbd/xgbd1/128832.htm" title="学校举办“戎耀奖学金”评审会暨学习贯彻习近平总书记重要回信精神座谈会 " target="_blank">
+					  <img class="pic1" src="" width="80" height="60" border="0"></a></td>
+					                        <td align="center"><a class="" href="xgbd/xgbd1/128831.htm" title="学校举办2017年秋季学期学生党员发展对象暨本科生党支部书记培训班开班仪式 " target="_blank">
+					  <img class="pic1" src="" width="80" height="60" border="0"></a></td>
+					                        <td align="center"><a class="" href="xgbd/xgbd1/128828.htm" title="【致知学堂】刁琳琳解读京津冀一体化战略政策 韩旭东分析中印军事关系发展走向 " target="_blank">
+					  <img class="pic1" src="" width="80" height="60" border="0"></a></td>
+					                      </tr>
+                  </tbody>
+                </table>
+                <table width="100%" cellpadding="0" cellspacing="0">
+                  <tbody>
+				                      <tr>
+                      <td width="10" valign="top" class=""><img src="images/Article_common9.gif" alt="普通文章"></td>
+                      <td class=""><a class="alists2" href="xgbd/xgbd1/128832.htm" title="学校举办“戎耀奖学金”评审会暨学习贯彻习近平总书记重要回信精神座谈会 " target="_self">            学校举办“戎耀奖学金”评审会暨学习贯彻习... 
+    </a></td>
+                      <td align="right" class="" width="40">10-26</td>
+                    </tr>
+					                    <tr>
+                      <td width="10" valign="top" class=""><img src="images/Article_common9.gif" alt="普通文章"></td>
+                      <td class=""><a class="alists2" href="xgbd/xgbd1/128831.htm" title="学校举办2017年秋季学期学生党员发展对象暨本科生党支部书记培训班开班仪式 " target="_self">            学校举办2017年秋季学期学生党员发展对... 
+    </a></td>
+                      <td align="right" class="" width="40">10-26</td>
+                    </tr>
+					                    <tr>
+                      <td width="10" valign="top" class=""><img src="images/Article_common9.gif" alt="普通文章"></td>
+                      <td class=""><a class="alists2" href="xgbd/xgbd1/128828.htm" title="【致知学堂】刁琳琳解读京津冀一体化战略政策 韩旭东分析中印军事关系发展走向 " target="_self">            【致知学堂】刁琳琳解读京津冀一体化战略政... 
+    </a></td>
+                      <td align="right" class="" width="40">10-26</td>
+                    </tr>
+					                    <tr>
+                      <td width="10" valign="top" class=""><img src="images/Article_common9.gif" alt="普通文章"></td>
+                      <td class=""><a class="alists2" href="xgbd/xgbd1/128825.htm" title="【致知学堂】校长孙宝国院士与大一新生谈“自觉与成才” " target="_self">            【致知学堂】校长孙宝国院士与大一新生谈“... 
+    </a></td>
+                      <td align="right" class="" width="40">10-26</td>
+                    </tr>
+					                    <tr>
+                      <td width="10" valign="top" class=""><img src="images/Article_common9.gif" alt="普通文章"></td>
+                      <td class=""><a class="alists2" href="xgbd/xgbd1/128823.htm" title="【致知学堂】赵敏俐谈《诗经》与诗教 " target="_self">            【致知学堂】赵敏俐谈《诗经》与诗教  
+    </a></td>
+                      <td align="right" class="" width="40">10-26</td>
+                    </tr>
+					                    
+                    <tr></tr>
+                  </tbody>
+                </table>
+                <!--内容结束 -->
+              </div>
+            </div>
+          </div>
+          <!--学工报道结束 --></td>
+        <td valign="top" width="333" align="left">&nbsp;</td>
+        <td valign="top" width="334" align="left"><!--院系传真开始 -->
+          <div class="bankuaiwrap bgcolor3">
+            <div class="bankuaicon">
+              <div class="classtitle"><a class="classtitle1" href="xwgk/index.htm">&nbsp; 学务公开</a><span class="subtitle1">Express</span> </div>
+              <div class="classline"> </div>
+              <div>
+                <!--内容开始 -->
+                <table width="100%" cellpadding="0" cellspacing="5" border="0" align="center">
+                  <tbody>
+                    <tr valign="top">
+                                           <td align="center"><a class="" href="xwgk/128879.htm" title="关于对推荐获得2016－2017学年国家励志奖学金学生进行公示的公告 " target="_blank">
+					  <img class="pic1" src="" width="80" height="60" border="0"></a></td>
+					                        <td align="center"><a class="" href="xwgk/128876.htm" title="2017年“爱心成就未来”助学项目获奖学生公示的公告" target="_blank">
+					  <img class="pic1" src="" width="80" height="60" border="0"></a></td>
+					                        <td align="center"><a class="" href="xwgk/128875.htm" title="关于2016－2017学年勤工助学先进集体、先进个人评选结果" target="_blank">
+					  <img class="pic1" src="" width="80" height="60" border="0"></a></td>
+					                      </tr>
+                  </tbody>
+                </table>
+                <table width="100%" cellpadding="0" cellspacing="0">
+                  <tbody>
+                                         <tr>
+                      <td width="10" valign="top" class=""><img src="images/Article_common9.gif" alt="普通文章"></td>
+                      <td class=""><a class="alists2" href="xwgk/128879.htm" title="关于对推荐获得2016－2017学年国家励志奖学金学生进行公示的公告 " target="_self">            关于对推荐获得2016－2017学年国家... 
+    </a></td>
+                      <td align="right" class="" width="40">10-26</td>
+                    </tr>
+					                    <tr>
+                      <td width="10" valign="top" class=""><img src="images/Article_common9.gif" alt="普通文章"></td>
+                      <td class=""><a class="alists2" href="xwgk/128876.htm" title="2017年“爱心成就未来”助学项目获奖学生公示的公告" target="_self">            2017年“爱心成就未来”助学项目获奖学... 
+    </a></td>
+                      <td align="right" class="" width="40">10-26</td>
+                    </tr>
+					                    <tr>
+                      <td width="10" valign="top" class=""><img src="images/Article_common9.gif" alt="普通文章"></td>
+                      <td class=""><a class="alists2" href="xwgk/128875.htm" title="关于2016－2017学年勤工助学先进集体、先进个人评选结果" target="_self">            关于2016－2017学年勤工助学先进集... 
+    </a></td>
+                      <td align="right" class="" width="40">10-26</td>
+                    </tr>
+					                    <tr>
+                      <td width="10" valign="top" class=""><img src="images/Article_common9.gif" alt="普通文章"></td>
+                      <td class=""><a class="alists2" href="xwgk/128874.htm" title="关于对推荐获得2016－2017学年国家奖学金学生进行公示的公告" target="_self">            关于对推荐获得2016－2017学年国家... 
+    </a></td>
+                      <td align="right" class="" width="40">10-26</td>
+                    </tr>
+					                    <tr>
+                      <td width="10" valign="top" class=""><img src="images/Article_common9.gif" alt="普通文章"></td>
+                      <td class=""><a class="alists2" href="http://xsc.btbu.edu.cn/nwxx/126155.htm" title="2017年秋季良乡校区值班表" target="_self">            2017年秋季良乡校区值班表 
+    </a></td>
+                      <td align="right" class="" width="40">09-01</td>
+                    </tr>
+					                    <tr></tr>
+                  </tbody>
+                </table>
+                <!--内容结束 -->
+              </div>
+            </div>
+          </div>
+          <!--院系传真结束 --></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div class="Pubwidth1">
+  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+    <tbody>
+      <tr>
+        <td height="80" align="center" valign="middle"><script language="javascript" src="images/11.js"></script>
+          <div id="BannerZoneAD_Div11" style="visibility:visible; z-index:1; width:180px; height:50px;"><a href="sxjy/zthd/pjpy/index.htm" target="_blank" title=""><img name="AD_8" id="AD_8" src="images/2011041622423819.jpg" width="180px" height="50px" border="0"></a></div></td>
+        <td align="center" valign="middle"><script language="javascript" src="images/12.js"></script>
+          <div id="BannerZoneAD_Div12" style="visibility:visible; z-index:1; width:180px; height:50px;"><a href="gfjy/jxdt/index.htm" target="_blank" title="军训动态"><img name="AD_5" id="AD_5" src="images/2011041103361087.jpg" width="180px" height="50px" border="0"></a></div></td>
+        <td align="center" valign="middle"><script language="javascript" src="images/13.js"></script>
+          <div id="BannerZoneAD_Div13" style="visibility:visible; z-index:1; width:180px; height:50px;"><a href="http://belief.btbu.edu.cn" target="_blank" title="党员在线学习"><img name="AD_6" id="AD_6" src="images/2011041103371140.jpg" width="180px" height="50px" border="0"></a></div></td>
+        <td align="center" valign="middle"><script language="javascript" src="images/14.js"></script>
+          <div id="BannerZoneAD_Div14" style="visibility:visible; z-index:1; width:180px; height:50px;"><a href="http://xlzx.btbu.edu.cn/" target="_blank" title="心理健康"><img name="AD_7" id="AD_7" src="images/2011041103373144.jpg" width="180px" height="50px" border="0"></a></div></td>
+        <td align="center" valign="middle"><script language="javascript" src="images/15.js"></script>
+          <div id="BannerZoneAD_Div15" style="visibility:visible; z-index:1; width:180px; height:50px;"><img name="AD_4" id="AD_4" src="images/2011041103352257.jpg" width="180px" height="50px" border="0"></div></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<!--中间三栏内容结束 -->
+<div class="clearboth"> </div>
+<div class="Pubwidth1 margin1 dividers"></div>
+<!--第二排开始 -->
+<div style="CLEAR: both" class="Pubwidth1 margin1  bgindex">
+  <table border="0" cellspacing="0" cellpadding="0" width="1000" align="center">
+    <tbody>
+      <tr>
+        <td valign="top" width="790" align="left"><!--快捷链接开始 -->
+          <div class="bankuaiwrap1">
+            <div class="bankuaicon1">
+              <div class="classtitle"><a class="classtitle1" href="http://xsc.btbu.edu.cn/#">&nbsp; 服务指南</a><span class="subtitle1">Guide</span> </div>
+              <div class="classline"> </div>
+              <div class="icoimage"><a title="办事指南" href="zlxz/bszn/index.htm" target="_blank"><img border="0" src="images/index_ico_2.gif" width="183" height="45"></a>
+			  <a title="网络课堂" href="http://btbu.pobaicn.com/" target="_blank"><img border="0" src="images/index_ico_1.gif" width="183" height="45"></a>
+			  <a title="在线调查" href="http://xsc.btbu.edu.cn/Survey/index.asp" target="_parent"><img border="0" src="images/index_ico_3.gif" width="183" height="45"></a>
+			  <a title="在线考试" href="http://test.xiaohuozi.net/"><img border="0" src="images/index_ico_4.gif" width="183" height="45"></a> </div>
+            </div>
+          </div>
+          <!--快捷链接结束 --></td>
+        <td valign="top" width="200" align="left"><!--问答列表开始 -->
+        <div class="bankuaiwrap2">
+			<div class="bankuaicon2">
+              <div class="askright">
+                	<a class="classtitle1" href="javascript:;void(0);">在线问答</a>
+                    <span class="subtitle1">Ask online</span>
+                    <div class="classline"> </div>
+                    <div class="Ask_online_link">
+                    	<a href="http://www.btbu.edu.cn/cms/modules/onlineLeaveMessageList.jsp?typeID=19"><img border="0" src="images/Ask_online_link.gif" width="183" height="45"></a>
+                    </div>
+              </div>
+            </div>
+        </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<!--第二排结束 -->
+<!--友情链接开始 -->
+<div class="Pubwidth1 margin1 dividers"></div>
+<div style="CLEAR: both" class="Pubwidth1">
+  <div style="CLEAR: both" class="bankuaiwrap3">
+    <div class="bankuaicon3">
+      <div class="classtitle"><span style="FLOAT: right"><a class="classmore" href="yqlj/index.htm">more </a></span><a class="classtitle1" href="yqlj/index.htm">&nbsp; 友情链接</a><span class="subtitle1">Links</span> </div>
+      <div class="classline"></div>
+      <div class="flinks">
+        <table width="100%" cellspacing="5">
+          <tbody>
+            <tr align="center" class="tdbg">
+			              <td width="88">
+			  <a href="http://www.bjzbb.com/" title="首都征兵网" target="_blank" ><img src="images/content/2015-07/20150724104015267873.jpg" width="88" height="31" border="0"></a>
+			  </td>
+			              
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+<!--友情链接结束 -->
+<!--尾部开始 -->
+<div style="TEXT-ALIGN: center; CLEAR: both" class="Pubwidth1">
+  <div class="clearboth"></div>
+  <div class="xscbottom2 Pubwidth1">
+    
+<div class="xscbottom2">
+      <!--CopyRight &copy; Student Affairs Department & Beijing Technology and Business University 2011<BR> -->
+      地址：学生活动中心二层（良乡校区）学生工作 81353241 81353246  地址：阜成路校区东区1号楼二层（学生工作 68984522）、东区礼堂（就业、招聘 68986006） <br>
+	<!--总访问量：<script 
+src="/cms/modules/channelVisitLog.jsp?parentID=3839"></script>位  &nbsp;&nbsp;
+	今日访问量：<script src="/cms/modules/todaychannelVisitLog.jsp?parentID=3839"></script></script>位-->&nbsp;&nbsp;
+</div>
+
+<script src="/cms/web/writeLog.jsp?channelID=3839"></script>
+    <!--<div><A href="/"><IMG src="/Skin/2011/images/bottomlogo.gif" width=173 height=38 border="0"></A></div> --></div>
+</div>
+<!--尾部结束 -->
+</body></html>

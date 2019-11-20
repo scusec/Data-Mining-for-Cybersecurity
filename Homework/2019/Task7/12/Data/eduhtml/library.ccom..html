@@ -1,0 +1,465 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>中央音乐学院图书馆</title>
+<link href="./images/20111114_tongyong.css" rel="stylesheet" type="text/css" />
+<link href="./images/20111114_main.css" rel="stylesheet" type="text/css" />
+<style type="text/css">body {margin:0; padding:0; font-family: "微软雅黑"} div.top_menu{font-family: "微软雅黑"} .white{font-family: "微软雅黑";} li.newxbt{font-family: "微软雅黑";}</style>
+</head>
+
+<body>
+ <div class="zhengti">
+<SCRIPT language=javascript> 
+//初始化 
+var def="1"; 
+function mover(object){ 
+//主菜单 
+var mm=document.getElementById("m_"+object); 
+mm.className="m_li_a"; 
+//初始主菜单先隐藏效果 
+if(def!=0){ 
+var mdef=document.getElementById("m_"+def); 
+mdef.className="m_li"; 
+} 
+//子菜单 
+var ss=document.getElementById("s_"+object); 
+ss.style.display="block"; 
+//初始子菜单先隐藏效果 
+if(def!=0){ 
+var sdef=document.getElementById("s_"+def); 
+sdef.style.display="none"; 
+} 
+} 
+function mout(object){ 
+//主菜单 
+var mm=document.getElementById("m_"+object); 
+mm.className="m_li"; 
+//初始主菜单还原效果 
+if(def!=0){ 
+var mdef=document.getElementById("m_"+def); 
+mdef.className="m_li_a"; 
+} 
+//子菜单 
+var ss=document.getElementById("s_"+object); 
+ss.style.display="none"; 
+//初始子菜单还原效果 
+if(def!=0){ 
+var sdef=document.getElementById("s_"+def); 
+sdef.style.display="block"; 
+} 
+} 
+</SCRIPT>
+
+<div class="top00">
+<div class="qb1">
+<h1> <div class="logo"><!--<a href="">--><a href="http://library.ccom.edu.cn/"><img src="./images/20111114_logo.png" width="269" height="120" /></a></div>
+<div class="wz white" style='font-size: 12px; line-height: 14px;'>图书馆开馆时间（寒暑假除外）<br />
+一层乐谱部、五层参考文献阅览室：周一至周五8:30-17:30<br/>
+二层书刊部、三层音像部：周一至周四8:00-22:00，周五8:00-20:00，<br/>周六10:00-20:00，周日10:00-22:00<br/>
+(周一至周五17:30后及周六日全天不办理借还)<br/>
+<font style="color:#ffecc3">
+
+<script language='JavaScript'>
+   <!--
+   tmpDate = new Date();
+   date = tmpDate.getDate();
+   month = tmpDate.getMonth() + 1 ;
+   year = tmpDate.getYear();
+   year = tmpDate.getYear();
+   year = year>1900 ? year : year+1900;
+   document.write(year + "年" + month + "月" + date + "日&nbsp;&nbsp;");
+   
+   myArray = new Array(6);
+   myArray[0] = "星期日"
+   myArray[1] = "星期一"
+   myArray[2] = "星期二"
+   myArray[3] = "星期三"
+   myArray[4] = "星期四"
+   myArray[5] = "星期五"
+   myArray[6] = "星期六"
+   weekday = tmpDate.getDay();
+   document.write(myArray[weekday])
+   //-->
+</script>
+          
+          <script type="text/javascript">
+var LunarDaysOfMonth = new Array
+(
+0xd4a8, 0xd4a0, 0xda50, 0x5aa8, 0x56a0, 0xaad8, 0x25d0, 0x92d0, 0xc958, 0xa950, // 2001-2010 
+0xb4a0, 0xb550, 0xb550, 0x55a8, 0x4ba0, 0xa5b0, 0x52b8, 0x52b0, 0xa930, 0x74a8, // 2011-2020 
+0x6aa0, 0xad50, 0x4da8, 0x4b60, 0x9570, 0xa4e0, 0xd260, 0xe930, 0xd530, 0x5aa0, // 2021-2030 
+0x6b50, 0x96d0, 0x4ae8, 0x4ad0, 0xa4d0, 0xd258, 0xd250, 0xd520, 0xdaa0, 0xb5a0, // 2031-2040 
+0x56d0, 0x4ad8, 0x49b0, 0xa4b8, 0xa4b0, 0xaa50, 0xb528, 0x6d20, 0xada0, 0x55b0 // 2041-2050 
+);
+
+// 数组LunarLeapYear存放农历2001年到2050年闰月的月份，如没有则为0，从高到低，每字节存两年 
+var LunarLeapYear = new Array
+(
+0x40, 0x02, 0x07, 0x00, 0x50, // 2001-2010 
+0x04, 0x09, 0x00, 0x60, 0x04, // 2011-2020 
+0x00, 0x20, 0x60, 0x05, 0x00, // 2021-2030 
+0x30, 0xb0, 0x06, 0x00, 0x50, // 2031-2040 
+0x02, 0x07, 0x00, 0x50, 0x03 // 2041-2050 
+);
+
+
+// 返回农历iLunarYear年的闰月月份，如没有则返回0 
+function GetLeapMonth(iLunarYear)
+{ 
+var Leap = LunarLeapYear[(iLunarYear - 2001) >> 1];
+return (((iLunarYear - 2001) & 1) == 0) ? (Leap >> 4) : (Leap & 0x0f);
+}
+
+// 返回农历iLunarYer年iLunarMonth月的天数，结果是一个长整数
+// 如果iLunarMonth不是闰月， 高字为0，低字为该月的天数
+// 如果iLunarMonth是闰月， 高字为后一个月的天数，低字为前一个月的天数
+function LunarMonthDays(iLunarYear, iLunarMonth)
+{ 
+var High;
+var Low;
+var Bit;
+
+High = 0;
+Low = 29;
+Bit = 16 - iLunarMonth;
+if ((iLunarMonth > GetLeapMonth(iLunarYear)) && (GetLeapMonth(iLunarYear) > 0)) Bit--;
+if ((LunarDaysOfMonth[iLunarYear - 2001] & (1 << Bit)) > 0) Low++;
+if (iLunarMonth == GetLeapMonth(iLunarYear))
+{
+High = ((LunarDaysOfMonth[iLunarYear - 2001] & (1 << (Bit-1))) > 0) ? 30 : 29;
+}
+
+return Low + (High << 16);
+}
+
+// 返回农历iLunarYear年的总天数
+function LunarYearDays(iLunarYear)
+{ 
+var Days;
+var tmp;
+
+Days = 0;
+for (var i=1; i <= 12; i++)
+{
+tmp = LunarMonthDays(iLunarYear, i);
+Days = Days + ((tmp >> 16) & 0xffff); //取高位 
+Days = Days + (tmp & 0xffff); //取低位 
+}
+
+return Days;
+}
+
+// 将农历iLunarYear年格式化成天干地支记年法表示的字符串 
+/*function FormatLunarYear(iLunarYear)
+{ 
+var szText1 = new String("甲乙丙丁戊己庚辛壬癸");
+var szText2 = new String("子丑寅卯辰巳午未申酉戌亥");
+var strYear;
+
+strYear = szText1.substr((iLunarYear - 4) % 10, 1);
+strYear = strYear + szText2.substr((iLunarYear - 4) % 12, 1);
+
+return strYear + "年";
+}
+*/
+// 将农历iLunarMonth月格式化成农历表示的字符串
+function FormatLunarMonth(iLunarMonth)
+{ 
+var szText = new String("正二三四五六七八九十");
+var strMonth;
+
+if (iLunarMonth <= 10)
+{
+strMonth = szText.substr(iLunarMonth - 1, 1);
+}
+else if (iLunarMonth == 11) strMonth = "十一";
+else strMonth = "十二";
+
+return strMonth + "月";
+}
+
+// 将农历iLunarDay日格式化成农历表示的字符串
+function FormatLunarDay(iLunarDay)
+{ 
+var szText1 = new String("初十廿三");
+var szText2 = new String("一二三四五六七八九十");
+var strDay;
+if ((iLunarDay != 20) && (iLunarDay != 30))
+{
+strDay = szText1.substr((iLunarDay - 1) / 10, 1) + szText2.substr((iLunarDay - 1) % 10, 1);
+}
+else if (iLunarDay != 20)
+{
+strDay = szText1.substr(iLunarDay / 10, 1) + "十";
+}
+else
+{
+strDay = "二十";
+}
+
+return strDay;
+}
+
+// 将公历日期转换为农历日期，返回农历表示的字符串
+function GetLunarDateString(SolarDate)
+{
+var tmp;
+var iLunarYear;
+var iLunarMonth;
+var iLunarDay;
+var Leap = false;
+var MinMilli = 1000 * 60;
+var HrMilli = MinMilli * 60;
+var DyMilli = HrMilli * 24;
+
+// 从2001年1月1日算起，给定的公历日期已经过去的天数
+// 11323是1970年1月1日到2001年1月1日之间的天数，因为Date是从1970年1月1日作为起点的
+var iSpanDays = Math.round(SolarDate.getTime() / DyMilli) - 11323;
+
+// 公历2001年1月24日为农历2001年正月初一，差23天
+if (iSpanDays < 23)
+{
+iYear = 2000;
+iLunarMonth = 12;
+iLunarDay = iSpanDays + 7;
+}
+else
+{
+// 从农历2001年正月初一算起 
+iSpanDays = iSpanDays - 23;
+iLunarYear = 2001;
+iLunarMonth = 1;
+iLunarDay = 1;
+
+// 计算农历年 
+tmp = LunarYearDays(iLunarYear);
+while (iSpanDays >= tmp)
+{
+iSpanDays -= tmp;
+iLunarYear++;
+tmp = LunarYearDays(iLunarYear);
+}
+
+// 计算农历月 
+tmp = LunarMonthDays(iLunarYear, iLunarMonth) & 0xffff; //取低字
+while (iSpanDays >= tmp)
+{
+iSpanDays -= tmp;
+if (iLunarMonth == GetLeapMonth(iLunarYear)) // 该年该月闰月
+{
+tmp = LunarMonthDays(iLunarYear, iLunarMonth) >> 16; //取高字
+if (iSpanDays < tmp)
+{
+Leap = (tmp > 0) ? true : false; // 闰月的后个月？
+break;
+}
+iSpanDays = iSpanDays - tmp;
+}
+
+iLunarMonth++;
+tmp = LunarMonthDays(iLunarYear,iLunarMonth) & 0xffff; //取低字
+}
+
+// 计算农历日 
+iLunarDay += iSpanDays;
+}
+
+return FormatLunarYear(iLunarYear) + (Leap ? "闰" : "") + FormatLunarMonth(iLunarMonth) + FormatLunarDay(iLunarDay);
+}
+
+var today= new Date(); // 今天是2004-3-5
+var str = GetLunarDateString(today);
+document.write("农历"+str);
+
+</script>
+   <strong><a href="mailto:librarian@ccom.edu.cn">读者建议</a></strong></font> </div>
+<div class="dt"><img src="./images/20111114_flashtu.gif" width="309" height="120" /></div></h1>
+
+<h2><DIV id=menu>
+<!--登陆注册区 -->
+    <div class="subLogin">
+      <iframe src="http://catalog.library.ccom.edu.cn/Login.aspx" frameborder="0" width="330px" style="width:330px;height:26px;margin-top:0" scrolling="no" height="26px" allowtransparency="true"></iframe>
+    </div>
+<UL>
+<LI class=m_li id=m_1><A href="./">首页</A> </LI>
+<!--<LI class=m_li id=m_1><A href="http://library.ccom.edu.cn/">首页</A> </LI>-->
+<LI class=m_li id=m_2 onmouseover=mover(2); onmouseout=mout(2);><A href="./bggk/gcjs/">本馆概况</A> </LI>
+
+<LI class=m_li id=m_4 onmouseover=mover(4); onmouseout=mout(4);><A href="./news/">新闻公告</A> </LI>
+
+<LI class=m_li id=m_5 onmouseover=mover(5); onmouseout=mout(5);><A href="http://catalog.library.ccom.edu.cn/NewBookList.aspx">最新资源</A> </LI>
+
+<LI class=m_li id=m_6 onmouseover=mover(6); onmouseout=mout(6);><A href="http://catalog.library.ccom.edu.cn/ReaderLogin.aspx">采购推荐</A> </LI>
+
+<LI class=m_li id=m_7 onmouseover=mover(7); onmouseout=mout(7);><A href="http://jp.library.ccom.edu.cn:8088/gdiss/diss">学位论文服务系统</A> </LI>
+
+<LI class=m_li id=m_8 onmouseover=mover(8); onmouseout=mout(8);><A href="http://catalog.library.ccom.edu.cn/ReaderLogin.aspx">我的图书馆</A> </LI>
+
+<LI class=m_li id=m_9 onmouseover=mover(9); onmouseout=mout(9);><A href="./help/">帮助</A> </LI>
+</UL></DIV>
+<DIV style="height:23px; float:left">
+<UL class=smenu>
+<LI class=s_li_a id=s_1 style="PADDING-LEFT:330px">欢迎光临中央音乐学院图书馆！<a href="/dzzy">浏览本馆提供的各类电子资源，请点此处</a></LI>
+<LI class=s_li id=s_2 onmouseover=mover(2); style="PADDING-LEFT: 380px" onmouseout=mout(2);><A href="./bggk/gcjs/">本馆介绍</A> | <A href="./bggk/fwbm/">服务部门</A> | <A href="./bggk/jygz/">借阅规则</A> | <A href="./bggk/lxwm/">联系我们</A></LI>
+<!--<LI class=s_li id=s_3 onmouseover=mover(3); style="PADDING-LEFT: 430px" onmouseout=mout(3);><A href="#">馆藏介绍</A> | <A href="#">借阅规则</A> | <A href="#">联系我们</A></LI>-->
+<LI class=s_li id=s_4 onmouseover=mover(4); style="PADDING-LEFT: 5800px" onmouseout=mout(4);><A href="./news/">新闻中心</A> </LI>
+<LI class=s_li id=s_5 onmouseover=mover(5); style="PADDING-LEFT: 580px" onmouseout=mout(5);><A href="./dzzy/">电子资源</A> | <A href="http://catalog.library.ccom.edu.cn/NewBookList.aspx">馆藏资源</A></LI>
+<!--
+<LI class=s_li id=s_6 onmouseover=mover(6); style="PADDING-LEFT:610px" onmouseout=mout(6);><A href="#">馆藏介绍</A> | <A href="#">借阅规则</A> | <A href="#">联系我们</A></LI>
+<LI class=s_li id=s_7 onmouseover=mover(7); style="PADDING-LEFT:650px" onmouseout=mout(7);><A href="#">馆藏介绍</A> | <A href="#">借阅规则</A> | <A href="#">联系我们</A></LI>
+<LI class=s_li id=s_8 onmouseover=mover(8); style="PADDING-LEFT:680px" onmouseout=mout(8);><A href="#">馆藏介绍</A> | <A href="#">借阅规则</A> | <A href="#">联系我们</A></LI>
+-->
+</UL></DIV>  </h2>
+
+</div></div>
+
+<div class="middle00"><!--中间开始--><div class="qb2">
+<h1>
+<div class="left">
+<div class="topbt" style="height:26px; padding-top:5px; color:#fff; background:url(./images/20111114_left_menu1.gif) repeat-x 0 0;"><A href="/dzzy/" style="color:#fff" ><span style="padding-left:20px;">本馆电子资源总览</span></a></div>
+
+<div class="topbt" style="height:26px; padding-top:5px; color:#fff; background:url(./images/20111114_left_menu1.gif) repeat-x 0 0;"><span style="padding-left:20px;">数据库分类浏览</span></div>
+
+<div class="top_menu">
+<ul>
+
+<li><a href="#" style="_padding-left:10px;padding-left:20px!important;">自建资源</a>
+<ul>
+
+<li><A href="http://lib.video.ccom.edu.cn:8080/" title="" target="_blank">馆藏音视频资料网上点播</a></li>
+
+<li><A href="http://dlib.ccom.edu.cn/masicong/index.htm" title="本内容需安装&lt;a href=&quot;http://ssreader.chaoxing.com/&quot;&gt;最新版超星阅读器&lt;/a&gt;方可使用。" target="_blank">马思聪专题乐谱专著全文库</a></li>
+
+<li><A href="http://dlib.ccom.edu.cn/gangqin/index.asp" title="本内容需安装&lt;a href=&quot;http://ssreader.chaoxing.com/&quot;&gt;最新版超星阅读器&lt;/a&gt;方可使用。" target="_blank">馆藏钢琴乐谱全文阅览</a></li>
+
+<li><A href="http://dlib.ccom.edu.cn/music/index.asp" title="本内容需安装&lt;a href=&quot;http://ssreader.chaoxing.com/&quot;&gt;最新版超星阅读器&lt;/a&gt;方可使用。" target="_blank">馆藏音乐社科书籍全文阅览</a></li>
+
+<li><A href="http://dlib.ccom.edu.cn/qikan/index.asp" title="本内容需安装&lt;a href=&quot;http://ssreader.chaoxing.com/&quot;&gt;最新版超星阅读器&lt;/a&gt;方可使用。" target="_blank">馆藏音乐核心期刊全文阅览</a></li>
+
+<li><A href="http://dlib.ccom.edu.cn:8080/was40/search?channelid=56665" title="" target="_blank">馆藏音乐期刊全文</a></li>
+
+<li><A href="http://dlib.ccom.edu.cn:8080/was40/search?channelid=5085" title="" target="_blank">馆藏中国解放前音乐期刊全文</a></li>
+
+<li><A href="http://dlib.ccom.edu.cn:918/WEB/index_1.htm" title="" target="_blank">中国歌曲全文库</a></li>
+
+</ul>
+</li>
+
+<li><a href="#" style="_padding-left:10px;padding-left:20px!important;">外购资源</a>
+<ul>
+
+<li><A href="http://www.oxfordmusiconline.com/subscriber/" title="【牛津音乐在线】前身是【格罗夫音乐在线(Grove online)】。读者进入【牛津音乐在线】即可访问并搜索专业、权威的音乐参考资源。本资源还包括2011年修订的的《牛津音乐之友》，其中关于作曲家、演奏家、指挥家、乐器与记谱的文章8000余篇；2006年修订的牛津音乐字典第二版，则专门为大学生和公众补充了普及性文章。" target="_blank">牛津音乐在线(格罗夫)</a></li>
+
+<li><A href="http://search.proquest.com/arts?accountid=10253" title="【国际音乐期刊数据库（IIMP）】可访问来自20多个国家的450多种国际音乐期刊的索引和文摘，以及140多种音乐期刊的全文。该数据库收录的大部分文章是1996 年以来的期刊文献，包含有一系列出版物的当期全文文章；另有大约20万条索引记录来自过期刊物，多是从刊物的第一期开始收录，部分甚至可追溯至 1874 年。" target="_blank">ProQuest国际音乐期刊全文库(IIMPFT)</a></li>
+
+<li><A href="http://search.proquest.com/dissertations?accountid=10253" title="【国际人文社科硕博学位论文库（PQDT）】是世界上收录最全的、有关人文和社会科学的学位论文库，它被视为当今学术研究中十分重要的参考信息源之一。该数据库每篇博士论文摘要约350 字，硕士论文摘要约150 字。数据库的论文收录起始于1861年，1997年以后的论文提供前24页的全文阅览。" target="_blank">ProQuest人文社科硕博学位论文库(PQDT)</a></li>
+
+<li><A href="http://www.jstor.org/" title="JSTOR全名为Journal Storage，最初是一个对过期期刊进行数字化的非营利性机构，于1995年成立。该机构有鉴于过期期刊对于图书馆所造成经费及存放空间等压力，有计划地建立核心学术性过期期刊的数字化存档。先以发展为以哲学、历史等人文社会学科主题为中心，兼及一般科学性主题共十几个领域的代表性学术期刊以及电子书全文库，提供从创刊号到最近3至5年前过刊的PDF全文。有些过刊的回溯年代早至1665年。" target="_blank">JSTOR西文过刊全文库</a></li>
+
+<li><A href="http://search.ebscohost.com/" title="Elton B Stephens Company（简称EBSCO)是全球最大的集成数据库出版公司。本主页可访问它旗下的音乐类数据库：（1）The Music Index音乐索引数据库；（2）Index to Printed Music (Ancient Greek Times-present )学术乐谱文献索摘数据库；（3）RISM Series A/II: Music Manuscripts after 1600 (1600-1850)古典音乐手稿数据库（1700~1900）；（4）RILM Abstracts of Music Literature(1967-present) RILM国际音乐文献资料大全—音乐文献文摘数据库；（5） RILM Retrospective Abstracts of Music Literature RILM国际音乐文献资料大全—音乐文摘回溯数据库；（6）RIPM Retrospective Index toMusic Periodicals (1800-1950) RIPM音乐期刊索引回溯数据库。" target="_blank">EBSCO 系列音乐参考资料</a></li>
+
+<li><A href="./dzzy/ckzy/201509/t20150916_30284.html" title="ASP是美国Alexander Street出版社推出的音乐类数字化典藏。其在线音视频欣赏部分包括：古典音乐图书馆、当代世界音乐、Smithsonian全球音乐图书馆、美国歌曲集/非裔美国人歌曲集、爵士乐图书馆、歌剧视频；音乐文献参考资料部分包括：古典音乐参考资料图书馆、Garland世界音乐百科全书、古典音乐乐谱图书馆、非洲裔美国人音乐参考资料集。" target="_blank">ASP世界音乐在线和歌剧视频</a></li>
+
+<li><A href="http://www.cnki.net/" title="中国知网(CNKI)，也称 中国知识资源总库，是国内权威的大型学术信息资源数据库。从本页面可访问其中几个重要的综合性数据库——中国期刊全文数据库、中国博士学位论文数据库、中国优秀硕士学位论文全文数据库、中国重要报纸全文数据库和中国重要会议文论全文数据库。每个数据库都提供初级检索、高级检索和专业检索三种检索功能，尤以高级检索最常用。" target="_blank">中国知网(CNKI)</a></li>
+
+<li><A href="http://www.duxiu.com/" title="【读秀知识搜索】是由海量文献资源组成的庞大知识库系统，其以300万种中文图书资源为基础，为用户提供深入的书目和全文检索、文献试读、以及通过Email获取文献资源的方式，是一个综合的大型知识搜索及文献服务平台。" target="_blank">读秀知识搜索</a></li>
+
+<li><A href="http://lib.cqvip.com/" title="【维普期刊数据库】包含12000 多种期刊、3000 多万篇全文文献，检索方式包括“基本检索”、“传统检索”、“高级检索”等，以及“任意字段”、“题名或关键字”等多类型字段检索。读者可以在检索结果页面直接下载全文，并且可以通过点击“被引期刊论文”、“被引学位论文”等标签，查看与检索词相关的引文信息。" target="_blank">维普期刊</a></li>
+
+<li><A href="http://www.kuke.com/" title="【库客数字音乐图书馆】拥有Naxos、Marco Polo、Countdown、SONY MUSIC等国际著名唱片公司的授权，同时整合了中国唱片总公司等国内唱片公司的资源。它的收藏不仅包括西方古典音乐，还囊括了中国、美国、西班牙、日本、瑞士、南非、伊朗等多个国家独具特色的民族民间音乐，同时也收录了爵士音乐、电影音乐、新世纪音乐等多种音乐类型。数据库汇聚了从中世纪至今的9000多位艺术家、100多种乐器的音乐作品，总计约50万首曲目。" target="_blank">库客数字音乐图书馆</a></li>
+
+<li><A href="http://www.blyun.com/" title="在读秀知识搜索平台上推出的【百链云数据搜索】为读者提供了查找外文学术资源的新途径，读者可以搜索到大量外文文献资源，如电子期刊、电子书以及各种形式的外文数据，不管是纸本馆藏还是电子资源，查找外文文献将变得更加轻松、便捷、有效。" target="_blank">百链云数据搜索</a></li>
+
+<li><A href="http://yalevideo.library.ccom.edu.cn" title="【雅乐国际教育视频库】系统是一套功能强大的多媒体视频点播系统，共有6大子库——国学经典、华夏文明、知识精品、对话世界、百科集萃、影视鉴赏，共200多个系列、3000多个节目、10000多个视频内容。" target="_blank">雅乐国际教育视频库</a></li>
+
+<li><A href="./dzzy/ckzy/201509/t20150914_30213.html" title="" target="_blank">馆订外文音乐期刊全文阅读</a></li>
+
+</ul>
+</li>
+
+<li><a href="#" style="_padding-left:10px;padding-left:20px!important;">友情链接</a>
+<ul>
+
+<li><A href="http://www.wsbgt.com/" title="《网上报告厅》数据库的资源涉及哲学、文学、历史学、艺术学等12大学科门类。资源形式多样化：分为报告、访谈、纪录片三种形式；包括中文、英语两种语言。由著名院士、专业研究者等国内外专家学者主讲。" target="_blank">爱迪科森网上报告厅</a></li>
+
+<li><A href="http://www.wxuexi.cn" title="《天天微学习中心》采用“微课”这种新的在线资源模式，辅助目标用户在校期间进行课堂外的学术科研、学科教学领域的通识教育和“理论&amp;实践相结合”的职业技能提升的视频数据库平台。目前已对我校开通使用。试用网址：http://www.wxuexi.cn或登录图书馆主页相关页面进行访问。<br/>《天天微学习中心》主题突出、短小精悍，将1500余门微课按微分类、微主题和两个维度进行体系划分。系统可根据读者的身份属性和观看记录，自动推送匹配课程，增加用户学习粘性。<br/>一站式检索系统<br/>根据检索词，系统会根据具体检索结果的媒体形态区分栏目所属，实现资源的统一检索。<br/>提供客户端资源上传和展示入口<br/>支持本校内和校际视频上传；个人用户可个性化组建微课，自主进行资源分类和内容编辑。" target="_blank">天天微学习中心</a></li>
+
+<li><A href="http://www.dachengdata.com" title="《大成故纸堆数据库》是专门辑录古旧文献的资料库，内容涵盖晚清和民国期刊、古籍文献、民国图书、古地方志、申报、顺天时报和中共党史期刊，聚老旧文献于一体，史料珍贵，检索方便，可直接查阅及下载，是研究近代人文科学和社会科学不可或缺的数据库工具之一。" target="_blank">大成故纸堆数据库</a></li>
+
+<li><A href="http://imslp.org/wiki/%E9%A6%96%E9%A1%B5" title="全球最大的公有领域乐谱库" target="_blank">IMSLP/Petrucci 音乐图书馆</a></li>
+
+<li><A href="http://www.cnbksy.cn/" title="" target="_blank">晚清与民国时期期刊全文数据库</a></li>
+
+<li><A href="http://www.ncpa-classic.com/" title="" target="_blank">国家大剧院古典音乐频道</a></li>
+
+<li><A href="http://lib.fifedu.com" title="外研社《FiF外语学习资源库》为我馆读者开通了试用服务，该数据库整合了国内外海量优质的外语学习资源，在基础性学习资源库基础上增加了阅享电子书模块和口语训练营，可为读者提供一站式的在线学习体验。&lt;br/&gt;<br/>使用方式：&lt;br/&gt;<br/>（1）学院IP许可范围内无需注册，可直接访问资源库。&lt;br/&gt;<br/>（2）为了更好地记录个人学习轨迹，使用个人中心、收藏、足迹等功能，建议大家注册属于自己的个人账号信息。在学校注册成功的账号，在校外也可以正常使用。此外，读者还可以用该数据库提供的公共账号登录学习。用户名：IloveEnglish   密码：123456<br/>" target="_blank">FiF外语学习资源库</a></li>
+
+<li><A href="http://www.eighteenthcenturydrama.amdigital.co.uk/" title="数据库由英国AMD出版社推出，收录的文献内容提供了独特的视角，向人们展示18世纪剧院文化与社会生活的方方面面，时间覆盖1737-1824年，收录内容主要源自美国亨廷顿图书馆（Huntington Library）的约翰•拉蓬特收藏（John Larpent Collection），资料还来自皇家乔治国王剧院（Georgian Theatre Royal，Richmond）、V&amp;A（维多利亚和阿尔伯特博物馆）、加里克会图书馆（Garrick Club Library）、伦敦大学（University of London）和大英图书馆（British Library）等机构的收藏。" target="_blank">18世纪戏剧（Eighteenth Century Drama）</a></li>
+
+</ul>
+</li>
+
+</ul>
+</div>
+
+<div class="topbt" ><a href="http://202.112.118.41/"><img src="./images/20111114_left_menu9.gif" width="185" height="49" /></a></div>
+<!--
+<div class="topbt" ><a href="http://zhuanti.ccom.edu.cn/artforum/"><img src="./images/left_menu8.gif" width="185" height="49" /></a></div>
+<div class="topbt" ><a href="#"><img src="./images/left_menu10.gif" width="185" height="49" /></a></div>
+<div class="topbt" ><a href="#"><img src="./images/left_menu11.gif" width="185" height="49" /></a></div>
+-->
+</div>
+
+
+<div class="right">
+<!--[if !IE]>检索开始<![endif]-->
+<div style="width:780px; height:auto; float:left; ">
+<div class="jiansuoq">
+<!--<iframe src="http://211.71.160.46/Search.aspx" frameborder="0" width="545" height="465" scrolling="no" style="margin-left:-5px"></iframe>-->
+<iframe src="http://catalog.library.ccom.edu.cn/Search.aspx" frameborder="0" width="545" height="465" scrolling="no" style="margin-left:-5px"></iframe>
+</div>
+
+<!--[if !IE]>检索结束<![endif]-->
+
+<div class="right2">
+
+<div style="width:200px; height:auto; float:left;margin-left:25px"><div class="topbt"><span>新闻公告</span><span class="newmore" style="float:right"><a href="./news/">更多》</a></span></div>
+<ul>
+
+<li class="newxbt"><a href="./news/201303/t20130323_23330.htm" title='<FONT color=#ff0000><STRONG>各书库、阅览室排架规则</STRONG></FONT>'><FONT color=#ff0000><STRONG>各书库、阅览室排架...</a></li>
+
+<li class="newxbt"><a href="./news/201511/t20151120_38772.htm" title='《华艺数位台湾学术文献数据库》开通试用'>《华艺数位台湾学术文献数据库》开通试用</a></li>
+
+<li class="newxbt"><a href="./news/201710/t20171011_45068.htm" title='RILM系列数据库试用通知'>RILM系列数据库试用通知</a></li>
+
+<li class="newxbt"><a href="./news/201710/t20171011_45067.htm" title='BLOOMSBURY POPULAR MUSIC 开通试用'>BLOOMSBURY POPULAR MUSIC 开通试用</a></li>
+
+<li class="newxbt"><a href="./news/201706/t20170615_43805.htm" title='万方数据知识服务平台及视频数据库试用通知'>万方数据知识服务平台及视频数据库试用通知</a></li>
+
+<li class="newxbt"><a href="./news/201705/t20170519_43607.htm" title='Alexander Street 出版社最新试用'>Alexander Street 出版社最新试用</a></li>
+
+</ul>
+</div>
+
+
+<!--<iframe src="http://211.71.160.46/NewTopbooksByList.aspx" frameborder="0" width="230" height="250" scrolling="no"></iframe>-->
+<iframe src="http://catalog.library.ccom.edu.cn/NewTopbooksByList.aspx" frameborder="0" width="230" height="250" scrolling="no"></iframe>
+</div>
+</div>
+
+</div>
+</h1>
+</div><!--[if !IE]>中间结束<![endif]--></div>
+<div class="bottom00"><!--底部开始--><div class="qb3">
+<h1 class="white"> <a href="http://www.ccom.edu.cn">中央音乐学院</a>  |  <a href="http://www.cnki.net/">中国知网</a>  | <a href="http://www.oxfordmusiconline.com">牛津音乐在线(格罗夫)</a> | <a href="./dzzy/">更多电子资源...</a> <!-- <a href="http://library.ccom.edu.cn/old">图书馆旧版首页</a>  |  <a href="http://211.71.174.16/netopac">附中图书馆</a> |  <a href="http://bjgxtgw.ruc.edu.cn/index.html">北京高校图工委</a> |  <a href="http://forum.ccom.edu.cn/library/">大学图书馆读者咨询论坛</a> --></h1>
+<h2><span><a href=""><img src="./images/lib_qrcode.jpg" width="66" height="66" /></a></span>
+<span class="white">Copyright (c) 2011-2016 Central Conservatory of Music Library, All Rights Reserved<br/>
+版权所有 中央音乐学院图书馆   <a href="./bggk/lxwm/">联系我们</a>   <a href="mailto:librarian@ccom.edu.cn">馆长信箱</a><br/>
+地址：中国北京市西城区鲍家街43号  邮箱：tsgbgs@ccom.edu.cn  电话：010-66425710</span></h2>
+</div><!--底部结束--></div>
+<!--[if !IE]>整体开始<![endif]--></div>
+
+
+</body>
+</html>

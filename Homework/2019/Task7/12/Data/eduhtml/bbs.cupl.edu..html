@@ -1,0 +1,770 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gbk" />
+<title>论坛 -  法大BBS -  Powered by Discuz!</title>
+
+<meta name="keywords" content="论坛" />
+<meta name="description" content="论坛 ,法大BBS" />
+<meta name="generator" content="Discuz! X3.2" />
+<meta name="author" content="Discuz! Team and Comsenz UI Team" />
+<meta name="copyright" content="2001-2013 Comsenz Inc." />
+<meta name="MSSmartTagsPreventParsing" content="True" />
+<meta http-equiv="MSThemeCompatible" content="Yes" />
+<base href="http://bbs.cupl.edu.cn/" /><link rel="stylesheet" type="text/css" href="data/cache/style_1_common.css?GRY" /><link rel="stylesheet" type="text/css" href="data/cache/style_1_forum_index.css?GRY" /><link rel="stylesheet" id="css_extstyle" type="text/css" href="./template/default/style/t2/style.css" /><script type="text/javascript">var STYLEID = '1', STATICURL = 'static/', IMGDIR = 'static/image/common', VERHASH = 'GRY', charset = 'gbk', discuz_uid = '0', cookiepre = 'eWhv_2132_', cookiedomain = '', cookiepath = '/', showusercard = '1', attackevasive = '0', disallowfloat = '', creditnotice = '3|贡献度|点,5|威望|点,6|金币|块', defaultstyle = './template/default/style/t2', REPORTURL = 'aHR0cDovL2Jicy5jdXBsLmVkdS5jbi9mb3J1bS5waHA=', SITEURL = 'http://bbs.cupl.edu.cn/', JSPATH = 'static/js/', CSSPATH = 'data/cache/style_', DYNAMICURL = '';</script>
+<script src="static/js/common.js?GRY" type="text/javascript"></script>
+<meta name="application-name" content="法大BBS" />
+<meta name="msapplication-tooltip" content="法大BBS" />
+<meta name="msapplication-task" content="name=论坛;action-uri=http://bbs.cupl.edu.cn/forum.php;icon-uri=http://bbs.cupl.edu.cn/static/image/common/bbs.ico" />
+<meta name="msapplication-task" content="name=群组;action-uri=http://bbs.cupl.edu.cn/group.php;icon-uri=http://bbs.cupl.edu.cn/static/image/common/group.ico" /><meta name="msapplication-task" content="name=;action-uri=http://bbs.cupl.edu.cn/home.php;icon-uri=http://bbs.cupl.edu.cn/static/image/common/home.ico" /><link rel="archives" title="法大BBS" href="http://bbs.cupl.edu.cn/archiver/" />
+<script src="static/js/forum.js?GRY" type="text/javascript"></script>
+</head>
+
+<body id="nv_forum" class="pg_index" onkeydown="if(event.keyCode==27) return false;">
+<div id="append_parent"></div><div id="ajaxwaitid"></div>
+<div id="toptb" class="cl">
+<div class="wp">
+<div class="z"><a href="javascript:;"  onclick="setHomepage('http://bbs.cupl.edu.cn/');">设为首页</a><a href="http://bbs.cupl.edu.cn/"  onclick="addFavorite(this.href, '法大BBS');return false;">收藏本站</a><script type="text/javascript">var _speedMark = new Date();</script></div>
+<div class="y">
+<a id="switchblind" href="javascript:;" onclick="toggleBlind(this)" title="开启辅助访问" class="switchblind">开启辅助访问</a>
+<a href="javascript:;" id="switchwidth" onclick="widthauto(this)" title="切换到宽版" class="switchwidth">切换到宽版</a>
+</div>
+</div>
+</div>
+
+<div id="qmenu_menu" class="p_pop blk" style="display: none;">
+<div class="ptm pbw hm">
+请 <a href="javascript:;" class="xi2" onclick="lsSubmit()"><strong>登录</strong></a> 后使用快捷导航<br />没有帐号？<a href="member.php?mod=9xYpZFyVmDSeQ2aT" class="xi2 xw1">注册指南</a>
+</div>
+<div id="fjump_menu" class="btda"></div></div><div id="hd">
+<div class="wp">
+<div class="hdc cl"><h2><a href="./" title="法大BBS"><img src="static/image/common/logo.png" alt="法大BBS" border="0" /></a></h2><script src="static/js/logging.js?GRY" type="text/javascript"></script>
+<form method="post" autocomplete="off" id="lsform" action="member.php?mod=logging&amp;action=login&amp;loginsubmit=yes&amp;infloat=yes&amp;lssubmit=yes" onsubmit="pwmd5('ls_password');return lsSubmit();">
+<div class="fastlg cl">
+<span id="return_ls" style="display:none"></span>
+<div class="y pns">
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td>
+<span class="ftid">
+<select name="fastloginfield" id="ls_fastloginfield" width="40" tabindex="900">
+<option value="username">用户名</option>
+<option value="email">Email</option>
+</select>
+</span>
+<script type="text/javascript">simulateSelect('ls_fastloginfield')</script>
+</td>
+<td><input type="text" name="username" id="ls_username" autocomplete="off" class="px vm" tabindex="901" /></td>
+<td class="fastlg_l"><label for="ls_cookietime"><input type="checkbox" name="cookietime" id="ls_cookietime" class="pc" value="2592000" tabindex="903" />自动登录</label></td>
+<td>&nbsp;<a href="javascript:;" onclick="showWindow('login', 'member.php?mod=logging&action=login&viewlostpw=1')">找回密码</a></td>
+</tr>
+<tr>
+<td><label for="ls_password" class="z psw_w">密码</label></td>
+<td><input type="password" name="password" id="ls_password" class="px vm" autocomplete="off" tabindex="902" /></td>
+<td class="fastlg_l"><button type="submit" class="pn vm" tabindex="904" style="width: 75px;"><em>登录</em></button></td>
+<td>&nbsp;<a href="member.php?mod=9xYpZFyVmDSeQ2aT" class="xi2 xw1">注册指南</a></td>
+</tr>
+</table>
+<input type="hidden" name="quickforward" value="yes" />
+<input type="hidden" name="handlekey" value="ls" />
+</div>
+</div>
+</form>
+
+<script src="static/js/md5.js?GRY" type="text/javascript" reload="1"></script>
+</div>
+
+<div id="nv">
+<a href="javascript:;" id="qmenu" onmouseover="delayShow(this, function () {showMenu({'ctrlid':'qmenu','pos':'34!','ctrlclass':'a','duration':2});showForummenu();})">快捷导航</a>
+<ul><li class="a" id="mn_forum" onmouseover="showMenu({'ctrlid':this.id,'ctrlclass':'hover','duration':2})"><a href="forum.php" hidefocus="true" title="BBS"  >论坛<span>BBS</span></a></li><li id="mn_N19d8" ><a href="http://www.cupl.edu.cn" hidefocus="true" target="_blank"  >学校首页</a></li><li id="mn_N6a55" ><a href="http://news.cupl.edu.cn" hidefocus="true" target="_blank"  >法大新闻网</a></li><li id="mn_userapp" onmouseover="delayShow(this, function () {showMenu({'ctrlid':'mn_userapp','pos':'43!','ctrlclass':'a','duration':2});showUserApp();})"><a href="userapp.php" hidefocus="true" title="Manyou"  >应用<span>Manyou</span><b class="icon_down"></b></a></li><li id="mn_Nff44" onmouseover="showMenu({'ctrlid':this.id,'ctrlclass':'hover','menuid':'plugin_menu'})"><a href="#" hidefocus="true" title="Plugin"  >插件<span>Plugin</span></a></li><li id="mn_N12a7" ><a href="misc.php?mod=ranklist" hidefocus="true" title="Ranklist"  >排行榜<span>Ranklist</span></a></li></ul>
+</div>
+<ul class="p_pop h_pop" id="plugin_menu" style="display: none">  <li><a href="plugin.php?id=dsu_paulsign:sign" id="mn_plink_sign">每日签到</a></li>
+ </ul>
+<ul class="p_pop h_pop" id="mn_forum_menu" style="display: none"><li><a href="forum.php?gid=51" hidefocus="true" >校务在线</a></li><li><a href="forum.php?gid=1" hidefocus="true" >晓月徜徉</a></li><li><a href="http://bbs.cupl.edu.cn/forum.php?mod=forumdisplay&fid=240" hidefocus="true" >军都漫步</a></li><li><a href="forum.php?gid=12" hidefocus="true" >学术交流</a></li><li><a href="forum.php?gid=21" hidefocus="true" >艺术文化</a></li><li><a href="forum.php?gid=36" hidefocus="true" >知性感性</a></li><li><a href="forum.php?gid=41" hidefocus="true" >电脑技术</a></li><li><a href="forum.php?gid=27" hidefocus="true" >休闲娱乐</a></li><li><a href="forum.php?gid=46" hidefocus="true" >社会信息</a></li></ul><div class="p_pop h_pop" id="mn_userapp_menu" style="display: none"></div><div id="mu" class="cl">
+<ul class="cl " id="snav_mn_userapp" style="display:none">
+</ul>
+</div><div id="scbar" class="cl">
+<form id="scbar_form" method="post" autocomplete="off" onsubmit="searchFocus($('scbar_txt'))" action="search.php?searchsubmit=yes" target="_blank">
+<input type="hidden" name="mod" id="scbar_mod" value="search" />
+<input type="hidden" name="formhash" value="c5f9ec85" />
+<input type="hidden" name="srchtype" value="title" />
+<input type="hidden" name="srhfid" value="" />
+<input type="hidden" name="srhlocality" value="forum::index" />
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="scbar_icon_td"></td>
+<td class="scbar_txt_td"><input type="text" name="srchtxt" id="scbar_txt" value="请输入搜索内容" autocomplete="off" x-webkit-speech speech /></td>
+<td class="scbar_type_td"><a href="javascript:;" id="scbar_type" class="xg1" onclick="showMenu(this.id)" hidefocus="true">搜索</a></td>
+<td class="scbar_btn_td"><button type="submit" name="searchsubmit" id="scbar_btn" sc="1" class="pn pnc" value="true"><strong class="xi2">搜索</strong></button></td>
+<td class="scbar_hot_td">
+<div id="scbar_hot">
+</div>
+</td>
+</tr>
+</table>
+</form>
+</div>
+<ul id="scbar_type_menu" class="p_pop" style="display: none;"><li><a href="javascript:;" rel="forum" class="curtype">帖子</a></li><li><a href="javascript:;" rel="user">用户</a></li></ul>
+<script type="text/javascript">
+initSearchmenu('scbar', '');
+</script>
+</div>
+</div>
+
+
+<div id="wp" class="wp">
+<div id="pt" class="bm cl">
+<div class="y">
+<div id="an">
+<dl class="cl">
+<dt class="z xw1">公告:&nbsp;</dt>
+<dd>
+<div id="anc"><ul id="ancl"><li><span><a href="http://bbs.cupl.edu.cn/forum.php?mod=viewthread&tid=2" target="_blank" class="xi2">注册学生组织公共账号请点击</a></span><em>(13-9-14)</em></li><li><span><a href="http://bbs.cupl.edu.cn/forum.php?mod=viewthread&tid=752512&" target="_blank" class="xi2">关于账户安全的公告</a></span><em>(13-8-29)</em></li><li><span><a href="forum.php?mod=announcement&id=47" target="_blank" class="xi2">请会员们注意管理好个人帐号和密码，保护安全！</a></span><em>(08-4-3)</em></li></ul></div>
+</dd>
+</dl>
+</div>
+<script type="text/javascript">announcement();</script>
+</div>
+<div class="z">
+<a href="./" class="nvhm" title="首页">法大BBS</a><em>&raquo;</em><a href="forum.php">论坛</a></div>
+<div class="z"></div>
+</div>
+
+
+
+<style id="diy_style" type="text/css">#portal_block_9 { border:#ffff99 !important;}#tab24h4Jr { border:medium none !important;}</style>
+
+<div class="wp">
+<!--[diy=diy1]--><div id="diy1" class="area"><div id="frameQ6bjX1" class="frame move-span cl frame-1"><div id="frameQ6bjX1_left" class="column frame-1-c"><div id="frameQ6bjX1_left_temp" class="move-span temp"></div><div id="portal_block_196" class="block move-span"><div id="portal_block_196_content" class="dxb_bc"><div class="module cl slidebox">
+<ul class="slideshow" style="padding-bottom:10px;"><li style="width: 938px; height: 375px;"><a href="http://news.cupl.edu.cn/info/1020/24760.htm" target="_blank"><img src="http://www.cupl.edu.cn/images/jiaren.jpg" width="938" height="375" /></a><span class="title">欢迎你·法大人</span></li></ul>
+</div>
+<script type="text/javascript">
+runslideshow();
+</script></div></div></div></div><div id="framep24Zq3" class="frame move-span cl frame-2-1"><div class="frame-title title"><span class="titletext">..:: 论坛导读 ::..</span><span class="subtitle" style="margin-left:280px;"><a href="portal.php" target="_blank" style="color:rgb(255, 255, 255) !important;"><img src="data/attachment/forum/201403/03/131839z3gpze5iyvep3iaz.gif" class="vm" alt=""/></a></span></div><div id="framep24Zq3_left" class="column frame-2-1-l"><div id="framep24Zq3_left_temp" class="move-span temp"></div><div id="tab24h4Jr" class="frame-tab move-span cl"><div id="tab24h4Jr_title" class="tab-title title column cl" switchtype="mouseover"><div id="portal_block_3" class="cl_block_bm block move-span">
+<DIV class="blocktitle title"><SPAN class=titletext>热门主题</SPAN></DIV><div id="portal_block_3_content" class="dxb_bc"><div class="module cl xl xl1">
+<ol><li><em><a href="home.php?mod=space&uid=50519" target="_blank">huchao210159</a></em><a href="forum.php?mod=viewthread&tid=911368" title="新一健身房跑步机！！！" target="_blank">新一健身房跑步机！！！</a></li><li><em><a href="home.php?mod=space&uid=79375" target="_blank">奔跑的木兰</a></em><a href="forum.php?mod=viewthread&tid=911377" title="一食堂台湾风味排骨面排骨变好少" target="_blank">一食堂台湾风味排骨面排骨变好少</a></li><li><em><a href="home.php?mod=space&uid=0" target="_blank">匿名</a></em><a href="forum.php?mod=viewthread&tid=911374" title="【亲测快一年了 】连上student-1x的方法" target="_blank">【亲测快一年了 】连上student-1x的方法</a></li><li><em><a href="home.php?mod=space&uid=61152" target="_blank">lisary</a></em><a href="forum.php?mod=viewthread&tid=911369" title="财务处 教学助理9月工资什么时候发啊？" target="_blank">财务处 教学助理9月工资什么时候发啊？</a></li></oll>
+</div></div></div><div id="portal_block_5" class="cl_block_bm block move-span"><div class="blocktitle title" style=""><span class="titletext" style="float:;margin-left:px;font-size:;color: !important;">最新主题</span></div><div id="portal_block_5_content" class="dxb_bc"><div class="module cl xl xl1">
+<ol><li><em><a href="home.php?mod=space&uid=74456" target="_blank">you-the-freedom</a></em><a href="forum.php?mod=viewthread&tid=911400" title="出人大2018考研资料全新" target="_blank">出人大2018考研资料全新</a></li><li><em><a href="home.php?mod=space&uid=23170" target="_blank">晚风</a></em><a href="forum.php?mod=viewthread&tid=911399" title="小半年登陆不了，以为bbs废了呢" target="_blank">小半年登陆不了，以为bbs废了呢</a></li><li><em><a href="home.php?mod=space&uid=68956" target="_blank">从新开始</a></em><a href="forum.php?mod=viewthread&tid=911398" title="智慧法大为什么登不上啊" target="_blank">智慧法大为什么登不上啊</a></li><li><em><a href="home.php?mod=space&uid=38278" target="_blank">风雨潇潇</a></em><a href="forum.php?mod=viewthread&tid=911396" title="招聘英语及爱好写作文案" target="_blank">招聘英语及爱好写作文案</a></li><li><em><a href="home.php?mod=space&uid=70342" target="_blank">citrine</a></em><a href="forum.php?mod=viewthread&tid=911395" title="出租家属院两居室" target="_blank">出租家属院两居室</a></li><li><em><a href="home.php?mod=space&uid=67782" target="_blank">sandysue</a></em><a href="forum.php?mod=viewthread&tid=911394" title="兴业证券IPO项目需招一位法律专业男生" target="_blank">兴业证券IPO项目需招一位法律专业男生</a></li><li><em><a href="home.php?mod=space&uid=76664" target="_blank">Fengweishang27</a></em><a href="forum.php?mod=viewthread&tid=911392" title="地铁4号线、10号线角门西附近，走路10分钟以内" target="_blank">地铁4号线、10号线角门西附近，走路10分钟以内</a></li><li><em><a href="home.php?mod=space&uid=52953" target="_blank">2011201011</a></em><a href="forum.php?mod=viewthread&tid=911391" title="兼职来喽 招家教" target="_blank">兼职来喽 招家教</a></li><li><em><a href="home.php?mod=space&uid=59128" target="_blank">海羿</a></em><a href="forum.php?mod=viewthread&tid=911390" title="研院" target="_blank">研院</a></li></oll>
+</div></div></div><div id="portal_block_4" class="cl_block_bm block move-span"><div class="blocktitle title" style=""><span class="titletext" style="float:;margin-left:px;font-size:;color: !important;">最新回复</span></div><div id="portal_block_4_content" class="dxb_bc"><div class="module cl xl xl1">
+<ol><li><em><a href="home.php?mod=space&uid=59128" target="_blank">海羿</a></em><a href="forum.php?mod=viewthread&tid=911390" title="研院" target="_blank">研院</a></li><li><em><a href="home.php?mod=space&uid=74456" target="_blank">you-the-freedom</a></em><a href="forum.php?mod=viewthread&tid=911400" title="出人大2018考研资料全新" target="_blank">出人大2018考研资料全新</a></li><li><em><a href="home.php?mod=space&uid=49329" target="_blank">cinema0</a></em><a href="forum.php?mod=viewthread&tid=866811" title="[链接失效]法理学原理超全资料整理~~！！绝对是干货好嘛！" target="_blank">[链接失效]法理学原理超全资料整理~~！！绝对是干货好</a></li><li><em><a href="home.php?mod=space&uid=23170" target="_blank">晚风</a></em><a href="forum.php?mod=viewthread&tid=911399" title="小半年登陆不了，以为bbs废了呢" target="_blank">小半年登陆不了，以为bbs废了呢</a></li><li><em><a href="home.php?mod=space&uid=54332" target="_blank">148</a></em><a href="forum.php?mod=viewthread&tid=895717" title="毕业师兄四年民法全套笔记免费送，日常学习、考前突击，喜欢的统统抱走" target="_blank">毕业师兄四年民法全套笔记免费送，日常学习、考前突击</a></li><li><em><a href="home.php?mod=space&uid=38278" target="_blank">风雨潇潇</a></em><a href="forum.php?mod=viewthread&tid=911396" title="招聘英语及爱好写作文案" target="_blank">招聘英语及爱好写作文案</a></li><li><em><a href="home.php?mod=space&uid=67782" target="_blank">sandysue</a></em><a href="forum.php?mod=viewthread&tid=911394" title="兴业证券IPO项目需招一位法律专业男生" target="_blank">兴业证券IPO项目需招一位法律专业男生</a></li><li><em><a href="home.php?mod=space&uid=68956" target="_blank">从新开始</a></em><a href="forum.php?mod=viewthread&tid=911398" title="智慧法大为什么登不上啊" target="_blank">智慧法大为什么登不上啊</a></li><li><em><a href="home.php?mod=space&uid=0" target="_blank">匿名</a></em><a href="forum.php?mod=viewthread&tid=911374" title="【亲测快一年了 】连上student-1x的方法" target="_blank">【亲测快一年了 】连上student-1x的方法</a></li><li><em><a href="home.php?mod=space&uid=76664" target="_blank">Fengweishang27</a></em><a href="forum.php?mod=viewthread&tid=911392" title="地铁4号线、10号线角门西附近，走路10分钟以内" target="_blank">地铁4号线、10号线角门西附近，走路10分钟以内</a></li></oll>
+</div></div></div><div id="portal_block_6" class="cl_block_bm block move-span"><div class="blocktitle title" style=""><span class="titletext" style="float:;margin-left:px;font-size:;color: !important;">寻物&amp;招领</span></div><div id="portal_block_6_content" class="dxb_bc"><div class="module cl xld"><dl class="cl">
+	<dt><em class="y xg1 xw0"><a href="home.php?mod=space&uid=82281" target="_blank">七点多的C</a></em><a href="forum.php?mod=viewthread&tid=911320" title="丢失iPhone7白色耳机线一根" target="_blank">丢失iPhone7白色耳机线一根</a></dt>
+	<dd>
+2017年9月10日在研究生院健身房跑步机上遗忘iPhone7白色耳机线一根，请健身房的朋友看
+</dd>
+</dl><dl class="cl">
+	<dt><em class="y xg1 xw0"><a href="home.php?mod=space&uid=36326" target="_blank">后勤服务大厅</a></em><a href="forum.php?mod=viewthread&tid=911122" title="2017.9.12后勤服务大厅 失物招领" target="_blank">2017.9.12后勤服务大厅 失物招领</a></dt>
+	<dd>
+以上失物被人捡到交至后勤服务大厅，请失主携带有效证件前来领取。有认识的相互转
+</dd>
+</dl><dl class="cl">
+	<dt><em class="y xg1 xw0"><a href="home.php?mod=space&uid=82108" target="_blank">火之舞</a></em><a href="forum.php?mod=viewthread&tid=911118" title="失物招领" target="_blank">失物招领</a></dt>
+	<dd>
+9.11晚上19:10分左右，在操场靠近水房的仰卧起坐器材处捡到一个U盘和12元钱，以及一张
+</dd>
+</dl><dl class="cl">
+	<dt><em class="y xg1 xw0"><a href="home.php?mod=space&uid=82784" target="_blank">zyx7320580517</a></em><a href="forum.php?mod=viewthread&tid=911036" title="求租 校园卡一张" target="_blank">求租 校园卡一张</a></dt>
+	<dd>
+同学来校暂住，求租校园卡一张，用期一个月，价钱私聊
+</dd>
+</dl></div></div></div></div><div id="tab24h4Jr_content" class="tb-c"></div><script type="text/javascript">initTab("tab24h4Jr","mouseover");</script></div></div><div id="framep24Zq3_center" class="column frame-2-1-r"><div id="framep24Zq3_center_temp" class="move-span temp"></div><div id="tabQ7GCI5" class="frame-tab move-span cl"><div id="tabQ7GCI5_title" class="tab-title title column cl" switchtype="click"><div id="portal_block_9" class="xbs xbs_2 block move-span">
+<DIV class="blocktitle title"><SPAN class=titletext>活跃会员</SPAN></DIV><div id="portal_block_9_content" class="dxb_bc"><div class="module cl ml mls">
+<ul><li>
+	<a href="home.php?mod=space&uid=18717" c="1" target="_blank"><img src="http://bbs.cupl.edu.cn/cupl_uc/avatar.php?uid=18717&size=small" width="48" height="48" alt="小刚" /></a>
+	<p><a href="home.php?mod=space&uid=18717" title="小刚" target="_blank">小刚</a></p>
+</li><li>
+	<a href="home.php?mod=space&uid=53174" c="1" target="_blank"><img src="http://bbs.cupl.edu.cn/cupl_uc/avatar.php?uid=53174&size=small" width="48" height="48" alt="换日线" /></a>
+	<p><a href="home.php?mod=space&uid=53174" title="换日线" target="_blank">换日线</a></p>
+</li><li>
+	<a href="home.php?mod=space&uid=82180" c="1" target="_blank"><img src="http://bbs.cupl.edu.cn/cupl_uc/avatar.php?uid=82180&size=small" width="48" height="48" alt="LYTCUPL" /></a>
+	<p><a href="home.php?mod=space&uid=82180" title="LYTCUPL" target="_blank">LYTCUPL</a></p>
+</li><li>
+	<a href="home.php?mod=space&uid=67782" c="1" target="_blank"><img src="http://bbs.cupl.edu.cn/cupl_uc/avatar.php?uid=67782&size=small" width="48" height="48" alt="sandysue" /></a>
+	<p><a href="home.php?mod=space&uid=67782" title="sandysue" target="_blank">sandysue</a></p>
+</li><li>
+	<a href="home.php?mod=space&uid=76664" c="1" target="_blank"><img src="http://bbs.cupl.edu.cn/cupl_uc/avatar.php?uid=76664&size=small" width="48" height="48" alt="Fengweishang27" /></a>
+	<p><a href="home.php?mod=space&uid=76664" title="Fengweishang27" target="_blank">Fengweishang27</a></p>
+</li><li>
+	<a href="home.php?mod=space&uid=77771" c="1" target="_blank"><img src="http://bbs.cupl.edu.cn/cupl_uc/avatar.php?uid=77771&size=small" width="48" height="48" alt="悲欢注定" /></a>
+	<p><a href="home.php?mod=space&uid=77771" title="悲欢注定" target="_blank">悲欢注定</a></p>
+</li><li>
+	<a href="home.php?mod=space&uid=68956" c="1" target="_blank"><img src="http://bbs.cupl.edu.cn/cupl_uc/avatar.php?uid=68956&size=small" width="48" height="48" alt="从新开始" /></a>
+	<p><a href="home.php?mod=space&uid=68956" title="从新开始" target="_blank">从新开始</a></p>
+</li><li>
+	<a href="home.php?mod=space&uid=38278" c="1" target="_blank"><img src="http://bbs.cupl.edu.cn/cupl_uc/avatar.php?uid=38278&size=small" width="48" height="48" alt="风雨潇潇" /></a>
+	<p><a href="home.php?mod=space&uid=38278" title="风雨潇潇" target="_blank">风雨潇潇</a></p>
+</li><li>
+	<a href="home.php?mod=space&uid=62560" c="1" target="_blank"><img src="http://bbs.cupl.edu.cn/cupl_uc/avatar.php?uid=62560&size=small" width="48" height="48" alt="TXL5D" /></a>
+	<p><a href="home.php?mod=space&uid=62560" title="TXL5D" target="_blank">TXL5D</a></p>
+</li><li>
+	<a href="home.php?mod=space&uid=74456" c="1" target="_blank"><img src="http://bbs.cupl.edu.cn/cupl_uc/avatar.php?uid=74456&size=small" width="48" height="48" alt="you-the-freedom" /></a>
+	<p><a href="home.php?mod=space&uid=74456" title="you-the-freedom" target="_blank">you-the-freedom</a></p>
+</li><li>
+	<a href="home.php?mod=space&uid=73287" c="1" target="_blank"><img src="http://bbs.cupl.edu.cn/cupl_uc/avatar.php?uid=73287&size=small" width="48" height="48" alt="我在远方" /></a>
+	<p><a href="home.php?mod=space&uid=73287" title="我在远方" target="_blank">我在远方</a></p>
+</li><li>
+	<a href="home.php?mod=space&uid=19053" c="1" target="_blank"><img src="http://bbs.cupl.edu.cn/cupl_uc/avatar.php?uid=19053&size=small" width="48" height="48" alt="仙丹" /></a>
+	<p><a href="home.php?mod=space&uid=19053" title="仙丹" target="_blank">仙丹</a></p>
+</li></ul>
+</div></div></div><div id="portal_block_199" class="block move-span"><div class="blocktitle title"><span style="float:;margin-left:px;font-size:;color: !important;" class="titletext">最新会员</span></div><div id="portal_block_199_content" class="dxb_bc"><div class="module cl ml mls">
+<ul><li>
+	<a href="home.php?mod=space&uid=82964" c="1" target="_blank"><img src="http://bbs.cupl.edu.cn/cupl_uc/avatar.php?uid=82964&size=small" width="48" height="48" alt="hbf1994" /></a>
+	<p><a href="home.php?mod=space&uid=82964" title="hbf1994" target="_blank">hbf1994</a></p>
+</li><li>
+	<a href="home.php?mod=space&uid=82963" c="1" target="_blank"><img src="http://bbs.cupl.edu.cn/cupl_uc/avatar.php?uid=82963&size=small" width="48" height="48" alt="Epide" /></a>
+	<p><a href="home.php?mod=space&uid=82963" title="Epide" target="_blank">Epide</a></p>
+</li><li>
+	<a href="home.php?mod=space&uid=82962" c="1" target="_blank"><img src="http://bbs.cupl.edu.cn/cupl_uc/avatar.php?uid=82962&size=small" width="48" height="48" alt="北方从不越烟雨" /></a>
+	<p><a href="home.php?mod=space&uid=82962" title="北方从不越烟雨" target="_blank">北方从不越烟雨</a></p>
+</li><li>
+	<a href="home.php?mod=space&uid=82961" c="1" target="_blank"><img src="http://bbs.cupl.edu.cn/cupl_uc/avatar.php?uid=82961&size=small" width="48" height="48" alt="cupler000" /></a>
+	<p><a href="home.php?mod=space&uid=82961" title="cupler000" target="_blank">cupler000</a></p>
+</li><li>
+	<a href="home.php?mod=space&uid=82960" c="1" target="_blank"><img src="http://bbs.cupl.edu.cn/cupl_uc/avatar.php?uid=82960&size=small" width="48" height="48" alt="海猫" /></a>
+	<p><a href="home.php?mod=space&uid=82960" title="海猫" target="_blank">海猫</a></p>
+</li><li>
+	<a href="home.php?mod=space&uid=82959" c="1" target="_blank"><img src="http://bbs.cupl.edu.cn/cupl_uc/avatar.php?uid=82959&size=small" width="48" height="48" alt="yzqyly" /></a>
+	<p><a href="home.php?mod=space&uid=82959" title="yzqyly" target="_blank">yzqyly</a></p>
+</li><li>
+	<a href="home.php?mod=space&uid=82958" c="1" target="_blank"><img src="http://bbs.cupl.edu.cn/cupl_uc/avatar.php?uid=82958&size=small" width="48" height="48" alt="until_bella" /></a>
+	<p><a href="home.php?mod=space&uid=82958" title="until_bella" target="_blank">until_bella</a></p>
+</li><li>
+	<a href="home.php?mod=space&uid=82957" c="1" target="_blank"><img src="http://bbs.cupl.edu.cn/cupl_uc/avatar.php?uid=82957&size=small" width="48" height="48" alt="DorothyLSY" /></a>
+	<p><a href="home.php?mod=space&uid=82957" title="DorothyLSY" target="_blank">DorothyLSY</a></p>
+</li><li>
+	<a href="home.php?mod=space&uid=82956" c="1" target="_blank"><img src="http://bbs.cupl.edu.cn/cupl_uc/avatar.php?uid=82956&size=small" width="48" height="48" alt="agan啊" /></a>
+	<p><a href="home.php?mod=space&uid=82956" title="agan啊" target="_blank">agan啊</a></p>
+</li><li>
+	<a href="home.php?mod=space&uid=82955" c="1" target="_blank"><img src="http://bbs.cupl.edu.cn/cupl_uc/avatar.php?uid=82955&size=small" width="48" height="48" alt="Hmccc" /></a>
+	<p><a href="home.php?mod=space&uid=82955" title="Hmccc" target="_blank">Hmccc</a></p>
+</li><li>
+	<a href="home.php?mod=space&uid=82954" c="1" target="_blank"><img src="http://bbs.cupl.edu.cn/cupl_uc/avatar.php?uid=82954&size=small" width="48" height="48" alt="menmen" /></a>
+	<p><a href="home.php?mod=space&uid=82954" title="menmen" target="_blank">menmen</a></p>
+</li><li>
+	<a href="home.php?mod=space&uid=82953" c="1" target="_blank"><img src="http://bbs.cupl.edu.cn/cupl_uc/avatar.php?uid=82953&size=small" width="48" height="48" alt="杜若华年" /></a>
+	<p><a href="home.php?mod=space&uid=82953" title="杜若华年" target="_blank">杜若华年</a></p>
+</li></ul>
+</div></div></div></div><div id="tabQ7GCI5_content" class="tb-c"></div><script type="text/javascript">initTab("tabQ7GCI5","click");</script></div></div></div></div><!--[/diy]-->
+</div>
+
+<div id="ct" class="wp cl">
+<div id="chart" class="bm bw0 cl">
+<p class="chart z">今日: <em>26</em><span class="pipe">|</span>昨日: <em>10</em><span class="pipe">|</span>帖子: <em>9513663</em><span class="pipe">|</span>会员: <em>75590</em><span class="pipe">|</span>欢迎新会员: <em><a href="home.php?mod=space&amp;username=hbf1994" target="_blank" class="xi2">hbf1994</a></em></p>
+<div class="y">
+<a href="forum.php?mod=guide&amp;view=new" title="最新回复" class="xi2">最新回复</a></div>
+</div>
+<!--[diy=diy_chart]--><div id="diy_chart" class="area"></div><!--[/diy]-->
+<div class="mn">
+
+
+
+
+
+<div class="fl bm">
+<div class="bm bmw  cl">
+<div class="bm_h cl">
+<span class="o">
+<img id="category_1_img" src="static/image/common/collapsed_no.gif" title="收起/展开" alt="收起/展开" onclick="toggle_collapse('category_1');" />
+</span>
+<span class="y">分区版主: <a href="home.php?mod=space&username=%B9%DC%C0%ED%D4%B1B" class="notabs" c="1">管理员B</a></span><h2><a href="forum.php?gid=1" style="">校园生活</a></h2>
+</div>
+<div id="category_1" class="bm_c" style="">
+<table cellspacing="0" cellpadding="0" class="fl_tb">
+<tr><td class="fl_icn" >
+<a href="forum.php?mod=forumdisplay&fid=240"><img src="static/image/common/forum.gif" alt="军都漫步" /></a>
+</td>
+<td>
+<h2><a href="forum.php?mod=forumdisplay&fid=240">军都漫步</a><em class="xw0 xi1" title="今日"> (1)</em></h2>
+<p>子版块: <a href="forum.php?mod=forumdisplay&fid=245" >寻物专版（昌平校区）</a></p><p>版主: <span class="xi2"><a href="home.php?mod=space&username=dengeyang" class="notabs" c="1"><strong>dengeyang</strong></a></span></p></td>
+<td class="fl_i">
+<span class="xi2"><span title="122695">12万</span></span><span class="xg1"> / <span title="2012147">201万</span></span></td>
+<td class="fl_by">
+<div>
+<a href="forum.php?mod=redirect&amp;tid=911398&amp;goto=lastpost#lastpost" class="xi2">智慧法大为什么登不上啊</a> <cite><span title="17-10-28 14:37">8&nbsp;小时前</span> <a href="home.php?mod=space&username=%B4%D3%D0%C2%BF%AA%CA%BC">从新开始</a></cite>
+</div>
+</td>
+</tr>
+<tr class="fl_row">
+<td class="fl_icn" >
+<a href="forum.php?mod=forumdisplay&fid=2"><img src="static/image/common/forum.gif" alt="晓月徜徉" /></a>
+</td>
+<td>
+<h2><a href="forum.php?mod=forumdisplay&fid=2">晓月徜徉</a></h2>
+<p>子版块: <a href="forum.php?mod=forumdisplay&fid=192" >寻物专版（学院路校区）</a></p><p>版主: <span class="xi2"><a href="home.php?mod=space&username=Wall%A1%A4E" class="notabs" c="1"><strong>Wall·E</strong></a></span></p></td>
+<td class="fl_i">
+<span class="xi2"><span title="38672">3万</span></span><span class="xg1"> / <span title="265271">26万</span></span></td>
+<td class="fl_by">
+<div>
+<a href="forum.php?mod=redirect&amp;tid=911368&amp;goto=lastpost#lastpost" class="xi2">新一健身房跑步机！！！</a> <cite><span title="17-10-27 20:32">昨天&nbsp;20:32</span> <a href="home.php?mod=space&username=%B4%D3%D0%C2%BF%AA%CA%BC">从新开始</a></cite>
+</div>
+</td>
+</tr>
+<tr class="fl_row">
+<td class="fl_icn" >
+<a href="forum.php?mod=forumdisplay&fid=125"><img src="static/image/common/forum.gif" alt="活动公告" /></a>
+</td>
+<td>
+<h2><a href="forum.php?mod=forumdisplay&fid=125">活动公告</a></h2>
+<p>子版块: <a href="forum.php?mod=forumdisplay&fid=229" >个人用户需发布活动请在此版发帖等待审核</a>, <a href="forum.php?mod=forumdisplay&fid=239" >BBS门户、论坛图片横幅使用申请</a></p><p>版主: <span class="xi2"><a href="home.php?mod=space&username=%B9%DC%C0%ED%D4%B1A" class="notabs" c="1">管理员A</a></span></p></td>
+<td class="fl_i">
+<span class="xi2">9757</span><span class="xg1"> / <span title="147263">14万</span></span></td>
+<td class="fl_by">
+<div>
+<a href="forum.php?mod=redirect&amp;tid=901079&amp;goto=lastpost#lastpost" class="xi2">2016ACCA商语挑战赛线上答题开始 ...</a> <cite>16-5-7 09:38 <a href="home.php?mod=space&username=%C9%CC%D4%BA%D1%A7%C9%FA%BB%E1">商院学生会</a></cite>
+</div>
+</td>
+</tr>
+<tr class="fl_row">
+<td class="fl_icn" >
+<a href="forum.php?mod=forumdisplay&fid=11"><img src="static/image/common/forum.gif" alt="社团组织" /></a>
+</td>
+<td>
+<h2><a href="forum.php?mod=forumdisplay&fid=11">社团组织</a></h2>
+</td>
+<td class="fl_i">
+<span class="xi2">4143</span><span class="xg1"> / <span title="44306">4万</span></span></td>
+<td class="fl_by">
+<div>
+<a href="forum.php?mod=redirect&amp;tid=908305&amp;goto=lastpost#lastpost" class="xi2">中国政法大学法律援助中心校内志 ...</a> <cite>17-9-29 11:37 <a href="home.php?mod=space&username=Core_Meteor">Core_Meteor</a></cite>
+</div>
+</td>
+</tr>
+<tr class="fl_row">
+<td class="fl_icn" >
+<a href="forum.php?mod=forumdisplay&fid=10"><img src="static/image/common/forum.gif" alt="乡谊乡情" /></a>
+</td>
+<td>
+<h2><a href="forum.php?mod=forumdisplay&fid=10">乡谊乡情</a></h2>
+<p class="xg2"><strong><font color="Red">在法大，相遇就是缘<br />
+若你们恰好来自同一个地方并在这里相识<br />
+那么祝愿你们建立起最深厚最朴实的老乡情谊</font></strong></p></td>
+<td class="fl_i">
+<span class="xi2">2567</span><span class="xg1"> / <span title="34130">3万</span></span></td>
+<td class="fl_by">
+<div>
+<a href="forum.php?mod=redirect&amp;tid=911123&amp;goto=lastpost#lastpost" class="xi2">寻研究生院山东青州的老乡~</a> <cite>17-9-12 20:45 <a href="home.php?mod=space&username=%BF%A8%BF%A8%B6%AB">卡卡东</a></cite>
+</div>
+</td>
+</tr>
+<tr class="fl_row">
+<td class="fl_icn" >
+<a href="forum.php?mod=forumdisplay&fid=132"><img src="static/image/common/forum.gif" alt="最受本科生欢迎的十位老师评选" /></a>
+</td>
+<td>
+<h2><a href="forum.php?mod=forumdisplay&fid=132">最受本科生欢迎的十位老师评选</a></h2>
+<p>版主: <span class="xi2"><a href="home.php?mod=space&username=%D0%A3%BC%C7%D5%DF%CD%C5" class="notabs" c="1">校记者团</a>, <a href="home.php?mod=space&username=%D0%C2%CE%C5%CD%A8%D1%B6%C9%E7" class="notabs" c="1">新闻通讯社</a></span></p></td>
+<td class="fl_i">
+<span class="xi2">476</span><span class="xg1"> / 7863</span></td>
+<td class="fl_by">
+<div>
+<a href="forum.php?mod=redirect&amp;tid=910317&amp;goto=lastpost#lastpost" class="xi2">“吾爱吾师”第七届最受本科生欢 ...</a> <cite>17-7-7 10:15 <a href="home.php?mod=space&username=%D4%C2%C1%C1%C1%B3">月亮脸</a></cite>
+</div>
+</td>
+</tr>
+<tr class="fl_row">
+</tr>
+</table>
+</div>
+</div><div class="bm bmw  flg cl">
+<div class="bm_h cl">
+<span class="o">
+<img id="category_21_img" src="static/image/common/collapsed_no.gif" title="收起/展开" alt="收起/展开" onclick="toggle_collapse('category_21');" />
+</span>
+<span class="y">分区版主: <a href="home.php?mod=space&username=%B9%DC%C0%ED%D4%B1E" class="notabs" c="1">管理员E</a></span><h2><a href="forum.php?gid=21" style="">艺术文化</a></h2>
+</div>
+<div id="category_21" class="bm_c" style="">
+<table cellspacing="0" cellpadding="0" class="fl_tb">
+<tr><td class="fl_g" width="32.9%">
+<div class="fl_icn_g">
+<a href="forum.php?mod=forumdisplay&fid=22"><img src="static/image/common/forum.gif" alt="音乐" /></a>
+</div>
+<dl>
+<dt><a href="forum.php?mod=forumdisplay&fid=22">音乐</a></dt>
+<dd><em>主题: 4603</em>, <em>帖数: <span title="87505">8万</span></em></dd><dd>
+<a href="forum.php?mod=redirect&amp;tid=910869&amp;goto=lastpost#lastpost">最后发表: 17-7-5 20:49</a>
+</dd>
+</dl>
+</td>
+<td class="fl_g" width="32.9%">
+<div class="fl_icn_g">
+<a href="forum.php?mod=forumdisplay&fid=23"><img src="static/image/common/forum.gif" alt="影视" /></a>
+</div>
+<dl>
+<dt><a href="forum.php?mod=forumdisplay&fid=23">影视</a></dt>
+<dd><em>主题: 4170</em>, <em>帖数: <span title="105494">10万</span></em></dd><dd>
+<a href="forum.php?mod=redirect&amp;tid=908817&amp;goto=lastpost#lastpost">最后发表: 17-4-4 11:36</a>
+</dd>
+</dl>
+</td>
+<td class="fl_g" width="32.9%">
+<div class="fl_icn_g">
+<a href="forum.php?mod=forumdisplay&fid=24"><img src="static/image/common/forum.gif" alt="读书" /></a>
+</div>
+<dl>
+<dt><a href="forum.php?mod=forumdisplay&fid=24">读书</a></dt>
+<dd><em>主题: 5962</em>, <em>帖数: <span title="114612">11万</span></em></dd><dd>
+<a href="forum.php?mod=redirect&amp;tid=525762&amp;goto=lastpost#lastpost">最后发表: 17-7-12 07:12</a>
+</dd>
+</dl>
+</td>
+</tr>
+<tr class="fl_row">
+<td class="fl_g" width="32.9%">
+<div class="fl_icn_g">
+<a href="forum.php?mod=forumdisplay&fid=26"><img src="static/image/common/forum.gif" alt="动漫" /></a>
+</div>
+<dl>
+<dt><a href="forum.php?mod=forumdisplay&fid=26">动漫</a></dt>
+<dd><em>主题: 4657</em>, <em>帖数: <span title="64167">6万</span></em></dd><dd>
+<a href="forum.php?mod=redirect&amp;tid=907374&amp;goto=lastpost#lastpost">最后发表: 17-6-15 13:47</a>
+</dd>
+</dl>
+</td>
+<td class="fl_g" width="32.9%">
+<div class="fl_icn_g">
+<a href="forum.php?mod=forumdisplay&fid=109"><img src="static/image/common/forum.gif" alt="文学原创" /></a>
+</div>
+<dl>
+<dt><a href="forum.php?mod=forumdisplay&fid=109">文学原创</a></dt>
+<dd><em>主题: 2353</em>, <em>帖数: <span title="22113">2万</span></em></dd><dd>
+<a href="forum.php?mod=redirect&amp;tid=848584&amp;goto=lastpost#lastpost">最后发表: 17-7-5 23:04</a>
+</dd>
+</dl>
+</td>
+<td width="32.9%">&nbsp;</td></tr></tr>
+</table>
+</div>
+</div><div class="bm bmw  flg cl">
+<div class="bm_h cl">
+<span class="o">
+<img id="category_27_img" src="static/image/common/collapsed_no.gif" title="收起/展开" alt="收起/展开" onclick="toggle_collapse('category_27');" />
+</span>
+<span class="y">分区版主: <a href="home.php?mod=space&username=%B9%AB%D7%D3%DE%C8" class="notabs" c="1">公子奕</a>, <a href="home.php?mod=space&username=%B9%DC%C0%ED%D4%B1E" class="notabs" c="1">管理员E</a></span><h2><a href="forum.php?gid=27" style="">休闲娱乐</a></h2>
+</div>
+<div id="category_27" class="bm_c" style="">
+<table cellspacing="0" cellpadding="0" class="fl_tb">
+<tr><td class="fl_g" width="32.9%">
+<div class="fl_icn_g">
+<a href="forum.php?mod=forumdisplay&fid=28"><img src="static/image/common/forum.gif" alt="谈天说地" /></a>
+</div>
+<dl>
+<dt><a href="forum.php?mod=forumdisplay&fid=28">谈天说地</a><em class="xw0 xi1" title="今日"> (1)</em></dt>
+<dd><em>主题: <span title="14056">1万</span></em>, <em>帖数: <span title="214171">21万</span></em></dd><dd>
+<a href="forum.php?mod=redirect&amp;tid=911399&amp;goto=lastpost#lastpost">最后发表: <span title="17-10-28 19:24">3&nbsp;小时前</span></a>
+</dd>
+</dl>
+</td>
+<td class="fl_g" width="32.9%">
+<div class="fl_icn_g">
+<a href="forum.php?mod=forumdisplay&fid=30"><img src="static/image/common/forum.gif" alt="体坛风云" /></a>
+</div>
+<dl>
+<dt><a href="forum.php?mod=forumdisplay&fid=30">体坛风云</a></dt>
+<dd><em>主题: <span title="14228">1万</span></em>, <em>帖数: <span title="103976">10万</span></em></dd><dd>
+<a href="forum.php?mod=redirect&amp;tid=909500&amp;goto=lastpost#lastpost">最后发表: 17-5-4 15:16</a>
+</dd>
+</dl>
+</td>
+<td class="fl_g" width="32.9%">
+<div class="fl_icn_g">
+<a href="forum.php?mod=forumdisplay&fid=31"><img src="static/image/common/forum.gif" alt="流行时尚" /></a>
+</div>
+<dl>
+<dt><a href="forum.php?mod=forumdisplay&fid=31">流行时尚</a></dt>
+<dd><em>主题: 2078</em>, <em>帖数: <span title="28186">2万</span></em></dd><dd>
+<a href="forum.php?mod=redirect&amp;tid=909631&amp;goto=lastpost#lastpost">最后发表: 17-5-10 22:21</a>
+</dd>
+</dl>
+</td>
+</tr>
+<tr class="fl_row">
+<td class="fl_g" width="32.9%">
+<div class="fl_icn_g">
+<a href="forum.php?mod=forumdisplay&fid=34"><img src="static/image/common/forum.gif" alt="幽默笑话" /></a>
+</div>
+<dl>
+<dt><a href="forum.php?mod=forumdisplay&fid=34">幽默笑话</a></dt>
+<dd><em>主题: <span title="12510">1万</span></em>, <em>帖数: <span title="163632">16万</span></em></dd><dd>
+<a href="forum.php?mod=redirect&amp;tid=908778&amp;goto=lastpost#lastpost">最后发表: 17-4-1 20:58</a>
+</dd>
+</dl>
+</td>
+<td class="fl_g" width="32.9%">
+<div class="fl_icn_g">
+<a href="forum.php?mod=forumdisplay&fid=32"><img src="static/image/common/forum.gif" alt="美食天地" /></a>
+</div>
+<dl>
+<dt><a href="forum.php?mod=forumdisplay&fid=32">美食天地</a></dt>
+<dd><em>主题: 3585</em>, <em>帖数: <span title="56464">5万</span></em></dd><dd>
+<a href="forum.php?mod=redirect&amp;tid=908782&amp;goto=lastpost#lastpost">最后发表: 17-4-2 20:09</a>
+</dd>
+</dl>
+</td>
+<td class="fl_g" width="32.9%">
+<div class="fl_icn_g">
+<a href="forum.php?mod=forumdisplay&fid=35"><img src="static/image/common/forum.gif" alt="驴行天下" /></a>
+</div>
+<dl>
+<dt><a href="forum.php?mod=forumdisplay&fid=35">驴行天下</a></dt>
+<dd><em>主题: 2324</em>, <em>帖数: <span title="28374">2万</span></em></dd><dd>
+<a href="forum.php?mod=redirect&amp;tid=910219&amp;goto=lastpost#lastpost">最后发表: 17-6-8 09:10</a>
+</dd>
+</dl>
+</td>
+</tr>
+<tr class="fl_row">
+<td class="fl_g" width="32.9%">
+<div class="fl_icn_g">
+<a href="forum.php?mod=forumdisplay&fid=33"><img src="static/image/common/forum.gif" alt="星座物语" /></a>
+</div>
+<dl>
+<dt><a href="forum.php?mod=forumdisplay&fid=33">星座物语</a></dt>
+<dd><em>主题: <span title="23937">2万</span></em>, <em>帖数: <span title="351707">35万</span></em></dd><dd>
+<a href="forum.php?mod=redirect&amp;tid=510770&amp;goto=lastpost#lastpost">最后发表: 17-1-11 10:28</a>
+</dd>
+</dl>
+</td>
+<td class="fl_g" width="32.9%">
+<div class="fl_icn_g">
+<a href="forum.php?mod=forumdisplay&fid=74"><img src="static/image/common/forum.gif" alt="养眼图吧" /></a>
+</div>
+<dl>
+<dt><a href="forum.php?mod=forumdisplay&fid=74">养眼图吧</a></dt>
+<dd><em>主题: <span title="13892">1万</span></em>, <em>帖数: <span title="590122">59万</span></em></dd><dd>
+<a href="forum.php?mod=redirect&amp;tid=908723&amp;goto=lastpost#lastpost">最后发表: 17-3-22 22:36</a>
+</dd>
+</dl>
+</td>
+<td class="fl_g" width="32.9%">
+<div class="fl_icn_g">
+<a href="forum.php?mod=forumdisplay&fid=129"><img src="static/image/common/forum.gif" alt="卫生健康" /></a>
+</div>
+<dl>
+<dt><a href="forum.php?mod=forumdisplay&fid=129">卫生健康</a></dt>
+<dd><em>主题: 2978</em>, <em>帖数: <span title="27061">2万</span></em></dd><dd>
+<a href="forum.php?mod=redirect&amp;tid=904615&amp;goto=lastpost#lastpost">最后发表: 16-12-7 18:12</a>
+</dd>
+</dl>
+</td>
+</tr>
+</table>
+</div>
+</div><div class="bm bmw  flg cl">
+<div class="bm_h cl">
+<span class="o">
+<img id="category_51_img" src="static/image/common/collapsed_no.gif" title="收起/展开" alt="收起/展开" onclick="toggle_collapse('category_51');" />
+</span>
+<span class="y">分区版主: <a href="home.php?mod=space&username=%B9%DC%C0%ED%D4%B1D" class="notabs" c="1">管理员D</a></span><h2><a href="forum.php?gid=51" style="">校务在线</a></h2>
+</div>
+<div id="category_51" class="bm_c" style="">
+<table cellspacing="0" cellpadding="0" class="fl_tb">
+<tr><td class="fl_g" width="32.9%">
+<div class="fl_icn_g">
+<a href="forum.php?mod=forumdisplay&fid=191"><img src="static/image/common/forum.gif" alt="信息通报" /></a>
+</div>
+<dl>
+<dt><a href="forum.php?mod=forumdisplay&fid=191">信息通报</a></dt>
+<dd><em>主题: 177</em>, <em>帖数: 364</em></dd><dd>
+<a href="forum.php?mod=redirect&amp;tid=908960&amp;goto=lastpost#lastpost">最后发表: 17-4-5 09:30</a>
+</dd>
+</dl>
+</td>
+<td width="32.9%">&nbsp;</td><td width="32.9%">&nbsp;</td></tr></tr>
+</table>
+</div>
+</div><div class="bm a_c"><b><color=red>校园事务类的公告、咨询、投诉请在校务在线分区的相应版块发帖</color></b></div><div class="bm bmw  flg cl">
+<div class="bm_h cl">
+<span class="o">
+<img id="category_66_img" src="static/image/common/collapsed_no.gif" title="收起/展开" alt="收起/展开" onclick="toggle_collapse('category_66');" />
+</span>
+<span class="y">分区版主: <a href="home.php?mod=space&username=%B9%DC%C0%ED%D4%B1C" class="notabs" c="1">管理员C</a></span><h2><a href="forum.php?gid=66" style="">BBS系统</a></h2>
+</div>
+<div id="category_66" class="bm_c" style="">
+<table cellspacing="0" cellpadding="0" class="fl_tb">
+<tr><td class="fl_g" width="32.9%">
+<div class="fl_icn_g">
+<a href="forum.php?mod=forumdisplay&fid=69"><img src="static/image/common/forum.gif" alt="新手互助" /></a>
+</div>
+<dl>
+<dt><a href="forum.php?mod=forumdisplay&fid=69">新手互助</a></dt>
+<dd><em>主题: 1140</em>, <em>帖数: 7544</em></dd><dd>
+<a href="forum.php?mod=redirect&amp;tid=910575&amp;goto=lastpost#lastpost">最后发表: 17-6-22 19:45</a>
+</dd>
+</dl>
+</td>
+<td class="fl_g" width="32.9%">
+<div class="fl_icn_g">
+<a href="forum.php?mod=forumdisplay&fid=70"><img src="static/image/common/forum.gif" alt="站务公告" /></a>
+</div>
+<dl>
+<dt><a href="forum.php?mod=forumdisplay&fid=70">站务公告</a></dt>
+<dd><em>主题: 17</em>, <em>帖数: 24</em></dd><dd>
+<a href="forum.php?mod=redirect&amp;tid=803313&amp;goto=lastpost#lastpost">最后发表: 13-8-31 22:57</a>
+</dd>
+</dl>
+</td>
+<td class="fl_g" width="32.9%">
+<div class="fl_icn_g">
+<a href="forum.php?mod=forumdisplay&fid=68"><img src="static/image/common/forum.gif" alt="版务公告" /></a>
+</div>
+<dl>
+<dt><a href="forum.php?mod=forumdisplay&fid=68">版务公告</a></dt>
+<dd><em>主题: 1906</em>, <em>帖数: <span title="29017">2万</span></em></dd><dd>
+<a href="forum.php?mod=redirect&amp;tid=906653&amp;goto=lastpost#lastpost">最后发表: 16-11-22 08:59</a>
+</dd>
+</dl>
+</td>
+</tr>
+<tr class="fl_row">
+<td class="fl_g" width="32.9%">
+<div class="fl_icn_g">
+<a href="forum.php?mod=forumdisplay&fid=71"><img src="static/image/common/forum.gif" alt="会员建议" /></a>
+</div>
+<dl>
+<dt><a href="forum.php?mod=forumdisplay&fid=71">会员建议</a></dt>
+<dd><em>主题: 963</em>, <em>帖数: <span title="10151">1万</span></em></dd><dd>
+<a href="forum.php?mod=redirect&amp;tid=908154&amp;goto=lastpost#lastpost">最后发表: 17-2-24 10:47</a>
+</dd>
+</dl>
+</td>
+<td width="32.9%">&nbsp;</td><td width="32.9%">&nbsp;</td></tr></tr>
+</table>
+</div>
+</div>
+</div>
+
+<div class="wp mtn">
+<!--[diy=diy3]--><div id="diy3" class="area"></div><!--[/diy]-->
+</div>
+
+<div id="online" class="bm oll">
+<div class="bm_h">
+<span class="o"><a href="forum.php?showoldetails=no#online" title="收起/展开"><img src="static/image/common/collapsed_no.gif" alt="收起/展开" /></a></span>
+<h3>
+<strong><a href="home.php?mod=space&amp;do=friend&amp;view=online&amp;type=member">在线会员</a></strong>
+<span class="xs1">- <strong>271</strong> 人在线
+- <strong>13</strong> 会员(<strong>1</strong> 隐身),
+<strong>258</strong> 位游客
+- 最高记录是 <strong>11000</strong> 于 <strong>15-10-21</strong>.</span>
+</h3>
+</div>
+<dl id="onlinelist" class="bm_c">
+<dt class="ptm pbm bbda"><img src="static/image/common/online_admin.gif" /> 管理员 &nbsp; &nbsp; &nbsp; <img src="static/image/common/online_supermod.gif" /> 站务 &nbsp; &nbsp; &nbsp; <img src="static/image/common/online_moderator.gif" /> 版主 &nbsp; &nbsp; &nbsp; <img src="static/image/common/online_member.gif" /> 会员 &nbsp; &nbsp; &nbsp; </dt>
+<dd class="ptm pbm">
+<ul class="cl">
+<li title="时间: 22:45">
+<img src="static/image/common/online_member.gif" alt="icon" />
+<a href="home.php?mod=space&amp;uid=49278">duduha</a>
+</li>
+<li title="时间: 22:43">
+<img src="static/image/common/online_member.gif" alt="icon" />
+<a href="home.php?mod=space&amp;uid=82961">cupler000</a>
+</li>
+<li title="时间: 22:38">
+<img src="static/image/common/online_member.gif" alt="icon" />
+<a href="home.php?mod=space&amp;uid=73287">我在远方</a>
+</li>
+<li title="时间: 22:34">
+<img src="static/image/common/online_member.gif" alt="icon" />
+<a href="home.php?mod=space&amp;uid=69259">一抹琉璃色</a>
+</li>
+<li title="时间: 22:33">
+<img src="static/image/common/online_member.gif" alt="icon" />
+<a href="home.php?mod=space&amp;uid=82227">傻蛮子</a>
+</li>
+<li title="时间: 22:27">
+<img src="static/image/common/online_member.gif" alt="icon" />
+<a href="home.php?mod=space&amp;uid=19053">仙丹</a>
+</li>
+<li title="时间: 22:24">
+<img src="static/image/common/online_member.gif" alt="icon" />
+<a href="home.php?mod=space&amp;uid=82498">十三姨</a>
+</li>
+<li title="时间: 22:18">
+<img src="static/image/common/online_member.gif" alt="icon" />
+<a href="home.php?mod=space&amp;uid=58634">包子包子包子</a>
+</li>
+<li title="时间: 22:07">
+<img src="static/image/common/online_member.gif" alt="icon" />
+<a href="home.php?mod=space&amp;uid=81769">candyyy</a>
+</li>
+<li title="时间: 22:07">
+<img src="static/image/common/online_member.gif" alt="icon" />
+<a href="home.php?mod=space&amp;uid=68928">宏华晏</a>
+</li>
+<li title="时间: 21:57">
+<img src="static/image/common/online_member.gif" alt="icon" />
+<a href="home.php?mod=space&amp;uid=80937">律海泛舟</a>
+</li>
+<li title="时间: 21:54">
+<img src="static/image/common/online_member.gif" alt="icon" />
+<a href="home.php?mod=space&amp;uid=62612">野蛮生长妞</a>
+</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="bm lk">
+<div id="category_lk" class="bm_c ptm">
+<ul class="x mbm cl">
+<li><a href="http://web.cupl.edu.cn/news" target="_blank" title="法大新闻网">法大新闻网</a></li><li><a href="http://bbs.pku.edu.cn/bbs/index.php" target="_blank" title="北大未名">北大未名</a></li><li><a href="http://www.smth.edu.cn/frames.php" target="_blank" title="水木清华">水木清华</a></li><li><a href="http://bbs.ruc.edu.cn/frames.html" target="_blank" title="天地人大">天地人大</a></li><li><a href="http://bbs.nju.edu.cn/" target="_blank" title="南京大学小百合">南京大学小百合</a></li><li><a href="http://bbs.whu.edu.cn/" target="_blank" title="武汉大学珞珈山水">武汉大学珞珈山水</a></li><li><a href="http://www.xizhengren.com/bbs/" target="_blank" title="西政人论坛">西政人论坛</a></li><li><a href="http://bbs.canghai.org/" target="_blank" title="沧海云帆">沧海云帆</a></li><li><a href="http://bbs.people.com.cn/" target="_blank" title="人民网强国社区">人民网强国社区</a></li></ul>
+</div>
+</div>
+
+</div>
+
+</div>
+<script>fixed_top_nv();</script>	</div>
+
+
+<script type="text/javascript">
+_attachEvent(window, 'load', getForbiddenFormula, document);
+function getForbiddenFormula() {
+var toGetForbiddenFormulaFIds = function () {
+ajaxget('plugin.php?id=cloudsearch&formhash=c5f9ec85');
+};
+var a = document.body.getElementsByTagName('a');
+for(var i = 0;i < a.length;i++){
+if(a[i].getAttribute('sc')) {
+a[i].setAttribute('mid', hash(a[i].href));
+a[i].onmousedown = function() {toGetForbiddenFormulaFIds();};
+}
+}
+var btn = document.body.getElementsByTagName('button');
+for(var i = 0;i < btn.length;i++){
+if(btn[i].getAttribute('sc')) {
+btn[i].setAttribute('mid', hash(btn[i].id));
+btn[i].onmousedown = function() {toGetForbiddenFormulaFIds();};
+}
+}
+}
+</script>
+
+<div id="ft" class="wp cl">
+<div id="flk" class="y">
+<p>
+<a href="forum.php?mod=misc&action=showdarkroom" >小黑屋</a><span class="pipe">|</span><a href="forum.php?mobile=yes" >手机版</a><span class="pipe">|</span><a href="archiver/" >Archiver</a><span class="pipe">|</span><strong><a href="http://bbs.cupl.edu.cn" target="_blank">中国政法大学</a></strong>
+( <a href="http://www.miitbeian.gov.cn/" target="_blank">京ICP备05004635号</a> )&nbsp;<a href="http://discuz.qq.com/service/security" target="_blank" title="防水墙保卫网站远离侵害"><img src="static/image/common/security.png"></a>&nbsp;&nbsp;<span id="tcss"></span><script type="text/javascript" src="http://tcss.qq.com/ping.js?v=1GRY" charset="utf-8"></script><script type="text/javascript" reload="1">pgvMain({"discuzParams":{"r2":"28986123","ui":0,"rt":"forum","md":"index","pn":1,"qq":"000","logo":11},"extraParams":""});</script></p>
+<p class="xs0">
+GMT+8, 17-10-28 22:46<span id="debuginfo">
+</span>
+</p>
+</div>
+<div id="frt">
+<p>Powered by <strong><a href="http://www.discuz.net" target="_blank">Discuz!</a></strong> <em>X3.2</em></p>
+<p class="xs0">&copy; 2001-2013 <a href="http://www.comsenz.com" target="_blank">Comsenz Inc.</a></p>
+</div></div>
+<script src="home.php?mod=misc&ac=sendmail&rand=1509201993" type="text/javascript"></script>
+<div id="scrolltop">
+<span hidefocus="true"><a title="返回顶部" onclick="window.scrollTo('0','0')" class="scrolltopa" ><b>返回顶部</b></a></span>
+</div>
+<script type="text/javascript">_attachEvent(window, 'scroll', function () { showTopLink(); });checkBlind();</script>
+			<div id="discuz_tips" style="display:none;"></div>
+			<script type="text/javascript">
+				var tipsinfo = '28986123|X3.2|0.6||0||0|7|1509201993|b869df49772998273ef42171bd6a835e|2';
+			</script>
+			<script src="http://discuz.gtimg.cn/cloud/scripts/discuz_tips.js?v=1" type="text/javascript" charset="UTF-8"></script><script type="text/javascript">
+			if($('debuginfo')) {
+				$('debuginfo').innerHTML = '. This page is cached  at 22:46:34  .';
+			}
+			</script>

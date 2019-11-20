@@ -1,0 +1,417 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>中国人民大学教务处</title>
+<meta name="Keywords" content="中国人民大学教务处" />
+<meta name="Description" content="中国人民大学教务处" />
+<meta name="renderer" content="webkit">
+<link href="css/all.css" rel="stylesheet" type="text/css" />
+
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+ <script >
+ 
+$(function(){
+  
+ 
+  $(".cur").css("background","url(images/w3thwr.jpg) center bottom no-repeat").css("color","#fff"); 
+   
+  $('.nav li a').mousemove(function(){                                      /*当鼠标滑到其他li*/
+  $(this).css("background","url(images/w3thwr.jpg) center bottom no-repeat").css("color","#fff");
+  $(this).parent().siblings().find("a").css("background","none").css("color","#606060");       /*hover a 加背景*/		                        
+  }); 
+ 
+  $('.nav li a').mouseleave(function(){    
+   $(this).css("background","none").css("color","#606060");     
+  });
+  
+    $('a.cur').mousemove(function(){  
+   $(this).css("background","url(images/w3thwr.jpg) center bottom no-repeat").css("color","#fff");
+
+  $(this).siblings().css("background","none").css("color","#606060");       /*hover a 加背景*/		
+				   
+	  });
+ 	
+  $('.nav').mouseleave(function(){                                            /*当鼠标滑出导航*/          
+  $('a.cur').css("background","url(images/w3thwr.jpg) center bottom no-repeat").css("color","#fff");
+      });
+ 
+  
+});
+ 
+</script>
+<script type="text/javascript" src="js/mdcfocus.min.js"></script>
+<link rel="stylesheet" type="text/css" href="css/global1.4.1.css" />
+
+<script type="text/javascript" src="js/jquery.jcarousel.js"></script>
+<link rel="stylesheet" type="text/css" href="css/skin.css" />
+
+ <script type="text/javascript">
+
+function mycarousel_initCallback(carousel)
+{
+    // Disable autoscrolling if the user clicks the prev or next button.
+    carousel.buttonNext.bind('click', function() {
+        carousel.startAuto(0);
+    });
+
+    carousel.buttonPrev.bind('click', function() {
+        carousel.startAuto(0);
+    });
+
+    // Pause autoscrolling if the user moves with the cursor over the clip.
+    carousel.clip.hover(function() {
+        carousel.stopAuto();
+    }, function() {
+        carousel.startAuto();
+    });
+};
+
+jQuery(document).ready(function() {
+    jQuery('#mycarousel').jcarousel({
+        auto: 6,
+        wrap: 'last',
+        initCallback: mycarousel_initCallback
+    });
+});
+ 
+</script>
+</head>
+<body style=" background:#f3f3f3; ">
+<div class="top_bg" style=" width:100%; height:111px; background:url(images/index_02.jpg)  repeat-x; ">
+  <div style=" width:1036px; margin:0 auto;">
+  <a style=" width:424px; float:left; height:111px; background:url(images/index_04.jpg) left center no-repeat; display:block;" href="/index.php"></a>
+  <div style="float:right; width:324px; text-align:right;   height:72px;padding-top:18px;  "> 
+  <div style="float:right;" >
+ <span style=" float:right; display:block; text-align:right; padding:0px 12px 0px 12px;">2017年10月28日 星期六　</span><a href="http://v.ruc.edu.cn" target="_blank" style="color:#ad0b29; float:right; padding:0px 2px; display:block;  text-align:right;" >[微人大]</a><div style=" clear:both;"></div>
+</div> 
+<form name="fr" id="fr" action="search.php" method="get" >
+ <div style="width:207px;  height:26px; background:url(images/index_07.jpg) 0px 10px no-repeat; padding:0px 2px; overflow:hidden; padding-top:10px;  float:right;">
+  <input name="tit" type="text" value="请输入关键字" style=" border:0px; width:166px; height:13px; padding:7px 0px 6px 0px; line-height:13px; color:#666; outline:none;  text-indent:6px; font-family:'微软雅黑'; font-size:12px;float:left; background:0px;" onfocus="if(this.value=='请输入关键字'){this.value='';}" onblur="if(this.value==''){this.value='请输入关键字';}"/><input name="" type="submit" style=" border:0px; background:0px;  width:35px; cursor:pointer; height:25px; display:block; outline:none;" value=""/>
+ </div>
+ </form>
+ <!--<a href="http://202.112.126.101:81" target="_blank" style="color:#ad0b29; float:right;   width:160px; overflow:hidden; display:block; clear:both; padding:0px 2px; padding-top:10px;"  >[教务处主页旧版]</a>-->
+ </div>
+ 
+ <div style=" clear:both;"></div>
+  </div>
+  </div>
+  <div class="top" style=" clear:both;   background:#e3e3e3;  ">
+      <ul class="nav" style=" width:1036px; margin:0 auto; display:block; background:url(images/eterfr.jpg) no-repeat;   height:41px;  ">
+	      <li><a class="cur" href="/"  style="">网站首页</a> </li>
+	      <li><a  href="more.php?cid=136"  style="">机构设置</a> </li>
+	      <li><a  href="more.php?cid=137"  style="">教学运行</a> </li>
+	      <li><a  href="more.php?cid=138"  style="">实践教学</a> </li>
+	      <li><a  href="more.php?cid=139"  style="">教学研究</a> </li>
+	      <li><a  href="more.php?cid=140"  style="">教材建设</a> </li>
+	      <li><a  href="more.php?cid=141"  style="">质量保障</a> </li>
+	      <li><a  href="more.php?cid=142"  style="">教学奖励</a> </li>
+	      <li><a  href="http://ctd.ruc.edu.cn" target='_blank' style="">教师教学发展</a> </li>
+	      <li><a  href="http://iss.ruc.edu.cn" target='_blank' style="">国际小学期</a> </li>
+	      <li><a  href="http://pinggu.ruc.edu.cn/web/index.php" target='_blank' style="">评估评建专题网</a> </li>
+	    </ul>
+  </div>
+  <div style=" clear:both;"></div> 
+  <div style="   height:345px; width:1036px; margin:10px auto;   ">
+    <div id="MDCFIeuRz3IL8" class="fi07"></div>
+ <script type="text/javascript">
+jQuery("#MDCFIeuRz3IL8").focusImg({"speed":"5000","flag":"fi07","hoverStop":true},[
+	{"p":"/upfile/image/20150106091735_312131_35914.jpg","l":"","t":""},	{"p":"/upfile/image/20150114160614_947879_98610.jpg","l":"","t":""},	{"p":"/upfile/image/20150114151708_166336_99327.jpg","l":"","t":""},	{"p":"/upfile/image/20150106091755_888568_90378.jpg","l":"","t":""},	{"p":"/upfile/image/20150114150126_375465_35718.jpg","l":"","t":""}
+]);
+</script>
+
+
+
+<div style=" height:auto;       float:left; margin-left:16px;   height:340px;  width:328px; background:url(images/index_16.png) repeat-x #fcfcfc ;">
+      <div style=" height:auto;    background:#f1f1f1;  height:340px; ">
+ 
+      <a href="more.php?cid=146"  style="display:block; width:100%; font-size:16px; line-height:38px; font-family:'微软雅黑';    height:38px; background:url(images/index_15.jpg) 0px 0px no-repeat; text-indent:25px; color:#6d6d6d;   ">活动看板</a>
+      
+        <ul class="hov" style="  height:auto; display:block;   padding:16px 16px 14px 16px; height:271px;  border:1px solid #e3e3e3;   ">
+        <div style="   border:1px solid #eae1ce; margin-bottom:6px; background:#fff;"><img src="images/index_19.jpg" width="293" height="115" /></div>
+		          
+          
+          <li style="  display:block; width:100%; height:30px; line-height:30px; margin:0px; padding:0px; margin-bottom:0px;"> <a href="displaynews.php?id=6249"  title="中国人民大学通识教育大讲堂—— “世界史是什么”系列讲座（四）：如何提高世界史专业学生的读书能力和写作能力" style="color:#6b6b6b;   line-height:30px; float:left;   overflow:hidden; display:block; height:30px;   overflow:hidden; ">中国人民大学通识教育大讲堂—— “..</a><span style="color:#939393; display:block; float:right; width:75px; text-align:right; height:30px; line-height:30px; text-indent:0px; padding:0px 0px;">[2017/10/24]</span></li>
+                    
+          
+          <li style="  display:block; width:100%; height:30px; line-height:30px; margin:0px; padding:0px; margin-bottom:0px;"> <a href="displaynews.php?id=6247"  title="中国人民大学通识教育大讲堂—— “世界史是什么”系列讲座（三）：我们为什么要学世界史" style="color:#6b6b6b;   line-height:30px; float:left;   overflow:hidden; display:block; height:30px;   overflow:hidden; ">中国人民大学通识教育大讲堂—— “..</a><span style="color:#939393; display:block; float:right; width:75px; text-align:right; height:30px; line-height:30px; text-indent:0px; padding:0px 0px;">[2017/10/20]</span></li>
+                    
+          
+          <li style="  display:block; width:100%; height:30px; line-height:30px; margin:0px; padding:0px; margin-bottom:0px;"> <a href="displaynews.php?id=6237"  title="中国人民大学通识教育大讲堂—— “世界史是什么”系列讲座（二）：有关世界史学科的几个入门问题" style="color:#6b6b6b;   line-height:30px; float:left;   overflow:hidden; display:block; height:30px;   overflow:hidden; ">中国人民大学通识教育大讲堂—— “..</a><span style="color:#939393; display:block; float:right; width:75px; text-align:right; height:30px; line-height:30px; text-indent:0px; padding:0px 0px;">[2017/10/16]</span></li>
+                    
+          
+          <li style="  display:block; width:100%; height:30px; line-height:30px; margin:0px; padding:0px; margin-bottom:0px;"> <a href="displaynews.php?id=6234"  title="中国人民大学通识教育大讲堂—— “世界史是什么”系列讲座（一）：我国世界史学科的价值评说与前景展望" style="color:#6b6b6b;   line-height:30px; float:left;   overflow:hidden; display:block; height:30px;   overflow:hidden; ">中国人民大学通识教育大讲堂—— “..</a><span style="color:#939393; display:block; float:right; width:75px; text-align:right; height:30px; line-height:30px; text-indent:0px; padding:0px 0px;">[2017/10/10]</span></li>
+                    
+          
+          <li style="  display:block; width:100%; height:30px; line-height:30px; margin:0px; padding:0px; margin-bottom:0px;"> <a href="displaynews.php?id=6150"  title="中国人民大学通识教育大讲堂 院士系列讲座·环境（一）：我国大气污染控制路径与进展" style="color:#6b6b6b;   line-height:30px; float:left;   overflow:hidden; display:block; height:30px;   overflow:hidden; ">中国人民大学通识教育大讲堂 院士系..</a><span style="color:#939393; display:block; float:right; width:75px; text-align:right; height:30px; line-height:30px; text-indent:0px; padding:0px 0px;">[2017/05/17]</span></li>
+                    <div style=" clear:both;"></div>
+        </ul>
+      </div>
+      </div>
+      
+      
+      
+      
+</div>
+  <div style=" width:1036px;   margin:0 auto;   ">
+    <div class="boer" style=" height:auto;  float:left;   width:336px;  border:1px solid #e3e3e3; border-top:4px solid #717171;  ">
+    
+    
+    
+            <a href="more.php?cid=145"  style="display:block; width:100%; font-size:16px; line-height:40px; font-family:'微软雅黑';    height:40px; background:url(images/etyqae.jpg) -5px 2px no-repeat; text-indent:22px; color:#6d6d6d;   ">通知公告</a>
+      <ul class="hov1" style=" height:auto; display:block;  background:#f1f1f1;  padding:4px 20px 5px 20px;   border-top:0px;  height:261px; overflow:hidden;  ">
+   
+        
+         <li style=" height:auto;  display:block; width:100%;  ">
+        <a href="displaynews.php?id=6241"  style=" width:auto ; background:url(images/index_23.jpg) 1px 10px no-repeat; padding-left:12px; text-indent:0px;  line-height:24px;    height:auto; float:none;" title="关于本科课程教学大纲微人大集中展示的通知">关于本科课程教学大纲微人大集中展示的通知<span style="color:#939393;    width:50px; text-align:right; height:24px; line-height:24px;  text-indent:0px;   padding:0px 0px;">[2017/10/17]</span></a>
+      </li><li style=" height:auto;  display:block; width:100%;  ">
+        <a href="displaynews.php?id=6240"  style=" width:auto ; background:url(images/index_23.jpg) 1px 10px no-repeat; padding-left:12px; text-indent:0px;  line-height:24px;    height:auto; float:none;" title="2017年下半年全国大学英语四、六级口语考试报名通知">2017年下半年全国大学英语四、六级口语考试报名通知<span style="color:#939393;    width:50px; text-align:right; height:24px; line-height:24px;  text-indent:0px;   padding:0px 0px;">[2017/10/16]</span></a>
+      </li><li style=" height:auto;  display:block; width:100%;  ">
+        <a href="displaynews.php?id=6238"  style=" width:auto ; background:url(images/index_23.jpg) 1px 10px no-repeat; padding-left:12px; text-indent:0px;  line-height:24px;    height:auto; float:none;" title="关于组织开展本科课程示范教学大纲评选工作的通知">关于组织开展本科课程示范教学大纲评选工作的通知<span style="color:#939393;    width:50px; text-align:right; height:24px; line-height:24px;  text-indent:0px;   padding:0px 0px;">[2017/10/16]</span></a>
+      </li><li style=" height:auto;  display:block; width:100%;  ">
+        <a href="displaynews.php?id=6233"  style=" width:auto ; background:url(images/index_23.jpg) 1px 10px no-repeat; padding-left:12px; text-indent:0px;  line-height:24px;    height:auto; float:none;" title="“中国共产党与国家治理体系和治理能力现代化”课程说明">“中国共产党与国家治理体系和治理能力现代化”课程说明<span style="color:#939393;    width:50px; text-align:right; height:24px; line-height:24px;  text-indent:0px;   padding:0px 0px;">[2017/10/10]</span></a>
+      </li><li style=" height:auto;  display:block; width:100%;  ">
+        <a href="displaynews.php?id=6232"  style=" width:auto ; background:url(images/index_23.jpg) 1px 10px no-repeat; padding-left:12px; text-indent:0px;  line-height:24px;    height:auto; float:none;" title="关于2014级本科生申请副修第二学士学位和第二专业认证的通知">关于2014级本科生申请副修第二学士学位和第二专业认证的通知<span style="color:#939393;    width:50px; text-align:right; height:24px; line-height:24px;  text-indent:0px;   padding:0px 0px;">[2017/10/09]</span></a>
+      </li><li style=" height:auto;  display:block; width:100%;  ">
+        <a href="displaynews.php?id=6230"  style=" width:auto ; background:url(images/index_23.jpg) 1px 10px no-repeat; padding-left:12px; text-indent:0px;  line-height:24px;    height:auto; float:none;" title="关于2017年12月大学英语四、六级考试补缴报名费的通知">关于2017年12月大学英语四、六级考试补缴报名费的通知<span style="color:#939393;    width:50px; text-align:right; height:24px; line-height:24px;  text-indent:0px;   padding:0px 0px;">[2017/09/30]</span></a>
+      </li><li style=" height:auto;  display:block; width:100%;  ">
+        <a href="displaynews.php?id=6225"  style=" width:auto ; background:url(images/index_23.jpg) 1px 10px no-repeat; padding-left:12px; text-indent:0px;  line-height:24px;    height:auto; float:none;" title="中国人民大学英语写作中心外教一对一辅导开放公告">中国人民大学英语写作中心外教一对一辅导开放公告<span style="color:#939393;    width:50px; text-align:right; height:24px; line-height:24px;  text-indent:0px;   padding:0px 0px;">[2017/09/22]</span></a>
+      </li>       <div style=" clear:both;"></div>
+        
+      </ul>
+    
+     <div style=" clear:both; height:10px;  background:#f1f1f1;    border-top:0px;"></div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+	
+      <div style=" clear:both;"></div>
+    </div>
+    
+    <div class="boer" style=" height:auto;  float:left; margin-left:14px;  width:336px;  border:1px solid #e3e3e3; border-top:4px solid #717171;  ">
+    
+    
+          <div style=" height:auto ;  width:330px; "> <a href="more.php?cid=148"  style="display:block; width:100%; font-size:16px; line-height:40px; font-family:'微软雅黑';    height:40px; background:url(images/etyqae.jpg) -5px 2px no-repeat; text-indent:22px; color:#6d6d6d;   ">国际交流</a>
+      <ul class="hov1" style=" height:auto; display:block;  background:#f1f1f1;  padding:4px 20px 5px 20px;   border-top:0px;  height:261px; overflow:hidden;  ">
+        		  <li style=" height:auto;  display:block; width:100%;  ">
+        <a href="displaynews.php?id=6251"  style=" width:auto ; background:url(images/index_23.jpg) 1px 10px no-repeat; padding-left:12px; text-indent:0px;  line-height:24px;    height:auto; float:none;" title="关于2016-2017学年本科学生境外交换学习奖学金评选的通知">关于2016-2017学年本科学生境外交换学习奖学金评选的通知<span style="color:#939393;    width:50px; text-align:right; height:24px; line-height:24px;  text-indent:0px;   padding:0px 0px;">[2017/10/26]</span></a>
+      </li>
+         		  <li style=" height:auto;  display:block; width:100%;  ">
+        <a href="displaynews.php?id=6250"  style=" width:auto ; background:url(images/index_23.jpg) 1px 10px no-repeat; padding-left:12px; text-indent:0px;  line-height:24px;    height:auto; float:none;" title="选拔本科生于2018年春季赴境外高校交换学习项目补选及意大利博洛尼亚大学交换学习项目面试通知">选拔本科生于2018年春季赴境外高校交换学习项目补选及意大利博洛尼亚大学交换学习项目面试通知<span style="color:#939393;    width:50px; text-align:right; height:24px; line-height:24px;  text-indent:0px;   padding:0px 0px;">[2017/10/26]</span></a>
+      </li>
+         		  <li style=" height:auto;  display:block; width:100%;  ">
+        <a href="displaynews.php?id=6245"  style=" width:auto ; background:url(images/index_23.jpg) 1px 10px no-repeat; padding-left:12px; text-indent:0px;  line-height:24px;    height:auto; float:none;" title="关于选拔本科生于2018年春季赴意大利博洛尼亚大学交换学习的通知">关于选拔本科生于2018年春季赴意大利博洛尼亚大学交换学习的通知<span style="color:#939393;    width:50px; text-align:right; height:24px; line-height:24px;  text-indent:0px;   padding:0px 0px;">[2017/10/19]</span></a>
+      </li>
+         		  <li style=" height:auto;  display:block; width:100%;  ">
+        <a href="displaynews.php?id=6244"  style=" width:auto ; background:url(images/index_23.jpg) 1px 10px no-repeat; padding-left:12px; text-indent:0px;  line-height:24px;    height:auto; float:none;" title="（补选）关于选拔本科生于2018年春季学期赴境外高校学习交换的通知">（补选）关于选拔本科生于2018年春季学期赴境外高校学习交换的通知<span style="color:#939393;    width:50px; text-align:right; height:24px; line-height:24px;  text-indent:0px;   padding:0px 0px;">[2017/10/19]</span></a>
+      </li>
+         		  <li style=" height:auto;  display:block; width:100%;  ">
+        <a href="displaynews.php?id=6235"  style=" width:auto ; background:url(images/index_23.jpg) 1px 10px no-repeat; padding-left:12px; text-indent:0px;  line-height:24px;    height:auto; float:none;" title="选拔本科生于2018年春季赴境外高校交换学习第三批项目面试通知">选拔本科生于2018年春季赴境外高校交换学习第三批项目面试通知<span style="color:#939393;    width:50px; text-align:right; height:24px; line-height:24px;  text-indent:0px;   padding:0px 0px;">[2017/10/11]</span></a>
+      </li>
+         		  <li style=" height:auto;  display:block; width:100%;  ">
+        <a href="displaynews.php?id=6224"  style=" width:auto ; background:url(images/index_23.jpg) 1px 10px no-repeat; padding-left:12px; text-indent:0px;  line-height:24px;    height:auto; float:none;" title="选拔本科生于2018年春季赴境外高校交换学习第一批项目面试通知">选拔本科生于2018年春季赴境外高校交换学习第一批项目面试通知<span style="color:#939393;    width:50px; text-align:right; height:24px; line-height:24px;  text-indent:0px;   padding:0px 0px;">[2017/09/21]</span></a>
+      </li>
+         		  <li style=" height:auto;  display:block; width:100%;  ">
+        <a href="displaynews.php?id=6216"  style=" width:auto ; background:url(images/index_23.jpg) 1px 10px no-repeat; padding-left:12px; text-indent:0px;  line-height:24px;    height:auto; float:none;" title="关于选拔本科生于2018年春季学期赴境外高校学习交换的通知">关于选拔本科生于2018年春季学期赴境外高校学习交换的通知<span style="color:#939393;    width:50px; text-align:right; height:24px; line-height:24px;  text-indent:0px;   padding:0px 0px;">[2017/09/15]</span></a>
+      </li>
+                   <div style=" clear:both;"></div>
+        </ul>
+         <div style=" clear:both; height:10px;  background:#f1f1f1;    border-top:0px;"></div>
+      </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+	
+      <div style=" clear:both;"></div>
+    </div>
+    
+    <div class="boer" style=" height:auto;  float:left; margin-left:14px;  width:330px;  border:1px solid #e3e3e3; border-top:4px solid #717171;  ">
+	
+    
+    
+          <div style=" height:auto;     background:#f1f1f1;"> <a href="more.php?cid=147"  style="display:block; width:100%; font-size:16px; line-height:40px; font-family:'微软雅黑';    height:40px; background:url(images/etyqae.jpg) -5px 2px no-repeat; text-indent:22px; color:#6d6d6d;   ">教学动态</a>
+        <ul class="hov" style="   height:auto; display:block;  background:#f1f1f1;  padding:0px 20px 10px 20px;   border-top:0px;   ">
+        <div style="    border:1px solid #eae1ce; margin-bottom:6px; background:#fff;"><img src="images/index_34.jpg" width="292" height="115" /></div>
+		          <li style="  display:block; width:100%; height:30px; line-height:30px; margin-bottom:0px;"> <a href="displaynews.php?id=6248"  title="北京师范大学郭小凌教授做客“通识教育大讲堂”" style="color:#6b6b6b;   line-height:30px; float:left;   overflow:hidden; display:block; height:30px;   overflow:hidden; ">北京师范大学郭小凌教授做客“通识..</a><span style="color:#939393; display:block; float:right; width:75px; text-align:right; height:30px; line-height:30px; text-indent:0px; padding:0px 0px;">[2017/10/20]</span>
+            <!--<span style="color:#939393; display:block; float:right; width:45px; height:30px; line-height:30px; text-indent:0px; padding:0px 0px;">[12/09]</span>-->
+          </li>
+                    <li style="  display:block; width:100%; height:30px; line-height:30px; margin-bottom:0px;"> <a href="displaynews.php?id=6246"  title="中国人民大学召开迎接本科教学工作审核评估工作小组专题会议" style="color:#6b6b6b;   line-height:30px; float:left;   overflow:hidden; display:block; height:30px;   overflow:hidden; ">中国人民大学召开迎接本科教学工作..</a><span style="color:#939393; display:block; float:right; width:75px; text-align:right; height:30px; line-height:30px; text-indent:0px; padding:0px 0px;">[2017/10/20]</span>
+            <!--<span style="color:#939393; display:block; float:right; width:45px; height:30px; line-height:30px; text-indent:0px; padding:0px 0px;">[12/09]</span>-->
+          </li>
+                    <li style="  display:block; width:100%; height:30px; line-height:30px; margin-bottom:0px;"> <a href="displaynews.php?id=6236"  title="中国人民大学通识教育大讲堂“世界史是什么”系列讲座成功开讲" style="color:#6b6b6b;   line-height:30px; float:left;   overflow:hidden; display:block; height:30px;   overflow:hidden; ">中国人民大学通识教育大讲堂“世界..</a><span style="color:#939393; display:block; float:right; width:75px; text-align:right; height:30px; line-height:30px; text-indent:0px; padding:0px 0px;">[2017/10/12]</span>
+            <!--<span style="color:#939393; display:block; float:right; width:45px; height:30px; line-height:30px; text-indent:0px; padding:0px 0px;">[12/09]</span>-->
+          </li>
+                    <li style="  display:block; width:100%; height:30px; line-height:30px; margin-bottom:0px;"> <a href="displaynews.php?id=6226"  title="中国人民大学召开2017-2018学年秋季学期本科教学工作部署会" style="color:#6b6b6b;   line-height:30px; float:left;   overflow:hidden; display:block; height:30px;   overflow:hidden; ">中国人民大学召开2017-2018学年秋季..</a><span style="color:#939393; display:block; float:right; width:75px; text-align:right; height:30px; line-height:30px; text-indent:0px; padding:0px 0px;">[2017/09/25]</span>
+            <!--<span style="color:#939393; display:block; float:right; width:45px; height:30px; line-height:30px; text-indent:0px; padding:0px 0px;">[12/09]</span>-->
+          </li>
+                    <li style="  display:block; width:100%; height:30px; line-height:30px; margin-bottom:0px;"> <a href="displaynews.php?id=6217"  title="中国人民大学两位优秀教师获“2017年大华杰出教学贡献奖”" style="color:#6b6b6b;   line-height:30px; float:left;   overflow:hidden; display:block; height:30px;   overflow:hidden; ">中国人民大学两位优秀教师获“2017..</a><span style="color:#939393; display:block; float:right; width:75px; text-align:right; height:30px; line-height:30px; text-indent:0px; padding:0px 0px;">[2017/09/18]</span>
+            <!--<span style="color:#939393; display:block; float:right; width:45px; height:30px; line-height:30px; text-indent:0px; padding:0px 0px;">[12/09]</span>-->
+          </li>
+                    <div style=" clear:both;"></div>
+        </ul>
+      </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      <div style=" clear:both;"></div>
+    </div>
+    <div style=" clear:both;"></div>
+  </div>
+   
+<div class="bottom" style=" margin:16px auto;  width:1036px; height:90px; overflow:hidden;  clear:both; text-align:left;">
+<a target="_blank" style="float:left; margin-right:5px;" href="/cxsy/index.asp"><img src="images/index_39.jpg" /></a>
+<a target="_blank" style="float:left; margin-right:5px;" href="/jxzl/default.asp"><img src="images/index_41_x1.jpg" style=" width:170px; height:61px;"/></a>
+<div style=" height:61px; width:123px; color:#6c6c6c; margin-left:5px; float:left;  padding-top:0px; "><div style="float:left; margin-right:5px; padding-top:14px;">关注我们</div> <img src="images/2222.png" /></div>
+<div style="float:left; width:510px; height:90px; overflow:hidden; margin-left:8px;">
+
+<ul id="mycarousel" class="jcarousel-skin-tango" style=" display:block; height:90px; overflow:hidden;">
+      <li>
+     <a href="more.php?cid=217"  class="hoi1" style="display:block; width:61px; height:61px; background:url(images/srsadt_75.gif) no-repeat;   "></a>
+     <a href="more.php?cid=217"  style="display:block; text-align:center; font-size:12px; color:#6c6c6c; padding-top:6px;">教学概览</a>
+      </li>
+       <li>
+     <a href="more.php?cid=222"  class="hoi2" style="display:block;   width:61px; height:61px; background:url(images/srsadt_76.gif) no-repeat; "></a>
+     <a href="more.php?cid=222"  style="display:block; text-align:center; font-size:12px; color:#6c6c6c; padding-top:6px;">规章制度</a>
+     </li>
+	      <li>
+     <a href="more.php?cid=229"   class="hoi3" style="display:block;    width:61px; height:61px; background:url(images/srsadt_77.gif) no-repeat;"></a>
+     <a href="more.php?cid=229"  style="display:block; text-align:center; font-size:12px; color:#6c6c6c; padding-top:6px;">文件下载</a>
+     </li>
+	       <li>
+     <a href="more.php?cid=238"  class="hoi4" style="display:block;   width:61px; height:61px; background:url(images/srsadt_78.gif) no-repeat; "></a>
+     <a href="more.php?cid=238"  style="display:block; text-align:center; font-size:12px; color:#6c6c6c; padding-top:6px;">办事指南</a>
+    </li>
+	       <li>
+     <a href="more.php?cid=236"  class="hoi5" style="display:block;    width:61px; height:61px; background:url(images/srsadt_80.gif) no-repeat;"></a>
+     <a href="more.php?cid=236"  style="display:block; text-align:center; font-size:12px; color:#6c6c6c; padding-top:6px;">教学日历</a>
+    </li>
+	       <li>
+     <a href="http://202.112.118.48/" target='_blank' class="hoi6" style="display:block;    width:61px; height:61px; background:url(images/srsadt_82.gif) no-repeat;"></a>
+     <a href="http://202.112.118.48/" target='_blank' style="display:block; text-align:center; overflow:hidden; font-size:12px; color:#6c6c6c; padding-top:6px;">论文提交</a>
+    </li>
+     
+   </ul>
+
+</div>
+</div>
+<div class="footer" style="  width:100%; height:70px;  background:url(images/index_76.jpg) repeat-x;     clear:both; text-align:center; ">
+  <div style=" width:1036px; height:70px; font-size:12px;  color:#fff; text-align:center;   margin:0 auto;">
+ 
+    <ul style="height:27px; margin:0px; margin-top:23px; display:block; float:left; width: 200px;  background:url(images/index_78.jpg) no-repeat;">
+     <li class="iisi"><div style=" height:27px; line-height:27px; text-indent:12px; text-align:left; font-size:12px; color:#929292;">友情链接</div> 
+        <ul class="eeeis">
+		         <li style="margin:0px; height:27px;"   ><a style="margin:0px; height:27px;"   href="http://www.moe.edu.cn/" target='_blank' >教育部</a></li>
+                <li style="margin:0px; height:27px;"   ><a style="margin:0px; height:27px;"   href="http://www.heec.edu.cn/" target='_blank' >教育部评估中心</a></li>
+                <li style="margin:0px; height:27px;"   ><a style="margin:0px; height:27px;"   href="http://www.bjedu.gov.cn/publish/portal27/" target='_blank' >北京市教委</a></li>
+                <li style="margin:0px; height:27px;"   ><a style="margin:0px; height:27px;"   href="http://www.pku.edu.cn/" target='_blank' >北京大学</a></li>
+                <li style="margin:0px; height:27px;"   ><a style="margin:0px; height:27px;"   href="http://www.tsinghua.edu.cn/publish/newthu/index.html" target='_blank' >清华大学</a></li>
+                <li style="margin:0px; height:27px;"   ><a style="margin:0px; height:27px;"   href="http://www.sociologyol.org/" target='_blank' >社会学视野</a></li>
+                <li style="margin:0px; height:27px;"   ><a style="margin:0px; height:27px;"   href="http://bbs.pinggu.org/" target='_blank' >人大经济论坛</a></li>
+                <li style="margin:0px; height:27px;"   ><a style="margin:0px; height:27px;"   href="http://www.philosophyol.com/" target='_blank' >哲学在线</a></li>
+                <li style="margin:0px; height:27px;"   ><a style="margin:0px; height:27px;"   href="http://www.icourses.cn/home/" target='_blank' >视频公开课</a></li>
+                <li style="margin:0px; height:27px;"   ><a style="margin:0px; height:27px;"   href="http://www.icourses.cn/home/" target='_blank' >爱课程网</a></li>
+                <li style="margin:0px; height:27px;"   ><a style="margin:0px; height:27px;"   href="http://www.lib.ruc.edu.cn/" target='_blank' >图书馆</a></li>
+                <li style="margin:0px; height:27px;"   ><a style="margin:0px; height:27px;"   href="http://www.ruc.edu.cn/" target='_blank' >人大主页</a></li>
+                <li style="margin:0px; height:27px;"   ><a style="margin:0px; height:27px;"   href="http://rucres.ruc.edu.cn" target='_blank' >中国人民大学研究性教学课程建设网</a></li>
+               </ul>
+     </li>
+    </ul>
+ 
+    <script>
+     $(function(){
+		$(".iisi").click(function(){
+				var h =	$(".eeeis").height()+27;	  
+				$(".eeeis").toggle().css("margin-top","-"+h+"px");				 
+								 })		
+		
+        $(".hoi1").hover(function(){
+				 		$(this).css("background","url(images/srsadt_47.gif) no-repeat")	 
+								 },function(){
+						 $(this).css("background","url(images/srsadt_82.gif) no-repeat")
+								 })		
+		 $(".hoi2").hover(function(){
+				 		$(this).css("background","url(images/srsadt_49.gif) no-repeat")	 
+								 },function(){
+						 $(this).css("background","url(images/srsadt_76.gif) no-repeat")
+								 })	
+		  $(".hoi3").hover(function(){
+				 		$(this).css("background","url(images/srsadt_51.gif) no-repeat")	 
+								 },function(){
+						 $(this).css("background","url(images/srsadt_77.gif) no-repeat")
+								 })	
+		   $(".hoi4").hover(function(){
+				 		$(this).css("background","url(images/srsadt_53.gif) no-repeat")	 
+								 },function(){
+						 $(this).css("background","url(images/srsadt_78.gif) no-repeat")
+								 })	
+		    $(".hoi5").hover(function(){
+				 		$(this).css("background","url(images/srsadt_55.gif) no-repeat")	 
+								 },function(){
+						 $(this).css("background","url(images/srsadt_80.gif) no-repeat")
+								 })	
+			 $(".hoi6").hover(function(){
+				 		$(this).css("background","url(images/srsadt_57.gif) no-repeat")	 
+								 },function(){
+						 $(this).css("background","url(images/srsadt_82.gif) no-repeat")
+								 })	 
+			 $(".boer").hover(function(){
+				 		$(this).css("border-top","4px solid #b30a2c")	 
+								 },function(){
+						 $(this).css("border-top","4px solid #717171")
+								 })	
+				})
+    </script>
+  
+    <div style=" width:350px; height:70px; float:left; font-size:12px; line-height:70px; margin-left:20px; color:#e9b6c0; text-align:left;   ">Copyright 2014中国人民大学教务处 版权所有</div>
+      <div style=" width:350px; height:58px; padding-top:12px; float:right; font-size:12px; line-height:24px; margin-left:20px; color:#d6a1ab; text-align:left;   ">地址：中国人民大学（中关村大街59号）科研楼B座 702<br />
+
+邮政编码：100872 电话：62515217 传真：62515217</div>
+  </div>
+</div><script>
+$(function(){
+		  
+		   })
+</script>
+</body>
+</html>

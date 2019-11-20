@@ -1,0 +1,531 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="/script/page.css" type=text/css rel=stylesheet>
+<script language="javascript" src="/module/jslib/jquery/jquery.js"></script>
+
+<title>宣传部</title>
+<meta name="Keywords" content="内容管理、内容管理发布（CMS）系统、信息发布、新闻采编发系统、知识管理、知识门户、政府门户、教育门户、企业门户、竞争情报系统、抓取系统、信息采集、信息雷达系统、电子政务、电子政务解决方案、办公系统、OA、网站办公系统"><meta name='Generator' content='大汉版通'><meta name='Author' content='大汉网络'>
+<meta name='Maketime' content='2017-10-19 18:02:35'>
+<meta name="sitename" content="宣传部">
+<meta name="siteurl"  content="http://dwxcb.yzu.edu.cn/index.html">
+<meta name="guild"    content="">
+<meta name="district"    content="">
+<meta name="sitecatalog"    content="">
+
+<link href="/images/47/css.css" rel="stylesheet" type="text/css" />
+<script type="text/JavaScript">
+function OpenFriendLink(url){ //v3.0
+  
+  if(url!="") window.open(url) ;
+  
+}
+</script>
+<script language="JavaScript">
+var ctimer;
+
+var lunarInfo=new Array(
+0x04bd8,0x04ae0,0x0a570,0x054d5,0x0d260,0x0d950,0x16554,0x056a0,0x09ad0,0x055d2,
+0x04ae0,0x0a5b6,0x0a4d0,0x0d250,0x1d255,0x0b540,0x0d6a0,0x0ada2,0x095b0,0x14977,
+0x04970,0x0a4b0,0x0b4b5,0x06a50,0x06d40,0x1ab54,0x02b60,0x09570,0x052f2,0x04970,
+0x06566,0x0d4a0,0x0ea50,0x06e95,0x05ad0,0x02b60,0x186e3,0x092e0,0x1c8d7,0x0c950,
+0x0d4a0,0x1d8a6,0x0b550,0x056a0,0x1a5b4,0x025d0,0x092d0,0x0d2b2,0x0a950,0x0b557,
+0x06ca0,0x0b550,0x15355,0x04da0,0x0a5d0,0x14573,0x052d0,0x0a9a8,0x0e950,0x06aa0,
+0x0aea6,0x0ab50,0x04b60,0x0aae4,0x0a570,0x05260,0x0f263,0x0d950,0x05b57,0x056a0,
+0x096d0,0x04dd5,0x04ad0,0x0a4d0,0x0d4d4,0x0d250,0x0d558,0x0b540,0x0b5a0,0x195a6,
+0x095b0,0x049b0,0x0a974,0x0a4b0,0x0b27a,0x06a50,0x06d40,0x0af46,0x0ab60,0x09570,
+0x04af5,0x04970,0x064b0,0x074a3,0x0ea50,0x06b58,0x055c0,0x0ab60,0x096d5,0x092e0,
+0x0c960,0x0d954,0x0d4a0,0x0da50,0x07552,0x056a0,0x0abb7,0x025d0,0x092d0,0x0cab5,
+0x0a950,0x0b4a0,0x0baa4,0x0ad50,0x055d9,0x04ba0,0x0a5b0,0x15176,0x052b0,0x0a930,
+0x07954,0x06aa0,0x0ad50,0x05b52,0x04b60,0x0a6e6,0x0a4e0,0x0d260,0x0ea65,0x0d530,
+0x05aa0,0x076a3,0x096d0,0x04bd7,0x04ad0,0x0a4d0,0x1d0b6,0x0d250,0x0d520,0x0dd45,
+0x0b5a0,0x056d0,0x055b2,0x049b0,0x0a577,0x0a4b0,0x0aa50,0x1b255,0x06d20,0x0ada0)
+
+var nStr1 = new Array('日','一','二','三','四','五','六','七','八','九','十','十一','腊')
+var nStr2 = new Array('初','十','廿','卅','　')
+
+//====================================== 传回农历 y年的总天数
+function lYearDays(y) {
+   var i, sum = 348
+   for(i=0x8000; i>0x8; i>>=1) sum += (lunarInfo[y-1900] & i)? 1: 0
+   return(sum+leapDays(y))
+}
+
+//====================================== 传回农历 y年闰月的天数
+function leapDays(y) {
+   if(leapMonth(y))  return((lunarInfo[y-1900] & 0x10000)? 30: 29)
+   else return(0)
+}
+
+//====================================== 传回农历 y年闰哪个月 1-12 , 没闰传回 0
+function leapMonth(y) {
+   return(lunarInfo[y-1900] & 0xf)
+}
+
+//====================================== 传回农历 y年m月的总天数
+function monthDays(y,m) {
+   return( (lunarInfo[y-1900] & (0x10000>>m))? 30: 29 )
+}
+
+//====================================== 算出农历, 传入日期物件, 传回农历日期物件
+//                                       该物件属性有 .year .month .day .isLeap .yearCyl .dayCyl .monCyl
+function Lunar(objDate) {
+
+   var i, leap=0, temp=0
+   var baseDate = new Date(1900,0,31)
+   var offset   = (objDate - baseDate)/86400000
+
+   this.dayCyl = offset + 40
+   this.monCyl = 14
+
+   for(i=1900; i<2050 && offset>0; i++) {
+      temp = lYearDays(i)
+      offset -= temp
+      this.monCyl += 12
+   }
+
+   if(offset<0) {
+      offset += temp;
+      i--;
+      this.monCyl -= 12
+   }
+
+   this.year = i
+   this.yearCyl = i-1864
+
+   leap = leapMonth(i) //闰哪个月
+   this.isLeap = false
+
+   for(i=1; i<13 && offset>0; i++) {
+      //闰月
+      if(leap>0 && i==(leap+1) && this.isLeap==false)
+         { --i; this.isLeap = true; temp = leapDays(this.year); }
+      else
+         { temp = monthDays(this.year, i); }
+
+      //解除闰月
+      if(this.isLeap==true && i==(leap+1)) this.isLeap = false
+
+      offset -= temp
+      if(this.isLeap == false) this.monCyl ++
+   }
+
+   if(offset==0 && leap>0 && i==leap+1)
+      if(this.isLeap)
+         { this.isLeap = false; }
+      else
+         { this.isLeap = true; --i; --this.monCyl;}
+
+   if(offset<0){ offset += temp; --i; --this.monCyl; }
+
+   this.month = i
+   this.day = offset + 1
+}
+
+//====================== 中文日期
+function cDay(d){
+   var s;
+
+   switch (d) {
+      case 10:
+         s = '初十'; break;
+      case 20:
+         s = '二十'; break;
+         break;
+      case 30:
+         s = '三十'; break;
+         break;
+      default :
+         s = nStr2[Math.floor(d/10)];
+         s += nStr1[d%10];
+   }
+   return(s);
+}
+
+
+function init(){
+
+if (document.all){
+	
+settimes();
+}
+}
+
+function settimes(){
+var time= new Date();
+
+hours= time.getHours();
+mins= time.getMinutes();
+secs= time.getSeconds();
+mons= (time.getMonth()+1);
+years= time.getYear(); 
+days= time.getDate(); 
+var sDObj , lDObj;
+	
+
+sDObj = new Date(years,time.getMonth(),days)    //当月一日日期
+lDObj = new Lunar(sDObj)
+
+week=time.getDay();
+switch (week)
+{
+	case 0: week="星期日"; break;
+	case 1: week="星期一"; break;
+	case 2: week="星期二"; break;
+	case 3: week="星期三"; break;
+	case 4: week="星期四"; break;
+	case 5: week="星期五"; break;
+	case 6: week="星期六"; break;
+}
+
+if (hours<10)
+hours="0"+hours;
+if(mins<10)
+mins="0"+mins;
+if (secs<10)
+secs="0"+secs;
+
+if (nStr1[lDObj.month]=="一") {
+	var nstr = "正月"+cDay(lDObj.day);
+}
+else {
+	var nstr = nStr1[lDObj.month]+"月"+cDay(lDObj.day);
+}
+var ystr = mons+"/"+days;
+var festival = "";
+switch (nstr)
+{
+	case "正月初一": festival="春节";break;
+	case "正月十五": festival="元宵节";break;
+	case "五月初五": festival="端午节";break;
+	case "八月十五": festival="中秋节";break;
+	case "九月初九": festival="重阳节";break;
+	case "腊月初八": festival="腊八节";break;
+}
+switch (ystr)
+{
+	case "1/1": festival+="元旦";break;
+	case "3/8": festival+="妇女节";break;
+	case "5/1": festival+="劳动节";break;
+	case "6/1": festival+="儿童节";break;
+	case "7/1": festival+="党的生日";break;
+	case "8/1": festival+="建军节";break;
+	case "9/10": festival+="教师节";break;
+	case "10/1": festival+="国庆节";break;
+}
+//var tim1=document.getElementById("tim1");
+//alert("<table cellpadding='0' cellspacing='0' border='0'><tr><td align='center'><font color=FFFFFF>"+years+"/"+ystr+" "+week+" "+hours+":"+mins+":"+secs+"<br>"+"农历"+(lDObj.isLeap?"闰":" ")+nstr+"  "+"</font></td></tr></table>");
+
+tim1.innerHTML="欢迎光临扬州大学宣传部引航网  ， 今天是： "+years+"/"+ystr+" "+week+" "+hours+":"+mins+":"+secs+" "+"农历"+(lDObj.isLeap?"闰":" ")+nstr;
+//tim1.innerHTML=years;
+setTimeout('settimes()',960);
+}
+</script>
+</head>
+
+<body>
+<table width="1000" border="0" align="center" cellpadding="0" cellspacing="0" style="margin-bottom:12px;">
+  <tr>
+    <td height="133"><EMBED pluginspage=http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash src=/flash/0/100416151915.swf width=1000 height=133 type=application/x-shockwave-flash quality="high"></EMBED></td>
+  </tr>
+  <tr>
+    <td height="34" background="/images/47/menubgx.gif">
+		<div class="menu">
+			<ul>
+				<li><a href="http://dwxcb.yzu.edu.cn">首页</a></li>
+				<li><A href="/col/col1923/index.html">工作职责</A></li>
+				<li><A href="/col/col1924/index.html">机构设置</A></li>
+				<li><A href="/col/col1925/index.html">时政学习</A></li>
+				<li><A href="/col/col1926/index.html">校园文化</A></li>
+				<li><A href="/col/col1927/index.html">文明之窗</A></li>
+				<li><A href="http://news.yzu.edu.cn/col/col40587/index.html" target="_blank">扬大校报</A></li>
+				<li><A href="http://news.yzu.edu.cn/col/col40585/index.html" target="_blank">扬大电视</A></li>
+				<li class="bnone"><A href="/col/col1930/index.html">规章制度</A></li>
+			</ul>
+		</div>
+	</td>
+  </tr>
+  <tr>
+    <td height="26" valign="middle" bgcolor="#F4F4F4" align="center"><div id="tim1"></div><SCRIPT>window.onload=function (){init();}</SCRIPT></td>
+  </tr>
+</table>
+<table width="946" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#F9F9F9">
+  <tr>
+    <td width="250" height="188" valign="top"><script type="text/javascript">var _width = 248; var _height = 185;var text_height =16;var flash_height = _height + text_height;var pic_arr = new Array();var link_arr = new Array();var text_arr = new Array();var i = 0;pic_arr[i] = "/picture/0/1709291011092178903.jpg";link_arr[i] = "/art/2017/9/28/art_14821_569083.html";text_arr[i] = "中国共产党扬州大学第三次代表大...";i++;pic_arr[i] = "/picture/0/1709290957240974806.jpg";link_arr[i] = "/art/2017/9/27/art_14821_569080.html";text_arr[i] = "中国共产党扬州大学第三次代表大...";i++;pic_arr[i] = "/picture/0/1709111147075555655.jpg";link_arr[i] = "/art/2017/9/11/art_14821_567569.html";text_arr[i] = "学校隆重举行2017级研究生开...";i++;pic_arr[i] = "/picture/0/1709111144166599122.jpg";link_arr[i] = "/art/2017/9/9/art_14821_567568.html";text_arr[i] = "学校隆重举行第33个教师节庆祝...";i++;pic_arr[i] = "/picture/0/1709111142241858174.jpg";link_arr[i] = "/art/2017/6/21/art_14821_567567.html";text_arr[i] = "学校隆重举行2017年毕业典礼...";i++;var p = pic_arr.join("|");var l = link_arr.join("|");var t = text_arr.join("|");var f = "/flash/0/slideshow.swf";document.write('<object ID="focus_flash" classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0" width="'+ _width +'" height="'+ flash_height +'">');document.write('<param name="allowScriptAccess" value="sameDomain"><param name="movie" value="'+f+'"><param name="quality" value="high"><param name="bgcolor">');document.write('<param name="menu" value="false"><param name=wmode value="transparent">');document.write('<param name="FlashVars" value="pics='+p+'&links='+l+'&texts='+t+'&borderwidth='+_width+'&borderheight='+_height+'&textheight='+text_height+'">');document.write('<embed ID="focus_flash" src="'+f+'" wmode="opaque" FlashVars="pics='+p+'&links='+l+'&texts='+t+'&borderwidth='+_width+'&borderheight='+_height+'&textheight='+text_height+'" menu="false" quality="high" width="'+ _width +'" height="'+ flash_height +'" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />');document.write('</object>');</script></td>
+    <td width="13" bgcolor="#FFFFFF"> </td>
+    <td width="420" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="28%" background="/images/47/titlebg.gif" class="index_title"><h1>·宣传动态</h1></td>
+        <td width="72%" align="right" bgcolor="#eaeaea"><a href="/col/col1939/index.html" style="color:#000000; text-decoration:none; padding-right:10px;" >更多</a></td>
+      </tr>
+      <tr>
+        <td class="index_news" style="padding:4px 10px" colspan="2"><table width='100%' cellspacing='0' cellpadding='0' border='0'>
+<tr>
+<td style='background-color:null'><table cellpadding='0' cellspacing='0' border='0' width='100%'><tr><td>·<a href='/art/2017/10/18/art_1939_570996.html' class='bt_link' title='我校师生集中收听收看中国共产党第十九次全国代表大会开幕会' target=_blank>我校师生集中收听收看中国共产党第十九次全...</a></td><td width='80' align='right' style='color:#999999'>2017-10-18</td></tr></table></td></tr>
+<tr>
+<td style='background-color:null'><table cellpadding='0' cellspacing='0' border='0' width='100%'><tr><td>·<a href='/art/2017/9/30/art_1939_569160.html' class='bt_link' title='中国共产党扬州大学第三次代表大会胜利闭幕' target=_blank>中国共产党扬州大学第三次代表大会胜利闭幕</a></td><td width='80' align='right' style='color:#999999'>2017-09-30</td></tr></table></td></tr>
+<tr>
+<td style='background-color:null'><table cellpadding='0' cellspacing='0' border='0' width='100%'><tr><td>·<a href='/art/2017/9/28/art_1939_569067.html' class='bt_link' title='中国共产党扬州大学第三次代表大会隆重开幕' target=_blank>中国共产党扬州大学第三次代表大会隆重开幕</a></td><td width='80' align='right' style='color:#999999'>2017-09-28</td></tr></table></td></tr>
+<tr>
+<td style='background-color:null'><table cellpadding='0' cellspacing='0' border='0' width='100%'><tr><td>·<a href='/art/2017/9/27/art_1939_569066.html' class='bt_link' title='中国共产党扬州大学第三次代表大会举行预备会议' target=_blank>中国共产党扬州大学第三次代表大会举行预备...</a></td><td width='80' align='right' style='color:#999999'>2017-09-27</td></tr></table></td></tr>
+<tr>
+<td style='background-color:null'><table cellpadding='0' cellspacing='0' border='0' width='100%'><tr><td>·<a href='/art/2017/9/24/art_1939_568868.html' class='bt_link' title='国家教育行政学院第54期高校领导干部进修班学员来我校考察调研' target=_blank>国家教育行政学院第54期高校领导干部进修...</a></td><td width='80' align='right' style='color:#999999'>2017-09-24</td></tr></table></td></tr>
+<tr>
+<td style='background-color:null'><table cellpadding='0' cellspacing='0' border='0' width='100%'><tr><td>·<a href='/art/2017/9/22/art_1939_568604.html' class='bt_link' title='省委组织部副部长周为号来我校开展调研走访活动' target=_blank>省委组织部副部长周为号来我校开展调研走访...</a></td><td width='80' align='right' style='color:#999999'>2017-09-22</td></tr></table></td></tr>
+<tr>
+<td style='background-color:null'><table cellpadding='0' cellspacing='0' border='0' width='100%'><tr><td>·<a href='/art/2017/9/21/art_1939_568487.html' class='bt_link' title='我校混合教学改革案例入编联合国教科文组织《混合学习白皮书》' target=_blank>我校混合教学改革案例入编联合国教科文组织...</a></td><td width='80' align='right' style='color:#999999'>2017-09-21</td></tr></table></td>
+</tr></table></td>
+      </tr>
+    </table></td>
+    <td width="13" bgcolor="#FFFFFF"> </td>
+    <td width="250" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <td width="42%" class="index_title"><h1>·信息发布</h1></td>
+        <td width="58%" align="right" bgcolor="#EAEAEA" ><a href="/col/col1933/index.html" style="color:#000000; text-decoration:none; padding-right:10px;" >更多</a></td>
+      </tr>
+      <tr>
+        <td class="index_news" colspan="2"><script language='javascript' src="/module/jslib/jquery/artdialog/artDialog.min.js"></script><script language='javascript' src="/module/permissionread/permissionunit.jsp?columnid=1933&unitid=6929&permissiontype=1&unitfilepath="></script></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td height="195" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="42%" class="index_title"><h1>·时政学习</h1></td>
+        <td width="58%" align="right" bgcolor="#EAEAEA" ><a href="/col/col1925/index.html" style="color:#000000; text-decoration:none; padding-right:10px;" >更多</a></td>
+      </tr>
+      <tr>
+        <td class="index_news" colspan="2"><table width='100%' cellspacing='0' cellpadding='0' border='0'>
+<tr>
+<td style='background-color:null'>·<a href='/art/2017/9/25/art_1925_568876.html' class='bt_link' title='高校高端智库联盟公约' target=_blank>高校高端智库联盟公约</a></td></tr>
+<tr>
+<td style='background-color:null'>·<a href='/art/2017/8/26/art_1925_566937.html' class='bt_link' title='用新常态的大逻辑观形势谋发展' target=_blank>用新常态的大逻辑观形势谋发展</a></td></tr>
+<tr>
+<td style='background-color:null'>·<a href='/art/2017/8/10/art_1925_566933.html' class='bt_link' title='中国民主政治在不断完善和发展' target=_blank>中国民主政治在不断完善和发展</a></td></tr>
+<tr>
+<td style='background-color:null'>·<a href='/art/2017/7/22/art_1925_566925.html' class='bt_link' title='建设政治文化 严肃政治生活 净化政治生态' target=_blank>建设政治文化 严肃政治生活 净...</a></td>
+</tr></table></td>
+      </tr>
+    </table>
+      <div align="center"><a href="http://dwxcb.yzu.edu.cn/col/col2843/index.html"><img src="/images/47/l1.jpg" width="212" height="40" border="0" /></a></div>
+      <div align="center" style="margin-top:8px"><a href="/col/col18181/index.html"><img src="/images/47/l2.gif" width="212" height="40" border="0" /></a></div>
+    </td>
+    <td bgcolor="#FFFFFF"> </td>
+    <td valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="28%" class="index_title"><h1>·校园文化</h1></td>
+        <td width="72%" align="right" bgcolor="#EAEAEA" ><a href="/col/col1926/index.html" style="color:#000000; text-decoration:none; padding-right:10px;" >更多</a></td>
+      </tr>
+      <tr>
+        <td class="index_news" colspan="2"><table width='100%' cellspacing='0' cellpadding='0' border='0'>
+<tr>
+<td style='background-color:null'><table cellpadding='0' cellspacing='0' border='0' width='100%'><tr><td>·<a href='/art/2017/10/18/art_1926_570997.html' class='bt_link' title='【建设成果】学校举办2017暑期“三下乡”社会实践活动成果分享会' target=_blank>【建设成果】学校举办2017暑期“三下乡...</a></td><td width='80' align='right' style='color:#999999'>2017-10-18</td></tr></table></td></tr>
+<tr>
+<td style='background-color:null'><table cellpadding='0' cellspacing='0' border='0' width='100%'><tr><td>·<a href='/art/2017/10/12/art_1926_570106.html' class='bt_link' title='【活动资讯】学校召开2016-2017学年本科生国家奖学金评审会' target=_blank>【活动资讯】学校召开2016-2017学...</a></td><td width='80' align='right' style='color:#999999'>2017-10-12</td></tr></table></td></tr>
+<tr>
+<td style='background-color:null'><table cellpadding='0' cellspacing='0' border='0' width='100%'><tr><td>·<a href='/art/2017/9/19/art_1926_568488.html' class='bt_link' title='【建设成果】我校学子荣获2017年“中国电信奖学金”' target=_blank>【建设成果】我校学子荣获2017年“中国...</a></td><td width='80' align='right' style='color:#999999'>2017-09-19</td></tr></table></td></tr>
+<tr>
+<td style='background-color:null'><table cellpadding='0' cellspacing='0' border='0' width='100%'><tr><td>·<a href='/art/2017/9/6/art_1926_567551.html' class='bt_link' title='【建设成果】我校师生在第十一届全国周培源大学生力学竞赛“基础力学实验”团体赛中喜获佳绩' target=_blank>【建设成果】我校师生在第十一届全国周培源...</a></td><td width='80' align='right' style='color:#999999'>2017-09-06</td></tr></table></td></tr>
+<tr>
+<td style='background-color:null'><table cellpadding='0' cellspacing='0' border='0' width='100%'><tr><td>·<a href='/art/2017/9/2/art_1926_567275.html' class='bt_link' title='【建设成果】机械学子在第十届“高教杯”全国大学生先进成图技术与产品信息建模创新大赛中喜获佳绩' target=_blank>【建设成果】机械学子在第十届“高教杯”全...</a></td><td width='80' align='right' style='color:#999999'>2017-09-02</td></tr></table></td></tr>
+<tr>
+<td style='background-color:null'><table cellpadding='0' cellspacing='0' border='0' width='100%'><tr><td>·<a href='/art/2017/8/21/art_1926_566747.html' class='bt_link' title='【建设成果】生科学子在第二届全国大学生生命科学创新创业大赛中喜获佳绩' target=_blank>【建设成果】生科学子在第二届全国大学生生...</a></td><td width='80' align='right' style='color:#999999'>2017-08-21</td></tr></table></td></tr>
+<tr>
+<td style='background-color:null'><table cellpadding='0' cellspacing='0' border='0' width='100%'><tr><td>·<a href='/art/2017/7/27/art_1926_566741.html' class='bt_link' title='【建设成果】我校学子在2017“批改网杯”全国大学生英语写作大赛中取得佳绩' target=_blank>【建设成果】我校学子在2017“批改网杯...</a></td><td width='80' align='right' style='color:#999999'>2017-07-27</td></tr></table></td>
+</tr></table></td>
+      </tr>
+    </table></td>
+    <td bgcolor="#FFFFFF"> </td>
+    <td valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="42%" class="index_title"><h1>·专家解读</h1></td>
+        <td width="58%" align="right" bgcolor="#EAEAEA" ><a href="/col/col1938/index.html" style="color:#000000; text-decoration:none; padding-right:10px;" >更多</a></td>
+      </tr>
+      <tr>
+        <td class="index_news" colspan="2"><table width='100%' cellspacing='0' cellpadding='0' border='0'>
+<tr>
+<td style='background-color:null'>·<a href='/art/2017/9/26/art_1938_568882.html' class='bt_link' title='姬芮芮：大数据推进新型智库建设' target=_blank>姬芮芮：大数据推进新型智库建设</a></td></tr>
+<tr>
+<td style='background-color:null'>·<a href='/art/2017/9/9/art_1938_568881.html' class='bt_link' title='黄渊基：打通智库建设的“最后一公里”' target=_blank>黄渊基：打通智库建设的“最后一...</a></td></tr>
+<tr>
+<td style='background-color:null'>·<a href='/art/2017/8/8/art_1938_568880.html' class='bt_link' title='应验：创新社会智库人才可持续发展机制' target=_blank>应验：创新社会智库人才可持续发...</a></td></tr>
+<tr>
+<td style='background-color:null'>·<a href='/art/2017/6/28/art_1938_562636.html' class='bt_link' title='付威：深入认识共享发展理念' target=_blank>付威：深入认识共享发展理念</a></td></tr>
+<tr>
+<td style='background-color:null'>·<a href='/art/2017/6/20/art_1938_561440.html' class='bt_link' title='王锡财：敬畏良知 把全面从严要求植根于心' target=_blank>王锡财：敬畏良知 把全面从严要...</a></td></tr>
+<tr>
+<td style='background-color:null'>·<a href='/art/2017/6/11/art_1938_561439.html' class='bt_link' title='张伟：马克思主义反贫困理论中国化的新贡献' target=_blank>张伟：马克思主义反贫困理论中国...</a></td></tr>
+<tr>
+<td style='background-color:null'>·<a href='/art/2017/6/2/art_1938_561438.html' class='bt_link' title='孙宪忠：从国家治理角度看民法总则' target=_blank>孙宪忠：从国家治理角度看民法总...</a></td>
+</tr></table></td>
+      </tr>
+    </table>
+    <div align="center"></div></td>
+  </tr>
+  
+  <tr>
+    <td height="195" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0" style="margin-top:8px">
+      <tr>
+        <td width="42%" class="index_title"><h1>·专题点击</h1></td>
+        <td width="58%" align="right" bgcolor="#EAEAEA" ><a href="/col/col1937/index.html" style="color:#000000; text-decoration:none; padding-right:10px;" >更多</a></td>
+      </tr>
+      <tr>
+        <td class="index_news" colspan="2"><table width='100%' cellspacing='0' cellpadding='0' border='0'>
+<tr>
+<td style='background-color:null'>·<a href='/art/2017/4/19/art_1937_552880.html' class='bt_link' title='实施网络强国战略 建设网络良好生态' target=_blank>实施网络强国战略 建设网络良好...</a></td></tr>
+<tr>
+<td style='background-color:null'>·<a href='/art/2016/11/12/art_1937_547028.html' class='bt_link' title='学习宣传贯彻党的十八届六中全会精神专题' target=_blank>学习宣传贯彻党的十八届六中全会...</a></td></tr>
+<tr>
+<td style='background-color:null'>·<a href='/art/2016/10/30/art_1937_547025.html' class='bt_link' title='缅怀先烈 不忘初心：长征精神学习专题' target=_blank>缅怀先烈 不忘初心：长征精神学...</a></td></tr>
+<tr>
+<td style='background-color:null'>·<a href='/art/2016/3/22/art_1937_518491.html' class='bt_link' title='“两学一做”学习教育' target=_blank>“两学一做”学习教育</a></td></tr>
+<tr>
+<td style='background-color:null'>·<a href='/art/2015/4/29/art_1937_480470.html' class='bt_link' title='深入开展“三严三实”专题教育' target=_blank>深入开展“三严三实”专题教育</a></td></tr>
+<tr>
+<td style='background-color:null'>·<a href='/art/2013/3/20/art_1937_307919.html' class='bt_link' title='学习贯彻习近平总书记系列重要讲话精神' target=_blank>学习贯彻习近平总书记系列重要讲...</a></td></tr>
+<tr>
+<td style='background-color:null'>·<a href='/art/2014/10/16/art_1937_465081.html' class='bt_link' title='培育和践行社会主义核心价值观' target=_blank>培育和践行社会主义核心价值观</a></td>
+</tr></table></td>
+      </tr>
+    </table></td>
+    <td bgcolor="#FFFFFF"> </td>
+    <td valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="28%" class="index_title"><h1>·文明之窗</h1></td>
+        <td width="72%" align="right" bgcolor="#EAEAEA" ><a href="/col/col1927/index.html" style="color:#000000; text-decoration:none; padding-right:10px;" >更多</a></td>
+      </tr>
+      <tr>
+        <td class="index_news" colspan="2"><table width='100%' cellspacing='0' cellpadding='0' border='0'>
+<tr>
+<td style='background-color:null'><table cellpadding='0' cellspacing='0' border='0' width='100%'><tr><td>·<a href='/art/2017/9/25/art_1927_568870.html' class='bt_link' title='我校外语学院入选“江苏省社会科学普及研发基地”' target=_blank>我校外语学院入选“江苏省社会科学普及研发...</a></td><td width='80' align='right' style='color:#999999'>2017-09-25</td></tr></table></td></tr>
+<tr>
+<td style='background-color:null'><table cellpadding='0' cellspacing='0' border='0' width='100%'><tr><td>·<a href='/art/2017/9/22/art_1927_568605.html' class='bt_link' title='我校2件新闻作品获2016年度江苏教育新闻奖' target=_blank>我校2件新闻作品获2016年度江苏教育新...</a></td><td width='80' align='right' style='color:#999999'>2017-09-22</td></tr></table></td></tr>
+<tr>
+<td style='background-color:null'><table cellpadding='0' cellspacing='0' border='0' width='100%'><tr><td>·<a href='/art/2017/9/5/art_1927_567277.html' class='bt_link' title='体育学院再次荣获“全国群众体育先进单位”称号' target=_blank>体育学院再次荣获“全国群众体育先进单位”...</a></td><td width='80' align='right' style='color:#999999'>2017-09-05</td></tr></table></td></tr>
+<tr>
+<td style='background-color:null'><table cellpadding='0' cellspacing='0' border='0' width='100%'><tr><td>·<a href='/art/2017/8/23/art_1927_566750.html' class='bt_link' title='我校校友、著名作家毕飞宇荣获“法兰西文学艺术骑士勋章”' target=_blank>我校校友、著名作家毕飞宇荣获“法兰西文学...</a></td><td width='80' align='right' style='color:#999999'>2017-08-23</td></tr></table></td></tr>
+<tr>
+<td style='background-color:null'><table cellpadding='0' cellspacing='0' border='0' width='100%'><tr><td>·<a href='/art/2017/7/20/art_1927_566740.html' class='bt_link' title='我校教师荣获民盟扬州市委特别贡献奖' target=_blank>我校教师荣获民盟扬州市委特别贡献奖</a></td><td width='80' align='right' style='color:#999999'>2017-07-20</td></tr></table></td></tr>
+<tr>
+<td style='background-color:null'><table cellpadding='0' cellspacing='0' border='0' width='100%'><tr><td>·<a href='/art/2017/7/14/art_1927_566739.html' class='bt_link' title='“人类命运共同体与多元文明的对话”国际学术研讨会暨全国第三届中青年马克思主义学者高峰论坛在我校举行' target=_blank>“人类命运共同体与多元文明的对话”国际学...</a></td><td width='80' align='right' style='color:#999999'>2017-07-14</td></tr></table></td></tr>
+<tr>
+<td style='background-color:null'><table cellpadding='0' cellspacing='0' border='0' width='100%'><tr><td>·<a href='/art/2017/7/13/art_1927_566738.html' class='bt_link' title='我校荣获“江苏省平安校园建设示范高校”称号' target=_blank>我校荣获“江苏省平安校园建设示范高校”称...</a></td><td width='80' align='right' style='color:#999999'>2017-07-13</td></tr></table></td>
+</tr></table></td>
+      </tr>
+    </table></td>
+    <td bgcolor="#FFFFFF"> </td>
+    <td rowspan="2" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0" style="width:250px">
+      <tr>
+        <td width="42%" class="index_title"><h1>·视频点播</h1></td>
+        <td width="58%" align="right" bgcolor="#EAEAEA" ><a href="http://dwxcb.yzu.edu.cn/col/col2841/index.html" style="color:#000000; text-decoration:none; padding-right:10px;" >更多</a></td>
+      </tr>
+      <tr>
+        <td class="index_news" colspan="2"><table width='100%' cellspacing='0' cellpadding='0' border='0'>
+<tr>
+<td style='background-color:null'>·<a href='/art/2017/9/26/art_2841_568886.html' class='bt_link' title='习近平总书记新闻舆论工作座谈会重要讲话精神解读' target=_blank>习近平总书记新闻舆论工...</a></td></tr>
+<tr>
+<td style='background-color:null'>·<a href='/art/2017/8/28/art_2841_568885.html' class='bt_link' title='十八大以来教育体制改革宏观政策解读' target=_blank>十八大以来教育体制改革...</a></td></tr>
+<tr>
+<td style='background-color:null'>·<a href='/art/2017/6/29/art_2841_562638.html' class='bt_link' title='21世纪中国马克思主义发展创新的基本特征' target=_blank>21世纪中国马克思主义...</a></td></tr>
+<tr>
+<td style='background-color:null'>·<a href='/art/2017/5/22/art_2841_562637.html' class='bt_link' title='中国文化在“一带一路”建设中的作用与价值' target=_blank>中国文化在“一带一路”...</a></td>
+</tr></table></td>
+      </tr>
+    </table>
+      <table width="100%" border="0" cellspacing="0" cellpadding="0" style="width:250px">
+        <tr>
+          <td width="42%" class="index_title"><h1>·网上调查</h1></td>
+          <td width="58%" align="right" bgcolor="#EAEAEA" ><a href="http://dwxcb.yzu.edu.cn/col/col2842/index.html" style="color:#000000; text-decoration:none; padding-right:10px;" >更多</a></td>
+        </tr>
+        <tr>
+          <td class="index_news" colspan="2"><table width='100%' cellspacing='0' cellpadding='0' border='0'>
+<tr>
+<td style='background-color:null'>·<a href='/art/2010/12/23/art_2842_77361.html' class='bt_link' title='扬州大学教风学风表述和校歌歌词征集投票' target=_blank>扬州大学教风学风表述和校歌歌词征...</a></td>
+</tr></table></td>
+        </tr>
+      </table>
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td width="42%" class="index_title"><h1>·友情链接</h1></td>
+          <td width="58%" bgcolor="#eaeaea" style="color:#000000; text-decoration:none; padding-right:10px;"> </td>
+        </tr>
+        <tr>
+          <td colspan="2" class="index_news"><TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+<TBODY>
+<TR>
+<TD align=middle height=26><SELECT style="FONT-SIZE: 9pt; WIDTH: 200px; BACKGROUND-COLOR: #ffffff" onchange="javascript:if (this.selectedIndex==0) return false;window.open(this.options[this.selectedIndex].value)" size=1 name=select1> <OPTION selected>----校内网址链接-----------------</OPTION> <OPTION value=http://www.yzu.edu.cn>扬州大学</OPTION> <OPTION value=http://jwjc.yzu.edu.cn>纪委（监察处）</OPTION> <OPTION value=http://dwbgs.yzu.edu.cn>党委办公室</OPTION> <OPTION value=http://zzb.yzu.edu.cn>组织部</OPTION> <OPTION value=http://dwxcb.yzu.edu.cn>宣传部</OPTION> <OPTION value=http://dangxiao.yzu.edu.cn>（党校）</OPTION> <OPTION value=http://dwtzb.yzu.edu.cn>统战部</OPTION> <OPTION value=http://xgc.yzu.edu.cn>学工部</OPTION> <OPTION value=http://bwc.yzu.edu.cn>保卫部（处）</OPTION> <OPTION value=http://rwb.yzu.edu.cn>（人武部）</OPTION> <OPTION value=http://gonghui.yzu.edu.cn>工会</OPTION> <OPTION value=http://tuanwei.yzu.edu.cn>团委</OPTION> <OPTION value=http://xzbgs.yzu.edu.cn>校长办公室</OPTION> <OPTION value=http://jwc.yzu.edu.cn>教务处</OPTION> <OPTION value=http://zhaoban.yzu.edu.cn>（招办）</OPTION> <OPTION value=http://yjsc.yzu.edu.cn>研究生处（院）</OPTION> <OPTION value=http://zrkxc.yzu.edu.cn>自然科学处</OPTION> <OPTION value=http://rwskc.yzu.edu.cn>人文社科处</OPTION> <OPTION value=http://cjc.yzu.edu.cn>成教处（院）</OPTION> <OPTION value=http://international.yzu.edu.cn>国际合作与交流（港澳台办公室）</OPTION> <OPTION value=http://rsc.yzu.edu.cn>人事处</OPTION> <OPTION value=http://coe.yzu.edu.cn>海外教育学院</OPTION> <OPTION value=http://cwc.yzu.edu.cn>财务处</OPTION> <OPTION value=http://gz.yzu.edu.cn>国有资产管理处</OPTION> <OPTION value=http://sjc.yzu.edu.cn>审计处</OPTION> <OPTION value=http://hqglc.yzu.edu.cn>后勤管理处</OPTION> <OPTION value=http://jjc.yzu.edu.cn>基建处</OPTION> <OPTION value=http://shebei.yzu.edu.cn>实验室与设备管理处</OPTION> <OPTION value=http://cszx.yzu.edu.cn>（测试中心）</OPTION> <OPTION value=http://kjcyc.yzu.edu.cn>科技产业处</OPTION> <OPTION value=http://fzbgs.yzu.edu.cn>发展办公室</OPTION> <OPTION value=http://ltxc.yzu.edu.cn>离退休处</OPTION> <OPTION value=http://hqjt.yzu.edu.cn>后勤服务集团</OPTION> <OPTION value=http://lib.yzu.edu.cn>图书馆</OPTION> <OPTION value=http://pgzx.yzu.edu.cn>教育教学评估中心</OPTION> <OPTION value=http://xbbjb.yzu.edu.cn>学报编辑部</OPTION> <OPTION value=http://dangan.yzu.edu.cn>档案馆</OPTION> <OPTION value=http://xxzx.yzu.edu.cn>信息中心</OPTION> <OPTION value=http://synmc.yzu.edu.cn>实验农牧场</OPTION></SELECT></TD></TR>
+<TR>
+<TD align=middle height=26><SELECT id=select2 style="FONT-SIZE: 9pt; WIDTH: 200px; BACKGROUND-COLOR: #ffffff" onchange="javascript:if (this.selectedIndex==0) return false;window.open(this.options[this.selectedIndex].value)" size=1 name=select2> <OPTION selected>----校外网站链接-----------------</OPTION> <OPTION value=http://www.baidu.com/>百度搜索引擎</OPTION></SELECT> </TD></TR></TBODY></TABLE></td>
+        </tr>
+      </table>
+    <table width="250" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="250"><P style="MARGIN-BOTTOM: 20px"><IMG height=25 src="/picture/0/090701094005638.gif" width=250 border=0></P></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td height="195" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="42%" class="index_title"><h1>·研讨交流</h1></td>
+        <td width="58%" align="right" bgcolor="#EAEAEA" ><a href="/col/col1936/index.html" style="color:#000000; text-decoration:none; padding-right:10px;" >更多</a></td>
+      </tr>
+      <tr>
+        <td class="index_news" colspan="2"><table width='100%' cellspacing='0' cellpadding='0' border='0'>
+<tr>
+<td style='background-color:null'>·<a href='/art/2017/9/23/art_1936_568877.html' class='bt_link' title='刘博智：吹响高校社科界服务国家“集结号”' target=_blank>刘博智：吹响高校社科界服务国家...</a></td></tr>
+<tr>
+<td style='background-color:null'>·<a href='/art/2017/7/13/art_1936_566953.html' class='bt_link' title='张维为：政治制度的竞争主要看三点' target=_blank>张维为：政治制度的竞争主要看三...</a></td></tr>
+<tr>
+<td style='background-color:null'>·<a href='/art/2017/6/27/art_1936_562635.html' class='bt_link' title='方世南 孔 川：如何优化党内政治生态' target=_blank>方世南 孔 川：如何优化党内政...</a></td></tr>
+<tr>
+<td style='background-color:null'>·<a href='/art/2017/6/15/art_1936_561436.html' class='bt_link' title='葛道凯：用教育的温度提高群众满意度' target=_blank>葛道凯：用教育的温度提高群众满...</a></td></tr>
+<tr>
+<td style='background-color:null'>·<a href='/art/2017/6/9/art_1936_561435.html' class='bt_link' title='侯波：掌握精准扶贫的“金钥匙”' target=_blank>侯波：掌握精准扶贫的“金钥匙”</a></td></tr>
+<tr>
+<td style='background-color:null'>·<a href='/art/2017/5/30/art_1936_561434.html' class='bt_link' title='郝立新：思政课程“配方”亟待改进' target=_blank>郝立新：思政课程“配方”亟待改...</a></td></tr>
+<tr>
+<td style='background-color:null'>·<a href='/art/2017/5/20/art_1936_558386.html' class='bt_link' title='苏晓晖：高峰论坛凸显中国号召力' target=_blank>苏晓晖：高峰论坛凸显中国号召力</a></td>
+</tr></table></td>
+      </tr>
+    </table></td>
+    <td bgcolor="#FFFFFF"> </td>
+    <td valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="28%" class="index_title"><h1>·普法园地</h1></td>
+        <td width="72%" align="right" bgcolor="#EAEAEA" ><a href="/col/col1934/index.html" style="color:#000000; text-decoration:none; padding-right:10px;" >更多</a></td>
+      </tr>
+      <tr>
+        <td class="index_news" colspan="2"><table width='100%' cellspacing='0' cellpadding='0' border='0'>
+<tr>
+<td style='background-color:null'><table cellpadding='0' cellspacing='0' border='0' width='100%'><tr><td>·<a href='/art/2017/9/26/art_1934_568873.html' class='bt_link' title='【微普法】@所有人：下月起一大波重磅新规实施，这些影响要知道' target=_blank>【微普法】@所有人：下月起一大波重磅新规...</a></td><td width='80' align='right' style='color:#999999'>2017-09-26</td></tr></table></td></tr>
+<tr>
+<td style='background-color:null'><table cellpadding='0' cellspacing='0' border='0' width='100%'><tr><td>·<a href='/art/2017/9/21/art_1934_568489.html' class='bt_link' title='【法制资讯】孟建柱：弘扬优良传统 坚持改革创新 努力建设更高水平的平安中国' target=_blank>【法制资讯】孟建柱：弘扬优良传统 坚持改...</a></td><td width='80' align='right' style='color:#999999'>2017-09-21</td></tr></table></td></tr>
+<tr>
+<td style='background-color:null'><table cellpadding='0' cellspacing='0' border='0' width='100%'><tr><td>·<a href='/art/2017/9/7/art_1934_567278.html' class='bt_link' title='【法制资讯】国务院发布《志愿服务条例》' target=_blank>【法制资讯】国务院发布《志愿服务条例》</a></td><td width='80' align='right' style='color:#999999'>2017-09-07</td></tr></table></td></tr>
+<tr>
+<td style='background-color:null'><table cellpadding='0' cellspacing='0' border='0' width='100%'><tr><td>·<a href='/art/2017/8/28/art_1934_566757.html' class='bt_link' title='【微普法】国歌法草案二次审议：侮辱国歌将追究刑事责任' target=_blank>【微普法】国歌法草案二次审议：侮辱国歌将...</a></td><td width='80' align='right' style='color:#999999'>2017-08-28</td></tr></table></td></tr>
+<tr>
+<td style='background-color:null'><table cellpadding='0' cellspacing='0' border='0' width='100%'><tr><td>·<a href='/art/2017/8/11/art_1934_566756.html' class='bt_link' title='【法制资讯】筑牢长治久安之基' target=_blank>【法制资讯】筑牢长治久安之基</a></td><td width='80' align='right' style='color:#999999'>2017-08-11</td></tr></table></td></tr>
+<tr>
+<td style='background-color:null'><table cellpadding='0' cellspacing='0' border='0' width='100%'><tr><td>·<a href='/art/2017/7/7/art_1934_566755.html' class='bt_link' title='【法制资讯】砥柱中流,引领中华民族伟大复兴' target=_blank>【法制资讯】砥柱中流,引领中华民族伟大复...</a></td><td width='80' align='right' style='color:#999999'>2017-07-07</td></tr></table></td></tr>
+<tr>
+<td style='background-color:null'><table cellpadding='0' cellspacing='0' border='0' width='100%'><tr><td>·<a href='/art/2017/6/28/art_1934_562633.html' class='bt_link' title='【法制资讯】五部门联合出台非法证据排除相关规定' target=_blank>【法制资讯】五部门联合出台非法证据排除相...</a></td><td width='80' align='right' style='color:#999999'>2017-06-28</td></tr></table></td>
+</tr></table></td>
+      </tr>
+    </table></td>
+    <td bgcolor="#FFFFFF"> </td>
+  </tr>
+</table>
+<table width="942" border="0" align="center" cellpadding="0" cellspacing="0" class="foot">
+  <tr>
+    <td width="1235"><P align=center>CopyRight (C) 扬州大学宣传部 版权所有</P></td>
+  </tr>
+</table>
+
+
+<!-- visitcount Begin --><iframe src='./module/visitcount/visit.jsp?type=1&i_webid=4&i_columnid=224' name="vishidden" id="vishidden" frameborder="0" style="width:0; height:0; display:none"></iframe><!-- visitcount End -->
+</body>
+</html>
+ <a href='http://www.hanweb.com' style='display:none'>Produced By 大汉网络 大汉版通发布系统</a><script language="javascript" src='/script/pagecontrol.js'></script>

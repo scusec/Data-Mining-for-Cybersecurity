@@ -1,0 +1,330 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>南昌大学邮件系统</title>
+    <link href="/coremail/cmcu_var/index_ncu/css/login.css" rel="stylesheet" type="text/css" charset="iso-8859-1">
+    <script type="text/javascript" src="/coremail/cmcu_var/index_ncu/js/RSA.js"></script>
+    <script type="text/javascript" src="/coremail/cmcu_var/index_ncu/js/BigInt.js"></script>
+    <script type="text/javascript" src="/coremail/cmcu_var/index_ncu/js/Barrett.js"></script>
+    <script type="text/javascript"><!--
+
+    var domainSpecified = true;
+
+    
+
+    function getAccountInputId() {
+        return domainSpecified ? "user" : "uid";
+    }
+
+    function getCookie(name) {
+        var reg = new RegExp("(^| )" + name + "=([^;]*)(;|$)", "gi");
+        var tmp = reg.exec(document.cookie);
+        return unescape((tmp || [])[2] || "");
+    }
+    window.onload=function(){
+        var accountInputId = getAccountInputId();
+        var cookie = getCookie(accountInputId);
+        if (cookie != null && cookie != "") {
+            document.getElementsByName("password")[0].focus();
+        } else {
+            $(accountInputId).focus();
+        }
+        //假如是firefox则隐藏隐藏设置主页
+        if (!document.all) {
+            var homepage = document.getElementById("homepage");
+            if (homepage) {
+                homepage.style.display = "none";
+            }
+        }
+    }
+
+    var key;
+    function bodyRSA(){
+        setMaxDigits(76);
+        key = new RSAKeyPair("10001","","ac594f69946cd71a4b0f278dbf5bbb103ad7e363da9100562dffabdd92771b46c83aaa59498cd038ee90dedd404c7262d57c00c48c81eb8088849c4ea9df32e9");
+    }
+
+    function tryAutoLogin() {
+        try {
+            var cookie = getCookie("NCU_INFO");
+            var email = "", exTime = "", timeDiff = 0;
+            if (cookie != null && cookie != "") {
+//            cookie = cookie.replace(/\"/g, "");
+                cookie = decodeURI(cookie);
+                var info = cookie.split("|");
+
+                email = info[0];
+                exTime = info[1];
+
+                timeDiff = new Date().getTime() - parseInt(exTime);
+            }
+
+            var error = "";
+            var errorUidPwd = "";
+//        if ((email.indexOf("@dev92.com") > -1)
+            if ((email.indexOf("@ncu.edu.cn") > -1 || email.indexOf("@email.ncu.edu.cn") > -1)
+                    && timeDiff < 7 * 24 * 60 * 60 * 1000 && (error == "" && errorUidPwd == "")) {
+                document.getElementById("autologin_form").submit();
+            }
+
+        } catch(e) {
+        }
+    }
+
+    function setCookie(name, value) {
+        document.cookie = name + '=' + escape(value)
+                + ";expires=" + (new Date(2099, 12, 31)).toGMTString();
+    }
+
+    function $(id) {
+        return document.getElementById(id);
+    }
+
+    function restoreCookies() {
+        var accountInputId = getAccountInputId();
+       // $(accountInputId).value = getCookie(accountInputId); // restoreCookies,有何作用 ???
+    }
+
+    function loginSubmit(form, event) {
+//    if (document.getElementById("saveUsername") && document.getElementById("saveUsername").checked) {
+//        setCookie("uid", document.getElementsByName("uid")[0].value);
+//    }
+
+        if (document.getElementById("remUser") && document.getElementById("remUser").checked) {
+            bodyRSA();
+            var password = document.getElementsByName("password")[0].value;
+            document.getElementById('encodedText').value = encryptedString(key, password);
+            document.getElementById("exTime").value = new Date().getTime();
+//        return false;
+        }
+
+        if ((document.getElementById("face_classic_cgi") || {}).selected) {
+            if (document.all) { // is IE
+                event.returnValue = false;
+            }
+            document.getElementById("classic_cgi_form").elements["user"].value = form.elements["uid"].value;
+            document.getElementById("classic_cgi_form").elements["pass"].value = form.elements["password"].value;
+            document.getElementById("classic_cgi_form").submit();
+            return false;
+        }
+        return true;
+    }
+    function bookmarkMe() {
+        try {
+            window.external.AddFavorite(location.href, document.title);
+        } catch(e) {
+            alert("请按 Ctrl-D 收藏本页")
+        }
+    }
+
+    function getUidFromInput() {
+        return domainSpecified ? ($("user").value + "@" + $("domain").value) : $("uid").value;
+    }
+
+    function recoverPwd(anchorElement) {
+        var uid = getUidFromInput();
+        anchorElement.href += '?uid=' + uid;
+    }
+    //--></script>
+</head>
+
+<body>
+<div class="Head">
+    <div class="fLeft">
+    </div>
+    <div class="fRight HeadLinks">
+        
+      <span id="homepage"><a  class="HeLink" href="javascript:;" onClick="this.style.behavior='url(#default#homepage)';this.setHomePage(document.location);">
+          设为首页</a>
+        |
+      </span>
+        
+        <a class="HeLink" href="javascript:bookmarkMe()">
+            收藏本页</a>
+        |
+        
+        
+        <a target="_blank" href="/coremail/help/index_zh_CN.jsp">
+            帮助</a>
+        |
+        
+            
+             <a class="HeLink" href="http://mail.ncu.edu.cn">切换至教工邮件</a>
+            
+            
+        
+    </div>
+</div>
+<div id="center">
+	<div>
+    <div class="MainLeft">
+        
+            
+                <div align=center><img src="/coremail/cmcu_var/index_ncu/css/logo.gif">
+                </div>
+                <div class="slogan2">
+                    <div style='width:100%;line-height:20px;text-align:left'><center><font color=blue><b>使用说明</b></font></center></div>
+                    <div style='width:100%;text-align:left'>　　1、学校为每个新生开设了容量为100M的学生邮箱。邮箱采用实名制，邮箱名为每个学生的“校园卡号@email.ncu.edu.cn”。邮箱仅限本人使用；</div>
+                    <div style='width:100%;text-align:left'>　　2、邮箱的初始密码为身份证后6位（最后1位为X字母的要输入小写x字母）。对于少数未提供身份证号的同学，请尝试输入"000000"；</div>
+                    <div style='width:100%;text-align:left'>　　3、请登录 http://email.ncu.edu.cn后修改密码。各位同学须保管好自己的密码，保证密码有一定的复杂性，不使用简单密码。如果可能请定期更改登录密码。如忘记密码，需要管理员修改密码，请本人携带有效身份证明，到网络中心用户接待室修改；</div>
+                    <div style='width:100%;text-align:left'>　　4、如果需要申请邮箱的别名，请登录 http://email.ncu.edu.cn后修改。建议按照姓名的汉语全拼申请，禁止使用不雅的单词作为别名。别名申请成功后，可以使用邮箱名为“别名@email.ncu.edu.cn”的方式收发邮件。别名采取谁先申请谁先使用的原则。如果申请时发现该别名已被注册，请另取别名，如在姓和名中间加下划线等方式。别名不能使用中文，不能全部使用数字，长度在5~12位之间；</div>
+                    <div style='width:100%;text-align:left'>　　5、同学在校学习期间，可使用该邮箱。为降低系统负荷，如果同学毕业后连续半年未登录自己的邮箱，系统将自动注销。如果同学毕业后不间断使用邮箱，系统将为同学保留该邮箱；</div>
+                    <div style='width:100%;text-align:left'>　　6、在使用过程中遇有疑问，可在工作日上班时间咨询83969312。</div>
+                </div>
+            
+            
+        
+    </div>
+
+    <div class="MainRight">
+        
+            
+            
+                
+            
+        
+        <form id="loginForm" method="post" action="/coremail/index.jsp"
+              onsubmit="return loginSubmit(this, event);">
+            
+            <input type="hidden" name="encodedText" id="encodedText"/>
+            <input type="hidden" name="exTime" id="exTime"/>
+            <div class="title">
+                <div class="caption">
+                    电子邮箱登录
+                    <span class="titleNote error"></span>
+                </div>
+            </div>
+            <table class="loginTable">
+                <tfoot>
+                <tr>
+                    <td></td>
+                    <td>
+                        <button name="action:login" type="submit" class="Button">
+                            登　录
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        
+                        <a href="/coremail/forgetpwd.jsp" onclick="recoverPwd(this);">
+                            忘记密码？ &gt;&gt;
+                        </a>
+                    </td>
+                </tr>
+                </tfoot>
+                <tr>
+                    <th>用户名:</th>
+                    <td align="left">
+                        
+                            
+                                <input type="text" id="user" name="user" class="input"
+                                       value=""/>
+                                @email.ncu.edu.cn
+                                <input type="hidden" id="domain" name="domain" value="email.ncu.edu.cn"/>
+                            
+                            
+                        
+                    </td>
+                </tr>
+                <tr>
+                    <th>密　码:</th>
+                    <td align="left"><input type="password" name="password" class="input" autocomplete="off"
+                               value=""></td>
+                </tr>
+                
+                <tr>
+                    <th>风　格:</th>
+                    <td align="left">
+                        
+                        <select name="face" class="inputWidth">
+                            <option value="">自动选择</option>
+                            
+                                
+                            
+                                
+                            
+                                
+                                    <option value="XJS" >
+                                        极速风格
+                                    </option>
+                                
+                            
+                            
+                        </select>
+                    </td>
+                </tr>
+                <!--
+                <tr class="saveUsername">
+                  <th>
+                    <input type="checkbox" id="saveUsername" checked>
+                  </th>
+                  <td>
+                    <label for="saveUsername">
+                      在此电脑上记住用户名
+                    </label>
+                  </td>
+                </tr>
+                -->
+                <tr class="remUser">
+                    <th>
+                        <input type="checkbox" id="remUser" value="1" name="remUser">
+                    </th>
+                    <td>
+                        <label for="remUser" onmouseover="document.getElementById('remUserDesc').style.display='';"
+                               onmouseout="document.getElementById('remUserDesc').style.display = 'none';">
+                            一周内自动登录
+                        </label>
+                        <div id="remUserDesc" style="position: absolute; z-index: 9; width: 220px; height: 80px; background-color: rgb(255, 239, 164); border: 1px solid rgb(255, 153, 0); text-align: left; padding: 5px; line-height: 150%; color: rgb(220, 104, 0);display:none">
+                            为了您的信息安全，请不要在网吧或公用电脑上使用此功能！<br/>如选择了该功能，退出邮箱时请直接关闭浏览器，而不要点击"退出"按钮退出！
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+	</div>
+</div>
+<div class="copyright">
+    <a href="http://net.ncu.edu.cn" target="_blank">南昌大学. &copy; 联系邮箱:support<img src="/coremail/cmcu_var/index_ncu/css/at.png" border=0>ncu.edu.cn </a>
+</div>
+
+
+<form action="/coremail/index.jsp" id="autologin_form" method="post">
+    <input type="hidden" name="action:login" value="1" />
+    <input type="hidden" name="autologin" value="1" />
+</form>
+
+<script type="text/javascript"><!--
+restoreCookies();
+tryAutoLogin();
+//--></script>
+
+
+<form action="/coremail/fcg/login" id="classic_cgi_form" method="post">
+    <input type="hidden" name="user" />
+    <input type="hidden" name="pass" />
+</form>
+<!-- Piwik -->
+<script type="text/javascript">
+  var _paq = _paq || [];
+  _paq.push(["trackPageView"]);
+  _paq.push(["enableLinkTracking"]);
+
+  (function() {
+    var u=(("https:" == document.location.protocol) ? "https" : "http") + "://tj.ncu.edu.cn/";
+    _paq.push(["setTrackerUrl", u+"piwik.php"]);
+    _paq.push(["setSiteId", "1"]);
+    var d=document, g=d.createElement("script"), s=d.getElementsByTagName("script")[0]; g.type="text/javascript";
+    g.defer=true; g.async=true; g.src=u+"piwik.js"; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<!-- End Piwik Code -->
+<div id=ipv6_enabled_www_test_logo></div>
+<script language="JavaScript" type="text/javascript">
+    	var Ipv6_Js_Server = (("https:" == document.location.protocol) ? "https://" : "http://");
+	document.write(unescape("%3Cscript src='" + Ipv6_Js_Server + "www.ipv6forum.com/ipv6_enabled/sa/SA1.php?id=3563' type='text/javascript'%3E%3C/script%3E"));
+</script>
+</body>
+</html>

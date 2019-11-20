@@ -1,0 +1,390 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+<head>
+    <title>欢迎光临北京林业大学信息学院学生工作网站</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+    <meta name="keywords" content="北京林业大学,信息学院,学生工作" />
+    <meta name="author" content="冯智乐，黄一鸣子，宣传中心" />
+	<style type="text/css" media="screen">
+#slider1 {
+    width: 480px; /* important to be same as image width */
+    height: 247px; /* important to be same as image height */
+    position: relative; /* important */
+	overflow: hidden; /* important */
+    float:left;
+	display:inline;
+    margin-left:38px;
+    }
+
+#slider1Content {
+    width: 480px; /* important to be same as image width or wider */  
+}
+.slider1Image {
+    float: left;
+    position: relative;
+	display: none;
+}
+.slider1Image span {
+    position: absolute;
+	font: 13px/15px Arial, Helvetica, sans-serif;
+    padding: 10px 13px;
+    width: 470px;
+    background-color: #777;
+    filter: alpha(opacity=70);
+    -moz-opacity: 0.7;
+	-khtml-opacity: 0.7;
+    opacity: 0.7;
+    color: #fff;
+    display: none;
+}
+.clear {
+	clear: both;
+}
+.slider1Image span strong {
+    font-size: 14px;
+}
+.slider_left {
+	top: 0;
+    left: 0;
+	width: 20px !important;
+	height: 247px;
+}
+</style>
+
+    <link type="text/css" href="images/style.css" rel="Stylesheet" />
+  
+	<script type="text/javascript" src="js/jquery-1.4.2.js"></script>
+	<script type="text/javascript" src="js/s3Slider.js"></script>
+	<script type="text/javascript" src="js/jquery.easing.js"></script>
+	<script type="text/javascript" src="js/jquery.dimensions.js"></script>
+	<script type="text/javascript" src="js/jquery.accordion.js"></script>
+	<!--[if IE 6]>
+	<script type="text/javascript" src="js/DD_belatedPNG.js" ></script>
+	<script type="text/javascript">
+	DD_belatedPNG.fix('.more');
+	</script>
+<![endif]-->
+
+
+	
+	<script type="text/javascript">
+	jQuery().ready(function(){
+		$('#slider1').s3Slider({
+            timeOut: 4000 
+        });
+		// simple accordion
+		//jQuery('#list1a').accordion();
+
+		// highly customized accordion
+		
+		jQuery('#navigation').accordion({
+			event: 'mouseover',
+			selectedClass: 'active',
+			animated: "bounceslide",
+			header: ".head",
+			autoheight:true
+		});
+		
+	});
+	</script>
+
+
+
+   
+</head>
+<!--判断是否为IE6-->
+<style type="text/css"> 
+#ie6-warning{ 
+background:rgb(255,255,225) url("/upload/201006/20100628012515690.gif") no-repeat scroll 8px center; 
+position:absolute; 
+top:0; 
+left:0; 
+font-size:12px; 
+color:#333; 
+width:97%; 
+padding: 2px 15px 2px 23px; 
+text-align:left; 
+} 
+#ie6-warning a { 
+text-decoration:none; 
+} 
+</style> 
+<body>
+<!--[if lte IE 6]> 
+<div id="ie6-warning" style="z-index:999;">您正在使用 Internet Explorer 6，该版本的IE浏览器在本页面的显示效果有差异，这将会影响您的浏览体验。建议您升级到 <a href="http://www.microsoft.com/china/windows/internet-explorer/" target="_blank">Internet Explorer 8</a> 或以下浏览器： <a href="http://www.mozillaonline.com/">Firefox</a> / <a href="http://www.google.com/chrome/?hl=zh-CN">Chrome</a> / <a href="http://www.apple.com.cn/safari/">Safari</a> / <a href="http://www.operachina.com/">Opera</a> 
+</div> 
+<script type="text/javascript"> 
+function position_fixed(el, eltop, elleft){ 
+// check if this is IE6 
+if(!window.XMLHttpRequest) 
+window.onscroll = function(){ 
+el.style.top = (document.documentElement.scrollTop + eltop)+"px"; 
+el.style.left = (document.documentElement.scrollLeft + elleft)+"px"; 
+} 
+else el.style.position = "fixed"; 
+} 
+position_fixed(document.getElementById("ie6-warning"),0, 0); 
+</script> 
+<![endif]--> 
+
+<div id="main">
+    <div id="head">
+            <div id="head_l_u"></div>
+            <div id="head_r_u_1"></div>
+			<div id="head_r_u_2"><a href="/" ><img src="images/home.gif" /></a></div>
+			<div id="head_r_u_3"></div>
+			<div id="search">
+			 <FORM name=formName action="http://cms.bjfu.edu.cn/cms/search/searchResults.jsp?siteID=94" target="_blank" method="post">
+			 <input name="siteID" type="hidden" value=94>
+			 <input type="image" src="images/submit.png" onclick="formName.submit()" name="submit">
+			 <INPUT id=keyword maxLength=12 size=15 name="query" value="站内文章检索" onfocus="this.value=''"></FORM>
+			</div>
+			<div id="head_r_u_4"></div>
+          
+            <div id="head_d">
+                       <object id="FlashID" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="1000" height="236">
+              <param name="movie" value="images/head.swf" />
+              <param name="quality" value="high" />
+              <param name="wmode" value="transparent" />
+              <param name="swfversion" value="8.0.35.0" />
+              <!-- This param tag prompts users with Flash Player 6.0 r65 and higher to download the latest version of Flash Player. Delete it if you don’t want users to see the prompt. -->
+              <param name="expressinstall" value="Scripts/expressInstall.swf" />
+              <!-- Next object tag is for non-IE browsers. So hide it from IE using IECC. -->
+              <!--[if !IE]>-->
+              <object type="application/x-shockwave-flash" data="images/head.swf" width="1000" height="236">
+                <!--<![endif]-->
+                <param name="quality" value="high" />
+                <param name="wmode" value="transparent" />
+                <param name="swfversion" value="8.0.35.0" />
+                <param name="expressinstall" value="Scripts/expressInstall.swf" />
+                <!-- The browser displays the following alternative content for users with Flash Player 6.0 and older. -->
+                <div>
+                  <h4>Content on this page requires a newer version of Adobe Flash Player.</h4>
+                  <p><a href="http://www.adobe.com/go/getflashplayer"><img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash player" /></a></p>
+                </div>
+                <!--[if !IE]>-->
+              </object>
+              <!--<![endif]-->
+            </object>
+            </div>  
+	</div>
+
+    <div id="left">
+	<div id="nav">
+	
+	<ul id="navigation">
+						<li class="daohang"><a class="head" href="/gzfg/">工作分工</a></li>	
+			<li class="daohang"><a class="head" href="/bslc/">办事流程</a></li>
+			<li class="daohang"><a class="head" href="#">党建之窗</a>
+				<ul class="daohang2">
+			   <li class="dd"><a href="/djzc/zbsz/">&nbsp;支部设置</a></li>
+			   <li class="dd"><a href="/djzc/dx/">&nbsp;&nbsp;党&nbsp;校</a></li>
+			   <li class="dd"><a href="/djzc/zzfz/">&nbsp;组织发展</a></li>
+			    </ul>
+			</li>
+			<li class="daohang"><a class="head" href="/bzr/">班&nbsp;主&nbsp;任</a></li>
+			<li class="daohang"><a class="head" href="/xszp/">学生作品</a></li>
+			<li class="daohang"><a class="head" href="#">学生组织</a>
+				<ul class="daohang2">
+			   <li class="dd" style="padding-left:21px"><a href="/xszz/yjsh/">&nbsp;&nbsp;研究生会</a></li>
+			   <li class="dd" style="padding-left:21px"><a href="/xszz/xsswzx/">学生事务中心</a></li>
+			   <li class="dd" style="padding-left:21px"><a href="/xszz/xsh/">&nbsp;&nbsp;学生会</a></li>
+			   <li class="dd" style="padding-left:21px"><a href="/xszz/jyswzx/">就业事务中心</a></li>
+			   <li class="dd" style="padding-left:21px"><a href="/xszz/djbgs/">&nbsp;党建办公室</a></li>
+			    </ul>
+                        </li>
+			<li class="daohang"><a class="head" href="#">学生社团</a>
+                         <ul class="daohang2">
+			   <li class="dd" style="text-align:left;padding-left:9px;"><a href="/xsst/jsjywlxh/">计算机与网络协会</a></li>
+			   <li class="dd" style="text-align:left;padding-left:27px;"><a href="/xsst/1907hjs/">1907话剧社</a></li>	
+			   <li class="dd" style="text-align:left;padding-left:27px;"><a href="/xsst/chwdt/">彩虹舞蹈团</a></li>
+			   <li class="dd" style="text-align:left;padding-left:15px;"><a href="/xsst/blylyxh/">辩论与礼仪协会</a></li>
+			   <li class="dd" style="text-align:left;padding-left:23px;"><a href="/xsst/ldlyxh/">兰典礼仪协会</a></li>
+			   <li class="dd" style="text-align:left;padding-left:18px;"><a href="/xsst/ACMahzxh/">ACM爱好者协会</a></li>
+			 </ul>
+			</li>
+			<li class="daohang"><a class="head" href="#">班级风采</a>
+			<ul class="daohang2">
+			   <li class="dd"><a href="/bjfc/2010j/">&nbsp;&nbsp;2010级</a></li>
+			   <li class="dd"><a href="/bjfc/2011j/">&nbsp;&nbsp;2011级</a></li>
+			   <li class="dd"><a href="/bjfc/2012j/">&nbsp;&nbsp;2012级</a></li>
+			   <li class="dd"><a href="/bjfc/2013j/">&nbsp;&nbsp;2013级</a></li>
+				<li class="dd"><a href="/bjfc/2014j/">&nbsp;&nbsp;2014级</a></li>
+<li class="dd"><a href="/bjfc/2015j/">&nbsp;&nbsp;2015级</a></li>
+
+			 </ul>
+			</li>
+			<li class="daohang"><a class="head" href="/gfs/">国&nbsp;防&nbsp;生</a></li>
+			<li class="daohang"><a class="head" href="#">媒体中心</a>
+			<ul class="daohang2">
+			   <li class="dd"><a href="/mtzx/spzy/">&nbsp;视频资源</a></li>
+			   <li class="dd"><a href="/mtzx/dzzz/">&nbsp;电子杂志</a></li>
+			   <li class="dd"><a href="/mtzx/gzjb/">&nbsp;工作简报</a></li>
+			 </ul>
+			</li>
+			<li class="daohang"><a class="head" href="#">下载中心</a>
+			 <ul class="daohang2">
+			   <li class="dd"><a href="/xzzx/gzzd/">&nbsp;规章制度</a></li>    
+			   <li class="dd"><a href="/xzzx/cyxz/">&nbsp;常用下载</a></li>
+			 </ul> 
+			</li>
+			<li class="daohang"><a class="head" href="#">获奖情况</a>
+			 <ul class="daohang2">
+			   <li class="dd"><a href="/hjqk/jt/">&nbsp;&nbsp;集&nbsp;体</a></li>
+			   <li class="dd"><a href="/hjqk/gr/">&nbsp;&nbsp;个&nbsp;人</a></li>
+			 </ul>
+			   </li>    
+			<li class="daohang"><a class="head" href="#">学生资助</a>
+			<ul class="daohang2">
+			   <li class="dd"><a href="/xszz/zxdk/">助学贷款</a></li>
+			   <li class="dd"><a href="/xszz/qgzx/">勤工助学</a></li>
+			 </ul>
+            </li>	
+		</ul>
+	</div>
+	
+	</div>
+	
+	<div id="mid-right">
+    <div class="mid">
+      <div class="flash_banner"></div>
+      <div class = "flash_cont">
+	      <div id="slider1">
+      <ul id="slider1Content">
+         		 		<li class="slider1Image"> <a href="/tpxw/257276.htm"><img src="/images/content/2017/20171026112857027808.jpg" /></a> <span class="slider_left">
+          更加紧密十九大</span></li>
+		 		 		 		<li class="slider1Image"> <a href="$cms.getUrl($article)"><img src="/images/content/2012/20120216174034865248.jpg" /></a> <span class="slider_left">
+          优秀摄影作品—田家炳体育馆      BY莫可</span></li>
+		 		 		 		<li class="slider1Image"> <a href="$cms.getUrl($article)"><img src="/images/content/2012/20120216174054301392.jpg" /></a> <span class="slider_left">
+          优秀摄影作品—北林计算中心      BY莫可</span></li>
+		 		 		 		<li class="slider1Image"> <a href="$cms.getUrl($article)"><img src="/images/content/2012/20120216174107823449.jpg" /></a> <span class="slider_left">
+          优秀摄影作品—南门天桥      BY莫可</span></li>
+		 		 
+
+        <div class="clear slider1Image"></div>
+      </ul>
+    </div>
+      
+    </div>
+	  <div class="news_banner1"><a href="/dtzc/" target="_blank"><img class="more" src="images/more.png"/></a></div>
+      <div class="news_cont1">
+      		<div class="mid-ul">
+            	<ul>
+				
+								<li><div class="content"><img src="images/li.png"><a href="/dtzc/257107.htm" target="_blank" title="信息学院2017年10月24日班长团支书会议">信息学院2017年10月24日班长团支书会议 
+</a></div><div class="cont_date">2017-10-24</div> </li>
+			    				<li><div class="content"><img src="images/li.png"><a href="/dtzc/256466.htm" target="_blank" title="关于举办北京林业大学第二十八期团校新生班级骨干培训班的通知">关于举办北京林业大学第二十八期团校新生班级骨干培训
+</a></div><div class="cont_date">2017-10-18</div> </li>
+			    				<li><div class="content"><img src="images/li.png"><a href="/dtzc/256128.htm" target="_blank" title="信息学院2016-2017学年研究生学业奖学金更正通知">信息学院2016-2017学年研究生学业奖学金更正
+</a></div><div class="cont_date">2017-10-16</div> </li>
+			    				<li><div class="content"><img src="images/li.png"><a href="/dtzc/256127.htm" target="_blank" title="关于信息学院评选优良学风班的相关通知">关于信息学院评选优良学风班的相关通知 
+</a></div><div class="cont_date">2017-10-16</div> </li>
+			    				<li><div class="content"><img src="images/li.png"><a href="/dtzc/256126.htm" target="_blank" title="信息学院2017年研究生国家奖学金、学术创新奖获奖名单公示">信息学院2017年研究生国家奖学金、学术创新奖获奖
+</a></div><div class="cont_date">2017-10-16</div> </li>
+			    				<li><div class="content"><img src="images/li.png"><a href="/dtzc/255886.htm" target="_blank" title="信息学院2017-2018上第六周课堂考勤通报批评">信息学院2017-2018上第六周课堂考勤通报批评 
+</a></div><div class="cont_date">2017-10-13</div> </li>
+			    
+                </ul>
+            </div>   
+      </div>
+    
+
+
+  <div class="news_banner2"><a href="/xsfc/" target="_blank"><img class="more" src="images/more.png" /></a></div>
+      <div class="news_cont2">
+      		<div class="mid-ul">
+            	<ul>
+				
+								<li><div class="content"><img src="images/li.png"><a href="/xsfc/257296.htm" target="_blank" title="网络表情发展历程及中文表情搜索服务构建与应用场景介绍讲座成功举办">网络表情发展历程及中文表情搜索服务构建与应用场景介
+</a></div><div class="cont_date">2017-10-26</div> </li>
+								<li><div class="content"><img src="images/li.png"><a href="/xsfc/257056.htm" target="_blank" title="北京林业大学信息学院研究生“夜神阁”杯羽毛球赛圆满成功">北京林业大学信息学院研究生“夜神阁”杯羽毛球赛圆满
+</a></div><div class="cont_date">2017-10-24</div> </li>
+								<li><div class="content"><img src="images/li.png"><a href="/xsfc/256922.htm" target="_blank" title="“宿舍文化节”第一弹——we are 伐木累圆满结束">“宿舍文化节”第一弹——we are 伐木累圆满结
+</a></div><div class="cont_date">2017-10-23</div> </li>
+								<li><div class="content"><img src="images/li.png"><a href="/xsfc/256914.htm" target="_blank" title="“优良学风班”答辩会圆满结束">“优良学风班”答辩会圆满结束 
+</a></div><div class="cont_date">2017-10-23</div> </li>
+								<li><div class="content"><img src="images/li.png"><a href="/xsfc/256052.htm" target="_blank" title="2017年北京林业大学“一嗨杯”研究生篮球赛成功举办">2017年北京林业大学“一嗨杯”研究生篮球赛成功举
+</a></div><div class="cont_date">2017-10-16</div> </li>
+								<li><div class="content"><img src="images/li.png"><a href="/xsfc/256034.htm" target="_blank" title="信息学院2017-2018年度社团答辩会成功举办">信息学院2017-2018年度社团答辩会成功举办 
+</a></div><div class="cont_date">2017-10-16</div> </li>
+										
+                </ul>
+            </div>   
+      </div>	
+	  
+  <div class="news_banner3"><a href="/jyzd/" target="_blank"><img class="more" src="images/more.png" /></a></div>
+      <div class="news_cont3">
+      		<div class="mid-ul">
+            	<ul>
+					
+								<li><div class="content"><img src="images/li.png"><a href="/jyzd/257001.htm" target="_blank" title="招聘17-032：上海泛微网络科技股份有限公司">招聘17-032：上海泛微网络科技股份有限公司 
+</a></div><div class="cont_date">2017-10-23</div> </li>
+								<li><div class="content"><img src="images/li.png"><a href="/jyzd/256720.htm" target="_blank" title="招聘17-031：中国工商银行软件开发中心2018年度校园招聘">招聘17-031：中国工商银行软件开发中心2018
+</a></div><div class="cont_date">2017-10-20</div> </li>
+								<li><div class="content"><img src="images/li.png"><a href="/jyzd/256271.htm" target="_blank" title="招聘17-031：Forgame云游控股集团2018科技金融类管培生校园招聘">招聘17-031：Forgame云游控股集团201
+</a></div><div class="cont_date">2017-10-17</div> </li>
+								<li><div class="content"><img src="images/li.png"><a href="/jyzd/255910.htm" target="_blank" title="招聘17-030：三星爱商(天津)国际物流">招聘17-030：三星爱商(天津)国际物流 
+</a></div><div class="cont_date">2017-10-13</div> </li>
+								<li><div class="content"><img src="images/li.png"><a href="/jyzd/255879.htm" target="_blank" title="招聘17-029：IDG资本成员企业2018联合校招">招聘17-029：IDG资本成员企业2018联合校
+</a></div><div class="cont_date">2017-10-13</div> </li>
+								<li><div class="content"><img src="images/li.png"><a href="/jyzd/255730.htm" target="_blank" title="招聘17-028：广州市瑞蚨互联网小额贷款有限公司">招聘17-028：广州市瑞蚨互联网小额贷款有限公司 
+</a></div><div class="cont_date">2017-10-11</div> </li>
+				
+                </ul>
+            </div>   
+      </div>
+	  <div class="news_bottom"></div>		  
+	
+	
+	
+	</div>
+    
+	
+	<div class="right">
+      <div class="scroll">
+        <div class="scroll_banner"></div>
+        <div id="scroll_cont">
+          <marquee onmouseover=this.stop(); onmouseout=this.start(); scrollamount=1 scrolldelay=30 direction=up width=180 height=170 style="margin-left:-5px;" >
+            <ul>
+             
+			 			 <li><a href="/ggl/154868.htm" target="_blank" title="北京林业大学信息学院办学理念征集">北京林业大学信息学院办学理念征集 
+</a></li>
+			 			 <li><a href="/ggl/89607.htm" target="_blank" title="关于校就业服务中心2012年寒假停止办理就业手续的通知">关于校就业服务中心2012年寒假停止办理就业手续的通知 
+</a></li>
+			 			 <li><a href="/ggl/87645.htm" target="_blank" title="信息学院第一次四级模拟考试听力原文及答案">信息学院第一次四级模拟考试听力原文及答案 
+</a></li>
+			 			 <li><a href="/ggl/87272.htm" target="_blank" title="第三届“全国软件专业人才设计与创业大赛的通知">第三届“全国软件专业人才设计与创业大赛的通知 
+</a></li>
+			 			 <li><a href="/ggl/79125.htm" target="_blank" title="第二届“中科杯”全国软件设计大赛决赛公开展示">第二届“中科杯”全国软件设计大赛决赛公开展示 
+</a></li>
+			 			 <li><a href="/ggl/75619.htm" target="_blank" title="暑假期间学生公寓注意防火、防盗等相关事宜">暑假期间学生公寓注意防火、防盗等相关事宜 
+</a></li>
+			       
+            </ul>
+          </marquee>
+        </div>
+      </div>
+    
+        <div class="link_top"></div>
+        <div class="link_cont">
+          <ul>
+		   <li><a href="http://app.bjfu.edu.cn/xxdt/office/Default.asp
+"  target="_blank"><img src="images/link1.jpg" alt=""></a></li>
+		   <li style="margin-top:10px;"><a href="http://xxdt.bjfu.edu.cn/djztw/"><img src="images/djztw.png" alt=""></a></li>
+		   <li style="margin-top:10px;"><a href="http://xxdt.bjfu.edu.cn/qzlxztw
+" target="_blank"><img src="images/qzlx.png" alt=""></a></li>
+		   <li style="margin-top:25px;"><a href="/gnwdshz/" target="_blank"><img src="images/link3.gif" alt=""></a></li>
+		   <li style="margin-top:10px;"><a href="http://app.bjfu.edu.cn/xxdt/guestbook/gb_list.asp" target="_blank"><img src="images/link5.gif" alt=""></a></li>      
+          </ul>
+        </div>
+		<div class="link_bottom"></div>
+      </div>
+    </div>
+
+</div>
+ <div  style="display:none;"> <script src="http://cms.bjfu.edu.cn/cms/web/channelVisitLog.jsp?siteID=3519"></script>
+  <script src="http://cms.bjfu.edu.cn/cms/web/writeLog.jsp?channelID=3519"></script>
+</div>
+</body>
+</body></html>

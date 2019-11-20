@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="icon" href="http://www.ustc.edu.cn/images/res/ustc.ico">
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" /><!-- 强制使用ie最新版本渲染，而不是默认的ie7 -->
+<title>
+ 中国科学技术大学图书馆</title>
+
+<meta name="viewport" content="width=device-width" />
+
+<link href="http://lib.ustc.edu.cn/wp-content/themes/ustclib2014/reset.css" type="text/css" rel="stylesheet"/>
+<link rel="stylesheet" type="text/css" media="all" href="http://lib.ustc.edu.cn/wp-content/themes/ustclib2014/style.css" />
+
+<link href="http://lib.ustc.edu.cn/wp-content/themes/ustclib2014/mobile.css" media="screen and (max-width:800px)" id="mobile-css" type="text/css" rel="stylesheet"/>
+
+<link rel="pingback" href="http://lib.ustc.edu.cn/xmlrpc.php" />
+
+<script type="text/javascript" src="http://lib.ustc.edu.cn/wp-content/themes/ustclib2014/js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="http://lib.ustc.edu.cn/wp-content/themes/ustclib2014/js/jquery.fullbg.min.js"></script>
+
+<script type="text/javascript" src="http://lib.ustc.edu.cn/wp-content/themes/ustclib2014/js/mobile.js"></script>
+<script type="text/javascript">
+jQuery(document).ready(function(){
+	var qcloud={};
+	$('[_t_nav]').hover(function(){
+		var _nav = $(this).attr('_t_nav');
+		clearTimeout( qcloud[ _nav + '_timer' ] );
+		qcloud[ _nav + '_timer' ] = setTimeout(function(){
+		$('[_t_nav]').each(function(){
+		$(this)[ _nav == $(this).attr('_t_nav') ? 'addClass':'removeClass' ]('nav-up-selected');
+		});
+		$('#'+_nav).stop(true,true).slideDown(200);
+		}, 150);
+	},function(){
+		var _nav = $(this).attr('_t_nav');
+		clearTimeout( qcloud[ _nav + '_timer' ] );
+		qcloud[ _nav + '_timer' ] = setTimeout(function(){
+		$('[_t_nav]').removeClass('nav-up-selected');
+		$('#'+_nav).stop(true,true).slideUp(200);
+		}, 150);
+	});
+	
+
+	
+});
+
+</script>
+<!--[if lt IE 9]>
+<script type="text/javascript">
+	$('#mobile-css').remove();
+</script>
+<!--<![endif]-->
+
+<!--[if lt IE 7]>
+<script src="http://lib.ustc.edu.cn/wp-content/themes/ustclib2014/js/IE/IE7.js"></script>
+<![endif]-->
+
+<!--[if lt IE 8]>
+<script src="http://lib.ustc.edu.cn/wp-content/themes/ustclib2014/js/IE/IE8.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+<script src="http://lib.ustc.edu.cn/wp-content/themes/ustclib2014/js/IE/IE9.js"></script>
+<![endif]-->
+
+
+
+
+<link rel='dns-prefetch' href='//s.w.org' />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.3\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.3\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/lib.ustc.edu.cn\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.8.2"}};
+			!function(a,b,c){function d(a){var b,c,d,e,f=String.fromCharCode;if(!k||!k.fillText)return!1;switch(k.clearRect(0,0,j.width,j.height),k.textBaseline="top",k.font="600 32px Arial",a){case"flag":return k.fillText(f(55356,56826,55356,56819),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,56826,8203,55356,56819),0,0),c=j.toDataURL(),b!==c&&(k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447),0,0),c=j.toDataURL(),b!==c);case"emoji4":return k.fillText(f(55358,56794,8205,9794,65039),0,0),d=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55358,56794,8203,9794,65039),0,0),e=j.toDataURL(),d!==e}return!1}function e(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i,j=b.createElement("canvas"),k=j.getContext&&j.getContext("2d");for(i=Array("flag","emoji4"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='contact-form-7-css'  href='http://lib.ustc.edu.cn/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=4.9' type='text/css' media='all' />
+<link rel='stylesheet' id='wpProQuiz_front_style-css'  href='http://lib.ustc.edu.cn/wp-content/plugins/wp-pro-quiz/css/wpProQuiz_front.min.css?ver=0.37' type='text/css' media='all' />
+<link rel='stylesheet' id='simple-pagination-css-css'  href='http://lib.ustc.edu.cn/wp-content/plugins/simple-pagination/css/default.css?ver=2.1.7' type='text/css' media='screen' />
+<script type='text/javascript' src='http://lib.ustc.edu.cn/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
+<script type='text/javascript' src='http://lib.ustc.edu.cn/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<link rel='https://api.w.org/' href='http://lib.ustc.edu.cn/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://lib.ustc.edu.cn/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://lib.ustc.edu.cn/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 4.8.2" />
+
+<script type='text/javascript'>
+var g_hanaFlash = false;
+try {
+  var fo = new ActiveXObject('ShockwaveFlash.ShockwaveFlash');
+  if(fo) g_hanaFlash = true;
+}catch(e){
+  if(navigator.mimeTypes ['application/x-shockwave-flash'] != undefined) g_hanaFlash = true;
+}
+function hanaTrackEvents(arg1,arg2,arg3,arg4) { if ( typeof( pageTracker ) !=='undefined') { pageTracker._trackEvent(arg1, arg2, arg3, arg4);} else if ( typeof(_gaq) !=='undefined'){  _gaq.push(['_trackEvent', arg1, arg2, arg3, arg4]);}}
+function hana_check_mobile_device(){ if(navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPod/i) || navigator.userAgent.match(/iPad/i)  || navigator.userAgent.match(/Android/i)) { return true; }else return false; }
+</script>
+<style type="text/css" id="custom-background-css">
+body.custom-background { background-color: #ffffff; }
+</style>
+</head>
+
+<body class="home blog custom-background" style="background:url(http://lib.ustc.edu.cn/wp-content/uploads/2015/03/bg-home-s.jpg) fixed"
+>
+
+
+
+    
+	<div id="maincontent">
+
+
+
+
+		<div class="TopCont">
+        	<div class="TopWrap">
+            	<div class="TopLogo">
+					<a href="http://lib.ustc.edu.cn">
+						<img src="http://lib.ustc.edu.cn/wp-content/themes/ustclib2014/images/logo_mini.png" height="65"/>
+					</a>
+				</div>
+                
+                <div class="TopRight">
+               		<div class="TopLoginContact">
+						<div  class="TopLogin">
+							<ul>
+														</ul>
+						</div>
+						
+												
+							<div class="TopContact"><h2 class="widget-title" style="display:none">顶部右边链接</h2>
+	<ul class='xoxo blogroll'>
+<li><a href="http://opac.lib.ustc.edu.cn/reader/login.php" target="_blank">登录个人图书馆</a></li>
+<li><a href="http://old.lib.ustc.edu.cn" target="_blank">旧版</a></li>
+<li><a href="http://lib.ustc.edu.cn/?p=6053">联系我们</a></li>
+<li><a href="http://en.lib.ustc.edu.cn">English</a></li>
+
+	</ul>
+</div>
+							
+						 
+                    </div>
+					
+					<div id="global-nav-container">
+						<div id="menu-button">菜单</div>
+						<ul id="global-nav" class="GloablNav"><li id="menu-item-7228" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-7228"><a href="#">服务指南</a>
+<ul  class="sub-menu">
+	<li id="menu-item-7230" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-7230"><a href="http://lib.ustc.edu.cn/%e6%9c%8d%e5%8a%a1%e6%8c%87%e5%8d%97/%e8%af%bb%e8%80%85%e9%a1%bb%e7%9f%a5/">读者须知</a></li>
+	<li id="menu-item-7231" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-7231"><a href="http://lib.ustc.edu.cn/%e6%9c%8d%e5%8a%a1%e6%8c%87%e5%8d%97/%e6%8e%a5%e5%8f%97%e5%9b%be%e4%b9%a6%e6%8d%90%e8%b5%a0%e5%8a%9e%e6%b3%95/">接受图书捐赠办法</a></li>
+	<li id="menu-item-7232" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-7232"><a href="http://lib.ustc.edu.cn/%e6%9c%8d%e5%8a%a1%e6%8c%87%e5%8d%97/%e7%9b%b8%e5%85%b3%e6%9c%8d%e5%8a%a1%e8%81%94%e7%b3%bb%e4%ba%ba/">相关服务联系人</a></li>
+	<li id="menu-item-7244" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-7244"><a href="http://lib.ustc.edu.cn/%e6%9c%8d%e5%8a%a1%e6%8c%87%e5%8d%97/%e5%9b%be%e4%b9%a6%e8%8d%90%e8%b4%ad/">图书荐购</a></li>
+	<li id="menu-item-7233" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-7233"><a href="http://lib.ustc.edu.cn/%e9%97%ae%e5%9b%be%e4%b9%a6%e9%a6%86%e5%91%98/%e5%b8%b8%e8%a7%81top10%e9%97%ae%e9%a2%98/">常见问题</a></li>
+	<li id="menu-item-7235" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-7235"><a href="http://lib.ustc.edu.cn/%e6%9c%8d%e5%8a%a1%e6%8c%87%e5%8d%97/%e6%9f%a5%e6%94%b6%e6%9f%a5%e5%bc%95/">查收查引</a></li>
+	<li id="menu-item-7240" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-7240"><a href="http://lib.ustc.edu.cn/%e6%9c%8d%e5%8a%a1%e6%8c%87%e5%8d%97/%e7%a7%91%e6%8a%80%e6%9f%a5%e6%96%b0/">科技查新</a></li>
+	<li id="menu-item-7238" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-7238"><a href="http://lib.ustc.edu.cn/%e6%9c%8d%e5%8a%a1%e6%8c%87%e5%8d%97/%e6%96%87%e7%8c%ae%e4%bc%a0%e9%80%92%e4%b8%8e%e9%a6%86%e9%99%85%e4%ba%92%e5%80%9f/">文献传递与馆际互借</a></li>
+	<li id="menu-item-7430" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-7430"><a href="http://lib.ustc.edu.cn/cat_news/%e6%9c%8d%e5%8a%a1%e5%85%ac%e5%91%8a/%e5%ad%a6%e4%bd%8d%e8%ae%ba%e6%96%87%e6%8f%90%e4%ba%a4-3/">学位论文提交</a></li>
+	<li id="menu-item-7248" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-7248"><a href="http://lib.ustc.edu.cn/%e4%be%a7%e8%be%b9%e6%a0%8f/%e5%9b%be%e4%b9%a6%e9%a6%86%e5%bf%97%e6%84%bf%e8%80%85-2/">图书馆志愿者</a></li>
+	<li id="menu-item-7437" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-7437"><a href="http://lib.ustc.edu.cn/%e6%9c%8d%e5%8a%a1%e6%8c%87%e5%8d%97/%e9%82%80%e6%82%a8%e4%b9%90%e7%8e%a9%e6%a0%a1%e5%9b%ad%e7%94%9f%e6%b4%bb-2/">微信图书馆</a></li>
+	<li id="menu-item-7250" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7250"><a href="http://lib.ustc.edu.cn/guestbook-upgrading/">留言板</a></li>
+	<li id="menu-item-7236" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-7236"><a href="http://lib.ustc.edu.cn/%e6%9c%8d%e5%8a%a1%e6%8c%87%e5%8d%97/%e5%9b%bd%e5%86%85%e5%a4%96%e5%9b%be%e4%b9%a6%e9%a6%86%e5%af%bc%e8%88%aa/">国内外图书馆导航</a></li>
+</ul>
+</li>
+<li id="menu-item-7251" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-7251"><a href="#">电子资源</a>
+<ul  class="sub-menu">
+	<li id="menu-item-12951" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-12951"><a href="http://lib.ustc.edu.cn/category/%e7%94%b5%e5%ad%90%e8%b5%84%e6%ba%90/database/1%e5%8f%91%e7%8e%b0%e7%b3%bb%e7%bb%9f/">发现系统</a></li>
+	<li id="menu-item-7262" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-7262"><a href="http://lib.ustc.edu.cn/category/%e7%94%b5%e5%ad%90%e8%b5%84%e6%ba%90/database/1-%e6%96%87%e6%91%98%e7%b4%a2%e5%bc%95%e6%95%b0%e6%8d%ae%e5%ba%93/">文摘/索引数据库</a></li>
+	<li id="menu-item-7263" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-7263"><a href="http://lib.ustc.edu.cn/category/%e7%94%b5%e5%ad%90%e8%b5%84%e6%ba%90/database/2-%e7%94%b5%e5%ad%90%e5%9b%be%e4%b9%a6/">电子图书</a></li>
+	<li id="menu-item-12605" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-12605"><a href="http://lib.ustc.edu.cn/category/%e7%94%b5%e5%ad%90%e8%b5%84%e6%ba%90/database/3-%e4%b8%ad%e6%96%87%e7%94%b5%e5%ad%90%e6%9c%9f%e5%88%8a/">中文电子期刊</a></li>
+	<li id="menu-item-12606" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-12606"><a href="http://lib.ustc.edu.cn/category/%e7%94%b5%e5%ad%90%e8%b5%84%e6%ba%90/database/4-%e5%a4%96%e6%96%87%e7%94%b5%e5%ad%90%e6%9c%9f%e5%88%8a/">外文电子期刊</a></li>
+	<li id="menu-item-12604" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-12604"><a href="http://lib.ustc.edu.cn/category/%e7%94%b5%e5%ad%90%e8%b5%84%e6%ba%90/database/5-%e4%b8%93%e5%88%a9%e6%a0%87%e5%87%86%e6%8a%a5%e5%91%8a/">专利/标准/报告</a></li>
+	<li id="menu-item-12612" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-12612"><a href="http://lib.ustc.edu.cn/category/%e7%94%b5%e5%ad%90%e8%b5%84%e6%ba%90/database/6-%e6%95%b0%e6%8d%ae%e4%bf%a1%e6%81%af/">数据/信息</a></li>
+	<li id="menu-item-12609" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-12609"><a href="http://lib.ustc.edu.cn/category/%e7%94%b5%e5%ad%90%e8%b5%84%e6%ba%90/database/7-%e5%ad%a6%e4%bd%8d%e8%ae%ba%e6%96%87/">学位论文</a></li>
+	<li id="menu-item-12608" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-12608"><a href="http://lib.ustc.edu.cn/category/%e7%94%b5%e5%ad%90%e8%b5%84%e6%ba%90/database/8-%e5%a4%9a%e5%aa%92%e4%bd%93/">多媒体</a></li>
+	<li id="menu-item-12610" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-12610"><a href="http://lib.ustc.edu.cn/category/%e7%94%b5%e5%ad%90%e8%b5%84%e6%ba%90/database/9-%e5%b7%a5%e5%85%b7%e8%bd%af%e4%bb%b6/">工具/软件</a></li>
+	<li id="menu-item-12607" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-12607"><a href="http://lib.ustc.edu.cn/category/%e7%94%b5%e5%ad%90%e8%b5%84%e6%ba%90/database/91-%e5%a4%96%e8%af%ad%e8%80%83%e8%af%95%e6%95%99%e8%be%85/">外语/考试/教辅</a></li>
+	<li id="menu-item-12611" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-12611"><a href="http://lib.ustc.edu.cn/category/%e7%94%b5%e5%ad%90%e8%b5%84%e6%ba%90/database/92-%e6%95%b0%e5%ad%a6%e4%b8%93%e4%b8%9a/">数学专业</a></li>
+	<li id="menu-item-12615" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-12615"><a href="http://lib.ustc.edu.cn/category/%e7%94%b5%e5%ad%90%e8%b5%84%e6%ba%90/database/trial-database/">试用数据库</a></li>
+	<li id="menu-item-7259" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-7259"><a href="http://lib.ustc.edu.cn/%e7%94%b5%e5%ad%90%e8%b5%84%e6%ba%90/%e7%89%88%e6%9d%83%e5%a3%b0%e6%98%8e/">版权声明</a></li>
+	<li id="menu-item-12908" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-12908"><a href="http://lib.ustc.edu.cn/cat_news/%e6%9c%8d%e5%8a%a1%e5%85%ac%e5%91%8a/%e3%80%90%e9%80%9a%e7%9f%a5%e3%80%91%e6%a0%a1%e5%a4%96%e8%ae%bf%e9%97%ae%e7%94%b5%e5%ad%90%e8%b5%84%e6%ba%90/">校外访问电子资源</a></li>
+</ul>
+</li>
+<li id="menu-item-7270" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-7270"><a href="#">查找文献</a>
+<ul  class="sub-menu">
+	<li id="menu-item-7272" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-7272"><a href="http://lib.ustc.edu.cn/%e6%9f%a5%e6%89%be%e6%96%87%e7%8c%ae/%e6%9f%a5%e6%89%be%e5%9b%be%e4%b9%a6/">查找图书</a></li>
+	<li id="menu-item-7278" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-7278"><a href="http://lib.ustc.edu.cn/%e6%9f%a5%e6%89%be%e6%96%87%e7%8c%ae/%e6%9f%a5%e6%89%be%e6%9c%9f%e5%88%8a/">查找期刊</a></li>
+	<li id="menu-item-7277" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-7277"><a href="http://lib.ustc.edu.cn/%e6%9f%a5%e6%89%be%e6%96%87%e7%8c%ae/%e6%9f%a5%e6%89%be%e4%bc%9a%e8%ae%ae%e6%96%87%e7%8c%ae/">查找会议文献</a></li>
+	<li id="menu-item-7276" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-7276"><a href="http://lib.ustc.edu.cn/%e6%9f%a5%e6%89%be%e6%96%87%e7%8c%ae/%e6%9f%a5%e6%89%be%e5%ad%a6%e4%bd%8d%e8%ae%ba%e6%96%87/">查找学位论文</a></li>
+	<li id="menu-item-7275" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-7275"><a href="http://lib.ustc.edu.cn/%e6%9f%a5%e6%89%be%e6%96%87%e7%8c%ae/%e6%9f%a5%e6%89%be%e4%b8%93%e5%88%a9%e6%96%87%e7%8c%ae/">查找专利文献</a></li>
+	<li id="menu-item-7273" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-7273"><a href="http://lib.ustc.edu.cn/%e6%9f%a5%e6%89%be%e6%96%87%e7%8c%ae/%e6%9f%a5%e6%89%be%e5%bd%b1%e9%9f%b3%e8%b5%84%e6%96%99/">查找影音资料</a></li>
+	<li id="menu-item-7271" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-7271"><a href="http://lib.ustc.edu.cn/%e6%9f%a5%e6%89%be%e6%96%87%e7%8c%ae/%e6%9f%a5%e6%89%be%e7%bd%91%e7%bb%9c%e5%85%ac%e5%bc%80%e8%af%be/">查找网络公开课</a></li>
+</ul>
+</li>
+<li id="menu-item-7229" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-7229"><a href="http://lib.ustc.edu.cn/category/%e8%af%bb%e8%80%85%e5%9f%b9%e8%ae%ad/">读者培训</a>
+<ul  class="sub-menu">
+	<li id="menu-item-7353" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-7353"><a href="http://lib.ustc.edu.cn/%e8%af%bb%e8%80%85%e5%9f%b9%e8%ae%ad/%e6%96%b0%e7%94%9f%e5%9f%b9%e8%ae%ad/">新生培训</a></li>
+	<li id="menu-item-7354" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-7354"><a href="http://lib.ustc.edu.cn/cat_news/%e6%9c%8d%e5%8a%a1%e5%85%ac%e5%91%8a/web-of-science-%e5%9c%a8%e7%ba%bf%e5%a4%a7%e8%ae%b2%e5%a0%82/">WOS 在线大讲堂</a></li>
+	<li id="menu-item-7355" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-7355"><a href="http://lib.ustc.edu.cn/%e8%af%bb%e8%80%85%e5%9f%b9%e8%ae%ad/%e4%bf%a1%e6%81%af%e6%a3%80%e7%b4%a2%e6%95%99%e5%ad%a6/">信息检索教学</a></li>
+	<li id="menu-item-7356" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-7356"><a href="http://lib.ustc.edu.cn/%e8%af%bb%e8%80%85%e5%9f%b9%e8%ae%ad/%e7%b3%bb%e5%88%97%e4%b8%93%e9%a2%98%e8%ae%b2%e5%ba%a7/">系列专题讲座</a></li>
+	<li id="menu-item-7357" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-7357"><a href="http://lib.ustc.edu.cn/%e8%af%bb%e8%80%85%e5%9f%b9%e8%ae%ad/%e7%9f%a5%e8%af%86%e5%88%9b%e6%96%b0%e6%9c%8d%e5%8a%a1/">知识创新服务</a></li>
+	<li id="menu-item-11047" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11047"><a href="http://lib.ustc.edu.cn/category/%e8%af%bb%e8%80%85%e5%9f%b9%e8%ae%ad/%e5%9c%a8%e7%ba%bf%e5%9f%b9%e8%ae%ad/">在线培训</a></li>
+</ul>
+</li>
+<li id="menu-item-2365" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-2365"><a href="#">本馆概况</a>
+<ul  class="sub-menu">
+	<li id="menu-item-7219" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-7219"><a href="http://lib.ustc.edu.cn/%e6%9c%ac%e9%a6%86%e6%a6%82%e5%86%b5/%e5%bc%80%e6%94%be%e6%97%b6%e9%97%b4/">日常开放时间</a></li>
+	<li id="menu-item-7220" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-7220"><a href="http://lib.ustc.edu.cn/%e6%9c%ac%e9%a6%86%e6%a6%82%e5%86%b5/%e9%a6%86%e8%97%8f%e5%88%86%e5%b8%83/">馆藏分布</a></li>
+	<li id="menu-item-7221" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-7221"><a href="http://lib.ustc.edu.cn/%e6%9c%ac%e9%a6%86%e6%a6%82%e5%86%b5/%e7%bb%84%e7%bb%87%e7%bb%93%e6%9e%84/">组织结构</a></li>
+	<li id="menu-item-7222" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-7222"><a href="http://lib.ustc.edu.cn/%e6%9c%ac%e9%a6%86%e6%a6%82%e5%86%b5/%e9%83%a8%e5%ae%a4%e4%bb%8b%e7%bb%8d/">部室介绍</a></li>
+	<li id="menu-item-7223" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-7223"><a href="http://lib.ustc.edu.cn/%e6%9c%ac%e9%a6%86%e6%a6%82%e5%86%b5/%e6%9c%ac%e9%a6%86%e7%ae%80%e4%bb%8b/">本馆简介</a></li>
+	<li id="menu-item-7224" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-7224"><a href="http://lib.ustc.edu.cn/%e6%9c%ac%e9%a6%86%e6%a6%82%e5%86%b5/%e7%8e%b0%e4%bb%bb%e9%a2%86%e5%af%bc/">现任领导</a></li>
+	<li id="menu-item-7225" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-7225"><a href="http://lib.ustc.edu.cn/%e6%9c%ac%e9%a6%86%e6%a6%82%e5%86%b5/%e5%8e%86%e5%8f%b2%e6%b2%bf%e9%9d%a9/">历史沿革</a></li>
+	<li id="menu-item-7226" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-7226"><a href="http://lib.ustc.edu.cn/%e6%9c%ac%e9%a6%86%e6%a6%82%e5%86%b5/%e5%9b%be%e4%b9%a6%e9%a6%86%e9%a3%8e%e8%b2%8c/">图书馆风貌</a></li>
+</ul>
+</li>
+</ul>					</div>
+					<!---------TopRight End------------------>   
+                </div>                
+            </div>
+        </div>
+        
+
+
+
+
+
+        <div class="MidCont">
+        	<div class="MidContWrap">
+            	
+                <div class="search_box">
+   					<div class="search">
+    											
+									<form id="search-form" name="search_form" action="http://lib.ustc.edu.cn" target="_blank" method="get">
+			<div id="pt1" class="select">
+				<a id="s0">图书</a>
+				<span class="arrow"></span>
+				<div style="display:none;" id="pt2" class="part"> 
+					<p>
+					<a title="书目检索系统（OPAC）上的全文检索">图书</a><a title="本站所发布的各项公告">站内</a><a title="SFX上的电子期刊列表">电子期刊</a><a title="仅限校园网IP访问">超星发现</a><a title="仅限校园网IP访问">Find+发现</a><a title="百度学术搜索">百度学术</a><a title="">Google站内</a>					</p>
+				</div>
+			</div> 
+			
+			<input id="t_type" name="t_type" value="图书" type="hidden" >
+			<input id="q" class="enter" name="s" placeholder="输入关键词…">
+			<input id="sm" class="sb" type="button" value="搜索">
+		</form>
+		<script type="text/javascript">
+			//use jquery
+			$('#pt2 p a').click(function(){
+				var v = $(this).text();
+				$('#t_type').val(v);
+				$('#s0').text(v);
+                
+				$('#pt2').hide();
+
+				return false;
+			});
+            
+            
+			$('#pt1').click(function(){
+				var n = $('#pt2');
+				if(n.is(':hidden')){
+				    n.show();
+				}else{
+				    n.hide();
+				}
+				
+				return false;
+			
+			});
+		    
+			$(document).on('click',function(){
+				$('#pt2').hide();
+			})
+
+			$('#sm').click(function() {
+				var v=$('#q').val();
+				if(v.replace(/(^\s*)|(\s*$)/g, "").length ==0) {
+					alert('不能为空');
+				} else {
+					$('#search-form').submit();
+				}
+			});
+		</script>
+								
+						 
+    				</div>
+				</div>
+                
+                <div id="HomeGridWrap">
+                	<!-----------FirstGrid Start--------------->
+                	<div class="HomeGridLeft">
+						<ul class="GridLeftTab">
+							
+							<li mid="0" class="HomeNewsTab-0 HomeNewsTab-cus-0"><span><a href="http://lib.ustc.edu.cn/category/cat_news/%e6%9c%8d%e5%8a%a1%e5%85%ac%e5%91%8a/">服务公告</a></span></li>
+							<li mid="1" class="HomeNewsTab-1"><span><a href="http://lib.ustc.edu.cn/category/cat_news/%e8%b5%84%e6%ba%90%e5%8a%a8%e6%80%81/">资源动态</a></span></li>
+						</ul>
+
+						<div class="GridLeftContWrap">
+							<div class="GridLeftInner">
+								<div class="contant-con con_list" mid="0" style="">
+    								<div class="HomeResourceWrap">
+                                    	<ul>
+                                        													
+																								<li class="sticky">
+												<span><p>[置顶] 06-01</p></span>
+												<h3><em><a href = "http://lib.ustc.edu.cn/cat_news/%e6%9c%8d%e5%8a%a1%e5%85%ac%e5%91%8a/%e3%80%90%e9%80%9a%e7%9f%a5%e3%80%91proquest%e7%a1%95%e5%8d%9a%e5%a3%ab%e8%ae%ba%e6%96%87%e6%8c%91%e9%80%89%e8%ae%a2%e8%b4%ad%ef%bc%88%e6%88%aa%e8%87%b310%e6%9c%8831%e6%97%a5%ef%bc%89/" title="【通知】Proquest硕博士论文挑选订购（截至10月31日）">【通知】Proquest硕博士论文挑选订购（截至10月31日）</a></em></h3>
+												</li>
+																								
+																							
+												
+																								<li>
+												<span><p>2017-10-27</p></span>
+												<h3><em><a href = "http://lib.ustc.edu.cn/cat_news/%e6%9c%8d%e5%8a%a1%e5%85%ac%e5%91%8a/%e3%80%90%e9%80%9a%e7%9f%a5%e3%80%91%e5%8f%a3%e8%af%ad%e4%bc%99%e4%bc%b4%e5%9c%a8%e7%ba%bf%e8%b6%a3%e5%91%b3%e6%af%94%e8%b5%9b/" title="【通知】口语伙伴在线趣味比赛">【通知】口语伙伴在线趣味比赛</a></em></h3>
+												</li>
+																								<li>
+												<span><p>2017-10-26</p></span>
+												<h3><em><a href = "http://lib.ustc.edu.cn/cat_news/%e6%9c%8d%e5%8a%a1%e5%85%ac%e5%91%8a/%e3%80%90%e6%96%b0%e9%97%bb%e3%80%91%e5%9b%be%e4%b9%a6%e9%a6%86%e5%bc%80%e5%b1%95%e5%b5%8c%e5%85%a5%e5%bc%8f%e6%95%99%e5%ad%a6%e6%9c%8d%e5%8a%a1%e5%8a%a9%e5%8a%9b%e5%ad%a6%e6%a0%a1%e6%95%99%e5%ad%a6/" title="【新闻】图书馆开展嵌入式教学服务助力学校教学科研">【新闻】图书馆开展嵌入式教学服务助力学校教学科研</a></em></h3>
+												</li>
+																								<li>
+												<span><p>2017-10-23</p></span>
+												<h3><em><a href = "http://lib.ustc.edu.cn/cat_news/%e6%9c%8d%e5%8a%a1%e5%85%ac%e5%91%8a/%e3%80%90%e8%8b%b1%e8%af%ad%e6%b2%99%e9%be%99%e3%80%91%e5%8d%81%e6%9c%88%e8%8b%b1%e8%af%ad%e6%b2%99%e9%be%99%e6%b4%bb%e5%8a%a8-%e6%89%98%e7%a6%8f%e8%80%83%e8%af%95%e5%a4%87/" title="【英语沙龙】十月英语沙龙活动——“托福考试备考逻辑”">【英语沙龙】十月英语沙龙活动——“托福考试备考逻辑”</a></em></h3>
+												</li>
+																								<li>
+												<span><p>2017-10-20</p></span>
+												<h3><em><a href = "http://lib.ustc.edu.cn/cat_news/%e6%9c%8d%e5%8a%a1%e5%85%ac%e5%91%8a/%e3%80%90%e6%96%b0%e9%97%bb%e3%80%91%e5%9b%be%e4%b9%a6%e9%a6%86%e4%b8%ba2017%e7%ba%a7%e7%a0%94%e7%a9%b6%e7%94%9f%e5%8f%8a%e7%95%99%e5%ad%a6%e7%94%9f%e5%bc%80%e5%b1%95%e6%96%b0%e7%94%9f%e5%9f%b9/" title="【新闻】图书馆为2017级研究生及留学生开展新生培训">【新闻】图书馆为2017级研究生及留学生开展新生培训</a></em></h3>
+												</li>
+																								<li>
+												<span><p>2017-10-19</p></span>
+												<h3><em><a href = "http://lib.ustc.edu.cn/cat_news/%e6%9c%8d%e5%8a%a1%e5%85%ac%e5%91%8a/%e3%80%90%e9%80%9a%e7%9f%a5%e3%80%91%e5%9b%be%e4%b9%a6%e9%a6%86%e8%af%ad%e8%a8%80%e5%ad%a6%e4%b9%a0%e4%b8%ad%e5%bf%83%e4%b8%be%e5%8a%9e%e6%89%98%e7%a6%8f%e5%a4%87%e8%80%83%e8%ae%b2%e5%ba%a7/" title="【通知】图书馆语言学习中心举办托福备考讲座">【通知】图书馆语言学习中心举办托福备考讲座</a></em></h3>
+												</li>
+																								<li>
+												<span><p>2017-10-17</p></span>
+												<h3><em><a href = "http://lib.ustc.edu.cn/cat_news/%e6%9c%8d%e5%8a%a1%e5%85%ac%e5%91%8a/%e3%80%90%e9%80%9a%e7%9f%a5%e3%80%912017%e5%85%a8%e5%9b%bd%e9%ab%98%e6%a0%a1cnki%e7%a0%94%e5%ad%a6%e5%be%81%e6%96%87%e5%a4%a7%e8%b5%9b/" title="【通知】2017全国高校CNKI研学征文大赛">【通知】2017全国高校CNKI研学征文大赛</a></em></h3>
+												</li>
+																								<li>
+												<span><p>2017-10-10</p></span>
+												<h3><em><a href = "http://lib.ustc.edu.cn/cat_news/%e6%9c%8d%e5%8a%a1%e5%85%ac%e5%91%8a/%e3%80%90%e8%8b%b1%e8%af%ad%e6%b2%99%e9%be%99%e3%80%91%e4%b9%9d%e6%9c%88%e8%8b%b1%e8%af%ad%e6%b2%99%e9%be%99%e6%b4%bb%e5%8a%a8-%e9%9b%85%e6%80%9d%e5%a4%87%e8%80%83%e6%8c%87%e5%8d%97/" title="【英语沙龙】九月英语沙龙活动——雅思备考指南及留学备考规划">【英语沙龙】九月英语沙龙活动——雅思备考指南及留学备考规划</a></em></h3>
+												</li>
+																								<li>
+												<span><p>2017-10-10</p></span>
+												<h3><em><a href = "http://lib.ustc.edu.cn/cat_news/%e6%9c%8d%e5%8a%a1%e5%85%ac%e5%91%8a/%e3%80%90%e9%80%9a%e7%9f%a5%e3%80%91%e5%85%b3%e4%ba%8e%e5%bc%80%e5%b1%95%e9%a6%96%e5%b1%8a%e8%af%b5%e8%af%bb%e7%bb%8f%e5%85%b8%ef%bc%8c%e9%a3%9e%e6%89%ac%e9%9d%92%e6%98%a5%e5%be%ae/" title="【通知】关于开展首届“诵读经典，飞扬青春”微阅读主题活动的通知">【通知】关于开展首届“诵读经典，飞扬青春”微阅读主题活动的通知</a></em></h3>
+												</li>
+																								<li>
+												<span><p>2017-09-30</p></span>
+												<h3><em><a href = "http://lib.ustc.edu.cn/cat_news/%e6%9c%8d%e5%8a%a1%e5%85%ac%e5%91%8a/%e3%80%90%e9%80%9a%e7%9f%a5%e3%80%91%e5%ae%89%e5%be%bd%e5%9b%be%e5%b7%a5%e5%a7%94%e5%be%81%e6%96%87%e6%b4%bb%e5%8a%a8%e9%80%9a%e7%9f%a5/" title="【通知】安徽图工委征文活动通知">【通知】安徽图工委征文活动通知</a></em></h3>
+												</li>
+																								<li>
+												<span><p>2017-09-28</p></span>
+												<h3><em><a href = "http://lib.ustc.edu.cn/cat_news/%e6%9c%8d%e5%8a%a1%e5%85%ac%e5%91%8a/%e3%80%90%e9%80%9a%e7%9f%a5%e3%80%91%e5%85%b3%e4%ba%8espringer%e5%92%8cnature%e6%95%b0%e6%8d%ae%e5%ba%93%e8%ae%bf%e9%97%ae%e6%95%85%e9%9a%9c%e8%af%b4%e6%98%8e/" title="【通知】关于Springer和Nature数据库访问故障说明">【通知】关于Springer和Nature数据库访问故障说明</a></em></h3>
+												</li>
+																								<li>
+												<span><p>2017-09-21</p></span>
+												<h3><em><a href = "http://lib.ustc.edu.cn/cat_news/%e6%9c%8d%e5%8a%a1%e5%85%ac%e5%91%8a/%e3%80%90%e9%80%9a%e7%9f%a5%e3%80%91%e4%b8%87%e6%96%b9%e5%bc%80%e5%ad%a6%e5%ad%a3%e4%b9%8b%e6%89%8d%e6%b0%94%e5%8f%8c%e6%94%b6%e6%b4%bb%e5%8a%a8%e9%80%9a%e7%9f%a5/" title="【通知】“万方开学季之才气双收”活动通知">【通知】“万方开学季之才气双收”活动通知</a></em></h3>
+												</li>
+																								<li>
+												<span><p>2017-09-19</p></span>
+												<h3><em><a href = "http://lib.ustc.edu.cn/cat_news/%e6%9c%8d%e5%8a%a1%e5%85%ac%e5%91%8a/%e3%80%90%e9%80%9a%e7%9f%a5%e3%80%91%e5%9b%be%e4%b9%a6%e9%a6%86%e8%af%ad%e8%a8%80%e5%ad%a6%e4%b9%a0%e4%b8%ad%e5%bf%83%e4%b8%be%e5%8a%9e%e9%9b%85%e6%80%9d%e5%a4%87%e8%80%83%e8%ae%b2%e5%ba%a7/" title="【通知】图书馆语言学习中心举办雅思备考讲座">【通知】图书馆语言学习中心举办雅思备考讲座</a></em></h3>
+												</li>
+																								<li>
+												<span><p>2017-09-18</p></span>
+												<h3><em><a href = "http://lib.ustc.edu.cn/cat_news/%e6%9c%8d%e5%8a%a1%e5%85%ac%e5%91%8a/%e3%80%90%e9%80%9a%e7%9f%a5%e3%80%91ieee-xplore-mooc-2017%e7%a7%8b%e5%ad%a3%e8%af%be%e7%a8%8b%e5%bc%80%e8%af%be%e5%95%a6%ef%bc%81/" title="【通知】IEEE Xplore MOOC 2017秋季课程开课啦！">【通知】IEEE Xplore MOOC 2017秋季课程开课啦！</a></em></h3>
+												</li>
+																								<li>
+												<span><p>2017-09-18</p></span>
+												<h3><em><a href = "http://lib.ustc.edu.cn/cat_news/%e6%9c%8d%e5%8a%a1%e5%85%ac%e5%91%8a/%e3%80%90%e9%80%9a%e7%9f%a5%e3%80%91%e7%9f%a5%e8%af%86%e8%a7%86%e7%95%8c%e7%ba%bf%e4%b8%8a%e6%b4%bb%e5%8a%a8-%e6%81%8b%e4%b8%8a%e5%9b%be%e4%b9%a6%e9%a6%86%e7%9f%a5/" title="【通知】“知识视界”线上活动——恋上图书馆知识竞赛通知">【通知】“知识视界”线上活动——恋上图书馆知识竞赛通知</a></em></h3>
+												</li>
+																								<li>
+												<span><p>2017-09-14</p></span>
+												<h3><em><a href = "http://lib.ustc.edu.cn/cat_news/%e6%9c%8d%e5%8a%a1%e5%85%ac%e5%91%8a/%e3%80%90%e9%80%9a%e7%9f%a5%e3%80%91%e4%b8%ad%e5%9b%bd%e7%a7%91%e5%ad%a6%e9%99%a2%e6%96%87%e7%8c%ae%e6%83%85%e6%8a%a5%e4%b8%ad%e5%bf%83-2017%e5%b9%b4%e7%a7%8b%e5%ad%a3%e5%85%a8%e9%99%a2%e6%96%87/" title="【通知】中国科学院文献情报中心 2017年秋季全院文献保障服务活动通知">【通知】中国科学院文献情报中心 2017年秋季全院文献保障服务活动通知</a></em></h3>
+												</li>
+																								<li>
+												<span><p>2017-09-13</p></span>
+												<h3><em><a href = "http://lib.ustc.edu.cn/cat_news/%e6%9c%8d%e5%8a%a1%e5%85%ac%e5%91%8a/%e3%80%90%e9%80%9a%e7%9f%a5%e3%80%91ai-%e6%99%ba%e7%94%9f%e6%b4%bb-ieee-xplore-%e7%a7%91%e6%8a%80%e6%96%87%e7%8c%ae%e6%a3%80%e7%b4%a2%e8%be%be%e4%ba%ba%e6%8c%91%e6%88%98%e8%b5%9b/" title="【通知】“AI 智生活” IEEE Xplore 科技文献检索达人挑战赛开始啦！">【通知】“AI 智生活” IEEE Xplore 科技文献检索达人挑战赛开始啦！</a></em></h3>
+												</li>
+																								<li>
+												<span><p>2017-09-11</p></span>
+												<h3><em><a href = "http://lib.ustc.edu.cn/cat_news/%e6%9c%8d%e5%8a%a1%e5%85%ac%e5%91%8a/%e3%80%90%e9%80%9a%e7%9f%a5%e3%80%91%e5%9c%b0%e8%b4%a8%e8%b5%84%e6%ba%90%e7%9f%a5%e8%af%86%e6%b4%bb%e5%8a%a8%e8%8e%b7%e5%a5%96%e5%90%8d%e5%8d%95/" title="【通知】地质资源知识活动获奖名单">【通知】地质资源知识活动获奖名单</a></em></h3>
+												</li>
+																								<li>
+												<span><p>2017-09-06</p></span>
+												<h3><em><a href = "http://lib.ustc.edu.cn/cat_news/%e6%9c%8d%e5%8a%a1%e5%85%ac%e5%91%8a/%e3%80%90%e6%96%b0%e9%97%bb%e3%80%91%e4%b8%ba%e6%96%b0%e7%a7%91%e5%a4%a7%e4%ba%ba%e6%8f%92%e4%b8%8a%e9%80%90%e6%a2%a6%e7%bf%85%e8%86%80-%e5%9b%be%e4%b9%a6%e9%a6%862/" title="【新闻】为“新科大人”插上逐梦翅膀 ——图书馆2017级本科新生培训工作圆满结束">【新闻】为“新科大人”插上逐梦翅膀 ——图书馆2017级本科新生培训工作圆满结束</a></em></h3>
+												</li>
+																								<li>
+												<span><p>2017-07-28</p></span>
+												<h3><em><a href = "http://lib.ustc.edu.cn/cat_news/%e6%9c%8d%e5%8a%a1%e5%85%ac%e5%91%8a/%e3%80%90%e9%80%9a%e7%9f%a5%e3%80%91%e6%85%a7%e7%a7%91%e4%b8%ad%e6%96%87%e5%aa%92%e4%bd%93%e8%b5%84%e8%ae%af%e5%8f%8a%e5%95%86%e4%b8%9a%e6%83%85%e6%8a%a5%e6%95%b0%e6%8d%ae%e5%ba%93%e6%ad%a3%e5%bc%8f/" title="【通知】慧科中文媒体资讯及商业情报数据库正式开通使用">【通知】慧科中文媒体资讯及商业情报数据库正式开通使用</a></em></h3>
+												</li>
+																								<li>
+												<span><p>2017-07-27</p></span>
+												<h3><em><a href = "http://lib.ustc.edu.cn/cat_news/%e6%9c%8d%e5%8a%a1%e5%85%ac%e5%91%8a/%e3%80%90%e9%80%9a%e7%9f%a5%e3%80%91%e5%85%b3%e4%ba%8ecidp%e5%88%b6%e9%80%a0%e4%b8%9a%e6%95%b0%e5%ad%97%e8%b5%84%e6%ba%90%e5%b9%b3%e5%8f%b0%e7%9a%84%e6%ad%a3%e5%bc%8f%e4%bd%bf/" title="【通知】CIDP制造业数字资源平台正式开通使用">【通知】CIDP制造业数字资源平台正式开通使用</a></em></h3>
+												</li>
+																								<li>
+												<span><p>2017-07-25</p></span>
+												<h3><em><a href = "http://lib.ustc.edu.cn/cat_news/%e6%9c%8d%e5%8a%a1%e5%85%ac%e5%91%8a/%e3%80%90%e6%96%b0%e9%97%bb%e3%80%91%e4%b9%a6%e6%b5%b7%e6%b3%9b%e8%88%9f-%e6%90%ba%e6%a2%a6%e8%b5%b7%e8%88%aa-%e5%9b%be%e4%b9%a6%e9%a6%86%e5%8a%a9%e5%8a%9b%e4%b8%ad%e5%9b%bd%e7%a7%91/" title="【新闻】书海泛舟 携梦起航 ——图书馆助力中国科大2017年优秀大学生夏令营">【新闻】书海泛舟 携梦起航 ——图书馆助力中国科大2017年优秀大学生夏令营</a></em></h3>
+												</li>
+																								<li>
+												<span><p>2017-07-18</p></span>
+												<h3><em><a href = "http://lib.ustc.edu.cn/cat_news/%e6%9c%8d%e5%8a%a1%e5%85%ac%e5%91%8a/%e3%80%90%e6%96%b0%e9%97%bb%e3%80%91%e5%88%9b%e6%96%b0%e5%bc%95%e9%a2%86%e6%9c%aa%e6%9d%a5-%e5%ae%89%e5%be%bd%e7%9c%81%e7%ac%ac%e4%ba%94%e5%b1%8a%e9%ab%98%e6%a0%a1/" title="【新闻】“创新引领未来”—— 安徽省第五届高校研究生 信息素养夏令营侧记">【新闻】“创新引领未来”—— 安徽省第五届高校研究生 信息素养夏令营侧记</a></em></h3>
+												</li>
+																								<li>
+												<span><p>2017-07-11</p></span>
+												<h3><em><a href = "http://lib.ustc.edu.cn/cat_news/%e6%9c%8d%e5%8a%a1%e5%85%ac%e5%91%8a/%e3%80%90%e6%96%b0%e9%97%bb%e3%80%91%e5%9b%be%e4%b9%a6%e9%a6%86%e5%8f%91%e5%b8%83%e4%b8%ad%e5%9b%bd%e7%a7%91%e5%a4%a72016%e5%b9%b4%e5%ba%a6%e9%ab%98%e6%b0%b4%e5%b9%b3%e5%ad%a6%e6%9c%af%e8%ae%ba/" title="【新闻】图书馆发布中国科大2016年度高水平学术论文统计与学科分析报告">【新闻】图书馆发布中国科大2016年度高水平学术论文统计与学科分析报告</a></em></h3>
+												</li>
+																								<li>
+												<span><p>2017-07-04</p></span>
+												<h3><em><a href = "http://lib.ustc.edu.cn/cat_news/%e6%9c%8d%e5%8a%a1%e5%85%ac%e5%91%8a/%e3%80%90%e9%80%9a%e7%9f%a5%e3%80%91%e6%88%91%e6%98%afcashl%e4%bb%a3%e8%a8%80%e4%ba%ba%ef%bc%81-%e5%bc%80%e4%b8%96%e8%a7%88%e6%96%87%e7%94%a8%e6%88%b7%e8%a7%86%e9%a2%91%e5%a4%a7%e8%b5%9b/" title="【通知】我是CASHL代言人！—开世览文用户视频大赛">【通知】我是CASHL代言人！—开世览文用户视频大赛</a></em></h3>
+												</li>
+																								<li>
+												<span><p>2017-06-12</p></span>
+												<h3><em><a href = "http://lib.ustc.edu.cn/cat_news/%e6%9c%8d%e5%8a%a1%e5%85%ac%e5%91%8a/%e3%80%90%e6%96%b0%e9%97%bb%e3%80%91%e6%88%91%e9%a6%86%e5%8f%82%e5%8a%a0%e4%b9%a6%e9%a6%99%e6%b1%9f%e6%b7%ae%e7%ac%ac%e4%b8%89%e5%b1%8a%e5%93%81%e8%af%bb%e7%bb%8f%e5%85%b8-%e5%af%b9%e8%af%9d/" title="【新闻】我馆参加书香江淮第三届“品读经典 对话信仰”互联网读书征文颁奖活动暨第四届征文活动启动仪式">【新闻】我馆参加书香江淮第三届“品读经典 对话信仰”互联网读书征文颁奖活动暨第四届征文活动启动仪式</a></em></h3>
+												</li>
+																								<li>
+												<span><p>2017-06-12</p></span>
+												<h3><em><a href = "http://lib.ustc.edu.cn/cat_news/%e6%9c%8d%e5%8a%a1%e5%85%ac%e5%91%8a/biotechnology%e4%b8%bb%e7%bc%96%e5%9c%a8%e7%ba%bf%e8%ae%b2%e5%ba%a7%ef%bc%8c%e5%a6%82%e4%bd%95%e6%92%b0%e5%86%99%e6%8a%95%e7%a8%bf%e4%bf%a1%e5%92%8c%e6%8e%a8%e8%8d%90%e5%ae%a1%e7%a8%bf%e4%ba%ba/" title="Biotechnology主编在线讲座，如何撰写投稿信和推荐审稿人">Biotechnology主编在线讲座，如何撰写投稿信和推荐审稿人</a></em></h3>
+												</li>
+																								<li>
+												<span><p>2017-06-05</p></span>
+												<h3><em><a href = "http://lib.ustc.edu.cn/cat_news/%e6%9c%8d%e5%8a%a1%e5%85%ac%e5%91%8a/%e3%80%90%e6%96%b0%e9%97%bb%e3%80%91%e8%af%ad%e8%a8%80%e5%ad%a6%e4%b9%a0%e4%b8%8e%e5%9b%bd%e9%99%85%e4%ba%a4%e6%b5%81%e4%b8%ad%e5%bf%83%e4%b8%be%e5%8a%9e%e5%a4%87%e6%88%98%e9%9b%85%e6%80%9d/" title="【新闻】语言学习与国际交流中心举办“备战雅思”英语沙龙活动">【新闻】语言学习与国际交流中心举办“备战雅思”英语沙龙活动</a></em></h3>
+												</li>
+																								<li>
+												<span><p>2017-06-01</p></span>
+												<h3><em><a href = "http://lib.ustc.edu.cn/cat_news/%e6%9c%8d%e5%8a%a1%e5%85%ac%e5%91%8a/%e3%80%90%e6%96%b0%e9%97%bb%e3%80%91%e6%96%b0%e4%b8%80%e4%bb%a3%e7%9f%a5%e8%af%86%e5%87%ba%e7%89%88%e4%b8%8e%e6%9c%8d%e5%8a%a1%e5%88%9b%e6%96%b0%e7%a0%94%e8%ae%a8%e4%bc%9a%e5%8f%ac/" title="【新闻】“新一代知识出版与服务创新”研讨会召开">【新闻】“新一代知识出版与服务创新”研讨会召开</a></em></h3>
+												</li>
+																								<li>
+												<span><p>2017-05-25</p></span>
+												<h3><em><a href = "http://lib.ustc.edu.cn/cat_news/%e6%9c%8d%e5%8a%a1%e5%85%ac%e5%91%8a/%e3%80%90%e8%8b%b1%e8%af%ad%e6%b2%99%e9%be%99%e3%80%91%e4%ba%94%e6%9c%88%e8%8b%b1%e8%af%ad%e6%b2%99%e9%be%99-%e5%a4%87%e6%88%98%e9%9b%85%e6%80%9d/" title="【英语沙龙】五月英语沙龙&#8212;备战雅思">【英语沙龙】五月英语沙龙&#8212;备战雅思</a></em></h3>
+												</li>
+																								<li>
+												<span><p>2017-05-10</p></span>
+												<h3><em><a href = "http://lib.ustc.edu.cn/cat_news/%e6%9c%8d%e5%8a%a1%e5%85%ac%e5%91%8a/%e3%80%90%e6%96%b0%e9%97%bb%e3%80%91%e5%9b%be%e4%b9%a6%e9%a6%86%e4%b8%be%e5%8a%9e%e7%82%b9%e4%ba%ae%e6%9c%aa%e6%9d%a5%e4%b9%8b%e6%98%9f%e4%b9%8b%e4%ba%ba%e6%96%87%e4%b8%8e%e7%a4%be/" title="【新闻】图书馆举办“点亮未来之星”之人文与社会科学学院培训会">【新闻】图书馆举办“点亮未来之星”之人文与社会科学学院培训会</a></em></h3>
+												</li>
+																										
+                                    	</ul>
+                                    </div>
+								</div>
+
+								<div class="contant-con con_list" mid="1" style="">
+                                	<div class="HomeResourceWrap">
+                                    	<ul>
+                                        												
+												
+																								<li>
+												<span><p>2017-10-25</p></span>
+												<h3><em><a href = "http://lib.ustc.edu.cn/%e7%94%b5%e5%ad%90%e8%b5%84%e6%ba%90/database/trial-database/%e3%80%90%e8%af%95%e7%94%a8%e3%80%91artbase%e4%b8%ad%e5%9b%bd%e8%89%ba%e6%9c%af%e5%93%81%e5%9b%be%e7%89%87%e5%ba%93/" title="【试用】ArtBase中国艺术品图片库">【试用】ArtBase中国艺术品图片库</a></em></h3>
+												</li>
+																								<li>
+												<span><p>2017-09-30</p></span>
+												<h3><em><a href = "http://lib.ustc.edu.cn/%e7%94%b5%e5%ad%90%e8%b5%84%e6%ba%90/database/trial-database/%e3%80%90%e8%af%95%e7%94%a8%e3%80%91%e3%80%8a%e9%bc%8e%e7%a7%80%e5%8f%a4%e7%b1%8d%e5%85%a8%e6%96%87%e6%a3%80%e7%b4%a2%e5%b9%b3%e5%8f%b0v1-0%e3%80%8b/" title="【试用】《鼎秀古籍全文检索平台V1.0》">【试用】《鼎秀古籍全文检索平台V1.0》</a></em></h3>
+												</li>
+																								<li>
+												<span><p>2017-09-28</p></span>
+												<h3><em><a href = "http://lib.ustc.edu.cn/%e7%94%b5%e5%ad%90%e8%b5%84%e6%ba%90/database/trial-database/%e3%80%90%e8%af%95%e7%94%a8%e3%80%91gobi%e5%b9%b3%e5%8f%b0%e8%af%95%e7%94%a8%e9%80%9a%e7%9f%a5/" title="【试用】GOBI平台试用通知">【试用】GOBI平台试用通知</a></em></h3>
+												</li>
+																								<li>
+												<span><p>2017-09-27</p></span>
+												<h3><em><a href = "http://lib.ustc.edu.cn/%e7%94%b5%e5%ad%90%e8%b5%84%e6%ba%90/database/trial-database/%e3%80%90%e8%af%95%e7%94%a8%e3%80%91cnrds%e4%b8%ad%e5%9b%bd%e7%a0%94%e7%a9%b6%e6%95%b0%e6%8d%ae%e6%9c%8d%e5%8a%a1%e5%b9%b3%e5%8f%b0%e8%af%95%e7%94%a8%e8%b4%a6%e5%8f%b7/" title="【试用】CNRDS(中国研究数据服务平台)试用账号">【试用】CNRDS(中国研究数据服务平台)试用账号</a></em></h3>
+												</li>
+																								<li>
+												<span><p>2017-09-01</p></span>
+												<h3><em><a href = "http://lib.ustc.edu.cn/%e7%94%b5%e5%ad%90%e8%b5%84%e6%ba%90/database/2-%e7%94%b5%e5%ad%90%e5%9b%be%e4%b9%a6/%e7%a7%91%e5%ad%a6%e6%96%87%e5%ba%93/" title="科学文库">科学文库</a></em></h3>
+												</li>
+																								<li>
+												<span><p>2017-09-01</p></span>
+												<h3><em><a href = "http://lib.ustc.edu.cn/%e7%94%b5%e5%ad%90%e8%b5%84%e6%ba%90/database/trial-database/%e3%80%90%e8%af%95%e7%94%a8%e3%80%9151cto%e5%ad%a6%e9%99%a2/" title="【试用】51CTO学院">【试用】51CTO学院</a></em></h3>
+												</li>
+																										
+                                    	</ul>
+                                    </div>
+								</div>       
+							</div>
+						</div>
+                     <!-----------FirstGrid End--------------->                               
+                    </div>
+                    
+                    <div class="HomeGridMid">
+												
+							<div id="home-center"><h1 class="widget-title">快速导航</h1><div class="menu-%e5%bf%ab%e9%80%9f%e5%af%bc%e8%88%aa-container"><ul id="menu-%e5%bf%ab%e9%80%9f%e5%af%bc%e8%88%aa" class="menu"><li id="menu-item-7203" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7203"><a href="http://opac.lib.ustc.edu.cn/opac/search.php">馆藏书目</a></li>
+<li id="menu-item-7487" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-7487"><a href="http://lib.ustc.edu.cn/%e6%9c%ac%e9%a6%86%e6%a6%82%e5%86%b5/%e9%a6%86%e8%97%8f%e5%88%86%e5%b8%83/">馆藏分布</a></li>
+<li id="menu-item-7197" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7197"><a href="http://lib.ustc.edu.cn/dbmap/">数据库地图</a></li>
+<li id="menu-item-7206" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-7206"><a href="http://lib.ustc.edu.cn/%e6%9c%8d%e5%8a%a1%e6%8c%87%e5%8d%97/%e5%9b%be%e4%b9%a6%e8%8d%90%e8%b4%ad/">图书荐购</a></li>
+<li id="menu-item-7198" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-7198"><a href="http://lib.ustc.edu.cn/%e6%9c%8d%e5%8a%a1%e6%8c%87%e5%8d%97/%e6%9f%a5%e6%94%b6%e6%9f%a5%e5%bc%95/">查收查引</a></li>
+<li id="menu-item-7207" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-7207"><a href="http://lib.ustc.edu.cn/%e6%9c%8d%e5%8a%a1%e6%8c%87%e5%8d%97/%e7%a7%91%e6%8a%80%e6%9f%a5%e6%96%b0/">科技查新</a></li>
+<li id="menu-item-7200" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-7200"><a href="http://lib.ustc.edu.cn/%e6%9c%8d%e5%8a%a1%e6%8c%87%e5%8d%97/%e6%96%87%e7%8c%ae%e4%bc%a0%e9%80%92%e4%b8%8e%e9%a6%86%e9%99%85%e4%ba%92%e5%80%9f/">文献传递</a></li>
+<li id="menu-item-7208" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-7208"><a href="http://lib.ustc.edu.cn/cat_news/%e6%9c%8d%e5%8a%a1%e5%85%ac%e5%91%8a/%e5%ad%a6%e4%bd%8d%e8%ae%ba%e6%96%87%e6%8f%90%e4%ba%a4-3/">学位论文提交</a></li>
+<li id="menu-item-7205" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-7205"><a href="http://lib.ustc.edu.cn/%e4%be%a7%e8%be%b9%e6%a0%8f/%e5%9b%be%e4%b9%a6%e9%a6%86%e5%bf%97%e6%84%bf%e8%80%85-2/">图书馆志愿者</a></li>
+<li id="menu-item-7805" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-7805"><a href="http://lib.ustc.edu.cn/%e6%9c%ac%e9%a6%86%e6%a6%82%e5%86%b5/%e5%bc%80%e6%94%be%e6%97%b6%e9%97%b4/">日常开放时间</a></li>
+</ul></div></div>							
+						 
+                    </div>
+                    
+                    <div class="HomeGridRight">
+                    	<h1 class="HomeGridTitle">主题活动</h1>
+                        <div class="HomeGridRightCont">
+                        	<div id="activityslider">
+      							<div class="activity-list">
+															
+      								<div class="ActivityWrap">
+										<a href="http://lib.ustc.edu.cn/cat_news/%e6%9c%8d%e5%8a%a1%e5%85%ac%e5%91%8a/%e3%80%90%e6%96%b0%e9%97%bb%e3%80%91%e6%96%b0%e4%b8%80%e4%bb%a3%e7%9f%a5%e8%af%86%e5%87%ba%e7%89%88%e4%b8%8e%e6%9c%8d%e5%8a%a1%e5%88%9b%e6%96%b0%e7%a0%94%e8%ae%a8%e4%bc%9a%e5%8f%ac/">
+											<img width="5760" height="3840" src="http://lib.ustc.edu.cn/wp-content/uploads/2017/06/VIP_6767.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" srcset="http://lib.ustc.edu.cn/wp-content/uploads/2017/06/VIP_6767.jpg 5760w, http://lib.ustc.edu.cn/wp-content/uploads/2017/06/VIP_6767-300x200.jpg 300w, http://lib.ustc.edu.cn/wp-content/uploads/2017/06/VIP_6767-768x512.jpg 768w, http://lib.ustc.edu.cn/wp-content/uploads/2017/06/VIP_6767-1024x683.jpg 1024w, http://lib.ustc.edu.cn/wp-content/uploads/2017/06/VIP_6767-100x67.jpg 100w" sizes="(max-width: 5760px) 100vw, 5760px" />										</a>
+                                        <span>【新闻】“新一代知识出版与服务创新”研讨会召开</span>
+                                    </div>
+															
+      								<div class="ActivityWrap">
+										<a href="http://lib.ustc.edu.cn/cat_news/%e6%9c%8d%e5%8a%a1%e5%85%ac%e5%91%8a/%e3%80%90%e9%80%9a%e7%9f%a5%e3%80%91%e7%82%b9%e4%ba%ae%e6%9c%aa%e6%9d%a5%e4%b9%8b%e6%98%9f%e4%b9%8b%e4%ba%ba%e6%96%87%e4%b8%8e%e7%a4%be%e4%bc%9a%e7%a7%91%e5%ad%a6%e5%ad%a6%e9%99%a2/">
+											<img width="3150" height="1575" src="http://lib.ustc.edu.cn/wp-content/uploads/2017/05/“点亮未来之星”之人文与社会科学学院培训会.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" srcset="http://lib.ustc.edu.cn/wp-content/uploads/2017/05/“点亮未来之星”之人文与社会科学学院培训会.jpg 3150w, http://lib.ustc.edu.cn/wp-content/uploads/2017/05/“点亮未来之星”之人文与社会科学学院培训会-300x150.jpg 300w, http://lib.ustc.edu.cn/wp-content/uploads/2017/05/“点亮未来之星”之人文与社会科学学院培训会-768x384.jpg 768w, http://lib.ustc.edu.cn/wp-content/uploads/2017/05/“点亮未来之星”之人文与社会科学学院培训会-1024x512.jpg 1024w, http://lib.ustc.edu.cn/wp-content/uploads/2017/05/“点亮未来之星”之人文与社会科学学院培训会-100x50.jpg 100w" sizes="(max-width: 3150px) 100vw, 3150px" />										</a>
+                                        <span>【通知】“点亮未来之星”之人文与社会科学学院培训会</span>
+                                    </div>
+															
+      								<div class="ActivityWrap">
+										<a href="http://lib.ustc.edu.cn/cat_news/%e6%9c%8d%e5%8a%a1%e5%85%ac%e5%91%8a/%e3%80%90%e6%96%b0%e9%97%bb%e3%80%91%e8%ae%b8%e6%ad%a6%e4%b9%a6%e8%ae%b0%e5%88%b0%e8%a5%bf%e5%8c%ba%e5%9b%be%e4%b9%a6%e9%a6%86%e8%b0%83%e7%a0%94/">
+											<img width="5760" height="3840" src="http://lib.ustc.edu.cn/wp-content/uploads/2016/11/8O0A6926.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" srcset="http://lib.ustc.edu.cn/wp-content/uploads/2016/11/8O0A6926.jpg 5760w, http://lib.ustc.edu.cn/wp-content/uploads/2016/11/8O0A6926-300x200.jpg 300w, http://lib.ustc.edu.cn/wp-content/uploads/2016/11/8O0A6926-768x512.jpg 768w, http://lib.ustc.edu.cn/wp-content/uploads/2016/11/8O0A6926-1024x683.jpg 1024w, http://lib.ustc.edu.cn/wp-content/uploads/2016/11/8O0A6926-100x67.jpg 100w" sizes="(max-width: 5760px) 100vw, 5760px" />										</a>
+                                        <span>【新闻】许武书记到西区图书馆调研</span>
+                                    </div>
+															
+      								<div class="ActivityWrap">
+										<a href="http://lib.ustc.edu.cn/cat_news/%e6%9c%8d%e5%8a%a1%e5%85%ac%e5%91%8a/%e3%80%90%e6%96%b0%e9%97%bb%e3%80%91%e6%88%91%e6%a0%a1%e4%b8%be%e5%8a%9espringer-nature%e4%b8%ad%e5%9b%bd%e7%a7%91%e5%ad%a6%e6%8a%80%e6%9c%af%e5%a4%a7%e5%ad%a6%e7%a7%91%e7%a0%94%e5%87%ba%e7%89%88/">
+											<img width="865" height="577" src="http://lib.ustc.edu.cn/wp-content/uploads/2016/10/2.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" srcset="http://lib.ustc.edu.cn/wp-content/uploads/2016/10/2.png 865w, http://lib.ustc.edu.cn/wp-content/uploads/2016/10/2-300x200.png 300w, http://lib.ustc.edu.cn/wp-content/uploads/2016/10/2-768x512.png 768w, http://lib.ustc.edu.cn/wp-content/uploads/2016/10/2-100x67.png 100w" sizes="(max-width: 865px) 100vw, 865px" />										</a>
+                                        <span>【新闻】我校举办Springer Nature中国科学技术大学科研出版峰会</span>
+                                    </div>
+								                                  
+      							</div>
+								<a href="#" class="prev left-arrow"></a>
+								<a href="#" class="next right-arrow"></a>
+      							<ul class="activity-pagination">
+	  								<li><a><div><span></span></div></a></li>
+	   								<li><a><div><span></span></div></a></li>
+	   								<li><a><div><span></span></div></a></li>  
+       							</ul>
+    						</div>
+                        </div>
+                        
+                    <!--------------HomeGridRight End------------------->    
+                    </div>
+                    
+                    
+                </div>
+                
+                <div class="HomeMidBotIcon">
+				<!--
+                	<span class="HomeMidBotIcon01">
+						<a href="http://talent.lib.ustc.edu.cn" target="_blank">
+							<img src="http://lib.ustc.edu.cn/wp-content/themes/ustclib2014/images/homemidcont_boticon01.png"/>
+						</a>
+					</span>
+                	<span class="HomeMidBotIcon02" id="code">
+						<a href="http://lib.ustc.edu.cn/wp-content/themes/ustclib2014/images/icon.png">
+							<img src="http://lib.ustc.edu.cn/wp-content/themes/ustclib2014/images/homemidcont_boticon02.png"/>
+						</a>
+					</span>
+                    <div id="code_img">
+						<img src="http://lib.ustc.edu.cn/wp-content/themes/ustclib2014/images/icon.png" />
+					</div>
+				-->
+				
+											
+						<div id="linkcat-49"><h1 class="widget-title" style="display:none">图标集</h1>
+	<ul class='xoxo blogroll'>
+<li><a href="http://lib.ustc.edu.cn/wp-content/uploads/2014/10/wx-qrcode.jpg" title="微信图书馆"><img src="http://lib.ustc.edu.cn/wp-content/uploads/2014/10/weixin.png"  alt="微信"  title="微信图书馆" /></a></li>
+<li><a href="http://weibo.com/ustclib" title="新浪微博" target="_blank"><img src="http://lib.ustc.edu.cn/wp-content/uploads/2014/10/weibo.png"  alt="新浪微博"  title="新浪微博" /></a></li>
+<li><a href="http://lib.ustc.edu.cn/freshmen/" title="新生专栏" target="_blank"><img src="http://lib.ustc.edu.cn/wp-content/uploads/2015/08/freshmen.png"  alt="新生专栏"  title="新生专栏" /></a></li>
+<li><a href="http://lib.ustc.edu.cn/%e6%9c%aa%e6%9d%a5%e5%ad%a6%e4%b9%a0%e4%b8%ad%e5%bf%83/%e8%a5%bf%e5%8c%ba%e6%9c%aa%e6%9d%a5%e5%ad%a6%e4%b9%a0%e4%b8%ad%e5%bf%83/" target="_blank"><img src="http://lib.ustc.edu.cn/wp-content/uploads/2016/11/未来学习中心.png"  alt="未来学习中心"  /></a></li>
+<li><a href="http://lib.ustc.edu.cn/%e8%8b%b1%e8%af%ad%e6%b2%99%e9%be%99/%e8%af%ad%e8%a8%80%e5%ad%a6%e4%b9%a0%e4%b8%8e%e5%9b%bd%e9%99%85%e4%ba%a4%e6%b5%81%e4%b8%ad%e5%bf%83%e8%8b%b1%e8%af%ad%e6%b2%99%e9%be%99%e6%b4%bb%e5%8a%a8/" target="_blank"><img src="http://lib.ustc.edu.cn/wp-content/uploads/2016/11/英语沙龙.png"  alt="英语沙龙"  /></a></li>
+<li><a href="http://lib.ustc.edu.cn/%e8%b5%84%e6%ba%90%e5%8a%a8%e6%80%81/%e4%ba%91%e8%88%9f%e7%9f%a5%e8%af%86%e7%a9%ba%e9%97%b4%e6%9c%8d%e5%8a%a1%e7%b3%bb%e7%bb%9f-%e8%b6%85%e6%98%9f%e5%ad%a6%e4%b9%a0%e9%80%9a/" title="超星云舟" target="_blank"><img src="http://lib.ustc.edu.cn/wp-content/uploads/2016/11/超星云舟-1.png"  alt="超星云舟"  title="超星云舟" /></a></li>
+<li><a href="http://lib.ustc.edu.cn/?p=6123" title="问图书馆员"><img src="http://lib.ustc.edu.cn/wp-content/uploads/2014/10/ask1.png"  alt="问图书馆员"  title="问图书馆员" /></a></li>
+
+	</ul>
+</div>
+						
+					 
+                </div>
+            <!---------------Midcont wrap end----------------->	
+            </div>
+         <!------------------MidCont end ------------>   
+        </div>
+		
+		
+<script type="text/javascript">
+$(window).load(function() {
+	$("#background").fullBg();
+});
+
+if(!Array.prototype.indexOf){
+	Array.prototype.indexOf = function(searchElement, fromIndex) {
+            var k;
+            // 1. Let O be the result of calling ToObject passing
+            //    the this value as the argument.
+            if (null === this || undefined === this) {
+                throw new TypeError('"this" is null or not defined');
+            }
+            var O = Object(this);
+            // 2. Let lenValue be the result of calling the Get
+            //    internal method of O with the argument "length".
+            // 3. Let len be ToUint32(lenValue).
+            var len = O.length >>> 0;
+            // 4. If len is 0, return -1.
+            if (len === 0) {
+                return -1;
+            }
+            // 5. If argument fromIndex was passed let n be
+            //    ToInteger(fromIndex); else let n be 0.
+            var n = +fromIndex || 0;
+            if (Math.abs(n) === Infinity) {
+                n = 0;
+            }
+            // 6. If n >= len, return -1.
+            if (n >= len) {
+                return -1;
+            }
+            // 7. If n >= 0, then Let k be n.
+            // 8. Else, n<0, Let k be len - abs(n).
+            //    If k is less than 0, then let k be 0.
+            k = Math.max(n >= 0 ? n : len - Math.abs(n), 0);
+            // 9. Repeat, while k < len
+            while (k < len) {
+                // a. Let Pk be ToString(k).
+                //   This is implicit for LHS operands of the in operator
+                // b. Let kPresent be the result of calling the
+                //    HasProperty internal method of O with argument Pk.
+                //   This step can be combined with c
+                // c. If kPresent is true, then
+                //    i.  Let elementK be the result of calling the Get
+                //        internal method of O with the argument ToString(k).
+                //   ii.  Let same be the result of applying the
+                //        Strict Equality Comparison Algorithm to
+                //        searchElement and elementK.
+                //  iii.  If same is true, return k.
+                if (k in O && O[k] === searchElement) {
+                    return k;
+                }
+                k++;
+            }
+            return -1;
+        };
+}
+$(function(){
+	//如果连接指向图片，则显示出来
+	$('.HomeMidBotIcon a').hover(function(){
+		var ext = this.href.substr(this.href.lastIndexOf('.')+1);
+		var imgExt = ['jpg','jpeg','png','gif','bmp'];
+		if(imgExt.indexOf(ext)!==-1){
+			var $container = $('<div>').attr('id','img-container').css({
+				'position' : 'fixed',
+				'width'	: function(){
+					return $(window).width()*0.3;
+				},
+				'left' : function(){
+					return  $(window).width()*0.35;
+				},
+				'top' : function(){
+					return ($(window).height() - $(window).width()*0.3)/2;
+				},
+				'padding': 10,
+				'z-index': 9999999999,
+				'background':'#FFF'
+			});
+			$('<img>').attr('src', this.href).attr('width', function(){
+					return $(window).width()*0.3;
+				})
+				.appendTo($container);
+			$container.appendTo('body');
+		}
+	},function(){
+		$('#img-container').remove();
+	});
+});
+</script>
+
+<script type="text/javascript">
+var n_c_ser = 0;//设置初始值为0；
+var width = $('#HomeGridWrap > .HomeGridLeft').width(); //default 508
+function t_player(cur){
+	width = $('#HomeGridWrap > .HomeGridLeft').width();
+	$('ul.GridLeftTab > li').eq(n_c_ser).removeClass("HomeNewsTab-cus-"+n_c_ser);
+	if(cur==null){
+		n_c_ser = ++n_c_ser % 2;   //递加函数
+	}else{
+		n_c_ser = cur;
+	}
+	if(n_c_ser !=0 ){
+	}
+	
+	$('.GridLeftInner').animate({marginLeft:(-1 * n_c_ser * width) + 'px'});//下面内容的动画效果左移动508px；
+
+	$('ul.GridLeftTab > li').eq(n_c_ser).addClass("HomeNewsTab-cus-"+n_c_ser);
+}
+
+var n_t = setInterval('t_player()', 24000);//每隔5秒 执行一次
+
+$('ul.GridLeftTab > li span').hover(function(){//当我鼠标悬浮上去的时候
+	var self = this;
+	clearInterval(n_t);   //清除动画
+	$('.GridLeftInner').stop();
+	var mid = $(this).parent().index()
+	$('ul.GridLeftTab > li').eq(n_c_ser).addClass("HomeNewsTab-cus-"+n_c_ser);
+	t_player(mid);
+},function(e){
+	n_t = setInterval('t_player()', 24000);//当鼠标离开的时候  继续执行上面循环的函数
+});
+</script>
+
+<script type="text/javascript" src="http://lib.ustc.edu.cn/wp-content/themes/ustclib2014/js/jquery.homenews.slider.js"></script>
+<script type="text/javascript" src="http://lib.ustc.edu.cn/wp-content/themes/ustclib2014/js/homenews.slider.js"></script>        
+
+        <div id="Foot">
+        	<div class="FootWrap">
+        		<div class="FootLeft">
+            		<p>COPYRIGHT (C) 2017 中国科学技术大学图书馆</p>
+                	<p>您的IP 221.224.213.42 - 不在<a href='/?p=9341' target=_blank>校园网</a></p>
+            	</div>
+            	<div class="FootRight">
+                							
+						<div id="linkcat-42"><h2 class="widget-title" style="display:none;">友情链接</h2>
+	<ul class='xoxo blogroll'>
+<li><a href="http://ic.lib.ustc.edu.cn">西区图书馆学习空间预约</a></li>
+<li><a href="http://ahadl.org" target="_blank">安徽省高校数字图书馆</a></li>
+<li><a href="http://lib.ustc.edu.cn/?p=6358">我校SCI最新成果</a></li>
+<li><a href="http://lib.ustc.edu.cn/%E7%94%B5%E5%AD%90%E8%B5%84%E6%BA%90/%E7%94%B5%E5%AD%90%E8%B5%84%E6%BA%90%E5%85%B6%E4%BB%96%E6%96%87%E6%A1%A3/%E6%88%91%E6%A0%A1esi%E9%AB%98%E8%A2%AB%E5%BC%95%E7%83%AD%E7%82%B9%E8%AE%BA%E6%96%87/">我校ESI高被引/热点论文</a></li>
+<li><a href="http://www.las.cas.cn/" target="_blank">国家科学图书馆</a></li>
+<li><a href="http://www.calis.edu.cn/calisnew" target="_blank">CALIS</a></li>
+<li><a href="http://www.ustc.edu.cn/" target="_blank">中国科大</a></li>
+<li><a href="http://bbs.ustc.edu.cn/cgi/bbsdoc?board=library" target="_blank">瀚海星云</a></li>
+
+	</ul>
+</div>
+						
+					            	</div>
+            </div>
+        </div>
+
+
+
+    </div>
+			<script type="text/javascript">jQuery(document).ready(function() { jQuery("head").append("<style type=\"text/css\">.wordpress-post-tabs-skin-default ul.ui-tabs, .wordpress-post-tabs-skin-default ul.ui-tabs-nav {font-size:16px;}
+</style>"); }) </script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var wpcf7 = {"apiSettings":{"root":"http:\/\/lib.ustc.edu.cn\/wp-json\/contact-form-7\/v1","namespace":"contact-form-7\/v1"},"recaptcha":{"messages":{"empty":"\u8bf7\u9a8c\u8bc1\u60a8\u4e0d\u662f\u4e00\u4e2a\u673a\u5668\u4eba"}}};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://lib.ustc.edu.cn/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=4.9'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var qpprFrontData = {"linkData":{"http:\/\/lib.ustc.edu.cn\/cat_news\/%e6%9c%8d%e5%8a%a1%e5%85%ac%e5%91%8a\/%e3%80%90%e6%b4%bb%e5%8a%a8%e3%80%91%e5%85%b3%e4%ba%8e%e6%b3%9b%e5%9c%a8%e4%bf%a1%e6%81%af%e7%a4%be%e4%bc%9a%e8%ae%a4%e7%9f%a5%e7%9a%84%e6%9c%89%e5%a5%96%e9%97%ae%e5%8d%b7%e8%b0%83%e6%9f%a5\/":[1,0,""],"http:\/\/lib.ustc.edu.cn\/cat_news\/%e6%9c%8d%e5%8a%a1%e5%85%ac%e5%91%8a\/%e3%80%90%e9%80%9a%e7%9f%a5%e3%80%91elsevier%e5%9c%a8%e7%ba%bf%e5%9f%b9%e8%ae%ad%e8%af%be%e7%a8%8b-2\/":[1,0,""],"http:\/\/lib.ustc.edu.cn\/cat_news\/%e6%9c%8d%e5%8a%a1%e5%85%ac%e5%91%8a\/%e3%80%90%e6%96%b0%e9%97%bb%e3%80%91%e8%91%97%e5%90%8d%e5%ad%a6%e8%80%85%e6%98%93%e4%b8%ad%e5%a4%a9%e5%81%9a%e5%ae%a2%e4%b8%ad%e5%9b%bd%e7%a7%91%e5%a4%a7%e4%bd%9c%e5%8e%86%e5%8f%b2%e7%9a%84\/":[1,0,""],"http:\/\/lib.ustc.edu.cn\/cat_news\/%e6%9c%8d%e5%8a%a1%e5%85%ac%e5%91%8a\/%e3%80%90%e6%b4%bb%e5%8a%a8%e3%80%91%e6%88%91%e7%9a%84%e5%ae%89%e5%85%a8%e8%b0%81%e6%9d%a5%e4%bf%9d%e6%8a%a4-%e7%9f%a5%e8%af%86%e4%b8%96%e7%95%8c\/":[1,0,""],"http:\/\/lib.ustc.edu.cn\/cat_news\/%e6%9c%8d%e5%8a%a1%e5%85%ac%e5%91%8a\/%e3%80%90%e9%80%9a%e7%9f%a5%e3%80%912015%e5%b9%b4ieee%e6%95%b0%e6%8d%ae%e5%ba%93%e7%bd%91%e7%bb%9c%e8%af%be%e5%a0%82%e5%bc%80%e8%af%be%e5%95%a6%ef%bc%81\/":[1,1,"http:\/\/cn.ieee.org\/online_training.html"],"http:\/\/lib.ustc.edu.cn\/cat_news\/%e6%9c%8d%e5%8a%a1%e5%85%ac%e5%91%8a\/%e3%80%90%e9%80%9a%e7%9f%a5%e3%80%91ebsco-%e7%a7%8b%e5%ad%a3%e5%9c%a8%e7%ba%bf%e6%95%99%e5%ad%a6%e8%af%be%e7%a8%8b%e9%80%9a%e7%9f%a5\/":[1,0,""],"http:\/\/lib.ustc.edu.cn\/cat_news\/%e9%a6%86%e5%86%85%e5%8a%a8%e6%80%81\/%e3%80%90%e9%80%9a%e7%9f%a5%e3%80%91%e5%85%b3%e4%ba%8e%e7%bb%84%e7%bb%87%e6%96%b0%e5%85%a5%e8%81%8c%e6%95%99%e5%b8%88%e5%8f%82%e5%8a%a0%e6%95%99%e8%82%b2%e9%83%a8%e9%ab%98%e6%a0%a1%e6%95%99%e5%b8%88\/":[0,0,""],"http:\/\/lib.ustc.edu.cn\/cat_news\/%e6%9c%8d%e5%8a%a1%e5%85%ac%e5%91%8a\/%e3%80%90%e9%80%9a%e7%9f%a5%e3%80%91%e5%85%b3%e4%ba%8e%e8%8b%b1%e6%89%8d%e8%ae%ba%e5%9d%9b%e4%b9%8b%e9%bb%84%e5%be%b7%e5%ae%bd%e6%95%99%e6%8e%88%e6%8a%a5%e5%91%8a%e4%bc%9a%e7%9a%84\/":[0,0,""],"http:\/\/lib.ustc.edu.cn\/cat_news\/%e6%9c%8d%e5%8a%a1%e5%85%ac%e5%91%8a\/%e3%80%90%e6%96%b0%e9%97%bb%e3%80%91%e5%ae%89%e5%be%bd%e7%9c%81%e9%ab%98%e6%a0%a1%e6%95%b0%e5%ad%97%e5%9b%be%e4%b9%a6%e9%a6%86%e5%8f%ac%e5%bc%80mooc%e7%a4%ba%e8%8c%83%e9%a1%b9%e7%9b%ae%e5%bb%ba\/":[0,0,""],"http:\/\/lib.ustc.edu.cn\/cat_news\/%e6%9c%8d%e5%8a%a1%e5%85%ac%e5%91%8a\/%e3%80%90%e6%96%b0%e9%97%bb%e3%80%91%e9%bb%84%e5%be%b7%e5%ae%bd%e6%95%99%e6%8e%88%e5%81%9a%e5%ae%a2%e4%b8%ad%e5%9b%bd%e7%a7%91%e5%a4%a7%e8%8b%b1%e6%89%8d%e8%ae%ba%e5%9d%9b%e7%95%85\/":[0,0,""],"http:\/\/lib.ustc.edu.cn\/%e8%8b%b1%e6%89%8d%e4%b9%a6%e8%8b%91\/%e6%96%b0%e9%97%bb%e5%8a%a8%e6%80%81\/%e3%80%90%e6%96%b0%e9%97%bb%e3%80%91%e5%85%b3%e4%ba%8e%e8%8b%b1%e6%89%8d%e8%ae%ba%e5%9d%9b%e4%b9%8b%e6%9d%8e%e6%9c%9d%e4%b8%9c%e5%85%88%e7%94%9f%e6%8a%a5%e5%91%8a%e4%bc%9a%e7%9a%84\/":[0,0,""],"http:\/\/lib.ustc.edu.cn\/cat_news\/%e6%9c%8d%e5%8a%a1%e5%85%ac%e5%91%8a\/%e3%80%90%e9%80%9a%e7%9f%a5%e3%80%91%e5%85%b3%e4%ba%8e%e8%8b%b1%e6%89%8d%e8%ae%ba%e5%9d%9b%e4%b9%8b%e6%9d%8e%e6%9c%9d%e4%b8%9c%e5%85%88%e7%94%9f%e6%8a%a5%e5%91%8a%e4%bc%9a%e7%9a%84\/":[0,0,""],"http:\/\/lib.ustc.edu.cn\/cat_news\/%e6%9c%8d%e5%8a%a1%e5%85%ac%e5%91%8a\/%e3%80%90%e6%96%b0%e9%97%bb%e3%80%91%e5%9b%be%e4%b9%a6%e9%a6%86%e5%bc%80%e5%b1%95endnote%e6%96%87%e7%8c%ae%e7%ae%a1%e7%90%86%e5%9f%b9%e8%ae%ad%e8%ae%b2%e5%ba%a7\/":[0,0,""],"http:\/\/lib.ustc.edu.cn\/cat_news\/%e6%9c%8d%e5%8a%a1%e5%85%ac%e5%91%8a\/%e3%80%90%e6%96%b0%e9%97%bb%e3%80%91%e5%9b%be%e4%b9%a6%e9%a6%86%e5%bc%80%e5%b1%95lexisnexis%e6%b3%95%e5%be%8b%e4%bf%a1%e6%81%af%e6%95%b0%e6%8d%ae%e5%ba%93%e5%9f%b9%e8%ae%ad\/":[0,0,""],"http:\/\/lib.ustc.edu.cn\/cat_news\/%e6%9c%8d%e5%8a%a1%e5%85%ac%e5%91%8a\/%e3%80%90%e6%96%b0%e9%97%bb%e3%80%91%e5%9b%be%e4%b9%a6%e9%a6%86%e9%92%88%e5%af%b9%e7%95%99%e5%ad%a6%e7%94%9f%e5%bc%80%e5%b1%95%e4%b8%93%e9%a2%98%e5%9f%b9%e8%ae%ad%e8%ae%b2%e5%ba%a7\/":[0,0,""],"http:\/\/lib.ustc.edu.cn\/cat_news\/%e6%9c%8d%e5%8a%a1%e5%85%ac%e5%91%8a\/%e3%80%90%e6%96%b0%e9%97%bb%e3%80%91%e5%9b%be%e4%b9%a6%e9%a6%86%e9%92%88%e5%af%b9%e7%81%ab%e7%81%be%e5%ae%9e%e9%aa%8c%e5%ae%a4%e5%bc%80%e5%b1%95endnote%e5%9f%b9%e8%ae%ad%e8%ae%b2%e5%ba%a7\/":[0,0,""],"http:\/\/lib.ustc.edu.cn\/cat_news\/%e6%9c%8d%e5%8a%a1%e5%85%ac%e5%91%8a\/%e3%80%90%e6%96%b0%e9%97%bb%e3%80%91%e5%9b%be%e4%b9%a6%e9%a6%86%e4%b8%ba%e4%bf%a1%e6%81%af%e5%ad%a6%e9%99%a2%e5%bc%80%e5%b1%95latex%e5%9f%b9%e8%ae%ad%e8%ae%b2%e5%ba%a7\/":[0,0,""],"http:\/\/lib.ustc.edu.cn\/cat_news\/%e6%9c%8d%e5%8a%a1%e5%85%ac%e5%91%8a\/%e3%80%90%e6%96%b0%e9%97%bb%e3%80%91%e5%9b%be%e4%b9%a6%e9%a6%86%e4%b8%ba%e4%ba%ba%e6%96%87%e5%ad%a6%e9%99%a2%e5%bc%80%e5%b1%95cnki%e5%9f%b9%e8%ae%ad%e8%ae%b2%e5%ba%a7\/":[0,0,""],"http:\/\/lib.ustc.edu.cn\/%e8%af%bb%e8%80%85%e5%9f%b9%e8%ae%ad\/%e5%9c%a8%e7%ba%bf%e5%9f%b9%e8%ae%ad\/%e3%80%90%e5%a6%82%e7%ba%a6%e8%80%8c%e8%87%b3%e3%80%91%e5%ad%a6%e4%b9%a0%e6%9c%89%e7%90%86%e4%b9%9f%e6%9c%89%e7%a4%bc-emerald-2016%e6%98%a5%e5%ad%a3%e5%9c%a8%e7%ba%bf%e8%af%be\/":[0,0,""],"http:\/\/lib.ustc.edu.cn\/%e8%af%bb%e8%80%85%e5%9f%b9%e8%ae%ad\/%e5%9c%a8%e7%ba%bf%e5%9f%b9%e8%ae%ad\/emerald2016%e7%a7%8b%e5%ad%a3%e5%9c%a8%e7%ba%bf%e8%af%be%e5%a0%82\/":[0,0,""],"http:\/\/lib.ustc.edu.cn\/cat_news\/%e6%9c%8d%e5%8a%a1%e5%85%ac%e5%91%8a\/%e3%80%90%e6%96%b0%e9%97%bb%e3%80%91%e5%ae%9e%e9%aa%8c%e5%ae%a4%e9%87%91%e6%89%8b%e6%8c%87%e6%9c%89%e5%a5%96%e9%97%ae%e7%ad%94%e6%b4%bb%e5%8a%a8-%e7%94%a8%e6%9c%80%e6%9d%83\/":[0,0,""],"http:\/\/lib.ustc.edu.cn\/%e6%8b%9b%e6%8a%95%e6%a0%87%e4%bf%a1%e6%81%af%e5%85%ac%e5%bc%80\/%e4%b8%ad%e5%9b%bd%e7%a7%91%e5%ad%a6%e6%8a%80%e6%9c%af%e5%a4%a7%e5%ad%a6%e5%9b%be%e4%b9%a6%e9%a6%862017-2019%e4%b8%ad%e5%a4%96%e6%96%87%e5%9b%be%e4%b9%a6%e9%87%87%e8%b4%ad%e4%b8%ad%e6%a0%87%e7%bb%93\/":[0,0,""],"http:\/\/lib.ustc.edu.cn\/%e6%8b%9b%e6%8a%95%e6%a0%87%e4%bf%a1%e6%81%af%e5%85%ac%e5%bc%80\/%e4%b8%ad%e5%9b%bd%e7%a7%91%e5%ad%a6%e6%8a%80%e6%9c%af%e5%a4%a7%e5%ad%a6%e5%9b%be%e4%b9%a6%e9%a6%862017-2019%e5%b9%b4%e5%ba%a6%e5%a4%96%e6%96%87%e7%ba%b8%e8%b4%a8%e6%9c%9f%e5%88%8a%e5%ae%9a\/":[0,0,""],"http:\/\/lib.ustc.edu.cn\/%e6%8b%9b%e6%8a%95%e6%a0%87%e4%bf%a1%e6%81%af%e5%85%ac%e5%bc%80\/%e4%b8%ad%e5%9b%bd%e7%a7%91%e5%ad%a6%e6%8a%80%e6%9c%af%e5%a4%a7%e5%ad%a6%e5%9b%be%e4%b9%a6%e9%a6%862015%e5%b9%b4%e5%ba%a6%e5%a4%96%e6%96%87%e5%8e%9f%e7%89%88%e5%9b%be%e4%b9%a6%e5%ae%9a%e7%82%b9\/":[0,0,""],"http:\/\/lib.ustc.edu.cn\/%e6%8b%9b%e6%8a%95%e6%a0%87%e4%bf%a1%e6%81%af%e5%85%ac%e5%bc%80\/%e4%b8%ad%e5%9b%bd%e7%a7%91%e5%ad%a6%e6%8a%80%e6%9c%af%e5%a4%a7%e5%ad%a6%e5%9b%be%e4%b9%a6%e9%a6%862015%e5%b9%b4%e5%ba%a6%e4%b8%ad%e6%96%87%e6%9c%9f%e5%88%8a%e5%ae%9a%e7%82%b9%e4%be%9b%e5%ba%94\/":[0,0,""],"http:\/\/lib.ustc.edu.cn\/%e6%8b%9b%e6%8a%95%e6%a0%87%e4%bf%a1%e6%81%af%e5%85%ac%e5%bc%80\/%e4%b8%ad%e5%9b%bd%e7%a7%91%e5%ad%a6%e6%8a%80%e6%9c%af%e5%a4%a7%e5%ad%a6%e5%ae%89%e5%be%bd%e7%9c%81%e9%ab%98%e6%a0%a1%e5%9b%be%e4%b9%a6%e9%a6%86%e4%b8%ad%e6%96%87%e5%8f%91%e7%8e%b0%e7%b3%bb%e7%bb%9f\/":[0,0,""],"http:\/\/lib.ustc.edu.cn\/%e6%8b%9b%e6%8a%95%e6%a0%87%e4%bf%a1%e6%81%af%e5%85%ac%e5%bc%80\/%e4%b8%ad%e5%9b%bd%e7%a7%91%e5%ad%a6%e6%8a%80%e6%9c%af%e5%a4%a7%e5%ad%a6%e5%9b%be%e4%b9%a6%e9%a6%86%e5%a4%a7%e6%a5%bc%e8%ae%be%e5%a4%87%e5%8f%8a%e6%9c%ba%e6%88%bf%e8%ae%be%e5%a4%87%e7%bb%b4%e4%bf%9d\/":[0,0,""],"http:\/\/lib.ustc.edu.cn\/%e6%8b%9b%e6%8a%95%e6%a0%87%e4%bf%a1%e6%81%af%e5%85%ac%e5%bc%80\/%e4%b8%ad%e5%9b%bd%e7%a7%91%e5%ad%a6%e6%8a%80%e6%9c%af%e5%a4%a7%e5%ad%a6%e5%9b%be%e4%b9%a6%e9%a6%86%e5%ae%b6%e5%85%b7%e9%87%87%e8%b4%ad%e5%8f%8a%e5%ae%89%e8%a3%85%e8%af%84%e6%a0%87%e7%bb%93%e6%9e%9c\/":[0,0,""],"http:\/\/lib.ustc.edu.cn\/%e6%8b%9b%e6%8a%95%e6%a0%87%e4%bf%a1%e6%81%af%e5%85%ac%e5%bc%80\/%e4%b8%ad%e5%9b%bd%e7%a7%91%e5%ad%a6%e6%8a%80%e6%9c%af%e5%a4%a7%e5%ad%a6%e5%9b%be%e4%b9%a6%e9%a6%86%e4%b8%ad%e5%a4%96%e6%96%87%e7%ba%b8%e8%b4%a8%e5%9b%be%e4%b9%a6%e5%ae%9a%e7%82%b9%e4%be%9b%e5%ba%94\/":[0,0,""],"http:\/\/lib.ustc.edu.cn\/%e6%8b%9b%e6%8a%95%e6%a0%87%e4%bf%a1%e6%81%af%e5%85%ac%e5%bc%80\/iel%e6%95%b0%e6%8d%ae%e5%ba%93%e9%87%87%e8%b4%ad%e9%a1%b9%e7%9b%ae%e5%85%ac%e7%a4%ba\/":[0,0,""],"http:\/\/lib.ustc.edu.cn\/%e6%8b%9b%e6%8a%95%e6%a0%87%e4%bf%a1%e6%81%af%e5%85%ac%e5%bc%80\/acs-journal%e6%95%b0%e6%8d%ae%e5%ba%93%e9%87%87%e8%b4%ad%e9%a1%b9%e7%9b%ae%e5%85%ac%e7%a4%ba\/":[0,0,""],"http:\/\/lib.ustc.edu.cn\/%e6%8b%9b%e6%8a%95%e6%a0%87%e4%bf%a1%e6%81%af%e5%85%ac%e5%bc%80\/%e9%a6%86%e8%97%8f%e5%9b%be%e4%b9%a6%e6%95%b0%e5%ad%97%e5%8c%96%e9%87%87%e8%b4%ad%e9%a1%b9%e7%9b%ae%e5%85%ac%e7%a4%ba\/":[0,0,""],"http:\/\/lib.ustc.edu.cn\/%e6%8b%9b%e6%8a%95%e6%a0%87%e4%bf%a1%e6%81%af%e5%85%ac%e5%bc%80\/elsevier-journal%e6%95%b0%e6%8d%ae%e5%ba%93%e9%87%87%e8%b4%ad%e9%a1%b9%e7%9b%ae%e5%85%ac%e7%a4%ba\/":[0,0,""],"http:\/\/lib.ustc.edu.cn\/%e6%8b%9b%e6%8a%95%e6%a0%87%e4%bf%a1%e6%81%af%e5%85%ac%e5%bc%80\/scival%e6%95%b0%e6%8d%ae%e5%ba%93%e9%87%87%e8%b4%ad%e9%a1%b9%e7%9b%ae%e5%85%ac%e7%a4%ba\/":[0,0,""],"http:\/\/lib.ustc.edu.cn\/%e6%8b%9b%e6%8a%95%e6%a0%87%e4%bf%a1%e6%81%af%e5%85%ac%e5%bc%80\/%e8%b6%85%e6%98%9f%e4%b8%ad%e6%96%87%e5%8f%91%e7%8e%b0%e7%b3%bb%e7%bb%9f%ef%bc%88%e7%bb%ad%e8%ae%a2%ef%bc%89%e9%87%87%e8%b4%ad%e9%a1%b9%e7%9b%ae%e5%85%ac%e7%a4%ba\/":[0,0,""],"http:\/\/lib.ustc.edu.cn\/%e6%8b%9b%e6%8a%95%e6%a0%87%e4%bf%a1%e6%81%af%e5%85%ac%e5%bc%80\/%e5%ae%89%e5%be%bd%e7%9c%81%e6%95%b0%e5%ad%97%e8%b5%84%e6%ba%90%e5%85%b1%e4%ba%ab%e5%b9%b3%e5%8f%b0%ef%bc%88%e7%bb%ad%e8%ae%a2%ef%bc%89%e9%87%87%e8%b4%ad%e9%a1%b9%e7%9b%ae%e5%85%ac%e7%a4%ba\/":[0,0,""],"http:\/\/lib.ustc.edu.cn\/%e6%8b%9b%e6%8a%95%e6%a0%87%e4%bf%a1%e6%81%af%e5%85%ac%e5%bc%80\/%e5%9b%be%e4%b9%a6%e9%a6%86%e4%b8%87%e6%96%b9%e6%9c%9f%e5%88%8a%e6%95%b0%e6%8d%ae%e5%ba%93%e9%87%87%e8%b4%ad%e9%a1%b9%e7%9b%ae%e5%85%ac%e7%a4%ba\/":[0,0,""],"http:\/\/lib.ustc.edu.cn\/%e6%8b%9b%e6%8a%95%e6%a0%87%e4%bf%a1%e6%81%af%e5%85%ac%e5%bc%80\/%e5%9b%be%e4%b9%a6%e9%a6%86scifinder%e6%95%b0%e6%8d%ae%e5%ba%93%e9%87%87%e8%b4%ad%e9%a1%b9%e7%9b%ae%e5%85%ac%e7%a4%ba\/":[0,0,""],"http:\/\/lib.ustc.edu.cn\/%e6%8b%9b%e6%8a%95%e6%a0%87%e4%bf%a1%e6%81%af%e5%85%ac%e5%bc%80\/%e5%9b%be%e4%b9%a6%e9%a6%86nature%e6%95%b0%e6%8d%ae%e5%ba%93%e9%87%87%e8%b4%ad%e9%a1%b9%e7%9b%ae%e5%85%ac%e7%a4%ba\/":[0,0,""],"http:\/\/lib.ustc.edu.cn\/%e6%8b%9b%e6%8a%95%e6%a0%87%e4%bf%a1%e6%81%af%e5%85%ac%e5%bc%80\/%e5%9b%be%e4%b9%a6%e9%a6%86sci%e6%95%b0%e6%8d%ae%e5%ba%93%e9%87%87%e8%b4%ad%e9%a1%b9%e7%9b%ae%e5%85%ac%e7%a4%ba\/":[0,0,""],"http:\/\/lib.ustc.edu.cn\/%e6%8b%9b%e6%8a%95%e6%a0%87%e4%bf%a1%e6%81%af%e5%85%ac%e5%bc%80\/%e5%9b%be%e4%b9%a6%e9%a6%86iel%e6%95%b0%e6%8d%ae%e5%ba%93%e9%87%87%e8%b4%ad%e9%a1%b9%e7%9b%ae%e5%85%ac%e7%a4%ba\/":[0,0,""],"http:\/\/lib.ustc.edu.cn\/%e6%8b%9b%e6%8a%95%e6%a0%87%e4%bf%a1%e6%81%af%e5%85%ac%e5%bc%80\/%e5%9b%be%e4%b9%a6%e9%a6%86acs%e6%95%b0%e6%8d%ae%e5%ba%93%e9%87%87%e8%b4%ad%e9%a1%b9%e7%9b%ae%e5%85%ac%e7%a4%ba\/":[0,0,""],"http:\/\/lib.ustc.edu.cn\/%e6%8b%9b%e6%8a%95%e6%a0%87%e4%bf%a1%e6%81%af%e5%85%ac%e5%bc%80\/%e5%9b%be%e4%b9%a6%e9%a6%86eds%e8%b5%84%e6%ba%90%e5%8f%91%e7%8e%b0%e6%95%b0%e6%8d%ae%e5%ba%93%e9%87%87%e8%b4%ad%e9%a1%b9%e7%9b%ae%e5%85%ac%e7%a4%ba\/":[0,0,""],"http:\/\/lib.ustc.edu.cn\/%e6%8b%9b%e6%8a%95%e6%a0%87%e4%bf%a1%e6%81%af%e5%85%ac%e5%bc%80\/%e5%9b%be%e4%b9%a6%e9%a6%86%e6%99%ba%e8%af%be%e8%8b%b1%e8%af%ad%e5%ad%a6%e4%b9%a0%e5%b9%b3%e5%8f%b0%e9%87%87%e8%b4%ad%e9%a1%b9%e7%9b%ae%e5%85%ac%e7%a4%ba\/":[0,0,""],"http:\/\/lib.ustc.edu.cn\/%e6%8b%9b%e6%8a%95%e6%a0%87%e4%bf%a1%e6%81%af%e5%85%ac%e5%bc%80\/%e5%9b%be%e4%b9%a6%e9%a6%86sci%e6%95%b0%e6%8d%ae%e5%ba%93%e9%87%87%e8%b4%ad%e9%a1%b9%e7%9b%ae%e5%85%ac%e7%a4%ba-2\/":[0,0,""],"http:\/\/lib.ustc.edu.cn\/%e6%8b%9b%e6%8a%95%e6%a0%87%e4%bf%a1%e6%81%af%e5%85%ac%e5%bc%80\/%e5%9b%be%e4%b9%a6%e9%a6%86iel%e6%95%b0%e6%8d%ae%e5%ba%93%e9%87%87%e8%b4%ad%e9%a1%b9%e7%9b%ae%e5%85%ac%e7%a4%ba-2\/":[0,0,""],"http:\/\/lib.ustc.edu.cn\/%e6%8b%9b%e6%8a%95%e6%a0%87%e4%bf%a1%e6%81%af%e5%85%ac%e5%bc%80\/%e5%9b%be%e4%b9%a6%e9%a6%86scifinder%e6%95%b0%e6%8d%ae%e5%ba%93%e9%87%87%e8%b4%ad%e9%a1%b9%e7%9b%ae%e5%85%ac%e7%a4%ba-2\/":[0,0,""],"http:\/\/lib.ustc.edu.cn\/%e6%8b%9b%e6%8a%95%e6%a0%87%e4%bf%a1%e6%81%af%e5%85%ac%e5%bc%80\/%e5%9b%be%e4%b9%a6%e9%a6%86%e8%b6%85%e6%98%9f%e5%8f%91%e7%8e%b0%e7%b3%bb%e7%bb%9f%e9%87%87%e8%b4%ad%e9%a1%b9%e7%9b%ae%e5%85%ac%e7%a4%ba\/":[0,0,""],"http:\/\/lib.ustc.edu.cn\/%e6%8b%9b%e6%8a%95%e6%a0%87%e4%bf%a1%e6%81%af%e5%85%ac%e5%bc%80\/%e5%ae%89%e5%be%bd%e7%9c%81%e6%95%b0%e5%ad%97%e8%b5%84%e6%ba%90%e5%85%b1%e4%ba%ab%e5%b9%b3%e5%8f%b0%e9%87%87%e8%b4%ad%e9%a1%b9%e7%9b%ae%e5%85%ac%e7%a4%ba\/":[0,0,""],"http:\/\/lib.ustc.edu.cn\/%e6%8b%9b%e6%8a%95%e6%a0%87%e4%bf%a1%e6%81%af%e5%85%ac%e5%bc%80\/%e5%9b%be%e4%b9%a6%e9%a6%862016%e5%b9%b4%e5%9b%bd%e5%86%85%e4%b8%ad%e6%96%87%e6%9c%9f%e5%88%8a%e9%87%87%e8%b4%ad%e9%a1%b9%e7%9b%ae%e5%85%ac%e7%a4%ba\/":[0,0,""],"http:\/\/lib.ustc.edu.cn\/ebooks\/":[0,0,""]},"siteURL":"http:\/\/lib.ustc.edu.cn","siteURLq":"http:\/\/lib.ustc.edu.cn"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://lib.ustc.edu.cn/wp-content/plugins/quick-pagepost-redirect-plugin/js/qppr_frontend_script.min.js?ver=5.1.8'></script>
+<script type='text/javascript' src='http://lib.ustc.edu.cn/wp-includes/js/wp-embed.min.js?ver=4.8.2'></script>
+</body>
+</html>

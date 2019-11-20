@@ -1,0 +1,747 @@
+
+<!DOCTYPE>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<title>《研究生教育研究》杂志社</title>
+<meta http-equiv="Content-Language" content="zh-cn">
+<meta http-equiv="Content-Type" content="text/xml; charset=gb2312">
+<meta name="description" content="《研究生教育研究》杂志社">
+<meta name="keywords" content="《研究生教育研究》杂志社"  />
+
+<link href="css/module_css.css" rel="stylesheet" type="text/css" />
+
+<link href="css/index_css.css" rel="stylesheet" type="text/css" />
+<LINK href="css/Erji_style.css" type="text/css" rel=stylesheet>
+<link href="css/front_table_css.css" rel="stylesheet" type="text/css">
+<SCRIPT type=text/javascript src="extjs/jquery-1.3.2.min.js"></SCRIPT>
+<link rel="stylesheet" type="text/css" href="css/front_table_css.css">
+<script type="text/javascript" src="js/checkform.js"></script>
+<script type="text/javascript" src="js/jquery.js"></script>
+
+<script type="text/javascript">
+// Executes the function when DOM will be loaded fully
+$(document).ready(function () {	
+	// hover property will help us set the events for mouse enter and mouse leave
+	$('.navigation li').hover(
+		// When mouse enters the .navigation element
+		function () {
+			//Fade in the navigation submenu
+			$('dl', this).fadeIn(); 	// fadeIn will show the sub cat menu
+		}, 
+		// When mouse leaves the .navigation element
+		function () {
+			//Fade out the navigation submenu
+			$('dl', this).fadeOut();	 // fadeOut will hide the sub cat menu		
+		}
+	);
+});
+	</script>
+	<script>
+function addCookie(url,title)
+{
+ if (document.all)
+    {
+       window.external.addFavorite(url,title);
+    }
+    else if (window.sidebar)
+    {
+       window.sidebar.addPanel(title, url, "");
+ }
+}
+
+function setHomepage(homeurl)
+{
+ if (document.all)
+    {
+        document.body.style.behavior='url(#default#homepage)';
+  document.body.setHomePage(homeurl);
+ 
+    }
+    else if (window.sidebar)
+    {
+    if(window.netscape)
+    {
+         try
+   {  
+            netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");  
+         }  
+         catch (e)  
+         {  
+    alert( "该操作被浏览器拒绝，如果想启用该功能，请在地址栏内输入 about:config,然后将项 signed.applets.codebase_principal_support 值该为true" );  
+         }
+    } 
+    var prefs = Components.classes['@mozilla.org/preferences-service;1'].getService(Components. interfaces.nsIPrefBranch);
+    prefs.setCharPref('browser.startup.homepage',homeurl);
+ }
+} 
+</script>
+
+</head>
+
+<body>
+<div class="et_header">
+      <div class="header">
+
+                         <div class="logo">
+						     <div style="height:25px; width:230px; color:#F00; float:left; position: relative; margin-left:50px; margin-top:15px;">
+<marquee direction="left" width="230" height="25"><img src="ext_images/gggdd.gif" /></marquee>
+
+</div>
+							 <ul>
+								 <li><a href="#" onclick="setHomepage(document.location.href);">设为首页</a>　|　<a href="#" rel="sidebar" onclick="addCookie(document.location.href,'《研究生教育研究》杂志社');">加入收藏</a></li>
+							 </ul>
+						 </div>
+
+     <div class="Nav">
+           
+           <ul class="navigation">
+		      <li class="active back"><A href="index.aspx">首页</A><div class="clear"></div></li>
+               <li class="atk" style=" background:none;"><A href="first_menu.aspx?parent_id=20141009015654001">期刊介绍</A><div class="clear"></div></li> <li><A href="first_menu.aspx?parent_id=20141009015712001">编委会组成</A><div class="clear"></div></li> <li><A href="first_menu.aspx?parent_id=20141009015729001">期刊订阅</A><div class="clear"></div></li> <li><A href="first_menu.aspx?parent_id=20141009015755001">投稿须知</A><div class="clear"></div></li> <li><A href="first_menu.aspx?parent_id=20141009015816001">联系我们</A><div class="clear"></div></li> <li><A href="first_menu.aspx?parent_id=20141009015842001">电子版</A><div class="clear"></div></li> <li><A href="http://journal.ustc.edu.cn/ch/guestbook/index.aspx">在线留言</A><div class="clear"></div></li> <li><A href="first_menu.aspx?parent_id=20141009015925001">下载专区</A><div class="clear"></div></li> <li><A href="first_menu.aspx?parent_id=20141009015948001">English</A><div class="clear"></div></li>
+           </ul>
+
+     </div>                                           
+</div>
+</div>
+<div class="et_content">
+
+<script language="javascript">
+	var yearID=new Array();
+	var yearName=new Array();
+	var quarterNameID=new Array();
+	
+			yearID[0]="2017";
+			yearName[0]="2017年";
+		
+			yearID[1]="2016";
+			yearName[1]="2016年";
+		
+			yearID[2]="2015";
+			yearName[2]="2015年";
+		
+			yearID[3]="2014";
+			yearName[3]="2014年";
+		
+			yearID[4]="2013";
+			yearName[4]="2013年";
+		
+			yearID[5]="2012";
+			yearName[5]="2012年";
+		
+			yearID[6]="2011";
+			yearName[6]="2011年";
+		
+			 quarterNameID[0]="2011:1:第1期";
+		
+			 quarterNameID[1]="2011:2:第2期";
+		
+			 quarterNameID[2]="2011:3:第3期";
+		
+			 quarterNameID[3]="2011:4:第4期";
+		
+			 quarterNameID[4]="2011:5:第5期";
+		
+			 quarterNameID[5]="2011:6:第6期";
+		
+			 quarterNameID[6]="2012:1:第1期";
+		
+			 quarterNameID[7]="2012:2:第2期";
+		
+			 quarterNameID[8]="2012:3:第3期";
+		
+			 quarterNameID[9]="2012:4:第4期";
+		
+			 quarterNameID[10]="2012:5:第5期";
+		
+			 quarterNameID[11]="2012:6:第6期";
+		
+			 quarterNameID[12]="2013:1:第1期";
+		
+			 quarterNameID[13]="2013:2:第2期";
+		
+			 quarterNameID[14]="2013:3:第3期";
+		
+			 quarterNameID[15]="2013:4:第4期";
+		
+			 quarterNameID[16]="2013:5:第5期";
+		
+			 quarterNameID[17]="2013:6:第6期";
+		
+			 quarterNameID[18]="2014:1:第1期";
+		
+			 quarterNameID[19]="2014:6:第6期";
+		
+			 quarterNameID[20]="2014:2:第2期";
+		
+			 quarterNameID[21]="2014:3:第3期";
+		
+			 quarterNameID[22]="2014:4:第4期";
+		
+			 quarterNameID[23]="2014:5:第5期";
+		
+			 quarterNameID[24]="2015:2:第2期";
+		
+			 quarterNameID[25]="2015:3:第3期";
+		
+			 quarterNameID[26]="2015:4:第4期";
+		
+			 quarterNameID[27]="2015:5:第5期";
+		
+			 quarterNameID[28]="2015:1:第1期";
+		
+			 quarterNameID[29]="2015:6:第6期";
+		
+			 quarterNameID[30]="2016:1:第1期";
+		
+			 quarterNameID[31]="2016:2:第2期";
+		
+			 quarterNameID[32]="2016:3:第3期";
+		
+			 quarterNameID[33]="2016:4:第4期";
+		
+			 quarterNameID[34]="2016:5:第5期";
+		
+			 quarterNameID[35]="2016:6:第6期";
+		
+			 quarterNameID[36]="2017:1:第1期";
+		
+			 quarterNameID[37]="2017:2:第2期";
+		
+			 quarterNameID[38]="2017:3:第3期";
+		
+			 quarterNameID[39]="2017:5:第5期";
+		
+			 quarterNameID[40]="2017:4:第4期";
+		
+</script>
+<div class="et_left">
+             <div class="box">
+                  <h3 class="title"><span>用户登录</span></h3>
+                  <ul class="anniu">
+				        <li><a href="author/login.aspx">作者投稿</a></li>
+                        <li><a href="auditor/login.aspx">专家审稿</a></li>   
+                        <li><a href="login.aspx">编辑办公</a></li>   
+                        <li><a href="reader/login.aspx">读者登录</a></li>                      
+                  </ul>
+            </div>
+            <div class="box">
+                  <h3 class="title" style=" background:url(ext_images/title-20141.jpg) no-repeat;"><span>在线期刊</span></h3>
+                  <ul class="zxqk" style="height:284px; overflow:hidden;">
+                  
+                        <li><span></span><p><a href="reader/query_recent_article_list.aspx?parent_id=001&order_field=stop_audit_time&order_type=desc" target="_blank">最新录用</a></p></li>
+                        <li><span></span><p><a href="reader/issue_list.aspx?year_id=2017&quarter_id=5" target="_blank">当期目次</a></p></li>
+                        <li><span></span><p><a href="reader/issue_browser.aspx" target="_blank">过刊浏览</a></p></li>
+                        <li><span></span><p><a href="reader/toc_alert.aspx"target="_blank">Email Alert</a></p></li>
+                        <li><span></span><p><a href="reader/rss.aspx" target="_blank">RSS</a></p></li>
+                        <li><span></span><p><a href="reader/more_cite_article_list.aspx" target="_blank">文章引用排行</a></p></li>
+                        <li><span></span><p><a href="reader/more_hotest_article_list.aspx" target="_blank">文章点击排行</a></p></li>
+                        <li><span></span><p><a href="reader/more_download_article_list.aspx" target="_blank">文章下载排行</a></p></li>
+                  </ul>
+            </div>
+	   <div class="box">
+                  <h3 class="title"><span>友情链接</span></h3>
+                  <ul class="link" style="height:192px; overflow:hidden;">
+				    
+					 <li><span></span><p><a href="http://www.csadge.edu.cn" target="_blank">
+					中国学位与研究生教育学会</a></p></li>
+					
+					 <li><span></span><p><a href="http://www.ustc.edu.cn/" target="_blank">
+					中国科学技术大学</a></p></li>
+					
+					 <li><span></span><p><a href="http://www.moe.gov.cn/" target="_blank">
+					中华人民共和国教育部</a></p></li>
+					
+					 <li><span></span><p><a href="http://www.moe.edu.cn/s78/A22/" target="_blank">
+					国务院学位委员会办公室</a></p></li>
+					
+					 <li><span></span><p><a href="http://www.cdgdc.edu.cn/" target="_blank">
+					教育部学位与研究生教育发展中心</a></p></li>
+					
+					 <li><span></span><p><a href="http://www.meng.edu.cn/" target="_blank">
+					全国工程硕士研究生教育网</a></p></li>
+					
+					 <li><span></span><p><a href="http://www.hie.edu.cn/" target="_blank">
+					中国高等教育学会</a></p></li>
+					
+                               
+                </ul>
+              </div>
+     </div>
+     <div class="et_center">
+           <div class="box">
+                  <h3 class="title" style=" background:url(ext_images/et_center_title1.jpg) repeat-x;"><span class="xxgg_tit">学会资讯</span><a href="reader/more_news_list.aspx?category_id=xxgg">更多>></a></h3>
+                  <ul class="xxgg">
+				      
+            <li><span></span><p><a href="reader/view_news.aspx?id=20171011101849987"
+                target="_blank">
+                首届研究生教育国际会议会议通知</a></p><em>2017-10-11</em></li>
+            
+            <li><span></span><p><a href="reader/view_news.aspx?id=20170903105122176"
+                target="_blank">
+                关于发布2017年研究课题指南及开展申报的通知</a></p><em>2017-09-03</em></li>
+            
+            <li><span></span><p><a href="reader/view_news.aspx?id=20170425025524599"
+                target="_blank">
+                人才选拔与评价委员会关于开展2017年优秀成果评选的通知</a></p><em>2017-04-25</em></li>
+            
+            <li><span></span><p><a href="reader/view_news.aspx?id=20170406032817777"
+                target="_blank">
+                2017年第九届全国工科研究生教育工作研讨会通知（第一轮通知——征文）</a></p><em>2017-04-06</em></li>
+            
+            <li><span></span><p><a href="reader/view_news.aspx?id=20161114034510820"
+                target="_blank">
+                改革创新 特色发展 建设研究生教育强国——中国学位与研究生教育学会2016年会员代表大会在西安召开</a></p><em>2016-11-14</em></li>
+            
+            <li><span></span><p><a href="reader/view_news.aspx?id=20160727050600802"
+                target="_blank">
+                全国第十一届学位与研究生教育评估学术会议征文通知</a></p><em>2016-07-27</em></li>
+            
+            <li><span></span><p><a href="reader/view_news.aspx?id=20160727045400355"
+                target="_blank">
+                学会2016年会员代表大会学术研讨会第二轮征文通知</a></p><em>2016-07-27</em></li>
+            
+												
+                      
+                  </ul>
+              </div>
+<div class="box" style="height:150px">
+                  <h3 class="title" style=" background:url(ext_images/et_center_title1.jpg) repeat-x;"><span class="xxgg_tit">期刊动态</span><a href="reader/more_news_list.aspx?category_id=qkdt">更多>></a></h3>
+                  <ul class="xxgg" style="height:108px;">
+				      
+            <li><span></span><p><a href="reader/view_news.aspx?id=20170907042953895"
+                target="_blank">
+                《研究生教育研究》编辑部招聘启事</a></p><em>2017-09-07</em></li>
+            
+            <li><span></span><p><a href="reader/view_news.aspx?id=20170705030114667"
+                target="_blank">
+                本刊入选CSSCI（2017-2018）来源期刊目录</a></p><em>2017-07-05</em></li>
+            
+            <li><span></span><p><a href="reader/view_news.aspx?id=20170605032302397"
+                target="_blank">
+                第二届研究生教育学学科建设高端论坛征文启事</a></p><em>2017-06-05</em></li>
+            
+            <li><span></span><p><a href="reader/view_news.aspx?id=20161114054650698"
+                target="_blank">
+                中国学位与研究生教育学会“研究生教育研究：理论与方法”论坛在西安成功举办</a></p><em>2016-11-14</em></li>
+            
+												
+                      
+                  </ul>
+              </div>
+
+              <div class="boxC_SS">
+                            <div id="Search">
+                             <div class="search_box" >
+                                            <script src="js/Search.js" type="text/javascript"></script>
+                               <div class="search"><script>dysearch();</script></div>    
+                               <div style=" float:left;"><a onclick="tosubmit()" href="#"><img src="ext_images/go.jpg" width="56" height="34"></a></div>
+                                     <div class="gjss"><a href="reader/advance_query.aspx">高级搜索</a></div>
+                            </div>
+                        </div>
+                  </div>
+			  
+			  
+
+               <div class="box" id="switchBox">
+               <form style=" margin-bottom:0px; padding:0px;" id="merge_abstract"   name="merge_abstract"  action="reader/merge_abstract.aspx" method="post">
+                  <h3 class="title"><p style=" font-size:14px; font-weight:700; color:#fff; width:160px; text-align:center;">2017年第5期 </p>
+				   <script type="text/javascript">
+						function tab2(y){
+							 for(i=1;i<7;i++){
+								 document.getElementById("Bqian"+i).style.display="none"
+								 document.getElementById("a"+i).className=""}
+								 document.getElementById("Bqian"+y).style.display="block"
+								 document.getElementById("a"+y).className="hover"
+							 }
+						</script>
+                  </h3>
+				  <div id="container">
+                  <div id="wrap" style="overflow:hidden;">
+                  <div class="quanx_xiaz">
+				  <dl>
+				  <dd><a href="##" id="selectall" onClick="selectall();">全选</a></dd><dd><a href="##" onClick="CancelAll();">取消选择</a></dd><dd><a href="##" onClick="javascript:merge_abstract.submit();">综合选择</a></dd></dl> 
+                 <span>
+				 
+                        <a href="">
+                            <img src="ext_images/mlxz2.jpg" />
+                        </a>
+                        
+						</span>
+						  <span>
+				 
+                        <a href="">
+                            <img src="ext_images/mlxiaz.jpg" />
+                        </a>
+                        
+						</span>
+						</div>
+				 <ul id="Bqian1">
+				 <h1 class="Lanm">文章标题</h1>
+                     
+                    <li class="dqml"><div><input id="20170501" name="file_no" type="checkbox" value="20170501" /></div><dl><dd><a href='reader/view_abstract.aspx?file_no=20170501&flag=1' target='_blank'>基于教育规律探讨一流大学建设的几个“双一流”</a></dd><dd>赵沁平</dd><dd><em>2017 Vol.(5):1-3</em><em><a href='reader/view_abstract.aspx?file_no=20170501&flag=1' target='_blank'>[摘要]</a>(145)</em><em><a href='reader/create_pdf.aspx?file_no=20170501&year_id=2017&quarter_id=5&falg=1' target="_blank">[PDF]</a>(159)</em><em><a href='http://html.rhhz.net/yjyjyyj/html/20170501.htm' target="_blank">[html]</a></em></dd></dl></li><li class="dqml"><div><input id="20170502" name="file_no" type="checkbox" value="20170502" /></div><dl><dd><a href='reader/view_abstract.aspx?file_no=20170502&flag=1' target='_blank'>论“双一流”建设的战略意义及逻辑体系</a></dd><dd>耿有权</dd><dd><em>2017 Vol.(5):4-8</em><em><a href='reader/view_abstract.aspx?file_no=20170502&flag=1' target='_blank'>[摘要]</a>(149)</em><em><a href='reader/create_pdf.aspx?file_no=20170502&year_id=2017&quarter_id=5&falg=1' target="_blank">[PDF]</a>(166)</em><em><a href='http://html.rhhz.net/yjyjyyj/html/20170502.htm' target="_blank">[html]</a></em></dd></dl></li><li class="dqml"><div><input id="20170503" name="file_no" type="checkbox" value="20170503" /></div><dl><dd><a href='reader/view_abstract.aspx?file_no=20170503&flag=1' target='_blank'>专业硕士就业状况及其影响因素研究——基于2016年全国毕业生的抽样调查数据</a></dd><dd>李敏,陈洪捷,沈文钦,高耀</dd><dd><em>2017 Vol.(5):9-17</em><em><a href='reader/view_abstract.aspx?file_no=20170503&flag=1' target='_blank'>[摘要]</a>(162)</em><em><a href='reader/create_pdf.aspx?file_no=20170503&year_id=2017&quarter_id=5&falg=1' target="_blank">[PDF]</a>(198)</em><em><a href='http://html.rhhz.net/yjyjyyj/html/20170503.htm' target="_blank">[html]</a></em></dd></dl></li><li class="dqml"><div><input id="20170504" name="file_no" type="checkbox" value="20170504" /></div><dl><dd><a href='reader/view_abstract.aspx?file_no=20170504&flag=1' target='_blank'>博士招生“申请制”:动因、价值及改进——供给侧改革视角</a></dd><dd>时广军</dd><dd><em>2017 Vol.(5):18-23</em><em><a href='reader/view_abstract.aspx?file_no=20170504&flag=1' target='_blank'>[摘要]</a>(132)</em><em><a href='reader/create_pdf.aspx?file_no=20170504&year_id=2017&quarter_id=5&falg=1' target="_blank">[PDF]</a>(186)</em><em><a href='http://html.rhhz.net/yjyjyyj/html/20170504.htm' target="_blank">[html]</a></em></dd></dl></li><li class="dqml"><div><input id="20170505" name="file_no" type="checkbox" value="20170505" /></div><dl><dd><a href='reader/view_abstract.aspx?file_no=20170505&flag=1' target='_blank'>我国少数民族研究生教育供给侧结构性改革的思考</a></dd><dd>洪雷,张佩</dd><dd><em>2017 Vol.(5):24-29</em><em><a href='reader/view_abstract.aspx?file_no=20170505&flag=1' target='_blank'>[摘要]</a>(118)</em><em><a href='reader/create_pdf.aspx?file_no=20170505&year_id=2017&quarter_id=5&falg=1' target="_blank">[PDF]</a>(122)</em><em><a href='http://html.rhhz.net/yjyjyyj/html/20170505.htm' target="_blank">[html]</a></em></dd></dl></li><li class="dqml"><div><input id="20170506" name="file_no" type="checkbox" value="20170506" /></div><dl><dd><a href='reader/view_abstract.aspx?file_no=20170506&flag=1' target='_blank'>我国各地研究生教育绩效研究</a></dd><dd>刘源,张建功</dd><dd><em>2017 Vol.(5):30-35</em><em><a href='reader/view_abstract.aspx?file_no=20170506&flag=1' target='_blank'>[摘要]</a>(130)</em><em><a href='reader/create_pdf.aspx?file_no=20170506&year_id=2017&quarter_id=5&falg=1' target="_blank">[PDF]</a>(136)</em><em><a href='http://html.rhhz.net/yjyjyyj/html/20170506.htm' target="_blank">[html]</a></em></dd></dl></li><li class="dqml"><div><input id="20170507" name="file_no" type="checkbox" value="20170507" /></div><dl><dd><a href='reader/view_abstract.aspx?file_no=20170507&flag=1' target='_blank'>博士生对培养过程满意吗?——基于数据监测视角</a></dd><dd>李明磊,周文辉,黄雨恒</dd><dd><em>2017 Vol.(5):36-42,48</em><em><a href='reader/view_abstract.aspx?file_no=20170507&flag=1' target='_blank'>[摘要]</a>(127)</em><em><a href='reader/create_pdf.aspx?file_no=20170507&year_id=2017&quarter_id=5&falg=1' target="_blank">[PDF]</a>(151)</em><em><a href='http://html.rhhz.net/yjyjyyj/html/20170507.htm' target="_blank">[html]</a></em></dd></dl></li><li class="dqml"><div><input id="20170508" name="file_no" type="checkbox" value="20170508" /></div><dl><dd><a href='reader/view_abstract.aspx?file_no=20170508&flag=1' target='_blank'>物化时代博士研究生休闲心态的培育</a></dd><dd>武永江</dd><dd><em>2017 Vol.(5):43-48</em><em><a href='reader/view_abstract.aspx?file_no=20170508&flag=1' target='_blank'>[摘要]</a>(112)</em><em><a href='reader/create_pdf.aspx?file_no=20170508&year_id=2017&quarter_id=5&falg=1' target="_blank">[PDF]</a>(135)</em><em><a href='http://html.rhhz.net/yjyjyyj/html/20170508.htm' target="_blank">[html]</a></em></dd></dl></li><li class="dqml"><div><input id="20170509" name="file_no" type="checkbox" value="20170509" /></div><dl><dd><a href='reader/view_abstract.aspx?file_no=20170509&flag=1' target='_blank'>试论教育生态学视角下的学术学位硕士研究生课程建设——以C9高校为例</a></dd><dd>程诗婷,廖文武</dd><dd><em>2017 Vol.(5):49-54</em><em><a href='reader/view_abstract.aspx?file_no=20170509&flag=1' target='_blank'>[摘要]</a>(118)</em><em><a href='reader/create_pdf.aspx?file_no=20170509&year_id=2017&quarter_id=5&falg=1' target="_blank">[PDF]</a>(148)</em><em><a href='http://html.rhhz.net/yjyjyyj/html/20170509.htm' target="_blank">[html]</a></em></dd></dl></li><li class="dqml"><div><input id="20170510" name="file_no" type="checkbox" value="20170510" /></div><dl><dd><a href='reader/view_abstract.aspx?file_no=20170510&flag=1' target='_blank'>基于课程体系的研究生在线课程引入问题探析</a></dd><dd>逄红梅,黄宏军</dd><dd><em>2017 Vol.(5):55-59</em><em><a href='reader/view_abstract.aspx?file_no=20170510&flag=1' target='_blank'>[摘要]</a>(118)</em><em><a href='reader/create_pdf.aspx?file_no=20170510&year_id=2017&quarter_id=5&falg=1' target="_blank">[PDF]</a>(134)</em><em><a href='http://html.rhhz.net/yjyjyyj/html/20170510.htm' target="_blank">[html]</a></em></dd></dl></li><li class="dqml"><div><input id="20170511" name="file_no" type="checkbox" value="20170511" /></div><dl><dd><a href='reader/view_abstract.aspx?file_no=20170511&flag=1' target='_blank'>现行推免制度对西北地区高校研究生生源与学科发展的影响——基于西北某省的数据分析</a></dd><dd>陈伟,石宝峰,马红玉,徐家鹏,赵敏娟</dd><dd><em>2017 Vol.(5):60-66</em><em><a href='reader/view_abstract.aspx?file_no=20170511&flag=1' target='_blank'>[摘要]</a>(117)</em><em><a href='reader/create_pdf.aspx?file_no=20170511&year_id=2017&quarter_id=5&falg=1' target="_blank">[PDF]</a>(124)</em><em><a href='http://html.rhhz.net/yjyjyyj/html/20170511.htm' target="_blank">[html]</a></em></dd></dl></li><li class="dqml"><div><input id="20170512" name="file_no" type="checkbox" value="20170512" /></div><dl><dd><a href='reader/view_abstract.aspx?file_no=20170512&flag=1' target='_blank'>研究生招生考试中“非认知能力”的测量:概念、实践与展望</a></dd><dd>王传毅,程哲</dd><dd><em>2017 Vol.(5):67-72,78</em><em><a href='reader/view_abstract.aspx?file_no=20170512&flag=1' target='_blank'>[摘要]</a>(133)</em><em><a href='reader/create_pdf.aspx?file_no=20170512&year_id=2017&quarter_id=5&falg=1' target="_blank">[PDF]</a>(203)</em><em><a href='http://html.rhhz.net/yjyjyyj/html/20170512.htm' target="_blank">[html]</a></em></dd></dl></li><li class="dqml"><div><input id="20170513" name="file_no" type="checkbox" value="20170513" /></div><dl><dd><a href='reader/view_abstract.aspx?file_no=20170513&flag=1' target='_blank'>法律硕士培养中的精耕细作与彰显风格——清华法学院法律硕士教育改革的新探索</a></dd><dd>邓海峰,杨如筠,张召怀</dd><dd><em>2017 Vol.(5):73-78</em><em><a href='reader/view_abstract.aspx?file_no=20170513&flag=1' target='_blank'>[摘要]</a>(115)</em><em><a href='reader/create_pdf.aspx?file_no=20170513&year_id=2017&quarter_id=5&falg=1' target="_blank">[PDF]</a>(125)</em><em><a href='http://html.rhhz.net/yjyjyyj/html/20170513.htm' target="_blank">[html]</a></em></dd></dl></li><li class="dqml"><div><input id="20170514" name="file_no" type="checkbox" value="20170514" /></div><dl><dd><a href='reader/view_abstract.aspx?file_no=20170514&flag=1' target='_blank'>基于服务产品模型的MBA教育服务质量提升策略研究</a></dd><dd>张圣亮,曾凡,解淑芹</dd><dd><em>2017 Vol.(5):79-83</em><em><a href='reader/view_abstract.aspx?file_no=20170514&flag=1' target='_blank'>[摘要]</a>(124)</em><em><a href='reader/create_pdf.aspx?file_no=20170514&year_id=2017&quarter_id=5&falg=1' target="_blank">[PDF]</a>(127)</em><em><a href='http://html.rhhz.net/yjyjyyj/html/20170514.htm' target="_blank">[html]</a></em></dd></dl></li><li class="dqml"><div><input id="20170515" name="file_no" type="checkbox" value="20170515" /></div><dl><dd><a href='reader/view_abstract.aspx?file_no=20170515&flag=1' target='_blank'>澳大利亚专业博士的发展、挑战、应对策略——以教育博士项目为例</a></dd><dd>王建梁,姚林</dd><dd><em>2017 Vol.(5):84-89</em><em><a href='reader/view_abstract.aspx?file_no=20170515&flag=1' target='_blank'>[摘要]</a>(117)</em><em><a href='reader/create_pdf.aspx?file_no=20170515&year_id=2017&quarter_id=5&falg=1' target="_blank">[PDF]</a>(127)</em><em><a href='http://html.rhhz.net/yjyjyyj/html/20170515.htm' target="_blank">[html]</a></em></dd></dl></li><li class="dqml"><div><input id="20170516" name="file_no" type="checkbox" value="20170516" /></div><dl><dd><a href='reader/view_abstract.aspx?file_no=20170516&flag=1' target='_blank'>开放办学与重心下移:日内瓦大学博士生培养过程管理研究</a></dd><dd>王斯秧,王顶明</dd><dd><em>2017 Vol.(5):90-95</em><em><a href='reader/view_abstract.aspx?file_no=20170516&flag=1' target='_blank'>[摘要]</a>(124)</em><em><a href='reader/create_pdf.aspx?file_no=20170516&year_id=2017&quarter_id=5&falg=1' target="_blank">[PDF]</a>(146)</em><em><a href='http://html.rhhz.net/yjyjyyj/html/20170516.htm' target="_blank">[html]</a></em></dd></dl></li>
+              
+				 </ul>
+                  <ul>
+                  
+					   
+					  </form>                   
+                  </ul>
+
+              </div>
+			   <div id="gradient" class="Shui_Kai"></div> 
+                  </div>
+                  <div id="read-more" class="Shui_Kai"></div>
+                  </div>
+                  <script type="text/javascript" src="js/jquery-1.6.2.min.js"></script>
+                  <script type="text/javascript">
+$(function(){
+	var slideHeight =476; // px
+	var defHeight = $('#wrap').height();
+	if(defHeight >= slideHeight){
+		$('#wrap').css('height' , slideHeight + 'px');
+		$('#read-more').append('<a href="#">点击浏览全部</a>');
+		$('#read-more a').click(function(){
+			var curHeight = $('#wrap').height();
+			if(curHeight == slideHeight){
+				$('#wrap').animate({
+				  height: defHeight
+				}, "normal");
+				$('#read-more a').html('点击收回');
+				$('#gradient').fadeOut();
+			}else{
+				$('#wrap').animate({
+				  height: slideHeight
+				}, "normal");
+				$('#read-more a').html('点击浏览全部');
+				$('#gradient').fadeIn();
+			}
+			return false;
+		});		
+	}
+});
+</script>
+     </div>
+     <div class="et_right">
+     <div class="box">
+                  <h3 class="title"><span>期刊信息</span></h3>
+                  <ul class="bqxx">
+
+				    
+		             <li class="fengm"><div class="div"><a href="reader/issue_list.aspx?year_id=2017&quarter_id=5" target="_blank">
+			       <img src="/config/cover/yjsjy/2017_5_small.jpg" width="158" height="199"/></a></div>
+                     </li>
+		           
+
+                      <li style="margin-left:15px;"><span>国内统一刊号：</span><p>CN34-1319/G4</p></li>
+                      <li style="margin-left:15px;"><span>国际标准刊号：</span><p>ISSN2095-1663</p></li>
+                      <li style=" border-bottom:1px solid #d2dbe1;margin-left: -4px;"></li><p style="margin-top:5px; color:#C00;">　本刊被以下数据库收录：</p>
+                    <ul class="slqk">  
+                         
+            <li  ><span></span><a href="reader/view_news.aspx?id=20141011042113001"
+                target="_blank">
+                国家哲学社会科学学术期刊数据库（NSSD）</a></li>
+            
+            <li  ><span></span><a href="reader/view_news.aspx?id=20141011042132001"
+                target="_blank">
+                中文社会科学引文索引数据库（CSSCI）</a></li>
+            
+            <li  ><span></span><a href="reader/view_news.aspx?id=20141011042149001"
+                target="_blank">
+                中国期刊全文数据库（CJFD）</a></li>
+            
+            <li  ><span></span><a href="reader/view_news.aspx?id=20141011042209001"
+                target="_blank">
+                中国核心期刊（遴选）数据库</a></li>
+            
+            <li  ><span></span><a href="reader/view_news.aspx?id=20141011042226001"
+                target="_blank">
+                中文科技期刊数据库</a></li>
+            
+                       
+                    </ul> 
+                  </ul>
+              </div>
+
+              
+               <div class="box">
+                  <h3 class="title"><span>期刊荣誉</span></h3>
+                      <ul class="qkry" style="height:45px; overflow:hidden;">
+
+					   
+													<li><span></span><p><a href="reader/view_news.aspx?id=20141009044328001" target="_blank">安徽省优秀期刊</a></p></li>
+												
+													<li><span></span><p><a href="reader/view_news.aspx?id=20141009044259001" target="_blank">华东地区优秀期刊</a></p></li>
+												
+													<li><span></span><p><a href="reader/view_news.aspx?id=20141009052225001" target="_blank">首届《CAJ－CD规范》执行优秀期刊奖</a></p></li>
+												
+                     
+                     </ul>  
+               </div>
+
+
+               <div class="box">
+                  <h3 class="title"><span>编辑部公告</span></h3>
+				   <marquee style="width:202px; height: 221px;" scrollamount="2" direction="up">
+                      <ul class="qkry" style="height:auto; overflow:hidden;">
+					   
+													<li><span></span><p><a href="reader/view_news.aspx?id=20161031090803759" target="_blank">欢迎订阅2017年《研究生教育研究》</a>&nbsp;<em>(2016-10-31)</em></p></li>
+												
+													<li><span></span><p><a href="reader/view_news.aspx?id=20141009052349001" target="_blank">敬告作者：《研究生教育研究》新网站上线</a>&nbsp;<em>(2014-10-09)</em></p></li>
+												
+													<li><span></span><p><a href="reader/view_news.aspx?id=20141009052315001" target="_blank">《研究生教育研究》新一届编委会成立</a>&nbsp;<em>(2014-10-09)</em></p></li>
+												
+													<li><span></span><p><a href="reader/view_news.aspx?id=20141011033740001" target="_blank">《研究生教育研究》近期组稿重点</a>&nbsp;<em>(2014-10-11)</em></p></li>
+												
+													<li><span></span><p><a href="reader/view_news.aspx?id=20141011033809001" target="_blank">《中国高教研究》报道本刊改革发展思路</a>&nbsp;<em>(2014-10-11)</em></p></li>
+												
+
+                      
+                     </ul>  
+					                    </marquee>
+
+               </div>
+                  
+     </div>
+     <p style="clear:both;"></p>
+
+ 
+   <p style="clear:both;"></p>
+</div>
+<div class="et_footer">
+     <div class="box">
+  您是本站第&nbsp; <font color="#f00"><b>859125</b></font>&nbsp; 位访问者&nbsp;&nbsp;&nbsp;&nbsp;<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1253239925'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s5.cnzz.com/z_stat.php%3Fid%3D1253239925%26online%3D1%26show%3Dline' type='text/javascript'%3E%3C/script%3E"));</script>
+     <br/>版权所有：&copy;《研究生教育研究》杂志社 &nbsp;&nbsp; 社址：安徽省合肥市金寨路96号<br />
+		  邮编：230026&nbsp;&nbsp;
+           Tel：86-0551-63606175 &nbsp;&nbsp;  E-mail：yjsjy@ustc.edu.cn<br />
+技术支持：<a href="http://www.e-tiller.com" target="_blank">北京勤云科技发展有限公司</a>
+</div>
+</div>
+<a title="返回顶部" class="topO" href="#"></a>
+ 											
+<div class="er_weim">手机扫一扫看<img src="/config/yjsjy/fixed_content/2015-04-02/qrcode_for_gh_e7108fa76166_430.jpg" /></div>
+   
+
+
+<a class="bshareDiv" href="http://www.bshare.cn/share">分享按钮</a><script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/button.js#uuid=&amp;style=3&amp;fs=4&amp;textcolor=#fff&amp;bgcolor=#F60&amp;text=分享到"></script>
+</div>
+
+
+
+<script type="text/javascript">
+//此段代码是漂浮窗口的代码
+var xPos = 20;//from 55zm.com
+var yPos = document.body.clientHeight;
+var step = 1;
+var delay = 30;                     
+var height = 0;                     
+var Hoffset = 0;                    
+var Woffset = 0;                     
+var yon = 0;                    
+var xon = 0;                     
+var pause = true;                    
+var interval;                    
+img.style.top = yPos;                    
+function changePos() {                   
+width = document.body.clientWidth;                    
+height = document.body.clientHeight;                    
+Hoffset = img.offsetHeight;                    
+Woffset = img.offsetWidth;                   
+img.style.left = xPos + document.body.scrollLeft;                    
+img.style.top = yPos + document.body.scrollTop;                    
+if (yon) {                  
+yPos = yPos + step;                    
+}               
+else {             
+yPos = yPos - step;                    
+}            
+if (yPos < 0) {                  
+yon = 1;                    
+yPos = 0;                    
+}                  
+if (yPos >= (height - Hoffset)) {                    
+yon = 0;                    
+yPos = (height - Hoffset);                     
+}                  
+if (xon) {                    
+xPos = xPos + step;                    
+}                 
+else {                 
+xPos = xPos - step;                   
+}                  
+if (xPos < 0) {                    
+xon = 1;                   
+xPos = 0;                   
+}         
+if (xPos >= (width - Woffset)) {                    
+xon = 0;           
+xPos = (width - Woffset);                    
+}                    
+}
+function start() {                    
+img.style.visibility = "visible";                  
+interval = setInterval('changePos()', delay);                    
+}              
+start();  
+</script>
+</div>   
+</body>
+</html>
+
+
+
+
+
+<script language="JavaScript" type="text/javascript">
+
+function onChangeYear(id){
+  var length=document.forms["query_form"].quarter_id.options.length;
+  for(i=0;i<length;i++){
+    document.forms["query_form"].quarter_id.remove(0);
+  }
+  var index=0;
+  for(i=0;i<quarterNameID.length;i++){
+   tempStr=quarterNameID[i];
+	  if(tempStr.indexOf(":")>1){
+		tempYearID=tempStr.substring(0,tempStr.indexOf(":"));
+		if(tempYearID==id){
+		    
+			tempStr=tempStr.substring(tempStr.indexOf(":")+1);
+			tempQuarterID=tempStr.substring(0,tempStr.indexOf(":"));
+			tempQuarterName=tempStr.substring(tempStr.indexOf(":")+1);
+			document.query_form.quarter_id[index]=new Option(tempQuarterName,tempQuarterID);
+			index=index+1;
+		}
+	  }
+     }
+}
+
+	onChangeYear(2017);
+    for(i=0;i<query_form.year_id.options.length;i++){
+	  if(query_form.year_id.options(i).value == 2017){
+		query_form.year_id.options(i).selected=true;
+		break;
+	  }
+	}
+
+	 for(i=0;i<query_form.quarter_id.options.length;i++){
+	  if(query_form.quarter_id.options(i).value == 5){
+		query_form.quarter_id.options(i).selected=true;
+	        break;
+	  }
+	}
+
+
+function onChangeYearCatalog(year_id){ 
+   if(year_id!=""){
+     catalog_query_form.submit();
+   }else{
+      alert("请选择年份！");
+   }
+
+     
+}
+</script>
+<script language="javascript">
+    function tosubmit() {
+        var myform = document.getElementById("advance_query_form");
+        myform.submit();
+    }
+</script>
+<script type="text/javascript">
+    function selectall() {
+        var f = document.forms["merge_abstract"];
+        for (i = 0; i < f.elements.length; i++)
+            if (f.elements[i].name.indexOf("file_no") == 0) {
+            f.elements[i].checked = true;
+        }
+    }
+    function CancelAll() {
+        var f = document.forms["merge_abstract"];
+        for (i = 0; i < f.elements.length; i++)
+            if (f.elements[i].name.indexOf("file_no") == 0) {
+            f.elements[i].checked = false;
+        }
+    }
+
+
+</script>
+<script type="text/javascript">
+    function selectall() {
+        var f = document.forms["merge_abstract"];
+        for (i = 0; i < f.elements.length; i++)
+            if (f.elements[i].name.indexOf("file_no") == 0) {
+            f.elements[i].checked = true;
+        }
+    }
+    function CancelAll() {
+        var f = document.forms["merge_abstract"];
+        for (i = 0; i < f.elements.length; i++)
+            if (f.elements[i].name.indexOf("file_no") == 0) {
+            f.elements[i].checked = false;
+        }
+    }
+
+
+</script>
+
+
+<script language="JavaScript" type="text/javascript">
+    $(document).ready(function() {
+        $("input[name='Btype']").click(function() {
+            if ($(this).attr("checked") == true) {
+                $("input[class*=" + this["className"] + "]").each(function() {
+                    $(this).attr("checked", true);
+                });
+            }
+            else {
+                $("input[class*=" + this["className"] + "]").each(function() {
+                    $(this).attr("checked", false);
+                });
+            }
+        });
+    })
+</script>
+<script language="javascript">
+
+function UpDown(type)
+{
+
+
+    var varYear='2017';
+    var varIssu='5';
+	
+    var i;
+    var temp=new Array();
+    for(i=0;i<quarterNameID.length;i++)
+    {
+        temp=quarterNameID[i].split(":");
+        if((temp[0]==varYear)&&(temp[1]==varIssu))
+            break;
+    }
+    if(type==1){
+        i--;
+        if(i>=0)
+        {
+            temp=quarterNameID[i].split(":");
+			
+			
+            location.href= 'index.aspx?year_id='+temp[0]+'&quarter_id='+temp[1];
+                
+        }
+        else
+            alert("当前已经是第一期")
+    }
+    else if(type==2){
+        i++;
+        if(i<quarterNameID.length)
+        {
+            temp=quarterNameID[i].split(":");
+            location.href = 'index.aspx?year_id='+temp[0]+'&quarter_id='+temp[1];
+        }
+        else
+            alert("当前已经是最后一期！")
+    }
+    
+}
+</script>

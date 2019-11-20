@@ -1,0 +1,387 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head> 
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+  <link rel="stylesheet" type="text/css" href="/r/cms/yxy/oldgsxy/css/style.css" /> 
+  <title>药学院</title> 
+  <script language="JavaScript">
+function correctPNG() // correctly handle PNG transparency in Win IE 5.5 & 6.
+{
+var arVersion = navigator.appVersion.split("MSIE")
+var version = parseFloat(arVersion[1])
+if ((version >= 5.5) && (document.body.filters)){
+for(var j=0; j<document.images.length; j++){
+var images = document.images[j]
+var imagesName = images.src.toUpperCase()
+if (imagesName.substring(imagesName.length-3, imagesName.length) == "PNG"){
+var imagesID = (images.id) ? "id='" + images.id + "' " : ""
+var imagesClass = (images.className) ? "class='" + images.className + "' " : ""
+var imagesTitle = (images.title) ? "title='" + images.title + "' " : "title='" + images.alt + "' "
+var imagesStyle = "display:inline-block;" + images.style.cssText
+var strNewHTML = "<span " + imagesID + imagesClass + imagesTitle+ " style=\"" + "width:" + images.width + "px; height:" + images.height + "px;" + imagesStyle + ";"
++ "filter:progid:DXImageTransform.Microsoft.AlphaImageLoader"+ "(src=\'" + images.src + "\', sizingMethod='scale');\"></span>"
+images.outerHTML = strNewHTML
+j = j-1
+}
+}
+}
+}
+window.attachEvent("onload", correctPNG);
+</script> 
+  <style>
+.rollBox{width:100%;overflow:hidden;}
+.rollBox .LeftBotton{margin-top:15px;width:26px; height:73px; background:url(/r/cms/yxy/oldgsxy/img/images/center_select_left.png) no-repeat 0px 0; overflow:hidden; float:left; display:inline; cursor:pointer;}
+.rollBox .RightBotton{margin-top:15px;width:26px; height:73px; background:url(/r/cms/yxy/oldgsxy/img/images/center_select_right.png) no-repeat 0px 0; overflow:hidden; float:right; display:inline; cursor:pointer;}
+.rollBox .Cont{width:535px;overflow:hidden; float:left; font-size:12px;}
+.rollBox .ScrCont{width:1000000px;}
+.rollBox .Cont .pic{width:177px;float:left; text-align:center;}
+.rollBox .Cont .pic img{padding:4px;  display:block; margin:0 auto 4px auto;}
+.rollBox #List1,.rollBox #List2{float:left;}
+.more_right{float:right;font-size:14px;font-weight:normal;color:#000000;padding-right:10px;}
+.more_right:hover{text-decoration:underline;}
+</style> 
+ </head> 
+ <body class="whole"> 
+  <div class="content"> 
+   <!--头部开始--> <script language="JavaScript">
+function correctPNG() // correctly handle PNG transparency in Win IE 5.5 & 6.
+{
+var arVersion = navigator.appVersion.split("MSIE")
+var version = parseFloat(arVersion[1])
+if ((version >= 5.5) && (document.body.filters)){
+for(var j=0; j<document.images.length; j++){
+var images = document.images[j]
+var imagesName = images.src.toUpperCase()
+if (imagesName.substring(imagesName.length-3, imagesName.length) == "PNG"){
+var imagesID = (images.id) ? "id='" + images.id + "' " : ""
+var imagesClass = (images.className) ? "class='" + images.className + "' " : ""
+var imagesTitle = (images.title) ? "title='" + images.title + "' " : "title='" + images.alt + "' "
+var imagesStyle = "display:inline-block;" + images.style.cssText
+var strNewHTML = "<span " + imagesID + imagesClass + imagesTitle+ " style=\"" + "width:" + images.width + "px; height:" + images.height + "px;" + imagesStyle + ";"
++ "filter:progid:DXImageTransform.Microsoft.AlphaImageLoader"+ "(src=\'" + images.src + "\', sizingMethod='scale');\"></span>"
+images.outerHTML = strNewHTML
+j = j-1
+}
+}
+}
+}
+window.attachEvent("onload", correctPNG);
+</script>
+
+<script src="/r/cms/front.js" type="text/javascript"></script>
+<script src="/r/cms/jquery.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(function() {
+  Cms.siteFlow("",location.href, document.referrer);
+});
+</script>
+
+<div class="content">
+
+<div class="top_bg"><img src="/r/cms/yxy/oldgsxy/img/images/bg_gai.jpg" style=" position:absolute; z-index:-1;width:1220px;" border="0" height="160" width="1220"/></div>
+
+
+
+<!--头部开始-->
+<div class="header">  
+ <img src=/u/cms/yxy/201404/1115592033wy.png  border="0" height="88"/>
+</div>
+<!--头部结束-->
+<!--导航开始-->
+<div class="menu">
+<table width="1220" height="15" border="0" cellpadding="0" cellspacing="0" style="margin:0 auto;">
+<tr>                                                                                                   
+<td align="center"><img src="/r/cms/yxy/oldgsxy/img/images/n_bottom.gif" border="0"></td>			
+</tr>
+</table>
+  <table width="1220" border="0" class="menu_table" cellpadding="0" cellspacing="0" height="39">
+  <tr>
+    <!--<th width="12" valign="top"><img src="/r/cms/yxy/oldgsxy/img/images/nav_left.png" width="12" height="39"/></th>-->
+<td align="center" nowrap><img src="/r/cms/yxy/oldgsxy/img/images/list.jpg" width="5" height="7"/>&nbsp;<a href="/">首页</a></td>
+ <td align="center" nowrap><img src="/r/cms/yxy/oldgsxy/img/images/list.jpg" width="5" height="7"/>&nbsp;<a href="http://yxy.fjtcm.edu.cn:80/xygk20140327162010/index.jhtml" >学院概况</a></td>
+ <td align="center" nowrap><img src="/r/cms/yxy/oldgsxy/img/images/list.jpg" width="5" height="7"/>&nbsp;<a href="http://yxy.fjtcm.edu.cn:80/szdw20140327162602/index.jhtml" >师资队伍</a></td>
+ <td align="center" nowrap><img src="/r/cms/yxy/oldgsxy/img/images/list.jpg" width="5" height="7"/>&nbsp;<a href="http://yxy.fjtcm.edu.cn:80/rcpy20140327162617/index.jhtml" >教育教学</a></td>
+ <td align="center" nowrap><img src="/r/cms/yxy/oldgsxy/img/images/list.jpg" width="5" height="7"/>&nbsp;<a href="http://yxy.fjtcm.edu.cn/xyjj20140607105435.jhtml" >招生就业</a></td>
+ <td align="center" nowrap><img src="/r/cms/yxy/oldgsxy/img/images/list.jpg" width="5" height="7"/>&nbsp;<a href="http://yxy.fjtcm.edu.cn:80/kxyj20140327162627/index.jhtml" >科学研究</a></td>
+ <td align="center" nowrap><img src="/r/cms/yxy/oldgsxy/img/images/list.jpg" width="5" height="7"/>&nbsp;<a href="http://yxy.fjtcm.edu.cn:80/xfjs20141204112304/index.jhtml" >学风建设</a></td>
+ <td align="center" nowrap><img src="/r/cms/yxy/oldgsxy/img/images/list.jpg" width="5" height="7"/>&nbsp;<a href="http://yxy.fjtcm.edu.cn:80/xkjs20140327162638/index.jhtml" >学科建设</a></td>
+ <td align="center" nowrap><img src="/r/cms/yxy/oldgsxy/img/images/list.jpg" width="5" height="7"/>&nbsp;<a href="http://yxy.fjtcm.edu.cn:80/wszwy20140327162652/index.jhtml" >网上植物园</a></td>
+ <td align="center" nowrap><img src="/r/cms/yxy/oldgsxy/img/images/list.jpg" width="5" height="7"/>&nbsp;<a href="http://yxy.fjtcm.edu.cn:80/yfpt20140327162705/index.jhtml" >研发平台</a></td>
+ <td align="center" nowrap><img src="/r/cms/yxy/oldgsxy/img/images/list.jpg" width="5" height="7"/>&nbsp;<a href="http://yxy.fjtcm.edu.cn:80/dj20140327162716/index.jhtml" >党建思政</a></td>
+ <td align="center" nowrap><img src="/r/cms/yxy/oldgsxy/img/images/list.jpg" width="5" height="7"/>&nbsp;<a href="http://yxy.fjtcm.edu.cn:80/tw20140327162726/index.jhtml" >学生工作</a></td>
+ <td align="center" nowrap><img src="/r/cms/yxy/oldgsxy/img/images/list.jpg" width="5" height="7"/>&nbsp;<a href="http://yxy.fjtcm.edu.cn:80/lxyz20160529000206/index.jhtml" >两学一做</a></td>
+ <!--<th width="12" valign="top"><img src="/r/cms/yxy/oldgsxy/img/images/nav_right.png" width="12" height="39"/></th>-->
+  </tr>
+</table>
+</div>
+<!--导航结束--> 
+   <!--导航结束--> 
+   <!--中间开始--> 
+   <div class="main"> 
+    <!--左边开始-->   
+    <div class="left"> 
+     <div class="img"> 
+      <img src="/r/cms/yxy/oldgsxy/img/images/img_left1.jpg" width="304" height="326" /> 
+     </div> 
+    </div>   
+    <!--左边结束--> 
+    <!--右边开始--> 
+    <div class="right_gai"> 
+     <table width="880" border="0" cellpadding="0" cellspacing="0" class="right_table"> 
+      <tbody> 
+       <tr> 
+        <td colspan="2" valign="top" class="table_left"> 
+         <!--学院新闻--> 
+         <div class="new_dongtai"> 
+          <table width="100%" border="0" cellpadding="0" cellspacing="0"> 
+           <tbody> 
+            <tr> 
+             <td width="4"><img src="/r/cms/yxy/oldgsxy/img/images/right_icon.png" border="0" /></td> 
+             <td width="15%" class="news_text" align="left" nowrap="nowrap" style="color:#835505; padding:0px 10px; font-size:14px;font-weight:bold;">学院新闻</td> 
+             <td class="right_con_bg" style="background:url(/r/cms/yxy/oldgsxy/img/images/right_new_bg.png) repeat-x;"><a href="/xyxw20140327161616/index.jhtml" class="more_right">more</a></td> 
+            </tr> 
+           </tbody> 
+          </table> 
+          <div class="list_gai"> 
+           <ul>
+               
+            <li><span>[2017-10-23]</span><a href="http://yxy.fjtcm.edu.cn:80/xyxw20140327161616/113139.jhtml" title="我校举办福建省中医药学会中药分会第十六次学术研讨会">我校举办福建省中医药学会中药分会第十六次学术研讨会</a></li>  
+            <li><span>[2017-10-23]</span><a href="http://yxy.fjtcm.edu.cn:80/xyxw20140327161616/113138.jhtml" title="中国中药协会资深副会长张世臣教授到我校作学术报告并指导我校炮制基地建设">中国中药协会资深副会长张世臣教授到我校作学术报告并指导我校炮制基地建设</a></li>  
+            <li><span>[2017-10-18]</span><a href="http://yxy.fjtcm.edu.cn:80/xyxw20140327161616/113031.jhtml" title="药学院教师受邀参加南平市生物产业产学研对接会">药学院教师受邀参加南平市生物产业产学研对接会</a></li>  
+            <li><span>[2017-10-09]</span><a href="http://yxy.fjtcm.edu.cn:80/xyxw20140327161616/112768.jhtml" title="药学院教师应邀在三明市开展中医药文化主题讲座">药学院教师应邀在三明市开展中医药文化主题讲座</a></li>  
+            <li><span>[2017-09-25]</span><a href="http://yxy.fjtcm.edu.cn:80/xyxw20140327161616/112590.jhtml" title="南方医科大学吴军教授到我校进行学术交流">南方医科大学吴军教授到我校进行学术交流</a></li>  
+            <li><span>[2017-09-21]</span><a href="http://yxy.fjtcm.edu.cn:80/xyxw20140327161616/112537.jhtml" title="药学院承办教师外出培训学习分享会">药学院承办教师外出培训学习分享会</a></li>   
+           </ul> 
+          </div> 
+         </div> 
+         <!--学院新闻--> </td> 
+        <td valign="top" width="267" class="table_right"> 
+         <div class="yuanxi_intro_notice" style="width:257px;margin-left:10px;"> 
+          <table width="100%" border="0" cellpadding="0" cellspacing="0"> 
+           <tbody> 
+            <tr> 
+             <td width="4"><img src="/r/cms/yxy/oldgsxy/img/images/right_icon.png" border="0" /></td> 
+             <td width="15%" class="news_text" align="left" nowrap="nowrap" style="color:#835505;padding:0 10px; font-size:14px;font-weight:bold;">通知公告</td> 
+             <td class="right_con_bg" style="background:url(/r/cms/yxy/oldgsxy/img/images/right_new_bg.png) repeat-x;"><a href="/tzgg20140327161809/index.jhtml" class="more_right">more</a></td> 
+            </tr> 
+           </tbody> 
+          </table> 
+          <div class="list"> 
+           <ul>
+               
+            <li><span>[2016-12-12]</span><a href="http://yxy.fjtcm.edu.cn:80/tzgg20140327161809/107175.jhtml" title="关于更改旗山讲坛“文献综述与课题申报”学术讲座地点的紧急通知">关于更改旗山讲坛“文献...</a></li>  
+            <li><span>[2016-12-06]</span><a href="http://yxy.fjtcm.edu.cn:80/tzgg20140327161809/107176.jhtml" title="“旗山讲坛”讲座通知">“旗山讲坛”讲座通知</a></li>  
+            <li><span>[2016-11-13]</span><a href="http://yxy.fjtcm.edu.cn:80/tzgg20140327161809/107172.jhtml" title="福建中医药大学第三十届田径运动会">福建中医药大学第三十届...</a></li>  
+            <li><span>[2016-11-09]</span><a href="http://yxy.fjtcm.edu.cn:80/tzgg20140327161809/107173.jhtml" title=" 关于组织申报校园文化建设优秀成果的通知 "> 关于组织申报校园文化...</a></li>  
+            <li><span>[2016-11-09]</span><a href="http://yxy.fjtcm.edu.cn:80/tzgg20140327161809/107174.jhtml" title="关于开展2016年校内巡察工作的通知">关于开展2016年校内巡察...</a></li>  
+            <li><span>[2016-09-30]</span><a href="http://yxy.fjtcm.edu.cn:80/tzgg20140327161809/104503.jhtml" title="药学院举行2016级新生入学教育">药学院举行2016级新生入...</a></li>   
+           </ul> 
+          </div> 
+         </div> </td> 
+       </tr> 
+       <tr> 
+        <td colspan="2" valign="top" class="table_left"> 
+         <!--教研活动--> 
+         <div class="jiaoyan"> 
+          <table width="100%" border="0" cellpadding="0" cellspacing="0"> 
+           <tbody> 
+            <tr> 
+             <td width="4"><img src="/r/cms/yxy/oldgsxy/img/images/right_icon.png" border="0" /></td> 
+             <td width="15%" class="news_text" align="left" nowrap="" style="padding:0 10px;color:#835505; font-size:14px;font-weight:bold;">图&nbsp;文</td> 
+             <td class="right_con_bg" style="background:url(/r/cms/yxy/oldgsxy/img/images/right_new_bg.png) repeat-x;">&nbsp;</td> 
+            </tr> 
+           </tbody> 
+          </table> 
+          <table width="100%" border="0" cellpadding="0" cellspacing="0" class="jiaoyan_table"> 
+           <tbody> 
+            <tr> 
+             <td> 
+              <div class="rollBox"> 
+               <div class="LeftBotton" onmousedown="ISL_GoUp()" onmouseup="ISL_StopUp()" onmouseout="ISL_StopUp()"></div> 
+               <div class="Cont" id="ISL_Cont"> 
+                <div class="ScrCont"> 
+                 <div id="List1"> 
+                  <!-- 图片列表 begin -->   
+                  <div class="pic"> 
+                   <a href="http://yxy.fjtcm.edu.cn:80/xyxw20140327161616/86128.jhtml" target="_self"><img src="/u/cms/yxy/201411/030949473puh.png" width="160" height="90" alt="我院举办深入开展党的群众路线教育实践活动总结大会" /></a> 
+                  </div>  
+                  <div class="pic"> 
+                   <a href="http://yxy.fjtcm.edu.cn:80/xyxw20140327161616/77471.jhtml" target="_self"><img src="/u/cms/yxy/201407/10134615l2ym.jpg" width="160" height="90" alt="福建省第四次中药资源普查启动仪式在我院举行" /></a> 
+                  </div>  
+                  <div class="pic"> 
+                   <a href="http://yxy.fjtcm.edu.cn:80/xyxw20140327161616/77459.jhtml" target="_self"><img src="/u/cms/yxy/201407/091754052xgu.jpg" width="160" height="90" alt="我院召开党的群众路线教育实践活动专题民主生活会" /></a> 
+                  </div>   
+                  <!-- 图片列表 end --> 
+                 </div> 
+                 <div id="List2"></div> 
+                </div> 
+               </div> 
+               <div class="RightBotton" onmousedown="ISL_GoDown()" onmouseup="ISL_StopDown()" onmouseout="ISL_StopDown()"></div> 
+              </div> </td> 
+            </tr> 
+           </tbody> 
+          </table> 
+          <!--<div class="dongtai_text">--> 
+          <!-- <span class="dongtai_img"></span> --> 
+          <!--</div>--> 
+          <!--<table width="100%" border="0" cellpadding="0" cellspacing="0" class="jiaoyan_table">
+  <tr>
+    <td>
+     <div class="rollBox">
+    <div class="LeftBotton" onmousedown="ISL_GoUp()" onmouseup="ISL_StopUp()" onmouseout="ISL_StopUp()"></div>
+    <div class="Cont" id="ISL_Cont">
+        <div class="ScrCont">
+            <div id="List1">--> 
+          <!-- 图片列表 begin --> 
+         </div> 
+         <!--教研活动--> </td> 
+        <td width="267" class="table_right" valign="top"> 
+         <!--友情链接--> 
+         <div class="yuanxi_intro"> 
+          <table width="100%" border="0" cellpadding="0" cellspacing="0"> 
+           <tbody> 
+            <tr> 
+             <td width="4"><img src="/r/cms/yxy/oldgsxy/img/images/right_icon.png" border="0" /></td> 
+             <td width="15%" class="news_text" align="left" nowrap="" style="padding:0 10px;color:#835505; font-size:14px;font-weight:bold;">   友情链接   </td> 
+             <td class="right_con_bg" style="background:url(/r/cms/yxy/oldgsxy/img/images/right_new_bg.png) repeat-x;">&nbsp;</td> 
+            </tr> 
+           </tbody> 
+          </table> 
+          <!--<div class="yuanxi_title"><span>友情链接</span></div>--> <table width="100%" border="0" cellspacing="0" cellpadding="0" class="news_links">
+ <td style="height:45px;font-size:12px;" >
+   <a href="http://zyxy.fjtcm.edu.cn/" target='_blank' title="科研处" style="background:url(/r/cms/yxy/oldgsxy/img/images/foward.png) no-repeat; margin-left:10px;   padding-left:15px; color:#482a10;font-size:12px;display:block;">&nbsp;&nbsp;科研处</a>
+  </td>
+
+ <td style="height:45px;font-size:12px;" >
+   <a href="http://jwcnew.fjtcm.edu.cn/" target='_blank' title="教务处" style="background:url(/r/cms/yxy/oldgsxy/img/images/foward.png) no-repeat; margin-left:10px;   padding-left:15px; color:#482a10;font-size:12px;display:block;">&nbsp;&nbsp;教务处</a>
+  </td>
+</tr>
+ <td style="height:45px;font-size:12px;" >
+   <a href="http://xscnew.fjtcm.edu.cn/" target='_blank' title="学生工作处" style="background:url(/r/cms/yxy/oldgsxy/img/images/foward.png) no-repeat; margin-left:10px;   padding-left:15px; color:#482a10;font-size:12px;display:block;">&nbsp;&nbsp;学生工作处</a>
+  </td>
+
+ <td style="height:45px;font-size:12px;" >
+   <a href="http://www.dost.moe.edu.cn/dostmoe/" target='_blank' title="教育部" style="background:url(/r/cms/yxy/oldgsxy/img/images/foward.png) no-repeat; margin-left:10px;   padding-left:15px; color:#482a10;font-size:12px;display:block;">&nbsp;&nbsp;教育部</a>
+  </td>
+</tr>
+ <td style="height:45px;font-size:12px;" >
+   <a href="http://www.fjtcm.edu.cn/" target='_blank' title="福建中医药大学" style="background:url(/r/cms/yxy/oldgsxy/img/images/foward.png) no-repeat; margin-left:10px;   padding-left:15px; color:#482a10;font-size:12px;display:block;">&nbsp;&nbsp;福建中医药大学</a>
+  </td>
+
+
+<tr>
+</table>
+ 
+         </div> 
+         <!--友情链接--> </td> 
+       </tr> 
+      </tbody> 
+     </table> 
+    </div> 
+    <!--右边结束--> 
+   </div> 
+   <!--中间结束--> 
+   <div class="spacer"></div> 
+   <!--<div class="line"></div>--> 
+   <!--底部开始--> 
+   <!--底部开始--> 
+   <div class="footer1"> 
+     <p class="address"><span class="paddingright" style="padding-right:15px;">地址：福建省福州市闽侯上街邱阳路1号</span>邮政编码：350122</p> 
+    <p class="copyright"><span class="paddingright" style="padding-right:15px;">版权所有(C)福建中医药大学</span>闽ICP备05005462</p> 
+  
+    
+ </div> 
+   <!--底部结束--> 
+   <div style="clear:both;text-align:center"> 
+   </div> 
+   <!--底部结束--> 
+  </div> 
+  <script language="javascript" type="text/javascript">
+var Speed = 10; //速度(毫秒)
+var Space = 5; //每次移动(px)
+var PageWidth = 180; //翻页宽度
+var fill = 0; //整体移位
+var MoveLock = false;
+var MoveTimeObj;
+var Comp = 0;
+var AutoPlayObj = null;
+GetObj("List2").innerHTML = GetObj("List1").innerHTML;
+GetObj('ISL_Cont').scrollLeft = fill;
+GetObj("ISL_Cont").onmouseover = function(){clearInterval(AutoPlayObj);}
+GetObj("ISL_Cont").onmouseout = function(){AutoPlay();}
+AutoPlay();
+function GetObj(objName){if(document.getElementById){return eval('document.getElementById("'+objName+'")')}else{return eval('document.all.'+objName)}}
+function AutoPlay(){ //自动滚动
+clearInterval(AutoPlayObj);
+AutoPlayObj = setInterval('ISL_GoDown();ISL_StopDown();',6000); //间隔时间
+}
+function ISL_GoUp(){ //上翻开始
+if(MoveLock) return;
+clearInterval(AutoPlayObj);
+MoveLock = true;
+MoveTimeObj = setInterval('ISL_ScrUp();',Speed);
+}
+function ISL_StopUp(){ //上翻停止
+clearInterval(MoveTimeObj);
+if(GetObj('ISL_Cont').scrollLeft % PageWidth - fill != 0){
+Comp = fill - (GetObj('ISL_Cont').scrollLeft % PageWidth);
+CompScr();
+}else{
+MoveLock = false;
+}
+AutoPlay();
+}
+function ISL_ScrUp(){ //上翻动作
+if(GetObj('ISL_Cont').scrollLeft <= 0){GetObj('ISL_Cont').scrollLeft = GetObj('ISL_Cont').scrollLeft + GetObj('List1').offsetWidth}
+GetObj('ISL_Cont').scrollLeft -= Space ;
+}
+function ISL_GoDown(){ //下翻
+clearInterval(MoveTimeObj);
+if(MoveLock) return;
+clearInterval(AutoPlayObj);
+MoveLock = true;
+ISL_ScrDown();
+MoveTimeObj = setInterval('ISL_ScrDown()',Speed);
+}
+function ISL_StopDown(){ //下翻停止
+clearInterval(MoveTimeObj);
+if(GetObj('ISL_Cont').scrollLeft % PageWidth - fill != 0 ){
+Comp = PageWidth - GetObj('ISL_Cont').scrollLeft % PageWidth + fill;
+CompScr();
+}else{
+MoveLock = false;
+}
+AutoPlay();
+}
+function ISL_ScrDown(){ //下翻动作
+if(GetObj('ISL_Cont').scrollLeft >= GetObj('List1').scrollWidth){GetObj('ISL_Cont').scrollLeft = GetObj('ISL_Cont').scrollLeft - GetObj('List1').scrollWidth;}
+GetObj('ISL_Cont').scrollLeft += Space ;
+}
+function CompScr(){
+var num;
+if(Comp == 0){MoveLock = false;return;}
+if(Comp < 0){ //上翻
+if(Comp < -Space){
+   Comp += Space;
+   num = Space;
+}else{
+   num = -Comp;
+   Comp = 0;
+}
+GetObj('ISL_Cont').scrollLeft -= num;
+setTimeout('CompScr()',Speed);
+}else{ //下翻
+if(Comp > Space){
+   Comp -= Space;
+   num = Space;
+}else{
+   num = Comp;
+   Comp = 0;
+}
+GetObj('ISL_Cont').scrollLeft += num;
+setTimeout('CompScr()',Speed);
+}
+}
+</script>   
+ </body>
+</html>

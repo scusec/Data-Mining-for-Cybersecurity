@@ -1,0 +1,378 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Study in China | 60,000 International Students\' Choice | CUCAS</title>
+<meta name="keywords" content="Study in China,Login to CUCAS,China Universities Application Service Online,Apply to Study in China" />
+<meta name="description" content="Study in China with CUCAS, the best China universities application service online, which helps 3,000+ international students successfully applied to study in China everyday." /> 
+<link rel="stylesheet" type="text/css" href="/resource/new/css/main.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="/resource/new/css/user.css" media="screen" />
+<script type="text/javascript">
+var JS_DOHEAD = '';var JS_DOMAIN = 'cucas.edu.cn';
+var JS_ZYJ = 'bachelor';
+</script>
+<script type="text/javascript" src="/resource/new/js/public/jquery.min.js"></script>
+<script type="text/javascript" src="/resource/new/js/public/bootstrap.min.js"></script>
+<script type="text/javascript" src="/resource/new/js/public/png.js"></script>
+
+<!-- The dialog plugin -->
+<script src="/resource/new/js/artdialog/jquery.artDialog.js?skin=idialog"></script>
+<script src="/resource/new/js/artdialog/iframeTools.js"></script>
+<script src="/resource/new/js/public/jquery.validate.js"></script>
+<script src="/resource/new/js/public/jquery.form.js" type="text/javascript"></script>
+<style>
+/* == 错误提示的样式 == */
+span.error {
+    background: url("/resource/new/images/personal/unchecked.gif") no-repeat scroll 4px center transparent;
+    color: red;
+    overflow: hidden;
+    padding-left: 19px;
+}
+span.success {
+    background: url("/resource/new/images/personal/checked.gif") no-repeat scroll 4px center transparent;
+    color: red;
+    overflow: hidden;
+    padding-left: 19px;
+}
+</style>
+<!--[if lte IE 6]>
+<script type="text/javascript">DD_belatedPNG.fix(' div, ul, img, li, input , a');</script>
+<![endif]-->
+</head>
+
+<body>
+
+<script type="text/javascript">
+$(function(){
+	 var code=0;
+	 if(code<0){
+		 $('.pop_Lerror').show();
+		 $('#inputerror').val("");
+	 }else{
+	    var url='';
+	    if(url){
+	    	window.location.href=url;
+	    }
+	 } 
+});
+</script>
+<div class="RegHeadBox">
+	<div class="RegHead"><a href='http://www.cucas.edu.cn/'><img src="/resource/new/images/public/logo1.png" /></a></div>
+</div>
+<div class="RegBox">
+	<div class="RegTit">LOGIN<span class='RegFtit2'> JOIN US?  <a href="http://my.cucas.edu.cn/reg?backurl=http%3A%2F%2Fmy.cucas.edu.cn%2Findex.php%2F%3F">REGISTER</a></span></div>
+	<form method="post" action="" id="myform" name="myform">
+    <div class="LogCon">
+		<a target="_blank" href="http://feature.cucas.edu.cn/why_cucas/index/" style="font-size: 14px;">5 Tips to Save $2,000 When Applying to China's Universities</a>
+    	<ul class="LogForm">
+        	<li class="pop_Lerror" style="display: none;"><input type="text" class="FormText" id="inputerror" value="" autocomplete="off"  isrequired="true" placeholder="" /></li>
+        	<li><input type="text"  maxlength="64" style="width:275px;"	autofocus="autofocus"  id="email" name="data[email]" class="FormText" value="" autocomplete="off" validate="required:true,email:true" placeholder="Email Address"/></li>
+		</ul>
+    	<ul class="LogForm">
+        	<li><input type="password" style="width:275px;"  id="password" name="data[password]" class="FormText" value="" autocomplete="off"  validate="required:true" placeholder="Password" /></li>
+        	
+                <li>
+                    <input class="input_text" type="text" maxlength="30" id="code" validate="required:true" name="code" value="" placeholder="Verification Code"/ style="float:left; margin-right:5px;">
+                    <span style="float:left;"><img align="absmiddle"  style="cursor:pointer;" title="Click to change verification code"  alt="Verification code"  onclick="$(this).attr('src','reg/verify_code?'+ new Date().getTime())" src="reg/verify_code"  class="yanzhengpic"/></span>
+                </li>
+              
+            <li class="jizhu"> 
+            <input type="checkbox" name="data[auto]" id="auto" value="1" checked="checked" style='float:left;margin-right:5px;' />
+            <label class="checkText" for='auto'>Remember me</label><a href="/login/fpassword" style="padding-left:10px;">Forgot Password?</a></li> 
+            <li>
+			
+			<input type="submit" class="LogBtn" value="LOGIN" />
+			<!--<span style="display:none" id="submit_img"><img src="/resource/new/images/MBBS/loading.gif"></span>
+			<input type="button" id="submit_button" class="LogBtn" value="LOGIN" onclick="submit_login()"/>-->
+			
+			</li>
+        </ul>
+    </div>
+     </form>
+	<div class="RegFoot"></div>
+</div>
+<script>
+		$(function(){
+	$('#myform').ajaxForm({
+		beforeSend:function(){
+			 art.dialog({
+					id:'msg',
+					content:'<img src="/resource/new/images/MBBS/loading.gif">',
+					lock:true,
+					opacity:0.1,
+					cancel:false
+				});
+		},
+		success:function(msg){
+			if(msg.state == 1){
+				$.ajax({'url':'http://www.'+msg.info,type:'get',dataType:'jsonp'});
+				$.ajax({'url':'http://school.'+msg.info,type:'get',dataType:'jsonp'});
+				$.ajax({'url':'http://chinambbs.'+msg.info,type:'get',dataType:'jsonp'});
+				$.ajax({'url':'http://bachelor.'+msg.info,type:'get',dataType:'jsonp'});
+				$.ajax({'url':'http://chinese.'+msg.info,type:'get',dataType:'jsonp'});
+				$.ajax({'url':'http://city.'+msg.info,type:'get',dataType:'jsonp'});
+				$.ajax({'url':'http://master.'+msg.info,type:'get',dataType:'jsonp'});
+				$.ajax({'url':'http://help.'+msg.info,type:'get',dataType:'jsonp'});
+				$.ajax({'url':'http://news.'+msg.info,type:'get',dataType:'jsonp'});
+				setTimeout(function(){ window.location.href=msg.data},2300);
+			}else if(msg.state == 2){
+				art.dialog.list['msg'].close();
+			
+				 $('.pop_Lerror').show();
+				 $('#inputerror').val(msg.info);
+			
+			}
+		},
+		dataType:'json'
+	
+	});
+
+});
+</script>
+<div class="bottom_margin"></div>
+
+<style>
+.quanbu{margin:0;padding:0; box-sizing:border-box;}
+.width_1024{ width:1024px; margin:0 auto;}
+.clear{ clear:both;}
+.clearfix{zoom:1;}
+.clearfix:after{clear:both; content:"";display:block;height:0;line-height:0;visibility:hidden;}
+.beijing{ background:url(/resource/new/images/why_cucas/guanggaobg.png) repeat-x; padding:13px 0px;}
+a.foot_ad_btn{ display:block; padding:0px 20px; height:44px; line-height:44px; text-align:center; background:url(/resource/new/images/why_cucas/bgbtn.gif) repeat-x; border:1px solid #ed7b00; box-shadow: 0 0 2px #888888; float:right; font-size:18px; color:#fff; text-transform:uppercase; text-shadow: 1px 1px 1px #a76e00; border-radius:5px; cursor:pointer;}
+a.foot_ad_btn:hover{background:url(/resource/new/images/why_cucas/btn-hover.png) repeat-x;text-decoration:none;}
+a.foot_ad_btn img{ margin-left:5px;}
+p.word{display:block; vertical-align:top; font-size:26px; color:#fff; float:left; font-weight:bold; line-height:44px;}
+</style>
+<!--<div class="min beijing quanbu">
+    <div class="width_1024 clearfix">
+        <p class="word quanbu" style="width:860px; font-size:18px;">Study Business in Top 10 Chinese Universities in The Fast-growing Economic Giant of Asia </p>
+        <a href="http://school.cucas.edu.cn/Study-In-Beijing-Foreign-Studies-University-International-Business-School_1012.html?utm_source=mycenter&utm_medium=downapplication&utm_content=down&utm_campaign=adv" class="foot_ad_btn" target="_blank">Apply Now<img src="/resource/new/images/why_cucas/sanjiao.png" style="vertical-align: middle;"></a>
+    </div>
+</div>-->
+<div class="min beijing quanbu">
+    <div class="width_1024 clearfix">
+        <p class="word quanbu" style="font-size:36px;">Learn China Different Cities' University Rankings </p>
+        <a href="http://www.cucas.edu.cn/studyinchina/top?utm_source=1-1&utm_medium=middle&utm_content=ranking6&utm_campaign=adv" class="foot_ad_btn" target="_blank">Learn More<img src="/resource/new/images/why_cucas/sanjiao.png" style="vertical-align: middle;"></a>
+    </div>
+</div>
+
+<div class="WayBox">
+    <div class="Way">
+        <table class="wayTab">
+            <tr>
+                <td><h2 class="m_b10">Find a Program</h2>
+                <a href="http://chinese.cucas.edu.cn" target="_blank">Chinese Course</a>
+                <a href="http://chinambbs.cucas.edu.cn" target="_blank">MBBS Course</a>
+                <a href="http://bachelor.cucas.edu.cn" target="_blank">Undergraduate Course</a>
+                <a href="http://master.cucas.edu.cn" target="_blank">Postgraduate Course</a>
+                <a href="http://chinese.cucas.edu.cn/search?tag=0-12" target="_blank">Summer Camp/Winter Camp</a>
+                <a href="http://www.cucas.edu.cn/studyinchina/programs" target="_blank">Program Lists</a></td>
+                
+                <td><h2 class="m_b10">CUCAS Services</h2>
+                <a href="http://www.cucas.edu.cn/server/details?id=589" target="_blank" rel="nofollow">University Application </a>
+                <a href="http://www.cucas.edu.cn/server/details?id=590" target="_blank" rel="nofollow">Accommodation </a>
+                <a href="http://www.cucas.edu.cn/server/details?id=591" target="_blank" rel="nofollow">Airport Pick Up </a>
+                <a href="http://www.cucas.edu.cn/server/details?id=656" target="_blank" rel="nofollow">Money Transfer </a>
+                <a href="http://scholarship.cucas.edu.cn/" target="_blank">China University Scholarships</a>
+                <a href="http://www.cucas.edu.cn/studyinchina/province" target="_blank">China University Search Engine</a>
+                <a href="http://www.cucas.edu.cn/studyinchina/top" target="_blank">China University Ranking</a>
+                </td>
+                <td><h2 class="m_b10">About CUCAS</h2>
+                <a href="http://school.cucas.edu.cn/sharesingle" target="_blank" rel="nofollow">Why CUCAS is Trustworthy</a>
+                <a href="http://www.cucas.edu.cn/server/brand" target="_blank" rel="nofollow">Introduction to CUCAS</a>
+                <a href="http://www.cucas.edu.cn/server/details?id=674" rel="nofollow">Job Opportunities / Internships</a>
+                <a href="http://www.cucas.edu.cn/server/index/2384/2384" target="_blank" rel="nofollow">Contact Us</a></td>
+                
+            
+                <th><h2 class="m_b10">STAY CONNECTED!</h2><p>Receive a weekly newsletter packed with useful tips and updates to prepare you for studying abroad</p><input type="text" id="submitemail" class="FormText" value="" autocomplete="off"  isrequired="true" placeholder="" /><input type="submit" class="wayBtn" value="Subscribe" onclick="submitemail()" /></th>
+            </tr>
+        </table>
+    </div>
+</div>
+<script>
+    function submitemail(){
+        var submitemail = $('#submitemail').val();
+        if(submitemail == ''){
+            alert('Email cannot be empty ');
+        }else{
+            $.ajax({
+                type:'POST',
+                url :'http://newsletter.cucas.edu.cn/nSubscribe.php',
+                data:{email:submitemail},
+                success:function(r){
+                    
+                },
+                dataType:'json'
+            });
+        }
+    }
+</script>
+<div class="footer">
+    <table>
+        <tr>
+            <td><a href="http://www.cucas.edu.cn/server/details?id=677" target="_blank" rel="nofollow"> Privacy Policy</a>
+                <a href="http://www.cucas.edu.cn/server/details?id=676" target="_blank" rel="nofollow">Terms of Use</a>
+                <a href="http://www.cucas.edu.cn/server/details?id=675" target="_blank" rel="nofollow"> Legal Support</a>
+                <a href="http://www.cucas.edu.cn/server/details?id=678" target="_blank" rel="nofollow"> Links</a>
+                <a href="http://www.cucas.edu.cn/index/sitemap">Sitemap</a></td>
+            <th>© 2008 - 2017 Chiwest, Inc. All rights reserved</th>
+        </tr>
+    </table>
+</div>
+<div class="w1024" id="notice_box" style="display:none">
+  <div class="news_bg">
+    <dl>
+      <dt><a href="" id="notice_title"></a></dt>
+      <dd id="notice_content"></dd>
+    </dl>
+    <div class="close" id="notice_close" onclick="notice_close()"></div>
+    <div class="next" id="notice_next" onclick="notice_next()"></div>
+  </div>
+  </div>
+<link rel="stylesheet" type="text/css" href="/resource/new/js/plugins/poshytip/tip-yellowsimple/tip-yellowsimple.css" media="screen" />
+<style>
+/*内容样式*/
+#notice_title{color: #FFF;}
+#notice_content{color: #FFF;}
+.w1024 { width:1024px; margin:0 auto; position:relative; }
+.news_bg { width:964px; padding:30px; background:#000; filter:alpha(Opacity=80); -moz-opacity:0.8; opacity: 0.8; z-index:100; border-radius:5px; position:fixed; bottom:0; }
+.news_bg:hover { background:#000; filter:alpha(Opacity=90); -moz-opacity:0.9; opacity: 0.9; z-index:100; border-radius:5px; position:fixed; bottom:0; }
+.news_bg dl {width: 930px;}
+.news_bg dl dt { font-size:22px; font-weight:bold; padding-bottom:10px; }
+a.news_link { color:#fff; text-decoration:none; }
+a.news_link:hover { color:#fff; text-decoration:underline; }
+.news_bg:hover .close { display:block; }
+.close { width:26px; height:25px; background: url(/resource/new/images/public/pic.png) no-repeat 0 0px; cursor:pointer; position:absolute; left: 937px; top: 0px; display:none; }
+.close:hover { width:26px; height:25px; background: url(/resource/new/images/public/pic.png) no-repeat 0 -25px; }
+.next { width:72px; height:26px; background: url(/resource/new/images/public/pic.png) no-repeat 0 -66px; position:absolute; bottom:0; right:0; cursor:pointer;}
+.next:hover { background: url(/resource/new/images/public/pic.png) no-repeat 0 -93px; }
+</style>
+<script type="text/javascript" src="/resource/new/js/public/select2.js"></script>
+<script type="text/javascript" src="/resource/new/js/header.js"></script>
+<script type="text/javascript" src="/resource/new/js/cart.js"></script>
+<script type="text/javascript" src="/resource/new/js/public/main.js"></script>
+<script type="text/javascript" src="/resource/new/js/plugins/poshytip/jquery.poshytip.min.js"></script>
+
+<!--返回顶部  吖頭-->
+<div style="display: none" id="goTopBtn"></div>
+<div id="erweima" onclick="window.open('http://www.cucas.edu.cn/subject/wechat/');" title="Joining CUCAS WeChat Family" style=" width:54px; background:#5c5c5c url(/resource/new/images/web/weixin.png) no-repeat center; line-height:54px; height:54px; border-radius:5px; position: fixed; _position:absolute; right:10px; bottom:144px; cursor: pointer; z-index:999;"></div>
+<script type=text/javascript>
+goTopEx();
+
+$("#erweima").hover(
+  function () {
+    $(this).attr("style","width:132px; background:#5c5c5c url(/resource/new/images/web/weixinhover.png) no-repeat center; line-height:132px; height:132px; border-radius:5px; position: fixed; _position:absolute; right:10px; bottom:144px; cursor: pointer; z-index:999;");
+  },
+  function () {
+    $(this).attr('style',"width:54px; background:#5c5c5c url(/resource/new/images/web/weixin.png) no-repeat center; line-height:54px; height:54px; border-radius:5px; position: fixed; _position:absolute; right:10px; bottom:144px; cursor: pointer; z-index:999;");
+  }
+);
+$('#mycucas_tips').poshytip({
+    className: 'tip-yellowsimple',
+    alignTo: 'target',
+    alignX: 'center',
+    alignY: 'bottom',
+    offsetX: 2,
+    offsetY: 5,
+    content: 'Click here to view or track your application!',
+});
+$('#mycucas_tips').poshytip('show');
+$('.tip-table').mouseout(function() { $('#mycucas_tips').poshytip('hideDelayed', 1000); });
+$('#mycucas_tips').poshytip('hideDelayed', 10000); 
+</script>
+
+<!-- facebook ad -->
+<script type="text/javascript">
+    adroll_adv_id="5POY3HQQ5NE35BAERAFSTB";adroll_pix_id="T45EZNO4VRGZRBVOQERTHB";(function(){var oldonload=window.onload;window.onload=function(){__adroll_loaded=true;var scr=document.createElement("script");var host=(("https:"==document.location.protocol)?"https://s.adroll.com":"http://a.adroll.com");scr.setAttribute('async','true');scr.type="text/javascript";scr.src=host+"/j/roundtrip.js";((document.getElementsByTagName('head')||[null])[0]||document.getElementsByTagName('script')[0].parentNode).appendChild(scr);if(oldonload){oldonload()}}}());
+</script>
+<!-- facebook ad end -->
+
+<script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 1035141359;
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js"></script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/1035141359/?value=0&amp;guid=ON&amp;script=0"/>
+</div>
+</noscript>
+
+<!--在线咨询的代码 -->
+
+<!--Start of Zopim Live Chat Script-->
+<script type="text/javascript">
+window.$zopim||(function(d,s){var z=$zopim=function(c){z._.push(c)},$=z.s=d.createElement(s),e=d.getElementsByTagName(s)[0];z.set=function(o){z.set._.push(o)};z._=[];z.set._=[];$.async=!0;$.setAttribute('charset','utf-8');$.src='//v2.zopim.com/?1m09bsORoa2mQUku3fru803lJGKHK3OM';z.t=+new Date;$.type='text/javascript';e.parentNode.insertBefore($,e)})(document,'script');
+</script>
+<script>
+   $zopim(function() {
+    $zopim.livechat.departments.filter('');
+    $zopim.livechat.departments.setVisitorDepartment('CUCAS Service');
+    $zopim.livechat.setOnConnected(function() {
+        var dept = $zopim.livechat.departments.getDepartment('CUCAS Service');
+        if(dept.status == 'offline') {
+            $zopim.livechat.setStatus('offline');
+        }
+        else {
+            $zopim.livechat.setStatus('online');
+        }
+    });
+});
+</script>
+<!--End of Zopim Live Chat Script-->
+<!--
+<style>
+    .help { width: 287px;z-index:99999; padding-top: 88px; background: url(/resource/2.0/images/view/doctor.png) no-repeat; position: fixed; right: 60px; bottom: 5px;}
+    .help a {display: block; line-height: 44px; text-align: center; background: #00bd39; color: #fff}
+    .help a:hover {background: #00ed47;}
+</style>
+<div class="help">
+    <a href="javascript:tc();">Get Help From One-on-One Counselor</a>
+</div>-->
+<script>
+/* function tc(){
+		art.dialog.open('http://www.cucas.edu.cn/counselor/get_forms',{
+			id:'zjj',
+			width:550,
+			height:600,
+			lock:true,
+			fixed:true,
+			padding:0,
+			background:'#000',
+			opacity:0.5
+		});
+	} */
+$zopim(function() {
+	$zopim.livechat.departments.filter('');
+	$zopim.livechat.departments.setVisitorDepartment('CUCAS Service');
+	$zopim.livechat.setOnConnected(function() {
+		var dept = $zopim.livechat.departments.getDepartment('CUCAS Service');
+		if(dept.status == 'offline') {
+		$zopim.livechat.setStatus('offline');
+		}
+		else {
+			$zopim.livechat.setStatus('online');
+		}
+	});
+});
+</script>
+<!--评价插件的代码 -->
+
+<!-- Start of GetKudos Script -->
+<script>
+(function(w,t,gk,d,s,fs){if(w[gk])return;d=w.document;w[gk]=function(){
+(w[gk]._=w[gk]._||[]).push(arguments)};s=d.createElement(t);s.async=!0;
+s.src='//static.getkudos.me/widget.js';fs=d.getElementsByTagName(t)[0];
+fs.parentNode.insertBefore(s,fs)})(window,'script','getkudos');
+
+getkudos('create', 'cucas');
+$("iframe[name='google_conversion_frame']").hide();
+</script>
+<!-- End of GetKudos Script -->
+
+</body>
+</html>
+ 

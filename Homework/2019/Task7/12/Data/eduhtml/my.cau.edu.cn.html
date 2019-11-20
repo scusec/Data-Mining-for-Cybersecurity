@@ -1,0 +1,128 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>对不起，您无法访问信息空间</title>
+<style type="text/css">
+/**/
+body, h1, h2, h3, ul, li {padding:0; margin:0;}
+ul, li {list-style:none;margin: 0;}
+body {font-size:14px; font-family:"Lucida Grande", Verdana, sans-serif;background:url(../images/weixin/weixin_bg0ec594.jpg) repeat-x; }
+p { margin:0.33em 0;}
+h2 {font-size:14px; font-weight:bold;}
+img {border:0;}
+a {text-decoration:none; color:#609700; cursor:pointer; outline:none}
+a:hover {text-decoration:underline; color:#333; }
+.clr {clear:both; height:1px; overflow:hidden;}
+.super_size{font-size:24px; font-family:"微软雅黑","黑体", "Lucida Grande", Verdana, sans-serif;}
+.blue{color:#545f77}
+.skyblue{color:#0068b7}
+.txt_red {color:#C00;}
+.bold{font-weight:bold;}
+.graytext { color:#999; }
+.f_size{font-size:12px;}
+.left{float:left;}
+.right{float:right;}
+
+body{text-align:center; }
+a.button:hover{color:#fff;text-decoration:none;}
+.red_font{color:red;}
+
+body{ background: url("../images/bodybg0ec594.jpg") repeat scroll 0 0 #DEDEE0}
+.container{
+    margin: 0 auto;
+    padding: 0 10px;
+    text-align: left;
+    width: 968px;
+}
+.content{
+    background-color: #FFFFFF;
+    border: 1px solid #CAC9C9;
+    margin-top: 25px;
+    overflow: hidden;
+    position: relative;
+}
+.article, .intro, .download, .document, .developer {
+    background: none repeat scroll 0 0 #F5F6F7;
+    border: 1px solid #C7CDD6;
+    box-shadow: 0 1px 3px #CCCCCC;
+    margin: 40px 20px 40px;
+}
+
+
+.section { padding:0 0 20px 0;margin:0 0 20px 0;border-bottom:1px solid #eee; overflow: hidden; }
+.lastSection{
+	border:none;
+	margin-bottom:0px;
+}
+.sectionDesc { color:#aaa;/*margin-top:-22px;*/margin-bottom:20px; }
+
+.noBorder { border-width:0; }
+
+
+.normalTitle { border-bottom:1px solid #d7dde6;border-radius:10px 10px 0 0;/*border-top:1px solid #fff;*/padding:20px 40px;text-shadow:0 1px 1px #fff;}
+.normalContent { background:#fff;/*border-radius:0 0 10px 10px;*/padding:40px; }
+
+
+.panelTitle { /*border-radius:10px 10px 0 0;border-top:1px solid #fff;*/padding:20px 40px;text-shadow:0 1px 1px #fff;}
+.panelContent { padding:0 40px 80px; }
+
+
+.processTitle { border-bottom:1px solid #d7dde6;border-radius:10px 10px 0 0;padding:20px 40px;text-shadow:0 1px 1px #fff;}
+.processContent {  background:#fff;padding:20px 40px;  }
+.processOperator { border-top:1px solid #d7dde6;border-radius:0 0 8px 8px; }
+.processOperator .operator { text-align: center; border-top:1px solid #fff;padding:15px 40px;border-radius:0 0 8px 8px;background:#F5F6F7;}
+
+
+.normalTitle h2,
+.panelTitle h2,
+.processTitle h2 { font-size:20px;font-weight:bold;
+	font-family: '微软雅黑';
+    font-size: 20px;
+    font-weight: bold; }
+.panelTitle .desc, 
+.normalTitle .desc,
+.processTitle .desc,{ color:#999;text-shadow:0 1px 1px #fff; }
+
+
+.innerPanel { box-shadow:0px 1px 3px #ccc;background:#fff;border-radius:2px; }
+.innerPanel .title { padding:20px 0 10px;border-bottom:2px solid #eee;margin:0 20px; }
+.innerPanel .title h3 { font-size:18px;color:#333;font-weight:bold;}
+.innerPanel .title p { font-size:14px;color:#999;margin:0;}
+.innerPanel .content { padding:10px 20px;}
+.innerPanel .operator { padding:10px 20px; border-top:1px solid #d7dde6;border-radius:0 0 2px 2px;background:#F0F1F2;overflow: hidden; }
+
+</style>
+</head>
+<script>
+var cnt = 20;
+function lod(){
+if(cnt < 0){
+window.location.href = "https://authserver.cau.edu.cn/authserver/login?service=http://my.cau.edu.cn/portal.jsp";
+}else{
+document.getElementById("showTime").innerHTML = "抱歉，您的地址不在校内。访问校内平台，请使用统一身份认证系统，登录后访问。  "+cnt+"秒钟后跳转到 <a href='https://authserver.cau.edu.cn/authserver/login?service=http://my.cau.edu.cn/portal.jsp'>统一身份认证系统</a>。";
+cnt--;
+}
+setTimeout("lod()",1000);
+}
+</script>
+<body onload="lod()">
+<div class="container">
+<div class="content">
+	<div class="article">
+    <div class="panelTitle">
+		<h2>温馨提示</h2>
+	</div>
+    <div class="loginContent panelContent">
+    <h3>您暂无法访问校内平台</h3><br />
+    <p id="showTime"></p><br />
+	<p style="line-height:24px;">
+	特别提示：出于安全原因，学校部分单位网站和信息系统（如：教务系统、图书馆数据库等）仅限于在校内访问。您需要登录 校外VPN 专用工具来访问校内资源。 进入：<a href="https://vpn.cau.edu.cn" target=_blank>校外VPN</a>
+	</p>
+    </div>
+    </div>
+</div>
+</div>
+</body>
+</html>

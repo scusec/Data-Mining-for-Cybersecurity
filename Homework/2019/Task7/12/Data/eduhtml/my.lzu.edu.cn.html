@@ -1,0 +1,193 @@
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>兰州大学信息门户登录</title>
+<link rel="stylesheet" type="text/css" href="login/res/img/global.css" />
+<link rel="stylesheet" type="text/css" href="login/res/img/login.css" />
+<link href="style/validation.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="login/res/js/jquery.min.js"></script>
+<script type="text/javascript">var _FH=$;</script>
+<script type="text/javascript" src="login/res/js/jquery.bg-resize.js"></script>
+<script type="text/javascript">
+function AddFavorite(sURL, sTitle) {
+	sURL = encodeURI(sURL);
+	try {
+		window.external.addFavorite(sURL, sTitle);
+	} catch (e) {
+		try {
+			window.sidebar.addPanel(sTitle, sURL, "");
+		} catch (e) {
+			alert("加入收藏失败，请使用Ctrl+D进行添加,或手动在浏览器里进行设置.");
+		}
+	}
+}
+
+function SetHome(url) {
+	if (document.all) {
+		document.body.style.behavior = 'url(#default#homepage)';
+		document.body.setHomePage(url);
+	} else {
+		alert("您好,您的浏览器不支持自动设置页面为首页功能,请您手动在浏览器里设置该页面为首页!");
+	}
+}
+function imgCap(){
+	url=_FH('#capt img').attr('src');
+	url=url.replace("?s=","?s=lzu");
+	_FH('#capt img').attr('src',url);
+}
+function showPwdMsg(){
+	formMsg(4);
+	var data ='请输入正确的用户名和密码，并填写验证码。';
+	_FH('#msg4 h4').html('错误提示');
+	_FH('#msg4 span').html(data);
+}
+function checkF(){
+	user=_FH('#username').val();
+	psw=_FH('#password').val();
+	cap=_FH('#captcha').val();
+	n=0;
+	if(cap ==''&&_FH('#captchaContent').css('display')!='none'){n=3;}
+	if(psw ==''){n=2;}
+	if(user==''){n=1;}
+	if(n>0)formMsg(n);
+
+	return false;
+}
+function formMsg(n){
+	_FH('#errMsg,#errMsg div').hide();
+	if(n>0){_FH('#errMsg').attr('class','msg'+n).show();_FH('#msg'+n).show();}
+}
+function aaaa(){
+	//alert(_FH('#username').val());
+	if(_FH('#username').val()!=""){
+		_FH('#username').parent().addClass('Hover');
+	}
+	if(_FH('#password').val()!=""){
+		_FH('#password').parent().addClass('Hover');
+	}
+}
+_FH(document).ready(function() {
+	_FH("#body-background").ezBgResize();
+	_FH('#username,#password,#captcha').keyup(function(){
+		if(_FH(this).val()!='')_FH(this).parent().addClass('Hover');
+		else _FH(this).parent().removeClass('Hover');
+	}).change(function(){
+		if(_FH(this).val()!='')_FH(this).parent().addClass('Hover');
+		else _FH(this).parent().removeClass('Hover');
+	}).click(function(){formMsg(0);});
+	_FH('#lg').hover(function(){_FH(this).addClass('Hover');},function(){_FH(this).removeClass('Hover');}).mousedown(function(){_FH(this).addClass('Down').removeClass('Hover');}).mouseup(function(){_FH(this).removeClass('Down').addClass('Hover');}).mouseout(function(){_FH(this).removeClass('Hover');});
+	_FH('#capt img').click(function(){imgCap()});
+	window.setTimeout("aaaa()",1000);
+});
+</script>
+</head>
+
+<body>
+<div id="wrapper">
+<div id="top">
+	<div id="topInner">
+		<div id="logo" class="l"></div>
+		<div id="topLinks" class="r">
+		<a target="_blank" href="login/info.htm">登录说明</a>
+		| <a onclick="SetHome(window.location)" href="javascript:void(0)">设为首页</a>
+		<!--| <a onclick="AddFavorite(window.location,document.title)" href="javascript:void(0)">加入收藏</a-->
+		<a onclick="javascript:aaaa();" href="#">加入收藏</a-->
+		| <a target="_blank" href="http://www.lzu.edu.cn/">兰大主页</a>
+		</div>
+	</div>
+</div>
+
+<table id="main" class="w900 nomp">
+	<tr>
+		<td>
+<div id="login" class="clearfix">
+	<form id="loginForm" name="loginForm" action=""  onsubmit="return checkF()" class="l">
+	<dl>
+	<dt id="tit">统一身份认证</dt>
+	<dd><div id="user" class="bd">
+		<input name="user"  id="username" tabindex="1" type="text" value="" class="l"  eMsg="请输入用户名"/>
+		<label for="username" class="l">兰大邮箱或一卡通号</label>
+		<span class="r">@lzu.edu.cn</span></div>
+	</dd>
+	<dd><div id="psw" class="bd">
+		<input name="pwd" id="password" tabindex="2" type="password"  class="l" />
+		<label for="password" class="l">密码</label>
+		<input type="submit" name="btn" id="lg" class="r" value="" tabindex="3"></div>
+	</dd>
+	<dd id="captchaContent"><div id="capt" class="bd">
+		<input name="captcha" id="captcha" tabindex="4" type="text" maxlength="4" class="l" />
+		<label for="captcha" class="l">验证码</label><img id="captchaImg" src="images/s.gif" class="r" alt="" /></div>
+		<div id="loginMsg" class="err-msg"></div>
+	</dd>
+	</dl>
+	<p class="caphide"><label for="" id="jihuo"><a target="_blank" href=""></a></label>
+		<label for=""><a target="_blank" href="http://my.lzu.edu.cn/getBackPassword.portal">找回密码</a></label></p>
+	<tt class="caphide"><a href="http://news.lzu.edu.cn/l/xiaonei/">校内新闻</a></tt>
+	</form>
+	<div id="shuoming" class="r">
+	<h3>登录说明</h3>
+	<ol>
+	<li>统一身份认证用户名为本人邮箱账号前缀或者一卡通卡号，密码为本人的邮箱密码；</li>
+	<li>如果帐号无法登录,请先登录邮箱修改一下邮箱密码(可修改成现用的邮箱密码),再去登录信息门户。</li>
+	<li>技术支持电话0931-8912026或发送邮件到mail@lzu.edu.cn联系网信办。</li>
+	</ol>
+	</div>
+	<ul id="news" class="c none">
+	</ul>
+	<div id="errMsg" class="none">
+		<i></i><tt></tt>
+		<div id="msg1" class="none"><h4>请输入用户名</h4>统一身份认证用户名为本人邮箱账号前缀或者一卡通卡号。</div>
+		<div id="msg2" class="none"><h4>请输入密码</h4>密码为本人的邮箱密码，如果输入账号密码登录不成功，请先激活账号。</div>
+		<div id="msg3" class="none"><h4>请输入验证码</h4></div>
+		<div id="msg4" class="none"><h4>用户不存在或密码错误</h4><span></span></div>
+		<u></u>
+	</div>
+</div>
+		</td>
+	</tr>
+</table>
+
+
+<div id="footer">
+<div id="footerInner" class="w900">
+版权所有&copy;兰州大学 2013
+| <a href="http://its.lzu.edu.cn" target="_blank">通信网络中心</a>提供技术支持
+<br />
+地址: 兰州市天水南路222号
+| 邮编: 730000
+| 联系电话: 0931-8912026
+</div>
+</div>
+</div>
+
+<div id="body-background"></div>
+
+<script type="text/javascript">
+var u='http://news.lzu.edu.cn';
+var newsSum=5;
+_FH.getJSON(u+"/api/lzu/?callback=?",{Rand:Math.random(),charset:'utf-8'},function(feihuang){
+	var lhb=[newsSum, 'news', feihuang.News];
+	_FH('#news').show();
+	_FH.each(lhb[2],function(i,FH){
+		url=FH.b;if(url.indexOf('://')<0)url=u+url;
+		_FH("#"+lhb[1]+'').append("<li><span>"+FH.d+"</span><a target='_blank' href='"+url+"' title='"+FH.h+"'>"+FH.l.replace(/\|/gi,'<br>')+"</a></li>");
+		if(i==lhb[0]-1) return false;
+	});
+});
+
+picn=5;
+var d = new Date();
+m=d.getSeconds();
+M=m%picn;
+_FH('#body-background').html('<img src="login/res/img/bg'+M+'.jpg" alt="" />');
+</script>
+<script type="text/javascript">var Login = {forwardUrl:'',loginURL:'userPasswordValidate.portal',nameField:'Login.Token1',pwdField:'Login.Token2',gotoUrl:'http://my.lzu.edu.cn/loginSuccess.portal',gotoFailUrl:'http://my.lzu.edu.cn/loginFailure.portal',hideCaptcha:true};</script>
+<script type="text/javascript" src="login/res/js/login.js"></script>
+</body>
+</html>

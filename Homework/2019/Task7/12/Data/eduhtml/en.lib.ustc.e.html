@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8" />
+<title>
+</title>
+
+<meta name="viewport" content="width=device-width" />
+
+<link href="http://en.lib.ustc.edu.cn/wp-content/themes/ustclib2014/reset.css" type="text/css" rel="stylesheet"/>
+<link rel="stylesheet" type="text/css" media="all" href="http://en.lib.ustc.edu.cn/wp-content/themes/ustclib2014/style.css" />
+<link href="http://en.lib.ustc.edu.cn/wp-content/themes/ustclib2014/mobile.css" type="text/css" rel="stylesheet"/>
+
+<link rel="pingback" href="http://en.lib.ustc.edu.cn/xmlrpc.php" />
+
+<script type="text/javascript" src="http://en.lib.ustc.edu.cn/wp-content/themes/ustclib2014/js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="http://en.lib.ustc.edu.cn/wp-content/themes/ustclib2014/js/jquery.fullbg.min.js"></script>
+<script type="text/javascript" src="http://en.lib.ustc.edu.cn/wp-content/themes/ustclib2014/js/downselect.js"></script>
+
+<script type="text/javascript">
+jQuery(document).ready(function(){
+	var qcloud={};
+	$('[_t_nav]').hover(function(){
+		var _nav = $(this).attr('_t_nav');
+		clearTimeout( qcloud[ _nav + '_timer' ] );
+		qcloud[ _nav + '_timer' ] = setTimeout(function(){
+		$('[_t_nav]').each(function(){
+		$(this)[ _nav == $(this).attr('_t_nav') ? 'addClass':'removeClass' ]('nav-up-selected');
+		});
+		$('#'+_nav).stop(true,true).slideDown(200);
+		}, 150);
+	},function(){
+		var _nav = $(this).attr('_t_nav');
+		clearTimeout( qcloud[ _nav + '_timer' ] );
+		qcloud[ _nav + '_timer' ] = setTimeout(function(){
+		$('[_t_nav]').removeClass('nav-up-selected');
+		$('#'+_nav).stop(true,true).slideUp(200);
+		}, 150);
+	});
+});
+</script>
+
+
+<link rel='dns-prefetch' href='//s.w.org' />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.3\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.3\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/en.lib.ustc.edu.cn\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.8.2"}};
+			!function(a,b,c){function d(a){var b,c,d,e,f=String.fromCharCode;if(!k||!k.fillText)return!1;switch(k.clearRect(0,0,j.width,j.height),k.textBaseline="top",k.font="600 32px Arial",a){case"flag":return k.fillText(f(55356,56826,55356,56819),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,56826,8203,55356,56819),0,0),c=j.toDataURL(),b!==c&&(k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447),0,0),c=j.toDataURL(),b!==c);case"emoji4":return k.fillText(f(55358,56794,8205,9794,65039),0,0),d=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55358,56794,8203,9794,65039),0,0),e=j.toDataURL(),d!==e}return!1}function e(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i,j=b.createElement("canvas"),k=j.getContext&&j.getContext("2d");for(i=Array("flag","emoji4"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='simple-pagination-css-css'  href='http://en.lib.ustc.edu.cn/wp-content/plugins/simple-pagination/css/default.css?ver=2.1.7' type='text/css' media='screen' />
+<link rel='https://api.w.org/' href='http://en.lib.ustc.edu.cn/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://en.lib.ustc.edu.cn/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://en.lib.ustc.edu.cn/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 4.8.2" />
+<!-- <meta name="vfb" version="2.9.4" /> -->
+</head>
+
+<body>
+
+
+    <img src="http://en.lib.ustc.edu.cn/wp-content/themes/ustclib2014/images/bg.jpg" alt="" id="background" />
+    
+    <div id="Texture"></div>
+    
+	<div id="maincontent">
+
+
+
+
+		<div class="TopCont">
+        	<div class="TopWrap">
+            	<div class="TopLogo">
+					<a href="http://en.lib.ustc.edu.cn">
+						<img src="http://en.lib.ustc.edu.cn/wp-content/themes/ustclib2014/images/logo_mini.png" height="61"/>
+					</a>
+				</div>
+                
+                <div class="TopRight">
+               		<div class="TopLoginContact">
+                    	<ul class="TopLogin">
+							
+							
+							
+						</ul>
+						<ul class="TopContact">
+							<li><a href="/?p=6053">Contact Us</a></li>
+							<li><a href="http://lib.ustc.edu.cn/">中文版</a></li>
+						</ul>
+
+                    </div>
+					
+					<div class="menu-%e5%85%a8%e5%b1%80%e5%af%bc%e8%88%aa-container"><ul id="global-nav" class="GloablNav"><li id="menu-item-7251" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-7251"><a href="#">E-resources</a>
+<ul  class="sub-menu">
+	<li id="menu-item-7262" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-7262"><a href="http://en.lib.ustc.edu.cn/category/e-resource/database/foreign-database/">Foreign Database</a></li>
+	<li id="menu-item-7263" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-7263"><a href="http://en.lib.ustc.edu.cn/category/e-resource/database/foreign-e-book/">Foreign e-Book</a></li>
+	<li id="menu-item-7264" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-7264"><a href="http://en.lib.ustc.edu.cn/category/e-resource/database/foreign-e-journal/">Foreign e-Journal</a></li>
+	<li id="menu-item-7259" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-7259"><a href="http://en.lib.ustc.edu.cn/e-resource/%e7%89%88%e6%9d%83%e5%a3%b0%e6%98%8e/">Copyright</a></li>
+</ul>
+</li>
+<li id="menu-item-2365" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-2365"><a href="#">About Us</a>
+<ul  class="sub-menu">
+	<li id="menu-item-7223" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-7223"><a href="http://en.lib.ustc.edu.cn/about/introduction/">Introduction</a></li>
+	<li id="menu-item-7219" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-7219"><a href="http://en.lib.ustc.edu.cn/about/hours/">Hours</a></li>
+	<li id="menu-item-7220" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-7220"><a href="http://en.lib.ustc.edu.cn/about/locations/">Locations</a></li>
+	<li id="menu-item-8111" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-8111"><a href="http://en.lib.ustc.edu.cn/services/contacts/">Contacts</a></li>
+	<li id="menu-item-7226" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-7226"><a href="http://en.lib.ustc.edu.cn/about/album/">Album</a></li>
+</ul>
+</li>
+</ul></div>
+					<!---------TopRight End------------------>   
+                </div>                
+            </div>
+        </div>
+        
+
+
+
+
+
+        <div class="MidCont">
+        	<div class="MidContWrap">
+            	
+                <div class="search_box">
+   					<div class="search">
+    											
+									<form id="search-form" name="search_form" action="http://en.lib.ustc.edu.cn" target="_blank" method="get">
+			<div id="pt1" class="select">
+				<a id="s0">Book</a>
+				<span class="arrow"></span>
+				<div style="display:none;" id="pt2" class="part"> 
+					<p>
+					<a title="">Book</a><a title="">This site</a><a title="">SFX</a><a title="">Find+</a><a title="">Google</a>					</p>
+				</div>
+			</div> 
+			
+			<input id="t_type" name="t_type" value="Book" type="hidden" >
+			<input id="q" class="enter" name="s" placeholder="Input keyword here ...">
+			<input id="sm" class="sb" type="button" value="Search">
+		</form>
+		<script type="text/javascript">
+			//use jquery
+			$('#pt2 p a').click(function(){
+				var v = $(this).text();
+				$('#t_type').val(v);
+				$('#s0').text(v);
+                
+				$('#pt2').hide();
+
+				return false;
+			});
+            
+            
+			$('#pt1').click(function(){
+				var n = $('#pt2');
+				if(n.is(':hidden')){
+				    n.show();
+				}else{
+				    n.hide();
+				}
+				
+				return false;
+			
+			});
+		    
+			$(document).on('click',function(){
+				$('#pt2').hide();
+			})
+
+			$('#sm').click(function() {
+				var v=$('#q').val();
+				if(v.replace(/(^\s*)|(\s*$)/g, "").length ==0) {
+					alert('不能为空');
+				} else {
+					$('#search-form').submit();
+				}
+			});
+		</script>
+								
+						 
+    				</div>
+				</div>
+                
+                <div id="HomeGridWrap">
+                	<!-----------FirstGrid Start--------------->
+                	<div class="HomeGridLeft">
+						<ul class="GridLeftTab">
+							
+							<li mid="0" class="HomeNewsTab-0 HomeNewsTab-cus-0"><span><a href="http://en.lib.ustc.edu.cn/category/news/">News</a></span></li>
+						</ul>
+
+						<div class="GridLeftContWrap">
+							<div class="GridLeftInner">
+								<div class="contant-con con_list" mid="0" style="">
+                                    <div class="HomeResourceWrap">
+                                    	<ul>
+                                        												
+												
+																								<li>
+												<span><p>2014-09-04</p></span>
+												<h3><em><a href = "http://en.lib.ustc.edu.cn/news/%e3%80%90%e6%96%b0%e9%97%bb%e3%80%91%e5%9b%be%e4%b9%a6%e9%a6%86%e4%b8%ba2014%e5%b9%b4%e6%9c%ac%e7%a7%91%e6%96%b0%e7%94%9f%e4%b8%be%e5%8a%9e%e5%9b%be%e4%b9%a6%e8%b5%84%e6%ba%90%e4%bd%bf%e7%94%a8/" title="Library orientations are offered to 2014 freshman">Library orientations are offered to 2014 freshman</a></em></h3>
+												</li>
+																								<li>
+												<span><p>2014-09-01</p></span>
+												<h3><em><a href = "http://en.lib.ustc.edu.cn/news/%e3%80%90%e9%80%9a%e7%9f%a5%e3%80%91%e8%87%b42014%e7%ba%a7%e6%96%b0%e7%94%9f%e8%af%bb%e8%80%85-2/" title="To library newcomers">To library newcomers</a></em></h3>
+												</li>
+																								<li>
+												<span><p>2014-07-23</p></span>
+												<h3><em><a href = "http://en.lib.ustc.edu.cn/news/%e3%80%90%e6%96%b0%e9%97%bb%e3%80%91%e7%94%a8%e4%bf%a1%e6%81%af%e6%9c%8d%e5%8a%a1%e7%a7%91%e7%a0%94-%e5%b0%86%e9%9d%92%e6%98%a5%e7%95%99%e9%a9%bb%e7%a7%91%e5%a4%a7-%e8%ae%b02014%e5%ae%89-2/" title="USTC hosts second Information Summer Camp in Anhui Province">USTC hosts second Information Summer Camp in Anhui Province</a></em></h3>
+												</li>
+																								<li>
+												<span><p>2013-12-30</p></span>
+												<h3><em><a href = "http://en.lib.ustc.edu.cn/news/%e3%80%90%e8%a7%86%e9%a2%91%e3%80%91%e6%98%93%e4%b8%ad%e5%a4%a9-%e5%8e%86%e5%8f%b2%e7%9a%84%e5%ba%95%e7%89%8c/" title="&#8220;Cards of History&#8221; delivered by the famous scholar Yi, Zhongtian">&#8220;Cards of History&#8221; delivered by the famous scholar Yi, Zhongtian</a></em></h3>
+												</li>
+																								<li>
+												<span><p>2013-11-12</p></span>
+												<h3><em><a href = "http://en.lib.ustc.edu.cn/news/%e3%80%90%e6%96%b0%e9%97%bb%e3%80%91%e5%9b%be%e4%b9%a6%e9%a6%86%e9%a1%ba%e5%88%a9%e5%ae%8c%e6%88%90%e6%9c%89%e9%99%a2%e7%b3%bb%e7%89%b9%e8%89%b2%e7%9a%84%e7%a0%94%e7%a9%b6%e7%94%9f%e6%96%b0%e7%94%9f/" title="Training for the graduate freshman has been successfully completed">Training for the graduate freshman has been successfully completed</a></em></h3>
+												</li>
+																								<li>
+												<span><p>2013-06-06</p></span>
+												<h3><em><a href = "http://en.lib.ustc.edu.cn/news/%e3%80%90%e9%80%9a%e7%9f%a5%e3%80%91%e5%9b%be%e4%b9%a6%e9%a6%86%e8%8b%b1%e6%89%8d%e4%b9%a6%e8%8b%91%e6%ac%a2%e8%bf%8e%e6%82%a8-2/" title="Welcome to the Talents Book Show">Welcome to the Talents Book Show</a></em></h3>
+												</li>
+																										
+                                    	</ul>
+                                    </div>
+								</div>
+
+							</div>
+						</div>
+                     <!-----------FirstGrid End--------------->                               
+                    </div>
+                    
+                    <div class="HomeGridMid">
+                    	<h1 class="HomeGridTitle">Events</h1>
+                        <div class="HomeGridMidCont">
+                        	<div id="activityslider">
+      							<div class="activity-list">
+								                                  
+      							</div>
+      							<ul class="activity-pagination">
+	  								<li><a><div><span></span></div></a></li>
+	   								<li><a><div><span></span></div></a></li>
+	   								<li><a><div><span></span></div></a></li>  
+       							</ul>
+    						</div>
+                        </div>
+                        
+                    <!--------------HomeGridMid End------------------->    
+                    </div>
+                    
+                    <div class="HomeGridRight">
+												
+							<div id="home-center"><h1 class="widget-title">Quick Navigation</h1><div class="menu-quick-navigation-container"><ul id="menu-quick-navigation" class="menu"><li id="menu-item-7197" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7197"><a href="http://en.lib.ustc.edu.cn/dbmap/">Database Map</a></li>
+<li id="menu-item-7206" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-7206"><a href="http://en.lib.ustc.edu.cn/services/suggest_a_purchase/">Suggest A Purchase</a></li>
+<li id="menu-item-7479" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-7479"><a href="http://en.lib.ustc.edu.cn/about/locations/">Locations</a></li>
+<li id="menu-item-7480" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-7480"><a href="http://en.lib.ustc.edu.cn/about/hours/">Hours</a></li>
+</ul></div></div>							
+						 
+                    </div>
+                    
+                    
+                </div>
+                
+                <!--div class="HomeMidBotIcon">
+                	<span class="HomeMidBotIcon01">
+						<a href="http://talent.lib.ustc.edu.cn" target="_blank">
+							<img src="http://en.lib.ustc.edu.cn/wp-content/themes/ustclib2014/images/homemidcont_boticon01.png"/>
+						</a>
+					</span>
+                	<span class="HomeMidBotIcon02" id="code">
+						<a href="http://en.lib.ustc.edu.cn/wp-content/themes/ustclib2014/images/icon.png">
+							<img src="http://en.lib.ustc.edu.cn/wp-content/themes/ustclib2014/images/homemidcont_boticon02.png"/>
+						</a>
+					</span>
+                    <div id="code_img">
+						<img src="http://en.lib.ustc.edu.cn/wp-content/themes/ustclib2014/images/icon.png" />
+					</div>
+                </div-->
+            <!---------------Midcont wrap end----------------->	
+            </div>
+         <!------------------MidCont end ------------>   
+        </div>
+<script type="text/javascript">
+$(window).load(function() {
+	$("#background").fullBg();
+});
+</script>
+
+<script type="text/javascript">
+var n_c_ser = 0;//设置初始值为0；
+function t_player(cur){
+	$('ul.GridLeftTab > li').eq(n_c_ser).removeClass("HomeNewsTab-cus-"+n_c_ser);
+	if(cur==null){
+		n_c_ser = ++n_c_ser % 2;   //递加函数
+	}else{
+		n_c_ser = cur;
+	}
+	if(n_c_ser !=0 ){
+	}
+	
+	$('.GridLeftInner').animate({marginLeft:(-1 * n_c_ser * 508) + 'px'});//下面内容的动画效果左移动508px；
+
+	$('ul.GridLeftTab > li').eq(n_c_ser).addClass("HomeNewsTab-cus-"+n_c_ser);
+}
+
+</script>
+
+<script type="text/javascript" src="http://en.lib.ustc.edu.cn/wp-content/themes/ustclib2014/js/jquery.homenews.slider.js"></script>
+<script type="text/javascript" src="http://en.lib.ustc.edu.cn/wp-content/themes/ustclib2014/js/homenews.slider.js"></script>        
+
+        <div id="Foot">
+        	<div class="FootWrap">
+        		<div class="FootLeft">
+            		<p>COPYRIGHT (C) 2017 Library of University of Science and Technology of China</p>

