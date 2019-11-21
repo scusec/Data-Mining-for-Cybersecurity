@@ -62,7 +62,7 @@ VLD 是PECL（PHP 扩展和应用仓库）的一个PHP扩展 。可以查看PHP�
 
 - LSTM:   准确率：94.8%     召回率：84.9%
 
-![LSTM](C:\Users\lenovo1\Desktop\Data-Mining-for-Cybersecurity\Task7\6\Screen\LSTM.png)
+![LSTM](https://github.com/scusec/Data-Mining-for-Cybersecurity/blob/master/Homework/2019/Task7/6/Screen/LSTM.png)
 
 ##  项目改进
 
