@@ -18,17 +18,17 @@
 
 ## 系统实现框图
 
-![系统实现框图](C:\Users\lenovo1\Desktop\Data-Mining-for-Cybersecurity\Task8\6\Screen\系统实现框图.png)
+![系统实现框图](https://github.com/scusec/Data-Mining-for-Cybersecurity/blob/master/Homework/2019/Task8/6/Screen/系统实现框图.png)
 
 ## 实验结果
 
 - 最终训练结果，测试集的准确率：87.75%，召回率：82.15%
 
-![测试集结果](C:\Users\lenovo1\Desktop\Data-Mining-for-Cybersecurity\Task8\6\Screen\测试集结果.png)
+![测试集结果](https://github.com/scusec/Data-Mining-for-Cybersecurity/blob/master/Homework/2019/Task8/6/Screen/测试集结果.png)
 
 - 输入单个图片文件进行识别
 
-![单个图片文件识别结果](C:\Users\lenovo1\Desktop\Data-Mining-for-Cybersecurity\Task8\6\Screen\单个图片文件识别结果.png)
+![单个图片文件识别结果](https://github.com/scusec/Data-Mining-for-Cybersecurity/blob/master/Homework/2019/Task8/6/Screen/单个图片文件识别结果.png)
 
 ## 实验改进
 
