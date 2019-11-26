@@ -10,15 +10,15 @@
 本项目利用验证码生成算法共生成了**43875**张验证码图片作为训练样本，验证码图片都以png的形式进行保存。以下是验证码图片的示例：
 </br>
 <div align="center">
-<img src="test/98eQ.png">
+<img src="Screen/98eQ.png">
 </div>
 </br>
 <div align="center">
-<img src="test/s8oM.png">
+<img src="Screen/s8oM.png">
 </div>
 </br>
 <div align="center">
-<img src="test/vmwS.png">
+<img src="Screen/vmwS.png">
 </div>
 </br>
 
@@ -98,21 +98,21 @@ python predict_captcha.py
 ### 1. 数据预处理截图
 </br>
 <div align="center">
-<img src="screen/preprocess.png" width="600">
+<img src="Screen/preprocess.png" width="600">
 </div>
 </br>
 
 ### 2. 模型训练截图
 </br>
 <div align="center">
-<img src="screen/train.png" width="600">
+<img src="Screen/train.png" width="600">
 </div>
 </br>
 
 ### 3. 数据预测截图
 </br>
 <div align="center">
-<img src="screen/predict.png" width="600">
+<img src="Screen/predict.png" width="600">
 </div>
 </br>
 
