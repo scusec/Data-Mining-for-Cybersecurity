@@ -1,0 +1,23 @@
+{
+  "origin_image_dir": "sample/origin/",
+  "new_image_dir": "sample/new_train/",
+  "train_image_dir": "sample/train/",
+  "test_image_dir": "sample/test/",
+  "api_image_dir": "sample/api/",
+  "online_image_dir": "sample/online/",
+  "local_image_dir": "sample/local/",
+  "model_save_dir": "model/",
+  "image_width": 100,
+  "image_height": 60,
+  "max_captcha": 4,
+  "image_suffix": "png",
+  "char_set": "0123456789abcdefghijklmnopqrstuvwxyz",
+  "use_labels_json_file": false,
+  "remote_url": "http://127.0.0.1:6100/captcha/",
+  "cycle_stop": 20000,
+  "acc_stop": 0.99,
+  "cycle_save": 500,
+  "enable_gpu": 1,
+  "train_batch_size": 128,
+  "test_batch_size": 100
+}
