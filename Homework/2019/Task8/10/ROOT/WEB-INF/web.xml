@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" 
+    xmlns="http://java.sun.com/xml/ns/javaee" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+    http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+  
+   <!-- kaptcha验证码配置 -->
+    <servlet>
+        <!-- 生成图片的Servlet -->
+        <servlet-name>Kaptcha</servlet-name>
+        <servlet-class>com.google.code.kaptcha.servlet.KaptchaServlet</servlet-class>
+        
+        <!-- 是否有边框-->
+        <init-param>
+            <param-name>kaptcha.border</param-name>
+            <param-value>no</param-value>
+        </init-param>    
+        <!-- 字体颜色 -->
+        <init-param>
+            <param-name>kaptcha.textproducer.font.color</param-name>
+            <param-value>red</param-value>
+        </init-param>
+        <!-- 图片宽度 -->
+        <init-param>
+            <param-name>kaptcha.image.width</param-name>
+            <param-value>180</param-value>
+        </init-param>
+        <!-- 使用哪些字符生成验证码 -->
+        <init-param>
+            <param-name>kaptcha.textproducer.char.string</param-name>
+            <param-value>123456789abcdefghijklmnopqrstuvwxyz</param-value>
+        </init-param>
+        <!-- 图片高度 -->
+        <init-param>
+            <param-name>kaptcha.image.height</param-name>
+            <param-value>60</param-value>
+        </init-param>
+        <!-- 字体大小 -->
+        <init-param>
+            <param-name>kaptcha.textproducer.font.size</param-name>
+            <param-value>43</param-value>
+        </init-param>
+        <!-- 干扰线的颜色 -->
+        <init-param>
+            <param-name>kaptcha.noise.color</param-name>
+            <param-value>black</param-value>
+        </init-param>
+        <!-- 字符个数 -->
+        <init-param>
+            <param-name>kaptcha.textproducer.char.length</param-name>
+            <param-value>4</param-value>
+        </init-param>
+        <!-- 使用哪些字体 -->
+        <init-param>
+            <param-name>kaptcha.textproducer.font.names</param-name>
+            <param-value>Arial</param-value>
+        </init-param>   
+		<!-- 干扰实现类 -->
+        <init-param>
+            <param-name>kaptcha.noise.impl</param-name>
+            <param-value> com.google.code.kaptcha.impl.DefaultNoise</param-value>
+        </init-param>  
+		<init-param>
+            <description>
+                图片样式： 水纹com.google.code.kaptcha.impl.WaterRipple
+                鱼眼com.google.code.kaptcha.impl.FishEyeGimpy
+                阴影com.google.code.kaptcha.impl.ShadowGimpy
+            </description>
+            <param-name>kaptcha.obscurificator.impl</param-name>
+            <param-value>
+                com.google.code.kaptcha.impl.WaterRipple
+            </param-value>
+        </init-param>
+		<init-param>
+            <description>
+                The date the kaptcha is generated is put into the
+                HttpSession. This is the key value for that item in the
+                session.
+            </description>
+            <param-name>kaptcha.session.date</param-name>
+            <param-value>KAPTCHA_SESSION_DATE</param-value>
+		</init-param>
+    </servlet>
+    <!-- 映射的url -->
+    <servlet-mapping>
+        <servlet-name>Kaptcha</servlet-name>
+        <url-pattern>/Kaptcha.jpg</url-pattern>
+    </servlet-mapping>
+	
+	
+</web-app>
+
+
