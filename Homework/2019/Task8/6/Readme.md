@@ -22,7 +22,7 @@
 
 ## 实验结果
 
-- 最终训练结果，测试集的准确率：87.75%，召回率：82.15%
+- 最终训练结果，测试集的准确率：0.85。
 
 ![测试集结果](https://github.com/scusec/Data-Mining-for-Cybersecurity/blob/master/Homework/2019/Task8/6/Screen/测试集结果.png)
 
