@@ -7,19 +7,7 @@
 
 本项目对两种方法都进行了实践和对比,文件结构：
 
-├── Screen
-│   ├── S1.png                        #分割式系统框架
-│   ├── S2.jpg                         #端到端式系统框架
-│   └── acc+recall.png          #分割式准确率和召回率
-├── code
-│   ├── cut                              #分割式
-│   │   ├── get_checkcode.py     #网页爬取数据
-│   │   ├── pre.py                         #OCR预分类
-│   │   ├── process.py                 #图片处理
-│   │   └── train.ipynb                #训练
-│   └── endtoend               #端到端式
-│       └── cnn_veri-1.py
-├── readme.md
+![](https://pic3.superbed.cn/item/5de152bc8e0e2e3ee9224535.png)
 
 #<span id="env">分割式</span>
 
