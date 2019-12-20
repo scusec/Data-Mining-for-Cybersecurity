@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>{% block title %}{% endblock %}</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.default.css') }}">
+</head>
+
+<body class="withvernav">
+<div class="bodywrapper">
+    <div class="topheader">
+        <div class="left">
+            <h1 class="logo">菜大佬の<span>DGA域名检测系统</span></h1>
+
+            <br clear="all" />
+
+        </div><!--left-->
+
+        <div class="right">
+        	<!--<div class="notification">
+                <a class="count" href="ajax/notifications.html"><span>9</span></a>
+        	</div>-->
+        </div><!--right-->
+    </div><!--topheader-->
+
+
+    <div class="header">
+{#    	<ul class="headermenu">#}
+{#            <li class="current"><a href={{ url_for(".index") }}><span class="icon icon-pencil"></span>Shell检测</a></li>#}
+{#        </ul>#}
+{##}
+{#       <div class="headerwidget">#}
+{#        </div><!--headerwidget-->#}
+
+    </div><!--header-->
+
+    <div class="centercontent">
+
+        <div id="contentwrapper" class="contentwrapper">
+            {% block content %}
+            {% endblock %}
+
+            <div id="activities" class="subcontent" style="display: none;">
+            	&nbsp;
+            </div><!-- #activities -->
+
+        </div><!--contentwrapper-->
+
+        <br clear="all" />
+
+	</div><!-- centercontent -->
+
+
+</div><!--bodywrapper-->
+
+</body>
+</html>

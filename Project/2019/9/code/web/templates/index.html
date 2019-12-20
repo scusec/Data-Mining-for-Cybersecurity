@@ -1,0 +1,94 @@
+{% extends "base.html" %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="{{ url_for('static', filename='style.default.css') }}">
+</head>
+
+<body class="withvernav">
+<div class="bodywrapper">
+    <div class="topheader">
+        <div class="left">
+            <h1 class="logo">第四组·<span>影评分析系统</span></h1>
+
+            <br clear="all" />
+
+        </div><!--left-->
+
+        <div class="right">
+        	<!--<div class="notification">
+                <a class="count" href="ajax/notifications.html"><span>9</span></a>
+        	</div>-->
+        </div><!--right-->
+    </div><!--topheader-->
+
+
+    <div class="header">
+    	<ul class="headermenu">
+            <li class="current"><a href={{ url_for(".index") }}><span class="icon icon-pencil"></span>影评分析</a></li>
+            <li><a href={{ url_for(".results") }}><span class="icon icon-pencil"></span>分析结果</a></li>
+            <li><a href={{ url_for(".feedback") }}><span class="icon icon-pencil"></span>感谢</a></li>
+        </ul>
+
+       <div class="headerwidget">
+        </div><!--headerwidget-->
+
+    </div><!--header-->
+
+    <div class="centercontent">
+
+        <div id="contentwrapper" class="contentwrapper">
+            {% block content %}
+            <div class="notibar announcement">
+                <a class="close"></a>
+                    <h3>DGA域名分类：</h3>
+                    <p>
+                        <b>0、Alexa（normal)</b><br>
+                        1、banjori
+                        2、cryptolocker
+                        3、dyre
+                        4、emotet<br>
+                        5、gameover
+                        6、murofet
+                        7、necurs
+                        8、nymaim
+                        9、post<br>
+                        10、pykspa
+                        11、pykspa_v1
+                        12、qakbot
+                        13、ramnit
+                        14、ranbyus<br>
+                        15、rovnix
+                        16、shiotob
+                        17、simda
+                        18、tinba
+                        19、virut<br>
+                    </p>
+            </div><!-- notification announcement -->
+            <div class="contenttitle2 nomargintop">
+                <h3>请输入要检测的域名:</h3>
+            </div>
+            <form method=post>
+                  <input type=text name=domain><br>
+                  <br><input type=submit value="检测">
+            </form><br>
+
+                <h3>域名：{{ domain }}</h3><br>
+                <h3>是否DGA域名：{{ is_dga }}</h3><br>
+                <h3>DGA域名分类：{{ result }}</h3>
+            {% endblock %}
+
+
+        </div><!--contentwrapper-->
+
+        <br clear="all" />
+
+	</div><!-- centercontent -->
+
+
+</div><!--bodywrapper-->
+
+</body>
+</html>
