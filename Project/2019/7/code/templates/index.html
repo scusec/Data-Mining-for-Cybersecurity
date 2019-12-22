@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/font-awesome.min.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/animate.css') }}">
+        <script src="{{ url_for('static',filename='js/jquery.min.js') }}"></script>
+
+        <title>僵尸网络检测-Group7</title>
+
+
+        <script type="text/javascript">
+        $(document).ready(function(){
+           'use strict';
+            jQuery('#headerwrap').backstretch([
+                "{{ url_for('static',filename='img/bg/bg1.jpg') }}",
+              "{{ url_for('static',filename='img/bg/bg2.jpg') }}",
+              "{{ url_for('static',filename='img/bg/bg3.jpg') }}"
+            ], {duration: 8000, fade: 800});
+        });
+
+        function f(id){
+            var obj = document.getElementById(id);
+            if(obj.style.display==""){
+                obj.style.display = "none";
+            }else{
+                obj.style.display = "";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="preloader">
+    </div>
+
+    <div id="main-navigation" class="navbar navbar-inverse navbar-fixed-top smoothtransition fadeInDown sb-slide" data-wow-delay="1s" role="navigation">
+        <div class="container smoothtransition">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+
+                </button>
+                <h2><a class="navbar-brand">基于DNS协议的僵尸网络检测</a></h2>
+            </div>
+
+        </div>
+    </div>
+
+	<header id="headerwrap" class="fullscreen">
+        <div class="vertical-center">
+    		<div class="container">
+    			<div class="row">
+    			    <div class="col-md-12">
+    			    	<h3 class="fancy wow fadeInDown" data-wow-delay="1.5s"><span><strong>数据挖掘-Group7课程设计</strong></span></h3>
+                        <h1 class="mb30 wow fadeInUp" data-wow-delay="2s">欢迎使用僵尸网络检测系统</h1>
+                        <a class="page-scroll btn btn-theme btn-lg btn-white wow fadeInUp" data-wow-delay="2.5s" href="#about-us">Take A Look</a>
+    			    </div>
+    			</div>
+    		</div>
+        </div>
+	</header>
+
+
+    <section id="contact" class="white section-wrapper">
+        <div id="about-us" class="section-inner nopaddingbottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 wow fadeInDown">
+                        <h2 class="section-heading"><strong>僵尸网络</strong> 检测</h2>
+                        <h3 class="section-subheading text-muted">您可以直接在下方的窗口中选择上传文件进行检测</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact-lower" class="white section-wrapper">
+        <div class="section-inner">
+            <div class="container">
+                <div class="row">
+
+                        <div id="message"></div>
+                        <form id="upload-form" action="/upload" method="post" enctype="multipart/form-data">
+                            <input type="file" id="upload" rows="5" name="file" size="50"/>
+                            <input class="btn btn-theme pull-right" type="submit" value="Upload" />
+                            <div class="prediction">
+                                <h4>Your File:</h4>
+                                <div>{{ content_upload }}</div>
+                                <h4>Prediction:</h4>
+                                <div style="white-space:pre"><strong>{{ prediction_upload }}</strong></div>
+                            </div>
+                        </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+   <footer id="footerwrap">
+        <div id="lowerfooter">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        Copyright &copy; 2019.Group7 All rights reserved.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="{{ url_for('static',filename='js/bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static',filename='js/plugins.js') }}"></script>
+    <script src="{{ url_for('static',filename='js/cubeportfolio.js') }}"></script>
+    <script src="{{ url_for('static',filename='js/init.js') }}"></script>
+
+  </body>
+</html>

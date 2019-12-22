@@ -1,0 +1,234 @@
+* {
+	margin:0;
+	padding:0
+}
+
+body {
+	background:#fff;
+	margin:0;
+	color:#404040;
+	font-family:'Raleway',sans-serif
+}
+
+body.boxed {
+	-webkit-backface-visibility: visible;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	font-family:'Raleway',sans-serif;
+	font-weight:300;
+	letter-spacing:-1px
+}
+
+h1 strong,h2 strong,h3 strong,h4 strong,h5 strong,h6 strong {
+	font-family:'Raleway',sans-serif;
+	font-weight: 700
+}
+
+p {
+	padding:0;
+	margin-bottom:22px;
+	font-family:'Raleway',sans-serif;
+	font-weight:300;
+	font-size: 14px;
+	line-height:28px;
+	color:#666;
+}
+
+html {
+	overflow-x:hidden
+}
+
+.mb30 {
+	margin-bottom:30px
+}
+
+::selection {
+	color:#fff;
+	text-shadow:none;
+	background:#2B2E31
+}
+
+*,:after,:before {
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+	padding:0;
+	margin:0
+}
+
+a {
+	padding:0;
+	margin:0;
+	text-decoration:none;
+	-webkit-transition:background-color .4s linear,color .4s linear;
+	-moz-transition:background-color .4s linear,color .4s linear;
+	-o-transition:background-color .4s linear,color .4s linear;
+	-ms-transition:background-color .4s linear,color .4s linear;
+	transition:background-color .4s linear,color .4s linear;
+	color: #337ab7;
+}
+
+a:hover,a:focus {
+	text-decoration:none;
+}
+
+.colour-hover:hover, .colour-hover:focus, .coloured {
+	color: #1f74ac;
+}
+
+.nopaddingbottom {
+	padding-bottom:0!important;
+}
+
+h2.section-heading {
+	margin-top: 0;
+	margin-bottom: 5px;
+	font-size: 36px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	text-align: center;
+}
+
+h3.section-subheading {
+	margin-bottom: 80px;
+	text-transform: none;
+	margin-top: 0;
+	font-size: 20px;
+	text-align: center;
+}
+
+.smoothtransition {
+	-webkit-transition:all .5s ease-in-out;
+	-moz-transition:all .5s ease-in-out;
+	-o-transition:all .5s ease-in-out;
+	-ms-transition:all .5s ease-in-out;
+	transition:all .5s ease-in-out
+}
+
+.smoothtransition:hover {
+	-webkit-transition:all .5s ease-in-out;
+	-moz-transition:all .5s ease-in-out;
+	-o-transition:all .5s ease-in-out;
+	-ms-transition:all .5s ease-in-out;
+	transition:all .5s ease-in-out
+}
+
+p.white, span.white, .white-text {
+	color: #ffffff;
+}
+
+/*-----------------------------------------------------------------------------------*/
+/*  4 - FORMS
+/*-----------------------------------------------------------------------------------*/
+input {
+	width:100%;
+	font-size:16px;
+	min-height:40px;
+	border-radius:2px;
+	line-height:20px;
+	padding:11px 30px 10px;
+	border:1px solid #b9b9af;
+	margin-bottom:0px;
+	background-color:#fff;
+	-webkit-transition:background-color .2s;
+	transition:background-color .2s
+}
+
+/*-----------------------------------------------------------------------------------*/
+/*  5 - BUTTONS
+/*-----------------------------------------------------------------------------------*/
+.btn,.btn:hover {
+	-webkit-transition:all .5s ease-in-out;
+	-moz-transition:all .5s ease-in-out;
+	-o-transition:all .5s ease-in-out;
+	-ms-transition:all .5s ease-in-out;
+	transition:all .5s ease-in-out
+}
+
+.btn-theme {
+	background:transparent;
+	border-color:#3498DB;
+	border: 1px solid;
+	color:#3498DB;
+	box-shadow:none;
+	border-radius:0;
+	padding: 12px 20px;
+	margin-bottom:20px;
+	position:relative;
+	text-transform:uppercase;
+	font-size: 14px;
+	font-weight: 300;
+}
+
+.btn-theme:hover, .btn-theme:active, .btn.cbp-filter-item-active {
+	position: relative;
+	border-color:#3498DB;
+	background:#3498DB;
+	color:#ffffff;
+	box-shadow: none !important;
+}
+
+.btn-white {
+	border-color: #ffffff;
+	background:transparent;
+	color: #ffffff;
+	box-shadow: none !important;
+}
+
+.btn-white:hover, .btn-white:active {
+	position: relative;
+	border-color:#ffffff;
+	background:#ffffff;
+	color: #3498DB;
+	box-shadow: none !important;
+}
+
+.btn-lg {
+	padding: 20px 30px;
+	border: 2px solid;
+	font-weight: 700;
+	font-size: 18px;
+}
+
+
+/*-----------------------------------------------------------------------------------*/
+/*  8 - FOOTER
+/*-----------------------------------------------------------------------------------*/
+#footerwrap {
+	background: #202020;
+	width:100%;
+	color:#eee;
+	overflow: hidden;
+	position: relative;
+}
+
+#lowerfooter {
+	background-color: #101010;
+	padding:20px;
+	position: relative;
+}
+
+#lowerfooter:after {
+	bottom: 100%;
+	left: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+	border-color: rgba(16, 16, 16, 0);
+	border-bottom-color: #101010;
+	border-width: 30px;
+	margin-left: -30px;
+}
+
+.prediction{
+	padding:10px;
+	border: 1px solid #b9b9af;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	width: 100%;
+	overflow: auto;
+}
