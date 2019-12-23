@@ -1,0 +1,302 @@
+{% extends "base.html" %}
+
+{% block title %}首页{% endblock %}
+
+{% block navbar %}
+<section class="content-header">
+    <h1>首页</h1>
+    <ol class="breadcrumb">
+        <li><i class="fa fa-dashboard"></i> 当前位置</li>
+        <li class="active">首页</li>
+    </ol>
+</section>
+{% endblock %}
+
+{% block content %}
+<div class="box box-primary">
+    <div class="box-body">
+        <div class="row">
+            <div class="col-lg-3 col-xs-6">
+                <div class="small-box bg-aqua">
+                    <div class="inner">
+                        <h3 id="count01">{{ count[0] }}条</h3>
+                        <p>微博内容</p>
+                    </div>
+                    <div class="icon">
+                        <i class="ion ion-ios-gear-outline"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-xs-6">
+                <div class="small-box bg-green">
+                    <div class="inner">
+                        <h3 id="count02">{{count[1] }} 条</h3>
+                        <p>积极情感</p>
+                    </div>
+                    <div class="icon">
+                        <i class="ion ion-iphone"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-xs-6">
+                <div class="small-box bg-yellow">
+                    <div class="inner">
+                        <h3 id="count03">{{ count[2] }} 条</h3>
+                        <p>中性情感</p>
+                    </div>
+                    <div class="icon">
+                        <i class="ion ion-person-add"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-xs-6">
+                <div class="small-box bg-red">
+                    <div class="inner">
+                        <h3 id="count04">{{ count[3] }} 条</h3>
+                        <p>消极情感</p>
+                    </div>
+                    <div class="icon">
+                        <i class="ion ion-pie-graph"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+ <div class="row">
+            <div id="main1" style="height: 700px;width:1000px;margin: 0 auto;"></div>
+            <script type="text/javascript">
+                var myChart = echarts.init(document.getElementById('main1'),'westeros');
+
+
+var builderJson = {
+  "all": 10887,
+  "charts": {
+                {{ topics[0] }}: {{ num[0] }},
+     {{ topics[1] }}: {{ num[1] }},
+     {{ topics[2] }}: {{ num[2] }},
+     {{ topics[3] }}: {{ num[3] }},
+     {{ topics[4] }}: {{ num[4] }},
+     {{ topics[5] }}: {{ num[5] }},
+    {{ topics[6] }}: {{ num[6] }},
+    {{ topics[7] }}: {{ num[7] }},
+  },
+  "components": {
+      {{ topics[-1] }}: {{ num[-1] }},
+       {{ topics[-2] }}: {{ num[-2] }},
+  {{ topics[-3] }}: {{ num[-3] }},
+   {{ topics[-4] }}: {{ num[-4] }},
+{{ topics[-5] }}: {{ num[-5] }},
+
+   {{ topics[-7] }}: {{ num[-7] }},
+    {{ topics[-8] }}: {{ num[-8] }},
+  },
+
+};
+
+var downloadJson = {
+  "积极情感": {{ count[1] }},
+  "消极情感": {{ count[3] }},
+  "中性情感": {{ count[2] }},
+};
+
+var themeJson = {
+  "健身减肥": 3000,
+  "娱乐追星": 3500,
+   "体育赛事": 2508,
+
+};
+
+var canvas = document.createElement('canvas');
+var ctx = canvas.getContext('2d');
+canvas.width = canvas.height = 100;
+ctx.textAlign = 'center';
+ctx.textBaseline = 'middle';
+ctx.globalAlpha = 0.08;
+ctx.font = '20px Microsoft Yahei';
+ctx.translate(50, 50);
+ctx.rotate(-Math.PI / 4);
+
+
+option = {
+    backgroundColor: {
+        type: 'pattern',
+        image: canvas,
+        repeat: 'repeat'
+    },
+    tooltip: {},
+    title: [{
+        text: '讨论主题',
+        subtext: '总计 ' + builderJson.all,
+        x: '25%',
+        textAlign: 'center'
+    }, {
+        text: '情感统计',
+        subtext: '总计 ' + Object.keys(downloadJson).reduce(function (all, key) {
+            return all + downloadJson[key];
+        }, 0),
+        x: '75%',
+        textAlign: 'center'
+    }, {
+        text: '主题统计',
+        subtext: '总计 ' + Object.keys(themeJson).reduce(function (all, key) {
+            return all + themeJson[key];
+        }, 0),
+        x: '75%',
+        y: '50%',
+        textAlign: 'center'
+    }],
+    grid: [{
+        top: 50,
+        width: '50%',
+        bottom: '45%',
+        left: 10,
+        containLabel: true
+    }, {
+        top: '55%',
+        width: '50%',
+        bottom: 0,
+        left: 10,
+        containLabel: true
+    }],
+    xAxis: [{
+        type: 'value',
+        max: builderJson.all,
+        splitLine: {
+            show: false
+        }
+    }, {
+        type: 'value',
+        max: builderJson.all,
+        gridIndex: 1,
+        splitLine: {
+            show: false
+        }
+    }],
+    yAxis: [{
+        type: 'category',
+        data: Object.keys(builderJson.charts),
+        axisLabel: {
+            interval: 0,
+            rotate: 30
+        },
+        splitLine: {
+            show: false
+        }
+    }, {
+        gridIndex: 1,
+        type: 'category',
+        data: Object.keys(builderJson.components),
+        axisLabel: {
+            interval: 0,
+            rotate: 30
+        },
+        splitLine: {
+            show: false
+        }
+    }],
+    series: [{
+        type: 'bar',
+        stack: 'chart',
+        z: 3,
+        label: {
+            normal: {
+                position: 'right',
+                show: true
+            }
+        },
+        data: Object.keys(builderJson.charts).map(function (key) {
+            return builderJson.charts[key];
+        })
+    }, {
+        type: 'bar',
+        stack: 'chart',
+        silent: true,
+        itemStyle: {
+            normal: {
+                color: '#eee'
+            }
+        },
+        data: Object.keys(builderJson.charts).map(function (key) {
+            return builderJson.all - builderJson.charts[key];
+        })
+    }, {
+        type: 'bar',
+        stack: 'component',
+        xAxisIndex: 1,
+        yAxisIndex: 1,
+        z: 3,
+        label: {
+            normal: {
+                position: 'right',
+                show: true
+            }
+        },
+        data: Object.keys(builderJson.components).map(function (key) {
+            return builderJson.components[key];
+        })
+    }, {
+        type: 'bar',
+        stack: 'component',
+        silent: true,
+        xAxisIndex: 1,
+        yAxisIndex: 1,
+        itemStyle: {
+            normal: {
+                color: '#eee'
+            }
+        },
+        data: Object.keys(builderJson.components).map(function (key) {
+            return builderJson.all - builderJson.components[key];
+        })
+    }, {
+        type: 'pie',
+        radius: [0, '30%'],
+        center: ['75%', '25%'],
+        data: Object.keys(downloadJson).map(function (key) {
+            return {
+                name: key.replace('.js', ''),
+                value: downloadJson[key]
+            }
+        })
+    }, {
+        type: 'pie',
+        radius: [0, '30%'],
+        center: ['75%', '75%'],
+        data: Object.keys(themeJson).map(function (key) {
+            return {
+                name: key.replace('.js', ''),
+                value: themeJson[key]
+            }
+        })
+    }]
+};
+myChart.setOption(option);
+    </script>
+     <script src="{{ url_for('static', filename='js/echarts.min.js') }}"></script>
+        </div>
+    <div class="box-footer">
+{#        <div class="alert alert-info alert-dismissible">#}
+{#            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>#}
+{#            <h4><i class="icon fa fa-info"></i> 本平台版权归人攻智能Group7所有</h4>#}
+
+{#        </div>#}
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    function initPage() {
+        var jsInObj = null;
+        restTemplate("GET", "/stats/summary", jsInObj, function (jsOutObj) {
+            $("#count01").text(jsOutObj.batch_count);
+            $("#count02").text(jsOutObj.test_count);
+            $("#count03").text(jsOutObj.succ_count);
+            $("#count04").text(jsOutObj.fail_count);
+        });
+    }
+</script>
+{% endblock %}

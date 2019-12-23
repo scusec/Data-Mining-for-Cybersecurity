@@ -1,0 +1,149 @@
+{% extends "base.html" %}
+{% block head %}
+<script src="{{ url_for('static', filename='js/echarts.min.js') }}"></script>
+{% endblock %}
+{% block title %}评论详情{% endblock %}
+
+
+{% block navbar %}
+<section class="content-header">
+    <h1></h1>
+    <ol class="breadcrumb">
+        <li><i class="fa fa-dashboard"></i> 当前位置</li>
+        <li class="active">评论详情</li>
+{#        <li class="active">通知方式配置</li>#}
+    </ol>
+</section>
+{% endblock %}
+{% block content %}
+   <div class="col-md-5">
+          <!-- Widget: user widget style 1 -->
+          <div class="box box-widget widget-user-2">
+            <!-- Add the bg color to the header using any of the bg-* classes -->
+            <div class="widget-user-header bg-light-blue">
+              <div class="widget-user-image">
+                  <img class="img-circle" src="{{ url_for('static', filename='images/tmp_avatar.jpg') }}" alt="User Avatar">
+
+              </div>
+              <!-- /.widget-user-image -->
+              <h3 class="widget-user-username">{{ content }}</h3>
+
+            </div>
+            <div class="box-footer no-padding">
+              <ul class="nav nav-stacked">
+                <li><a href="#">情感倾向
+                    {% if sentiment == '1' %}
+                    <span class="pull-right badge bg-red">中性</span>
+                    {%  elif sentiment == '2' %}
+                    <span class="pull-right badge bg-red">积极</span>
+                    {%   else %}
+                    <span class="pull-right badge bg-gray">消极</span>
+                    {% endif %}
+
+                </a></li>
+
+                <li><a href="#">积极概率<span class="pull-right badge bg-aqua">{{ positive_prob }}</span></a></li>
+                <li><a href="#">消极概率<span class="pull-right badge bg-green">{{ negative_prob }}</span></a></li>
+               <!-- <li><a href="#">置信度 <span class="pull-right badge bg-red">{{ confidence }}</span></a></li>-->
+                <li><a href="#">所属类别 <span class="pull-right badge bg-red">{{ label }}</span></a></li>
+              </ul>
+            </div>
+          </div>
+          <!-- /.widget-user -->
+        </div>
+    <div class="col-md-7 ">
+          <!-- Bar chart -->
+          <div class="box box-primary">
+            <div class="box-header with-border" >
+              <i class="fa fa-bar-chart-o"></i>
+
+              <h3 class="box-title">分析</h3>
+
+               <div class="row">
+            <div id="main1" style="height:500px;width:500px;margin: 0 auto;"></div>
+            <script type="text/javascript">
+                var myChart = echarts.init(document.getElementById('main1'),'westeros');
+                 option = {
+                    tooltip: {
+                        trigger: 'item',
+                        formatter: "{a} <br/>{b}: {c} ({d}%)"
+                    },
+                    legend: {
+                        orient: 'vertical',
+                        x: 'left',
+                        data:['积极倾向','消极倾向']
+                    },
+                    series: [
+                        {
+                            name:'概率分析',
+                            type:'pie',
+                            radius: ['50%', '70%'],
+                            avoidLabelOverlap: false,
+                            label: {
+                                normal: {
+                                    show: false,
+                                    position: 'center'
+                                },
+                                emphasis: {
+                                    show: true,
+                                    textStyle: {
+                                        fontSize: '30',
+                                        fontWeight: 'bold'
+                                    }
+                                }
+                            },
+                            labelLine: {
+                                normal: {
+                                    show: false
+                                }
+                            },
+                            data:[
+                                {value:{{ positive_prob }}, name:'积极倾向'},
+                                {value:{{ negative_prob }}, name:'消极倾向'},
+
+                            ]
+                        }
+                    ]
+                };
+                myChart.setOption(option);
+    </script>
+     <script src="{{ url_for('static', filename='js/echarts.min.js') }}"></script>
+        </div>
+
+
+            </div>
+
+            <!-- /.box-body-->
+          </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+          <!-- The time line -->
+          <ul class="timeline">
+            <!-- timeline time label -->
+            <!-- /.timeline-label -->
+            <!-- timeline item -->
+            {% for i in comment  %}
+                <li>
+                  <i class="fa  fa-commenting-o bg-blue"></i>
+                  <div class="timeline-item">
+                    <span class="time"><i class="fa fa-user"></i> {{ i.username }}</span>
+                    <div class="timeline-body">
+                      {{ i.content }}
+                    </div>
+                    <div class="timeline-footer" >
+                      <span style="font-size: 12px;"><i class="fa fa-commenting"></i> 回复数：{{ i.comments_num }}
+                      </span>
+                    </div>
+                  </div>
+                </li>
+            {% endfor %}
+            <!-- END timeline item -->
+          </ul>
+        </div>
+        <!-- /.col -->
+      </div>
+      <!-- /.row -->
+{% endblock %}
+{% block scripts %}
+{%  endblock %}
