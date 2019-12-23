@@ -88,31 +88,31 @@
 &emsp;&emsp;可视化部分基于flask框架进行了开发，文本、图表相结合，清晰明了，如下图所示。
 
 <div align="center">
-<img src="screen/web.png" width="600">
+<img src="screen/web.png" width="400">
 </div>
 
 &emsp;&emsp;前端页面展示如下图所示。
 
 <div align="center">
-<img src="screen/web1.jpg" width="600">
+<img src="screen/web1.jpg" width="800">
 </div>
 </br>
 <div align="center">
-<img src="screen/web2.png" width="600">
+<img src="screen/web2.png" width="800">
 </div>
 </br>
 <div align="center">
-<img src="screen/web3.png" width="600">
+<img src="screen/web3.png" width="800">
 </div>
 </br>
 <div align="center">
-<img src="screen/web4.png" width="600">
+<img src="screen/web4.png" width="800">
 </div>
 <div align="center">
-<img src="screen/web5.png" width="600">
+<img src="screen/web5.png" width="800">
 </div>
 <div align="center">
-<img src="screen/web6.png" width="600">
+<img src="screen/web6.png" width="800">
 </div>
 
 
