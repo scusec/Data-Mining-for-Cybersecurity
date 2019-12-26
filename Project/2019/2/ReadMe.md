@@ -24,13 +24,13 @@
 
    - 将OPCODE再次细化；
 
-     ![avatar](./Screen/OPCODE.png))
+     ![avatar](./Screen/OPCODE.png)
      
      
 
 3. 模型选择及评估：
 
-   ![avatar](./Screen/metrics.png))
+   ![avatar](./Screen/metrics.png)
 
    - 对于 MLP、CNN、LSTM 等神经网络实现的分类器，其训练过程往往比传统的机器学 习模型更复杂一些，然而在本实验中这三类模型并没有表现出更高的参数。
 
@@ -40,9 +40,7 @@
 
 ![avatar](./Screen/ROC.png)
 
-![avatar](./Screen/confusion_matrix.png))
-
-!
+![avatar](./Screen/confusion_matrix.png)
 
 4. 总结及未来工作
 
