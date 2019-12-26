@@ -10,6 +10,6 @@
 
 sample文件夹为文件对话框起始路径。将需要检测的APK文件放入sample文件夹，运行home.py，便可以开始检测。
 
-![QQ拼音截图20191226205010_副本](C:\Users\lenovo1\Desktop\代码结构.png)
+![QQ拼音截图20191226205010_副本](https://github.com/scusec/Data-Mining-for-Cybersecurity/blob/master/Project/2019/6/Screen/代码结构.png)
 
-![QQ拼音截图20191226205702](C:\Users\lenovo1\Desktop\运行效果.png)
+![QQ拼音截图20191226205702](https://github.com/scusec/Data-Mining-for-Cybersecurity/blob/master/Project/2019/6/Screen/运行效果.png)
