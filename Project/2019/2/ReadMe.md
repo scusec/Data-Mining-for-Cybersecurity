@@ -24,13 +24,13 @@
 
    - 将OPCODE再次细化；
 
-     ![avatar]([https://github.com/scusec/Data-Mining-for-Cybersecurity/blob/master/Project/2019/2/Screen/OPCODE处理.png))
+     ![avatar](./Screen/OPCODE.png))
      
      
 
 3. 模型选择及评估：
 
-   ![avatar]([https://github.com/scusec/Data-Mining-for-Cybersecurity/blob/master/Project/2019/2/Screen/模型评估.png))
+   ![avatar](./Screen/metrics.png))
 
    - 对于 MLP、CNN、LSTM 等神经网络实现的分类器，其训练过程往往比传统的机器学 习模型更复杂一些，然而在本实验中这三类模型并没有表现出更高的参数。
 
@@ -38,9 +38,11 @@
 
    - 因此，我们可以综合对比上述实验结果，结合提升漏洞召回率这一研究目标，并且在考 量算法和模型的时间复杂度、空间复杂度基础之上得出结论:优化后的操作码序列与 SVM 的模型组合可以达到最高的指标，是最有效的方法。
 
-![avatar](https://github.com/scusec/Data-Mining-for-Cybersecurity/blob/master/Project/2019/2/Screen/ROC.png)
+![avatar](./Screen/ROC.png)
 
-![avatar]([https://github.com/scusec/Data-Mining-for-Cybersecurity/blob/master/Project/2019/2/Screen/混淆矩阵.png))
+![avatar](./Screen/confusion_matrix.png))
+
+!
 
 4. 总结及未来工作
 
