@@ -1,0 +1,173 @@
+from util import *
+
+def preprocess_data(data):
+    log('Process date...')
+    data=process_date(data)
+    log('Process date done!')
+    log_shape(data)
+    return data
+
+
+def feature_engineer(df):
+    log('Before feature engineer')
+    log('Num of features: ' + str(len(df.columns)))
+    log('Features: ' + str(df.columns))
+
+    log('Cal next_time_delta')
+    df = cal_next_time_delta(df, 'next_time_delta', 'float32')
+    gc.collect()
+    log('Cal prev_time_delta')
+    df = cal_prev_time_delta(df, 'prev_time_delta', 'float32')
+    gc.collect()
+    log('Cal nunique_channel_gb_ip')
+    df = merge_nunique(df, ['ip'], 'channel', 'nunique_channel_gb_ip', 'uint32')
+    gc.collect()
+    log('Cal nunique_app_gb_ip_device_os')
+    df = merge_nunique(df, ['ip', 'device', 'os'], 'app', 'nunique_app_gb_ip_device_os', 'uint32')
+    gc.collect()
+    log('Cal nunique_hour_gb_ip_day')
+    df = merge_nunique(df, ['ip', 'day'], 'hour', 'nunique_hour_gb_ip_day', 'uint32')
+    gc.collect()
+    log('Cal nunique_app_gb_ip')
+    df = merge_nunique(df, ['ip'], 'app', 'nunique_app_gb_ip', 'uint32')
+    gc.collect()
+    log('Cal nunique_os_gb_ip_app')
+    df = merge_nunique(df, ['ip', 'app'], 'os', 'nunique_os_gb_ip_app', 'uint32')
+    gc.collect()
+    log('Cal nunique_device_gb_ip')
+    df = merge_nunique(df, ['ip'], 'device', 'nunique_device_gb_ip', 'uint32')
+    gc.collect()
+    log('Cal nunique_channel_gb_app')
+    df = merge_nunique(df, ['app'], 'channel', 'nunique_channel_gb_app', 'uint32')
+    gc.collect()
+    log('Cal cumcount_os_gb_ip')
+    df = merge_cumcount(df, ['ip'], 'os', 'cumcount_os_gb_ip', 'uint32')
+    gc.collect()
+    log('Cal cumcount_app_gb_ip_device_os')
+    df = merge_cumcount(df, ['ip', 'device', 'os'], 'app', 'cumcount_app_gb_ip_device_os', 'uint32')
+    gc.collect()
+    log('Cal count_gb_ip_day_hour')
+    df = merge_count(df, ['ip', 'day', 'hour'], 'count_gb_ip_day_hour', 'uint32')
+    gc.collect()
+    log('Cal count_gb_ip_app')
+    df = merge_count(df, ['ip', 'app'], 'count_gb_ip_app', 'uint32')
+    gc.collect()
+    log('Cal count_gb_ip_app_os')
+    df = merge_count(df, ['ip', 'app', 'os'], 'count_gb_ip_app_os', 'uint32')
+    gc.collect()
+    log('Cal var_day_gb_ip_app_os')
+    df = merge_var(df, ['ip', 'app', 'os'], 'day', 'var_day_gb_ip_app_os', 'float32')
+    gc.collect()
+
+
+def read_data():
+    log('Read data...')
+    train_reader=pd.read_csv('my_train.csv', header=0, sep=',', dtype=dtypes, usecols=['ip', 'app', 'device', 'os', 'channel', 'click_time', 'is_attributed'],iterator=True)
+    train=read_csv_on_batch(train_reader,"train.csv")
+    print("###### train head 100 ########")
+    print(train.head(100))
+    print("#############################")
+
+    test_supplement_reader=pd.read_csv('my_test_supplement.csv', header=0, sep=',', dtype=dtypes, usecols=['ip', 'app', 'device', 'os', 'channel', 'click_time'],iterator=True)
+    test_supplement=read_csv_on_batch(test_supplement_reader,"test_supplement.csv")
+    print("###### test_supplement head 100 ########")
+    print(test_supplement.head(100))
+    print("#############################")
+    gc.collect()
+    log('Read data done!')
+    log_shape(train, test_supplement)
+    return train,test_supplement
+
+
+def preprocess(train,test_supplement):
+    log('Process date...')
+    train = process_date(train)
+    test_supplement = process_date(test_supplement)
+    gc.collect()
+    log('Process date done!')
+    log_shape(train, test_supplement)
+    return train,test_supplement
+
+def feature_engineer(train,test_supplement):
+    global predictors
+    train_len = len(train)
+    log('Train size:' + str(train_len))
+    log('Train append test_supplement...')
+    df = train.append(test_supplement).reset_index(drop=True)
+    del train
+    del test_supplement
+    gc.collect()    
+    log('Train append test_supplement done!')
+    log('Before feature engineer')
+    log('Num of features: ' + str(len(df.columns)))
+    log('Features: ' + str(df.columns))
+    
+    log('Cal next_time_delta')
+    df = cal_next_time_delta(df, 'next_time_delta', 'float32')
+    gc.collect()
+    log('Cal prev_time_delta')
+    df = cal_prev_time_delta(df, 'prev_time_delta', 'float32')
+    gc.collect()
+    log('Cal nunique_channel_gb_ip')
+    df = merge_nunique(df, ['ip'], 'channel', 'nunique_channel_gb_ip', 'uint32')
+    gc.collect()
+    log('Cal nunique_app_gb_ip_device_os')
+    df = merge_nunique(df, ['ip', 'device', 'os'], 'app', 'nunique_app_gb_ip_device_os', 'uint32')
+    gc.collect()
+    log('Cal nunique_hour_gb_ip_day')
+    df = merge_nunique(df, ['ip', 'day'], 'hour', 'nunique_hour_gb_ip_day', 'uint32')
+    gc.collect()
+    log('Cal nunique_app_gb_ip')
+    df = merge_nunique(df, ['ip'], 'app', 'nunique_app_gb_ip', 'uint32')
+    gc.collect()
+    log('Cal nunique_os_gb_ip_app')
+    df = merge_nunique(df, ['ip', 'app'], 'os', 'nunique_os_gb_ip_app', 'uint32')
+    gc.collect()
+    log('Cal nunique_device_gb_ip')
+    df = merge_nunique(df, ['ip'], 'device', 'nunique_device_gb_ip', 'uint32')
+    gc.collect()
+    log('Cal nunique_channel_gb_app')
+    df = merge_nunique(df, ['app'], 'channel', 'nunique_channel_gb_app', 'uint32')
+    gc.collect()
+    log('Cal cumcount_os_gb_ip')
+    df = merge_cumcount(df, ['ip'], 'os', 'cumcount_os_gb_ip', 'uint32')
+    gc.collect()
+    log('Cal cumcount_app_gb_ip_device_os')
+    df = merge_cumcount(df, ['ip', 'device', 'os'], 'app', 'cumcount_app_gb_ip_device_os', 'uint32')
+    gc.collect()
+    log('Cal count_gb_ip_day_hour')
+    df = merge_count(df, ['ip', 'day', 'hour'], 'count_gb_ip_day_hour', 'uint32')
+    gc.collect()
+    log('Cal count_gb_ip_app')
+    df = merge_count(df, ['ip', 'app'], 'count_gb_ip_app', 'uint32')
+    gc.collect()
+    log('Cal count_gb_ip_app_os')
+    df = merge_count(df, ['ip', 'app', 'os'], 'count_gb_ip_app_os', 'uint32')
+    gc.collect()
+    log('Cal var_day_gb_ip_app_os')
+    df = merge_var(df, ['ip', 'app', 'os'], 'day', 'var_day_gb_ip_app_os', 'float32')
+    gc.collect()
+
+    log('After feature engineer')
+    log('Num of features: ' + str(len(df.columns)))
+    log('Features: ' + str(df.columns))
+    # Save all features
+    cPickle.dump(df,open('all.p', 'wb'))
+    log("all feature saved in all.p")
+    cPickle.dump(predictors,open('predictors.p', 'wb'))
+    log("predictors saved in predictors.p")
+    cPickle.dump(train_len,open('train_len.p', 'wb'))
+    log("train_len saved in train_len.p")
+    log("build feature done!")
+
+
+def main():
+    train,test_supplement=read_data()
+    train,test_supplement=preprocess(train,test_supplement)
+    feature_engineer(train,test_supplement)
+
+
+if __name__ == "__main__":
+    main()
+
+
