@@ -1,7 +1,7 @@
 captcha==0.3
 chardet==3.0.4
 matplotlib==2.1.0
-numpy==1.16.2
+numpy==1.22.0
 olefile==0.46
 tensorboard==1.7.0
 tensorflow>=1.15
